@@ -16,7 +16,7 @@ window.PORTAL_DATA = {
       "icon": "fa-solid fa-guitar",
       "accent": "amber",
       "description": "An ambitious, narrative-rich folk-rock catalog exploring human longing, societal fractures, and pathways to reconciliation. Featuring full lyrics vaults, musical analyses, and official video playlists.",
-      "link": "https://tpatterson34.github.io/the-shady-river-bard/",
+      "link": "/vault/",
       "cta": "Enter Complete Discography Vault"
     },
     {
@@ -56,7 +56,7 @@ window.PORTAL_DATA = {
         "Rural Chasm",
         "Common Ground"
       ],
-      "url": "https://tpatterson34.github.io/the-fracture/",
+      "url": "/the-fracture/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcHGcrGGVmhxgbmjlO4Z7SU2",
       "description": "An empirical 4-movement audit of modern America's deep sociological divisions, followed by a compassionate roadmap toward vulnerability, community stewardship, and human reconnection."
     },
@@ -74,7 +74,7 @@ window.PORTAL_DATA = {
         "Inner Citadel",
         "Stoicism"
       ],
-      "url": "https://tpatterson34.github.io/sanitys-edge/",
+      "url": "/sanitys-edge/",
       "video_url": "https://www.youtube.com/@TheShadyRiverBard",
       "description": "A visceral journey along the razor's edge of psychological equilibrium in an era of hyper-connectivity and cognitive fragmentation."
     },
@@ -92,7 +92,7 @@ window.PORTAL_DATA = {
         "Claim of Right",
         "Self-Determination"
       ],
-      "url": "https://tpatterson34.github.io/the-forgotten-crown/",
+      "url": "/the-forgotten-crown/",
       "video_url": "https://www.youtube.com/@TheShadyRiverBard",
       "description": "An archivist's unearthing of suppressed constitutional truths, the 1689 Claim of Right, and the timeless principle of salvo jure cujuslibet."
     },
@@ -110,7 +110,7 @@ window.PORTAL_DATA = {
         "Hope",
         "Shared Future"
       ],
-      "url": "https://tpatterson34.github.io/the-shady-river-bard/",
+      "url": "/vault/#american-renewal",
       "video_url": "https://www.youtube.com/@TheShadyRiverBard",
       "description": "A defiant, hopeful folk-rock celebration of labor, neighborly solidarity, and the enduring resilience of the American spirit."
     }
