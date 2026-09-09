@@ -92,8 +92,13 @@
       transition: all 0.5s ease-in-out;
     }
   </style>
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/a11y.css">
 </head>
 <body class="bg-basalt-950 text-stone-200 font-sans antialiased selection:bg-fissure-600 selection:text-white min-h-screen flex flex-col">
+  <!-- Skip Navigation Link (WCAG 2.4.1 Bypass Blocks) -->
+  <a href="#main-content" class="a11y-skip-link">Skip to main content</a>
+
 
   <!-- TOP ANNOUNCEMENT / DISCOGRAPHY BACKLINK -->
   <aside aria-label="Discography Breadcrumb" class="bg-basalt-900 border-b border-white/10 px-4 py-2 text-xs text-stone-400">
@@ -104,17 +109,54 @@
       </div>
       <div class="flex items-center gap-4">
         <a href="/vault/" class="hover:text-fissure-400 transition-colors flex items-center gap-1.5 font-medium">
-          <i class="fa-solid fa-arrow-left text-[10px]"></i>
+          <i aria-hidden="true" class="fa-solid fa-arrow-left text-[10px]"></i>
           <span>Return to Discography</span>
         </a>
         <span class="text-stone-600">|</span>
         <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcHGcrGGVmhxgbmjlO4Z7SU2" target="_blank" rel="noopener noreferrer" class="hover:text-red-400 transition-colors flex items-center gap-1">
-          <i class="fa-brands fa-youtube text-red-500"></i>
+          <i class="fa-brands fa-youtube text-red-500" aria-hidden="true"></i>
           <span>Official Album Video Playlist</span>
         </a>
+        <span class="text-stone-600" aria-hidden="true">|</span>
+        <button id="a11y-toggle-btn" onclick="toggleA11yToolbar()" aria-expanded="false" aria-controls="a11y-toolbar" class="hover:text-fissure-400 text-stone-300 transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-fissure-400 rounded px-1.5 py-0.5 font-mono text-[11px]" aria-label="Toggle accessibility display preferences">
+          <i class="fa-solid fa-universal-access text-fissure-400" aria-hidden="true"></i>
+          <span>Accessibility</span>
+        </button>
       </div>
     </div>
   </aside>
+
+  <!-- EXPANDABLE ACCESSIBILITY TOOLBAR (WCAG 2.1 AA) -->
+  <div id="a11y-toolbar" class="hidden bg-basalt-900 border-b border-fissure-500/40 py-3 px-4 text-xs transition-all shadow-2xl relative z-40" role="region" aria-label="Accessibility Display Preferences">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <div class="w-7 h-7 rounded-lg bg-basalt-950 border border-fissure-500/40 flex items-center justify-center text-fissure-400 text-xs">
+          <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+        </div>
+        <div>
+          <span class="font-display font-bold text-stone-100 block">Accessibility Preferences</span>
+          <span class="text-stone-400 text-[11px] font-body">Custom display controls for readability & vision assistance</span>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-2 sm:gap-3 font-mono text-xs">
+        <button id="btn-contrast" onclick="toggleA11yOption('contrast')" class="px-3 py-1.5 rounded-lg bg-basalt-800 hover:bg-basalt-750 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-fissure-500">
+          High Contrast: <span id="val-contrast" class="text-stone-400">Off</span>
+        </button>
+        <button id="btn-textsize" onclick="cycleTextSize()" class="px-3 py-1.5 rounded-lg bg-basalt-800 hover:bg-basalt-750 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-fissure-500">
+          Text Size: <span id="val-textsize" class="text-stone-400">Normal</span>
+        </button>
+        <button id="btn-underline" onclick="toggleA11yOption('underline')" class="px-3 py-1.5 rounded-lg bg-basalt-800 hover:bg-basalt-750 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-fissure-500">
+          Underline Links: <span id="val-underline" class="text-stone-400">Off</span>
+        </button>
+        <button id="btn-motion" onclick="toggleA11yOption('motion')" class="px-3 py-1.5 rounded-lg bg-basalt-800 hover:bg-basalt-750 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-fissure-500">
+          Reduced Motion: <span id="val-motion" class="text-stone-400">System</span>
+        </button>
+        <button onclick="resetA11yOptions()" class="px-2 py-1 text-stone-400 hover:text-white underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-white">
+          Reset
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- STICKY PRIMARY NAVIGATION -->
   <nav class="sticky top-0 z-50 bg-basalt-950/90 backdrop-blur-md border-b border-white/10 shadow-2xl">
@@ -138,7 +180,7 @@
           <a href="#narrative-arc" class="text-stone-300 hover:text-fissure-400 transition-colors py-1">Roadmap</a>
           <a href="#pillars" class="text-stone-300 hover:text-fissure-400 transition-colors py-1">7 Fault Lines</a>
           <a href="#tracks-section" class="text-fissure-400 font-bold hover:text-fissure-300 transition-colors py-1 flex items-center gap-1.5">
-            <i class="fa-solid fa-compact-disc"></i>
+            <i aria-hidden="true" class="fa-solid fa-compact-disc"></i>
             <span>All 14 Songs &amp; Lyrics</span>
           </a>
         </div>
@@ -146,23 +188,23 @@
         <!-- External Streaming Buttons -->
         <div class="hidden lg:flex items-center space-x-2">
           <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcHGcrGGVmhxgbmjlO4Z7SU2" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="YouTube Video Playlist">
-            <i class="fa-brands fa-youtube text-base"></i>
+            <i aria-hidden="true" class="fa-brands fa-youtube text-base"></i>
           </a>
           <a href="https://open.spotify.com/album/43YxX8r0k778XQ5h0M8F0H" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-emerald-950/60 hover:bg-emerald-900/80 text-emerald-400 border border-emerald-800/40 text-xs transition-colors" title="Spotify">
-            <i class="fa-brands fa-spotify text-base"></i>
+            <i aria-hidden="true" class="fa-brands fa-spotify text-base"></i>
           </a>
           <a href="https://music.apple.com/us/album/the-fracture/1831416972" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-pink-950/60 hover:bg-pink-900/80 text-pink-400 border border-pink-800/40 text-xs transition-colors" title="Apple Music">
-            <i class="fa-brands fa-apple text-base"></i>
+            <i aria-hidden="true" class="fa-brands fa-apple text-base"></i>
           </a>
           <a href="https://music.amazon.com/search/The+Shady+River+Bard+The+Fracture?filter=IsLibrary%7Cfalse&sc=none" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-amber-950/60 hover:bg-amber-900/80 text-amber-400 border border-amber-800/40 text-xs transition-colors" title="Amazon Music">
-            <i class="fa-brands fa-amazon text-base"></i>
+            <i aria-hidden="true" class="fa-brands fa-amazon text-base"></i>
           </a>
         </div>
 
         <!-- Mobile Menu Toggle Button -->
         <div class="md:hidden flex items-center">
           <button id="mobile-menu-btn" aria-label="Toggle navigation menu" class="text-stone-300 hover:text-white p-2 focus:outline-none focus:ring-2 focus:ring-fissure-400 rounded-lg">
-            <i class="fa-solid fa-bars text-lg"></i>
+            <i aria-hidden="true" class="fa-solid fa-bars text-lg"></i>
           </button>
         </div>
 
@@ -178,7 +220,7 @@
     </div>
   </nav>
 
-  <main id="top" class="flex-grow">
+  <main id="main-content" tabindex="-1" class="flex-grow focus:outline-none">
     
     <!-- HERO SECTION -->
     <section class="relative py-16 sm:py-24 overflow-hidden border-b border-white/10">
@@ -207,7 +249,7 @@
           <!-- Right Column: Concept Manifesto & Executive Summary -->
           <div class="lg:col-span-7 space-y-6">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-basalt-800 border border-fissure-500/30 text-fissure-400 text-xs font-mono uppercase tracking-widest">
-              <i class="fa-solid fa-brain text-[11px]"></i>
+              <i aria-hidden="true" class="fa-solid fa-brain text-[11px]"></i>
               <span>Interactive Concept Experience</span>
             </div>
 
@@ -231,15 +273,15 @@
             <!-- Quick Action Links -->
             <div class="pt-4 flex flex-wrap items-center gap-4">
               <a href="#tracks-section" class="px-6 py-3 rounded-xl bg-gradient-to-r from-fissure-600 to-fissure-500 hover:from-fissure-500 hover:to-fissure-400 text-basalt-950 font-display font-bold text-sm tracking-wider uppercase transition-all shadow-lg hover:shadow-fissure-500/30 flex items-center gap-2">
-                <i class="fa-solid fa-headphones-simple"></i>
+                <i aria-hidden="true" class="fa-solid fa-headphones-simple"></i>
                 <span>Explore 14 Songs &amp; Lyrics</span>
               </a>
               <a href="#narrative-arc" class="px-6 py-3 rounded-xl bg-basalt-850 hover:bg-basalt-800 text-stone-200 border border-white/10 hover:border-fissure-400/50 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2">
-                <i class="fa-solid fa-map-location-dot text-fissure-400"></i>
+                <i aria-hidden="true" class="fa-solid fa-map-location-dot text-fissure-400"></i>
                 <span>View Narrative Roadmap</span>
               </a>
               <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcHGcrGGVmhxgbmjlO4Z7SU2" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-red-950/60 hover:bg-red-900 text-red-300 border border-red-800/50 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2">
-                <i class="fa-brands fa-youtube text-red-400"></i>
+                <i aria-hidden="true" class="fa-brands fa-youtube text-red-400"></i>
                 <span>Play All Videos ↗</span>
               </a>
             </div>
@@ -256,7 +298,7 @@
         
         <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-fissure-950 border border-fissure-800/40 text-fissure-400 text-xs font-mono uppercase tracking-widest">
-            <i class="fa-solid fa-route text-[11px]"></i>
+            <i aria-hidden="true" class="fa-solid fa-route text-[11px]"></i>
             <span>The Four Movements</span>
           </div>
           <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-wide">
@@ -281,7 +323,7 @@
               The initial shock of acoustic isolation, economic obsolescence for young men, generational asset gaps, and segregated zip codes.
             </p>
             <div class="text-[11px] font-mono text-fissure-400 flex items-center gap-1.5 font-semibold group-hover:translate-x-1 transition-transform">
-              <span>Jump to Songs</span> <i class="fa-solid fa-arrow-down text-[10px]"></i>
+              <span>Jump to Songs</span> <i aria-hidden="true" class="fa-solid fa-arrow-down text-[10px]"></i>
             </div>
           </div>
 
@@ -296,7 +338,7 @@
               The algorithmic echo chamber, competing national realities on the same soil, rural hospital deserts, and the spiritual nadir.
             </p>
             <div class="text-[11px] font-mono text-stone-400 group-hover:text-fissure-400 flex items-center gap-1.5 font-semibold group-hover:translate-x-1 transition-transform">
-              <span>Jump to Songs</span> <i class="fa-solid fa-arrow-down text-[10px]"></i>
+              <span>Jump to Songs</span> <i aria-hidden="true" class="fa-solid fa-arrow-down text-[10px]"></i>
             </div>
           </div>
 
@@ -311,7 +353,7 @@
               The turning point: whispering across the political wire, breaking masculine stoicism with honest tears, and rediscovering shared soil.
             </p>
             <div class="text-[11px] font-mono text-stone-400 group-hover:text-river-400 flex items-center gap-1.5 font-semibold group-hover:translate-x-1 transition-transform">
-              <span>Jump to Songs</span> <i class="fa-solid fa-arrow-down text-[10px]"></i>
+              <span>Jump to Songs</span> <i aria-hidden="true" class="fa-solid fa-arrow-down text-[10px]"></i>
             </div>
           </div>
 
@@ -326,7 +368,7 @@
               Physical boundary crossing to deliberate in good faith, stitching intergenerational continuity, and the grand unifying hymn.
             </p>
             <div class="text-[11px] font-mono text-stone-400 group-hover:text-emerald-400 flex items-center gap-1.5 font-semibold group-hover:translate-x-1 transition-transform">
-              <span>Jump to Songs</span> <i class="fa-solid fa-arrow-down text-[10px]"></i>
+              <span>Jump to Songs</span> <i aria-hidden="true" class="fa-solid fa-arrow-down text-[10px]"></i>
             </div>
           </div>
 
@@ -334,7 +376,7 @@
 
         <!-- Quick Jump Navigation Bar -->
         <div class="mt-8 flex flex-wrap items-center justify-center gap-2">
-          <span class="text-xs font-mono text-stone-400 mr-2"><i class="fa-solid fa-compass text-fissure-400 mr-1.5"></i>Quick Jump:</span>
+          <span class="text-xs font-mono text-stone-400 mr-2"><i aria-hidden="true" class="fa-solid fa-compass text-fissure-400 mr-1.5"></i>Quick Jump:</span>
           <button onclick="scrollToAct(1)" class="text-xs font-mono text-stone-300 hover:text-white px-3 py-1.5 rounded-lg bg-basalt-800 border border-white/10 hover:border-fissure-500/50 transition-colors">Act I (Tracks 1–4)</button>
           <button onclick="scrollToAct(2)" class="text-xs font-mono text-stone-300 hover:text-white px-3 py-1.5 rounded-lg bg-basalt-800 border border-white/10 hover:border-fissure-500/50 transition-colors">Act II (Tracks 5–8)</button>
           <button onclick="scrollToAct(3)" class="text-xs font-mono text-stone-300 hover:text-white px-3 py-1.5 rounded-lg bg-basalt-800 border border-white/10 hover:border-river-500/50 transition-colors">Act III (Tracks 9–11)</button>
@@ -350,7 +392,7 @@
         
         <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-basalt-800 border border-white/10 text-stone-300 text-xs font-mono uppercase tracking-widest">
-            <i class="fa-solid fa-microscope text-[11px] text-fissure-400"></i>
+            <i aria-hidden="true" class="fa-solid fa-microscope text-[11px] text-fissure-400"></i>
             <span>The Research Dossier</span>
           </div>
           <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-wide">
@@ -371,7 +413,7 @@
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-4">
             <div>
               <h3 class="font-display text-xl font-bold text-white flex items-center gap-2.5">
-                <i class="fa-solid fa-chart-line text-fissure-400"></i>
+                <i aria-hidden="true" class="fa-solid fa-chart-line text-fissure-400"></i>
                 <span>Interactive Fracture Inspector: The Widening Gap</span>
               </h3>
               <p class="text-xs text-stone-400 mt-1">Comparing empirical metrics across the fault lines</p>
@@ -398,7 +440,7 @@
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 border-b border-white/10 pb-8">
           <div class="space-y-2">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-fissure-950 border border-fissure-800/40 text-fissure-400 text-xs font-mono uppercase tracking-widest">
-              <i class="fa-solid fa-compact-disc text-[11px]"></i>
+              <i aria-hidden="true" class="fa-solid fa-compact-disc text-[11px]"></i>
               <span>Complete Audio &amp; Lyrics Vault</span>
             </div>
             <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-wide">
@@ -412,11 +454,11 @@
           <!-- Quick Actions: Expand/Collapse All Lyrics -->
           <div class="flex flex-wrap items-center gap-2">
             <button onclick="toggleAllLyrics(true)" class="text-xs font-mono px-3.5 py-2 rounded-lg bg-basalt-800 hover:bg-basalt-750 text-stone-200 border border-white/10 hover:border-fissure-400/40 transition-colors flex items-center gap-1.5">
-              <i class="fa-solid fa-angles-down text-[11px] text-fissure-400"></i>
+              <i aria-hidden="true" class="fa-solid fa-angles-down text-[11px] text-fissure-400"></i>
               <span>Expand All Lyrics</span>
             </button>
             <button onclick="toggleAllLyrics(false)" class="text-xs font-mono px-3.5 py-2 rounded-lg bg-basalt-800 hover:bg-basalt-750 text-stone-200 border border-white/10 hover:border-white/20 transition-colors flex items-center gap-1.5">
-              <i class="fa-solid fa-angles-up text-[11px] text-stone-400"></i>
+              <i aria-hidden="true" class="fa-solid fa-angles-up text-[11px] text-stone-400"></i>
               <span>Collapse All</span>
             </button>
           </div>
@@ -425,7 +467,7 @@
         <!-- In-section Act Navigation Jump Bar -->
         <div class="mb-10 p-3 rounded-2xl bg-basalt-850 border border-white/10 flex flex-wrap items-center justify-between gap-3 shadow-lg">
           <div class="flex items-center gap-2 text-xs font-mono text-stone-400 px-2">
-            <i class="fa-solid fa-compass text-fissure-400"></i>
+            <i aria-hidden="true" class="fa-solid fa-compass text-fissure-400"></i>
             <span>Jump to Movement:</span>
           </div>
           <div class="flex flex-wrap items-center gap-2">
@@ -478,7 +520,19 @@
           </a>
         </div>
       </div>
-      <div class="pt-6 border-t border-white/5 text-center text-stone-600 font-mono text-[11px]">
+            <div class="pt-6 border-t border-white/5 flex flex-wrap items-center justify-between gap-4 text-stone-500 font-mono text-[11px]">
+        <div>&copy; 2025 The Shady River Bard. All music, conceptual syntheses, lyrics, and artwork reserved.</div>
+        <div class="flex items-center gap-4">
+          <button onclick="openA11yModal()" class="text-stone-400 hover:text-fissure-400 underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-fissure-400">
+            Accessibility Statement (WCAG 2.1 AA)
+          </button>
+          <span>&bull;</span>
+          <button onclick="toggleA11yToolbar()" class="text-stone-400 hover:text-fissure-400 underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-fissure-400">
+            Display Preferences
+          </button>
+        </div>
+      </div>
+      <div class="hidden">
         &copy; 2025 The Shady River Bard. All music, conceptual syntheses, lyrics, and artwork reserved.
       </div>
     </div>
@@ -638,7 +692,7 @@
                     ${t.title}
                   </h3>
                   <p class="text-xs text-stone-400 font-mono flex items-center gap-2">
-                    <span><i class="fa-solid fa-tag text-fissure-500 mr-1"></i>${t.core_pillar}</span>
+                    <span><i aria-hidden="true" class="fa-solid fa-tag text-fissure-500 mr-1"></i>${t.core_pillar}</span>
                   </p>
                 </div>
               </div>
@@ -646,7 +700,7 @@
               <!-- Right: Direct Listen Link + Lyrics Accordion Toggle -->
               <div class="flex items-center gap-3 w-full md:w-auto justify-end">
                 <a href="${t.video_url}" target="_blank" rel="noopener noreferrer" class="py-2.5 px-4 rounded-xl bg-red-600 hover:bg-red-500 text-white font-medium text-xs transition-colors flex items-center gap-2 shadow focus:outline-none focus:ring-2 focus:ring-white" aria-label="Watch ${t.title} official video on YouTube">
-                  <i class="fa-brands fa-youtube text-sm"></i>
+                  <i aria-hidden="true" class="fa-brands fa-youtube text-sm"></i>
                   <span>Watch Video ↗</span>
                 </a>
                 
@@ -661,7 +715,7 @@
             <!-- Style & Musical Direction Banner -->
             <div class="p-4 rounded-xl bg-basalt-900 border border-white/5 space-y-1">
               <span class="text-[10px] font-mono uppercase tracking-wider text-fissure-400 font-bold block">
-                <i class="fa-solid fa-guitar mr-1.5"></i>Musical Direction &amp; Instrumentation
+                <i aria-hidden="true" class="fa-solid fa-guitar mr-1.5"></i>Musical Direction &amp; Instrumentation
               </span>
               <p class="text-xs text-stone-300 font-mono leading-relaxed">
                 ${t.style}
@@ -679,11 +733,11 @@
               <!-- Lyrics Header & Copy Action -->
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-2">
-                  <i class="fa-solid fa-quote-left text-fissure-400 text-xs"></i>
+                  <i aria-hidden="true" class="fa-solid fa-quote-left text-fissure-400 text-xs"></i>
                   <span class="text-xs font-mono uppercase tracking-wider text-stone-300 font-semibold">Complete Official Lyrics</span>
                 </div>
                 <button onclick="copyLyrics(${t.number})" id="copy-btn-${t.number}" class="text-xs font-mono text-stone-400 hover:text-white px-2.5 py-1 rounded bg-basalt-800 border border-white/10 hover:border-white/20 transition-colors flex items-center gap-1.5">
-                  <i class="fa-solid fa-copy text-[10px]"></i>
+                  <i aria-hidden="true" class="fa-solid fa-copy text-[10px]"></i>
                   <span>Copy Lyrics</span>
                 </button>
               </div>
@@ -706,7 +760,7 @@
               ${t.youtube_description ? `
                 <div class="p-4 sm:p-5 rounded-xl bg-basalt-900/60 border border-white/5 text-xs text-stone-400 space-y-2">
                   <span class="font-mono text-[10px] uppercase tracking-wider text-fissure-400 font-bold block">
-                    <i class="fa-solid fa-scroll mr-1.5"></i>Narrative Context &amp; Visual Notes:
+                    <i aria-hidden="true" class="fa-solid fa-scroll mr-1.5"></i>Narrative Context &amp; Visual Notes:
                   </span>
                   <p class="leading-relaxed font-sans">${t.youtube_description.replace(/\n/g, '<br>')}</p>
                 </div>
@@ -815,9 +869,9 @@
       navigator.clipboard.writeText(track.lyrics).then(() => {
         const btn = document.getElementById(`copy-btn-${trackNum}`);
         if (btn) {
-          btn.innerHTML = '<i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Copied!';
+          btn.innerHTML = '<i aria-hidden="true" class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Copied!';
           setTimeout(() => {
-            btn.innerHTML = '<i class="fa-solid fa-copy mr-1.5"></i>Copy Lyrics';
+            btn.innerHTML = '<i aria-hidden="true" class="fa-solid fa-copy mr-1.5"></i>Copy Lyrics';
           }, 2000);
         }
       }).catch(err => {
@@ -960,5 +1014,7 @@
       }
     });
   </script>
+  <!-- Unified Accessibility Controller -->
+  <script src="/assets/js/a11y.js"></script>
 </body>
 </html>

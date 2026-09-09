@@ -1,0 +1,130 @@
+/* ==========================================================================
+   THE SHADY RIVER ECOSYSTEM - UNIFIED ACCESSIBILITY (WCAG 2.1 AA) STYLESHEET
+   ========================================================================== */
+
+/* 1. Skip Navigation Link (WCAG 2.4.1 Bypass Blocks) */
+.a11y-skip-link {
+  position: fixed;
+  top: -9999px;
+  left: -9999px;
+  z-index: 99999;
+  padding: 0.75rem 1.25rem;
+  background-color: #f59e0b;
+  color: #06080b !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.7), 0 8px 10px -6px rgba(0, 0, 0, 0.7);
+  border: 2px solid #ffffff;
+  transition: none;
+}
+
+.a11y-skip-link:focus,
+.a11y-skip-link:focus-visible {
+  top: 1rem !important;
+  left: 1rem !important;
+  outline: 3px solid #ffffff !important;
+  outline-offset: 2px !important;
+}
+
+/* 2. Enhanced Focus Indicators (WCAG 2.4.7 Focus Visible) */
+:focus-visible {
+  outline: 2px solid #f59e0b !important;
+  outline-offset: 3px !important;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex="0"]:focus-visible {
+  outline: 2px solid #fbbf24 !important;
+  outline-offset: 2px !important;
+}
+
+/* 3. Reduced Motion Accommodations (WCAG 2.2.2 & 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.user-reduced-motion *,
+.user-reduced-motion *::before,
+.user-reduced-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* 4. High Contrast Mode (WCAG 1.4.3 & 1.4.6 Contrast Enhanced) */
+.high-contrast {
+  filter: contrast(112%);
+}
+
+.high-contrast body,
+html.high-contrast {
+  background-color: #05070a !important;
+  color: #f5f5f4 !important;
+}
+
+.high-contrast .portal-card,
+.high-contrast .glass-card,
+.high-contrast article,
+.high-contrast section {
+  border-color: rgba(245, 158, 11, 0.5) !important;
+}
+
+.high-contrast .text-stone-400,
+.high-contrast .text-stone-500,
+.high-contrast .text-zinc-500,
+.high-contrast .text-zinc-400 {
+  color: #e7e5e4 !important;
+}
+
+.high-contrast .text-stone-300,
+.high-contrast .text-stone-200 {
+  color: #ffffff !important;
+}
+
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+  border: 2px solid #f59e0b !important;
+  background-color: #0c0e12 !important;
+  color: #ffffff !important;
+}
+
+/* 5. Underline Links Mode (WCAG 1.4.1 Use of Color) */
+.underline-links a,
+.underline-links button.underline-target,
+.underline-links [role="button"] {
+  text-decoration: underline !important;
+  text-underline-offset: 4px !important;
+}
+
+.underline-links .no-underline,
+.underline-links button[class*="rounded-xl"],
+.underline-links a[class*="rounded-xl"],
+.underline-links button[class*="rounded-full"],
+.underline-links a[class*="rounded-full"] {
+  text-decoration: none !important;
+}
+
+/* 6. Text Resizing / Font Scaling (WCAG 1.4.4 Resize Text up to 200%) */
+html.font-lg {
+  font-size: 115% !important;
+}
+
+html.font-xl {
+  font-size: 130% !important;
+}

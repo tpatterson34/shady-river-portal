@@ -104,8 +104,13 @@
       overflow: hidden;
     }
   </style>
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/a11y.css">
 </head>
 <body class="bg-prairie-950 text-stone-200 font-sans antialiased selection:bg-rust-600 selection:text-white min-h-screen flex flex-col">
+  <!-- Skip Navigation Link (WCAG 2.4.1 Bypass Blocks) -->
+  <a href="#main-content" class="a11y-skip-link">Skip to main content</a>
+
 
   <!-- TOP BREADCRUMB BAR -->
   <aside aria-label="Portal Navigation" class="bg-prairie-900 border-b border-white/10 px-4 py-2 text-xs text-stone-400">
@@ -116,17 +121,17 @@
       </div>
       <div class="flex items-center gap-4 text-[11px] font-mono">
         <a href="/" class="hover:text-rust-400 text-stone-300 transition-colors flex items-center gap-1 font-bold">
-          <i class="fa-solid fa-water text-rust-500"></i>
+          <i aria-hidden="true" class="fa-solid fa-water text-rust-500"></i>
           <span>&larr; Flagship Portal</span>
         </a>
         <span class="text-stone-700">|</span>
         <a href="/vault/" class="hover:text-wheat-400 text-stone-300 transition-colors flex items-center gap-1">
-          <i class="fa-solid fa-compact-disc text-wheat-500"></i>
+          <i aria-hidden="true" class="fa-solid fa-compact-disc text-wheat-500"></i>
           <span>26-Album Catalog</span>
         </a>
         <span class="text-stone-700">|</span>
         <a href="https://theshadyriverbard.substack.com" target="_blank" rel="noopener noreferrer" class="hover:text-rust-400 transition-colors flex items-center gap-1">
-          <i class="fa-solid fa-bookmark text-rust-400"></i>
+          <i aria-hidden="true" class="fa-solid fa-bookmark text-rust-400"></i>
           <span>Substack Liner Notes</span>
         </a>
       </div>
@@ -155,11 +160,11 @@
           <a href="#roadmap" class="text-stone-300 hover:text-rust-400 transition-colors py-1">4 Acts</a>
           <a href="#dossier" class="text-stone-300 hover:text-rust-400 transition-colors py-1">6 Fault Lines</a>
           <a href="#songs-section" class="text-stone-300 hover:text-rust-400 transition-colors py-1 flex items-center gap-1.5">
-            <i class="fa-solid fa-list-ol text-[11px] text-rust-500"></i>
+            <i aria-hidden="true" class="fa-solid fa-list-ol text-[11px] text-rust-500"></i>
             <span>15 Songs</span>
           </a>
           <a href="#streaming" class="text-stone-300 hover:text-wheat-400 transition-colors py-1 flex items-center gap-1.5">
-            <i class="fa-solid fa-play text-[11px] text-wheat-500"></i>
+            <i aria-hidden="true" class="fa-solid fa-play text-[11px] text-wheat-500"></i>
             <span>Streaming</span>
           </a>
         </div>
@@ -174,8 +179,8 @@
 
         <!-- Mobile Menu Toggle Button -->
         <div class="md:hidden flex items-center">
-          <button id="mobile-menu-btn" aria-label="Toggle navigation menu" class="text-stone-300 hover:text-white p-2 focus:outline-none focus:ring-2 focus:ring-rust-500 rounded-lg">
-            <i class="fa-solid fa-bars text-xl"></i>
+          <button id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu" class="text-stone-300 hover:text-white p-2 focus:outline-none focus:ring-2 focus:ring-rust-500 rounded-lg">
+            <i aria-hidden="true" class="fa-solid fa-bars text-xl"></i>
           </button>
         </div>
 
@@ -193,7 +198,7 @@
     </div>
   </nav>
 
-  <main id="top" class="flex-grow">
+  <main id="main-content" tabindex="-1" class="flex-grow focus:outline-none">
 
     <!-- HERO SECTION -->
     <section id="overview" class="relative py-16 sm:py-28 overflow-hidden border-b border-white/10 bg-gradient-to-b from-prairie-900 via-prairie-950 to-prairie-950">
@@ -208,7 +213,7 @@
           <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
             
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-prairie-850 border border-rust-500/40 text-rust-400 text-xs font-mono uppercase tracking-widest shadow-inner">
-              <i class="fa-solid fa-cow text-[11px]"></i>
+              <i aria-hidden="true" class="fa-solid fa-cow text-[11px]"></i>
               <span>Album 26 &bull; The Cattle Crisis Dossier</span>
             </div>
 
@@ -227,7 +232,7 @@
             <!-- Rolling Video Notice Callout -->
             <div class="p-4 rounded-2xl bg-prairie-850 border border-rust-500/30 text-xs font-mono space-y-1.5 max-w-xl mx-auto lg:mx-0 text-left">
               <div class="flex items-center gap-2 text-rust-400 font-bold uppercase tracking-wider">
-                <i class="fa-solid fa-film text-[12px]"></i>
+                <i aria-hidden="true" class="fa-solid fa-film text-[12px]"></i>
                 <span>Rolling Track-by-Track Video Premiere</span>
               </div>
               <p class="text-stone-400 leading-normal font-sans">
@@ -238,15 +243,15 @@
             <!-- Hero Action Buttons -->
             <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4">
               <a href="#songs-section" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-rust-600 to-rust-500 hover:from-rust-500 hover:to-rust-400 text-white font-display font-bold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-xl hover:shadow-rust-500/30 flex items-center gap-2.5">
-                <i class="fa-solid fa-play"></i>
+                <i aria-hidden="true" class="fa-solid fa-play"></i>
                 <span>Watch Released Videos (1–4)</span>
               </a>
               <a href="#streaming" class="px-6 py-3.5 rounded-xl bg-prairie-850 hover:bg-prairie-800 text-stone-200 border border-wheat-500/40 hover:border-wheat-400 font-display font-bold text-xs sm:text-sm tracking-wider uppercase transition-all flex items-center gap-2.5 shadow-lg">
-                <i class="fa-solid fa-music text-wheat-400"></i>
+                <i aria-hidden="true" class="fa-solid fa-music text-wheat-400"></i>
                 <span>Stream Complete Album</span>
               </a>
               <a href="#dossier" class="px-5 py-3.5 rounded-xl bg-prairie-850 hover:bg-prairie-800 text-stone-300 border border-white/10 hover:border-rust-500/40 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2">
-                <i class="fa-solid fa-scale-unbalanced text-stone-400"></i>
+                <i aria-hidden="true" class="fa-solid fa-scale-unbalanced text-stone-400"></i>
                 <span>Economic Dossier</span>
               </a>
             </div>
@@ -324,7 +329,7 @@
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 border-b border-white/10 pb-8">
           <div class="space-y-2">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rust-950 border border-rust-800/40 text-rust-400 text-xs font-mono uppercase tracking-widest">
-              <i class="fa-solid fa-file-invoice text-[10px]"></i>
+              <i aria-hidden="true" class="fa-solid fa-file-invoice text-[10px]"></i>
               <span>Forensic Thematic Dossier</span>
             </div>
             <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-wide">
@@ -356,7 +361,7 @@
         <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 border-b border-white/10 pb-8">
           <div class="space-y-2">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-prairie-800 border border-white/10 text-stone-300 text-xs font-mono uppercase tracking-widest">
-              <i class="fa-solid fa-compact-disc text-rust-500 text-[10px]"></i>
+              <i aria-hidden="true" class="fa-solid fa-compact-disc text-rust-500 text-[10px]"></i>
               <span>Lyrics Vault &bull; Complete 15 Tracks</span>
             </div>
             <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-wide">
@@ -370,15 +375,16 @@
           <!-- Filter & Search Controls -->
           <div class="flex flex-wrap items-center gap-3">
             <div class="relative">
+              <label for="track-search" class="sr-only">Search tracks, lyrics, or themes</label>
               <input type="text" id="track-search" placeholder="Search lyrics or title..." class="px-4 py-2 pl-9 rounded-xl bg-prairie-800 border border-white/10 text-white placeholder-stone-500 text-xs focus:outline-none focus:ring-2 focus:ring-rust-500 font-mono w-48 sm:w-60">
-              <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-stone-500 text-xs"></i>
+              <i aria-hidden="true" class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-stone-500 text-xs"></i>
             </div>
             
             <button onclick="filterTracks('all')" id="btn-filter-all" class="px-3.5 py-2 rounded-xl bg-rust-600 text-white text-xs font-mono font-bold transition-all shadow-md">
               All 15
             </button>
             <button onclick="filterTracks('videos')" id="btn-filter-videos" class="px-3.5 py-2 rounded-xl bg-prairie-800 text-stone-300 hover:text-white border border-white/10 text-xs font-mono transition-all flex items-center gap-1.5">
-              <i class="fa-solid fa-video text-rust-400 text-[10px]"></i>
+              <i aria-hidden="true" class="fa-solid fa-video text-rust-400 text-[10px]"></i>
               <span>Videos Live (4)</span>
             </button>
             <button onclick="expandAllLyrics()" class="px-3.5 py-2 rounded-xl bg-prairie-800 text-stone-400 hover:text-stone-200 border border-white/10 text-xs font-mono transition-all">
@@ -388,7 +394,7 @@
         </div>
 
         <!-- Active Filter Indicator -->
-        <div id="filter-status-banner" class="hidden mb-6 p-3 rounded-xl bg-prairie-850 border border-rust-500/30 text-xs font-mono flex items-center justify-between text-stone-300">
+        <div id="filter-status-banner" role="status" aria-live="polite" class="hidden mb-6 p-3 rounded-xl bg-prairie-850 border border-rust-500/30 text-xs font-mono flex items-center justify-between text-stone-300">
           <span id="filter-status-text">Showing filtered tracks</span>
           <button onclick="filterTracks('all')" class="text-rust-400 hover:text-white underline">Clear Filter</button>
         </div>
@@ -416,23 +422,23 @@
 
         <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
           <a href="https://open.spotify.com/album/6HLUZhKWtm9llm6iUncqhh" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-prairie-850 hover:bg-prairie-800 text-stone-200 border border-white/10 hover:border-emerald-500/50 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2.5 shadow-md">
-            <i class="fa-brands fa-spotify text-emerald-500 text-base"></i>
+            <i aria-hidden="true" class="fa-brands fa-spotify text-emerald-500 text-base"></i>
             <span>Spotify Album</span>
           </a>
           <a href="https://music.apple.com/us/album/the-hollow-herd/6804488381" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-prairie-850 hover:bg-prairie-800 text-stone-200 border border-white/10 hover:border-pink-500/50 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2.5 shadow-md">
-            <i class="fa-brands fa-apple text-pink-400 text-base"></i>
+            <i aria-hidden="true" class="fa-brands fa-apple text-pink-400 text-base"></i>
             <span>Apple Music</span>
           </a>
           <a href="https://music.youtube.com/playlist?list=OLAK5uy_mpc61Qn3VVVfyhyUHuggJtbD2ZhMYVYtk" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-prairie-850 hover:bg-prairie-800 text-stone-200 border border-white/10 hover:border-red-500/50 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2.5 shadow-md">
-            <i class="fa-brands fa-youtube text-red-500 text-base"></i>
+            <i aria-hidden="true" class="fa-brands fa-youtube text-red-500 text-base"></i>
             <span>YouTube Music</span>
           </a>
           <a href="https://music.amazon.com/search/The+Shady+River+Bard+The+Hollow+Herd" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-prairie-850 hover:bg-prairie-800 text-stone-200 border border-white/10 hover:border-amber-500/50 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2.5 shadow-md">
-            <i class="fa-brands fa-amazon text-amber-500 text-base"></i>
+            <i aria-hidden="true" class="fa-brands fa-amazon text-amber-500 text-base"></i>
             <span>Amazon Music</span>
           </a>
           <a href="https://theshadyriverbard.substack.com" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-prairie-850 hover:bg-prairie-800 text-stone-200 border border-white/10 hover:border-orange-500/50 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2.5 shadow-md">
-            <i class="fa-solid fa-bookmark text-orange-400 text-sm"></i>
+            <i aria-hidden="true" class="fa-solid fa-bookmark text-orange-400 text-sm"></i>
             <span>Substack Liner Notes</span>
           </a>
         </div>
@@ -443,15 +449,15 @@
   </main>
 
   <!-- VIDEO PLAYER MODAL -->
-  <div id="video-modal" class="hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+  <div id="video-modal" role="dialog" aria-modal="true" aria-labelledby="modal-video-title" class="hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
     <div class="relative w-full max-w-4xl bg-prairie-900 border border-rust-500/40 rounded-3xl overflow-hidden shadow-2xl space-y-4 p-4 sm:p-6">
       <div class="flex items-center justify-between pb-2 border-b border-white/10">
         <div>
           <span class="text-[10px] font-mono uppercase text-rust-400 font-bold block" id="modal-track-label">Track Video</span>
           <h3 class="font-display text-lg sm:text-xl font-bold text-white" id="modal-video-title">Playing Video</h3>
         </div>
-        <button onclick="closeVideoModal()" aria-label="Close Video" class="text-stone-400 hover:text-white p-2 rounded-xl bg-prairie-800 border border-white/10">
-          <i class="fa-solid fa-xmark text-lg"></i>
+        <button id="modal-close-btn" onclick="closeVideoModal()" aria-label="Close Video Player" class="text-stone-400 hover:text-white p-2 rounded-xl bg-prairie-800 border border-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-rust-500">
+          <i aria-hidden="true" class="fa-solid fa-xmark text-lg"></i>
         </button>
       </div>
 
@@ -516,6 +522,21 @@
         </div>
       </div>
 
+      <div class="pt-6 border-t border-white/5 flex flex-wrap items-center justify-between gap-4 text-[11px] text-stone-500 font-mono">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-universal-access text-wheat-400" aria-hidden="true"></i>
+          <span>WCAG 2.1 AA &bull; ADA Title III Compliant Experience</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <button onclick="openA11yModal()" class="text-stone-400 hover:text-wheat-400 underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-wheat-400">
+            Accessibility Statement
+          </button>
+          <span>&bull;</span>
+          <button onclick="toggleA11yToolbar()" class="text-stone-400 hover:text-wheat-400 underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-wheat-400">
+            Display Preferences
+          </button>
+        </div>
+      </div>
     </div>
   </footer>
 
@@ -559,7 +580,7 @@
 
           <div class="pt-3 border-t border-white/10 flex items-center justify-between text-xs font-mono text-stone-400 group-hover:text-rust-400 transition-colors">
             <span>Filter Act Tracks</span>
-            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            <i aria-hidden="true" class="fa-solid fa-arrow-right text-[10px]"></i>
           </div>
         </article>
       `).join('');
@@ -592,7 +613,7 @@
             <ul class="text-xs font-body text-stone-300 space-y-2 pt-2 border-t border-white/5">
               ${p.points.map(pt => `
                 <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-angle-right text-rust-500 text-[10px] mt-1 flex-shrink-0"></i>
+                  <i aria-hidden="true" class="fa-solid fa-angle-right text-rust-500 text-[10px] mt-1 flex-shrink-0"></i>
                   <span>${pt}</span>
                 </li>
               `).join('')}
@@ -644,7 +665,7 @@
       if (tracks.length === 0) {
         container.innerHTML = `
           <div class="p-12 text-center rounded-3xl bg-prairie-850 border border-white/10 text-stone-400 font-mono text-sm space-y-2">
-            <i class="fa-solid fa-filter text-2xl text-rust-500 mb-2"></i>
+            <i aria-hidden="true" class="fa-solid fa-filter text-2xl text-rust-500 mb-2"></i>
             <p>No tracks match your current filter.</p>
             <button onclick="filterTracks('all')" class="text-rust-400 underline font-bold">Reset Filters</button>
           </div>
@@ -691,7 +712,7 @@
               <div class="flex items-center gap-2.5 w-full sm:w-auto justify-end">
                 ${t.is_video_public ? `
                   <button onclick="openVideoModal('${t.youtube_id}', '${t.title}', ${t.track_number})" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-gradient-to-r from-rust-600 to-rust-500 hover:from-rust-500 hover:to-rust-400 text-white font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-play text-[11px]"></i>
+                    <i aria-hidden="true" class="fa-solid fa-play text-[11px]"></i>
                     <span>Watch Video</span>
                   </button>
                 ` : `
@@ -717,31 +738,31 @@
 
             <!-- Lyrics Toggle & Actions -->
             <div class="pt-2 border-t border-white/10 flex flex-wrap items-center justify-between gap-3">
-              <button onclick="toggleTrackLyrics(${t.track_number})" class="text-xs font-mono text-rust-400 hover:text-rust-300 flex items-center gap-2 font-bold focus:outline-none">
-                <i class="fa-solid ${isExpanded ? 'fa-chevron-up' : 'fa-chevron-down'} text-[10px]"></i>
+              <button onclick="toggleTrackLyrics(${t.track_number})" aria-expanded="${isExpanded}" aria-controls="lyrics-${t.track_number}" aria-label="${isExpanded ? 'Collapse formatted lyrics for ' + t.title : 'Read full lyrics and cues for ' + t.title}" class="text-xs font-mono text-rust-400 hover:text-rust-300 flex items-center gap-2 font-bold focus:outline-none focus-visible:ring-2 focus-visible:ring-rust-500 rounded px-1 py-0.5">
+                <i class="fa-solid ${isExpanded ? 'fa-chevron-up' : 'fa-chevron-down'} text-[10px]" aria-hidden="true"></i>
                 <span>${isExpanded ? 'Collapse Formatted Lyrics' : 'Read Full Lyrics & Suno Cues'}</span>
               </button>
 
               <div class="flex items-center gap-3 text-xs font-mono">
                 <a href="${window.HOLLOW_HERD_DATA.manifesto.spotify_url}" target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-emerald-400 transition-colors flex items-center gap-1">
-                  <i class="fa-brands fa-spotify text-emerald-400"></i>
+                  <i aria-hidden="true" class="fa-brands fa-spotify text-emerald-400"></i>
                   <span>Spotify</span>
                 </a>
                 <span class="text-stone-700">|</span>
                 <a href="${window.HOLLOW_HERD_DATA.manifesto.apple_music_url}" target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-pink-400 transition-colors flex items-center gap-1">
-                  <i class="fa-brands fa-apple text-pink-400"></i>
+                  <i aria-hidden="true" class="fa-brands fa-apple text-pink-400"></i>
                   <span>Apple</span>
                 </a>
                 <span class="text-stone-700">|</span>
                 <a href="${window.HOLLOW_HERD_DATA.manifesto.youtube_music_url}" target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-red-400 transition-colors flex items-center gap-1">
-                  <i class="fa-brands fa-youtube text-red-500"></i>
+                  <i aria-hidden="true" class="fa-brands fa-youtube text-red-500"></i>
                   <span>YT Music</span>
                 </a>
               </div>
             </div>
 
             <!-- Expandable Lyrics Body -->
-            <div id="lyrics-${t.track_number}" class="${isExpanded ? 'block' : 'hidden'} p-6 rounded-2xl bg-prairie-900 border border-white/5 space-y-1 transition-all">
+            <div id="lyrics-${t.track_number}" role="region" aria-label="Lyrics for ${t.title}" class="${isExpanded ? 'block' : 'hidden'} p-6 rounded-2xl bg-prairie-900 border border-white/5 space-y-1 transition-all">
               <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-4 text-xs font-mono text-stone-400">
                 <span>Official Lyrics &bull; The Shady River Bard</span>
                 <span>Track ${t.track_number} of 15</span>
@@ -797,10 +818,14 @@
       if (filterType === 'all') {
         btnAll.className = 'px-3.5 py-2 rounded-xl bg-rust-600 text-white text-xs font-mono font-bold transition-all shadow-md';
         btnVid.className = 'px-3.5 py-2 rounded-xl bg-prairie-800 text-stone-300 hover:text-white border border-white/10 text-xs font-mono transition-all flex items-center gap-1.5';
+        btnAll.setAttribute('aria-pressed', 'true');
+        btnVid.setAttribute('aria-pressed', 'false');
         document.getElementById('filter-status-banner').classList.add('hidden');
       } else if (filterType === 'videos') {
         btnVid.className = 'px-3.5 py-2 rounded-xl bg-rust-600 text-white text-xs font-mono font-bold transition-all shadow-md flex items-center gap-1.5';
         btnAll.className = 'px-3.5 py-2 rounded-xl bg-prairie-800 text-stone-300 hover:text-white border border-white/10 text-xs font-mono transition-all';
+        btnVid.setAttribute('aria-pressed', 'true');
+        btnAll.setAttribute('aria-pressed', 'false');
         updateFilterBanner('Showing 4 Released Music Videos');
       }
 
@@ -829,8 +854,11 @@
       }, 100);
     }
 
-    // Video Modal Logic
+    // Video Modal Logic with Full A11y Focus Restoration
+    let videoTriggerButton = null;
+
     function openVideoModal(youtubeId, title, trackNum) {
+      videoTriggerButton = document.activeElement;
       const modal = document.getElementById('video-modal');
       const iframe = document.getElementById('video-iframe');
       const titleEl = document.getElementById('modal-video-title');
@@ -843,6 +871,8 @@
         if (labelEl) labelEl.innerText = `Track ${trackNum} Official Video`;
         if (ytLink) ytLink.href = `https://www.youtube.com/watch?v=${youtubeId}`;
         modal.classList.remove('hidden');
+        const closeBtn = document.getElementById('modal-close-btn');
+        if (closeBtn) closeBtn.focus();
       }
     }
 
@@ -852,6 +882,9 @@
       if (modal && iframe) {
         iframe.src = '';
         modal.classList.add('hidden');
+      }
+      if (videoTriggerButton && typeof videoTriggerButton.focus === 'function') {
+        videoTriggerButton.focus();
       }
     }
 
@@ -874,7 +907,7 @@
       const mobileMenu = document.getElementById('mobile-menu');
       if (mobileBtn && mobileMenu) {
         mobileBtn.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
+          const isClosed = mobileMenu.classList.toggle('hidden'); mobileBtn.setAttribute('aria-expanded', !isClosed);
         });
       }
 
@@ -884,5 +917,7 @@
       });
     });
   </script>
+  <!-- Unified Accessibility Controller -->
+  <script src="/assets/js/a11y.js"></script>
 </body>
 </html>

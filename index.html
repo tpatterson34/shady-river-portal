@@ -107,8 +107,13 @@
       transform: translateY(-4px);
     }
   </style>
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/a11y.css">
 </head>
 <body class="bg-soil-950 text-stone-200 font-sans antialiased selection:bg-amber-600 selection:text-white min-h-screen flex flex-col">
+  <!-- Skip Navigation Link (WCAG 2.4.1 Bypass Blocks) -->
+  <a href="#main-content" class="a11y-skip-link">Skip to main content</a>
+
 
   <!-- TOP BREADCRUMB BAR -->
   <aside aria-label="Official Domain Notice" class="bg-soil-900 border-b border-white/10 px-4 py-2 text-xs text-stone-400">
@@ -119,17 +124,54 @@
       </div>
       <div class="flex items-center gap-4 text-[11px] font-mono">
         <a href="https://theshadyriverbard.substack.com" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-colors flex items-center gap-1">
-          <i class="fa-solid fa-bookmark text-amber-500"></i>
+          <i aria-hidden="true" class="fa-solid fa-bookmark text-amber-500"></i>
           <span>Substack Journal</span>
         </a>
         <span class="text-stone-700">|</span>
         <a href="https://www.youtube.com/@TheShadyRiverBard" target="_blank" rel="noopener noreferrer" class="hover:text-red-400 transition-colors flex items-center gap-1">
-          <i class="fa-brands fa-youtube text-red-500"></i>
+          <i class="fa-brands fa-youtube text-red-500" aria-hidden="true"></i>
           <span>YouTube Channel</span>
         </a>
+        <span class="text-stone-700" aria-hidden="true">|</span>
+        <button id="a11y-toggle-btn" onclick="toggleA11yToolbar()" aria-expanded="false" aria-controls="a11y-toolbar" class="hover:text-amber-400 text-stone-300 transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded px-1.5 py-0.5 font-mono text-[11px]" aria-label="Toggle accessibility display preferences">
+          <i class="fa-solid fa-universal-access text-amber-400" aria-hidden="true"></i>
+          <span>Accessibility</span>
+        </button>
       </div>
     </div>
   </aside>
+
+  <!-- EXPANDABLE ACCESSIBILITY TOOLBAR (WCAG 2.1 AA) -->
+  <div id="a11y-toolbar" class="hidden bg-soil-900 border-b border-amber-500/40 py-3 px-4 text-xs transition-all shadow-2xl relative z-40" role="region" aria-label="Accessibility Display Preferences">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <div class="w-7 h-7 rounded-lg bg-amber-950/80 border border-amber-500/40 flex items-center justify-center text-amber-400 text-xs">
+          <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+        </div>
+        <div>
+          <span class="font-display font-bold text-stone-100 block">Accessibility Preferences</span>
+          <span class="text-stone-400 text-[11px] font-body">Custom display controls for readability & vision assistance</span>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-2 sm:gap-3 font-mono text-xs">
+        <button id="btn-contrast" onclick="toggleA11yOption('contrast')" class="px-3 py-1.5 rounded-lg bg-soil-800 hover:bg-soil-700 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
+          High Contrast: <span id="val-contrast" class="text-stone-400">Off</span>
+        </button>
+        <button id="btn-textsize" onclick="cycleTextSize()" class="px-3 py-1.5 rounded-lg bg-soil-800 hover:bg-soil-700 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
+          Text Size: <span id="val-textsize" class="text-stone-400">Normal</span>
+        </button>
+        <button id="btn-underline" onclick="toggleA11yOption('underline')" class="px-3 py-1.5 rounded-lg bg-soil-800 hover:bg-soil-700 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
+          Underline Links: <span id="val-underline" class="text-stone-400">Off</span>
+        </button>
+        <button id="btn-motion" onclick="toggleA11yOption('motion')" class="px-3 py-1.5 rounded-lg bg-soil-800 hover:bg-soil-700 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
+          Reduced Motion: <span id="val-motion" class="text-stone-400">System</span>
+        </button>
+        <button onclick="resetA11yOptions()" class="px-2 py-1 text-stone-400 hover:text-white underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-white">
+          Reset
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- STICKY PRIMARY NAVIGATION -->
   <nav class="sticky top-0 z-50 bg-soil-950/90 backdrop-blur-md border-b border-white/10 shadow-2xl">
@@ -139,7 +181,7 @@
         <!-- Brand Logo & Emblem -->
         <a href="#top" class="flex items-center gap-3.5 group focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-lg p-1">
           <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-600/30 via-soil-850 to-river-900/40 border border-amber-500/40 shadow-lg flex items-center justify-center text-amber-400 group-hover:scale-105 group-hover:border-amber-400 transition-all duration-300 flex-shrink-0">
-            <i class="fa-solid fa-water text-xl"></i>
+            <i aria-hidden="true" class="fa-solid fa-water text-xl"></i>
           </div>
           <div class="flex flex-col">
             <span class="font-display font-bold text-white tracking-widest text-lg sm:text-xl group-hover:text-amber-300 transition-colors">THE SHADY RIVER</span>
@@ -154,15 +196,15 @@
             <span>The Hollow Herd</span>
           </a>
           <a href="#music-section" class="text-stone-300 hover:text-amber-400 transition-colors py-1 flex items-center gap-1.5">
-            <i class="fa-solid fa-music text-[11px] text-amber-500"></i>
+            <i aria-hidden="true" class="fa-solid fa-music text-[11px] text-amber-500"></i>
             <span>The Bard</span>
           </a>
           <a href="#homestead-section" class="text-stone-300 hover:text-emerald-400 transition-colors py-1 flex items-center gap-1.5">
-            <i class="fa-solid fa-seedling text-[11px] text-emerald-500"></i>
+            <i aria-hidden="true" class="fa-solid fa-seedling text-[11px] text-emerald-500"></i>
             <span>Homestead, LLC</span>
           </a>
           <a href="#chronicles-section" class="text-stone-300 hover:text-amber-400 transition-colors py-1 flex items-center gap-1.5">
-            <i class="fa-solid fa-feather-pointed text-[11px] text-amber-400"></i>
+            <i aria-hidden="true" class="fa-solid fa-feather-pointed text-[11px] text-amber-400"></i>
             <span>Chronicles</span>
           </a>
         </div>
@@ -170,15 +212,15 @@
         <!-- Quick Discography Vault CTA -->
         <div class="hidden lg:flex items-center space-x-3">
           <a href="/vault/" class="px-4 py-2 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-white/10 hover:border-amber-500/50 text-xs font-mono tracking-wider transition-all flex items-center gap-2">
-            <i class="fa-solid fa-compact-disc text-amber-400"></i>
+            <i aria-hidden="true" class="fa-solid fa-compact-disc text-amber-400"></i>
             <span>26-Album Catalog ↗</span>
           </a>
         </div>
 
         <!-- Mobile Menu Toggle Button -->
         <div class="md:hidden flex items-center">
-          <button id="mobile-menu-btn" aria-label="Toggle navigation menu" class="text-stone-300 hover:text-white p-2 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-lg">
-            <i class="fa-solid fa-bars text-xl"></i>
+          <button id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu" class="text-stone-300 hover:text-white p-2 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-lg">
+            <i aria-hidden="true" class="fa-solid fa-bars text-xl"></i>
           </button>
         </div>
 
@@ -198,7 +240,7 @@
     </div>
   </nav>
 
-  <main id="top" class="flex-grow">
+  <main id="main-content" tabindex="-1" class="flex-grow focus:outline-none">
 
     <!-- HERO SECTION -->
     <section class="relative py-20 sm:py-32 overflow-hidden border-b border-white/10">
@@ -211,7 +253,7 @@
         
         <div class="flex flex-wrap items-center justify-center gap-3">
           <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-soil-900 border border-amber-500/30 text-amber-400 text-xs font-mono uppercase tracking-widest shadow-inner">
-            <i class="fa-solid fa-compass text-[11px]"></i>
+            <i aria-hidden="true" class="fa-solid fa-compass text-[11px]"></i>
             <span>Official Creative Portal</span>
           </div>
           <a href="/the-hollow-herd/" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-soil-900 border border-orange-500/50 hover:border-orange-400 text-orange-400 hover:text-orange-300 text-xs font-mono uppercase tracking-wider transition-all shadow-inner group">
@@ -236,19 +278,19 @@
         <!-- Gateway Action Buttons -->
         <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
           <a href="/the-hollow-herd/" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-orange-600 via-amber-600 to-amber-500 hover:from-orange-500 hover:to-amber-400 text-soil-950 font-display font-bold text-sm tracking-wider uppercase transition-all shadow-xl hover:shadow-orange-500/25 flex items-center gap-2.5 ring-2 ring-orange-400/40">
-            <i class="fa-solid fa-play"></i>
+            <i aria-hidden="true" class="fa-solid fa-play"></i>
             <span>Experience The Hollow Herd</span>
           </a>
           <a href="#music-section" class="px-7 py-3.5 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-amber-500/40 hover:border-amber-400 font-display font-bold text-sm tracking-wider uppercase transition-all flex items-center gap-2.5 shadow-lg">
-            <i class="fa-solid fa-guitar text-amber-400"></i>
+            <i aria-hidden="true" class="fa-solid fa-guitar text-amber-400"></i>
             <span>The Music &amp; Vaults</span>
           </a>
           <a href="#homestead-section" class="px-7 py-3.5 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-emerald-500/40 hover:border-emerald-400 font-display font-bold text-sm tracking-wider uppercase transition-all flex items-center gap-2.5 shadow-lg">
-            <i class="fa-solid fa-seedling text-emerald-400"></i>
+            <i aria-hidden="true" class="fa-solid fa-seedling text-emerald-400"></i>
             <span>The Homestead, LLC</span>
           </a>
           <a href="#chronicles-section" class="px-7 py-3.5 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-amber-500/40 hover:border-amber-400 font-display font-bold text-sm tracking-wider uppercase transition-all flex items-center gap-2.5 shadow-lg">
-            <i class="fa-solid fa-feather-pointed text-amber-400"></i>
+            <i aria-hidden="true" class="fa-solid fa-feather-pointed text-amber-400"></i>
             <span>The Chronicles</span>
           </a>
         </div>
@@ -276,7 +318,7 @@
           <article class="portal-card p-8 rounded-3xl bg-soil-850 border border-amber-500/30 hover:border-amber-400 transition-all flex flex-col justify-between shadow-2xl space-y-6 group">
             <div class="space-y-4">
               <div class="w-14 h-14 rounded-2xl bg-amber-950/80 border border-amber-500/50 flex items-center justify-center text-amber-400 text-2xl group-hover:scale-110 transition-transform shadow-md">
-                <i class="fa-solid fa-compact-disc"></i>
+                <i aria-hidden="true" class="fa-solid fa-compact-disc"></i>
               </div>
               <div>
                 <span class="text-[11px] font-mono uppercase tracking-widest text-amber-400 font-bold block mb-1">Acoustic &amp; Electric Folk</span>
@@ -288,15 +330,15 @@
                 An intentional 26-album concept discography mapping American fractures, generational asset moats, male vulnerability, and paths to common ground.
               </p>
               <ul class="text-xs font-mono text-stone-400 space-y-2 pt-2 border-t border-white/5">
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> 26 Full Concept Albums &amp; Vaults</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Standalone Interactive Experiences</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Official Music Video Playlists</li>
+                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-amber-400 text-[10px]"></i> 26 Full Concept Albums &amp; Vaults</li>
+                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-amber-400 text-[10px]"></i> Standalone Interactive Experiences</li>
+                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-amber-400 text-[10px]"></i> Official Music Video Playlists</li>
               </ul>
             </div>
             <div class="pt-4 border-t border-white/10">
               <a href="/vault/" class="w-full py-3 px-4 rounded-xl bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 font-mono text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2">
                 <span>Enter Discography Vault</span>
-                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                <i aria-hidden="true" class="fa-solid fa-arrow-right text-[10px]"></i>
               </a>
             </div>
           </article>
@@ -305,7 +347,7 @@
           <article class="portal-card p-8 rounded-3xl bg-soil-850 border border-emerald-500/30 hover:border-emerald-400 transition-all flex flex-col justify-between shadow-2xl space-y-6 group">
             <div class="space-y-4">
               <div class="w-14 h-14 rounded-2xl bg-emerald-950/80 border border-emerald-500/50 flex items-center justify-center text-emerald-400 text-2xl group-hover:scale-110 transition-transform shadow-md">
-                <i class="fa-solid fa-seedling"></i>
+                <i aria-hidden="true" class="fa-solid fa-seedling"></i>
               </div>
               <div>
                 <span class="text-[11px] font-mono uppercase tracking-widest text-emerald-400 font-bold block mb-1">Permaculture &amp; Soil</span>
@@ -317,15 +359,15 @@
                 The living earth beneath the music. A working permaculture homestead in Western Washington dedicated to regenerative soil building, heirloom fruit orchards, and self-reliance.
               </p>
               <ul class="text-xs font-mono text-stone-400 space-y-2 pt-2 border-t border-white/5">
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> Pacific Northwest Agroecology</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> Zero Synthetic Soil Stewardship</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> The Living Inspiration for the Songs</li>
+                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-emerald-400 text-[10px]"></i> Pacific Northwest Agroecology</li>
+                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-emerald-400 text-[10px]"></i> Zero Synthetic Soil Stewardship</li>
+                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-emerald-400 text-[10px]"></i> The Living Inspiration for the Songs</li>
               </ul>
             </div>
             <div class="pt-4 border-t border-white/10">
               <a href="#homestead-section" class="w-full py-3 px-4 rounded-xl bg-emerald-600/20 hover:bg-emerald-600 text-emerald-300 hover:text-soil-950 border border-emerald-500/40 font-mono text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2">
                 <span>The Homestead Story</span>
-                <i class="fa-solid fa-arrow-down text-[10px]"></i>
+                <i aria-hidden="true" class="fa-solid fa-arrow-down text-[10px]"></i>
               </a>
             </div>
           </article>
@@ -334,7 +376,7 @@
           <article class="portal-card p-8 rounded-3xl bg-soil-850 border border-river-500/30 hover:border-amber-400 transition-all flex flex-col justify-between shadow-2xl space-y-6 group">
             <div class="space-y-4">
               <div class="w-14 h-14 rounded-2xl bg-soil-900 border border-amber-500/50 flex items-center justify-center text-amber-400 text-2xl group-hover:scale-110 transition-transform shadow-md">
-                <i class="fa-solid fa-feather-pointed"></i>
+                <i aria-hidden="true" class="fa-solid fa-feather-pointed"></i>
               </div>
               <div>
                 <span class="text-[11px] font-mono uppercase tracking-widest text-amber-400 font-bold block mb-1">Substack Journal &amp; Notes</span>
@@ -346,15 +388,15 @@
                 Long-form essays on human-AI songwriting, track-by-track liner notes, historical sovereignty investigations, and dispatches from the Washington homestead.
               </p>
               <ul class="text-xs font-mono text-stone-400 space-y-2 pt-2 border-t border-white/5">
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> "The Spark Under the Hood" Process Manifesto</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> In-Depth Track-by-Track Liner Notes</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Direct Reader Discussions on Substack</li>
+                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-amber-400 text-[10px]"></i> "The Spark Under the Hood" Process Manifesto</li>
+                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-amber-400 text-[10px]"></i> In-Depth Track-by-Track Liner Notes</li>
+                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-amber-400 text-[10px]"></i> Direct Reader Discussions on Substack</li>
               </ul>
             </div>
             <div class="pt-4 border-t border-white/10">
               <a href="#chronicles-section" class="w-full py-3 px-4 rounded-xl bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 font-mono text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2">
                 <span>Explore the Journal</span>
-                <i class="fa-solid fa-arrow-down text-[10px]"></i>
+                <i aria-hidden="true" class="fa-solid fa-arrow-down text-[10px]"></i>
               </a>
             </div>
           </article>
@@ -370,7 +412,7 @@
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 border-b border-white/10 pb-8">
           <div class="space-y-2">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950 border border-amber-800/40 text-amber-400 text-xs font-mono uppercase tracking-widest">
-              <i class="fa-solid fa-star text-[10px]"></i>
+              <i aria-hidden="true" class="fa-solid fa-star text-[10px]"></i>
               <span>Featured Concept Landmarks</span>
             </div>
             <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-wide">
@@ -383,7 +425,7 @@
           <div>
             <a href="/vault/" class="px-5 py-2.5 rounded-xl bg-soil-850 hover:bg-soil-800 text-amber-400 border border-amber-500/40 font-mono text-xs font-bold uppercase tracking-wider transition-colors inline-flex items-center gap-2">
               <span>View All 26 Albums</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              <i aria-hidden="true" class="fa-solid fa-arrow-right text-[10px]"></i>
             </a>
           </div>
         </div>
@@ -405,7 +447,7 @@
           <!-- Left Column: Homestead Narrative -->
           <div class="lg:col-span-7 space-y-6">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950 border border-emerald-800/50 text-emerald-400 text-xs font-mono uppercase tracking-widest">
-              <i class="fa-solid fa-tree text-[10px]"></i>
+              <i aria-hidden="true" class="fa-solid fa-tree text-[10px]"></i>
               <span>The Land &amp; The Soil</span>
             </div>
 
@@ -429,17 +471,17 @@
             <!-- Tenets Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-white/10">
               <div class="p-4 rounded-2xl bg-soil-850 border border-white/5 space-y-2">
-                <i class="fa-solid fa-mountain-sun text-emerald-400 text-lg"></i>
+                <i aria-hidden="true" class="fa-solid fa-mountain-sun text-emerald-400 text-lg"></i>
                 <h4 class="font-display text-sm font-bold text-white">Regenerative Soil</h4>
                 <p class="text-xs text-stone-400 font-body">Fungal networks, compost teas, and zero synthetic shortcuts.</p>
               </div>
               <div class="p-4 rounded-2xl bg-soil-850 border border-white/5 space-y-2">
-                <i class="fa-solid fa-apple-whole text-emerald-400 text-lg"></i>
+                <i aria-hidden="true" class="fa-solid fa-apple-whole text-emerald-400 text-lg"></i>
                 <h4 class="font-display text-sm font-bold text-white">Heirloom Orchards</h4>
                 <p class="text-xs text-stone-400 font-body">Cultivating Pacific Northwest adapted heritage fruits and berries.</p>
               </div>
               <div class="p-4 rounded-2xl bg-soil-850 border border-white/5 space-y-2">
-                <i class="fa-solid fa-hands-holding-circle text-emerald-400 text-lg"></i>
+                <i aria-hidden="true" class="fa-solid fa-hands-holding-circle text-emerald-400 text-lg"></i>
                 <h4 class="font-display text-sm font-bold text-white">Honest Craft</h4>
                 <p class="text-xs text-stone-400 font-body">Proving that physical labor and deep philosophical storytelling belong together.</p>
               </div>
@@ -452,7 +494,7 @@
             <div class="p-8 rounded-3xl bg-gradient-to-br from-emerald-950/40 via-soil-850 to-soil-900 border border-emerald-500/30 shadow-2xl space-y-6">
               <div class="flex items-center gap-3">
                 <div class="w-12 h-12 rounded-xl bg-emerald-900/60 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-xl">
-                  <i class="fa-solid fa-wheat-awn"></i>
+                  <i aria-hidden="true" class="fa-solid fa-wheat-awn"></i>
                 </div>
                 <div>
                   <h3 class="font-display text-lg font-bold text-white">Agrarian Connection</h3>
@@ -486,7 +528,7 @@
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 border-b border-white/10 pb-8">
           <div class="space-y-2">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-soil-800 border border-white/10 text-stone-300 text-xs font-mono uppercase tracking-widest">
-              <i class="fa-solid fa-bookmark text-amber-500 text-[10px]"></i>
+              <i aria-hidden="true" class="fa-solid fa-bookmark text-amber-500 text-[10px]"></i>
               <span>The Shady River Chronicles</span>
               <span id="live-sync-indicator" class="hidden text-[10px] text-emerald-400 font-mono lowercase flex items-center gap-1 ml-1 border-l border-white/10 pl-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -503,7 +545,7 @@
           <div>
             <a href="https://theshadyriverbard.substack.com" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 hover:text-amber-400 border border-white/10 hover:border-amber-500/40 font-mono text-xs font-bold uppercase tracking-wider transition-colors inline-flex items-center gap-2">
               <span>Visit Substack Publication ↗</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
             </a>
           </div>
         </div>
@@ -531,23 +573,23 @@
 
         <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
           <a href="https://www.youtube.com/@TheShadyRiverBard" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-white/10 hover:border-red-500/50 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2.5 shadow-md">
-            <i class="fa-brands fa-youtube text-red-500 text-base"></i>
+            <i aria-hidden="true" class="fa-brands fa-youtube text-red-500 text-base"></i>
             <span>YouTube Videos</span>
           </a>
           <a href="https://open.spotify.com/artist/2QtTWiosF5IrrAib5b7arZ" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-white/10 hover:border-emerald-500/50 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2.5 shadow-md">
-            <i class="fa-brands fa-spotify text-emerald-500 text-base"></i>
+            <i aria-hidden="true" class="fa-brands fa-spotify text-emerald-500 text-base"></i>
             <span>Spotify</span>
           </a>
           <a href="https://music.apple.com/us/artist/the-shady-river-bard/1829561760" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-white/10 hover:border-pink-500/50 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2.5 shadow-md">
-            <i class="fa-brands fa-apple text-pink-400 text-base"></i>
+            <i aria-hidden="true" class="fa-brands fa-apple text-pink-400 text-base"></i>
             <span>Apple Music</span>
           </a>
           <a href="https://music.amazon.com/search/The+Shady+River+Bard" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-white/10 hover:border-amber-500/50 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2.5 shadow-md">
-            <i class="fa-brands fa-amazon text-amber-500 text-base"></i>
+            <i aria-hidden="true" class="fa-brands fa-amazon text-amber-500 text-base"></i>
             <span>Amazon Music</span>
           </a>
           <a href="https://theshadyriverbard.substack.com" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-white/10 hover:border-orange-500/50 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2.5 shadow-md">
-            <i class="fa-solid fa-bookmark text-orange-400 text-sm"></i>
+            <i aria-hidden="true" class="fa-solid fa-bookmark text-orange-400 text-sm"></i>
             <span>Substack</span>
           </a>
         </div>
@@ -610,6 +652,21 @@
         </div>
       </div>
 
+      <div class="pt-6 border-t border-white/5 flex flex-wrap items-center justify-between gap-4 text-[11px] text-stone-500 font-mono">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-universal-access text-amber-400" aria-hidden="true"></i>
+          <span>WCAG 2.1 AA &bull; ADA Title III Compliant Experience</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <button onclick="openA11yModal()" class="text-stone-400 hover:text-amber-400 underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400">
+            Accessibility Statement
+          </button>
+          <span>&bull;</span>
+          <button onclick="toggleA11yToolbar()" class="text-stone-400 hover:text-amber-400 underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400">
+            Display Preferences
+          </button>
+        </div>
+      </div>
     </div>
   </footer>
 
@@ -668,7 +725,7 @@
             </a>
             ${a.video_url ? `
               <a href="${a.video_url}" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="Watch Videos">
-                <i class="fa-brands fa-youtube"></i>
+                <i aria-hidden="true" class="fa-brands fa-youtube"></i>
               </a>
             ` : ''}
           </div>
@@ -700,7 +757,7 @@
           <div class="pt-3 border-t border-white/10">
             <a href="${e.url}" target="_blank" rel="noopener noreferrer" class="w-full py-2 px-3 rounded-lg bg-soil-800 hover:bg-amber-600 text-stone-300 hover:text-soil-950 border border-white/10 hover:border-amber-500 font-mono text-xs font-semibold uppercase tracking-wider transition-all flex items-center justify-between">
               <span>Read on Substack</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+              <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
             </a>
           </div>
         </article>
@@ -800,10 +857,12 @@
       const mobileMenu = document.getElementById('mobile-menu');
       if (mobileBtn && mobileMenu) {
         mobileBtn.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
+          const isClosed = mobileMenu.classList.toggle('hidden'); mobileBtn.setAttribute('aria-expanded', !isClosed);
         });
       }
     });
   </script>
+  <!-- Unified Accessibility Controller -->
+  <script src="/assets/js/a11y.js"></script>
 </body>
 </html>

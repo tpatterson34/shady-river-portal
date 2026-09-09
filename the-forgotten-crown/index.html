@@ -71,8 +71,43 @@
             opacity: 1;
         }
     </style>
+    <!-- Unified Accessibility Stylesheet -->
+    <link rel="stylesheet" href="/assets/css/a11y.css">
 </head>
+    <!-- EXPANDABLE ACCESSIBILITY TOOLBAR (WCAG 2.1 AA) -->
+    <div id="a11y-toolbar" class="hidden bg-scottish-muted border-b border-gold-accent/40 py-3 px-6 text-xs transition-all shadow-2xl relative z-40" role="region" aria-label="Accessibility Display Preferences">
+        <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-2.5">
+                <i class="fa-solid fa-universal-access text-gold-accent text-sm" aria-hidden="true"></i>
+                <div>
+                    <span class="font-display font-bold text-parchment block">Accessibility Preferences</span>
+                    <span class="text-gray-400 text-[11px]">Custom display controls for readability & vision assistance</span>
+                </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-2 sm:gap-3 font-mono text-xs">
+                <button id="btn-contrast" onclick="toggleA11yOption('contrast')" class="px-3 py-1.5 rounded bg-scottish-dark hover:bg-gray-800 text-gray-200 border border-gray-700 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-accent">
+                    High Contrast: <span id="val-contrast" class="text-gray-400">Off</span>
+                </button>
+                <button id="btn-textsize" onclick="cycleTextSize()" class="px-3 py-1.5 rounded bg-scottish-dark hover:bg-gray-800 text-gray-200 border border-gray-700 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-accent">
+                    Text Size: <span id="val-textsize" class="text-gray-400">Normal</span>
+                </button>
+                <button id="btn-underline" onclick="toggleA11yOption('underline')" class="px-3 py-1.5 rounded bg-scottish-dark hover:bg-gray-800 text-gray-200 border border-gray-700 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-accent">
+                    Underline Links: <span id="val-underline" class="text-gray-400">Off</span>
+                </button>
+                <button id="btn-motion" onclick="toggleA11yOption('motion')" class="px-3 py-1.5 rounded bg-scottish-dark hover:bg-gray-800 text-gray-200 border border-gray-700 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-accent">
+                    Reduced Motion: <span id="val-motion" class="text-gray-400">System</span>
+                </button>
+                <button onclick="resetA11yOptions()" class="px-2 py-1 text-gray-400 hover:text-white underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-white">
+                    Reset
+                </button>
+            </div>
+        </div>
+    </div>
+
 <body class="bg-scottish-dark text-gray-300 font-serif antialiased selection:bg-gold-accent selection:text-scottish-dark">
+    <!-- Skip Navigation Link (WCAG 2.4.1 Bypass Blocks) -->
+    <a href="#main-content" class="a11y-skip-link">Skip to main content</a>
+
 
     <div class="flex flex-col md:flex-row min-h-screen">
         
@@ -83,18 +118,29 @@
                 <p class="text-sm text-gray-400 italic">By The Shady River Bard</p>
             </div>
             
+            <div class="mb-6 pb-6 border-b border-gray-700 flex flex-col gap-2 font-mono text-xs">
+                <a href="/vault/" class="text-gold-accent hover:text-parchment transition-colors flex items-center gap-1.5 font-bold">
+                    <i class="fa-solid fa-arrow-left text-[10px]" aria-hidden="true"></i>
+                    <span>Return to Vault</span>
+                </a>
+                <button id="a11y-toggle-btn" onclick="toggleA11yToolbar()" aria-expanded="false" aria-controls="a11y-toolbar" class="w-full py-1.5 px-2.5 rounded bg-scottish-dark hover:bg-gray-800 text-gray-300 border border-gray-700 text-left transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-accent">
+                    <i class="fa-solid fa-universal-access text-gold-accent" aria-hidden="true"></i>
+                    <span>Accessibility Controls</span>
+                </button>
+            </div>
+            
             <ul class="space-y-4 text-sm font-display tracking-wide">
-                <li><a href="#intro" class="hover:text-gold-accent transition-colors"><i class="fa-solid fa-scroll mr-2"></i>I. Introduction</a></li>
-                <li><a href="#thematic" class="hover:text-gold-accent transition-colors"><i class="fa-solid fa-scale-balanced mr-2"></i>II. Thematic Analysis</a></li>
-                <li><a href="#roadmap" class="hover:text-gold-accent transition-colors"><i class="fa-solid fa-map mr-2"></i>III. Song Roadmap</a></li>
-                <li><a href="#conclusion" class="hover:text-gold-accent transition-colors"><i class="fa-solid fa-feather mr-2"></i>IV. Conclusion</a></li>
-                <li><a href="#guidelines" class="hover:text-gold-accent transition-colors"><i class="fa-solid fa-music mr-2"></i>V. Song Guidelines</a></li>
-                <li><a href="#tracks" class="hover:text-gold-accent transition-colors"><i class="fa-solid fa-compact-disc mr-2"></i>VI. Detailed Tracks</a></li>
+                <li><a href="#intro" class="hover:text-gold-accent transition-colors"><i aria-hidden="true" class="fa-solid fa-scroll mr-2"></i>I. Introduction</a></li>
+                <li><a href="#thematic" class="hover:text-gold-accent transition-colors"><i aria-hidden="true" class="fa-solid fa-scale-balanced mr-2"></i>II. Thematic Analysis</a></li>
+                <li><a href="#roadmap" class="hover:text-gold-accent transition-colors"><i aria-hidden="true" class="fa-solid fa-map mr-2"></i>III. Song Roadmap</a></li>
+                <li><a href="#conclusion" class="hover:text-gold-accent transition-colors"><i aria-hidden="true" class="fa-solid fa-feather mr-2"></i>IV. Conclusion</a></li>
+                <li><a href="#guidelines" class="hover:text-gold-accent transition-colors"><i aria-hidden="true" class="fa-solid fa-music mr-2"></i>V. Song Guidelines</a></li>
+                <li><a href="#tracks" class="hover:text-gold-accent transition-colors"><i aria-hidden="true" class="fa-solid fa-compact-disc mr-2"></i>VI. Detailed Tracks</a></li>
             </ul>
         </nav>
 
         <!-- Main Content Area -->
-        <main class="flex-1 p-6 md:p-12 max-w-5xl mx-auto">
+        <main id="main-content" tabindex="-1" class="flex-1 p-6 md:p-12 max-w-5xl mx-auto focus:outline-none">
             
             <!-- Header section imitating a document title page -->
             <header class="text-center mb-16 border-b border-gray-700 pb-12">
@@ -106,7 +152,7 @@
             </header>
 
             <section id="intro" class="mb-16 scroll-mt-24">
-                <h2 class="font-display text-3xl text-gold-accent border-b border-gray-700 pb-2 mb-6"><i class="fa-solid fa-bookmark mr-3 text-sm opacity-50"></i>I. Introduction</h2>
+                <h2 class="font-display text-3xl text-gold-accent border-b border-gray-700 pb-2 mb-6"><i aria-hidden="true" class="fa-solid fa-bookmark mr-3 text-sm opacity-50"></i>I. Introduction</h2>
                 <div class="space-y-4 text-lg leading-relaxed text-gray-300">
                     <p class="first-letter:text-5xl first-letter:font-display first-letter:text-parchment first-letter:float-left first-letter:mr-2 first-letter:-mt-1">
                         The following concept document outlines a comprehensive, expert-level blueprint for a full-length concept album to be performed and recorded by the artist known as The Shady River Bard. The proposed working titles for this project are <em class="text-parchment">Salvo Jure Cujuslibet</em>, <em class="text-parchment">The Stirling Directive</em>, or <em class="text-parchment">The Forgotten Crown</em>. The album is designed as a deep, narrative-driven exploration of historical subjugation, the orchestrated division of the working class, and the eventual awakening of a populace to their inherent, unalienable sovereignty.
@@ -125,7 +171,7 @@
             </section>
 
             <section id="thematic" class="mb-16 scroll-mt-24">
-                <h2 class="font-display text-3xl text-gold-accent border-b border-gray-700 pb-2 mb-6"><i class="fa-solid fa-scale-balanced mr-3 text-sm opacity-50"></i>II. Thematic Analysis</h2>
+                <h2 class="font-display text-3xl text-gold-accent border-b border-gray-700 pb-2 mb-6"><i aria-hidden="true" class="fa-solid fa-scale-balanced mr-3 text-sm opacity-50"></i>II. Thematic Analysis</h2>
                 <p class="mb-6">The thematic foundation relies on a rigorous examination of historical law, constitutional suppression, and modern socio-economic exploitation.</p>
 
                 <!-- Accordion Container -->
@@ -135,7 +181,7 @@
                     <div class="border border-gray-700 rounded bg-scottish-muted overflow-hidden shadow-sm">
                         <button class="accordion-header w-full text-left px-6 py-4 font-display text-lg text-parchment hover:bg-gray-800 transition-colors focus:outline-none flex justify-between items-center" onclick="toggleAccordion(this)">
                             <span>A. The Illusion of Voluntary Union and the Claim of Right (1689)</span>
-                            <i class="fa-solid fa-chevron-down text-gold-accent transition-transform duration-300"></i>
+                            <i aria-hidden="true" class="fa-solid fa-chevron-down text-gold-accent transition-transform duration-300"></i>
                         </button>
                         <div class="accordion-content px-6 bg-scottish-dark">
                             <div class="py-4 space-y-3">
@@ -149,7 +195,7 @@
                     <div class="border border-gray-700 rounded bg-scottish-muted overflow-hidden shadow-sm">
                         <button class="accordion-header w-full text-left px-6 py-4 font-display text-lg text-parchment hover:bg-gray-800 transition-colors focus:outline-none flex justify-between items-center" onclick="toggleAccordion(this)">
                             <span>B. Corporate Feudalism and the Plunder of the Common Good</span>
-                            <i class="fa-solid fa-chevron-down text-gold-accent transition-transform duration-300"></i>
+                            <i aria-hidden="true" class="fa-solid fa-chevron-down text-gold-accent transition-transform duration-300"></i>
                         </button>
                         <div class="accordion-content px-6 bg-scottish-dark">
                             <div class="py-4 space-y-3">
@@ -163,7 +209,7 @@
                      <div class="border border-gray-700 rounded bg-scottish-muted overflow-hidden shadow-sm">
                         <button class="accordion-header w-full text-left px-6 py-4 font-display text-lg text-parchment hover:bg-gray-800 transition-colors focus:outline-none flex justify-between items-center" onclick="toggleAccordion(this)">
                             <span>C. The Principle of Salvo Jure Cujuslibet</span>
-                            <i class="fa-solid fa-chevron-down text-gold-accent transition-transform duration-300"></i>
+                            <i aria-hidden="true" class="fa-solid fa-chevron-down text-gold-accent transition-transform duration-300"></i>
                         </button>
                         <div class="accordion-content px-6 bg-scottish-dark">
                             <div class="py-4 space-y-3">
@@ -177,7 +223,7 @@
                     <div class="border border-gray-700 rounded bg-scottish-muted overflow-hidden shadow-sm">
                         <button class="accordion-header w-full text-left px-6 py-4 font-display text-lg text-parchment hover:bg-gray-800 transition-colors focus:outline-none flex justify-between items-center" onclick="toggleAccordion(this)">
                             <span>D. The Edinburgh Proclamation and the Stirling Directive</span>
-                            <i class="fa-solid fa-chevron-down text-gold-accent transition-transform duration-300"></i>
+                            <i aria-hidden="true" class="fa-solid fa-chevron-down text-gold-accent transition-transform duration-300"></i>
                         </button>
                         <div class="accordion-content px-6 bg-scottish-dark">
                             <div class="py-4 space-y-3">
@@ -191,7 +237,7 @@
                     <div class="border border-gray-700 rounded bg-scottish-muted overflow-hidden shadow-sm">
                         <button class="accordion-header w-full text-left px-6 py-4 font-display text-lg text-parchment hover:bg-gray-800 transition-colors focus:outline-none flex justify-between items-center" onclick="toggleAccordion(this)">
                             <span>E. The Shift to International Decolonisation (UN C-24)</span>
-                            <i class="fa-solid fa-chevron-down text-gold-accent transition-transform duration-300"></i>
+                            <i aria-hidden="true" class="fa-solid fa-chevron-down text-gold-accent transition-transform duration-300"></i>
                         </button>
                         <div class="accordion-content px-6 bg-scottish-dark">
                             <div class="py-4 space-y-3">
@@ -205,7 +251,7 @@
             </section>
 
             <section id="roadmap" class="mb-16 scroll-mt-24">
-                <h2 class="font-display text-3xl text-gold-accent border-b border-gray-700 pb-2 mb-6"><i class="fa-solid fa-map-location-dot mr-3 text-sm opacity-50"></i>III. The Song Roadmap</h2>
+                <h2 class="font-display text-3xl text-gold-accent border-b border-gray-700 pb-2 mb-6"><i aria-hidden="true" class="fa-solid fa-map-location-dot mr-3 text-sm opacity-50"></i>III. The Song Roadmap</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
                     <div class="bg-gray-800/50 p-4 border border-gray-700 rounded-lg text-center">
@@ -341,17 +387,17 @@
                     <h2 class="font-display text-2xl text-gold-accent border-b border-gray-700 pb-2 mb-4">V. Song Guidelines</h2>
                     <div class="bg-scottish-muted p-6 rounded border border-gray-700 h-full">
                         <ul class="space-y-3 text-sm text-gray-300">
-                            <li><i class="fa-solid fa-guitar text-gold-accent w-5 text-center mr-2"></i><strong>Genre & Style:</strong> Traditional/Contemporary Scottish Folk, Bothy Ballads, Celtic Folk-Rock. 4/4 Strathspey rhythms utilized.</li>
-                            <li><i class="fa-solid fa-music text-gold-accent w-5 text-center mr-2"></i><strong>Instrumentation:</strong> DADGAD acoustic guitar, Scottish trad cello (melodic/bass), Low Whistle (intimate), Border Pipes (climax).</li>
-                            <li><i class="fa-solid fa-microphone-lines text-gold-accent w-5 text-center mr-2"></i><strong>Vocal Delivery:</strong> Raw, weathered, working-class persona (e.g., Dick Gaughan). Authentic enunciation, emotional gravity.</li>
-                            <li><i class="fa-solid fa-cloud-moon text-gold-accent w-5 text-center mr-2"></i><strong>Mood:</strong> Trajectory from melancholic observation to urgent frustration, to intellectual discovery, ending in hopeful resolve.</li>
+                            <li><i aria-hidden="true" class="fa-solid fa-guitar text-gold-accent w-5 text-center mr-2"></i><strong>Genre & Style:</strong> Traditional/Contemporary Scottish Folk, Bothy Ballads, Celtic Folk-Rock. 4/4 Strathspey rhythms utilized.</li>
+                            <li><i aria-hidden="true" class="fa-solid fa-music text-gold-accent w-5 text-center mr-2"></i><strong>Instrumentation:</strong> DADGAD acoustic guitar, Scottish trad cello (melodic/bass), Low Whistle (intimate), Border Pipes (climax).</li>
+                            <li><i aria-hidden="true" class="fa-solid fa-microphone-lines text-gold-accent w-5 text-center mr-2"></i><strong>Vocal Delivery:</strong> Raw, weathered, working-class persona (e.g., Dick Gaughan). Authentic enunciation, emotional gravity.</li>
+                            <li><i aria-hidden="true" class="fa-solid fa-cloud-moon text-gold-accent w-5 text-center mr-2"></i><strong>Mood:</strong> Trajectory from melancholic observation to urgent frustration, to intellectual discovery, ending in hopeful resolve.</li>
                         </ul>
                     </div>
                 </section>
             </div>
 
             <section id="tracks" class="mb-16 scroll-mt-24">
-                <h2 class="font-display text-3xl text-gold-accent border-b border-gray-700 pb-2 mb-8"><i class="fa-solid fa-compact-disc mr-3 text-sm opacity-50"></i>VI. Detailed Tracks Preview</h2>
+                <h2 class="font-display text-3xl text-gold-accent border-b border-gray-700 pb-2 mb-8"><i aria-hidden="true" class="fa-solid fa-compact-disc mr-3 text-sm opacity-50"></i>VI. Detailed Tracks Preview</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     
@@ -1276,6 +1322,18 @@ The people are the crown.
                 <p class="mt-2">Concept Document rendered as Interactive Summary.</p>
             </footer>
 
+                    <footer class="mt-16 pt-8 border-t border-gray-700 flex flex-wrap items-center justify-between gap-4 text-xs text-gray-400 font-mono">
+                <div>The Sovereign's Right &bull; The Shady River Bard</div>
+                <div class="flex items-center gap-4">
+                    <button onclick="openA11yModal()" class="text-gray-400 hover:text-gold-accent underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-gold-accent">
+                        Accessibility Statement (WCAG 2.1 AA)
+                    </button>
+                    <span>&bull;</span>
+                    <button onclick="toggleA11yToolbar()" class="text-gray-400 hover:text-gold-accent underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-gold-accent">
+                        Display Preferences
+                    </button>
+                </div>
+            </footer>
         </main>
     </div>
 
@@ -1299,5 +1357,7 @@ The people are the crown.
             }
         }
     </script>
+    <!-- Unified Accessibility Controller -->
+    <script src="/assets/js/a11y.js"></script>
 </body>
 </html>

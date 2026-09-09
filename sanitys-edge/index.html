@@ -95,8 +95,13 @@
             background: #94a3b8;
         }
     </style>
+    <!-- Unified Accessibility Stylesheet -->
+    <link rel="stylesheet" href="/assets/css/a11y.css">
 </head>
 <body class="bg-industrial-50 text-industrial-900 font-sans antialiased selection:bg-brand-500 selection:text-white">
+    <!-- Skip Navigation Link (WCAG 2.4.1 Bypass Blocks) -->
+    <a href="#main-content" class="a11y-skip-link">Skip to main content</a>
+
 
     <!-- Sticky Navigation Bar -->
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-industrial-200 shadow-sm">
@@ -118,9 +123,16 @@
                     <a href="#workspace" class="px-3 py-2 rounded-md hover:text-brand-600 hover:bg-industrial-50 transition-colors">Track Workspace</a>
                 </nav>
 
-                <div class="flex items-center space-x-2">
+                <div class="flex items-center space-x-3">
+                    <a href="/vault/" class="text-xs font-mono text-industrial-700 hover:text-brand-600 flex items-center gap-1 font-bold">
+                        <span>&larr; Vault</span>
+                    </a>
+                    <button id="a11y-toggle-btn" onclick="toggleA11yToolbar()" aria-expanded="false" aria-controls="a11y-toolbar" class="px-2.5 py-1 rounded-lg bg-industrial-100 hover:bg-industrial-200 text-industrial-800 text-xs border border-industrial-300 transition-colors font-mono flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500" aria-label="Toggle accessibility display preferences">
+                        <span aria-hidden="true">&#9855;</span>
+                        <span>Accessibility</span>
+                    </button>
                     <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-brand-100 text-brand-700 border border-brand-500/30">
-                        <span class="w-2 h-2 rounded-full bg-brand-600 animate-ping mr-1.5"></span>
+                        <span class="w-2 h-2 rounded-full bg-brand-600 animate-ping mr-1.5" aria-hidden="true"></span>
                         89s to Midnight
                     </span>
                 </div>
@@ -128,7 +140,37 @@
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+    <!-- EXPANDABLE ACCESSIBILITY TOOLBAR (WCAG 2.1 AA) -->
+    <div id="a11y-toolbar" class="hidden bg-industrial-900 border-b border-brand-500/40 py-3 px-4 text-xs transition-all shadow-2xl relative z-40 text-white" role="region" aria-label="Accessibility Display Preferences">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-2.5">
+                <span class="text-lg" aria-hidden="true">&#9855;</span>
+                <div>
+                    <span class="font-bold text-white block">Accessibility Preferences</span>
+                    <span class="text-industrial-400 text-[11px]">Custom display controls for readability & vision assistance</span>
+                </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-2 sm:gap-3 font-mono text-xs">
+                <button id="btn-contrast" onclick="toggleA11yOption('contrast')" class="px-3 py-1.5 rounded-lg bg-industrial-800 hover:bg-industrial-700 text-industrial-200 border border-industrial-700 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
+                    High Contrast: <span id="val-contrast" class="text-industrial-400">Off</span>
+                </button>
+                <button id="btn-textsize" onclick="cycleTextSize()" class="px-3 py-1.5 rounded-lg bg-industrial-800 hover:bg-industrial-700 text-industrial-200 border border-industrial-700 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
+                    Text Size: <span id="val-textsize" class="text-industrial-400">Normal</span>
+                </button>
+                <button id="btn-underline" onclick="toggleA11yOption('underline')" class="px-3 py-1.5 rounded-lg bg-industrial-800 hover:bg-industrial-700 text-industrial-200 border border-industrial-700 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
+                    Underline Links: <span id="val-underline" class="text-industrial-400">Off</span>
+                </button>
+                <button id="btn-motion" onclick="toggleA11yOption('motion')" class="px-3 py-1.5 rounded-lg bg-industrial-800 hover:bg-industrial-700 text-industrial-200 border border-industrial-700 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
+                    Reduced Motion: <span id="val-motion" class="text-industrial-400">System</span>
+                </button>
+                <button onclick="resetA11yOptions()" class="px-2 py-1 text-industrial-400 hover:text-white underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-white">
+                    Reset
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content" tabindex="-1" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12 focus:outline-none">
 
         <!-- Hero & Key Metrics Banner -->
         <section id="overview" class="bg-gradient-to-br from-industrial-900 via-industrial-800 to-slate-900 text-white rounded-2xl p-6 sm:p-10 shadow-xl relative overflow-hidden">
@@ -663,9 +705,17 @@
             <p class="text-sm leading-relaxed text-industrial-300">
                 <em>Sanity’s Edge</em> is designed to be a profound wake-up call wrapped in the sonic grit of experimental classic rock and heavy blues. By meticulously mapping the undeniable links between elite foreign policy hubris, military-industrial profiteering, and domestic deaths of despair, the album forces the listener to confront the orchestrated nature of modern suffering. Taking the audience to the very brink of the nuclear precipice—89 seconds to midnight—and offering a definitive path back through shared humanity, the album serves as a crucial artistic intervention to pull civilization back from the edge of madness.
             </p>
-            <div class="pt-4 border-t border-industrial-800 flex justify-between items-center text-xs text-industrial-400">
+            <div class="pt-4 border-t border-industrial-800 flex flex-wrap justify-between items-center text-xs text-industrial-400 gap-3">
                 <span>The Shady River Bard Universe • Interactive Album Concept</span>
-                <span>89 Seconds To Midnight</span>
+                <div class="flex items-center gap-4 font-mono text-[11px]">
+                    <button onclick="openA11yModal()" class="text-industrial-400 hover:text-brand-400 underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-brand-400">
+                        Accessibility Statement (WCAG 2.1 AA)
+                    </button>
+                    <span>&bull;</span>
+                    <button onclick="toggleA11yToolbar()" class="text-industrial-400 hover:text-brand-400 underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-brand-400">
+                        Display Preferences
+                    </button>
+                </div>
             </div>
         </footer>
 
@@ -1196,5 +1246,7 @@
             });
         }
     </script>
+    <!-- Unified Accessibility Controller -->
+    <script src="/assets/js/a11y.js"></script>
 </body>
 </html>
