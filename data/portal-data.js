@@ -6,7 +6,7 @@ window.PORTAL_DATA = {
     "creator": "The Shady River Bard",
     "location": "Western Washington State",
     "homestead_entity": "The Shady River Homestead, LLC",
-    "summary": "Rooted in the fertile soil and timber of Western Washington, The Shady River is a unified creative ecosystem: a 26-album concept discography chronicling the human spirit, a working permaculture homestead dedicated to land stewardship, and an artisanal mercantile celebrating honest craft and music."
+    "summary": "Rooted in the fertile soil and timber of Western Washington, The Shady River is a unified creative ecosystem: a 26-album concept discography chronicling the human spirit, a working permaculture homestead dedicated to land stewardship, and deep reflective essays on craft and life."
   },
   "gateways": [
     {
@@ -30,14 +30,14 @@ window.PORTAL_DATA = {
       "cta": "Explore the Homestead"
     },
     {
-      "id": "mercantile",
-      "title": "The Shady River Mercantile",
-      "subtitle": "Heavyweight Apparel, Fine Art & Keepsakes",
-      "icon": "fa-solid fa-shirt",
+      "id": "chronicles",
+      "title": "The Shady River Chronicles",
+      "subtitle": "Essays, Track Liner Notes & Dispatches",
+      "icon": "fa-solid fa-feather-pointed",
       "accent": "river",
-      "description": "Wear the art. Carry the story. Premium heavyweight graphic tees featuring original album paintings, archival 12x12 gicl\u00e9e art prints, and companion physical songbooks.",
-      "link": "#mercantile-section",
-      "cta": "View Apparel & Goods"
+      "description": "Long-form reflections on human-AI co-creation, deep dives into historical sovereignty, song analyses, and dispatches from the land on Substack.",
+      "link": "#chronicles-section",
+      "cta": "Read Journal & Liner Notes"
     }
   ],
   "featured_albums": [
@@ -159,7 +159,7 @@ window.PORTAL_DATA = {
       "category": "Workwear Heavyweight",
       "cover": "assets/covers/album-11.webp",
       "tagline": "Tractor Steel & Pacific Northwest Loam",
-      "back_quote": "\"The Shady River Homestead, LLC \u2022 Western WA\"",
+      "back_quote": "\"The Shady River Homestead, LLC • Western WA\"",
       "material": "7.5 oz Heavyweight Rugged Cotton",
       "color": "Dark Earth Charcoal",
       "status": "In Concept & Design"
@@ -168,7 +168,7 @@ window.PORTAL_DATA = {
   "homestead_details": {
     "title": "The Shady River Homestead, LLC",
     "location": "Western Washington State",
-    "mission": "Practicing regenerative permaculture, soil biology stewardship, and agricultural self-reliance. The homestead is not a separate venture\u2014it is the physical bedrock and living laboratory from which The Shady River Bard draws all thematic inspiration.",
+    "mission": "Practicing regenerative permaculture, soil biology stewardship, and agricultural self-reliance. The homestead is not a separate venture—it is the physical bedrock and living laboratory from which The Shady River Bard draws all thematic inspiration.",
     "pillars": [
       {
         "title": "Regenerative Soil Stewardship",
@@ -189,25 +189,52 @@ window.PORTAL_DATA = {
   },
   "chronicles": [
     {
-      "title": "One Human Heart, One Digital Muse",
-      "date": "2025 Dispatches",
-      "category": "Creative Process",
-      "summary": "How a retired software engineer on a Washington homestead uses generative AI as an acoustic instrument and literary sparring partner to produce 26 full concept albums.",
-      "url": "https://theshadyriverbard.substack.com"
+      "title": "The Spark Under the Hood",
+      "date": "September 8, 2026",
+      "category": "Manifesto & Creative Process",
+      "summary": "An intimate look into human-AI co-creation, songwriting, and the creative spark that drives the Shady River Bard universe.",
+      "url": "https://theshadyriverbard.substack.com/p/the-spark-under-the-hood",
+      "image": "https://substackcdn.com/image/fetch/$s_!sTXg!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2a6e25c5-233e-4000-920f-c3a81117a80a_2816x1536.jpeg"
     },
     {
-      "title": "The 9-Mile Lifespan Chasm: Mapping America's ZIP Code Destiny",
-      "date": "2025 Dispatches",
-      "category": "Societal Audits",
-      "summary": "The empirical data behind 'The Fracture' and 'Five-Digit Fate': why a 30-year life expectancy gap separates adjacent neighborhoods in the same American city.",
-      "url": "https://theshadyriverbard.substack.com"
+      "title": "The Liner Notes: The Edinburgh Proclamation",
+      "date": "August 24, 2026",
+      "category": "Track Notes: The Forgotten Crown",
+      "summary": "Track 13 from the concept album The Forgotten Crown — exploring historical Scottish sovereignty, royal decrees, and the enduring 1689 Claim of Right.",
+      "url": "https://theshadyriverbard.substack.com/p/the-liner-notes-the-edinburgh-proclamation",
+      "image": "https://substackcdn.com/image/youtube/w_728,c_limit/2mq9H2ed09E"
     },
     {
-      "title": "Winter Soil, Sharp Tools: Preparing the Homestead for Spring",
-      "date": "2025 Dispatches",
-      "category": "Homestead Life",
-      "summary": "Pruning heirloom trees, mending fencing, and finding acoustic rhythm in the quiet rain of the Pacific Northwest winter.",
-      "url": "https://theshadyriverbard.substack.com"
+      "title": "The Liner Notes: The Calf in the Clay",
+      "date": "August 31, 2026",
+      "category": "Track Notes: The Hollow Herd",
+      "summary": "Track 1 from the album The Hollow Herd — rural life, homestead realities, and the persistent struggle against the mud, cold, and seasonal elements.",
+      "url": "https://theshadyriverbard.substack.com/p/the-liner-notes-the-calf-in-the-clay",
+      "image": "https://substackcdn.com/image/youtube/w_728,c_limit/-PJtGDSmaMU"
+    },
+    {
+      "title": "The Liner Notes: The Big Four (The Hourglass)",
+      "date": "September 7, 2026",
+      "category": "Track Notes: The Hollow Herd",
+      "summary": "Track 4 from the album The Hollow Herd — examining corporate consolidation, meatpacker monopolies, and the shrinking margin of modern agrarians.",
+      "url": "https://theshadyriverbard.substack.com/p/the-liner-notes-the-big-four-the",
+      "image": "https://substackcdn.com/image/youtube/w_728,c_limit/DnQ_cMpVplc"
+    },
+    {
+      "title": "The Liner Notes: Fences Made of Plastic",
+      "date": "September 5, 2026",
+      "category": "Track Notes: The Hollow Herd",
+      "summary": "Track 3 from the album The Hollow Herd — synthetic boundaries, suburban sprawl, and the creeping alienation of traditional agrarian landscapes.",
+      "url": "https://theshadyriverbard.substack.com/p/the-liner-notes-fences-made-of-plastic",
+      "image": "https://substackcdn.com/image/youtube/w_728,c_limit/qvvKEIqE57w"
+    },
+    {
+      "title": "The Liner Notes: Old Gray Muzzle",
+      "date": "August 17, 2026",
+      "category": "Track Notes: A Dog's Life",
+      "summary": "Track 14 from the upcoming album A Dog's Life: The Tao of the Tail — a poignant tribute to aging companions, lifelong fidelity, and quiet love.",
+      "url": "https://theshadyriverbard.substack.com/p/the-liner-notes-old-gray-muzzle",
+      "image": "https://substackcdn.com/image/youtube/w_728,c_limit/G3B9LMSfKgs"
     }
   ],
   "streaming": [
