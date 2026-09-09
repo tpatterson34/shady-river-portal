@@ -63,6 +63,9 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+  <!-- High-Priority Preload for Hero Album Artwork -->
+  <link rel="preload" as="image" href="assets/art/the-fracture-cover.webp" type="image/webp" fetchpriority="high">
+
   <style>
     /* Custom scrollbar */
     ::-webkit-scrollbar {
@@ -171,7 +174,7 @@
         <!-- Brand Logo & Title -->
         <a href="#top" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-fissure-400 rounded-lg p-1">
           <div class="w-10 h-10 rounded-lg overflow-hidden border border-fissure-500/50 shadow-md group-hover:border-fissure-400 transition-all flex-shrink-0">
-            <img src="assets/art/The Fracture Album Art.jpg" alt="The Fracture album thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <img src="assets/art/the-fracture-cover.webp" alt="The Fracture album thumbnail" width="40" height="40" loading="eager" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           </div>
           <div class="flex flex-col">
             <span class="font-display font-bold text-white tracking-widest text-base sm:text-lg group-hover:text-fissure-300 transition-colors">THE FRACTURE</span>
@@ -241,8 +244,8 @@
             <div class="relative group max-w-md w-full">
               <div class="absolute -inset-1.5 bg-gradient-to-r from-fissure-500 via-river-500 to-fissure-600 rounded-2xl blur-lg opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
               <div class="relative rounded-2xl overflow-hidden border-2 border-fissure-500/40 bg-basalt-900 shadow-2xl">
-                <img src="assets/art/The Fracture Album Art.jpg" alt="The Fracture album cover painting" class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105">
-                <div class="absolute inset-0 bg-gradient-to-t from-basalt-950 via-transparent to-transparent opacity-60"></div>
+                <img src="assets/art/the-fracture-cover.webp" alt="The Fracture album cover painting" width="600" height="600" loading="eager" fetchpriority="high" decoding="async" class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-basalt-950 via-transparent to-transparent opacity-60 pointer-events-none"></div>
                 <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono text-stone-300 bg-basalt-900/80 backdrop-blur-md px-3 py-2 rounded-lg border border-white/10">
                   <span class="text-fissure-400 font-semibold uppercase">Album 03 &bull; 14 Tracks</span>
                   <span>Released 2025</span>
@@ -544,7 +547,7 @@
   </footer>
 
   <!-- LOAD DATA SCRIPT -->
-  <script src="data/fracture-data.js"></script>
+  <script src="data/fracture-data.js?v=20260909_02"></script>
 
   <!-- APP LOGIC SCRIPT -->
   <script>
@@ -683,7 +686,7 @@
               <!-- Left: Artwork & Details -->
               <div class="flex items-center gap-5">
                 <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden border border-white/10 flex-shrink-0 shadow-md">
-                  <img src="${t.image_square}" alt="${t.title} artwork" class="w-full h-full object-cover">
+                  <img src="${t.image_square}" alt="${t.title} artwork" loading="lazy" decoding="async" class="w-full h-full object-cover">
                 </div>
                 
                 <div class="space-y-1">
@@ -729,7 +732,7 @@
 
             <!-- Panoramic Artwork Banner -->
             <div class="rounded-xl overflow-hidden border border-white/5 shadow-inner">
-              <img src="${t.image_landscape}" alt="${t.title} panoramic art" class="w-full h-48 sm:h-64 object-cover object-center opacity-90 hover:opacity-100 transition-opacity">
+              <img src="${t.image_landscape}" alt="${t.title} panoramic art" loading="lazy" decoding="async" class="w-full h-48 sm:h-64 object-cover object-center opacity-90 hover:opacity-100 transition-opacity">
             </div>
 
             <!-- Expandable Lyrics Container (Collapsed by Default) -->

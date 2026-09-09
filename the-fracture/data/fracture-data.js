@@ -1,4 +1,4 @@
-// Auto-generated data for The Fracture interactive experience
+// Comprehensive Concept & Lyric Data for The Fracture (Album 03)
 window.FRACTURE_DATA = {
   "manifesto": {
     "title": "The Fracture",
@@ -14,7 +14,7 @@ window.FRACTURE_DATA = {
     "spotify_url": "https://open.spotify.com/album/43YxX8r0k778XQ5h0M8F0H",
     "amazon_music_url": "https://music.amazon.com/search/The+Shady+River+Bard+The+Fracture?filter=IsLibrary%7Cfalse&sc=none",
     "discography_url": "https://tpatterson34.github.io/the-shady-river-bard/",
-    "cover_image": "assets/art/The Fracture Album Art.jpg"
+    "cover_image": "assets/art/the-fracture-cover.webp"
   },
   "pillars": [
     {
@@ -352,8 +352,8 @@ window.FRACTURE_DATA = {
       ],
       "video_id": "wDyFkjp_H3s",
       "video_url": "https://www.youtube.com/watch?v=wDyFkjp_H3s",
-      "image_landscape": "assets/art/Echos in the Canyon.jpg",
-      "image_square": "assets/art/Echos in the Canyon - Square.jpg",
+      "image_landscape": "assets/art/echos-in-the-canyon.webp",
+      "image_square": "assets/art/echos-in-the-canyon---square.webp",
       "youtube_description": "What happens when the voices of a nation fall silent, leaving only whispers in the void? \"Echos in the Canyon\" is the haunting overture to \"The Fracture,\" an album that journeys into the heart of a divided society. This slow, melancholic country blues track sets the stage with a pervasive sense of unease and a quiet, sorrowful introspection. It\u2019s a song about the \"tearing in the fabric,\" the lonely feeling that we\u2019re standing on the edge of a great divide, hearing only the promises the past couldn't keep. It's the sound of a world where eyes no longer meet and the common ground has faded, leaving only a hollow wind and the search for solid ground. #CountryBlues #Alienation #TheFracture @TheShadyRiverBard",
       "image_prompt": "A cinematic and beautiful 1400px x 1400px image portraying a vast, shadowed canyon at dusk. A lone, silhouetted figure stands small at the edge, looking down into the deep chasm where a hollow, misty wind swirls. Far below, the faint outlines of empty, desolate streets are visible. The color palette is composed of deep blues, purples, and greys, creating a mood of profound melancholy, solitude, and alienation. The lighting is low and soft, with the last light of the sun disappearing behind the canyon rim. Do not include any text."
     },
@@ -440,8 +440,8 @@ window.FRACTURE_DATA = {
       ],
       "video_id": "FPVOzhvbRVk",
       "video_url": "https://www.youtube.com/watch?v=FPVOzhvbRVk",
-      "image_landscape": "assets/art/Digital Dust & Analog Bones.jpg",
-      "image_square": "assets/art/Digital Dust & Analog Bones - sq.jpg",
+      "image_landscape": "assets/art/digital-dust-analog-bones.webp",
+      "image_square": "assets/art/digital-dust-analog-bones---sq.webp",
       "youtube_description": "Are we speaking the same language anymore? \"Digital Dust & Analog Bones\" tackles the generational divide head-on, capturing the restless, frustrating energy of a world split between two realities. This driving country folk song tells the story of trying to bridge the chasm between \"analog time\" and the rapid-fire clicks of the digital age. It\u2019s a lament for the loss of shared understanding, where one generation\u2019s hard-won wisdom becomes just an echo in the air, and the other\u2019s truth is a fleeting flicker on a screen. It\u2019s the sound of reaching across a chasm and finding only a silent, lonely void. #GenerationalDivide #FolkMusic #ModernLife @TheShadyRiverBard",
       "image_prompt": "A cinematic and beautiful 1400px x 1400px image portraying a visual split between two worlds. On the left, the weathered, wrinkled hands of an older person gently hold an open, well-read paperback book, with a sunlit, fertile field in the background. On the right, the face of a younger person is illuminated only by the frantic, cold blue light of a smartphone, their eyes wide and reflecting the data streams swirling around them in a dark room. A visible, hazy chasm of light and shadow separates the two distinct scenes. Do not include any text."
     },
@@ -528,8 +528,8 @@ window.FRACTURE_DATA = {
       ],
       "video_id": "Z7db8lqz9vQ",
       "video_url": "https://www.youtube.com/watch?v=Z7db8lqz9vQ",
-      "image_landscape": "assets/art/Ghost in the Room (Young Man's Blues).jpg",
-      "image_square": "assets/art/Ghost in the Room (Young Man's Blues) - sq.jpg",
+      "image_landscape": "assets/art/ghost-in-the-room-young-mans-blues.webp",
+      "image_square": "assets/art/ghost-in-the-room-young-mans-blues---sq.webp",
       "youtube_description": "A hundred friends in your pocket, but the room is still cold and bare. \"Ghost in the Room (Young Man's Blues)\" is a stark, intimate, and deeply melancholic dive into the paradox of modern male loneliness. Set to a sparse Delta Blues rhythm, this song gives voice to the silent struggle of a generation told to \"be strong\" and \"keep it bottled up,\" only to find themselves isolated in a digital world. It\u2019s the sound of quiet desperation, the feeling of being a shadow on the wall while life passes by. This is the blues for the young man who hears a million voices but feels no one is truly there. #MentalHealth #DeltaBlues #Loneliness @TheShadyRiverBard",
       "image_prompt": "A cinematic and beautiful 1400x1400px image portraying a young man sitting on the edge of a bed in a stark, minimalist room, his head bowed. The only source of light is the cold, bright screen of the smartphone in his hands, which casts a long, distorted shadow of him onto the wall behind. The shadow is elongated and ethereal, appearing as a ghostly figure haunting the desolate space. The atmosphere is one of profound isolation and quiet desperation. Do not include any text."
     },
@@ -625,8 +625,8 @@ window.FRACTURE_DATA = {
       ],
       "video_id": "lcajFC97hFM",
       "video_url": "https://www.youtube.com/watch?v=lcajFC97hFM",
-      "image_landscape": "assets/art/The Great Divide Road.jpg",
-      "image_square": "assets/art/The Great Divide Road - sq.jpg",
+      "image_landscape": "assets/art/the-great-divide-road.webp",
+      "image_square": "assets/art/the-great-divide-road---sq.webp",
       "youtube_description": "Two worlds, one land, spinning to a different beat. \"The Great Divide Road\" is a driving country rock anthem that paints a vivid portrait of the urban-rural split. The song takes you on a journey down a long road that cuts through the heart of a fractured nation, with the city's neon progress on one side and the country's quiet traditions on the other. It\u2019s a song about the whispers that turn to angry shouts across fields and avenues, and the struggle to find a common melody when different values, fears, and dreams are pulling a nation in two different directions. It's the sound of watching common ground pass by in the rearview mirror. #CountryRock #Americana #Divided @TheShadyRiverBard",
       "image_prompt": "A cinematic and beautiful 1400px x 1400px image portraying a long, straight asphalt road that stretches to the horizon, physically splitting two entirely different American landscapes. On the left side of the road is a vast, rural countryside bathed in the soft light of a full moon, with a lone oak tree and distant church bells. On the right side is a bustling, modern city skyline at night, blazing with brilliant neon lights and the frantic energy of the avenue. The road itself acts as a stark line of demarcation between the two realities. Do not include any text."
     },
@@ -722,8 +722,8 @@ window.FRACTURE_DATA = {
       ],
       "video_id": "chCja87RBsk",
       "video_url": "https://www.youtube.com/watch?v=chCja87RBsk",
-      "image_landscape": "assets/art/The Echo Chamber Walls.jpg",
-      "image_square": "assets/art/The Echo Chamber Walls - sq.jpg",
+      "image_landscape": "assets/art/the-echo-chamber-walls.webp",
+      "image_square": "assets/art/the-echo-chamber-walls---sq.webp",
       "youtube_description": "What if the walls of your world were built by algorithms? \"The Echo Chamber Walls\" is a hypnotic country blues track that explores the quiet desperation of being trapped in a digital reality tailored to your own biases. With its persistent, cyclical rhythm, the song mimics the unending scroll, where every click builds the prison walls higher and no outside truth can strike. It\u2019s a weary lament for a time when we could talk across the fence, and a stark warning about the loneliness that comes when the only voice you can hear is your own, reflected back at you until all reason fades. #EchoChamber #BluesMusic #SocialMedia @TheShadyRiverBard",
       "image_prompt": "A cinematic and beautiful 1400px x 1400px image portraying a person sitting in the center of a dark, enclosed room. The walls are not solid but are constructed of massive, glowing, semi-transparent screens. These screens all reflect the person's own weary face back at them, overlaid with a hypnotic, looping collage of social media icons, distorted headlines, and angry comment threads. The feeling is one of intense claustrophobia and being trapped within a digital prison. Do not include any text."
     },
@@ -810,8 +810,8 @@ window.FRACTURE_DATA = {
       ],
       "video_id": "6YJMjtw46tg",
       "video_url": "https://www.youtube.com/watch?v=6YJMjtw46tg",
-      "image_landscape": "assets/art/Two Flags, One Land (But Different Truths).jpg",
-      "image_square": "assets/art/Two Flags, One Land (But Different Truths) - sq.jpg",
+      "image_landscape": "assets/art/two-flags-one-land-but-different-truths.webp",
+      "image_square": "assets/art/two-flags-one-land-but-different-truths---sq.webp",
       "youtube_description": "The same sun shines on us all, but the light hits different in each eye. \"Two Flags, One Land (But Different Truths)\" is a gritty, driving, and confrontational blues track about the heart of political polarization. It\u2019s the sound of a nation where neighbors are called by hateful names and whispers have turned to scorchingly angry shouts. This song laments a world where the fabric of a shared future is fraying, thread by thread, as two separate, irreconcilable truths wave defiantly in the same breeze. It's a raw and honest look at a dangerous, burning game. #PoliticalDivide #GrittyBlues #AmericanLife @TheShadyRiverBard",
       "image_prompt": "A cinematic and beautiful 1400px x 1400px image portraying a dramatic, wide landscape under a troubled, fiery sunset. In the center, two weathered and slightly tattered flags stand on separate, leaning poles, planted in the weary ground. They are silhouetted against the burning sky, casting long, opposing shadows that create a stark line of division across the land. The mood is tense and full of anguish, a visual representation of ideological warfare. Do not include any text."
     },
@@ -898,8 +898,8 @@ window.FRACTURE_DATA = {
       ],
       "video_id": "FE_pbRsRZb8",
       "video_url": "https://www.youtube.com/watch?v=FE_pbRsRZb8",
-      "image_landscape": "assets/art/The Widening Creek.jpg",
-      "image_square": "assets/art/The Widening Creek - sq.jpg",
+      "image_landscape": "assets/art/the-widening-creek.webp",
+      "image_square": "assets/art/the-widening-creek---sq.webp",
       "youtube_description": "The sun shines bright on towers tall, but the shadow it casts is dark and long. \"The Widening Creek\" is a slow, mournful country blues ballad that confronts the quiet injustice of economic inequality. With a heavy, deliberate pace, the song paints a somber picture of a world with two sets of chances, where healthcare, schooling, and opportunity are divided by a current of wealth. It\u2019s a song about the strained threads of our social fabric, and the seeds of bitterness sown when one side of the creek has everything and the other watches their dreams get washed away. #Inequality #CountryBallad #SocialCommentary @TheShadyRiverBard",
       "image_prompt": "A cinematic and beautiful 1400px x 1400px image portraying a stark landscape divided by a dark, murky creek that grows progressively wider as it flows from the background to the foreground. On the far, sunlit bank stand gleaming, golden skyscrapers and pristine mansions. On the near, shadowed bank are small, dilapidated houses with peeling paint and wilted gardens. The contrast between the two sides is extreme, representing the vast and growing economic disparity. Do not include any text."
     },
@@ -986,8 +986,8 @@ window.FRACTURE_DATA = {
       ],
       "video_id": "rV21QTd3o6I",
       "video_url": "https://www.youtube.com/watch?v=rV21QTd3o6I",
-      "image_landscape": "assets/art/Lost Horizon (Where the Spirit Fades).jpg",
-      "image_square": "assets/art/Lost Horizon (Where the Spirit Fades) - sq.jpg",
+      "image_landscape": "assets/art/lost-horizon-where-the-spirit-fades.webp",
+      "image_square": "assets/art/lost-horizon-where-the-spirit-fades---sq.webp",
       "youtube_description": "What happens when the moral compass spins wild? \"Lost Horizon (Where the Spirit Fades)\" is the emotional and spiritual nadir of \"The Fracture.\" This profoundly melancholic gospel blues track is a search for meaning in a world where old foundations have crumbled. It\u2019s the sound of a hollow heart, where the comfort of old church bells has been replaced by the empty echoes of a thousand different, conflicting truths. This is a song for anyone who has felt adrift in a sea of spiritual chaos, searching for a guiding star on a horizon that has disappeared into the mist. #SpiritualCrisis #GospelBlues #SearchForMeaning @TheShadyRiverBard",
       "image_prompt": "A cinematic and beautiful 1400px x 1400px image portraying a lone figure standing on the edge of a crumbling, rocky cliff, looking out over a vast, turbulent ocean under a chaotic, stormy sky. The horizon line where the sky should meet the water is completely obscured by a thick, swirling grey mist. A sense of spiritual desolation and a desperate search for a guiding star permeates the scene. The color palette is dark and desaturated, emphasizing the feeling of being lost. Do not include any text."
     },
@@ -1074,8 +1074,8 @@ window.FRACTURE_DATA = {
       ],
       "video_id": "nWZ9aajp_Lc",
       "video_url": "https://www.youtube.com/watch?v=nWZ9aajp_Lc",
-      "image_landscape": "assets/art/Whispers Across the Wire.jpg",
-      "image_square": "assets/art/Whispers Across the Wire - sq.jpg",
+      "image_landscape": "assets/art/whispers-across-the-wire.webp",
+      "image_square": "assets/art/whispers-across-the-wire---sq.webp",
       "youtube_description": "Can a fragile whisper bridge a vast divide? \"Whispers Across the Wire\" is the pivot point in the album \"The Fracture,\" where the narrative turns from describing the problems to hinting at the solution. This slow, reflective country folk track is about the quiet, intentional effort to connect across the digital and generational chasm. It\u2019s not about shouting, but about listening for the soft, low secrets that old hearts know. It\u2019s a song about planting seeds of understanding where cold winds blow, and the hopeful belief that even the most fragile connection is a start. #Connection #Hopeful #FolkMusic @TheShadyRiverBard",
       "image_prompt": "A cinematic and beautiful 1400px x 1400px image portraying a delicate and fragile scene of connection. From off-screen, a single, gently glowing thread of light\u2014the \"wire\"\u2014stretches towards the viewer. Along this thread, tiny, shimmering particles of light travel like soft whispers. In the foreground, a pair of open hands is positioned as if to gently catch these whispers, representing a hopeful effort to receive the message. The background is dark and soft-focus, emphasizing the intimacy and importance of this fragile link. Do not include any text."
     },
@@ -1162,8 +1162,8 @@ window.FRACTURE_DATA = {
       ],
       "video_id": "df5V1KDfl10",
       "video_url": "https://www.youtube.com/watch?v=df5V1KDfl10",
-      "image_landscape": "assets/art/Man Enough to Cry.jpg",
-      "image_square": "assets/art/Man Enough to Cry - sq.jpg",
+      "image_landscape": "assets/art/man-enough-to-cry.webp",
+      "image_square": "assets/art/man-enough-to-cry---sq.webp",
       "youtube_description": "They said, \"Son, you gotta be tough.\" But what if true strength is found in the courage to be vulnerable? \"Man Enough to Cry\" is a deeply empathetic and powerful country folk ballad that challenges the toxic stereotype of the stoic man. It's a journey from the silent gloom of bottled-up pain to the healing light of a new day. This is an anthem for every ghost in every room, a call to break the invisible chains of expectation and find the profound connection that only comes when we have the courage to let the teardrops fall. The healing has begun. #Vulnerability #Healing #CountryFolk @TheShadyRiverBard",
       "image_prompt": "A cinematic and beautiful 1400px x 1400px image portraying a man's face in profile, with the light of a rising sun warming his features. A single, clear tear traces a path down his cheek. In the background, heavy, dark chains that were once around his shoulders are dramatically shattering into pieces and dissolving into light. The scene represents the powerful release of vulnerability and the breaking of emotional constraints. Do not include any text."
     },
@@ -1259,8 +1259,8 @@ window.FRACTURE_DATA = {
       ],
       "video_id": "cl2Dv_o8Ixc",
       "video_url": "https://www.youtube.com/watch?v=cl2Dv_o8Ixc",
-      "image_landscape": "assets/art/Common Ground Beneath Our Feet.jpg",
-      "image_square": "assets/art/Common Ground Beneath Our Feet - sq.jpg",
+      "image_landscape": "assets/art/common-ground-beneath-our-feet.webp",
+      "image_square": "assets/art/common-ground-beneath-our-feet---sq.webp",
       "youtube_description": "Beyond the labels, beyond the noise, what unites us? \"Common Ground Beneath Our Feet\" is a hopeful country folk anthem that gently pushes aside the arguments and anger to find the shared humanity that connects us all. It\u2019s a reminder that no matter our differences, the human heart beats the same. This song is a plea to look down, to see the simple, foundational truths we all share\u2014the fears that bind us, the dreams we help grow, and the spinning ground we all stand upon. It\u2019s a search for the place where honest hearts can find shelter. #Unity #Humanity #Hope @TheShadyRiverBard",
       "image_prompt": "A cinematic and beautiful 1400px x 1400px image portraying a powerful and hopeful scene. A diverse collection of feet\u2014representing different ages, races, and walks of life with various shoes from work boots to sneakers to bare feet\u2014are standing together in a circle on dry, cracked earth. From the cracks between their feet, vibrant green sprouts and colorful wildflowers are defiantly growing upwards towards the light, showing that life and unity can spring from the most broken ground. Do not include any text."
     },
@@ -1356,8 +1356,8 @@ window.FRACTURE_DATA = {
       ],
       "video_id": "6x8VgJNE1Bw",
       "video_url": "https://www.youtube.com/watch?v=6x8VgJNE1Bw",
-      "image_landscape": "assets/art/Reaching Across the River.jpg",
-      "image_square": "assets/art/Reaching Across the River - sq.jpg",
+      "image_landscape": "assets/art/reaching-across-the-river.webp",
+      "image_square": "assets/art/reaching-across-the-river---sq.webp",
       "youtube_description": "The first step is the hardest. \"Reaching Across the River\" is an uplifting Americana anthem that moves beyond observing the problem to taking action. It\u2019s a song about the courage it takes to make the first move, to step towards the divide with a patient ear and an open heart. This is the sound of building a bridge of honest effort, one whispered prayer at a time. It\u2019s a powerful call to action, a leap of faith, and a promise that by planting the seeds of reconciliation, we can cross any chasm and heal any divide. #Reconciliation #Americana #CallToAction @TheShadyRiverBard",
       "image_prompt": "A cinematic and beautiful 1400px x 1400px image portraying a courageous act of reconciliation. A person stands on the bank of a wide, turbulent river, representing a great divide. They are extending their hand forward with determination. From the opposite bank, shrouded in mist, another hand is reaching back. At the point where their fingertips are about to touch, a brilliant, glowing bridge of light begins to form, arching across the chasm and calming the waters beneath it. Do not include any text."
     },
@@ -1444,8 +1444,8 @@ window.FRACTURE_DATA = {
       ],
       "video_id": "93e1SXpdasI",
       "video_url": "https://www.youtube.com/watch?v=93e1SXpdasI",
-      "image_landscape": "assets/art/The Unbroken Thread.jpg",
-      "image_square": "assets/art/The Unbroken Thread - sq.jpg",
+      "image_landscape": "assets/art/the-unbroken-thread.webp",
+      "image_square": "assets/art/the-unbroken-thread---sq.webp",
       "youtube_description": "When foundations crack and certainties fade, what remains? \"The Unbroken Thread\" is a profound and hopeful ballad that reflects on the timeless human spirit. In a world of noise, chaos, and shifting traditions, this song finds the one thing that never breaks: the common hunger for truth, community, and purpose that runs through every soul. It\u2019s a reminder that no algorithm or creed can sever the fundamental connections we share. This is a hymn to the persistent, precious, and unbroken thread that makes us human. #Humanity #Connection #Ballad @TheShadyRiverBard",
       "image_prompt": "A cinematic and beautiful 1400px x 1400px image portraying a timeless connection. A single, brilliant golden thread glows brightly as it weaves through a dark and chaotic background. In the center of the image, the wrinkled hand of an elderly person and the smooth hand of a young person are gently holding, but not pulling, the same thread. The thread is a representation of the enduring human quest for meaning, purpose, and community that connects all generations. Do not include any text."
     },
@@ -1532,8 +1532,8 @@ window.FRACTURE_DATA = {
       ],
       "video_id": "AvAjIrk7TbA",
       "video_url": "https://www.youtube.com/watch?v=AvAjIrk7TbA",
-      "image_landscape": "assets/art/One Sky Over Us All.jpg",
-      "image_square": "assets/art/One Sky Over Us All - sq.jpg",
+      "image_landscape": "assets/art/one-sky-over-us-all.webp",
+      "image_square": "assets/art/one-sky-over-us-all---sq.webp",
       "youtube_description": "From the bottom of the canyon, we all look up at the same stars. \"One Sky Over Us All\" is the powerful, soaring, and emotionally resonant finale to \"The Fracture.\" This is the album's ultimate declaration of hope. Featuring a powerful, opera-like baritone and a rich male quartet, this anthem shatters the bitter lies and rises above the fear. It\u2019s a journey from the echoes of division to the resounding truth that a shared humanity unites us. It is the final, hopeful promise that beyond the labels and the fear, a truth that makes our spirits rise is reflected in all our eyes. #Anthem #Hope #Unity @TheShadyRiverBard",
       "image_prompt": "A cinematic and beautiful 1400px x 1400px image portraying a powerful, low-angle perspective from the bottom of a deep canyon or a narrow city street. The walls of the canyon/buildings represent our divisions. But looking up, the vast majority of the image is a breathtaking, boundless, deep blue sky filled with countless stars. The sky is a vast, unifying canopy that stretches over everything, a truth that makes all the divisions below seem small and transient. Do not include any text."
     }
