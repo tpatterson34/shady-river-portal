@@ -707,7 +707,8 @@
         // Try Cloudflare Edge Function first
         try {
           const edgeRes = await fetch('/api/chronicles');
-          if (edgeRes.ok) {
+          const ct = edgeRes.headers.get('content-type') || '';
+          if (edgeRes.ok && ct.includes('json')) {
             items = await edgeRes.json();
           }
         } catch (err) {
