@@ -148,7 +148,11 @@
         </a>
 
         <!-- Desktop Navigation Links -->
-        <div class="hidden md:flex items-center space-x-7 text-xs font-mono tracking-widest uppercase">
+        <div class="hidden md:flex items-center space-x-6 text-xs font-mono tracking-widest uppercase">
+          <a href="/the-hollow-herd/" class="text-amber-400 hover:text-amber-300 font-bold transition-colors py-1 flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+            <span>The Hollow Herd</span>
+          </a>
           <a href="#music-section" class="text-stone-300 hover:text-amber-400 transition-colors py-1 flex items-center gap-1.5">
             <i class="fa-solid fa-music text-[11px] text-amber-500"></i>
             <span>The Bard</span>
@@ -183,6 +187,10 @@
 
     <!-- Mobile Dropdown Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-soil-900 border-b border-white/10 px-4 pt-3 pb-5 space-y-3 text-sm font-mono uppercase tracking-wider">
+      <a href="/the-hollow-herd/" class="block py-2 text-amber-400 font-bold flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+        <span>The Hollow Herd (New Album) ↗</span>
+      </a>
       <a href="#music-section" class="block py-2 text-stone-300 hover:text-amber-400">The Bard (Music)</a>
       <a href="#homestead-section" class="block py-2 text-stone-300 hover:text-emerald-400">The Shady River Homestead, LLC</a>
       <a href="#chronicles-section" class="block py-2 text-stone-300 hover:text-amber-400">Chronicles &amp; Substack</a>
@@ -201,9 +209,16 @@
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
         
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-soil-900 border border-amber-500/30 text-amber-400 text-xs font-mono uppercase tracking-widest shadow-inner">
-          <i class="fa-solid fa-compass text-[11px]"></i>
-          <span>Official Creative Portal</span>
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-soil-900 border border-amber-500/30 text-amber-400 text-xs font-mono uppercase tracking-widest shadow-inner">
+            <i class="fa-solid fa-compass text-[11px]"></i>
+            <span>Official Creative Portal</span>
+          </div>
+          <a href="/the-hollow-herd/" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-soil-900 border border-orange-500/50 hover:border-orange-400 text-orange-400 hover:text-orange-300 text-xs font-mono uppercase tracking-wider transition-all shadow-inner group">
+            <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+            <span class="font-bold">New Album 26:</span>
+            <span>The Hollow Herd ↗</span>
+          </a>
         </div>
 
         <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight max-w-5xl mx-auto">
@@ -220,8 +235,12 @@
 
         <!-- Gateway Action Buttons -->
         <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
-          <a href="#music-section" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-soil-950 font-display font-bold text-sm tracking-wider uppercase transition-all shadow-xl hover:shadow-amber-500/25 flex items-center gap-2.5">
-            <i class="fa-solid fa-guitar"></i>
+          <a href="/the-hollow-herd/" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-orange-600 via-amber-600 to-amber-500 hover:from-orange-500 hover:to-amber-400 text-soil-950 font-display font-bold text-sm tracking-wider uppercase transition-all shadow-xl hover:shadow-orange-500/25 flex items-center gap-2.5 ring-2 ring-orange-400/40">
+            <i class="fa-solid fa-play"></i>
+            <span>Experience The Hollow Herd</span>
+          </a>
+          <a href="#music-section" class="px-7 py-3.5 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-amber-500/40 hover:border-amber-400 font-display font-bold text-sm tracking-wider uppercase transition-all flex items-center gap-2.5 shadow-lg">
+            <i class="fa-solid fa-guitar text-amber-400"></i>
             <span>The Music &amp; Vaults</span>
           </a>
           <a href="#homestead-section" class="px-7 py-3.5 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-emerald-500/40 hover:border-emerald-400 font-display font-bold text-sm tracking-wider uppercase transition-all flex items-center gap-2.5 shadow-lg">
@@ -370,7 +389,7 @@
         </div>
 
         <!-- Landmark Albums Grid -->
-        <div id="landmark-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div id="landmark-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           <!-- Populated dynamically via portal-data.js -->
         </div>
 
@@ -559,10 +578,11 @@
         <div class="space-y-2">
           <span class="font-mono text-xs uppercase tracking-widest text-stone-300 font-bold block mb-2">Gateways</span>
           <ul class="space-y-1.5 font-mono text-xs">
-            <li><a href="/vault/" class="hover:text-amber-400 transition-colors">26-Album Discography ↗</a></li>
+            <li><a href="/the-hollow-herd/" class="text-amber-400 font-bold hover:underline transition-colors flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>The Hollow Herd (Album 26) ↗</a></li>
             <li><a href="/the-fracture/" class="hover:text-amber-400 transition-colors">The Fracture Concept Site ↗</a></li>
             <li><a href="/sanitys-edge/" class="hover:text-amber-400 transition-colors">Sanity's Edge App ↗</a></li>
             <li><a href="/the-forgotten-crown/" class="hover:text-amber-400 transition-colors">The Sovereign's Right ↗</a></li>
+            <li><a href="/vault/" class="hover:text-amber-400 transition-colors">26-Album Discography ↗</a></li>
             <li><a href="#homestead-section" class="hover:text-emerald-400 transition-colors">The Homestead, LLC</a></li>
             <li><a href="#chronicles-section" class="hover:text-amber-400 transition-colors">The Chronicles (Substack)</a></li>
           </ul>

@@ -42,6 +42,25 @@ window.PORTAL_DATA = {
   ],
   "featured_albums": [
     {
+      "id": "the-hollow-herd",
+      "number": "26",
+      "title": "The Hollow Herd",
+      "subtitle": "A Forensic Sonic Audit of the American Cattle Crisis",
+      "badge": "Brand New Album Release",
+      "cover": "the-hollow-herd/assets/art/the-hollow-herd-cover.webp",
+      "tracks_count": 15,
+      "themes": [
+        "Big Four Meatpackers",
+        "Argentine Betrayal",
+        "Paper Cattle Fraud",
+        "Water Crisis & Drought",
+        "The Prime Act"
+      ],
+      "url": "/the-hollow-herd/",
+      "video_url": "https://www.youtube.com/watch?v=-PJtGDSmaMU",
+      "description": "An uncompromising 4-act, 15-track conceptual investigation of the financialization of American ranching, the Big Four beef oligopoly, and the struggle for agrarian survival. Features rolling video premieres."
+    },
+    {
       "id": "the-fracture",
       "number": "03",
       "title": "The Fracture",
