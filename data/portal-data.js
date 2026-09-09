@@ -37,7 +37,8 @@ window.PORTAL_DATA = {
       "accent": "river",
       "description": "Long-form reflections on human-AI co-creation, deep dives into historical sovereignty, song analyses, and dispatches from the land on Substack.",
       "link": "#chronicles-section",
-      "cta": "Read Journal & Liner Notes"
+      "cta": "Read Journal & Liner Notes",
+      "liner_notes_url": "https://theshadyriverbard.substack.com/s/deconstructed"
     }
   ],
   "featured_albums": [

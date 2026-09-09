@@ -15,7 +15,8 @@ window.HOLLOW_HERD_DATA = {
     "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_mpc61Qn3VVVfyhyUHuggJtbD2ZhMYVYtk",
     "amazon_music_url": "https://music.amazon.com/search/The+Shady+River+Bard+The+Hollow+Herd",
     "video_playlist_url": "https://www.youtube.com/playlist?list=PLZ3uWHmWOPCY",
-    "substack_url": "https://theshadyriverbard.substack.com",
+    "substack_url": "https://theshadyriverbard.substack.com/s/deconstructed",
+    "liner_notes_url": "https://theshadyriverbard.substack.com/s/deconstructed",
     "total_tracks": 15,
     "public_videos_count": 4,
     "release_cadence": "Videos premiering track-by-track 2\u20133 times weekly; full 15-track album streaming now."
