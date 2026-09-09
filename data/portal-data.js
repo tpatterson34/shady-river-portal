@@ -48,7 +48,7 @@ window.PORTAL_DATA = {
       "title": "The Hollow Herd",
       "subtitle": "A Forensic Sonic Audit of the American Cattle Crisis",
       "badge": "Brand New Album Release",
-      "cover": "the-hollow-herd/assets/art/the-hollow-herd-cover.webp",
+      "cover": "/the-hollow-herd/assets/art/the-hollow-herd-cover.webp",
       "tracks_count": 15,
       "themes": [
         "Big Four Meatpackers",
@@ -67,7 +67,7 @@ window.PORTAL_DATA = {
       "title": "The Fracture",
       "subtitle": "A Societal Audit & Blueprint for Reconciliation",
       "badge": "Flagship Concept App",
-      "cover": "assets/covers/album-03.webp",
+      "cover": "/assets/covers/album-03.webp",
       "tracks_count": 14,
       "themes": [
         "Polarization",
@@ -86,7 +86,7 @@ window.PORTAL_DATA = {
       "title": "Sanity's Edge",
       "subtitle": "Psychological Resilience in the Modern Noise",
       "badge": "Interactive Companion",
-      "cover": "assets/covers/vault/sanity-s-edge.webp",
+      "cover": "/assets/covers/vault/sanity-s-edge.webp",
       "tracks_count": 12,
       "themes": [
         "Mental Health",
@@ -104,7 +104,7 @@ window.PORTAL_DATA = {
       "title": "The Sovereign's Right",
       "subtitle": "The 1689 Claim of Right & Historical Sovereignty",
       "badge": "Historical Deep Dive",
-      "cover": "assets/covers/vault/the-forgotten-crown.webp",
+      "cover": "/assets/covers/vault/the-forgotten-crown.webp",
       "tracks_count": 10,
       "themes": [
         "Scottish History",
@@ -122,7 +122,7 @@ window.PORTAL_DATA = {
       "title": "American Renewal",
       "subtitle": "Rebuilding Community Infrastructure & Common Faith",
       "badge": "Anthem Collection",
-      "cover": "assets/covers/album-19.webp",
+      "cover": "/assets/covers/album-19.webp",
       "tracks_count": 12,
       "themes": [
         "Civic Repair",

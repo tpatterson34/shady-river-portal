@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="data/albums-data.js"></script>
+  <script src="data/albums-data.js?v=20260909_03"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -737,7 +737,8 @@
           const matchGenre = (item.genre || '').toLowerCase().includes(query);
           const matchThemes = (item.themes || []).some(t => t.toLowerCase().includes(query));
           const matchTracks = (item.tracks || []).some(tr => tr.toLowerCase().includes(query));
-          return matchTitle || matchDesc || matchGenre || matchThemes || matchTracks;
+          const matchBespoke = (query.includes('bespoke') || query.includes('interactive') || query.includes('app')) && item.is_bespoke;
+          return matchTitle || matchDesc || matchGenre || matchThemes || matchTracks || matchBespoke;
         }
         return true;
       });
@@ -842,11 +843,16 @@
           <div class="p-5 pt-0 mt-auto border-t border-white/5 pt-4">
             ${isReleased ? `
               <div class="flex items-center gap-2">
-                <button onclick="openModal('${item.id}')" aria-label="View tracklist and liner notes for ${item.title}" class="flex-1 py-2 px-3 rounded-xl bg-soil-800 hover:bg-soil-700 text-stone-200 text-xs font-medium transition-colors border border-white/5 flex items-center justify-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
+                <button onclick="openModal('${item.id}')" aria-label="View tracklist and liner notes for ${item.title}" class="${item.is_bespoke && item.custom_url ? 'py-2 px-2.5' : 'flex-1 py-2 px-3'} rounded-xl bg-soil-800 hover:bg-soil-700 text-stone-200 text-xs font-medium transition-colors border border-white/5 flex items-center justify-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                  Tracklist & Details
+                  ${item.is_bespoke && item.custom_url ? 'Details' : 'Tracklist & Details'}
                 </button>
-                <a href="${item.youtube_url || 'https://www.youtube.com/@TheShadyRiverBard'}" target="_blank" aria-label="Play ${item.title} on YouTube (opens in new tab)" class="py-2 px-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-xs font-medium transition-colors flex items-center justify-center gap-1.5 shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+                ${item.is_bespoke && item.custom_url ? `
+                  <a href="${item.custom_url}" target="_blank" aria-label="Launch interactive app for ${item.title} (opens in new tab)" class="flex-1 py-2 px-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-medium transition-colors flex items-center justify-center gap-1 shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+                    <span>App ↗</span>
+                  </a>
+                ` : ''}
+                <a href="${item.youtube_url || 'https://www.youtube.com/@TheShadyRiverBard'}" target="_blank" aria-label="Play ${item.title} on YouTube (opens in new tab)" class="${item.is_bespoke && item.custom_url ? 'py-2 px-2.5' : 'py-2 px-3'} rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-xs font-medium transition-colors flex items-center justify-center gap-1.5 shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
                   <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                   Play
                 </a>
