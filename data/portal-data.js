@@ -81,22 +81,23 @@ window.PORTAL_DATA = {
       "description": "An empirical 4-movement audit of modern America's deep sociological divisions, followed by a compassionate roadmap toward vulnerability, community stewardship, and human reconnection."
     },
     {
-      "id": "sanitys-edge",
+      "id": "the-great-inversion",
       "number": "04",
-      "title": "Sanity's Edge",
-      "subtitle": "Psychological Resilience in the Modern Noise",
-      "badge": "Interactive Companion",
-      "cover": "/assets/covers/vault/sanity-s-edge.webp",
-      "tracks_count": 12,
+      "title": "The Great Inversion",
+      "subtitle": "An Antidote to the Decline of Ambition & Modern Malaise",
+      "badge": "Bespoke Interactive Vault",
+      "cover": "/the-great-inversion/assets/art/the-great-inversion-cover.webp",
+      "tracks_count": 13,
       "themes": [
-        "Mental Health",
-        "Information Overload",
-        "Inner Citadel",
-        "Stoicism"
+        "Economics of Apathy",
+        "Young Men's Dilemma",
+        "Dopamine Haze",
+        "Milestone Retreat",
+        "FIRE & Autonomy"
       ],
-      "url": "/sanitys-edge/",
-      "video_url": "https://www.youtube.com/@TheShadyRiverBard",
-      "description": "A visceral journey along the razor's edge of psychological equilibrium in an era of hyper-connectivity and cognitive fragmentation."
+      "url": "/the-great-inversion/",
+      "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcHpbQ_j63bh6NrvnSP-KwSM",
+      "description": "An unflinching 3-movement examination of the modern retreat from traditional life milestones and the rise of quiet quitting—culminating in an empowering counter-current toward sovereignty, intentionalism, and redefined purpose."
     },
     {
       "id": "the-forgotten-crown",
