@@ -100,6 +100,25 @@ window.PORTAL_DATA = {
       "description": "An unflinching 3-movement examination of the modern retreat from traditional life milestones and the rise of quiet quitting—culminating in an empowering counter-current toward sovereignty, intentionalism, and redefined purpose."
     },
     {
+      "id": "the-poison-we-trust",
+      "number": "05",
+      "title": "The Poison We Trust",
+      "subtitle": "A Social Analysis of Modern Public Health & The Body Politic",
+      "badge": "Bespoke Interactive Vault",
+      "cover": "/the-poison-we-trust/assets/art/the-poison-we-trust-cover.webp",
+      "tracks_count": 13,
+      "themes": [
+        "Broken Food Pyramid",
+        "Industrial Seed Oils",
+        "The Pill Trap",
+        "Institutional Capture",
+        "Health Sovereignty"
+      ],
+      "url": "/the-poison-we-trust/",
+      "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcG-3eJRamWMAXVCJEhO_sRa",
+      "description": "An unflinching 4-movement investigation into dietary deceptions, corporate capture of regulatory agencies, and the modern chronic illness epidemic—culminating in an empowering revival of ancestral health sovereignty."
+    },
+    {
       "id": "the-forgotten-crown",
       "number": "Vault",
       "title": "The Sovereign's Right",

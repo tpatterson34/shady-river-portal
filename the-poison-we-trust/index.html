@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Great Inversion | Interactive Concept Experience &amp; Lyrics Vault | The Shady River Bard</title>
-  <meta name="description" content="An interactive concept website and complete lyrics vault for 'The Great Inversion' by The Shady River Bard. An empirical audit of the decline of ambition and a roadmap toward autonomy, FIRE, intentional minimalism, and redefined purpose.">
+  <title>The Poison We Trust | Interactive Concept Experience &amp; Lyrics Vault | The Shady River Bard</title>
+  <meta name="description" content="An interactive concept website and complete lyrics vault for 'The Poison We Trust' by The Shady River Bard. A forensic sociological audit of modern public health, dietary deceptions, regulatory capture, and the path to health sovereignty.">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -23,7 +23,7 @@
               700: '#273248',
               600: '#384663',
             },
-            inversion: {
+            amber: {
               300: '#fde68a',
               400: '#fbbf24',
               500: '#f59e0b',
@@ -42,14 +42,32 @@
               900: '#064e3b',
               950: '#022c22',
             },
-            azure: {
-              400: '#60a5fa',
-              500: '#3b82f6',
-              600: '#2563eb',
-              700: '#1d4ed8',
-              800: '#1e40af',
-              900: '#1e3a8a',
-              950: '#172554',
+            rose: {
+              400: '#fb7185',
+              500: '#f43f5e',
+              600: '#e11d48',
+              700: '#be123c',
+              800: '#9f1239',
+              900: '#881337',
+              950: '#4c0519',
+            },
+            teal: {
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+              950: '#042f2e',
+            },
+            purple: {
+              400: '#c084fc',
+              500: '#a855f7',
+              600: '#9333ea',
+              700: '#7e22ce',
+              800: '#6b21a8',
+              900: '#581c87',
+              950: '#3b0764',
             }
           },
           fontFamily: {
@@ -72,7 +90,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- High-Priority Preload for Hero Album Artwork -->
-  <link rel="preload" as="image" href="assets/art/the-great-inversion-cover.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/art/the-poison-we-trust-cover.webp" type="image/webp" fetchpriority="high">
 
   <!-- Unified Accessibility Stylesheet -->
   <link rel="stylesheet" href="/assets/css/a11y.css">
@@ -100,6 +118,9 @@
     .glow-emerald {
       box-shadow: 0 0 35px -5px rgba(16, 185, 129, 0.25);
     }
+    .glow-rose {
+      box-shadow: 0 0 35px -5px rgba(244, 63, 94, 0.25);
+    }
     
     /* Smooth transitions */
     .act-highlight {
@@ -107,7 +128,7 @@
     }
   </style>
 </head>
-<body class="bg-soil-950 text-stone-200 font-sans antialiased selection:bg-inversion-600 selection:text-white min-h-screen flex flex-col">
+<body class="bg-soil-950 text-stone-200 font-sans antialiased selection:bg-amber-600 selection:text-white min-h-screen flex flex-col">
   
   <!-- Skip Navigation Link (WCAG 2.4.1 Bypass Blocks) -->
   <a href="#main-content" class="a11y-skip-link">Skip to main content</a>
@@ -116,27 +137,22 @@
   <aside aria-label="Discography Breadcrumb" class="bg-soil-900 border-b border-white/10 px-4 py-2 text-xs text-stone-400">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2">
-        <span class="inline-block w-2 h-2 rounded-full bg-inversion-400 animate-pulse"></span>
-        <span class="font-mono text-stone-300">The Shady River Bard Vault &bull; Album 04 Exploration</span>
+        <span class="inline-block w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+        <span class="font-mono text-stone-300">The Shady River Bard Vault &bull; Album 05 Exploration</span>
       </div>
       <div class="flex items-center gap-4 flex-wrap">
-        <a href="/vault/" class="hover:text-inversion-400 transition-colors flex items-center gap-1.5 font-medium">
+        <a href="/vault/" class="hover:text-amber-400 transition-colors flex items-center gap-1.5 font-medium">
           <i aria-hidden="true" class="fa-solid fa-arrow-left text-[10px]"></i>
           <span>Return to Discography</span>
         </a>
         <span class="text-stone-600" aria-hidden="true">|</span>
-        <a href="https://theshadyriverbard.substack.com/s/the-great-inversion" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 text-stone-300 transition-colors flex items-center gap-1.5 font-medium" title="Read Companion Novella on Substack">
-          <i aria-hidden="true" class="fa-solid fa-book-open text-amber-500"></i>
-          <span>Companion Novella</span>
-        </a>
-        <span class="text-stone-600" aria-hidden="true">|</span>
-        <a href="https://theshadyriverbard.substack.com/s/deconstructed" target="_blank" rel="noopener noreferrer" class="hover:text-inversion-400 text-stone-300 transition-colors flex items-center gap-1.5 font-medium" title="Read all track liner notes on Substack">
+        <a href="https://theshadyriverbard.substack.com/s/deconstructed" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 text-stone-300 transition-colors flex items-center gap-1.5 font-medium" title="Read all track liner notes on Substack">
           <i aria-hidden="true" class="fa-solid fa-bookmark text-amber-500"></i>
           <span>"Deconstructed" Liner Notes</span>
         </a>
         <span class="text-stone-600" aria-hidden="true">|</span>
-        <button id="a11y-toggle-btn" onclick="toggleA11yToolbar()" aria-expanded="false" aria-controls="a11y-toolbar" class="hover:text-inversion-400 text-stone-300 transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-inversion-400 rounded px-1.5 py-0.5 font-mono text-[11px]" aria-label="Toggle accessibility display preferences">
-          <i class="fa-solid fa-universal-access text-inversion-400" aria-hidden="true"></i>
+        <button id="a11y-toggle-btn" onclick="toggleA11yToolbar()" aria-expanded="false" aria-controls="a11y-toolbar" class="hover:text-amber-400 text-stone-300 transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded px-1.5 py-0.5 font-mono text-[11px]" aria-label="Toggle accessibility display preferences">
+          <i class="fa-solid fa-universal-access text-amber-400" aria-hidden="true"></i>
           <span>Accessibility</span>
         </button>
       </div>
@@ -144,10 +160,10 @@
   </aside>
 
   <!-- EXPANDABLE ACCESSIBILITY TOOLBAR (WCAG 2.1 AA) -->
-  <div id="a11y-toolbar" class="hidden bg-soil-900 border-b border-inversion-500/40 py-3 px-4 text-xs transition-all shadow-2xl relative z-40" role="region" aria-label="Accessibility Display Preferences">
+  <div id="a11y-toolbar" class="hidden bg-soil-900 border-b border-amber-500/40 py-3 px-4 text-xs transition-all shadow-2xl relative z-40" role="region" aria-label="Accessibility Display Preferences">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
       <div class="flex items-center gap-2.5">
-        <div class="w-7 h-7 rounded-lg bg-soil-950 border border-inversion-500/40 flex items-center justify-center text-inversion-400 text-xs">
+        <div class="w-7 h-7 rounded-lg bg-soil-950 border border-amber-500/40 flex items-center justify-center text-amber-400 text-xs">
           <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
         </div>
         <div>
@@ -156,16 +172,16 @@
         </div>
       </div>
       <div class="flex flex-wrap items-center gap-2 sm:gap-3 font-mono text-xs">
-        <button id="btn-contrast" onclick="toggleA11yOption('contrast')" class="px-3 py-1.5 rounded-lg bg-soil-800 hover:bg-soil-750 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inversion-500">
+        <button id="btn-contrast" onclick="toggleA11yOption('contrast')" class="px-3 py-1.5 rounded-lg bg-soil-800 hover:bg-soil-750 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
           High Contrast: <span id="val-contrast" class="text-stone-400">Off</span>
         </button>
-        <button id="btn-textsize" onclick="cycleTextSize()" class="px-3 py-1.5 rounded-lg bg-soil-800 hover:bg-soil-750 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inversion-500">
+        <button id="btn-textsize" onclick="cycleTextSize()" class="px-3 py-1.5 rounded-lg bg-soil-800 hover:bg-soil-750 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
           Text Size: <span id="val-textsize" class="text-stone-400">Normal</span>
         </button>
-        <button id="btn-underline" onclick="toggleA11yOption('underline')" class="px-3 py-1.5 rounded-lg bg-soil-800 hover:bg-soil-750 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inversion-500">
+        <button id="btn-underline" onclick="toggleA11yOption('underline')" class="px-3 py-1.5 rounded-lg bg-soil-800 hover:bg-soil-750 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
           Underline Links: <span id="val-underline" class="text-stone-400">Off</span>
         </button>
-        <button id="btn-motion" onclick="toggleA11yOption('motion')" class="px-3 py-1.5 rounded-lg bg-soil-800 hover:bg-soil-750 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inversion-500">
+        <button id="btn-motion" onclick="toggleA11yOption('motion')" class="px-3 py-1.5 rounded-lg bg-soil-800 hover:bg-soil-750 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
           Reduced Motion: <span id="val-motion" class="text-stone-400">System</span>
         </button>
         <button onclick="resetA11yOptions()" class="px-2 py-1 text-stone-400 hover:text-white underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-white">
@@ -181,23 +197,23 @@
       <div class="flex items-center justify-between h-16">
         
         <!-- Brand Logo & Title -->
-        <a href="#top" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-inversion-400 rounded-lg p-1">
-          <div class="w-10 h-10 rounded-lg overflow-hidden border border-inversion-500/50 shadow-md group-hover:border-inversion-400 transition-all flex-shrink-0">
-            <img src="assets/art/the-great-inversion-cover.webp" alt="The Great Inversion album thumbnail" width="40" height="40" loading="eager" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <a href="#top" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-amber-400 rounded-lg p-1">
+          <div class="w-10 h-10 rounded-lg overflow-hidden border border-amber-500/50 shadow-md group-hover:border-amber-400 transition-all flex-shrink-0">
+            <img src="assets/art/the-poison-we-trust-cover.webp" alt="The Poison We Trust album thumbnail" width="40" height="40" loading="eager" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           </div>
           <div class="flex flex-col">
-            <span class="font-display font-bold text-white tracking-widest text-base sm:text-lg group-hover:text-inversion-300 transition-colors">THE GREAT INVERSION</span>
+            <span class="font-display font-bold text-white tracking-widest text-base sm:text-lg group-hover:text-amber-300 transition-colors">THE POISON WE TRUST</span>
             <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">The Shady River Bard</span>
           </div>
         </a>
 
         <!-- Desktop Navigation Links -->
         <div class="hidden md:flex items-center space-x-5 text-xs font-mono tracking-wider uppercase">
-          <a href="#overview" class="text-stone-300 hover:text-inversion-400 transition-colors py-1">Overview</a>
-          <a href="#narrative-arc" class="text-stone-300 hover:text-inversion-400 transition-colors py-1">3 Movements</a>
-          <a href="#pillars" class="text-stone-300 hover:text-inversion-400 transition-colors py-1">5 Pillars</a>
-          <a href="#matrix-section" class="text-stone-300 hover:text-inversion-400 transition-colors py-1">Inversion Matrix</a>
-          <a href="#tracks-section" class="text-inversion-400 font-bold hover:text-inversion-300 transition-colors py-1 flex items-center gap-1.5">
+          <a href="#overview" class="text-stone-300 hover:text-amber-400 transition-colors py-1">Overview</a>
+          <a href="#narrative-arc" class="text-stone-300 hover:text-amber-400 transition-colors py-1">4 Movements</a>
+          <a href="#pillars" class="text-stone-300 hover:text-amber-400 transition-colors py-1">5 Pillars</a>
+          <a href="#timeline-section" class="text-stone-300 hover:text-amber-400 transition-colors py-1">Dietary Matrix</a>
+          <a href="#tracks-section" class="text-amber-400 font-bold hover:text-amber-300 transition-colors py-1 flex items-center gap-1.5">
             <i aria-hidden="true" class="fa-solid fa-compact-disc"></i>
             <span>All 13 Songs &amp; Lyrics</span>
           </a>
@@ -205,23 +221,23 @@
 
         <!-- External Streaming Buttons -->
         <div class="hidden lg:flex items-center space-x-2">
-          <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcHpbQ_j63bh6NrvnSP-KwSM" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="YouTube Video Playlist">
+          <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcG-3eJRamWMAXVCJEhO_sRa" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="YouTube Video Playlist" aria-label="Official YouTube Video Playlist">
             <i aria-hidden="true" class="fa-brands fa-youtube text-base"></i>
           </a>
-          <a href="https://open.spotify.com/artist/2QtTWiosF5IrrAib5b7arZ" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-emerald-950/60 hover:bg-emerald-900/80 text-emerald-400 border border-emerald-800/40 text-xs transition-colors" title="Spotify">
+          <a href="https://open.spotify.com/artist/2QtTWiosF5IrrAib5b7arZ" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-emerald-950/60 hover:bg-emerald-900/80 text-emerald-400 border border-emerald-800/40 text-xs transition-colors" title="Spotify" aria-label="Listen on Spotify">
             <i aria-hidden="true" class="fa-brands fa-spotify text-base"></i>
           </a>
-          <a href="https://music.apple.com/us/album/the-great-inversion/1830781994" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-pink-950/60 hover:bg-pink-900/80 text-pink-400 border border-pink-800/40 text-xs transition-colors" title="Apple Music">
+          <a href="https://music.apple.com/us/album/the-poison-we-trust/1831430324" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-pink-950/60 hover:bg-pink-900/80 text-pink-400 border border-pink-800/40 text-xs transition-colors" title="Apple Music" aria-label="Listen on Apple Music">
             <i aria-hidden="true" class="fa-brands fa-apple text-base"></i>
           </a>
-          <a href="https://music.youtube.com/playlist?list=OLAK5uy_k5rTw4Kozej6ttb6LPZGEJp5RhO_StPCs" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-amber-950/60 hover:bg-amber-900/80 text-amber-400 border border-amber-800/40 text-xs transition-colors" title="YouTube Music">
+          <a href="https://music.youtube.com/playlist?list=OLAK5uy_njkOkt_a5ECU757dPJTts5ZmUrKnXCcUg" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-amber-950/60 hover:bg-amber-900/80 text-amber-400 border border-amber-800/40 text-xs transition-colors" title="YouTube Music" aria-label="Listen on YouTube Music">
             <i aria-hidden="true" class="fa-solid fa-play text-base"></i>
           </a>
         </div>
 
         <!-- Mobile Menu Toggle Button -->
         <div class="md:hidden flex items-center">
-          <button id="mobile-menu-btn" aria-label="Toggle navigation menu" class="text-stone-300 hover:text-white p-2 focus:outline-none focus:ring-2 focus:ring-inversion-400 rounded-lg">
+          <button id="mobile-menu-btn" aria-label="Toggle navigation menu" class="text-stone-300 hover:text-white p-2 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded-lg">
             <i aria-hidden="true" class="fa-solid fa-bars text-lg"></i>
           </button>
         </div>
@@ -231,11 +247,11 @@
 
     <!-- Mobile Dropdown Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-soil-900 border-b border-white/10 px-4 pt-2 pb-4 space-y-2 text-sm font-mono uppercase tracking-wider">
-      <a href="#overview" class="block py-2 text-stone-300 hover:text-inversion-400">Overview</a>
-      <a href="#narrative-arc" class="block py-2 text-stone-300 hover:text-inversion-400">3 Narrative Movements</a>
-      <a href="#pillars" class="block py-2 text-stone-300 hover:text-inversion-400">5 Societal Pillars</a>
-      <a href="#matrix-section" class="block py-2 text-stone-300 hover:text-inversion-400">Inversion Matrix</a>
-      <a href="#tracks-section" class="block py-2 text-inversion-400 font-bold">13 Songs &amp; Lyrics</a>
+      <a href="#overview" class="block py-2 text-stone-300 hover:text-amber-400">Overview</a>
+      <a href="#narrative-arc" class="block py-2 text-stone-300 hover:text-amber-400">4 Narrative Movements</a>
+      <a href="#pillars" class="block py-2 text-stone-300 hover:text-amber-400">5 Societal Pillars</a>
+      <a href="#timeline-section" class="block py-2 text-stone-300 hover:text-amber-400">Dietary Matrix</a>
+      <a href="#tracks-section" class="block py-2 text-amber-400 font-bold">13 Songs &amp; Lyrics</a>
     </div>
   </nav>
 
@@ -244,8 +260,9 @@
     <!-- HERO SECTION -->
     <section id="overview" class="relative py-16 sm:py-24 overflow-hidden border-b border-white/10">
       <!-- Ambient Glow Effects -->
-      <div class="absolute top-0 left-1/4 w-96 h-96 bg-inversion-600/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
       <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute top-1/2 right-10 w-80 h-80 bg-rose-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -253,12 +270,12 @@
           <!-- Left Column: Album Cover Painting -->
           <div class="lg:col-span-5 flex justify-center">
             <div class="relative group max-w-md w-full">
-              <div class="absolute -inset-1.5 bg-gradient-to-r from-inversion-500 via-emerald-500 to-inversion-600 rounded-2xl blur-lg opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-              <div class="relative rounded-2xl overflow-hidden border-2 border-inversion-500/40 bg-soil-900 shadow-2xl">
-                <img src="assets/art/the-great-inversion-cover.webp" alt="The Great Inversion album cover artwork" width="600" height="600" loading="eager" fetchpriority="high" decoding="async" class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105">
+              <div class="absolute -inset-1.5 bg-gradient-to-r from-amber-500 via-emerald-500 to-rose-600 rounded-2xl blur-lg opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+              <div class="relative rounded-2xl overflow-hidden border-2 border-amber-500/40 bg-soil-900 shadow-2xl">
+                <img src="assets/art/the-poison-we-trust-cover.webp" alt="The Poison We Trust album cover artwork" width="600" height="600" loading="eager" fetchpriority="high" decoding="async" class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105">
                 <div class="absolute inset-0 bg-gradient-to-t from-soil-950 via-transparent to-transparent opacity-60 pointer-events-none"></div>
                 <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono text-stone-300 bg-soil-900/80 backdrop-blur-md px-3 py-2 rounded-lg border border-white/10">
-                  <span class="text-inversion-400 font-semibold uppercase">Album 04 &bull; 13 Tracks</span>
+                  <span class="text-amber-400 font-semibold uppercase">Album 05 &bull; 13 Tracks</span>
                   <span>Released 2025</span>
                 </div>
               </div>
@@ -267,39 +284,39 @@
 
           <!-- Right Column: Concept Manifesto & Summary -->
           <div class="lg:col-span-7 space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-soil-800 border border-inversion-500/30 text-inversion-400 text-xs font-mono uppercase tracking-widest">
-              <i aria-hidden="true" class="fa-solid fa-compass text-[11px]"></i>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-soil-800 border border-amber-500/30 text-amber-400 text-xs font-mono uppercase tracking-widest">
+              <i aria-hidden="true" class="fa-solid fa-flask-vial text-[11px]"></i>
               <span>Interactive Concept Vault</span>
             </div>
 
             <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
-              THE GREAT INVERSION
+              THE POISON WE TRUST
             </h1>
 
-            <p class="font-display text-xl sm:text-2xl text-inversion-400 font-medium italic">
-              An Antidote to the Decline of Ambition &amp; Modern Malaise
+            <p class="font-display text-xl sm:text-2xl text-amber-400 font-medium italic">
+              A Social Analysis of Modern Public Health &amp; The Body Politic
             </p>
 
             <div class="space-y-4 text-stone-300 text-base sm:text-lg leading-relaxed font-body">
               <p>
-                The retreat from traditional ambition is not a mystery of the soul but a matter of accounting&mdash;a rational adaptation to a society where the old rungs of the economic ladder have snapped.
+                The modern health crisis is not an accident of genetics or a failure of willpower; it is the predictable outcome of institutional capture.
               </p>
               <p class="text-sm sm:text-base text-stone-400">
-                <em>The Great Inversion</em> is an intentional 3-movement concept album by <strong>The Shady River Bard</strong>. It diagnoses the mathematical realities of lost upward mobility, prime-age male detachment, and digital dopamine pacification, before charting an empowering counter-current toward FIRE, intentional minimalism, sovereign craft, and local community.
+                <em>The Poison We Trust</em> is an intentional 4-movement concept album by <strong>The Shady River Bard</strong>. Set to gritty Americana, country blues, and atmospheric folk, it investigates the dietary deceptions, pharmaceutical profiteering, and regulatory entanglements that have compromised the American body politic, before charting an empowering counter-current toward health sovereignty, regenerative nutrition, and earned hope.
               </p>
             </div>
 
             <!-- Quick Action Links -->
             <div class="pt-4 flex flex-wrap items-center gap-4">
-              <a href="#tracks-section" class="px-6 py-3 rounded-xl bg-gradient-to-r from-inversion-600 to-inversion-500 hover:from-inversion-500 hover:to-inversion-400 text-soil-950 font-display font-bold text-sm tracking-wider uppercase transition-all shadow-lg hover:shadow-inversion-500/30 flex items-center gap-2">
+              <a href="#tracks-section" class="px-6 py-3 rounded-xl bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-soil-950 font-display font-bold text-sm tracking-wider uppercase transition-all shadow-lg hover:shadow-amber-500/30 flex items-center gap-2">
                 <i aria-hidden="true" class="fa-solid fa-headphones-simple"></i>
                 <span>Explore 13 Songs &amp; Lyrics</span>
               </a>
-              <a href="#narrative-arc" class="px-6 py-3 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-white/10 hover:border-inversion-400/50 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2">
-                <i aria-hidden="true" class="fa-solid fa-route text-inversion-400"></i>
-                <span>3 Narrative Movements</span>
+              <a href="#narrative-arc" class="px-6 py-3 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-white/10 hover:border-amber-400/50 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2">
+                <i aria-hidden="true" class="fa-solid fa-route text-amber-400"></i>
+                <span>4 Narrative Movements</span>
               </a>
-              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcHpbQ_j63bh6NrvnSP-KwSM" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-red-950/60 hover:bg-red-900 text-red-300 border border-red-800/50 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2">
+              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcG-3eJRamWMAXVCJEhO_sRa" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-red-950/60 hover:bg-red-900 text-red-300 border border-red-800/50 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2">
                 <i aria-hidden="true" class="fa-brands fa-youtube text-red-400"></i>
                 <span>Play All Videos ↗</span>
               </a>
@@ -311,68 +328,83 @@
       </div>
     </section>
 
-    <!-- SECTION: THE 3-MOVEMENT NARRATIVE STEPPER -->
+    <!-- SECTION: THE 4-MOVEMENT NARRATIVE STEPPER -->
     <section id="narrative-arc" class="py-16 sm:py-20 bg-soil-900/50 border-b border-white/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-inversion-950 border border-inversion-800/40 text-inversion-400 text-xs font-mono uppercase tracking-widest">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950 border border-amber-800/40 text-amber-400 text-xs font-mono uppercase tracking-widest">
             <i aria-hidden="true" class="fa-solid fa-signs-post text-[11px]"></i>
-            <span>The Three Movements</span>
+            <span>The Four Movements</span>
           </div>
           <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-wide">
             The Narrative Roadmap
           </h2>
           <p class="text-sm sm:text-base text-stone-400 leading-relaxed">
-            The album travels from the quiet despair of a broken system, through the specific human costs of retreat, culminating in the discovery of sovereign, authentic ways of living. Click any movement below to jump directly to its songs.
+            The album travels from the betrayal of federal dietary guidance, through corporate capture and the human cost of chronic disease, culminating in the collective awakening to health sovereignty. Click any movement below to jump directly to its songs.
           </p>
         </div>
 
-        <!-- 3-Movement Stepper Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- 4-Movement Stepper Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
           <!-- Movement 1 -->
-          <div onclick="scrollToAct(1)" id="act-btn-1" class="cursor-pointer text-left p-6 rounded-2xl bg-soil-850 border border-inversion-700/50 hover:border-inversion-400 transition-all group focus:outline-none focus:ring-2 focus:ring-inversion-400 shadow-xl hover:-translate-y-1">
+          <div onclick="scrollToAct(1)" id="act-btn-1" class="cursor-pointer text-left p-6 rounded-2xl bg-soil-850 border border-amber-700/50 hover:border-amber-400 transition-all group focus:outline-none focus:ring-2 focus:ring-amber-400 shadow-xl hover:-translate-y-1">
             <div class="flex items-center justify-between mb-3">
-              <span class="text-xs font-mono uppercase tracking-wider px-3 py-1 rounded bg-inversion-950 text-inversion-400 border border-inversion-800/80 font-bold">Part I</span>
+              <span class="text-xs font-mono uppercase tracking-wider px-3 py-1 rounded bg-amber-950 text-amber-400 border border-amber-800/80 font-bold">Part I</span>
               <span class="text-xs font-mono text-stone-400">Tracks 01–04</span>
             </div>
-            <h3 class="font-display text-xl font-bold text-white group-hover:text-inversion-300 transition-colors mb-2">The Diagnosis</h3>
+            <h3 class="font-display text-lg font-bold text-white group-hover:text-amber-300 transition-colors mb-2">The Great Betrayal</h3>
             <p class="text-xs text-stone-400 leading-relaxed mb-5">
-              Setting the scene: the 50% upward mobility coin flip, impossible housing price-to-income moats, young men retreating to basement gaming citadels, and algorithmic digital anesthesia.
+              Setting the scene: the broken dietary oath, the USDA Food Pyramid scheme, industrial seed oils replacing ancestral fats, and chemical flavor deception.
             </p>
-            <div class="text-xs font-mono text-inversion-400 flex items-center gap-1.5 font-semibold group-hover:translate-x-1 transition-transform">
+            <div class="text-xs font-mono text-amber-400 flex items-center gap-1.5 font-semibold group-hover:translate-x-1 transition-transform">
               <span>Jump to Songs (1–4)</span> <i aria-hidden="true" class="fa-solid fa-arrow-down text-[10px]"></i>
             </div>
           </div>
 
           <!-- Movement 2 -->
-          <div onclick="scrollToAct(2)" id="act-btn-2" class="cursor-pointer text-left p-6 rounded-2xl bg-soil-850 border border-white/10 hover:border-inversion-400 transition-all group focus:outline-none focus:ring-2 focus:ring-inversion-400 shadow-xl hover:-translate-y-1">
+          <div onclick="scrollToAct(2)" id="act-btn-2" class="cursor-pointer text-left p-6 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-400 transition-all group focus:outline-none focus:ring-2 focus:ring-amber-400 shadow-xl hover:-translate-y-1">
             <div class="flex items-center justify-between mb-3">
               <span class="text-xs font-mono uppercase tracking-wider px-3 py-1 rounded bg-soil-950 text-stone-300 border border-white/20 font-bold">Part II</span>
               <span class="text-xs font-mono text-stone-400">Tracks 05–08</span>
             </div>
-            <h3 class="font-display text-xl font-bold text-white group-hover:text-inversion-300 transition-colors mb-2">The Human Cost</h3>
+            <h3 class="font-display text-lg font-bold text-white group-hover:text-amber-300 transition-colors mb-2">The Captured Machine</h3>
             <p class="text-xs text-stone-400 leading-relaxed mb-5">
-              Workplace boundary survival ("Quiet Quitting"), romantic delay, the weighty decision not to bring children into an unstable world, and the album's contemplative turning point.
+              Investigating systemic institutional capture: the revolving door between FDA and biopharma, the polypharmacy pill trap, and corporate-funded blind spot science.
             </p>
-            <div class="text-xs font-mono text-stone-400 group-hover:text-inversion-400 flex items-center gap-1.5 font-semibold group-hover:translate-x-1 transition-transform">
+            <div class="text-xs font-mono text-stone-400 group-hover:text-amber-400 flex items-center gap-1.5 font-semibold group-hover:translate-x-1 transition-transform">
               <span>Jump to Songs (5–8)</span> <i aria-hidden="true" class="fa-solid fa-arrow-down text-[10px]"></i>
             </div>
           </div>
 
           <!-- Movement 3 -->
-          <div onclick="scrollToAct(3)" id="act-btn-3" class="cursor-pointer text-left p-6 rounded-2xl bg-soil-850 border border-emerald-700/50 hover:border-emerald-400 transition-all group focus:outline-none focus:ring-2 focus:ring-emerald-400 shadow-xl hover:-translate-y-1">
+          <div onclick="scrollToAct(3)" id="act-btn-3" class="cursor-pointer text-left p-6 rounded-2xl bg-soil-850 border border-white/10 hover:border-emerald-400 transition-all group focus:outline-none focus:ring-2 focus:ring-emerald-400 shadow-xl hover:-translate-y-1">
             <div class="flex items-center justify-between mb-3">
-              <span class="text-xs font-mono uppercase tracking-wider px-3 py-1 rounded bg-emerald-950 text-emerald-400 border border-emerald-800/80 font-bold">Part III</span>
-              <span class="text-xs font-mono text-stone-400">Tracks 09–13</span>
+              <span class="text-xs font-mono uppercase tracking-wider px-3 py-1 rounded bg-soil-950 text-stone-300 border border-white/20 font-bold">Part III</span>
+              <span class="text-xs font-mono text-stone-400">Tracks 09–11</span>
             </div>
-            <h3 class="font-display text-xl font-bold text-white group-hover:text-emerald-300 transition-colors mb-2">The Redefinition</h3>
+            <h3 class="font-display text-lg font-bold text-white group-hover:text-emerald-300 transition-colors mb-2">The Human Cost &amp; Pivot</h3>
             <p class="text-xs text-stone-400 leading-relaxed mb-5">
-              The counter-currents: intentional minimalism, the defiant mathematics of the FIRE movement (4% Rule), sovereign craft in the creator economy, localism, and the grand closing anthem.
+              The lived reality of chronic metabolic disease, turning toward ancestral regeneration, and awakening to personal health sovereignty.
+            </p>
+            <div class="text-xs font-mono text-stone-400 group-hover:text-emerald-400 flex items-center gap-1.5 font-semibold group-hover:translate-x-1 transition-transform">
+              <span>Jump to Songs (9–11)</span> <i aria-hidden="true" class="fa-solid fa-arrow-down text-[10px]"></i>
+            </div>
+          </div>
+
+          <!-- Movement 4 -->
+          <div onclick="scrollToAct(4)" id="act-btn-4" class="cursor-pointer text-left p-6 rounded-2xl bg-soil-850 border border-emerald-700/50 hover:border-emerald-400 transition-all group focus:outline-none focus:ring-2 focus:ring-emerald-400 shadow-xl hover:-translate-y-1">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono uppercase tracking-wider px-3 py-1 rounded bg-emerald-950 text-emerald-400 border border-emerald-800/80 font-bold">Part IV</span>
+              <span class="text-xs font-mono text-stone-400">Tracks 12–13</span>
+            </div>
+            <h3 class="font-display text-lg font-bold text-white group-hover:text-emerald-300 transition-colors mb-2">Sober Reality &amp; Horizons</h3>
+            <p class="text-xs text-stone-400 leading-relaxed mb-5">
+              The searing title track confronting overarching systemic complicity, culminating in an optimistic, unclouded anthem of health sovereignty and renewed vitality.
             </p>
             <div class="text-xs font-mono text-emerald-400 flex items-center gap-1.5 font-semibold group-hover:translate-x-1 transition-transform">
-              <span>Jump to Songs (9–13)</span> <i aria-hidden="true" class="fa-solid fa-arrow-down text-[10px]"></i>
+              <span>Jump to Songs (12–13)</span> <i aria-hidden="true" class="fa-solid fa-arrow-down text-[10px]"></i>
             </div>
           </div>
 
@@ -386,54 +418,56 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-soil-800 border border-white/10 text-inversion-400 text-xs font-mono uppercase tracking-widest">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-soil-800 border border-white/10 text-amber-400 text-xs font-mono uppercase tracking-widest">
             <i aria-hidden="true" class="fa-solid fa-cubes-stacked text-[11px]"></i>
-            <span>Sociological Audit</span>
+            <span>Public Health Framework</span>
           </div>
           <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-wide">
             The Five Framework Pillars
           </h2>
           <p class="text-sm sm:text-base text-stone-400 leading-relaxed">
-            Synthesizing economic research, labor economics, and neurological science into five structural pillars that underpin the songs of <em>The Great Inversion</em>.
+            Synthesizing nutritional biochemistry, regulatory economics, and metabolic medicine into five structural pillars that underpin the songs of <em>The Poison We Trust</em>.
           </p>
         </div>
 
         <!-- Dynamic Pillars Grid -->
         <div id="pillars-container" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <!-- Populated by JavaScript via window.GREAT_INVERSION_DATA.pillars -->
+          <!-- Populated by JavaScript via window.POISON_WE_TRUST_DATA.pillars -->
         </div>
 
       </div>
     </section>
 
-    <!-- SECTION: THE AMBITION INVERSION MATRIX -->
-    <section id="matrix-section" class="py-16 sm:py-20 bg-soil-900/40 border-b border-white/10">
+    <!-- SECTION: US DIETARY EVOLUTION TIMELINE MATRIX -->
+    <section id="timeline-section" class="py-16 sm:py-20 bg-soil-900/40 border-b border-white/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-inversion-950 border border-inversion-800/40 text-inversion-400 text-xs font-mono uppercase tracking-widest">
-            <i aria-hidden="true" class="fa-solid fa-arrows-split-up-and-left text-[11px]"></i>
-            <span>Conceptual Shift</span>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950 border border-amber-800/40 text-amber-400 text-xs font-mono uppercase tracking-widest">
+            <i aria-hidden="true" class="fa-solid fa-timeline text-[11px]"></i>
+            <span>Historical Matrix</span>
           </div>
           <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-wide">
-            The Inversion of Ambition
+            US Dietary Evolution Timeline
           </h2>
           <p class="text-sm sm:text-base text-stone-400 leading-relaxed">
-            The American Dream is no longer about getting rich within the system, but about becoming independent from it. Ambition has turned from an outward climb to the inward construction of a sovereign life.
+            How federal dietary guidance shifted from wartime whole-food nourishment to an ultra-processed grain and sugar subsidy pyramid that sparked modern chronic illness.
           </p>
         </div>
 
-        <!-- Comparison Table / Matrix -->
+        <!-- Timeline Matrix Table -->
         <div class="overflow-x-auto rounded-2xl border border-white/10 shadow-2xl bg-soil-850">
           <table class="w-full text-left text-sm font-sans border-collapse">
             <thead>
               <tr class="border-b border-white/10 bg-soil-900">
-                <th class="p-4 sm:p-5 font-mono text-xs uppercase tracking-wider text-stone-400">Metric of Success</th>
-                <th class="p-4 sm:p-5 font-mono text-xs uppercase tracking-wider text-rose-400 border-l border-white/10">The Old Ambition (20th Century)</th>
-                <th class="p-4 sm:p-5 font-mono text-xs uppercase tracking-wider text-emerald-400 border-l border-white/10">The New Ambition (21st Century)</th>
+                <th class="p-4 sm:p-5 font-mono text-xs uppercase tracking-wider text-amber-400">Era &amp; Year</th>
+                <th class="p-4 sm:p-5 font-mono text-xs uppercase tracking-wider text-stone-200 border-l border-white/10">Guideline / Model</th>
+                <th class="p-4 sm:p-5 font-mono text-xs uppercase tracking-wider text-stone-300 border-l border-white/10">Dietary Shift</th>
+                <th class="p-4 sm:p-5 font-mono text-xs uppercase tracking-wider text-rose-400 border-l border-white/10">Lobbying &amp; Corporate Influence</th>
+                <th class="p-4 sm:p-5 font-mono text-xs uppercase tracking-wider text-emerald-400 border-l border-white/10">Public Health Outcome</th>
               </tr>
             </thead>
-            <tbody id="matrix-tbody" class="divide-y divide-white/5 font-mono text-xs">
+            <tbody id="timeline-tbody" class="divide-y divide-white/5 font-mono text-xs">
               <!-- Populated by JavaScript -->
             </tbody>
           </table>
@@ -449,7 +483,7 @@
         <!-- Section Header -->
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-white/10">
           <div class="space-y-2">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-inversion-950 border border-inversion-800/40 text-inversion-400 text-xs font-mono uppercase tracking-widest">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950 border border-amber-800/40 text-amber-400 text-xs font-mono uppercase tracking-widest">
               <i aria-hidden="true" class="fa-solid fa-compact-disc text-[11px]"></i>
               <span>Complete Discography Vault</span>
             </div>
@@ -457,7 +491,7 @@
               The 13 Songs &amp; Formatted Lyrics
             </h2>
             <p class="text-sm text-stone-400 max-w-2xl font-body">
-              Explore the full acoustic and thematic journey. Click <strong>Show Lyrics</strong> on any track to reveal stanzas, guitar chord progressions, vocal directions, and narrative context.
+              Explore the full acoustic and thematic journey. Click <strong>Show Lyrics</strong> on any track to reveal stanzas, vocal directions, guitar instrumentation, and narrative context.
             </p>
           </div>
 
@@ -495,26 +529,25 @@
             A 26-album narrative folk-rock catalog chronicling the human spirit, rooted in Western Washington state and dedicated to authentic storytelling.
           </p>
           <div class="text-[11px] font-mono text-stone-500">
-            Album 04: The Great Inversion (2025)
+            Album 05: The Poison We Trust (2025)
           </div>
         </div>
 
-        <!-- Col 2: Inversion Resources -->
+        <!-- Col 2: Album Resources -->
         <div class="space-y-3">
-          <h4 class="font-mono text-xs uppercase tracking-wider text-inversion-400 font-bold">Album Exploration</h4>
+          <h4 class="font-mono text-xs uppercase tracking-wider text-amber-400 font-bold">Album Exploration</h4>
           <ul class="space-y-2 font-mono text-[11px]">
-            <li><a href="https://theshadyriverbard.substack.com/s/the-great-inversion" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-book-open text-amber-500 text-[10px]"></i><span>Companion Novella ↗</span></a></li>
             <li><a href="https://theshadyriverbard.substack.com/s/deconstructed" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-bookmark text-amber-500 text-[10px]"></i><span>"Deconstructed" Liner Notes ↗</span></a></li>
-            <li><a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcHpbQ_j63bh6NrvnSP-KwSM" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-brands fa-youtube text-red-500 text-[10px]"></i><span>Official Video Playlist ↗</span></a></li>
+            <li><a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcG-3eJRamWMAXVCJEhO_sRa" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-brands fa-youtube text-red-500 text-[10px]"></i><span>Official Video Playlist ↗</span></a></li>
             <li><a href="/vault/" class="hover:text-white transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-guitar text-stone-400 text-[10px]"></i><span>Complete 26-Album Vault</span></a></li>
           </ul>
         </div>
 
         <!-- Col 3: Sister Concept Sites -->
         <div class="space-y-3">
-          <h4 class="font-mono text-xs uppercase tracking-wider text-inversion-400 font-bold">Interactive Vaults</h4>
+          <h4 class="font-mono text-xs uppercase tracking-wider text-amber-400 font-bold">Interactive Vaults</h4>
           <ul class="space-y-2 font-mono text-[11px]">
-            <li><a href="/the-poison-we-trust/" class="hover:text-white transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-flask-vial text-amber-500 text-[10px]"></i><span>The Poison We Trust (Album 05) ↗</span></a></li>
+            <li><a href="/the-great-inversion/" class="hover:text-white transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-compass text-amber-500 text-[10px]"></i><span>The Great Inversion (Album 04) ↗</span></a></li>
             <li><a href="/the-fracture/" class="hover:text-white transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-layer-group text-amber-500 text-[10px]"></i><span>The Fracture (Album 03) ↗</span></a></li>
             <li><a href="/the-hollow-herd/" class="hover:text-white transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-cow text-amber-500 text-[10px]"></i><span>The Hollow Herd (Album 26) ↗</span></a></li>
             <li><a href="/" class="hover:text-white transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-house text-emerald-500 text-[10px]"></i><span>Flagship Homestead Portal</span></a></li>
@@ -523,16 +556,16 @@
 
         <!-- Col 4: Accessibility & Legal -->
         <div class="space-y-3">
-          <h4 class="font-mono text-xs uppercase tracking-wider text-inversion-400 font-bold">Universal Access</h4>
+          <h4 class="font-mono text-xs uppercase tracking-wider text-amber-400 font-bold">Universal Access</h4>
           <p class="text-stone-400 text-[11px] leading-relaxed">
             Fully certified for Section 508 and WCAG 2.1 AA guidelines, featuring semantic landmarks, skip links, and full keyboard navigation.
           </p>
           <div class="space-y-1">
-            <button onclick="toggleA11yToolbar()" class="text-[11px] font-mono text-inversion-400 hover:text-inversion-300 underline flex items-center gap-1">
+            <button onclick="toggleA11yToolbar()" class="text-[11px] font-mono text-amber-400 hover:text-amber-300 underline flex items-center gap-1">
               <i aria-hidden="true" class="fa-solid fa-sliders"></i>
               <span>Adjust Display Toolbar</span>
             </button>
-            <button onclick="openA11yModal()" class="text-[11px] font-mono text-stone-400 hover:text-inversion-400 underline flex items-center gap-1">
+            <button onclick="openA11yModal()" class="text-[11px] font-mono text-stone-400 hover:text-amber-400 underline flex items-center gap-1">
               <i aria-hidden="true" class="fa-solid fa-universal-access"></i>
               <span>Accessibility Statement (WCAG 2.1 AA)</span>
             </button>
@@ -544,13 +577,13 @@
       <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-stone-500">
         <div>&copy; 2025&ndash;2026 The Shady River Bard &bull; The Shady River Homestead, LLC. All rights reserved.</div>
         <div class="flex items-center gap-4 flex-wrap">
-          <button onclick="openA11yModal()" class="hover:text-inversion-400 underline transition-colors">Accessibility Statement</button>
+          <button onclick="openA11yModal()" class="hover:text-amber-400 underline transition-colors">Accessibility Statement</button>
           <span>&bull;</span>
           <a href="/vault/" class="hover:text-stone-300 transition-colors">Discography</a>
           <span>&bull;</span>
           <a href="https://theshadyriverbard.substack.com" target="_blank" rel="noopener noreferrer" class="hover:text-stone-300 transition-colors">Substack</a>
           <span>&bull;</span>
-          <a href="#top" class="hover:text-inversion-400 transition-colors">Back to Top &uarr;</a>
+          <a href="#top" class="hover:text-amber-400 transition-colors">Back to Top &uarr;</a>
         </div>
       </div>
 
@@ -558,16 +591,16 @@
   </footer>
 
   <!-- Concept Data Script -->
-  <script src="data/great-inversion-data.js?v=20260910_01"></script>
+  <script src="data/poison-we-trust-data.js?v=20260910_02"></script>
 
   <!-- Interactive Logic Script -->
   <script>
     // 1. Render Framework Pillars
     function renderPillars() {
       const container = document.getElementById('pillars-container');
-      if (!container || !window.GREAT_INVERSION_DATA) return;
+      if (!container || !window.POISON_WE_TRUST_DATA) return;
 
-      const pillars = window.GREAT_INVERSION_DATA.pillars;
+      const pillars = window.POISON_WE_TRUST_DATA.pillars;
       const colorMap = {
         amber: { border: 'border-amber-500/40', bg: 'bg-amber-950/40', text: 'text-amber-400', badge: 'bg-amber-950 text-amber-300 border-amber-800/60' },
         rose: { border: 'border-rose-500/40', bg: 'bg-rose-950/40', text: 'text-rose-400', badge: 'bg-rose-950 text-rose-300 border-rose-800/60' },
@@ -579,7 +612,7 @@
       container.innerHTML = pillars.map(p => {
         const theme = colorMap[p.color] || colorMap.amber;
         return `
-          <article class="p-6 sm:p-8 rounded-2xl bg-soil-850 border ${theme.border} shadow-xl hover:border-inversion-400 transition-all space-y-6 flex flex-col justify-between">
+          <article class="p-6 sm:p-8 rounded-2xl bg-soil-850 border ${theme.border} shadow-xl hover:border-amber-400 transition-all space-y-6 flex flex-col justify-between">
             <div class="space-y-4">
               
               <!-- Header -->
@@ -611,7 +644,7 @@
               <!-- Mechanism & Metaphor -->
               <div class="space-y-3 pt-2 text-xs leading-relaxed text-stone-300 font-body">
                 <p>
-                  <strong class="font-mono uppercase text-[11px] ${theme.text} tracking-wider block mb-1">Sociological Mechanism:</strong>
+                  <strong class="font-mono uppercase text-[11px] ${theme.text} tracking-wider block mb-1">Public Health Mechanism:</strong>
                   ${p.mechanism}
                 </p>
                 <div class="p-3 rounded-xl bg-soil-900/80 border border-white/5 text-stone-400 italic font-body">
@@ -626,7 +659,7 @@
               <span class="text-[10px] font-mono text-stone-500 uppercase">Connected Songs:</span>
               <div class="flex items-center gap-1.5 flex-wrap">
                 ${p.connected_tracks.map(tNum => `
-                  <button onclick="expandSingleTrack(${tNum})" class="text-[11px] font-mono px-2.5 py-1 rounded ${theme.badge} border hover:bg-inversion-900 hover:border-inversion-500 transition-colors">
+                  <button onclick="expandSingleTrack(${tNum})" class="text-[11px] font-mono px-2.5 py-1 rounded ${theme.badge} border hover:bg-amber-900 hover:border-amber-500 transition-colors" aria-label="Jump to Track ${tNum}">
                     Track ${tNum}
                   </button>
                 `).join('')}
@@ -637,50 +670,56 @@
       }).join('');
     }
 
-    // 2. Render Inversion Matrix Table
-    function renderMatrix() {
-      const tbody = document.getElementById('matrix-tbody');
-      if (!tbody || !window.GREAT_INVERSION_DATA) return;
+    // 2. Render Dietary Evolution Timeline Matrix Table
+    function renderTimeline() {
+      const tbody = document.getElementById('timeline-tbody');
+      if (!tbody || !window.POISON_WE_TRUST_DATA) return;
 
-      const matrix = window.GREAT_INVERSION_DATA.comparison_matrix;
-      tbody.innerHTML = matrix.map(row => `
+      const timeline = window.POISON_WE_TRUST_DATA.dietary_timeline;
+      tbody.innerHTML = timeline.map(row => `
         <tr class="hover:bg-soil-800/40 transition-colors">
-          <td class="p-4 sm:p-5 font-bold text-stone-200">${row.metric}</td>
-          <td class="p-4 sm:p-5 text-stone-400 border-l border-white/10 line-through decoration-rose-500/40">${row.old}</td>
-          <td class="p-4 sm:p-5 text-emerald-300 font-semibold border-l border-white/10 flex items-center gap-2">
-            <i aria-hidden="true" class="fa-solid fa-arrow-right text-[10px] text-emerald-400"></i>
-            <span>${row.new}</span>
-          </td>
+          <td class="p-4 sm:p-5 font-bold text-amber-400">${row.year}</td>
+          <td class="p-4 sm:p-5 text-stone-200 font-semibold border-l border-white/10">${row.name}</td>
+          <td class="p-4 sm:p-5 text-stone-300 border-l border-white/10">${row.shift}</td>
+          <td class="p-4 sm:p-5 text-rose-300/90 border-l border-white/10 font-sans text-xs">${row.influence}</td>
+          <td class="p-4 sm:p-5 text-emerald-300 border-l border-white/10 font-sans text-xs">${row.outcome}</td>
         </tr>
       `).join('');
     }
 
-    // 3. Render Tracklist & Lyrics (Continuous List with 3 Movement Dividers)
+    // 3. Render Tracklist & Lyrics (Continuous List with 4 Movement Dividers)
     function renderTracks() {
       const container = document.getElementById('tracks-container');
-      if (!container || !window.GREAT_INVERSION_DATA) return;
+      if (!container || !window.POISON_WE_TRUST_DATA) return;
 
-      const tracks = window.GREAT_INVERSION_DATA.tracks;
+      const tracks = window.POISON_WE_TRUST_DATA.tracks;
 
       const actMetadata = {
         1: {
-          title: "Part I: The Diagnosis",
+          title: "Movement I: The Great Betrayal",
           tracks: "Tracks 01 – 04",
-          subtitle: "Setting the scene: economic disillusionment, impossible housing price-to-income moats, young men retreating into virtual worlds, and digital dopamine pacification.",
-          color: "border-inversion-500",
-          tagBg: "bg-inversion-950 text-inversion-400 border-inversion-800/60"
+          subtitle: "Setting the scene: the broken dietary oath, the USDA Food Pyramid scheme, industrial seed oils replacing ancestral fats, and chemical flavor deception.",
+          color: "border-amber-500",
+          tagBg: "bg-amber-950 text-amber-400 border-amber-800/60"
         },
         2: {
-          title: "Part II: The Human Cost",
+          title: "Movement II: The Captured Machine",
           tracks: "Tracks 05 – 08",
-          subtitle: "Delving deeper into emotional consequences: setting workplace boundaries as survival, delaying romance, consciously ending family names, and articulating the state of being stuck.",
+          subtitle: "Investigating systemic institutional capture: the revolving door between FDA and biopharma, the polypharmacy pill trap, and corporate-funded blind spot science.",
+          color: "border-purple-500",
+          tagBg: "bg-purple-950 text-purple-300 border-purple-800/60"
+        },
+        3: {
+          title: "Movement III: The Human Cost & The Pivot",
+          tracks: "Tracks 09 – 11",
+          subtitle: "The lived reality of chronic metabolic disease, turning toward ancestral regeneration, and awakening to personal health sovereignty.",
           color: "border-rose-500",
           tagBg: "bg-rose-950 text-rose-300 border-rose-800/60"
         },
-        3: {
-          title: "Part III: The Redefinition",
-          tracks: "Tracks 09 – 13",
-          subtitle: "The counter-currents: intentional minimalism, the radical discipline of FIRE (The 4% Rule), independent creator craft, re-grounding in local community, and a grand unifying vision of true wealth.",
+        4: {
+          title: "Movement IV: Sober Reality & New Horizons",
+          tracks: "Tracks 12 – 13",
+          subtitle: "The searing title track confronting overarching systemic complicity, culminating in an optimistic, unclouded anthem of health sovereignty and renewed vitality.",
           color: "border-emerald-500",
           tagBg: "bg-emerald-950 text-emerald-400 border-emerald-800/60"
         }
@@ -727,7 +766,7 @@
                 
                 <div class="space-y-1">
                   <div class="flex items-center gap-2">
-                    <span class="font-mono text-xs text-inversion-400 font-bold px-2 py-0.5 rounded bg-inversion-950 border border-inversion-800/40">
+                    <span class="font-mono text-xs text-amber-400 font-bold px-2 py-0.5 rounded bg-amber-950 border border-amber-800/40">
                       Track ${String(t.number).padStart(2, '0')}
                     </span>
                     <span class="text-xs font-mono text-stone-400">${t.act_title}</span>
@@ -736,7 +775,7 @@
                     ${t.title}
                   </h3>
                   <p class="text-xs text-stone-400 font-mono flex items-center gap-2">
-                    <span><i aria-hidden="true" class="fa-solid fa-tag text-inversion-500 mr-1"></i>${t.core_pillar}</span>
+                    <span><i aria-hidden="true" class="fa-solid fa-tag text-amber-500 mr-1"></i>${t.core_pillar}</span>
                   </p>
                 </div>
               </div>
@@ -748,9 +787,9 @@
                   <span>Watch Video ↗</span>
                 </a>
                 
-                <button onclick="toggleTrackLyrics(${t.number})" id="toggle-btn-${t.number}" class="py-2.5 px-4 rounded-xl bg-soil-800 hover:bg-soil-750 text-stone-200 border border-white/10 font-medium text-xs transition-colors flex items-center gap-2 focus:outline-none focus:ring-1 focus:ring-inversion-400">
+                <button onclick="toggleTrackLyrics(${t.number})" id="toggle-btn-${t.number}" class="py-2.5 px-4 rounded-xl bg-soil-800 hover:bg-soil-750 text-stone-200 border border-white/10 font-medium text-xs transition-colors flex items-center gap-2 focus:outline-none focus:ring-1 focus:ring-amber-400" aria-expanded="false" aria-controls="lyrics-drawer-${t.number}">
                   <span id="toggle-label-${t.number}">Show Lyrics</span>
-                  <i id="toggle-icon-${t.number}" class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
+                  <i id="toggle-icon-${t.number}" class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
                 </button>
               </div>
 
@@ -758,7 +797,7 @@
 
             <!-- Style & Musical Direction Banner -->
             <div class="p-4 rounded-xl bg-soil-900 border border-white/5 space-y-1">
-              <span class="text-[10px] font-mono uppercase tracking-wider text-inversion-400 font-bold block">
+              <span class="text-[10px] font-mono uppercase tracking-wider text-amber-400 font-bold block">
                 <i aria-hidden="true" class="fa-solid fa-guitar mr-1.5"></i>Musical Direction &amp; Instrumentation
               </span>
               <p class="text-xs text-stone-300 font-mono leading-relaxed">
@@ -777,23 +816,23 @@
               <!-- Lyrics Header & Copy Action -->
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-2">
-                  <i aria-hidden="true" class="fa-solid fa-quote-left text-inversion-400 text-xs"></i>
+                  <i aria-hidden="true" class="fa-solid fa-quote-left text-amber-400 text-xs"></i>
                   <span class="text-xs font-mono uppercase tracking-wider text-stone-300 font-semibold">Official Lyrics &amp; Stanzas</span>
                 </div>
-                <button onclick="copyLyrics(${t.number})" id="copy-btn-${t.number}" class="text-xs font-mono text-stone-400 hover:text-white px-2.5 py-1 rounded bg-soil-800 border border-white/10 hover:border-white/20 transition-colors flex items-center gap-1.5">
+                <button onclick="copyLyrics(${t.number})" id="copy-btn-${t.number}" class="text-xs font-mono text-stone-400 hover:text-white px-2.5 py-1 rounded bg-soil-800 border border-white/10 hover:border-white/20 transition-colors flex items-center gap-1.5" aria-label="Copy lyrics for ${t.title}">
                   <i aria-hidden="true" class="fa-solid fa-copy text-[10px]"></i>
                   <span>Copy Lyrics</span>
                 </button>
               </div>
               
               <!-- Formatted Stanzas Display -->
-              <div class="space-y-6 p-6 sm:p-8 rounded-2xl bg-soil-950/90 border border-white/5 font-serif text-stone-200 text-sm sm:text-base leading-relaxed selection:bg-inversion-600 shadow-inner">
+              <div class="space-y-6 p-6 sm:p-8 rounded-2xl bg-soil-950/90 border border-white/5 font-serif text-stone-200 text-sm sm:text-base leading-relaxed selection:bg-amber-600 shadow-inner">
                 ${t.stanzas && t.stanzas.length > 0 ? t.stanzas.map(s => `
                   <div class="stanza space-y-2">
-                    <span class="inline-block text-[10px] font-mono uppercase tracking-wider text-inversion-400 font-bold px-2.5 py-0.5 rounded bg-inversion-950/80 border border-inversion-800/40">
+                    <span class="inline-block text-[10px] font-mono uppercase tracking-wider text-amber-400 font-bold px-2.5 py-0.5 rounded bg-amber-950/80 border border-amber-800/40">
                       ${s.tag}
                     </span>
-                    <div class="space-y-1 pl-3 border-l-2 border-inversion-900/50 text-stone-200 font-mono text-xs sm:text-sm">
+                    <div class="space-y-1 pl-3 border-l-2 border-amber-900/50 text-stone-200 font-mono text-xs sm:text-sm">
                       ${s.lines.map(line => `<p class="leading-relaxed">${line}</p>`).join('')}
                     </div>
                   </div>
@@ -803,7 +842,7 @@
               <!-- Narrative Context & Video Description -->
               ${t.youtube_description ? `
                 <div class="p-4 sm:p-5 rounded-xl bg-soil-900/60 border border-white/5 text-xs text-stone-400 space-y-2">
-                  <span class="font-mono text-[10px] uppercase tracking-wider text-inversion-400 font-bold block">
+                  <span class="font-mono text-[10px] uppercase tracking-wider text-amber-400 font-bold block">
                     <i aria-hidden="true" class="fa-solid fa-scroll mr-1.5"></i>Narrative Context &amp; Visual Notes:
                   </span>
                   <p class="leading-relaxed font-sans">${t.youtube_description.replace(/\n/g, '<br>')}</p>
@@ -821,13 +860,13 @@
 
     // 4. Smooth Scroll directly to an Act from Roadmap
     function scrollToAct(actNum) {
-      for (let i = 1; i <= 3; i++) {
+      for (let i = 1; i <= 4; i++) {
         const btn = document.getElementById(`act-btn-${i}`);
         if (btn) {
           if (i === actNum) {
-            btn.classList.add('ring-2', 'ring-inversion-400', 'border-inversion-400');
+            btn.classList.add('ring-2', 'ring-amber-400', 'border-amber-400');
           } else {
-            btn.classList.remove('ring-2', 'ring-inversion-400', 'border-inversion-400');
+            btn.classList.remove('ring-2', 'ring-amber-400', 'border-amber-400');
           }
         }
       }
@@ -835,9 +874,9 @@
       const targetHeader = document.getElementById(`act-section-${actNum}`);
       if (targetHeader) {
         targetHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        targetHeader.classList.add('ring-2', 'ring-inversion-400');
+        targetHeader.classList.add('ring-2', 'ring-amber-400');
         setTimeout(() => {
-          targetHeader.classList.remove('ring-2', 'ring-inversion-400');
+          targetHeader.classList.remove('ring-2', 'ring-amber-400');
         }, 2000);
       }
     }
@@ -847,6 +886,7 @@
       const drawer = document.getElementById(`lyrics-drawer-${trackNum}`);
       const label = document.getElementById(`toggle-label-${trackNum}`);
       const icon = document.getElementById(`toggle-icon-${trackNum}`);
+      const btn = document.getElementById(`toggle-btn-${trackNum}`);
 
       if (!drawer || !label || !icon) return;
 
@@ -855,10 +895,12 @@
         drawer.classList.remove('hidden');
         label.textContent = 'Hide Lyrics';
         icon.classList.add('rotate-180');
+        if (btn) btn.setAttribute('aria-expanded', 'true');
       } else {
         drawer.classList.add('hidden');
         label.textContent = 'Show Lyrics';
         icon.classList.remove('rotate-180');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
       }
     }
 
@@ -867,42 +909,47 @@
       const drawer = document.getElementById(`lyrics-drawer-${trackNum}`);
       const label = document.getElementById(`toggle-label-${trackNum}`);
       const icon = document.getElementById(`toggle-icon-${trackNum}`);
+      const btn = document.getElementById(`toggle-btn-${trackNum}`);
 
       if (drawer && drawer.classList.contains('hidden')) {
         drawer.classList.remove('hidden');
         if (label) label.textContent = 'Hide Lyrics';
         if (icon) icon.classList.add('rotate-180');
+        if (btn) btn.setAttribute('aria-expanded', 'true');
       }
 
       const trackEl = document.getElementById(`track-${trackNum}`);
       if (trackEl) {
         trackEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        trackEl.classList.add('ring-2', 'ring-inversion-400');
+        trackEl.classList.add('ring-2', 'ring-amber-400');
         setTimeout(() => {
-          trackEl.classList.remove('ring-2', 'ring-inversion-400');
+          trackEl.classList.remove('ring-2', 'ring-amber-400');
         }, 2200);
       }
     }
 
     // 7. Expand / Collapse All Lyrics
     function toggleAllLyrics(shouldExpand) {
-      if (!window.GREAT_INVERSION_DATA) return;
-      const tracks = window.GREAT_INVERSION_DATA.tracks;
+      if (!window.POISON_WE_TRUST_DATA) return;
+      const tracks = window.POISON_WE_TRUST_DATA.tracks;
 
       tracks.forEach(t => {
         const drawer = document.getElementById(`lyrics-drawer-${t.number}`);
         const label = document.getElementById(`toggle-label-${t.number}`);
         const icon = document.getElementById(`toggle-icon-${t.number}`);
+        const btn = document.getElementById(`toggle-btn-${t.number}`);
 
         if (drawer && label && icon) {
           if (shouldExpand) {
             drawer.classList.remove('hidden');
             label.textContent = 'Hide Lyrics';
             icon.classList.add('rotate-180');
+            if (btn) btn.setAttribute('aria-expanded', 'true');
           } else {
             drawer.classList.add('hidden');
             label.textContent = 'Show Lyrics';
             icon.classList.remove('rotate-180');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
           }
         }
       });
@@ -910,8 +957,8 @@
 
     // 8. One-Click Copy Lyrics with Toast Feedback
     function copyLyrics(trackNum) {
-      if (!window.GREAT_INVERSION_DATA) return;
-      const track = window.GREAT_INVERSION_DATA.tracks.find(t => t.number === trackNum);
+      if (!window.POISON_WE_TRUST_DATA) return;
+      const track = window.POISON_WE_TRUST_DATA.tracks.find(t => t.number === trackNum);
       if (!track) return;
 
       let lyricsToCopy = '';
@@ -938,7 +985,7 @@
     // Initialization on DOM Load
     document.addEventListener('DOMContentLoaded', () => {
       renderPillars();
-      renderMatrix();
+      renderTimeline();
       renderTracks();
 
       // Mobile Menu Toggle
