@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Unbroken Chain | Album 10 Vault | The Shady River Bard</title>
+  <title>This Sacred Ground | Album 11 Vault | The Shady River Bard</title>
   
-  <meta name="description" content="Explore The Unbroken Chain, a 4-act historical folk blues cantata by The Shady River Bard. 14 tracks tracing the evolution of forced labor in America, complete lyrics vault, Suno prompts, and historical analysis.">
+  <meta name="description" content="Explore This Sacred Ground, a 5-act folk epic by The Shady River Bard bearing witness to the Native American experience from creation to boarding schools and modern resurgence. Complete lyrics vault, Suno prompts, and historical analysis.">
   <meta name="author" content="The Shady River Bard">
-  <link rel="canonical" href="https://theshadyriverbard.com/unbroken-chain/">
+  <link rel="canonical" href="https://theshadyriverbard.com/this-sacred-ground/">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="The Unbroken Chain | Album 10 Vault">
-  <meta property="og:description" content="A 4-act historical folk blues cantata by The Shady River Bard tracing forced labor from chattel slavery to convict leasing and modern mass incarceration.">
-  <meta property="og:image" content="https://theshadyriverbard.com/unbroken-chain/assets/art/unbroken-chain-cover.webp">
-  <meta property="og:url" content="https://theshadyriverbard.com/unbroken-chain/">
+  <meta property="og:title" content="This Sacred Ground | Album 11 Vault">
+  <meta property="og:description" content="A 5-act folk epic by The Shady River Bard exploring creation, broken treaties, boarding schools, and modern cultural resurgence on ancestral earth.">
+  <meta property="og:image" content="https://theshadyriverbard.com/this-sacred-ground/assets/art/this-sacred-ground-cover.webp">
+  <meta property="og:url" content="https://theshadyriverbard.com/this-sacred-ground/">
   <meta property="og:type" content="music.album">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The Unbroken Chain | Album 10 Vault">
-  <meta name="twitter:description" content="Historical folk blues cantata tracing the unbroken chain of labor exploitation and defiant musical resilience.">
-  <meta name="twitter:image" content="https://theshadyriverbard.com/unbroken-chain/assets/art/unbroken-chain-cover.webp">
+  <meta name="twitter:title" content="This Sacred Ground | Album 11 Vault">
+  <meta name="twitter:description" content="Folk epic tracing the sacred connection to the land and the resilient endurance of Indigenous culture.">
+  <meta name="twitter:image" content="https://theshadyriverbard.com/this-sacred-ground/assets/art/this-sacred-ground-cover.webp">
   
   <!-- Preload Cover Artwork -->
-  <link rel="preload" as="image" href="assets/art/unbroken-chain-cover.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/art/this-sacred-ground-cover.webp" type="image/webp" fetchpriority="high">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -32,35 +32,41 @@
       theme: {
         extend: {
           colors: {
-            chain: {
-              50: '#f8fafc',
-              100: '#f1f5f9',
-              200: '#e2e8f0',
-              300: '#cbd5e1',
-              400: '#94a3b8',
-              500: '#64748b',
-              600: '#475569',
-              700: '#334155',
-              800: '#1e293b',
-              850: '#172033',
-              900: '#0f172a',
-              950: '#080d1a',
+            sacred: {
+              50: '#fbfaf8',
+              100: '#f5f3ef',
+              200: '#e8e4dc',
+              300: '#d5cdc0',
+              400: '#b8ab97',
+              500: '#9d8c74',
+              600: '#82705b',
+              700: '#685748',
+              800: '#55473c',
+              850: '#3a3029',
+              900: '#26201b',
+              950: '#14100d',
             },
-            iron: {
-              400: '#a1a1aa',
-              500: '#71717a',
-              600: '#52525b',
-              700: '#3f3f46',
-              800: '#27272a',
-              900: '#18181b',
-              950: '#09090b',
+            earth: {
+              800: '#292524',
+              850: '#1f1c1a',
+              900: '#1c1917',
+              950: '#0c0a09',
             },
-            gold: {
-              300: '#fde047',
-              400: '#facc15',
-              500: '#eab308',
-              600: '#ca8a04',
-              700: '#a16207',
+            cedar: {
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea580c',
+              700: '#c2410c',
+              800: '#9a3412',
+              900: '#7c2d12',
+            },
+            sage: {
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
             },
             amber: {
               300: '#fcd34d',
@@ -95,32 +101,31 @@
   <link rel="stylesheet" href="/assets/css/a11y.css">
 
   <style>
-    .chain-bg-pattern {
-      background-image: radial-gradient(circle at 50% 0%, rgba(217, 119, 6, 0.08) 0%, transparent 60%),
-                        radial-gradient(circle at 80% 80%, rgba(56, 189, 248, 0.04) 0%, transparent 50%),
-                        linear-gradient(to bottom, #080d1a, #0f172a 40%, #18181b 100%);
+    .sacred-bg-pattern {
+      background-image: radial-gradient(circle at 50% 0%, rgba(217, 119, 6, 0.09) 0%, transparent 60%),
+                        radial-gradient(circle at 85% 85%, rgba(16, 185, 129, 0.05) 0%, transparent 50%),
+                        linear-gradient(to bottom, #0c0a09, #1c1917 35%, #26201b 70%, #0c0a09 100%);
     }
     .lyrics-scroll::-webkit-scrollbar {
       width: 6px;
     }
     .lyrics-scroll::-webkit-scrollbar-track {
-      background: rgba(15, 23, 42, 0.6);
+      background: rgba(28, 25, 23, 0.6);
     }
     .lyrics-scroll::-webkit-scrollbar-thumb {
-      background: rgba(180, 83, 9, 0.5);
+      background: rgba(217, 119, 6, 0.5);
       border-radius: 3px;
     }
     .lyrics-scroll::-webkit-scrollbar-thumb:hover {
-      background: rgba(217, 119, 6, 0.8);
+      background: rgba(245, 158, 11, 0.8);
     }
-    /* Ensure high contrast focus outlines */
     a:focus-visible, button:focus-visible, input:focus-visible {
       outline: 2px solid #fbbf24;
       outline-offset: 2px;
     }
   </style>
 </head>
-<body class="bg-chain-950 text-slate-100 font-sans antialiased min-h-screen selection:bg-amber-600 selection:text-white chain-bg-pattern flex flex-col">
+<body class="bg-earth-950 text-slate-100 font-sans antialiased min-h-screen selection:bg-amber-600 selection:text-white sacred-bg-pattern flex flex-col">
 
   <!-- 1. WCAG Skip to Main Content Link -->
   <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 px-5 py-3 bg-amber-500 text-slate-950 font-bold rounded-lg shadow-2xl focus:outline-none focus:ring-4 focus:ring-amber-300">
@@ -128,7 +133,7 @@
   </a>
 
   <!-- Sticky Top Navigation -->
-  <header class="sticky top-0 z-40 bg-chain-950/90 backdrop-blur-md border-b border-chain-800/80 transition-all duration-300">
+  <header class="sticky top-0 z-40 bg-earth-950/90 backdrop-blur-md border-b border-earth-800 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
       
       <!-- Brand & Album Title -->
@@ -137,17 +142,17 @@
           <i class="fa-solid fa-feather-pointed" aria-hidden="true"></i>
           <span class="hidden sm:inline">The Shady River Bard</span>
         </a>
-        <span class="text-chain-600 shrink-0" aria-hidden="true">/</span>
+        <span class="text-sacred-700 shrink-0" aria-hidden="true">/</span>
         <div class="flex items-center gap-2 min-w-0">
-          <span class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30 shrink-0">Album 10</span>
-          <h1 class="text-sm font-bold text-slate-100 truncate">The Unbroken Chain</h1>
+          <span class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30 shrink-0">Album 11</span>
+          <h1 class="text-sm font-bold text-slate-100 truncate">This Sacred Ground</h1>
         </div>
       </div>
 
       <!-- Quick Nav Links -->
       <nav class="hidden md:flex items-center gap-6 text-xs font-medium text-slate-300" aria-label="Album navigation">
         <a href="#overview" class="hover:text-amber-400 transition-colors">Overview</a>
-        <a href="#acts" class="hover:text-amber-400 transition-colors">The 4 Acts</a>
+        <a href="#acts" class="hover:text-amber-400 transition-colors">The 5 Acts</a>
         <a href="#pillars" class="hover:text-amber-400 transition-colors">Historical Pillars</a>
         <a href="#tracklist" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
           <i class="fa-solid fa-music text-amber-500" aria-hidden="true"></i>
@@ -157,16 +162,16 @@
 
       <!-- External Links & A11y Quick Toggle -->
       <div class="flex items-center gap-2">
-        <a href="https://music.apple.com/us/album/the-unbroken-chain/1832642969" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-chain-800 hover:bg-chain-700 text-slate-200 border border-chain-700 text-xs font-medium transition-colors" title="Listen on Apple Music" aria-label="Listen to The Unbroken Chain on Apple Music (opens in new tab)">
+        <a href="https://music.apple.com/us/album/this-sacred-ground/1833864145" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-earth-850 hover:bg-earth-800 text-slate-200 border border-earth-800 text-xs font-medium transition-colors" title="Listen on Apple Music" aria-label="Listen to This Sacred Ground on Apple Music (opens in new tab)">
           <i class="fa-brands fa-apple text-sm text-pink-400" aria-hidden="true"></i>
           <span>Apple Music</span>
         </a>
-        <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcH2lWQ4zDr7Kh4kW-TU8HFI" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-red-950/40 hover:bg-red-900/50 text-red-300 border border-red-800/60 text-xs font-medium transition-colors" title="Watch on YouTube" aria-label="Watch The Unbroken Chain video playlist on YouTube (opens in new tab)">
+        <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcGKqJdE1F67neqmJgNBvouc" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-red-950/40 hover:bg-red-900/50 text-red-300 border border-red-800/60 text-xs font-medium transition-colors" title="Watch on YouTube" aria-label="Watch This Sacred Ground video playlist on YouTube (opens in new tab)">
           <i class="fa-brands fa-youtube text-sm text-red-500" aria-hidden="true"></i>
           <span>Playlist</span>
         </a>
         <!-- Accessibility Quick Trigger -->
-        <button onclick="window.toggleA11yToolbar && window.toggleA11yToolbar()" class="p-2 rounded-lg bg-chain-800/90 hover:bg-chain-700 text-amber-400 border border-chain-700/80 text-xs transition-colors" title="Accessibility Settings" aria-label="Toggle Accessibility Menu">
+        <button onclick="window.toggleA11yToolbar && window.toggleA11yToolbar()" class="p-2 rounded-lg bg-earth-850 hover:bg-earth-800 text-amber-400 border border-earth-800 text-xs transition-colors" title="Accessibility Settings" aria-label="Toggle Accessibility Menu">
           <i class="fa-solid fa-universal-access text-sm" aria-hidden="true"></i>
         </button>
       </div>
@@ -178,24 +183,24 @@
   <main id="main-content" tabindex="-1" class="flex-grow focus:outline-none">
 
     <!-- HERO SECTION -->
-    <section id="overview" class="relative py-12 md:py-20 border-b border-chain-800/80 overflow-hidden" aria-labelledby="hero-title">
+    <section id="overview" class="relative py-12 md:py-20 border-b border-earth-800 overflow-hidden" aria-labelledby="hero-title">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
           <!-- Album Artwork Column -->
           <div class="lg:col-span-5 flex justify-center">
-            <div class="relative w-full max-w-md aspect-square rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-900/40 group bg-chain-900">
+            <div class="relative w-full max-w-md aspect-square rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-900/40 group bg-earth-900">
               <img 
-                src="assets/art/unbroken-chain-cover.webp" 
-                alt="The Unbroken Chain album cover by The Shady River Bard"
+                src="assets/art/this-sacred-ground-cover.webp" 
+                alt="This Sacred Ground album cover by The Shady River Bard"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 width="1000"
                 height="1000"
                 fetchpriority="high">
-              <div class="absolute inset-0 bg-gradient-to-t from-chain-950 via-transparent to-transparent opacity-80 pointer-events-none"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-earth-950 via-transparent to-transparent opacity-80 pointer-events-none"></div>
               <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs text-slate-300">
-                <span class="font-mono bg-chain-950/80 px-2.5 py-1 rounded backdrop-blur border border-chain-800">Album #10</span>
-                <span class="bg-amber-600/90 text-slate-950 font-bold px-2.5 py-1 rounded backdrop-blur">14 Tracks • 58 Min</span>
+                <span class="font-mono bg-earth-950/80 px-2.5 py-1 rounded backdrop-blur border border-earth-800">Album #11</span>
+                <span class="bg-amber-600/90 text-slate-950 font-bold px-2.5 py-1 rounded backdrop-blur">12 Tracks • 52 Min</span>
               </div>
             </div>
           </div>
@@ -208,34 +213,34 @@
                 <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/30">
                   Concept Album
                 </span>
-                <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-slate-800 text-slate-300 border border-slate-700">
-                  Historical Folk Blues / Americana Cantata
+                <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-stone-800 text-stone-300 border border-stone-700">
+                  Folk Epic / Indigenous Historical Americana
                 </span>
-                <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-blue-950/40 text-blue-300 border border-blue-800/40">
+                <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-emerald-950/40 text-emerald-300 border border-emerald-800/40">
                   Released 2025
                 </span>
               </div>
               <h2 id="hero-title" class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
-                The Unbroken Chain
+                This Sacred Ground
               </h2>
               <p class="text-base sm:text-lg text-amber-300/90 font-serif italic">
-                From Chattel to Convict Leasing to Modern Incarceration — and the Enduring Song of Freedom
+                From Creation and Betrayal to Defiant Resilience on Ancestral Earth
               </p>
             </div>
 
             <!-- Core Thesis Blockquote -->
-            <blockquote class="p-4 sm:p-5 rounded-xl bg-chain-900/90 border-l-4 border-amber-500 text-slate-200 text-sm sm:text-base leading-relaxed font-serif shadow-inner">
+            <blockquote class="p-4 sm:p-5 rounded-xl bg-earth-900/90 border-l-4 border-amber-500 text-slate-200 text-sm sm:text-base leading-relaxed font-serif shadow-inner">
               <p class="italic mb-2">
-                "What is the unbroken chain? Is it the one made of iron, passed from the slave ship to the chain gang to the prison cell? Or is it the one made of spirit, a sequence of voices and melodies passed down through generations, refusing to be silenced? Both exist, intertwined in the very soul of American history."
+                "The circle was broken. But the ground... the ground remembers. The ground endures. It holds the dust of our ancestors and the seeds of our children. It is here. It is holy. It is home."
               </p>
               <footer class="text-xs text-amber-400 font-sans font-medium">
-                — The Shady River Bard, <em>The Unbroken Chain Liner Notes</em>
+                — The Shady River Bard, <em>This Sacred Ground Liner Notes</em>
               </footer>
             </blockquote>
 
             <!-- Narrative Description -->
             <p class="text-sm text-slate-300 leading-relaxed">
-              <em>The Unbroken Chain</em> is a 4-act work of sonic testimony confronting a devastating truth hidden in plain sight: slavery was not abolished by the 13th Amendment, but given a new legal name. Tracing the evolution of forced labor through the post-emancipation convict lease system, the modern prison-industrial complex, and global debt peonage, the album contrasts systemic bondage with the parallel unbroken chain of cultural resistance, gospel testimony, and artistic reclamation.
+              <em>This Sacred Ground</em> is a 5-act folk epic bearing witness to the Native American experience. Conceived as a journey through myth, historical trauma, and cultural resurgence, the narrative moves from the mythic harmony of pre-colonial creation through broken treaties, forced removal, and the cultural erasure of boarding schools, culminating in a triumphant celebration of language revitalization and modern Indigenous sovereignty.
             </p>
 
             <!-- Action CTAs -->
@@ -244,36 +249,36 @@
                 <i class="fa-solid fa-book-open text-base" aria-hidden="true"></i>
                 <span>Explore Tracks & Lyrics</span>
               </a>
-              <a href="https://music.apple.com/us/album/the-unbroken-chain/1832642969" target="_blank" rel="noopener noreferrer" class="px-4 py-3 rounded-xl bg-chain-800 hover:bg-chain-700 text-white border border-chain-700 font-medium text-sm flex items-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400">
+              <a href="https://music.apple.com/us/album/this-sacred-ground/1833864145" target="_blank" rel="noopener noreferrer" class="px-4 py-3 rounded-xl bg-earth-850 hover:bg-earth-800 text-white border border-earth-700 font-medium text-sm flex items-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400">
                 <i class="fa-brands fa-apple text-pink-400 text-base" aria-hidden="true"></i>
                 <span>Apple Music</span>
               </a>
-              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcH2lWQ4zDr7Kh4kW-TU8HFI" target="_blank" rel="noopener noreferrer" class="px-4 py-3 rounded-xl bg-chain-800 hover:bg-chain-700 text-white border border-chain-700 font-medium text-sm flex items-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400">
+              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcGKqJdE1F67neqmJgNBvouc" target="_blank" rel="noopener noreferrer" class="px-4 py-3 rounded-xl bg-earth-850 hover:bg-earth-800 text-white border border-earth-700 font-medium text-sm flex items-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400">
                 <i class="fa-brands fa-youtube text-red-400 text-base" aria-hidden="true"></i>
                 <span>YouTube Playlist</span>
               </a>
-              <a href="#pillars" class="px-4 py-3 rounded-xl bg-chain-900/80 hover:bg-chain-800 text-amber-300 border border-amber-900/60 font-medium text-sm flex items-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400">
+              <a href="#pillars" class="px-4 py-3 rounded-xl bg-earth-900/80 hover:bg-earth-800 text-amber-300 border border-amber-900/60 font-medium text-sm flex items-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400">
                 <i class="fa-solid fa-landmark text-base" aria-hidden="true"></i>
                 <span>Historical Pillars</span>
               </a>
             </div>
 
             <!-- Stats Bar -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3 border-t border-chain-800 text-center font-mono">
-              <div class="p-3 rounded-lg bg-chain-900/60 border border-chain-800">
-                <span class="block text-xl font-bold text-amber-400">14</span>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3 border-t border-earth-800 text-center font-mono">
+              <div class="p-3 rounded-lg bg-earth-900/60 border border-earth-800">
+                <span class="block text-xl font-bold text-amber-400">12</span>
                 <span class="text-[11px] text-slate-400 uppercase tracking-wider">Tracks</span>
               </div>
-              <div class="p-3 rounded-lg bg-chain-900/60 border border-chain-800">
-                <span class="block text-xl font-bold text-slate-200">4</span>
+              <div class="p-3 rounded-lg bg-earth-900/60 border border-earth-800">
+                <span class="block text-xl font-bold text-slate-200">5</span>
                 <span class="text-[11px] text-slate-400 uppercase tracking-wider">Acts</span>
               </div>
-              <div class="p-3 rounded-lg bg-chain-900/60 border border-chain-800">
-                <span class="block text-xl font-bold text-blue-400">6</span>
+              <div class="p-3 rounded-lg bg-earth-900/60 border border-earth-800">
+                <span class="block text-xl font-bold text-emerald-400">6</span>
                 <span class="text-[11px] text-slate-400 uppercase tracking-wider">Pillars</span>
               </div>
-              <div class="p-3 rounded-lg bg-chain-900/60 border border-chain-800">
-                <span class="block text-xl font-bold text-gold-400">58m</span>
+              <div class="p-3 rounded-lg bg-earth-900/60 border border-earth-800">
+                <span class="block text-xl font-bold text-amber-300">52m</span>
                 <span class="text-[11px] text-slate-400 uppercase tracking-wider">Runtime</span>
               </div>
             </div>
@@ -285,41 +290,41 @@
     </section>
 
     <!-- NARRATIVE ACTS STEPPER -->
-    <section id="acts" class="py-16 bg-chain-950/60 border-b border-chain-800/80" aria-labelledby="acts-heading">
+    <section id="acts" class="py-16 bg-earth-950/60 border-b border-earth-800" aria-labelledby="acts-heading">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/30">
-            <i class="fa-solid fa-route" aria-hidden="true"></i> Narrative Arc
+            <i class="fa-solid fa-route" aria-hidden="true"></i> Five-Act Journey
           </div>
           <h2 id="acts-heading" class="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">
-            The Four Acts of The Unbroken Chain
+            The Five Acts of This Sacred Ground
           </h2>
           <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-            Follow the chronological and thematic evolution across four distinct soundscapes, from the raw work song of the cotton row to the triumphant communal gospel of survival.
+            Follow the chronological and thematic evolution from mythic creation, through the sorrow of removal and boarding school silence, to contemporary reservation survival and radiant cultural rebirth.
           </p>
         </div>
 
-        <div id="acts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div id="acts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
           <!-- Populated by JavaScript -->
         </div>
 
       </div>
     </section>
 
-    <!-- THE 6 HISTORICAL & SOCIOLOGICAL PILLARS -->
-    <section id="pillars" class="py-16 border-b border-chain-800/80 bg-chain-900/40" aria-labelledby="pillars-heading">
+    <!-- THE 6 HISTORICAL & CULTURAL PILLARS -->
+    <section id="pillars" class="py-16 border-b border-earth-800 bg-earth-900/40" aria-labelledby="pillars-heading">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-blue-500/10 text-blue-400 border border-blue-500/30">
-            <i class="fa-solid fa-landmark" aria-hidden="true"></i> Sociological & Historical Context
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+            <i class="fa-solid fa-landmark" aria-hidden="true"></i> Historical & Cultural Facets
           </div>
           <h2 id="pillars-heading" class="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">
-            Pillars of the Unbroken Chain
+            Pillars of Sacred Ground
           </h2>
           <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-            Drawn directly from the master album research, these six analytical pillars illuminate the legal, economic, and cultural mechanisms that perpetuated unfree labor and the music that resisted it.
+            Derived directly from the master album research and historical source documentation, these six pillars contextualize the legal, philosophical, and personal dimensions of the album.
           </p>
         </div>
 
@@ -346,17 +351,17 @@
                 Tracklist & Interactive Lyrics Vault
               </h2>
               <p class="text-slate-300 text-sm mt-1">
-                Explore all 14 tracks with complete, full-width lyrics drawers, official copyright disclosures, Suno prompts, and narrative breakdowns.
+                Explore all 12 tracks with full-width lyrics drawers, official legal copyright disclosures, Suno style prompts, and narrative breakdowns.
               </p>
             </div>
 
             <!-- Global Expand / Collapse All Controls -->
             <div class="flex items-center gap-2 shrink-0">
-              <button id="btn-expand-all" class="px-4 py-2 rounded-lg bg-chain-800 hover:bg-chain-700 text-slate-200 border border-chain-700 text-xs font-semibold flex items-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400" aria-label="Expand all lyrics drawers across all tracks">
+              <button id="btn-expand-all" class="px-4 py-2 rounded-lg bg-earth-850 hover:bg-earth-800 text-slate-200 border border-earth-700 text-xs font-semibold flex items-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400" aria-label="Expand all lyrics drawers across all tracks">
                 <i class="fa-solid fa-angles-down text-amber-400" aria-hidden="true"></i>
                 <span>Expand All Lyrics</span>
               </button>
-              <button id="btn-collapse-all" class="px-4 py-2 rounded-lg bg-chain-800 hover:bg-chain-700 text-slate-200 border border-chain-700 text-xs font-semibold flex items-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400" aria-label="Collapse all lyrics drawers">
+              <button id="btn-collapse-all" class="px-4 py-2 rounded-lg bg-earth-850 hover:bg-earth-800 text-slate-200 border border-earth-700 text-xs font-semibold flex items-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400" aria-label="Collapse all lyrics drawers">
                 <i class="fa-solid fa-angles-up text-slate-400" aria-hidden="true"></i>
                 <span>Collapse All</span>
               </button>
@@ -364,7 +369,7 @@
           </div>
 
           <!-- Toolbar: Search Bar & Act Filters -->
-          <div class="p-4 rounded-xl bg-chain-900/90 border border-chain-800 space-y-4">
+          <div class="p-4 rounded-xl bg-earth-900/90 border border-earth-800 space-y-4">
             
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
               
@@ -379,7 +384,7 @@
                     type="text" 
                     id="track-search" 
                     placeholder="Search by title, lyric, concept, or prompt..." 
-                    class="w-full pl-10 pr-10 py-2.5 bg-chain-950 border border-chain-700 rounded-lg text-sm text-slate-100 placeholder-slate-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors">
+                    class="w-full pl-10 pr-10 py-2.5 bg-earth-950 border border-earth-700 rounded-lg text-sm text-slate-100 placeholder-slate-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors">
                   <button id="btn-clear-search" class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-200" aria-label="Clear search input">
                     <i class="fa-solid fa-xmark text-sm" aria-hidden="true"></i>
                   </button>
@@ -390,27 +395,30 @@
               <div class="lg:col-span-7 flex flex-wrap items-center gap-1.5" role="group" aria-label="Filter tracks by Act">
                 <span class="text-xs text-slate-400 mr-1 hidden sm:inline font-mono">Filter:</span>
                 <button data-act="all" class="act-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500 text-slate-950 transition-colors" aria-pressed="true">
-                  All Tracks (14)
+                  All (12)
                 </button>
-                <button data-act="act-1" class="act-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-chain-800 hover:bg-chain-700 text-slate-300 border border-chain-700 transition-colors" aria-pressed="false">
+                <button data-act="act-1" class="act-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-earth-850 hover:bg-earth-800 text-slate-300 border border-earth-700 transition-colors" aria-pressed="false">
                   Act I (3)
                 </button>
-                <button data-act="act-2" class="act-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-chain-800 hover:bg-chain-700 text-slate-300 border border-chain-700 transition-colors" aria-pressed="false">
-                  Act II (3)
+                <button data-act="act-2" class="act-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-earth-850 hover:bg-earth-800 text-slate-300 border border-earth-700 transition-colors" aria-pressed="false">
+                  Act II (2)
                 </button>
-                <button data-act="act-3" class="act-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-chain-800 hover:bg-chain-700 text-slate-300 border border-chain-700 transition-colors" aria-pressed="false">
-                  Act III (3)
+                <button data-act="act-3" class="act-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-earth-850 hover:bg-earth-800 text-slate-300 border border-earth-700 transition-colors" aria-pressed="false">
+                  Act III (2)
                 </button>
-                <button data-act="act-4" class="act-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-chain-800 hover:bg-chain-700 text-slate-300 border border-chain-700 transition-colors" aria-pressed="false">
-                  Act IV (5)
+                <button data-act="act-4" class="act-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-earth-850 hover:bg-earth-800 text-slate-300 border border-earth-700 transition-colors" aria-pressed="false">
+                  Act IV (2)
+                </button>
+                <button data-act="act-5" class="act-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-earth-850 hover:bg-earth-800 text-slate-300 border border-earth-700 transition-colors" aria-pressed="false">
+                  Act V (3)
                 </button>
               </div>
 
             </div>
 
             <!-- Active Result Counter -->
-            <div class="flex items-center justify-between text-xs text-slate-400 pt-2 border-t border-chain-800 font-mono">
-              <span id="results-count">Showing 14 of 14 tracks</span>
+            <div class="flex items-center justify-between text-xs text-slate-400 pt-2 border-t border-earth-800 font-mono">
+              <span id="results-count">Showing 12 of 12 tracks</span>
               <span class="text-amber-400">All lyrics include permanent legal copyright notice</span>
             </div>
 
@@ -430,15 +438,15 @@
 
   <!-- ACCESSIBLE VIDEO PLAYER MODAL -->
   <div id="video-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/85 backdrop-blur-sm flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modal-video-title">
-    <div class="relative w-full max-w-4xl bg-chain-950 border border-chain-700 rounded-2xl shadow-2xl overflow-hidden">
+    <div class="relative w-full max-w-4xl bg-earth-950 border border-earth-700 rounded-2xl shadow-2xl overflow-hidden">
       
       <!-- Modal Header -->
-      <div class="px-5 py-4 bg-chain-900 border-b border-chain-800 flex items-center justify-between gap-4">
+      <div class="px-5 py-4 bg-earth-900 border-b border-earth-800 flex items-center justify-between gap-4">
         <div class="flex items-center gap-3 min-w-0">
           <span class="px-2 py-0.5 rounded text-xs font-mono font-bold bg-red-950/60 text-red-400 border border-red-800/60 shrink-0">YouTube Video</span>
           <h3 id="modal-video-title" class="text-sm font-bold text-white truncate">Track Title</h3>
         </div>
-        <button id="modal-close-btn" class="w-8 h-8 rounded-lg bg-chain-800 hover:bg-chain-700 text-slate-300 hover:text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400" aria-label="Close video player modal">
+        <button id="modal-close-btn" class="w-8 h-8 rounded-lg bg-earth-850 hover:bg-earth-800 text-slate-300 hover:text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400" aria-label="Close video player modal">
           <i class="fa-solid fa-xmark text-base" aria-hidden="true"></i>
         </button>
       </div>
@@ -456,8 +464,8 @@
       </div>
 
       <!-- Modal Footer -->
-      <div class="px-5 py-3 bg-chain-900/90 border-t border-chain-800 flex items-center justify-between text-xs text-slate-400">
-        <span class="font-serif italic text-amber-300/80">The Shady River Bard • The Unbroken Chain</span>
+      <div class="px-5 py-3 bg-earth-900/90 border-t border-earth-800 flex items-center justify-between text-xs text-slate-400">
+        <span class="font-serif italic text-amber-300/80">The Shady River Bard • This Sacred Ground</span>
         <a id="modal-external-link" href="#" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 flex items-center gap-1.5 transition-colors">
           <span>Watch on YouTube</span>
           <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
@@ -474,7 +482,7 @@
   </div>
 
   <!-- SITE FOOTER & DISCOGRAPHY LINKS -->
-  <footer class="bg-chain-950 border-t border-chain-800 py-12 text-slate-400 text-xs font-sans">
+  <footer class="bg-earth-950 border-t border-earth-800 py-12 text-slate-400 text-xs font-sans">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
       
       <!-- Top Row: Artist & Mission -->
@@ -486,7 +494,7 @@
             <span>The Shady River Bard</span>
           </div>
           <p class="text-slate-400 text-xs leading-relaxed max-w-lg">
-            Music created in the Pacific Northwest by The Shady River Bard. An enduring exploration of American labor, deindustrialization, historical memory, and the unbroken chain of human resilience.
+            Music created in the Pacific Northwest by The Shady River Bard. Dedicated to the enduring spirit of ancestral earth, cultural revitalization, and the sacred stories that echo across generations.
           </p>
           <div class="flex items-center gap-3 pt-1">
             <a href="https://music.apple.com/us/artist/the-shady-river-bard/1829561760" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" title="Apple Music Artist Page" aria-label="Apple Music Artist Profile (opens in new tab)">
@@ -509,8 +517,8 @@
             <li><a href="/unequal-justice/" class="hover:text-amber-400 transition-colors">Album 07: Unequal Justice</a></li>
             <li><a href="/cognitive-inferno/" class="hover:text-amber-400 transition-colors">Album 08: Cognitive Inferno</a></li>
             <li><a href="/the-hammer-and-the-rust/" class="hover:text-amber-400 transition-colors">Album 09: The Hammer and the Rust</a></li>
-            <li><span class="text-amber-400 font-semibold flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-[10px]" aria-hidden="true"></i> Album 10: The Unbroken Chain (Active)</span></li>
-            <li><a href="/this-sacred-ground/" class="hover:text-amber-400 transition-colors">Album 11: This Sacred Ground</a></li>
+            <li><a href="/unbroken-chain/" class="hover:text-amber-400 transition-colors">Album 10: The Unbroken Chain</a></li>
+            <li><span class="text-amber-400 font-semibold flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-[10px]" aria-hidden="true"></i> Album 11: This Sacred Ground (Active)</span></li>
             <li><a href="/the-hollow-herd/" class="hover:text-amber-400 transition-colors">Album 26: The Hollow Herd</a></li>
           </ul>
         </div>
@@ -533,12 +541,12 @@
       </div>
 
       <!-- Bottom Row: Copyright & Legal Notice -->
-      <div class="pt-8 border-t border-chain-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
+      <div class="pt-8 border-t border-earth-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
         <p>
           &copy; 2025 The Shady River Bard &bull; The Shady River Homestead, LLC. All rights reserved.
         </p>
         <p class="font-mono text-[10px]">
-          WCAG 2.1 AA &bull; Section 508 Compliant &bull; <a href="https://theshadyriverbard.com/unbroken-chain/" class="text-amber-400 hover:underline">theshadyriverbard.com/unbroken-chain/</a>
+          WCAG 2.1 AA &bull; Section 508 Compliant &bull; <a href="https://theshadyriverbard.com/this-sacred-ground/" class="text-amber-400 hover:underline">theshadyriverbard.com/this-sacred-ground/</a>
         </p>
       </div>
 
@@ -547,14 +555,14 @@
 
   <!-- Core Scripts -->
   <script src="/assets/js/a11y.js"></script>
-  <script src="data/unbroken-chain-data.js?v=20260910_01"></script>
+  <script src="data/this-sacred-ground-data.js?v=20260910_01"></script>
 
   <!-- Interactive Application Script -->
   <script>
     (function() {
-      const data = window.UNBROKEN_CHAIN_DATA;
+      const data = window.SACRED_GROUND_DATA;
       if (!data) {
-        console.error("Unbroken Chain dataset failed to load.");
+        console.error("Sacred Ground dataset failed to load.");
         return;
       }
 
@@ -586,9 +594,10 @@
       // Color maps for Acts
       const actColorMap = {
         'act-1': { border: 'border-amber-700/60', badge: 'bg-amber-500/20 text-amber-400 border-amber-500/30', glow: 'hover:border-amber-500/60' },
-        'act-2': { border: 'border-slate-700/60', badge: 'bg-slate-700/40 text-slate-300 border-slate-600/40', glow: 'hover:border-slate-500/60' },
-        'act-3': { border: 'border-cyan-800/60', badge: 'bg-cyan-950/60 text-cyan-400 border-cyan-800/60', glow: 'hover:border-cyan-500/60' },
-        'act-4': { border: 'border-gold-700/60', badge: 'bg-amber-500/20 text-gold-300 border-gold-500/30', glow: 'hover:border-gold-500/60' }
+        'act-2': { border: 'border-red-800/60', badge: 'bg-red-950/60 text-red-400 border-red-800/60', glow: 'hover:border-red-500/60' },
+        'act-3': { border: 'border-slate-700/60', badge: 'bg-slate-800/60 text-slate-300 border-slate-700/60', glow: 'hover:border-slate-500/60' },
+        'act-4': { border: 'border-yellow-800/60', badge: 'bg-yellow-950/60 text-yellow-400 border-yellow-800/60', glow: 'hover:border-yellow-500/60' },
+        'act-5': { border: 'border-emerald-700/60', badge: 'bg-emerald-950/60 text-emerald-300 border-emerald-700/60', glow: 'hover:border-emerald-500/60' }
       };
 
       // 1. Render Narrative Acts
@@ -597,22 +606,22 @@
         actsContainer.innerHTML = data.acts.map(act => {
           const colors = actColorMap[act.act_id] || actColorMap['act-1'];
           return `
-            <div class="p-6 rounded-2xl bg-chain-900/90 border ${colors.border} ${colors.glow} transition-all duration-300 flex flex-col justify-between group">
+            <div class="p-5 rounded-2xl bg-earth-900/90 border ${colors.border} ${colors.glow} transition-all duration-300 flex flex-col justify-between group">
               <div class="space-y-3">
                 <div class="flex items-center justify-between text-xs font-mono">
                   <span class="px-2.5 py-1 rounded font-bold ${colors.badge}">${act.title.split(':')[0]}</span>
                   <span class="text-slate-400">${act.track_range}</span>
                 </div>
-                <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition-colors font-display">
+                <h3 class="text-base font-bold text-white group-hover:text-amber-400 transition-colors font-display leading-snug">
                   ${act.title.split(':')[1] || act.title}
                 </h3>
                 <p class="text-xs text-amber-300/80 font-serif italic">${act.subtitle}</p>
                 <p class="text-xs text-slate-300 leading-relaxed">${act.description}</p>
               </div>
-              <div class="pt-5 mt-5 border-t border-chain-800">
+              <div class="pt-4 mt-4 border-t border-earth-800">
                 <button 
                   onclick="filterByAct('${act.act_id}')" 
-                  class="w-full py-2 px-3 rounded-lg bg-chain-800 hover:bg-chain-700 text-slate-200 text-xs font-semibold flex items-center justify-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400"
+                  class="w-full py-2 px-3 rounded-lg bg-earth-850 hover:bg-earth-800 text-slate-200 text-xs font-semibold flex items-center justify-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400"
                   aria-label="View tracks for ${act.title}">
                   <span>Explore Tracks</span>
                   <i class="fa-solid fa-arrow-down text-[10px] text-amber-400" aria-hidden="true"></i>
@@ -626,20 +635,20 @@
       // 2. Render Historical Pillars
       function renderPillars() {
         if (!pillarsContainer) return;
-        pillarsContainer.innerHTML = data.pillars.map((p, idx) => {
+        pillarsContainer.innerHTML = data.pillars.map((p) => {
           return `
-            <div class="p-6 rounded-2xl bg-chain-900/80 border border-chain-800 hover:border-amber-700/50 transition-all duration-300 space-y-4">
+            <div class="p-6 rounded-2xl bg-earth-900/80 border border-earth-800 hover:border-amber-700/50 transition-all duration-300 space-y-4">
               <div class="flex items-center justify-between text-xs font-mono">
-                <span class="px-2 py-0.5 rounded bg-blue-950/60 text-blue-300 border border-blue-800/40">Pillar 0${p.number}</span>
+                <span class="px-2 py-0.5 rounded bg-emerald-950/60 text-emerald-300 border border-emerald-800/40">Pillar 0${p.number}</span>
                 <span class="text-slate-400 font-sans">Historical Facet</span>
               </div>
               <div>
                 <h3 class="text-base font-bold text-white font-display">${p.title}</h3>
                 <p class="text-xs text-amber-400/90 font-serif italic mt-0.5">${p.subtitle}</p>
               </div>
-              <div class="space-y-2.5 text-xs text-slate-300 pt-2 border-t border-chain-800/80">
+              <div class="space-y-2.5 text-xs text-slate-300 pt-2 border-t border-earth-800">
                 <div>
-                  <span class="text-[11px] font-mono font-bold text-slate-400 uppercase tracking-wider block mb-0.5">Core Causes</span>
+                  <span class="text-[11px] font-mono font-bold text-slate-400 uppercase tracking-wider block mb-0.5">Core Dynamics</span>
                   <p class="leading-relaxed text-slate-300/90">${p.causes}</p>
                 </div>
                 <div>
@@ -661,11 +670,9 @@
         if (!tracksContainer) return;
 
         const filtered = data.tracks.filter(track => {
-          // Act filter
           if (currentFilter !== 'all' && track.act_id !== currentFilter) {
             return false;
           }
-          // Search query filter
           if (currentQuery) {
             const q = currentQuery.toLowerCase();
             const inTitle = track.title.toLowerCase().includes(q);
@@ -678,12 +685,11 @@
           return true;
         });
 
-        // Update result count
         resultsCountEl.textContent = `Showing ${filtered.length} of ${data.tracks.length} tracks`;
 
         if (filtered.length === 0) {
           tracksContainer.innerHTML = `
-            <div class="p-12 text-center rounded-2xl bg-chain-900/60 border border-chain-800 space-y-4">
+            <div class="p-12 text-center rounded-2xl bg-earth-900/60 border border-earth-800 space-y-4">
               <i class="fa-solid fa-magnifying-glass text-3xl text-slate-600" aria-hidden="true"></i>
               <h3 class="text-lg font-bold text-white">No matching tracks found</h3>
               <p class="text-xs text-slate-400">Try adjusting your search terms or clearing the active act filter.</p>
@@ -703,11 +709,8 @@
               if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
                 return `<div class="font-mono text-xs font-bold text-amber-400/90 pt-3 pb-1 uppercase tracking-wider">${trimmed}</div>`;
               }
-              if (trimmed.startsWith('(LEAD)')) {
-                return `<div class="text-slate-100 font-medium">${trimmed}</div>`;
-              }
-              if (trimmed.startsWith('(CHOIR)') || trimmed.startsWith('(ALL)')) {
-                return `<div class="text-amber-300/90 italic pl-3 border-l border-amber-600/40">${trimmed}</div>`;
+              if (trimmed.startsWith('"') && trimmed.endsWith('"')) {
+                return `<div class="text-amber-300/95 italic pl-3 border-l-2 border-amber-600/60">${trimmed}</div>`;
               }
               return `<div class="text-slate-200">${trimmed}</div>`;
             }).join('');
@@ -715,7 +718,7 @@
           }).join('');
 
           return `
-            <article id="track-${track.number_padded}" class="track-card rounded-2xl bg-chain-900/95 border ${colors.border} overflow-hidden shadow-xl transition-all duration-300 hover:shadow-2xl">
+            <article id="track-${track.number_padded}" class="track-card rounded-2xl bg-earth-900/95 border ${colors.border} overflow-hidden shadow-xl transition-all duration-300 hover:shadow-2xl">
               
               <!-- Track Main Header Grid -->
               <div class="p-6 md:p-8">
@@ -723,15 +726,15 @@
                   
                   <!-- Thumbnail & Media Trigger -->
                   <div class="lg:col-span-4 space-y-3">
-                    <div class="relative aspect-[16/9] rounded-xl overflow-hidden bg-chain-950 border border-chain-800 group shadow-md">
+                    <div class="relative aspect-[16/9] rounded-xl overflow-hidden bg-earth-950 border border-earth-800 group shadow-md">
                       <img 
                         src="${track.art_banner}" 
                         alt="${track.title} artwork banner" 
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy">
-                      <div class="absolute inset-0 bg-gradient-to-t from-chain-950/90 via-transparent to-transparent opacity-70"></div>
+                      <div class="absolute inset-0 bg-gradient-to-t from-earth-950/90 via-transparent to-transparent opacity-70"></div>
                       <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-white">
-                        <span class="font-mono bg-chain-950/80 px-2 py-0.5 rounded border border-chain-700">Track ${track.number_padded}</span>
+                        <span class="font-mono bg-earth-950/80 px-2 py-0.5 rounded border border-earth-700">Track ${track.number_padded}</span>
                         <button 
                           onclick="openVideoModal('${track.title}', '${track.video_id}')"
                           class="px-3 py-1 rounded-lg bg-red-600 hover:bg-red-500 text-white font-semibold text-xs flex items-center gap-1.5 shadow-lg shadow-red-950 transition-all focus:outline-none focus:ring-2 focus:ring-red-400"
@@ -750,7 +753,7 @@
                         <span class="text-slate-200 font-semibold">${track.emotional_arc}</span>
                       </div>
                       <div class="flex items-center gap-1.5 text-slate-300 font-mono text-[11px]">
-                        <i class="fa-solid fa-guitar text-blue-400" aria-hidden="true"></i>
+                        <i class="fa-solid fa-guitar text-emerald-400" aria-hidden="true"></i>
                         <span class="text-slate-400">Style:</span>
                         <span class="text-slate-200 font-semibold truncate">${track.style_label}</span>
                       </div>
@@ -763,7 +766,7 @@
                     <div>
                       <div class="flex flex-wrap items-center gap-2 mb-1.5">
                         <span class="px-2 py-0.5 rounded text-xs font-mono font-bold ${colors.badge}">${track.act}</span>
-                        <span class="text-xs text-slate-400 font-mono">• Track ${track.number_padded} of 14</span>
+                        <span class="text-xs text-slate-400 font-mono">• Track ${track.number_padded} of 12</span>
                       </div>
                       <h3 class="text-xl sm:text-2xl font-bold font-display text-white tracking-tight">
                         ${track.title}
@@ -775,7 +778,7 @@
 
                     <!-- Key Quote Callout -->
                     ${track.key_quote ? `
-                      <div class="p-3 rounded-lg bg-chain-950/70 border-l-2 border-amber-500 text-slate-200 text-xs font-serif italic">
+                      <div class="p-3 rounded-lg bg-earth-950/70 border-l-2 border-amber-500 text-slate-200 text-xs font-serif italic">
                         "${track.key_quote}"
                       </div>
                     ` : ''}
@@ -787,7 +790,7 @@
 
                     <!-- Suno Musical Style Prompt -->
                     ${track.suno_prompt ? `
-                      <div class="p-3 rounded-lg bg-chain-950/90 border border-chain-800/80 space-y-1">
+                      <div class="p-3 rounded-lg bg-earth-950/90 border border-earth-800 space-y-1">
                         <div class="flex items-center justify-between text-[11px] font-mono text-amber-400">
                           <span class="font-bold flex items-center gap-1.5">
                             <i class="fa-solid fa-sliders" aria-hidden="true"></i>
@@ -801,13 +804,13 @@
                     ` : ''}
 
                     <!-- Drawer Controls Action Bar -->
-                    <div class="pt-2 flex flex-wrap items-center justify-between gap-3 border-t border-chain-800">
+                    <div class="pt-2 flex flex-wrap items-center justify-between gap-3 border-t border-earth-800">
                       
                       <!-- Toggle Lyrics Drawer Button -->
                       <button 
                         id="toggle-lyrics-${track.number_padded}"
                         onclick="toggleLyricsDrawer('${track.number_padded}')"
-                        class="px-4 py-2 rounded-lg bg-chain-800 hover:bg-chain-700 text-slate-200 hover:text-white font-semibold text-xs flex items-center gap-2 border border-chain-700 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400"
+                        class="px-4 py-2 rounded-lg bg-earth-850 hover:bg-earth-800 text-slate-200 hover:text-white font-semibold text-xs flex items-center gap-2 border border-earth-700 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400"
                         aria-expanded="false"
                         aria-controls="lyrics-drawer-${track.number_padded}">
                         <i class="fa-solid fa-chevron-down text-amber-400 transition-transform duration-300" id="icon-chevron-${track.number_padded}" aria-hidden="true"></i>
@@ -834,13 +837,13 @@
               <!-- FULL-WIDTH DEDICATED EXPANDABLE LYRICS DRAWER -->
               <div 
                 id="lyrics-drawer-${track.number_padded}" 
-                class="hidden border-t border-chain-800 bg-chain-950/95"
+                class="hidden border-t border-earth-800 bg-earth-950/95"
                 role="region"
                 aria-label="Full lyrics for ${track.title}">
                 
                 <div class="p-6 md:p-8 max-w-4xl mx-auto space-y-6">
                   
-                  <div class="flex items-center justify-between pb-3 border-b border-chain-800 text-xs font-mono">
+                  <div class="flex items-center justify-between pb-3 border-b border-earth-800 text-xs font-mono">
                     <span class="text-amber-400 font-bold flex items-center gap-2">
                       <i class="fa-solid fa-scroll" aria-hidden="true"></i>
                       <span>Complete Stanzas &bull; Track ${track.number_padded}</span>
@@ -854,7 +857,7 @@
                   </div>
 
                   <!-- PERMANENT LEGAL COPYRIGHT NOTICE BAR -->
-                  <div class="mt-6 p-4 rounded-xl bg-chain-900 border border-chain-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-slate-400">
+                  <div class="mt-6 p-4 rounded-xl bg-earth-900 border border-earth-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-slate-400">
                     <div class="space-y-0.5">
                       <p class="font-medium text-slate-300 flex items-center gap-1.5">
                         <i class="fa-regular fa-copyright text-amber-500" aria-hidden="true"></i>
@@ -866,7 +869,7 @@
                     </div>
                     <button 
                       onclick="copyLyrics(${track.number})" 
-                      class="px-3 py-1.5 rounded bg-chain-800 hover:bg-chain-700 text-amber-400 hover:text-amber-300 border border-chain-700 text-[11px] font-mono shrink-0 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400">
+                      class="px-3 py-1.5 rounded bg-earth-850 hover:bg-earth-800 text-amber-400 hover:text-amber-300 border border-earth-700 text-[11px] font-mono shrink-0 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400">
                       <i class="fa-regular fa-copy mr-1" aria-hidden="true"></i> Copy
                     </button>
                   </div>
@@ -943,7 +946,7 @@
 
         const fullCopyPayload = 
 `${track.title}
-Album 10: The Unbroken Chain
+Album 11: This Sacred Ground
 Artist: The Shady River Bard
 Act: ${track.act} (${track.subtitle})
 Musical Style: ${track.style_label}
@@ -958,7 +961,7 @@ ${cleanLyricsText}
 LEGAL COPYRIGHT & ATTRIBUTION:
 ==================================================
 ${track.copyright_notice}
-Official Subsite Vault: https://theshadyriverbard.com/unbroken-chain/
+Official Subsite Vault: https://theshadyriverbard.com/this-sacred-ground/
 `;
 
         navigator.clipboard.writeText(fullCopyPayload).then(() => {
@@ -1049,12 +1052,12 @@ Official Subsite Vault: https://theshadyriverbard.com/unbroken-chain/
         filterBtns.forEach(b => {
           const bAct = b.getAttribute('data-act');
           if (bAct === act) {
-            b.classList.remove('bg-chain-800', 'text-slate-300', 'hover:bg-chain-700', 'border', 'border-chain-700');
+            b.classList.remove('bg-earth-850', 'text-slate-300', 'hover:bg-earth-800', 'border', 'border-earth-700');
             b.classList.add('bg-amber-500', 'text-slate-950');
             b.setAttribute('aria-pressed', 'true');
           } else {
             b.classList.remove('bg-amber-500', 'text-slate-950');
-            b.classList.add('bg-chain-800', 'text-slate-300', 'hover:bg-chain-700', 'border', 'border-chain-700');
+            b.classList.add('bg-earth-850', 'text-slate-300', 'hover:bg-earth-800', 'border', 'border-earth-700');
             b.setAttribute('aria-pressed', 'false');
           }
         });

@@ -218,6 +218,25 @@ window.PORTAL_DATA = {
       "description": "A profound 4-act historical folk blues cantata tracing the continuous evolution of forced labor in America from plantation chattel to convict leasing and modern prison manufacturing, set against the enduring unbroken chain of spiritual and musical resilience."
     },
     {
+      "id": "this-sacred-ground",
+      "number": "11",
+      "title": "This Sacred Ground",
+      "subtitle": "From Creation and Betrayal to Defiant Resilience on Ancestral Earth",
+      "badge": "Bespoke Interactive Vault",
+      "cover": "/this-sacred-ground/assets/art/this-sacred-ground-cover.webp",
+      "tracks_count": 12,
+      "themes": [
+        "Creation & Kinship",
+        "Broken Treaties",
+        "Boarding School Era",
+        "Reservation Realities",
+        "Language Rebirth"
+      ],
+      "url": "/this-sacred-ground/",
+      "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcGKqJdE1F67neqmJgNBvouc",
+      "description": "A sweeping 5-act folk epic bearing witness to the Native American experience—from mythic creation and sovereign clan governance, through broken treaties and boarding schools, to triumphant language revitalization and cultural rebirth."
+    },
+    {
       "id": "the-forgotten-crown",
       "number": "Vault",
       "title": "The Sovereign's Right",
