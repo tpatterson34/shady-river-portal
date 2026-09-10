@@ -345,7 +345,26 @@ window.PORTAL_DATA = {
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcHr2R6eMk1Xd3DPGh4fPYtK",
       "description": "A swashbuckling 4-act, 13-track maritime satirical odyssey auditing corporate privateering, algorithmic plunder, and the pillaging of everyday life—reclaiming dignity and grassroots solidarity from the modern buccaneers."
     },
-    {
+        {
+      "id": "american-rubble",
+      "number": "18",
+      "title": "American Rubble",
+      "subtitle": "The Anatomy of Collapse, Civil Conflict & The Human Cost of Division",
+      "badge": "Bespoke Interactive Vault",
+      "cover": "/american-rubble/assets/art/american-rubble-cover.webp",
+      "tracks_count": 13,
+      "themes": [
+        "Systemic Collapse",
+        "Civil Conflict",
+        "Moral Injury",
+        "Transgenerational Trauma",
+        "Preventative Empathy"
+      ],
+      "url": "/american-rubble/",
+      "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEF1fY_cQrs4C2GfkNgO70J",
+      "description": "The horrifying prognosis to the diagnosis of Divide and Conquer. A meticulously researched 4-act, 13-movement dark dystopian folk concept album tracing the systemic collapse of food and electrical grids, intimate neighborhood warfare, black-market warlordism, and the poisoned silence of memory."
+    },
+{
       "id": "the-forgotten-crown",
       "number": "Vault",
       "title": "The Sovereign's Right",
