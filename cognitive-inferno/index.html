@@ -394,10 +394,19 @@
           </div>
         </div>
 
-        <!-- Live Track Counter -->
-        <div class="flex items-center justify-between text-xs font-mono text-stone-400 mb-6 px-1">
+        <!-- Live Track Counter & Global Controls -->
+        <div class="flex flex-wrap items-center justify-between text-xs font-mono text-stone-400 mb-6 px-1 gap-3">
           <span id="track-counter">Showing 10 of 10 tracks</span>
-          <span class="text-inferno-400">Click card or button to expand complete lyrics & prompts</span>
+          <div class="flex items-center gap-2">
+            <button onclick="expandAllLyrics()" class="px-3 py-1.5 rounded-lg bg-cyber-900 hover:bg-cyber-800 text-stone-300 border border-cyber-750 hover:border-inferno-500/50 text-xs transition-colors flex items-center gap-1.5 focus:outline-none focus:ring-1 focus:ring-inferno-500" aria-label="Expand lyrics for all visible tracks">
+              <i aria-hidden="true" class="fa-solid fa-angles-down text-[10px] text-inferno-400"></i>
+              <span>Expand All Lyrics</span>
+            </button>
+            <button onclick="collapseAllLyrics()" class="px-3 py-1.5 rounded-lg bg-cyber-900 hover:bg-cyber-800 text-stone-300 border border-cyber-750 hover:border-white/20 text-xs transition-colors flex items-center gap-1.5 focus:outline-none focus:ring-1 focus:ring-inferno-500" aria-label="Collapse all track lyrics">
+              <i aria-hidden="true" class="fa-solid fa-angles-up text-[10px] text-stone-400"></i>
+              <span>Collapse All</span>
+            </button>
+          </div>
         </div>
 
         <!-- Tracks Container -->
@@ -532,7 +541,7 @@
   </footer>
 
   <!-- DATA SCRIPT -->
-  <script src="data/cognitive-inferno-data.js?v=20260910_07"></script>
+  <script src="data/cognitive-inferno-data.js?v=20260910_08"></script>
 
   <!-- INTERACTIVE APPLICATION LOGIC -->
   <script>
@@ -706,135 +715,145 @@
       container.innerHTML = filtered.map(track => `
         <article id="track-${track.number}" class="rounded-2xl bg-cyber-900 border border-cyber-800 overflow-hidden shadow-xl hover:border-inferno-600/40 transition-colors">
           
-          <!-- Track Header -->
-          <div class="p-5 sm:p-6 border-b border-cyber-800 bg-cyber-950/60 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <!-- Track Header Bar -->
+          <div class="p-5 sm:p-6 border-b border-cyber-800 bg-cyber-950/70 flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div class="flex items-start sm:items-center gap-4">
-              <span class="w-10 h-10 rounded-xl bg-inferno-950 border border-inferno-800/80 text-inferno-400 font-mono font-bold text-base flex items-center justify-center shrink-0">
+              <span class="w-11 h-11 rounded-xl bg-inferno-950 border border-inferno-800/80 text-inferno-400 font-mono font-bold text-lg flex items-center justify-center shrink-0 shadow-inner">
                 ${track.number_padded}
               </span>
               <div>
                 <div class="flex items-center gap-2 flex-wrap mb-1">
-                  <span class="text-xs font-mono px-2 py-0.5 rounded bg-cyber-800 text-stone-300 border border-cyber-700">
+                  <span class="text-xs font-mono px-2 py-0.5 rounded bg-cyber-800 text-stone-300 border border-cyber-700 font-medium">
                     ${track.phase_title}
                   </span>
                   <span class="text-xs font-mono text-inferno-400 font-medium">
                     ${track.musical_mood}
                   </span>
                 </div>
-                <h3 class="font-display font-bold text-xl sm:text-2xl text-white">
+                <h3 class="font-display font-bold text-xl sm:text-2xl text-white tracking-wide">
                   ${track.title}
                 </h3>
               </div>
             </div>
 
-            <div class="flex items-center gap-2">
-              <button onclick="openVideoModal('${track.video_id}', '${escapeHtml(track.title)}')" aria-label="Play official video for ${track.title}" class="px-3.5 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-medium flex items-center gap-1.5 transition-colors shadow focus:outline-none focus:ring-2 focus:ring-white">
+            <div class="flex items-center gap-2 flex-wrap">
+              <button onclick="openVideoModal('${track.video_id}', '${escapeHtml(track.title)}')" aria-label="Play official video for ${track.title}" class="px-4 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-semibold flex items-center gap-1.5 transition-colors shadow focus:outline-none focus:ring-2 focus:ring-white">
                 <i aria-hidden="true" class="fa-solid fa-play text-xs"></i>
                 <span>Play Video</span>
               </button>
-              <button onclick="copyLyrics(${track.number})" aria-label="Copy lyrics for ${track.title}" class="px-3 py-2 rounded-xl bg-cyber-800 hover:bg-cyber-700 text-stone-300 text-xs font-medium flex items-center gap-1.5 border border-cyber-700 transition-colors focus:outline-none focus:ring-2 focus:ring-inferno-500">
-                <i aria-hidden="true" class="fa-regular fa-copy"></i>
-                <span>Copy</span>
+              <button onclick="toggleLyrics(${track.number})" id="btn-toggle-${track.number}" aria-expanded="false" aria-controls="lyrics-drawer-${track.number}" class="px-4 py-2 rounded-xl bg-cyber-800 hover:bg-cyber-750 text-stone-200 text-xs font-medium flex items-center gap-1.5 border border-cyber-700 transition-colors focus:outline-none focus:ring-2 focus:ring-inferno-500">
+                <i aria-hidden="true" id="toggle-icon-${track.number}" class="fa-solid fa-file-lines text-[11px] text-inferno-400"></i>
+                <span id="toggle-label-${track.number}">View Lyrics (${track.stanzas.length} Stanzas)</span>
               </button>
             </div>
           </div>
 
-          <!-- Track Body: Split Art + Details & Lyrics -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 p-5 sm:p-6">
+          <!-- Track Overview: Narrative, Key Lyric, Prompts & Artwork Preview -->
+          <div class="p-5 sm:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
             
-            <!-- Artwork & Narrative Notes -->
-            <div class="lg:col-span-4 space-y-4">
-              <div class="relative aspect-[16/9] rounded-xl overflow-hidden border border-cyber-800 bg-cyber-950 group">
+            <!-- Left 8 cols: Track Narrative, Key Lyric & Production Details -->
+            <div class="lg:col-span-8 space-y-4">
+              
+              <!-- Track Narrative Description -->
+              <div class="p-4 sm:p-5 rounded-xl bg-cyber-950/80 border border-cyber-800 text-xs sm:text-sm text-stone-300 leading-relaxed space-y-3">
+                <p>
+                  <strong class="font-mono text-xs uppercase tracking-wider text-inferno-400 font-bold block mb-1">
+                    <i aria-hidden="true" class="fa-solid fa-scroll mr-1.5"></i>Track Narrative &amp; Conceptual Focus:
+                  </strong>
+                  ${track.description}
+                </p>
+
+                <div class="p-3 rounded-lg bg-cyber-900/80 border-l-2 border-inferno-500/80 text-stone-200">
+                  <span class="text-[10px] font-mono uppercase tracking-wider text-stone-400 block mb-0.5 font-bold">Key Lyric Excerpt:</span>
+                  <p class="italic font-serif text-xs sm:text-sm text-inferno-200">&ldquo;${track.key_lyric}&rdquo;</p>
+                </div>
+
+                <div class="pt-2 flex flex-wrap items-center justify-between gap-2 border-t border-cyber-850">
+                  <div class="flex flex-wrap gap-1.5">
+                    ${(track.tags || []).map(tag => `
+                      <span class="px-2 py-0.5 rounded bg-cyber-850 text-stone-400 text-[11px] font-mono border border-white/5">#${tag}</span>
+                    `).join('')}
+                  </div>
+                  
+                  <button onclick="toggleSunoPrompt(${track.number})" id="suno-btn-${track.number}" aria-expanded="false" class="text-[11px] font-mono text-cyanic-400 hover:text-cyanic-300 transition-colors flex items-center gap-1.5 focus:outline-none focus:underline">
+                    <i aria-hidden="true" class="fa-solid fa-sliders text-[10px]"></i>
+                    <span>Suno Direction &amp; Style</span>
+                    <i aria-hidden="true" id="suno-icon-${track.number}" class="fa-solid fa-chevron-down text-[9px] transition-transform"></i>
+                  </button>
+                </div>
+
+                <div id="suno-content-${track.number}" class="hidden pt-3 border-t border-cyber-850 text-xs text-stone-400 space-y-1.5 font-mono">
+                  <p><strong class="text-stone-200">Style Prompt:</strong> ${track.musical_highlights || 'Psych-Folk / Dark Blues & Industrial Rock'}</p>
+                  <p><strong class="text-stone-200">Tags:</strong> <span class="text-cyanic-300">${track.suno_tags || ''}</span></p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right 4 cols: High-Res Panoramic Artwork Banner -->
+            <div class="lg:col-span-4 space-y-2">
+              <div class="aspect-video rounded-xl overflow-hidden border border-cyber-800 bg-cyber-950 shadow-md group">
                 <img 
                   src="${track.art_banner}" 
-                  alt="${track.title} official banner artwork by The Shady River Bard" 
+                  alt="${track.title} banner artwork by The Shady River Bard" 
                   loading="lazy" 
+                  decoding="async"
                   width="1200" 
                   height="655" 
                   class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                 >
               </div>
-
-              <div class="p-4 rounded-xl bg-cyber-950/80 border border-cyber-800 text-xs text-stone-300 leading-relaxed space-y-2">
-                <p><strong class="text-stone-100">Narrative:</strong> ${track.description}</p>
-                <p><strong class="text-stone-100">Key Lyric:</strong> <em class="text-inferno-300">"${track.key_lyric}"</em></p>
-                
-                <div class="pt-2 flex flex-wrap gap-1.5">
-                  ${(track.tags || []).map(tag => `
-                    <span class="px-2 py-0.5 rounded bg-cyber-800 text-stone-400 text-[11px] font-mono">${tag}</span>
-                  `).join('')}
-                </div>
-              </div>
-
-              <!-- Suno Musical Direction Accordion -->
-              <div class="border border-cyber-800 rounded-xl overflow-hidden bg-cyber-950/60">
-                <button onclick="toggleSunoPrompt(${track.number})" aria-expanded="false" id="suno-btn-${track.number}" class="w-full p-3 text-left flex items-center justify-between text-xs font-mono text-stone-300 hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-inferno-500">
-                  <span class="flex items-center gap-1.5 text-cyanic-400">
-                    <i aria-hidden="true" class="fa-solid fa-sliders"></i>
-                    <span>Suno Musical Style & Tags</span>
-                  </span>
-                  <i aria-hidden="true" id="suno-icon-${track.number}" class="fa-solid fa-chevron-down text-[10px] text-stone-400 transition-transform"></i>
-                </button>
-                <div id="suno-content-${track.number}" class="hidden p-3 border-t border-cyber-800 text-xs text-stone-400 space-y-2 font-mono">
-                  <p><strong class="text-stone-200">Style Prompt:</strong> ${track.musical_highlights || 'Industrial Rock, Driving Drums, Electric Guitars'}</p>
-                  <p><strong class="text-stone-200">Suno Tags:</strong> <span class="text-cyanic-300">${track.suno_tags || 'Industrial Rock, Hard Rock'}</span></p>
-                </div>
+              <div class="flex items-center justify-between text-[11px] font-mono text-stone-500 px-1">
+                <span>Original Master Artwork</span>
+                <span>Track 0${track.number}</span>
               </div>
             </div>
 
-            <!-- Lyrics Presentation -->
-            <div class="lg:col-span-8 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center justify-between border-b border-cyber-800 pb-2 mb-4">
-                  <span class="text-xs font-mono uppercase tracking-wider text-stone-400 font-semibold">
-                    Official Lyrics (${track.stanzas.length} Stanzas)
-                  </span>
-                  <span class="text-xs font-mono text-stone-400">
-                    Suno Master Cut
-                  </span>
-                </div>
+          </div>
 
-                <!-- Lyrics Stanzas Grid / Flow -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm" id="lyrics-flow-${track.number}">
-                  ${track.stanzas.slice(0, 4).map(stanza => `
-                    <div class="p-3.5 rounded-xl bg-cyber-950/70 border border-cyber-800/80">
-                      <span class="block text-[11px] font-mono text-inferno-400 font-bold uppercase mb-1.5">
-                        ${stanza.name}
-                      </span>
-                      <div class="space-y-1 text-stone-200 leading-relaxed font-sans">
-                        ${stanza.lines.map(l => `<p>${l}</p>`).join('')}
-                      </div>
-                    </div>
-                  `).join('')}
-                </div>
-
-                <!-- Remaining Hidden Stanzas (Expandable) -->
-                ${track.stanzas.length > 4 ? `
-                  <div id="extra-lyrics-${track.number}" class="hidden grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm mt-4">
-                    ${track.stanzas.slice(4).map(stanza => `
-                      <div class="p-3.5 rounded-xl bg-cyber-950/70 border border-cyber-800/80">
-                        <span class="block text-[11px] font-mono text-inferno-400 font-bold uppercase mb-1.5">
-                          ${stanza.name}
-                        </span>
-                        <div class="space-y-1 text-stone-200 leading-relaxed font-sans">
-                          ${stanza.lines.map(l => `<p>${l}</p>`).join('')}
-                        </div>
-                      </div>
-                    `).join('')}
-                  </div>
-                ` : ''}
+          <!-- FULL-WIDTH EXPANDABLE LYRICS DRAWER -->
+          <div id="lyrics-drawer-${track.number}" class="hidden border-t border-cyber-800 bg-cyber-950/90 p-5 sm:p-8 space-y-6">
+            
+            <!-- Lyrics Header & Copy Action -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-cyber-800 gap-3">
+              <div class="flex items-center gap-2">
+                <i aria-hidden="true" class="fa-solid fa-quote-left text-inferno-400 text-sm"></i>
+                <h4 class="font-mono text-xs uppercase tracking-wider text-stone-200 font-bold">
+                  Official Lyrics &bull; ${track.title} <span class="text-stone-500 font-normal">(${track.stanzas.length} Stanzas)</span>
+                </h4>
               </div>
 
-              <!-- Toggle Full Lyrics Button -->
-              ${track.stanzas.length > 4 ? `
-                <div class="pt-4 mt-4 border-t border-cyber-800 flex justify-end">
-                  <button onclick="toggleLyrics(${track.number})" id="toggle-lyrics-btn-${track.number}" class="px-4 py-1.5 rounded-lg bg-cyber-800 hover:bg-cyber-750 text-stone-300 hover:text-white text-xs font-medium transition-colors flex items-center gap-1.5 border border-cyber-700">
-                    <span id="toggle-lyrics-text-${track.number}">View Remaining ${track.stanzas.length - 4} Stanzas</span>
-                    <i aria-hidden="true" id="toggle-lyrics-icon-${track.number}" class="fa-solid fa-chevron-down text-[10px]"></i>
-                  </button>
-                </div>
-              ` : ''}
+              <button onclick="copyLyrics(${track.number})" id="btn-copy-${track.number}" aria-label="Copy lyrics for ${track.title}" class="px-3.5 py-1.5 rounded-lg bg-cyber-900 hover:bg-inferno-600 text-stone-300 hover:text-white border border-cyber-750 hover:border-inferno-500 text-xs font-mono transition-all flex items-center gap-1.5 shadow-sm focus:outline-none focus:ring-2 focus:ring-inferno-400 self-start sm:self-auto">
+                <i aria-hidden="true" class="fa-regular fa-copy text-[11px]"></i>
+                <span id="btn-copy-label-${track.number}">Copy Lyrics</span>
+              </button>
+            </div>
 
+            <!-- Complete Stanzas Grid Layout (All Stanzas Displayed) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-xs sm:text-sm">
+              ${track.stanzas.map(stanza => `
+                <div class="p-4 rounded-xl bg-cyber-900/70 border border-cyber-800/80 space-y-2 hover:border-cyber-750 transition-colors">
+                  <span class="inline-block text-[11px] font-mono text-inferno-400 font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-inferno-950/80 border border-inferno-900/60">
+                    ${stanza.name}
+                  </span>
+                  <div class="space-y-1 pl-2.5 border-l-2 border-inferno-900/60 text-stone-200 leading-relaxed font-sans">
+                    ${stanza.lines.map(l => `<p class="leading-relaxed">${l}</p>`).join('')}
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+
+            <!-- Legal Copyright & Attribution Notice at Bottom of Lyrics -->
+            <div class="pt-6 border-t border-cyber-800/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs font-mono text-stone-400">
+              <div class="flex items-center gap-2">
+                <i aria-hidden="true" class="fa-regular fa-copyright text-inferno-400 text-sm"></i>
+                <span>&copy; 2025 The Shady River Bard &bull; The Shady River Homestead, LLC. All rights reserved.</span>
+              </div>
+              <div class="flex items-center gap-2 text-[11px] text-stone-500">
+                <span>Album 08: Cognitive Inferno</span>
+                <span>&bull;</span>
+                <a href="https://theshadyriverbard.com/cognitive-inferno/" class="hover:text-inferno-400 underline transition-colors">theshadyriverbard.com</a>
+              </div>
             </div>
 
           </div>
@@ -898,24 +917,52 @@
       }, 100);
     }
 
-    // 6. TOGGLE DRAWERS
+    // 6. TOGGLE DRAWERS & GLOBAL CONTROLS
     function toggleLyrics(trackNum) {
-      const extra = document.getElementById(`extra-lyrics-${trackNum}`);
-      const btnText = document.getElementById(`toggle-lyrics-text-${trackNum}`);
-      const icon = document.getElementById(`toggle-lyrics-icon-${trackNum}`);
-      if (!extra) return;
+      const drawer = document.getElementById(`lyrics-drawer-${trackNum}`);
+      const btn = document.getElementById(`btn-toggle-${trackNum}`);
+      const label = document.getElementById(`toggle-label-${trackNum}`);
+      const icon = document.getElementById(`toggle-icon-${trackNum}`);
+      if (!drawer || !btn) return;
 
-      if (extra.classList.contains('hidden')) {
-        extra.classList.remove('hidden');
-        extra.classList.add('grid');
-        if (btnText) btnText.textContent = 'Collapse Lyrics';
-        if (icon) icon.className = 'fa-solid fa-chevron-up text-[10px]';
+      const isHidden = drawer.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', !isHidden);
+      const track = data.tracks.find(t => t.number === trackNum);
+      const stanzasCount = track ? track.stanzas.length : '';
+
+      if (isHidden) {
+        if (label) label.textContent = `View Lyrics (${stanzasCount} Stanzas)`;
+        if (icon) icon.className = 'fa-solid fa-file-lines text-[11px] text-inferno-400';
       } else {
-        extra.classList.add('hidden');
-        extra.classList.remove('grid');
-        if (btnText) btnText.textContent = `View Remaining Stanzas`;
-        if (icon) icon.className = 'fa-solid fa-chevron-down text-[10px]';
+        if (label) label.textContent = 'Hide Lyrics';
+        if (icon) icon.className = 'fa-solid fa-chevron-up text-[11px] text-inferno-400';
       }
+    }
+
+    function expandAllLyrics() {
+      document.querySelectorAll('[id^="lyrics-drawer-"]').forEach(el => el.classList.remove('hidden'));
+      document.querySelectorAll('[id^="btn-toggle-"]').forEach(btn => {
+        btn.setAttribute('aria-expanded', 'true');
+        const num = btn.id.replace('btn-toggle-', '');
+        const label = document.getElementById(`toggle-label-${num}`);
+        const icon = document.getElementById(`toggle-icon-${num}`);
+        if (label) label.textContent = 'Hide Lyrics';
+        if (icon) icon.className = 'fa-solid fa-chevron-up text-[11px] text-inferno-400';
+      });
+    }
+
+    function collapseAllLyrics() {
+      document.querySelectorAll('[id^="lyrics-drawer-"]').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('[id^="btn-toggle-"]').forEach(btn => {
+        btn.setAttribute('aria-expanded', 'false');
+        const num = btn.id.replace('btn-toggle-', '');
+        const track = data.tracks.find(t => t.number === parseInt(num));
+        const stanzasCount = track ? track.stanzas.length : '';
+        const label = document.getElementById(`toggle-label-${num}`);
+        const icon = document.getElementById(`toggle-icon-${num}`);
+        if (label) label.textContent = `View Lyrics (${stanzasCount} Stanzas)`;
+        if (icon) icon.className = 'fa-solid fa-file-lines text-[11px] text-inferno-400';
+      });
     }
 
     function toggleSunoPrompt(trackNum) {
@@ -967,19 +1014,33 @@
       if (e.key === 'Escape') closeVideoModal();
     });
 
-    // 8. COPY LYRICS TO CLIPBOARD
+    // 8. COPY LYRICS WITH EMBEDDED COPYRIGHT DISCLOSURE
     function copyLyrics(trackNum) {
       const track = data.tracks.find(t => t.number === trackNum);
       if (!track) return;
 
-      let text = `${track.title} - The Shady River Bard\nAlbum 08: Cognitive Inferno\n\n`;
+      let text = `Track ${track.number_padded}: ${track.title}\n`;
+      text += `Artist: The Shady River Bard\n`;
+      text += `Album: Cognitive Inferno (Album 08)\n\n`;
+
       track.stanzas.forEach(s => {
         text += `${s.name}\n`;
         text += s.lines.join('\n') + '\n\n';
       });
 
+      text += `--------------------------------------------------\n`;
+      text += `© 2025 The Shady River Bard • The Shady River Homestead, LLC.\n`;
+      text += `All music, lyrics, and conceptual frameworks reserved.\n`;
+      text += `Official Vault: https://theshadyriverbard.com/cognitive-inferno/\n`;
+
       navigator.clipboard.writeText(text).then(() => {
-        showToast(`"${track.title}" lyrics copied to clipboard!`);
+        const btn = document.getElementById(`btn-copy-${trackNum}`);
+        if (btn) {
+          const orig = btn.innerHTML;
+          btn.innerHTML = `<i aria-hidden="true" class="fa-solid fa-check text-emerald-400 text-[11px]"></i><span class="text-emerald-300">Copied with Copyright!</span>`;
+          setTimeout(() => { btn.innerHTML = orig; }, 2500);
+        }
+        showToast(`"${track.title}" lyrics copied with copyright notice!`);
       }).catch(() => {
         showToast(`Failed to copy lyrics.`);
       });

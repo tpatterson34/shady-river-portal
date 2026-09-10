@@ -467,7 +467,7 @@
   </footer>
 
   <!-- LOAD DATA MODULE -->
-  <script src="data/unequal-justice-data.js?v=20260910_06"></script>
+  <script src="data/unequal-justice-data.js?v=20260910_08"></script>
 
   <!-- SUB-APP CONTROLLER SCRIPT -->
   <script>
@@ -709,6 +709,19 @@
                     `).join('')}
                   </div>
 
+                  <!-- Legal Copyright & Attribution Notice -->
+                  <div class="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs font-mono text-stone-400">
+                    <div class="flex items-center gap-2">
+                      <i aria-hidden="true" class="fa-regular fa-copyright text-gilded-400 text-sm"></i>
+                      <span>&copy; 2025 The Shady River Bard &bull; The Shady River Homestead, LLC. All rights reserved.</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-[11px] text-stone-500">
+                      <span>Album 07: Unequal Justice</span>
+                      <span>&bull;</span>
+                      <a href="https://theshadyriverbard.com/unequal-justice/" class="hover:text-gilded-400 underline transition-colors">theshadyriverbard.com</a>
+                    </div>
+                  </div>
+
                 </div>
 
               </article>
@@ -759,22 +772,29 @@
       });
     }
 
-    // Copy track lyrics to clipboard
+    // Copy track lyrics to clipboard with embedded copyright disclosure
     function copyTrackLyrics(num) {
       const data = window.UNEQUAL_JUSTICE_DATA;
       if (!data) return;
       const track = data.tracks.find(t => t.number === num);
       if (!track) return;
 
-      const lyricsText = track.stanzas.map(st => `${st.name}\n` + st.lines.join('\n')).join('\n\n');
-      const fullText = `${track.title} - The Shady River Bard (Album 07: Unequal Justice)\n\n` + lyricsText;
+      const paddedNum = track.number < 10 ? '0' + track.number : track.number;
+      let fullText = `Track ${paddedNum}: ${track.title}\n`;
+      fullText += `Artist: The Shady River Bard\n`;
+      fullText += `Album: Unequal Justice (Album 07)\n\n`;
+      fullText += track.stanzas.map(st => `${st.name}\n` + st.lines.join('\n')).join('\n\n');
+      fullText += `\n\n--------------------------------------------------\n`;
+      fullText += `© 2025 The Shady River Bard • The Shady River Homestead, LLC.\n`;
+      fullText += `All rights reserved.\n`;
+      fullText += `Official Vault: https://theshadyriverbard.com/unequal-justice/\n`;
 
       navigator.clipboard.writeText(fullText).then(() => {
         const btn = document.getElementById(`btn-copy-${num}`);
         if (btn) {
           const orig = btn.innerHTML;
-          btn.innerHTML = `<i aria-hidden="true" class="fa-solid fa-check text-green-400"></i><span>Copied!</span>`;
-          setTimeout(() => btn.innerHTML = orig, 2000);
+          btn.innerHTML = `<i aria-hidden="true" class="fa-solid fa-check text-green-400"></i><span>Copied with Copyright!</span>`;
+          setTimeout(() => btn.innerHTML = orig, 2500);
         }
       }).catch(err => {
         console.error('Copy failed:', err);

@@ -632,7 +632,7 @@
   </footer>
 
   <!-- Concept Data Script -->
-  <script src="data/poison-we-trust-data.js?v=20260910_07"></script>
+  <script src="data/poison-we-trust-data.js?v=20260910_08"></script>
 
   <!-- Interactive Logic Script -->
   <script>
@@ -878,6 +878,19 @@
                     </div>
                   </div>
                 `).join('') : `<div class="whitespace-pre-line font-mono text-xs">${t.lyrics}</div>`}
+
+                <!-- Visual Copyright Notice -->
+                <div class="mt-6 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs font-mono text-stone-400">
+                  <div class="flex items-center gap-2">
+                    <i aria-hidden="true" class="fa-regular fa-copyright text-amber-400 text-sm"></i>
+                    <span>&copy; 2025&ndash;2026 The Shady River Bard &bull; The Shady River Homestead, LLC. All rights reserved.</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-[11px] text-stone-500">
+                    <span>Album 05: The Poison We Trust</span>
+                    <span>&bull;</span>
+                    <a href="https://theshadyriverbard.com/the-poison-we-trust/" class="hover:text-amber-400 underline transition-colors">theshadyriverbard.com</a>
+                  </div>
+                </div>
               </div>
 
               <!-- Narrative Context & Video Description -->
@@ -996,27 +1009,36 @@
       });
     }
 
-    // 8. One-Click Copy Lyrics with Toast Feedback
+    // 8. One-Click Copy Lyrics with Embedded Copyright Disclosure
     function copyLyrics(trackNum) {
       if (!window.POISON_WE_TRUST_DATA) return;
       const track = window.POISON_WE_TRUST_DATA.tracks.find(t => t.number === trackNum);
       if (!track) return;
 
-      let lyricsToCopy = '';
+      const paddedNum = track.number < 10 ? '0' + track.number : track.number;
+      let lyricsToCopy = `Track ${paddedNum}: ${track.title}\n`;
+      lyricsToCopy += `Artist: The Shady River Bard\n`;
+      lyricsToCopy += `Album: The Poison We Trust (Album 05)\n\n`;
+
       if (track.stanzas && track.stanzas.length > 0) {
-        lyricsToCopy = track.stanzas.map(s => `${s.tag}\n${s.lines.join('\n')}`).join('\n\n');
+        lyricsToCopy += track.stanzas.map(s => `${s.tag}\n${s.lines.join('\n')}`).join('\n\n');
       } else {
-        lyricsToCopy = track.lyrics;
+        lyricsToCopy += track.lyrics;
       }
+
+      lyricsToCopy += `\n\n--------------------------------------------------\n`;
+      lyricsToCopy += `© 2025–2026 The Shady River Bard • The Shady River Homestead, LLC.\n`;
+      lyricsToCopy += `All rights reserved.\n`;
+      lyricsToCopy += `Official Vault: https://theshadyriverbard.com/the-poison-we-trust/\n`;
 
       navigator.clipboard.writeText(lyricsToCopy).then(() => {
         const btn = document.getElementById(`copy-btn-${trackNum}`);
         if (btn) {
           const originalHTML = btn.innerHTML;
-          btn.innerHTML = '<i aria-hidden="true" class="fa-solid fa-check text-emerald-400 text-[10px]"></i><span class="text-emerald-300">Copied!</span>';
+          btn.innerHTML = '<i aria-hidden="true" class="fa-solid fa-check text-emerald-400 text-[10px]"></i><span class="text-emerald-300">Copied with Copyright!</span>';
           setTimeout(() => {
             btn.innerHTML = originalHTML;
-          }, 2000);
+          }, 2500);
         }
       }).catch(err => {
         console.error('Failed to copy lyrics:', err);
