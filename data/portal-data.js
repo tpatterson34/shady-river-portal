@@ -199,6 +199,25 @@ window.PORTAL_DATA = {
       "description": "An epic 4-act, 14-track industrial cantata exploring the rise, brutal collapse, and hard-won resilience of the American manufacturing heartland. Fusing work chants, throat-singing drones, and scrap metal percussion into an unforgettable sonic monument."
     },
     {
+      "id": "unbroken-chain",
+      "number": "10",
+      "title": "The Unbroken Chain",
+      "subtitle": "From Chattel to Convict Leasing to Modern Incarceration — and the Enduring Song of Freedom",
+      "badge": "Bespoke Interactive Vault",
+      "cover": "/unbroken-chain/assets/art/unbroken-chain-cover.webp",
+      "tracks_count": 14,
+      "themes": [
+        "Antebellum Bondage",
+        "13th Amendment Loophole",
+        "Convict Leasing",
+        "Prison-Industrial Complex",
+        "Cultural Reclamation"
+      ],
+      "url": "/unbroken-chain/",
+      "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcH2lWQ4zDr7Kh4kW-TU8HFI",
+      "description": "A profound 4-act historical folk blues cantata tracing the continuous evolution of forced labor in America from plantation chattel to convict leasing and modern prison manufacturing, set against the enduring unbroken chain of spiritual and musical resilience."
+    },
+    {
       "id": "the-forgotten-crown",
       "number": "Vault",
       "title": "The Sovereign's Right",
