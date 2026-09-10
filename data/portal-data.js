@@ -309,6 +309,24 @@ window.PORTAL_DATA = {
       "description": "An unflinching 12-track sonic documentary and forensic ledger auditing the half-century liquidation of American communities, pensions, public health, and democracy itself—culminating in an epic indictment of modern extraction."
     },
     {
+      "id": "divide-and-conquer",
+      "number": "16",
+      "title": "Divide and Conquer",
+      "subtitle": "A Four-Act Dissection of Manufactured Division & The Path to Reconnection",
+      "badge": "Bespoke Interactive Vault",
+      "cover": "/divide-and-conquer/assets/art/divide-and-conquer-cover.webp",
+      "tracks_count": 13,
+      "themes": [
+        "Elite Overproduction",
+        "Manufactured Division",
+        "Red vs Blue Trap",
+        "Grassroots Solidarity"
+      ],
+      "url": "/divide-and-conquer/",
+      "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEG-mE0vg_OVLqdIkxszN7C",
+      "description": "The unifying theory of the entire discography. Grounded in Peter Turchin's structural-demographic dynamics, this 13-track, four-act magnum opus unmasks the architects of partisan warfare and calls for working-class reconnection."
+    },
+    {
       "id": "the-forgotten-crown",
       "number": "Vault",
       "title": "The Sovereign's Right",

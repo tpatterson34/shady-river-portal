@@ -929,7 +929,9 @@ window.CATALOG = {
         "8mm58HVrb5o"
       ],
       "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_mUA-AZ8GzwPkh1C7mnd6B3A8xT-GOk44g",
-      "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEG-mE0vg_OVLqdIkxszN7C"
+      "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEG-mE0vg_OVLqdIkxszN7C",
+      "is_bespoke": true,
+      "custom_url": "/divide-and-conquer/"
     },
     {
       "id": "yo-ho-ho-and-a-pocket-full-of-greed",
