@@ -1113,7 +1113,9 @@ window.CATALOG = {
         "M6HtQGZGWqI"
       ],
       "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_l_5xEDbLp-p7WGwPU80pfyzWMPJYkgvEo",
-      "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcF3V0GG90EPJ_Tuhrpykvc5"
+      "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcF3V0GG90EPJ_Tuhrpykvc5",
+      "is_bespoke": true,
+      "custom_url": "/american-renewal/"
     },
     {
       "id": "have-yourself-a-shady-little-christmas",

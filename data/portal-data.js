@@ -386,19 +386,20 @@ window.PORTAL_DATA = {
       "id": "american-renewal",
       "number": "19",
       "title": "American Renewal",
-      "subtitle": "Rebuilding Community Infrastructure & Common Faith",
-      "badge": "Anthem Collection",
-      "cover": "/assets/covers/album-19.webp",
-      "tracks_count": 12,
+      "subtitle": "A Blueprint for Applied Hope, Systemic Reform & Grassroots Restoration",
+      "badge": "Bespoke Interactive Vault",
+      "cover": "/american-renewal/assets/art/american-renewal-cover.webp",
+      "tracks_count": 19,
       "themes": [
-        "Civic Repair",
-        "Working Class",
-        "Hope",
-        "Shared Future"
+        "Systemic Reform",
+        "Applied Hope",
+        "Collective Repair",
+        "Community Resilience",
+        "Democratic Renewal"
       ],
-      "url": "/vault/#american-renewal",
-      "video_url": "https://www.youtube.com/@TheShadyRiverBard",
-      "description": "A defiant, hopeful folk-rock celebration of labor, neighborly solidarity, and the enduring resilience of the American spirit."
+      "url": "/american-renewal/",
+      "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcF3V0GG90EPJ_Tuhrpykvc5",
+      "description": "The necessary answer to the diagnosis of Divide and Conquer and the dark prognosis of American Rubble. A 19-song epic of applied hope structured as a 2-volume, 4-act journey tackling corporate capture and labor liquidation before mending social cohesion and modernizing our constitutional blueprint."
     }
   ],
   "merchandise": [
