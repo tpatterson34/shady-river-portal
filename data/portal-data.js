@@ -273,6 +273,24 @@ window.PORTAL_DATA = {
       "description": "An intimate, unflinching 11-track musical memoir of the Bard's mother, Judith Faye Adams ('Mama Judie'), and an empirical sociological data audit of Single Mothers in America. Journeying through pre-dawn shifts, boyhood drive-ins, domestic storms, and the healing gold of Kintsugi grace."
     },
     {
+      "id": "five-digit-fate",
+      "number": "14",
+      "title": "Five-Digit Fate",
+      "subtitle": "A Social Cartography of American Poverty & Geographic Determinism",
+      "badge": "Bespoke Interactive Vault",
+      "cover": "/five-digit-fate/assets/art/five-digit-fate-cover.webp",
+      "tracks_count": 17,
+      "themes": [
+        "Geographic Determinism",
+        "The Opportunity Atlas",
+        "Deaths of Despair",
+        "The Unbranded Heart"
+      ],
+      "url": "/five-digit-fate/",
+      "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEI54M3aP3O8p9s84xcrHrT",
+      "description": "An ambitious 5-act, 17-track social cartography translating the empirical research of Raj Chetty's Opportunity Atlas, Case & Deaton's Deaths of Despair, and Richard Rothstein's The Color of Law into a profound journey across America's heartland and the triumph of the human soul."
+    },
+    {
       "id": "the-forgotten-crown",
       "number": "Vault",
       "title": "The Sovereign's Right",

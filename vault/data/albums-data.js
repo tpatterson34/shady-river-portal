@@ -817,7 +817,9 @@ window.CATALOG = {
         "wcQ1zkLU1ps"
       ],
       "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_k2mdyly8AhgJTCAC0Nh9Zt6F_cJa6QsW0",
-      "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEI54M3aP3O8p9s84xcrHrT"
+      "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEI54M3aP3O8p9s84xcrHrT",
+      "is_bespoke": true,
+      "custom_url": "/five-digit-fate/"
     },
     {
       "id": "sold-cheap",
