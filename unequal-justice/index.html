@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unequal Justice | The Shady River Bard (Album 07)</title>
+  <meta name="description" content="Official interactive concept website and complete 18-track lyrics vault for Unequal Justice (Album 07) by The Shady River Bard. An unflinching modern folk epic exploring corporate impunity, mass incarceration, and the two-weight scale of law.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            court: {
+              950: '#06080d',
+              900: '#0b1017',
+              850: '#111722',
+              800: '#18202e',
+              750: '#202a3c',
+              700: '#2a374e',
+              600: '#3a4b69',
+            },
+            gilded: {
+              300: '#fde68a',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f',
+            },
+            crimson: {
+              400: '#f87171',
+              500: '#ef4444',
+              600: '#dc2626',
+              700: '#b91c1c',
+              800: '#991b1b',
+              900: '#7f1d1d',
+            },
+            slate: {
+              400: '#94a3b8',
+              500: '#64748b',
+              600: '#475569',
+            }
+          },
+          fontFamily: {
+            display: ['Cinzel', 'Georgia', 'serif'],
+            body: ['Lora', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/a11y.css">
+
+  <!-- High-Priority Preload for Hero Album Cover -->
+  <link rel="preload" as="image" href="assets/art/unequal-justice-cover.webp" type="image/webp" fetchpriority="high">
+
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #06080d;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #18202e;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #d97706;
+    }
+
+    /* Ambient atmospheric glow */
+    .glow-gilded {
+      box-shadow: 0 0 35px -5px rgba(217, 119, 6, 0.22);
+    }
+    .glow-crimson {
+      box-shadow: 0 0 35px -5px rgba(220, 38, 38, 0.22);
+    }
+
+    /* Screen reader skip link */
+    .sr-skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      z-index: 100;
+      padding: 0.75rem 1.25rem;
+      background: #d97706;
+      color: #06080d;
+      font-weight: 700;
+      border-radius: 0.5rem;
+      transition: top 0.2s ease;
+    }
+    .sr-skip-link:focus {
+      top: 1rem;
+    }
+  </style>
+</head>
+<body class="bg-court-950 text-stone-200 font-sans antialiased selection:bg-gilded-600 selection:text-white">
+
+  <!-- A11Y SKIP LINK -->
+  <a href="#main-content" class="sr-skip-link focus:outline-none focus:ring-2 focus:ring-white">
+    Skip to main content
+  </a>
+
+  <!-- GLOBAL NAV -->
+  <header class="sticky top-0 z-40 bg-court-950/90 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand Link -->
+      <a href="/" class="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-gilded-500 rounded-lg p-1" aria-label="The Shady River - Return to Home">
+        <div class="w-9 h-9 rounded-lg overflow-hidden border border-gilded-500/40 shadow-sm group-hover:border-gilded-400 transition-colors">
+          <img src="assets/art/unequal-justice-cover.webp" alt="Unequal Justice album thumbnail" width="36" height="36" loading="eager" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        </div>
+        <div>
+          <span class="font-display text-base font-bold text-white group-hover:text-gilded-400 transition-colors block leading-tight">
+            The Shady River
+          </span>
+          <span class="text-[10px] font-mono text-stone-400 block tracking-wider uppercase">
+            Album 07 &bull; Unequal Justice
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Jump Links -->
+      <nav class="hidden md:flex items-center gap-6 font-mono text-xs text-stone-300" aria-label="Page Sections">
+        <a href="#overview" class="hover:text-gilded-400 transition-colors">Overview</a>
+        <a href="#roadmap" class="hover:text-gilded-400 transition-colors">4-Act Arc</a>
+        <a href="#pillars" class="hover:text-gilded-400 transition-colors">Framework</a>
+        <a href="#two-scales" class="hover:text-gilded-400 transition-colors">Two Scales</a>
+        <a href="#tracks" class="hover:text-gilded-400 transition-colors">18 Tracks</a>
+        <a href="/vault/" class="text-gilded-400 hover:underline flex items-center gap-1 font-bold">
+          <span>26-Album Vault</span>
+          <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </nav>
+
+      <!-- External Quick Links -->
+      <div class="flex items-center gap-2">
+        <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcHMkTpFn5HegqFaTudnxu1L" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="YouTube Playlist" aria-label="Open YouTube Video Playlist">
+          <i aria-hidden="true" class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://music.youtube.com/playlist?list=OLAK5uy_kB9UqNZJQoWpY_fRivd6kS1a5G0dZ7SR0" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="YouTube Music" aria-label="Open YouTube Music">
+          <i aria-hidden="true" class="fa-solid fa-music"></i>
+        </a>
+        <button onclick="toggleA11yToolbar()" class="p-2 rounded-lg bg-court-850 hover:bg-court-800 text-stone-300 border border-white/10 text-xs transition-colors" title="Accessibility Settings" aria-label="Toggle Accessibility Display Settings">
+          <i aria-hidden="true" class="fa-solid fa-universal-access"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN LANDMARK -->
+  <main id="main-content" tabindex="-1" class="focus:outline-none">
+
+    <!-- HERO SECTION -->
+    <section id="overview" class="relative pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden border-b border-white/10 bg-gradient-to-b from-court-950 via-court-900 to-court-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          
+          <!-- Hero Artwork Column (5 cols) -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-md aspect-square rounded-2xl overflow-hidden border-2 border-gilded-500/40 glow-gilded shadow-2xl group">
+              <img src="assets/art/unequal-justice-cover.webp" alt="Unequal Justice album cover artwork depicting the blindfolded Lady Justice with unbalanced scales and industrial courtroom silhouettes" width="600" height="600" loading="eager" fetchpriority="high" decoding="async" class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-court-950/80 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity"></div>
+              <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[11px] font-mono px-3 py-1.5 rounded-lg bg-court-950/85 backdrop-blur-md border border-white/10">
+                <span class="text-gilded-400 font-bold">Album 07 &bull; 18 Tracks</span>
+                <span class="text-stone-300">Raw Folk &amp; Blues</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Content Column (7 cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <div class="space-y-2">
+              <div class="flex flex-wrap gap-2 items-center">
+                <span class="text-xs font-mono font-bold px-2.5 py-1 rounded-md bg-gilded-950/80 text-gilded-400 border border-gilded-500/40 uppercase tracking-wider">
+                  Bespoke Interactive Vault
+                </span>
+                <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-court-850 text-stone-300 border border-white/10">
+                  Released 2025
+                </span>
+                <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-crimson-950/60 text-crimson-400 border border-crimson-800/40">
+                  4-Act Folk Epic
+                </span>
+              </div>
+
+              <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-none pt-2">
+                Unequal <span class="text-transparent bg-clip-text bg-gradient-to-r from-gilded-400 via-amber-300 to-crimson-400">Justice</span>
+              </h1>
+              
+              <p class="font-display text-lg sm:text-xl text-stone-300 italic">
+                Systemic Inequity, Mass Incarceration &amp; The Scale of Law
+              </p>
+            </div>
+
+            <p class="text-sm sm:text-base text-stone-300 font-body leading-relaxed">
+              In a world of fleeting headlines and endless noise, <strong class="text-white">Unequal Justice</strong> is an unflinching 18-track narrative folk-blues epic examining the two Americas living under one flag. Guided by the ancient metaphor of the <em>"two-weight stone"</em>—one weight used when weighing out justice for the powerful, and another when measuring out punishment for the poor—the album dissects corporate impunity, the cash-bail meat grinder, mandatory sentencing, and the permanent stigma of a criminal record, before rising in defiance with exonerations, whistleblowers, and grassroots community solidarity.
+            </p>
+
+            <!-- Thesis Highlight Box -->
+            <div class="p-4 rounded-xl bg-court-850/80 border border-gilded-500/30 space-y-2">
+              <div class="flex items-center gap-2 text-xs font-mono text-gilded-400 font-bold uppercase tracking-wider">
+                <i aria-hidden="true" class="fa-solid fa-scale-unbalanced-flip text-gilded-400"></i>
+                <span>The Album Thesis: The Two-Weight Stone</span>
+              </div>
+              <p class="text-xs text-stone-300 leading-relaxed font-body italic">
+                "The ancient proverb warns that a false balance is an abomination, but a just weight is delight. 'Unequal Justice' exposes modern legal systems operating with a two-weight stone—one of impunity, deferred prosecution, and golden parachutes for the wealthy, and another of cash bail, mandatory minimums, and generational ruin for the poor. Bearing witness to this disparity is the first, indispensable step toward demanding a single, true scale."
+              </p>
+            </div>
+
+            <!-- CTA Action Buttons -->
+            <div class="pt-2 flex flex-wrap gap-3 items-center">
+              <a href="#tracks" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-gilded-600 to-amber-600 hover:from-gilded-500 hover:to-amber-500 text-court-950 font-mono text-xs font-bold transition-all shadow-lg flex items-center gap-2">
+                <span>Explore 18-Track Vault</span>
+                <i aria-hidden="true" class="fa-solid fa-arrow-down text-xs"></i>
+              </a>
+              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcHMkTpFn5HegqFaTudnxu1L" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-red-950/70 hover:bg-red-900 text-red-300 border border-red-800/50 font-mono text-xs font-semibold transition-all flex items-center gap-2">
+                <i aria-hidden="true" class="fa-brands fa-youtube"></i>
+                <span>Watch Video Playlist ↗</span>
+              </a>
+              <a href="https://theshadyriverbard.substack.com/s/deconstructed" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-court-800 hover:bg-court-750 text-stone-300 border border-white/10 font-mono text-xs transition-all flex items-center gap-2">
+                <i aria-hidden="true" class="fa-solid fa-bookmark text-gilded-400"></i>
+                <span>"Deconstructed" Liner Notes ↗</span>
+              </a>
+              <a href="/vault/" class="px-4 py-2.5 rounded-xl bg-court-850 hover:bg-court-800 text-stone-300 border border-white/10 font-mono text-xs transition-all flex items-center gap-2">
+                <i aria-hidden="true" class="fa-solid fa-guitar text-gilded-400"></i>
+                <span>26-Album Vault</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 1: 4-ACT NARRATIVE ROADMAP -->
+    <section id="roadmap" class="py-16 md:py-20 border-b border-white/10 bg-court-900/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gilded-950/80 border border-gilded-500/30 text-gilded-400 font-mono text-xs">
+            <i aria-hidden="true" class="fa-solid fa-diagram-project"></i>
+            <span>Thematic Structure</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            The 4-Act Narrative Roadmap
+          </h2>
+          <p class="text-sm sm:text-base text-stone-300 font-body leading-relaxed">
+            The album's narrative guides the listener on an emotional and intellectual journey from the discovery of profound structural injustice to a final, clear-eyed call for resolution. Click any act card to jump directly to its song group.
+          </p>
+        </div>
+
+        <!-- 4-Act Grid Container (Rendered Dynamically via JS) -->
+        <div id="movements-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Populated by JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: 5 JUSTICE FRAMEWORK PILLARS -->
+    <section id="pillars" class="py-16 md:py-20 border-b border-white/10 bg-court-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-crimson-950/80 border border-crimson-500/30 text-crimson-400 font-mono text-xs">
+            <i aria-hidden="true" class="fa-solid fa-scale-unbalanced"></i>
+            <span>Forensic Sociological Audit</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            The 5 Pillars of Unequal Justice
+          </h2>
+          <p class="text-sm sm:text-base text-stone-300 font-body leading-relaxed">
+            Drawing upon criminological data, statutory analysis, and lived experience, these five pillars define the anatomy of America's two-tiered legal system. Click any track tag on a pillar to filter the lyrics vault below.
+          </p>
+        </div>
+
+        <!-- 5 Pillars Grid (Rendered Dynamically) -->
+        <div id="pillars-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Populated by JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: THE TWO SCALES MATRIX -->
+    <section id="two-scales" class="py-16 md:py-20 border-b border-white/10 bg-court-900/40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gilded-950/80 border border-gilded-500/30 text-gilded-400 font-mono text-xs">
+            <i aria-hidden="true" class="fa-solid fa-table-columns"></i>
+            <span>Symmetrical Audit Matrix</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            The Two Scales of Justice Matrix
+          </h2>
+          <p class="text-sm sm:text-base text-stone-300 font-body leading-relaxed">
+            A forensic comparison across five core judicial dimensions, illustrating the stark disparity between justice measured for the powerful versus justice meted out to the vulnerable.
+          </p>
+        </div>
+
+        <!-- Accessible Matrix Table -->
+        <div class="overflow-x-auto rounded-2xl border border-white/10 shadow-2xl bg-court-850/90">
+          <table class="w-full text-left text-xs sm:text-sm font-sans">
+            <caption class="sr-only">Comparative analysis between the Gilded Shield (Justice for the Wealthy) and the Iron Funnel (Justice for the Poor) across five judicial dimensions.</caption>
+            <thead>
+              <tr class="border-b border-white/10 bg-court-950/80 text-stone-300 font-mono text-[11px] uppercase tracking-wider">
+                <th scope="col" class="py-4 px-5 sm:px-6 font-bold text-white w-1/4">Judicial Dimension</th>
+                <th scope="col" class="py-4 px-5 sm:px-6 font-bold text-gilded-400 w-3/8">
+                  <span class="flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-shield-halved"></i> The Gilded Shield (Corporate / Wealthy)</span>
+                </th>
+                <th scope="col" class="py-4 px-5 sm:px-6 font-bold text-crimson-400 w-3/8">
+                  <span class="flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-filter"></i> The Iron Funnel (Indigent / Poor)</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="two-scales-tbody" class="divide-y divide-white/5 font-body text-xs sm:text-sm text-stone-300">
+              <!-- Populated by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: 18-TRACK CONTINUOUS VAULT -->
+    <section id="tracks" class="py-16 md:py-24 bg-court-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-white/10">
+          <div class="space-y-2 max-w-2xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gilded-950/80 border border-gilded-500/30 text-gilded-400 font-mono text-xs">
+              <i aria-hidden="true" class="fa-solid fa-compact-disc"></i>
+              <span>Complete Lyrics Vault</span>
+            </div>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">
+              All 18 Tracks &bull; Stanzas &amp; Musical Direction
+            </h2>
+            <p class="text-sm text-stone-300 font-body">
+              Every track features dual landscape and square artworks, Suno AI generation prompts, complete chordless lyrics, and one-click copy functionality.
+            </p>
+          </div>
+
+          <!-- Vault Filter & Controls -->
+          <div class="flex flex-wrap items-center gap-3">
+            <div id="filter-indicator" class="hidden text-xs font-mono px-3 py-1.5 rounded-lg bg-gilded-950 text-gilded-300 border border-gilded-500/40 flex items-center gap-2">
+              <span id="filter-label">Filter Active</span>
+              <button onclick="clearTrackFilter()" class="hover:text-white" aria-label="Clear active track filter">
+                <i aria-hidden="true" class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <button onclick="expandAllLyrics()" class="py-1.5 px-3 rounded-lg bg-court-800 hover:bg-court-700 text-stone-300 font-mono text-xs transition-colors border border-white/10">
+              Expand All
+            </button>
+            <button onclick="collapseAllLyrics()" class="py-1.5 px-3 rounded-lg bg-court-800 hover:bg-court-700 text-stone-300 font-mono text-xs transition-colors border border-white/10">
+              Collapse All
+            </button>
+          </div>
+        </div>
+
+        <!-- Continuous Tracklist Container (Rendered Dynamically) -->
+        <div id="tracks-container" class="space-y-12">
+          <!-- Populated by JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-court-950 border-t border-white/10 py-12 text-stone-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Col 1: Brand & Philosophy -->
+        <div class="space-y-3">
+          <h3 class="font-display text-base font-bold text-white tracking-wide">The Shady River Bard</h3>
+          <p class="text-stone-400 leading-relaxed font-body">
+            A 26-album narrative folk-rock catalog chronicling the human spirit, rooted in Western Washington state and dedicated to authentic storytelling.
+          </p>
+          <div class="text-[11px] font-mono text-stone-500">
+            Album 07: Unequal Justice (2025)
+          </div>
+        </div>
+
+        <!-- Col 2: Album Resources -->
+        <div class="space-y-3">
+          <h4 class="font-mono text-xs uppercase tracking-wider text-gilded-400 font-bold">Album Exploration</h4>
+          <ul class="space-y-2 font-mono text-[11px]">
+            <li><a href="https://theshadyriverbard.substack.com/s/deconstructed" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-bookmark text-gilded-500 text-[10px]"></i><span>"Deconstructed" Liner Notes ↗</span></a></li>
+            <li><a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcHMkTpFn5HegqFaTudnxu1L" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-brands fa-youtube text-red-500 text-[10px]"></i><span>Official Video Playlist ↗</span></a></li>
+            <li><a href="https://music.youtube.com/playlist?list=OLAK5uy_kB9UqNZJQoWpY_fRivd6kS1a5G0dZ7SR0" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-music text-red-400 text-[10px]"></i><span>YouTube Music Album ↗</span></a></li>
+            <li><a href="/vault/" class="hover:text-white transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-guitar text-stone-400 text-[10px]"></i><span>Complete 26-Album Vault</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Sister Concept Sites -->
+        <div class="space-y-3">
+          <h4 class="font-mono text-xs uppercase tracking-wider text-gilded-400 font-bold">Interactive Vaults</h4>
+          <ul class="space-y-2 font-mono text-[11px]">
+            <li><a href="/a-house-divided/" class="hover:text-white transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-fire text-amber-500 text-[10px]"></i><span>A House Divided (Album 06) ↗</span></a></li>
+            <li><a href="/the-poison-we-trust/" class="hover:text-white transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-flask-vial text-amber-500 text-[10px]"></i><span>The Poison We Trust (Album 05) ↗</span></a></li>
+            <li><a href="/the-great-inversion/" class="hover:text-white transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-compass text-amber-500 text-[10px]"></i><span>The Great Inversion (Album 04) ↗</span></a></li>
+            <li><a href="/the-fracture/" class="hover:text-white transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-layer-group text-amber-500 text-[10px]"></i><span>The Fracture (Album 03) ↗</span></a></li>
+            <li><a href="/the-hollow-herd/" class="hover:text-white transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-cow text-amber-500 text-[10px]"></i><span>The Hollow Herd (Album 26) ↗</span></a></li>
+            <li><a href="/" class="hover:text-white transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-house text-emerald-500 text-[10px]"></i><span>Flagship Homestead Portal</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Accessibility & Legal -->
+        <div class="space-y-3">
+          <h4 class="font-mono text-xs uppercase tracking-wider text-gilded-400 font-bold">Universal Access</h4>
+          <p class="text-stone-400 text-[11px] leading-relaxed">
+            Fully certified for Section 508 and WCAG 2.1 AA guidelines, featuring semantic landmarks, skip links, and full keyboard navigation.
+          </p>
+          <div class="space-y-1">
+            <button onclick="toggleA11yToolbar()" class="text-[11px] font-mono text-gilded-400 hover:text-gilded-300 underline flex items-center gap-1">
+              <i aria-hidden="true" class="fa-solid fa-sliders"></i>
+              <span>Adjust Display Toolbar</span>
+            </button>
+            <button onclick="openA11yModal()" class="text-[11px] font-mono text-stone-400 hover:text-gilded-400 underline flex items-center gap-1">
+              <i aria-hidden="true" class="fa-solid fa-universal-access"></i>
+              <span>Accessibility Statement (WCAG 2.1 AA)</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-stone-500 font-mono text-[11px]">
+        <div>
+          &copy; 2025 The Shady River Homestead, LLC &amp; The Shady River Bard. All music, lyrics, and artwork reserved.
+        </div>
+        <div>
+          <a href="#overview" class="hover:text-gilded-400 transition-colors uppercase">Back to Top &uarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- LOAD DATA MODULE -->
+  <script src="data/unequal-justice-data.js?v=20260910_04"></script>
+
+  <!-- SUB-APP CONTROLLER SCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const data = window.UNEQUAL_JUSTICE_DATA;
+      if (!data) {
+        console.error('UNEQUAL_JUSTICE_DATA not loaded');
+        return;
+      }
+
+      renderMovements(data.movements);
+      renderPillars(data.pillars);
+      renderTwoScales(data.two_scales_matrix);
+      renderTracks(data.tracks);
+    });
+
+    // 1. Render Movements / 4-Act Stepper
+    function renderMovements(movements) {
+      const container = document.getElementById('movements-container');
+      if (!container) return;
+
+      container.innerHTML = movements.map(m => `
+        <div onclick="scrollToSection('${m.anchor_id}')" class="cursor-pointer p-5 rounded-2xl bg-court-850 border border-white/10 hover:border-gilded-500/50 hover:bg-court-800/80 transition-all shadow-lg flex flex-col justify-between space-y-4 group">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-gilded-950 text-gilded-400 border border-gilded-500/30">
+                ${m.tracks_range}
+              </span>
+              <i aria-hidden="true" class="${m.icon} text-stone-400 group-hover:text-gilded-400 transition-colors text-sm"></i>
+            </div>
+            <h3 class="font-display text-lg font-bold text-white group-hover:text-gilded-300 transition-colors leading-snug">
+              ${m.title}
+            </h3>
+            <p class="text-xs text-gilded-400/80 font-mono">${m.subtitle}</p>
+            <p class="text-xs text-stone-300 font-body leading-relaxed">
+              ${m.summary}
+            </p>
+          </div>
+          <div class="pt-2 border-t border-white/5 flex items-center justify-between text-[11px] font-mono text-stone-400 group-hover:text-gilded-300">
+            <span>Explore Act Songs</span>
+            <i aria-hidden="true" class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // 2. Render 5 Framework Pillars
+    function renderPillars(pillars) {
+      const container = document.getElementById('pillars-container');
+      if (!container) return;
+
+      container.innerHTML = pillars.map(p => `
+        <article class="p-6 rounded-2xl bg-court-850 border border-white/10 hover:border-gilded-500/40 transition-all shadow-xl flex flex-col justify-between space-y-5">
+          <div class="space-y-4">
+            
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-court-950 text-gilded-400 border border-gilded-500/30">
+                ${p.badge}
+              </span>
+              <div class="w-8 h-8 rounded-lg bg-court-900 flex items-center justify-center text-gilded-400 border border-white/5">
+                <i aria-hidden="true" class="${p.icon}"></i>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="font-display text-xl font-bold text-white leading-snug">
+                ${p.title}
+              </h3>
+              <p class="text-xs text-stone-400 font-mono mt-0.5">${p.subtitle}</p>
+            </div>
+
+            <!-- Empirical Stat Box -->
+            <div class="p-3.5 rounded-xl bg-court-950/80 border border-white/5 space-y-1">
+              <div class="font-display text-2xl font-black text-gilded-400 tracking-tight">
+                ${p.stat}
+              </div>
+              <div class="text-xs text-stone-300 font-body leading-snug">
+                ${p.stat_label}
+              </div>
+            </div>
+
+            <!-- Mechanism & Metaphor -->
+            <div class="space-y-2 text-xs leading-relaxed font-body">
+              <p class="text-stone-300">
+                <strong class="text-stone-200 font-semibold">Mechanism:</strong> ${p.mechanism}
+              </p>
+              <p class="text-stone-400 italic">
+                <strong class="text-stone-300 not-italic font-semibold">Metaphor:</strong> "${p.metaphor}"
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Connected Track Tags -->
+          <div class="pt-4 border-t border-white/10 space-y-2">
+            <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider">Connected Tracks:</div>
+            <div class="flex flex-wrap gap-1.5">
+              ${p.track_numbers.map(num => `
+                <button onclick="filterByTrack(${num})" class="px-2 py-0.5 rounded text-[11px] font-mono bg-court-900 hover:bg-gilded-600 text-stone-300 hover:text-court-950 border border-white/10 hover:border-gilded-500 transition-colors" title="Filter to Track ${num}">
+                  Track ${num < 10 ? '0' + num : num}
+                </button>
+              `).join('')}
+            </div>
+          </div>
+
+        </article>
+      `).join('');
+    }
+
+    // 3. Render Two Scales Matrix
+    function renderTwoScales(matrix) {
+      const tbody = document.getElementById('two-scales-tbody');
+      if (!tbody) return;
+
+      tbody.innerHTML = matrix.map((row, idx) => `
+        <tr class="${idx % 2 === 0 ? 'bg-court-900/30' : 'bg-transparent'} hover:bg-court-800/40 transition-colors">
+          <th scope="row" class="py-4 px-5 sm:px-6 font-mono text-xs text-white font-bold align-top">
+            ${row.dimension}
+          </th>
+          <td class="py-4 px-5 sm:px-6 text-stone-300 align-top leading-relaxed border-l border-white/5">
+            <span class="text-gilded-300 font-semibold block sm:hidden font-mono text-[10px] uppercase mb-1">Gilded Shield:</span>
+            ${row.gilded_shield}
+          </td>
+          <td class="py-4 px-5 sm:px-6 text-stone-300 align-top leading-relaxed border-l border-white/5">
+            <span class="text-crimson-300 font-semibold block sm:hidden font-mono text-[10px] uppercase mb-1">Iron Funnel:</span>
+            ${row.iron_funnel}
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    // 4. Render Tracks Continuous Vault
+    function renderTracks(tracks) {
+      const container = document.getElementById('tracks-container');
+      if (!container) return;
+
+      // Group tracks by Act
+      const acts = [
+        { act: 1, id: 'act-section-1', title: 'Act I: The Gilded Shield & The Iron Funnel (Tracks 01–07)', tracks: tracks.filter(t => t.act === 1) },
+        { act: 2, id: 'act-section-2', title: 'Act II: The Crooked Architecture & The Ripples of Ruin (Tracks 08–13)', tracks: tracks.filter(t => t.act === 2) },
+        { act: 3, id: 'act-section-3', title: 'Act III: The Cracks in the Concrete (Tracks 14–16)', tracks: tracks.filter(t => t.act === 3) },
+        { act: 4, id: 'act-section-4', title: 'Act IV: The Blindfold Lifts (Tracks 17–18)', tracks: tracks.filter(t => t.act === 4) }
+      ];
+
+      container.innerHTML = acts.map(group => `
+        <div id="${group.id}" class="space-y-6 scroll-mt-24">
+          <div class="flex items-center gap-4 pb-2 border-b border-white/10">
+            <h3 class="font-display text-xl sm:text-2xl font-bold text-gilded-400">
+              ${group.title}
+            </h3>
+          </div>
+
+          <div class="grid grid-cols-1 gap-8">
+            ${group.tracks.map(t => `
+              <article id="track-${t.number}" class="track-card p-6 sm:p-8 rounded-2xl bg-court-850 border border-white/10 hover:border-gilded-500/40 transition-all shadow-xl space-y-6">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                  
+                  <!-- Artwork Thumbnail (Square 600x600) (3 cols) -->
+                  <div class="lg:col-span-3">
+                    <div class="aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md relative bg-court-950 group">
+                      <img src="${t.image_square}" alt="${t.title} square artwork" width="600" height="600" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                      <div class="absolute top-2 left-2 px-2 py-0.5 rounded bg-court-950/85 backdrop-blur-sm text-[10px] font-mono font-bold text-gilded-400 border border-gilded-500/30">
+                        #${t.number_padded}
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Details & Narrative (6 cols) -->
+                  <div class="lg:col-span-6 space-y-3">
+                    <div class="flex flex-wrap items-center gap-2">
+                      <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-court-900 text-stone-300 border border-white/5">
+                        ${t.act_name}
+                      </span>
+                      <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-gilded-950 text-gilded-400 border border-gilded-500/30">
+                        ${t.core_theme}
+                      </span>
+                    </div>
+
+                    <h4 class="font-display text-2xl font-bold text-white leading-tight">
+                      ${t.number_padded}. ${t.title}
+                    </h4>
+
+                    <p class="text-xs sm:text-sm text-stone-300 font-body leading-relaxed">
+                      ${t.narrative_contribution || t.youtube_description}
+                    </p>
+
+                    <!-- Suno Musical Direction -->
+                    ${t.suno_prompt ? `
+                      <div class="p-3 rounded-lg bg-court-900/90 border border-white/5 text-xs text-stone-400 space-y-1 font-mono">
+                        <div class="text-[10px] text-gilded-400 uppercase tracking-wider font-bold">
+                          <i aria-hidden="true" class="fa-solid fa-sliders text-[10px] mr-1"></i>Suno Musical Direction:
+                        </div>
+                        <p class="text-[11px] text-stone-300 leading-snug">${t.suno_prompt}</p>
+                      </div>
+                    ` : ''}
+                  </div>
+
+                  <!-- Banner Preview & Quick Links (3 cols) -->
+                  <div class="lg:col-span-3 space-y-3">
+                    <div class="aspect-video rounded-xl overflow-hidden border border-white/10 shadow-sm bg-court-950">
+                      <img src="${t.image_landscape}" alt="${t.title} landscape banner" width="1200" height="655" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    </div>
+
+                    <div class="space-y-2">
+                      <a href="${t.video_url}" target="_blank" rel="noopener noreferrer" class="w-full py-2 px-3 rounded-lg bg-red-950/70 hover:bg-red-900 text-red-300 border border-red-800/40 text-center font-mono text-xs font-bold transition-all flex items-center justify-center gap-2" aria-label="Watch ${t.title} official video on YouTube">
+                        <i aria-hidden="true" class="fa-brands fa-youtube"></i>
+                        <span>Watch Video ↗</span>
+                      </a>
+                      <button onclick="toggleLyrics(${t.number})" id="btn-toggle-${t.number}" class="w-full py-2 px-3 rounded-lg bg-court-800 hover:bg-court-700 text-stone-200 border border-white/10 text-center font-mono text-xs font-semibold transition-all flex items-center justify-center gap-1.5" aria-expanded="false" aria-controls="lyrics-drawer-${t.number}">
+                        <i aria-hidden="true" class="fa-solid fa-file-lines text-[10px]"></i>
+                        <span>View Lyrics (${t.stanzas.length} Stanzas)</span>
+                      </button>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Expandable Lyrics Drawer -->
+                <div id="lyrics-drawer-${t.number}" class="hidden pt-6 border-t border-white/10 space-y-6">
+                  
+                  <div class="flex items-center justify-between">
+                    <div class="font-mono text-xs text-gilded-400 font-bold uppercase tracking-wider">
+                      Official Song Lyrics &bull; ${t.title}
+                    </div>
+                    <button onclick="copyTrackLyrics(${t.number})" id="btn-copy-${t.number}" class="py-1 px-2.5 rounded bg-court-800 hover:bg-gilded-600 text-stone-300 hover:text-court-950 border border-white/10 text-xs font-mono transition-colors flex items-center gap-1.5" aria-label="Copy lyrics for ${t.title}">
+                      <i aria-hidden="true" class="fa-regular fa-copy"></i>
+                      <span>Copy Lyrics</span>
+                    </button>
+                  </div>
+
+                  <!-- Stanzas Grid -->
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 font-body text-xs sm:text-sm text-stone-300 leading-relaxed bg-court-900/50 p-5 sm:p-6 rounded-xl border border-white/5">
+                    ${t.stanzas.map(st => `
+                      <div class="space-y-1.5">
+                        <div class="text-[10px] font-mono text-gilded-400 font-bold uppercase tracking-widest">${st.name}</div>
+                        ${st.lines.map(line => `<p class="leading-snug">${line}</p>`).join('')}
+                      </div>
+                    `).join('')}
+                  </div>
+
+                </div>
+
+              </article>
+            `).join('')}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Scroll helper
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        el.classList.add('ring-2', 'ring-gilded-500');
+        setTimeout(() => el.classList.remove('ring-2', 'ring-gilded-500'), 1500);
+      }
+    }
+
+    // Toggle single track lyrics
+    function toggleLyrics(num) {
+      const drawer = document.getElementById(`lyrics-drawer-${num}`);
+      const btn = document.getElementById(`btn-toggle-${num}`);
+      if (!drawer || !btn) return;
+
+      const isHidden = drawer.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', !isHidden);
+      btn.innerHTML = isHidden 
+        ? `<i aria-hidden="true" class="fa-solid fa-file-lines text-[10px]"></i><span>View Lyrics</span>`
+        : `<i aria-hidden="true" class="fa-solid fa-chevron-up text-[10px]"></i><span>Hide Lyrics</span>`;
+    }
+
+    // Expand all lyrics
+    function expandAllLyrics() {
+      document.querySelectorAll('[id^="lyrics-drawer-"]').forEach(el => el.classList.remove('hidden'));
+      document.querySelectorAll('[id^="btn-toggle-"]').forEach(btn => {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.innerHTML = `<i aria-hidden="true" class="fa-solid fa-chevron-up text-[10px]"></i><span>Hide Lyrics</span>`;
+      });
+    }
+
+    // Collapse all lyrics
+    function collapseAllLyrics() {
+      document.querySelectorAll('[id^="lyrics-drawer-"]').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('[id^="btn-toggle-"]').forEach(btn => {
+        btn.setAttribute('aria-expanded', 'false');
+        btn.innerHTML = `<i aria-hidden="true" class="fa-solid fa-file-lines text-[10px]"></i><span>View Lyrics</span>`;
+      });
+    }
+
+    // Copy track lyrics to clipboard
+    function copyTrackLyrics(num) {
+      const data = window.UNEQUAL_JUSTICE_DATA;
+      if (!data) return;
+      const track = data.tracks.find(t => t.number === num);
+      if (!track) return;
+
+      const lyricsText = track.stanzas.map(st => `${st.name}\n` + st.lines.join('\n')).join('\n\n');
+      const fullText = `${track.title} - The Shady River Bard (Album 07: Unequal Justice)\n\n` + lyricsText;
+
+      navigator.clipboard.writeText(fullText).then(() => {
+        const btn = document.getElementById(`btn-copy-${num}`);
+        if (btn) {
+          const orig = btn.innerHTML;
+          btn.innerHTML = `<i aria-hidden="true" class="fa-solid fa-check text-green-400"></i><span>Copied!</span>`;
+          setTimeout(() => btn.innerHTML = orig, 2000);
+        }
+      }).catch(err => {
+        console.error('Copy failed:', err);
+      });
+    }
+
+    // Filter to specific track from pillar click
+    function filterByTrack(trackNum) {
+      const el = document.getElementById(`track-${trackNum}`);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        el.classList.add('ring-2', 'ring-gilded-500', 'bg-court-800');
+        setTimeout(() => el.classList.remove('ring-2', 'ring-gilded-500', 'bg-court-800'), 2500);
+
+        // Open lyrics
+        const drawer = document.getElementById(`lyrics-drawer-${trackNum}`);
+        if (drawer && drawer.classList.contains('hidden')) {
+          toggleLyrics(trackNum);
+        }
+
+        // Show filter indicator
+        const ind = document.getElementById('filter-indicator');
+        const lbl = document.getElementById('filter-label');
+        if (ind && lbl) {
+          lbl.textContent = `Jumped to Track ${trackNum}`;
+          ind.classList.remove('hidden');
+        }
+      }
+    }
+
+    function clearTrackFilter() {
+      const ind = document.getElementById('filter-indicator');
+      if (ind) ind.classList.add('hidden');
+    }
+  </script>
+
+  <!-- UNIFIED ACCESSIBILITY CONTROLLER SCRIPT -->
+  <script src="/assets/js/a11y.js"></script>
+
+</body>
+</html>

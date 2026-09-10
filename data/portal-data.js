@@ -138,6 +138,25 @@ window.PORTAL_DATA = {
       "description": "A profound 6-movement narrative journey across ideological divides on climate, honoring the symmetrical pain of both changing weather and displaced heritage, and charting a pragmatic roadmap toward shared stewardship."
     },
     {
+      "id": "unequal-justice",
+      "number": "07",
+      "title": "Unequal Justice",
+      "subtitle": "Systemic Inequity, Mass Incarceration & The Scale of Law",
+      "badge": "Bespoke Interactive Vault",
+      "cover": "/unequal-justice/assets/art/unequal-justice-cover.webp",
+      "tracks_count": 18,
+      "themes": [
+        "The Gilded Shield",
+        "The Iron Funnel",
+        "Crooked Architecture",
+        "Ripples of Ruin",
+        "Cracks in the Concrete"
+      ],
+      "url": "/unequal-justice/",
+      "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcHMkTpFn5HegqFaTudnxu1L",
+      "description": "An unflinching 4-act, 18-track modern folk epic examining the two Americas living under one flag. Guided by the metaphor of the 'two-weight stone,' it contrasts corporate impunity with the cash-bail meat grinder and mandatory sentencing, culminating in an anthem of earned, resolute hope."
+    },
+    {
       "id": "the-forgotten-crown",
       "number": "Vault",
       "title": "The Sovereign's Right",
