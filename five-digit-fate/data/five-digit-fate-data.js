@@ -275,112 +275,6 @@ window.FIVE_DIGIT_FATE_DATA = {
           "The album Five-Digit Fate is conceived as more than a collection of songs about hardship; it is a meticulously researched and deeply felt indictment of a system that sorts, values, and ultimately discards human beings based on their address. By weaving together the empirical certainty of geographic determinism, the sociological analysis of despair, and the specific, lived histories of five iconic American regions, the album endeavors to give a human face to the statistics and a voice to the silenced. It argues that the agricultural subjugation of the Mississippi Delta, the extraction of wealth from Appalachia, the abandonment of Chicago and Detroit, and the cultural erasure of Oakland are not separate, isolated tragedies. Rather, they are different chapters in the same book—a story of how evolving forms of economic violence dismantle the social fabric that gives life meaning and provides pathways to opportunity.",
           "The purpose of this work is to force the listener to confront the brutal reality of the \"brand\" we, as a society, assign to our fellow citizens. It is an invitation to see the connections between a sharecropper's field in the 1920s, a redlined map from the 1930s, a shuttered factory from the 1980s, and a \"for rent\" sign in a gentrifying neighborhood today. Ultimately, the album seeks to achieve its final purpose in the music itself: to allow the listener to hear, in the resilient traditions of blues, folk, soul, and techno, the defiant, unbranded heartbeat of a culture that refuses to be forgotten, a humanity that will not be reduced to a number."
         ]
-      },
-      "suno_tag_catalog": {
-        "title": "IX. Suno Tag Catalog (Reference)",
-        "lines": [
-          "Core Genres: Americana, Folk, Blues, Country Blues, Folk-Rock, Social Commentary",
-          "Mississippi Delta Sound: Delta Blues, Acoustic Blues, Raw, Slide Guitar, Field Holler",
-          "Appalachian Sound: Raw Acoustic, Mountain Folk, Appalachian Folk, Clawhammer Banjo, Mournful Fiddle, Stripped-down, Ballad, Storytelling",
-          "Chicago Sound: Electric Blues, Chicago Blues, Gritty, Urban Blues, Distorted Harmonica, Slide Guitar, Sparse Drum Machine, Industrial Blues, Rhythmic, Spoken-Word",
-          "Detroit Sound: Motown, Pop-Soul, R&B, Soul, Techno, Electro-Funk, Electronic, Synthesizer",
-          "Oakland Sound: Chicano Soul, Bay Area Funk, Soul, R&B, Melancholic, Smooth, Grooving Bassline, Laid-back",
-          "Overall Moods & Themes: Somber, Melancholy, Defiant, Angry, Hopeful, Reflective, Pensive, Gritty, Raw, Emotional, Epic, Anthemic, Cinematic, Haunting, Atmospheric, Storytelling, Political, Social Justice",
-          "Instrumentation: Acoustic Guitar, Electric Guitar, Slide Guitar, Banjo, Fiddle, Mandolin, Harmonica, Bass Guitar, Drums, Piano, Organ, Synthesizer, Drum Machine, Industrial Percussion, Found Sounds (e.g., hammer on anvil)",
-          "Vocal Style: Male Vocals, Raspy Vocals, Emotional Vocals, Storyteller, Spoken Word, Chant, Group Vocals, a cappella",
-          "Works cited",
-          "King Coal's Last Reign: How Corporate Greed Keeps Appalachia Underdeveloped, accessed August 4, 2025, http://www.cpreview.org/articles/2025/5/king-coals-last-reign-how-corporate-greed-keeps-appalachia-underdeveloped",
-          "voices.uchicago.edu, accessed August 4, 2025, https://voices.uchicago.edu/findingchicago/2022/09/16/migration-sounds-and-the-history-of-chicago-blues/#:~:text=During%20the%20Great%20Migration%20caused,the%20foundations%20of%20Chicago%20Blues.",
-          "Chicago blues - Wikipedia, accessed August 4, 2025, https://en.wikipedia.org/wiki/Chicago_blues",
-          "Migration, Sounds, and the History of Chicago Blues | ELI AEPP ..., accessed August 4, 2025, https://voices.uchicago.edu/findingchicago/2022/09/16/migration-sounds-and-the-history-of-chicago-blues/",
-          "Chicano Soul: Recordings and History of an American Culture | Discoveries | Research Home | TTU, accessed August 4, 2025, https://www.depts.ttu.edu/research/discoveries/posts/spring-2018/books/chicano-soul.php",
-          "Celebrating Black Music Month | Oakland Public Library, accessed August 4, 2025, https://oaklandlibrary.org/blogs/post/june-is-black-music-appreciation-month/",
-          "Chicano Music in the San Joaquin Valley by | Sounds of California, accessed August 4, 2025, https://soundsofca.actaonline.org/stories/chicano-music",
-          "The Opportunity Atlas – RAJ CHETTY, accessed August 4, 2025, https://rajchetty.com/the-opportunity-atlas/",
-          "The Opportunity Atlas | Watson School of International and Public Affairs, accessed August 4, 2025, https://home.watson.brown.edu/news/2018-10-01/opportunity-atlas",
-          "Opportunity Atlas Data Tool - U.S. Census Bureau, accessed August 4, 2025, https://www.census.gov/programs-surveys/ces/data/analysis-visualization-tools/opportunity-atlas.html",
-          "The Opportunity Atlas: Mapping the Childhood Roots of Social Mobility, accessed August 4, 2025, https://opportunityinsights.org/wp-content/uploads/2018/10/atlas_paper.pdf",
-          "Where is the Land of Opportunity? The Geography of Intergenerational Mobility in the United States - Harvard University, accessed August 4, 2025, https://scholar.harvard.edu/files/hendren/files/mobility_geo.pdf",
-          "Where is the Land of Opportunity? The Geography of Intergenerational Mobility in the United States, accessed August 4, 2025, https://opportunityinsights.org/paper/land-of-opportunity/",
-          "The Opportunity Atlas: Mapping the Childhood Roots of Social Mobility | Nathaniel Hendren, accessed August 4, 2025, https://hendren.scholars.harvard.edu/publications/opportunity-atlas-mapping-childhood-roots-social-mobility",
-          "The Opportunity Atlas: Mapping the Childhood Roots of Social Mobility, accessed August 4, 2025, https://opportunityinsights.org/paper/the-opportunity-atlas/",
-          "New 'Opportunity Atlas' tracks economic mobility by neighborhood | Brown University, accessed August 4, 2025, https://www.brown.edu/news/2018-10-01/opportunity",
-          "These maps from Raj Chetty show that where children grow up has a major impact on their lifetime earnings | Brookings, accessed August 4, 2025, https://www.brookings.edu/articles/these-maps-from-raj-chetty-show-that-where-children-grow-up-has-a-major-impact-on-their-lifetime-earnings/",
-          "In Conversation with Raj Chetty - Equitable Growth, accessed August 4, 2025, https://equitablegrowth.org/in-conversation-with-raj-chetty/",
-          "Raj Chetty: Access To The American Dream Isn't Just Determined By Income. Geography Matters - WGBH, accessed August 4, 2025, https://www.wgbh.org/news/national/2019-09-27/raj-chetty-access-to-the-american-dream-isnt-just-determined-by-income-geography-matters",
-          "Seven key takeaways from Chetty's new research on friendship and ..., accessed August 4, 2025, https://www.brookings.edu/articles/7-key-takeaways-from-chettys-new-research-on-friendship-and-economic-mobility/",
-          "The Deindustrialization of Chicago's Southeast Side ..., accessed August 4, 2025, https://www.chipublib.org/blogs/post/the-deindustrialization-of-chicagos-southeast-side-commemorating-the-45th-anniversary-of-the-closing-of-wisconsin-steel/",
-          "An Examination of Fear of Crime and Social Vulnerability in Chicago Neighborhoods - ICJIA | Illinois Criminal Justice Information Authority, accessed August 4, 2025, https://icjia.illinois.gov/researchhub/articles/an-examination-of-fear-of-crime-and-social-vulnerability-in-chicago-neighborhoods",
-          "Oakland's Displacement Crisis: As Told by the Numbers Cost Burdened Households By Income - PolicyLink, accessed August 4, 2025, https://www.policylink.org/sites/default/files/PolicyLink%20Oakland's%20Displacement%20Crisis%20by%20the%20numbers.pdf",
-          "Book Review: Deaths of Despair and the Future of Capitalism by Anne Case and Angus Deaton - LSE Blogs, accessed August 4, 2025, https://blogs.lse.ac.uk/lsereviewofbooks/2021/08/12/book-review-deaths-of-despair-and-the-future-of-capitalism-by-anne-case-and-angus-deaton/",
-          "Event | Professor Anne Case on Deaths of Despair and the Future of ..., accessed August 4, 2025, https://www.worldbank.org/en/events/2024/04/08/professor-anne-case-on-deaths-of-despair-and-the-future-of-capitalism",
-          "Deaths of Despair and the Future of Capitalism - STFM Journals, accessed August 4, 2025, https://journals.stfm.org/familymedicine/2021/march/br-cayley-mar21/",
-          "www.brookings.edu, accessed August 4, 2025, https://www.brookings.edu/articles/mortality-and-morbidity-in-the-21st-century/#:~:text=Case%20and%20Deaton%20find%20that,mortality%20since%20the%20late%201990s.",
-          "Mortality and morbidity in the 21st century | Brookings, accessed August 4, 2025, https://www.brookings.edu/articles/mortality-and-morbidity-in-the-21st-century/",
-          "Book Review: Deaths of Despair and the Future of Capitalism by Anne Case and Angus Deaton | USAPP - LSE Blogs, accessed August 4, 2025, https://blogs.lse.ac.uk/usappblog/2021/08/15/book-review-deaths-of-despair-and-the-future-of-capitalism-by-anne-case-and-angus-deaton/",
-          "Book Review of Deaths of Despair and the Future of Capitalism, by Anne Case and Angus Deaton | SOA, accessed August 4, 2025, https://www.soa.org/sections/social-ins-pub-fin/social-ins-pub-fin-newsletter/2021/november/ipi-2021-11-jabek/",
-          "Deaths of Despair and the Future of Capitalism | Summary, Quotes, FAQ, Audio - SoBrief, accessed August 4, 2025, https://sobrief.com/books/deaths-of-despair-and-the-future-of-capitalism",
-          "Living and Dying in America: An Essay on Deaths of Despair and the Future of Capitalism, accessed August 4, 2025, https://www.aeaweb.org/articles?id=10.1257/jel.20211638",
-          "Book review and summary: \"Deaths of despair: the future of capitalism\" - TASC, accessed August 4, 2025, https://www.tasc.ie/blog/2020/08/12/book-review-and-summary-deaths-of-despair-the-futu/",
-          "The Socioeconomic Impact of Coal in the ... - UKnowledge, accessed August 4, 2025, https://uknowledge.uky.edu/cgi/viewcontent.cgi?article=1016&context=mpampp_etds",
-          "Mortality in Appalachian Coal Mining Regions: The Value of Statistical Life Lost - PMC, accessed August 4, 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC2693168/",
-          "Appalachia's other company towns, accessed August 4, 2025, https://www.appalachianplaces.org/post/appalachia-s-other-company-towns",
-          "Company Towns: 1880s to 1935 - Social Welfare History Project, accessed August 4, 2025, https://socialwelfare.library.vcu.edu/organizations/labor/company-towns-1890s-to-1935/",
-          "Company Towns - National Coal Heritage Area - WV.gov, accessed August 4, 2025, https://coalheritage.wv.gov/coal_history/Pages/Company-Towns.aspx",
-          "Opioids and Appalachia | National Affairs, accessed August 4, 2025, https://www.nationalaffairs.com/publications/detail/opioids-and-appalachia",
-          "NBER WORKING PAPER SERIES ABANDONED BY COAL, SWALLOWED BY OPIOIDS? Gilbert E. Metcalf Qitong Wang Working Paper 26551 http://www, accessed August 4, 2025, https://www.nber.org/system/files/working_papers/w26551/w26551.pdf",
-          "Opioid Use in Medicare Part D in States in the Appalachian Region, accessed August 4, 2025, https://oig.hhs.gov/reports-and-publications/workplan/summary/wp-summary-0000354.asp",
-          "A Public Health Emergency: West Virginia's Efforts to Curb the Opioid Crisis - Congress.gov, accessed August 4, 2025, https://www.congress.gov/116/meeting/house/110367/witnesses/HHRG-116-IF02-Wstate-MullinsC-20200114.pdf",
-          "“Now we are seeing the tides wash in”: Trauma and the opioid epidemic in rural Appalachian Ohio, accessed August 4, 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC8276036/",
-          "Series on opioid epidemic highlights personal stories, medical ..., accessed August 4, 2025, https://www.wvsom.edu/news/2021/april/series-opioid-epidemic-highlights-personal-stories-medical-information",
-          "Contributing Factors To Drug Abuse In The Appalachian Region - Digital Commons @ East Tennessee State University, accessed August 4, 2025, https://dc.etsu.edu/cgi/viewcontent.cgi?article=1859&context=honors",
-          "Chicago - Mapping Inequality, accessed August 4, 2025, https://dsl.richmond.edu/panorama/redlining/map/IL/Chicago/context",
-          "Modern Day Consequences of Historic Redlining: Finding a Path Forward - PMC, accessed August 4, 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC9901820/",
-          "Redlining · Racial Restriction and Housing Discrimination in the Chicagoland Area - Digital Chicago, accessed August 4, 2025, https://digitalchicagohistory.org/exhibits/show/restricted-chicago/other/redlining",
-          "History of Chicago - Wikipedia, accessed August 4, 2025, https://en.wikipedia.org/wiki/History_of_Chicago",
-          "CHICAGO'S SOUTHEAST SIDE Industrial History, accessed August 4, 2025, https://www.csu.edu/cerc/researchreports/documents/ChicagoSESideIndustrialHistory.pdf",
-          "Deindustrializing Chicago: A Daughter's Story - MIT Anthropology, accessed August 4, 2025, https://anthropology.mit.edu/files/anthropology/imce/people/papers/walley_deindustrializing_chicago.pdf",
-          "DIR-013-17 Cartel and Gangs in Chicago - Unclassified - DEA.gov, accessed August 4, 2025, https://www.dea.gov/sites/default/files/2018-07/DIR-013-17%20Cartel%20and%20Gangs%20in%20Chicago%20-%20Unclassified.pdf",
-          "The Fracturing of Gangs and Violence in Chicago: A Research-Based Reorientation of Violence Prevention and Intervention Policy - Great Cities Institute, accessed August 4, 2025, https://greatcities.uic.edu/wp-content/uploads/2019/01/The_Fracturing_of_Gangs_and_Violence_in_Chicago.pdf",
-          "From the Delta to Chicago: Muddy Waters' Downhome Blues and the Shaping of African-American Urban Identity in Post World War I - ScholarWorks@GVSU, accessed August 4, 2025, https://scholarworks.gvsu.edu/cgi/viewcontent.cgi?article=1050&context=mcnair",
-          "Housing burden Nine-County Bay Area vs. California, accessed August 4, 2025, https://bayareaequityatlas.org/indicators/housing-burden",
-          "Tech Boom Squeezes Bay Area Housing Affordability, Threatening Lower-Income Residents' Ability to Stay - The Pioneer, accessed August 4, 2025, https://thepioneeronline.com/47865/features/tech-boom-squeezes-bay-area-housing-affordability-threatening-lower-income-residents-ability-to-stay/",
-          "The Impact of the Tech Boom on Housing - U.S. Census Bureau, accessed August 4, 2025, https://www.census.gov/library/stories/2019/04/impact-of-tech-boom-on-housing.html",
-          "The Housing Crisis in Oakland | 2018-10-01 | Architectural Record, accessed August 4, 2025, https://www.architecturalrecord.com/articles/13650-the-housing-crisis-in-oakland",
-          "Oakland's Displacement Crisis: As Told by the Numbers ... - PolicyLink, accessed August 4, 2025, https://www.policylink.org/sites/default/files/PolicyLink%20Oakland%27s%20Displacement%20Crisis%20by%20the%20numbers.pdf",
-          "The Psychological Impact Of Gentrification: Community Identity ..., accessed August 4, 2025, https://www.betterhelp.com/advice/trauma/the-psychological-impact-of-gentrification-community-identity-culture-and-change/",
-          "Impact of gentrification on adult mental health - PMC, accessed August 4, 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC7240775/",
-          "Full article: The influence of gentrification on the health and well-being of older adults: a qualitative study - Taylor & Francis Online, accessed August 4, 2025, https://www.tandfonline.com/doi/full/10.1080/23748834.2024.2308372",
-          "DISPLACED - California Humanities, accessed August 4, 2025, https://calhum.org/our-history/displaced/",
-          "West Oakland Oral History Interviews: Landon Williams Interview ..., accessed August 4, 2025, https://californiarevealed.org/do/6112a538-f5a9-46ba-ac61-61d1f4a20bc8",
-          "You Tell Us: Oakland, gentrification, and the hunt for cool, accessed August 4, 2025, https://oaklandnorth.net/2011/07/26/you-tell-us-oakland-gentrification-and-the-hunt-for-cool/",
-          "Corporate jargon - Wikipedia, accessed August 4, 2025, https://en.wikipedia.org/wiki/Corporate_jargon",
-          "The Importance of Brand Language in 2024 (With Examples) - G2 Learning Hub, accessed August 4, 2025, https://learn.g2.com/brand-language",
-          "The Impact of Language on Branding: A Comprehensive Analysis - ResearchGate, accessed August 4, 2025, https://www.researchgate.net/publication/393008944_The_Impact_of_Language_on_Branding_A_Comprehensive_Analysis",
-          "Brand Language Strategy: Impact and Implementation | TMDesign - Medium, accessed August 4, 2025, https://medium.com/theymakedesign/brand-language-strategy-impact-and-implementation-a29e58ef24cd",
-          "The Power of Words: How Language Shapes Your Brand Identity - Better Proposals, accessed August 4, 2025, https://betterproposals.io/blog/brand-language/",
-          "Consumption Symbols as Carriers of Culture | Stanford Graduate School of Business, accessed August 4, 2025, https://www.gsb.stanford.edu/faculty-research/publications/consumption-symbols-carriers-culture",
-          "How Brands Can Become Symbols | Hult International Business School, accessed August 4, 2025, https://www.hult.edu/blog/how-brands-can-become-symbols/",
-          "Cultural Symbolism of Brands - Carlos J. Torelli - ResearchGate, accessed August 4, 2025, https://www.researchgate.net/profile/Carlos-Torelli/publication/284572698_Cultural_symbolism_of_brands/links/56698d2b08ae430ab4f7274e/Cultural-symbolism-of-brands.pdf",
-          "www.hult.edu, accessed August 4, 2025, https://www.hult.edu/blog/how-brands-can-become-symbols/#:~:text=Brands%20as%20Symbols&text=Luxury%20items%20signal%20attributes%20associated,Consider%20sustainability.",
-          "History of Branding: Irons in the Fire - National Cowboy & Western Heritage Museum, accessed August 4, 2025, https://nationalcowboymuseum.org/explore/history-of-branding-irons-in-the-fire/",
-          "Music in the Civil Rights Movement | Articles and Essays | Civil Rights History Project | Digital Collections | Library of Congress, accessed August 4, 2025, https://www.loc.gov/collections/civil-rights-history-project/articles-and-essays/music-in-the-civil-rights-movement/",
-          "www.loc.gov, accessed August 4, 2025, https://www.loc.gov/collections/civil-rights-history-project/articles-and-essays/music-in-the-civil-rights-movement/#:~:text=African%20American%20spirituals%2C%20gospel%2C%20and,large%20meetings%20and%20through%20publications.",
-          "A Field Guide to... Appalachia - Smithsonian Folkways Recordings, accessed August 31, 2025, https://folkways.si.edu/playlist/a-field-guide-to-appalachia",
-          "9 Hours Sounds of Chicago, Ambience 3D City Noises of Downtown HD - YouTube, accessed August 31, 2025, https://www.youtube.com/watch?v=KkXLEHqzYZk",
-          "'We're being pushed out': the displacement of black Oakland - The Guardian, accessed August 31, 2025, https://www.theguardian.com/us-news/2018/jun/01/from-black-panthers-to-bbq-becky-the-displacement-of-black-oakland",
-          "Culture of the Blues — Mississippi Delta National Heritage Area, accessed August 31, 2025, https://www.msdeltaheritage.com/blues-culture",
-          "Mississippi Blues - 2003-08, accessed August 31, 2025, http://www.mshistorynow.mdah.ms.gov/issue/mississippi-blues",
-          "The History of Mississippi Delta Blues Music, accessed August 31, 2025, https://visitmississippi.org/experiences/the-history-of-mississippi-delta-blues-music/",
-          "Seeing Like a Chocolate City:Reimagining Detroit's Future Through Its Past | Stanford Law Review, accessed August 31, 2025, https://www.stanfordlawreview.org/online/seeing-like-a-chocolate-cityreimagining-detroits-future-through-its-past/",
-          "Detroit's Downfall | Bentley University, accessed August 31, 2025, https://www.bentley.edu/news/detroits-downfall",
-          "Envisioning The City Of The Future: Responses To Deindustrialization, Segregation, And The Urban Crisis In Postwar Detroit, 1950, accessed August 31, 2025, https://digitalcommons.wayne.edu/cgi/viewcontent.cgi?article=3103&context=oa_dissertations",
-          "a. Economic Change and Social Inequality: Case Study Detroit USA • Background In the USA many of the heavy manufacturing indus - IB Geography Pods, accessed August 31, 2025, https://www.ibgeographypods.org/uploads/7/6/2/2/7622863/detroit_usa_-_traditional_industry_decline.pdf",
-          "The Critical Nexus: Deindustrialization, Racism and Urban Crisis in Post-1967 Detroit - ScholarWorks@GVSU, accessed August 31, 2025, https://scholarworks.gvsu.edu/cgi/viewcontent.cgi?article=1184&context=mcnair",
-          "Detroit and Deindustrialization - Dollars & Sense, accessed August 31, 2025, https://www.dollarsandsense.org/detroit-and-deindustrialization/",
-          "Ask the expert: How Detroit and its people are integral to the rise of techno music, accessed August 31, 2025, https://msutoday.msu.edu/news/2025/05/ask-the-expert-how-detroit-and-its-people-are-integral-to-the-rise-of-techno-music",
-          "Detroit techno - Wikipedia, accessed August 31, 2025, https://en.wikipedia.org/wiki/Detroit_techno"
-        ]
       }
     },
     "release_material": [
@@ -578,7 +472,7 @@ window.FIVE_DIGIT_FATE_DATA = {
         "Here is the revised version of **Track 1, \"Prologue (A National Static),\"** incorporating these changes.",
         "-----"
       ],
-      "suno_prompt": "Spoken word manifesto over a slow, monotonous, funereal snare drum tap. Faint radio static fades in and out. Atmospheric, dark ambient, minimalist, stark, ominous.",
+      "arrangement_prompt": "Spoken word manifesto over a slow, monotonous, funereal snare drum tap. Faint radio static fades in and out. Atmospheric, dark ambient, minimalist, stark, ominous.",
       "cover_art_prompt": "9:16, a stark, high-contrast, black and white photo. A close-up of a weathered, antique radio dial. The needle is stuck between stations, representing static. The image is grainy, atmospheric, and slightly out of focus, conveying a sense of unease and history.",
       "social_captions": [
         "We've re-tuned the Prologue. Listen to the rhythm beneath the static. A national heartbeat. A funereal march. This is Five-Digit Fate. #FiveDigitFate #TheShadyRiverBard #SpokenWord #Minimalist #NewMusic",
@@ -706,9 +600,9 @@ window.FIVE_DIGIT_FATE_DATA = {
       "quote": "Yeah, I'm Delta born and Delta bred / Got the Mississippi River runnin' through my head",
       "summary": "\"Delta Born\" is a raw, acoustic blues number that transports the listener to the sweltering cotton fields of the post-slavery Mississippi Delta. The lyrics paint a picture of relentless labor and systemic oppression, where the land itself feels both like a cradle and a cage. It establishes the socio-economic conditions that gave birth to the Delta Blues, framing the music not just as an art form, but as a vital tool for survival—a language of sorrow, hope, and the first whispers of a great migration north.",
       "prelude": [
-        "You are absolutely right. My apologies. That was a significant oversight. Including chords in the Suno lyrics field is a rookie mistake, as the AI will indeed try to sing them. Thank you for catching that and correcting the process."
+        "You are absolutely right. My apologies. That was a significant oversight. Including chords in the lyrics field is a rookie mistake, as the AI will indeed try to sing them. Thank you for catching that and correcting the process."
       ],
-      "suno_prompt": "Raw acoustic Delta Blues, gritty slide guitar, soulful male vocals, foot stomp percussion. Lo-fi, authentic, like an old field recording from the 1930s.",
+      "arrangement_prompt": "Raw acoustic Delta Blues, gritty slide guitar, soulful male vocals, foot stomp percussion. Lo-fi, authentic, like an old field recording from the 1930s.",
       "cover_art_prompt": "9:16, a stark, high-contrast, black and white photograph of a pair of calloused, dirt-caked hands holding an old, weathered acoustic guitar. The focus is sharp on the hands and the guitar, while the background is a soft, blurry image of a sun-drenched, rural field. The mood is timeless and evocative of hard labor.\n-----\nThank you again for the correction. Our process is now stronger.\nLet's proceed with the next song on the roadmap: **Act I, Track 3: \"Branded at Birth.\"**",
       "social_captions": [
         "From the static to the source. This is where the music begins. In the mud, in the sweat, in the sorrow. This is \"Delta Born.\" #FiveDigitFate #DeltaBlues #Acoustic #TheShadyRiverBard #Mississippi",
@@ -868,7 +762,7 @@ window.FIVE_DIGIT_FATE_DATA = {
         "Now, we move from the general to the specific. We take that history, that environment, and we focus it down to a single, searing point. This next song is the album's thesis statement. It's where we introduce the branding iron, both literally and metaphorically. This is the heart of the \"Five-Digit Fate.\"",
         "-----"
       ],
-      "suno_prompt": "Gritty acoustic folk, stark Americana. A raw, gravelly male vocal with simmering anger, almost spoken-word. Just a driving acoustic guitar and a mournful, distant harmonica.",
+      "arrangement_prompt": "Gritty acoustic folk, stark Americana. A raw, gravelly male vocal with simmering anger, almost spoken-word. Just a driving acoustic guitar and a mournful, distant harmonica.",
       "cover_art_prompt": "9:16, a stark, high-contrast, black and white photo. A close-up of a baby's clenched fist. On the soft skin of the back of the hand, a five-digit number is subtly visible, as if it were a faint birthmark or a fresh scar. The image is emotionally powerful and disturbing.",
       "social_captions": [
         "They don't use an iron, they don't use a flame. The brand is a number. The brand is a name. This is the thesis. This is \"Branded at Birth.\" #FiveDigitFate #BrandedAtBirth #FolkMusic #TheShadyRiverBard",
@@ -1041,7 +935,7 @@ window.FIVE_DIGIT_FATE_DATA = {
         "The sound changes here, as the blueprint demands. We're trading the raw folk guitar for the mournful sound of mountain music. We're about to meet our first character: an old man haunted by the memory of a town that was built to serve a single purpose, and then left to die.",
         "-----"
       ],
-      "suno_prompt": "Mournful Appalachian Folk Ballad. A weathered, weary male storyteller's voice with a slight accent. Music is led by a sad, weeping fiddle and a gentle, rhythmic clawhammer banjo. Raw, authentic, historical sound.",
+      "arrangement_prompt": "Mournful Appalachian Folk Ballad. A weathered, weary male storyteller's voice with a slight accent. Music is led by a sad, weeping fiddle and a gentle, rhythmic clawhammer banjo. Raw, authentic, historical sound.",
       "cover_art_prompt": "9:16, a haunting, slightly desaturated color photograph. An old man with a deeply lined face sits on a dilapidated wooden porch, looking out towards an unseen valley. He holds a tin cup of coffee. The focus is on his weathered hands and face. In the background, the misty, green Appalachian hills rise up, beautiful but somber. The mood is one of quiet, profound nostalgia and loss.",
       "social_captions": [
         "We leave the abstract and enter the specific. Meet the first resident of our \"Five-Digit Fate.\" A man living in the ghost of a town built and abandoned by the coal company. #CompanyTownGhost #FiveDigitFate #Appalachia #FolkMusic",
@@ -1200,7 +1094,7 @@ window.FIVE_DIGIT_FATE_DATA = {
         "Excellent\\! The shift in location and musical style should be stark and impactful. We're moving from the open, yet confining, mountains to the dense, structurally constrained urban landscape.",
         "-----"
       ],
-      "suno_prompt": "Sparse, haunting Electric Chicago Blues. Gritty distorted harmonica, minimal kick and snare drums, raw electric guitar, and a soulful, weary female vocal, like a tender but solemn lullaby.",
+      "arrangement_prompt": "Sparse, haunting Electric Chicago Blues. Gritty distorted harmonica, minimal kick and snare drums, raw electric guitar, and a soulful, weary female vocal, like a tender but solemn lullaby.",
       "cover_art_prompt": "9:16, a stark, desaturated color photograph of a dimly lit bedroom window at night. Outside the window, blurry city lights are visible, but a prominent, faded red line is painted across the brick wall of a building across the street, as if a ghost of an old map. Inside, a silhouette of a mother cradling a baby is faintly visible, evoking a sense of protective intimacy within a confined space.",
       "social_captions": [
         "The lullaby of a city divided. On the South Side, a mother sings of invisible lines drawn in red. This is \"Red Line Lullaby.\" #FiveDigitFate #ChicagoBlues #Redlining #TheShadyRiverBard",
@@ -1363,7 +1257,7 @@ window.FIVE_DIGIT_FATE_DATA = {
         "This song, \"The Five-Dollar Day,\" is the sound of that promise. It's the roar of the factory, the rhythm of the assembly line, and the dream of a wage that could change a family's destiny. The tone of the album shifts here, from weary blues to the driving, optimistic energy of early R\\&B and Jump Blues. This is the 'Ascension' before the collapse.",
         "-----"
       ],
-      "suno_prompt": "Energetic Early R&B and Jump Blues, 1950s Rock and Roll. Driving upright bass, swinging drums, honking saxophone, and a robust, celebratory male vocal. Vintage, warm production like an old Sun Records session.",
+      "arrangement_prompt": "Energetic Early R&B and Jump Blues, 1950s Rock and Roll. Driving upright bass, swinging drums, honking saxophone, and a robust, celebratory male vocal. Vintage, warm production like an old Sun Records session.",
       "cover_art_prompt": "9:16, a vintage, slightly faded color photograph from the 1950s. A young, hopeful African American man in work clothes is smiling, looking up towards the sky. Behind him, the imposing but promising facade of a classic American auto factory is visible, with smoke gently rising from its stacks. The sun is low, casting a golden, optimistic glow over the scene.",
       "social_captions": [
         "All aboard for the Motor City. This is the sound of hope. The sound of a wage that could build a future. This is \"The Five-Dollar Day.\" #FiveDigitFate #Detroit #JumpBlues #TheShadyRiverBard",
@@ -1518,7 +1412,7 @@ window.FIVE_DIGIT_FATE_DATA = {
         "The sound has to be perfect: polished, upbeat, irresistible Pop-Soul. This is \"The Sound of Young America.\" But, as the blueprint demands, there's a tension here. While the magic is happening inside Studio A, the world outside the walls is starting to simmer. The lyrics will capture that duality—the pure joy of the music set against the faint, distant rumble of a city growing restless.",
         "-----"
       ],
-      "suno_prompt": "Classic 1960s Motown Pop-Soul. Polished production, driving bassline, prominent tambourine and drums, sweet strings, horns. Smooth male lead vocal with tight female harmony backing vocals. Upbeat, vibrant, and danceable.",
+      "arrangement_prompt": "Classic 1960s Motown Pop-Soul. Polished production, driving bassline, prominent tambourine and drums, sweet strings, horns. Smooth male lead vocal with tight female harmony backing vocals. Upbeat, vibrant, and danceable.",
       "cover_art_prompt": "9:16, a stylized, warm-toned color photo evoking a 1960s album cover. A close-up on a vintage studio microphone. In the soft-focus background, the silhouettes of a vocal group are visible around the mic. Through a studio window behind them, a blurry, slightly ominous dusk cityscape can be seen, hinting at the world outside the creative sanctuary.",
       "social_captions": [
         "Inside the little blue house on West Grand, they were building a dream. Outside, a different reality was taking shape. This is \"Hitsville, U.S.A.\" #FiveDigitFate #Motown #Detroit #SoulMusic",
@@ -1698,7 +1592,7 @@ window.FIVE_DIGIT_FATE_DATA = {
         "The music shifts back to our core contemplative country-blues sound. The glitter fades, and the grit returns.",
         "-----"
       ],
-      "suno_prompt": "Contemplative Country Blues, somber Americana. A weary, heartfelt male storyteller's voice. Music is led by an acoustic guitar and a mournful, weeping pedal steel guitar. Warm, intimate, and melancholic.",
+      "arrangement_prompt": "Contemplative Country Blues, somber Americana. A weary, heartfelt male storyteller's voice. Music is led by an acoustic guitar and a mournful, weeping pedal steel guitar. Warm, intimate, and melancholic.",
       "cover_art_prompt": "9:16, a poignant, desaturated color photo. The focus is on a dusty, motionless grandfather clock in the corner of a sparsely furnished room. Sunlight streams through a dirty window, illuminating dust motes in the air. The clock's hands are frozen. The mood is one of stillness, time stopped, and quiet decay.",
       "social_captions": [
         "The party's over. The glitter fades, and the grit returns. A song about the quiet decay of the American dream. This is \"The Long Slow Collapse.\" #FiveDigitFate #CountryBlues #Americana #TheShadyRiverBard",
@@ -1860,7 +1754,7 @@ window.FIVE_DIGIT_FATE_DATA = {
         "The music will be intimate and reflective to match. Just a classic, finger-picked country blues.",
         "-----"
       ],
-      "suno_prompt": "Intimate finger-picked Country Blues. A weathered, older male storyteller's voice, warm and reflective. Just a single acoustic guitar, played with intricate, melodic finger-picking. Heartfelt, nostalgic, and sad.",
+      "arrangement_prompt": "Intimate finger-picked Country Blues. A weathered, older male storyteller's voice, warm and reflective. Just a single acoustic guitar, played with intricate, melodic finger-picking. Heartfelt, nostalgic, and sad.",
       "cover_art_prompt": "9:16, a warm, sepia-toned photograph. An old, faded photo of a bustling 1960s block party is held up by a modern, wrinkled hand. The focus is sharp on the old photo, which shows families laughing, kids playing, and a sense of vibrant community. The background is the blurry, desaturated present-day view of that same, now-empty street.",
       "social_captions": [
         "It wasn't just a job. It was a rhythm. A community. A world. A song for the soul of the neighborhood. #FiveDigitFate #CountryBlues #Nostalgia #TheShadyRiverBard",
@@ -2010,7 +1904,7 @@ window.FIVE_DIGIT_FATE_DATA = {
         "The first symptom we confront is one of the most brutal. We're going back to the hollows of Appalachia, to a generation after the \"Company Town Ghost.\" We're going to tell the story of how that quiet despair gets medicated, how pain from the mine becomes a different kind of trap. It's time to meet the man singing **\"Hillbilly Heroin.\"**",
         "-----"
       ],
-      "suno_prompt": "Raw, pained acoustic ballad. A single, stark acoustic guitar. The male vocal is strained, cracking with emotion, full of desperation and regret. Brutally honest, close-mic'd, and somber.",
+      "arrangement_prompt": "Raw, pained acoustic ballad. A single, stark acoustic guitar. The male vocal is strained, cracking with emotion, full of desperation and regret. Brutally honest, close-mic'd, and somber.",
       "cover_art_prompt": "9:16, a stark, high-contrast, black and white photo. A close-up of a man's calloused, dirty hand resting on a worn wooden table. Next to the hand is a single, small white pill, looking clinical and out of place. The focus is razor-sharp on the pill and the deep lines of the man's knuckles. The mood is one of bleakness and quiet tragedy.",
       "social_captions": [
         "Act IV begins. We now live in the wreckage. A story from the heart of the opioid crisis, where a workplace injury becomes a death sentence. This is \"Hillbilly Heroin.\" #FiveDigitFate #OpioidCrisis #Appalachia #Acoustic",
@@ -2173,7 +2067,7 @@ window.FIVE_DIGIT_FATE_DATA = {
         "This song is a cold, hard calculation. It's the sound of limited options, a business plan written on a napkin where the choice isn't between right and wrong, but between a slow death and a fast one. It's the logic of survival when the system has branded you a liability.",
         "Musically, we're evolving. This is where the traditional blues of the Great Migration meets the cadence of the street. It’s a rhythmic, spoken-word delivery over a gritty, looping beat—a true symptom of the brand."
       ],
-      "suno_prompt": "A gritty, lo-fi hip-hop blues track. A slow, menacing drum machine loop and a deep sub bass provide the foundation for a rhythmic, spoken-word male vocal. The chorus shifts to a weary, soulful blues melody. Sparse, urban, and tense.",
+      "arrangement_prompt": "A gritty, lo-fi hip-hop blues track. A slow, menacing drum machine loop and a deep sub bass provide the foundation for a rhythmic, spoken-word male vocal. The chorus shifts to a weary, soulful blues melody. Sparse, urban, and tense.",
       "cover_art_prompt": "9:16, a stark, high-contrast, black and white night photograph. A young man's silhouette stands at a desolate, wet street corner under the harsh glare of a single streetlight. The focus is on a crumpled piece of paper in his hand, looking like a balance sheet with two columns of pros and cons. The mood is tense, lonely, and pragmatic.",
       "social_captions": [
         "Do you want the slow drought, or the hurricane? A song about the math they do on the South Side when all the good choices have been redlined. This is \"The Corner Economy.\" #FiveDigitFate #Chicago #SpokenWord #HipHopBlues",
@@ -2347,7 +2241,7 @@ window.FIVE_DIGIT_FATE_DATA = {
         "Of course. A clean, final version is a great idea for the official project document. Here is the complete, finalized output for the song we just perfected, with all our changes incorporated correctly.",
         "-----"
       ],
-      "suno_prompt": "Early West Coast Hip-Hop with a slow, menacing G-Funk bassline. A simple 808 drum beat and a mournful, high-pitched synth lead. Verses are a rhythmic, spoken-word male narration. The chorus is a sung, melancholic soul melody.",
+      "arrangement_prompt": "Early West Coast Hip-Hop with a slow, menacing G-Funk bassline. A simple 808 drum beat and a mournful, high-pitched synth lead. Verses are a rhythmic, spoken-word male narration. The chorus is a sung, melancholic soul melody.",
       "cover_art_prompt": "9:16, a gritty, 90s-style photograph taken at night. A low-rider car is parked under a streetlight on a city street. The focus is on the reflection in its polished, dark paint. The reflection shows the blurry, neon sign of an old movie theater, but the image is distorted and warped, as if melting away. The mood is tense, nostalgic, and melancholic.\n-----\nWith the Oakland chapter now successfully chronicled, are you ready to head back to Detroit and witness the birth of Techno in **\"Alleys of Your Mind?\"**",
       "social_captions": [
         "A different sound for a different kind of pain. The slow erasure of a city, told over a G-funk beat. This is the new \"Last Picture Show in Oakland.\" #FiveDigitFate #Oakland #HipHop #GFunk #Gentrification",
@@ -2500,7 +2394,7 @@ window.FIVE_DIGIT_FATE_DATA = {
         "With no assembly lines to work, they created their own. They took the ghost of the city's mechanical rhythm and channeled it through synthesizers and drum machines. This isn't a song of nostalgia; it's a song of defiant creation. It's Afrofuturism born in empty warehouses—a cold, mechanical, futuristic sound that's also deeply human. It's about finding a future when the promised one has rusted away.",
         "This is a major sonic departure for the Bard, but a crucial part of the story."
       ],
-      "suno_prompt": "Authentic 1980s Detroit Techno and Electro-Funk. Driving 808 drum machine beat, cold arpeggiated synth bassline, and futuristic Juno-60 synth pads. Male vocals are processed with a heavy, robotic vocoder effect. Mechanical, hypnotic, and defiant.",
+      "arrangement_prompt": "Authentic 1980s Detroit Techno and Electro-Funk. Driving 808 drum machine beat, cold arpeggiated synth bassline, and futuristic Juno-60 synth pads. Male vocals are processed with a heavy, robotic vocoder effect. Mechanical, hypnotic, and defiant.",
       "cover_art_prompt": "9:16, a moody, high-contrast photograph with a strong 1980s aesthetic. A lone figure stands in a vast, empty, and derelict factory floor. Shafts of light cut through the grimy windows, illuminating dust in the air. The figure is holding a small, vintage synthesizer (like a Roland TB-303), which is glowing faintly. The mood is one of dystopian solitude but also creative potential.",
       "social_captions": [
         "The factories went silent, so a new machine was born. From the ruins of the Motor City, a new beat emerges. This is the sound of Detroit Techno. #FiveDigitFate #DetroitTechno #ElectroFunk #TheShadyRiverBard",
@@ -2639,7 +2533,7 @@ window.FIVE_DIGIT_FATE_DATA = {
         "The music becomes a reflection of this conflict: man versus machine. The Bard's folk-rock heart fused with a cold, industrial pulse.",
         "-----"
       ],
-      "suno_prompt": "Driving Industrial Folk Rock. A fusion of powerful, angry acoustic guitar and gritty, mechanical sounds. Heavy, repetitive drum machine beat, distorted bass, and industrial percussion. The lead vocal is a passionate, defiant male singer.",
+      "arrangement_prompt": "Driving Industrial Folk Rock. A fusion of powerful, angry acoustic guitar and gritty, mechanical sounds. Heavy, repetitive drum machine beat, distorted bass, and industrial percussion. The lead vocal is a passionate, defiant male singer.",
       "cover_art_prompt": "9:16, a striking and tense image. A person's hand, worn and real, is seen tracing a thick, glowing red line across a cold, blue-toned digital map of a city on a screen. The fingers are pressing down hard, causing a slight digital distortion or glitch where they touch the screen. The mood is a clash of human anger and cold, impersonal technology.",
       "social_captions": [
         "What if your whole life was just a color on a map? This is a song for everyone who's ever been told their fate was sealed by their zip code. This is \"The Opportunity Atlas.\" https://www.opportunityatlas.org/ #FiveDigitFate #IndustrialFolk #ProtestSong",
@@ -2803,7 +2697,7 @@ window.FIVE_DIGIT_FATE_DATA = {
         "The music has to reflect that intimacy. All the industrial noise falls away, leaving us with a stripped-down, painfully emotional acoustic folk sound. Just the Bard, a guitar, and a story.",
         "-----"
       ],
-      "suno_prompt": "Stripped-down, emotional acoustic folk ballad. A single, intimately recorded acoustic guitar. The male vocal is soft, vulnerable, and breaking with emotion, almost a whisper. Heartbreaking, raw, and poignant.",
+      "arrangement_prompt": "Stripped-down, emotional acoustic folk ballad. A single, intimately recorded acoustic guitar. The male vocal is soft, vulnerable, and breaking with emotion, almost a whisper. Heartbreaking, raw, and poignant.",
       "cover_art_prompt": "9:16, a poignant, soft-focus color photograph. The shot is a close-up of a wooden door frame inside a now-empty room. On the frame are a series of faded pencil marks and dates, marking a child's growth over the years. A single adult hand rests gently beside the marks, as if saying goodbye. The lighting is soft and melancholic, coming from a nearby window.",
       "social_captions": [
         "How do you pack a memory? A song about the quiet, final moment of displacement. The things the moving trucks can't carry. #PricedOut #FiveDigitFate #Acoustic #FolkMusic",
@@ -2947,7 +2841,7 @@ window.FIVE_DIGIT_FATE_DATA = {
       "prelude": [
         "Absolutely. It's essential to have a clean, final document of the anthem, especially after all the work we put into dialing it in."
       ],
-      "suno_prompt": "An epic, building 'Stomp and Holler' Folk-Rock anthem. Instrumental variety and transitions is KEY. The song must sound differently throughout. Features a driving four-on-the-floor kick drum, passionate male vocals, and gang vocal harmonies. STARTS sparse with acoustic guitar, then BUILDS with layers of banjo, piano, and organ, culminating in a massive, gospel choir-driven climax.",
+      "arrangement_prompt": "An epic, building 'Stomp and Holler' Folk-Rock anthem. Instrumental variety and transitions is KEY. The song must sound differently throughout. Features a driving four-on-the-floor kick drum, passionate male vocals, and gang vocal harmonies. STARTS sparse with acoustic guitar, then BUILDS with layers of banjo, piano, and organ, culminating in a massive, gospel choir-driven climax.",
       "cover_art_prompt": "9:16, a powerful and vibrant color photograph. On a decaying, gray, urban brick wall covered in faded posters and grime, a stunningly bright and colorful mural has been painted. The mural depicts a fusion of American musical history: a bluesman's guitar morphs into a banjo, which then blends into a saxophone, surrounded by musical notes. The artwork is a defiant splash of life against the backdrop of urban decay.\n-----\nOnce you have this logged, let me know when you're ready to write the final track, **\"Five-Digit Fate (Reprise) / A Human Being.\"**",
       "social_captions": [
         "They can take your home. They can take your job. But they can't take your song. This is the counter-brand. This is \"The Music They Couldn't Erase.\" #FiveDigitFate #Anthem #Resilience #FolkRock",
@@ -3108,7 +3002,7 @@ window.FIVE_DIGIT_FATE_DATA = {
         "This is the epilogue. This is the unbranded heart, speaking its name.",
         "-----"
       ],
-      "suno_prompt": "A cappella. A single, raw, defiant male vocal in a quiet, empty room. The voice starts as an intense whisper and builds to a powerful, cracking shout. Stark, emotional, and completely stripped-down. Minimalist.",
+      "arrangement_prompt": "A cappella. A single, raw, defiant male vocal in a quiet, empty room. The voice starts as an intense whisper and builds to a powerful, cracking shout. Stark, emotional, and completely stripped-down. Minimalist.",
       "cover_art_prompt": "9:16, an extreme close-up, high-resolution photograph of a human eye. The eye is looking directly at the camera, filled with emotion—a mix of sorrow, defiance, and resilience. Reflected in the iris, barely visible, is the faint, colorful grid of the Opportunity Atlas map. The image is stark, intimate, and deeply human.\n-----\nAnd with that, the story of \"Five-Digit Fate\" is told.",
       "social_captions": [
         "After the noise, the final truth. I am not a number. #FiveDigitFate #AHumanBeing #Acapella #TheShadyRiverBard",

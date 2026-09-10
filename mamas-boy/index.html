@@ -4,8 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mama's Boy | Album 13 Vault | The Shady River Bard</title>
-  <meta name="description" content="Explore Mama's Boy by The Shady River Bard: a deeply personal musical memoir of Judith Faye Adams ('Mama Judie') and an empirical sociological data audit of Single Mothers in America. 11 tracks, complete lyrics vault, Suno prompts, and official videos.">
+  <meta name="description" content="Explore Mama's Boy by The Shady River Bard: a deeply personal musical memoir of Judith Faye Adams ('Mama Judie') and an empirical sociological data audit of Single Mothers in America. 11 tracks, complete lyrics vault, arrangement notes, and official videos.">
   
+  <!-- Cache Control to ensure instant updates -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
   <!-- Canonical & Social Meta -->
   <link rel="canonical" href="https://theshadyriverbard.com/mamas-boy/">
   <meta property="og:site_name" content="The Shady River Bard">
@@ -361,7 +366,7 @@
               </span>
             </h2>
             <p class="text-xs text-stone-400 font-mono">
-              Unabridged stanzas, Suno musical style prompts, and official lyric video releases
+              Unabridged stanzas, musical arrangement notes, and official lyric video releases
             </p>
           </div>
 
@@ -374,7 +379,7 @@
 
             <button onclick="collapseAllLyrics()" class="px-3 py-1.5 rounded-lg bg-hearth-800 hover:bg-hearth-750 text-stone-300 border border-white/10 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
               <i aria-hidden="true" class="fa-solid fa-angles-up text-xs"></i>
-              <span>Collapse All</span>
+              <span>Collapse All Lyrics</span>
             </button>
           </div>
         </div>
@@ -541,7 +546,7 @@
 
   <!-- DATA & APP LOGIC -->
   <script src="/assets/js/a11y.js"></script>
-  <script src="data/mamas-boy-data.js?v=20260910_01"></script>
+  <script src="data/mamas-boy-data.js?v=20260910_03"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const data = window.MAMAS_BOY_DATA;
@@ -836,14 +841,14 @@
                     </button>
                   </div>
 
-                  <!-- Suno Musical Prompt Block -->
-                  ${t.suno_prompt ? `
+                  <!-- Musical Arrangement Directives -->
+                  ${t.arrangement_prompt ? `
                     <div class="p-4 rounded-xl bg-hearth-900 border border-mama-500/20 text-xs font-mono space-y-1">
                       <div class="flex items-center gap-2 text-mama-400 font-bold uppercase tracking-wider text-[10px]">
                         <i aria-hidden="true" class="fa-solid fa-sliders"></i>
-                        <span>Suno Musical Style Prompt</span>
+                        <span>Musical Arrangement &amp; Sonic Identity</span>
                       </div>
-                      <p class="text-stone-300 font-sans leading-relaxed">${t.suno_prompt}</p>
+                      <p class="text-stone-300 font-sans leading-relaxed">${t.arrangement_prompt}</p>
                     </div>
                   ` : ''}
 
