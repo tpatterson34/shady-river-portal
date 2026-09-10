@@ -175,7 +175,7 @@ window.UNEQUAL_JUSTICE_DATA = {
     {
       "number": 1,
       "number_padded": "01",
-      "title": "’T’h’e’ ’S’e’t’t’l’e’m’e’n’t’",
+      "title": "The Settlement",
       "slug": "the-settlement",
       "act": 1,
       "act_name": "Act I: The Gilded Shield & The Iron Funnel",
@@ -260,7 +260,7 @@ window.UNEQUAL_JUSTICE_DATA = {
     {
       "number": 2,
       "number_padded": "02",
-      "title": "’T’h’e’ ’C’o’u’n’t’y’ ’L’i’n’e’",
+      "title": "The County Line",
       "slug": "the-county-line",
       "act": 1,
       "act_name": "Act I: The Gilded Shield & The Iron Funnel",
@@ -345,7 +345,7 @@ window.UNEQUAL_JUSTICE_DATA = {
     {
       "number": 3,
       "number_padded": "03",
-      "title": "’T’h’e’ ’U’n’d’i’s’c’l’o’s’e’d’ ’F’i’l’e’s’",
+      "title": "The Undisclosed Files",
       "slug": "the-undisclosed-files",
       "act": 1,
       "act_name": "Act I: The Gilded Shield & The Iron Funnel",
@@ -434,7 +434,7 @@ window.UNEQUAL_JUSTICE_DATA = {
     {
       "number": 4,
       "number_padded": "04",
-      "title": "’T’o’o’ ’B’i’g’ ’t’o’ ’F’a’i’l’,’ ’T’o’o’ ’S’m’a’l’l’ ’t’o’ ’S’e’e’",
+      "title": "Too Big to Fail, Too Small to See",
       "slug": "too-big-to-fail-too-small-to-see",
       "act": 1,
       "act_name": "Act I: The Gilded Shield & The Iron Funnel",
@@ -519,7 +519,7 @@ window.UNEQUAL_JUSTICE_DATA = {
     {
       "number": 5,
       "number_padded": "05",
-      "title": "’T’h’e’ ’R’e’d’ ’L’i’n’e’",
+      "title": "The Red Line",
       "slug": "the-red-line",
       "act": 1,
       "act_name": "Act I: The Gilded Shield & The Iron Funnel",
@@ -689,7 +689,7 @@ window.UNEQUAL_JUSTICE_DATA = {
     {
       "number": 7,
       "number_padded": "07",
-      "title": "’T’h’e’ ’P’l’e’a’ ’B’a’r’g’a’i’n’",
+      "title": "The Plea Bargain",
       "slug": "the-plea-bargain",
       "act": 1,
       "act_name": "Act I: The Gilded Shield & The Iron Funnel",
@@ -774,7 +774,7 @@ window.UNEQUAL_JUSTICE_DATA = {
     {
       "number": 8,
       "number_padded": "08",
-      "title": "’T’h’e’ ’A’L’E’C’ ’T’r’a’i’n’",
+      "title": "The ALEC Train",
       "slug": "the-alec-train",
       "act": 2,
       "act_name": "Act II: The Crooked Architecture & The Ripples of Ruin",
@@ -859,7 +859,7 @@ window.UNEQUAL_JUSTICE_DATA = {
     {
       "number": 9,
       "number_padded": "09",
-      "title": "’T’h’e’ ’J’u’d’g’e’’’s’ ’H’a’n’d’s’ ’A’r’e’ ’T’i’e’d’",
+      "title": "The Judge’s Hands Are Tied",
       "slug": "the-judges-hands-are-tied",
       "act": 2,
       "act_name": "Act II: The Crooked Architecture & The Ripples of Ruin",
@@ -944,7 +944,7 @@ window.UNEQUAL_JUSTICE_DATA = {
     {
       "number": 10,
       "number_padded": "10",
-      "title": "’T’h’e’ ’C’o’s’t’ ’o’f’ ’T’h’e’i’r’ ’F’r’e’e’d’o’m’",
+      "title": "The Cost of Their Freedom",
       "slug": "the-cost-of-their-freedom",
       "act": 2,
       "act_name": "Act II: The Crooked Architecture & The Ripples of Ruin",
@@ -1029,7 +1029,7 @@ window.UNEQUAL_JUSTICE_DATA = {
     {
       "number": 11,
       "number_padded": "11",
-      "title": "’T’h’e’ ’S’e’n’t’e’n’c’e’ ’A’f’t’e’r’",
+      "title": "The Sentence After",
       "slug": "the-sentence-after",
       "act": 2,
       "act_name": "Act II: The Crooked Architecture & The Ripples of Ruin",
@@ -1114,7 +1114,7 @@ window.UNEQUAL_JUSTICE_DATA = {
     {
       "number": 12,
       "number_padded": "12",
-      "title": "’T’h’e’ ’S’i’l’e’n’c’e’d’ ’S’c’r’e’a’m’",
+      "title": "The Silenced Scream",
       "slug": "the-silenced-scream",
       "act": 2,
       "act_name": "Act II: The Crooked Architecture & The Ripples of Ruin",
@@ -1284,7 +1284,7 @@ window.UNEQUAL_JUSTICE_DATA = {
     {
       "number": 14,
       "number_padded": "14",
-      "title": "’T’h’e’ ’I’n’n’o’c’e’n’c’e’ ’M’a’n’",
+      "title": "The Innocence Man",
       "slug": "the-innocence-man",
       "act": 3,
       "act_name": "Act III: The Cracks in the Concrete",
@@ -1369,7 +1369,7 @@ window.UNEQUAL_JUSTICE_DATA = {
     {
       "number": 15,
       "number_padded": "15",
-      "title": "’T’h’e’ ’L’a’m’p’l’i’g’h’t’e’r’ ’(’S’e’r’p’i’c’o’’’s’ ’S’o’n’g’)’",
+      "title": "The Lamplighter (Serpico’s Song)",
       "slug": "the-lamplighter-serpicos-song",
       "act": 3,
       "act_name": "Act III: The Cracks in the Concrete",
@@ -1463,7 +1463,7 @@ window.UNEQUAL_JUSTICE_DATA = {
     {
       "number": 16,
       "number_padded": "16",
-      "title": "’T’h’e’ ’M’a’m’a’’’s’ ’B’a’i’l’ ’J’a’r’",
+      "title": "The Mama’s Bail Jar",
       "slug": "the-mamas-bail-jar",
       "act": 3,
       "act_name": "Act III: The Cracks in the Concrete",
@@ -1633,7 +1633,7 @@ window.UNEQUAL_JUSTICE_DATA = {
     {
       "number": 18,
       "number_padded": "18",
-      "title": "’T’h’e’ ’U’n’w’a’v’e’r’i’n’g’ ’G’a’z’e’",
+      "title": "The Unwavering Gaze",
       "slug": "the-unwavering-gaze",
       "act": 4,
       "act_name": "Act IV: The Blindfold Lifts",
