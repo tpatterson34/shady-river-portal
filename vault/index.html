@@ -356,9 +356,15 @@
           <span id="modal-badge" class="px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-brand-500/20 text-brand-400 border border-brand-500/30">#01</span>
           <h3 id="modal-title" class="text-xl sm:text-2xl font-serif font-bold text-stone-100">Album Title</h3>
         </div>
-        <button id="modal-close-btn" onclick="closeModal()" aria-label="Close album details modal" class="p-2 rounded-lg text-stone-400 hover:text-white hover:bg-soil-700 transition-colors focus-visible:ring-2 focus-visible:ring-brand-500">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-        </button>
+        <div class="flex items-center gap-2">
+          <button id="modal-share-btn" onclick="shareCurrentAlbum()" aria-label="Share direct link to this album" title="Copy direct link to this album" class="px-3 py-1.5 rounded-lg bg-soil-700/80 hover:bg-soil-600 text-stone-200 hover:text-white border border-white/10 text-xs font-mono font-medium transition-all flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+            <span id="modal-share-text">Share</span>
+          </button>
+          <button id="modal-close-btn" onclick="closeModal()" aria-label="Close album details modal" class="p-2 rounded-lg text-stone-400 hover:text-white hover:bg-soil-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
       </div>
 
       <!-- Modal Body (Scrollable) -->
@@ -640,6 +646,7 @@
 
         buildThemeTags();
         renderGrid();
+        checkUrlHash();
       } catch (err) {
         console.error("Failed loading albums.json:", err);
       }
@@ -894,10 +901,14 @@
       setTimeout(() => openVoteModal(targetId), 250);
     }
 
-    function openModal(id) {
+    function openModal(id, updateUrl = true) {
       const allItems = [...catalog.released, ...catalog.vault];
-      const item = allItems.find(x => x.id === id);
+      const item = allItems.find(x => x.id === id || String(x.number) === String(id) || `album-${x.number}` === String(id).toLowerCase());
       if (!item) return;
+
+      if (updateUrl && history.replaceState) {
+        history.replaceState(null, '', '#' + item.id);
+      }
 
       previouslyFocusedElement = document.activeElement;
       currentModalId = item.id;
@@ -1044,7 +1055,11 @@
       }, 10);
     }
 
-    function closeModal() {
+    function closeModal(updateUrl = true) {
+      if (updateUrl && window.location.hash && history.replaceState) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
+      currentModalId = null;
       const modal = document.getElementById('album-modal');
       modal.classList.add('opacity-0');
       setTimeout(() => {
@@ -1054,6 +1069,56 @@
           previouslyFocusedElement = null;
         }
       }, 300);
+    }
+
+    async function shareCurrentAlbum() {
+      if (!currentModalId) return;
+      const allItems = [...catalog.released, ...catalog.vault];
+      const item = allItems.find(x => x.id === currentModalId);
+      const url = `${window.location.origin}${window.location.pathname}#${currentModalId}`;
+      const title = item ? `${item.title} | The Shady River Bard` : 'The Shady River Bard Vault';
+      const text = item ? `Explore "${item.title}" in The Shady River Bard discography vault:` : 'Explore the discography vault:';
+
+      const shareText = document.getElementById('modal-share-text');
+      const shareBtn = document.getElementById('modal-share-btn');
+
+      if (navigator.share && /mobile|android|iphone|ipad/i.test(navigator.userAgent)) {
+        try {
+          await navigator.share({ title, text, url });
+          return;
+        } catch (e) {
+          // User cancelled or share dismissed; fallback to copy
+        }
+      }
+
+      try {
+        await navigator.clipboard.writeText(url);
+        if (shareText) shareText.innerText = "✓ Copied!";
+        if (shareBtn) shareBtn.classList.add('bg-emerald-900', 'text-emerald-300', 'border-emerald-600');
+        setTimeout(() => {
+          if (shareText) shareText.innerText = "Share";
+          if (shareBtn) shareBtn.classList.remove('bg-emerald-900', 'text-emerald-300', 'border-emerald-600');
+        }, 2000);
+      } catch (err) {
+        prompt("Direct link to this album:", url);
+      }
+    }
+
+    function checkUrlHash() {
+      const rawHash = window.location.hash ? window.location.hash.replace(/^#/, '').trim() : '';
+      if (!rawHash) return;
+
+      const allItems = [...catalog.released, ...catalog.vault];
+      const item = allItems.find(x => x.id === rawHash || String(x.number) === rawHash || `album-${x.number}` === rawHash.toLowerCase());
+      if (item) {
+        const inVault = catalog.vault.some(x => x.id === item.id);
+        if (inVault && currentSection !== 'vault') {
+          switchSection('vault');
+        } else if (!inVault && currentSection !== 'released') {
+          switchSection('released');
+        }
+        openModal(item.id, false);
+      }
     }
 
     // Voting modal logic
@@ -1310,6 +1375,19 @@
         if (!document.getElementById('album-modal').classList.contains('hidden')) trapModalFocus(e, 'album-modal');
         else if (!document.getElementById('vote-modal').classList.contains('hidden')) trapModalFocus(e, 'vote-modal');
         else if (!document.getElementById('a11y-modal').classList.contains('hidden')) trapModalFocus(e, 'a11y-modal');
+      }
+    });
+
+    // Handle browser Back / Forward navigation with URL hashes
+    window.addEventListener('hashchange', () => {
+      const rawHash = window.location.hash ? window.location.hash.replace(/^#/, '').trim() : '';
+      if (rawHash) {
+        checkUrlHash();
+      } else {
+        const modal = document.getElementById('album-modal');
+        if (modal && !modal.classList.contains('hidden')) {
+          closeModal(false);
+        }
       }
     });
 
