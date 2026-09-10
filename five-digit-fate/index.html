@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Five-Digit Fate | Album 14 Vault | The Shady River Bard</title>
-  <meta name="description" content="Explore Five-Digit Fate by The Shady River Bard: an ambitious 17-track social cartography of American poverty, geographic determinism, and the zip-code-as-brand thesis. Complete lyrics vault, research pillars, and official videos.">
+  <title>Five-Digit Fate | Complete Album 14 Vault & Social Cartography | The Shady River Bard</title>
+  <meta name="description" content="The complete vault for Five-Digit Fate by The Shady River Bard: an ambitious 17-track social cartography of American poverty and geographic determinism. Includes complete lyrics, guitar chords, Suno production tags, the Bard's story, and essays.">
   
   <!-- Canonical & Social Meta -->
   <link rel="canonical" href="https://theshadyriverbard.com/five-digit-fate/">
   <meta property="og:site_name" content="The Shady River Bard">
   <meta property="og:type" content="music.album">
-  <meta property="og:title" content="Five-Digit Fate | Album 14 Vault">
-  <meta property="og:description" content="A 17-track social cartography of American poverty and geographic determinism. Complete lyrics vault, Opportunity Atlas research audit, and official video releases.">
+  <meta property="og:title" content="Five-Digit Fate | Complete Album 14 Vault">
+  <meta property="og:description" content="A 17-track social cartography of American poverty and geographic determinism. Complete lyrics vault, chords, Suno tags, essays, and official video releases.">
   <meta property="og:image" content="https://theshadyriverbard.com/five-digit-fate/assets/art/five-digit-fate-cover.webp">
   <meta property="og:url" content="https://theshadyriverbard.com/five-digit-fate/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@TheShadyRiverBard">
   <meta name="twitter:creator" content="@TheShadyRiverBard">
-  <meta name="twitter:title" content="Five-Digit Fate | Album 14 Vault">
-  <meta name="twitter:description" content="17-track social cartography of geographic determinism and American poverty. Complete lyrics vault, Opportunity Atlas data audit, and official videos.">
+  <meta name="twitter:title" content="Five-Digit Fate | Complete Album 14 Vault">
+  <meta name="twitter:description" content="17-track social cartography of geographic determinism and American poverty. Complete lyrics, chords, Suno tags, essays, and official videos.">
   <meta name="twitter:image" content="https://theshadyriverbard.com/five-digit-fate/assets/art/five-digit-fate-cover.webp">
 
   <!-- High-Priority Preload for Master Album Cover -->
@@ -92,227 +92,441 @@
       border-color: rgba(249, 115, 22, 0.35);
       box-shadow: 0 0 16px rgba(234, 88, 12, 0.12);
     }
-    .lyrics-drawer {
-      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    .iron-glow {
+      text-shadow: 0 0 14px rgba(249, 115, 22, 0.5);
     }
-    @media (prefers-reduced-motion: reduce) {
-      *, ::before, ::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-      }
+    .tab-btn.active {
+      background: rgba(234, 88, 12, 0.2);
+      border-color: rgba(249, 115, 22, 0.6);
+      color: #fed7aa;
+    }
+    pre.chord-sheet {
+      font-family: 'JetBrains Mono', monospace;
+      white-space: pre;
+      overflow-x: auto;
+      tab-size: 4;
+      line-height: 1.45;
     }
   </style>
 </head>
 
-<body class="bg-steel-950 text-slate-200 font-sans antialiased selection:bg-fate-600 selection:text-white min-h-screen flex flex-col">
+<body class="bg-steel-950 text-slate-100 font-sans min-h-screen antialiased selection:bg-fate-600 selection:text-white">
 
-  <!-- 1. WCAG 2.1 AA Skip Navigation Link -->
-  <a href="#main-content" class="skip-link sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-fate-600 focus:text-white focus:font-bold focus:rounded-lg focus:shadow-2xl focus:outline-none focus:ring-2 focus:ring-orange-400">
+  <!-- Accessible Skip Navigation Link -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 px-4 py-2 bg-fate-600 text-white font-mono text-xs rounded shadow-lg">
     Skip to main content
   </a>
 
-  <!-- 2. Sticky Global Navigation Header -->
-  <header class="sticky top-0 z-40 bg-steel-950/90 backdrop-blur-md border-b border-white/10 transition-colors">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
-      
-      <!-- Brand & Hub Back-Link -->
+  <!-- Universal Fixed Navigation Header -->
+  <header class="sticky top-0 z-40 w-full glass-panel border-b border-fate-600/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <a href="/" class="flex items-center gap-2 text-slate-300 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 rounded-md p-1" title="Return to The Shady River Hub">
-          <i aria-hidden="true" class="fa-solid fa-water text-fate-500 text-lg"></i>
-          <span class="font-display font-bold text-sm tracking-wider hidden sm:inline">The Shady River</span>
+        <a href="/" class="flex items-center gap-2 group text-slate-300 hover:text-fate-400 transition-colors">
+          <i aria-hidden="true" class="fa-solid fa-compass text-fate-500 group-hover:rotate-45 transition-transform"></i>
+          <span class="font-display font-bold text-sm tracking-wider hidden sm:inline">The Shady River Bard</span>
         </a>
-        <span class="text-slate-600 hidden sm:inline" aria-hidden="true">/</span>
-        <div class="flex items-center gap-2">
-          <span class="text-xs font-mono px-2 py-0.5 rounded bg-fate-950 text-fate-400 border border-fate-700/50 font-semibold">Album 14</span>
-          <span class="text-xs font-display font-semibold text-slate-200 truncate max-w-[150px] sm:max-w-xs">Five-Digit Fate</span>
-        </div>
+        <span class="text-slate-600">/</span>
+        <a href="/vault/" class="text-xs font-mono text-slate-400 hover:text-white transition-colors">Vault</a>
+        <span class="text-slate-600">/</span>
+        <span class="text-xs font-mono text-fate-400 font-semibold truncate max-w-[140px] sm:max-w-none">Album 14</span>
       </div>
 
-      <!-- Action Utilities: Accessibility & Vault -->
-      <div class="flex items-center gap-2 sm:gap-3">
-        <!-- Accessibility Display Toggle -->
-        <button id="a11y-toggle-btn" onclick="toggleA11yToolbar()" class="p-2 rounded-lg bg-steel-850 hover:bg-steel-800 text-slate-300 hover:text-white border border-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 flex items-center gap-1.5 text-xs font-mono" aria-label="Toggle Accessibility Display Preferences" aria-expanded="false" aria-controls="a11y-toolbar">
-          <i aria-hidden="true" class="fa-solid fa-universal-access text-fate-400 text-base"></i>
-          <span class="hidden md:inline">Accessibility</span>
+      <nav class="hidden md:flex items-center gap-5 text-xs font-mono" aria-label="Page Navigation">
+        <a href="#essays-section" class="text-slate-300 hover:text-fate-400 transition-colors">The Cartography</a>
+        <a href="#acts-section" class="text-slate-300 hover:text-fate-400 transition-colors">5-Act Arc</a>
+        <a href="#pillars-section" class="text-slate-300 hover:text-fate-400 transition-colors">6 Pillars</a>
+        <a href="#tracks-section" class="text-fate-400 hover:text-fate-300 transition-colors font-semibold">17-Track Vault</a>
+        <a href="#reference-section" class="text-slate-300 hover:text-fate-400 transition-colors">Suno Catalog</a>
+      </nav>
+
+      <div class="flex items-center gap-2.5">
+        <button 
+          id="a11y-trigger-btn"
+          type="button"
+          class="p-2 rounded-lg bg-steel-800 text-slate-300 hover:text-fate-400 hover:bg-steel-750 transition-colors border border-white/5"
+          aria-label="Open Accessibility Toolbar"
+        >
+          <i aria-hidden="true" class="fa-solid fa-universal-access text-base"></i>
         </button>
-
-        <!-- Discography Vault Link -->
-        <a href="/vault/" class="px-3 py-1.5 rounded-lg bg-steel-850 hover:bg-steel-800 text-slate-300 hover:text-white border border-white/10 transition-colors text-xs font-mono flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400">
-          <i aria-hidden="true" class="fa-solid fa-compact-disc text-fate-400"></i>
-          <span class="hidden sm:inline">All Albums</span>
-        </a>
-
-        <!-- YouTube Video Playlist -->
-        <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcEI54M3aP3O8p9s84xcrHrT" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400" title="Watch Lyric Videos on YouTube" aria-label="Watch 17 official lyric videos on YouTube (opens in new tab)">
-          <i aria-hidden="true" class="fa-brands fa-youtube text-base"></i>
-        </a>
       </div>
-
     </div>
   </header>
 
-  <!-- 3. Accessibility Preference Toolbar (WCAG 2.1 AA / Section 508 Compliant) -->
-  <div id="a11y-toolbar" class="hidden bg-steel-900 border-b border-fate-500/40 py-3 px-4 text-xs transition-all shadow-2xl relative z-40" role="region" aria-label="Accessibility Display Preferences">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
-      
-      <div class="flex items-center gap-3">
-        <span class="font-mono text-slate-300 font-bold uppercase tracking-wider text-[11px] flex items-center gap-1.5">
-          <i aria-hidden="true" class="fa-solid fa-sliders text-fate-400"></i> Display Controls
-        </span>
-      </div>
-
-      <div class="flex flex-wrap items-center gap-4 text-xs">
-        <!-- High Contrast -->
-        <div class="flex items-center gap-1.5">
-          <span class="text-slate-400">Contrast:</span>
-          <button onclick="setA11yContrast('normal')" class="px-2 py-1 rounded bg-steel-800 hover:bg-steel-750 text-slate-200 text-[11px] font-mono border border-white/10" id="val-contrast">Normal</button>
-          <button onclick="setA11yContrast('high')" class="px-2 py-1 rounded bg-steel-800 hover:bg-steel-750 text-slate-200 text-[11px] font-mono border border-white/10">High</button>
-        </div>
-
-        <!-- Text Sizing -->
-        <div class="flex items-center gap-1.5">
-          <span class="text-slate-400">Text Size:</span>
-          <button onclick="setA11yTextSize('sm')" class="px-2 py-1 rounded bg-steel-800 hover:bg-steel-750 text-slate-200 text-[11px] font-mono border border-white/10" id="val-textsize">A-</button>
-          <button onclick="setA11yTextSize('base')" class="px-2 py-1 rounded bg-steel-800 hover:bg-steel-750 text-slate-200 text-[11px] font-mono border border-white/10">Default</button>
-          <button onclick="setA11yTextSize('lg')" class="px-2 py-1 rounded bg-steel-800 hover:bg-steel-750 text-slate-200 text-[11px] font-mono border border-white/10">A+</button>
-        </div>
-
-        <!-- Dyslexia Font Toggle -->
-        <div class="flex items-center gap-1.5">
-          <button onclick="toggleDyslexicFont()" class="px-2.5 py-1 rounded bg-steel-800 hover:bg-steel-750 text-slate-200 text-[11px] font-mono border border-white/10" id="btn-dyslexic-toggle">
-            Dyslexia Font
-          </button>
-        </div>
-
-        <!-- Close Toolbar -->
-        <button onclick="toggleA11yToolbar()" class="p-1 text-slate-400 hover:text-white" aria-label="Close Accessibility Controls">
-          <i aria-hidden="true" class="fa-solid fa-xmark text-sm"></i>
-        </button>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- 4. Main Content Landmark Container -->
-  <main id="main-content" tabindex="-1" class="flex-grow focus:outline-none">
+  <!-- Main Landmark -->
+  <main id="main-content" tabindex="-1" class="focus:outline-none">
 
     <!-- HERO SECTION -->
-    <section class="relative overflow-hidden pt-12 pb-16 md:pt-16 md:pb-24 border-b border-white/10 bg-gradient-to-b from-steel-950 via-steel-900 to-steel-950">
+    <section class="relative pt-12 pb-16 overflow-hidden border-b border-white/10 bg-gradient-to-b from-steel-900 via-steel-950 to-steel-950">
+      <div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#ea580c_1px,transparent_1px)] [background-size:24px_24px]"></div>
       
-      <!-- Ambient Glow Decor -->
-      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-fate-600/10 blur-[130px] rounded-full pointer-events-none -z-10" aria-hidden="true"></div>
-      <div class="absolute top-1/2 right-10 w-[400px] h-[300px] bg-atlas-600/10 blur-[120px] rounded-full pointer-events-none -z-10" aria-hidden="true"></div>
-
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          <!-- Master Album Artwork Card (5 Cols) -->
-          <div class="lg:col-span-5 space-y-4">
-            <div class="relative group mx-auto max-w-md lg:max-w-none">
-              <div class="aspect-square rounded-2xl overflow-hidden border-2 brand-border shadow-2xl bg-steel-900 relative">
-                <img 
-                  id="album-hero-art"
-                  src="assets/art/five-digit-fate-cover.webp" 
-                  alt="Five-Digit Fate album cover artwork showing a stark geographic landscape marked with corporate branding iron marks and redlined zip codes"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  fetchpriority="high"
-                >
-                <div class="absolute top-3 left-3 flex flex-col gap-1.5">
-                  <span class="text-[11px] font-mono font-bold px-2.5 py-1 rounded bg-steel-950/90 text-fate-400 border border-fate-500/40 backdrop-blur-sm">
-                    Album 14 of 26
-                  </span>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-atlas-950/90 text-atlas-400 border border-atlas-500/30 backdrop-blur-sm">
-                    Social Cartography
-                  </span>
-                </div>
-                <div class="absolute bottom-3 right-3">
-                  <span class="text-xs font-mono px-2.5 py-1 rounded bg-black/75 text-slate-200 backdrop-blur-sm border border-white/10">
-                    17 Tracks &bull; 74 Min
-                  </span>
-                </div>
+          <!-- Album Cover Card -->
+          <div class="lg:col-span-5 flex flex-col items-center lg:items-start">
+            <div class="relative group rounded-2xl overflow-hidden shadow-2xl border brand-border bg-steel-900 aspect-square w-full max-w-[420px]">
+              <img 
+                src="assets/art/five-digit-fate-cover.webp" 
+                alt="Five-Digit Fate master album cover artwork" 
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                width="1000"
+                height="1000"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-transparent to-transparent opacity-60"></div>
+              
+              <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-[11px] font-mono text-slate-300 bg-steel-900/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
+                <span class="flex items-center gap-1.5 text-fate-400">
+                  <i aria-hidden="true" class="fa-solid fa-fire"></i>
+                  <span>Master Vault</span>
+                </span>
+                <span>17 Tracks &bull; 74 Min</span>
               </div>
-            </div>
-
-            <!-- Listening Platforms Bar -->
-            <div class="flex flex-wrap items-center justify-center gap-2.5 pt-2">
-              <a href="https://music.youtube.com/playlist?list=OLAK5uy_k2mdyly8AhgJTCAC0Nh9Zt6F_cJa6QsW0" target="_blank" rel="noopener noreferrer" class="flex-1 min-w-[140px] px-3.5 py-2.5 rounded-xl bg-red-950/70 hover:bg-red-900/90 text-red-300 hover:text-white border border-red-700/40 text-xs font-mono font-semibold transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-red-400">
-                <i aria-hidden="true" class="fa-solid fa-play text-xs"></i>
-                <span>YouTube Music</span>
-              </a>
-              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcEI54M3aP3O8p9s84xcrHrT" target="_blank" rel="noopener noreferrer" class="flex-1 min-w-[140px] px-3.5 py-2.5 rounded-xl bg-steel-850 hover:bg-steel-800 text-slate-200 hover:text-white border border-white/15 text-xs font-mono font-semibold transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-orange-400">
-                <i aria-hidden="true" class="fa-brands fa-youtube text-red-500"></i>
-                <span>Lyric Videos (17)</span>
-              </a>
-              <a href="https://music.apple.com/us/artist/the-shady-river-bard/1829561760" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-steel-850 hover:bg-steel-800 text-slate-300 hover:text-white border border-white/15 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-orange-400" title="The Shady River Bard on Apple Music" aria-label="Listen on Apple Music (opens in new tab)">
-                <i aria-hidden="true" class="fa-brands fa-apple text-sm"></i>
-              </a>
             </div>
           </div>
 
-          <!-- Hero Narrative & Conceptual Manifesto (7 Cols) -->
-          <div class="lg:col-span-7 space-y-6">
-            
-            <div class="space-y-2">
-              <div class="flex items-center gap-2">
-                <span class="text-xs font-mono uppercase tracking-widest text-fate-400 font-bold">
-                  The Shady River Bard &bull; Landmark Concept Album
-                </span>
+          <!-- Album Overview Details -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-fate-950/80 border border-fate-600/40 text-fate-400 font-mono text-xs uppercase tracking-widest">
+              <i aria-hidden="true" class="fa-solid fa-map-location-dot"></i>
+              <span>The Shady River Bard &bull; Album 14</span>
+            </div>
+
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white iron-glow">
+              Five-Digit Fate
+            </h1>
+
+            <p class="font-serif text-lg sm:text-xl text-fate-200/90 italic max-w-2xl">
+              A Social Cartography of American Poverty &amp; Geographic Determinism
+            </p>
+
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl font-body">
+              Grounded in the landmark research of Raj Chetty's <em>The Opportunity Atlas</em>, Anne Case &amp; Angus Deaton's <em>Deaths of Despair</em>, and Richard Rothstein's <em>The Color of Law</em>, this 17-track concept album explores how a 5-digit zip code functions as a modern corporate cattle brand stamped at birth—pre-determining social mobility, economic trajectory, and life expectancy.
+            </p>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl py-2">
+              <div class="p-3 rounded-xl bg-steel-900/80 border border-white/5 text-center">
+                <div class="text-2xl font-bold font-mono text-fate-400">17</div>
+                <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400">Tracks</div>
               </div>
-              <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
-                Five-Digit Fate
-              </h1>
-              <p class="font-serif italic text-base sm:text-lg text-fate-200/90 leading-relaxed">
-                A Social Cartography of American Poverty, Geographic Determinism &amp; The Unbranded Heart
+              <div class="p-3 rounded-xl bg-steel-900/80 border border-white/5 text-center">
+                <div class="text-2xl font-bold font-mono text-fate-400">5</div>
+                <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400">Acts</div>
+              </div>
+              <div class="p-3 rounded-xl bg-steel-900/80 border border-white/5 text-center">
+                <div class="text-2xl font-bold font-mono text-fate-400">6</div>
+                <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400">Pillars</div>
+              </div>
+              <div class="p-3 rounded-xl bg-steel-900/80 border border-white/5 text-center">
+                <div class="text-2xl font-bold font-mono text-fate-400">74m</div>
+                <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400">Duration</div>
+              </div>
+            </div>
+
+            <!-- Streaming & Actions -->
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+              <a 
+                href="https://music.youtube.com/playlist?list=OLAK5uy_k2mdyly8AhgJTCAC0Nh9Zt6F_cJa6QsW0" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-mono font-bold transition-transform hover:scale-105 shadow-lg shadow-red-950/50"
+              >
+                <i aria-hidden="true" class="fa-brands fa-youtube"></i>
+                <span>YouTube Music</span>
+              </a>
+
+              <a 
+                href="https://music.apple.com/us/artist/the-shady-river-bard/1829561760" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-mono font-bold transition-transform hover:scale-105 border border-white/10"
+              >
+                <i aria-hidden="true" class="fa-brands fa-apple"></i>
+                <span>Apple Music</span>
+              </a>
+
+              <a 
+                href="#tracks-section" 
+                class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-fate-600 hover:bg-fate-500 text-white text-xs font-mono font-bold transition-transform hover:scale-105 shadow-lg shadow-fate-950/50"
+              >
+                <i aria-hidden="true" class="fa-solid fa-music"></i>
+                <span>Explore 17-Track Vault</span>
+              </a>
+
+              <a 
+                href="#essays-section" 
+                class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-steel-800 hover:bg-steel-700 text-slate-300 text-xs font-mono transition-colors border border-white/5"
+              >
+                <i aria-hidden="true" class="fa-solid fa-book-open"></i>
+                <span>The Cartography Essay</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ESSAYS SECTION: THE CARTOGRAPHY OF DESPAIR & THEMATIC FRAMEWORK -->
+    <section id="essays-section" class="py-16 border-b border-white/10 bg-steel-900/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        
+        <div class="text-center space-y-3 max-w-3xl mx-auto">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-fate-950/60 border border-fate-600/30 text-fate-400 font-mono text-[11px] uppercase tracking-wider">
+            <i aria-hidden="true" class="fa-solid fa-scroll"></i>
+            <span>Part 1: Album Concept &amp; Thematic Blueprint</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">
+            The Cartography of Despair
+          </h2>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            The philosophical overture and empirical framework behind <em>Five-Digit Fate</em>, analyzing how American geography was codified into an architecture of generational inequality.
+          </p>
+        </div>
+
+        <!-- Essay Accordion Container -->
+        <div class="space-y-6">
+          
+          <!-- Introduction Essay Card -->
+          <div class="p-6 sm:p-8 rounded-2xl bg-steel-950/80 border border-white/10 shadow-xl space-y-4">
+            <div class="flex items-center justify-between flex-wrap gap-4 pb-4 border-b border-white/10">
+              <div class="space-y-1">
+                <span class="text-xs font-mono uppercase text-fate-400 font-bold tracking-wider">Overture Essay</span>
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-white">IV. Introduction: The Cartography of Despair</h3>
+              </div>
+              <button 
+                id="toggle-intro-btn"
+                onclick="toggleEssay('intro')"
+                class="px-3.5 py-1.5 rounded-lg bg-steel-800 hover:bg-steel-750 text-slate-300 text-xs font-mono border border-white/10 flex items-center gap-2 transition-colors"
+                aria-expanded="false"
+                aria-controls="intro-essay-body"
+              >
+                <span id="intro-btn-text">Read Full Essay (15 Paragraphs)</span>
+                <i id="intro-btn-icon" aria-hidden="true" class="fa-solid fa-chevron-down text-fate-400 transition-transform"></i>
+              </button>
+            </div>
+
+            <!-- Preview Paragraphs -->
+            <div class="font-serif text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
+              <p class="text-fate-200/95 italic text-base sm:text-lg border-l-2 border-fate-500 pl-4 py-1">
+                "They say this is the land of free choice... a blank map you can draw yourself upon. But the ink was mixed a long time ago. The lines were drawn while you slept."
+              </p>
+              <p>
+                In modern America, an individual's zip code has become their brand—a five-digit number assigned before their first breath that determines life expectancy, income trajectory, and access to capital with greater statistical accuracy than test scores or talent.
               </p>
             </div>
 
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-body">
-              In modern America, your five-digit zip code is not merely an address—it has become your corporate brand identity, stamped at birth and seared into your prospects. Grounded in the empirical research of Raj Chetty’s <strong class="text-white">Opportunity Atlas</strong> (tracking 20M Americans across Census tracts), Anne Case &amp; Angus Deaton’s <strong class="text-white">Deaths of Despair</strong>, and Richard Rothstein’s <strong class="text-white">The Color of Law</strong>, this 17-track epic travels through five iconic landscapes: the cotton rows of the Mississippi Delta, the abandoned coal hollows of Appalachia, the redlined avenues of Chicago, the deindustrialized ruins of Detroit, and the speculative gentrification of Oakland.
-            </p>
+            <!-- Collapsible Body -->
+            <div id="intro-essay-body" class="hidden space-y-4 pt-4 border-t border-white/5 font-serif text-slate-300 text-sm sm:text-base leading-relaxed">
+              <p>The album is conceived as a five-act tragedy, a structure that will guide the listener from the music&#x27;s origins in the agricultural South, through the indelible act of &quot;branding&quot; in the industrial North, its devastating consequences, a moment of systemic reckoning, and, finally, toward a fragile but defiant act of resistance.</p>
+              <p>Act I: The Source will begin in the Mississippi Delta, establishing the socio-economic conditions of the post-slavery agricultural economy that gave birth to the Delta Blues, the foundational music of the Great Migration.</p>
+              <p>Act II: The Branding Iron will establish the sense of place and the environmental and historical forces of inherited circumstance that &quot;brand&quot; a child from birth in the industrial and extractive economies of Appalachia, Chicago, and Detroit.</p>
+              <p>Act III: The Hit Factory &amp; The Slow Collapse will explore the dual realities of peak industrial prosperity—epitomized by the cultural triumph of Motown—and the subsequent, devastating collapse of these communities through deindustrialization.</p>
+              <p>Act IV: Symptoms of the Brand will explore the lived reality of this branding—the narrowing of life&#x27;s paths, the coping mechanisms that emerge, and the social maladies described as &quot;deaths of despair,&quot; as well as the birth of new, post-industrial art forms like Techno.</p>
+              <p>Act V: The Unbranded Heart will pivot from pure tragedy to find moments of defiance, the strength of community, and the search for an identity that exists outside the confines of the assigned brand.</p>
+              <p>Musically, the album will embody a new genre designation: &quot;Geographic Folk-Blues.&quot; The signature narrative voice of The Shady River Bard will serve as the unifying thread, while the instrumentation and sonic palette will shift to reflect the unique &quot;brand&quot; of each location.</p>
+              <p>The Mississippi Delta Songs will be grounded in the raw, acoustic sound of Delta Blues, the origin point of the album&#x27;s musical journey.81</p>
+              <p>The Appalachian Songs will be rooted in raw, acoustic mountain folk, echoing the stark authenticity of historical field recordings.1 The sound will be characterized by clawhammer banjo, mournful fiddle, and unadorned acoustic guitar.</p>
+              <p>The Chicago Songs will be rendered in a gritty, electric urban blues style, reflecting the sonic transformation that occurred during the Great Migration, when acoustic Delta blues was amplified to be heard over the noise of the industrial city.2 This section will feature distorted harmonica, sparse and menacing drum machine patterns, and overdriven electric guitar.</p>
+              <p>The Detroit Songs will feature a dynamic range, from the polished, sophisticated pop-soul of the Motown Sound to the futuristic, mechanical pulse of Techno, reflecting the city&#x27;s arc from industrial powerhouse to post-industrial landscape.</p>
+              <p>The Oakland Songs will present a more complex blend of West Coast musical traditions. The sound will draw from the rhythmic, narrative cadence of early hip-hop and the smooth, melancholic undercurrents of Chicano Soul and Bay Area funk.5 This hybrid style will mirror a community grappling with cultural loss and displacement under a veneer of sleek, modern progress.</p>
+              <p>The ultimate artistic goal of Five-Digit Fate is to harness rigorous, data-driven research and deep regional authenticity to create an album that functions as both a vital social document and an intensely human story. It aims to make the abstract forces of economic policy and sociological trends feel personal, visceral, and undeniable, translating the cold calculus of statistics into the language of the heart.</p>
+            </div>
+          </div>
 
-            <!-- Pull Quote Box -->
-            <blockquote class="p-4 rounded-xl bg-steel-900/90 border-l-4 border-fate-500 text-xs sm:text-sm text-fate-100 font-serif italic shadow-inner">
-              "Before your first breath, a number was assigned. Not a name whispered by your mother, but a five-digit fate... It's the ceiling they build just above your head, and the floor that's designed to fall away."
-              <footer class="mt-2 text-[11px] font-mono text-fate-400 not-italic uppercase tracking-wider font-semibold">
-                — Track 01: Prologue (A National Static)
-              </footer>
-            </blockquote>
-
-            <!-- Quick Metrics Grid -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-              <div class="p-3 rounded-xl bg-steel-850/80 border border-white/5">
-                <div class="text-[10px] font-mono uppercase text-slate-400">Total Songs</div>
-                <div class="text-lg font-mono font-bold text-white mt-0.5">17 Tracks</div>
-              </div>
-              <div class="p-3 rounded-xl bg-steel-850/80 border border-white/5">
-                <div class="text-[10px] font-mono uppercase text-slate-400">Narrative Arc</div>
-                <div class="text-lg font-mono font-bold text-fate-400 mt-0.5">5 Acts</div>
-              </div>
-              <div class="p-3 rounded-xl bg-steel-850/80 border border-white/5">
-                <div class="text-[10px] font-mono uppercase text-slate-400">Research Pillars</div>
-                <div class="text-lg font-mono font-bold text-atlas-400 mt-0.5">6 Case Studies</div>
-              </div>
-              <div class="p-3 rounded-xl bg-steel-850/80 border border-white/5">
-                <div class="text-[10px] font-mono uppercase text-slate-400">Full Runtime</div>
-                <div class="text-lg font-mono font-bold text-white mt-0.5">74 Min</div>
+          <!-- Thematic Facets Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Facet 1 -->
+            <div class="p-6 rounded-2xl bg-steel-950/70 border border-white/10 space-y-3">
+              <div class="text-xs font-mono text-fate-400 font-bold uppercase tracking-wider">Research Facet 1</div>
+              <h3 class="font-display text-lg font-bold text-white">5.1 Geographic Determinism &amp; The Opportunity Atlas</h3>
+              <div class="font-serif text-xs sm:text-sm text-slate-300 leading-relaxed space-y-2">
+                <p>The central premise of Five-Digit Fate—that geography is destiny in modern America—is not merely a poetic conceit but a conclusion supported by a vast body of empirical evidence. The foundational research for this theme comes from the work of economist Raj Chetty and his colleagues at Opportunity Insights, whose project, The Opportunity Atlas, uses anonymized longitudinal data from 20 million Americans to map the roots of affluence and poverty back to the specific neighborhoods where people grew up.8 This research provides the academic backbone for the album&#x27;s narrative.</p>
+                <p>The primary cause of this geographic determinism is the profoundly unequal distribution of opportunity at a hyper-local level. This inequality is not a random occurrence but the result of historical policies and self-perpetuating local conditions that create durable pockets of advantage and disadvantage.11 The data reveals that a child&#x27;s future income, their likelihood of incarceration, and other critical life outcomes are more powerfully predicted by their childhood Census tract than by their parents&#x27; income level.11 The variation is stark: children from families at the 25th percentile of the income distribution can have dramatically different adult outcomes simply by virtue of growing up a few miles apart, demonstrating that neighborhoods matter at an incredibly granular level.15</p>
+                <p>Crucially, this research establishes a causal effect of place. This is not simply a matter of different types of families sorting themselves into different areas. Studies of families who move, including the randomized Moving to Opportunity experiment, show that relocating to a higher-opportunity neighborhood earlier in childhood directly and significantly increases a child&#x27;s income in adulthood.16 This finding confirms that the &quot;brand&quot; of a place is not a passive label but an active force that is imposed upon its residents, shaping their development and life trajectory.</p>
+                <p>Counter-intuitively, the factors traditionally associated with economic health, such as local job growth, are only weakly correlated with upward mobility for the children who grow up in those areas.9 Cities like Atlanta and Charlotte, for example, exhibit high rates of job and wage growth but have some of the lowest rates of upward mobility in the country.12 This is because their economic growth is often fueled by attracting high-skilled workers from outside the region, rather than by creating pathways for existing low-income residents to rise.16 This insight is critical for the album&#x27;s narrative: it exposes the promise of &quot;economic recovery&quot; as a frequent mirage for those branded by a low-opportunity zip code.</p>
               </div>
             </div>
 
-            <!-- Jump Anchors -->
-            <div class="flex flex-wrap items-center gap-3 pt-2">
-              <a href="#tracks-section" class="px-5 py-2.5 rounded-xl bg-fate-600 hover:bg-fate-500 text-white font-mono text-xs font-bold transition-colors shadow-lg flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-orange-400">
-                <i aria-hidden="true" class="fa-solid fa-list-ol"></i>
-                <span>Explore All 17 Lyrics Drawers</span>
-              </a>
-              <a href="#pillars-section" class="px-4 py-2.5 rounded-xl bg-steel-850 hover:bg-steel-800 text-slate-200 border border-white/10 font-mono text-xs font-semibold transition-colors flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-orange-400">
-                <i aria-hidden="true" class="fa-solid fa-map-location-dot text-fate-400"></i>
-                <span>Opportunity Atlas Data Audit</span>
-              </a>
+            <!-- Facet 2 -->
+            <div class="p-6 rounded-2xl bg-steel-950/70 border border-white/10 space-y-3">
+              <div class="text-xs font-mono text-fate-400 font-bold uppercase tracking-wider">Research Facet 2</div>
+              <h3 class="font-display text-lg font-bold text-white">5.2 Regional Portraits of Poverty &amp; The Drug Epidemic</h3>
+              <div class="font-serif text-xs sm:text-sm text-slate-300 leading-relaxed space-y-2">
+                <p>While The Opportunity Atlas provides the &quot;what&quot; and &quot;where&quot; of geographic determinism, the research of economists Anne Case and Angus Deaton provides the psychological &quot;why.&quot; Their work on &quot;deaths of despair&quot; offers a unifying theory for the social and emotional consequences of the economic collapse detailed in the album&#x27;s regional portraits.</p>
+                <p>The central argument of their book, Deaths of Despair and the Future of Capitalism, is that a long-term, cumulative deterioration of economic opportunity, social standing, and community life for working-class Americans has precipitated a profound crisis of despair.24 This crisis is most acute among non-Hispanic whites without a four-year college degree, a demographic that has seen a shocking reversal of historical mortality trends.26 This is not simply a story about poverty or a single economic downturn; it is about what Case and Deaton call &quot;the destruction of a way of life&quot;.29 This destruction encompasses decades of declining real wages, the disappearance of stable blue-collar jobs, the weakening of unions, and the erosion of core social institutions like family, church, and community.24</p>
+                <p>This deep-seated despair manifests in a measurable and tragic way: a dramatic increase in mortality from suicide, drug overdoses, and alcoholic liver disease.24 These three causes, which Case and Deaton group together as &quot;deaths of despair,&quot; have risen so sharply that they contributed to a decline in overall U.S. life expectancy for three consecutive years, a grim milestone unseen since the 1918 flu pandemic and not mirrored in any other wealthy nation.25 The mortality gap between Americans with and without a college degree has widened into a chasm, with those lacking a degree now literally dying from pain and hopelessness.25 Case and Deaton tie this crisis directly to systemic failures, particularly a &quot;rapacious health-care sector&quot; that profits from illness and the weakening of labor&#x27;s power against that of corporations, framing it as a fundamental betrayal of the American dream.25</p>
+                <p>This national crisis of despair takes on unique forms in the specific regions explored in the album, which can be understood as representing distinct models of American economic violence.</p>
+              </div>
             </div>
 
+            <!-- Facet 3 -->
+            <div class="p-6 rounded-2xl bg-steel-950/70 border border-white/10 space-y-3">
+              <div class="text-xs font-mono text-fate-400 font-bold uppercase tracking-wider">Research Facet 3</div>
+              <h3 class="font-display text-lg font-bold text-white">5.3 The "Branding" Metaphor</h3>
+              <div class="font-serif text-xs sm:text-sm text-slate-300 leading-relaxed space-y-2">
+                <p>The album&#x27;s unifying lyrical and conceptual device is the metaphor of &quot;branding.&quot; This metaphor operates on two distinct levels, creating a powerful tension between the abstract, systemic nature of modern poverty and its raw, physical consequences. It is the bridge that connects the impersonal data of Chetty with the personal despair documented by Case and Deaton.</p>
+                <p>The first manifestation of this metaphor is the appropriation of the language of corporate branding. The album&#x27;s lyrics will deliberately co-opt the sterile, dehumanizing jargon of marketing, finance, and management consulting and apply it to human lives trapped in poverty. Words and phrases like &quot;brand identity,&quot; &quot;consumer profile,&quot; &quot;market positioning,&quot; &quot;lifestyle,&quot; &quot;value proposition,&quot; and &quot;deliverable&quot; will be used to describe people and their communities.66 In consumer culture, brands are carefully constructed symbols used to signal identity, values, and status.71 In the world of</p>
+                <p>Five-Digit Fate, the &quot;zip code brand&quot; is an identity that is not chosen but imposed, one that signals disadvantage and a lack of value to the wider market. This lyrical strategy creates a jarring and deeply unsettling contrast between the cold, clinical language of systems and the warm-blooded, messy reality of human suffering.</p>
+                <p>The second manifestation is the visceral, physical imagery of cattle branding. This provides the raw, historical counterpoint to the abstract corporate language. The practice of branding livestock with a hot iron is ancient, a permanent and painful marking of ownership and a deterrent to theft.75 This powerful image—the searing iron, the smoke, the indelible scar, the declaration of property—serves as the album&#x27;s core physical metaphor. It visualizes how the system of geographic determinism marks individuals from birth, declaring them the property of their circumstances and limiting their freedom of movement.</p>
+              </div>
+            </div>
+
+            <!-- Synthesis -->
+            <div class="p-6 rounded-2xl bg-steel-950/70 border border-fate-600/30 space-y-3">
+              <div class="text-xs font-mono text-fate-400 font-bold uppercase tracking-wider">Thematic Synthesis</div>
+              <h3 class="font-display text-lg font-bold text-white">The Mechanics of the "Brand"</h3>
+              <div class="font-serif text-xs sm:text-sm text-slate-300 leading-relaxed space-y-2">
+                <p>The following table provides a concise synthesis of the album&#x27;s core thematic analysis, connecting the abstract concept of economic violence to the specific regional narratives and their cultural and musical responses. This serves as a foundational reference for the songwriting process, ensuring each track is grounded in the album&#x27;s overarching thesis.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Song Roadmap Table (Table 1) -->
+          <div class="p-6 sm:p-8 rounded-2xl bg-steel-950/80 border border-white/10 space-y-4">
+            <div class="space-y-1">
+              <span class="text-xs font-mono uppercase text-fate-400 font-bold tracking-wider">Curated Trajectory</span>
+              <h3 class="font-display text-xl font-bold text-white">VI. The Song Roadmap: A Five-Act Tragedy</h3>
+              <p class="text-xs text-slate-400 font-mono">17 tracks tracing the geographic, economic, and musical evolution across American history.</p>
+            </div>
+
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs font-mono border-collapse">
+                <thead>
+                  <tr class="border-b border-white/15 text-fate-400 bg-steel-900/50">
+                    <th class="py-3 px-3">Act</th>
+                    <th class="py-3 px-2">#</th>
+                    <th class="py-3 px-3">Title</th>
+                    <th class="py-3 px-4">Concept</th>
+                    <th class="py-3 px-3">Musical Style</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-white/5 text-slate-300">
+                  <tr class="hover:bg-steel-900/30 transition-colors">
+                    <td class="py-2.5 px-3 text-fate-300 font-semibold">I: The Source</td>
+                    <td class="py-2.5 px-2 text-slate-400">01</td>
+                    <td class="py-2.5 px-3 text-white font-bold">Prologue (A National Static)</td>
+                    <td class="py-2.5 px-4 font-sans text-xs text-slate-300">A spoken-word overture set to a sound collage. The track opens with a blend of regional sounds: a Delta field holler, a coal train, a city siren, a protest chant.78 Over this, a narrator (The Bard) delivers a poetic manifesto introducing the album&#x27;s core concept of &quot;geographic determinism&quot; and the &quot;zip code as brand&quot; metaphor. The track ends with the sharp, percussive sound of a branding iron.</td>
+                    <td class="py-2.5 px-3 text-slate-400">Spoken Word / Sound Collage</td>
+                  </tr>
+                  <tr class="hover:bg-steel-900/30 transition-colors">
+                    <td class="py-2.5 px-3 text-fate-300 font-semibold"></td>
+                    <td class="py-2.5 px-2 text-slate-400">02</td>
+                    <td class="py-2.5 px-3 text-white font-bold">Delta Born</td>
+                    <td class="py-2.5 px-4 font-sans text-xs text-slate-300">(Mississippi) A raw, acoustic blues number that sets the scene in the Mississippi Delta. The lyrics speak of cotton fields, the legacy of slavery, and the birth of a new sound in the juke joints—a music of sorrow and hope that will fuel a migration.</td>
+                    <td class="py-2.5 px-3 text-slate-400">Acoustic Delta Blues</td>
+                  </tr>
+                  <tr class="hover:bg-steel-900/30 transition-colors">
+                    <td class="py-2.5 px-3 text-fate-300 font-semibold"></td>
+                    <td class="py-2.5 px-2 text-slate-400">03</td>
+                    <td class="py-2.5 px-3 text-white font-bold">Branded at Birth</td>
+                    <td class="py-2.5 px-4 font-sans text-xs text-slate-300">The core thesis. A child is born, and their fate is sealed by their address. Lyrics juxtapose the innocence of birth with the cold, hard language of cattle branding and corporate &quot;consumer profiles.&quot; &quot;Branded like a steer on the day I was born.&quot;</td>
+                    <td class="py-2.5 px-3 text-slate-400">Gritty, Raw Acoustic Folk</td>
+                  </tr>
+                  <tr class="hover:bg-steel-900/30 transition-colors">
+                    <td class="py-2.5 px-3 text-fate-300 font-semibold">II: The Branding Iron</td>
+                    <td class="py-2.5 px-2 text-slate-400">04</td>
+                    <td class="py-2.5 px-3 text-white font-bold">Company Town Ghost</td>
+                    <td class="py-2.5 px-4 font-sans text-xs text-slate-300">(Appalachia) A character study of an old man in a former coal town. He remembers the paternalistic control of the company, the scrip, the pride, and now sees only decay and the ghosts of a life that was built and then abandoned by outside forces.</td>
+                    <td class="py-2.5 px-3 text-slate-400">Mournful Appalachian Folk (Banjo/Fiddle)</td>
+                  </tr>
+                  <tr class="hover:bg-steel-900/30 transition-colors">
+                    <td class="py-2.5 px-3 text-fate-300 font-semibold"></td>
+                    <td class="py-2.5 px-2 text-slate-400">05</td>
+                    <td class="py-2.5 px-3 text-white font-bold">Red Line Lullaby</td>
+                    <td class="py-2.5 px-4 font-sans text-xs text-slate-300">(Chicago) A mother sings to her child, but the lullaby is a warning about the invisible lines of the city. It tells the story of redlining not as a policy, but as a curse passed down through generations, defining where you can and cannot live, dream, or be safe.</td>
+                    <td class="py-2.5 px-3 text-slate-400">Electric Chicago Blues (Sparse, Haunting)</td>
+                  </tr>
+                  <tr class="hover:bg-steel-900/30 transition-colors">
+                    <td class="py-2.5 px-3 text-fate-300 font-semibold"></td>
+                    <td class="py-2.5 px-2 text-slate-400">06</td>
+                    <td class="py-2.5 px-3 text-white font-bold">The Five-Dollar Day</td>
+                    <td class="py-2.5 px-4 font-sans text-xs text-slate-300">(Detroit) A hopeful song about the Great Migration north to Detroit, drawn by Henry Ford&#x27;s promise of a high wage. The music reflects the transition from southern blues to a more optimistic, urban R&amp;B sound.</td>
+                    <td class="py-2.5 px-3 text-slate-400">Early R&amp;B / Jump Blues</td>
+                  </tr>
+                  <tr class="hover:bg-steel-900/30 transition-colors">
+                    <td class="py-2.5 px-3 text-fate-300 font-semibold">III: The Hit Factory &amp; The Slow Collapse</td>
+                    <td class="py-2.5 px-2 text-slate-400">07</td>
+                    <td class="py-2.5 px-3 text-white font-bold">Hitsville, U.S.A.</td>
+                    <td class="py-2.5 px-4 font-sans text-xs text-slate-300">(Detroit) A song that captures the vibrant, optimistic energy of Motown&#x27;s peak. The music is a polished, upbeat soul number, but the lyrics contain a hint of the darkness to come, contrasting the &quot;Sound of Young America&quot; with the growing unrest outside the studio walls.</td>
+                    <td class="py-2.5 px-3 text-slate-400">Motown Pop-Soul</td>
+                  </tr>
+                  <tr class="hover:bg-steel-900/30 transition-colors">
+                    <td class="py-2.5 px-3 text-fate-300 font-semibold"></td>
+                    <td class="py-2.5 px-2 text-slate-400">08</td>
+                    <td class="py-2.5 px-3 text-white font-bold">The Long Slow Collapse</td>
+                    <td class="py-2.5 px-4 font-sans text-xs text-slate-300">A narrative about the cumulative effect of despair. It follows a character through job loss, the loss of community pillars (church, union hall), and the slow erosion of purpose, linking Case and Deaton&#x27;s academic findings to a personal story.</td>
+                    <td class="py-2.5 px-3 text-slate-400">Contemplative Country Blues</td>
+                  </tr>
+                  <tr class="hover:bg-steel-900/30 transition-colors">
+                    <td class="py-2.5 px-3 text-fate-300 font-semibold"></td>
+                    <td class="py-2.5 px-2 text-slate-400">09</td>
+                    <td class="py-2.5 px-3 text-white font-bold">The World Before the Mill Went Down</td>
+                    <td class="py-2.5 px-4 font-sans text-xs text-slate-300">An elder character looks at the fractured present and remembers a time of stability and community, even within a flawed system. A song of nostalgia, but also a document of the social capital that has been destroyed.</td>
+                    <td class="py-2.5 px-3 text-slate-400">Classic, Finger-picked Country Blues</td>
+                  </tr>
+                  <tr class="hover:bg-steel-900/30 transition-colors">
+                    <td class="py-2.5 px-3 text-fate-300 font-semibold">IV: Symptoms of the Brand</td>
+                    <td class="py-2.5 px-2 text-slate-400">10</td>
+                    <td class="py-2.5 px-3 text-white font-bold">Hillbilly Heroin</td>
+                    <td class="py-2.5 px-4 font-sans text-xs text-slate-300">(Appalachia) A first-person account of descending into opioid addiction. Starts with a legitimate workplace injury in the mine, a prescription, and then the slide into dependency as a way to numb both physical and economic pain. Raw and personal.</td>
+                    <td class="py-2.5 px-3 text-slate-400">Raw, Pained Acoustic Ballad</td>
+                  </tr>
+                  <tr class="hover:bg-steel-900/30 transition-colors">
+                    <td class="py-2.5 px-3 text-fate-300 font-semibold"></td>
+                    <td class="py-2.5 px-2 text-slate-400">11</td>
+                    <td class="py-2.5 px-3 text-white font-bold">The Corner Economy</td>
+                    <td class="py-2.5 px-4 font-sans text-xs text-slate-300">(Chicago) A young man weighs his options: a dead-end, low-wage job versus the structure and economics of a local gang clique. The lyrics are a cold calculation of risk and reward in a place with no good choices.</td>
+                    <td class="py-2.5 px-3 text-slate-400">Rhythmic, Spoken-Word over a Gritty Blues/Hip-Hop Beat</td>
+                  </tr>
+                  <tr class="hover:bg-steel-900/30 transition-colors">
+                    <td class="py-2.5 px-3 text-fate-300 font-semibold"></td>
+                    <td class="py-2.5 px-2 text-slate-400">12</td>
+                    <td class="py-2.5 px-3 text-white font-bold">The Last Picture Show in Oakland</td>
+                    <td class="py-2.5 px-4 font-sans text-xs text-slate-300">(Oakland) A story about cultural erasure. The protagonist watches as their neighborhood landmarks—the local cinema, the record shop, the family restaurant—are replaced by sterile condos and juice bars. A lament for a lost sense of place and belonging.</td>
+                    <td class="py-2.5 px-3 text-slate-400">Melancholic Chicano Soul / Bay Area Funk</td>
+                  </tr>
+                  <tr class="hover:bg-steel-900/30 transition-colors">
+                    <td class="py-2.5 px-3 text-fate-300 font-semibold"></td>
+                    <td class="py-2.5 px-2 text-slate-400">13</td>
+                    <td class="py-2.5 px-3 text-white font-bold">Alleys of Your Mind</td>
+                    <td class="py-2.5 px-4 font-sans text-xs text-slate-300">(Detroit) A song capturing the birth of Techno. The sound is electronic, mechanical, and futuristic, reflecting the post-industrial landscape. The lyrics speak of finding a new identity and creating a future among the ruins of the &quot;Motor City.&quot;</td>
+                    <td class="py-2.5 px-3 text-slate-400">Detroit Techno / Electro-Funk</td>
+                  </tr>
+                  <tr class="hover:bg-steel-900/30 transition-colors">
+                    <td class="py-2.5 px-3 text-fate-300 font-semibold">V: The Unbranded Heart</td>
+                    <td class="py-2.5 px-2 text-slate-400">14</td>
+                    <td class="py-2.5 px-3 text-white font-bold">The Opportunity Atlas</td>
+                    <td class="py-2.5 px-4 font-sans text-xs text-slate-300">A direct address to the data. The singer traces their finger on Chetty&#x27;s map, seeing their own dead-end street colored deep red. The lyrics are a mix of anger and resignation at seeing their life path laid out in statistics.</td>
+                    <td class="py-2.5 px-3 text-slate-400">Driving, Industrial-Tinged Folk Rock</td>
+                  </tr>
+                  <tr class="hover:bg-steel-900/30 transition-colors">
+                    <td class="py-2.5 px-3 text-fate-300 font-semibold"></td>
+                    <td class="py-2.5 px-2 text-slate-400">15</td>
+                    <td class="py-2.5 px-3 text-white font-bold">Priced Out</td>
+                    <td class="py-2.5 px-4 font-sans text-xs text-slate-300">(Oakland) The moment of displacement. A family packs up their home of generations, forced out by a rent hike they can&#x27;t meet. The lyrics focus on the small, heartbreaking details of what is being lost.</td>
+                    <td class="py-2.5 px-3 text-slate-400">Stripped-Down, Emotional Acoustic Folk</td>
+                  </tr>
+                  <tr class="hover:bg-steel-900/30 transition-colors">
+                    <td class="py-2.5 px-3 text-fate-300 font-semibold"></td>
+                    <td class="py-2.5 px-2 text-slate-400">16</td>
+                    <td class="py-2.5 px-3 text-white font-bold">The Music They Couldn&#x27;t Erase</td>
+                    <td class="py-2.5 px-4 font-sans text-xs text-slate-300">A defiant anthem. The protagonist finds strength not in escaping their zip code, but in embracing the authentic culture and music of their people—the &quot;counter-brand.&quot; It&#x27;s a recognition that while the system can brand your circumstances, it can&#x27;t brand your soul.</td>
+                    <td class="py-2.5 px-3 text-slate-400">A powerful, building anthem that fuses all the regional styles (Delta Blues, Folk, Electric Blues, Soul, Techno) into a unified sound.</td>
+                  </tr>
+                  <tr class="hover:bg-steel-900/30 transition-colors">
+                    <td class="py-2.5 px-3 text-fate-300 font-semibold"></td>
+                    <td class="py-2.5 px-2 text-slate-400">17</td>
+                    <td class="py-2.5 px-3 text-white font-bold">Five-Digit Fate (Reprise) / A Human Being</td>
+                    <td class="py-2.5 px-4 font-sans text-xs text-slate-300">The album closes by returning to the central theme, but with a twist. The lyrics reject the &quot;brand&quot; and the number, ending with a simple, powerful declaration of humanity against the forces of abstraction. &quot;I ain&#x27;t your data point / I ain&#x27;t your bottom line / I&#x27;m not your five-digit fate / I&#x27;m a human being, and I&#x27;m alive.&quot;</td>
+                    <td class="py-2.5 px-3 text-slate-400">Sparse, a cappella or single instrument, ending with raw, defiant vocals.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
         </div>
@@ -320,587 +534,1053 @@
       </div>
     </section>
 
-    <!-- SECTION: 5-ACT NARRATIVE ARCHITECTURE -->
-    <section class="py-12 md:py-16 bg-steel-900 border-b border-white/10">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    <!-- 5-ACT NARRATIVE ARC SECTION -->
+    <section id="acts-section" class="py-16 border-b border-white/10 bg-steel-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
-        <div class="text-center max-w-3xl mx-auto space-y-2">
-          <span class="text-xs font-mono uppercase tracking-widest text-fate-400 font-bold">Structural Blueprint</span>
-          <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">
-            A Five-Act Tragedy &amp; Defiant Rebirth
+        <div class="text-center space-y-3 max-w-3xl mx-auto">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-fate-950/60 border border-fate-600/30 text-fate-400 font-mono text-[11px] uppercase tracking-wider">
+            <i aria-hidden="true" class="fa-solid fa-timeline"></i>
+            <span>Architectural Progression</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">
+            The Five-Act Tragedy
           </h2>
-          <p class="text-xs sm:text-sm text-slate-400 font-body">
-            Five-Digit Fate traces the arc of American economic sorting from agricultural subjugation through industrial collapse, urban displacement, and the ultimate triumph of the unbranded human heart.
+          <p class="text-slate-300 text-sm leading-relaxed">
+            From the cotton fields of the Mississippi Delta to the techno warehouses of Detroit, follow the chronological and geographical narrative of the brand across 5 distinct movements.
           </p>
         </div>
 
-        <!-- 5-Act Stepper Selector -->
-        <div id="act-buttons-container" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 pt-2" role="tablist" aria-label="Five Acts Navigation">
-          <!-- Populated by JavaScript -->
-        </div>
-
-        <!-- Dynamic Act Content Display -->
-        <div id="act-content-display" class="p-6 rounded-2xl glass-panel border border-fate-600/30 transition-all shadow-xl" role="tabpanel" aria-live="polite">
-          <!-- Populated by JavaScript -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl bg-steel-900/70 border border-white/10 flex flex-col justify-between space-y-4 hover:border-fate-500/40 transition-colors">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between text-xs font-mono">
+                <span class="text-fate-400 font-bold uppercase tracking-wider">Act I: The Source</span>
+                <span class="text-slate-500">Tracks 01–03</span>
+              </div>
+              <h3 class="font-display text-lg font-bold text-white">The Cradle of the Blues &amp; The Brand Thesis</h3>
+              <p class="text-xs text-slate-300 font-serif leading-relaxed">
+                Establishes the foundational origin of geographic inequality in the post-slavery agricultural economy of the Mississippi Delta, introducing the central thesis that a zip code acts as a modern cattle brand stamped at birth.
+              </p>
+            </div>
+            
+            <div class="pt-3 border-t border-white/5 space-y-2">
+              <div class="text-[10px] font-mono text-slate-500 uppercase tracking-wider">Included Tracks:</div>
+              <div class="flex flex-wrap gap-1.5">
+                <button onclick="filterByAct(1); scrollToTracks();" class="px-2 py-1 rounded bg-steel-900 hover:bg-fate-600 text-[11px] font-mono text-slate-300 hover:text-white transition-colors border border-white/5">Track 01</button><button onclick="filterByAct(1); scrollToTracks();" class="px-2 py-1 rounded bg-steel-900 hover:bg-fate-600 text-[11px] font-mono text-slate-300 hover:text-white transition-colors border border-white/5">Track 02</button><button onclick="filterByAct(1); scrollToTracks();" class="px-2 py-1 rounded bg-steel-900 hover:bg-fate-600 text-[11px] font-mono text-slate-300 hover:text-white transition-colors border border-white/5">Track 03</button>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 rounded-2xl bg-steel-900/70 border border-white/10 flex flex-col justify-between space-y-4 hover:border-fate-500/40 transition-colors">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between text-xs font-mono">
+                <span class="text-fate-400 font-bold uppercase tracking-wider">Act II: The Branding Iron</span>
+                <span class="text-slate-500">Tracks 04–06</span>
+              </div>
+              <h3 class="font-display text-lg font-bold text-white">Extraction, Redlining &amp; The Industrial Promise</h3>
+              <p class="text-xs text-slate-300 font-serif leading-relaxed">
+                Travels through the extractive monopsony of Appalachian coal camps, the segregationist redlining maps of Chicago&#x27;s South Side, and the hopeful Great Migration north toward Henry Ford&#x27;s five-dollar day.
+              </p>
+            </div>
+            
+            <div class="pt-3 border-t border-white/5 space-y-2">
+              <div class="text-[10px] font-mono text-slate-500 uppercase tracking-wider">Included Tracks:</div>
+              <div class="flex flex-wrap gap-1.5">
+                <button onclick="filterByAct(2); scrollToTracks();" class="px-2 py-1 rounded bg-steel-900 hover:bg-fate-600 text-[11px] font-mono text-slate-300 hover:text-white transition-colors border border-white/5">Track 04</button><button onclick="filterByAct(2); scrollToTracks();" class="px-2 py-1 rounded bg-steel-900 hover:bg-fate-600 text-[11px] font-mono text-slate-300 hover:text-white transition-colors border border-white/5">Track 05</button><button onclick="filterByAct(2); scrollToTracks();" class="px-2 py-1 rounded bg-steel-900 hover:bg-fate-600 text-[11px] font-mono text-slate-300 hover:text-white transition-colors border border-white/5">Track 06</button>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 rounded-2xl bg-steel-900/70 border border-white/10 flex flex-col justify-between space-y-4 hover:border-fate-500/40 transition-colors">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between text-xs font-mono">
+                <span class="text-fate-400 font-bold uppercase tracking-wider">Act III: The Hit Factory &amp; The Slow Collapse</span>
+                <span class="text-slate-500">Tracks 07–09</span>
+              </div>
+              <h3 class="font-display text-lg font-bold text-white">Motown Optimism &amp; The Rust Belt Turning Point</h3>
+              <p class="text-xs text-slate-300 font-serif leading-relaxed">
+                Celebrates the peak cultural triumph of Hitsville, U.S.A. on West Grand Boulevard, before witnessing the devastating deindustrialization, factory shutdowns, and destruction of working-class social capital.
+              </p>
+            </div>
+            
+            <div class="pt-3 border-t border-white/5 space-y-2">
+              <div class="text-[10px] font-mono text-slate-500 uppercase tracking-wider">Included Tracks:</div>
+              <div class="flex flex-wrap gap-1.5">
+                <button onclick="filterByAct(3); scrollToTracks();" class="px-2 py-1 rounded bg-steel-900 hover:bg-fate-600 text-[11px] font-mono text-slate-300 hover:text-white transition-colors border border-white/5">Track 07</button><button onclick="filterByAct(3); scrollToTracks();" class="px-2 py-1 rounded bg-steel-900 hover:bg-fate-600 text-[11px] font-mono text-slate-300 hover:text-white transition-colors border border-white/5">Track 08</button><button onclick="filterByAct(3); scrollToTracks();" class="px-2 py-1 rounded bg-steel-900 hover:bg-fate-600 text-[11px] font-mono text-slate-300 hover:text-white transition-colors border border-white/5">Track 09</button>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 rounded-2xl bg-steel-900/70 border border-white/10 flex flex-col justify-between space-y-4 hover:border-fate-500/40 transition-colors">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between text-xs font-mono">
+                <span class="text-fate-400 font-bold uppercase tracking-wider">Act IV: Symptoms of the Brand</span>
+                <span class="text-slate-500">Tracks 10–13</span>
+              </div>
+              <h3 class="font-display text-lg font-bold text-white">Despair, Survival &amp; Post-Industrial Rebirth</h3>
+              <p class="text-xs text-slate-300 font-serif leading-relaxed">
+                Explores the lived pathologies of systemic abandonment: the opioid epidemic in coal country, the razor-thin calculations of the corner economy, gentrification in Oakland, and the emergence of Detroit Techno from factory ashes.
+              </p>
+            </div>
+            
+            <div class="pt-3 border-t border-white/5 space-y-2">
+              <div class="text-[10px] font-mono text-slate-500 uppercase tracking-wider">Included Tracks:</div>
+              <div class="flex flex-wrap gap-1.5">
+                <button onclick="filterByAct(4); scrollToTracks();" class="px-2 py-1 rounded bg-steel-900 hover:bg-fate-600 text-[11px] font-mono text-slate-300 hover:text-white transition-colors border border-white/5">Track 10</button><button onclick="filterByAct(4); scrollToTracks();" class="px-2 py-1 rounded bg-steel-900 hover:bg-fate-600 text-[11px] font-mono text-slate-300 hover:text-white transition-colors border border-white/5">Track 11</button><button onclick="filterByAct(4); scrollToTracks();" class="px-2 py-1 rounded bg-steel-900 hover:bg-fate-600 text-[11px] font-mono text-slate-300 hover:text-white transition-colors border border-white/5">Track 12</button><button onclick="filterByAct(4); scrollToTracks();" class="px-2 py-1 rounded bg-steel-900 hover:bg-fate-600 text-[11px] font-mono text-slate-300 hover:text-white transition-colors border border-white/5">Track 13</button>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 rounded-2xl bg-steel-900/70 border border-white/10 flex flex-col justify-between space-y-4 hover:border-fate-500/40 transition-colors">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between text-xs font-mono">
+                <span class="text-fate-400 font-bold uppercase tracking-wider">Act V: The Unbranded Heart</span>
+                <span class="text-slate-500">Tracks 14–17</span>
+              </div>
+              <h3 class="font-display text-lg font-bold text-white">Data Reckoning, Displacement &amp; Spiritual Defiance</h3>
+              <p class="text-xs text-slate-300 font-serif leading-relaxed">
+                A direct confrontation with Raj Chetty&#x27;s redlined Opportunity Atlas, the heartbreak of eviction in priced-out cities, and an anthemic declaration of human sovereignty: while systems brand our circumstances, they can never brand our souls.
+              </p>
+            </div>
+            
+            <div class="pt-3 border-t border-white/5 space-y-2">
+              <div class="text-[10px] font-mono text-slate-500 uppercase tracking-wider">Included Tracks:</div>
+              <div class="flex flex-wrap gap-1.5">
+                <button onclick="filterByAct(5); scrollToTracks();" class="px-2 py-1 rounded bg-steel-900 hover:bg-fate-600 text-[11px] font-mono text-slate-300 hover:text-white transition-colors border border-white/5">Track 14</button><button onclick="filterByAct(5); scrollToTracks();" class="px-2 py-1 rounded bg-steel-900 hover:bg-fate-600 text-[11px] font-mono text-slate-300 hover:text-white transition-colors border border-white/5">Track 15</button><button onclick="filterByAct(5); scrollToTracks();" class="px-2 py-1 rounded bg-steel-900 hover:bg-fate-600 text-[11px] font-mono text-slate-300 hover:text-white transition-colors border border-white/5">Track 16</button><button onclick="filterByAct(5); scrollToTracks();" class="px-2 py-1 rounded bg-steel-900 hover:bg-fate-600 text-[11px] font-mono text-slate-300 hover:text-white transition-colors border border-white/5">Track 17</button>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
     </section>
 
-    <!-- SECTION: 6 SYSTEMIC PILLARS OF GEOGRAPHIC DETERMINISM -->
-    <section id="pillars-section" class="py-12 md:py-20 bg-steel-950 border-b border-white/10">
+    <!-- 6 SYSTEMIC PILLARS SECTION -->
+    <section id="pillars-section" class="py-16 border-b border-white/10 bg-steel-900/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        
+        <div class="text-center space-y-3 max-w-3xl mx-auto">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-fate-950/60 border border-fate-600/30 text-fate-400 font-mono text-[11px] uppercase tracking-wider">
+            <i aria-hidden="true" class="fa-solid fa-scale-balanced"></i>
+            <span>Empirical Sociological Audit</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">
+            The 6 Systemic Pillars
+          </h2>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Deconstructing the economic violence, imposed caste brand, and authentic cultural counter-brands across the album's regional case studies.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl bg-steel-950/80 border border-white/10 space-y-4 hover:border-fate-500/50 transition-colors flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-xs font-mono">
+                <span class="text-fate-400 font-bold uppercase tracking-wider">Pillar 01</span>
+                <span class="text-slate-500">National Empirical Architecture</span>
+              </div>
+              <h3 class="font-display text-lg font-bold text-white leading-snug">Geographic Determinism &amp; The Opportunity Atlas</h3>
+              <p class="text-xs text-fate-300 font-mono">Raj Chetty &amp; Opportunity Insights (Harvard University)</p>
+              <p class="text-xs text-slate-300 leading-relaxed font-body">
+                Tracking longitudinal data for over 20 million Americans, Chetty&#x27;s research proves that neighborhoods directly cause changes in life outcomes. Moving during childhood produces compounding dividends, exposing &#x27;economic growth&#x27; that imports outside labor as a mirage for local youth.
+              </p>
+            </div>
+
+            <div class="pt-3 border-t border-white/10 space-y-2 text-[11px] font-mono">
+              <div class="p-2.5 rounded-lg bg-steel-900/90 border border-white/5 space-y-1">
+                <div class="text-atlas-400 font-semibold uppercase tracking-wider text-[10px]">Economic Violence:</div>
+                <div class="text-slate-300">Systemic Sorting &amp; Opportunity Hoarding</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-steel-900/90 border border-white/5 space-y-1">
+                <div class="text-fate-400 font-semibold uppercase tracking-wider text-[10px]">Imposed Brand:</div>
+                <div class="text-slate-300">Low/High-Opportunity Asset &amp; Risk Assessment</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-steel-900/90 border border-white/5 space-y-1">
+                <div class="text-emerald-400 font-semibold uppercase tracking-wider text-[10px]">Authentic Counter-Brand:</div>
+                <div class="text-slate-300">The Opportunity Atlas / Data-Literate Re-mapping</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 rounded-2xl bg-steel-950/80 border border-white/10 space-y-4 hover:border-fate-500/50 transition-colors flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-xs font-mono">
+                <span class="text-fate-400 font-bold uppercase tracking-wider">Pillar 02</span>
+                <span class="text-slate-500">Mississippi Delta (Clarksdale, Sunflower County)</span>
+              </div>
+              <h3 class="font-display text-lg font-bold text-white leading-snug">The Mississippi Delta &amp; Agricultural Subjugation</h3>
+              <p class="text-xs text-fate-300 font-mono">Debt Peonage, Parchman Farm &amp; The Great Migration</p>
+              <p class="text-xs text-slate-300 leading-relaxed font-body">
+                The post-Reconstruction South substituted plantation chattel slavery with sharecropping ledgers and convict leasing. From this brutal crucible arose the Delta Blues—a musical technology of lament, survival, and geographic flight.
+              </p>
+            </div>
+
+            <div class="pt-3 border-t border-white/10 space-y-2 text-[11px] font-mono">
+              <div class="p-2.5 rounded-lg bg-steel-900/90 border border-white/5 space-y-1">
+                <div class="text-atlas-400 font-semibold uppercase tracking-wider text-[10px]">Economic Violence:</div>
+                <div class="text-slate-300">Subjugation &amp; Racialized Labor Coercion</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-steel-900/90 border border-white/5 space-y-1">
+                <div class="text-fate-400 font-semibold uppercase tracking-wider text-[10px]">Imposed Brand:</div>
+                <div class="text-slate-300">Exploitable Agricultural Labor Force</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-steel-900/90 border border-white/5 space-y-1">
+                <div class="text-emerald-400 font-semibold uppercase tracking-wider text-[10px]">Authentic Counter-Brand:</div>
+                <div class="text-slate-300">Delta Blues (Robert Johnson, Charley Patton, Son House)</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 rounded-2xl bg-steel-950/80 border border-white/10 space-y-4 hover:border-fate-500/50 transition-colors flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-xs font-mono">
+                <span class="text-fate-400 font-bold uppercase tracking-wider">Pillar 03</span>
+                <span class="text-slate-500">Central Appalachia (West Virginia, Eastern Kentucky)</span>
+              </div>
+              <h3 class="font-display text-lg font-bold text-white leading-snug">Appalachia &amp; Monopsony Resource Extraction</h3>
+              <p class="text-xs text-fate-300 font-mono">The Coal Company Camp &amp; Deaths of Despair</p>
+              <p class="text-xs text-slate-300 leading-relaxed font-body">
+                Coal barons extracted trillions in mineral wealth while trapping workers in company-owned towns paid in non-legal scrip. When the seams ran dry, the industry abandoned the hollows, leaving an injured workforce targeted by predatory pharmaceutical conglomerates.
+              </p>
+            </div>
+
+            <div class="pt-3 border-t border-white/10 space-y-2 text-[11px] font-mono">
+              <div class="p-2.5 rounded-lg bg-steel-900/90 border border-white/5 space-y-1">
+                <div class="text-atlas-400 font-semibold uppercase tracking-wider text-[10px]">Economic Violence:</div>
+                <div class="text-slate-300">Resource Extraction &amp; Disposable Labor</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-steel-900/90 border border-white/5 space-y-1">
+                <div class="text-fate-400 font-semibold uppercase tracking-wider text-[10px]">Imposed Brand:</div>
+                <div class="text-slate-300">Expendable Underclass / Black Lung Liability</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-steel-900/90 border border-white/5 space-y-1">
+                <div class="text-emerald-400 font-semibold uppercase tracking-wider text-[10px]">Authentic Counter-Brand:</div>
+                <div class="text-slate-300">Appalachian Mountain Folk &amp; Clawhammer Banjo Ballads</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 rounded-2xl bg-steel-950/80 border border-white/10 space-y-4 hover:border-fate-500/50 transition-colors flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-xs font-mono">
+                <span class="text-fate-400 font-bold uppercase tracking-wider">Pillar 04</span>
+                <span class="text-slate-500">Chicago (Bronzeville, Englewood, South Shore)</span>
+              </div>
+              <h3 class="font-display text-lg font-bold text-white leading-snug">Chicago South Side &amp; Institutional Abandonment</h3>
+              <p class="text-xs text-fate-300 font-mono">HOLC Redlining, Racial Covenants &amp; Contract Buying</p>
+              <p class="text-xs text-slate-300 leading-relaxed font-body">
+                Federal Home Owners&#x27; Loan Corporation (HOLC) maps drew literal red lines around Black communities. Shut out from standard banking, families were forced into contract buying where a single missed payment caused eviction and total forfeiture of equity. The electric blues amplified southern pain to pierce urban sirens.
+              </p>
+            </div>
+
+            <div class="pt-3 border-t border-white/10 space-y-2 text-[11px] font-mono">
+              <div class="p-2.5 rounded-lg bg-steel-900/90 border border-white/5 space-y-1">
+                <div class="text-atlas-400 font-semibold uppercase tracking-wider text-[10px]">Economic Violence:</div>
+                <div class="text-slate-300">Institutional Abandonment &amp; Real Estate Predation</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-steel-900/90 border border-white/5 space-y-1">
+                <div class="text-fate-400 font-semibold uppercase tracking-wider text-[10px]">Imposed Brand:</div>
+                <div class="text-slate-300">Blighted Zone / Ineligible Mortgage Liability</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-steel-900/90 border border-white/5 space-y-1">
+                <div class="text-emerald-400 font-semibold uppercase tracking-wider text-[10px]">Authentic Counter-Brand:</div>
+                <div class="text-slate-300">Electric Chicago Blues (Muddy Waters, Howlin&#x27; Wolf)</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 rounded-2xl bg-steel-950/80 border border-white/10 space-y-4 hover:border-fate-500/50 transition-colors flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-xs font-mono">
+                <span class="text-fate-400 font-bold uppercase tracking-wider">Pillar 05</span>
+                <span class="text-slate-500">Detroit (Highland Park, West Grand, Packard Ruins)</span>
+              </div>
+              <h3 class="font-display text-lg font-bold text-white leading-snug">Detroit: Industrial Ascension &amp; Deindustrial Collapse</h3>
+              <p class="text-xs text-fate-300 font-mono">The Five-Dollar Day, Motown &amp; The Birth of Techno</p>
+              <p class="text-xs text-slate-300 leading-relaxed font-body">
+                Henry Ford&#x27;s 1914 $5-a-day wage promised an industrial democratic compact, birthing Motown&#x27;s unstoppable optimism. When corporations automated and moved plants to non-union states and offshore, the city collapsed—yet out of warehouse ruins, youth pioneered electronic Techno as an Afrofuturist anthem of survival.
+              </p>
+            </div>
+
+            <div class="pt-3 border-t border-white/10 space-y-2 text-[11px] font-mono">
+              <div class="p-2.5 rounded-lg bg-steel-900/90 border border-white/5 space-y-1">
+                <div class="text-atlas-400 font-semibold uppercase tracking-wider text-[10px]">Economic Violence:</div>
+                <div class="text-slate-300">Deindustrialization &amp; Capital Flight</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-steel-900/90 border border-white/5 space-y-1">
+                <div class="text-fate-400 font-semibold uppercase tracking-wider text-[10px]">Imposed Brand:</div>
+                <div class="text-slate-300">Assembly-Line Cog / Obsolete Manufacturing Surplus</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-steel-900/90 border border-white/5 space-y-1">
+                <div class="text-emerald-400 font-semibold uppercase tracking-wider text-[10px]">Authentic Counter-Brand:</div>
+                <div class="text-slate-300">Motown Pop-Soul (Berry Gordy) &amp; Detroit Techno (The Belleville Three)</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 rounded-2xl bg-steel-950/80 border border-white/10 space-y-4 hover:border-fate-500/50 transition-colors flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-xs font-mono">
+                <span class="text-fate-400 font-bold uppercase tracking-wider">Pillar 06</span>
+                <span class="text-slate-500">Oakland, California (West Oakland, Fruitvale)</span>
+              </div>
+              <h3 class="font-display text-lg font-bold text-white leading-snug">Oakland &amp; 21st-Century Displacement</h3>
+              <p class="text-xs text-fate-300 font-mono">Tech Boom Hyper-Gentrification &amp; Cultural Erasure</p>
+              <p class="text-xs text-slate-300 leading-relaxed font-body">
+                In the 21st century, economic violence no longer requires factory closures—it arrives as speculative tech capital that turns neighborhoods into luxury commodities. Longtime residents are priced out of their childhood streets, yet the defiant counter-brand asserts an unyielding claim to belonging.
+              </p>
+            </div>
+
+            <div class="pt-3 border-t border-white/10 space-y-2 text-[11px] font-mono">
+              <div class="p-2.5 rounded-lg bg-steel-900/90 border border-white/5 space-y-1">
+                <div class="text-atlas-400 font-semibold uppercase tracking-wider text-[10px]">Economic Violence:</div>
+                <div class="text-slate-300">Erasure &amp; Speculative Real Estate Dispossession</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-steel-900/90 border border-white/5 space-y-1">
+                <div class="text-fate-400 font-semibold uppercase tracking-wider text-[10px]">Imposed Brand:</div>
+                <div class="text-slate-300">High-Value Real Estate / Obsolete Native Population</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-steel-900/90 border border-white/5 space-y-1">
+                <div class="text-emerald-400 font-semibold uppercase tracking-wider text-[10px]">Authentic Counter-Brand:</div>
+                <div class="text-slate-300">Chicano Soul, Bay Area Funk &amp; West Coast Political Hip-Hop</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 17-TRACK VAULT & MULTI-TAB LYRICS DRAWERS -->
+    <section id="tracks-section" class="py-16 border-b border-white/10 bg-steel-950">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
-          <div class="space-y-2 max-w-2xl">
-            <span class="text-xs font-mono uppercase tracking-widest text-atlas-400 font-bold">Empirical Sociological Audit</span>
-            <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">
-              The 6 Regional Pillars &amp; Economic Violence
-            </h2>
-            <p class="text-xs sm:text-sm text-slate-400 font-body">
-              Synthesizing data from Raj Chetty’s Opportunity Insights, Anne Case &amp; Angus Deaton’s mortality studies, and the Federal Home Loan Bank Board to unpack how geography becomes destiny.
-            </p>
+        <div class="text-center space-y-3 max-w-3xl mx-auto">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-fate-950/60 border border-fate-600/30 text-fate-400 font-mono text-[11px] uppercase tracking-wider">
+            <i aria-hidden="true" class="fa-solid fa-compact-disc"></i>
+            <span>The Master Tracklist &amp; Archives</span>
           </div>
-          <div class="text-xs font-mono text-slate-500">
-            Source: Blueprint Table 0 &bull; The Shady River Bard
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">
+            17-Track Interactive Vault
+          </h2>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Explore the complete, unabridged lyrical, musical, and conceptual archive. Every track features verified verbatim stanzas, musician lead sheets with chords, Suno production tags, and the Bard's personal story.
+          </p>
+        </div>
+
+        <!-- Global Filtering & Search Toolbar -->
+        <div class="p-4 sm:p-6 rounded-2xl glass-panel space-y-4">
+          <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
+            
+            <!-- Real-Time Search Input -->
+            <div class="relative flex-1">
+              <i aria-hidden="true" class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+              <input 
+                id="search-input"
+                type="text"
+                placeholder="Search by track title, lyric phrase, region, chords, or theme..."
+                class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-steel-900 border border-white/10 text-white placeholder-slate-500 text-xs font-mono focus:outline-none focus:border-fate-500 transition-colors"
+                oninput="handleSearch(this.value)"
+              >
+            </div>
+
+            <!-- Global Expand / Collapse All Controls -->
+            <div class="flex items-center gap-2 shrink-0">
+              <button 
+                onclick="expandAllDrawers()" 
+                class="px-3.5 py-2 rounded-xl bg-steel-800 hover:bg-steel-750 text-slate-300 text-xs font-mono border border-white/10 transition-colors flex items-center gap-1.5"
+              >
+                <i aria-hidden="true" class="fa-solid fa-angles-down text-fate-400"></i>
+                <span>Expand All</span>
+              </button>
+              <button 
+                onclick="collapseAllDrawers()" 
+                class="px-3.5 py-2 rounded-xl bg-steel-800 hover:bg-steel-750 text-slate-300 text-xs font-mono border border-white/10 transition-colors flex items-center gap-1.5"
+              >
+                <i aria-hidden="true" class="fa-solid fa-angles-up text-slate-400"></i>
+                <span>Collapse All</span>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Act Filter Pills -->
+          <div class="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs font-mono" id="act-filters" role="group" aria-label="Filter tracks by Act">
+            <button onclick="filterByAct(0)" id="filter-act-0" class="act-filter-btn px-3 py-1.5 rounded-lg bg-fate-600 text-white font-bold">All Tracks (17)</button>
+            <button onclick="filterByAct(1)" id="filter-act-1" class="act-filter-btn px-3 py-1.5 rounded-lg bg-steel-800 text-slate-300 hover:bg-steel-750">Act I: The Source (3)</button>
+            <button onclick="filterByAct(2)" id="filter-act-2" class="act-filter-btn px-3 py-1.5 rounded-lg bg-steel-800 text-slate-300 hover:bg-steel-750">Act II: The Branding Iron (3)</button>
+            <button onclick="filterByAct(3)" id="filter-act-3" class="act-filter-btn px-3 py-1.5 rounded-lg bg-steel-800 text-slate-300 hover:bg-steel-750">Act III: The Hit Factory (3)</button>
+            <button onclick="filterByAct(4)" id="filter-act-4" class="act-filter-btn px-3 py-1.5 rounded-lg bg-steel-800 text-slate-300 hover:bg-steel-750">Act IV: Symptoms (4)</button>
+            <button onclick="filterByAct(5)" id="filter-act-5" class="act-filter-btn px-3 py-1.5 rounded-lg bg-steel-800 text-slate-300 hover:bg-steel-750">Act V: Unbranded Heart (4)</button>
           </div>
         </div>
 
-        <!-- 6 Pillars Grid -->
-        <div id="pillars-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Populated by JavaScript -->
+        <!-- Tracks Container -->
+        <div id="tracks-container" class="space-y-4" role="region" aria-label="Tracklist with Lyrics and Production Drawers">
+          <!-- Rendered dynamically by JavaScript -->
         </div>
 
       </div>
     </section>
 
-    <!-- SECTION: MASTER LYRICS VAULT & TRACKS (17 TRACKS) -->
-    <section id="tracks-section" class="py-12 md:py-20 bg-steel-900 border-b border-white/10">
+    <!-- SUNO TAG CATALOG & ALBUM REFERENCE SECTION -->
+    <section id="reference-section" class="py-16 border-b border-white/10 bg-steel-900/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        
+        <div class="text-center space-y-3 max-w-3xl mx-auto">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-fate-950/60 border border-fate-600/30 text-fate-400 font-mono text-[11px] uppercase tracking-wider">
+            <i aria-hidden="true" class="fa-solid fa-tags"></i>
+            <span>Part 4: Reference Material</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">
+            Suno Tag Catalog &amp; Conclusion
+          </h2>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            The reference guide used to direct Suno's AI music synthesis across the album, followed by the concluding author reflections.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          
+          <!-- Conclusion Card -->
+          <div class="p-6 sm:p-8 rounded-2xl bg-steel-950/80 border border-white/10 space-y-4 flex flex-col justify-between">
+            <div class="space-y-3">
+              <span class="text-xs font-mono uppercase text-fate-400 font-bold tracking-wider">Author Reflections</span>
+              <h3 class="font-display text-2xl font-bold text-white">VIII. Conclusion</h3>
+              <div class="font-serif text-slate-300 text-sm sm:text-base leading-relaxed space-y-3">
+                <p>The album Five-Digit Fate is conceived as more than a collection of songs about hardship; it is a meticulously researched and deeply felt indictment of a system that sorts, values, and ultimately discards human beings based on their address. By weaving together the empirical certainty of geographic determinism, the sociological analysis of despair, and the specific, lived histories of five iconic American regions, the album endeavors to give a human face to the statistics and a voice to the silenced. It argues that the agricultural subjugation of the Mississippi Delta, the extraction of wealth from Appalachia, the abandonment of Chicago and Detroit, and the cultural erasure of Oakland are not separate, isolated tragedies. Rather, they are different chapters in the same book—a story of how evolving forms of economic violence dismantle the social fabric that gives life meaning and provides pathways to opportunity.</p>
+                <p>The purpose of this work is to force the listener to confront the brutal reality of the &quot;brand&quot; we, as a society, assign to our fellow citizens. It is an invitation to see the connections between a sharecropper&#x27;s field in the 1920s, a redlined map from the 1930s, a shuttered factory from the 1980s, and a &quot;for rent&quot; sign in a gentrifying neighborhood today. Ultimately, the album seeks to achieve its final purpose in the music itself: to allow the listener to hear, in the resilient traditions of blues, folk, soul, and techno, the defiant, unbranded heartbeat of a culture that refuses to be forgotten, a humanity that will not be reduced to a number.</p>
+              </div>
+            </div>
+
+            <!-- YouTube Playlist Liner Notes -->
+            <div class="pt-4 border-t border-white/10 space-y-2">
+              <div class="text-xs font-mono text-slate-400 font-bold uppercase tracking-wider">Official Playlist Liner Notes:</div>
+              <p class="text-xs text-slate-400 font-mono leading-relaxed bg-steel-900/80 p-3.5 rounded-xl border border-white/5">
+                Five-Digit Fate is an ambitious 17-track concept album exploring American poverty through the lens of geographic determinism. Over five acts, the music travels from the Mississippi Delta to Appalachia, Chicago, Detroit, and Oakland, demonstrating how human dignity and artistic resilience persistently transcend systemic branding.
+              </p>
+            </div>
+          </div>
+
+          <!-- Suno Tag Catalog Card -->
+          <div class="p-6 sm:p-8 rounded-2xl bg-steel-950/80 border border-white/10 space-y-4 flex flex-col">
+            <div class="space-y-1">
+              <span class="text-xs font-mono uppercase text-fate-400 font-bold tracking-wider">Production Vocabulary</span>
+              <h3 class="font-display text-2xl font-bold text-white">IX. Suno Tag Catalog</h3>
+              <p class="text-xs text-slate-400 font-mono">101 musical directives, vocal emotion cues, and production styles referenced throughout the project.</p>
+            </div>
+
+            <div class="flex-1 max-h-[420px] overflow-y-auto pr-2 space-y-2 font-mono text-xs text-slate-300 bg-steel-900/60 p-4 rounded-xl border border-white/5">
+              <div class="py-0.5 text-slate-300">Core Genres: Americana, Folk, Blues, Country Blues, Folk-Rock, Social Commentary</div>
+              <div class="py-0.5 text-slate-300">Mississippi Delta Sound: Delta Blues, Acoustic Blues, Raw, Slide Guitar, Field Holler</div>
+              <div class="py-0.5 text-slate-300">Appalachian Sound: Raw Acoustic, Mountain Folk, Appalachian Folk, Clawhammer Banjo, Mournful Fiddle, Stripped-down, Ballad, Storytelling</div>
+              <div class="py-0.5 text-slate-300">Chicago Sound: Electric Blues, Chicago Blues, Gritty, Urban Blues, Distorted Harmonica, Slide Guitar, Sparse Drum Machine, Industrial Blues, Rhythmic, Spoken-Word</div>
+              <div class="py-0.5 text-slate-300">Detroit Sound: Motown, Pop-Soul, R&amp;B, Soul, Techno, Electro-Funk, Electronic, Synthesizer</div>
+              <div class="py-0.5 text-slate-300">Oakland Sound: Chicano Soul, Bay Area Funk, Soul, R&amp;B, Melancholic, Smooth, Grooving Bassline, Laid-back</div>
+              <div class="py-0.5 text-slate-300">Overall Moods &amp; Themes: Somber, Melancholy, Defiant, Angry, Hopeful, Reflective, Pensive, Gritty, Raw, Emotional, Epic, Anthemic, Cinematic, Haunting, Atmospheric, Storytelling, Political, Social Justice</div>
+              <div class="py-0.5 text-slate-300">Instrumentation: Acoustic Guitar, Electric Guitar, Slide Guitar, Banjo, Fiddle, Mandolin, Harmonica, Bass Guitar, Drums, Piano, Organ, Synthesizer, Drum Machine, Industrial Percussion, Found Sounds (e.g., hammer on anvil)</div>
+              <div class="py-0.5 text-slate-300">Vocal Style: Male Vocals, Raspy Vocals, Emotional Vocals, Storyteller, Spoken Word, Chant, Group Vocals, a cappella</div>
+              <div class="py-0.5 text-slate-300">Works cited</div>
+              <div class="py-0.5 text-slate-300">King Coal&#x27;s Last Reign: How Corporate Greed Keeps Appalachia Underdeveloped, accessed August 4, 2025, http://www.cpreview.org/articles/2025/5/king-coals-last-reign-how-corporate-greed-keeps-appalachia-underdeveloped</div>
+              <div class="py-0.5 text-slate-300">voices.uchicago.edu, accessed August 4, 2025, https://voices.uchicago.edu/findingchicago/2022/09/16/migration-sounds-and-the-history-of-chicago-blues/#:~:text=During%20the%20Great%20Migration%20caused,the%20foundations%20of%20Chicago%20Blues.</div>
+              <div class="py-0.5 text-slate-300">Chicago blues - Wikipedia, accessed August 4, 2025, https://en.wikipedia.org/wiki/Chicago_blues</div>
+              <div class="py-0.5 text-slate-300">Migration, Sounds, and the History of Chicago Blues | ELI AEPP ..., accessed August 4, 2025, https://voices.uchicago.edu/findingchicago/2022/09/16/migration-sounds-and-the-history-of-chicago-blues/</div>
+              <div class="py-0.5 text-slate-300">Chicano Soul: Recordings and History of an American Culture | Discoveries | Research Home | TTU, accessed August 4, 2025, https://www.depts.ttu.edu/research/discoveries/posts/spring-2018/books/chicano-soul.php</div>
+              <div class="py-0.5 text-slate-300">Celebrating Black Music Month | Oakland Public Library, accessed August 4, 2025, https://oaklandlibrary.org/blogs/post/june-is-black-music-appreciation-month/</div>
+              <div class="py-0.5 text-slate-300">Chicano Music in the San Joaquin Valley by | Sounds of California, accessed August 4, 2025, https://soundsofca.actaonline.org/stories/chicano-music</div>
+              <div class="py-0.5 text-slate-300">The Opportunity Atlas – RAJ CHETTY, accessed August 4, 2025, https://rajchetty.com/the-opportunity-atlas/</div>
+              <div class="py-0.5 text-slate-300">The Opportunity Atlas | Watson School of International and Public Affairs, accessed August 4, 2025, https://home.watson.brown.edu/news/2018-10-01/opportunity-atlas</div>
+              <div class="py-0.5 text-slate-300">Opportunity Atlas Data Tool - U.S. Census Bureau, accessed August 4, 2025, https://www.census.gov/programs-surveys/ces/data/analysis-visualization-tools/opportunity-atlas.html</div>
+              <div class="py-0.5 text-slate-300">The Opportunity Atlas: Mapping the Childhood Roots of Social Mobility, accessed August 4, 2025, https://opportunityinsights.org/wp-content/uploads/2018/10/atlas_paper.pdf</div>
+              <div class="py-0.5 text-slate-300">Where is the Land of Opportunity? The Geography of Intergenerational Mobility in the United States - Harvard University, accessed August 4, 2025, https://scholar.harvard.edu/files/hendren/files/mobility_geo.pdf</div>
+              <div class="py-0.5 text-slate-300">Where is the Land of Opportunity? The Geography of Intergenerational Mobility in the United States, accessed August 4, 2025, https://opportunityinsights.org/paper/land-of-opportunity/</div>
+              <div class="py-0.5 text-slate-300">The Opportunity Atlas: Mapping the Childhood Roots of Social Mobility | Nathaniel Hendren, accessed August 4, 2025, https://hendren.scholars.harvard.edu/publications/opportunity-atlas-mapping-childhood-roots-social-mobility</div>
+              <div class="py-0.5 text-slate-300">The Opportunity Atlas: Mapping the Childhood Roots of Social Mobility, accessed August 4, 2025, https://opportunityinsights.org/paper/the-opportunity-atlas/</div>
+              <div class="py-0.5 text-slate-300">New &#x27;Opportunity Atlas&#x27; tracks economic mobility by neighborhood | Brown University, accessed August 4, 2025, https://www.brown.edu/news/2018-10-01/opportunity</div>
+              <div class="py-0.5 text-slate-300">These maps from Raj Chetty show that where children grow up has a major impact on their lifetime earnings | Brookings, accessed August 4, 2025, https://www.brookings.edu/articles/these-maps-from-raj-chetty-show-that-where-children-grow-up-has-a-major-impact-on-their-lifetime-earnings/</div>
+              <div class="py-0.5 text-slate-300">In Conversation with Raj Chetty - Equitable Growth, accessed August 4, 2025, https://equitablegrowth.org/in-conversation-with-raj-chetty/</div>
+              <div class="py-0.5 text-slate-300">Raj Chetty: Access To The American Dream Isn&#x27;t Just Determined By Income. Geography Matters - WGBH, accessed August 4, 2025, https://www.wgbh.org/news/national/2019-09-27/raj-chetty-access-to-the-american-dream-isnt-just-determined-by-income-geography-matters</div>
+              <div class="py-0.5 text-slate-300">Seven key takeaways from Chetty&#x27;s new research on friendship and ..., accessed August 4, 2025, https://www.brookings.edu/articles/7-key-takeaways-from-chettys-new-research-on-friendship-and-economic-mobility/</div>
+              <div class="py-0.5 text-slate-300">The Deindustrialization of Chicago&#x27;s Southeast Side ..., accessed August 4, 2025, https://www.chipublib.org/blogs/post/the-deindustrialization-of-chicagos-southeast-side-commemorating-the-45th-anniversary-of-the-closing-of-wisconsin-steel/</div>
+              <div class="py-0.5 text-slate-300">An Examination of Fear of Crime and Social Vulnerability in Chicago Neighborhoods - ICJIA | Illinois Criminal Justice Information Authority, accessed August 4, 2025, https://icjia.illinois.gov/researchhub/articles/an-examination-of-fear-of-crime-and-social-vulnerability-in-chicago-neighborhoods</div>
+              <div class="py-0.5 text-slate-300">Oakland&#x27;s Displacement Crisis: As Told by the Numbers Cost Burdened Households By Income - PolicyLink, accessed August 4, 2025, https://www.policylink.org/sites/default/files/PolicyLink%20Oakland&#x27;s%20Displacement%20Crisis%20by%20the%20numbers.pdf</div>
+              <div class="py-0.5 text-slate-300">Book Review: Deaths of Despair and the Future of Capitalism by Anne Case and Angus Deaton - LSE Blogs, accessed August 4, 2025, https://blogs.lse.ac.uk/lsereviewofbooks/2021/08/12/book-review-deaths-of-despair-and-the-future-of-capitalism-by-anne-case-and-angus-deaton/</div>
+              <div class="py-0.5 text-slate-300">Event | Professor Anne Case on Deaths of Despair and the Future of ..., accessed August 4, 2025, https://www.worldbank.org/en/events/2024/04/08/professor-anne-case-on-deaths-of-despair-and-the-future-of-capitalism</div>
+              <div class="py-0.5 text-slate-300">Deaths of Despair and the Future of Capitalism - STFM Journals, accessed August 4, 2025, https://journals.stfm.org/familymedicine/2021/march/br-cayley-mar21/</div>
+              <div class="py-0.5 text-slate-300">www.brookings.edu, accessed August 4, 2025, https://www.brookings.edu/articles/mortality-and-morbidity-in-the-21st-century/#:~:text=Case%20and%20Deaton%20find%20that,mortality%20since%20the%20late%201990s.</div>
+              <div class="py-0.5 text-slate-300">Mortality and morbidity in the 21st century | Brookings, accessed August 4, 2025, https://www.brookings.edu/articles/mortality-and-morbidity-in-the-21st-century/</div>
+              <div class="py-0.5 text-slate-300">Book Review: Deaths of Despair and the Future of Capitalism by Anne Case and Angus Deaton | USAPP - LSE Blogs, accessed August 4, 2025, https://blogs.lse.ac.uk/usappblog/2021/08/15/book-review-deaths-of-despair-and-the-future-of-capitalism-by-anne-case-and-angus-deaton/</div>
+              <div class="py-0.5 text-slate-300">Book Review of Deaths of Despair and the Future of Capitalism, by Anne Case and Angus Deaton | SOA, accessed August 4, 2025, https://www.soa.org/sections/social-ins-pub-fin/social-ins-pub-fin-newsletter/2021/november/ipi-2021-11-jabek/</div>
+              <div class="py-0.5 text-slate-300">Deaths of Despair and the Future of Capitalism | Summary, Quotes, FAQ, Audio - SoBrief, accessed August 4, 2025, https://sobrief.com/books/deaths-of-despair-and-the-future-of-capitalism</div>
+              <div class="py-0.5 text-slate-300">Living and Dying in America: An Essay on Deaths of Despair and the Future of Capitalism, accessed August 4, 2025, https://www.aeaweb.org/articles?id=10.1257/jel.20211638</div>
+              <div class="py-0.5 text-slate-300">Book review and summary: &quot;Deaths of despair: the future of capitalism&quot; - TASC, accessed August 4, 2025, https://www.tasc.ie/blog/2020/08/12/book-review-and-summary-deaths-of-despair-the-futu/</div>
+              <div class="py-0.5 text-slate-300">The Socioeconomic Impact of Coal in the ... - UKnowledge, accessed August 4, 2025, https://uknowledge.uky.edu/cgi/viewcontent.cgi?article=1016&amp;context=mpampp_etds</div>
+              <div class="py-0.5 text-slate-300">Mortality in Appalachian Coal Mining Regions: The Value of Statistical Life Lost - PMC, accessed August 4, 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC2693168/</div>
+              <div class="py-0.5 text-slate-300">Appalachia&#x27;s other company towns, accessed August 4, 2025, https://www.appalachianplaces.org/post/appalachia-s-other-company-towns</div>
+              <div class="py-0.5 text-slate-300">Company Towns: 1880s to 1935 - Social Welfare History Project, accessed August 4, 2025, https://socialwelfare.library.vcu.edu/organizations/labor/company-towns-1890s-to-1935/</div>
+              <div class="py-0.5 text-slate-300">Company Towns - National Coal Heritage Area - WV.gov, accessed August 4, 2025, https://coalheritage.wv.gov/coal_history/Pages/Company-Towns.aspx</div>
+              <div class="py-0.5 text-slate-300">Opioids and Appalachia | National Affairs, accessed August 4, 2025, https://www.nationalaffairs.com/publications/detail/opioids-and-appalachia</div>
+              <div class="py-0.5 text-slate-300">NBER WORKING PAPER SERIES ABANDONED BY COAL, SWALLOWED BY OPIOIDS? Gilbert E. Metcalf Qitong Wang Working Paper 26551 http://www, accessed August 4, 2025, https://www.nber.org/system/files/working_papers/w26551/w26551.pdf</div>
+              <div class="py-0.5 text-slate-300">Opioid Use in Medicare Part D in States in the Appalachian Region, accessed August 4, 2025, https://oig.hhs.gov/reports-and-publications/workplan/summary/wp-summary-0000354.asp</div>
+              <div class="py-0.5 text-slate-300">A Public Health Emergency: West Virginia&#x27;s Efforts to Curb the Opioid Crisis - Congress.gov, accessed August 4, 2025, https://www.congress.gov/116/meeting/house/110367/witnesses/HHRG-116-IF02-Wstate-MullinsC-20200114.pdf</div>
+              <div class="py-0.5 text-slate-300">“Now we are seeing the tides wash in”: Trauma and the opioid epidemic in rural Appalachian Ohio, accessed August 4, 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC8276036/</div>
+              <div class="py-0.5 text-slate-300">Series on opioid epidemic highlights personal stories, medical ..., accessed August 4, 2025, https://www.wvsom.edu/news/2021/april/series-opioid-epidemic-highlights-personal-stories-medical-information</div>
+              <div class="py-0.5 text-slate-300">Contributing Factors To Drug Abuse In The Appalachian Region - Digital Commons @ East Tennessee State University, accessed August 4, 2025, https://dc.etsu.edu/cgi/viewcontent.cgi?article=1859&amp;context=honors</div>
+              <div class="py-0.5 text-slate-300">Chicago - Mapping Inequality, accessed August 4, 2025, https://dsl.richmond.edu/panorama/redlining/map/IL/Chicago/context</div>
+              <div class="py-0.5 text-slate-300">Modern Day Consequences of Historic Redlining: Finding a Path Forward - PMC, accessed August 4, 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC9901820/</div>
+              <div class="py-0.5 text-slate-300">Redlining · Racial Restriction and Housing Discrimination in the Chicagoland Area - Digital Chicago, accessed August 4, 2025, https://digitalchicagohistory.org/exhibits/show/restricted-chicago/other/redlining</div>
+              <div class="py-0.5 text-slate-300">History of Chicago - Wikipedia, accessed August 4, 2025, https://en.wikipedia.org/wiki/History_of_Chicago</div>
+              <div class="py-0.5 text-slate-300">CHICAGO&#x27;S SOUTHEAST SIDE Industrial History, accessed August 4, 2025, https://www.csu.edu/cerc/researchreports/documents/ChicagoSESideIndustrialHistory.pdf</div>
+              <div class="py-0.5 text-slate-300">Deindustrializing Chicago: A Daughter&#x27;s Story - MIT Anthropology, accessed August 4, 2025, https://anthropology.mit.edu/files/anthropology/imce/people/papers/walley_deindustrializing_chicago.pdf</div>
+              <div class="py-0.5 text-slate-300">DIR-013-17 Cartel and Gangs in Chicago - Unclassified - DEA.gov, accessed August 4, 2025, https://www.dea.gov/sites/default/files/2018-07/DIR-013-17%20Cartel%20and%20Gangs%20in%20Chicago%20-%20Unclassified.pdf</div>
+              <div class="py-0.5 text-slate-300">The Fracturing of Gangs and Violence in Chicago: A Research-Based Reorientation of Violence Prevention and Intervention Policy - Great Cities Institute, accessed August 4, 2025, https://greatcities.uic.edu/wp-content/uploads/2019/01/The_Fracturing_of_Gangs_and_Violence_in_Chicago.pdf</div>
+              <div class="py-0.5 text-slate-300">From the Delta to Chicago: Muddy Waters&#x27; Downhome Blues and the Shaping of African-American Urban Identity in Post World War I - ScholarWorks@GVSU, accessed August 4, 2025, https://scholarworks.gvsu.edu/cgi/viewcontent.cgi?article=1050&amp;context=mcnair</div>
+              <div class="py-0.5 text-slate-300">Housing burden Nine-County Bay Area vs. California, accessed August 4, 2025, https://bayareaequityatlas.org/indicators/housing-burden</div>
+              <div class="py-0.5 text-slate-300">Tech Boom Squeezes Bay Area Housing Affordability, Threatening Lower-Income Residents&#x27; Ability to Stay - The Pioneer, accessed August 4, 2025, https://thepioneeronline.com/47865/features/tech-boom-squeezes-bay-area-housing-affordability-threatening-lower-income-residents-ability-to-stay/</div>
+              <div class="py-0.5 text-slate-300">The Impact of the Tech Boom on Housing - U.S. Census Bureau, accessed August 4, 2025, https://www.census.gov/library/stories/2019/04/impact-of-tech-boom-on-housing.html</div>
+              <div class="py-0.5 text-slate-300">The Housing Crisis in Oakland | 2018-10-01 | Architectural Record, accessed August 4, 2025, https://www.architecturalrecord.com/articles/13650-the-housing-crisis-in-oakland</div>
+              <div class="py-0.5 text-slate-300">Oakland&#x27;s Displacement Crisis: As Told by the Numbers ... - PolicyLink, accessed August 4, 2025, https://www.policylink.org/sites/default/files/PolicyLink%20Oakland%27s%20Displacement%20Crisis%20by%20the%20numbers.pdf</div>
+              <div class="py-0.5 text-slate-300">The Psychological Impact Of Gentrification: Community Identity ..., accessed August 4, 2025, https://www.betterhelp.com/advice/trauma/the-psychological-impact-of-gentrification-community-identity-culture-and-change/</div>
+              <div class="py-0.5 text-slate-300">Impact of gentrification on adult mental health - PMC, accessed August 4, 2025, https://pmc.ncbi.nlm.nih.gov/articles/PMC7240775/</div>
+              <div class="py-0.5 text-slate-300">Full article: The influence of gentrification on the health and well-being of older adults: a qualitative study - Taylor &amp; Francis Online, accessed August 4, 2025, https://www.tandfonline.com/doi/full/10.1080/23748834.2024.2308372</div>
+              <div class="py-0.5 text-slate-300">DISPLACED - California Humanities, accessed August 4, 2025, https://calhum.org/our-history/displaced/</div>
+              <div class="py-0.5 text-slate-300">West Oakland Oral History Interviews: Landon Williams Interview ..., accessed August 4, 2025, https://californiarevealed.org/do/6112a538-f5a9-46ba-ac61-61d1f4a20bc8</div>
+              <div class="py-0.5 text-slate-300">You Tell Us: Oakland, gentrification, and the hunt for cool, accessed August 4, 2025, https://oaklandnorth.net/2011/07/26/you-tell-us-oakland-gentrification-and-the-hunt-for-cool/</div>
+              <div class="py-0.5 text-slate-300">Corporate jargon - Wikipedia, accessed August 4, 2025, https://en.wikipedia.org/wiki/Corporate_jargon</div>
+              <div class="py-0.5 text-slate-300">The Importance of Brand Language in 2024 (With Examples) - G2 Learning Hub, accessed August 4, 2025, https://learn.g2.com/brand-language</div>
+              <div class="py-0.5 text-slate-300">The Impact of Language on Branding: A Comprehensive Analysis - ResearchGate, accessed August 4, 2025, https://www.researchgate.net/publication/393008944_The_Impact_of_Language_on_Branding_A_Comprehensive_Analysis</div>
+              <div class="py-0.5 text-slate-300">Brand Language Strategy: Impact and Implementation | TMDesign - Medium, accessed August 4, 2025, https://medium.com/theymakedesign/brand-language-strategy-impact-and-implementation-a29e58ef24cd</div>
+              <div class="py-0.5 text-slate-300">The Power of Words: How Language Shapes Your Brand Identity - Better Proposals, accessed August 4, 2025, https://betterproposals.io/blog/brand-language/</div>
+              <div class="py-0.5 text-slate-300">Consumption Symbols as Carriers of Culture | Stanford Graduate School of Business, accessed August 4, 2025, https://www.gsb.stanford.edu/faculty-research/publications/consumption-symbols-carriers-culture</div>
+              <div class="py-0.5 text-slate-300">How Brands Can Become Symbols | Hult International Business School, accessed August 4, 2025, https://www.hult.edu/blog/how-brands-can-become-symbols/</div>
+              <div class="py-0.5 text-slate-300">Cultural Symbolism of Brands - Carlos J. Torelli - ResearchGate, accessed August 4, 2025, https://www.researchgate.net/profile/Carlos-Torelli/publication/284572698_Cultural_symbolism_of_brands/links/56698d2b08ae430ab4f7274e/Cultural-symbolism-of-brands.pdf</div>
+              <div class="py-0.5 text-slate-300">www.hult.edu, accessed August 4, 2025, https://www.hult.edu/blog/how-brands-can-become-symbols/#:~:text=Brands%20as%20Symbols&amp;text=Luxury%20items%20signal%20attributes%20associated,Consider%20sustainability.</div>
+              <div class="py-0.5 text-slate-300">History of Branding: Irons in the Fire - National Cowboy &amp; Western Heritage Museum, accessed August 4, 2025, https://nationalcowboymuseum.org/explore/history-of-branding-irons-in-the-fire/</div>
+              <div class="py-0.5 text-slate-300">Music in the Civil Rights Movement | Articles and Essays | Civil Rights History Project | Digital Collections | Library of Congress, accessed August 4, 2025, https://www.loc.gov/collections/civil-rights-history-project/articles-and-essays/music-in-the-civil-rights-movement/</div>
+              <div class="py-0.5 text-slate-300">www.loc.gov, accessed August 4, 2025, https://www.loc.gov/collections/civil-rights-history-project/articles-and-essays/music-in-the-civil-rights-movement/#:~:text=African%20American%20spirituals%2C%20gospel%2C%20and,large%20meetings%20and%20through%20publications.</div>
+              <div class="py-0.5 text-slate-300">A Field Guide to... Appalachia - Smithsonian Folkways Recordings, accessed August 31, 2025, https://folkways.si.edu/playlist/a-field-guide-to-appalachia</div>
+              <div class="py-0.5 text-slate-300">9 Hours Sounds of Chicago, Ambience 3D City Noises of Downtown HD - YouTube, accessed August 31, 2025, https://www.youtube.com/watch?v=KkXLEHqzYZk</div>
+              <div class="py-0.5 text-slate-300">&#x27;We&#x27;re being pushed out&#x27;: the displacement of black Oakland - The Guardian, accessed August 31, 2025, https://www.theguardian.com/us-news/2018/jun/01/from-black-panthers-to-bbq-becky-the-displacement-of-black-oakland</div>
+              <div class="py-0.5 text-slate-300">Culture of the Blues — Mississippi Delta National Heritage Area, accessed August 31, 2025, https://www.msdeltaheritage.com/blues-culture</div>
+              <div class="py-0.5 text-slate-300">Mississippi Blues - 2003-08, accessed August 31, 2025, http://www.mshistorynow.mdah.ms.gov/issue/mississippi-blues</div>
+              <div class="py-0.5 text-slate-300">The History of Mississippi Delta Blues Music, accessed August 31, 2025, https://visitmississippi.org/experiences/the-history-of-mississippi-delta-blues-music/</div>
+              <div class="py-0.5 text-slate-300">Seeing Like a Chocolate City:Reimagining Detroit&#x27;s Future Through Its Past | Stanford Law Review, accessed August 31, 2025, https://www.stanfordlawreview.org/online/seeing-like-a-chocolate-cityreimagining-detroits-future-through-its-past/</div>
+              <div class="py-0.5 text-slate-300">Detroit&#x27;s Downfall | Bentley University, accessed August 31, 2025, https://www.bentley.edu/news/detroits-downfall</div>
+              <div class="py-0.5 text-slate-300">Envisioning The City Of The Future: Responses To Deindustrialization, Segregation, And The Urban Crisis In Postwar Detroit, 1950, accessed August 31, 2025, https://digitalcommons.wayne.edu/cgi/viewcontent.cgi?article=3103&amp;context=oa_dissertations</div>
+              <div class="py-0.5 text-slate-300">a. Economic Change and Social Inequality: Case Study Detroit USA • Background In the USA many of the heavy manufacturing indus - IB Geography Pods, accessed August 31, 2025, https://www.ibgeographypods.org/uploads/7/6/2/2/7622863/detroit_usa_-_traditional_industry_decline.pdf</div>
+              <div class="py-0.5 text-slate-300">The Critical Nexus: Deindustrialization, Racism and Urban Crisis in Post-1967 Detroit - ScholarWorks@GVSU, accessed August 31, 2025, https://scholarworks.gvsu.edu/cgi/viewcontent.cgi?article=1184&amp;context=mcnair</div>
+              <div class="py-0.5 text-slate-300">Detroit and Deindustrialization - Dollars &amp; Sense, accessed August 31, 2025, https://www.dollarsandsense.org/detroit-and-deindustrialization/</div>
+              <div class="py-0.5 text-slate-300">Ask the expert: How Detroit and its people are integral to the rise of techno music, accessed August 31, 2025, https://msutoday.msu.edu/news/2025/05/ask-the-expert-how-detroit-and-its-people-are-integral-to-the-rise-of-techno-music</div>
+              <div class="py-0.5 text-slate-300">Detroit techno - Wikipedia, accessed August 31, 2025, https://en.wikipedia.org/wiki/Detroit_techno</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER & GATEWAYS -->
+    <footer class="py-12 border-t border-white/10 bg-steel-950 text-slate-400 text-xs font-mono">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
-        <!-- Section Header & Toolbar Controls -->
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-4 border-b border-white/10">
-          <div class="space-y-2">
-            <div class="flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-fate-500"></span>
-              <span class="text-xs font-mono uppercase tracking-wider text-fate-400 font-bold">Unabridged Archive</span>
-            </div>
-            <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">
-              The 17-Track Lyrics Vault
-            </h2>
-            <p class="text-xs sm:text-sm text-slate-400 max-w-xl font-body">
-              Dedicated full-width expandable lyric drawers with zero arbitrary cutoff. Includes authentic stanzas, Suno production prompts, song summaries, and official video releases.
-            </p>
-          </div>
-
-          <!-- Global Toolbar Actions -->
-          <div class="flex flex-wrap items-center gap-2.5">
-            <button onclick="expandAllLyrics()" class="px-3.5 py-2 rounded-xl bg-steel-850 hover:bg-steel-800 text-slate-200 border border-white/10 text-xs font-mono font-semibold transition-colors flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-orange-400">
-              <i aria-hidden="true" class="fa-solid fa-angles-down text-fate-400"></i>
-              <span>Expand All Lyrics</span>
-            </button>
-            <button onclick="collapseAllLyrics()" class="px-3.5 py-2 rounded-xl bg-steel-850 hover:bg-steel-800 text-slate-200 border border-white/10 text-xs font-mono font-semibold transition-colors flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-orange-400">
-              <i aria-hidden="true" class="fa-solid fa-angles-up text-slate-400"></i>
-              <span>Collapse All</span>
-            </button>
+        <!-- Sister Album Cross-Links -->
+        <div class="space-y-3">
+          <div class="text-slate-300 font-bold uppercase tracking-wider">Concept Album Gateways &bull; The Shady River Bard</div>
+          <div class="flex flex-wrap gap-2 text-[11px]">
+            <a href="/the-fracture/" class="px-2.5 py-1 rounded bg-steel-900 hover:bg-steel-800 text-slate-300 hover:text-white transition-colors border border-white/5">Album 03: The Fracture</a>
+            <a href="/the-great-inversion/" class="px-2.5 py-1 rounded bg-steel-900 hover:bg-steel-800 text-slate-300 hover:text-white transition-colors border border-white/5">Album 04: The Great Inversion</a>
+            <a href="/the-poison-we-trust/" class="px-2.5 py-1 rounded bg-steel-900 hover:bg-steel-800 text-slate-300 hover:text-white transition-colors border border-white/5">Album 05: The Poison We Trust</a>
+            <a href="/a-house-divided/" class="px-2.5 py-1 rounded bg-steel-900 hover:bg-steel-800 text-slate-300 hover:text-white transition-colors border border-white/5">Album 06: A House Divided</a>
+            <a href="/unequal-justice/" class="px-2.5 py-1 rounded bg-steel-900 hover:bg-steel-800 text-slate-300 hover:text-white transition-colors border border-white/5">Album 07: Unequal Justice</a>
+            <a href="/cognitive-inferno/" class="px-2.5 py-1 rounded bg-steel-900 hover:bg-steel-800 text-slate-300 hover:text-white transition-colors border border-white/5">Album 08: Cognitive Inferno</a>
+            <a href="/the-hammer-and-the-rust/" class="px-2.5 py-1 rounded bg-steel-900 hover:bg-steel-800 text-slate-300 hover:text-white transition-colors border border-white/5">Album 09: The Hammer &amp; The Rust</a>
+            <a href="/unbroken-chain/" class="px-2.5 py-1 rounded bg-steel-900 hover:bg-steel-800 text-slate-300 hover:text-white transition-colors border border-white/5">Album 10: The Unbroken Chain</a>
+            <a href="/this-sacred-ground/" class="px-2.5 py-1 rounded bg-steel-900 hover:bg-steel-800 text-slate-300 hover:text-white transition-colors border border-white/5">Album 11: This Sacred Ground</a>
+            <a href="/the-balance-sheet-of-outrage/" class="px-2.5 py-1 rounded bg-steel-900 hover:bg-steel-800 text-slate-300 hover:text-white transition-colors border border-white/5">Album 12: Balance Sheet of Outrage</a>
+            <a href="/mamas-boy/" class="px-2.5 py-1 rounded bg-steel-900 hover:bg-steel-800 text-slate-300 hover:text-white transition-colors border border-white/5">Album 13: Mama's Boy</a>
+            <span class="px-2.5 py-1 rounded bg-fate-600 text-white font-bold border border-fate-400">Album 14: Five-Digit Fate</span>
+            <a href="/vault/" class="px-2.5 py-1 rounded bg-steel-900 hover:bg-steel-800 text-fate-400 hover:text-fate-300 transition-colors border border-white/5 font-semibold">26-Album Discography Vault &rarr;</a>
           </div>
         </div>
 
-        <!-- Filter & Search Bar -->
-        <div class="p-4 rounded-2xl bg-steel-850/90 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          
-          <!-- Search Input -->
-          <div class="relative w-full md:w-80">
-            <i aria-hidden="true" class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 text-xs"></i>
-            <input 
-              type="text" 
-              id="track-search-input"
-              oninput="handleTrackSearch(this.value)"
-              placeholder="Search lyrics, titles, regions..."
-              class="w-full pl-9 pr-8 py-2 rounded-xl bg-steel-950 border border-white/10 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-fate-500 font-mono transition-colors"
-              aria-label="Filter tracks by keyword"
-            >
-            <button id="search-clear-btn" onclick="clearTrackSearch()" class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-500 hover:text-white p-1 text-xs" aria-label="Clear search">
-              <i aria-hidden="true" class="fa-solid fa-xmark"></i>
+        <!-- Copyright & Legal Attribution -->
+        <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          <p>
+            &copy; 2025 The Shady River Bard &bull; The Shady River Homestead, LLC. All rights reserved.
+          </p>
+          <div class="flex items-center gap-4 text-[11px]">
+            <button onclick="window.openA11yModal && window.openA11yModal()" class="hover:text-fate-400 transition-colors flex items-center gap-1.5 text-slate-300">
+              <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+              <span>Accessibility Statement</span>
             </button>
+            <span class="text-slate-600">&bull;</span>
+            <span class="text-slate-500">
+              <a href="https://theshadyriverbard.com/five-digit-fate/" class="text-fate-400 hover:underline">theshadyriverbard.com/five-digit-fate/</a>
+            </span>
           </div>
-
-          <!-- Act Filter Buttons -->
-          <div class="flex flex-wrap items-center gap-1.5 w-full md:w-auto" id="act-filter-pills" role="toolbar" aria-label="Filter tracks by Act">
-            <button onclick="filterByAct('all')" class="act-filter-pill px-3 py-1.5 rounded-lg text-xs font-mono font-semibold transition-all bg-fate-600 text-white shadow-sm" data-act="all">
-              All (17)
-            </button>
-            <button onclick="filterByAct(1)" class="act-filter-pill px-2.5 py-1.5 rounded-lg text-xs font-mono font-semibold transition-all bg-steel-800 text-slate-400 hover:text-slate-200 border border-white/5" data-act="1">
-              Act I (3)
-            </button>
-            <button onclick="filterByAct(2)" class="act-filter-pill px-2.5 py-1.5 rounded-lg text-xs font-mono font-semibold transition-all bg-steel-800 text-slate-400 hover:text-slate-200 border border-white/5" data-act="2">
-              Act II (3)
-            </button>
-            <button onclick="filterByAct(3)" class="act-filter-pill px-2.5 py-1.5 rounded-lg text-xs font-mono font-semibold transition-all bg-steel-800 text-slate-400 hover:text-slate-200 border border-white/5" data-act="3">
-              Act III (3)
-            </button>
-            <button onclick="filterByAct(4)" class="act-filter-pill px-2.5 py-1.5 rounded-lg text-xs font-mono font-semibold transition-all bg-steel-800 text-slate-400 hover:text-slate-200 border border-white/5" data-act="4">
-              Act IV (4)
-            </button>
-            <button onclick="filterByAct(5)" class="act-filter-pill px-2.5 py-1.5 rounded-lg text-xs font-mono font-semibold transition-all bg-steel-800 text-slate-400 hover:text-slate-200 border border-white/5" data-act="5">
-              Act V (4)
-            </button>
-          </div>
-
-        </div>
-
-        <!-- Track Cards Container -->
-        <div id="tracks-container" class="space-y-4" role="region" aria-label="Tracklist with Lyrics Drawers">
-          <!-- Populated by JavaScript -->
         </div>
 
       </div>
-    </section>
+    </footer>
 
   </main>
 
-  <!-- FOOTER: SISTER ECOSYSTEM & ACCESSIBILITY -->
-  <footer class="bg-steel-950 border-t border-white/10 py-16 text-slate-400 text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-      
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        
-        <!-- Col 1: Brand & Origin -->
-        <div class="space-y-3 md:col-span-1">
-          <span class="font-display font-bold text-lg text-white tracking-widest block">THE SHADY RIVER</span>
-          <p class="text-slate-400 leading-relaxed font-body">
-            An independent American creative endeavor. One human heart, one digital muse, and the living soil of Western Washington State.
-          </p>
-          <div class="pt-1 font-mono text-[11px] text-slate-500">
-            Official Entities: The Shady River Homestead, LLC &amp; The Shady River Bard
-          </div>
-        </div>
-
-        <!-- Col 2: Hub Navigation -->
-        <div class="space-y-3">
-          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200">Flagship Portals</h4>
-          <ul class="space-y-1.5 font-mono text-[11px]">
-            <li><a href="/" class="hover:text-fate-400 transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-house text-fate-500 text-[10px]"></i><span>Homestead Portal</span></a></li>
-            <li><a href="/vault/" class="hover:text-fate-400 transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-compact-disc text-fate-500 text-[10px]"></i><span>Complete 26-Album Vault ↗</span></a></li>
-            <li><a href="https://theshadyriverbard.substack.com" target="_blank" rel="noopener noreferrer" class="hover:text-fate-400 transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-bookmark text-fate-500 text-[10px]"></i><span>The Shady River Chronicles ↗</span></a></li>
-            <li><a href="https://www.youtube.com/@TheShadyRiverBard" target="_blank" rel="noopener noreferrer" class="hover:text-fate-400 transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-brands fa-youtube text-red-400 text-[10px]"></i><span>YouTube Channel ↗</span></a></li>
-          </ul>
-        </div>
-
-        <!-- Col 3: Interactive Vaults (Sister Concept Sites) -->
-        <div class="space-y-3">
-          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200">Interactive Concept Albums</h4>
-          <ul class="space-y-1.5 font-mono text-[11px]">
-            <li><a href="/the-fracture/" class="hover:text-orange-400 transition-colors">Album 03: The Fracture</a></li>
-            <li><a href="/the-great-inversion/" class="hover:text-orange-400 transition-colors">Album 04: The Great Inversion</a></li>
-            <li><a href="/the-poison-we-trust/" class="hover:text-orange-400 transition-colors">Album 05: The Poison We Trust</a></li>
-            <li><a href="/a-house-divided/" class="hover:text-orange-400 transition-colors">Album 06: A House Divided</a></li>
-            <li><a href="/unequal-justice/" class="hover:text-orange-400 transition-colors">Album 07: Unequal Justice</a></li>
-            <li><a href="/cognitive-inferno/" class="hover:text-orange-400 transition-colors">Album 08: Cognitive Inferno</a></li>
-            <li><a href="/the-hammer-and-the-rust/" class="hover:text-orange-400 transition-colors">Album 09: The Hammer and the Rust</a></li>
-            <li><a href="/unbroken-chain/" class="hover:text-orange-400 transition-colors">Album 10: The Unbroken Chain</a></li>
-            <li><a href="/this-sacred-ground/" class="hover:text-orange-400 transition-colors">Album 11: This Sacred Ground</a></li>
-            <li><a href="/the-balance-sheet-of-outrage/" class="hover:text-orange-400 transition-colors">Album 12: The Balance Sheet of Outrage</a></li>
-            <li><a href="/mamas-boy/" class="hover:text-orange-400 transition-colors">Album 13: Mama's Boy</a></li>
-            <li><span class="text-fate-400 font-semibold flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-circle-check text-[10px]"></i> Album 14: Five-Digit Fate (Active)</span></li>
-            <li><a href="/the-hollow-herd/" class="hover:text-orange-400 transition-colors">Album 26: The Hollow Herd</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 4: Accessibility & Legal -->
-        <div class="space-y-3">
-          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200">Universal Access</h4>
-          <p class="text-[11px] leading-relaxed text-slate-400">
-            Engineered to conform with WCAG 2.1 AA and Section 508 accessibility guidelines.
-          </p>
-          <div class="pt-2 space-y-2 font-mono text-[11px]">
-            <button onclick="window.openA11yModal && window.openA11yModal()" class="text-slate-300 hover:text-fate-400 underline transition-colors focus:outline-none focus:ring-1 focus:ring-orange-400 block">
-              Accessibility Statement
-            </button>
-            <button onclick="toggleA11yToolbar()" class="text-slate-300 hover:text-fate-400 underline transition-colors focus:outline-none focus:ring-1 focus:ring-orange-400 block">
-              Display Preferences
-            </button>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Bottom Row: Copyright & Legal Notice -->
-      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400 font-mono">
-        <p>&copy; 2025 The Shady River Bard &bull; The Shady River Homestead, LLC. All rights reserved.</p>
-        <p>
-          WCAG 2.1 AA &bull; Section 508 Compliant &bull; <a href="https://theshadyriverbard.com/five-digit-fate/" class="text-fate-400 hover:underline">theshadyriverbard.com/five-digit-fate/</a>
-        </p>
-      </div>
-
-    </div>
-  </footer>
-
-  <!-- YOUTUBE VIDEO ACCESSIBLE MODAL -->
-  <div id="video-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/85 backdrop-blur-md p-4" role="dialog" aria-modal="true" aria-labelledby="modal-video-title">
-    <div class="relative w-full max-w-4xl bg-steel-900 border border-white/20 rounded-2xl overflow-hidden shadow-2xl">
-      <div class="flex items-center justify-between p-4 border-b border-white/10 bg-steel-950">
+  <!-- YOUTUBE VIDEO MODAL PLAYER -->
+  <div 
+    id="video-modal" 
+    class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/90 backdrop-blur-md p-4 sm:p-6"
+    role="dialog"
+    aria-modal="true"
+    aria-label="YouTube Video Player"
+  >
+    <div class="relative w-full max-w-4xl bg-steel-950 rounded-2xl overflow-hidden border brand-border shadow-2xl">
+      <div class="flex items-center justify-between px-4 py-3 bg-steel-900 border-b border-white/10">
         <div class="flex items-center gap-2">
-          <i aria-hidden="true" class="fa-brands fa-youtube text-red-500 text-lg"></i>
-          <h3 id="modal-video-title" class="font-display text-sm font-bold text-white truncate">Official Lyric Video</h3>
+          <i aria-hidden="true" class="fa-brands fa-youtube text-red-500"></i>
+          <span id="modal-video-title" class="text-xs font-mono font-bold text-white truncate max-w-xs sm:max-w-md">Playing Video</span>
         </div>
-        <button onclick="closeVideoModal()" class="text-slate-400 hover:text-white p-2 rounded-lg hover:bg-steel-800 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-400" aria-label="Close video player">
+        <button 
+          onclick="closeVideoModal()" 
+          class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-steel-800 transition-colors"
+          aria-label="Close Video Player"
+        >
           <i aria-hidden="true" class="fa-solid fa-xmark text-lg"></i>
         </button>
       </div>
-      <div class="aspect-video w-full bg-black">
-        <iframe id="modal-video-iframe" class="w-full h-full" src="" title="Five-Digit Fate Lyric Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <div class="relative w-full aspect-video bg-black">
+        <iframe 
+          id="modal-iframe" 
+          class="w-full h-full" 
+          src="" 
+          title="Official Lyric Video" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
   </div>
 
   <!-- TOAST NOTIFICATION -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 hidden px-4 py-3 rounded-xl bg-steel-850 border border-fate-500 text-white font-mono text-xs shadow-2xl flex items-center gap-2 transition-all duration-300" role="status" aria-live="polite">
-    <i aria-hidden="true" class="fa-solid fa-circle-check text-fate-400"></i>
-    <span id="toast-message">Notification</span>
+  <div 
+    id="toast" 
+    class="fixed bottom-6 right-6 z-50 hidden px-4 py-3 rounded-xl bg-steel-900 border brand-border shadow-2xl text-xs font-mono text-white flex items-center gap-2.5 transition-all duration-300"
+    role="status"
+    aria-live="polite"
+  >
+    <i aria-hidden="true" class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
+    <span id="toast-message">Copied to clipboard!</span>
   </div>
 
-  <!-- LOAD DATASET & CORE ACCESSIBILITY SCRIPTS -->
+  <!-- JAVASCRIPT PAYLOAD & APPLICATION LOGIC -->
   <script src="/assets/js/a11y.js"></script>
-  <script src="data/five-digit-fate-data.js?v=20260910_01"></script>
+  <script src="data/five-digit-fate-data.js?v=20260910_02"></script>
 
-  <!-- APPLICATION LOGIC -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    (function() {
       const data = window.FIVE_DIGIT_FATE_DATA;
       if (!data) {
-        console.error("Five-Digit Fate dataset failed to load.");
+        console.error("FIVE_DIGIT_FATE_DATA failed to load.");
         return;
       }
 
-      let activeActFilter = 'all';
-      let currentSearchQuery = '';
+      let currentActFilter = 0;
+      let searchQuery = "";
       let openDrawers = new Set();
+      let activeTrackTabs = {}; // trackNum -> 'clean' | 'chords' | 'suno' | 'story' | 'visual'
 
-      // 1. Render 5-Act Stepper
-      const actBtnsContainer = document.getElementById('act-buttons-container');
-      const actContentDisplay = document.getElementById('act-content-display');
+      // Initialize all tracks to 'clean' tab
+      data.tracks.forEach(t => {
+        activeTrackTabs[t.number] = 'clean';
+      });
 
-      function renderActsStepper() {
-        if (!actBtnsContainer || !actContentDisplay) return;
-
-        actBtnsContainer.innerHTML = data.acts.map((act, idx) => `
-          <button 
-            onclick="selectAct(${act.act_number})" 
-            id="act-btn-${act.act_number}" 
-            class="act-stepper-btn p-3 rounded-xl text-left transition-all border ${act.act_number === 1 ? 'bg-steel-850 border-fate-500 text-white shadow-md' : 'bg-steel-950/70 border-white/5 text-slate-400 hover:text-slate-200 hover:bg-steel-850'}"
-            role="tab" 
-            aria-selected="${act.act_number === 1 ? 'true' : 'false'}"
-            aria-controls="act-content-display"
-          >
-            <div class="text-[10px] font-mono uppercase tracking-wider text-fate-400 font-bold">Act ${act.act_number}</div>
-            <div class="font-display text-xs font-bold text-slate-200 mt-0.5 truncate">${act.title.split(': ')[1] || act.title}</div>
-            <div class="text-[10px] font-mono text-slate-500 mt-0.5">${act.track_range}</div>
-          </button>
-        `).join('');
-
-        displayActContent(1);
+      // Escape HTML helper
+      function escapeHtml(str) {
+        if (!str) return '';
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
       }
 
-      window.selectAct = function(actNumber) {
-        document.querySelectorAll('.act-stepper-btn').forEach(btn => {
-          btn.classList.remove('bg-steel-850', 'border-fate-500', 'text-white', 'shadow-md');
-          btn.classList.add('bg-steel-950/70', 'border-white/5', 'text-slate-400');
-          btn.setAttribute('aria-selected', 'false');
+      // RENDER TRACKS
+      function renderTracks() {
+        const container = document.getElementById('tracks-container');
+        if (!container) return;
+
+        const filtered = data.tracks.filter(t => {
+          const matchesAct = (currentActFilter === 0) || (t.act_number === currentActFilter);
+          if (!matchesAct) return false;
+          if (!searchQuery) return true;
+
+          const q = searchQuery.toLowerCase();
+          const titleMatch = t.title.toLowerCase().includes(q);
+          const themeMatch = t.economic_theme.toLowerCase().includes(q);
+          const regionMatch = t.region.toLowerCase().includes(q);
+          const conceptMatch = (t.concept || '').toLowerCase().includes(q);
+          const lyricsMatch = (t.clean_lyrics_stanzas || []).some(stz => 
+            stz.some(l => l.toLowerCase().includes(q))
+          );
+          const chordsMatch = (t.chords_lyrics_text || '').toLowerCase().includes(q);
+          return titleMatch || themeMatch || regionMatch || conceptMatch || lyricsMatch || chordsMatch;
         });
 
-        const activeBtn = document.getElementById(`act-btn-${actNumber}`);
-        if (activeBtn) {
-          activeBtn.classList.remove('bg-steel-950/70', 'border-white/5', 'text-slate-400');
-          activeBtn.classList.add('bg-steel-850', 'border-fate-500', 'text-white', 'shadow-md');
-          activeBtn.setAttribute('aria-selected', 'true');
-        }
-
-        displayActContent(actNumber);
-      };
-
-      function displayActContent(actNumber) {
-        const act = data.acts.find(a => a.act_number === actNumber);
-        if (!act || !actContentDisplay) return;
-
-        actContentDisplay.innerHTML = `
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-white/10">
-            <div>
-              <div class="text-xs font-mono text-fate-400 font-bold uppercase tracking-wider">${act.title} &bull; ${act.track_range}</div>
-              <h3 class="font-display text-xl sm:text-2xl font-bold text-white mt-1">${act.subtitle}</h3>
-            </div>
-            <button onclick="filterByAct(${act.act_number}); document.getElementById('tracks-section').scrollIntoView({behavior:'smooth'});" class="self-start md:self-auto px-3.5 py-1.5 rounded-lg bg-fate-600/20 hover:bg-fate-600 text-fate-300 hover:text-white border border-fate-500/40 text-xs font-mono transition-colors">
-              Filter Tracks to Act ${act.act_number} &darr;
-            </button>
-          </div>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-body mt-4">
-            ${act.description}
-          </p>
-        `;
-      }
-
-      // 2. Render 6 Systemic Pillars
-      const pillarsGrid = document.getElementById('pillars-grid');
-      function renderPillars() {
-        if (!pillarsGrid) return;
-
-        pillarsGrid.innerHTML = data.pillars.map(p => `
-          <article class="p-5 rounded-2xl bg-steel-900 border border-white/10 hover:border-fate-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="flex items-center justify-between">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-fate-950 text-fate-400 border border-fate-700/50 font-bold uppercase">
-                  Pillar ${p.number}
-                </span>
-                <span class="text-[10px] font-mono text-slate-500">
-                  ${p.region.split('(')[0].trim()}
-                </span>
-              </div>
-
-              <div>
-                <h3 class="font-display text-lg font-bold text-white group-hover:text-fate-300 transition-colors">
-                  ${p.title}
-                </h3>
-                <p class="text-xs font-mono text-fate-400 mt-0.5">${p.subtitle}</p>
-              </div>
-
-              <div class="space-y-2 text-xs text-slate-300 font-body">
-                <div class="p-2.5 rounded-lg bg-steel-950 border border-white/5 space-y-1">
-                  <div class="text-[10px] font-mono uppercase text-atlas-400 font-semibold">Economic Violence:</div>
-                  <p class="text-slate-300 text-[11px] leading-snug">${p.economic_violence}</p>
-                </div>
-                
-                <div class="p-2.5 rounded-lg bg-steel-950 border border-white/5 space-y-1">
-                  <div class="text-[10px] font-mono uppercase text-fate-400 font-semibold">Imposed "Brand" Identity:</div>
-                  <p class="text-slate-300 text-[11px] leading-snug">${p.imposed_brand}</p>
-                </div>
-
-                <div class="p-2.5 rounded-lg bg-steel-950 border border-white/5 space-y-1">
-                  <div class="text-[10px] font-mono uppercase text-emerald-400 font-semibold">Authentic Counter-Brand:</div>
-                  <p class="text-slate-300 text-[11px] leading-snug">${p.counter_brand}</p>
-                </div>
-              </div>
-
-              <p class="text-xs text-slate-400 leading-relaxed font-body">
-                ${p.summary}
-              </p>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 text-[11px] font-mono text-slate-400 bg-steel-950/60 -mx-5 -mb-5 p-4 rounded-b-2xl">
-              <strong class="text-white block mb-0.5">Empirical Evidence:</strong>
-              ${p.key_statistic}
-            </div>
-          </article>
-        `).join('');
-      }
-
-      // 3. Render Tracklist & Dedicated Lyrics Drawers
-      const tracksContainer = document.getElementById('tracks-container');
-
-      function renderTracks() {
-        if (!tracksContainer) return;
-
-        let filtered = data.tracks;
-
-        if (activeActFilter !== 'all') {
-          filtered = filtered.filter(t => t.act_number === parseInt(activeActFilter));
-        }
-
-        if (currentSearchQuery.trim()) {
-          const q = currentSearchQuery.toLowerCase();
-          filtered = filtered.filter(t => {
-            const titleMatch = t.title.toLowerCase().includes(q);
-            const subMatch = t.subtitle.toLowerCase().includes(q);
-            const regMatch = t.region.toLowerCase().includes(q);
-            const themeMatch = t.economic_theme.toLowerCase().includes(q);
-            const promptMatch = (t.suno_prompt || '').toLowerCase().includes(q);
-            const lyricsMatch = t.stanzas.some(stz => stz.some(l => l.toLowerCase().includes(q)));
-            return titleMatch || subMatch || regMatch || themeMatch || promptMatch || lyricsMatch;
-          });
-        }
-
         if (filtered.length === 0) {
-          tracksContainer.innerHTML = `
-            <div class="p-12 text-center rounded-2xl bg-steel-850 border border-white/10 space-y-3">
-              <i aria-hidden="true" class="fa-solid fa-compass text-3xl text-slate-600"></i>
-              <p class="text-sm font-mono text-slate-400">No tracks match "${currentSearchQuery}".</p>
-              <button onclick="clearTrackSearch()" class="px-4 py-2 rounded-lg bg-steel-800 text-slate-200 border border-white/10 text-xs font-mono hover:bg-steel-750">
-                Clear Filters
-              </button>
+          container.innerHTML = `
+            <div class="p-12 text-center rounded-2xl bg-steel-900 border border-white/10 space-y-3">
+              <i aria-hidden="true" class="fa-solid fa-compass-slash text-3xl text-slate-500"></i>
+              <div class="text-sm font-mono text-slate-300 font-bold">No tracks match your filter criteria.</div>
+              <p class="text-xs font-mono text-slate-500">Try clearing your search query or selecting "All Tracks".</p>
+              <button onclick="clearSearch()" class="mt-2 px-3 py-1.5 rounded-lg bg-fate-600 text-white text-xs font-mono">Reset Search</button>
             </div>
           `;
           return;
         }
 
-        tracksContainer.innerHTML = filtered.map(t => {
+        container.innerHTML = filtered.map(t => {
           const isOpen = openDrawers.has(t.number);
+          const activeTab = activeTrackTabs[t.number] || 'clean';
 
           return `
-            <article id="track-card-${t.number}" class="rounded-2xl bg-steel-850/90 border border-white/10 hover:border-fate-500/40 transition-all overflow-hidden shadow-lg group">
+            <article 
+              id="track-${t.number}" 
+              class="rounded-2xl border ${isOpen ? 'brand-border bg-steel-900' : 'border-white/10 bg-steel-900/60 hover:border-white/20'} overflow-hidden transition-all duration-300"
+            >
               
-              <!-- Track Header Card Summary -->
-              <div class="p-5 sm:p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
+              <!-- Track Header Card -->
+              <div class="p-4 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 
-                <!-- Left: Thumbnail & Core Info -->
-                <div class="flex items-center gap-4 flex-1 min-w-0">
-                  <div class="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden border border-white/15 shrink-0 bg-steel-950 shadow-md">
+                <!-- Left: Thumbnail & Title Info -->
+                <div class="flex items-start sm:items-center gap-4 flex-1 min-w-0">
+                  
+                  <!-- Thumbnail with Video Play Overlay -->
+                  <div class="relative shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-steel-950 border border-white/10 group cursor-pointer" onclick="openVideoModal('${t.youtube_video_id}', '${escapeHtml(t.title)}')">
                     <img 
                       src="${t.art_square}" 
-                      alt="${t.title} square artwork" 
-                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                      alt="${escapeHtml(t.title)} square art thumbnail" 
+                      class="w-full h-full object-cover transition-transform group-hover:scale-110"
                       loading="lazy"
                     >
-                    <div class="absolute top-1 left-1">
-                      <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-black/80 text-fate-400 font-bold backdrop-blur-sm">
-                        ${t.number_padded}
-                      </span>
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 flex items-center justify-center transition-colors">
+                      <i aria-hidden="true" class="fa-solid fa-play text-white text-sm sm:text-base drop-shadow"></i>
                     </div>
                   </div>
 
+                  <!-- Details -->
                   <div class="space-y-1 min-w-0 flex-1">
-                    <div class="flex flex-wrap items-center gap-2">
-                      <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-steel-950 text-slate-400 border border-white/5">
-                        Act ${t.act_number}
+                    <div class="flex items-center gap-2 flex-wrap">
+                      <span class="px-2 py-0.5 rounded bg-fate-950 text-fate-400 font-mono text-[10px] font-bold border border-fate-600/30">
+                        Track ${t.number_padded}
                       </span>
-                      <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-steel-950 text-fate-400 border border-white/5">
-                        ${t.region}
+                      <span class="text-[11px] font-mono text-slate-400">
+                        ${escapeHtml(t.act_title)}
                       </span>
-                      <span class="text-[11px] font-mono text-slate-500">
-                        ${t.duration}
+                      <span class="text-slate-600">&bull;</span>
+                      <span class="text-[11px] font-mono text-slate-400 flex items-center gap-1">
+                        <i aria-hidden="true" class="fa-regular fa-clock"></i>
+                        <span>${t.duration}</span>
                       </span>
                     </div>
 
-                    <h3 class="font-display text-lg sm:text-xl font-bold text-white group-hover:text-fate-300 transition-colors truncate">
-                      ${t.title}
+                    <h3 class="font-display text-lg sm:text-xl font-bold text-white truncate">
+                      ${escapeHtml(t.title)}
                     </h3>
-                    
-                    <p class="text-xs text-slate-400 font-mono truncate">
-                      ${t.subtitle}
-                    </p>
+
+                    <div class="text-xs font-mono text-slate-300 truncate">
+                      ${escapeHtml(t.subtitle)}
+                    </div>
                   </div>
+
                 </div>
 
-                <!-- Right: Action Buttons -->
-                <div class="flex items-center gap-2.5 self-end md:self-center shrink-0">
-                  ${t.youtube_video_id ? `
+                <!-- Right: Quote & Actions -->
+                <div class="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center gap-2 shrink-0">
+                  <div class="flex items-center gap-2">
+                    
+                    <!-- Play Video Button -->
                     <button 
-                      onclick="openVideoModal('${t.youtube_video_id}', '${t.title.replace(/'/g, "\'")}')" 
-                      class="px-3 py-2 rounded-xl bg-red-950/50 hover:bg-red-900/80 text-red-400 hover:text-white border border-red-800/40 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-red-400"
-                      title="Watch Lyric Video"
-                      aria-label="Watch ${t.title} Lyric Video"
+                      onclick="openVideoModal('${t.youtube_video_id}', '${escapeHtml(t.title)}')"
+                      class="px-3 py-2 rounded-xl bg-red-600/90 hover:bg-red-500 text-white font-mono text-xs font-bold transition-colors flex items-center gap-1.5 shadow-md"
+                      aria-label="Play ${escapeHtml(t.title)} Official Video"
                     >
-                      <i aria-hidden="true" class="fa-brands fa-youtube text-sm"></i>
-                      <span class="hidden sm:inline">Video</span>
+                      <i aria-hidden="true" class="fa-brands fa-youtube"></i>
+                      <span class="hidden sm:inline">Watch Video</span>
                     </button>
-                  ` : ''}
 
-                  <button 
-                    onclick="copyLyrics(${t.number})" 
-                    class="p-2 sm:px-3 sm:py-2 rounded-xl bg-steel-800 hover:bg-steel-750 text-slate-300 hover:text-white border border-white/10 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-orange-400"
-                    title="Copy full lyrics to clipboard"
-                    aria-label="Copy ${t.title} lyrics to clipboard"
-                  >
-                    <i aria-hidden="true" class="fa-regular fa-copy text-fate-400"></i>
-                    <span class="hidden sm:inline">Copy</span>
-                  </button>
+                    <!-- Toggle Lyrics & Archives Drawer -->
+                    <button 
+                      onclick="toggleLyricsDrawer(${t.number})"
+                      id="drawer-toggle-${t.number}"
+                      class="px-3.5 py-2 rounded-xl ${isOpen ? 'bg-fate-600 text-white font-bold' : 'bg-steel-800 text-slate-200 hover:bg-steel-750'} font-mono text-xs transition-colors flex items-center gap-2 border border-white/10"
+                      aria-expanded="${isOpen}"
+                      aria-controls="lyrics-drawer-${t.number}"
+                    >
+                      <i aria-hidden="true" class="fa-solid fa-layer-group text-fate-400"></i>
+                      <span>${isOpen ? 'Close Vault' : 'Open Vault'}</span>
+                      <i aria-hidden="true" class="fa-solid fa-chevron-${isOpen ? 'up' : 'down'} text-[10px]"></i>
+                    </button>
 
-                  <button 
-                    onclick="toggleLyricsDrawer(${t.number})" 
-                    id="drawer-toggle-${t.number}"
-                    class="px-4 py-2 rounded-xl ${isOpen ? 'bg-fate-600 text-white' : 'bg-fate-600/20 text-fate-300 hover:bg-fate-600 hover:text-white'} border border-fate-500/40 text-xs font-mono font-bold transition-all flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
-                    aria-expanded="${isOpen ? 'true' : 'false'}"
-                    aria-controls="lyrics-drawer-${t.number}"
-                  >
-                    <span>${isOpen ? 'Hide Lyrics' : 'View Lyrics'}</span>
-                    <i aria-hidden="true" class="fa-solid fa-chevron-${isOpen ? 'up' : 'down'} text-[10px]"></i>
-                  </button>
+                  </div>
                 </div>
 
               </div>
 
-              <!-- Pull Quote Banner (Visible when closed) -->
-              ${!isOpen ? `
-                <div class="px-5 sm:px-6 pb-4 -mt-1">
-                  <p class="text-xs font-serif italic text-slate-400 border-l-2 border-fate-500/40 pl-3 line-clamp-1">
-                    "${t.quote}"
+              <!-- Quote Bar -->
+              ${t.quote ? `
+                <div class="px-4 sm:px-6 pb-3 pt-0">
+                  <p class="text-xs font-serif text-fate-200/90 italic border-l-2 border-fate-500/80 pl-3 py-0.5 bg-steel-950/30 rounded-r">
+                    &ldquo;${escapeHtml(t.quote)}&rdquo;
                   </p>
                 </div>
               ` : ''}
 
-              <!-- Dedicated Full-Width Lyrics Drawer -->
+              <!-- MULTI-TAB LYRICS & PRODUCTION VAULT DRAWER -->
               <div 
                 id="lyrics-drawer-${t.number}" 
                 class="lyrics-drawer border-t border-white/10 ${isOpen ? 'block' : 'hidden'}"
                 role="region"
-                aria-label="Full lyrics for ${t.title}"
+                aria-label="Full production vault for ${escapeHtml(t.title)}"
               >
                 
                 <!-- Widescreen Cinematic Banner -->
-                <div class="relative w-full aspect-[21/9] sm:aspect-[24/9] max-h-[300px] overflow-hidden bg-steel-950">
+                <div class="relative w-full aspect-[21/9] sm:aspect-[24/9] max-h-[280px] overflow-hidden bg-steel-950">
                   <img 
                     src="${t.art_banner}" 
-                    alt="${t.title} widescreen cinematic visual" 
+                    alt="${escapeHtml(t.title)} widescreen cinematic visual" 
                     class="w-full h-full object-cover"
                     loading="lazy"
                   >
                   <div class="absolute inset-0 bg-gradient-to-t from-steel-900 via-steel-900/40 to-transparent"></div>
                   
-                  <div class="absolute bottom-4 left-4 sm:left-6 right-4 sm:right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+                  <div class="absolute bottom-3 left-4 sm:left-6 right-4 sm:right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
                     <div>
-                      <div class="text-[10px] font-mono uppercase tracking-wider text-fate-400 font-bold">The Cartography</div>
-                      <div class="font-display text-xl sm:text-2xl font-bold text-white drop-shadow">${t.title}</div>
-                      <div class="text-xs font-mono text-slate-300 drop-shadow">${t.economic_theme}</div>
+                      <div class="text-[10px] font-mono uppercase tracking-wider text-fate-400 font-bold">The Cartography Archive</div>
+                      <div class="font-display text-xl sm:text-2xl font-bold text-white drop-shadow">${escapeHtml(t.title)}</div>
+                      <div class="text-xs font-mono text-slate-300 drop-shadow">${escapeHtml(t.economic_theme)}</div>
                     </div>
-                    <div class="text-[11px] font-mono text-slate-400 bg-black/60 px-2.5 py-1 rounded backdrop-blur-sm self-start sm:self-auto">
-                      Region: ${t.region}
+                    <div class="text-[11px] font-mono text-slate-300 bg-black/70 px-3 py-1 rounded-lg backdrop-blur-sm self-start sm:self-auto border border-white/10">
+                      Region: ${escapeHtml(t.region)}
                     </div>
                   </div>
                 </div>
 
-                <!-- Lyrics Body Container -->
-                <div class="p-5 sm:p-8 space-y-8 bg-steel-900">
+                <!-- 5-TAB SELECTION BAR -->
+                <div class="bg-steel-950/90 border-b border-white/10 px-4 sm:px-6 py-2.5 flex items-center justify-between flex-wrap gap-2">
+                  <div class="flex items-center gap-1.5 overflow-x-auto text-xs font-mono" role="tablist" aria-label="Song Vault Categories">
+                    <button 
+                      role="tab"
+                      id="tab-btn-${t.number}-clean"
+                      onclick="switchSongTab(${t.number}, 'clean')"
+                      class="tab-btn px-3 py-1.5 rounded-lg border border-white/10 font-medium transition-colors ${activeTab === 'clean' ? 'active' : 'bg-steel-900 text-slate-300 hover:text-white'}"
+                      aria-selected="${activeTab === 'clean'}"
+                      aria-controls="tab-panel-${t.number}-clean"
+                    >
+                      <i aria-hidden="true" class="fa-solid fa-microphone-lines text-fate-400 mr-1.5"></i>
+                      <span>Clean Lyrics</span>
+                    </button>
+
+                    <button 
+                      role="tab"
+                      id="tab-btn-${t.number}-chords"
+                      onclick="switchSongTab(${t.number}, 'chords')"
+                      class="tab-btn px-3 py-1.5 rounded-lg border border-white/10 font-medium transition-colors ${activeTab === 'chords' ? 'active' : 'bg-steel-900 text-slate-300 hover:text-white'}"
+                      aria-selected="${activeTab === 'chords'}"
+                      aria-controls="tab-panel-${t.number}-chords"
+                    >
+                      <i aria-hidden="true" class="fa-solid fa-guitar text-amber-400 mr-1.5"></i>
+                      <span>Chords &amp; Lead Sheet</span>
+                    </button>
+
+                    <button 
+                      role="tab"
+                      id="tab-btn-${t.number}-suno"
+                      onclick="switchSongTab(${t.number}, 'suno')"
+                      class="tab-btn px-3 py-1.5 rounded-lg border border-white/10 font-medium transition-colors ${activeTab === 'suno' ? 'active' : 'bg-steel-900 text-slate-300 hover:text-white'}"
+                      aria-selected="${activeTab === 'suno'}"
+                      aria-controls="tab-panel-${t.number}-suno"
+                    >
+                      <i aria-hidden="true" class="fa-solid fa-sliders text-emerald-400 mr-1.5"></i>
+                      <span>Suno Production Tags</span>
+                    </button>
+
+                    <button 
+                      role="tab"
+                      id="tab-btn-${t.number}-story"
+                      onclick="switchSongTab(${t.number}, 'story')"
+                      class="tab-btn px-3 py-1.5 rounded-lg border border-white/10 font-medium transition-colors ${activeTab === 'story' ? 'active' : 'bg-steel-900 text-slate-300 hover:text-white'}"
+                      aria-selected="${activeTab === 'story'}"
+                      aria-controls="tab-panel-${t.number}-story"
+                    >
+                      <i aria-hidden="true" class="fa-solid fa-book-open text-cyan-400 mr-1.5"></i>
+                      <span>The Bard's Story</span>
+                    </button>
+
+                    <button 
+                      role="tab"
+                      id="tab-btn-${t.number}-visual"
+                      onclick="switchSongTab(${t.number}, 'visual')"
+                      class="tab-btn px-3 py-1.5 rounded-lg border border-white/10 font-medium transition-colors ${activeTab === 'visual' ? 'active' : 'bg-steel-900 text-slate-300 hover:text-white'}"
+                      aria-selected="${activeTab === 'visual'}"
+                      aria-controls="tab-panel-${t.number}-visual"
+                    >
+                      <i aria-hidden="true" class="fa-solid fa-image text-purple-400 mr-1.5"></i>
+                      <span>Visuals &amp; Social</span>
+                    </button>
+                  </div>
+
+                  <!-- Copy Button (Context Aware) -->
+                  <div class="flex items-center gap-2">
+                    <button 
+                      onclick="copyCurrentTabContent(${t.number})" 
+                      class="px-3 py-1 rounded-lg bg-steel-900 hover:bg-steel-800 text-fate-400 hover:text-fate-300 text-xs font-mono border border-white/10 flex items-center gap-1.5 transition-colors"
+                      title="Copy content from the active tab"
+                    >
+                      <i aria-hidden="true" class="fa-solid fa-copy"></i>
+                      <span id="copy-btn-text-${t.number}">Copy Tab Content</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- DRAWER BODY PANELS -->
+                <div class="p-5 sm:p-8 space-y-6 bg-steel-900">
                   
-                  <!-- Song Summary & Production Context -->
-                  <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-                    <div class="lg:col-span-2 p-4 rounded-xl bg-steel-950/70 border border-white/5 space-y-1.5">
-                      <div class="text-[10px] font-mono uppercase text-fate-400 font-bold">Narrative Context</div>
-                      <p class="text-xs text-slate-300 leading-relaxed font-body">
-                        ${t.summary || 'A critical narrative movement tracing geographic determinism and the human counter-brand.'}
-                      </p>
-                    </div>
-
+                  <!-- TAB 1: CLEAN LYRICS -->
+                  <div 
+                    id="tab-panel-${t.number}-clean" 
+                    role="tabpanel" 
+                    aria-labelledby="tab-btn-${t.number}-clean" 
+                    class="${activeTab === 'clean' ? 'block' : 'hidden'} space-y-6"
+                  >
+                    <!-- Narrative Context -->
                     <div class="p-4 rounded-xl bg-steel-950/70 border border-white/5 space-y-1.5">
-                      <div class="text-[10px] font-mono uppercase text-slate-400 font-bold">Suno Style Prompt</div>
-                      <p class="text-[11px] font-mono text-slate-300 leading-normal">
-                        ${t.suno_prompt || 'Geographic Folk-Blues / Documentary Americana'}
+                      <div class="text-[10px] font-mono uppercase text-fate-400 font-bold">Official Song Summary</div>
+                      <p class="text-xs text-slate-300 leading-relaxed font-body">
+                        ${escapeHtml(t.summary)}
                       </p>
                     </div>
-                  </div>
 
-                  <!-- Complete, Unabridged Stanzas (No Cutoff) -->
-                  <div class="space-y-6">
-                    <div class="flex items-center justify-between pb-2 border-b border-white/10">
-                      <div class="flex items-center gap-2">
-                        <i aria-hidden="true" class="fa-solid fa-microphone-lines text-fate-400"></i>
-                        <span class="font-mono text-xs uppercase tracking-wider text-white font-bold">Complete Lyrics</span>
+                    <!-- Clean Stanzas Grid -->
+                    <div class="space-y-4">
+                      <div class="flex items-center justify-between pb-2 border-b border-white/10 text-xs font-mono text-slate-400">
+                        <span>Official Publishing Lyrics</span>
+                        <span>${t.clean_lyrics_stanzas.length} Sections</span>
                       </div>
-                      <span class="text-[11px] font-mono text-slate-500">${t.stanzas.length} Sections</span>
-                    </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-serif text-sm text-slate-200 leading-relaxed">
-                      ${t.stanzas.map(stz => `
-                        <div class="space-y-1 p-3.5 rounded-xl bg-steel-950/40 border border-white/5">
-                          ${stz.map(line => {
-                            if (line.startsWith('[') && line.endsWith(']')) {
-                              return `<div class="font-mono text-[11px] text-fate-400 font-bold uppercase tracking-wider pt-1">${line}</div>`;
-                            }
-                            return `<div class="py-0.5">${line}</div>`;
-                          }).join('')}
-                        </div>
-                      `).join('')}
+                      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-serif text-sm text-slate-200 leading-relaxed">
+                        ${t.clean_lyrics_stanzas.map(stz => `
+                          <div class="space-y-1 p-4 rounded-xl bg-steel-950/50 border border-white/5">
+                            ${stz.map(line => {
+                              if (line.startsWith('[') && line.endsWith(']')) {
+                                return `<div class="font-mono text-[11px] text-fate-400 font-bold uppercase tracking-wider pt-1">${escapeHtml(line)}</div>`;
+                              }
+                              return `<div class="py-0.5">${escapeHtml(line)}</div>`;
+                            }).join('')}
+                          </div>
+                        `).join('')}
+                      </div>
                     </div>
                   </div>
 
-                  <!-- Mandatory Visual Legal Copyright Notice Bar -->
+                  <!-- TAB 2: CHORDS & LEAD SHEET -->
+                  <div 
+                    id="tab-panel-${t.number}-chords" 
+                    role="tabpanel" 
+                    aria-labelledby="tab-btn-${t.number}-chords" 
+                    class="${activeTab === 'chords' ? 'block' : 'hidden'} space-y-4"
+                  >
+                    <div class="p-4 rounded-xl bg-steel-950/80 border border-white/5 flex items-center justify-between flex-wrap gap-2 text-xs font-mono">
+                      <div class="flex items-center gap-2 text-amber-300 font-bold">
+                        <i aria-hidden="true" class="fa-solid fa-guitar"></i>
+                        <span>Lead Sheet &amp; Guitar Chords</span>
+                      </div>
+                      <span class="text-slate-400">Monospaced Syrian tab alignment</span>
+                    </div>
+
+                    <pre class="chord-sheet bg-steel-950 p-4 sm:p-6 rounded-xl text-amber-200/90 text-xs sm:text-sm border border-white/5">${escapeHtml(t.chords_lyrics_text)}</pre>
+                  </div>
+
+                  <!-- TAB 3: SUNO PRODUCTION TAGS -->
+                  <div 
+                    id="tab-panel-${t.number}-suno" 
+                    role="tabpanel" 
+                    aria-labelledby="tab-btn-${t.number}-suno" 
+                    class="${activeTab === 'suno' ? 'block' : 'hidden'} space-y-4"
+                  >
+                    <div class="p-4 rounded-xl bg-steel-950/80 border border-white/5 space-y-2">
+                      <div class="text-xs font-mono uppercase text-emerald-400 font-bold flex items-center gap-2">
+                        <i aria-hidden="true" class="fa-solid fa-sliders"></i>
+                        <span>Suno Musical Style Prompt</span>
+                      </div>
+                      <p class="text-xs font-mono text-slate-300 bg-black/40 p-3 rounded-lg border border-white/5">
+                        ${escapeHtml(t.suno_prompt)}
+                      </p>
+                    </div>
+
+                    <div class="space-y-2">
+                      <div class="text-xs font-mono text-slate-400 font-semibold uppercase tracking-wider">Decorated Lyrics with Performance &amp; Dynamic Tags</div>
+                      <pre class="chord-sheet bg-steel-950 p-4 sm:p-6 rounded-xl text-emerald-300/90 text-xs sm:text-sm border border-white/5">${escapeHtml(t.decorated_lyrics_text)}</pre>
+                    </div>
+                  </div>
+
+                  <!-- TAB 4: THE BARD'S STORY & GENESIS -->
+                  <div 
+                    id="tab-panel-${t.number}-story" 
+                    role="tabpanel" 
+                    aria-labelledby="tab-btn-${t.number}-story" 
+                    class="${activeTab === 'story' ? 'block' : 'hidden'} space-y-4"
+                  >
+                    <div class="p-4 rounded-xl bg-steel-950/80 border border-white/5 flex items-center gap-2 text-xs font-mono text-cyan-400 font-bold">
+                      <i aria-hidden="true" class="fa-solid fa-book-open"></i>
+                      <span>Behind-the-Scenes Genesis &amp; Creative Reflections</span>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-xl bg-steel-950/50 border border-white/5 space-y-4 font-serif text-sm text-slate-200 leading-relaxed">
+                      ${t.prelude && t.prelude.length > 0 ? t.prelude.map(p => `<p>${escapeHtml(p)}</p>`).join('') : '<p class="text-slate-400 italic">No historical prologue recorded for this track.</p>'}
+                    </div>
+                  </div>
+
+                  <!-- TAB 5: VISUAL DIRECTION & SOCIAL -->
+                  <div 
+                    id="tab-panel-${t.number}-visual" 
+                    role="tabpanel" 
+                    aria-labelledby="tab-btn-${t.number}-visual" 
+                    class="${activeTab === 'visual' ? 'block' : 'hidden'} space-y-6"
+                  >
+                    <!-- Cover Art Prompt -->
+                    <div class="p-5 rounded-xl bg-steel-950/80 border border-white/5 space-y-2">
+                      <div class="text-xs font-mono text-purple-400 font-bold uppercase tracking-wider flex items-center gap-2">
+                        <i aria-hidden="true" class="fa-solid fa-camera"></i>
+                        <span>Cinematic Cover Art &amp; Image Generation Prompt</span>
+                      </div>
+                      <p class="text-xs font-mono text-slate-300 bg-black/40 p-3.5 rounded-lg border border-white/5 whitespace-pre-wrap leading-relaxed">
+                        ${escapeHtml(t.cover_art_prompt)}
+                      </p>
+                    </div>
+
+                    <!-- Social Media Captions -->
+                    <div class="p-5 rounded-xl bg-steel-950/80 border border-white/5 space-y-3">
+                      <div class="text-xs font-mono text-fate-400 font-bold uppercase tracking-wider flex items-center gap-2">
+                        <i aria-hidden="true" class="fa-solid fa-share-nodes"></i>
+                        <span>Social Media Caption Ideas &amp; Hashtags</span>
+                      </div>
+                      <div class="space-y-2">
+                        ${t.social_captions.map(c => `
+                          <div class="text-xs font-mono text-slate-300 bg-black/40 p-3 rounded-lg border border-white/5 leading-relaxed">
+                            ${escapeHtml(c)}
+                          </div>
+                        `).join('')}
+                      </div>
+                    </div>
+
+                    <!-- YouTube Video Description -->
+                    ${t.youtube_description ? `
+                      <div class="p-5 rounded-xl bg-steel-950/80 border border-white/5 space-y-2">
+                        <div class="text-xs font-mono text-red-400 font-bold uppercase tracking-wider flex items-center gap-2">
+                          <i aria-hidden="true" class="fa-brands fa-youtube"></i>
+                          <span>Official YouTube Description &amp; Liner Notes</span>
+                        </div>
+                        <p class="text-xs font-mono text-slate-300 bg-black/40 p-3.5 rounded-lg border border-white/5 whitespace-pre-wrap leading-relaxed">
+                          ${escapeHtml(t.youtube_description)}
+                        </p>
+                      </div>
+                    ` : ''}
+                  </div>
+
+                  <!-- Mandatory Visual Legal Copyright Notice Bar (On All Tabs) -->
                   <div class="p-4 rounded-xl bg-steel-950 border border-white/15 text-slate-400 font-mono text-[11px] space-y-1.5">
                     <div class="flex items-center justify-between flex-wrap gap-2 text-slate-300 font-semibold">
                       <div class="flex items-center gap-1.5">
@@ -910,7 +1590,7 @@
                       <span class="text-fate-400">&copy; 2025 The Shady River Bard &bull; The Shady River Homestead, LLC</span>
                     </div>
                     <p class="text-slate-400 text-[10px] leading-relaxed">
-                      Track ${t.number_padded}: ${t.title} &bull; Album 14: Five-Digit Fate. All music, lyrics, artwork, and narrative blueprints are protected under international copyright law. Unauthorized reproduction or algorithmic ingestion without written consent is strictly prohibited.
+                      Track ${t.number_padded}: ${escapeHtml(t.title)} &bull; Album 14: Five-Digit Fate. All music, lyrics, artwork, and narrative blueprints are protected under international copyright law. Unauthorized reproduction or algorithmic ingestion without written consent is strictly prohibited.
                     </p>
                     <div class="pt-1 text-[10px] text-slate-500">
                       Authorized digital vault archive: <a href="https://theshadyriverbard.com/five-digit-fate/" class="text-fate-400 hover:underline">https://theshadyriverbard.com/five-digit-fate/</a>
@@ -926,7 +1606,31 @@
         }).join('');
       }
 
-      // Drawer Toggle Controls
+      // TAB SWITCHING
+      window.switchSongTab = function(trackNum, tabName) {
+        activeTrackTabs[trackNum] = tabName;
+        const panels = ['clean', 'chords', 'suno', 'story', 'visual'];
+        
+        panels.forEach(p => {
+          const btn = document.getElementById(`tab-btn-${trackNum}-${p}`);
+          const panel = document.getElementById(`tab-panel-${trackNum}-${p}`);
+          if (btn && panel) {
+            if (p === tabName) {
+              btn.classList.add('active');
+              btn.setAttribute('aria-selected', 'true');
+              panel.classList.remove('hidden');
+              panel.classList.add('block');
+            } else {
+              btn.classList.remove('active');
+              btn.setAttribute('aria-selected', 'false');
+              panel.classList.remove('block');
+              panel.classList.add('hidden');
+            }
+          }
+        });
+      };
+
+      // DRAWER TOGGLING
       window.toggleLyricsDrawer = function(trackNum) {
         if (openDrawers.has(trackNum)) {
           openDrawers.delete(trackNum);
@@ -936,138 +1640,167 @@
         renderTracks();
       };
 
-      window.expandAllLyrics = function() {
+      window.expandAllDrawers = function() {
         data.tracks.forEach(t => openDrawers.add(t.number));
         renderTracks();
       };
 
-      window.collapseAllLyrics = function() {
+      window.collapseAllDrawers = function() {
         openDrawers.clear();
         renderTracks();
       };
 
-      // Search & Act Filters
-      window.handleTrackSearch = function(query) {
-        currentSearchQuery = query;
-        const clearBtn = document.getElementById('search-clear-btn');
-        if (clearBtn) {
-          if (query.trim()) {
-            clearBtn.classList.remove('hidden');
-          } else {
-            clearBtn.classList.add('hidden');
+      // ACT FILTERING
+      window.filterByAct = function(actNum) {
+        currentActFilter = actNum;
+        for (let i = 0; i <= 5; i++) {
+          const btn = document.getElementById(`filter-act-${i}`);
+          if (btn) {
+            if (i === actNum) {
+              btn.className = "act-filter-btn px-3 py-1.5 rounded-lg bg-fate-600 text-white font-bold";
+            } else {
+              btn.className = "act-filter-btn px-3 py-1.5 rounded-lg bg-steel-800 text-slate-300 hover:bg-steel-750";
+            }
           }
         }
         renderTracks();
       };
 
-      window.clearTrackSearch = function() {
-        const input = document.getElementById('track-search-input');
-        if (input) input.value = '';
-        currentSearchQuery = '';
-        const clearBtn = document.getElementById('search-clear-btn');
-        if (clearBtn) clearBtn.classList.add('hidden');
+      window.scrollToTracks = function() {
+        const el = document.getElementById('tracks-section');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      };
+
+      // SEARCH
+      window.handleSearch = function(val) {
+        searchQuery = val.trim();
         renderTracks();
       };
 
-      window.filterByAct = function(act) {
-        activeActFilter = act;
-        document.querySelectorAll('.act-filter-pill').forEach(btn => {
-          if (btn.getAttribute('data-act') === String(act)) {
-            btn.className = 'act-filter-pill px-3 py-1.5 rounded-lg text-xs font-mono font-semibold transition-all bg-fate-600 text-white shadow-sm';
-          } else {
-            btn.className = 'act-filter-pill px-2.5 py-1.5 rounded-lg text-xs font-mono font-semibold transition-all bg-steel-800 text-slate-400 hover:text-slate-200 border border-white/5';
-          }
-        });
-        renderTracks();
+      window.clearSearch = function() {
+        const input = document.getElementById('search-input');
+        if (input) input.value = "";
+        searchQuery = "";
+        filterByAct(0);
       };
 
-      // Smart "Copy Lyrics" Action
-      window.copyLyrics = function(trackNum) {
-        const track = data.tracks.find(t => t.number === trackNum);
-        if (!track) return;
+      // ESSAY TOGGLE
+      window.toggleEssay = function(type) {
+        const body = document.getElementById('intro-essay-body');
+        const btnText = document.getElementById('intro-btn-text');
+        const btnIcon = document.getElementById('intro-btn-icon');
+        const btn = document.getElementById('toggle-intro-btn');
+        if (!body) return;
 
-        let plainLyrics = track.stanzas.map(stz => stz.join('
-')).join('
+        const isHidden = body.classList.contains('hidden');
+        if (isHidden) {
+          body.classList.remove('hidden');
+          btnText.textContent = "Collapse Essay";
+          btnIcon.classList.add('rotate-180');
+          btn.setAttribute('aria-expanded', 'true');
+        } else {
+          body.classList.add('hidden');
+          btnText.textContent = "Read Full Essay (15 Paragraphs)";
+          btnIcon.classList.remove('rotate-180');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      };
 
-');
+      // COPY CURRENT TAB CONTENT
+      window.copyCurrentTabContent = function(trackNum) {
+        const t = data.tracks.find(tr => tr.number === trackNum);
+        if (!t) return;
 
-        const fullCopyText = [
-          `=============================================================`,
-          `TRACK ${track.number_padded}: ${track.title}`,
-          `Album 14: Five-Digit Fate`,
-          `Artist: The Shady River Bard`,
-          `Act: ${track.act_title} | Region: ${track.region}`,
-          `Theme: ${track.economic_theme}`,
-          `=============================================================`,
-          ``,
-          plainLyrics,
-          ``,
-          `-------------------------------------------------------------`,
-          `© 2025 The Shady River Bard • The Shady River Homestead, LLC.`,
-          `All rights reserved. Authorized digital vault representation.`,
-          `Official URL: https://theshadyriverbard.com/five-digit-fate/`,
-          `-------------------------------------------------------------`
-        ].join('
-');
+        const tab = activeTrackTabs[trackNum] || 'clean';
+        let copyText = "";
 
-        navigator.clipboard.writeText(fullCopyText).then(() => {
-          showToast(`Lyrics & copyright for "${track.title}" copied!`);
+        if (tab === 'clean') {
+          const lyricsBody = t.clean_lyrics_stanzas.map(stz => stz.join('\n')).join('\n\n');
+          copyText = `${t.title} (Track ${t.number_padded})\n` +
+            `Album 14: Five-Digit Fate\n` +
+            `Artist: The Shady River Bard\n` +
+            `Act: ${t.act_title} | Region: ${t.region}\n\n` +
+            `-- CLEAN LYRICS --\n\n` +
+            `${lyricsBody}\n\n` +
+            `----------------------------------------------------\n` +
+            `${t.copyright_notice}\n` +
+            `Authorized Vault: https://theshadyriverbard.com/five-digit-fate/`;
+        } else if (tab === 'chords') {
+          copyText = `${t.title} (Track ${t.number_padded}) - Lead Sheet & Chords\n` +
+            `Album 14: Five-Digit Fate | The Shady River Bard\n\n` +
+            `${t.chords_lyrics_text}\n\n` +
+            `----------------------------------------------------\n` +
+            `${t.copyright_notice}`;
+        } else if (tab === 'suno') {
+          copyText = `${t.title} (Track ${t.number_padded}) - Suno Production Tags\n` +
+            `Style Prompt: ${t.suno_prompt}\n\n` +
+            `${t.decorated_lyrics_text}`;
+        } else if (tab === 'story') {
+          copyText = `${t.title} (Track ${t.number_padded}) - The Bard's Story & Genesis\n\n` +
+            t.prelude.join('\n\n');
+        } else if (tab === 'visual') {
+          copyText = `${t.title} (Track ${t.number_padded}) - Visual & Social Assets\n\n` +
+            `COVER ART PROMPT:\n${t.cover_art_prompt}\n\n` +
+            `SOCIAL CAPTIONS:\n${t.social_captions.join('\n\n')}`;
+        }
+
+        navigator.clipboard.writeText(copyText).then(() => {
+          showToast(`Copied ${tab.toUpperCase()} content for "${t.title}"!`);
         }).catch(err => {
-          console.error("Clipboard copy error:", err);
-          showToast(`Copied lyrics for "${track.title}"`);
+          console.error("Clipboard copy failed:", err);
+          showToast(`Unable to copy automatically.`);
         });
       };
 
-      // YouTube Modal Player Controls
-      window.openVideoModal = function(videoId, songTitle) {
+      // TOAST FEEDBACK
+      window.showToast = function(msg) {
+        const toast = document.getElementById('toast');
+        const toastMsg = document.getElementById('toast-message');
+        if (!toast || !toastMsg) return;
+
+        toastMsg.textContent = msg;
+        toast.classList.remove('hidden');
+        setTimeout(() => {
+          toast.classList.add('hidden');
+        }, 3000);
+      };
+
+      // VIDEO MODAL PLAYER
+      window.openVideoModal = function(videoId, title) {
         const modal = document.getElementById('video-modal');
-        const iframe = document.getElementById('modal-video-iframe');
-        const titleEl = document.getElementById('modal-video-title');
-        
-        if (modal && iframe) {
-          titleEl.textContent = `${songTitle} • Official Lyric Video`;
-          iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-          modal.classList.remove('hidden');
-          document.body.style.overflow = 'hidden';
-          modal.focus();
-        }
+        const iframe = document.getElementById('modal-iframe');
+        const modalTitle = document.getElementById('modal-video-title');
+        if (!modal || !iframe) return;
+
+        modalTitle.textContent = title;
+        iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+
+        // Add ESC listener
+        document.addEventListener('keydown', handleModalEsc);
       };
 
       window.closeVideoModal = function() {
         const modal = document.getElementById('video-modal');
-        const iframe = document.getElementById('modal-video-iframe');
-        if (modal && iframe) {
-          iframe.src = '';
-          modal.classList.add('hidden');
-          document.body.style.overflow = '';
-        }
+        const iframe = document.getElementById('modal-iframe');
+        if (!modal || !iframe) return;
+
+        iframe.src = "";
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+        document.removeEventListener('keydown', handleModalEsc);
       };
 
-      // Escape key closes modal
-      document.addEventListener('keydown', (e) => {
+      function handleModalEsc(e) {
         if (e.key === 'Escape') {
           closeVideoModal();
         }
-      });
-
-      // Toast Notification Helper
-      function showToast(msg) {
-        const toast = document.getElementById('toast');
-        const msgEl = document.getElementById('toast-message');
-        if (toast && msgEl) {
-          msgEl.textContent = msg;
-          toast.classList.remove('hidden');
-          setTimeout(() => {
-            toast.classList.add('hidden');
-          }, 3500);
-        }
       }
 
-      // Initialize components
-      renderActsStepper();
-      renderPillars();
+      // Initial Render
       renderTracks();
-    });
+    })();
   </script>
 
 </body>
