@@ -160,13 +160,45 @@
         <a href="https://music.youtube.com/playlist?list=OLAK5uy_kB9UqNZJQoWpY_fRivd6kS1a5G0dZ7SR0" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="YouTube Music" aria-label="Open YouTube Music">
           <i aria-hidden="true" class="fa-solid fa-music"></i>
         </a>
-        <button onclick="toggleA11yToolbar()" class="p-2 rounded-lg bg-court-850 hover:bg-court-800 text-stone-300 border border-white/10 text-xs transition-colors" title="Accessibility Settings" aria-label="Toggle Accessibility Display Settings">
+        <button id="a11y-toggle-btn" onclick="toggleA11yToolbar()" aria-expanded="false" aria-controls="a11y-toolbar" class="p-2 rounded-lg bg-court-850 hover:bg-court-800 text-amber-400 border border-white/10 text-xs transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500" title="Accessibility Display Preferences" aria-label="Toggle accessibility display preferences">
           <i aria-hidden="true" class="fa-solid fa-universal-access"></i>
         </button>
       </div>
 
     </div>
   </header>
+
+  <!-- EXPANDABLE ACCESSIBILITY TOOLBAR (WCAG 2.1 AA) -->
+  <div id="a11y-toolbar" class="hidden bg-soil-900 border-b border-amber-500/40 py-3 px-4 text-xs transition-all shadow-2xl relative z-40" role="region" aria-label="Accessibility Display Preferences">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <div class="w-7 h-7 rounded-lg bg-amber-950/80 border border-amber-500/40 flex items-center justify-center text-amber-400 text-xs">
+          <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+        </div>
+        <div>
+          <span class="font-display font-bold text-stone-100 block">Accessibility Preferences</span>
+          <span class="text-stone-400 text-[11px] font-body">Custom display controls for readability &amp; vision assistance</span>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-2 sm:gap-3 font-mono text-xs">
+        <button id="btn-contrast" onclick="toggleA11yOption('contrast')" class="px-3 py-1.5 rounded-lg bg-court-850 hover:bg-court-800 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
+          High Contrast: <span id="val-contrast" class="text-stone-400">Off</span>
+        </button>
+        <button id="btn-textsize" onclick="cycleTextSize()" class="px-3 py-1.5 rounded-lg bg-court-850 hover:bg-court-800 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
+          Text Size: <span id="val-textsize" class="text-stone-400">Normal</span>
+        </button>
+        <button id="btn-underline" onclick="toggleA11yOption('underline')" class="px-3 py-1.5 rounded-lg bg-court-850 hover:bg-court-800 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
+          Underline Links: <span id="val-underline" class="text-stone-400">Off</span>
+        </button>
+        <button id="btn-motion" onclick="toggleA11yOption('motion')" class="px-3 py-1.5 rounded-lg bg-court-850 hover:bg-court-800 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
+          Reduced Motion: <span id="val-motion" class="text-stone-400">System</span>
+        </button>
+        <button onclick="resetA11yOptions()" class="px-2 py-1 text-stone-400 hover:text-white underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-white">
+          Reset
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- MAIN LANDMARK -->
   <main id="main-content" tabindex="-1" class="focus:outline-none">

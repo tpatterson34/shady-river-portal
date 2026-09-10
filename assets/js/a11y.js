@@ -102,11 +102,66 @@
     }
   }
 
+  // 1.5 Ensure Accessibility Preferences Toolbar Exists in DOM
+  function ensureA11yToolbarExists() {
+    let toolbar = document.getElementById('a11y-toolbar');
+    if (toolbar) return toolbar;
+
+    const toolbarHtml = `
+      <div id="a11y-toolbar" class="hidden border-b border-amber-500/40 py-3 px-4 text-xs transition-all shadow-2xl relative z-40 bg-stone-900" role="region" aria-label="Accessibility Display Preferences" style="background-color: #0b0f14;">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+          <div class="flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-lg border border-amber-500/40 flex items-center justify-center text-amber-400 text-xs" style="background-color: rgba(69, 26, 3, 0.8);">
+              <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+            </div>
+            <div>
+              <span class="font-bold text-stone-100 block" style="font-family: serif, system-ui;">Accessibility Preferences</span>
+              <span class="text-stone-400 text-[11px]">Custom display controls for readability &amp; vision assistance</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center gap-2 sm:gap-3 font-mono text-xs">
+            <button id="btn-contrast" onclick="toggleA11yOption('contrast')" class="px-3 py-1.5 rounded-lg text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500" style="background-color: #171e2a;">
+              High Contrast: <span id="val-contrast" class="text-stone-400">Off</span>
+            </button>
+            <button id="btn-textsize" onclick="cycleTextSize()" class="px-3 py-1.5 rounded-lg text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500" style="background-color: #171e2a;">
+              Text Size: <span id="val-textsize" class="text-stone-400">Normal</span>
+            </button>
+            <button id="btn-underline" onclick="toggleA11yOption('underline')" class="px-3 py-1.5 rounded-lg text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500" style="background-color: #171e2a;">
+              Underline Links: <span id="val-underline" class="text-stone-400">Off</span>
+            </button>
+            <button id="btn-motion" onclick="toggleA11yOption('motion')" class="px-3 py-1.5 rounded-lg text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500" style="background-color: #171e2a;">
+              Reduced Motion: <span id="val-motion" class="text-stone-400">System</span>
+            </button>
+            <button onclick="resetA11yOptions()" class="px-2 py-1 text-stone-400 hover:text-white underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-white">
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Anchor after header or nav or body start
+    const headerEl = document.querySelector('header');
+    const navEl = document.querySelector('nav');
+    const targetAnchor = headerEl || navEl;
+
+    if (targetAnchor && targetAnchor.parentNode) {
+      targetAnchor.insertAdjacentHTML('afterend', toolbarHtml);
+    } else if (document.body) {
+      document.body.insertAdjacentHTML('afterbegin', toolbarHtml);
+    }
+
+    toolbar = document.getElementById('a11y-toolbar');
+    updateToolbarUI();
+    return toolbar;
+  }
+
   // Toggle Accessibility Preferences Toolbar
   window.toggleA11yToolbar = function () {
-    const toolbar = document.getElementById('a11y-toolbar');
-    const toggleBtn = document.getElementById('a11y-toggle-btn');
+    const toolbar = ensureA11yToolbarExists();
     if (!toolbar) return;
+
+    const toggleBtn = document.getElementById('a11y-toggle-btn') || document.querySelector('button[aria-controls="a11y-toolbar"]');
 
     const isHidden = toolbar.classList.contains('hidden');
     if (isHidden) {
@@ -114,6 +169,7 @@
       if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'true');
       const firstBtn = toolbar.querySelector('button');
       if (firstBtn) firstBtn.focus();
+      toolbar.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     } else {
       toolbar.classList.add('hidden');
       if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
@@ -278,9 +334,14 @@
   // Apply on immediate load
   loadA11yState();
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadA11yState);
-  } else {
+  function initA11y() {
     loadA11yState();
+    ensureA11yToolbarExists();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initA11y);
+  } else {
+    initA11y();
   }
 })();
