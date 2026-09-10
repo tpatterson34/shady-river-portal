@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sold Cheap | Complete Album 15 Vault &amp; Forensic Audit | The Shady River Bard</title>
-  <meta name="description" content="The complete vault for Sold Cheap by The Shady River Bard: an ambitious 12-track sonic documentary on the systemic devaluation of American life. Includes unabridged lyrics, lead sheets, arrangement notes, the Bard's story, and forensic ledger.">
+  <meta name="description" content="The complete vault for Sold Cheap by The Shady River Bard: an ambitious 12-track sonic documentary on the systemic devaluation of American life. Includes unabridged lyrics, the Bard's story, and forensic ledger.">
   
   <!-- Cache Control to ensure instant updates -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -16,14 +16,14 @@
   <meta property="og:site_name" content="The Shady River Bard">
   <meta property="og:type" content="music.album">
   <meta property="og:title" content="Sold Cheap | Complete Album 15 Vault">
-  <meta property="og:description" content="A 12-track sonic documentary on the systemic devaluation of American life. Complete lyrics vault, chords, arrangement notes, essays, and official video releases.">
+  <meta property="og:description" content="A 12-track sonic documentary on the systemic devaluation of American life. Complete lyrics vault, the Bard's story, essays, and official video releases.">
   <meta property="og:image" content="https://theshadyriverbard.com/sold-cheap/assets/art/sold-cheap-cover.webp">
   <meta property="og:url" content="https://theshadyriverbard.com/sold-cheap/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@TheShadyRiverBard">
   <meta name="twitter:creator" content="@TheShadyRiverBard">
   <meta name="twitter:title" content="Sold Cheap | Complete Album 15 Vault">
-  <meta name="twitter:description" content="12-track sonic documentary and forensic audit of modern America. Complete lyrics, chords, arrangement notes, essays, and official videos.">
+  <meta name="twitter:description" content="12-track sonic documentary and forensic audit of modern America. Complete lyrics, essays, the Bard's story, and official videos.">
   <meta name="twitter:image" content="https://theshadyriverbard.com/sold-cheap/assets/art/sold-cheap-cover.webp">
 
   <!-- High-Priority Preload for Master Album Cover -->
@@ -102,13 +102,6 @@
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .chord-sheet {
-      font-family: 'JetBrains Mono', monospace;
-      white-space: pre-wrap;
-      tab-size: 4;
-      line-height: 1.6;
     }
 
     .tab-btn.active {
@@ -592,7 +585,7 @@
             12-Track Interactive Vault
           </h2>
           <p class="text-slate-300 text-sm leading-relaxed">
-            Explore the complete, unabridged lyrical, musical, and conceptual archive. Every track features verified verbatim stanzas, musician lead sheets with chords, arrangement notes, and the Bard's personal story.
+            Explore the complete, unabridged lyrical and narrative archive. Every track features verified verbatim stanzas, the Bard's personal genesis story, and official video releases.
           </p>
         </div>
 
@@ -814,7 +807,7 @@
 
   <!-- JAVASCRIPT PAYLOAD & APPLICATION LOGIC -->
   <script src="/assets/js/a11y.js"></script>
-  <script src="data/sold-cheap-data.js?v=20260910_01"></script>
+  <script src="data/sold-cheap-data.js?v=20260910_02"></script>
 
   <script>
     (function() {
@@ -827,7 +820,7 @@
       let currentActFilter = 0;
       let searchQuery = "";
       let openDrawers = new Set();
-      let activeTrackTabs = {}; // trackNum -> 'clean' | 'chords' | 'arrangement' | 'story' | 'visual'
+      let activeTrackTabs = {}; // trackNum -> 'clean' | 'story'
 
       // Initialize all tracks to 'clean' tab
       data.tracks.forEach(t => {
@@ -901,7 +894,7 @@
                       height="600"
                     >
                     <button 
-                      onclick="openVideoModal('${t.youtube_video_id}', '${escapeHtml(t.title)}')"
+                      onclick="openTrackVideo(${t.number})"
                       class="absolute inset-0 bg-black/60 opacity-0 group-hover/art:opacity-100 flex items-center justify-center text-copper-400 hover:text-copper-300 transition-opacity focus:opacity-100 focus:outline-none"
                       aria-label="Play official lyric video for ${escapeHtml(t.title)}"
                       title="Play official video"
@@ -940,7 +933,7 @@
 
                   <div class="flex items-center gap-2 shrink-0">
                     <button 
-                      onclick="openVideoModal('${t.youtube_video_id}', '${escapeHtml(t.title)}')"
+                      onclick="openTrackVideo(${t.number})"
                       class="p-2.5 rounded-xl bg-coldslate-900 hover:bg-coldslate-800 text-copper-400 hover:text-white border border-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-copper-400"
                       aria-label="Play video for ${escapeHtml(t.title)}"
                       title="Watch Official Video"
@@ -964,7 +957,7 @@
 
               </div>
 
-              <!-- EXPANDABLE 5-TAB DRAWER SURFACE -->
+              <!-- EXPANDABLE DRAWER SURFACE -->
               <div 
                 id="drawer-content-${t.number}" 
                 class="${isOpen ? 'block' : 'hidden'} border-t border-white/10 bg-coldslate-950/95"
@@ -1008,60 +1001,24 @@
                       role="tab"
                       id="tab-btn-${t.number}-clean"
                       onclick="switchSongTab(${t.number}, 'clean')"
-                      class="tab-btn px-3 py-1.5 rounded-lg border border-white/10 font-medium transition-colors ${activeTab === 'clean' ? 'active' : 'bg-coldslate-900 text-slate-300 hover:text-white'}"
+                      class="tab-btn px-3.5 py-1.5 rounded-lg border border-white/10 font-medium transition-colors ${activeTab === 'clean' ? 'active' : 'bg-coldslate-900 text-slate-300 hover:text-white'}"
                       aria-selected="${activeTab === 'clean'}"
                       aria-controls="tab-panel-${t.number}-clean"
                     >
-                      <i aria-hidden="true" class="fa-solid fa-align-left text-copper-400 mr-1.5"></i>
+                      <i aria-hidden="true" class="fa-solid fa-scroll text-copper-400 mr-1.5"></i>
                       <span>Clean Lyrics</span>
-                    </button>
-
-                    <button 
-                      role="tab"
-                      id="tab-btn-${t.number}-chords"
-                      onclick="switchSongTab(${t.number}, 'chords')"
-                      class="tab-btn px-3 py-1.5 rounded-lg border border-white/10 font-medium transition-colors ${activeTab === 'chords' ? 'active' : 'bg-coldslate-900 text-slate-300 hover:text-white'}"
-                      aria-selected="${activeTab === 'chords'}"
-                      aria-controls="tab-panel-${t.number}-chords"
-                    >
-                      <i aria-hidden="true" class="fa-solid fa-guitar text-amber-400 mr-1.5"></i>
-                      <span>Chords &amp; Lead Sheet</span>
-                    </button>
-
-                    <button 
-                      role="tab"
-                      id="tab-btn-${t.number}-arrangement"
-                      onclick="switchSongTab(${t.number}, 'arrangement')"
-                      class="tab-btn px-3 py-1.5 rounded-lg border border-white/10 font-medium transition-colors ${activeTab === 'arrangement' ? 'active' : 'bg-coldslate-900 text-slate-300 hover:text-white'}"
-                      aria-selected="${activeTab === 'arrangement'}"
-                      aria-controls="tab-panel-${t.number}-arrangement"
-                    >
-                      <i aria-hidden="true" class="fa-solid fa-sliders text-emerald-400 mr-1.5"></i>
-                      <span>Arrangement &amp; Performance</span>
                     </button>
 
                     <button 
                       role="tab"
                       id="tab-btn-${t.number}-story"
                       onclick="switchSongTab(${t.number}, 'story')"
-                      class="tab-btn px-3 py-1.5 rounded-lg border border-white/10 font-medium transition-colors ${activeTab === 'story' ? 'active' : 'bg-coldslate-900 text-slate-300 hover:text-white'}"
+                      class="tab-btn px-3.5 py-1.5 rounded-lg border border-white/10 font-medium transition-colors ${activeTab === 'story' ? 'active' : 'bg-coldslate-900 text-slate-300 hover:text-white'}"
                       aria-selected="${activeTab === 'story'}"
                       aria-controls="tab-panel-${t.number}-story"
                     >
-                      <i aria-hidden="true" class="fa-solid fa-book-open text-cyan-400 mr-1.5"></i>
+                      <i aria-hidden="true" class="fa-solid fa-book-open text-amber-400 mr-1.5"></i>
                       <span>The Bard's Story</span>
-                    </button>
-
-                    <button 
-                      role="tab"
-                      id="tab-btn-${t.number}-visual"
-                      onclick="switchSongTab(${t.number}, 'visual')"
-                      class="tab-btn px-3 py-1.5 rounded-lg border border-white/10 font-medium transition-colors ${activeTab === 'visual' ? 'active' : 'bg-coldslate-900 text-slate-300 hover:text-white'}"
-                      aria-selected="${activeTab === 'visual'}"
-                      aria-controls="tab-panel-${t.number}-visual"
-                    >
-                      <i aria-hidden="true" class="fa-solid fa-palette text-purple-400 mr-1.5"></i>
-                      <span>Visual Direction &amp; Social</span>
                     </button>
                   </div>
 
@@ -1090,55 +1047,14 @@
                     </div>
                   </div>
 
-                  <!-- TAB 2: CHORDS & LEAD SHEET -->
-                  <div 
-                    id="tab-panel-${t.number}-chords" 
-                    role="tabpanel" 
-                    aria-labelledby="tab-btn-${t.number}-chords" 
-                    class="${activeTab === 'chords' ? 'block' : 'hidden'} space-y-4"
-                  >
-                    <div class="p-4 rounded-xl bg-coldslate-900/80 border border-white/5 flex items-center justify-between flex-wrap gap-2 text-xs font-mono">
-                      <div class="flex items-center gap-2 text-amber-300 font-bold">
-                        <i aria-hidden="true" class="fa-solid fa-guitar"></i>
-                        <span>Lead Sheet &amp; Guitar Chords</span>
-                      </div>
-                      <span class="text-slate-400">Monospaced Syrian tab alignment</span>
-                    </div>
-
-                    <pre class="chord-sheet bg-coldslate-950 p-4 sm:p-6 rounded-xl text-amber-200/90 text-xs sm:text-sm border border-white/5">${escapeHtml(t.chords_lyrics_text)}</pre>
-                  </div>
-
-                  <!-- TAB 3: ARRANGEMENT & PERFORMANCE NOTES -->
-                  <div 
-                    id="tab-panel-${t.number}-arrangement" 
-                    role="tabpanel" 
-                    aria-labelledby="tab-btn-${t.number}-arrangement" 
-                    class="${activeTab === 'arrangement' ? 'block' : 'hidden'} space-y-4"
-                  >
-                    <div class="p-4 rounded-xl bg-coldslate-900/80 border border-white/5 space-y-2">
-                      <div class="text-xs font-mono uppercase text-emerald-400 font-bold flex items-center gap-2">
-                        <i aria-hidden="true" class="fa-solid fa-sliders"></i>
-                        <span>Musical Arrangement &amp; Sonic Identity</span>
-                      </div>
-                      <p class="text-xs font-mono text-slate-300 bg-black/40 p-3 rounded-lg border border-white/5">
-                        ${escapeHtml(t.arrangement_prompt)}
-                      </p>
-                    </div>
-
-                    <div class="space-y-2">
-                      <div class="text-xs font-mono text-slate-400 font-semibold uppercase tracking-wider">Decorated Lyrics with Performance &amp; Dynamic Tags</div>
-                      <pre class="chord-sheet bg-coldslate-950 p-4 sm:p-6 rounded-xl text-emerald-300/90 text-xs sm:text-sm border border-white/5">${escapeHtml(t.decorated_lyrics_text)}</pre>
-                    </div>
-                  </div>
-
-                  <!-- TAB 4: THE BARD'S STORY & GENESIS -->
+                  <!-- TAB 2: THE BARD'S STORY & GENESIS -->
                   <div 
                     id="tab-panel-${t.number}-story" 
                     role="tabpanel" 
                     aria-labelledby="tab-btn-${t.number}-story" 
                     class="${activeTab === 'story' ? 'block' : 'hidden'} space-y-4"
                   >
-                    <div class="p-4 rounded-xl bg-coldslate-900/80 border border-white/5 flex items-center gap-2 text-xs font-mono text-cyan-400 font-bold">
+                    <div class="p-4 rounded-xl bg-coldslate-900/80 border border-white/5 flex items-center gap-2 text-xs font-mono text-amber-400 font-bold">
                       <i aria-hidden="true" class="fa-solid fa-book-open"></i>
                       <span>Behind-the-Scenes Genesis &amp; Creative Reflections</span>
                     </div>
@@ -1151,38 +1067,6 @@
                       <div class="p-4 rounded-xl bg-black/40 border border-white/5 space-y-2">
                         <div class="text-xs font-mono text-slate-400 font-semibold uppercase">Official Video Liner Notes</div>
                         <p class="text-xs font-mono text-slate-300 leading-relaxed">${escapeHtml(t.youtube_description)}</p>
-                      </div>
-                    ` : ''}
-                  </div>
-
-                  <!-- TAB 5: VISUAL DIRECTION & SOCIAL -->
-                  <div 
-                    id="tab-panel-${t.number}-visual" 
-                    role="tabpanel" 
-                    aria-labelledby="tab-btn-${t.number}-visual" 
-                    class="${activeTab === 'visual' ? 'block' : 'hidden'} space-y-4"
-                  >
-                    <div class="p-4 rounded-xl bg-coldslate-900/80 border border-white/5 space-y-2">
-                      <div class="text-xs font-mono uppercase text-purple-400 font-bold flex items-center gap-2">
-                        <i aria-hidden="true" class="fa-solid fa-palette"></i>
-                        <span>Cinematic Cover Art Generation Prompt</span>
-                      </div>
-                      <p class="text-xs font-mono text-slate-300 bg-black/40 p-3 rounded-lg border border-white/5 whitespace-pre-line">
-                        ${escapeHtml(t.cover_art_prompt)}
-                      </p>
-                    </div>
-
-                    ${t.social_captions.length > 0 ? `
-                      <div class="space-y-3">
-                        <div class="text-xs font-mono text-slate-400 font-semibold uppercase tracking-wider">Social Media Caption Variations</div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                          ${t.social_captions.map((cap, cIdx) => `
-                            <div class="p-3 rounded-xl bg-coldslate-900/40 border border-white/5 text-xs font-mono text-slate-300 flex flex-col justify-between gap-2">
-                              <p>${escapeHtml(cap)}</p>
-                              <span class="text-[10px] text-slate-500 text-right">Option ${cIdx + 1}</span>
-                            </div>
-                          `).join('')}
-                        </div>
                       </div>
                     ` : ''}
                   </div>
@@ -1208,7 +1092,7 @@
       // TAB SWITCHING
       window.switchSongTab = function(trackNum, tabName) {
         activeTrackTabs[trackNum] = tabName;
-        const panels = ['clean', 'chords', 'arrangement', 'story', 'visual'];
+        const panels = ['clean', 'story'];
         
         panels.forEach(p => {
           const btn = document.getElementById(`tab-btn-${trackNum}-${p}`);
@@ -1290,32 +1174,16 @@
         let copyText = "";
 
         if (tab === 'clean') {
-          const lyricsBody = t.clean_lyrics_stanzas.join('\n\n');
-          copyText = `${t.title} (Track ${t.number_padded}) - Official Clean Lyrics\n` +
-            `Album 15: Sold Cheap | The Shady River Bard\n` +
-            `Act: ${t.act_title} | Location: ${t.location}\n\n` +
-            `-- CLEAN LYRICS --\n\n` +
-            `${lyricsBody}\n\n` +
+          copyText = `${t.title} (Track ${t.number_padded}) - Unabridged Lyrics\n` +
+            `Album 15: Sold Cheap | The Shady River Bard\n\n` +
+            `\"${t.quote}\"\n\n` +
+            t.clean_lyrics_stanzas.join('\n\n') + '\n\n' +
             `----------------------------------------------------\n` +
             `${t.copyright_notice}\n` +
             `Authorized Vault: https://theshadyriverbard.com/sold-cheap/`;
-        } else if (tab === 'chords') {
-          copyText = `${t.title} (Track ${t.number_padded}) - Lead Sheet & Chords\n` +
-            `Album 15: Sold Cheap | The Shady River Bard\n\n` +
-            `${t.chords_lyrics_text}\n\n` +
-            `----------------------------------------------------\n` +
-            `${t.copyright_notice}`;
-        } else if (tab === 'arrangement') {
-          copyText = `${t.title} (Track ${t.number_padded}) - Arrangement & Performance Notes\n` +
-            `Style & Arrangement: ${t.arrangement_prompt}\n\n` +
-            `${t.decorated_lyrics_text}`;
         } else if (tab === 'story') {
           copyText = `${t.title} (Track ${t.number_padded}) - The Bard's Story & Genesis\n\n` +
             t.prelude.join('\n\n');
-        } else if (tab === 'visual') {
-          copyText = `${t.title} (Track ${t.number_padded}) - Visual & Social Assets\n\n` +
-            `COVER ART PROMPT:\n${t.cover_art_prompt}\n\n` +
-            `SOCIAL CAPTIONS:\n${t.social_captions.join('\n\n')}`;
         }
 
         navigator.clipboard.writeText(copyText).then(() => {
@@ -1337,6 +1205,13 @@
         setTimeout(() => {
           toast.classList.add('hidden');
         }, 3000);
+      };
+
+      // TRACK VIDEO HELPER FUNCTION (Immune to escaping/apostrophes in track title)
+      window.openTrackVideo = function(trackNum) {
+        const track = data.tracks.find(item => item.number === trackNum);
+        if (!track || !track.youtube_video_id) return;
+        openVideoModal(track.youtube_video_id, track.title);
       };
 
       // VIDEO MODAL PLAYER
