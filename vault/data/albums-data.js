@@ -273,7 +273,10 @@ window.CATALOG = {
       ],
       "genre": "Gritty Political Folk",
       "release_year": 2025,
-      "companion_novella": null,
+      "companion_novella": {
+        "title": "The Lucidity Protocol",
+        "url": "https://theshadyriverbard.substack.com/s/the-lucidity-protocol"
+      },
       "cover_image": "assets/covers/album-05.webp",
       "apple_music_url": "https://music.apple.com/us/album/the-poison-we-trust/1831430324",
       "track_videos": [
@@ -451,10 +454,7 @@ window.CATALOG = {
       ],
       "genre": "Psych-Folk / Dark Blues",
       "release_year": 2025,
-      "companion_novella": {
-        "title": "The Lucidity Protocol",
-        "url": "https://theshadyriverbard.substack.com/s/the-lucidity-protocol"
-      },
+      "companion_novella": null,
       "cover_image": "assets/covers/album-08.webp",
       "apple_music_url": "https://music.apple.com/us/album/cognitive-inferno/1832521551",
       "track_videos": [

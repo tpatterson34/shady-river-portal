@@ -10,21 +10,17 @@ window.INFERNO_DATA = {
     "release_year": 2025,
     "genre": "Psych-Folk / Dark Blues & Industrial Rock",
     "hero_art": "assets/art/cognitive-inferno-cover.webp",
-    "companion_novella": {
-      "title": "The Lucidity Protocol",
-      "url": "https://theshadyriverbard.substack.com/s/the-lucidity-protocol",
-      "badge": "Official Companion Novella"
-    },
+    "companion_novella": null,
     "apple_music_url": "https://music.apple.com/us/album/cognitive-inferno/1832521551",
     "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_lJrGYBBlzKrUtuVNPPOzDhK1WrjobM1Wg",
     "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcE3k_0lQhF30Bpo4ik5m6S_",
-    "description": "Have you ever lost an hour to a screen and wondered where the time went? Have you felt the phantom buzz of a notification in your pocket, or the low-grade, constant hum of anxiety from a world that never, ever logs off? We live our lives inside a machine we built but no longer control. Cognitive Inferno is the soundtrack to this modern condition—a visceral, unflinching rock symphony on the war for human attention, the somatic toll of dopamine debt, and the radical reclamation of consciousness through the Lucidity Protocol.",
+    "description": "Have you ever lost an hour to a screen and wondered where the time went? Have you felt the phantom buzz of a notification in your pocket, or the low-grade, constant hum of anxiety from a world that never, ever logs off? We live our lives inside a machine we built but no longer control. Cognitive Inferno is the soundtrack to this modern condition—a visceral, unflinching rock symphony on the war for human attention, the somatic toll of dopamine debt, and the radical reclamation of consciousness and sovereign human presence.",
     "stats": {
       "tracks": 10,
       "phases": 4,
       "pillars": 5,
       "duration": "43 Min",
-      "novella": "The Lucidity Protocol"
+      "sound": "The Roaring Fire"
     }
   },
   "phases": [
@@ -71,7 +67,7 @@ window.INFERNO_DATA = {
       "phase_number": 4,
       "phase_id": "phase-4",
       "title": "The Reckoning & The Roaring Fire",
-      "subtitle": "The Lucidity Protocol, Sovereign Consciousness, and Re-Humanization",
+      "subtitle": "The Roaring Fire, Sovereign Consciousness, and Re-Humanization",
       "track_range": "Track 10",
       "description": "The album's triumphant philosophical thesis. Rather than retreating into hopeless luddism or despair, we meet the inferno of digital noise with a fiercer, intentional flame: sovereign human awareness, analog connection, deep contemplative work, and re-humanized community.",
       "tracks": [
@@ -145,9 +141,9 @@ window.INFERNO_DATA = {
       "key_quote": "When certainty becomes a digital fortress, curiosity is treated as treason."
     },
     {
-      "id": "lucidity-protocol",
+      "id": "internal-fire",
       "pillar_number": 5,
-      "title": "The Lucidity Protocol & Re-Humanization",
+      "title": "The Internal Fire & Re-Humanization",
       "subtitle": "Neuroplastic Reclamation, Deep Work & Analog Sanctuaries",
       "metric": "100% Sovereign Reclaim",
       "stat_detail": "Targeted digital fasting, prolonged uninterrupted contemplation, and somatic embodiment trigger rapid neuroplastic restoration of executive control and emotional regulation.",
@@ -165,27 +161,27 @@ window.INFERNO_DATA = {
     {
       "dimension": "Information Ingestion",
       "cognitive_overload": "Algorithmic infinite stream; passive scrolling; hyper-condensed snippets and inflammatory soundbites; constant sensory flooding.",
-      "lucidity_protocol": "Intentional curated feeds; deliberate deep reading of primary texts; analog physical books; sacred hours of total information silence."
+      "sovereign_presence": "Intentional curated feeds; deliberate deep reading of primary texts; analog physical books; sacred hours of total information silence."
     },
     {
       "dimension": "Dopamine Regulation",
       "cognitive_overload": "Variable reward addiction; craving external digital validation; phantom vibrations; perpetual neuro-chemical depletion and anhedonia.",
-      "lucidity_protocol": "Delayed gratification; intrinsic fulfillment through prolonged craftsmanship; cold-turkey dopamine fasting; somatic grounding in physical reality."
+      "sovereign_presence": "Delayed gratification; intrinsic fulfillment through prolonged craftsmanship; cold-turkey dopamine fasting; somatic grounding in physical reality."
     },
     {
       "dimension": "Cognitive Processing",
       "cognitive_overload": "Extreme attention residue; chronic task-switching; surface-level scanning; reliance on automated generative surrogates.",
-      "lucidity_protocol": "Monotasking; 90-minute uninterrupted deep-work cycles; sovereign critical reasoning; protected contemplative downtime."
+      "sovereign_presence": "Monotasking; 90-minute uninterrupted deep-work cycles; sovereign critical reasoning; protected contemplative downtime."
     },
     {
       "dimension": "Social Cohesion",
       "cognitive_overload": "Epistemic tribal silos; affective polarization; performative outrage; transactional digital parasocial connections.",
-      "lucidity_protocol": "Embodied face-to-face dialogue; charitable listening across divides; shared physical community labor; non-judgmental presence."
+      "sovereign_presence": "Embodied face-to-face dialogue; charitable listening across divides; shared physical community labor; non-judgmental presence."
     },
     {
       "dimension": "Identity & Sovereignty",
       "cognitive_overload": "Commoditized attention capital; predictive algorithmic behavioral modification; externalized self-worth.",
-      "lucidity_protocol": "Sovereign autonomy; unmonitored analog sanctuary; intentional boundary defense; conscious self-definition."
+      "sovereign_presence": "Sovereign autonomy; unmonitored analog sanctuary; intentional boundary defense; conscious self-definition."
     }
   ],
   "tracks": [

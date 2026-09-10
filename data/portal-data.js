@@ -107,6 +107,10 @@ window.PORTAL_DATA = {
       "badge": "Bespoke Interactive Vault",
       "cover": "/the-poison-we-trust/assets/art/the-poison-we-trust-cover.webp",
       "tracks_count": 13,
+      "companion_novella": {
+        "title": "The Lucidity Protocol",
+        "url": "https://theshadyriverbard.substack.com/s/the-lucidity-protocol"
+      },
       "themes": [
         "Broken Food Pyramid",
         "Industrial Seed Oils",
@@ -116,7 +120,7 @@ window.PORTAL_DATA = {
       ],
       "url": "/the-poison-we-trust/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcG-3eJRamWMAXVCJEhO_sRa",
-      "description": "An unflinching 4-movement investigation into dietary deceptions, corporate capture of regulatory agencies, and the modern chronic illness epidemic—culminating in an empowering revival of ancestral health sovereignty."
+      "description": "An unflinching 4-movement investigation into dietary deceptions, corporate capture of regulatory agencies, and the modern chronic illness epidemic—accompanied by the serialized companion novella 'The Lucidity Protocol' on Substack."
     },
     {
       "id": "a-house-divided",
@@ -169,11 +173,11 @@ window.PORTAL_DATA = {
         "Dopamine Exploitation",
         "Cognitive Fragmentation",
         "Epistemic Tribes",
-        "The Lucidity Protocol"
+        "Re-Humanization"
       ],
       "url": "/cognitive-inferno/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcE3k_0lQhF30Bpo4ik5m6S_",
-      "description": "A visceral 4-phase rock symphony dissecting the algorithmic capture of human attention, the neurological toll of endless scrolling and dopamine debt, and the radical reclaiming of sovereignty through the Lucidity Protocol."
+      "description": "A visceral 4-phase rock symphony dissecting the algorithmic capture of human attention, the neurological toll of endless scrolling and dopamine debt, and the radical reclaiming of sovereign human presence."
     },
     {
       "id": "the-forgotten-crown",

@@ -15,6 +15,13 @@ window.POISON_WE_TRUST_DATA = {
     "amazon_music_url": "https://music.amazon.com/search/The+Shady+River+Bard+The+Poison+We+Trust",
     "discography_url": "https://theshadyriverbard.com/vault/",
     "liner_notes_url": "https://theshadyriverbard.substack.com/s/deconstructed",
+    "companion_novella": {
+      "title": "The Lucidity Protocol",
+      "subtitle": "A Speculative Novella on Memory, Compliance, and Soil Sovereignty",
+      "url": "https://theshadyriverbard.substack.com/s/the-lucidity-protocol",
+      "badge": "Official Companion Novella",
+      "description": "When a corporate biotech firm takes over a struggling convalescent facility, they introduce a 'miracle drug' that deletes the residents' memories to ensure perfectly profitable compliance. Armed with illicit heirloom seeds and a stubborn connection to the dirt, old-school groundskeeper Bram Thorne wages a quiet war against the sterile new regime."
+    },
     "cover_image": "assets/art/the-poison-we-trust-cover.webp"
   },
   "pillars": [
