@@ -986,7 +986,9 @@ window.CATALOG = {
         "MzXiLlrSzek"
       ],
       "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_lsEEp9XNtrX2itoiJlVbt0rNWtxF7rlR0",
-      "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcHr2R6eMk1Xd3DPGh4fPYtK"
+      "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcHr2R6eMk1Xd3DPGh4fPYtK",
+      "is_bespoke": true,
+      "custom_url": "/yo-ho-ho-and-a-pocket-full-of-greed/"
     },
     {
       "id": "american-rubble",

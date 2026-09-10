@@ -327,6 +327,25 @@ window.PORTAL_DATA = {
       "description": "The unifying theory of the entire discography. Grounded in Peter Turchin's structural-demographic dynamics, this 13-track, four-act magnum opus unmasks the architects of partisan warfare and calls for working-class reconnection."
     },
     {
+      "id": "yo-ho-ho-and-a-pocket-full-of-greed",
+      "number": "17",
+      "title": "Yo Ho Ho and a Pocket Full of Greed",
+      "subtitle": "A Swashbuckling Satirical Sea Shanty Odyssey Auditing Corporate Privateers",
+      "badge": "Bespoke Interactive Vault",
+      "cover": "/yo-ho-ho-and-a-pocket-full-of-greed/assets/art/yo-ho-ho-and-a-pocket-full-of-greed-cover.webp",
+      "tracks_count": 13,
+      "themes": [
+        "Modern Corporate Privateers",
+        "The Gilded Armada",
+        "Sovereign Citizens vs Subjects",
+        "Algorithmic Plunder",
+        "Common Ground Reclamation"
+      ],
+      "url": "/yo-ho-ho-and-a-pocket-full-of-greed/",
+      "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcHr2R6eMk1Xd3DPGh4fPYtK",
+      "description": "A swashbuckling 4-act, 13-track maritime satirical odyssey auditing corporate privateering, algorithmic plunder, and the pillaging of everyday life—reclaiming dignity and grassroots solidarity from the modern buccaneers."
+    },
+    {
       "id": "the-forgotten-crown",
       "number": "Vault",
       "title": "The Sovereign's Right",
