@@ -291,6 +291,24 @@ window.PORTAL_DATA = {
       "description": "An ambitious 5-act, 17-track social cartography translating the empirical research of Raj Chetty's Opportunity Atlas, Case & Deaton's Deaths of Despair, and Richard Rothstein's The Color of Law into a profound journey across America's heartland and the triumph of the human soul."
     },
     {
+      "id": "sold-cheap",
+      "number": "15",
+      "title": "Sold Cheap",
+      "subtitle": "A Three-Act Sonic Audit of the Systemic Devaluation of American Life",
+      "badge": "Bespoke Interactive Vault",
+      "cover": "/sold-cheap/assets/art/sold-cheap-cover.webp",
+      "tracks_count": 12,
+      "themes": [
+        "Corporate Hostile Takeover",
+        "Forensic Ledger Audit",
+        "Military-Industrial Complex",
+        "Signal to Noise"
+      ],
+      "url": "/sold-cheap/",
+      "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcFedvC4nuXNk7fDNzCwfZe0",
+      "description": "An unflinching 12-track sonic documentary and forensic ledger auditing the half-century liquidation of American communities, pensions, public health, and democracy itself—culminating in an epic indictment of modern extraction."
+    },
+    {
       "id": "the-forgotten-crown",
       "number": "Vault",
       "title": "The Sovereign's Right",
