@@ -630,10 +630,10 @@
 
     async function init() {
       try {
-        if (window.BARD_CATALOG || window.DISCOGRAPHY_DATA) {
-          catalog = window.BARD_CATALOG || window.DISCOGRAPHY_DATA;
+        if (window.CATALOG || window.BARD_CATALOG || window.DISCOGRAPHY_DATA) {
+          catalog = window.CATALOG || window.BARD_CATALOG || window.DISCOGRAPHY_DATA;
         } else {
-          const res = await fetch('data/albums.json');
+          const res = await fetch('data/albums.json?v=20260910_01');
           catalog = await res.json();
         }
         
