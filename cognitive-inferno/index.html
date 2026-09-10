@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cognitive Inferno | The Shady River Bard (Album 08)</title>
+  <meta name="description" content="Official interactive concept website and complete 10-track lyrics vault for Cognitive Inferno (Album 08) by The Shady River Bard. An unflinching rock symphony on the attention economy, algorithmic behaviorism, and re-humanization.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cyber: {
+              950: '#06080d',
+              900: '#0b1017',
+              850: '#101722',
+              800: '#172232',
+              750: '#1e2c40',
+              700: '#273852',
+              600: '#384f73',
+            },
+            inferno: {
+              300: '#fdba74',
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea580c',
+              700: '#c2410c',
+              800: '#9a3412',
+              900: '#7c2d12',
+            },
+            cyanic: {
+              400: '#22d3ee',
+              500: '#06b6d4',
+              600: '#0891b2',
+              700: '#0e7490',
+            },
+            glitch: {
+              500: '#ef4444',
+              600: '#dc2626',
+            }
+          },
+          fontFamily: {
+            display: ['Rajdhani', 'Cinzel', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/a11y.css">
+
+  <!-- High-Priority Preload for Hero Album Cover -->
+  <link rel="preload" as="image" href="assets/art/cognitive-inferno-cover.webp" type="image/webp" fetchpriority="high">
+
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #06080d;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #172232;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ea580c;
+    }
+
+    /* Ambient atmospheric glow */
+    .glow-inferno {
+      box-shadow: 0 0 35px -5px rgba(234, 88, 12, 0.25);
+    }
+    .glow-cyan {
+      box-shadow: 0 0 30px -5px rgba(6, 182, 212, 0.22);
+    }
+
+    /* Screen reader skip link */
+    .sr-skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      z-index: 100;
+      padding: 0.75rem 1.25rem;
+      background: #ea580c;
+      color: #06080d;
+      font-weight: 700;
+      border-radius: 0.5rem;
+      transition: top 0.2s ease;
+    }
+    .sr-skip-link:focus {
+      top: 1rem;
+    }
+  </style>
+</head>
+<body class="bg-cyber-950 text-stone-200 font-body antialiased selection:bg-inferno-600 selection:text-white">
+
+  <!-- A11Y SKIP LINK -->
+  <a href="#main-content" class="sr-skip-link focus:outline-none focus:ring-2 focus:ring-white">
+    Skip to main content
+  </a>
+
+  <!-- TOP GLOBAL NAVIGATION -->
+  <header class="sticky top-0 z-40 bg-cyber-950/90 backdrop-blur-md border-b border-cyber-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="/" class="flex items-center gap-2 group" aria-label="Return to The Shady River Bard Portal Homepage">
+          <span class="w-8 h-8 rounded-lg bg-inferno-600 flex items-center justify-center text-white font-bold font-display text-sm tracking-wider shadow group-hover:bg-inferno-500 transition-colors">
+            SRB
+          </span>
+          <span class="font-display font-bold text-base text-stone-100 group-hover:text-inferno-400 transition-colors tracking-wide hidden sm:inline">
+            The Shady River Bard
+          </span>
+        </a>
+        <span class="text-stone-600 hidden sm:inline">/</span>
+        <span class="text-xs uppercase font-mono tracking-widest text-inferno-400 font-semibold px-2 py-0.5 rounded bg-inferno-950/80 border border-inferno-800/60">
+          Album 08
+        </span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-stone-300" aria-label="Primary page navigation">
+        <a href="#roadmap" class="hover:text-inferno-400 transition-colors focus:outline-none focus:ring-2 focus:ring-inferno-500 rounded px-1">Roadmap</a>
+        <a href="#matrix" class="hover:text-inferno-400 transition-colors focus:outline-none focus:ring-2 focus:ring-inferno-500 rounded px-1">Lucidity Matrix</a>
+        <a href="#pillars" class="hover:text-inferno-400 transition-colors focus:outline-none focus:ring-2 focus:ring-inferno-500 rounded px-1">5 Pillars</a>
+        <a href="#vault" class="hover:text-inferno-400 transition-colors focus:outline-none focus:ring-2 focus:ring-inferno-500 rounded px-1">Lyrics Vault</a>
+        <a href="/vault/" class="hover:text-white text-stone-400 transition-colors flex items-center gap-1 focus:outline-none focus:ring-2 focus:ring-inferno-500 rounded px-1" title="Catalog Vault">
+          <i aria-hidden="true" class="fa-solid fa-compact-disc text-xs text-amber-500"></i>
+          <span>Full Vault</span>
+        </a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://theshadyriverbard.substack.com/s/the-lucidity-protocol" target="_blank" rel="noopener noreferrer" class="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyanic-950/80 hover:bg-cyanic-900 text-cyanic-300 border border-cyanic-700/60 text-xs font-mono transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-cyanic-400">
+          <i aria-hidden="true" class="fa-solid fa-book-open text-cyanic-400"></i>
+          <span>Companion Novella</span>
+        </a>
+        <a href="#vault" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-inferno-600 hover:bg-inferno-500 text-white text-xs font-semibold uppercase tracking-wider transition-colors shadow focus:outline-none focus:ring-2 focus:ring-white">
+          <i aria-hidden="true" class="fa-solid fa-scroll text-xs"></i>
+          <span>Explore Songs</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1" class="focus:outline-none">
+    <!-- HERO SECTION -->
+    <section class="relative overflow-hidden pt-12 pb-20 border-b border-cyber-800 bg-gradient-to-b from-cyber-900 via-cyber-950 to-cyber-950">
+      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ea580c_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          
+          <!-- Album Cover Painting -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative group w-full max-w-md aspect-square rounded-2xl overflow-hidden border-2 border-inferno-600/30 shadow-2xl glow-inferno bg-cyber-900">
+              <img 
+                src="assets/art/cognitive-inferno-cover.webp" 
+                alt="Cognitive Inferno official album cover art by The Shady River Bard depicting an abstract human mind ablaze in digital circuitry and neon flames" 
+                width="1000" 
+                height="1000" 
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                fetchpriority="high"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-cyber-950 via-transparent to-transparent opacity-80 pointer-events-none"></div>
+              
+              <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-cyber-950/85 backdrop-blur-md border border-cyber-750">
+                <div class="flex items-center justify-between text-xs font-mono text-stone-300">
+                  <span class="flex items-center gap-1.5 text-inferno-400 font-semibold">
+                    <i aria-hidden="true" class="fa-solid fa-fire text-inferno-500"></i> The Roaring Fire Sound
+                  </span>
+                  <span>10 Tracks • 43 Min</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Album Narrative & Vision -->
+          <div class="lg:col-span-7 flex flex-col justify-center">
+            <div class="flex flex-wrap items-center gap-2.5 mb-4">
+              <span class="px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-inferno-500/10 text-inferno-400 border border-inferno-500/30 font-semibold">
+                Studio Album 08 • Released 2025
+              </span>
+              <span class="px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-cyanic-950/80 text-cyanic-300 border border-cyanic-800/60 font-semibold">
+                Psych-Folk / Dark Blues & Industrial Rock
+              </span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display tracking-tight text-white mb-3 leading-tight">
+              Cognitive <span class="text-transparent bg-clip-text bg-gradient-to-r from-inferno-400 via-amber-400 to-cyanic-400">Inferno</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-inferno-300/90 font-medium mb-5 leading-snug">
+              The Algorithmic War for Human Consciousness, Somatic Toll of Dopamine Debt, and Radical Re-Humanization
+            </p>
+
+            <p class="text-stone-300 text-sm sm:text-base leading-relaxed mb-6">
+              Have you ever lost an hour to a screen and wondered where the time went? Have you felt the phantom buzz of a notification in your pocket, or the low-grade, constant hum of anxiety from a world that never, ever logs off? We live our lives inside a machine we built but no longer control. <strong class="text-stone-100 font-semibold">Cognitive Inferno</strong> is the soundtrack to this modern condition—a visceral, 4-phase rock symphony guiding listeners through the seduction of the feed, the somatic toll of dopamine debt, the crash of terminal velocity, and the triumphant reclamation of sovereign human consciousness through the <strong class="text-cyanic-300 font-semibold">Lucidity Protocol</strong>.
+            </p>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+              <div class="p-3 rounded-xl bg-cyber-900 border border-cyber-800 text-center">
+                <span class="block text-2xl font-bold font-display text-white" id="stat-tracks">10</span>
+                <span class="text-xs font-mono uppercase tracking-wider text-stone-400">Master Tracks</span>
+              </div>
+              <div class="p-3 rounded-xl bg-cyber-900 border border-cyber-800 text-center">
+                <span class="block text-2xl font-bold font-display text-inferno-400" id="stat-phases">4</span>
+                <span class="text-xs font-mono uppercase tracking-wider text-stone-400">Narrative Phases</span>
+              </div>
+              <div class="p-3 rounded-xl bg-cyber-900 border border-cyber-800 text-center">
+                <span class="block text-2xl font-bold font-display text-cyanic-400" id="stat-pillars">5</span>
+                <span class="text-xs font-mono uppercase tracking-wider text-stone-400">Cognitive Pillars</span>
+              </div>
+              <div class="p-3 rounded-xl bg-cyber-900 border border-cyber-800 text-center">
+                <span class="block text-2xl font-bold font-display text-amber-400">1</span>
+                <span class="text-xs font-mono uppercase tracking-wider text-stone-400">Companion Novella</span>
+              </div>
+            </div>
+
+            <!-- Action CTAs -->
+            <div class="flex flex-wrap items-center gap-4">
+              <a href="#vault" class="px-6 py-3 rounded-xl bg-gradient-to-r from-inferno-600 to-inferno-500 hover:from-inferno-500 hover:to-inferno-400 text-white font-semibold text-sm tracking-wide shadow-lg shadow-inferno-950/50 flex items-center gap-2 transition-all focus:outline-none focus:ring-2 focus:ring-white">
+                <i aria-hidden="true" class="fa-solid fa-music"></i>
+                <span>Open Lyrics & Video Vault</span>
+              </a>
+              <a href="https://theshadyriverbard.substack.com/s/the-lucidity-protocol" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-cyber-900 hover:bg-cyber-850 text-cyanic-300 border border-cyanic-800/80 font-medium text-sm flex items-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-cyanic-400">
+                <i aria-hidden="true" class="fa-solid fa-book-open text-cyanic-400"></i>
+                <span>Read "The Lucidity Protocol"</span>
+              </a>
+              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcE3k_0lQhF30Bpo4ik5m6S_" target="_blank" rel="noopener noreferrer" class="px-4 py-3 rounded-xl bg-cyber-900 hover:bg-cyber-800 text-stone-300 hover:text-white border border-cyber-750 text-sm flex items-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-inferno-500" aria-label="Watch full album on YouTube Playlist (opens in new tab)">
+                <i aria-hidden="true" class="fa-brands fa-youtube text-red-500"></i>
+                <span>YouTube Playlist</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: 4-PHASE NARRATIVE ROADMAP -->
+    <section id="roadmap" class="py-16 border-b border-cyber-800 bg-cyber-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-xs uppercase font-mono tracking-widest text-inferno-400 font-semibold px-2.5 py-1 rounded bg-inferno-950/80 border border-inferno-800/50">
+            Conceptual Arc
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-bold font-display text-white mt-3 mb-4">
+            The 4-Phase Narrative Roadmap
+          </h2>
+          <p class="text-stone-300 text-sm sm:text-base leading-relaxed">
+            Follow the descent into algorithmic captivity and the hard-won ascent back to sovereign presence. Click any phase below to jump directly to its track group in the vault.
+          </p>
+        </div>
+
+        <!-- Stepper Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="phases-container">
+          <!-- Dynamically Rendered by JS -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: COGNITIVE OVERLOAD VS LUCIDITY PROTOCOL MATRIX -->
+    <section id="matrix" class="py-16 border-b border-cyber-800 bg-gradient-to-b from-cyber-950 via-cyber-900 to-cyber-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-xs uppercase font-mono tracking-widest text-cyanic-400 font-semibold px-2.5 py-1 rounded bg-cyanic-950/80 border border-cyanic-800/50">
+            Empirical Comparison
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-bold font-display text-white mt-3 mb-4">
+            Cognitive Overload vs. The Lucidity Protocol
+          </h2>
+          <p class="text-stone-300 text-sm sm:text-base leading-relaxed">
+            A direct systematic comparison across 5 core dimensions of modern life—contrasting the default state of algorithmic capture with deliberate neuro-sovereignty.
+          </p>
+        </div>
+
+        <!-- Comparison Table Container -->
+        <div class="overflow-x-auto rounded-2xl border border-cyber-800 bg-cyber-900/90 shadow-2xl">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-cyber-800 bg-cyber-950/90 font-mono text-xs uppercase tracking-wider">
+                <th class="p-4 sm:p-5 text-stone-300 w-1/4">Core Dimension</th>
+                <th class="p-4 sm:p-5 text-glitch-500 w-3/8">
+                  <i aria-hidden="true" class="fa-solid fa-triangle-exclamation mr-1.5"></i> The Algorithmic Inferno (Overload)
+                </th>
+                <th class="p-4 sm:p-5 text-cyanic-400 w-3/8">
+                  <i aria-hidden="true" class="fa-solid fa-shield-halved mr-1.5"></i> The Lucidity Protocol (Reclamation)
+                </th>
+              </tr>
+            </thead>
+            <tbody id="matrix-tbody" class="divide-y divide-cyber-800">
+              <!-- Dynamically Rendered by JS -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Novella Context Callout -->
+        <div class="mt-8 p-6 rounded-2xl bg-gradient-to-r from-cyanic-950/60 via-cyber-900 to-inferno-950/40 border border-cyanic-800/50 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-cyanic-900/60 border border-cyanic-700/60 flex items-center justify-center text-cyanic-400 text-xl shrink-0">
+              <i aria-hidden="true" class="fa-solid fa-book-bookmark"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-white text-base">Companion Novella: "The Lucidity Protocol"</h3>
+              <p class="text-stone-300 text-xs sm:text-sm">Explore the companion serialized speculative narrative on Substack detailing the underground movement reclaiming cognitive autonomy.</p>
+            </div>
+          </div>
+          <a href="https://theshadyriverbard.substack.com/s/the-lucidity-protocol" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-cyanic-600 hover:bg-cyanic-500 text-white font-medium text-xs whitespace-nowrap transition-colors shadow flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-white">
+            <span>Read on Substack</span>
+            <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: 5 COGNITIVE & NEUROLOGICAL PILLARS -->
+    <section id="pillars" class="py-16 border-b border-cyber-800 bg-cyber-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-xs uppercase font-mono tracking-widest text-amber-400 font-semibold px-2.5 py-1 rounded bg-amber-950/80 border border-amber-800/50">
+            Neurological Analysis
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-bold font-display text-white mt-3 mb-4">
+            5 Pillars of the Attention War
+          </h2>
+          <p class="text-stone-300 text-sm sm:text-base leading-relaxed">
+            Grounded in clinical neuroscience, behavioral psychology, and social theory. Each pillar reveals an empirical mechanism of cognitive capture and connects to corresponding songs.
+          </p>
+        </div>
+
+        <!-- Pillars Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="pillars-container">
+          <!-- Dynamically Rendered by JS -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: FULL LYRICS & AUDIO-VISUAL VAULT -->
+    <section id="vault" class="py-16 bg-cyber-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 border-b border-cyber-800 pb-6">
+          <div>
+            <span class="text-xs uppercase font-mono tracking-widest text-inferno-400 font-semibold px-2.5 py-1 rounded bg-inferno-950/80 border border-inferno-800/50">
+              Discography Archive
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-bold font-display text-white mt-2">
+              The Complete Lyrics & Audio Vault
+            </h2>
+            <p class="text-stone-300 text-sm mt-1">
+              Explore official stanzas, Suno production prompts, and video streams for all 10 tracks.
+            </p>
+          </div>
+
+          <!-- Controls: Search & Filters -->
+          <div class="flex flex-wrap items-center gap-3">
+            <div class="relative min-w-[240px]">
+              <i aria-hidden="true" class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-400 text-xs"></i>
+              <input 
+                type="text" 
+                id="search-input" 
+                placeholder="Search lyrics, titles, themes..." 
+                aria-label="Search lyrics, titles, and themes"
+                class="w-full pl-9 pr-4 py-2 rounded-xl bg-cyber-900 border border-cyber-750 text-stone-100 placeholder-stone-400 text-xs focus:outline-none focus:ring-2 focus:ring-inferno-500 transition-colors"
+              >
+            </div>
+            
+            <div class="flex items-center gap-1 bg-cyber-900 p-1 rounded-xl border border-cyber-800 text-xs" role="tablist" aria-label="Filter tracks by narrative phase">
+              <button onclick="filterPhase(0)" id="filter-btn-0" role="tab" aria-selected="true" class="px-3 py-1.5 rounded-lg bg-inferno-600 text-white font-medium transition-colors">All (10)</button>
+              <button onclick="filterPhase(1)" id="filter-btn-1" role="tab" aria-selected="false" class="px-3 py-1.5 rounded-lg text-stone-400 hover:text-stone-200 transition-colors">Phase I</button>
+              <button onclick="filterPhase(2)" id="filter-btn-2" role="tab" aria-selected="false" class="px-3 py-1.5 rounded-lg text-stone-400 hover:text-stone-200 transition-colors">Phase II</button>
+              <button onclick="filterPhase(3)" id="filter-btn-3" role="tab" aria-selected="false" class="px-3 py-1.5 rounded-lg text-stone-400 hover:text-stone-200 transition-colors">Phase III</button>
+              <button onclick="filterPhase(4)" id="filter-btn-4" role="tab" aria-selected="false" class="px-3 py-1.5 rounded-lg text-stone-400 hover:text-stone-200 transition-colors">Phase IV</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Track Counter -->
+        <div class="flex items-center justify-between text-xs font-mono text-stone-400 mb-6 px-1">
+          <span id="track-counter">Showing 10 of 10 tracks</span>
+          <span class="text-inferno-400">Click card or button to expand complete lyrics & prompts</span>
+        </div>
+
+        <!-- Tracks Container -->
+        <div class="space-y-6" id="tracks-container">
+          <!-- Dynamically Rendered by JS -->
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- VIDEO MODAL -->
+  <div id="video-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modal-track-title">
+    <div class="relative w-full max-w-4xl bg-cyber-950 border border-cyber-800 rounded-2xl overflow-hidden shadow-2xl">
+      <div class="flex items-center justify-between p-4 border-b border-cyber-800 bg-cyber-900">
+        <h3 id="modal-track-title" class="font-display font-bold text-white text-base sm:text-lg flex items-center gap-2">
+          <i aria-hidden="true" class="fa-brands fa-youtube text-red-500"></i>
+          <span>Track Video Player</span>
+        </h3>
+        <button onclick="closeVideoModal()" aria-label="Close video player" class="w-8 h-8 rounded-lg bg-cyber-800 hover:bg-cyber-700 text-stone-300 hover:text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-inferno-500">
+          <i aria-hidden="true" class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="relative aspect-video w-full bg-black">
+        <iframe 
+          id="video-iframe" 
+          class="w-full h-full" 
+          src="" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" role="status" aria-live="polite">
+    <div class="px-4 py-3 rounded-xl bg-inferno-600 text-white font-medium text-xs sm:text-sm shadow-2xl flex items-center gap-2 border border-inferno-400/40">
+      <i aria-hidden="true" class="fa-solid fa-check-circle"></i>
+      <span id="toast-message">Lyrics copied to clipboard!</span>
+    </div>
+  </div>
+
+  <!-- ECOSYSTEM FOOTER -->
+  <footer class="bg-cyber-900 border-t border-cyber-800 pt-16 pb-12 text-stone-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+        
+        <!-- Brand Summary -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2.5 mb-4">
+            <span class="w-8 h-8 rounded-lg bg-inferno-600 flex items-center justify-center text-white font-bold font-display text-sm tracking-wider shadow">
+              SRB
+            </span>
+            <span class="font-display font-bold text-lg text-white">
+              The Shady River Bard
+            </span>
+          </div>
+          <p class="text-stone-300 text-xs sm:text-sm leading-relaxed mb-4">
+            A prolific conceptual music and narrative storytelling project exploring the human condition, generational shifts, public health, justice systems, and the war for attention in the digital age.
+          </p>
+          <div class="flex items-center gap-3">
+            <a href="https://music.apple.com/us/album/cognitive-inferno/1832521551" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-cyber-800 hover:bg-cyber-700 text-stone-200 flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-inferno-500" title="Apple Music" aria-label="Apple Music">
+              <i aria-hidden="true" class="fa-brands fa-apple"></i>
+            </a>
+            <a href="https://music.youtube.com/playlist?list=OLAK5uy_lJrGYBBlzKrUtuVNPPOzDhK1WrjobM1Wg" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-cyber-800 hover:bg-cyber-700 text-stone-200 flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-inferno-500" title="YouTube Music" aria-label="YouTube Music">
+              <i aria-hidden="true" class="fa-brands fa-youtube text-red-500"></i>
+            </a>
+            <a href="https://theshadyriverbard.substack.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-cyber-800 hover:bg-cyber-700 text-stone-200 flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-inferno-500" title="Substack" aria-label="Substack">
+              <i aria-hidden="true" class="fa-solid fa-bookmark text-amber-400"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61578707414516" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-cyber-800 hover:bg-cyber-700 text-stone-200 flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-inferno-500" title="Facebook" aria-label="Facebook">
+              <i aria-hidden="true" class="fa-brands fa-facebook-f text-blue-400"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Ecosystem Links -->
+        <div>
+          <h4 class="font-display font-bold text-white text-xs uppercase tracking-wider mb-4">Core Ecosystem</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="/" class="hover:text-inferno-400 transition-colors">Portal Homepage</a></li>
+            <li><a href="/vault/" class="hover:text-inferno-400 transition-colors">Complete Catalog Vault</a></li>
+            <li><a href="https://theshadyriverbard.substack.com/s/the-lucidity-protocol" target="_blank" rel="noopener noreferrer" class="hover:text-cyanic-300 transition-colors flex items-center gap-1">
+              <span>The Lucidity Protocol</span>
+              <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a></li>
+            <li><a href="https://music.apple.com/us/artist/the-shady-river-bard/1829561760" target="_blank" rel="noopener noreferrer" class="hover:text-inferno-400 transition-colors">Apple Music Artist Page</a></li>
+          </ul>
+        </div>
+
+        <!-- Interactive Concept Vaults -->
+        <div class="lg:col-span-2">
+          <h4 class="font-display font-bold text-white text-xs uppercase tracking-wider mb-4">Bespoke Interactive Apps</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+            <a href="/the-great-inversion/" class="p-2.5 rounded-lg bg-cyber-800/60 hover:bg-cyber-800 text-stone-200 border border-cyber-750 transition-colors flex items-center justify-between">
+              <span>04 • The Great Inversion</span>
+              <i aria-hidden="true" class="fa-solid fa-arrow-right text-[10px] text-amber-500"></i>
+            </a>
+            <a href="/the-poison-we-trust/" class="p-2.5 rounded-lg bg-cyber-800/60 hover:bg-cyber-800 text-stone-200 border border-cyber-750 transition-colors flex items-center justify-between">
+              <span>05 • The Poison We Trust</span>
+              <i aria-hidden="true" class="fa-solid fa-arrow-right text-[10px] text-emerald-500"></i>
+            </a>
+            <a href="/a-house-divided/" class="p-2.5 rounded-lg bg-cyber-800/60 hover:bg-cyber-800 text-stone-200 border border-cyber-750 transition-colors flex items-center justify-between">
+              <span>06 • A House Divided</span>
+              <i aria-hidden="true" class="fa-solid fa-arrow-right text-[10px] text-sky-400"></i>
+            </a>
+            <a href="/unequal-justice/" class="p-2.5 rounded-lg bg-cyber-800/60 hover:bg-cyber-800 text-stone-200 border border-cyber-750 transition-colors flex items-center justify-between">
+              <span>07 • Unequal Justice</span>
+              <i aria-hidden="true" class="fa-solid fa-arrow-right text-[10px] text-amber-400"></i>
+            </a>
+            <a href="/cognitive-inferno/" class="p-2.5 rounded-lg bg-inferno-950/80 text-inferno-300 border border-inferno-800/80 transition-colors flex items-center justify-between font-semibold">
+              <span>08 • Cognitive Inferno</span>
+              <i aria-hidden="true" class="fa-solid fa-fire text-[10px] text-inferno-400"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-cyber-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-400 gap-4">
+        <p>&copy; 2025 The Shady River Bard. All music, lyrics, and conceptual frameworks reserved.</p>
+        <div class="flex items-center gap-4 flex-wrap">
+          <button onclick="openA11yModal()" class="hover:text-amber-400 underline transition-colors">Accessibility Statement (WCAG 2.1 AA)</button>
+          <span>&bull;</span>
+          <button onclick="toggleA11yToolbar()" class="hover:text-amber-400 underline transition-colors">Display Preferences</button>
+          <span>&bull;</span>
+          <a href="#main-content" class="hover:text-white transition-colors">Back to Top &uarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- DATA SCRIPT -->
+  <script src="data/cognitive-inferno-data.js?v=20260910_05"></script>
+
+  <!-- INTERACTIVE APPLICATION LOGIC -->
+  <script>
+    const data = window.INFERNO_DATA;
+    let activePhaseFilter = 0;
+    let searchQuery = '';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initRoadmap();
+      initMatrix();
+      initPillars();
+      renderTracks();
+      setupSearch();
+    });
+
+    // 1. RENDER 4-PHASE ROADMAP
+    function initRoadmap() {
+      const container = document.getElementById('phases-container');
+      if (!container || !data.phases) return;
+
+      container.innerHTML = data.phases.map(phase => `
+        <div class="p-6 rounded-2xl bg-cyber-900 border border-cyber-800 hover:border-inferno-600/50 transition-all flex flex-col justify-between group shadow-lg">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono font-semibold px-2 py-0.5 rounded bg-inferno-950 text-inferno-400 border border-inferno-800/60">
+                Phase 0${phase.phase_number}
+              </span>
+              <span class="text-xs font-mono text-stone-400">${phase.track_range}</span>
+            </div>
+            <h3 class="font-display font-bold text-lg text-white group-hover:text-inferno-400 transition-colors mb-1">
+              ${phase.title}
+            </h3>
+            <p class="text-xs font-mono text-stone-400 mb-3">${phase.subtitle}</p>
+            <p class="text-stone-300 text-xs leading-relaxed mb-4">
+              ${phase.description}
+            </p>
+          </div>
+          <div>
+            <button onclick="scrollToPhase(${phase.phase_number})" class="w-full py-2 px-3 rounded-xl bg-cyber-800 hover:bg-cyber-750 text-stone-200 text-xs font-medium transition-colors flex items-center justify-center gap-1.5 border border-cyber-700/60 focus:outline-none focus:ring-2 focus:ring-inferno-500">
+              <span>View Tracks (${phase.tracks.join(', ')})</span>
+              <i aria-hidden="true" class="fa-solid fa-arrow-down text-[10px] text-inferno-400"></i>
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // 2. RENDER LUCIDITY MATRIX
+    function initMatrix() {
+      const tbody = document.getElementById('matrix-tbody');
+      if (!tbody || !data.matrix) return;
+
+      tbody.innerHTML = data.matrix.map(row => `
+        <tr class="hover:bg-cyber-850/50 transition-colors">
+          <td class="p-4 sm:p-5 font-semibold text-white font-mono text-xs uppercase tracking-wide border-r border-cyber-800/60">
+            ${row.dimension}
+          </td>
+          <td class="p-4 sm:p-5 text-stone-300 text-xs leading-relaxed border-r border-cyber-800/60 bg-glitch-950/10">
+            <div class="flex items-start gap-2">
+              <i aria-hidden="true" class="fa-solid fa-xmark text-glitch-500 mt-0.5 shrink-0"></i>
+              <span>${row.cognitive_overload}</span>
+            </div>
+          </td>
+          <td class="p-4 sm:p-5 text-stone-200 text-xs leading-relaxed bg-cyanic-950/10">
+            <div class="flex items-start gap-2">
+              <i aria-hidden="true" class="fa-solid fa-check text-cyanic-400 mt-0.5 shrink-0"></i>
+              <span>${row.lucidity_protocol}</span>
+            </div>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    // 3. RENDER 5 COGNITIVE PILLARS
+    function initPillars() {
+      const container = document.getElementById('pillars-container');
+      if (!container || !data.pillars) return;
+
+      const iconsMap = {
+        'eye': 'fa-eye',
+        'activity': 'fa-chart-line',
+        'zap-off': 'fa-bolt-lightning',
+        'shield-alert': 'fa-shield-halved',
+        'flame': 'fa-fire'
+      };
+
+      container.innerHTML = data.pillars.map(pillar => `
+        <div class="p-6 rounded-2xl bg-cyber-900 border border-cyber-800 hover:border-amber-500/50 transition-all flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                <i aria-hidden="true" class="fa-solid ${iconsMap[pillar.icon] || 'fa-brain'}"></i>
+              </div>
+              <span class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-800/60">
+                ${pillar.metric}
+              </span>
+            </div>
+
+            <h3 class="font-display font-bold text-lg text-white mb-1">
+              ${pillar.title}
+            </h3>
+            <p class="text-xs font-mono text-amber-400/90 mb-3">${pillar.subtitle}</p>
+
+            <div class="p-2.5 rounded-lg bg-cyber-950/80 border border-cyber-800 mb-4 text-xs font-mono text-stone-300">
+              <i aria-hidden="true" class="fa-solid fa-chart-pie text-amber-500 mr-1.5"></i>
+              ${pillar.stat_detail}
+            </div>
+
+            <div class="space-y-3 text-xs text-stone-300 leading-relaxed mb-4">
+              <p><strong class="text-stone-100">Mechanism:</strong> ${pillar.mechanism}</p>
+              <p><strong class="text-stone-100">Metaphor:</strong> ${pillar.metaphor}</p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-cyber-800">
+            <blockquote class="text-xs italic text-stone-400 border-l-2 border-amber-500 pl-2.5 mb-3">
+              "${pillar.key_quote}"
+            </blockquote>
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="text-[11px] font-mono text-stone-400">Connected Tracks:</span>
+              ${pillar.connected_tracks.map(tNum => `
+                <button onclick="scrollToTrack(${tNum})" class="px-2 py-0.5 rounded bg-cyber-800 hover:bg-cyber-700 text-stone-300 text-xs font-mono transition-colors focus:outline-none focus:ring-1 focus:ring-amber-400">
+                  Track 0${tNum}
+                </button>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // 4. RENDER TRACKS IN VAULT
+    function renderTracks() {
+      const container = document.getElementById('tracks-container');
+      if (!container || !data.tracks) return;
+
+      const filtered = data.tracks.filter(t => {
+        const matchesPhase = activePhaseFilter === 0 || t.phase === activePhaseFilter;
+        if (!matchesPhase) return false;
+
+        if (!searchQuery) return true;
+        const q = searchQuery.toLowerCase();
+        const titleMatch = t.title.toLowerCase().includes(q);
+        const themeMatch = (t.core_theme || '').toLowerCase().includes(q);
+        const tagMatch = (t.tags || []).some(tag => tag.toLowerCase().includes(q));
+        const lyricsMatch = t.stanzas.some(s => s.lines.some(l => l.toLowerCase().includes(q)));
+
+        return titleMatch || themeMatch || tagMatch || lyricsMatch;
+      });
+
+      // Update counter
+      const counterEl = document.getElementById('track-counter');
+      if (counterEl) {
+        counterEl.textContent = `Showing ${filtered.length} of ${data.tracks.length} tracks`;
+      }
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="p-12 text-center rounded-2xl bg-cyber-900 border border-cyber-800 text-stone-400">
+            <i aria-hidden="true" class="fa-solid fa-magnifying-glass text-3xl mb-3 text-stone-600"></i>
+            <p class="font-display font-bold text-lg text-white mb-1">No tracks found</p>
+            <p class="text-xs text-stone-400">No tracks matched your search "${searchQuery}". Try a different keyword or reset filters.</p>
+            <button onclick="resetFilters()" class="mt-4 px-4 py-2 rounded-xl bg-inferno-600 text-white text-xs font-semibold">
+              Reset Filters
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(track => `
+        <article id="track-${track.number}" class="rounded-2xl bg-cyber-900 border border-cyber-800 overflow-hidden shadow-xl hover:border-inferno-600/40 transition-colors">
+          
+          <!-- Track Header -->
+          <div class="p-5 sm:p-6 border-b border-cyber-800 bg-cyber-950/60 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-start sm:items-center gap-4">
+              <span class="w-10 h-10 rounded-xl bg-inferno-950 border border-inferno-800/80 text-inferno-400 font-mono font-bold text-base flex items-center justify-center shrink-0">
+                ${track.number_padded}
+              </span>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap mb-1">
+                  <span class="text-xs font-mono px-2 py-0.5 rounded bg-cyber-800 text-stone-300 border border-cyber-700">
+                    ${track.phase_title}
+                  </span>
+                  <span class="text-xs font-mono text-inferno-400 font-medium">
+                    ${track.musical_mood}
+                  </span>
+                </div>
+                <h3 class="font-display font-bold text-xl sm:text-2xl text-white">
+                  ${track.title}
+                </h3>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button onclick="openVideoModal('${track.video_id}', '${escapeHtml(track.title)}')" aria-label="Play official video for ${track.title}" class="px-3.5 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-medium flex items-center gap-1.5 transition-colors shadow focus:outline-none focus:ring-2 focus:ring-white">
+                <i aria-hidden="true" class="fa-solid fa-play text-xs"></i>
+                <span>Play Video</span>
+              </button>
+              <button onclick="copyLyrics(${track.number})" aria-label="Copy lyrics for ${track.title}" class="px-3 py-2 rounded-xl bg-cyber-800 hover:bg-cyber-700 text-stone-300 text-xs font-medium flex items-center gap-1.5 border border-cyber-700 transition-colors focus:outline-none focus:ring-2 focus:ring-inferno-500">
+                <i aria-hidden="true" class="fa-regular fa-copy"></i>
+                <span>Copy</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Track Body: Split Art + Details & Lyrics -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 p-5 sm:p-6">
+            
+            <!-- Artwork & Narrative Notes -->
+            <div class="lg:col-span-4 space-y-4">
+              <div class="relative aspect-[16/9] rounded-xl overflow-hidden border border-cyber-800 bg-cyber-950 group">
+                <img 
+                  src="${track.art_banner}" 
+                  alt="${track.title} official banner artwork by The Shady River Bard" 
+                  loading="lazy" 
+                  width="1200" 
+                  height="655" 
+                  class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                >
+              </div>
+
+              <div class="p-4 rounded-xl bg-cyber-950/80 border border-cyber-800 text-xs text-stone-300 leading-relaxed space-y-2">
+                <p><strong class="text-stone-100">Narrative:</strong> ${track.description}</p>
+                <p><strong class="text-stone-100">Key Lyric:</strong> <em class="text-inferno-300">"${track.key_lyric}"</em></p>
+                
+                <div class="pt-2 flex flex-wrap gap-1.5">
+                  ${(track.tags || []).map(tag => `
+                    <span class="px-2 py-0.5 rounded bg-cyber-800 text-stone-400 text-[11px] font-mono">${tag}</span>
+                  `).join('')}
+                </div>
+              </div>
+
+              <!-- Suno Musical Direction Accordion -->
+              <div class="border border-cyber-800 rounded-xl overflow-hidden bg-cyber-950/60">
+                <button onclick="toggleSunoPrompt(${track.number})" aria-expanded="false" id="suno-btn-${track.number}" class="w-full p-3 text-left flex items-center justify-between text-xs font-mono text-stone-300 hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-inferno-500">
+                  <span class="flex items-center gap-1.5 text-cyanic-400">
+                    <i aria-hidden="true" class="fa-solid fa-sliders"></i>
+                    <span>Suno Musical Style & Tags</span>
+                  </span>
+                  <i aria-hidden="true" id="suno-icon-${track.number}" class="fa-solid fa-chevron-down text-[10px] text-stone-400 transition-transform"></i>
+                </button>
+                <div id="suno-content-${track.number}" class="hidden p-3 border-t border-cyber-800 text-xs text-stone-400 space-y-2 font-mono">
+                  <p><strong class="text-stone-200">Style Prompt:</strong> ${track.musical_highlights || 'Industrial Rock, Driving Drums, Electric Guitars'}</p>
+                  <p><strong class="text-stone-200">Suno Tags:</strong> <span class="text-cyanic-300">${track.suno_tags || 'Industrial Rock, Hard Rock'}</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lyrics Presentation -->
+            <div class="lg:col-span-8 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between border-b border-cyber-800 pb-2 mb-4">
+                  <span class="text-xs font-mono uppercase tracking-wider text-stone-400 font-semibold">
+                    Official Lyrics (${track.stanzas.length} Stanzas)
+                  </span>
+                  <span class="text-xs font-mono text-stone-400">
+                    Suno Master Cut
+                  </span>
+                </div>
+
+                <!-- Lyrics Stanzas Grid / Flow -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm" id="lyrics-flow-${track.number}">
+                  ${track.stanzas.slice(0, 4).map(stanza => `
+                    <div class="p-3.5 rounded-xl bg-cyber-950/70 border border-cyber-800/80">
+                      <span class="block text-[11px] font-mono text-inferno-400 font-bold uppercase mb-1.5">
+                        ${stanza.name}
+                      </span>
+                      <div class="space-y-1 text-stone-200 leading-relaxed font-sans">
+                        ${stanza.lines.map(l => `<p>${l}</p>`).join('')}
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+
+                <!-- Remaining Hidden Stanzas (Expandable) -->
+                ${track.stanzas.length > 4 ? `
+                  <div id="extra-lyrics-${track.number}" class="hidden grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm mt-4">
+                    ${track.stanzas.slice(4).map(stanza => `
+                      <div class="p-3.5 rounded-xl bg-cyber-950/70 border border-cyber-800/80">
+                        <span class="block text-[11px] font-mono text-inferno-400 font-bold uppercase mb-1.5">
+                          ${stanza.name}
+                        </span>
+                        <div class="space-y-1 text-stone-200 leading-relaxed font-sans">
+                          ${stanza.lines.map(l => `<p>${l}</p>`).join('')}
+                        </div>
+                      </div>
+                    `).join('')}
+                  </div>
+                ` : ''}
+              </div>
+
+              <!-- Toggle Full Lyrics Button -->
+              ${track.stanzas.length > 4 ? `
+                <div class="pt-4 mt-4 border-t border-cyber-800 flex justify-end">
+                  <button onclick="toggleLyrics(${track.number})" id="toggle-lyrics-btn-${track.number}" class="px-4 py-1.5 rounded-lg bg-cyber-800 hover:bg-cyber-750 text-stone-300 hover:text-white text-xs font-medium transition-colors flex items-center gap-1.5 border border-cyber-700">
+                    <span id="toggle-lyrics-text-${track.number}">View Remaining ${track.stanzas.length - 4} Stanzas</span>
+                    <i aria-hidden="true" id="toggle-lyrics-icon-${track.number}" class="fa-solid fa-chevron-down text-[10px]"></i>
+                  </button>
+                </div>
+              ` : ''}
+
+            </div>
+
+          </div>
+
+        </article>
+      `).join('');
+    }
+
+    // 5. SEARCH & FILTERS
+    function setupSearch() {
+      const input = document.getElementById('search-input');
+      if (!input) return;
+
+      input.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        renderTracks();
+      });
+    }
+
+    function filterPhase(phaseNum) {
+      activePhaseFilter = phaseNum;
+      for (let i = 0; i <= 4; i++) {
+        const btn = document.getElementById(`filter-btn-${i}`);
+        if (btn) {
+          if (i === phaseNum) {
+            btn.className = 'px-3 py-1.5 rounded-lg bg-inferno-600 text-white font-medium transition-colors';
+            btn.setAttribute('aria-selected', 'true');
+          } else {
+            btn.className = 'px-3 py-1.5 rounded-lg text-stone-400 hover:text-stone-200 transition-colors';
+            btn.setAttribute('aria-selected', 'false');
+          }
+        }
+      }
+      renderTracks();
+    }
+
+    function resetFilters() {
+      searchQuery = '';
+      const input = document.getElementById('search-input');
+      if (input) input.value = '';
+      filterPhase(0);
+    }
+
+    function scrollToPhase(phaseNum) {
+      filterPhase(phaseNum);
+      const vaultEl = document.getElementById('vault');
+      if (vaultEl) {
+        vaultEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function scrollToTrack(trackNum) {
+      filterPhase(0);
+      setTimeout(() => {
+        const el = document.getElementById(`track-${trackNum}`);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          el.classList.add('ring-2', 'ring-amber-500');
+          setTimeout(() => el.classList.remove('ring-2', 'ring-amber-500'), 2500);
+        }
+      }, 100);
+    }
+
+    // 6. TOGGLE DRAWERS
+    function toggleLyrics(trackNum) {
+      const extra = document.getElementById(`extra-lyrics-${trackNum}`);
+      const btnText = document.getElementById(`toggle-lyrics-text-${trackNum}`);
+      const icon = document.getElementById(`toggle-lyrics-icon-${trackNum}`);
+      if (!extra) return;
+
+      if (extra.classList.contains('hidden')) {
+        extra.classList.remove('hidden');
+        extra.classList.add('grid');
+        if (btnText) btnText.textContent = 'Collapse Lyrics';
+        if (icon) icon.className = 'fa-solid fa-chevron-up text-[10px]';
+      } else {
+        extra.classList.add('hidden');
+        extra.classList.remove('grid');
+        if (btnText) btnText.textContent = `View Remaining Stanzas`;
+        if (icon) icon.className = 'fa-solid fa-chevron-down text-[10px]';
+      }
+    }
+
+    function toggleSunoPrompt(trackNum) {
+      const content = document.getElementById(`suno-content-${trackNum}`);
+      const icon = document.getElementById(`suno-icon-${trackNum}`);
+      const btn = document.getElementById(`suno-btn-${trackNum}`);
+      if (!content) return;
+
+      const isHidden = content.classList.contains('hidden');
+      if (isHidden) {
+        content.classList.remove('hidden');
+        if (icon) icon.classList.add('rotate-180');
+        if (btn) btn.setAttribute('aria-expanded', 'true');
+      } else {
+        content.classList.add('hidden');
+        if (icon) icon.classList.remove('rotate-180');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    // 7. VIDEO MODAL
+    function openVideoModal(videoId, title) {
+      const modal = document.getElementById('video-modal');
+      const iframe = document.getElementById('video-iframe');
+      const titleEl = document.getElementById('modal-track-title');
+      if (!modal || !iframe) return;
+
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      if (titleEl) {
+        titleEl.innerHTML = `<i aria-hidden="true" class="fa-brands fa-youtube text-red-500"></i> <span>${title}</span>`;
+      }
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('video-modal');
+      const iframe = document.getElementById('video-iframe');
+      if (!modal || !iframe) return;
+
+      iframe.src = '';
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeVideoModal();
+    });
+
+    // 8. COPY LYRICS TO CLIPBOARD
+    function copyLyrics(trackNum) {
+      const track = data.tracks.find(t => t.number === trackNum);
+      if (!track) return;
+
+      let text = `${track.title} - The Shady River Bard\nAlbum 08: Cognitive Inferno\n\n`;
+      track.stanzas.forEach(s => {
+        text += `${s.name}\n`;
+        text += s.lines.join('\n') + '\n\n';
+      });
+
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(`"${track.title}" lyrics copied to clipboard!`);
+      }).catch(() => {
+        showToast(`Failed to copy lyrics.`);
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const msgEl = document.getElementById('toast-message');
+      if (!toast || !msgEl) return;
+
+      msgEl.textContent = msg;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3000);
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/'/g, "\\'");
+    }
+  </script>
+
+  <!-- UNIFIED ACCESSIBILITY CONTROLLER SCRIPT -->
+  <script src="/assets/js/a11y.js"></script>
+
+</body>
+</html>

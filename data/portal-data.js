@@ -157,6 +157,25 @@ window.PORTAL_DATA = {
       "description": "An unflinching 4-act, 18-track modern folk epic examining the two Americas living under one flag. Guided by the metaphor of the 'two-weight stone,' it contrasts corporate impunity with the cash-bail meat grinder and mandatory sentencing, culminating in an anthem of earned, resolute hope."
     },
     {
+      "id": "cognitive-inferno",
+      "number": "08",
+      "title": "Cognitive Inferno",
+      "subtitle": "The Algorithmic War for Human Consciousness & Re-Humanization",
+      "badge": "Bespoke Interactive Vault",
+      "cover": "/cognitive-inferno/assets/art/cognitive-inferno-cover.webp",
+      "tracks_count": 10,
+      "themes": [
+        "Attention Scarcity",
+        "Dopamine Exploitation",
+        "Cognitive Fragmentation",
+        "Epistemic Tribes",
+        "The Lucidity Protocol"
+      ],
+      "url": "/cognitive-inferno/",
+      "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcE3k_0lQhF30Bpo4ik5m6S_",
+      "description": "A visceral 4-phase rock symphony dissecting the algorithmic capture of human attention, the neurological toll of endless scrolling and dopamine debt, and the radical reclaiming of sovereignty through the Lucidity Protocol."
+    },
+    {
       "id": "the-forgotten-crown",
       "number": "Vault",
       "title": "The Sovereign's Right",
