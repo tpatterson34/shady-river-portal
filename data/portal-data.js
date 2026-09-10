@@ -180,6 +180,25 @@ window.PORTAL_DATA = {
       "description": "A visceral 4-phase rock symphony dissecting the algorithmic capture of human attention, the neurological toll of endless scrolling and dopamine debt, and the radical reclaiming of sovereign human presence."
     },
     {
+      "id": "the-hammer-and-the-rust",
+      "number": "09",
+      "title": "The Hammer and the Rust",
+      "subtitle": "An Industrial Cantata of the American Rust Belt",
+      "badge": "Bespoke Interactive Vault",
+      "cover": "/the-hammer-and-the-rust/assets/art/the-hammer-and-the-rust-cover.webp",
+      "tracks_count": 14,
+      "themes": [
+        "The Forge and the Fire",
+        "The Silence and the Shutdown",
+        "The Human Toll",
+        "Rust and Bone",
+        "Industrial Folk Chant"
+      ],
+      "url": "/the-hammer-and-the-rust/",
+      "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcHpUBDbXPozRJgyZkJfX3ND",
+      "description": "An epic 4-act, 14-track industrial cantata exploring the rise, brutal collapse, and hard-won resilience of the American manufacturing heartland. Fusing work chants, throat-singing drones, and scrap metal percussion into an unforgettable sonic monument."
+    },
+    {
       "id": "the-forgotten-crown",
       "number": "Vault",
       "title": "The Sovereign's Right",

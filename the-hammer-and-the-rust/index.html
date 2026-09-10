@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Hammer and the Rust | The Shady River Bard (Album 09)</title>
+  <meta name="description" content="Official interactive concept website and complete 14-track lyrics vault for The Hammer and the Rust (Album 09) by The Shady River Bard. An industrial cantata exploring the rise, fall, and hard-won resilience of the American Rust Belt.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            forge: {
+              950: '#070a0f',
+              900: '#0c121b',
+              850: '#111a26',
+              800: '#182435',
+              750: '#1f2e43',
+              700: '#273a54',
+              600: '#385275',
+            },
+            rust: {
+              300: '#fdba74',
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea580c',
+              700: '#c2410c',
+              800: '#9a3412',
+              900: '#7c2d12',
+            },
+            amberfire: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+            },
+            steel: {
+              300: '#cbd5e1',
+              400: '#94a3b8',
+              500: '#64748b',
+              600: '#475569',
+              700: '#334155',
+            }
+          },
+          fontFamily: {
+            display: ['Cinzel', 'Montserrat', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/a11y.css">
+
+  <!-- High-Priority Preload for Hero Album Cover -->
+  <link rel="preload" as="image" href="assets/art/the-hammer-and-the-rust-cover.webp" type="image/webp" fetchpriority="high">
+
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #070a0f;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #182435;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ea580c;
+    }
+
+    /* Ambient atmospheric glow */
+    .glow-rust {
+      box-shadow: 0 0 35px -5px rgba(234, 88, 12, 0.28);
+    }
+    .glow-amber {
+      box-shadow: 0 0 30px -5px rgba(245, 158, 11, 0.25);
+    }
+
+    /* Screen reader skip link */
+    .sr-skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      z-index: 100;
+      padding: 0.75rem 1.25rem;
+      background: #ea580c;
+      color: #070a0f;
+      font-weight: 700;
+      border-radius: 0.5rem;
+      transition: top 0.2s ease;
+    }
+    .sr-skip-link:focus {
+      top: 1rem;
+    }
+  </style>
+</head>
+<body class="bg-forge-950 text-stone-200 font-body antialiased selection:bg-rust-600 selection:text-white">
+
+  <!-- A11Y SKIP LINK -->
+  <a href="#main-content" class="sr-skip-link focus:outline-none focus:ring-2 focus:ring-white">
+    Skip to main content
+  </a>
+
+  <!-- TOP GLOBAL NAVIGATION -->
+  <header class="sticky top-0 z-40 bg-forge-950/90 backdrop-blur-md border-b border-forge-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="/" class="flex items-center gap-2 group" aria-label="Return to The Shady River Bard Portal Homepage">
+          <span class="w-8 h-8 rounded-lg bg-rust-700 flex items-center justify-center text-white font-bold font-display text-sm tracking-wider shadow group-hover:bg-rust-600 transition-colors">
+            SRB
+          </span>
+          <span class="font-display font-bold text-base text-stone-100 group-hover:text-rust-400 transition-colors tracking-wide hidden sm:inline">
+            The Shady River Bard
+          </span>
+        </a>
+        <span class="text-stone-600 hidden sm:inline">/</span>
+        <span class="text-xs uppercase font-mono tracking-widest text-rust-400 font-semibold px-2 py-0.5 rounded bg-rust-950/80 border border-rust-800/60">
+          Album 09
+        </span>
+      </div>
+
+      <nav aria-label="Album navigation" class="flex items-center gap-2 sm:gap-4 text-xs font-mono">
+        <a href="#narrative-arc" class="text-stone-400 hover:text-stone-200 transition-colors hidden md:inline">The 4 Acts</a>
+        <a href="#sociological-pillars" class="text-stone-400 hover:text-stone-200 transition-colors hidden lg:inline">Historical Pillars</a>
+        <a href="#musical-identity" class="text-stone-400 hover:text-stone-200 transition-colors hidden lg:inline">Cantata Sound</a>
+        <a href="#vault" class="px-3 py-1.5 rounded-lg bg-rust-700/80 hover:bg-rust-600 text-white font-medium border border-rust-600/50 transition-colors flex items-center gap-1.5 shadow-sm">
+          <i aria-hidden="true" class="fa-solid fa-compact-disc"></i>
+          <span>14 Tracks &bull; Vault</span>
+        </a>
+        <a href="/vault/" class="text-stone-400 hover:text-stone-200 transition-colors flex items-center gap-1">
+          <i aria-hidden="true" class="fa-solid fa-arrow-left text-[10px]"></i>
+          <span class="hidden sm:inline">Portal Hub</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main id="main-content" tabindex="-1" class="focus:outline-none space-y-20 pb-24">
+
+    <!-- HERO SECTION -->
+    <section aria-labelledby="hero-title" class="relative pt-12 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
+      <!-- Background Ambient Blobs -->
+      <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-rust-700/15 blur-3xl pointer-events-none"></div>
+      <div class="absolute top-1/2 -right-24 w-96 h-96 rounded-full bg-amberfire-500/10 blur-3xl pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <!-- Hero Left: Title, Stats, Overview & Badges -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="flex items-center gap-2.5 flex-wrap">
+            <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-rust-950 border border-rust-800 text-rust-400">
+              <i aria-hidden="true" class="fa-solid fa-industry mr-1.5 text-rust-400"></i>Four-Act Industrial Cantata
+            </span>
+            <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-forge-900 border border-forge-800 text-stone-300">
+              2025 Master Release
+            </span>
+            <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-amberfire-950/80 border border-amberfire-800/60 text-amberfire-400">
+              Bespoke Interactive Vault
+            </span>
+          </div>
+
+          <div>
+            <h1 id="hero-title" class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-none mb-3">
+              The Hammer <span class="text-rust-500">&amp; the Rust</span>
+            </h1>
+            <p class="font-mono text-sm sm:text-base text-amberfire-400/90 tracking-wide uppercase font-semibold">
+              An Industrial Cantata of the American Rust Belt
+            </p>
+          </div>
+
+          <p class="text-sm sm:text-base text-stone-300 leading-relaxed font-sans max-w-2xl">
+            A sonic monument to a forgotten congregation: the American industrial worker. Spanning four epic narrative acts, <em>The Hammer and the Rust</em> fuses traditional labor work songs, visceral Mongolian throat-singing drones, and real scrap-metal industrial percussion into an unflinching requiem and testament to the rise, violent collapse, human devastation, and hard-won resilience of the manufacturing heartland.
+          </p>
+
+          <!-- Key Metrics Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="p-3.5 rounded-xl bg-forge-900/90 border border-forge-800">
+              <span class="text-2xl font-bold font-mono text-white block">14</span>
+              <span class="text-xs text-stone-400 uppercase tracking-wider font-mono">Tracks</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-forge-900/90 border border-forge-800">
+              <span class="text-2xl font-bold font-mono text-rust-400 block">4 Acts</span>
+              <span class="text-xs text-stone-400 uppercase tracking-wider font-mono">Narrative Arc</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-forge-900/90 border border-forge-800">
+              <span class="text-2xl font-bold font-mono text-amberfire-400 block">4 Pillars</span>
+              <span class="text-xs text-stone-400 uppercase tracking-wider font-mono">Socio-History</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-forge-900/90 border border-forge-800">
+              <span class="text-2xl font-bold font-mono text-steel-300 block">54 Min</span>
+              <span class="text-xs text-stone-400 uppercase tracking-wider font-mono">Full Duration</span>
+            </div>
+          </div>
+
+          <!-- Streaming & Quick-Action Buttons -->
+          <div class="flex items-center gap-3 flex-wrap pt-2">
+            <a href="https://music.apple.com/us/album/the-hammer-and-the-rust/1833555239" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-white text-zinc-950 hover:bg-stone-200 text-xs font-semibold flex items-center gap-2 transition-colors shadow focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white">
+              <i aria-hidden="true" class="fa-brands fa-apple text-sm"></i>
+              <span>Apple Music</span>
+            </a>
+            <a href="https://music.youtube.com/playlist?list=OLAK5uy_nCRwQcoPTWZUdP5TEUb2ngIFy_o13fabo" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-red-700 hover:bg-red-600 text-white text-xs font-semibold flex items-center gap-2 transition-colors shadow focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+              <i aria-hidden="true" class="fa-brands fa-youtube text-sm"></i>
+              <span>YouTube Music</span>
+            </a>
+            <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcHpUBDbXPozRJgyZkJfX3ND" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-forge-900 hover:bg-forge-800 text-stone-200 border border-forge-750 text-xs font-semibold flex items-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-rust-500">
+              <i aria-hidden="true" class="fa-solid fa-list-check text-xs text-rust-400"></i>
+              <span>Video Playlist</span>
+            </a>
+            <a href="#vault" class="px-4 py-2.5 rounded-xl bg-rust-700 hover:bg-rust-600 text-white text-xs font-semibold flex items-center gap-2 transition-colors shadow focus:outline-none focus:ring-2 focus:ring-white">
+              <i aria-hidden="true" class="fa-solid fa-scroll text-xs"></i>
+              <span>Explore Lyrics Vault</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Right: Master Album Artwork Display -->
+        <div class="lg:col-span-5 flex flex-col items-center">
+          <div class="relative w-full max-w-md aspect-square rounded-2xl overflow-hidden border border-forge-750 shadow-2xl glow-rust bg-forge-900 group">
+            <img 
+              src="assets/art/the-hammer-and-the-rust-cover.webp" 
+              alt="The Hammer and the Rust master cover artwork by The Shady River Bard" 
+              width="1000" 
+              height="1000" 
+              fetchpriority="high"
+              decoding="async"
+              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-forge-950/90 via-transparent to-transparent opacity-80 pointer-events-none"></div>
+            <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono text-stone-300">
+              <span class="px-2 py-1 rounded bg-forge-950/80 backdrop-blur-sm border border-forge-800">
+                Official Master Cover Art
+              </span>
+              <span class="px-2 py-1 rounded bg-rust-950/80 text-rust-400 font-bold border border-rust-900/80">
+                Album 09
+              </span>
+            </div>
+          </div>
+          <p class="mt-3 text-xs text-stone-400 font-mono text-center">
+            Mastered for High-Resolution Spatial Audio &bull; 14 Concept Compositions
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 ACTS NARRATIVE STEPPER -->
+    <section id="narrative-arc" aria-labelledby="narrative-title" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <div class="flex items-center gap-2 text-xs font-mono text-rust-400 font-semibold uppercase tracking-wider mb-2">
+          <i aria-hidden="true" class="fa-solid fa-route"></i>
+          <span>The Four-Act Structure</span>
+        </div>
+        <h2 id="narrative-title" class="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-white">
+          The Journey from Fire to Bone
+        </h2>
+        <p class="text-sm text-stone-400 max-w-3xl mt-1">
+          A narrative cantata unfolding across four distinct emotional and societal movements—from the thunderous zenith of industrial might to the sudden silencing, communal grief, and defiant integration of history into authentic strength.
+        </p>
+      </div>
+
+      <!-- 4 Acts Interactive Stepper Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id="acts-grid">
+        <!-- Rendered dynamically via JS -->
+      </div>
+    </section>
+
+    <!-- SOCIOLOGICAL & HISTORICAL ANALYSIS PILLARS -->
+    <section id="sociological-pillars" aria-labelledby="pillars-title" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <div class="flex items-center gap-2 text-xs font-mono text-amberfire-400 font-semibold uppercase tracking-wider mb-2">
+          <i aria-hidden="true" class="fa-solid fa-book-bookmark"></i>
+          <span>Research Blueprint &bull; Table 0 Analysis</span>
+        </div>
+        <h2 id="pillars-title" class="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-white">
+          Thematic Analysis: A Requiem for the Rust Belt
+        </h2>
+        <p class="text-sm text-stone-400 max-w-3xl mt-1">
+          Deconstructing the socio-historical forces that defined the American industrial heartland—analyzing the macro-economic shocks, corporate betrayal, somatic trauma, and cultural memory explored in the album.
+        </p>
+      </div>
+
+      <!-- 4 Pillars Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="pillars-grid">
+        <!-- Rendered dynamically via JS -->
+      </div>
+
+      <!-- Thematic Bridge Callout to Album 06 -->
+      <div class="mt-8 p-6 rounded-2xl bg-forge-900/90 border border-forge-800 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div class="space-y-2">
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-rust-950 text-rust-400 font-bold border border-rust-900">
+              Thematic Echo
+            </span>
+            <span class="text-xs font-mono text-stone-400">Connection to Album 06</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white">
+            From &ldquo;The Poison We Trust&rdquo; to &ldquo;The Hammer and the Rust&rdquo;
+          </h3>
+          <p class="text-xs sm:text-sm text-stone-300 max-w-2xl leading-relaxed">
+            The somatic devastation chronicled in Track 09 (&ldquo;Black Lung Lullaby&rdquo;) directly bridges The Shady River Bard's earlier investigation in <em>The Poison We Trust</em> into corporate toxic contamination. Where Album 06 examined invisible chemical poison, Album 09 confronts the literal coal and silica dust woven into the respiratory tissue of workers who gave their bodies to keep the furnaces lit.
+          </p>
+        </div>
+        <a href="/the-poison-we-trust/" class="px-4 py-2 rounded-xl bg-forge-800 hover:bg-forge-750 text-stone-200 hover:text-white text-xs font-mono border border-forge-700 transition-colors whitespace-nowrap shrink-0 flex items-center gap-2">
+          <i aria-hidden="true" class="fa-solid fa-flask-vial text-emerald-400"></i>
+          <span>Visit Album 06 Vault</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- CANTATA MUSICAL IDENTITY & INSTRUMENTATION -->
+    <section id="musical-identity" aria-labelledby="sound-title" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="p-8 rounded-3xl bg-gradient-to-br from-forge-900 via-forge-950 to-forge-900 border border-forge-800 shadow-xl">
+        <div class="max-w-3xl mb-8">
+          <div class="flex items-center gap-2 text-xs font-mono text-rust-400 font-semibold uppercase tracking-wider mb-2">
+            <i aria-hidden="true" class="fa-solid fa-waveform-lines"></i>
+            <span>Bespoke Musical Genre</span>
+          </div>
+          <h2 id="sound-title" class="font-display font-bold text-2xl sm:text-3xl text-white">
+            The Sound of &ldquo;Industrial Folk Chant&rdquo;
+          </h2>
+          <p class="text-sm text-stone-300 mt-2 leading-relaxed font-sans">
+            Engineered specifically for <em>The Hammer and the Rust</em>, the album's acoustic architecture weaves three distinct musical traditions into a singular sonic monument:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-5 rounded-2xl bg-forge-950/80 border border-forge-800 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-rust-950 border border-rust-800 flex items-center justify-center text-rust-400 text-lg">
+              <i aria-hidden="true" class="fa-solid fa-people-group"></i>
+            </div>
+            <h3 class="font-display font-bold text-base text-white">1. Work Songs &amp; Chants</h3>
+            <p class="text-xs text-stone-400 leading-relaxed">
+              Rooted in traditional American labor anthems and sea shanties. Resonant baritone leads trade lines with a collective chorus, capturing the physical cadence and shared solidarity of the mill floor.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-amberfire-950 border border-amberfire-800 flex items-center justify-center text-amberfire-400 text-lg">
+              <i aria-hidden="true" class="fa-solid fa-microphone-lines"></i>
+          </div>
+            <h3 class="font-display font-bold text-base text-white">2. Throat Singing &amp; Drones</h3>
+            <p class="text-xs text-stone-400 leading-relaxed">
+              Deep, guttural <em>kargyraa</em> throat singing evokes the terrifying sub-bass roar of blast furnaces, while piercing <em>sygyt</em> overtones suggest whistling steam pressure and high-tension wires.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-forge-950/80 border border-forge-800 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-steel-700/60 border border-steel-600 flex items-center justify-center text-steel-300 text-lg">
+              <i aria-hidden="true" class="fa-solid fa-hammer"></i>
+            </div>
+            <h3 class="font-display font-bold text-base text-white">3. Industrial Percussion</h3>
+            <p class="text-xs text-stone-400 leading-relaxed">
+              Inspired by Einstürzende Neubauten: real sledgehammers striking anvils, screeching angle grinders on sheet metal, steel chains, and clattering scrap iron serving as rhythm and emotional dirge.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPLETE TRACK ARCHIVE & LYRICS VAULT -->
+    <section id="vault" aria-labelledby="vault-title" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Vault Header & Controls Toolbar -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-forge-900 border border-forge-800 shadow-2xl mb-8 space-y-6">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-mono text-rust-400 font-semibold uppercase tracking-wider mb-1">
+              <i aria-hidden="true" class="fa-solid fa-vault"></i>
+              <span>Interactive Song Archive</span>
+            </div>
+            <h2 id="vault-title" class="font-display font-bold text-2xl sm:text-3xl text-white">
+              The 14-Track Lyrics Vault
+            </h2>
+          </div>
+
+          <!-- Global Toolbar Actions: Expand/Collapse All Lyrics -->
+          <div class="flex items-center gap-2 flex-wrap">
+            <button onclick="expandAllLyrics()" id="btn-expand-all" class="px-3.5 py-1.5 rounded-lg bg-forge-800 hover:bg-forge-750 text-stone-200 hover:text-white border border-forge-700 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-rust-500">
+              <i aria-hidden="true" class="fa-solid fa-angles-down text-[10px] text-rust-400"></i>
+              <span>Expand All Lyrics</span>
+            </button>
+            <button onclick="collapseAllLyrics()" id="btn-collapse-all" class="px-3.5 py-1.5 rounded-lg bg-forge-800 hover:bg-forge-750 text-stone-200 hover:text-white border border-forge-700 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-rust-500">
+              <i aria-hidden="true" class="fa-solid fa-angles-up text-[10px] text-stone-400"></i>
+              <span>Collapse All</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter & Search Toolbar -->
+        <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 pt-4 border-t border-forge-800">
+          
+          <!-- Act Filter Buttons -->
+          <div class="flex items-center gap-1.5 flex-wrap text-xs font-mono" role="tablist" aria-label="Filter tracks by Act">
+            <button onclick="filterAct(0)" id="filter-btn-0" role="tab" aria-selected="true" class="px-3 py-1.5 rounded-lg bg-rust-700 text-white font-medium transition-colors">
+              All 14 Tracks
+            </button>
+            <button onclick="filterAct(1)" id="filter-btn-1" role="tab" aria-selected="false" class="px-3 py-1.5 rounded-lg text-stone-400 hover:text-stone-200 transition-colors">
+              Act I: The Forge (01-04)
+            </button>
+            <button onclick="filterAct(2)" id="filter-btn-2" role="tab" aria-selected="false" class="px-3 py-1.5 rounded-lg text-stone-400 hover:text-stone-200 transition-colors">
+              Act II: The Fracture (05-07)
+            </button>
+            <button onclick="filterAct(3)" id="filter-btn-3" role="tab" aria-selected="false" class="px-3 py-1.5 rounded-lg text-stone-400 hover:text-stone-200 transition-colors">
+              Act III: The Echo (08-11)
+            </button>
+            <button onclick="filterAct(4)" id="filter-btn-4" role="tab" aria-selected="false" class="px-3 py-1.5 rounded-lg text-stone-400 hover:text-stone-200 transition-colors">
+              Act IV: The Ember (12-14)
+            </button>
+          </div>
+
+          <!-- Search Input -->
+          <div class="relative w-full lg:w-72">
+            <i aria-hidden="true" class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-500 text-xs"></i>
+            <input 
+              type="search" 
+              id="search-input" 
+              placeholder="Search lyrics, titles, tags..." 
+              aria-label="Search album tracks and lyrics"
+              class="w-full pl-9 pr-4 py-2 rounded-xl bg-forge-950 border border-forge-750 text-stone-200 text-xs placeholder:text-stone-500 focus:outline-none focus:ring-2 focus:ring-rust-500 transition-colors"
+            >
+          </div>
+        </div>
+
+        <!-- Track counter indicator -->
+        <div class="flex items-center justify-between text-xs font-mono text-stone-400 pt-1">
+          <span id="track-counter">Showing 14 of 14 tracks</span>
+          <span class="text-stone-500">Click &ldquo;View Lyrics&rdquo; or play video for any track</span>
+        </div>
+      </div>
+
+      <!-- Tracks List Container -->
+      <div class="space-y-6" id="tracks-container">
+        <!-- Rendered dynamically via JS -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- YOUTUBE VIDEO MODAL -->
+  <div id="video-modal" role="dialog" aria-modal="true" aria-labelledby="modal-track-title" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="relative w-full max-w-4xl bg-forge-900 border border-forge-750 rounded-2xl overflow-hidden shadow-2xl">
+      <div class="p-4 border-b border-forge-800 flex items-center justify-between bg-forge-950/80">
+        <h3 id="modal-track-title" class="font-display font-bold text-base text-white flex items-center gap-2">
+          <!-- Populated dynamically -->
+        </h3>
+        <button onclick="closeVideoModal()" aria-label="Close video player" class="w-8 h-8 rounded-lg bg-forge-800 hover:bg-forge-700 text-stone-300 hover:text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-rust-500">
+          <i aria-hidden="true" class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+      <div class="aspect-video w-full bg-black">
+        <iframe id="video-iframe" class="w-full h-full" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" role="status" aria-live="polite" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 ease-out pointer-events-none">
+    <div class="px-4 py-3 rounded-xl bg-rust-700 text-white font-mono text-xs shadow-2xl flex items-center gap-2 border border-rust-500">
+      <i aria-hidden="true" class="fa-solid fa-circle-check text-sm text-emerald-300"></i>
+      <span id="toast-message">Lyrics copied to clipboard!</span>
+    </div>
+  </div>
+
+  <!-- FOOTER NAVIGATION ACROSS SISTERS -->
+  <footer class="bg-forge-950 border-t border-forge-800 py-12 px-4 sm:px-6 lg:px-8 text-xs font-mono text-stone-400">
+    <div class="max-w-7xl mx-auto space-y-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <div class="space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="w-7 h-7 rounded-lg bg-rust-700 text-white font-display font-bold text-xs flex items-center justify-center">SRB</span>
+            <span class="font-display font-bold text-sm text-white">The Shady River Bard</span>
+          </div>
+          <p class="text-xs text-stone-500 leading-relaxed font-sans">
+            Independent conceptual songwriting, historical testimony, and immersive thematic digital archives.
+          </p>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-mono text-xs uppercase tracking-wider text-stone-200 font-bold">Sister Concept Subsites</h4>
+          <ul class="space-y-1.5 text-stone-400">
+            <li><a href="/cognitive-inferno/" class="hover:text-rust-400 transition-colors">Album 08: Cognitive Inferno</a></li>
+            <li><a href="/unequal-justice/" class="hover:text-rust-400 transition-colors">Album 07: Unequal Justice</a></li>
+            <li><a href="/the-poison-we-trust/" class="hover:text-rust-400 transition-colors">Album 06: The Poison We Trust</a></li>
+            <li><a href="/a-house-divided/" class="hover:text-rust-400 transition-colors">Album 05: A House Divided</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-mono text-xs uppercase tracking-wider text-stone-200 font-bold">Ecosystem Vaults</h4>
+          <ul class="space-y-1.5 text-stone-400">
+            <li><a href="/the-fracture/" class="hover:text-rust-400 transition-colors">Album 03: The Fracture</a></li>
+            <li><a href="/unbroken-chain/" class="hover:text-rust-400 transition-colors">Album 10: The Unbroken Chain</a></li>
+            <li><a href="/this-sacred-ground/" class="hover:text-rust-400 transition-colors">Album 11: This Sacred Ground</a></li>
+            <li><a href="/vault/" class="hover:text-rust-400 transition-colors">All Albums Master Vault</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-mono text-xs uppercase tracking-wider text-stone-200 font-bold">Official Music Links</h4>
+          <ul class="space-y-1.5 text-stone-400">
+            <li><a href="https://music.apple.com/us/album/the-hammer-and-the-rust/1833555239" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Apple Music</a></li>
+            <li><a href="https://music.youtube.com/playlist?list=OLAK5uy_nCRwQcoPTWZUdP5TEUb2ngIFy_o13fabo" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">YouTube Music</a></li>
+            <li><a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcHpUBDbXPozRJgyZkJfX3ND" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Official Lyric Videos</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-forge-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-stone-400 text-xs">
+        <div>
+          &copy; 2025 The Shady River Bard &bull; The Shady River Homestead, LLC. All rights reserved.
+        </div>
+        <div class="flex items-center gap-4 flex-wrap">
+          <button onclick="openA11yModal()" class="hover:text-amberfire-400 underline transition-colors">Accessibility Statement (WCAG 2.1 AA)</button>
+          <span>&bull;</span>
+          <button onclick="toggleA11yToolbar()" class="hover:text-amberfire-400 underline transition-colors">Display Preferences</button>
+          <span>&bull;</span>
+          <a href="/" class="hover:text-stone-200 transition-colors">Portal Home</a>
+          <span>&bull;</span>
+          <a href="/vault/" class="hover:text-stone-200 transition-colors">Master Vault</a>
+          <span>&bull;</span>
+          <a href="#main-content" class="hover:text-stone-200 transition-colors">Back to Top &uarr;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MASTER DATASET SCRIPT -->
+  <script src="data/hammer-and-rust-data.js?v=20260910_09"></script>
+
+  <!-- UNIFIED ACCESSIBILITY TOOLBAR SCRIPT -->
+  <script src="/assets/js/a11y.js"></script>
+
+  <!-- APPLICATION LOGIC SCRIPT -->
+  <script>
+    // State management
+    const data = window.HAMMER_RUST_DATA;
+    let activeActFilter = 0; // 0 = all
+    let searchQuery = '';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!data) {
+        console.error('Master dataset HAMMER_RUST_DATA not found.');
+        return;
+      }
+      renderActs();
+      renderPillars();
+      renderTracks();
+      setupSearch();
+    });
+
+    // 1. ESCAPE HTML HELPER
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/[&<>"']/g, m => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+      }[m]));
+    }
+
+    // 2. RENDER 4 ACTS CARDS
+    function renderActs() {
+      const grid = document.getElementById('acts-grid');
+      if (!grid || !data.acts) return;
+
+      grid.innerHTML = data.acts.map(act => `
+        <button 
+          onclick="scrollToAct(${act.act_number})" 
+          class="text-left p-5 rounded-2xl bg-forge-900 border border-forge-800 hover:border-rust-500/80 transition-all group flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-rust-500"
+          aria-label="Filter to ${act.title}: ${act.subtitle}"
+        >
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-rust-400 font-bold px-2 py-0.5 rounded bg-rust-950 border border-rust-900">
+                ${act.track_range}
+              </span>
+              <span class="text-xs font-mono text-stone-500 group-hover:text-rust-400 transition-colors">
+                Act 0${act.act_number} &rarr;
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-lg text-white group-hover:text-rust-300 transition-colors">
+              ${act.title}
+            </h3>
+            <p class="text-xs font-mono text-amberfire-400/90 font-medium">
+              ${act.subtitle}
+            </p>
+            <p class="text-xs text-stone-400 leading-relaxed font-sans pt-1">
+              ${act.description}
+            </p>
+          </div>
+          <div class="pt-4 mt-2 border-t border-forge-800/80 flex items-center justify-between text-[11px] font-mono text-stone-500">
+            <span>${act.tracks.length} Songs</span>
+            <span class="text-rust-400 group-hover:underline">Explore Act</span>
+          </div>
+        </button>
+      `).join('');
+    }
+
+    // 3. RENDER 4 SOCIO-ECONOMIC PILLARS
+    function renderPillars() {
+      const grid = document.getElementById('pillars-grid');
+      if (!grid || !data.pillars) return;
+
+      grid.innerHTML = data.pillars.map(pillar => `
+        <div class="p-6 rounded-2xl bg-forge-900 border border-forge-800 flex flex-col justify-between space-y-4 hover:border-forge-700 transition-colors">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-mono text-amberfire-400 font-bold px-2 py-0.5 rounded bg-amberfire-950 border border-amberfire-900">
+                Research Facet 0${pillar.number}
+              </span>
+              <span class="text-xs font-mono text-stone-500">Table 0 Manuscript</span>
+            </div>
+            
+            <h3 class="font-display font-bold text-xl text-white mb-1">
+              ${pillar.title}
+            </h3>
+            <p class="text-xs font-mono text-rust-400 mb-4 font-semibold">
+              ${pillar.subtitle}
+            </p>
+
+            <div class="space-y-3 text-xs text-stone-300 leading-relaxed font-sans">
+              <p><strong class="text-white font-mono uppercase text-[11px] tracking-wider text-amberfire-300">Causes:</strong> ${pillar.causes}</p>
+              <p><strong class="text-white font-mono uppercase text-[11px] tracking-wider text-amberfire-300">Manifestations:</strong> ${pillar.manifestations}</p>
+              <p><strong class="text-white font-mono uppercase text-[11px] tracking-wider text-amberfire-300">Outcomes:</strong> ${pillar.outcomes}</p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-forge-800">
+            <blockquote class="text-xs italic text-stone-300 border-l-2 border-rust-500 pl-3 py-0.5 bg-forge-950/60 rounded-r-lg">
+              <strong class="text-rust-300 not-italic block font-mono text-[10px] uppercase mb-0.5">Deeper Understanding:</strong>
+              &ldquo;${pillar.deeper_understanding}&rdquo;
+            </blockquote>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // 4. RENDER TRACKS IN VAULT
+    function renderTracks() {
+      const container = document.getElementById('tracks-container');
+      if (!container || !data.tracks) return;
+
+      const filtered = data.tracks.filter(t => {
+        const matchesAct = activeActFilter === 0 || t.act_number === activeActFilter;
+        if (!matchesAct) return false;
+
+        if (!searchQuery) return true;
+        const q = searchQuery.toLowerCase();
+        const titleMatch = t.title.toLowerCase().includes(q);
+        const tagMatch = (t.tags || []).some(tag => tag.toLowerCase().includes(q));
+        const lyricsMatch = t.stanzas.some(s => s.lines.some(l => l.toLowerCase().includes(q)));
+        const descMatch = (t.description || '').toLowerCase().includes(q);
+
+        return titleMatch || tagMatch || lyricsMatch || descMatch;
+      });
+
+      // Update counter
+      const counterEl = document.getElementById('track-counter');
+      if (counterEl) {
+        counterEl.textContent = `Showing ${filtered.length} of ${data.tracks.length} tracks`;
+      }
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="p-12 text-center rounded-2xl bg-forge-900 border border-forge-800 text-stone-400">
+            <i aria-hidden="true" class="fa-solid fa-magnifying-glass text-3xl mb-3 text-stone-600"></i>
+            <p class="font-display font-bold text-lg text-white mb-1">No tracks found</p>
+            <p class="text-xs text-stone-400">No tracks matched your search "${escapeHtml(searchQuery)}". Try another keyword or reset filters.</p>
+            <button onclick="resetFilters()" class="mt-4 px-4 py-2 rounded-xl bg-rust-700 text-white text-xs font-semibold">
+              Reset Filters
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(track => `
+        <article id="track-${track.number}" class="rounded-2xl bg-forge-900 border border-forge-800 overflow-hidden shadow-xl hover:border-rust-600/40 transition-colors">
+          
+          <!-- Track Header Bar -->
+          <div class="p-5 sm:p-6 border-b border-forge-800 bg-forge-950/70 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-start sm:items-center gap-4">
+              <span class="w-11 h-11 rounded-xl bg-rust-950 border border-rust-800 text-rust-400 font-mono font-bold text-lg flex items-center justify-center shrink-0 shadow-inner">
+                ${track.number_padded}
+              </span>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap mb-1">
+                  <span class="text-xs font-mono px-2 py-0.5 rounded bg-forge-800 text-stone-300 border border-forge-700 font-medium">
+                    ${track.act}
+                  </span>
+                  <span class="text-xs font-mono text-amberfire-400 font-medium">
+                    ${track.musical_mood}
+                  </span>
+                </div>
+                <h3 class="font-display font-bold text-xl sm:text-2xl text-white tracking-wide">
+                  ${track.title}
+                </h3>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2 flex-wrap">
+              <button onclick="openVideoModal('${track.video_id}', '${escapeHtml(track.title)}')" aria-label="Play official video for ${track.title}" class="px-4 py-2 rounded-xl bg-red-700 hover:bg-red-600 text-white text-xs font-semibold flex items-center gap-1.5 transition-colors shadow focus:outline-none focus:ring-2 focus:ring-white">
+                <i aria-hidden="true" class="fa-solid fa-play text-xs"></i>
+                <span>Play Video</span>
+              </button>
+              <button onclick="toggleLyrics(${track.number})" id="btn-toggle-${track.number}" aria-expanded="false" aria-controls="lyrics-drawer-${track.number}" class="px-4 py-2 rounded-xl bg-forge-800 hover:bg-forge-750 text-stone-200 text-xs font-medium flex items-center gap-1.5 border border-forge-700 transition-colors focus:outline-none focus:ring-2 focus:ring-rust-500">
+                <i aria-hidden="true" id="toggle-icon-${track.number}" class="fa-solid fa-file-lines text-[11px] text-rust-400"></i>
+                <span id="toggle-label-${track.number}">View Lyrics (${track.stanzas.length} Stanzas)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Track Overview: Narrative, Key Lyric, Prompts & Artwork Preview -->
+          <div class="p-5 sm:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            
+            <!-- Left 8 cols: Track Narrative, Key Lyric & Production Details -->
+            <div class="lg:col-span-8 space-y-4">
+              
+              <!-- Track Narrative Description -->
+              <div class="p-4 sm:p-5 rounded-xl bg-forge-950/80 border border-forge-800 text-xs sm:text-sm text-stone-300 leading-relaxed space-y-3 font-sans">
+                <p>
+                  <strong class="font-mono text-xs uppercase tracking-wider text-rust-400 font-bold block mb-1">
+                    <i aria-hidden="true" class="fa-solid fa-scroll mr-1.5"></i>Narrative Focus &amp; Core Thesis:
+                  </strong>
+                  ${track.description}
+                </p>
+
+                <div class="p-3 rounded-lg bg-forge-900/80 border-l-2 border-rust-500 text-stone-200">
+                  <span class="text-[10px] font-mono uppercase tracking-wider text-stone-400 block mb-0.5 font-bold">Key Lyric Excerpt:</span>
+                  <p class="italic font-serif text-xs sm:text-sm text-amberfire-200">&ldquo;${track.key_lyric}&rdquo;</p>
+                </div>
+
+                <div class="pt-2 flex flex-wrap items-center justify-between gap-2 border-t border-forge-850">
+                  <div class="flex flex-wrap gap-1.5">
+                    ${(track.tags || []).map(tag => `
+                      <span class="px-2 py-0.5 rounded bg-forge-850 text-stone-400 text-[11px] font-mono border border-white/5">#${tag}</span>
+                    `).join('')}
+                  </div>
+                  
+                  <button onclick="toggleSunoPrompt(${track.number})" id="suno-btn-${track.number}" aria-expanded="false" class="text-[11px] font-mono text-amberfire-400 hover:text-amberfire-300 transition-colors flex items-center gap-1.5 focus:outline-none focus:underline">
+                    <i aria-hidden="true" class="fa-solid fa-sliders text-[10px]"></i>
+                    <span>Suno Direction &amp; Style</span>
+                    <i aria-hidden="true" id="suno-icon-${track.number}" class="fa-solid fa-chevron-down text-[9px] transition-transform"></i>
+                  </button>
+                </div>
+
+                <div id="suno-content-${track.number}" class="hidden pt-3 border-t border-forge-850 text-xs text-stone-400 space-y-1.5 font-mono">
+                  <p><strong class="text-stone-200">Style Prompt:</strong> ${track.suno_prompt || track.musical_mood}</p>
+                  <p><strong class="text-stone-200">Emotional Arc:</strong> <span class="text-rust-300">${track.emotional_arc}</span></p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right 4 cols: High-Res Panoramic Artwork Banner -->
+            <div class="lg:col-span-4 space-y-2">
+              <div class="aspect-video rounded-xl overflow-hidden border border-forge-800 bg-forge-950 shadow-md group">
+                <img 
+                  src="${track.art_banner}" 
+                  alt="${track.title} banner artwork by The Shady River Bard" 
+                  loading="lazy" 
+                  decoding="async"
+                  width="1200" 
+                  height="655" 
+                  class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                >
+              </div>
+              <div class="flex items-center justify-between text-[11px] font-mono text-stone-500 px-1">
+                <span>Original Master Artwork</span>
+                <span>Track 0${track.number}</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- FULL-WIDTH EXPANDABLE LYRICS DRAWER -->
+          <div id="lyrics-drawer-${track.number}" class="hidden border-t border-forge-800 bg-forge-950/90 p-5 sm:p-8 space-y-6">
+            
+            <!-- Lyrics Header & Copy Action -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-forge-800 gap-3">
+              <div class="flex items-center gap-2">
+                <i aria-hidden="true" class="fa-solid fa-quote-left text-rust-400 text-sm"></i>
+                <h4 class="font-mono text-xs uppercase tracking-wider text-stone-200 font-bold">
+                  Official Lyrics &bull; ${track.title} <span class="text-stone-500 font-normal">(${track.stanzas.length} Stanzas)</span>
+                </h4>
+              </div>
+
+              <button onclick="copyLyrics(${track.number})" id="btn-copy-${track.number}" aria-label="Copy lyrics for ${track.title}" class="px-3.5 py-1.5 rounded-lg bg-forge-900 hover:bg-rust-700 text-stone-300 hover:text-white border border-forge-750 hover:border-rust-600 text-xs font-mono transition-all flex items-center gap-1.5 shadow-sm focus:outline-none focus:ring-2 focus:ring-rust-400 self-start sm:self-auto">
+                <i aria-hidden="true" class="fa-regular fa-copy text-[11px]"></i>
+                <span id="btn-copy-label-${track.number}">Copy Lyrics</span>
+              </button>
+            </div>
+
+            <!-- Complete Stanzas Grid Layout (All Stanzas Displayed) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-xs sm:text-sm">
+              ${track.stanzas.map(stanza => `
+                <div class="p-4 rounded-xl bg-forge-900/70 border border-forge-800/80 space-y-2 hover:border-forge-750 transition-colors">
+                  <span class="inline-block text-[11px] font-mono text-rust-400 font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-rust-950/80 border border-rust-900/60">
+                    ${stanza.name}
+                  </span>
+                  <div class="space-y-1 pl-2.5 border-l-2 border-rust-900/60 text-stone-200 leading-relaxed font-sans">
+                    ${stanza.lines.map(l => `<p class="leading-relaxed">${l}</p>`).join('')}
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+
+            <!-- Legal Copyright & Attribution Notice at Bottom of Lyrics -->
+            <div class="pt-6 border-t border-forge-800/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs font-mono text-stone-400">
+              <div class="flex items-center gap-2">
+                <i aria-hidden="true" class="fa-regular fa-copyright text-rust-400 text-sm"></i>
+                <span>&copy; 2025 The Shady River Bard &bull; The Shady River Homestead, LLC. All rights reserved.</span>
+              </div>
+              <div class="flex items-center gap-2 text-[11px] text-stone-500">
+                <span>Album 09: The Hammer and the Rust</span>
+                <span>&bull;</span>
+                <a href="https://theshadyriverbard.com/the-hammer-and-the-rust/" class="hover:text-rust-400 underline transition-colors">theshadyriverbard.com</a>
+              </div>
+            </div>
+
+          </div>
+
+        </article>
+      `).join('');
+    }
+
+    // 5. SEARCH & FILTERS
+    function setupSearch() {
+      const input = document.getElementById('search-input');
+      if (!input) return;
+
+      input.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        renderTracks();
+      });
+    }
+
+    function filterAct(actNum) {
+      activeActFilter = actNum;
+      for (let i = 0; i <= 4; i++) {
+        const btn = document.getElementById(`filter-btn-${i}`);
+        if (btn) {
+          if (i === actNum) {
+            btn.className = 'px-3 py-1.5 rounded-lg bg-rust-700 text-white font-medium transition-colors';
+            btn.setAttribute('aria-selected', 'true');
+          } else {
+            btn.className = 'px-3 py-1.5 rounded-lg text-stone-400 hover:text-stone-200 transition-colors';
+            btn.setAttribute('aria-selected', 'false');
+          }
+        }
+      }
+      renderTracks();
+    }
+
+    function resetFilters() {
+      searchQuery = '';
+      const input = document.getElementById('search-input');
+      if (input) input.value = '';
+      filterAct(0);
+    }
+
+    function scrollToAct(actNum) {
+      filterAct(actNum);
+      const vaultEl = document.getElementById('vault');
+      if (vaultEl) {
+        vaultEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // 6. TOGGLE DRAWERS & GLOBAL CONTROLS
+    function toggleLyrics(trackNum) {
+      const drawer = document.getElementById(`lyrics-drawer-${trackNum}`);
+      const btn = document.getElementById(`btn-toggle-${trackNum}`);
+      const label = document.getElementById(`toggle-label-${trackNum}`);
+      const icon = document.getElementById(`toggle-icon-${trackNum}`);
+      if (!drawer || !btn) return;
+
+      const isHidden = drawer.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', !isHidden);
+      const track = data.tracks.find(t => t.number === trackNum);
+      const stanzasCount = track ? track.stanzas.length : '';
+
+      if (isHidden) {
+        if (label) label.textContent = `View Lyrics (${stanzasCount} Stanzas)`;
+        if (icon) icon.className = 'fa-solid fa-file-lines text-[11px] text-rust-400';
+      } else {
+        if (label) label.textContent = 'Hide Lyrics';
+        if (icon) icon.className = 'fa-solid fa-chevron-up text-[11px] text-rust-400';
+      }
+    }
+
+    function expandAllLyrics() {
+      document.querySelectorAll('[id^="lyrics-drawer-"]').forEach(el => el.classList.remove('hidden'));
+      document.querySelectorAll('[id^="btn-toggle-"]').forEach(btn => {
+        btn.setAttribute('aria-expanded', 'true');
+        const num = btn.id.replace('btn-toggle-', '');
+        const label = document.getElementById(`toggle-label-${num}`);
+        const icon = document.getElementById(`toggle-icon-${num}`);
+        if (label) label.textContent = 'Hide Lyrics';
+        if (icon) icon.className = 'fa-solid fa-chevron-up text-[11px] text-rust-400';
+      });
+    }
+
+    function collapseAllLyrics() {
+      document.querySelectorAll('[id^="lyrics-drawer-"]').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('[id^="btn-toggle-"]').forEach(btn => {
+        btn.setAttribute('aria-expanded', 'false');
+        const num = btn.id.replace('btn-toggle-', '');
+        const track = data.tracks.find(t => t.number === parseInt(num));
+        const stanzasCount = track ? track.stanzas.length : '';
+        const label = document.getElementById(`toggle-label-${num}`);
+        const icon = document.getElementById(`toggle-icon-${num}`);
+        if (label) label.textContent = `View Lyrics (${stanzasCount} Stanzas)`;
+        if (icon) icon.className = 'fa-solid fa-file-lines text-[11px] text-rust-400';
+      });
+    }
+
+    function toggleSunoPrompt(trackNum) {
+      const content = document.getElementById(`suno-content-${trackNum}`);
+      const icon = document.getElementById(`suno-icon-${trackNum}`);
+      const btn = document.getElementById(`suno-btn-${trackNum}`);
+      if (!content) return;
+
+      const isHidden = content.classList.contains('hidden');
+      if (isHidden) {
+        content.classList.remove('hidden');
+        if (icon) icon.classList.add('rotate-180');
+        if (btn) btn.setAttribute('aria-expanded', 'true');
+      } else {
+        content.classList.add('hidden');
+        if (icon) icon.classList.remove('rotate-180');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    // 7. VIDEO MODAL
+    function openVideoModal(videoId, title) {
+      const modal = document.getElementById('video-modal');
+      const iframe = document.getElementById('video-iframe');
+      const titleEl = document.getElementById('modal-track-title');
+      if (!modal || !iframe) return;
+
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      if (titleEl) {
+        titleEl.innerHTML = `<i aria-hidden="true" class="fa-brands fa-youtube text-red-500"></i> <span>${title}</span>`;
+      }
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('video-modal');
+      const iframe = document.getElementById('video-iframe');
+      if (!modal || !iframe) return;
+
+      iframe.src = '';
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeVideoModal();
+    });
+
+    // 8. COPY LYRICS WITH EMBEDDED COPYRIGHT DISCLOSURE
+    function copyLyrics(trackNum) {
+      const track = data.tracks.find(t => t.number === trackNum);
+      if (!track) return;
+
+      let text = `Track ${track.number_padded}: ${track.title}\n`;
+      text += `Artist: The Shady River Bard\n`;
+      text += `Album: The Hammer and the Rust (Album 09)\n\n`;
+
+      track.stanzas.forEach(s => {
+        text += `${s.name}\n`;
+        text += s.lines.join('\n') + '\n\n';
+      });
+
+      text += `--------------------------------------------------\n`;
+      text += `© 2025 The Shady River Bard • The Shady River Homestead, LLC.\n`;
+      text += `All music, lyrics, and conceptual frameworks reserved.\n`;
+      text += `Official Vault: https://theshadyriverbard.com/the-hammer-and-the-rust/\n`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById(`btn-copy-${trackNum}`);
+        if (btn) {
+          const orig = btn.innerHTML;
+          btn.innerHTML = `<i aria-hidden="true" class="fa-solid fa-check text-emerald-400 text-[11px]"></i><span class="text-emerald-300">Copied with Copyright!</span>`;
+          setTimeout(() => { btn.innerHTML = orig; }, 2500);
+        }
+        showToast(`"${track.title}" lyrics copied with copyright notice!`);
+      }).catch(() => {
+        showToast(`Failed to copy lyrics.`);
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const msgEl = document.getElementById('toast-message');
+      if (!toast || !msgEl) return;
+
+      msgEl.textContent = msg;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
