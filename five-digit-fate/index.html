@@ -84,6 +84,7 @@
   </script>
 
   <!-- Core Accessibility Stylesheet -->
+  <link rel="stylesheet" href="../assets/css/a11y.css">
   <link rel="stylesheet" href="/assets/css/a11y.css">
 
   <style>
@@ -146,16 +147,52 @@
 
       <div class="flex items-center gap-2.5">
         <button 
-          id="a11y-trigger-btn"
+          id="a11y-toggle-btn"
           type="button"
+          onclick="window.toggleA11yToolbar && window.toggleA11yToolbar()"
+          aria-expanded="false" 
+          aria-controls="a11y-toolbar"
           class="p-2 rounded-lg bg-steel-800 text-slate-300 hover:text-fate-400 hover:bg-steel-750 transition-colors border border-white/5"
-          aria-label="Open Accessibility Toolbar"
+          aria-label="Toggle accessibility display preferences"
+          title="Toggle accessibility display preferences"
         >
           <i aria-hidden="true" class="fa-solid fa-universal-access text-base"></i>
         </button>
       </div>
     </div>
   </header>
+
+  <!-- EXPANDABLE ACCESSIBILITY TOOLBAR (WCAG 2.1 AA) -->
+  <div id="a11y-toolbar" class="hidden bg-steel-900 border-b border-fate-500/40 py-3 px-4 text-xs transition-all shadow-2xl relative z-40" role="region" aria-label="Accessibility Display Preferences">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <div class="w-7 h-7 rounded-lg bg-steel-950 border border-fate-500/40 flex items-center justify-center text-fate-400 text-xs">
+          <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+        </div>
+        <div>
+          <span class="font-display font-bold text-stone-100 block">Accessibility Preferences</span>
+          <span class="text-stone-400 text-[11px] font-sans">Custom display controls for readability &amp; vision assistance</span>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-2 sm:gap-3 font-mono text-xs">
+        <button id="btn-contrast" onclick="toggleA11yOption('contrast')" class="px-3 py-1.5 rounded-lg bg-steel-850 hover:bg-steel-800 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-fate-500">
+          High Contrast: <span id="val-contrast" class="text-stone-400">Off</span>
+        </button>
+        <button id="btn-textsize" onclick="cycleTextSize()" class="px-3 py-1.5 rounded-lg bg-steel-850 hover:bg-steel-800 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-fate-500">
+          Text Size: <span id="val-textsize" class="text-stone-400">Normal</span>
+        </button>
+        <button id="btn-underline" onclick="toggleA11yOption('underline')" class="px-3 py-1.5 rounded-lg bg-steel-850 hover:bg-steel-800 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-fate-500">
+          Underline Links: <span id="val-underline" class="text-stone-400">Off</span>
+        </button>
+        <button id="btn-motion" onclick="toggleA11yOption('motion')" class="px-3 py-1.5 rounded-lg bg-steel-850 hover:bg-steel-800 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-fate-500">
+          Reduced Motion: <span id="val-motion" class="text-stone-400">System</span>
+        </button>
+        <button onclick="resetA11yOptions()" class="px-2 py-1 text-stone-400 hover:text-white underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-white">
+          Reset
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- Main Landmark -->
   <main id="main-content" tabindex="-1" class="focus:outline-none">
@@ -1053,6 +1090,7 @@
   </div>
 
   <!-- JAVASCRIPT PAYLOAD & APPLICATION LOGIC -->
+  <script src="../assets/js/a11y.js"></script>
   <script src="/assets/js/a11y.js"></script>
   <script src="data/five-digit-fate-data.js?v=20260910_04"></script>
 

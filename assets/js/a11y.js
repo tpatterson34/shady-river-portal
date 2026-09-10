@@ -7,6 +7,9 @@
 (function () {
   'use strict';
 
+  if (window.__A11Y_INITIALIZED__) return;
+  window.__A11Y_INITIALIZED__ = true;
+
   // 1. Accessibility State Management & LocalStorage Persistence
   const STORAGE_KEY = 'bard_a11y_prefs';
 
@@ -161,7 +164,10 @@
     const toolbar = ensureA11yToolbarExists();
     if (!toolbar) return;
 
-    const toggleBtn = document.getElementById('a11y-toggle-btn') || document.querySelector('button[aria-controls="a11y-toolbar"]');
+    const toggleBtn = document.getElementById('a11y-toggle-btn') || 
+                      document.getElementById('a11y-trigger-btn') || 
+                      document.getElementById('a11y-trigger') || 
+                      document.querySelector('button[aria-controls="a11y-toolbar"]');
 
     const isHidden = toolbar.classList.contains('hidden');
     if (isHidden) {
@@ -337,6 +343,18 @@
   function initA11y() {
     loadA11yState();
     ensureA11yToolbarExists();
+
+    // Auto-bind any accessibility toggle triggers across all portal/subsite pages
+    const triggerButtons = document.querySelectorAll('#a11y-toggle-btn, #a11y-trigger-btn, #a11y-trigger, button[aria-controls="a11y-toolbar"], button[aria-controls="a11y-toolbar-modal"]');
+    triggerButtons.forEach(btn => {
+      const existingOnclick = btn.getAttribute('onclick') || '';
+      if (!existingOnclick || existingOnclick.indexOf('toggleA11yToolbar') === -1) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.toggleA11yToolbar();
+        });
+      }
+    });
   }
 
   if (document.readyState === 'loading') {
