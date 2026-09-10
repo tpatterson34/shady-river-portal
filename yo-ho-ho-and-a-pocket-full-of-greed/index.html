@@ -877,41 +877,39 @@
                     <div class="text-xs font-serif italic text-pirategold-300/90 line-clamp-1">
                       "${escapeHtml(t.quote)}"
                     </div>
+
+                    <div class="text-[11px] font-mono text-slate-400/80 truncate">
+                      <i aria-hidden="true" class="fa-solid fa-tag text-[10px] text-pirategold-500/60 mr-1"></i>${escapeHtml(t.core_theme || '')}
+                    </div>
                   </div>
 
                 </div>
 
                 <!-- Right: Actions Bar -->
-                <div class="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center gap-2 shrink-0">
-                  <div class="flex items-center gap-2">
-                    
-                    <!-- Play Video Button -->
-                    <button 
-                      onclick="openTrackVideo(${t.number})"
-                      class="px-3 py-2 rounded-xl bg-red-950/80 hover:bg-red-900 text-red-200 font-mono text-xs font-bold transition-colors flex items-center gap-1.5 border border-red-700/50 shadow-md"
-                      aria-label="Play ${escapeHtml(t.title)} Official Video"
-                    >
-                      <i aria-hidden="true" class="fa-brands fa-youtube text-red-400"></i>
-                      <span class="hidden sm:inline">Watch Video</span>
-                    </button>
+                <div class="flex items-center gap-2 shrink-0 self-start sm:self-center">
+                  
+                  <!-- Play Video Button -->
+                  <button 
+                    onclick="openTrackVideo(${t.number})"
+                    class="px-3 py-2 rounded-xl bg-red-950/80 hover:bg-red-900 text-red-200 font-mono text-xs font-bold transition-colors flex items-center gap-1.5 border border-red-700/50 shadow-md"
+                    aria-label="Play ${escapeHtml(t.title)} Official Video"
+                  >
+                    <i aria-hidden="true" class="fa-brands fa-youtube text-red-400"></i>
+                    <span class="hidden sm:inline">Watch Video</span>
+                  </button>
 
-                    <!-- Toggle Lyrics & Story Drawer -->
-                    <button 
-                      onclick="toggleLyricsDrawer(${t.number})"
-                      id="drawer-toggle-${t.number}"
-                      class="px-3.5 py-2 rounded-xl ${isOpen ? 'bg-pirategold-500 text-ocean-950 font-bold' : 'bg-ocean-900 text-slate-200 hover:bg-ocean-850'} font-mono text-xs transition-colors flex items-center gap-2 border border-white/10 shadow-md"
-                      aria-expanded="${isOpen}"
-                      aria-controls="drawer-panel-${t.number}"
-                    >
-                      <span>${isOpen ? 'Collapse' : 'Lyrics & Story'}</span>
-                      <i aria-hidden="true" class="fa-solid ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'} text-[10px]"></i>
-                    </button>
+                  <!-- Toggle Lyrics & Story Drawer -->
+                  <button 
+                    onclick="toggleLyricsDrawer(${t.number})"
+                    id="drawer-toggle-${t.number}"
+                    class="px-3.5 py-2 rounded-xl ${isOpen ? 'bg-pirategold-500 text-ocean-950 font-bold' : 'bg-ocean-900 text-slate-200 hover:bg-ocean-850'} font-mono text-xs transition-colors flex items-center gap-2 border border-white/10 shadow-md"
+                    aria-expanded="${isOpen}"
+                    aria-controls="drawer-panel-${t.number}"
+                  >
+                    <span>${isOpen ? 'Collapse' : 'Lyrics & Story'}</span>
+                    <i aria-hidden="true" class="fa-solid ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'} text-[10px]"></i>
+                  </button>
 
-                  </div>
-
-                  <div class="text-[10px] font-mono text-slate-500 hidden sm:block">
-                    ${escapeHtml(t.core_theme || '')}
-                  </div>
                 </div>
 
               </div>
@@ -939,7 +937,7 @@
                       <div class="text-[10px] uppercase text-pirategold-400 font-bold">${escapeHtml(t.act_title)} &bull; Track ${t.number_padded}</div>
                       <div class="font-display text-base sm:text-lg font-bold text-white drop-shadow">${escapeHtml(t.title)}</div>
                     </div>
-                    <div class="text-[11px] text-slate-300 bg-black/60 px-2.5 py-1 rounded-lg backdrop-blur-sm hidden sm:block">
+                    <div class="text-[11px] text-slate-300 bg-black/60 px-2.5 py-1 rounded-lg backdrop-blur-sm hidden sm:block max-w-md line-clamp-2">
                       Narrative Role: ${escapeHtml(t.narrative_role)}
                     </div>
                   </div>
