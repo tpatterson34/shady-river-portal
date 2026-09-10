@@ -299,6 +299,8 @@ window.CATALOG = {
       "number": 6,
       "title": "A House Divided",
       "status": "released",
+      "is_bespoke": true,
+      "custom_url": "/a-house-divided/",
       "youtube_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcGu-dyJFizG_351gSA6-jRn",
       "description": "From the searing inferno of \"The Roaring Fire\" to the haunting silence of \"Ghost Town,\" \"A House Divided\" is a profound and emotionally resonant journey through the heart of our planet's most pressing challenges and humanity's response. The Shady River Bard navigates the landscapes of climate division, painting vivid sonic portraits of loss and resilience—from the parched fields and silent mines to the floodwaters of forgotten rivers.\n\nThis album delves into the psychological dragons of inaction that hold us captive, before turning a pivotal corner towards hope. It seeks \"Common Ground,\" showcasing \"The Living Soil\" of regenerative solutions and the vibrant hum of \"The Clean Energy\" transforming communities. Culminating in \"The Unlikely Handshake,\" \"A House Divided\" celebrates the powerful alliances forged when historical adversaries unite for a shared future.\n\nMusically, the album is a testament to diversity, moving fluidly across a spectrum that includes the intense energy of industrial rock, atmospheric electronic soundscapes, contemplative folk, raw country blues, and the uplifting spirit of Americana. Each track is a carefully crafted narrative, designed not just to observe the division but to illuminate the pathways to healing and connection, offering a powerful challenge and a resolute commitment to building a future together.",
       "track_count": 14,

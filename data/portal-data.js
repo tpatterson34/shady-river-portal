@@ -119,6 +119,25 @@ window.PORTAL_DATA = {
       "description": "An unflinching 4-movement investigation into dietary deceptions, corporate capture of regulatory agencies, and the modern chronic illness epidemic—culminating in an empowering revival of ancestral health sovereignty."
     },
     {
+      "id": "a-house-divided",
+      "number": "06",
+      "title": "A House Divided",
+      "subtitle": "Navigating Climate Division & Forging Common Ground",
+      "badge": "Bespoke Interactive Vault",
+      "cover": "/a-house-divided/assets/art/a-house-divided-cover.webp",
+      "tracks_count": 14,
+      "themes": [
+        "The Unquiet Earth",
+        "Architecture of Doubt",
+        "Symmetrical Human Loss",
+        "Dragons of Inaction",
+        "Transcendent Common Ground"
+      ],
+      "url": "/a-house-divided/",
+      "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcGu-dyJFizG_351gSA6-jRn",
+      "description": "A profound 6-movement narrative journey across ideological divides on climate, honoring the symmetrical pain of both changing weather and displaced heritage, and charting a pragmatic roadmap toward shared stewardship."
+    },
+    {
       "id": "the-forgotten-crown",
       "number": "Vault",
       "title": "The Sovereign's Right",
