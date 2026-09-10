@@ -237,6 +237,24 @@ window.PORTAL_DATA = {
       "description": "A sweeping 5-act folk epic bearing witness to the Native American experience—from mythic creation and sovereign clan governance, through broken treaties and boarding schools, to triumphant language revitalization and cultural rebirth."
     },
     {
+      "id": "the-balance-sheet-of-outrage",
+      "number": "12",
+      "title": "The Balance Sheet of Outrage",
+      "subtitle": "A Forensic Sonic Audit of the Military-Industrial Complex across Four Movements",
+      "badge": "Bespoke Interactive Vault",
+      "cover": "/the-balance-sheet-of-outrage/assets/art/the-balance-sheet-of-outrage-cover.webp",
+      "tracks_count": 14,
+      "themes": [
+        "The Business Proposal",
+        "The Propaganda Machine",
+        "The Externalities",
+        "The Reckoning & The Cycle"
+      ],
+      "url": "/the-balance-sheet-of-outrage/",
+      "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcGtsazmtO3CYDLN3lgel91m",
+      "description": "An unflinching 4-act, 14-track forensic sonic audit stripping away the flags and anthems to expose the cold quarterly earnings, manufactured consent, civilian externalities, and permanent war cycle of the military-industrial complex."
+    },
+    {
       "id": "the-forgotten-crown",
       "number": "Vault",
       "title": "The Sovereign's Right",
