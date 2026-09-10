@@ -777,7 +777,7 @@
 
     function createCardHTML(item) {
       const isReleased = currentSection === 'released';
-      const cover = item.cover_image || 'assets/covers/album-01.jpg';
+      const cover = item.cover_image || 'assets/covers/album-01.webp';
       const numberBadge = isReleased ? `#${String(item.number).padStart(2, '0')}` : 'VAULT';
       const desc = item.description || item.pitch || '';
       const truncatedDesc = desc.length > 140 ? desc.substring(0, 137) + '...' : desc;
@@ -791,7 +791,7 @@
           <div>
             <!-- Image Frame (Keyboard accessible) -->
             <div onclick="openModal('${item.id}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); openModal('${item.id}');}" class="relative aspect-square overflow-hidden bg-soil-950 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-t-2xl" role="button" tabindex="0" aria-label="Open album details and liner notes for ${item.title}">
-              <img src="${cover}" alt="Album cover art for ${item.title} by The Shady River Bard" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+              <img src="${cover}" alt="Album cover art for ${item.title} by The Shady River Bard" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" onerror="this.onerror=null; this.src='assets/covers/album-01.webp';">
               <div class="absolute inset-0 bg-gradient-to-t from-soil-900 via-transparent to-transparent opacity-80 group-hover:opacity-50 transition-opacity" aria-hidden="true"></div>
               
               <!-- Center Hover Icon -->
@@ -918,7 +918,8 @@
       document.getElementById('modal-badge').innerText = item.number ? `#${String(item.number).padStart(2, '0')}` : 'VAULT CONCEPT';
       
       const modalArt = document.getElementById('modal-art');
-      modalArt.src = item.cover_image || 'assets/covers/album-01.jpg';
+      modalArt.onerror = function() { this.onerror = null; this.src = 'assets/covers/album-01.webp'; };
+      modalArt.src = item.cover_image || 'assets/covers/album-01.webp';
       modalArt.alt = `Official cover artwork for ${item.title} by The Shady River Bard`;
       
       const rawDesc = item.description || item.pitch || '';
