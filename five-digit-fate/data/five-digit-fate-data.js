@@ -186,7 +186,7 @@ window.FIVE_DIGIT_FATE_DATA = {
       "youtube_video_id": "IbWYkOMEg3o",
       "art_banner": "assets/art/prologue-a-national-static.webp",
       "art_square": "assets/art/prologue-a-national-static--sq.webp",
-      "quote": "Before your first breath, a number was assigned... not a name whispered by your mother, but a five-digit fate.",
+      "quote": "Before your first breath, a number was assigned. / Not a name whispered by your mother... but a five-digit fate.",
       "suno_prompt": "Spoken word manifesto over a slow, monotonous, funereal snare drum tap. Faint radio static fades in and out. Atmospheric, dark ambient, minimalist, stark, ominous.",
       "summary": "\"Prologue (A National Static)\" serves as the album's overture, a spoken-word manifesto set against a stark, minimalist soundscape. The Bard's narration introduces the core themes of geographic determinism over a slow, monotonous funereal snare drum that marks time like a grim heartbeat. The sound of radio static is used dynamically, fading in and out to create tension rather than a wall of noise. The track functions as a declaration of intent, tuning the listener's ear to the tragedy about to unfold, culminating in the sharp, violent sound of a branding iron that signals the story's true beginning.",
       "stanzas": [
@@ -403,7 +403,7 @@ window.FIVE_DIGIT_FATE_DATA = {
       "youtube_video_id": "_aGKMysmXVw",
       "art_banner": "assets/art/delta-born.webp",
       "art_square": "assets/art/delta-born--sq.webp",
-      "quote": "Parchman Farm is a shadow long / Singin' to the rhythm of what's gone wrong.",
+      "quote": "Yeah, I'm Delta born and Delta bred / Got the Mississippi River runnin' through my head",
       "suno_prompt": "Raw acoustic Delta Blues, gritty slide guitar, soulful male vocals, foot stomp percussion. Lo-fi, authentic, like an old field recording from the 1930s.",
       "summary": "\"Delta Born\" is a raw, acoustic blues number that transports the listener to the sweltering cotton fields of the post-slavery Mississippi Delta. The lyrics paint a picture of relentless labor and systemic oppression, where the land itself feels both like a cradle and a cage. It establishes the socio-economic conditions that gave birth to the Delta Blues, framing the music not just as an art form, but as a vital tool for survival—a language of sorrow, hope, and the first whispers of a great migration north.",
       "stanzas": [
@@ -635,7 +635,7 @@ window.FIVE_DIGIT_FATE_DATA = {
       "youtube_video_id": "2Nfj8ue_tFs",
       "art_banner": "assets/art/branded-at-birth.webp",
       "art_square": "assets/art/branded-at-birth--sq.webp",
-      "quote": "The first sound wasn't a doctor's slap / It was the closing latch of a poverty trap.",
+      "quote": "The first sound wasn't a doctor's slap / It was the closing latch of a poverty trap",
       "suno_prompt": "Gritty acoustic folk, stark Americana. A raw, gravelly male vocal with simmering anger, almost spoken-word. Just a driving acoustic guitar and a mournful, distant harmonica.",
       "summary": "\"Branded at Birth\" is the album's core thesis, a gritty and raw acoustic folk song that makes the central metaphor explicit. The lyrics juxtapose the universal innocence of a newborn with the cold, systemic cruelty of geographic determinism. It directly introduces the dual meaning of \"branding\"—the sterile language of a corporate \"consumer profile\" and the visceral, painful imagery of a cattle brand. This song sets the grim, unwavering tone for the rest of the album, arguing that a child's fate is sealed not by character, but by their address.",
       "stanzas": [
@@ -882,7 +882,7 @@ window.FIVE_DIGIT_FATE_DATA = {
       "youtube_video_id": "d6iKRH_FW4w",
       "art_banner": "assets/art/company-town-ghost.webp",
       "art_square": "assets/art/company-town-ghost--sq.webp",
-      "quote": "I remember the scrip, that paper gold / In the company store where my youth was sold.",
+      "quote": "I remember the scrip, that paper gold / In the company store where my youth was sold",
       "suno_prompt": "Mournful Appalachian Folk Ballad. A weathered, weary male storyteller's voice with a slight accent. Music is led by a sad, weeping fiddle and a gentle, rhythmic clawhammer banjo. Raw, authentic, historical sound.",
       "summary": "\"Company Town Ghost\" is a mournful Appalachian folk ballad that tells the story of an old man in a hollowed-out coal town. Through his eyes, we witness the complete life cycle of the town—from the paternalistic control of the coal company and the pride of dangerous labor, to the slow decay after the mine closes. The song is a character study in loss, exploring the ghost of a community and a personal identity that were built, owned, and ultimately abandoned by outside forces, leaving behind only memories and the quiet hum of despair.",
       "stanzas": [
@@ -1117,7 +1117,7 @@ window.FIVE_DIGIT_FATE_DATA = {
       "youtube_video_id": "MOQYtKqFdro",
       "art_banner": "assets/art/red-line-lullaby.webp",
       "art_square": "assets/art/red-line-lullaby--sq.webp",
-      "quote": "That ain't just a place where the freight train's strong / That's a line they drew, with an ink so deep.",
+      "quote": "Mama's got a song, soft and low / 'Bout where you can go, and where you can't grow",
       "suno_prompt": "Sparse, haunting Electric Chicago Blues. Gritty distorted harmonica, minimal kick and snare drums, raw electric guitar, and a soulful, weary female vocal, like a tender but solemn lullaby.",
       "summary": "\"Red Line Lullaby\" is a sparse, haunting electric Chicago Blues number, told from the perspective of a mother on the South Side. As she sings to her child, the lullaby subtly becomes a solemn warning about the invisible, yet impenetrable, lines of the city—the legacy of redlining. The lyrics reveal how this historical policy has created enduring boundaries, dictating where one can live, dream, and find safety, effectively passing a generational curse of \"abandonment\" down from mother to child through the very geography of their neighborhood.",
       "stanzas": [
@@ -1358,7 +1358,7 @@ window.FIVE_DIGIT_FATE_DATA = {
       "youtube_video_id": "81fEAoQ0ITE",
       "art_banner": "assets/art/the-five-dollar-day.webp",
       "art_square": "assets/art/the-five-dollar-day--sq.webp",
-      "quote": "Five dollars a day, boys, five dollars a day! / Pack up the old truck, we're on our way!",
+      "quote": "Oh, that Five-Dollar Day, hear the people sing! / Gonna buy a little house, buy a diamond ring",
       "suno_prompt": "Energetic Early R&B and Jump Blues, 1950s Rock and Roll. Driving upright bass, swinging drums, honking saxophone, and a robust, celebratory male vocal. Vintage, warm production like an old Sun Records session.",
       "summary": "\"The Five-Dollar Day\" marks a significant tonal shift in the album, capturing the powerful sense of hope that drew migrants to Detroit during the Great Migration. Set to an energetic, early R\\&B/Jump Blues rhythm, the song tells the story of someone leaving the hardships of the South for the promise of a high wage in Henry Ford's auto plants. It’s a song of forward momentum and belief in the industrial dream, representing the \"Ascension\" phase of Detroit's story before the eventual decline.",
       "stanzas": [
@@ -1587,7 +1587,7 @@ window.FIVE_DIGIT_FATE_DATA = {
       "youtube_video_id": "2E6nP-Bmto8",
       "art_banner": "assets/art/hitsville-usa.webp",
       "art_square": "assets/art/hitsville-usa--sq.webp",
-      "quote": "A love song assembly line, makin' you feel fine / Shakin' the foundation, answerin' a brand new call.",
+      "quote": "Yeah, it's Hitsville, U.S.A., a three-minute dream / Makin' sweet music, a universal theme",
       "suno_prompt": "Classic 1960s Motown Pop-Soul. Polished production, driving bassline, prominent tambourine and drums, sweet strings, horns. Smooth male lead vocal with tight female harmony backing vocals. Upbeat, vibrant, and danceable.",
       "summary": "\"Hitsville, U.S.A.\" captures the vibrant, peak-era energy of Motown Records. Musically, it’s a polished, upbeat pop-soul number, complete with driving basslines, tambourines, and tight harmonies, embodying \"The Sound of Young America.\" Lyrically, however, the song contains a subtle undercurrent of foreboding. It contrasts the hermetically sealed joy and unity being created inside the studio with the growing unrest and systemic issues simmering on the Detroit streets outside, foreshadowing the \"Slow Collapse\" to come.",
       "stanzas": [
@@ -1850,7 +1850,7 @@ window.FIVE_DIGIT_FATE_DATA = {
       "youtube_video_id": "IVSoaMSWy7U",
       "art_banner": "assets/art/the-long-slow-collapse.webp",
       "art_square": "assets/art/the-long-slow-collapse--sq.webp",
-      "quote": "The shift whistle blew, but nobody moved / A long, slow collapse in the heartland.",
+      "quote": "'Cause this ain't a bang, it's a quiet fade / It's the long slow collapse of the life we made",
       "suno_prompt": "Contemplative Country Blues, somber Americana. A weary, heartfelt male storyteller's voice. Music is led by an acoustic guitar and a mournful, weeping pedal steel guitar. Warm, intimate, and melancholic.",
       "summary": "\"The Long Slow Collapse\" marks the album's tragic turning point. Shifting from the vibrant energy of Motown to a somber, contemplative country-blues style, the song follows a single character's descent into despair. It's a narrative of gradual loss—the factory whistle falling silent, the union hall closing its doors, the hollowing out of community, and the slow erosion of purpose. This track personalizes the academic concept of \"deaths of despair,\" illustrating how systemic economic change manifests as a quiet, intensely personal tragedy.",
       "stanzas": [
@@ -2085,7 +2085,7 @@ window.FIVE_DIGIT_FATE_DATA = {
       "youtube_video_id": "aZAICYXAbhM",
       "art_banner": "assets/art/the-world-before-the-mill-went-down.webp",
       "art_square": "assets/art/the-world-before-the-mill-went-down--sq.webp",
-      "quote": "We had a union hall, we had a softball team / In the world before the mill went down.",
+      "quote": "And we were all connected by the fire and the sound / That was the world before the mill went down",
       "suno_prompt": "Intimate finger-picked Country Blues. A weathered, older male storyteller's voice, warm and reflective. Just a single acoustic guitar, played with intricate, melodic finger-picking. Heartfelt, nostalgic, and sad.",
       "summary": "\"The World Before the Mill Went Down\" is an intimate, finger-picked country blues ballad steeped in nostalgia. An elder character reflects on a past that, while difficult, was defined by stability and a strong sense of community. The song is not a lament for a lost job, but for a lost \"social capital\"—the shared purpose, neighborhood bonds, and predictable rhythms of life that were anchored by the local mill. It serves as a poignant document of the vibrant, interconnected world that was destroyed by deindustrialization, highlighting what is lost beyond mere economics.",
       "stanzas": [
@@ -2299,7 +2299,7 @@ window.FIVE_DIGIT_FATE_DATA = {
       "youtube_video_id": "i3BLtsuykLk",
       "art_banner": "assets/art/hillbilly-heroin.webp",
       "art_square": "assets/art/hillbilly-heroin--sq.webp",
-      "quote": "A little white pill for a hurt in the back / Turned into a train runnin' off the track.",
+      "quote": "But the devil's in the chemistry, it's a fact / That hillbilly heroin ain't bringin' you back",
       "suno_prompt": "Raw, pained acoustic ballad. A single, stark acoustic guitar. The male vocal is strained, cracking with emotion, full of desperation and regret. Brutally honest, close-mic'd, and somber.",
       "summary": "\"Hillbilly Heroin\" is a raw and painfully personal acoustic ballad that serves as the first entry in the album's \"Symptoms of the Brand\" act. Told in the first person, it traces a direct line from a legitimate, physically demanding job in the mines to a devastating opioid addiction. The narrator recounts how a workplace injury, treated with aggressively marketed prescription pills, becomes a trap that numbs not only the physical pain but also the deeper economic and spiritual despair of a forgotten Appalachia. It's a stark, unflinching look at the opioid crisis as a direct consequence of the region's history of extraction and abandonment.",
       "stanzas": [
@@ -2537,7 +2537,7 @@ window.FIVE_DIGIT_FATE_DATA = {
       "youtube_video_id": "zNmF_XlPbgk",
       "art_banner": "assets/art/the-corner-economy.webp",
       "art_square": "assets/art/the-corner-economy--sq.webp",
-      "quote": "Ten dollars an hour at the drive-thru lane / Or a soldier on the corner in the pouring rain.",
+      "quote": "It's the corner economy, a balance sheet of pain / Do you want the slow drought, or the hurricane?",
       "suno_prompt": "A gritty, lo-fi hip-hop blues track. A slow, menacing drum machine loop and a deep sub bass provide the foundation for a rhythmic, spoken-word male vocal. The chorus shifts to a weary, soulful blues melody. Sparse, urban, and tense.",
       "summary": "\"The Corner Economy\" is a stark, rhythmic track that blends spoken-word narration with a gritty blues/hip-hop beat. It presents a cold, calculated monologue from a young man on Chicago's South Side as he weighs his two viable career paths: a low-wage, dead-end job with no future, or the high-risk, high-reward structure of a local gang. The lyrics are framed not as a moral dilemma, but as a pragmatic business decision in an environment devoid of real opportunity, showcasing a devastating \"symptom\" of the \"abandonment\" brand.",
       "stanzas": [
@@ -2807,7 +2807,7 @@ window.FIVE_DIGIT_FATE_DATA = {
       "youtube_video_id": "FVmNC64b7jc",
       "art_banner": "assets/art/the-last-picture-show-in-oakland.webp",
       "art_square": "assets/art/the-last-picture-show-in-oakland--sq.webp",
-      "quote": "They tore down the Grand Lake, put up a coffee bar / Erasing our history, street by street.",
+      "quote": "We built this city on soul and on sound / Now they're sellin' off pieces of our sacred ground",
       "suno_prompt": "Early West Coast Hip-Hop with a slow, menacing G-Funk bassline. A simple 808 drum beat and a mournful, high-pitched synth lead. Verses are a rhythmic, spoken-word male narration. The chorus is a sung, melancholic soul melody.",
       "summary": "Re-imagined with the stark sound of early West Coast hip-hop, \"The Last Picture Show in Oakland\" becomes a gritty, narrative-driven lament. Built on a slow, menacing G-funk beat, the track features the Bard delivering rhythmic, spoken-word verses that catalog the cultural erasure of his neighborhood. The cold, calculating feel of the beat is contrasted by a soulful, melancholic chorus, creating a powerful tension between the grim reality of gentrification and the deep-seated love for the city being lost.",
       "stanzas": [
@@ -3042,7 +3042,7 @@ window.FIVE_DIGIT_FATE_DATA = {
       "youtube_video_id": "HYguQVRcOV0",
       "art_banner": "assets/art/alleys-of-your-mind.webp",
       "art_square": "assets/art/alleys-of-your-mind--sq.webp",
-      "quote": "Synthesizers humming in an empty hall / Machine music rising from the factory wall.",
+      "quote": "In the alleys of your mind, a new current flows / A spark in the darkness, that's how the future grows",
       "suno_prompt": "Authentic 1980s Detroit Techno and Electro-Funk. Driving 808 drum machine beat, cold arpeggiated synth bassline, and futuristic Juno-60 synth pads. Male vocals are processed with a heavy, robotic vocoder effect. Mechanical, hypnotic, and defiant.",
       "summary": "\"Alleys of Your Mind\" captures the birth of Detroit Techno, representing a pivotal shift in the album's narrative from pure despair to defiant creation. The track is a futuristic and mechanical electro-funk piece, built on cold synthesizer melodies and the relentless pulse of a drum machine. The lyrics, often delivered with a robotic vocoder effect, speak of repurposing the ruins of the \"Motor City\" into a new, electronic identity. It's a \"symptom\" that manifests not as a sickness, but as the invention of an Afrofuturist future when the mainstream American dream has collapsed.",
       "stanzas": [
@@ -3268,7 +3268,7 @@ window.FIVE_DIGIT_FATE_DATA = {
       "youtube_video_id": "H3LMrbJ3tN0",
       "art_banner": "assets/art/the-opportunity-atlas.webp",
       "art_square": "assets/art/the-opportunity-atlas--sq.webp",
-      "quote": "Trace your finger on the atlas where the numbers turn red / A five-digit prison where the dream was misled.",
+      "quote": "This ain't no back road, this ain't no street / It's the Opportunity Atlas, the sound of defeat",
       "suno_prompt": "Driving Industrial Folk Rock. A fusion of powerful, angry acoustic guitar and gritty, mechanical sounds. Heavy, repetitive drum machine beat, distorted bass, and industrial percussion. The lead vocal is a passionate, defiant male singer.",
       "summary": "\"The Opportunity Atlas\" kicks off the album's final act with a driving, industrial-tinged folk-rock anthem. The song is a direct confrontation with the systemic data that underpins the album's narrative. The protagonist traces their life on Raj Chetty's map, seeing their community's fate laid bare in stark, color-coded reality. The music mirrors this theme, fusing the Bard's passionate acoustic-driven rock with a cold, mechanical, and relentless industrial rhythm, creating a sound of human anger pushing back against an unfeeling system.",
       "stanzas": [
@@ -3535,7 +3535,7 @@ window.FIVE_DIGIT_FATE_DATA = {
       "youtube_video_id": "Fsa6czORm9E",
       "art_banner": "assets/art/priced-out.webp",
       "art_square": "assets/art/priced-out--sq.webp",
-      "quote": "The landlord gave us thirty days to pack forty years of life / Priced out of the only home we ever knew.",
+      "quote": "And we're priced out of the life we knew / Just a line on a spreadsheet for someone new",
       "suno_prompt": "Stripped-down, emotional acoustic folk ballad. A single, intimately recorded acoustic guitar. The male vocal is soft, vulnerable, and breaking with emotion, almost a whisper. Heartbreaking, raw, and poignant.",
       "summary": "\"Priced Out\" is a stripped-down, painfully intimate acoustic folk ballad that depicts the final moment of displacement. Returning to the family in Oakland, the song focuses on the small, heartbreaking details of packing up a generational home after a rent hike makes it impossible to stay. The lyrics avoid grand political statements, instead lingering on the quiet tragedy of lost memories and a severed connection to place—the faded wallpaper, the useless keys, the pencil marks on a door frame. It is the emotional climax of the \"erasure\" theme, translating economic forces into a profound and personal loss.",
       "stanzas": [
@@ -3748,7 +3748,7 @@ window.FIVE_DIGIT_FATE_DATA = {
       "youtube_video_id": "v9D0_GHY13U",
       "art_banner": "assets/art/the-music-they-couldnt-erase.webp",
       "art_square": "assets/art/the-music-they-couldnt-erase--sq.webp",
-      "quote": "You can brand our circumstances, you can buy up the land / But you can't erase the music of a free man's hand.",
+      "quote": "This is the music they couldn't erase / Every note is a memory, every chord is a place",
       "suno_prompt": "### **Final Version: Act V, Track 16: \"The Music They Couldn't Erase\"**",
       "summary": "\"The Music They Couldn't Erase\" is the album's powerful, climactic anthem of resilience. The song builds from a simple acoustic folk/blues foundation into a full-blown, multi-genre rock anthem, fusing all the regional styles explored throughout the album. Lyrically, it's a defiant declaration that while systems can control economies and landscapes, they cannot touch the cultural soul embodied in music. The protagonist finds strength not in escaping their brand, but in embracing the \"counter-brand\" of their heritage, realizing it's the one thing that can't be bought, sold, or gentrified.",
       "stanzas": [
@@ -3978,7 +3978,7 @@ window.FIVE_DIGIT_FATE_DATA = {
       "youtube_video_id": "wcQ1zkLU1ps",
       "art_banner": "assets/art/the-unbranded-heart.webp",
       "art_square": "assets/art/the-unbranded-heart--sq.webp",
-      "quote": "I ain't your data point, I ain't your bottom line / I am an unbranded heart, and my soul is mine.",
+      "quote": "I'm not your five-digit fate / I'm a human being... and I'm alive.",
       "suno_prompt": "A cappella. A single, raw, defiant male vocal in a quiet, empty room. The voice starts as an intense whisper and builds to a powerful, cracking shout. Stark, emotional, and completely stripped-down. Minimalist.",
       "summary": "Serving as the album's powerful and intimate epilogue, \"Five-Digit Fate (Reprise) / A Human Being\" strips away all instrumentation to focus on a single, raw human voice. In a stark a cappella performance, the narrator directly rejects the labels, data points, and systemic brands that have defined the album's narrative. It's a final, defiant declaration of humanity against the forces of abstraction, bringing the sprawling story of \"Five-Digit Fate\" to a quiet, gut-wrenching, and ultimately hopeful close.",
       "stanzas": [
