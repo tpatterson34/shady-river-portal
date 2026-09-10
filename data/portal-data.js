@@ -255,6 +255,24 @@ window.PORTAL_DATA = {
       "description": "An unflinching 4-act, 14-track forensic sonic audit stripping away the flags and anthems to expose the cold quarterly earnings, manufactured consent, civilian externalities, and permanent war cycle of the military-industrial complex."
     },
     {
+      "id": "mamas-boy",
+      "number": "13",
+      "title": "Mama's Boy",
+      "subtitle": "A Memoir of Judith Faye Adams & A Tribute to Single Mothers in America",
+      "badge": "Bespoke Interactive Vault",
+      "cover": "/mamas-boy/assets/art/mamas-boy-cover.webp",
+      "tracks_count": 11,
+      "themes": [
+        "The Weight of Her World",
+        "Through a Son's Eyes",
+        "The Storm and the Shelter",
+        "The Reckoning, Grief & Grace"
+      ],
+      "url": "/mamas-boy/",
+      "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcGsdstc3avnCK2Ttq3H-lLd",
+      "description": "An intimate, unflinching 11-track musical memoir of the Bard's mother, Judith Faye Adams ('Mama Judie'), and an empirical sociological data audit of Single Mothers in America. Journeying through pre-dawn shifts, boyhood drive-ins, domestic storms, and the healing gold of Kintsugi grace."
+    },
+    {
       "id": "the-forgotten-crown",
       "number": "Vault",
       "title": "The Sovereign's Right",
