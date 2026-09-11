@@ -419,6 +419,26 @@ window.PORTAL_DATA = {
         "url": "/have-yourself-a-shady-little-christmas/",
         "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEJAWlpL_w-X_nFgrJ4f4Bn",
         "description": "An unflinching 15-track modern Christmas carol told through the lens of social realism. Following William from the frozen shadows outside festive shop windows through addiction crisis to an unexpected encounter with Joe the store Santa, proving that the opposite of addiction is connection."
+    },
+    {
+        "id": "doomsday-clock",
+        "number": "21",
+        "title": "Doomsday Clock",
+        "subtitle": "An Album Blueprint for Existential Reckoning",
+        "badge": "Bespoke Interactive Vault",
+        "cover": "/doomsday-clock/assets/art/doomsday-clock-cover.webp",
+        "tracks_count": 13,
+        "themes": [
+            "Existential Risk",
+            "AI Misalignment",
+            "Climate Tipping Points",
+            "Engineered Pandemics",
+            "Nuclear Precipice",
+            "89 Seconds to Midnight"
+        ],
+        "url": "/doomsday-clock/",
+        "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcFJ4vC-R0d-N2XvsMwph5bj",
+        "description": "A 13-movement four-act concept album translating existential risk into visceral narrative art. Tracing humanity's precarious position 89 seconds to midnight from creeping objectless anxiety through catastrophic ruin to the final chilling silence."
     }
   ],
   "merchandise": [

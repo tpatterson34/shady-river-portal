@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Shady River Bard — Doomsday Clock | Official Album 21 Hub</title>
+  <meta name="description" content="Official interactive concept hub, complete lyrics vault, and existential risk research matrix for Album 21: 'Doomsday Clock' by The Shady River Bard.">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="music.album">
+  <meta property="og:site_name" content="The Shady River Bard">
+  <meta property="og:title" content="Doomsday Clock | Official Album 21 Hub">
+  <meta property="og:description" content="A 13-movement four-act concept album translating existential risk and 89 seconds to midnight into visceral narrative art. Full lyrics, videos, and research matrix.">
+  <meta property="og:image" content="https://theshadyriverbard.com/doomsday-clock/assets/art/doomsday-clock-cover.webp">
+  <meta property="og:url" content="https://theshadyriverbard.com/doomsday-clock/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@TheShadyRiverBard">
+  <meta name="twitter:creator" content="@TheShadyRiverBard">
+  <meta name="twitter:title" content="Doomsday Clock | Official Album 21 Hub">
+  <meta name="twitter:description" content="A 13-movement four-act concept album translating existential risk into visceral narrative art. Full lyrics, videos, and research matrix.">
+  <meta name="twitter:image" content="https://theshadyriverbard.com/doomsday-clock/assets/art/doomsday-clock-cover.webp">
+
+  <!-- High-Priority Preload for Master Album Cover -->
+  <link rel="preload" as="image" href="assets/art/doomsday-clock-cover.webp" type="image/webp" fetchpriority="high">
+
+  <!-- Google Fonts: Cinzel, Lora, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Cinzel', 'serif'],
+            serif: ['Lora', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            ash: {
+              950: '#06080c',
+              900: '#0b0f16',
+              850: '#111722',
+              800: '#172030',
+              750: '#1e2b40',
+              700: '#283954'
+            },
+            ember: {
+              300: '#fde68a',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              900: '#451a03'
+            },
+            fallout: {
+              400: '#f87171',
+              500: '#ef4444',
+              600: '#dc2626',
+              700: '#b91c1c'
+            },
+            twilight: {
+              300: '#cbd5e1',
+              400: '#94a3b8',
+              500: '#64748b',
+              600: '#475569'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Core Accessibility Stylesheet -->
+  <link rel="stylesheet" href="../assets/css/a11y.css">
+  <link rel="stylesheet" href="/assets/css/a11y.css">
+
+  <!-- Official Favicon & Icons -->
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+
+  <style>
+    /* WCAG 2.1 AA Compliance Styles */
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-delay: -1ms !important;
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        background-attachment: initial !important;
+        scroll-behavior: auto !important;
+        transition-delay: 0s !important;
+        transition-duration: 0s !important;
+      }
+    }
+    .focus-ring:focus-visible {
+      outline: 2px solid #f59e0b !important;
+      outline-offset: 2px !important;
+    }
+    .glass-panel {
+      background: rgba(11, 15, 22, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .text-glow {
+      text-shadow: 0 0 20px rgba(245, 158, 11, 0.35);
+    }
+    .border-glow {
+      box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.25);
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+
+  <!-- Data Engine -->
+  <script src="data/doomsday-clock-data.js"></script>
+</head>
+<body class="bg-ash-950 text-slate-200 min-h-screen flex flex-col font-sans antialiased selection:bg-ember-500 selection:text-ash-950">
+
+  <!-- ACCESSIBILITY SKIP LINK (WCAG 2.4.1) -->
+  <a 
+    href="#main-content" 
+    class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-ember-500 focus:text-ash-950 focus:font-bold focus:rounded-lg focus:shadow-2xl focus:outline-none focus:ring-2 focus:ring-white"
+  >
+    Skip to main content
+  </a>
+
+  <!-- TOP CONTEXT ANNOUNCEMENT BAR -->
+  <aside aria-label="Official Album Notice" class="bg-ash-900 border-b border-white/10 px-4 py-2 text-xs text-twilight-400">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-fallout-500 animate-ping" aria-hidden="true"></span>
+        <span class="font-mono text-ember-400 font-semibold uppercase tracking-wider">Concept Album 21</span>
+        <span class="text-twilight-600" aria-hidden="true">&bull;</span>
+        <span class="hidden sm:inline">Four-Act Existential Reckoning</span>
+        <span class="text-twilight-600 hidden sm:inline" aria-hidden="true">&bull;</span>
+        <span class="font-mono text-fallout-400">89 Seconds to Midnight</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="/vault/" class="hover:text-ember-400 transition-colors font-mono text-[11px] flex items-center gap-1">
+          <i aria-hidden="true" class="fa-solid fa-compact-disc text-ember-500"></i>
+          <span>Discography Vault</span>
+        </a>
+        <span class="text-twilight-600" aria-hidden="true">|</span>
+        <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcFJ4vC-R0d-N2XvsMwph5bj" target="_blank" rel="noopener noreferrer" class="hover:text-red-400 transition-colors flex items-center gap-1">
+          <i aria-hidden="true" class="fa-brands fa-youtube text-red-500"></i>
+          <span>Official Video Playlist</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- STICKY PRIMARY NAVIGATION -->
+  <header class="sticky top-0 z-40 glass-panel border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand & Album Indicator -->
+      <div class="flex items-center gap-3">
+        <a href="/" class="flex items-center gap-2 group focus-ring rounded-lg p-1">
+          <div class="w-8 h-8 rounded-lg bg-ash-900 border border-ember-500/60 flex items-center justify-center p-1 shadow-md group-hover:scale-105 group-hover:border-ember-400 transition-all flex-shrink-0">
+            <img src="../assets/images/logo-mark.webp" alt="The Shady River Bard official logo" class="w-full h-full object-contain">
+          </div>
+          <div>
+            <div class="font-display font-bold text-white text-sm sm:text-base leading-tight group-hover:text-ember-400 transition-colors">
+              The Shady River Bard
+            </div>
+            <div class="font-mono text-[10px] text-ember-400/80 leading-none">
+              Album 21 &bull; Doomsday Clock
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-6 text-xs font-mono tracking-wider uppercase" aria-label="Album Sections">
+        <a href="#thematic-matrix" class="text-twilight-300 hover:text-ember-400 transition-colors py-1">Threat Matrix</a>
+        <a href="#acts-roadmap" class="text-twilight-300 hover:text-ember-400 transition-colors py-1">4 Acts Roadmap</a>
+        <a href="#tracks-section" class="text-ember-400 font-bold hover:text-ember-300 transition-colors py-1 flex items-center gap-1.5">
+          <i aria-hidden="true" class="fa-solid fa-music"></i>
+          <span>13 Movements</span>
+        </a>
+        <a href="/vault/" class="text-twilight-300 hover:text-white transition-colors py-1 flex items-center gap-1">
+          <i aria-hidden="true" class="fa-solid fa-vault text-[11px] text-ember-500"></i>
+          <span>Vault</span>
+        </a>
+      </nav>
+
+      <!-- Actions & A11y Toggle -->
+      <div class="flex items-center space-x-3">
+        <button 
+          id="a11y-toggle-btn" 
+          onclick="toggleA11yToolbar()" 
+          aria-expanded="false" 
+          aria-controls="a11y-toolbar" 
+          class="p-2 rounded-lg bg-ash-850 hover:bg-ash-800 text-twilight-300 hover:text-ember-400 border border-white/10 text-xs transition-colors focus-ring" 
+          title="Accessibility Display Preferences"
+          aria-label="Toggle Accessibility Preferences Toolbar"
+        >
+          <i aria-hidden="true" class="fa-solid fa-universal-access text-base"></i>
+        </button>
+
+        <a 
+          href="/vault/" 
+          class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-ash-850 hover:bg-ash-800 text-slate-200 border border-white/10 hover:border-ember-500/40 text-xs font-mono transition-all"
+        >
+          <span>&larr; Discography</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button 
+          id="mobile-menu-btn" 
+          onclick="toggleMobileMenu()" 
+          aria-expanded="false" 
+          aria-controls="mobile-menu" 
+          class="md:hidden p-2 rounded-lg bg-ash-850 hover:bg-ash-800 text-slate-300 hover:text-white border border-white/10 focus-ring"
+          aria-label="Toggle navigation menu"
+        >
+          <i aria-hidden="true" class="fa-solid fa-bars text-base"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-ash-900/98 border-b border-white/10 px-4 py-3 space-y-2 text-xs font-mono uppercase tracking-wider">
+      <a href="#thematic-matrix" onclick="toggleMobileMenu()" class="block py-2 text-twilight-300 hover:text-ember-400">Threat Matrix</a>
+      <a href="#acts-roadmap" onclick="toggleMobileMenu()" class="block py-2 text-twilight-300 hover:text-ember-400">4 Acts Roadmap</a>
+      <a href="#tracks-section" onclick="toggleMobileMenu()" class="block py-2 text-ember-400 font-bold">13 Movements & Lyrics</a>
+      <a href="/vault/" class="block py-2 text-twilight-300 hover:text-white">Discography Vault &rarr;</a>
+    </div>
+  </header>
+
+  <!-- EXPANDABLE ACCESSIBILITY PREFERENCES TOOLBAR (WCAG 2.1 AA) -->
+  <aside 
+    id="a11y-toolbar" 
+    class="hidden bg-ash-900 border-b border-ember-500/40 py-3 px-4 text-xs transition-all shadow-2xl relative z-30" 
+    aria-label="Accessibility Display Preferences"
+  >
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <div class="w-7 h-7 rounded-lg bg-ember-950 border border-ember-500/40 flex items-center justify-center text-ember-400 text-xs">
+          <i aria-hidden="true" class="fa-solid fa-universal-access"></i>
+        </div>
+        <div>
+          <span class="font-display font-bold text-slate-100 block">Accessibility Display Preferences</span>
+          <span class="text-twilight-400 text-[11px]">Enhanced contrast, text sizing, and motion controls (WCAG 2.1 AA)</span>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-2 sm:gap-3 font-mono text-xs">
+        <button id="btn-contrast" onclick="toggleA11yOption('contrast')" class="px-3 py-1.5 rounded-lg bg-ash-800 hover:bg-ash-750 text-slate-200 border border-white/10 font-medium transition-colors focus-ring">
+          High Contrast: <span id="val-contrast" class="text-twilight-400">Off</span>
+        </button>
+        <button id="btn-textsize" onclick="cycleTextSize()" class="px-3 py-1.5 rounded-lg bg-ash-800 hover:bg-ash-750 text-slate-200 border border-white/10 font-medium transition-colors focus-ring">
+          Text Size: <span id="val-textsize" class="text-twilight-400">Normal</span>
+        </button>
+        <button id="btn-underline" onclick="toggleA11yOption('underline')" class="px-3 py-1.5 rounded-lg bg-ash-800 hover:bg-ash-750 text-slate-200 border border-white/10 font-medium transition-colors focus-ring">
+          Underline Links: <span id="val-underline" class="text-twilight-400">Off</span>
+        </button>
+        <button id="btn-motion" onclick="toggleA11yOption('motion')" class="px-3 py-1.5 rounded-lg bg-ash-800 hover:bg-ash-750 text-slate-200 border border-white/10 font-medium transition-colors focus-ring">
+          Reduced Motion: <span id="val-motion" class="text-twilight-400">System</span>
+        </button>
+        <button onclick="resetA11yOptions()" class="px-2 py-1 text-twilight-400 hover:text-white underline transition-colors focus-ring">
+          Reset
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN LANDMARK -->
+  <main id="main-content" tabindex="-1" class="flex-grow focus:outline-none">
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-12 pb-16 lg:pt-16 lg:pb-24 border-b border-white/10 overflow-hidden" aria-labelledby="album-title">
+      <!-- Ambient Glow Backdrop -->
+      <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[850px] h-[450px] bg-ember-600/10 blur-[140px] pointer-events-none rounded-full" aria-hidden="true"></div>
+      <div class="absolute top-1/3 -right-32 w-[600px] h-[350px] bg-fallout-600/10 blur-[130px] pointer-events-none rounded-full" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          
+          <!-- Master Cover Art Column -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative group w-full max-w-md">
+              <div class="absolute -inset-1.5 bg-gradient-to-tr from-ember-600/40 via-fallout-500/30 to-twilight-500/20 rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
+              <div class="relative rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-ash-900 aspect-square">
+                <img 
+                  src="assets/art/doomsday-clock-cover.webp" 
+                  alt="Doomsday Clock master album cover artwork showing a stark countdown clock and apocalyptic landscape" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  width="1000"
+                  height="1000"
+                  loading="eager"
+                  decoding="async"
+                >
+                <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-ash-950 via-ash-950/80 to-transparent">
+                  <span class="inline-flex items-center gap-1.5 text-[11px] font-mono text-ember-400 bg-ash-900/90 border border-ember-500/30 px-2.5 py-1 rounded-md">
+                    <span class="w-1.5 h-1.5 rounded-full bg-fallout-500 animate-ping"></span>
+                    Master Concept Edition &bull; 13 Movements
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Narrative Editorial Column -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex flex-wrap items-center gap-2">
+              <span class="px-3 py-1 rounded-full bg-ember-950/80 border border-ember-500/40 text-ember-400 text-xs font-mono uppercase tracking-widest font-semibold">
+                Concept Album 21
+              </span>
+              <span class="px-3 py-1 rounded-full bg-ash-850 border border-white/10 text-twilight-300 text-xs font-mono">
+                13 Movements
+              </span>
+              <span class="px-3 py-1 rounded-full bg-ash-850 border border-white/10 text-twilight-300 text-xs font-mono">
+                01:01:17 Master Runtime
+              </span>
+              <span class="px-3 py-1 rounded-full bg-fallout-950/80 border border-fallout-500/40 text-fallout-400 text-xs font-mono font-bold">
+                89s to Midnight
+              </span>
+            </div>
+
+            <div>
+              <h1 id="album-title" class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight text-white leading-none">
+                DOOMSDAY CLOCK
+              </h1>
+              <p class="text-lg sm:text-xl font-serif text-ember-400 italic mt-3">
+                An Album Blueprint for Existential Reckoning
+              </p>
+            </div>
+
+            <!-- Featured Album Lead Quote -->
+            <blockquote class="border-l-4 border-ember-500 pl-4 py-1 text-slate-300 font-serif italic text-base sm:text-lg bg-ash-900/60 rounded-r-lg">
+              &ldquo;Listen. Before the ticking stops.&rdquo;
+            </blockquote>
+
+            <p class="text-sm sm:text-base text-twilight-300 leading-relaxed font-sans">
+              Welcome to <em>Doomsday Clock</em>, the twenty-first album from The Shady River Bard. This is not a work of escapism. It is a work of witness. Conceived as an immersive four-act sonic journey, the album takes its central metaphor from the real-world Doomsday Clock maintained since 1947 by the Bulletin of the Atomic Scientists—measuring our proximity to self-annihilation from the technologies of our own making. Through thirteen movements, the album traces our descent from creeping objectless anxiety to the unvarnished final silence of extinction.
+            </p>
+
+            <!-- Quick Stats Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+              <div class="bg-ash-900/80 border border-white/5 rounded-xl p-3 text-center">
+                <span class="block font-display text-2xl font-bold text-ember-400">13</span>
+                <span class="text-[11px] font-mono text-twilight-400 uppercase">Movements</span>
+              </div>
+              <div class="bg-ash-900/80 border border-white/5 rounded-xl p-3 text-center">
+                <span class="block font-display text-2xl font-bold text-twilight-200">4</span>
+                <span class="text-[11px] font-mono text-twilight-400 uppercase">Acts</span>
+              </div>
+              <div class="bg-ash-900/80 border border-white/5 rounded-xl p-3 text-center">
+                <span class="block font-display text-2xl font-bold text-ember-400">01:01:17</span>
+                <span class="text-[11px] font-mono text-twilight-400 uppercase">Total Runtime</span>
+              </div>
+              <div class="bg-ash-900/80 border border-white/5 rounded-xl p-3 text-center">
+                <span class="block font-display text-2xl font-bold text-fallout-400">89s</span>
+                <span class="text-[11px] font-mono text-twilight-400 uppercase">To Midnight</span>
+              </div>
+            </div>
+
+            <!-- External Streaming Actions -->
+            <div class="flex flex-wrap items-center gap-3 pt-3">
+              <a 
+                href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcFJ4vC-R0d-N2XvsMwph5bj" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="px-4 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-mono font-bold tracking-wider uppercase transition-colors flex items-center gap-2 shadow-lg focus-ring"
+              >
+                <i aria-hidden="true" class="fa-brands fa-youtube text-sm"></i>
+                <span>YouTube Playlist</span>
+              </a>
+              <a 
+                href="https://music.apple.com/us/album/the-doomsday-clock/1868204426" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="px-4 py-2.5 rounded-xl bg-ash-850 hover:bg-ash-800 text-slate-200 border border-white/10 hover:border-pink-500/50 text-xs font-mono transition-colors flex items-center gap-2 focus-ring"
+              >
+                <i aria-hidden="true" class="fa-brands fa-apple text-pink-400"></i>
+                <span>Apple Music</span>
+              </a>
+              <a 
+                href="https://open.spotify.com/album/1s6pdAQt8rvMcqZ4vwzB4E" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="px-4 py-2.5 rounded-xl bg-ash-850 hover:bg-ash-800 text-slate-200 border border-white/10 hover:border-emerald-500/50 text-xs font-mono transition-colors flex items-center gap-2 focus-ring"
+              >
+                <i aria-hidden="true" class="fa-brands fa-spotify text-emerald-400"></i>
+                <span>Spotify</span>
+              </a>
+              <a 
+                href="https://music.youtube.com/playlist?list=PLO_tWXIGUXcFJ4vC-R0d-N2XvsMwph5bj" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="px-4 py-2.5 rounded-xl bg-ash-850 hover:bg-ash-800 text-slate-200 border border-white/10 hover:border-red-500/50 text-xs font-mono transition-colors flex items-center gap-2 focus-ring"
+              >
+                <i aria-hidden="true" class="fa-solid fa-compact-disc text-red-400"></i>
+                <span>YouTube Music</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: THEMATIC MATRIX (Table 0 Threat Categories) -->
+    <section id="thematic-matrix" class="py-16 bg-ash-900/50 border-b border-white/10 relative" aria-labelledby="matrix-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-10">
+          <div class="inline-flex items-center gap-2 text-xs font-mono text-ember-400 uppercase tracking-widest font-semibold mb-2">
+            <i aria-hidden="true" class="fa-solid fa-radiation"></i>
+            <span>Table 0 &bull; Core Research Matrix</span>
+          </div>
+          <h2 id="matrix-heading" class="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight">
+            Six Pillars of Existential Peril
+          </h2>
+          <p class="text-sm sm:text-base text-twilight-300 mt-3 leading-relaxed">
+            The narrative architecture of <em>Doomsday Clock</em> synthesizes six distinct global catastrophic risk vectors. Explore how systemic failure, technological misalignment, ecological thresholds, and psychological fragmentation intertwine across the album's story.
+          </p>
+        </div>
+
+        <div id="thematic-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Dynamically populated from ALBUM_DATA.thematic_elements -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: 4 ACTS NARRATIVE ROADMAP -->
+    <section id="acts-roadmap" class="py-16 border-b border-white/10 relative" aria-labelledby="roadmap-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-10">
+          <div class="inline-flex items-center gap-2 text-xs font-mono text-twilight-400 uppercase tracking-widest font-semibold mb-2">
+            <i aria-hidden="true" class="fa-solid fa-diagram-project text-ember-400"></i>
+            <span>Dramatic Structure</span>
+          </div>
+          <h2 id="roadmap-heading" class="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight">
+            The Four-Act Descent
+          </h2>
+          <p class="text-sm sm:text-base text-twilight-300 mt-3 leading-relaxed">
+            From creeping modern unease to the ultimate silence of an empty world, the 13 movements unfold in four distinct thematic arcs.
+          </p>
+        </div>
+
+        <div id="acts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Dynamically populated from ALBUM_DATA.acts -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: 13 MOVEMENTS & LYRICS VAULT -->
+    <section id="tracks-section" class="py-16 bg-ash-900/30" aria-labelledby="tracks-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header & Act Filter Tabs -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+          <div>
+            <div class="inline-flex items-center gap-2 text-xs font-mono text-ember-400 uppercase tracking-widest font-semibold mb-2">
+              <i aria-hidden="true" class="fa-solid fa-compact-disc"></i>
+              <span>The Complete Discographic Workspace</span>
+            </div>
+            <h2 id="tracks-heading" class="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight">
+              13 Movements, Lyrics &amp; Lore
+            </h2>
+            <p class="text-sm text-twilight-300 mt-2">
+              Filter by Act or browse the complete 61-minute epic with full publishing lyrics and literary commentary.
+            </p>
+          </div>
+
+          <!-- Act Filters -->
+          <div class="flex flex-wrap items-center gap-2 font-mono text-xs" role="tablist" aria-label="Filter movements by Act">
+            <button 
+              onclick="filterTracks('all')" 
+              id="filter-all" 
+              role="tab" 
+              aria-selected="true" 
+              class="act-filter-btn active px-3 py-1.5 rounded-lg bg-ember-600 text-ash-950 font-bold transition-all focus-ring"
+            >
+              All (13)
+            </button>
+            <button 
+              onclick="filterTracks(1)" 
+              id="filter-act-1" 
+              role="tab" 
+              aria-selected="false" 
+              class="act-filter-btn px-3 py-1.5 rounded-lg bg-ash-850 hover:bg-ash-800 text-twilight-300 border border-white/10 transition-all focus-ring"
+            >
+              Act I (3)
+            </button>
+            <button 
+              onclick="filterTracks(2)" 
+              id="filter-act-2" 
+              role="tab" 
+              aria-selected="false" 
+              class="act-filter-btn px-3 py-1.5 rounded-lg bg-ash-850 hover:bg-ash-800 text-twilight-300 border border-white/10 transition-all focus-ring"
+            >
+              Act II (4)
+            </button>
+            <button 
+              onclick="filterTracks(3)" 
+              id="filter-act-3" 
+              role="tab" 
+              aria-selected="false" 
+              class="act-filter-btn px-3 py-1.5 rounded-lg bg-ash-850 hover:bg-ash-800 text-twilight-300 border border-white/10 transition-all focus-ring"
+            >
+              Act III (2)
+            </button>
+            <button 
+              onclick="filterTracks(4)" 
+              id="filter-act-4" 
+              role="tab" 
+              aria-selected="false" 
+              class="act-filter-btn px-3 py-1.5 rounded-lg bg-ash-850 hover:bg-ash-800 text-twilight-300 border border-white/10 transition-all focus-ring"
+            >
+              Act IV (4)
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Track Cards Container -->
+        <div id="tracks-grid" class="space-y-12">
+          <!-- Dynamically populated from ALBUM_DATA.tracks -->
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- YOUTUBE VIDEO MODAL -->
+  <div 
+    id="video-modal" 
+    class="hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6" 
+    role="dialog" 
+    aria-modal="true" 
+    aria-labelledby="modal-video-title"
+  >
+    <div class="relative w-full max-w-4xl bg-ash-900 border border-white/15 rounded-2xl overflow-hidden shadow-2xl">
+      <div class="flex items-center justify-between px-4 py-3 border-b border-white/10 bg-ash-950">
+        <div class="flex items-center gap-2">
+          <i aria-hidden="true" class="fa-brands fa-youtube text-red-500"></i>
+          <span id="modal-video-title" class="font-display font-bold text-sm text-white truncate">Video Player</span>
+        </div>
+        <button 
+          onclick="closeVideoModal()" 
+          class="p-1.5 rounded-lg text-twilight-400 hover:text-white hover:bg-white/10 transition-colors focus-ring" 
+          aria-label="Close video player"
+        >
+          <i aria-hidden="true" class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <div class="relative aspect-video w-full bg-black">
+        <iframe 
+          id="modal-iframe" 
+          class="w-full h-full border-0" 
+          src="" 
+          title="Official Track Music Video" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACCESSIBILITY STATEMENT MODAL (WCAG 2.1 AA) -->
+  <div 
+    id="a11y-modal" 
+    class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" 
+    role="dialog" 
+    aria-modal="true" 
+    aria-labelledby="a11y-modal-title"
+  >
+    <div class="relative w-full max-w-2xl bg-ash-900 border border-white/15 rounded-2xl p-6 shadow-2xl space-y-4 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between border-b border-white/10 pb-3">
+        <h3 id="a11y-modal-title" class="font-display text-xl font-bold text-white flex items-center gap-2">
+          <i aria-hidden="true" class="fa-solid fa-universal-access text-ember-400"></i>
+          <span>Accessibility Statement</span>
+        </h3>
+        <button 
+          onclick="toggleA11yModal(false)" 
+          class="p-1.5 rounded-lg text-twilight-400 hover:text-white hover:bg-white/10 transition-colors focus-ring" 
+          aria-label="Close accessibility statement"
+        >
+          <i aria-hidden="true" class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <div class="space-y-3 text-xs sm:text-sm text-twilight-300 leading-relaxed">
+        <p>
+          The Shady River Bard digital ecosystem is committed to digital inclusivity and conforms with the <strong>Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</strong> standards.
+        </p>
+        <h4 class="font-bold text-white text-sm">Key Accessibility Features:</h4>
+        <ul class="list-disc pl-5 space-y-1">
+          <li><strong>Keyboard Navigability:</strong> Full tab accessibility with clear, high-visibility focus indicators.</li>
+          <li><strong>Skip Links:</strong> Direct bypass mechanism to leap directly to primary content.</li>
+          <li><strong>Display Preferences Toolbar:</strong> In-browser toggles for High Contrast, Variable Font Sizing, Link Underlining, and Reduced Motion.</li>
+          <li><strong>Semantic Landmarks:</strong> Proper ARIA headers, mains, navigation, and regions.</li>
+          <li><strong>Screen Reader Compliance:</strong> Explicit, descriptive image alt text and aria-hidden decorative iconography.</li>
+        </ul>
+      </div>
+      <div class="pt-3 border-t border-white/10 flex justify-end">
+        <button 
+          onclick="toggleA11yModal(false)" 
+          class="px-4 py-2 bg-ember-600 hover:bg-ember-500 text-ash-950 font-bold rounded-lg text-xs font-mono transition-colors focus-ring"
+        >
+          Close Statement
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-ash-950 border-t border-white/10 py-12 text-xs text-twilight-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 border-b border-white/10 pb-8">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-ash-900 border border-ember-500/50 flex items-center justify-center p-1.5">
+            <img src="../assets/images/logo-mark.webp" alt="The Shady River Bard official logo" class="w-full h-full object-contain">
+          </div>
+          <div>
+            <span class="font-display font-bold text-white text-base block">THE SHADY RIVER BARD</span>
+            <span class="text-[11px] font-mono text-twilight-500">Song &bull; Soil &bull; Story &bull; Western Washington</span>
+          </div>
+        </div>
+
+        <!-- Quick Footer Navigation -->
+        <div class="flex flex-wrap items-center gap-4 text-xs font-mono">
+          <a href="/" class="hover:text-ember-400 transition-colors">Flagship Portal</a>
+          <span class="text-twilight-700" aria-hidden="true">&bull;</span>
+          <a href="/vault/" class="hover:text-ember-400 transition-colors">26-Album Vault</a>
+          <span class="text-twilight-700" aria-hidden="true">&bull;</span>
+          <a href="https://theshadyriverbard.substack.com/s/deconstructed" target="_blank" rel="noopener noreferrer" class="hover:text-ember-400 transition-colors">Deconstructed Notes</a>
+          <span class="text-twilight-700" aria-hidden="true">&bull;</span>
+          <button onclick="toggleA11yModal(true)" class="hover:text-ember-400 underline transition-colors focus-ring">Accessibility Statement</button>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-twilight-500 font-mono">
+        <p>&copy; 2026 The Shady River Bard. All music, lyrics, and literary essays published under all rights reserved.</p>
+        <p>Concept Album 21 &bull; <em>Doomsday Clock</em></p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- CLIENT-SIDE RENDERING & INTERACTIVE LOGIC -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderThematicMatrix();
+      renderActsRoadmap();
+      renderTracks('all');
+    });
+
+    // 1. Render Thematic Matrix (Table 0)
+    function renderThematicMatrix() {
+      const container = document.getElementById('thematic-grid');
+      if (!container || !ALBUM_DATA.thematic_elements) return;
+
+      const icons = [
+        'fa-globe', 'fa-microchip', 'fa-temperature-arrow-up', 
+        'fa-biohazard', 'fa-bomb', 'fa-brain'
+      ];
+
+      container.innerHTML = ALBUM_DATA.thematic_elements.map((el, i) => `
+        <article class="bg-ash-900/80 border border-white/10 hover:border-ember-500/40 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 shadow-xl flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="w-8 h-8 rounded-lg bg-ember-950/80 border border-ember-500/40 flex items-center justify-center text-ember-400 text-xs">
+                <i aria-hidden="true" class="fa-solid ${icons[i % icons.length]}"></i>
+              </span>
+              <span class="text-[10px] font-mono text-twilight-500 uppercase tracking-widest">Pillar 0${i + 1}</span>
+            </div>
+            <h3 class="font-display font-bold text-lg text-white">${escapeHtml(el.category)}</h3>
+            <p class="text-xs text-twilight-300 leading-relaxed font-sans">${escapeHtml(el.core_concept)}</p>
+            <div class="pt-2 border-t border-white/5 space-y-1.5 text-[11px]">
+              <div class="text-twilight-400"><strong class="text-twilight-200">Manifestation:</strong> ${escapeHtml(el.manifestations)}</div>
+              <div class="text-fallout-400"><strong class="text-fallout-300">Impact:</strong> ${escapeHtml(el.impact)}</div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 bg-ash-950/50 -mx-6 -mb-6 p-4 rounded-b-2xl">
+            <span class="text-[10px] font-mono text-ember-400 uppercase tracking-wider block font-bold mb-1">Narrative Implication</span>
+            <p class="text-[11px] text-twilight-300 italic font-serif leading-snug">&ldquo;${escapeHtml(el.narrative_implication)}&rdquo;</p>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    // 2. Render 4 Acts Roadmap
+    function renderActsRoadmap() {
+      const container = document.getElementById('acts-container');
+      if (!container || !ALBUM_DATA.acts) return;
+
+      container.innerHTML = ALBUM_DATA.acts.map(act => `
+        <div class="bg-ash-900/60 border border-white/10 hover:border-ember-500/30 rounded-2xl p-5 transition-colors shadow-lg flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2 py-0.5 rounded bg-ember-950 border border-ember-500/30 text-ember-400 text-[10px] font-mono uppercase font-bold">
+                Act 0${act.act_num}
+              </span>
+              <span class="text-[11px] font-mono text-twilight-400">${act.tracks}</span>
+            </div>
+            <h3 class="font-display font-bold text-base text-white">${escapeHtml(act.title.split(': ')[1] || act.title)}</h3>
+            <span class="text-[11px] text-ember-400/90 font-serif italic block mb-3">${escapeHtml(act.subtitle)}</span>
+            <p class="text-xs text-twilight-300 leading-relaxed font-sans">${escapeHtml(act.description)}</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 text-right">
+            <button onclick="filterTracks(${act.act_num})" class="text-[11px] font-mono text-ember-400 hover:text-white transition-colors">
+              Filter Tracks &rarr;
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // 3. Render Track Cards with Filter
+    function renderTracks(filter) {
+      const container = document.getElementById('tracks-grid');
+      if (!container || !ALBUM_DATA.tracks) return;
+
+      // Update filter tab active state
+      document.querySelectorAll('.act-filter-btn').forEach(btn => {
+        btn.classList.remove('active', 'bg-ember-600', 'text-ash-950', 'font-bold');
+        btn.classList.add('bg-ash-850', 'text-twilight-300');
+        btn.setAttribute('aria-selected', 'false');
+      });
+
+      const activeBtnId = filter === 'all' ? 'filter-all' : `filter-act-${filter}`;
+      const activeBtn = document.getElementById(activeBtnId);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-ash-850', 'text-twilight-300');
+        activeBtn.classList.add('active', 'bg-ember-600', 'text-ash-950', 'font-bold');
+        activeBtn.setAttribute('aria-selected', 'true');
+      }
+
+      const filteredTracks = filter === 'all' 
+        ? ALBUM_DATA.tracks 
+        : ALBUM_DATA.tracks.filter(t => t.act === filter);
+
+      container.innerHTML = filteredTracks.map(t => {
+        const formattedLyrics = escapeHtml(t.lyrics)
+          .replace(/\[(.*?)\]/g, '<span class="text-ember-400 font-mono font-bold block mt-3 mb-1">[$1]</span>');
+        
+        return `
+        <article id="${t.slug}" class="bg-ash-900 border border-white/10 hover:border-ember-500/30 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300">
+          
+          <!-- Track Banner (16:9) -->
+          <div class="relative aspect-video w-full overflow-hidden bg-ash-950">
+            <img 
+              src="${t.art_banner}" 
+              alt="Art for Movement ${t.number}: ${escapeHtml(t.title)}" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+              width="1200"
+              height="675"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-ash-900 via-transparent to-black/40"></div>
+            
+            <!-- Top Floating Meta -->
+            <div class="absolute top-4 left-4 flex flex-wrap items-center gap-2">
+              <span class="px-2.5 py-1 rounded-md bg-ash-950/90 border border-white/20 text-white font-mono text-xs font-bold shadow-lg">
+                Movement ${t.number < 10 ? '0' + t.number : t.number}
+              </span>
+              <span class="px-2.5 py-1 rounded-md bg-ember-950/90 border border-ember-500/40 text-ember-400 font-mono text-xs shadow-lg">
+                ${escapeHtml(t.act_title)}
+              </span>
+            </div>
+
+            <!-- Video Play Button Overlay -->
+            <div class="absolute bottom-4 right-4">
+              <button 
+                onclick="openVideoModal('${t.video_id}', '${escapeHtml(t.title)}')" 
+                class="px-4 py-2 rounded-xl bg-red-600/90 hover:bg-red-500 text-white font-mono text-xs font-bold flex items-center gap-2 shadow-2xl transition-all hover:scale-105 focus-ring"
+                aria-label="Play music video for ${escapeHtml(t.title)}"
+              >
+                <i aria-hidden="true" class="fa-brands fa-youtube text-base"></i>
+                <span>Watch Video</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Track Body Content -->
+          <div class="p-6 sm:p-8 space-y-6">
+            
+            <!-- Title & Duration Header -->
+            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-white/10 pb-4">
+              <div>
+                <h3 class="text-2xl sm:text-3xl font-display font-extrabold text-white tracking-tight">
+                  ${escapeHtml(t.title)}
+                </h3>
+                <span class="text-xs font-serif text-ember-400/90 italic mt-0.5 block">
+                  ${escapeHtml(t.thematic_focus)}
+                </span>
+              </div>
+              <div class="flex items-center gap-3 text-xs font-mono text-twilight-400">
+                <span class="flex items-center gap-1">
+                  <i aria-hidden="true" class="fa-regular fa-clock text-ember-500"></i>
+                  <span>${t.duration}</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- 100% Verbatim Lyric Quote -->
+            <blockquote class="border-l-4 border-ember-500 bg-ash-850/80 p-4 rounded-r-xl shadow-inner">
+              <p class="text-sm sm:text-base font-serif italic text-slate-200 leading-relaxed whitespace-pre-line">&ldquo;${escapeHtml(t.quote)}&rdquo;</p>
+              <cite class="text-[10px] font-mono text-ember-400 mt-2 block font-normal uppercase tracking-wider">— Verbatim Movement Excerpt</cite>
+            </blockquote>
+
+            <!-- The Bard's Story (Two-Paragraph Narrative Commentary) -->
+            <div class="space-y-3 bg-ash-950/60 p-5 rounded-xl border border-white/5">
+              <div class="flex items-center gap-2 text-xs font-mono text-twilight-400 uppercase tracking-wider">
+                <i aria-hidden="true" class="fa-solid fa-feather text-ember-400"></i>
+                <span class="font-bold text-white">The Bard's Story &bull; Lore &amp; Context</span>
+              </div>
+              <div class="text-xs sm:text-sm text-twilight-300 leading-relaxed space-y-2.5 font-sans">
+                ${t.bard_story.split('\n\n').map(p => `<p>${escapeHtml(p)}</p>`).join('')}
+              </div>
+            </div>
+
+            <!-- Style, Themes & Tags -->
+            <div class="flex flex-wrap items-center gap-2 pt-1 text-xs">
+              <span class="text-[11px] font-mono text-twilight-500 mr-1">Style &amp; Tags:</span>
+              <span class="px-2 py-0.5 rounded bg-ash-800 text-twilight-300 border border-white/5 font-mono text-[11px]">
+                ${escapeHtml(t.musical_style)}
+              </span>
+              ${t.tags.map(tag => `
+                <span class="px-2 py-0.5 rounded bg-ash-850 text-ember-400/90 border border-ember-500/20 font-mono text-[11px]">
+                  #${escapeHtml(tag)}
+                </span>
+              `).join('')}
+            </div>
+
+            <!-- Expandable Lyrics Drawer -->
+            <div class="pt-2 border-t border-white/10">
+              <div class="flex items-center justify-between">
+                <button 
+                  onclick="toggleLyrics('${t.slug}')" 
+                  id="btn-lyrics-${t.slug}" 
+                  aria-expanded="false" 
+                  aria-controls="drawer-${t.slug}" 
+                  class="inline-flex items-center gap-2 text-xs font-mono text-ember-400 hover:text-ember-300 font-bold focus-ring py-1 rounded"
+                >
+                  <i aria-hidden="true" class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-${t.slug}"></i>
+                  <span>View Complete Lyrics</span>
+                </button>
+                <button 
+                  onclick="copyLyrics('${t.slug}')" 
+                  class="text-[11px] font-mono text-twilight-400 hover:text-white transition-colors focus-ring px-2 py-1 rounded"
+                  title="Copy lyrics to clipboard"
+                >
+                  <i aria-hidden="true" class="fa-regular fa-copy"></i>
+                  <span id="copy-msg-${t.slug}">Copy</span>
+                </button>
+              </div>
+
+              <div 
+                id="drawer-${t.slug}" 
+                class="hidden mt-4 p-5 bg-ash-950 rounded-xl border border-white/10 font-serif text-sm text-slate-300 leading-relaxed max-h-96 overflow-y-auto space-y-1 select-text"
+              >
+                ${formattedLyrics}
+              </div>
+            </div>
+
+          </div>
+
+        </article>
+        `;
+      }).join('');
+    }
+
+    // 4. Interactive Video Modal Controller
+    function openVideoModal(videoId, title) {
+      const modal = document.getElementById('video-modal');
+      const iframe = document.getElementById('modal-iframe');
+      const titleEl = document.getElementById('modal-video-title');
+      if (!modal || !iframe) return;
+
+      titleEl.textContent = title;
+      iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+
+      // Trap Escape
+      window.addEventListener('keydown', handleModalKeydown);
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('video-modal');
+      const iframe = document.getElementById('modal-iframe');
+      if (!modal || !iframe) return;
+
+      iframe.src = '';
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleModalKeydown);
+    }
+
+    function handleModalKeydown(e) {
+      if (e.key === 'Escape') closeVideoModal();
+    }
+
+    // Close modal on background click
+    document.getElementById('video-modal')?.addEventListener('click', (e) => {
+      if (e.target.id === 'video-modal') closeVideoModal();
+    });
+
+    // 5. Lyrics Drawer Toggle
+    function toggleLyrics(slug) {
+      const drawer = document.getElementById(`drawer-${slug}`);
+      const btn = document.getElementById(`btn-lyrics-${slug}`);
+      const icon = document.getElementById(`icon-${slug}`);
+      if (!drawer || !btn) return;
+
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      if (isExpanded) {
+        drawer.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+        if (icon) icon.style.transform = 'rotate(0deg)';
+      } else {
+        drawer.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      }
+    }
+
+    // 6. Copy Lyrics Helper
+    function copyLyrics(slug) {
+      const track = ALBUM_DATA.tracks.find(t => t.slug === slug);
+      if (!track) return;
+
+      navigator.clipboard.writeText(track.lyrics).then(() => {
+        const msg = document.getElementById(`copy-msg-${slug}`);
+        if (msg) {
+          msg.textContent = 'Copied!';
+          setTimeout(() => { msg.textContent = 'Copy'; }, 2000);
+        }
+      });
+    }
+
+    // 7. Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      if (!menu || !btn) return;
+
+      const isHidden = menu.classList.contains('hidden');
+      if (isHidden) {
+        menu.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        menu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    // 8. Accessibility Preferences Toolbar Controller
+    function toggleA11yToolbar() {
+      const toolbar = document.getElementById('a11y-toolbar');
+      const btn = document.getElementById('a11y-toggle-btn');
+      if (!toolbar || !btn) return;
+
+      const isHidden = toolbar.classList.contains('hidden');
+      if (isHidden) {
+        toolbar.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        toolbar.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    function toggleA11yOption(opt) {
+      const html = document.documentElement;
+      if (opt === 'contrast') {
+        html.classList.toggle('high-contrast');
+        const isActive = html.classList.contains('high-contrast');
+        document.getElementById('val-contrast').textContent = isActive ? 'On' : 'Off';
+      } else if (opt === 'underline') {
+        html.classList.toggle('underline-links');
+        const isActive = html.classList.contains('underline-links');
+        document.getElementById('val-underline').textContent = isActive ? 'On' : 'Off';
+      } else if (opt === 'motion') {
+        html.classList.toggle('user-reduced-motion');
+        const isActive = html.classList.contains('user-reduced-motion');
+        document.getElementById('val-motion').textContent = isActive ? 'Reduced' : 'System';
+      }
+    }
+
+    const textSizes = ['Normal', 'Large', 'Extra Large'];
+    let currentTextSizeIdx = 0;
+    function cycleTextSize() {
+      currentTextSizeIdx = (currentTextSizeIdx + 1) % textSizes.length;
+      document.getElementById('val-textsize').textContent = textSizes[currentTextSizeIdx];
+      const html = document.documentElement;
+      html.classList.remove('text-lg-mode', 'text-xl-mode');
+      if (currentTextSizeIdx === 1) html.classList.add('text-lg-mode');
+      if (currentTextSizeIdx === 2) html.classList.add('text-xl-mode');
+    }
+
+    function resetA11yOptions() {
+      const html = document.documentElement;
+      html.classList.remove('high-contrast', 'underline-links', 'user-reduced-motion', 'text-lg-mode', 'text-xl-mode');
+      document.getElementById('val-contrast').textContent = 'Off';
+      document.getElementById('val-underline').textContent = 'Off';
+      document.getElementById('val-motion').textContent = 'System';
+      document.getElementById('val-textsize').textContent = 'Normal';
+      currentTextSizeIdx = 0;
+    }
+
+    // 9. Accessibility Statement Modal
+    function toggleA11yModal(show) {
+      const modal = document.getElementById('a11y-modal');
+      if (!modal) return;
+      if (show) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      } else {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+  </script>
+
+  <!-- Unified Accessibility System Global Script -->
+  <script src="../assets/js/a11y.js"></script>
+</body>
+</html>

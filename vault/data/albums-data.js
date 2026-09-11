@@ -1,4 +1,5 @@
-window.ALBUMS_DATA = {
+// The Shady River Bard — Complete Discography & Vault Database
+const ALBUMS_DATA = {
   "summary": {
     "total_released": 26,
     "total_vault": 19,
@@ -1188,7 +1189,7 @@ window.ALBUMS_DATA = {
       "track_count": 13,
       "tracks": [
         "The Quiet Hum",
-        "Seconds",
+        "89 Seconds",
         "The Mirror's Glare",
         "The Alignment Problem",
         "The Slow Burn",
@@ -1232,7 +1233,9 @@ window.ALBUMS_DATA = {
         "Sa8PW-yv9Gw"
       ],
       "youtube_music_url": "https://music.youtube.com/playlist?list=PLO_tWXIGUXcFJ4vC-R0d-N2XvsMwph5bj",
-      "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcFJ4vC-R0d-N2XvsMwph5bj"
+      "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcFJ4vC-R0d-N2XvsMwph5bj",
+      "is_bespoke": true,
+      "custom_url": "/doomsday-clock/"
     },
     {
       "id": "the-inner-citadel-a-stoic-s-songbook",
