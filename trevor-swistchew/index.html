@@ -179,13 +179,38 @@
 </section>
 <!-- Essay Compendium Section -->
 <section class="py-16 max-w-6xl mx-auto px-4 sm:px-6" id="essays">
-<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+<!-- Compendium Header & Controls Bar -->
+<div class="mb-10 space-y-6">
+<!-- Top Row: Section Title & Results Counter -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
 <div>
-<span class="text-xs font-mono text-amber-500 uppercase tracking-widest block mb-1">Archival Catalog</span>
+<span class="text-xs font-mono text-amber-500 uppercase tracking-widest block mb-1">Archival Catalog &amp; Dossiers</span>
 <h2 class="font-display text-3xl sm:text-4xl font-bold text-stone-100">The Compendium</h2>
 </div>
-<!-- Filter Tabs -->
-<!-- Filter Tabs -->
+<div aria-live="polite" class="text-xs font-mono text-stone-400 flex items-center gap-2 bg-stone-900/80 border border-stone-800 px-3 py-1.5 rounded-lg shrink-0" id="results-count">
+<span class="inline-block w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+<span id="results-count-text">Showing 22 of 22 works</span>
+</div>
+</div>
+<!-- Middle Row: Interactive Search Input & Quick Controls -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+<!-- Search Box -->
+<div class="relative flex-1" role="search">
+<label class="sr-only" for="essay-search-input">Search essays by title, theme, keyword, or dossier topic</label>
+<i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-500 text-xs pointer-events-none"></i>
+<input aria-label="Search essays by title, theme, keyword, or dossier topic" autocomplete="off" class="w-full pl-10 pr-10 py-2.5 rounded-xl bg-stone-900/90 border border-stone-800 text-stone-100 placeholder-stone-500 text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/30 transition-all font-sans" id="essay-search-input" placeholder="Search essays by title, theme, keyword, or dossier topic... (Press '/' to focus)" spellcheck="false" type="search"/>
+<!-- Clear Button -->
+<button aria-label="Clear search" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-stone-500 hover:text-stone-300 transition-colors p-1" id="clear-search-btn" title="Clear search query" type="button">
+<i class="fa-solid fa-circle-xmark text-sm"></i>
+</button>
+</div>
+<!-- Reset Filters Button (appears when filtered or searched) -->
+<button class="hidden px-4 py-2.5 rounded-xl bg-stone-800 hover:bg-stone-700 border border-stone-700 text-xs font-mono text-stone-300 hover:text-white transition-all items-center gap-2 shrink-0" id="reset-all-filters-btn" title="Reset active category and clear search input" type="button">
+<i class="fa-solid fa-rotate-left text-[11px]"></i>
+<span>Reset</span>
+</button>
+</div>
+<!-- Bottom Row: Filter Tabs -->
 <div aria-label="Compendium Category Filters" class="flex flex-wrap items-center gap-2 text-xs font-cinzel" id="compendium-filters" role="tablist">
 <button aria-selected="true" class="filter-btn px-3 py-1.5 rounded-md bg-amber-500 text-stone-950 font-bold border border-amber-500 shadow-md transition-all flex items-center gap-1.5" data-filter="all" type="button">
 <span>All Works</span>
@@ -898,6 +923,21 @@ Read Experience <i class="fa-solid fa-arrow-right text-[10px]"></i>
 </div>
 </div>
 </article>
+</div><!-- Empty State for 0 Results -->
+<div class="hidden text-center py-16 px-4 rounded-2xl bg-stone-900/60 border border-stone-800 shadow-xl space-y-4 my-6" id="compendium-empty-state" role="status">
+<div class="w-14 h-14 mx-auto rounded-full bg-stone-800/80 border border-stone-700 flex items-center justify-center text-stone-400 text-xl">
+<i class="fa-solid fa-book-open-reader text-amber-500/80"></i>
+</div>
+<div class="space-y-1 max-w-md mx-auto">
+<h3 class="font-cinzel font-bold text-lg text-stone-100">No matching essays found</h3>
+<p class="font-serif text-sm text-stone-400" id="empty-state-message">
+      No works match your search query and category filters.
+    </p>
+</div>
+<button class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-cinzel font-bold text-xs transition-colors shadow-md inline-flex items-center gap-2" id="empty-state-reset-btn" type="button">
+<i class="fa-solid fa-rotate-left text-[10px]"></i>
+<span>Clear Search &amp; Show All Works</span>
+</button>
 </div>
 </section>
 <!-- Musical Chamber Showcase Section -->
@@ -1041,54 +1081,193 @@ Read Experience <i class="fa-solid fa-arrow-right text-[10px]"></i>
 </footer>
 <!-- Client Scripts -->
 <script src="assets/js/reading-experience.js"></script>
-<script>
+
+ <script>
     document.addEventListener('DOMContentLoaded', function() {
       const filterContainer = document.getElementById('compendium-filters');
       const grid = document.querySelector('#essays .grid');
-      if (!filterContainer || !grid) return;
+      const searchInput = document.getElementById('essay-search-input');
+      const clearSearchBtn = document.getElementById('clear-search-btn');
+      const resetFiltersBtn = document.getElementById('reset-all-filters-btn');
+      const resultsCountText = document.getElementById('results-count-text');
+      const emptyState = document.getElementById('compendium-empty-state');
+      const emptyStateMsg = document.getElementById('empty-state-message');
+      const emptyStateResetBtn = document.getElementById('empty-state-reset-btn');
 
-      const buttons = filterContainer.querySelectorAll('.filter-btn');
+      if (!grid) return;
+
       const articles = grid.querySelectorAll('article[data-category]');
+      const filterButtons = filterContainer ? filterContainer.querySelectorAll('.filter-btn') : [];
+      const totalCount = articles.length;
 
-      buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
+      let activeCategory = 'all';
+      let searchQuery = '';
+
+      function updateActiveFilterButton(selectedCategory) {
+        filterButtons.forEach(btn => {
           const filter = btn.getAttribute('data-filter');
+          const isSelected = filter === selectedCategory;
+          btn.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+          const badge = btn.querySelector('span:last-child');
 
-          buttons.forEach(b => {
-            b.setAttribute('aria-selected', 'false');
-            b.classList.remove('bg-amber-500', 'text-stone-950', 'font-bold', 'border-amber-500', 'shadow-md');
-            b.classList.add('bg-stone-900', 'text-stone-400', 'border-stone-800');
-            const badge = b.querySelector('span:last-child');
+          if (isSelected) {
+            btn.classList.remove('bg-stone-900', 'text-stone-400', 'border-stone-800');
+            btn.classList.add('bg-amber-500', 'text-stone-950', 'font-bold', 'border-amber-500', 'shadow-md');
+            if (badge) {
+              badge.classList.remove('bg-stone-950', 'text-stone-400');
+              badge.classList.add('bg-stone-950/20', 'text-stone-950');
+            }
+          } else {
+            btn.classList.remove('bg-amber-500', 'text-stone-950', 'font-bold', 'border-amber-500', 'shadow-md');
+            btn.classList.add('bg-stone-900', 'text-stone-400', 'border-stone-800');
             if (badge) {
               badge.classList.remove('bg-stone-950/20', 'text-stone-950');
               badge.classList.add('bg-stone-950', 'text-stone-400');
             }
-          });
+          }
+        });
+      }
 
-          btn.setAttribute('aria-selected', 'true');
-          btn.classList.remove('bg-stone-900', 'text-stone-400', 'border-stone-800');
-          btn.classList.add('bg-amber-500', 'text-stone-950', 'font-bold', 'border-amber-500', 'shadow-md');
-          const activeBadge = btn.querySelector('span:last-child');
-          if (activeBadge) {
-            activeBadge.classList.remove('bg-stone-950', 'text-stone-400');
-            activeBadge.classList.add('bg-stone-950/20', 'text-stone-950');
+      function filterAndRender() {
+        const query = searchQuery.toLowerCase().trim();
+        let visibleCount = 0;
+
+        articles.forEach(article => {
+          const cats = (article.getAttribute('data-category') || '').split(' ');
+          const matchesCategory = (activeCategory === 'all') || cats.includes(activeCategory);
+
+          let matchesSearch = true;
+          if (query) {
+            const text = (article.textContent || '').toLowerCase();
+            matchesSearch = text.includes(query);
           }
 
-          articles.forEach(article => {
-            const cats = (article.getAttribute('data-category') || '').split(' ');
-            if (filter === 'all' || cats.includes(filter)) {
-              article.style.display = '';
-              article.classList.remove('hidden');
-              article.classList.add('filter-item-visible');
-            } else {
-              article.style.display = 'none';
-              article.classList.add('hidden');
-              article.classList.remove('filter-item-visible');
+          if (matchesCategory && matchesSearch) {
+            article.style.display = '';
+            article.classList.remove('hidden');
+            article.classList.add('filter-item-visible');
+            visibleCount++;
+          } else {
+            article.style.display = 'none';
+            article.classList.add('hidden');
+            article.classList.remove('filter-item-visible');
+          }
+        });
+
+        // Update results counter
+        if (resultsCountText) {
+          if (query || activeCategory !== 'all') {
+            resultsCountText.textContent = `Showing ${visibleCount} of ${totalCount} works`;
+          } else {
+            resultsCountText.textContent = `Showing ${totalCount} of ${totalCount} works`;
+          }
+        }
+
+        // Toggle clear search button
+        if (clearSearchBtn) {
+          if (query.length > 0) {
+            clearSearchBtn.classList.remove('hidden');
+          } else {
+            clearSearchBtn.classList.add('hidden');
+          }
+        }
+
+        // Toggle reset filters button
+        if (resetFiltersBtn) {
+          if (query.length > 0 || activeCategory !== 'all') {
+            resetFiltersBtn.classList.remove('hidden');
+            resetFiltersBtn.classList.add('flex');
+          } else {
+            resetFiltersBtn.classList.add('hidden');
+            resetFiltersBtn.classList.remove('flex');
+          }
+        }
+
+        // Handle empty state
+        if (emptyState) {
+          if (visibleCount === 0) {
+            emptyState.classList.remove('hidden');
+            if (emptyStateMsg) {
+              if (query && activeCategory !== 'all') {
+                emptyStateMsg.textContent = `No works match "${query}" in the selected category.`;
+              } else if (query) {
+                emptyStateMsg.textContent = `No works match "${query}". Try searching by a title keyword, legal case, or philosophical concept.`;
+              } else {
+                emptyStateMsg.textContent = `No works currently cataloged in this category.`;
+              }
             }
-          });
+          } else {
+            emptyState.classList.add('hidden');
+          }
+        }
+      }
+
+      // Filter button click handlers
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeCategory = btn.getAttribute('data-filter') || 'all';
+          updateActiveFilterButton(activeCategory);
+          filterAndRender();
         });
       });
+
+      // Search input handler
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value;
+          filterAndRender();
+        });
+
+        // Keyboard navigation: Escape clears search
+        searchInput.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            searchQuery = '';
+            searchInput.value = '';
+            filterAndRender();
+            searchInput.blur();
+          }
+        });
+      }
+
+      // Keyboard shortcut: '/' focuses search input from anywhere
+      document.addEventListener('keydown', (e) => {
+        if (e.key === '/' && document.activeElement !== searchInput && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+          e.preventDefault();
+          if (searchInput) {
+            searchInput.focus();
+            searchInput.select();
+          }
+        }
+      });
+
+      // Clear search button handler
+      if (clearSearchBtn) {
+        clearSearchBtn.addEventListener('click', () => {
+          searchQuery = '';
+          if (searchInput) {
+            searchInput.value = '';
+            searchInput.focus();
+          }
+          filterAndRender();
+        });
+      }
+
+      // Reset all filters button handler
+      function resetAll() {
+        activeCategory = 'all';
+        searchQuery = '';
+        if (searchInput) searchInput.value = '';
+        updateActiveFilterButton('all');
+        filterAndRender();
+      }
+
+      if (resetFiltersBtn) {
+        resetFiltersBtn.addEventListener('click', resetAll);
+      }
+
+      if (emptyStateResetBtn) {
+        emptyStateResetBtn.addEventListener('click', resetAll);
+      }
     });
-  </script>
-</body>
+  </script></body>
 </html>
