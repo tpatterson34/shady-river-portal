@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Collected Poetry of Trevor Swistchew | Literary Salon Chamber</title>
+  <meta name="description" content="Explore the collected poems of Trevor Swistchew: 28 original works of Scottish bardic verse, social satire, Zen invocations, and protest lyrics (1985–2026).">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              950: '#0c0b0a',
+              900: '#121110',
+              850: '#181614',
+              800: '#1f1c19',
+              700: '#2b2723',
+              600: '#3d3731',
+            },
+            parchment: {
+              50: '#fdfbf7',
+              100: '#f7f4ed',
+              200: '#efeae0',
+              300: '#e5ded2',
+              400: '#d8cdbe',
+              500: '#c5b8a5',
+            },
+            brass: {
+              400: '#dfbe75',
+              500: '#c5a059',
+              600: '#a6823c',
+              700: '#846427',
+            },
+            thistle: {
+              600: '#9d2b45',
+              700: '#7e2035',
+            }
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Lora', 'Georgia', 'serif'],
+            display: ['"Playfair Display"', 'Cinzel', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Web Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="../assets/css/a11y.css">
+
+  <!-- Scottish Literary Salon Theme Stylesheet -->
+  <link rel="stylesheet" href="../assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950">
+
+  <!-- Skip Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Poetry Catalog</a>
+
+  <!-- Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      
+      <div class="flex items-center gap-3">
+        <a href="../index.html" class="flex items-center gap-2 text-stone-300 hover:text-amber-400 group transition-colors">
+          <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
+          <span class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:inline">Trevor Swistchew</span>
+        </a>
+        <span class="text-stone-600 hidden sm:inline">/</span>
+        <span class="text-xs font-mono text-amber-400">Poetry Chamber</span>
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="hidden md:flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 text-[11px] font-mono transition-colors" title="Visit The Shady River Bard Portal">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Controls -->
+      <div class="flex items-center gap-3">
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs" role="group" aria-label="Reading Theme Selection">
+          <button data-theme="dark" class="theme-toggle-btn px-2 py-1 rounded transition-colors active-theme" title="Dark Peat Theme" aria-label="Dark Peat Theme" aria-pressed="true">
+            <i class="fa-solid fa-moon text-amber-400"></i>
+          </button>
+          <button data-theme="sepia" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Aged Parchment Sepia Theme" aria-label="Aged Parchment Sepia Theme" aria-pressed="false">
+            <i class="fa-solid fa-book-open"></i>
+          </button>
+          <button data-theme="light" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Edinburgh Stone Light Theme" aria-label="Edinburgh Stone Light Theme" aria-pressed="false">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+    
+    <!-- Hero Banner & Title -->
+    <section class="space-y-8 text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono">
+        <i class="fa-solid fa-feather-pointed"></i>
+        <span>28 Original Works &bull; 1985–2026 Archive</span>
+      </div>
+
+      <h1 class="font-cinzel text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-4xl mx-auto">
+        The Collected Poetry of Trevor Swistchew
+      </h1>
+
+      <p class="font-serif italic text-lg sm:text-xl text-stone-300 max-w-2xl mx-auto leading-relaxed">
+        From tributes to Robert Burns and Scots vernacular broadsides to Zen awakenings, personal reflections, and razor-sharp social satire.
+      </p>
+
+      <!-- Banner Image -->
+      <figure class="rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl bg-peat-950 max-w-5xl mx-auto">
+        <img src="../assets/images/collected-poems-banner.jpg" alt="Ancient writing desk by a stone arched window looking out over Scottish Highland lochs and purple heather-clad mountains" class="w-full aspect-video object-cover" loading="eager">
+        <figcaption class="p-3 text-center text-xs text-stone-400 font-serif italic border-t border-stone-800">
+          The Scottish Literary Salon: verses composed in contemplation of life, truth, memory, and freedom.
+        </figcaption>
+      </figure>
+
+      <!-- Quick Stats & Cross Link -->
+      <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-mono pt-4">
+        <div class="px-3.5 py-1.5 rounded-lg bg-stone-900 border border-stone-800 text-stone-300">
+          <strong class="text-amber-400">28</strong> Individual Poems &amp; Parables
+        </div>
+        <div class="px-3.5 py-1.5 rounded-lg bg-stone-900 border border-stone-800 text-stone-300">
+          <strong class="text-amber-400">5</strong> Thematic Chambers
+        </div>
+        <a href="../index.html#essays" class="px-3.5 py-1.5 rounded-lg bg-stone-900 border border-stone-700 text-amber-400 hover:text-white transition-colors flex items-center gap-1.5">
+          <span>Explore 17 Essays Archive</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Poetry Grid Section -->
+    <section class="space-y-6">
+      <div class="border-b border-stone-800 pb-4 flex items-center justify-between">
+        <h2 class="font-cinzel text-xl sm:text-2xl font-bold text-white tracking-wide">
+          The Collected Works
+        </h2>
+        <span class="text-xs font-mono text-stone-400">28 Titles</span>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Scottish Bardic Homage
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#1 &bull; 2026</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="to-robert-burns/index.html" class="hover:underline">
+                To Robert Burns
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              A Tribute to Scotland’s National Bard and the Spirit of Honest Verse
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              An affectionate toast to Rabbie Burns, Jean Armour, and the enduring human heart of Scottish poetics.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="to-robert-burns/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Aesthetics & The Creative Life
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#2 &bull; 2026</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="the-frustration-of-the-artist/index.html" class="hover:underline">
+                The Frustration of the Artist
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              On the Weight of Life’s Yoke, the Creative Spark, and the Demands of Art
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              The painter's dedication to depicting the pain of ordinary folk, working from dusk till dawn.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="the-frustration-of-the-artist/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Philosophical Wit & Human Nature
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#3 &bull; 2026</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="on-being-misunderstood/index.html" class="hover:underline">
+                On Being Misunderstood
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              The Art of Conversational Caution, Scotch Restraint, and the Eloquence of Silence
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              Reflections on tea, cakes, drink, and the virtue of holding one's tongue: 'The less you speak, the more you say.'
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="on-being-misunderstood/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Social Satire & Human Nature
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#4 &bull; 2026</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="in-criticism-of-back-door-gossip/index.html" class="hover:underline">
+                In Criticism of Back Door Gossip
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              A Trenchant Admonition Against Compulsory Sympathy and Idle Whining
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              Why secondhand complaints are poison: 'The moral of this little po-em is DON’T TELL ME but go straight to ‘em.'
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="in-criticism-of-back-door-gossip/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Eastern Philosophy & Metaphysics
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#5 &bull; 2026</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="kye-ho/index.html" class="hover:underline">
+                Kye – Ho!
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              An Awakening Invocation of Milarepa and the Cleansing of the Doors of Perception
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              Calling on the warrior spirit that defeats delusion, ignorance, and aggression through ancient wisdom.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="kye-ho/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Working-Class Realism & Social Critique
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#6 &bull; 2026</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="no-comment/index.html" class="hover:underline">
+                No Comment?
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              On Thick Dark Fogs, Shoebox Housing Schemes, and the Absence of Social Justice
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              A sharp critique of urban planning, poverty, and how society discards those without wealth.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="no-comment/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Personal Lyric & Memory
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#7 &bull; 2018</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="dont-you-know/index.html" class="hover:underline">
+                Don’t you know
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              A Candid Confession of Early Trauma, Lingering Shadows, and New Beginnings
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              Looking back on a youth born in the mist and moving past brutality to restart life anew.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="dont-you-know/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Personal Lyric & Memory
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#8 &bull; 2018</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="reflection/index.html" class="hover:underline">
+                Reflection
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              Within the Walls of Memory: Walking Out of Frozen Rain into Personal Freedom
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              Reflecting on how the words on paper strive to communicate lived pain and melt the past away.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="reflection/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Humorous Verse & Travel Sketch
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#9 &bull; 2018</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="for-lizzie-with-love/index.html" class="hover:underline">
+                (for lizzie) with love
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              An Ischian Travel Anecdote of Naples Skies, Aloe Vera, and Ungovernable Gulls
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              A delightful comedic ode to Lizzie, an untimely seagull in Napoli, and the virtue of long sleeves.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="for-lizzie-with-love/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Satirical Parable & Courtroom Fiction
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#10 &bull; 2026</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="when-the-devil-went-to-trial/index.html" class="hover:underline">
+                When the Devil Went to Trial
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              The Trillion-Charge Arraignment of Lucifer at the Old Bailey Supreme High Court
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              A courtroom satire exploring the jurisdictional absurdity of mortal judges attempting to sentence the Prince of Darkness.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="when-the-devil-went-to-trial/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Poetics & Philosophy
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#11 &bull; 1985</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="to-poetry-and-poets/index.html" class="hover:underline">
+                To Poetry and Poets
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              The Self-Speaking Tao of Verse and the Humility of the Pen
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              A timeless 7-line aphoristic poem on the true nature of poetic inspiration.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="to-poetry-and-poets/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Occasional Verse & Family Celebrations
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#12 &bull; May 2021</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="ode-for-david-and-doreen/index.html" class="hover:underline">
+                Ode for David and Doreen
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              Celebrating Fifty Years of Wedded Bliss (Golden Anniversary)
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              A joyful rhyming tribute from Edinburgh to a loving couple celebrating a half-century together.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="ode-for-david-and-doreen/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Social Conscience & Human Rights
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#13 &bull; 2014</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="poem-for-a-racist/index.html" class="hover:underline">
+                Poem for a Racist
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              A Socratic Interrogation of Global Interdependence and Everyday Hypocrisy
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              Auditing the clothes, tea, cars, and culture of a racist to expose the absurd contradiction of prejudice.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="poem-for-a-racist/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Zen & Contemplative Insight
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#14 &bull; 2026</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="truth-will-eventually-hit-you/index.html" class="hover:underline">
+                Truth Will Eventually Hit You
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              On Smug Deceptions, Words Like Rain, and the Fundamental Law of Non-Ownership
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              Meditations on impermanence: 'Nothing we say changes night into day... No one owns anything, think it over.'
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="truth-will-eventually-hit-you/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Existential Inquiry & Intimacy
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#15 &bull; 2026</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="not-living-up-to-anyone-elses-expectations/index.html" class="hover:underline">
+                Not Living up to Anyone Else’s Expectations
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              Masks across the Room and the Vulnerability of Being Real
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              A searching poetic inquiry into emotional honesty, expectations, and whether love is real.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="not-living-up-to-anyone-elses-expectations/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Urban Alienation & Modernity
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#16 &bull; 2026</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="metropolis/index.html" class="hover:underline">
+                Metropolis
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              Grey Monoliths, Blindfold Momentum, and the Architecture of the Cage
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              Critiquing the hurried artificiality of urban life, moving from womb to tomb in shoebox flats.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="metropolis/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Spiritual Awakening & Counterculture
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#17 &bull; 2026</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="love-peace-truth/index.html" class="hover:underline">
+                Love! Peace! Truth!
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              Three Words That Shook Cynicism and Opened the Weeping Heart
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              Moving from intellectual detachment to profound emotional opening upon realizing that love, peace, and truth really mean business.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="love-peace-truth/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Radical Politics & Human Dignity
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#18 &bull; 2026</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="social-control/index.html" class="hover:underline">
+                Social Control
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              Police, Education, Morals, Values: Dismantling the Shambles of Coercion
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              Auditing the mechanisms of social discipline and affirming that people can only be human when they know how to love.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="social-control/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Existential Philosophy & Perception
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#19 &bull; 2026</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="the-quest-for-innocence/index.html" class="hover:underline">
+                The Quest for Innocence
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              Seeking Truth Beyond History's Catalogue of Despair, Without Labels or Names
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              A profound meditation on the catalog of suffering and the longing to see the world with innocent, unconditioned eyes.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="the-quest-for-innocence/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Spiritual Provocation & Animal Sentience
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#20 &bull; 2026</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="clarion-call/index.html" class="hover:underline">
+                Clarion Call
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              On the Souls of Animals, Military Futility, and Brother Death as a Friend
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              Challenging institutional arrogance regarding animal souls, warfare, and the true meaning of mortality.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="clarion-call/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Metaphysical Verse & Samsara
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#21 &bull; 2026</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="no-title-propagate-self/index.html" class="hover:underline">
+                No Title (Propagate Self)
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              The Impulse to Be: Samsara, Craving, and the Cycles of Form
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              Contemplating the relentless cycle of biological and psychological reincarnation, craving, and needless suffering.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="no-title-propagate-self/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Sci-Fi Political Satire
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#22 &bull; 2026</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="martians/index.html" class="hover:underline">
+                Martians
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              Canal Diggers from Mars Arrive for Jobcentres Under Mrs T
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              A brilliant satirical fantasy where Martian laborers arrive in Commons to be assigned to MARTWORKS and HOUSEMARTS.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="martians/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Devotional & Spiritual Lyric
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#23 &bull; 2026</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="the-heart-of-mankind/index.html" class="hover:underline">
+                The Heart of Mankind
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              The Bleeding Heart, the Falling Tears, and Universal Compassion
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              A pure, rhythmic chant on suffering as the shared ground of compassion and mutual salvation.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="the-heart-of-mankind/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Folk Wisdom & Satirical Allegory
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#24 &bull; 2026</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="the-vanity-of-beautiful-ladies/index.html" class="hover:underline">
+                The Vanity of Beautiful Ladies
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              The Mirror’s Reply to the Wicked Queen: Ageing, Youth, and True Inner Grace
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              The mirror answers back: beauty fades, the Bird of Youth flies away, and inner truth is all that lasts.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="the-vanity-of-beautiful-ladies/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Nocturne & Contemplation
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#25 &bull; 2026</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="goodnight/index.html" class="hover:underline">
+                Goodnight
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              Switching Off to the World: Silence, Dark, and Inner Self-Reliance
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              Closing eyes, ears, and mouth to the noisy world to dwell in the vast quiet reality within.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="goodnight/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                British Social Satire
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#26 &bull; 2026</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="what-every-thrill-seeker-wants/index.html" class="hover:underline">
+                What Every Thrill Seeker Wants
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              A Big Pad, a Volvo, Brie in Corfu, and Waiting on the Pools
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              A hilarious romp through working-class aspirations of consumer luxury and winning the football pools.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="what-every-thrill-seeker-wants/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Rock Lyric & Working-Class Protest
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#27 &bull; 1991</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="cash-in-hand/index.html" class="hover:underline">
+                CASH IN HAND
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              Song by Raw Power: Sweating for a Wage in the Yahoo Age
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              Raw Power's blistering 1991 rock lyric attacking money mania, banking greed, and the wage trap.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="cash-in-hand/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="group p-6 rounded-xl border border-stone-800 bg-stone-900/50 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg hover:shadow-2xl">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-semibold uppercase tracking-wider">
+                Scots Vernacular Political Parody
+              </span>
+              <span class="text-stone-500 text-[11px] font-mono">#28 &bull; 1989</span>
+            </div>
+
+            <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              <a href="life-in-thatchers-britain/index.html" class="hover:underline">
+                Life in Thatcher’s Britain
+              </a>
+            </h3>
+
+            <p class="font-serif italic text-xs text-stone-400 leading-relaxed">
+              Parody in a Pensioner’s Mood: On Water Sell-Offs, Poll Tax, and Tory Rule
+            </p>
+
+            <p class="text-xs text-stone-300 leading-relaxed font-sans">
+              A rich Scots broadside railing against water privatization, clearances, and the poll tax in 1989.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-stone-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1–2 min read</span>
+            <a href="life-in-thatchers-britain/index.html" class="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Read Poem</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Creative Fellowship CTA -->
+    <section class="mt-20 p-8 rounded-2xl bg-gradient-to-br from-peat-900 to-peat-950 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl">
+      <div class="space-y-2 text-center sm:text-left">
+        <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold">Creative Fellowship</span>
+        <h3 class="font-cinzel text-xl font-bold text-white">The Shady River Bard Creative Ecosystem</h3>
+        <p class="text-xs text-stone-300 max-w-xl leading-relaxed">
+          Trevor Swistchew's poetry and philosophical inquiries are published in fellowship with The Shady River Bard—exploring a 26-album concept discography, working permaculture, and reflections on human purpose.
+        </p>
+      </div>
+      <a href="https://tpatterson34.github.io/shady-river-portal/" class="px-5 py-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-peat-950 font-cinzel font-bold text-xs uppercase tracking-wider transition-colors shrink-0 shadow-lg flex items-center gap-2">
+        <span>Explore Shady River</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-16 pt-8 border-t border-stone-800/60 text-center text-xs text-stone-500 font-sans space-y-2">
+      <p>Collected Poetry &copy; 1985–2026 Trevor Swistchew. All rights reserved.</p>
+      <p>
+        <a href="../index.html" class="text-stone-400 hover:text-amber-400 transition-colors mr-3">&larr; Return to Compendium Archive</a>
+        <a href="https://tpatterson34.github.io/shady-river-portal/friends-of-the-bard/" class="text-amber-400 hover:text-amber-300 transition-colors font-medium">Friends of the Bard Collective ↗</a>
+      </p>
+    </footer>
+
+  </main>
+
+  <script src="../assets/js/reading-experience.js"></script>
+</body>
+</html>

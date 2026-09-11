@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Frustration of the Artist | Trevor Swistchew Poetry</title>
+  <meta name="description" content="The painter's dedication to depicting the pain of ordinary folk, working from dusk till dawn. From the Collected Poetry of Trevor Swistchew.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              950: '#0c0b0a',
+              900: '#121110',
+              850: '#181614',
+              800: '#1f1c19',
+              700: '#2b2723',
+              600: '#3d3731',
+            },
+            parchment: {
+              50: '#fdfbf7',
+              100: '#f7f4ed',
+              200: '#efeae0',
+              300: '#e5ded2',
+              400: '#d8cdbe',
+              500: '#c5b8a5',
+            },
+            brass: {
+              400: '#dfbe75',
+              500: '#c5a059',
+              600: '#a6823c',
+              700: '#846427',
+            },
+            thistle: {
+              600: '#9d2b45',
+              700: '#7e2035',
+            }
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Lora', 'Georgia', 'serif'],
+            display: ['"Playfair Display"', 'Cinzel', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Web Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/a11y.css">
+
+  <!-- Scottish Literary Salon Theme Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950">
+
+  <!-- WCAG Skip Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Poem</a>
+
+  <!-- Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- Top Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      
+      <!-- Brand Links -->
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2 text-stone-300 hover:text-amber-400 group transition-colors">
+          <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
+          <span class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:inline">Trevor Swistchew</span>
+        </a>
+        <span class="text-stone-600 hidden sm:inline">/</span>
+        <a href="../index.html" class="text-xs font-mono text-amber-400/90 hover:text-amber-300 transition-colors flex items-center gap-1">
+          <i class="fa-solid fa-feather text-[10px]"></i>
+          <span>Poetry Chamber</span>
+        </a>
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="hidden md:flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 text-[11px] font-mono transition-colors" title="Visit The Shady River Bard Portal">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Controls -->
+      <div class="flex items-center gap-3">
+        <!-- Font Size Scaler -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs font-mono text-stone-300" role="group" aria-label="Font Size Scaling">
+          <button id="font-size-dec" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Decrease font size" aria-label="Decrease font size">A-</button>
+          <button id="font-size-reset" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors text-[10px] text-stone-400" title="Reset font size" aria-label="Reset font size">A</button>
+          <button id="font-size-inc" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Increase font size" aria-label="Increase font size">A+</button>
+        </div>
+
+        <!-- Theme Switcher -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs" role="group" aria-label="Reading Theme Selection">
+          <button data-theme="dark" class="theme-toggle-btn px-2 py-1 rounded transition-colors active-theme" title="Dark Peat Theme" aria-label="Dark Peat Theme" aria-pressed="true">
+            <i class="fa-solid fa-moon text-amber-400"></i>
+          </button>
+          <button data-theme="sepia" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Aged Parchment Sepia Theme" aria-label="Aged Parchment Sepia Theme" aria-pressed="false">
+            <i class="fa-solid fa-book-open"></i>
+          </button>
+          <button data-theme="light" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Edinburgh Stone Light Theme" aria-label="Edinburgh Stone Light Theme" aria-pressed="false">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main id="main-content" class="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+    <article class="space-y-8">
+      
+      <!-- Poem Header -->
+      <header class="text-center space-y-4 border-b border-stone-800/80 pb-8">
+        <div class="flex flex-wrap items-center justify-center gap-2 text-xs font-mono">
+          <span class="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-semibold uppercase tracking-wider">
+            Aesthetics & The Creative Life
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="px-2.5 py-0.5 rounded bg-stone-800 border border-stone-700 text-stone-300">
+            2026
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400">Trevor Swistchew</span>
+        </div>
+
+        <h1 class="font-cinzel text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+          The Frustration of the Artist
+        </h1>
+
+        <p class="font-serif italic text-base sm:text-lg text-stone-400 max-w-xl mx-auto">
+          On the Weight of Life’s Yoke, the Creative Spark, and the Demands of Art
+        </p>
+      </header>
+
+      <!-- Poem Body Card -->
+      <div class="p-6 sm:p-10 rounded-2xl bg-stone-900/60 border border-amber-500/20 shadow-2xl backdrop-blur-sm">
+        <div id="essay-article" class="prose prose-invert prose-stone max-w-none text-stone-200 font-serif">
+            <p class="first-letter:font-cinzel first-letter:text-4xl first-letter:font-bold first-letter:float-left first-letter:mr-2.5 first-letter:text-amber-500 first-letter:leading-none text-stone-200 font-serif leading-loose text-base sm:text-lg mb-6">
+              The yearning to be understood<br>
+              And not be merely seen as crude<br>
+              For painting pictures in the nude<br>
+              Which some folk think is very good
+            </p>
+            <p class="text-stone-200 font-serif leading-loose text-base sm:text-lg mb-6">
+              The artist paints, and with each stroke<br>
+              Of brush, depicts weight of life’s yoke<br>
+              The pan of ordinary folk<br>
+              Who live life hard, it is no joke
+            </p>
+            <p class="text-stone-200 font-serif leading-loose text-base sm:text-lg mb-6">
+              Some people think his work a waste<br>
+              And oft condemn it in their haste<br>
+              But artists, working with life’s “paste”<br>
+              Have sensed a life that few can taste
+            </p>
+            <p class="text-stone-200 font-serif leading-loose text-base sm:text-lg mb-6">
+              The humanness which drives them on<br>
+              And bides them work from dusk ‘til dawn<br>
+              Shows mankind’s spirit has not gone<br>
+              And shows that Joy has not yet flown
+            </p>
+            <p class="text-stone-200 font-serif leading-loose text-base sm:text-lg mb-6">
+              We are all artists in our heart<br>
+              And love is where we make a start.<br>
+              Some minds would like to break apart<br>
+              “It’s good” they say “but is it Art?”
+            </p>
+        </div>
+      </div>
+
+      <!-- Linear Poem Navigation (Prev / Next) -->
+      <div class="p-4 rounded-xl bg-stone-900/40 border border-stone-800 flex items-center justify-between gap-4">
+        <a href="../to-robert-burns/index.html" class="flex items-center gap-2 text-stone-400 hover:text-amber-400 text-xs font-mono transition-colors">
+            <i class="fa-solid fa-arrow-left text-[10px]"></i>
+            <span class="truncate max-w-[180px] sm:max-w-xs">To Robert Burns</span>
+          </a>
+        <a href="../index.html" class="px-3 py-1.5 rounded bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white text-xs font-mono transition-colors shrink-0">
+          All 28 Poems
+        </a>
+        <a href="../on-being-misunderstood/index.html" class="flex items-center gap-2 text-stone-400 hover:text-amber-400 text-xs font-mono transition-colors ml-auto text-right">
+            <span class="truncate max-w-[180px] sm:max-w-xs">On Being Misunderstood</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+      </div>
+
+      <!-- Creative Fellowship Callout -->
+      <div class="mt-12 p-6 rounded-2xl bg-gradient-to-br from-peat-900 to-peat-950 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="space-y-1 text-center sm:text-left">
+          <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold">Creative Fellowship</span>
+          <h4 class="font-cinzel text-lg font-bold text-white">The Shady River Bard Creative Ecosystem</h4>
+          <p class="text-xs text-stone-300 max-w-xl">
+            Trevor Swistchew's poetry and philosophical essays are published in fellowship with The Shady River Bard—exploring a 26-album concept discography, working permaculture, and reflections on human purpose.
+          </p>
+        </div>
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-peat-950 font-cinzel font-bold text-xs uppercase tracking-wider transition-colors shrink-0 shadow-lg flex items-center gap-1.5">
+          <span>Explore Shady River</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+        </a>
+      </div>
+
+      <!-- Footer -->
+      <footer class="pt-6 border-t border-stone-800/60 text-center text-xs text-stone-500 font-sans space-y-2">
+        <p>Poem &copy; 2026 Trevor Swistchew. All rights reserved.</p>
+        <p>
+          <a href="../index.html" class="text-stone-400 hover:text-amber-400 transition-colors mr-3">&larr; Return to Poetry Chamber</a>
+          <a href="../../index.html" class="text-stone-400 hover:text-amber-400 transition-colors mr-3">Compendium Archive</a>
+          <a href="https://tpatterson34.github.io/shady-river-portal/friends-of-the-bard/" class="text-amber-400 hover:text-amber-300 transition-colors">Friends of the Bard Collective ↗</a>
+        </p>
+      </footer>
+
+    </article>
+  </main>
+
+  <script src="../../assets/js/reading-experience.js"></script>
+</body>
+</html>
