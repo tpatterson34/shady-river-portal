@@ -273,7 +273,7 @@
                 <span>Rolling Track-by-Track Video Premiere</span>
               </div>
               <p class="text-stone-400 leading-normal font-sans">
-                The full 15-track musical album is available on all streamers today. Official music videos are premiering track-by-track 2&ndash;3 times weekly. Tracks 1&ndash;4 are live now below!
+                The full 15-track musical album is available on all streamers today. Official music videos are premiering track-by-track 2&ndash;3 times weekly. Tracks 1&ndash;5 are live now below!
               </p>
             </div>
 
@@ -281,7 +281,7 @@
             <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4">
               <a href="#songs-section" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-rust-600 to-rust-500 hover:from-rust-500 hover:to-rust-400 text-white font-display font-bold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-xl hover:shadow-rust-500/30 flex items-center gap-2.5">
                 <i aria-hidden="true" class="fa-solid fa-play"></i>
-                <span>Watch Released Videos (1–4)</span>
+                <span>Watch Released Videos (1–5)</span>
               </a>
               <a href="#streaming" class="px-6 py-3.5 rounded-xl bg-prairie-850 hover:bg-prairie-800 text-stone-200 border border-wheat-500/40 hover:border-wheat-400 font-display font-bold text-xs sm:text-sm tracking-wider uppercase transition-all flex items-center gap-2.5 shadow-lg">
                 <i aria-hidden="true" class="fa-solid fa-music text-wheat-400"></i>
@@ -403,7 +403,7 @@
               The Songs of The Hollow Herd
             </h2>
             <p class="text-sm text-stone-400 max-w-2xl font-body">
-              Explore formatted lyrics, musical cues, and song summaries for all 15 tracks. Watch the 4 released music videos now, or stream any track across all music platforms.
+              Explore formatted lyrics, musical cues, and song summaries for all 15 tracks. Watch the 5 released music videos now, or stream any track across all music platforms.
             </p>
           </div>
 
@@ -420,7 +420,7 @@
             </button>
             <button onclick="filterTracks('videos')" id="btn-filter-videos" class="px-3.5 py-2 rounded-xl bg-prairie-800 text-stone-300 hover:text-white border border-white/10 text-xs font-mono transition-all flex items-center gap-1.5">
               <i aria-hidden="true" class="fa-solid fa-video text-rust-400 text-[10px]"></i>
-              <span>Videos Live (4)</span>
+              <span>Videos Live (5)</span>
             </button>
             <button onclick="expandAllLyrics()" class="px-3.5 py-2 rounded-xl bg-prairie-800 text-stone-400 hover:text-stone-200 border border-white/10 text-xs font-mono transition-all">
               Expand All
@@ -857,9 +857,10 @@
       } else if (filterType === 'videos') {
         btnVid.className = 'px-3.5 py-2 rounded-xl bg-rust-600 text-white text-xs font-mono font-bold transition-all shadow-md flex items-center gap-1.5';
         btnAll.className = 'px-3.5 py-2 rounded-xl bg-prairie-800 text-stone-300 hover:text-white border border-white/10 text-xs font-mono transition-all';
-        btnVid.setAttribute('aria-pressed', 'true');
-        btnAll.setAttribute('aria-pressed', 'false');
-        updateFilterBanner('Showing 4 Released Music Videos');
+        const liveCount = (window.HOLLOW_HERD_DATA && window.HOLLOW_HERD_DATA.tracks) 
+          ? window.HOLLOW_HERD_DATA.tracks.filter(t => t.is_video_public).length 
+          : 5;
+        updateFilterBanner(`Showing ${liveCount} Released Music Videos`);
       }
 
       renderTracks();

@@ -249,7 +249,7 @@ window.HOLLOW_HERD_DATA = {
       "title": "Captive Supply",
       "cover_image": "assets/art/05-captive-supply.webp",
       "youtube_id": "q9_-8ndLlFE",
-      "is_video_public": false,
+      "is_video_public": true,
       "act_number": 2,
       "act_title": "The Squeeze (The Market)",
       "subtitle": "Alternative Marketing Arrangements & The Silent Gavel",
