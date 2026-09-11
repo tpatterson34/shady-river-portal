@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter One: The Gospel According to Common Sense — Trevor Swistchew (2026)</title>
+  
+  <meta name="description" content="Chapter One: The Gospel According to Common Sense by Trevor Swistchew. A satirical mock-biblical apocrypha exploring the God of KASH, call-centre apostles, the bureaucratic refugee ark, and the divine cosmic jest.">
+  <meta name="author" content="Trevor Swistchew">
+  <link rel="canonical" href="https://tpatterson34.github.io/shady-river-portal/trevor-swistchew/essays/the-gospel-according-to-common-sense/">
+
+  <!-- Tailwind CSS CDN with Typography Plugin -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography,aspect-ratio"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              50: '#f6f5f3',
+              100: '#e7e4df',
+              200: '#d1cbc2',
+              300: '#b5aca0',
+              400: '#9b8d7f',
+              500: '#847466',
+              600: '#6b5c50',
+              700: '#55493f',
+              800: '#463c35',
+              900: '#3c342e',
+              950: '#201b17',
+            },
+            brass: {
+              400: '#d4af37',
+              500: '#c59b27',
+              600: '#aa821c',
+            },
+            soil: {
+              850: '#26201b',
+              900: '#1c1815',
+            }
+          },
+          fontFamily: {
+            serif: ['Source Serif 4', 'Georgia', 'serif'],
+            display: ['Cinzel', 'Playfair Display', 'serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Web Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/a11y.css">
+
+  <!-- Scottish Literary Salon Theme Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950">
+
+  <!-- 1. WCAG Skip Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Essay Content</a>
+
+  <!-- 2. Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- 3. Top Sticky Reading Utility & Salon Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      
+      <!-- Salon Brand / Return Link -->
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2.5 text-stone-300 hover:text-amber-400 group transition-colors">
+          <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
+          <div class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:block">
+            Trevor Swistchew <span class="text-stone-500 font-sans font-normal mx-1">|</span> <span class="text-stone-400">Compendium Archive</span>
+          </div>
+        </a>
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="hidden md:flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 text-[11px] font-mono transition-colors" title="Visit The Shady River Bard Portal">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Reading Accommodations Controls -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Font Size Scaler -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs font-mono text-stone-300" role="group" aria-label="Font Size Scaling">
+          <button id="font-size-dec" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Decrease font size" aria-label="Decrease font size">A-</button>
+          <button id="font-size-reset" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors text-[10px] text-stone-400" title="Reset font size" aria-label="Reset font size">A</button>
+          <button id="font-size-inc" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Increase font size" aria-label="Increase font size">A+</button>
+        </div>
+
+        <!-- Tri-State Theme Switcher -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs" role="group" aria-label="Reading Theme Selection">
+          <button data-theme="dark" class="theme-toggle-btn px-2 py-1 rounded transition-colors active-theme" title="Dark Peat Theme" aria-label="Dark Peat Theme" aria-pressed="true">
+            <i class="fa-solid fa-moon text-amber-400"></i>
+          </button>
+          <button data-theme="sepia" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Aged Parchment Sepia Theme" aria-label="Aged Parchment Sepia Theme" aria-pressed="false">
+            <i class="fa-solid fa-book-open"></i>
+          </button>
+          <button data-theme="light" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Edinburgh Stone Light Theme" aria-label="Edinburgh Stone Light Theme" aria-pressed="false">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- 4. Main Essay Content Container -->
+  <main id="main-content" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+    <article class="space-y-10">
+      
+      <!-- HERO & ESSAY HEADER -->
+      <header class="space-y-6 text-center sm:text-left border-b border-stone-800 pb-10">
+        
+        <!-- Category & Reading Time Badge -->
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 text-xs font-mono">
+          <span class="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-semibold tracking-wider uppercase">
+            Biblical Satire &amp; Theological Parable
+          </span>
+          <span class="text-stone-500">•</span>
+          <span class="text-stone-400">4 min read</span>
+          <span class="text-stone-500">•</span>
+          <span class="text-stone-400">530 words</span>
+          <span class="text-stone-500">•</span>
+          <span class="text-amber-500 font-bold">Compendium #18</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-stone-100 leading-tight">
+          Chapter One: The Gospel According to Common Sense
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="font-serif italic text-lg sm:text-xl text-stone-300 max-w-3xl leading-relaxed">
+          A Mock-Biblical Apocrypha of Usury, Call-Centre Apostles, the Bureaucratic Refugee Ark, and the Divine Cosmic Jest.
+        </p>
+
+        <!-- Author & Metadata Block -->
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 pt-2 text-xs font-mono text-stone-400 border-t border-stone-800/60">
+          <div class="flex items-center gap-2">
+            <span class="text-amber-500"><i class="fa-solid fa-pen-nib"></i></span>
+            <span class="text-stone-200 font-medium">Trevor Swistchew</span>
+          </div>
+          <span class="text-stone-600">•</span>
+          <div>
+            <span>Copyright &copy; 2026</span>
+          </div>
+          <span class="text-stone-600">•</span>
+          <div class="text-amber-400/90">
+            <span>The Scottish Literary Salon Archive</span>
+          </div>
+        </div>
+
+        <!-- Fine-Art Hero Banner -->
+        <figure class="mt-8 rounded-2xl overflow-hidden border border-stone-800 shadow-2xl bg-stone-950">
+          <div class="aspect-w-16 aspect-h-9 relative overflow-hidden">
+            <img 
+              src="../../assets/images/gospel-common-sense-banner.jpg" 
+              alt="Chapter One: The Gospel According to Common Sense Banner Artwork" 
+              class="w-full h-full object-cover"
+              loading="eager"
+            />
+          </div>
+          <figcaption class="text-center text-xs text-stone-400 font-serif italic pt-2 pb-1 bg-stone-900/60 border-t border-stone-800/80">
+            The Temple of KASH: where ancient scriptural robes conceal the money changers, the bureaucratic ark braves the storm, and divine sunlight pierces the comedic illusion.
+          </figcaption>
+        </figure>
+
+        <!-- Epigraph -->
+        <blockquote class="p-4 sm:p-5 rounded-xl bg-peat-900/80 border-l-4 border-amber-500 text-stone-300 font-serif italic text-sm sm:text-base leading-relaxed">
+          “Lo! Did ye not know I was joking? Why take ye it all so seriously? See ye not the absurdity of existence, the futility of owning land which outlasts all men? ... Verily I say unto thee: let no man, woman, or IT add nor subtract from my most holy gospel, lest I kick thy ass into orbit.” — Trevor Swistchew
+        </blockquote>
+
+      </header>
+
+      <!-- INTERACTIVE CONTEXTUAL DOSSIER -->
+      <section class="my-12 p-6 rounded-2xl bg-stone-900/90 border border-amber-500/30 shadow-2xl backdrop-blur-sm" aria-labelledby="dossier-heading-gospel">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-white/10">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-sm">
+              <i class="fa-solid fa-scroll"></i>
+            </span>
+            <div>
+              <h3 id="dossier-heading-gospel" class="font-cinzel font-bold text-base sm:text-lg text-amber-300">
+                The Exegetical Codex &bull; The Modern Apocrypha
+              </h3>
+              <span class="text-[11px] font-mono text-stone-400">Satirical Deconstruction of Usury, Border Bureaucracy &amp; Inward Clarity</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <button onclick="switchTab('gospel', 'kash')" id="btn-gospel-kash" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-amber-500 bg-amber-500/10 text-amber-400 font-bold">
+              <span>The God KASH</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Usury &amp; Debt</span>
+            </button>
+            <button onclick="switchTab('gospel', 'apocrypha')" id="btn-gospel-apocrypha" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+              <span>Modern Parables</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">PINs &amp; Refugees</span>
+            </button>
+            <button onclick="switchTab('gospel', 'revelation')" id="btn-gospel-revelation" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+              <span>The Divine Jest</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Laughter &amp; Orbit</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="min-h-[140px]">
+          <!-- Panel 1: The God KASH -->
+          <div id="panel-gospel-kash" class="dossier-tab-panel block space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">From Ancient Usury to the High Altar of 29% APR</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-stone-300 mb-3">
+              <div class="p-3 rounded-lg bg-peat-900 border border-white/5">
+                <strong class="text-amber-400 block font-cinzel mb-1">The Sanctification of Profit</strong>
+                In Trevor Swistchew's biting satire, commercial banking temples invert traditional morality: poverty is branded as a personal sin, while compounding usury and credit scores become the sole measure of human worth.
+              </div>
+              <div class="p-3 rounded-lg bg-peat-900 border border-white/5">
+                <strong class="text-amber-400 block font-cinzel mb-1">The Altar of Permanent Debt</strong>
+                Forgiveness of sins—the foundational promise of biblical gospel—is subordinated to revolving credit lines at 29% APR, driving the hungry to hustle, scam, and survive in an engineered scarcity economy.
+              </div>
+            </div>
+            <div class="p-3 rounded-lg bg-peat-900 border border-amber-500/20 text-xs font-mono text-amber-400">
+              “Thus was born the sacred cycle: Hypocrisy dressed in robes, Greed disguised as grace, And laughter — blessed laughter — the only true resurrection.”
+            </div>
+          </div>
+
+          <!-- Panel 2: Modern Parables -->
+          <div id="panel-gospel-apocrypha" class="dossier-tab-panel hidden space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">Offshore Apostles of Kollect &amp; Noah as an Undocumented Alien</h4>
+            <ul class="text-xs text-stone-300 space-y-2 list-disc pl-4">
+              <li><strong>The Epistle of Kevin Smith:</strong> The global call-centre scam economy depicted as modern apostles soliciting PIN numbers from the elderly under Western aliases, until an elder's shrewd linguistic inquiry renders him unto Caesar.</li>
+              <li><strong>Noah’s Refugee Ark:</strong> Swistchew brilliantly reframes the Ark story through 21st-century border xenophobia: Noah is classified as an “illegal immigrant” by port customs, harassed by flag-waving nativists collecting welfare, and detained by Turkish police upon arrival on Mount Ararat.</li>
+              <li><strong>Institutional Bureaucracy:</strong> Animals arriving by corporate parcel couriers (UPS) without basic hygiene, illuminating how systemic administrative cruelty replaces humanitarian rescue.</li>
+            </ul>
+          </div>
+
+          <!-- Panel 3: The Divine Jest -->
+          <div id="panel-gospel-revelation" class="dossier-tab-panel hidden space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">The Cosmic Joke, Transcendent Gender &amp; Inward Clarity</h4>
+            <p class="text-xs text-stone-300 leading-relaxed mb-3">
+              The concluding revelation shatters both religious dogma and commercial self-help culture. The Divine Voice—revealed beyond human gender constraints (HE, HIM, IT)—confesses that existence was always a cosmic joke, rebukes the hubris of mortal land ownership, and scorns charlatan gurus selling Enlightenment to those who already possess innate clarity.
+            </p>
+            <div class="p-3 rounded-lg bg-peat-900 border border-amber-500/30 text-xs font-mono text-amber-300">
+              “Why follow phoney gurus, why read books on how to get CLEAR, when clarity has dwelt in you since birth and before? Verily I say unto thee: let no man, woman, or IT add nor subtract from my most holy gospel, lest I kick thy ass into orbit.”
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ESSAY TEXT: ILLUMINATED SCRIPTURAL TYPOGRAPHY -->
+      <section class="prose prose-invert prose-stone max-w-none font-serif text-base sm:text-lg leading-relaxed space-y-8">
+
+        <!-- CANTO I -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-stone-900/40 border border-stone-800/80 space-y-4">
+          <div class="flex items-center gap-2 text-xs font-mono text-amber-500 font-bold uppercase tracking-widest pb-2 border-b border-stone-800">
+            <i class="fa-solid fa-feather-pointed text-[10px]"></i>
+            <span>Canto I &bull; The Trademarked Word &amp; The Fleeced Sheep</span>
+          </div>
+
+          <p class="text-lg sm:text-xl text-stone-200 leading-relaxed drop-cap">
+            In the beginning was the Word, and the Word was trademarked.<br>
+            The faithful gathered, not for salvation, but for the sale.<br>
+            Every miracle came with a receipt, every blessing with a surcharge.<br>
+            And lo, the shepherds discovered that sheep are most profitable when fleeced.
+          </p>
+
+          <p class="text-stone-300 italic pl-4 border-l-2 border-amber-500/40">
+            “Brothers and sisters,” cries the preacher, “give until it hurts!”<br>
+            And the congregation, obedient as ever, replies:<br>
+            “We are already in pain, but here’s our wallet anyway.”
+          </p>
+
+          <p class="text-stone-200 font-medium">
+            Thus was born the sacred cycle:<br>
+            Hypocrisy dressed in robes,<br>
+            Greed disguised as grace,<br>
+            And laughter &mdash; blessed laughter &mdash; the only true resurrection.
+          </p>
+        </div>
+
+        <!-- CANTO II -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-stone-900/40 border border-stone-800/80 space-y-4">
+          <div class="flex items-center gap-2 text-xs font-mono text-amber-500 font-bold uppercase tracking-widest pb-2 border-b border-stone-800">
+            <i class="fa-solid fa-coins text-[10px]"></i>
+            <span>Canto II &bull; The Temples of KASH &amp; The Altar of Debt</span>
+          </div>
+
+          <p class="text-stone-300 leading-relaxed">
+            And it came to pass thet the great God KASH set upon humanity his Temples men
+            knew as BANKS an lo the money changers did gather all the money unto themselves
+            and men were forced by hunger thereof to learn Mugging and Robbing to feed their
+            families and women on the side.
+          </p>
+
+          <p class="text-stone-200 leading-relaxed">
+            And verily, the priests of Profit did anoint themselves with gold,<br>
+            declaring poverty a sin and interest a virtue.<br>
+            The Temples rang not with hymns but with the clatter of coins,<br>
+            and the faithful were measured not by spirit, but by credit score.
+          </p>
+
+          <p class="text-stone-300 pl-4 border-l-2 border-amber-500/40 leading-relaxed">
+            Lo, the hungry learned new commandments:<br>
+            Thou shalt hustle, thou shalt scam, thou shalt survive.<br>
+            And the weary bowed before the altar of Debt,<br>
+            where forgiveness was never granted, save at 29% APR.
+          </p>
+
+          <p class="text-stone-200 font-medium">
+            Thus did the Gospel of KASH spread across the nations,<br>
+            and laughter became the only rebellion left to the poor.
+          </p>
+        </div>
+
+        <!-- CANTO III -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-stone-900/40 border border-stone-800/80 space-y-4">
+          <div class="flex items-center gap-2 text-xs font-mono text-amber-500 font-bold uppercase tracking-widest pb-2 border-b border-stone-800">
+            <i class="fa-solid fa-headset text-[10px]"></i>
+            <span>Canto III &bull; The Apostle of PIN Numbers &amp; The Roman Guard</span>
+          </div>
+
+          <p class="text-stone-200 leading-relaxed">
+            And in the land of India, in a city called Kollect,<br>
+            there arose The Cutter, who did send forth "Kevin Smith,"<br>
+            a Sikh call-centre prophet of PIN numbers.
+          </p>
+
+          <p class="text-stone-300 italic pl-4 border-l-2 border-amber-500/40 leading-relaxed">
+            He preached unto the widows and the weary:<br>
+            “Give me thy digits, and I shall multiply thy blessings!”<br>
+            But lo, one elder, wise in suspicion,<br>
+            spake: “Kevin is no name of the Indus!”
+          </p>
+
+          <p class="text-stone-200 leading-relaxed">
+            Then did she summon the Roman Guard,<br>
+            and Kevin was rendered unto Caesar,<br>
+            who booted him to the Crucifier,<br>
+            and seized all shekels of deceit.
+          </p>
+
+          <p class="text-stone-100 font-cinzel font-bold text-base sm:text-lg pl-4 border-l-2 border-amber-500 text-amber-300 leading-relaxed">
+            And when the nails were hammered in,<br>
+            the heavens opened, and a Voice thundered:<br>
+            “Render unto the Almighty that which He created<br>
+            long before greedy man had invented PINS and Profit.”
+          </p>
+        </div>
+
+        <!-- CANTO IV -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-stone-900/40 border border-stone-800/80 space-y-4">
+          <div class="flex items-center gap-2 text-xs font-mono text-amber-500 font-bold uppercase tracking-widest pb-2 border-b border-stone-800">
+            <i class="fa-solid fa-ship text-[10px]"></i>
+            <span>Canto IV &bull; The Refugee Ark &amp; The Border Bureaucracy</span>
+          </div>
+
+          <p class="text-stone-300 leading-relaxed">
+            And in the land of Noah did a whale<br>
+            cross a thousand miles of desert to swallow Jonah,<br>
+            before the Red Flood Warning was sounded.
+          </p>
+
+          <p class="text-stone-200 leading-relaxed">
+            Noah, weary yet resolute, built he a boat called THE ARK,<br>
+            and filled it with two of every beast of Earth,<br>
+            though Customs declared him an ILLEGAL IMMIGRANT,<br>
+            and small men with red-cross flags did shout:<br>
+            “Go home! Stop marrying our women! Stop taking our jobs!”<br>
+            Though many of them had no jobs to surrender,<br>
+            save the Holy Welfare they worshipped in silence.
+          </p>
+
+          <p class="text-stone-300 leading-relaxed">
+            Then the world, by UPS delivery, surrendered its animals two by two,<br>
+            and the Ark was loaded without toilet provision, without telephone,<br>
+            and drifted upon the waters for many weeks.
+          </p>
+
+          <p class="text-stone-300 leading-relaxed">
+            At last a dove of peace was seen flying eastward,<br>
+            and Noah followed, landing near a mount in Turkiye,<br>
+            where police did arrest him as an uninvited incomer,<br>
+            accused of converting the folk to a foreign faith.
+          </p>
+
+          <p class="text-stone-200 font-medium pl-4 border-l-2 border-amber-500/50">
+            Thus was the Ark not a vessel of salvation,<br>
+            but a refugee boat, battered by bureaucracy,<br>
+            mocked by hypocrisy, and sanctified only by laughter.
+          </p>
+        </div>
+
+        <!-- CANTO V -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-stone-900/40 border border-stone-800/80 space-y-4">
+          <div class="flex items-center gap-2 text-xs font-mono text-amber-500 font-bold uppercase tracking-widest pb-2 border-b border-stone-800">
+            <i class="fa-solid fa-sun text-[10px]"></i>
+            <span>Canto V &bull; The Revelation of Common Sense &amp; The Cosmic Orbit</span>
+          </div>
+
+          <p class="text-stone-300 leading-relaxed">
+            Then came at last the Revelation:<br>
+            that God the Father &mdash; HE, HIM, IT &mdash;<br>
+            no longer claimed any gender,<br>
+            but spoke unto the mass huddled upon Earth:
+          </p>
+
+          <blockquote class="p-4 sm:p-6 rounded-xl bg-peat-900 border-l-4 border-amber-500 text-stone-100 font-display text-base sm:text-xl leading-relaxed space-y-3">
+            <p>
+              “Lo! Did ye not know I was joking?<br>
+              Why take ye it all so seriously?<br>
+              See ye not the absurdity of existence,<br>
+              the futility of owning land<br>
+              which outlasts all men?
+            </p>
+            <p>
+              Why follow phoney gurus,<br>
+              why read books on how to get CLEAR,<br>
+              when clarity has dwelt in you<br>
+              since birth and before?
+            </p>
+            <p class="text-amber-400 font-bold pt-2">
+              Verily I say unto thee:<br>
+              let no man, woman, or IT<br>
+              add nor subtract from my most holy gospel,<br>
+              lest I kick thy ass into orbit.”
+            </p>
+          </blockquote>
+
+          <div class="pt-4 text-right">
+            <span class="font-mono text-xs text-stone-400 uppercase tracking-widest">
+              Copyright Trevor Swistchew. 2026
+            </span>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- NAVIGATION FOOTER -->
+      <footer class="mt-16 pt-8 border-t border-stone-800 space-y-8">
+        
+        <!-- Sequential Reading Links -->
+        <div class="grid sm:grid-cols-2 gap-4">
+          <a href="../should-there-be-limits-on-free-speech/index.html" class="p-4 rounded-xl bg-stone-900/60 border border-stone-800 hover:border-amber-500/40 transition-colors group">
+            <span class="text-[10px] font-mono uppercase text-stone-500 group-hover:text-amber-400 block mb-1">&larr; Previous Work (Compendium #17)</span>
+            <span class="font-display font-bold text-sm text-stone-200 group-hover:text-amber-300">Should There Be Limits on Free Speech?</span>
+          </a>
+          <a href="../../poetry/index.html" class="p-4 rounded-xl bg-stone-900/60 border border-stone-800 hover:border-amber-500/40 transition-colors group text-right">
+            <span class="text-[10px] font-mono uppercase text-stone-500 group-hover:text-amber-400 block mb-1">Poetic Works Archive &rarr;</span>
+            <span class="font-display font-bold text-sm text-stone-200 group-hover:text-amber-300">The Poetry Chamber (28 Collected Poems)</span>
+          </a>
+        </div>
+
+        <!-- Creative Fellowship CTA -->
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-peat-900 to-peat-950 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="space-y-1 text-center sm:text-left">
+            <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold">Creative Fellowship</span>
+            <h4 class="font-cinzel text-lg font-bold text-white">The Shady River Bard Creative Ecosystem</h4>
+            <p class="text-xs text-stone-300 max-w-xl">
+              Trevor Swistchew's philosophical essays, satire, and collected verse are published in fellowship with The Shady River Bard—exploring a 26-album concept discography, homestead stories, and reflections on human purpose.
+            </p>
+          </div>
+          <a href="https://tpatterson34.github.io/shady-river-portal/" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-peat-950 font-cinzel font-bold text-xs uppercase tracking-wider transition-colors shrink-0 shadow-lg flex items-center gap-1.5">
+            <span>Explore Shady River</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+          </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="pt-6 border-t border-stone-800/60 text-center text-xs text-stone-400 font-sans space-y-2">
+          <p>Essay &copy; 2026 Trevor Swistchew. All rights reserved.</p>
+          <p class="text-stone-500">Published for the Trevor Swistchew Compendium &amp; Literary Salon Archive.</p>
+          <p class="pt-2">
+            <a href="../../index.html" class="text-stone-400 hover:text-amber-400 transition-colors mr-3">&larr; Return to Compendium Archive</a>
+            <a href="https://tpatterson34.github.io/shady-river-portal/friends-of-the-bard/" class="text-amber-400 hover:text-amber-300 transition-colors font-medium">Friends of the Bard Collective ↗</a>
+          </p>
+        </div>
+      </footer>
+
+    </article>
+  </main>
+
+  <!-- Client-Side Tab Switching Script -->
+  <script>
+    function switchTab(essayId, tabId) {
+      const container = document.querySelector('[aria-labelledby="dossier-heading-' + essayId + '"]');
+      if (!container) return;
+      
+      const buttons = container.querySelectorAll('.dossier-tab-btn');
+      const panels = container.querySelectorAll('.dossier-tab-panel');
+      
+      buttons.forEach(btn => {
+        btn.classList.remove('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+        btn.classList.add('border-transparent', 'text-stone-400');
+      });
+      
+      panels.forEach(p => p.classList.add('hidden'));
+      
+      const targetBtn = document.getElementById('btn-' + essayId + '-' + tabId);
+      const targetPanel = document.getElementById('panel-' + essayId + '-' + tabId);
+      
+      if (targetBtn) {
+        targetBtn.classList.remove('border-transparent', 'text-stone-400');
+        targetBtn.classList.add('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+      }
+      if (targetPanel) {
+        targetPanel.classList.remove('hidden');
+      }
+    }
+  </script>
+  <script src="../../assets/js/reading-experience.js"></script>
+</body>
+</html>
