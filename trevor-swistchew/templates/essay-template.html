@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ESSAY_TITLE}} | Trevor Swistchew</title>
+  <meta name="description" content="{{ESSAY_SUBTITLE}} - An essay and companion study by Trevor Swistchew.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              950: '#0c0b0a',
+              900: '#121110',
+              850: '#181614',
+              800: '#1f1c19',
+              700: '#2b2723',
+              600: '#3d3731',
+            },
+            parchment: {
+              50: '#fdfbf7',
+              100: '#f7f4ed',
+              200: '#efeae0',
+              300: '#e5ded2',
+              400: '#d8cdbe',
+              500: '#c5b8a5',
+            },
+            brass: {
+              400: '#dfbe75',
+              500: '#c5a059',
+              600: '#a6823c',
+              700: '#846427',
+            },
+            thistle: {
+              600: '#9d2b45',
+              700: '#7e2035',
+            },
+            loch: {
+              400: '#38bdf8',
+              700: '#0369a1',
+              900: '#0c4a6e',
+            }
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Lora', 'Georgia', 'serif'],
+            display: ['"Playfair Display"', 'Cinzel', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Web Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="../assets/css/a11y.css">
+
+  <!-- Scottish Literary Salon Theme Stylesheet -->
+  <link rel="stylesheet" href="../assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950">
+
+  <!-- 1. WCAG Skip to Main Content Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Essay Content</a>
+
+  <!-- 2. Reading Progress Indicator -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- 3. Top Sticky Reading Utility & Salon Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      
+      <!-- Salon Brand / Return Link -->
+      <a href="../index.html" class="flex items-center gap-2.5 text-stone-300 hover:text-amber-400 group transition-colors">
+        <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
+        <div class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:block">
+          Trevor Swistchew <span class="text-stone-500 font-sans font-normal mx-1">|</span> <span class="text-stone-400">Salon Archive</span>
+        </div>
+      </a>
+
+      <!-- Sticky Companion Audio Mini-Controller (Synced with Main Player) -->
+      <div id="header-mini-audio-container" class="hidden md:flex items-center gap-3 px-3 py-1 rounded-full bg-stone-950/60 border border-stone-700/60 text-xs text-stone-300">
+        <button id="header-mini-play" type="button" aria-label="Play Companion Track" class="w-6 h-6 rounded-full bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/40 flex items-center justify-center transition-colors">
+          <i id="header-mini-icon" class="fa-solid fa-play text-amber-500 text-[10px]"></i>
+        </button>
+        <span class="text-stone-400 font-sans text-[11px] truncate max-w-[160px]" id="header-mini-track">Companion Track: {{COMPANION_SONG_TITLE}}</span>
+      </div>
+
+      <!-- Reading Accommodations Controls -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Font Size Scaler -->
+        <div class="flex items-center bg-stone-950/40 border border-stone-700/60 rounded-md p-0.5 text-xs text-stone-400" role="group" aria-label="Reading font size">
+          <button type="button" data-set-font="sm" class="px-2 py-1 rounded hover:text-amber-400 transition-colors" title="Small Text">A-</button>
+          <button type="button" data-set-font="base" class="px-2 py-1 rounded hover:text-amber-400 transition-colors text-amber-500 font-bold" title="Standard Text">A</button>
+          <button type="button" data-set-font="lg" class="px-2 py-1 rounded hover:text-amber-400 transition-colors" title="Large Text">A+</button>
+          <button type="button" data-set-font="xl" class="px-2 py-1 rounded hover:text-amber-400 transition-colors" title="Extra Large Text">A++</button>
+        </div>
+
+        <!-- Tri-State Theme Switcher -->
+        <div class="flex items-center bg-stone-950/40 border border-stone-700/60 rounded-md p-0.5 text-xs text-stone-400" role="group" aria-label="Reading atmosphere theme">
+          <button type="button" data-set-theme="dark" class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" title="Peat & Loch (Dark)">
+            <i class="fa-solid fa-moon text-[11px]"></i>
+            <span class="sr-only">Dark Theme</span>
+          </button>
+          <button type="button" data-set-theme="sepia" class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" title="Aged Parchment (Sepia)">
+            <i class="fa-solid fa-scroll text-[11px]"></i>
+            <span class="sr-only">Sepia Theme</span>
+          </button>
+          <button type="button" data-set-theme="light" class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" title="Edinburgh Stone (Light)">
+            <i class="fa-solid fa-sun text-[11px]"></i>
+            <span class="sr-only">Light Theme</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- 4. Main Content Landmark -->
+  <main id="main-content" class="min-h-screen pb-24">
+
+    <!-- A. HERO & THESIS HEADER -->
+    <article id="essay-article" class="max-w-4xl mx-auto px-4 sm:px-6 pt-10 md:pt-16">
+      
+      <!-- Thematic Metadata Header -->
+      <header class="mb-10 text-center">
+        
+        <!-- Thematic Category Badges -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-5">
+          <span class="px-2.5 py-1 text-xs font-mono font-medium rounded-full bg-amber-500/10 text-amber-500 border border-amber-500/20">
+            {{THEME_TAG_1}}
+          </span>
+          <span class="px-2.5 py-1 text-xs font-mono font-medium rounded-full bg-stone-800 text-stone-300 border border-stone-700">
+            {{THEME_TAG_2}}
+          </span>
+          <!-- Companion Music Badge Indicator -->
+          <span class="px-2.5 py-1 text-xs font-mono font-medium rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50 flex items-center gap-1.5">
+            <i class="fa-solid fa-music text-[10px]"></i> Companion Composition Included
+          </span>
+        </div>
+
+        <!-- Essay Title & Subtitle -->
+        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-4 leading-tight">
+          {{ESSAY_TITLE}}
+        </h1>
+        <p class="font-serif italic text-xl sm:text-2xl text-stone-400 max-w-2xl mx-auto mb-6">
+          {{ESSAY_SUBTITLE}}
+        </p>
+
+        <!-- Publication Byline & Reading Metrics -->
+        <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-sans text-stone-400 border-y border-stone-800 py-3 max-w-xl mx-auto">
+          <span><i class="fa-solid fa-feather-pointed mr-1.5 text-amber-500"></i> Trevor Swistchew</span>
+          <span class="text-stone-600">•</span>
+          <span><i class="fa-regular fa-calendar mr-1.5"></i> {{PUBLICATION_DATE}}</span>
+          <span class="text-stone-600">•</span>
+          <span id="metric-read-time"><i class="fa-regular fa-clock mr-1.5"></i> 14 min read</span>
+          <span class="text-stone-600">•</span>
+          <span id="metric-word-count"><i class="fa-solid fa-align-left mr-1.5"></i> 3,100 words</span>
+        </div>
+      </header>
+
+      <!-- 16:9 Evocative Banner Art -->
+      <figure class="mb-12 rounded-lg overflow-hidden border border-stone-800 shadow-2xl bg-stone-950">
+        <div class="aspect-w-16 aspect-h-9 relative w-full h-auto overflow-hidden">
+          <img 
+            src="../assets/images/banner-placeholder.svg" 
+            alt="{{BANNER_ART_DESCRIPTION}}" 
+            class="w-full h-full object-cover object-center transform hover:scale-[1.01] transition-transform duration-700"
+            loading="eager"
+            width="1600"
+            height="900"
+          />
+        </div>
+        <figcaption class="px-4 py-2.5 text-xs text-stone-400 italic bg-stone-950/80 border-t border-stone-800 flex items-center justify-between">
+          <span>{{BANNER_ART_CAPTION}}</span>
+          <span class="text-[10px] text-stone-400 font-mono">16:9 Editorial Archive Art</span>
+        </figcaption>
+      </figure>
+
+      <!-- B. THE EMPIRICAL DOSSIER & INFOGRAPHIC COMPONENT -->
+      <section class="mb-14 rounded-lg border border-amber-500/30 bg-stone-900/50 p-6 md:p-8 backdrop-blur-sm shadow-xl" aria-labelledby="dossier-heading">
+        <div class="flex items-center justify-between border-b border-amber-500/20 pb-4 mb-6">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500">
+              <i class="fa-solid fa-landmark"></i>
+            </span>
+            <div>
+              <h2 id="dossier-heading" class="font-cinzel text-lg font-bold tracking-wide text-amber-500 uppercase">
+                Empirical Research Dossier
+              </h2>
+              <p class="text-xs text-stone-400 font-sans">Historical context, analytical matrix & foundational evidence</p>
+            </div>
+          </div>
+          <span class="text-xs font-mono px-2 py-0.5 rounded bg-stone-800 text-stone-300 border border-stone-700">Archival Briefing</span>
+        </div>
+
+        <!-- Tabbed Infographic / Matrix Switcher -->
+        <div data-dossier-tabs class="space-y-6">
+          <div class="flex border-b border-stone-700 text-xs font-cinzel tracking-wider" role="tablist" aria-label="Dossier Tabs">
+            <button role="tab" aria-selected="true" aria-controls="panel-matrix" id="tab-matrix" class="px-4 py-2.5 border-b-2 border-amber-500 text-amber-500 bg-amber-500/10 font-bold transition-all">
+              <i class="fa-solid fa-table-columns mr-1.5"></i> Comparative Matrix
+            </button>
+            <button role="tab" aria-selected="false" aria-controls="panel-timeline" id="tab-timeline" class="px-4 py-2.5 border-b-2 border-transparent text-stone-400 hover:text-stone-200 transition-all">
+              <i class="fa-solid fa-timeline mr-1.5"></i> Chronological Horizon
+            </button>
+            <button role="tab" aria-selected="false" aria-controls="panel-sources" id="tab-sources" class="px-4 py-2.5 border-b-2 border-transparent text-stone-400 hover:text-stone-200 transition-all">
+              <i class="fa-solid fa-scroll mr-1.5"></i> Primary Tenets
+            </button>
+          </div>
+
+          <!-- Panel 1: Comparative Matrix -->
+          <div role="tabpanel" id="panel-matrix" aria-labelledby="tab-matrix" class="space-y-4">
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs border-collapse font-sans">
+                <thead>
+                  <tr class="border-b border-stone-700 bg-stone-950/40 text-stone-300 font-semibold font-cinzel">
+                    <th class="py-3 px-4">Dimension / Question</th>
+                    <th class="py-3 px-4 text-amber-500">The Conventional Narrative</th>
+                    <th class="py-3 px-4 text-sky-400">The Empirical Reality</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-stone-800 text-stone-300">
+                  <tr class="hover:bg-stone-800/30 transition-colors">
+                    <td class="py-3 px-4 font-medium text-stone-200 font-mono">Constitutional Baseline</td>
+                    <td class="py-3 px-4 text-stone-400">Westminster parliamentary sovereignty represents the singular supreme constitutional doctrine.</td>
+                    <td class="py-3 px-4">Scottish constitutional law grounds sovereignty strictly in the people (<em class="text-amber-400">Claim of Right 1689</em>), placing the monarch/executive under covenant.</td>
+                  </tr>
+                  <tr class="hover:bg-stone-800/30 transition-colors">
+                    <td class="py-3 px-4 font-medium text-stone-200 font-mono">1707 Treaty of Union</td>
+                    <td class="py-3 px-4 text-stone-400">An equal, irrevocable partnership established by consensus between equal states.</td>
+                    <td class="py-3 px-4">An uneven fiscal buyout passed amidst heavy bribery and widespread civil riots, systematically circumventing territorial sovereignty.</td>
+                  </tr>
+                  <tr class="hover:bg-stone-800/30 transition-colors">
+                    <td class="py-3 px-4 font-medium text-stone-200 font-mono">Resource & Wealth Flow</td>
+                    <td class="py-3 px-4 text-stone-400">Regional subsidization through central treasuries and modern transfer mechanisms.</td>
+                    <td class="py-3 px-4">Extraction of strategic natural assets, renewable energy, and territorial baseline without localized reinvestment or decision-making power.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Panel 2: Chronological Horizon -->
+          <div role="tabpanel" id="panel-timeline" aria-labelledby="tab-timeline" class="hidden space-y-4">
+            <ol class="relative border-l border-stone-700 ml-4 space-y-6 text-xs">
+              <li class="mb-4 ml-6">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-stone-900 rounded-full -left-3 ring-4 ring-stone-900 border border-amber-500 text-amber-500">
+                  <i class="fa-solid fa-scroll text-[10px]"></i>
+                </span>
+                <h4 class="font-cinzel text-sm font-bold text-amber-400">1320 — Declaration of Arbroath</h4>
+                <p class="mt-1 text-stone-300 leading-relaxed font-serif">
+                  Asserts popular sovereignty: a monarch holds power conditional upon defending the liberties of the community.
+                </p>
+              </li>
+              <li class="mb-4 ml-6">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-stone-900 rounded-full -left-3 ring-4 ring-stone-900 border border-sky-400 text-sky-400">
+                  <i class="fa-solid fa-balance-scale text-[10px]"></i>
+                </span>
+                <h4 class="font-cinzel text-sm font-bold text-stone-200">1689 — The Claim of Right</h4>
+                <p class="mt-1 text-stone-300 leading-relaxed font-serif">
+                  Enshrines popular sovereignty as constitutional law; monarchs can forfeit legitimate power when violating civic covenant.
+                </p>
+              </li>
+              <li class="ml-6">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-stone-900 rounded-full -left-3 ring-4 ring-stone-900 border border-amber-500 text-amber-500">
+                  <i class="fa-solid fa-landmark-flag text-[10px]"></i>
+                </span>
+                <h4 class="font-cinzel text-sm font-bold text-amber-400">1707 — The Act of Union & Salvo Jure</h4>
+                <p class="mt-1 text-stone-300 leading-relaxed font-serif">
+                  Enacted under intense public protest, preserving Scots Law and religious institutions while setting up centuries of constitutional tension.
+                </p>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Panel 3: Primary Tenets -->
+          <div role="tabpanel" id="panel-sources" aria-labelledby="tab-sources" class="hidden space-y-3">
+            <div class="grid sm:grid-cols-2 gap-3 text-xs">
+              <div class="p-3.5 rounded bg-stone-950/60 border border-stone-800">
+                <div class="font-cinzel font-bold text-amber-500 mb-1">Principle of Salvo Jure Cujuslibet</div>
+                <p class="text-stone-300 leading-relaxed font-serif">
+                  "Saving the right of anyone"—the legal safeguard guaranteeing that no private rights or constitutional liberties are extinguished without judicial remedy.
+                </p>
+              </div>
+              <div class="p-3.5 rounded bg-stone-950/60 border border-stone-800">
+                <div class="font-cinzel font-bold text-sky-400 mb-1">Popular vs Parliamentary Sovereignty</div>
+                <p class="text-stone-300 leading-relaxed font-serif">
+                  The irreconcilable clash between English constitutional tradition (Crown-in-Parliament as absolute) and Scots constitutional tradition (the people as ultimate sovereigns).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- C. THE CURATED READING EXPERIENCE -->
+      <section id="essay-body" class="essay-content prose prose-stone max-w-none">
+
+        <!-- SECTION I -->
+        <div class="section-divider">
+          <span>I. The Broken Covenant</span>
+        </div>
+
+        <p class="drop-cap">
+          To walk the damp wynds of Edinburgh or gaze across the peat-dark waters of the Forth is to be confronted by a peculiar historical vertigo. We are told we inhabit a settled realm—a mature, unwritten constitutional union forged in the fires of eighteenth-century pragmatism and sustained by steady mutual interest. Yet beneath the veneer of civil administration and corporate tenancy lies an older, unresolved fissure: the systematic pacification of a people whose foundational laws were never repealed, merely forgotten.
+        </p>
+
+        <p>
+          The architecture of societal division is never accidental. It is engineered with meticulous care, designed to encourage the citizen to mistake the symptoms of dispossession for personal failure or ethnic discord<a href="#fn-1" class="footnote-ref" id="fnref-1" aria-label="Footnote 1">1</a>. When power concentrates in distant financial boardrooms and parliamentary lobbies, the vernacular language of shared duty is replaced by the sterile vocabulary of management consultants and speculative markets.
+        </p>
+
+        <!-- Pull Quote -->
+        <blockquote class="pull-quote">
+          "A nation that surrenders the memory of its constitutional covenants does not simply lose its independence; it forfeits the moral vocabulary required to recognize its own subjugation."
+        </blockquote>
+
+        <p>
+          Consider the persistent myth of parliamentary supremacy. In English jurisprudence, the Crown-in-Parliament is unbounded, possessing the theoretical authority to legislate without limitation. Yet in the Scottish tradition, sovereignty was never surrendered to an assembly of lords and burgesses; it was vested irrevocably in the body of the people<a href="#fn-2" class="footnote-ref" id="fnref-2" aria-label="Footnote 2">2</a>. The ruler was not an absolute master, but a steward held accountable to a binding compact.
+        </p>
+
+        <!-- SECTION II -->
+        <div class="section-divider">
+          <span>II. The Mechanics of Dispossession</span>
+        </div>
+
+        <p>
+          The transformation of land from common patrimony into speculative collateral did not occur overnight. It proceeded through centuries of legal fiction and economic attrition. The Clearances were not a regrettable climatic aberration, but an orchestrated realignment of territory to serve imperial capital<a href="#fn-3" class="footnote-ref" id="fnref-3" aria-label="Footnote 3">3</a>. Those who worked the soil were displaced to make way for cheviot sheep, grouse moors, and later, the offshore drilling platforms and foreign-owned wind conglomerates that extract billions while nearby communities endure fuel poverty.
+        </p>
+
+        <p>
+          What makes this extraction enduring is not physical coercion, but psychological enclosure. By dividing the populace into competing tribes—urban against rural, worker against pensioner, regional factions against one another—the architecture of control remains inviolate. The citizen is kept exhausted, endlessly litigating manufactured culture wars while the foundational wealth of the country flows silently past their door.
+        </p>
+
+        <!-- SECTION III -->
+        <div class="section-divider">
+          <span>III. The Awakening of the Sovereign Citizen</span>
+        </div>
+
+        <p>
+          Reclamation begins not with political slogans, but with intellectual clarity. It requires an unsparing audit of how division was constructed and a return to first principles. The legal maxim <em>salvo jure cujuslibet</em> reminds us that fundamental rights cannot be dissolved by lapse of time or executive fiat.
+        </p>
+
+        <p>
+          When people rediscover that sovereignty was never an abstract gift bestowed by high office, but an inherent duty carried in their own bones, the architecture of obedience begins to tremble. It is this rediscovery that bridges the historical record and the living present—turning dusty archives into the sparks of renewal.
+        </p>
+
+      </section>
+
+      <!-- D. THE MUSICAL CONNECTION -->
+      <section class="mt-20 pt-10 border-t border-stone-800" aria-labelledby="musical-companion-heading">
+        
+        <div class="rounded-lg border border-amber-500/30 bg-stone-900/70 p-6 md:p-8 backdrop-blur-md shadow-2xl">
+          
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 mb-6 border-b border-stone-800">
+            <div>
+              <span class="text-xs font-mono text-sky-400 uppercase tracking-wider flex items-center gap-1.5 mb-1">
+                <i class="fa-solid fa-compact-disc"></i> Musical Companion Piece
+              </span>
+              <h3 id="musical-companion-heading" class="font-display text-2xl font-bold text-stone-100">
+                {{COMPANION_SONG_TITLE}}
+              </h3>
+              <p class="font-serif italic text-sm text-stone-400">Composed & performed by Trevor Swistchew</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-1 rounded bg-stone-950 border border-stone-700 text-xs font-mono text-amber-400">DADGAD Tuning</span>
+              <span class="px-2.5 py-1 rounded bg-stone-950 border border-stone-700 text-xs font-mono text-stone-400">Low Whistle & Cello</span>
+            </div>
+          </div>
+
+          <!-- Embedded Audio Player Widget -->
+          <div class="bg-stone-950/80 rounded-md p-4 border border-stone-800 mb-6">
+            <audio id="companion-audio" preload="metadata">
+              <source src="{{COMPANION_AUDIO_SRC}}" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+              <!-- Play / Pause Button -->
+              <button id="main-play-btn" type="button" aria-label="Play Companion Track" class="w-12 h-12 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 flex items-center justify-center text-lg transition-transform active:scale-95 shadow-lg flex-shrink-0">
+                <i id="main-play-icon" class="fa-solid fa-play text-stone-950 ml-0.5"></i>
+              </button>
+
+              <!-- Progress Bar & Time -->
+              <div class="flex-1 space-y-1.5">
+                <div class="flex items-center justify-between text-xs font-mono text-stone-400">
+                  <span id="current-time">00:00</span>
+                  <span id="total-duration">04:35</span>
+                </div>
+                <input id="main-scrubber" type="range" min="0" max="275" value="0" class="audio-scrubber w-full" aria-label="Audio scrubber">
+              </div>
+
+              <!-- Volume Control -->
+              <div class="hidden sm:flex items-center gap-2 text-stone-400 text-xs pl-2 border-l border-stone-800">
+                <button id="mute-btn" type="button" aria-label="Mute audio" class="hover:text-amber-400">
+                  <i id="mute-icon" class="fa-solid fa-volume-high"></i>
+                </button>
+                <input id="volume-slider" type="range" min="0" max="1" step="0.05" value="0.8" class="audio-scrubber w-16" aria-label="Volume slider">
+              </div>
+            </div>
+          </div>
+
+          <!-- Side-by-Side: Adapted Lyrics & Liner Notes -->
+          <div class="grid md:grid-cols-2 gap-6 pt-4">
+            
+            <!-- Lyric Adaptation -->
+            <div class="bg-stone-950/50 rounded p-5 border border-stone-800/80">
+              <h4 class="font-cinzel text-sm font-bold text-amber-500 uppercase tracking-wide mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-lines-leaning"></i> Adapted Song Lyrics
+              </h4>
+              <div class="font-mono text-xs text-stone-300 leading-relaxed whitespace-pre-wrap space-y-3">
+[Verse 1]
+The wynds are cold, the stone is grey
+They sold the water rights away
+A parchment stamped with foreign seal
+Beneath the boot we learned to feel.
+
+[Chorus]
+Oh save the right, oh break the chain
+No crown was meant to rule in vain
+The oath was swore upon the stone:
+The sovereign soul is not their own.
+              </div>
+            </div>
+
+            <!-- Creative Genesis / Liner Notes -->
+            <div class="bg-stone-950/50 rounded p-5 border border-stone-800/80">
+              <h4 class="font-cinzel text-sm font-bold text-sky-400 uppercase tracking-wide mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-pen-nib"></i> Creative Genesis & Liner Notes
+              </h4>
+              <p class="font-serif text-xs text-stone-300 leading-relaxed mb-3">
+                This composition was born directly from the third section of the essay, reflecting on the historical principle of <em>salvo jure</em>. Rather than a mournful lament, the tempo shifts into a resolute 6/8 political folk march.
+              </p>
+              <p class="font-serif text-xs text-stone-300 leading-relaxed">
+                Featuring an open DADGAD acoustic tuning with low whistle countermelodies, the track echoes traditional bothy ballads while driving home the contemporary urgency of constitutional reclamation.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- E. CONSOLIDATED SCHOLARLY ENDNOTES -->
+      <footer class="mt-20 pt-10 border-t border-stone-800" aria-labelledby="endnotes-heading">
+        <h3 id="endnotes-heading" class="font-cinzel text-lg font-bold text-amber-500 uppercase tracking-wider mb-6 flex items-center gap-2">
+          <i class="fa-solid fa-book-bookmark text-sm"></i> Scholarly Endnotes & Citations
+        </h3>
+        <ol class="space-y-4 text-xs font-sans text-stone-400">
+          <li id="fn-1" class="pl-4 border-l-2 border-stone-800">
+            <span class="font-mono text-amber-500 font-bold">[1]</span>
+            For a rigorous historical audit of how division is leveraged as an administrative tool in peripheral territories, see Michael Hechter, <em>Internal Colonialism: The Celtic Fringe in British National Development</em> (Routledge & Kegan Paul, 1975).
+            <a href="#fnref-1" class="footnote-backref text-amber-500 hover:underline ml-1" aria-label="Back to content">↩</a>
+          </li>
+          <li id="fn-2" class="pl-4 border-l-2 border-stone-800">
+            <span class="font-mono text-amber-500 font-bold">[2]</span>
+            Lord President Cooper's landmark opinion in <em>MacCormick v Lord Advocate</em> (1953 SC 396) confirmed: "The principle of the unlimited sovereignty of Parliament is a distinctly English principle which has no counterpart in Scottish constitutional law."
+            <a href="#fnref-2" class="footnote-backref text-amber-500 hover:underline ml-1" aria-label="Back to content">↩</a>
+          </li>
+          <li id="fn-3" class="pl-4 border-l-2 border-stone-800">
+            <span class="font-mono text-amber-500 font-bold">[3]</span>
+            See James Hunter, <em>The Making of the Crofting Community</em> (John Donald, 1976), tracing the conversion of common pastoral rights into capitalized estate assets.
+            <a href="#fnref-3" class="footnote-backref text-amber-500 hover:underline ml-1" aria-label="Back to content">↩</a>
+          </li>
+        </ol>
+
+        <!-- Provenance & Copyright -->
+        <div class="mt-12 pt-6 border-t border-stone-800/60 text-center text-xs text-stone-500 font-sans">
+          <p>© 2026 Trevor Swistchew. All rights reserved. Published for the Shady River literary compendium.</p>
+        </div>
+      </footer>
+
+    </article>
+  </main>
+
+  <!-- Client-Side Scripts -->
+  <script src="../assets/js/reading-experience.js"></script>
+  <script src="../assets/js/audio-companion.js"></script>
+</body>
+</html>

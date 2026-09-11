@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trevor Swistchew | Digital Compendium & Literary Salon</title>
+  <meta name="description" content="The official publishing portal and interactive literary compendium of Trevor Swistchew—Scotland-based musician, songwriter, essayist, and cultural thinker.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              950: '#0c0b0a',
+              900: '#121110',
+              850: '#181614',
+              800: '#1f1c19',
+              700: '#2b2723',
+              600: '#3d3731',
+            },
+            parchment: {
+              50: '#fdfbf7',
+              100: '#f7f4ed',
+              200: '#efeae0',
+              300: '#e5ded2',
+              400: '#d8cdbe',
+              500: '#c5b8a5',
+            },
+            brass: {
+              400: '#dfbe75',
+              500: '#c5a059',
+              600: '#a6823c',
+              700: '#846427',
+            },
+            thistle: {
+              600: '#9d2b45',
+              700: '#7e2035',
+            },
+            loch: {
+              400: '#38bdf8',
+              700: '#0369a1',
+              900: '#0c4a6e',
+            }
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Lora', 'Georgia', 'serif'],
+            display: ['"Playfair Display"', 'Cinzel', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Accessibility & Salon Theme -->
+  <link rel="stylesheet" href="assets/css/a11y.css">
+  <link rel="stylesheet" href="assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950">
+
+  <!-- WCAG Skip Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Portal Content</a>
+
+  <!-- Top Navigation -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      
+      <!-- Brand -->
+      <a href="index.html" class="flex items-center gap-3 text-stone-200 hover:text-amber-400 group transition-colors">
+        <div class="w-8 h-8 rounded border border-amber-500/50 bg-stone-950 flex items-center justify-center text-amber-500 text-sm font-cinzel font-bold shadow group-hover:border-amber-400">
+          TS
+        </div>
+        <div>
+          <span class="font-cinzel font-bold tracking-widest text-sm text-stone-100 block">TREVOR SWISTCHEW</span>
+          <span class="font-mono text-[10px] tracking-wider text-amber-500/80 block uppercase">Literary Salon & Archive</span>
+        </div>
+      </a>
+
+      <!-- Navigation & Controls -->
+      <div class="flex items-center gap-4">
+        <nav class="hidden sm:flex items-center gap-6 text-xs font-cinzel tracking-wider text-stone-400" aria-label="Main Navigation">
+          <a href="/friends-of-the-bard/" class="text-amber-500 hover:text-amber-400 font-semibold transition-colors flex items-center gap-1">
+            <i class="fa-solid fa-arrow-left text-[10px]"></i>
+            <span>Friends of the Bard</span>
+          </a>
+          <a href="#essays" class="hover:text-amber-400 transition-colors">Compendium</a>
+          <a href="#music" class="hover:text-amber-400 transition-colors">Musical Chamber</a>
+          <a href="#about" class="hover:text-amber-400 transition-colors">About</a>
+        </nav>
+
+        <!-- Tri-State Theme Switcher -->
+        <div class="flex items-center bg-stone-950/50 border border-stone-700/60 rounded-md p-0.5 text-xs text-stone-400" role="group" aria-label="Reading atmosphere theme">
+          <button type="button" data-set-theme="dark" class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" title="Peat & Loch (Dark)">
+            <i class="fa-solid fa-moon text-[11px]"></i>
+            <span class="sr-only">Dark Theme</span>
+          </button>
+          <button type="button" data-set-theme="sepia" class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" title="Aged Parchment (Sepia)">
+            <i class="fa-solid fa-scroll text-[11px]"></i>
+            <span class="sr-only">Sepia Theme</span>
+          </button>
+          <button type="button" data-set-theme="light" class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" title="Edinburgh Stone (Light)">
+            <i class="fa-solid fa-sun text-[11px]"></i>
+            <span class="sr-only">Light Theme</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Atmospheric Hero Section -->
+    <section class="relative py-16 md:py-24 border-b border-stone-800 overflow-hidden">
+      <!-- Background Ambient Glow -->
+      <div class="absolute inset-0 bg-gradient-to-b from-stone-950 via-stone-900 to-stone-950 opacity-90"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative max-w-5xl mx-auto px-4 sm:px-6 text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-xs font-mono mb-6">
+          <i class="fa-solid fa-feather-pointed"></i> Interactive Digital Compendium
+        </div>
+
+        <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-stone-100 mb-6 leading-tight">
+          Where Thought Meets Melody & Law
+        </h1>
+
+        <p class="font-serif italic text-lg sm:text-xl text-stone-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+          The curated essays, constitutional inquiries, empirical research dossiers, and companion musical compositions of Trevor Swistchew.
+        </p>
+
+        <!-- Feature Pills -->
+        <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-sans text-stone-400 max-w-2xl mx-auto">
+          <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-stone-900 border border-stone-800">
+            <i class="fa-solid fa-book-open text-amber-500"></i>
+            <span>Curated Typography & Drop Caps</span>
+          </div>
+          <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-stone-900 border border-stone-800">
+            <i class="fa-solid fa-chart-simple text-sky-400"></i>
+            <span>Empirical Research Dossiers</span>
+          </div>
+          <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-stone-900 border border-stone-800">
+            <i class="fa-solid fa-guitar text-rose-400"></i>
+            <span>Companion Song Adaptations</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Essay Compendium Section -->
+    <section id="essays" class="py-16 max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="text-xs font-mono text-amber-500 uppercase tracking-widest block mb-1">Archival Catalog</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-stone-100">The Compendium</h2>
+        </div>
+        
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap gap-2 text-xs font-cinzel">
+          <button class="px-3 py-1.5 rounded-md bg-amber-500 text-stone-950 font-bold border border-amber-500 transition-all">All Essays</button>
+          <button class="px-3 py-1.5 rounded-md bg-stone-900 text-stone-400 hover:text-stone-200 border border-stone-800 transition-all">Constitutional Law</button>
+          <button class="px-3 py-1.5 rounded-md bg-stone-900 text-stone-400 hover:text-stone-200 border border-stone-800 transition-all">Society & Land</button>
+          <button class="px-3 py-1.5 rounded-md bg-stone-900 text-stone-400 hover:text-stone-200 border border-stone-800 transition-all">Poetics & Song</button>
+        </div>
+      </div>
+
+      <!-- Essays Showcase Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Featured Demonstration Card: The Sovereign's Right -->
+        <article class="group rounded-lg border border-stone-800 bg-stone-900/60 hover:border-amber-500/50 transition-all duration-300 flex flex-col overflow-hidden shadow-xl hover:shadow-2xl">
+          <div class="aspect-w-16 aspect-h-9 relative overflow-hidden bg-stone-950">
+            <img 
+              src="assets/images/banner-placeholder.svg" 
+              alt="The Sovereign's Right Artwork" 
+              class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute top-3 left-3 flex gap-2">
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/90 text-stone-950 font-bold">Featured</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-sky-950/80 text-sky-400 border border-sky-800 flex items-center gap-1">
+                <i class="fa-solid fa-music text-[9px]"></i> Song Included
+              </span>
+            </div>
+          </div>
+
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-[11px] font-mono text-stone-400 mb-2">
+                <span>Constitutional Law</span>
+                <span>•</span>
+                <span>14 min read</span>
+              </div>
+
+              <h3 class="font-display text-xl font-bold text-stone-100 group-hover:text-amber-400 transition-colors mb-2">
+                The Sovereign's Right
+              </h3>
+
+              <p class="font-serif text-sm text-stone-400 leading-relaxed mb-4">
+                An empirical audit of the 1689 Claim of Right, the doctrine of <em>salvo jure cujuslibet</em>, and the manufactured division of the modern working class.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-stone-800/80 flex items-center justify-between text-xs">
+              <span class="font-mono text-stone-400">Companion: <em>Salvo Jure</em></span>
+              <a href="templates/essay-template.html" class="font-cinzel font-bold text-amber-500 hover:text-amber-400 flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                Read Experience <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Future Slot 1 -->
+        <article class="rounded-lg border border-dashed border-stone-800 bg-stone-950/40 p-6 flex flex-col items-center justify-center text-center">
+          <div class="w-12 h-12 rounded-full border border-stone-700/60 bg-stone-900 flex items-center justify-center text-stone-500 mb-4">
+            <i class="fa-solid fa-scroll text-lg"></i>
+          </div>
+          <h3 class="font-cinzel text-sm font-bold text-stone-400 uppercase tracking-wider mb-2">Ingestion Chamber</h3>
+          <p class="font-serif text-xs text-stone-400 max-w-xs leading-relaxed mb-4">
+            Ready for Trevor's first incoming essay. The empirical research dossier and companion audio pipeline are primed.
+          </p>
+          <span class="px-2.5 py-1 rounded bg-stone-900 border border-stone-800 text-[11px] font-mono text-amber-500">
+            Awaiting Step 2 Ingestion
+          </span>
+        </article>
+
+        <!-- Future Slot 2 -->
+        <article class="rounded-lg border border-dashed border-stone-800 bg-stone-950/40 p-6 flex flex-col items-center justify-center text-center">
+          <div class="w-12 h-12 rounded-full border border-stone-700/60 bg-stone-900 flex items-center justify-center text-stone-500 mb-4">
+            <i class="fa-solid fa-music text-lg"></i>
+          </div>
+          <h3 class="font-cinzel text-sm font-bold text-stone-400 uppercase tracking-wider mb-2">The Musical Connection</h3>
+          <p class="font-serif text-xs text-stone-400 max-w-xs leading-relaxed mb-4">
+            Prose-to-melody adaptations, studio liner notes, and lyric matrices automatically pair with new writings.
+          </p>
+          <span class="px-2.5 py-1 rounded bg-stone-900 border border-stone-800 text-[11px] font-mono text-sky-400">
+            Acoustic & Folk-Rock Engine
+          </span>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Musical Chamber Teaser Section -->
+    <section id="music" class="py-16 border-t border-stone-800 bg-stone-950/60">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="rounded-xl border border-amber-500/30 bg-stone-900/80 p-8 md:p-10 shadow-2xl backdrop-blur-sm">
+          <div class="max-w-2xl">
+            <span class="text-xs font-mono text-sky-400 uppercase tracking-widest block mb-2">The Musical Connection</span>
+            <h2 class="font-display text-3xl font-bold text-stone-100 mb-4">Words That Demand Harmony</h2>
+            <p class="font-serif text-stone-300 leading-relaxed mb-6">
+              In Trevor Swistchew’s creative cosmos, the boundary between political philosophy and Scottish folk-rock is porous. Essays distill the historical crisis; the compositions crystallize the emotional weight.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 text-xs font-mono text-amber-400">
+              <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-dot text-[8px]"></i> Dick Gaughan Influence</span>
+              <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-dot text-[8px]"></i> DADGAD Tunings</span>
+              <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-dot text-[8px]"></i> Low Whistle & Cello</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <div class="w-16 h-16 rounded-full border border-amber-500/40 bg-stone-950 mx-auto flex items-center justify-center text-amber-500 font-cinzel text-xl font-bold mb-6">
+        TS
+      </div>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-stone-100 mb-4">About Trevor Swistchew</h2>
+      <p class="font-serif text-stone-400 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-8">
+        Trevor Swistchew is a Scotland-based songwriter, composer, and essayist. His work interrogates the mechanics of power, constitutional history, social cohesion, and the restorative capacity of music.
+      </p>
+      <div class="flex justify-center gap-4 text-xs font-cinzel text-amber-500">
+        <span class="border border-amber-500/30 px-3 py-1 rounded bg-stone-900">Edinburgh, Scotland</span>
+        <span class="border border-amber-500/30 px-3 py-1 rounded bg-stone-900">Constitutional Thinker</span>
+        <span class="border border-amber-500/30 px-3 py-1 rounded bg-stone-900">Songwriter & Bard</span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-stone-800 py-10 bg-stone-950 text-xs text-stone-400 font-sans">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <p class="text-stone-300 font-cinzel font-semibold">The Trevor Swistchew Literary Archive</p>
+        <p class="text-stone-400 text-[11px] mt-0.5">Crafted with modern editorial architecture & Scottish heritage typography.</p>
+      </div>
+      <div class="flex items-center gap-4 text-[11px]">
+        <a href="#essays" class="hover:text-amber-400 transition-colors">Catalog</a>
+        <a href="#" class="hover:text-amber-400 transition-colors">Back to Top</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Client Scripts -->
+  <script src="assets/js/reading-experience.js"></script>
+</body>
+</html>
