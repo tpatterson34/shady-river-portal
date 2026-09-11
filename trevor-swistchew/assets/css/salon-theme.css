@@ -262,3 +262,154 @@ input[type=range].audio-scrubber::-webkit-slider-thumb {
 input[type=range].audio-scrubber::-webkit-slider-thumb:hover {
   transform: scale(1.25);
 }
+
+
+/* ===================================================
+   READING FONT SIZE SCALING
+   =================================================== */
+:root {
+  --reading-font-size: 1.125rem;
+}
+
+#essay-article,
+#essay-article p,
+#essay-body,
+#essay-body p,
+.essay-content,
+.essay-content p,
+article .prose,
+article .prose p {
+  font-size: var(--reading-font-size) !important;
+}
+
+/* ===================================================
+   LIGHT THEME (EDINBURGH STONE) OVERRIDES
+   =================================================== */
+html.theme-light body {
+  background-color: #f7f5ef !important;
+  color: #1c1917 !important;
+}
+
+html.theme-light header {
+  background-color: rgba(247, 245, 239, 0.95) !important;
+  border-color: #e7e2d5 !important;
+}
+
+html.theme-light .bg-stone-900,
+html.theme-light .bg-stone-900\/40,
+html.theme-light .bg-stone-900\/60,
+html.theme-light .bg-stone-900\/80,
+html.theme-light .bg-stone-900\/90,
+html.theme-light .bg-stone-950,
+html.theme-light .bg-stone-950\/40,
+html.theme-light .bg-stone-950\/60,
+html.theme-light .bg-peat-900,
+html.theme-light .bg-peat-950,
+html.theme-light .bg-soil-850,
+html.theme-light .bg-soil-900 {
+  background-color: #ffffff !important;
+  border-color: #e2ded4 !important;
+}
+
+html.theme-light .border-stone-800,
+html.theme-light .border-stone-800\/80,
+html.theme-light .border-stone-800\/60,
+html.theme-light .border-stone-700,
+html.theme-light .border-stone-700\/60 {
+  border-color: #e2ded4 !important;
+}
+
+html.theme-light .text-stone-100,
+html.theme-light .text-stone-200,
+html.theme-light .text-white {
+  color: #1c1917 !important;
+}
+
+html.theme-light .text-stone-300,
+html.theme-light .text-stone-400 {
+  color: #44403c !important;
+}
+
+html.theme-light .text-stone-500 {
+  color: #78716c !important;
+}
+
+html.theme-light .prose-invert {
+  --tw-prose-body: #1c1917 !important;
+  --tw-prose-headings: #1c1917 !important;
+  --tw-prose-lead: #44403c !important;
+  --tw-prose-links: #b45309 !important;
+  --tw-prose-bold: #1c1917 !important;
+  --tw-prose-quotes: #292524 !important;
+}
+
+html.theme-light footer {
+  background-color: #f2efe7 !important;
+  border-color: #ded9cb !important;
+}
+
+/* ===================================================
+   SEPIA THEME (AGED PARCHMENT) OVERRIDES
+   =================================================== */
+html.theme-sepia body {
+  background-color: #f2e8d5 !important;
+  color: #2b2118 !important;
+}
+
+html.theme-sepia header {
+  background-color: rgba(242, 232, 213, 0.95) !important;
+  border-color: #dfceb0 !important;
+}
+
+html.theme-sepia .bg-stone-900,
+html.theme-sepia .bg-stone-900\/40,
+html.theme-sepia .bg-stone-900\/60,
+html.theme-sepia .bg-stone-900\/80,
+html.theme-sepia .bg-stone-900\/90,
+html.theme-sepia .bg-stone-950,
+html.theme-sepia .bg-stone-950\/40,
+html.theme-sepia .bg-stone-950\/60,
+html.theme-sepia .bg-peat-900,
+html.theme-sepia .bg-peat-950,
+html.theme-sepia .bg-soil-850,
+html.theme-sepia .bg-soil-900 {
+  background-color: #fbf5e8 !important;
+  border-color: #dfceb0 !important;
+}
+
+html.theme-sepia .border-stone-800,
+html.theme-sepia .border-stone-800\/80,
+html.theme-sepia .border-stone-800\/60,
+html.theme-sepia .border-stone-700,
+html.theme-sepia .border-stone-700\/60 {
+  border-color: #dfceb0 !important;
+}
+
+html.theme-sepia .text-stone-100,
+html.theme-sepia .text-stone-200,
+html.theme-sepia .text-white {
+  color: #2b2118 !important;
+}
+
+html.theme-sepia .text-stone-300,
+html.theme-sepia .text-stone-400 {
+  color: #574635 !important;
+}
+
+html.theme-sepia .text-stone-500 {
+  color: #88745f !important;
+}
+
+html.theme-sepia .prose-invert {
+  --tw-prose-body: #2b2118 !important;
+  --tw-prose-headings: #2b2118 !important;
+  --tw-prose-lead: #574635 !important;
+  --tw-prose-links: #a16207 !important;
+  --tw-prose-bold: #2b2118 !important;
+  --tw-prose-quotes: #3d2f22 !important;
+}
+
+html.theme-sepia footer {
+  background-color: #e9dac1 !important;
+  border-color: #dcc9ab !important;
+}

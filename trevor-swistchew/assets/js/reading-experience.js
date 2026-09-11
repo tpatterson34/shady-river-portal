@@ -20,37 +20,49 @@ function initThemeManager() {
 
   setTheme(savedTheme);
 
-  const buttons = document.querySelectorAll('[data-set-theme]');
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const theme = btn.getAttribute('data-set-theme');
-      setTheme(theme);
+  // Match all theme buttons: data-set-theme, data-theme, or class theme-toggle-btn
+  const themeButtons = document.querySelectorAll('[data-set-theme], [data-theme], .theme-toggle-btn');
+  themeButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const theme = btn.getAttribute('data-set-theme') || btn.getAttribute('data-theme');
+      if (theme) setTheme(theme);
     });
   });
 
   function setTheme(theme) {
-    html.classList.remove('theme-light', 'theme-sepia');
+    if (!theme) theme = 'dark';
+    
+    // Remove existing theme classes
+    html.classList.remove('dark', 'theme-light', 'theme-sepia');
+    
     if (theme === 'light') {
       html.classList.add('theme-light');
     } else if (theme === 'sepia') {
       html.classList.add('theme-sepia');
+    } else {
+      theme = 'dark';
+      html.classList.add('dark');
     }
     localStorage.setItem(THEME_KEY, theme);
 
-    // Update active button indicators
-    document.querySelectorAll('[data-set-theme]').forEach(b => {
-      const isCurrent = b.getAttribute('data-set-theme') === theme;
+    // Update active button indicators across all formats
+    document.querySelectorAll('[data-set-theme], [data-theme], .theme-toggle-btn').forEach(b => {
+      const bTheme = b.getAttribute('data-set-theme') || b.getAttribute('data-theme');
+      const isCurrent = (bTheme === theme);
       b.setAttribute('aria-pressed', isCurrent ? 'true' : 'false');
       if (isCurrent) {
-        b.classList.add('ring-2', 'ring-amber-500', 'bg-black/20');
+        b.classList.add('active-theme', 'ring-2', 'ring-amber-500', 'bg-black/20', 'text-amber-400');
+        b.classList.remove('text-stone-400');
       } else {
-        b.classList.remove('ring-2', 'ring-amber-500', 'bg-black/20');
+        b.classList.remove('active-theme', 'ring-2', 'ring-amber-500', 'bg-black/20', 'text-amber-400');
+        b.classList.add('text-stone-400');
       }
     });
   }
 }
 
-/* 2. Font Size Scaling (16px, 18px, 20px, 22px) */
+/* 2. Font Size Scaling */
 function initFontSizeManager() {
   const FONT_KEY = 'trevor-portal-font-size';
   const html = document.documentElement;
@@ -58,24 +70,73 @@ function initFontSizeManager() {
     'sm': { size: '1rem', label: '16px' },
     'base': { size: '1.125rem', label: '18px' },
     'lg': { size: '1.25rem', label: '20px' },
-    'xl': { size: '1.375rem', label: '22px' }
+    'xl': { size: '1.4rem', label: '22px' }
   };
+  const sizeKeys = ['sm', 'base', 'lg', 'xl'];
 
-  const savedSizeKey = localStorage.getItem(FONT_KEY) || 'base';
+  let savedSizeKey = localStorage.getItem(FONT_KEY) || 'base';
+  if (!fontSizes[savedSizeKey]) savedSizeKey = 'base';
   setFontSize(savedSizeKey);
 
-  const buttons = document.querySelectorAll('[data-set-font]');
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
+  // 1. Listen on [data-set-font]
+  const setFontButtons = document.querySelectorAll('[data-set-font]');
+  setFontButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
       const sizeKey = btn.getAttribute('data-set-font');
-      setFontSize(sizeKey);
+      if (fontSizes[sizeKey]) setFontSize(sizeKey);
     });
   });
 
+  // 2. Listen on #font-size-dec, #font-size-reset, #font-size-inc
+  const decBtn = document.getElementById('font-size-dec');
+  const resetBtn = document.getElementById('font-size-reset');
+  const incBtn = document.getElementById('font-size-inc');
+
+  if (decBtn) {
+    decBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      let currentIdx = sizeKeys.indexOf(savedSizeKey);
+      if (currentIdx > 0) {
+        setFontSize(sizeKeys[currentIdx - 1]);
+      }
+    });
+  }
+
+  if (resetBtn) {
+    resetBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      setFontSize('base');
+    });
+  }
+
+  if (incBtn) {
+    incBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      let currentIdx = sizeKeys.indexOf(savedSizeKey);
+      if (currentIdx < sizeKeys.length - 1) {
+        setFontSize(sizeKeys[currentIdx + 1]);
+      }
+    });
+  }
+
   function setFontSize(sizeKey) {
     if (!fontSizes[sizeKey]) sizeKey = 'base';
-    html.style.setProperty('--essay-font-size', fontSizes[sizeKey].size);
+    savedSizeKey = sizeKey;
+    const val = fontSizes[sizeKey].size;
+    html.style.setProperty('--reading-font-size', val);
+    html.style.setProperty('--essay-font-size', val);
     localStorage.setItem(FONT_KEY, sizeKey);
+
+    // Apply directly to text containers for immediate visual effect
+    const articleBodies = document.querySelectorAll('#essay-article, #essay-body, .essay-content, main article .prose');
+    articleBodies.forEach(el => {
+      el.style.fontSize = val;
+    });
+    const paragraphs = document.querySelectorAll('#essay-article p, #essay-body p, .essay-content p, main article .prose p');
+    paragraphs.forEach(p => {
+      p.style.fontSize = val;
+    });
 
     document.querySelectorAll('[data-set-font]').forEach(b => {
       const isCurrent = b.getAttribute('data-set-font') === sizeKey;
@@ -92,7 +153,7 @@ function initFontSizeManager() {
 /* 3. Reading Progress Bar */
 function initReadingProgressBar() {
   const progressBar = document.getElementById('reading-progress-bar');
-  const essayArticle = document.getElementById('essay-article');
+  const essayArticle = document.getElementById('essay-article') || document.getElementById('essay-body') || document.querySelector('article');
   if (!progressBar) return;
 
   window.addEventListener('scroll', () => {
@@ -127,10 +188,8 @@ function initFootnoteSystem() {
     const noteContentElement = fnId ? document.getElementById(fnId) : null;
     if (!noteContentElement) return;
 
-    // Create or locate tooltip element
     ref.addEventListener('click', (e) => {
-      // On desktop, toggle popover card; on shift-click or if mobile, let it jump to endnote
-      if (window.innerWidth < 768) return; // allow jump on mobile
+      if (window.innerWidth < 768) return;
       e.preventDefault();
       toggleTooltip(ref, noteContentElement);
     });
@@ -157,7 +216,6 @@ function initFootnoteSystem() {
     tooltip.className = 'footnote-tooltip active';
     tooltip.setAttribute('role', 'tooltip');
     
-    // Extract clean note text (remove backlink icon)
     const cleanClone = contentEl.cloneNode(true);
     const backLink = cleanClone.querySelector('.footnote-backref');
     if (backLink) backLink.remove();
@@ -173,13 +231,11 @@ function initFootnoteSystem() {
     document.body.appendChild(tooltip);
     activeTooltip = tooltip;
 
-    // Position popover
     const rect = ref.getBoundingClientRect();
     const tooltipRect = tooltip.getBoundingClientRect();
     let top = rect.top + window.scrollY - tooltipRect.height - 10;
     let left = rect.left + window.scrollX - (tooltipRect.width / 2) + (rect.width / 2);
 
-    // Viewport bounds clamping
     if (top < window.scrollY + 10) {
       top = rect.bottom + window.scrollY + 10;
     }
@@ -214,7 +270,6 @@ function initFootnoteSystem() {
     }
   }
 
-  // Close on Escape or click outside
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') hideTooltip();
   });
@@ -260,7 +315,7 @@ function initDossierTabs() {
 
 /* 6. Dynamic Reading Metrics (Word Count & Reading Time) */
 function calculateReadingMetrics() {
-  const essayBody = document.getElementById('essay-body');
+  const essayBody = document.getElementById('essay-body') || document.getElementById('essay-article');
   const wordCountElem = document.getElementById('metric-word-count');
   const readTimeElem = document.getElementById('metric-read-time');
 
