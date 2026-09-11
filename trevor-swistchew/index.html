@@ -189,7 +189,7 @@
 </div>
 <div aria-live="polite" class="text-xs font-mono text-stone-400 flex items-center gap-2 bg-stone-900/80 border border-stone-800 px-3 py-1.5 rounded-lg shrink-0" id="results-count">
 <span class="inline-block w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-<span id="results-count-text">Showing 22 of 22 works</span>
+<span id="results-count-text">Showing 23 of 23 works</span>
 </div>
 </div>
 <!-- Middle Row: Interactive Search Input & Quick Controls -->
@@ -214,7 +214,7 @@
 <div aria-label="Compendium Category Filters" class="flex flex-wrap items-center gap-2 text-xs font-cinzel" id="compendium-filters" role="tablist">
 <button aria-selected="true" class="filter-btn px-3 py-1.5 rounded-md bg-amber-500 text-stone-950 font-bold border border-amber-500 shadow-md transition-all flex items-center gap-1.5" data-filter="all" type="button">
 <span>All Works</span>
-<span class="text-[10px] font-mono px-1.5 py-0.2 rounded bg-stone-950/20 text-stone-950 font-bold" id="count-all">22</span>
+<span class="text-[10px] font-mono px-1.5 py-0.2 rounded bg-stone-950/20 text-stone-950 font-bold" id="count-all">23</span>
 </button>
 <button aria-selected="false" class="filter-btn px-3 py-1.5 rounded-md bg-stone-900 text-stone-400 hover:text-stone-200 border border-stone-800 transition-all flex items-center gap-1.5" data-filter="constitutional" type="button">
 <span>Constitutional Law</span>
@@ -222,11 +222,11 @@
 </button>
 <button aria-selected="false" class="filter-btn px-3 py-1.5 rounded-md bg-stone-900 text-stone-400 hover:text-stone-200 border border-stone-800 transition-all flex items-center gap-1.5" data-filter="society" type="button">
 <span>Society &amp; Land</span>
-<span class="text-[10px] font-mono px-1.5 py-0.2 rounded bg-stone-950 text-stone-400 border border-white/5" id="count-society">15</span>
+<span class="text-[10px] font-mono px-1.5 py-0.2 rounded bg-stone-950 text-stone-400 border border-white/5" id="count-society">16</span>
 </button>
 <button aria-selected="false" class="filter-btn px-3 py-1.5 rounded-md bg-stone-900 text-stone-400 hover:text-stone-200 border border-stone-800 transition-all flex items-center gap-1.5" data-filter="philosophy" type="button">
 <span>Philosophy &amp; Mind</span>
-<span class="text-[10px] font-mono px-1.5 py-0.2 rounded bg-stone-950 text-stone-400 border border-white/5" id="count-philosophy">8</span>
+<span class="text-[10px] font-mono px-1.5 py-0.2 rounded bg-stone-950 text-stone-400 border border-white/5" id="count-philosophy">9</span>
 </button>
 <button aria-selected="false" class="filter-btn px-3 py-1.5 rounded-md bg-stone-900 text-stone-400 hover:text-stone-200 border border-stone-800 transition-all flex items-center gap-1.5" data-filter="poetics" type="button">
 <span>Poetics &amp; Song</span>
@@ -922,6 +922,37 @@ Read Experience <i class="fa-solid fa-arrow-right text-[10px]"></i>
 </a>
 </div>
 </div>
+</article><article class="group rounded-xl border border-stone-800 bg-stone-900/60 hover:border-amber-500/50 transition-all duration-300 flex flex-col overflow-hidden shadow-xl hover:shadow-2xl" data-category="philosophy society">
+<div class="aspect-w-16 aspect-h-9 relative overflow-hidden bg-stone-950">
+<img alt="A Warning to Humanity Banner" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="assets/images/warning-to-humanity-banner.jpg"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/90 text-stone-950 font-bold">Ecological Philosophy</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-mono bg-stone-900/90 text-stone-300 border border-stone-700">Planetary Limits</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-[11px] font-mono text-stone-400 mb-2">
+<span>Civilisational Collapse &amp; Fragility</span>
+<span>•</span>
+<span>3 min read</span>
+<span>•</span>
+<span class="text-amber-500 font-bold">Compendium #22</span>
+</div>
+<h3 class="font-display text-xl font-bold text-stone-100 group-hover:text-amber-400 transition-colors mb-2 leading-snug">
+A Warning to Humanity
+</h3>
+<p class="font-serif text-sm text-stone-400 leading-relaxed mb-4">
+A direct philosophical warning confronting modern civilisational fragility, the compounding velocity of systemic decline, and nature’s inevitable reclamation of space.
+</p>
+</div>
+<div class="pt-4 border-t border-stone-800/80 flex items-center justify-between text-xs">
+<span class="font-mono text-stone-400">480 words</span>
+<a class="font-cinzel font-bold text-amber-500 hover:text-amber-400 flex items-center gap-1.5 group-hover:translate-x-1 transition-transform" href="essays/a-warning-to-humanity/index.html">
+Read Experience <i class="fa-solid fa-arrow-right text-[10px]"></i>
+</a>
+</div>
+</div>
 </article>
 </div><!-- Empty State for 0 Results -->
 <div class="hidden text-center py-16 px-4 rounded-2xl bg-stone-900/60 border border-stone-800 shadow-xl space-y-4 my-6" id="compendium-empty-state" role="status">
@@ -1081,8 +1112,7 @@ Read Experience <i class="fa-solid fa-arrow-right text-[10px]"></i>
 </footer>
 <!-- Client Scripts -->
 <script src="assets/js/reading-experience.js"></script>
-
- <script>
+<script>
     document.addEventListener('DOMContentLoaded', function() {
       const filterContainer = document.getElementById('compendium-filters');
       const grid = document.querySelector('#essays .grid');

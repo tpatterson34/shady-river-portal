@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Warning to Humanity — Trevor Swistchew (2026)</title>
+  
+  <meta name="description" content="A philosophical meditation and direct civilisational warning by Trevor Swistchew on systemic fragility, institutional corruption, ecological thresholds, and the reclamation of space by natural systems.">
+  <meta name="author" content="Trevor Swistchew">
+  <link rel="canonical" href="https://tpatterson34.github.io/shady-river-portal/trevor-swistchew/essays/a-warning-to-humanity/">
+
+  <!-- Tailwind CSS CDN with Typography Plugin -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography,aspect-ratio"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              50: '#f6f5f3',
+              100: '#e7e4df',
+              200: '#d1cbc2',
+              300: '#b5aca0',
+              400: '#9b8d7f',
+              500: '#847466',
+              600: '#6b5c50',
+              700: '#55493f',
+              800: '#463c35',
+              900: '#3c342e',
+              950: '#201b17',
+            },
+            brass: {
+              400: '#d4af37',
+              500: '#c59b27',
+              600: '#aa821c',
+            },
+            soil: {
+              850: '#26201b',
+              900: '#1c1815',
+            }
+          },
+          fontFamily: {
+            serif: ['Source Serif 4', 'Georgia', 'serif'],
+            display: ['Cinzel', 'Playfair Display', 'serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Web Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/a11y.css">
+
+  <!-- Scottish Literary Salon Theme Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950">
+
+  <!-- 1. WCAG Skip Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Essay Content</a>
+
+  <!-- 2. Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- 3. Top Sticky Reading Utility & Salon Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      
+      <!-- Salon Brand / Return Link -->
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2.5 text-stone-300 hover:text-amber-400 group transition-colors">
+          <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
+          <div class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:block">
+            Trevor Swistchew <span class="text-stone-500 font-sans font-normal mx-1">|</span> <span class="text-stone-400">Compendium Archive</span>
+          </div>
+        </a>
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="hidden md:flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 text-[11px] font-mono transition-colors" title="Visit The Shady River Bard Portal">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Reading Accommodations Controls -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Font Size Scaler -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs font-mono text-stone-300" role="group" aria-label="Font Size Scaling">
+          <button id="font-size-dec" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Decrease font size" aria-label="Decrease font size">A-</button>
+          <button id="font-size-reset" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors text-[10px] text-stone-400" title="Reset font size" aria-label="Reset font size">A</button>
+          <button id="font-size-inc" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Increase font size" aria-label="Increase font size">A+</button>
+        </div>
+
+        <!-- Tri-State Theme Switcher -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs" role="group" aria-label="Reading Theme Selection">
+          <button data-theme="dark" class="theme-toggle-btn px-2 py-1 rounded transition-colors active-theme" title="Dark Peat Theme" aria-label="Dark Peat Theme" aria-pressed="true">
+            <i class="fa-solid fa-moon text-amber-400"></i>
+          </button>
+          <button data-theme="sepia" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Aged Parchment Sepia Theme" aria-label="Aged Parchment Sepia Theme" aria-pressed="false">
+            <i class="fa-solid fa-book-open"></i>
+          </button>
+          <button data-theme="light" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Edinburgh Stone Light Theme" aria-label="Edinburgh Stone Light Theme" aria-pressed="false">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- 4. Main Article Container -->
+  <main id="main-content" class="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+    
+    <article id="essay-article" class="space-y-10">
+
+      <!-- Breadcrumbs & Header Metadata -->
+      <header class="space-y-6">
+        
+        <nav aria-label="Breadcrumb" class="flex flex-wrap items-center gap-2 text-xs font-mono text-stone-500">
+          <a href="../../index.html" class="hover:text-amber-400 transition-colors">Compendium</a>
+          <span>&gt;</span>
+          <a href="../../index.html#essays" class="hover:text-amber-400 transition-colors">Essays</a>
+          <span>&gt;</span>
+          <span class="text-stone-300 font-semibold">Compendium #22</span>
+        </nav>
+
+        <!-- Category & Badges -->
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="px-2.5 py-1 rounded bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-mono tracking-wide uppercase font-semibold">
+            Ecological Philosophy
+          </span>
+          <span class="px-2.5 py-1 rounded bg-stone-800/80 border border-stone-700/50 text-stone-300 text-xs font-mono">
+            Civilisational Collapse
+          </span>
+          <span class="px-2.5 py-1 rounded bg-emerald-950/40 border border-emerald-800/30 text-emerald-300 text-xs font-mono">
+            Planetary Equilibrium
+          </span>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <div class="space-y-3">
+          <h1 class="font-cinzel text-3xl sm:text-5xl font-black text-stone-100 tracking-tight leading-tight">
+            A Warning to Humanity
+          </h1>
+          <p class="font-serif italic text-lg sm:text-2xl text-stone-300 leading-relaxed font-light">
+            Systemic Fragility, Institutional Sclerosis, and the Inevitable Reclamation of Natural Space.
+          </p>
+        </div>
+
+        <!-- Author Byline & Scholarly Meta Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-b border-stone-800/80 text-xs font-mono text-stone-400 py-3">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 font-bold font-cinzel">TS</span>
+            <div>
+              <span class="text-stone-200 font-semibold block">Trevor Swistchew</span>
+              <span class="text-[11px] text-stone-500">Scotland &bull; 2026</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 text-stone-400">
+            <span><i class="fa-regular fa-clock mr-1 text-amber-500/70"></i> 3 min read</span>
+            <span><i class="fa-solid fa-file-lines mr-1 text-amber-500/70"></i> 480 words</span>
+            <span><i class="fa-solid fa-mountain mr-1 text-amber-500/70"></i> Civilisational Horizon</span>
+          </div>
+        </div>
+
+        <!-- 5. Bespoke Fine-Art Banner Image -->
+        <figure class="relative rounded-2xl overflow-hidden border border-stone-800/80 bg-stone-950 shadow-2xl">
+          <img 
+            src="../../assets/images/warning-to-humanity-banner.jpg" 
+            alt="A Warning to Humanity — Fine Art Oil Painting of Overgrown Ancient Colonnades, Crumbled Masonry, and Wild Nature Reclaiming Space at Sunset" 
+            class="w-full h-auto object-cover max-h-[480px]"
+            loading="eager"
+          />
+          <figcaption class="p-3 bg-stone-900/95 border-t border-stone-800 text-[11px] font-mono text-stone-400 flex items-center justify-between">
+            <span>The Course of Empire &bull; <em>Overgrown Ruins, Primeval Watershed, and the Reclamation of Space</em></span>
+            <span class="text-amber-400/80 font-semibold">Trevor Swistchew Archive</span>
+          </figcaption>
+        </figure>
+
+      </header>
+
+      <!-- 6. Essay Verbatim Body -->
+      <div id="essay-body" class="prose prose-invert max-w-none font-serif text-base sm:text-lg text-stone-200 leading-relaxed space-y-6 sm:space-y-7">
+        
+        <p class="first-letter:text-5xl first-letter:font-cinzel first-letter:text-amber-500 first-letter:float-left first-letter:mr-3 first-letter:leading-none">
+          Humanity is living inside the ruins of every civilisation that came before it. This is not metaphor. This is not exaggeration. This is the condition of the modern world. The ground beneath every city is layered with the failures of past societies. The systems people rely on today are weakened versions of systems that once collapsed. The world is not stable. It is a structure built on debris.
+        </p>
+
+        <p>
+          Humanity behaves as if it stands at the beginning of history. It does not. It stands at the end of a long chain of mistakes. Every previous civilisation exhausted its environment corrupted its institutions ignored its warnings and fell. The present world inherited all of that damage and added more. The result is a planet strained beyond its limits and a society unable to recognise its own fragility.
+        </p>
+
+        <!-- Blockquote Callout: Corruption & Accelerated Decline -->
+        <blockquote class="my-8 p-6 rounded-xl bg-stone-900/90 border-l-4 border-amber-500 shadow-xl space-y-3">
+          <p class="font-serif italic text-stone-100 text-lg sm:text-xl leading-relaxed">
+            &ldquo;Corruption is the force that accelerates this decline. It removes integrity from leadership, reliability from institutions, and truth from public life. It ensures that every crisis becomes more severe than it needed to be. It ensures that every solution is undermined before it can take effect.&rdquo;
+          </p>
+          <cite class="block font-mono text-xs text-amber-400 not-italic uppercase tracking-widest font-bold">
+            &mdash; Trevor Swistchew, The Dynamics of Systemic Decline
+          </cite>
+        </blockquote>
+
+        <p>
+          Corruption is the force that accelerates this decline. It removes integrity from leadership, reliability from institutions, and truth from public life. It ensures that every crisis becomes more severe than it needed to be. It ensures that every solution is undermined before it can take effect. It ensures that the world moves steadily toward collapse while most people remain unaware of the scale of the danger.
+        </p>
+
+        <p>
+          Humanity is surrounded by signs of systemic failure. Infrastructure decays faster than it can be repaired. Environmental systems break down faster than they can recover. Political structures fracture faster than they can stabilise. Social trust erodes faster than it can be rebuilt. These are not isolated problems. They are symptoms of a civilisation approaching its limits.
+        </p>
+
+        <p>
+          Nature responds to human decline with clarity. When human systems fail, natural systems begin to reclaim space. Forests advance into abandoned land. Rivers reshape weakened terrain. Species return where human pressure has faded. The planet does not require human guidance to heal. It requires human restraint. Without restraint, the world becomes a place where human survival is no longer guaranteed.
+        </p>
+
+        <p>
+          This warning is direct. Humanity is not exempt from collapse. It is not protected by intelligence, technology or history. It is subject to the same forces that ended every civilisation before it. If corruption continues to hollow out institutions, if apathy continues to replace responsibility, if distraction continues to replace awareness, the outcome is predictable.
+        </p>
+
+        <!-- Concluding Sovereign Callout -->
+        <div class="my-8 p-6 rounded-2xl bg-stone-900 border border-stone-700/80 shadow-2xl space-y-4">
+          <div class="flex items-center gap-2 text-xs font-mono text-amber-500 uppercase tracking-widest font-bold">
+            <i class="fa-solid fa-tree"></i>
+            <span>The Planetary Horizon &bull; Fact Over Symbol</span>
+          </div>
+
+          <p class="font-serif text-stone-100 leading-relaxed">
+            Humanity must recognise the reality of its situation. The world is not thriving. It is enduring. The systems are not strong. They are strained. The future is not secure. It is conditional. The planet will continue without humanity if humanity continues without responsibility.
+          </p>
+
+          <p class="font-serif font-semibold text-amber-300 leading-relaxed pt-2 border-t border-stone-800">
+            This is the warning. It is not symbolic. It is not poetic. It is not abstract. It is factual, immediate, and unavoidable. Humanity must change course or it will become another layer in the long graveyard of failed civilisations.
+          </p>
+
+          <div class="pt-2 text-right">
+            <span class="font-cinzel font-bold text-stone-300 text-sm tracking-wider uppercase">— Trevor Swistchew, 2026</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 7. Interactive Philosophical Dossier Component -->
+      <section class="mt-14 pt-8 border-t border-stone-800/80 space-y-6" aria-labelledby="dossier-heading-warning">
+        
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <span class="text-[10px] font-mono tracking-widest text-amber-400 uppercase font-bold block">Philosophical &amp; Ecological Analysis</span>
+            <h2 id="dossier-heading-warning" class="font-cinzel text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-compass text-amber-500 text-lg"></i>
+              The Civilisational Horizon &amp; Planetary Threshold Dossier
+            </h2>
+          </div>
+          <span class="px-2.5 py-1 rounded bg-stone-900 border border-stone-700 text-stone-400 text-xs font-mono">
+            3 Inquiry Modules
+          </span>
+        </div>
+
+        <p class="text-sm text-stone-400 font-serif leading-relaxed">
+          Examine the historical, systems-analytic, and ecological foundations underlying Trevor Swistchew’s warning. This dossier contrasts the recurring patterns of collapse across past empires with the physical realities of biophysical limits.
+        </p>
+
+        <!-- Dossier Tabs -->
+        <div class="border-b border-stone-800 flex overflow-x-auto gap-2 text-xs font-mono" role="tablist">
+          <button 
+            id="btn-warning-archaeology" 
+            onclick="switchTab('warning', 'archaeology')" 
+            class="dossier-tab-btn px-4 py-2.5 border-b-2 border-amber-500 bg-amber-500/10 text-amber-400 font-bold transition-all whitespace-nowrap flex items-center gap-2"
+            role="tab" 
+            aria-selected="true"
+            aria-controls="panel-warning-archaeology"
+          >
+            <i class="fa-solid fa-layer-group text-xs"></i>
+            <span>1. The Archaeology of Debris</span>
+          </button>
+          
+          <button 
+            id="btn-warning-vectors" 
+            onclick="switchTab('warning', 'vectors')" 
+            class="dossier-tab-btn px-4 py-2.5 border-b-2 border-transparent text-stone-400 hover:text-stone-200 transition-all whitespace-nowrap flex items-center gap-2"
+            role="tab" 
+            aria-selected="false"
+            aria-controls="panel-warning-vectors"
+          >
+            <i class="fa-solid fa-arrow-trend-down text-xs"></i>
+            <span>2. The Four Vectors of Strain</span>
+          </button>
+
+          <button 
+            id="btn-warning-reclamation" 
+            onclick="switchTab('warning', 'reclamation')" 
+            class="dossier-tab-btn px-4 py-2.5 border-b-2 border-transparent text-stone-400 hover:text-stone-200 transition-all whitespace-nowrap flex items-center gap-2"
+            role="tab" 
+            aria-selected="false"
+            aria-controls="panel-warning-reclamation"
+          >
+            <i class="fa-solid fa-seedling text-xs"></i>
+            <span>3. Nature's Clarity &amp; Restraint</span>
+          </button>
+        </div>
+
+        <!-- Dossier Panels -->
+        <div class="space-y-4">
+          
+          <!-- Panel 1: The Archaeology of Debris -->
+          <div id="panel-warning-archaeology" class="dossier-tab-panel p-6 rounded-xl bg-stone-900/90 border border-stone-800 space-y-4" role="tabpanel" aria-labelledby="btn-warning-archaeology">
+            <h3 class="font-display font-bold text-lg text-amber-400 flex items-center gap-2">
+              <i class="fa-solid fa-monument"></i>
+              The Stratigraphy of Collapse: Building on Weakened Predecessors
+            </h3>
+            <p class="text-sm text-stone-300 font-serif leading-relaxed">
+              Swistchew argues that modern civilisation does not occupy virgin ground; it exists upon the sediments of previous collapsed systems:
+            </p>
+            <div class="grid sm:grid-cols-2 gap-4 text-xs font-sans text-stone-300">
+              <div class="p-3.5 rounded-lg bg-stone-950/70 border border-stone-800 space-y-1.5">
+                <span class="font-mono text-[10px] text-amber-500 font-bold uppercase block">Ecological Overshoot &bull; Mesopotamia &amp; Maya</span>
+                <div class="font-bold text-stone-100">Agricultural Siltation &amp; Deforestation</div>
+                <p class="text-stone-400 leading-relaxed">
+                  Historical civilizations consistently exhausted their primary resource bases. Sumerian canal networks salinized the Fertile Crescent; Mayan intensive monoculture depleted lowland soils, triggering rapid depopulation under climatic fluctuations.
+                </p>
+              </div>
+
+              <div class="p-3.5 rounded-lg bg-stone-950/70 border border-stone-800 space-y-1.5">
+                <span class="font-mono text-[10px] text-amber-500 font-bold uppercase block">Institutional Sclerosis &bull; Joseph Tainter</span>
+                <div class="font-bold text-stone-100">Diminishing Returns on Complexity</div>
+                <p class="text-stone-400 leading-relaxed">
+                  As societies solve crises by adding administrative layers, the energy and metabolic cost of maintaining bureaucracy eventually exceeds the benefits produced. Collapse becomes an inevitable economizing mechanism when maintenance costs outstrip surplus.
+                </p>
+              </div>
+            </div>
+            <div class="p-3 rounded-lg bg-stone-950/90 border border-stone-800 text-xs text-stone-400 font-serif leading-relaxed">
+              <span class="text-amber-400 font-mono font-bold uppercase text-[10px] block mb-1">The Illusion of Immunity:</span>
+              Contemporary culture treats technological advancement as an exemption from ecological laws. Swistchew notes that every preceding civilization felt equally permanent at its peak, mistaking temporary extraction rates for permanent structural stability.
+            </div>
+          </div>
+
+          <!-- Panel 2: The Four Vectors of Strain -->
+          <div id="panel-warning-vectors" class="dossier-tab-panel p-6 rounded-xl bg-stone-900/90 border border-stone-800 space-y-4 hidden" role="tabpanel" aria-labelledby="btn-warning-vectors">
+            <h3 class="font-display font-bold text-lg text-amber-400 flex items-center gap-2">
+              <i class="fa-solid fa-arrows-split-up-and-left"></i>
+              The Four Compounding Velocities of Systemic Stress
+            </h3>
+            <p class="text-sm text-stone-300 font-serif leading-relaxed">
+              The essay details four critical domains where degradation has outpaced systemic regenerative capacity:
+            </p>
+            <div class="space-y-3 text-xs font-sans">
+              <div class="p-3 rounded-lg bg-stone-950/80 border border-stone-800 flex items-start justify-between gap-3">
+                <div>
+                  <span class="font-mono font-bold text-amber-400 text-[11px] block">1. Physical Infrastructure Decay</span>
+                  <span class="text-stone-300">Power grids, water conveyance systems, bridges, and transport arteries deteriorate faster than municipal budgets and political attention can finance repairs.</span>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-stone-800 text-stone-300 font-mono text-[10px] shrink-0">Entropy > Maintenance</span>
+              </div>
+
+              <div class="p-3 rounded-lg bg-stone-950/80 border border-stone-800 flex items-start justify-between gap-3">
+                <div>
+                  <span class="font-mono font-bold text-amber-400 text-[11px] block">2. Biophysical Breakdown vs. Recovery</span>
+                  <span class="text-stone-300">Topsoil depletion, aquifer drainage, ocean acidification, and biosphere disruption advance faster than ecological buffers can heal or regenerate.</span>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-stone-800 text-stone-300 font-mono text-[10px] shrink-0">Extraction > Regeneration</span>
+              </div>
+
+              <div class="p-3 rounded-lg bg-stone-950/80 border border-stone-800 flex items-start justify-between gap-3">
+                <div>
+                  <span class="font-mono font-bold text-amber-400 text-[11px] block">3. Institutional &amp; Political Fracturing</span>
+                  <span class="text-stone-300">Corruption and polarization hollow out regulatory bodies and public governance, preventing pragmatic systemic solutions before crises become unmanageable.</span>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-stone-800 text-stone-300 font-mono text-[10px] shrink-0">Fracture > Consensus</span>
+              </div>
+
+              <div class="p-3 rounded-lg bg-stone-950/80 border border-stone-800 flex items-start justify-between gap-3">
+                <div>
+                  <span class="font-mono font-bold text-amber-400 text-[11px] block">4. Epistemic &amp; Social Trust Erosion</span>
+                  <span class="text-stone-300">Distraction, algorithmic noise, and cynicism replace shared civic responsibility and public truth, leaving society incapable of collective alignment.</span>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-stone-800 text-stone-300 font-mono text-[10px] shrink-0">Distraction > Awareness</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Nature's Clarity & Restraint -->
+          <div id="panel-warning-reclamation" class="dossier-tab-panel p-6 rounded-xl bg-stone-900/90 border border-stone-800 space-y-4 hidden" role="tabpanel" aria-labelledby="btn-warning-reclamation">
+            <h3 class="font-display font-bold text-lg text-amber-400 flex items-center gap-2">
+              <i class="fa-solid fa-leaf"></i>
+              Ecological Succession: Space Reclaimed Without Human Guidance
+            </h3>
+            <div class="prose prose-invert max-w-none text-xs text-stone-300 font-serif leading-relaxed space-y-3">
+              <p>
+                <strong class="text-amber-400 font-mono uppercase">1. The Advance of Forest &amp; River:</strong> When human industrial maintenance retreats, natural systems do not mourn; they reoccupy. Concrete fractures under frost wedging, pioneering lichens and mosses build organic humus, and deep-rooted conifers dismantle stone arches within generations.
+              </p>
+              <p>
+                <strong class="text-amber-400 font-mono uppercase">2. The Fallacy of Management:</strong> Modern environmental ideology often presumes the planet is a fragile garden requiring technocratic stewardship. Swistchew reverses this anthropocentric premise: the Earth heals itself through indifference to human survival. It requires not human management, but human restraint.
+              </p>
+              <p>
+                <strong class="text-amber-400 font-mono uppercase">3. A Conditional Future:</strong> The warning closes with biological realism. The planet has survived five major mass extinction events and will continue its orbits without civilization. The survival of humanity within the biosphere remains conditional upon immediate restraint.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- 8. Essay Metadata, Citation & Footer -->
+      <footer class="mt-14 pt-8 border-t border-stone-800/80 space-y-8">
+        
+        <!-- Scholarly Citation Box -->
+        <div class="p-5 rounded-xl bg-stone-950/80 border border-stone-800 text-xs font-mono space-y-2">
+          <div class="text-amber-400 font-bold uppercase tracking-wider text-[11px] flex items-center gap-2">
+            <i class="fa-solid fa-quote-left"></i>
+            <span>Recommended Academic &amp; Philosophical Citation</span>
+          </div>
+          <p class="text-stone-300 select-all font-mono leading-relaxed bg-stone-900/80 p-3 rounded border border-stone-800">
+            Swistchew, Trevor. &ldquo;A Warning to Humanity.&rdquo; <em>Trevor Swistchew Compendium &amp; Literary Salon</em>, Essay #22, Edinburgh / Shady River Collective, 2026. Permanent URI: https://tpatterson34.github.io/shady-river-portal/trevor-swistchew/essays/a-warning-to-humanity/
+          </p>
+        </div>
+
+        <!-- Sequential Reading Links -->
+        <div class="grid sm:grid-cols-2 gap-4">
+          <a href="../the-truth-child-protection-hides/index.html" class="p-4 rounded-xl bg-stone-900/60 border border-stone-800 hover:border-amber-500/40 transition-colors group">
+            <span class="text-[10px] font-mono uppercase text-stone-500 group-hover:text-amber-400 block mb-1">&larr; Previous Work (Compendium #21)</span>
+            <span class="font-display font-bold text-sm text-stone-200 group-hover:text-amber-300">The Truth Child Protection Hides</span>
+          </a>
+          <a href="../../poetry/index.html" class="p-4 rounded-xl bg-stone-900/60 border border-stone-800 hover:border-amber-500/40 transition-colors group text-right">
+            <span class="text-[10px] font-mono uppercase text-stone-500 group-hover:text-amber-400 block mb-1">Poetic Works Archive &rarr;</span>
+            <span class="font-display font-bold text-sm text-stone-200 group-hover:text-amber-300">The Poetry Chamber (28 Collected Poems)</span>
+          </a>
+        </div>
+
+        <!-- Creative Fellowship CTA -->
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-peat-900 to-peat-950 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="space-y-1 text-center sm:text-left">
+            <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold">Creative Fellowship</span>
+            <h4 class="font-cinzel text-lg font-bold text-white">The Shady River Bard Creative Ecosystem</h4>
+            <p class="text-xs text-stone-300 max-w-xl">
+              Trevor Swistchew's ecological warnings, constitutional audits, and philosophical inquiries are published in fellowship with The Shady River Bard—exploring a 26-album concept discography, working permaculture, and reflections on human sovereignty.
+            </p>
+          </div>
+          <a href="https://tpatterson34.github.io/shady-river-portal/" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-peat-950 font-cinzel font-bold text-xs uppercase tracking-wider transition-colors shrink-0 shadow-lg flex items-center gap-1.5">
+            <span>Explore Shady River</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+          </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="pt-6 border-t border-stone-800/60 text-center text-xs text-stone-400 font-sans space-y-2">
+          <p>Essay &copy; 2026 Trevor Swistchew. All rights reserved.</p>
+          <p class="text-stone-500">Published for the Trevor Swistchew Compendium &amp; Literary Salon Archive.</p>
+          <p class="pt-2">
+            <a href="../../index.html" class="text-stone-400 hover:text-amber-400 transition-colors mr-3">&larr; Return to Compendium Archive</a>
+            <a href="https://tpatterson34.github.io/shady-river-portal/friends-of-the-bard/" class="text-amber-400 hover:text-amber-300 transition-colors font-medium">Friends of the Bard Collective ↗</a>
+          </p>
+        </div>
+      </footer>
+
+    </article>
+  </main>
+
+  <!-- Client-Side Tab Switching Script -->
+  <script>
+    function switchTab(essayId, tabId) {
+      const container = document.querySelector('[aria-labelledby="dossier-heading-' + essayId + '"]');
+      if (!container) return;
+      
+      const buttons = container.querySelectorAll('.dossier-tab-btn');
+      const panels = container.querySelectorAll('.dossier-tab-panel');
+      
+      buttons.forEach(btn => {
+        btn.classList.remove('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+        btn.classList.add('border-transparent', 'text-stone-400');
+        btn.setAttribute('aria-selected', 'false');
+      });
+      
+      panels.forEach(p => p.classList.add('hidden'));
+      
+      const targetBtn = document.getElementById('btn-' + essayId + '-' + tabId);
+      const targetPanel = document.getElementById('panel-' + essayId + '-' + tabId);
+      
+      if (targetBtn) {
+        targetBtn.classList.remove('border-transparent', 'text-stone-400');
+        targetBtn.classList.add('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+        targetBtn.setAttribute('aria-selected', 'true');
+      }
+      if (targetPanel) {
+        targetPanel.classList.remove('hidden');
+      }
+    }
+  </script>
+  <script src="../../assets/js/reading-experience.js"></script>
+</body>
+</html>
