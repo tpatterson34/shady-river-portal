@@ -669,6 +669,77 @@
     }
 
     // 3. Render Tracklist & Lyrics (Continuous List with 3 Movement Dividers)
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function getQuote(t) {
+      if (t.quote) return t.quote;
+      if (t.stanzas && t.stanzas.length > 0) {
+        const chorus = t.stanzas.find(s => s.tag && s.tag.toLowerCase().includes('chorus'));
+        if (chorus && chorus.lines && chorus.lines.length > 0) {
+          return chorus.lines.slice(0, 2).join('\n');
+        }
+        const verse1 = t.stanzas.find(s => s.tag && s.tag.toLowerCase().includes('verse 1'));
+        if (verse1 && verse1.lines && verse1.lines.length > 0) {
+          return verse1.lines.slice(0, 2).join('\n');
+        }
+        for (const s of t.stanzas) {
+          if (s.lines && s.lines.length > 0) {
+            return s.lines.slice(0, 2).join('\n');
+          }
+        }
+      }
+      if (t.lyrics) {
+        const lines = t.lyrics.split('\n').map(l => l.trim()).filter(l => l && !l.startsWith('['));
+        if (lines.length > 0) {
+          return lines.slice(0, 2).join('\n');
+        }
+      }
+      return '';
+    }
+
+    function openVideoModal(videoId, title) {
+      const modal = document.getElementById('video-modal');
+      const iframe = document.getElementById('video-iframe');
+      const titleEl = document.getElementById('modal-track-title');
+      if (!modal || !iframe) return;
+
+      if (videoId) {
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      } else {
+        iframe.src = '';
+      }
+      if (titleEl) {
+        titleEl.innerHTML = `<i aria-hidden="true" class="fa-brands fa-youtube text-red-500"></i> <span>${escapeHtml(title)}</span>`;
+      }
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('video-modal');
+      const iframe = document.getElementById('video-iframe');
+      if (!modal || !iframe) return;
+
+      iframe.src = '';
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeVideoModal();
+    });
+
+    // 2. Render Tracklist & Lyrics (Continuous List of all 13 Songs with Act Dividers)
     function renderTracks() {
       const container = document.getElementById('tracks-container');
       if (!container || !window.GREAT_INVERSION_DATA) return;
@@ -725,103 +796,164 @@
           `;
         }
 
+        const quote = getQuote(t);
+        const numPadded = String(t.number).padStart(2, '0');
+        const actBadgeTitle = t.act_title ? t.act_title.split(':')[0] : `Movement ${t.act}`;
+
         // Render Track Article
         html += `
-          <article id="track-${t.number}" class="scroll-mt-28 p-6 sm:p-8 rounded-2xl bg-soil-850 border border-white/10 hover:border-white/20 transition-all shadow-xl space-y-6">
+          <article id="track-${t.number}" class="scroll-mt-28 bg-soil-850 border border-white/10 hover:border-inversion-500/40 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300">
             
-            <!-- Header Row: Artwork + Info + Actions -->
-            <div class="flex flex-col md:flex-row gap-6 items-start md:items-center justify-between border-b border-white/10 pb-6">
+            <!-- Track Banner (16:9 Widescreen) -->
+            <div class="relative aspect-video w-full overflow-hidden bg-soil-950">
+              <img 
+                src="${t.image_landscape || t.image_square}" 
+                alt="${escapeHtml(t.title)} artwork" 
+                class="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+                width="1200"
+                height="675"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-soil-900 via-transparent to-black/40"></div>
               
-              <!-- Left: Artwork & Details -->
-              <div class="flex items-center gap-5">
-                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden border border-white/10 flex-shrink-0 shadow-md bg-soil-900">
-                  <img src="${t.image_square}" alt="${t.title} square artwork" loading="lazy" decoding="async" class="w-full h-full object-cover">
-                </div>
-                
-                <div class="space-y-1">
-                  <div class="flex items-center gap-2">
+              <!-- Top Floating Meta -->
+              <div class="absolute top-4 left-4 flex flex-wrap items-center gap-2">
+                <span class="px-2.5 py-1 rounded-md bg-soil-950/90 border border-white/20 text-white font-mono text-xs font-bold shadow-lg">
+                  Track ${numPadded}
+                </span>
+                <span class="px-2.5 py-1 rounded-md bg-inversion-950/90 border border-inversion-500/40 text-inversion-400 font-mono text-xs shadow-lg">
+                  ${escapeHtml(actBadgeTitle)}
+                </span>
+              </div>
+
+              <!-- Video Play Button Overlay -->
+              <div class="absolute bottom-4 right-4">
+                <button 
+                  onclick="openVideoModal('${t.video_id || ''}', '${escapeHtml(t.title)}')" 
+                  class="px-4 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white font-mono text-xs font-bold flex items-center gap-2 shadow-2xl transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
+                  aria-label="Play music video for ${escapeHtml(t.title)}"
+                >
+                  <i aria-hidden="true" class="fa-brands fa-youtube text-base"></i>
+                  <span>Watch Video</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Track Body Content -->
+            <div class="p-6 sm:p-8 space-y-6">
+              
+              <!-- Title & Subtitle Header -->
+              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-white/10 pb-4">
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
                     <span class="font-mono text-xs text-inversion-400 font-bold px-2 py-0.5 rounded bg-inversion-950 border border-inversion-800/40">
-                      Track ${String(t.number).padStart(2, '0')}
+                      Track ${numPadded}
                     </span>
-                    <span class="text-xs font-mono text-stone-400">${t.act_title}</span>
+                    <span class="text-xs font-mono text-stone-400">${escapeHtml(t.act_title)}</span>
                   </div>
-                  <h3 class="font-display text-2xl sm:text-3xl font-bold text-white tracking-wide">
-                    ${t.title}
+                  <h3 class="text-2xl sm:text-3xl font-display font-extrabold text-white tracking-tight">
+                    ${escapeHtml(t.title)}
                   </h3>
-                  <p class="text-xs text-stone-400 font-mono flex items-center gap-2">
-                    <span><i aria-hidden="true" class="fa-solid fa-tag text-inversion-500 mr-1"></i>${t.core_pillar}</span>
-                  </p>
-                </div>
-              </div>
-
-              <!-- Right: Listen Action + Lyrics Accordion Toggle -->
-              <div class="flex items-center gap-3 w-full md:w-auto justify-end flex-wrap">
-                <a href="${t.video_url}" target="_blank" rel="noopener noreferrer" class="py-2.5 px-4 rounded-xl bg-red-600 hover:bg-red-500 text-white font-medium text-xs transition-colors flex items-center gap-2 shadow focus:outline-none focus:ring-2 focus:ring-white" aria-label="Watch ${t.title} official video on YouTube">
-                  <i aria-hidden="true" class="fa-brands fa-youtube text-sm"></i>
-                  <span>Watch Video ↗</span>
-                </a>
-                
-                <button onclick="toggleTrackLyrics(${t.number})" id="toggle-btn-${t.number}" class="py-2.5 px-4 rounded-xl bg-soil-800 hover:bg-soil-750 text-stone-200 border border-white/10 font-medium text-xs transition-colors flex items-center gap-2 focus:outline-none focus:ring-1 focus:ring-inversion-400">
-                  <span id="toggle-label-${t.number}">Show Lyrics</span>
-                  <i id="toggle-icon-${t.number}" class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
-                </button>
-              </div>
-
-            </div>
-
-            <!-- Style & Musical Direction Banner -->
-            <div class="p-4 rounded-xl bg-soil-900 border border-white/5 space-y-1">
-              <span class="text-[10px] font-mono uppercase tracking-wider text-inversion-400 font-bold block">
-                <i aria-hidden="true" class="fa-solid fa-guitar mr-1.5"></i>Musical Direction &amp; Instrumentation
-              </span>
-              <p class="text-xs text-stone-300 font-mono leading-relaxed">
-                ${t.style}
-              </p>
-            </div>
-
-            <!-- Panoramic Artwork Banner -->
-            <div class="rounded-xl overflow-hidden border border-white/5 shadow-inner">
-              <img src="${t.image_landscape}" alt="${t.title} panoramic art" loading="lazy" decoding="async" class="w-full h-48 sm:h-64 object-cover object-center opacity-90 hover:opacity-100 transition-opacity">
-            </div>
-
-            <!-- Expandable Lyrics Drawer (Collapsed by Default) -->
-            <div id="lyrics-drawer-${t.number}" class="hidden space-y-5 pt-4 border-t border-white/10">
-              
-              <!-- Lyrics Header & Copy Action -->
-              <div class="flex items-center justify-between">
-                <div class="flex items-center gap-2">
-                  <i aria-hidden="true" class="fa-solid fa-quote-left text-inversion-400 text-xs"></i>
-                  <span class="text-xs font-mono uppercase tracking-wider text-stone-300 font-semibold">Official Lyrics &amp; Stanzas</span>
-                </div>
-                <button onclick="copyLyrics(${t.number})" id="copy-btn-${t.number}" class="text-xs font-mono text-stone-400 hover:text-white px-2.5 py-1 rounded bg-soil-800 border border-white/10 hover:border-white/20 transition-colors flex items-center gap-1.5">
-                  <i aria-hidden="true" class="fa-solid fa-copy text-[10px]"></i>
-                  <span>Copy Lyrics</span>
-                </button>
-              </div>
-              
-              <!-- Formatted Stanzas Display -->
-              <div class="space-y-6 p-6 sm:p-8 rounded-2xl bg-soil-950/90 border border-white/5 font-serif text-stone-200 text-sm sm:text-base leading-relaxed selection:bg-inversion-600 shadow-inner">
-                ${t.stanzas && t.stanzas.length > 0 ? t.stanzas.map(s => `
-                  <div class="stanza space-y-2">
-                    <span class="inline-block text-[10px] font-mono uppercase tracking-wider text-inversion-400 font-bold px-2.5 py-0.5 rounded bg-inversion-950/80 border border-inversion-800/40">
-                      ${s.tag}
+                  ${t.narrative_theme ? `
+                    <span class="text-xs font-serif text-inversion-400/90 italic mt-0.5 block">
+                      ${escapeHtml(t.narrative_theme)}
                     </span>
-                    <div class="space-y-1 pl-3 border-l-2 border-inversion-900/50 text-stone-200 font-mono text-xs sm:text-sm">
-                      ${s.lines.map(line => `<p class="leading-relaxed">${line}</p>`).join('')}
-                    </div>
+                  ` : ''}
+                </div>
+                ${t.core_pillar ? `
+                  <div class="flex items-center gap-2 text-xs font-mono text-stone-400">
+                    <span><i aria-hidden="true" class="fa-solid fa-tag text-inversion-500 mr-1"></i>${escapeHtml(t.core_pillar)}</span>
                   </div>
-                `).join('') : `<div class="whitespace-pre-line font-mono text-xs">${t.lyrics}</div>`}
+                ` : ''}
               </div>
 
-              <!-- Narrative Context & Video Description -->
+              <!-- 100% Verbatim Lyric Quote -->
+              ${quote ? `
+                <blockquote class="border-l-4 border-inversion-500 bg-soil-900/80 p-4 rounded-r-xl shadow-inner">
+                  <p class="text-sm sm:text-base font-serif italic text-stone-200 leading-relaxed whitespace-pre-line">&ldquo;${escapeHtml(quote)}&rdquo;</p>
+                  <cite class="text-[10px] font-mono text-inversion-400 mt-2 block font-normal uppercase tracking-wider">— Verbatim Movement Excerpt</cite>
+                </blockquote>
+              ` : ''}
+
+              <!-- The Bard's Story (Lore & Context) Directly Visible -->
               ${t.youtube_description ? `
-                <div class="p-4 sm:p-5 rounded-xl bg-soil-900/60 border border-white/5 text-xs text-stone-400 space-y-2">
-                  <span class="font-mono text-[10px] uppercase tracking-wider text-inversion-400 font-bold block">
-                    <i aria-hidden="true" class="fa-solid fa-scroll mr-1.5"></i>Narrative Context &amp; Visual Notes:
-                  </span>
-                  <p class="leading-relaxed font-sans">${t.youtube_description.replace(/\n/g, '<br>')}</p>
+                <div class="space-y-3 bg-soil-950/60 p-5 rounded-xl border border-white/5">
+                  <div class="flex items-center gap-2 text-xs font-mono text-stone-400 uppercase tracking-wider">
+                    <i aria-hidden="true" class="fa-solid fa-feather text-inversion-400"></i>
+                    <span class="font-bold text-white">The Bard's Story &bull; Lore &amp; Context</span>
+                  </div>
+                  <div class="text-xs sm:text-sm text-stone-300 leading-relaxed space-y-2.5 font-sans">
+                    ${t.youtube_description.split('\n\n').map(p => `<p class="leading-relaxed">${escapeHtml(p).replace(/\n/g, '<br>')}</p>`).join('')}
+                  </div>
                 </div>
               ` : ''}
+
+              <!-- Musical Direction & Instrumentation -->
+              <div class="p-4 rounded-xl bg-soil-900 border border-white/5 space-y-1">
+                <span class="text-[10px] font-mono uppercase tracking-wider text-inversion-400 font-bold block">
+                  <i aria-hidden="true" class="fa-solid fa-guitar mr-1.5"></i>Musical Direction &amp; Instrumentation
+                </span>
+                <p class="text-xs text-stone-300 font-mono leading-relaxed">
+                  ${escapeHtml(t.style)}
+                </p>
+              </div>
+
+              <!-- Expandable Lyrics Drawer (Only Lyrics Collapsed!) -->
+              <div class="pt-2 border-t border-white/10">
+                <div class="flex items-center justify-between">
+                  <button 
+                    onclick="toggleTrackLyrics(${t.number})" 
+                    id="toggle-btn-${t.number}" 
+                    aria-expanded="false" 
+                    aria-controls="lyrics-drawer-${t.number}" 
+                    class="inline-flex items-center gap-2 text-xs font-mono text-inversion-400 hover:text-inversion-300 font-bold focus:outline-none focus:ring-1 focus:ring-inversion-400 py-1 rounded"
+                  >
+                    <i aria-hidden="true" class="fa-solid fa-chevron-down transition-transform duration-300" id="toggle-icon-${t.number}"></i>
+                    <span id="toggle-label-${t.number}">View Complete Lyrics</span>
+                  </button>
+                  <button 
+                    onclick="copyLyrics(${t.number})" 
+                    id="copy-btn-${t.number}"
+                    class="text-xs font-mono text-stone-400 hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-white px-2.5 py-1 rounded bg-soil-800 border border-white/10 hover:border-white/20 flex items-center gap-1.5"
+                    title="Copy lyrics to clipboard"
+                    aria-label="Copy lyrics for ${escapeHtml(t.title)}"
+                  >
+                    <i aria-hidden="true" class="fa-regular fa-copy"></i>
+                    <span>Copy Lyrics</span>
+                  </button>
+                </div>
+
+                <div id="lyrics-drawer-${t.number}" class="hidden mt-4 space-y-6">
+                  <!-- Formatted Stanzas Display -->
+                  <div class="space-y-6 p-6 sm:p-8 rounded-2xl bg-soil-950/90 border border-white/5 font-serif text-stone-200 text-sm sm:text-base leading-relaxed selection:bg-inversion-600 shadow-inner">
+                    ${t.stanzas && t.stanzas.length > 0 ? t.stanzas.map(s => `
+                      <div class="stanza space-y-2">
+                        <span class="inline-block text-[10px] font-mono uppercase tracking-wider text-inversion-400 font-bold px-2.5 py-0.5 rounded bg-inversion-950/80 border border-inversion-800/40">
+                          ${escapeHtml(s.tag)}
+                        </span>
+                        <div class="space-y-1 pl-3 border-l-2 border-inversion-900/50 text-stone-200 font-mono text-xs sm:text-sm">
+                          ${s.lines.map(line => `<p class="leading-relaxed">${escapeHtml(line)}</p>`).join('')}
+                        </div>
+                      </div>
+                    `).join('') : `<div class="whitespace-pre-line font-mono text-xs">${escapeHtml(t.lyrics)}</div>`}
+
+                    <!-- Visual Copyright Notice -->
+                    <div class="mt-6 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs font-mono text-stone-400">
+                      <div class="flex items-center gap-2">
+                        <i aria-hidden="true" class="fa-regular fa-copyright text-inversion-400 text-sm"></i>
+                        <span>&copy; 2025&ndash;2026 The Shady River Bard &bull; All rights reserved.</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-[11px] text-stone-500">
+                        <span>Album 04: The Great Inversion</span>
+                        <span>&bull;</span>
+                        <a href="https://theshadyriverbard.com/the-great-inversion/" class="hover:text-inversion-400 underline transition-colors">theshadyriverbard.com</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
 
             </div>
 
@@ -832,124 +964,106 @@
       container.innerHTML = html;
     }
 
-    // 4. Smooth Scroll directly to an Act from Roadmap
-    function scrollToAct(actNum) {
-      for (let i = 1; i <= 3; i++) {
-        const btn = document.getElementById(`act-btn-${i}`);
-        if (btn) {
-          if (i === actNum) {
-            btn.classList.add('ring-2', 'ring-inversion-400', 'border-inversion-400');
-          } else {
-            btn.classList.remove('ring-2', 'ring-inversion-400', 'border-inversion-400');
-          }
-        }
-      }
-
-      const targetHeader = document.getElementById(`act-section-${actNum}`);
-      if (targetHeader) {
-        targetHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        targetHeader.classList.add('ring-2', 'ring-inversion-400');
-        setTimeout(() => {
-          targetHeader.classList.remove('ring-2', 'ring-inversion-400');
-        }, 2000);
-      }
-    }
-
-    // 5. Toggle Single Track Lyrics Accordion
+    // 3. Toggle single track lyrics drawer
     function toggleTrackLyrics(trackNum) {
       const drawer = document.getElementById(`lyrics-drawer-${trackNum}`);
       const label = document.getElementById(`toggle-label-${trackNum}`);
       const icon = document.getElementById(`toggle-icon-${trackNum}`);
-
-      if (!drawer || !label || !icon) return;
+      const btn = document.getElementById(`toggle-btn-${trackNum}`);
+      if (!drawer) return;
 
       const isHidden = drawer.classList.contains('hidden');
       if (isHidden) {
         drawer.classList.remove('hidden');
-        label.textContent = 'Hide Lyrics';
-        icon.classList.add('rotate-180');
+        if (label) label.innerText = 'Hide Lyrics';
+        if (icon) icon.classList.add('rotate-180');
+        if (btn) btn.setAttribute('aria-expanded', 'true');
       } else {
         drawer.classList.add('hidden');
-        label.textContent = 'Show Lyrics';
-        icon.classList.remove('rotate-180');
+        if (label) label.innerText = 'View Complete Lyrics';
+        if (icon) icon.classList.remove('rotate-180');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
       }
     }
 
-    // 6. Expand Track & Jump Directly From Pillar Cards
+    // 4. Expand single track and scroll to it (from Pillars connected tracks)
     function expandSingleTrack(trackNum) {
-      const drawer = document.getElementById(`lyrics-drawer-${trackNum}`);
-      const label = document.getElementById(`toggle-label-${trackNum}`);
-      const icon = document.getElementById(`toggle-icon-${trackNum}`);
-
-      if (drawer && drawer.classList.contains('hidden')) {
-        drawer.classList.remove('hidden');
-        if (label) label.textContent = 'Hide Lyrics';
-        if (icon) icon.classList.add('rotate-180');
-      }
-
       const trackEl = document.getElementById(`track-${trackNum}`);
       if (trackEl) {
         trackEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const drawer = document.getElementById(`lyrics-drawer-${trackNum}`);
+        const label = document.getElementById(`toggle-label-${trackNum}`);
+        const icon = document.getElementById(`toggle-icon-${trackNum}`);
+        const btn = document.getElementById(`toggle-btn-${trackNum}`);
+        if (drawer && drawer.classList.contains('hidden')) {
+          drawer.classList.remove('hidden');
+          if (label) label.innerText = 'Hide Lyrics';
+          if (icon) icon.classList.add('rotate-180');
+          if (btn) btn.setAttribute('aria-expanded', 'true');
+        }
         trackEl.classList.add('ring-2', 'ring-inversion-400');
-        setTimeout(() => {
-          trackEl.classList.remove('ring-2', 'ring-inversion-400');
-        }, 2200);
+        setTimeout(() => trackEl.classList.remove('ring-2', 'ring-inversion-400'), 2000);
       }
     }
 
-    // 7. Expand / Collapse All Lyrics
-    function toggleAllLyrics(shouldExpand) {
+    // 5. Toggle all 13 track lyrics simultaneously
+    function toggleAllLyrics(expand) {
       if (!window.GREAT_INVERSION_DATA) return;
-      const tracks = window.GREAT_INVERSION_DATA.tracks;
-
-      tracks.forEach(t => {
+      window.GREAT_INVERSION_DATA.tracks.forEach(t => {
         const drawer = document.getElementById(`lyrics-drawer-${t.number}`);
         const label = document.getElementById(`toggle-label-${t.number}`);
         const icon = document.getElementById(`toggle-icon-${t.number}`);
+        const btn = document.getElementById(`toggle-btn-${t.number}`);
+        if (!drawer) return;
 
-        if (drawer && label && icon) {
-          if (shouldExpand) {
-            drawer.classList.remove('hidden');
-            label.textContent = 'Hide Lyrics';
-            icon.classList.add('rotate-180');
-          } else {
-            drawer.classList.add('hidden');
-            label.textContent = 'Show Lyrics';
-            icon.classList.remove('rotate-180');
-          }
+        if (expand) {
+          drawer.classList.remove('hidden');
+          if (label) label.innerText = 'Hide Lyrics';
+          if (icon) icon.classList.add('rotate-180');
+          if (btn) btn.setAttribute('aria-expanded', 'true');
+        } else {
+          drawer.classList.add('hidden');
+          if (label) label.innerText = 'View Complete Lyrics';
+          if (icon) icon.classList.remove('rotate-180');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
         }
       });
     }
 
-    // 8. One-Click Copy Lyrics with Toast Feedback
+    // 6. Copy lyrics to clipboard
     function copyLyrics(trackNum) {
       if (!window.GREAT_INVERSION_DATA) return;
       const track = window.GREAT_INVERSION_DATA.tracks.find(t => t.number === trackNum);
       if (!track) return;
 
-      let lyricsToCopy = '';
-      if (track.stanzas && track.stanzas.length > 0) {
-        lyricsToCopy = track.stanzas.map(s => `${s.tag}\n${s.lines.join('\n')}`).join('\n\n');
-      } else {
-        lyricsToCopy = track.lyrics;
-      }
-
-      navigator.clipboard.writeText(lyricsToCopy).then(() => {
-        const btn = document.getElementById(`copy-btn-${trackNum}`);
+      const btn = document.getElementById(`copy-btn-${trackNum}`);
+      navigator.clipboard.writeText(track.lyrics).then(() => {
         if (btn) {
-          const originalHTML = btn.innerHTML;
-          btn.innerHTML = '<i aria-hidden="true" class="fa-solid fa-check text-emerald-400 text-[10px]"></i><span class="text-emerald-300">Copied!</span>';
+          const original = btn.innerHTML;
+          btn.innerHTML = '<i aria-hidden="true" class="fa-solid fa-check text-emerald-400 mr-1.5"></i><span>Copied!</span>';
           setTimeout(() => {
-            btn.innerHTML = originalHTML;
+            btn.innerHTML = original;
           }, 2000);
         }
-      }).catch(err => {
-        console.error('Failed to copy lyrics:', err);
+      }).catch(() => {
+        if (btn) {
+          btn.innerHTML = '<i aria-hidden="true" class="fa-solid fa-check text-emerald-400 mr-1.5"></i><span>Copied!</span>';
+          setTimeout(() => {
+            btn.innerHTML = '<i aria-hidden="true" class="fa-regular fa-copy"></i><span>Copy Lyrics</span>';
+          }, 2000);
+        }
       });
     }
 
     // Initialization on DOM Load
     document.addEventListener('DOMContentLoaded', () => {
+      const videoModalEl = document.getElementById('video-modal');
+      if (videoModalEl) {
+        videoModalEl.addEventListener('click', (e) => {
+          if (e.target === videoModalEl) closeVideoModal();
+        });
+      }
+
       renderPillars();
       renderMatrix();
       renderTracks();
@@ -966,5 +1080,22 @@
   </script>
   <!-- Unified Accessibility Controller -->
   <script src="/assets/js/a11y.js"></script>
+
+  <!-- YOUTUBE VIDEO MODAL -->
+  <div id="video-modal" role="dialog" aria-modal="true" aria-labelledby="modal-track-title" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="relative w-full max-w-4xl bg-soil-900 border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
+      <div class="p-4 border-b border-white/10 flex items-center justify-between bg-soil-950/80">
+        <h3 id="modal-track-title" class="font-display font-bold text-base text-white flex items-center gap-2">
+          <!-- Populated dynamically -->
+        </h3>
+        <button onclick="closeVideoModal()" aria-label="Close video player" class="w-8 h-8 rounded-lg bg-soil-800 hover:bg-soil-750 text-stone-300 hover:text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-inversion-400">
+          <i aria-hidden="true" class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+      <div class="aspect-video w-full bg-black">
+        <iframe id="video-iframe" class="w-full h-full" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

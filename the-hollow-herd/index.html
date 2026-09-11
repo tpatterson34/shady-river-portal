@@ -439,7 +439,7 @@
         </div>
 
         <!-- Tracks Container (All 15 Tracks) -->
-        <div class="space-y-6" id="tracks-list">
+        <div class="space-y-12" id="tracks-list">
           <!-- Populated dynamically via JS -->
         </div>
 
@@ -582,6 +582,15 @@
 
   <!-- INTERACTIVE APP LOGIC -->
   <script>
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
     let currentFilter = 'all';
     let currentActFilter = null;
     let expandedTracks = new Set();
@@ -693,9 +702,9 @@
       if (searchTerm) {
         tracks = tracks.filter(t => 
           t.title.toLowerCase().includes(searchTerm) ||
-          t.subtitle.toLowerCase().includes(searchTerm) ||
-          t.lyrics.toLowerCase().includes(searchTerm) ||
-          t.summary.toLowerCase().includes(searchTerm)
+          (t.subtitle || '').toLowerCase().includes(searchTerm) ||
+          (t.lyrics || '').toLowerCase().includes(searchTerm) ||
+          (t.summary || '').toLowerCase().includes(searchTerm)
         );
       }
 
@@ -704,192 +713,221 @@
           <div class="p-12 text-center rounded-3xl bg-prairie-850 border border-white/10 text-stone-400 font-mono text-sm space-y-2">
             <i aria-hidden="true" class="fa-solid fa-filter text-2xl text-rust-500 mb-2"></i>
             <p>No tracks match your current filter.</p>
-            <button onclick="filterTracks('all')" class="text-rust-400 underline font-bold">Reset Filters</button>
+            <button onclick="filterTracks('all')" class="text-rust-400 underline font-bold focus-ring">Reset Filters</button>
           </div>
         `;
         return;
       }
 
       container.innerHTML = tracks.map(t => {
-        const isExpanded = expandedTracks.has(t.track_number);
-        const formattedLyrics = t.lyrics.split('\n').map(line => {
-          const l = line.trim();
-          if (l.startsWith('[') && l.endsWith(']')) {
-            return `<div class="text-rust-400 font-mono text-xs uppercase tracking-wider font-bold pt-3 pb-1 border-b border-white/5 mb-1">${l}</div>`;
+        const paddedNum = String(t.track_number).padStart(2, '0');
+        const slug = `track-${t.track_number}`;
+
+        // Extract 2-line lyric quote
+        let lyricQuote = '';
+        if (t.lyrics) {
+          const lines = t.lyrics.split('\n')
+            .map(l => l.trim())
+            .filter(l => l && !l.startsWith('[') && !l.endsWith(']'));
+          if (lines.length >= 2) {
+            lyricQuote = lines.slice(0, 2).join('\n');
+          } else if (lines.length === 1) {
+            lyricQuote = lines[0];
           }
-          return `<div class="leading-relaxed font-body text-xs sm:text-sm text-stone-200 py-0.5">${line}</div>`;
-        }).join('');
+        }
+
+        // Format clean lyrics
+        let formattedLyrics = '';
+        if (t.lyrics) {
+          formattedLyrics = escapeHtml(t.lyrics).split('\n').map(line => {
+            const trimmed = line.trim();
+            if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
+              return `<span class="text-rust-400 font-mono font-bold block mt-3 mb-1">${trimmed}</span>`;
+            }
+            return `<div>${line}</div>`;
+          }).join('');
+        }
+
+        // Format The Bard's Story (summary)
+        let storyHtml = '';
+        if (t.summary) {
+          storyHtml = `<p>${escapeHtml(t.summary)}</p>`;
+        }
 
         return `
-          <article id="track-${t.track_number}" class="portal-card p-6 sm:p-7 rounded-3xl bg-prairie-850 border border-white/10 hover:border-rust-500/40 transition-all shadow-xl space-y-6">
+        <article id="${slug}" class="bg-prairie-850 border border-white/10 hover:border-rust-500/40 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300">
+          
+          <!-- Track Banner (16:9) -->
+          <div class="relative aspect-video w-full overflow-hidden bg-prairie-950">
+            <img 
+              src="${t.cover_image}" 
+              alt="Art for Track ${paddedNum}: ${escapeHtml(t.title)}" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+              width="1200"
+              height="675"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-prairie-850 via-transparent to-black/40"></div>
             
-            <!-- Track Header & Thumbnail -->
-            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <div class="flex items-center gap-4">
-                <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-white/10 flex-shrink-0 bg-prairie-900 shadow-md">
-                  <img src="${t.cover_image}" alt="${t.title} artwork" class="w-full h-full object-cover" loading="lazy">
-                </div>
-                <div>
-                  <div class="flex items-center gap-2 mb-1">
-                    <span class="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-prairie-900 text-stone-400 border border-white/10">
-                      Track ${String(t.track_number).padStart(2, '0')}
-                    </span>
-                    <span class="text-[10px] font-mono text-rust-400 uppercase tracking-wider">
-                      Act ${t.act_number}
-                    </span>
-                  </div>
-                  <h3 class="font-display text-xl sm:text-2xl font-bold text-white leading-tight">
-                    ${t.title}
-                  </h3>
-                  <p class="text-xs font-mono text-stone-400 mt-0.5">${t.subtitle}</p>
-                </div>
-              </div>
-
-              <!-- Release Status Badge & Action -->
-              <div class="flex items-center gap-2.5 w-full sm:w-auto justify-end">
-                ${t.is_video_public ? `
-                  <button onclick="openVideoModal('${t.youtube_id}', '${t.title}', ${t.track_number})" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-gradient-to-r from-rust-600 to-rust-500 hover:from-rust-500 hover:to-rust-400 text-white font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2">
-                    <i aria-hidden="true" class="fa-solid fa-play text-[11px]"></i>
-                    <span>Watch Video</span>
-                  </button>
-                ` : `
-                  <div class="w-full sm:w-auto px-3.5 py-2 rounded-xl bg-prairie-900 border border-white/10 text-stone-400 font-mono text-[11px] flex items-center justify-center gap-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-wheat-500"></span>
-                    <span>Video Premiering Soon</span>
-                  </div>
-                `}
-              </div>
+            <!-- Top Floating Meta -->
+            <div class="absolute top-4 left-4 flex flex-wrap items-center gap-2">
+              <span class="px-2.5 py-1 rounded-md bg-prairie-950/90 border border-white/20 text-white font-mono text-xs font-bold shadow-lg">
+                Track ${paddedNum}
+              </span>
+              <span class="px-2.5 py-1 rounded-md bg-prairie-950/90 border border-rust-500/40 text-rust-400 font-mono text-xs shadow-lg">
+                Act 0${t.act_number}: ${escapeHtml(t.act_title)}
+              </span>
             </div>
 
-            <!-- Concept & Narrative Role -->
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 rounded-2xl bg-prairie-900/80 border border-white/5 text-xs font-body">
-              <div class="md:col-span-8 space-y-1">
-                <span class="text-[10px] font-mono text-rust-400 uppercase font-bold block">Narrative Context:</span>
-                <p class="text-stone-300 leading-relaxed">${t.summary}</p>
-              </div>
-              <div class="md:col-span-4 space-y-1 border-t md:border-t-0 md:border-l border-white/5 pt-2 md:pt-0 md:pl-4">
-                <span class="text-[10px] font-mono text-wheat-400 uppercase font-bold block">Musical Cue:</span>
-                <p class="text-stone-400 italic text-[11px] font-mono leading-relaxed">${t.musical_cue || 'Gothic Americana instrumentation'}</p>
-              </div>
-            </div>
-
-            <!-- Lyrics Toggle & Actions -->
-            <div class="pt-2 border-t border-white/10 flex flex-wrap items-center justify-between gap-3">
-              <button onclick="toggleTrackLyrics(${t.track_number})" aria-expanded="${isExpanded}" aria-controls="lyrics-${t.track_number}" aria-label="${isExpanded ? 'Collapse formatted lyrics for ' + t.title : 'Read full lyrics and cues for ' + t.title}" class="text-xs font-mono text-rust-400 hover:text-rust-300 flex items-center gap-2 font-bold focus:outline-none focus-visible:ring-2 focus-visible:ring-rust-500 rounded px-1 py-0.5">
-                <i class="fa-solid ${isExpanded ? 'fa-chevron-up' : 'fa-chevron-down'} text-[10px]" aria-hidden="true"></i>
-                <span>${isExpanded ? 'Collapse Formatted Lyrics' : 'Read Full Lyrics & Suno Cues'}</span>
+            <!-- Video Play Button Overlay -->
+            <div class="absolute bottom-4 right-4">
+              ${t.is_video_public ? `
+              <button 
+                onclick="openVideoModal('${t.youtube_id}', '${escapeHtml(t.title)}', ${t.track_number})" 
+                class="px-4 py-2 rounded-xl bg-red-600/90 hover:bg-red-500 text-white font-mono text-xs font-bold flex items-center gap-2 shadow-2xl transition-all hover:scale-105 focus-ring"
+                aria-label="Play music video for ${escapeHtml(t.title)}"
+              >
+                <i aria-hidden="true" class="fa-brands fa-youtube text-base"></i>
+                <span>Watch Video</span>
               </button>
+              ` : `
+              <span class="px-3.5 py-1.5 rounded-xl bg-black/70 border border-white/10 text-stone-400 font-mono text-[11px] backdrop-blur-sm flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-wheat-500"></span>
+                <span>Video Premiering Soon</span>
+              </span>
+              `}
+            </div>
+          </div>
 
-              <div class="flex items-center gap-3 text-xs font-mono">
-                <a href="${window.HOLLOW_HERD_DATA.manifesto.spotify_url}" target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-emerald-400 transition-colors flex items-center gap-1">
-                  <i aria-hidden="true" class="fa-brands fa-spotify text-emerald-400"></i>
-                  <span>Spotify</span>
-                </a>
-                <span class="text-stone-700">|</span>
-                <a href="${window.HOLLOW_HERD_DATA.manifesto.apple_music_url}" target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-pink-400 transition-colors flex items-center gap-1">
-                  <i aria-hidden="true" class="fa-brands fa-apple text-pink-400"></i>
-                  <span>Apple</span>
-                </a>
-                <span class="text-stone-700">|</span>
-                <a href="${window.HOLLOW_HERD_DATA.manifesto.youtube_music_url}" target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-red-400 transition-colors flex items-center gap-1">
-                  <i aria-hidden="true" class="fa-brands fa-youtube text-red-500"></i>
-                  <span>YT Music</span>
-                </a>
+          <!-- Track Body Content -->
+          <div class="p-6 sm:p-8 space-y-6">
+            
+            <!-- Title & Subtitle Header -->
+            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-white/10 pb-4">
+              <div>
+                <h3 class="text-2xl sm:text-3xl font-display font-extrabold text-white tracking-tight">
+                  ${escapeHtml(t.title)}
+                </h3>
+                <span class="text-xs font-serif text-rust-300/90 italic mt-0.5 block">
+                  ${escapeHtml(t.subtitle)}
+                </span>
+              </div>
+              <div class="flex items-center gap-3 text-xs font-mono text-stone-400">
+                <span class="px-2.5 py-1 rounded bg-prairie-900 border border-white/5 text-[11px]">
+                  Act ${t.act_number}
+                </span>
               </div>
             </div>
 
-            <!-- Expandable Lyrics Body -->
-            <div id="lyrics-${t.track_number}" role="region" aria-label="Lyrics for ${t.title}" class="${isExpanded ? 'block' : 'hidden'} p-6 rounded-2xl bg-prairie-900 border border-white/5 space-y-1 transition-all">
-              <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-4 text-xs font-mono text-stone-400">
-                <span>Official Lyrics &bull; The Shady River Bard</span>
-                <span>Track ${t.track_number} of 15</span>
+            <!-- 100% Verbatim Lyric Quote -->
+            ${lyricQuote ? `
+            <blockquote class="border-l-4 border-rust-500 bg-prairie-900/80 p-4 rounded-r-xl shadow-inner">
+              <p class="text-sm sm:text-base font-serif italic text-slate-200 leading-relaxed whitespace-pre-line">&ldquo;${escapeHtml(lyricQuote)}&rdquo;</p>
+              <cite class="text-[10px] font-mono text-rust-400 mt-2 block font-normal uppercase tracking-wider">— Verbatim Movement Excerpt</cite>
+            </blockquote>` : ''}
+
+            <!-- The Bard's Story (Directly Visible Narrative Commentary) -->
+            ${storyHtml ? `
+            <div class="space-y-3 bg-prairie-950/60 p-5 rounded-xl border border-white/5">
+              <div class="flex items-center gap-2 text-xs font-mono text-stone-400 uppercase tracking-wider">
+                <i aria-hidden="true" class="fa-solid fa-feather text-rust-400"></i>
+                <span class="font-bold text-white">The Bard's Story &bull; Lore &amp; Context</span>
               </div>
-              <div class="space-y-0.5">
+              <div class="text-xs sm:text-sm text-stone-300 leading-relaxed space-y-2.5 font-sans">
+                ${storyHtml}
+              </div>
+            </div>` : ''}
+
+            <!-- Musical Cue & Sonic Identity -->
+            <div class="flex flex-wrap items-center gap-2 pt-1 text-xs">
+              <span class="text-[11px] font-mono text-stone-400 mr-1">Musical Cue:</span>
+              <span class="px-2 py-0.5 rounded bg-prairie-900 text-wheat-300/90 border border-white/5 font-mono text-[11px]">
+                ${escapeHtml(t.musical_cue || 'Gothic Americana')}
+              </span>
+            </div>
+
+            <!-- Expandable Lyrics Drawer -->
+            <div class="pt-2 border-t border-white/10">
+              <div class="flex items-center justify-between">
+                <button 
+                  onclick="toggleLyrics('${slug}')" 
+                  id="btn-lyrics-${slug}" 
+                  aria-expanded="false" 
+                  aria-controls="drawer-${slug}" 
+                  class="inline-flex items-center gap-2 text-xs font-mono text-rust-400 hover:text-rust-300 font-bold focus-ring py-1 rounded"
+                >
+                  <i aria-hidden="true" class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-${slug}"></i>
+                  <span>View Complete Lyrics</span>
+                </button>
+                <button 
+                  onclick="copyLyrics('${slug}')" 
+                  class="text-[11px] font-mono text-stone-400 hover:text-white transition-colors focus-ring px-2 py-1 rounded"
+                  title="Copy lyrics to clipboard"
+                >
+                  <i aria-hidden="true" class="fa-regular fa-copy"></i>
+                  <span id="copy-msg-${slug}">Copy</span>
+                </button>
+              </div>
+
+              <div 
+                id="drawer-${slug}" 
+                class="hidden mt-4 p-5 bg-prairie-950 rounded-xl border border-white/10 font-serif text-sm text-stone-300 leading-relaxed max-h-96 overflow-y-auto space-y-1 select-text"
+              >
                 ${formattedLyrics}
               </div>
             </div>
 
-          </article>
+          </div>
+
+        </article>
         `;
       }).join('');
     }
 
-    // Toggle single track lyrics
-    function toggleTrackLyrics(trackNumber) {
-      if (expandedTracks.has(trackNumber)) {
-        expandedTracks.delete(trackNumber);
+    // Lyrics Drawer Toggle
+    function toggleLyrics(slug) {
+      const drawer = document.getElementById(`drawer-${slug}`);
+      const btn = document.getElementById(`btn-lyrics-${slug}`);
+      const icon = document.getElementById(`icon-${slug}`);
+      if (!drawer || !btn) return;
+
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      if (isExpanded) {
+        drawer.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+        if (icon) icon.style.transform = 'rotate(0deg)';
       } else {
-        expandedTracks.add(trackNumber);
-      }
-      renderTracks();
-    }
-
-    // Expand / Collapse all lyrics
-    function expandAllLyrics() {
-      if (!window.HOLLOW_HERD_DATA) return;
-      if (expandedTracks.size === window.HOLLOW_HERD_DATA.tracks.length) {
-        expandedTracks.clear();
-      } else {
-        window.HOLLOW_HERD_DATA.tracks.forEach(t => expandedTracks.add(t.track_number));
-      }
-      renderTracks();
-    }
-
-    // Filter by Act
-    function filterByAct(actNumber) {
-      currentActFilter = actNumber;
-      currentFilter = 'act';
-      updateFilterBanner(`Filtered by Act ${actNumber}`);
-      renderTracks();
-      document.getElementById('songs-section').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    // Filter by type (all or videos)
-    function filterTracks(filterType) {
-      currentFilter = filterType;
-      currentActFilter = null;
-
-      const btnAll = document.getElementById('btn-filter-all');
-      const btnVid = document.getElementById('btn-filter-videos');
-
-      if (filterType === 'all') {
-        btnAll.className = 'px-3.5 py-2 rounded-xl bg-rust-600 text-white text-xs font-mono font-bold transition-all shadow-md';
-        btnVid.className = 'px-3.5 py-2 rounded-xl bg-prairie-800 text-stone-300 hover:text-white border border-white/10 text-xs font-mono transition-all flex items-center gap-1.5';
-        btnAll.setAttribute('aria-pressed', 'true');
-        btnVid.setAttribute('aria-pressed', 'false');
-        document.getElementById('filter-status-banner').classList.add('hidden');
-      } else if (filterType === 'videos') {
-        btnVid.className = 'px-3.5 py-2 rounded-xl bg-rust-600 text-white text-xs font-mono font-bold transition-all shadow-md flex items-center gap-1.5';
-        btnAll.className = 'px-3.5 py-2 rounded-xl bg-prairie-800 text-stone-300 hover:text-white border border-white/10 text-xs font-mono transition-all';
-        const liveCount = (window.HOLLOW_HERD_DATA && window.HOLLOW_HERD_DATA.tracks) 
-          ? window.HOLLOW_HERD_DATA.tracks.filter(t => t.is_video_public).length 
-          : 5;
-        updateFilterBanner(`Showing ${liveCount} Released Music Videos`);
-      }
-
-      renderTracks();
-    }
-
-    function updateFilterBanner(msg) {
-      const banner = document.getElementById('filter-status-banner');
-      const text = document.getElementById('filter-status-text');
-      if (banner && text) {
-        text.innerText = msg;
-        banner.classList.remove('hidden');
+        drawer.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+        if (icon) icon.style.transform = 'rotate(180deg)';
       }
     }
 
-    // Jump to specific track
-    function jumpToTrack(trackNum) {
-      currentActFilter = null;
-      currentFilter = 'all';
-      filterTracks('all');
-      expandedTracks.add(trackNum);
-      renderTracks();
-      setTimeout(() => {
-        const el = document.getElementById(`track-${trackNum}`);
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 100);
+    // Copy Lyrics Helper
+    function copyLyrics(slug) {
+      const trackNum = parseInt(slug.replace('track-', ''), 10);
+      const track = window.HOLLOW_HERD_DATA.tracks.find(t => t.track_number === trackNum);
+      if (!track) return;
+
+      const copyText = `${track.title} (Track ${String(track.track_number).padStart(2, '0')})\n` +
+        `Album 26: The Hollow Herd | The Shady River Bard\n` +
+        `Act ${track.act_number}: ${track.act_title}\n\n` +
+        `-- COMPLETE LYRICS --\n\n` +
+        `${track.lyrics}\n\n` +
+        `----------------------------------------------------\n` +
+        `© 2026 The Shady River Bard. All Rights Reserved.\n` +
+        `Authorized Vault: https://theshadyriverbard.com/the-hollow-herd/`;
+
+      navigator.clipboard.writeText(copyText).then(() => {
+        const msg = document.getElementById(`copy-msg-${slug}`);
+        if (msg) {
+          msg.textContent = 'Copied!';
+          setTimeout(() => { msg.textContent = 'Copy'; }, 2000);
+        }
+      }).catch(err => {
+        console.error("Clipboard copy failed:", err);
+      });
     }
 
     // Video Modal Logic with Full A11y Focus Restoration

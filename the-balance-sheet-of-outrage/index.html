@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Balance Sheet of Outrage | Album 12 Vault | The Shady River Bard</title>
-  <meta name="description" content="Explore The Balance Sheet of Outrage, a 4-act forensic sonic audit of the military-industrial complex by The Shady River Bard. 14 tracks, complete lyrics vault, Suno prompts, systemic pillars, and official videos.">
+  <meta name="description" content="Explore The Balance Sheet of Outrage, a 4-act forensic sonic audit of the military-industrial complex by The Shady River Bard. 14 tracks, complete lyrics vault, thematic analyses, systemic pillars, and official videos.">
   
   <!-- Canonical & Social Meta -->
   <link rel="canonical" href="https://theshadyriverbard.com/the-balance-sheet-of-outrage/">
@@ -35,6 +35,16 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -733,24 +743,29 @@
           const matchTitle = t.title.toLowerCase().includes(currentSearchQuery);
           const matchTheme = t.theme.toLowerCase().includes(currentSearchQuery);
           const matchNarrative = t.narrative.toLowerCase().includes(currentSearchQuery);
-          const matchLyrics = t.stanzas.some(s => s.toLowerCase().includes(currentSearchQuery));
-          const matchSuno = t.suno_prompt.toLowerCase().includes(currentSearchQuery);
+          const matchLyrics = t.stanzas.some(st => st.toLowerCase().includes(currentSearchQuery));
+          const matchArc = (t.emotional_arc || '').toLowerCase().includes(currentSearchQuery);
 
-          return matchTitle || matchTheme || matchNarrative || matchLyrics || matchSuno;
+          return matchTitle || matchTheme || matchNarrative || matchLyrics || matchArc;
         });
 
         if (searchFeedback) {
-          searchFeedback.innerText = `Showing ${filtered.length} of ${data.tracks.length} tracks`;
+          searchFeedback.textContent = currentSearchQuery ? `Found ${filtered.length} tracks matching "${currentSearchQuery}"` : '';
         }
 
         if (filtered.length === 0) {
           tracksContainer.innerHTML = `
-            <div class="p-12 text-center rounded-3xl bg-steel-850 border border-white/10 space-y-3">
-              <i class="fa-solid fa-file-circle-xmark text-4xl text-stone-500" aria-hidden="true"></i>
-              <p class="font-display font-bold text-lg text-white">No tracks match your search</p>
-              <p class="text-xs font-mono text-stone-400">Try adjusting keywords or selecting "All Tracks".</p>
-              <button onclick="clearSearch()" class="mt-2 px-4 py-2 rounded-xl bg-steel-800 text-stone-200 border border-white/10 text-xs font-mono hover:bg-steel-750">
-                Clear Filters
+            <div class="p-12 text-center rounded-3xl bg-steel-850 border border-white/10 text-stone-400">
+              <i class="fa-solid fa-filter-circle-xmark text-4xl mb-4 text-stone-500" aria-hidden="true"></i>
+              <h3 class="font-display font-bold text-xl text-white mb-2">No Matching Tracks Found</h3>
+              <p class="text-xs sm:text-sm text-stone-400 max-w-md mx-auto mb-6">
+                No tracks matched "${escapeHtml(currentSearchQuery)}". Try clearing your search query or selecting "All Movements".
+              </p>
+              <button 
+                onclick="window.clearSearch()"
+                class="px-5 py-2.5 rounded-xl bg-outrage-500 hover:bg-outrage-400 text-stone-950 font-bold text-xs uppercase tracking-wider transition-all focus:outline-none focus:ring-2 focus:ring-outrage-400"
+              >
+                Clear Search &amp; Filters
               </button>
             </div>
           `;
@@ -760,157 +775,136 @@
         tracksContainer.innerHTML = filtered.map(t => {
           const isExpanded = openDrawers.has(t.number);
 
+          // Formatted stanzas
+          const stanzasHtml = t.stanzas.map(stanza => {
+            const lines = stanza.split('\n').map(line => {
+              const trimmed = line.trim();
+              if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
+                return `<div class="font-mono text-xs font-bold text-outrage-400 pt-3 pb-1 uppercase tracking-wider">${escapeHtml(trimmed)}</div>`;
+              }
+              return `<div class="text-stone-200">${escapeHtml(trimmed)}</div>`;
+            }).join('');
+            return `<div class="py-1.5">${lines}</div>`;
+          }).join('');
+
           return `
-            <article id="track-${t.number}" class="track-card rounded-3xl bg-steel-850 border border-white/10 shadow-xl overflow-hidden">
+            <article id="track-${t.number}" class="bg-steel-850 border border-white/10 hover:border-outrage-500/30 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300">
               
-              <!-- Card Header & Summary Row -->
-              <div class="p-6 sm:p-7 space-y-5">
+              <!-- Track Banner (16:9) -->
+              <div class="relative aspect-video w-full overflow-hidden bg-steel-950">
+                <img 
+                  src="${t.art_banner}" 
+                  alt="Art for Track ${t.track_number_formatted}: ${escapeHtml(t.title)}" 
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                  width="1200"
+                  height="675"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-steel-850 via-transparent to-black/40"></div>
                 
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-4">
-                  <div class="flex items-center gap-3">
-                    <span class="w-9 h-9 rounded-xl bg-outrage-950 border border-outrage-500/40 flex items-center justify-center font-mono font-bold text-outrage-400 text-sm flex-shrink-0">
-                      ${t.track_number_formatted}
-                    </span>
-                    <div>
-                      <h3 class="font-display text-xl sm:text-2xl font-bold text-white">
-                        ${t.title}
-                      </h3>
-                      <div class="flex items-center gap-2 text-xs font-mono text-stone-400 mt-0.5">
-                        <span class="text-outrage-400 font-bold">${t.act_title}</span>
-                        <span>&bull;</span>
-                        <span>${t.theme}</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Action Buttons -->
-                  <div class="flex items-center gap-2 flex-wrap">
-                    <button 
-                      onclick="openVideoModal('${t.video_id}', '${t.title.replace(/'/g, "\\'")}')" 
-                      class="px-3 py-1.5 rounded-lg bg-red-950/40 hover:bg-red-900/60 text-red-300 border border-red-800/50 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500"
-                      title="Watch ${t.title} official lyric video"
-                      aria-label="Watch ${t.title} video on YouTube"
-                    >
-                      <i class="fa-brands fa-youtube text-red-400" aria-hidden="true"></i>
-                      <span>Lyric Video</span>
-                    </button>
-
-                    <button 
-                      onclick="copyTrackLyrics(${t.number})" 
-                      class="px-3 py-1.5 rounded-lg bg-steel-800 hover:bg-steel-750 text-stone-200 border border-white/10 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
-                      title="Copy ${t.title} lyrics with official legal copyright"
-                      aria-label="Copy lyrics for ${t.title}"
-                    >
-                      <i class="fa-solid fa-copy text-amber-400" aria-hidden="true"></i>
-                      <span>Copy Lyrics</span>
-                    </button>
-
-                    <button 
-                      onclick="toggleDrawer(${t.number})" 
-                      id="drawer-toggle-${t.number}" 
-                      aria-expanded="${isExpanded}" 
-                      aria-controls="drawer-content-${t.number}"
-                      class="px-3.5 py-1.5 rounded-lg ${isExpanded ? 'bg-outrage-600 text-white font-bold' : 'bg-steel-800 hover:bg-steel-750 text-stone-200'} border border-white/10 text-xs font-mono transition-all flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-outrage-500"
-                    >
-                      <span>${isExpanded ? 'Hide Lyrics' : 'View Lyrics'}</span>
-                      <i class="fa-solid ${isExpanded ? 'fa-chevron-up' : 'fa-chevron-down'} text-[11px]" aria-hidden="true"></i>
-                    </button>
-                  </div>
+                <!-- Top Floating Meta -->
+                <div class="absolute top-4 left-4 flex flex-wrap items-center gap-2">
+                  <span class="px-2.5 py-1 rounded-md bg-steel-950/90 border border-white/20 text-white font-mono text-xs font-bold shadow-lg">
+                    Track ${t.track_number_formatted}
+                  </span>
+                  <span class="px-2.5 py-1 rounded-md bg-outrage-950/90 border border-outrage-500/40 text-outrage-400 font-mono text-xs shadow-lg">
+                    ${escapeHtml(t.act_title)}
+                  </span>
                 </div>
 
-                <!-- Two-Column Body: Visual & Excerpt -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-                  
-                  <!-- Artwork Column -->
-                  <div class="lg:col-span-4">
-                    <div class="relative aspect-[16/9] rounded-2xl overflow-hidden border border-white/10 shadow-md group">
-                      <img 
-                        src="${t.art_banner}" 
-                        alt="${t.title} artwork" 
-                        loading="lazy" 
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      >
-                      <div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-black/75 text-[10px] font-mono text-stone-300 backdrop-blur-sm">
-                        ${t.act_title}
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Narrative & Lyric Excerpt Column -->
-                  <div class="lg:col-span-8 space-y-3">
-                    <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-body">
-                      ${t.narrative}
-                    </p>
-
-                    <blockquote class="p-3.5 rounded-xl bg-steel-900 border-l-2 border-outrage-500 text-xs font-body italic text-stone-200">
-                      "${t.quote}"
-                    </blockquote>
-
-                    <div class="flex flex-wrap items-center gap-2 pt-1 text-[11px] font-mono">
-                      <span class="px-2.5 py-0.5 rounded bg-steel-950 text-outrage-400 border border-white/5">
-                        <strong>Arc:</strong> ${t.emotional_arc}
-                      </span>
-                    </div>
-
-                    <!-- Collapsible Prompt Information -->
-                    <details class="text-[11px] font-mono text-stone-400 bg-steel-950/60 p-2.5 rounded-xl border border-white/5">
-                      <summary class="cursor-pointer hover:text-stone-200 transition-colors focus:outline-none">
-                        <span>Production &amp; Music Generation Prompt</span>
-                      </summary>
-                      <p class="mt-2 text-stone-300 leading-relaxed font-mono text-[11px]">
-                        ${t.suno_prompt || 'Industrial rock / political folk arrangement.'}
-                      </p>
-                    </details>
-                  </div>
-
+                <!-- Video Play Button Overlay -->
+                <div class="absolute bottom-4 right-4">
+                  <button 
+                    onclick="openVideoModal('${t.video_id}', '${escapeHtml(t.title)}')" 
+                    class="px-4 py-2 rounded-xl bg-red-600/90 hover:bg-red-500 text-white font-mono text-xs font-bold flex items-center gap-2 shadow-2xl transition-all hover:scale-105 focus-ring"
+                    aria-label="Play music video for ${escapeHtml(t.title)}"
+                  >
+                    <i aria-hidden="true" class="fa-brands fa-youtube text-base"></i>
+                    <span>Watch Video</span>
+                  </button>
                 </div>
-
               </div>
 
-              <!-- FULL-WIDTH DEDICATED EXPANDABLE LYRICS DRAWER -->
-              <div 
-                id="drawer-content-${t.number}" 
-                class="lyrics-drawer bg-steel-900/90 border-t border-white/10 ${isExpanded ? 'block' : 'hidden'}"
-              >
-                <div class="p-6 sm:p-8 space-y-6">
-                  
-                  <div class="flex items-center justify-between border-b border-white/10 pb-3">
-                    <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider flex items-center gap-2">
-                      <i class="fa-solid fa-scroll text-outrage-500" aria-hidden="true"></i>
-                      <span>Complete Unedited Lyrics &bull; ${t.title}</span>
-                    </h4>
-                    <span class="text-[11px] font-mono text-stone-400">${t.stanzas.length} Stanzas</span>
+              <!-- Track Body Content -->
+              <div class="p-6 sm:p-8 space-y-6">
+                
+                <!-- Title & Duration Header -->
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-white/10 pb-4">
+                  <div>
+                    <h3 class="text-2xl sm:text-3xl font-display font-extrabold text-white tracking-tight">
+                      ${escapeHtml(t.title)}
+                    </h3>
+                    <span class="text-xs font-serif text-outrage-400/90 italic mt-0.5 block">
+                      ${escapeHtml(t.theme)}
+                    </span>
                   </div>
-
-                  <!-- Stanzas Grid: Full formatting, no cutoff -->
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-body text-xs sm:text-sm leading-relaxed text-stone-200">
-                    ${t.stanzas.map((stanza, sIdx) => `
-                      <div class="p-4 rounded-xl bg-steel-950/70 border border-white/5 space-y-1">
-                        ${stanza.split('\n').map(line => `
-                          <p class="${line.startsWith('[') ? 'font-mono text-[11px] text-outrage-400 font-bold uppercase tracking-wider mb-1' : ''}">
-                            ${line}
-                          </p>
-                        `).join('')}
-                      </div>
-                    `).join('')}
-                  </div>
-
-                  <!-- PERMANENT LEGAL COPYRIGHT NOTICE BAR -->
-                  <div class="p-4 rounded-xl bg-steel-950 border border-outrage-500/30 text-stone-300 text-xs font-mono flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 shadow-inner">
-                    <div class="space-y-0.5">
-                      <p class="font-bold text-stone-100">
-                        &copy; 2025 The Shady River Bard &bull; The Shady River Homestead, LLC. All rights reserved.
-                      </p>
-                      <p class="text-[11px] text-stone-400">
-                        Track ${t.track_number_formatted}: ${t.title} &bull; Album 12: The Balance Sheet of Outrage
-                      </p>
-                    </div>
-                    <div class="text-[10px] text-outrage-400 text-right sm:text-right">
-                      Authorized digital vault representation &bull; theshadyriverbard.com
-                    </div>
-                  </div>
-
                 </div>
+
+                <!-- 100% Verbatim Lyric Quote -->
+                ${t.quote ? `
+                <blockquote class="border-l-4 border-outrage-500 bg-steel-950/80 p-4 rounded-r-xl shadow-inner">
+                  <p class="text-sm sm:text-base font-serif italic text-slate-200 leading-relaxed whitespace-pre-line">&ldquo;${escapeHtml(t.quote)}&rdquo;</p>
+                  <cite class="text-[10px] font-mono text-outrage-400 mt-2 block font-normal uppercase tracking-wider">— Verbatim Movement Excerpt</cite>
+                </blockquote>` : ''}
+
+                <!-- The Bard's Story (Directly Visible Narrative Commentary) -->
+                ${t.narrative ? `
+                <div class="space-y-3 bg-steel-950/60 p-5 rounded-xl border border-white/5">
+                  <div class="flex items-center gap-2 text-xs font-mono text-stone-400 uppercase tracking-wider">
+                    <i aria-hidden="true" class="fa-solid fa-feather text-outrage-400"></i>
+                    <span class="font-bold text-white">The Bard's Story &bull; Lore &amp; Context</span>
+                  </div>
+                  <div class="text-xs sm:text-sm text-stone-300 leading-relaxed space-y-2.5 font-sans">
+                    ${t.narrative.split('\n\n').map(p => `<p>${escapeHtml(p)}</p>`).join('')}
+                  </div>
+                </div>` : ''}
+
+                <!-- Style, Themes & Tags -->
+                <div class="flex flex-wrap items-center gap-2 pt-1 text-xs">
+                  <span class="text-[11px] font-mono text-stone-400 mr-1">Emotional Arc:</span>
+                  <span class="px-2 py-0.5 rounded bg-steel-800 text-stone-300 border border-white/5 font-mono text-[11px]">
+                    ${escapeHtml(t.emotional_arc)}
+                  </span>
+                  <span class="px-2 py-0.5 rounded bg-steel-950 text-outrage-400/90 border border-outrage-500/20 font-mono text-[11px]">
+                    #DefenseIndustrialComplex
+                  </span>
+                  <span class="px-2 py-0.5 rounded bg-steel-950 text-outrage-400/90 border border-outrage-500/20 font-mono text-[11px]">
+                    #WarProfiteering
+                  </span>
+                </div>
+
+                <!-- Expandable Lyrics Drawer -->
+                <div class="pt-2 border-t border-white/10">
+                  <div class="flex items-center justify-between">
+                    <button 
+                      onclick="window.toggleDrawer(${t.number})" 
+                      id="btn-toggle-${t.number}" 
+                      aria-expanded="${isExpanded ? 'true' : 'false'}" 
+                      aria-controls="drawer-content-${t.number}" 
+                      class="inline-flex items-center gap-2 text-xs font-mono text-outrage-400 hover:text-outrage-300 font-bold focus-ring py-1 rounded"
+                    >
+                      <i aria-hidden="true" class="fa-solid fa-chevron-down transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}" id="icon-${t.number}"></i>
+                      <span>${isExpanded ? 'Hide Lyrics' : 'View Complete Lyrics'}</span>
+                    </button>
+                    <button 
+                      onclick="window.copyTrackLyrics(${t.number})" 
+                      class="text-[11px] font-mono text-stone-400 hover:text-white transition-colors focus-ring px-2 py-1 rounded"
+                      title="Copy lyrics to clipboard"
+                    >
+                      <i aria-hidden="true" class="fa-regular fa-copy"></i>
+                      <span>Copy Lyrics</span>
+                    </button>
+                  </div>
+
+                  <div 
+                    id="drawer-content-${t.number}" 
+                    class="${isExpanded ? '' : 'hidden'} mt-4 p-5 bg-steel-950 rounded-xl border border-white/10 font-serif text-sm text-stone-300 leading-relaxed max-h-96 overflow-y-auto space-y-1 select-text"
+                  >
+                    ${stanzasHtml}
+                  </div>
+                </div>
+
               </div>
 
             </article>

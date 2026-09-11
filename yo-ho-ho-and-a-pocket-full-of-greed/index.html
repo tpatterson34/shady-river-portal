@@ -557,7 +557,7 @@
         </div>
 
         <!-- Continuous Tracklist Container (Rendered Dynamically) -->
-        <div id="tracks-container" class="space-y-4">
+        <div id="tracks-container" class="space-y-12">
           <!-- Tracks rendered dynamically -->
         </div>
 
@@ -815,7 +815,7 @@
       // RENDER TRACKS
       function renderTracks() {
         const container = document.getElementById('tracks-container');
-        if (!container) return;
+        if (!container || !data.tracks) return;
 
         const filtered = data.tracks.filter(t => {
           const matchesAct = (currentActFilter === 0) || (t.act_number === currentActFilter);
@@ -826,411 +826,258 @@
           const titleMatch = t.title.toLowerCase().includes(q);
           const themeMatch = (t.core_theme || '').toLowerCase().includes(q);
           const roleMatch = (t.narrative_role || '').toLowerCase().includes(q);
-          const lyricsMatch = (t.clean_lyrics_text || '').toLowerCase().includes(q);
+          const lyricsMatch = (t.clean_lyrics_stanzas || []).some(stz => stz.lines.some(l => l.toLowerCase().includes(q)));
           const storyMatch = (t.prelude || []).some(p => p.toLowerCase().includes(q));
-
           return titleMatch || themeMatch || roleMatch || lyricsMatch || storyMatch;
         });
 
         if (filtered.length === 0) {
           container.innerHTML = `
-            <div class="p-12 text-center rounded-2xl bg-ocean-900/60 border border-white/10 space-y-3">
-              <i aria-hidden="true" class="fa-solid fa-compass-slash text-3xl text-slate-500"></i>
-              <div class="text-sm font-mono text-slate-300 font-bold">No tracks match your filter criteria.</div>
-              <p class="text-xs font-mono text-slate-500">Try clearing your search query or selecting "All Tracks".</p>
-              <button onclick="clearSearch()" class="mt-2 px-3 py-1.5 rounded-lg bg-pirategold-600 text-ocean-950 font-bold text-xs font-mono">Reset Search</button>
+            <div class="p-12 text-center rounded-2xl bg-ocean-900 border border-white/10 text-slate-400 font-mono text-sm space-y-2">
+              <i aria-hidden="true" class="fa-solid fa-filter text-2xl text-pirategold-400 mb-2"></i>
+              <p>No tracks match your current filter.</p>
+              <button onclick="clearSearch()" class="text-pirategold-400 underline font-bold focus-ring">Reset Filters</button>
             </div>
           `;
           return;
         }
 
         container.innerHTML = filtered.map(t => {
-          const isOpen = openDrawers.has(t.number);
-          const activeTab = activeTrackTabs[t.number] || 'clean';
-
-          // Format clean lyrics into stanzas
-          const stanzasHtml = t.clean_lyrics_stanzas.map(stz => {
-            const lines = stz.map(l => {
-              if (l.startsWith('[') && l.endsWith(']')) {
-                return `<div class="text-xs font-mono uppercase tracking-widest text-pirategold-400 font-bold pt-3 pb-1 border-b border-white/5 mb-1">${escapeHtml(l)}</div>`;
-              }
-              return `<div class="leading-relaxed text-slate-200 py-0.5">${escapeHtml(l)}</div>`;
+          // Format clean lyrics stanzas
+          let formattedLyrics = '';
+          if (t.clean_lyrics_stanzas && Array.isArray(t.clean_lyrics_stanzas)) {
+            formattedLyrics = t.clean_lyrics_stanzas.map(stz => {
+              const header = stz.name ? `<span class="text-pirategold-400 font-mono font-bold block mt-3 mb-1">[${escapeHtml(stz.name)}]</span>` : '';
+              const lines = (stz.lines || []).map(line => `<div>${escapeHtml(line)}</div>`).join('');
+              return `<div class="mb-4">${header}${lines}</div>`;
             }).join('');
-            return `<div class="space-y-0.5 mb-4">${lines}</div>`;
-          }).join('');
+          } else if (t.lyrics) {
+            formattedLyrics = escapeHtml(t.lyrics).split('\n').map(line => {
+              const trimmed = line.trim();
+              if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
+                return `<span class="text-pirategold-400 font-mono font-bold block mt-3 mb-1">${trimmed}</span>`;
+              }
+              return `<div>${line}</div>`;
+            }).join('');
+          }
 
-          // Format The Bard's Story paragraphs
-          const storyHtml = t.prelude && t.prelude.length > 0 
-            ? t.prelude.map(p => `<p class="leading-relaxed text-slate-300 text-sm font-serif mb-4">${escapeHtml(p)}</p>`).join('')
-            : `<p class="text-slate-400 font-mono text-xs">Genesis reflections forthcoming.</p>`;
+          // Format The Bard's Story (prelude)
+          let storyHtml = '';
+          if (t.prelude && Array.isArray(t.prelude)) {
+            storyHtml = t.prelude.map(p => `<p>${escapeHtml(p)}</p>`).join('');
+          } else if (t.summary) {
+            storyHtml = `<p>${escapeHtml(t.summary)}</p>`;
+          }
 
           return `
-            <article 
-              id="track-${t.number}" 
-              class="rounded-2xl glass-panel border border-white/10 overflow-hidden shadow-lg transition-all duration-300 ${isOpen ? 'ring-1 ring-pirategold-500/40 bg-ocean-900/90' : 'hover:border-white/20'}"
-            >
-              
-              <!-- Track Header Card -->
-              <div class="p-4 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                
-                <!-- Left: Thumbnail & Title Info -->
-                <div class="flex items-start sm:items-center gap-4 flex-1 min-w-0">
-                  
-                  <!-- Thumbnail with Video Play Overlay -->
-                  <div 
-                    class="relative shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-ocean-950 border border-white/10 group cursor-pointer shadow-md" 
-                    onclick="openTrackVideo(${t.number})"
-                  >
-                    <img 
-                      src="${t.art_square}" 
-                      alt="${escapeHtml(t.title)} square art thumbnail" 
-                      class="w-full h-full object-cover group-hover:scale-110 duration-500"
-                      loading="lazy"
-                    >
-                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 flex items-center justify-center transition-colors">
-                      <i aria-hidden="true" class="fa-solid fa-play text-white text-sm sm:text-base drop-shadow"></i>
-                    </div>
-                  </div>
-
-                  <!-- Details -->
-                  <div class="space-y-1 min-w-0 flex-1">
-                    <div class="flex items-center gap-2 flex-wrap">
-                      <span class="px-2 py-0.5 rounded bg-ocean-950 text-pirategold-400 font-mono text-[10px] font-bold border border-pirategold-500/30">
-                        Track ${t.number_padded}
-                      </span>
-                      <span class="text-[11px] font-mono text-slate-400">
-                        ${escapeHtml(t.act_title)}
-                      </span>
-                      <span class="text-slate-600">&bull;</span>
-                      <span class="text-[11px] font-mono text-slate-400 flex items-center gap-1">
-                        <i aria-hidden="true" class="fa-regular fa-clock"></i>
-                        <span>${t.duration}</span>
-                      </span>
-                    </div>
-
-                    <h3 class="font-display text-lg sm:text-xl font-bold text-white truncate">
-                      ${escapeHtml(t.title)}
-                    </h3>
-
-                    <div class="text-xs font-serif italic text-pirategold-300/90 line-clamp-1">
-                      "${escapeHtml(t.quote)}"
-                    </div>
-
-                    <div class="text-[11px] font-mono text-slate-400/80 truncate">
-                      <i aria-hidden="true" class="fa-solid fa-tag text-[10px] text-pirategold-500/60 mr-1"></i>${escapeHtml(t.core_theme || '')}
-                    </div>
-                  </div>
-
-                </div>
-
-                <!-- Right: Actions Bar -->
-                <div class="flex items-center gap-2 shrink-0 self-start sm:self-center">
-                  
-                  <!-- Play Video Button -->
-                  <button 
-                    onclick="openTrackVideo(${t.number})"
-                    class="px-3 py-2 rounded-xl bg-red-950/80 hover:bg-red-900 text-red-200 font-mono text-xs font-bold transition-colors flex items-center gap-1.5 border border-red-700/50 shadow-md"
-                    aria-label="Play ${escapeHtml(t.title)} Official Video"
-                  >
-                    <i aria-hidden="true" class="fa-brands fa-youtube text-red-400"></i>
-                    <span class="hidden sm:inline">Watch Video</span>
-                  </button>
-
-                  <!-- Toggle Lyrics & Story Drawer -->
-                  <button 
-                    onclick="toggleLyricsDrawer(${t.number})"
-                    id="drawer-toggle-${t.number}"
-                    class="px-3.5 py-2 rounded-xl ${isOpen ? 'bg-pirategold-500 text-ocean-950 font-bold' : 'bg-ocean-900 text-slate-200 hover:bg-ocean-850'} font-mono text-xs transition-colors flex items-center gap-2 border border-white/10 shadow-md"
-                    aria-expanded="${isOpen}"
-                    aria-controls="drawer-panel-${t.number}"
-                  >
-                    <span>${isOpen ? 'Collapse' : 'Lyrics & Story'}</span>
-                    <i aria-hidden="true" class="fa-solid ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'} text-[10px]"></i>
-                  </button>
-
-                </div>
-
-              </div>
-
-              <!-- EXPANDED DRAWER CONTAINER -->
-              <div 
-                id="drawer-panel-${t.number}" 
-                class="${isOpen ? 'block' : 'hidden'} border-t border-white/10 bg-ocean-950/60 p-4 sm:p-6 space-y-6"
-                role="region"
-                aria-label="${escapeHtml(t.title)} lyrics and story details"
+          <article id="${t.slug}" class="bg-ocean-900 border border-white/10 hover:border-pirategold-500/30 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300">
+            
+            <!-- Track Banner (16:9) -->
+            <div class="relative aspect-video w-full overflow-hidden bg-ocean-950">
+              <img 
+                src="${t.art_banner}" 
+                alt="Art for Track ${t.number_padded}: ${escapeHtml(t.title)}" 
+                class="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+                width="1200"
+                height="675"
               >
-                
-                <!-- Widescreen Cinematic Banner -->
-                <div class="relative w-full aspect-[21/9] sm:aspect-[24/9] rounded-xl overflow-hidden border border-white/10 shadow-lg">
-                  <img 
-                    src="${t.art_banner}" 
-                    alt="${escapeHtml(t.title)} widescreen cinematic concept artwork" 
-                    class="w-full h-full object-cover"
-                    loading="lazy"
-                  >
-                  <div class="absolute inset-0 bg-gradient-to-t from-ocean-950 via-ocean-950/30 to-transparent"></div>
-                  
-                  <div class="absolute bottom-3 left-4 right-4 flex items-end justify-between text-xs font-mono">
-                    <div class="space-y-0.5">
-                      <div class="text-[10px] uppercase text-pirategold-400 font-bold">${escapeHtml(t.act_title)} &bull; Track ${t.number_padded}</div>
-                      <div class="font-display text-base sm:text-lg font-bold text-white drop-shadow">${escapeHtml(t.title)}</div>
-                    </div>
-                    <div class="text-[11px] text-slate-300 bg-black/60 px-2.5 py-1 rounded-lg backdrop-blur-sm hidden sm:block max-w-md line-clamp-2">
-                      Narrative Role: ${escapeHtml(t.narrative_role)}
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Tab Controls Bar -->
-                <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 border-b border-white/10 pb-3">
-                  
-                  <!-- 2 Streamlined Tabs -->
-                  <div class="flex items-center gap-2" role="tablist" aria-label="Track details tabs">
-                    <button 
-                      role="tab"
-                      id="tab-btn-${t.number}-clean"
-                      onclick="switchSongTab(${t.number}, 'clean')"
-                      class="tab-btn px-4 py-2 rounded-lg border font-mono text-xs font-bold transition-colors ${activeTab === 'clean' ? 'active' : ''}"
-                      aria-selected="${activeTab === 'clean'}"
-                      aria-controls="tab-panel-${t.number}-clean"
-                    >
-                      <i aria-hidden="true" class="fa-solid fa-scroll text-pirategold-400 mr-1.5"></i>
-                      <span>Clean Lyrics</span>
-                    </button>
-
-                    <button 
-                      role="tab"
-                      id="tab-btn-${t.number}-story"
-                      onclick="switchSongTab(${t.number}, 'story')"
-                      class="tab-btn px-4 py-2 rounded-lg border font-mono text-xs font-bold transition-colors ${activeTab === 'story' ? 'active' : ''}"
-                      aria-selected="${activeTab === 'story'}"
-                      aria-controls="tab-panel-${t.number}-story"
-                    >
-                      <i aria-hidden="true" class="fa-solid fa-book-open text-blue-400 mr-1.5"></i>
-                      <span>The Bard's Story</span>
-                    </button>
-                  </div>
-
-                  <!-- Copy Tab Content Button -->
-                  <button 
-                    onclick="copyCurrentTabContent(${t.number})" 
-                    class="px-3.5 py-2 rounded-lg bg-ocean-900 hover:bg-ocean-850 text-slate-300 hover:text-white border border-white/10 text-xs font-mono transition-colors flex items-center justify-center gap-1.5 shrink-0"
-                    title="Copy tab content to clipboard"
-                    aria-label="Copy ${escapeHtml(t.title)} ${activeTab} content to clipboard"
-                  >
-                    <i aria-hidden="true" class="fa-regular fa-copy text-pirategold-400"></i>
-                    <span>Copy Content</span>
-                  </button>
-
-                </div>
-
-                <!-- Tab Panels Area -->
-                <div class="space-y-4">
-                  
-                  <!-- TAB 1: CLEAN LYRICS -->
-                  <div 
-                    id="tab-panel-${t.number}-clean" 
-                    role="tabpanel" 
-                    aria-labelledby="tab-btn-${t.number}-clean" 
-                    class="${activeTab === 'clean' ? 'block' : 'hidden'} space-y-4"
-                  >
-                    <div class="p-4 rounded-xl bg-ocean-900/80 border border-white/5 flex items-center justify-between flex-wrap gap-2 text-xs font-mono">
-                      <div class="flex items-center gap-2 text-pirategold-300 font-bold">
-                        <i aria-hidden="true" class="fa-solid fa-align-left"></i>
-                        <span>Unabridged Verbatim Lyrics</span>
-                      </div>
-                      <span class="text-slate-400">Official Release Text</span>
-                    </div>
-
-                    <div class="p-4 sm:p-6 rounded-xl bg-ocean-950 font-serif text-sm sm:text-base border border-white/5 space-y-3">
-                      ${stanzasHtml}
-                    </div>
-                  </div>
-
-                  <!-- TAB 2: THE BARD'S STORY & GENESIS -->
-                  <div 
-                    id="tab-panel-${t.number}-story" 
-                    role="tabpanel" 
-                    aria-labelledby="tab-btn-${t.number}-story" 
-                    class="${activeTab === 'story' ? 'block' : 'hidden'} space-y-4"
-                  >
-                    <div class="p-4 rounded-xl bg-ocean-900/80 border border-white/5 flex items-center gap-2 text-xs font-mono text-blue-400 font-bold">
-                      <i aria-hidden="true" class="fa-solid fa-book-open"></i>
-                      <span>Behind-the-Scenes Genesis &amp; Creative Reflections</span>
-                    </div>
-
-                    <div class="p-4 sm:p-6 rounded-xl bg-ocean-950 border border-white/5">
-                      ${storyHtml}
-                    </div>
-                  </div>
-
-                </div>
-
-                <!-- LEGAL COPYRIGHT DISCLOSURE BAR -->
-                <div class="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] font-mono text-slate-400 bg-black/30 p-3 rounded-xl">
-                  <div class="flex items-center gap-2 text-center sm:text-left">
-                    <i aria-hidden="true" class="fa-regular fa-copyright text-slate-500"></i>
-                    <span>${escapeHtml(t.copyright_notice)}</span>
-                  </div>
-                  <div class="flex items-center gap-3">
-                    <span class="text-slate-500">Authorized Discography Vault:</span>
-                    <a href="https://theshadyriverbard.com/yo-ho-ho-and-a-pocket-full-of-greed/" class="text-pirategold-400 hover:underline shrink-0">theshadyriverbard.com/yo-ho-ho-and-a-pocket-full-of-greed/</a>
-                  </div>
-                </div>
-
+              <div class="absolute inset-0 bg-gradient-to-t from-ocean-900 via-transparent to-black/40"></div>
+              
+              <!-- Top Floating Meta -->
+              <div class="absolute top-4 left-4 flex flex-wrap items-center gap-2">
+                <span class="px-2.5 py-1 rounded-md bg-ocean-950/90 border border-white/20 text-white font-mono text-xs font-bold shadow-lg">
+                  Track ${t.number_padded}
+                </span>
+                <span class="px-2.5 py-1 rounded-md bg-pirategold-950/90 border border-pirategold-500/40 text-pirategold-400 font-mono text-xs shadow-lg">
+                  ${escapeHtml(t.act_title)}
+                </span>
               </div>
 
-            </article>
+              <!-- Video Play Button Overlay -->
+              <div class="absolute bottom-4 right-4">
+                <button 
+                  onclick="openVideoModal('${t.youtube_video_id}', '${escapeHtml(t.title)}')" 
+                  class="px-4 py-2 rounded-xl bg-red-600/90 hover:bg-red-500 text-white font-mono text-xs font-bold flex items-center gap-2 shadow-2xl transition-all hover:scale-105 focus-ring"
+                  aria-label="Play music video for ${escapeHtml(t.title)}"
+                >
+                  <i aria-hidden="true" class="fa-brands fa-youtube text-base"></i>
+                  <span>Watch Video</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Track Body Content -->
+            <div class="p-6 sm:p-8 space-y-6">
+              
+              <!-- Title & Duration Header -->
+              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-white/10 pb-4">
+                <div>
+                  <h3 class="text-2xl sm:text-3xl font-display font-extrabold text-white tracking-tight">
+                    ${escapeHtml(t.title)}
+                  </h3>
+                  <span class="text-xs font-serif text-pirategold-300/90 italic mt-0.5 block">
+                    ${escapeHtml(t.core_theme)} &bull; ${escapeHtml(t.narrative_role)}
+                  </span>
+                </div>
+                <div class="flex items-center gap-3 text-xs font-mono text-slate-400">
+                  <span class="flex items-center gap-1">
+                    <i aria-hidden="true" class="fa-regular fa-clock text-pirategold-400"></i>
+                    <span>${t.duration}</span>
+                  </span>
+                </div>
+              </div>
+
+              <!-- 100% Verbatim Lyric Quote -->
+              ${t.quote ? `
+              <blockquote class="border-l-4 border-pirategold-500 bg-ocean-850/80 p-4 rounded-r-xl shadow-inner">
+                <p class="text-sm sm:text-base font-serif italic text-slate-200 leading-relaxed whitespace-pre-line">&ldquo;${escapeHtml(t.quote)}&rdquo;</p>
+                <cite class="text-[10px] font-mono text-pirategold-400 mt-2 block font-normal uppercase tracking-wider">— Verbatim Movement Excerpt</cite>
+              </blockquote>` : ''}
+
+              <!-- The Bard's Story (Directly Visible Narrative Commentary) -->
+              ${storyHtml ? `
+              <div class="space-y-3 bg-ocean-950/60 p-5 rounded-xl border border-white/5">
+                <div class="flex items-center gap-2 text-xs font-mono text-slate-400 uppercase tracking-wider">
+                  <i aria-hidden="true" class="fa-solid fa-feather text-pirategold-400"></i>
+                  <span class="font-bold text-white">The Bard's Story &bull; Lore &amp; Context</span>
+                </div>
+                <div class="text-xs sm:text-sm text-slate-300 leading-relaxed space-y-2.5 font-sans">
+                  ${storyHtml}
+                </div>
+              </div>` : ''}
+
+              <!-- Style, Themes & Tags -->
+              <div class="flex flex-wrap items-center gap-2 pt-1 text-xs">
+                <span class="text-[11px] font-mono text-slate-400 mr-1">Narrative Role:</span>
+                <span class="px-2 py-0.5 rounded bg-ocean-800 text-slate-300 border border-white/5 font-mono text-[11px]">
+                  ${escapeHtml(t.narrative_role)}
+                </span>
+                <span class="px-2 py-0.5 rounded bg-ocean-850 text-pirategold-400/90 border border-pirategold-500/20 font-mono text-[11px]">
+                  #${escapeHtml(t.core_theme)}
+                </span>
+              </div>
+
+              <!-- Expandable Lyrics Drawer -->
+              <div class="pt-2 border-t border-white/10">
+                <div class="flex items-center justify-between">
+                  <button 
+                    onclick="toggleLyrics('${t.slug}')" 
+                    id="btn-lyrics-${t.slug}" 
+                    aria-expanded="false" 
+                    aria-controls="drawer-${t.slug}" 
+                    class="inline-flex items-center gap-2 text-xs font-mono text-pirategold-400 hover:text-pirategold-300 font-bold focus-ring py-1 rounded"
+                  >
+                    <i aria-hidden="true" class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-${t.slug}"></i>
+                    <span>View Complete Lyrics</span>
+                  </button>
+                  <button 
+                    onclick="copyLyrics('${t.slug}')" 
+                    class="text-[11px] font-mono text-slate-400 hover:text-white transition-colors focus-ring px-2 py-1 rounded"
+                    title="Copy lyrics to clipboard"
+                  >
+                    <i aria-hidden="true" class="fa-regular fa-copy"></i>
+                    <span id="copy-msg-${t.slug}">Copy</span>
+                  </button>
+                </div>
+
+                <div 
+                  id="drawer-${t.slug}" 
+                  class="hidden mt-4 p-5 bg-ocean-950 rounded-xl border border-white/10 font-serif text-sm text-slate-300 leading-relaxed max-h-96 overflow-y-auto space-y-1 select-text"
+                >
+                  ${formattedLyrics}
+                </div>
+              </div>
+
+            </div>
+
+          </article>
           `;
         }).join('');
       }
 
-      // TAB SWITCHING
-      window.switchSongTab = function(trackNum, tabName) {
-        activeTrackTabs[trackNum] = tabName;
-        const panels = ['clean', 'story'];
-        
-        panels.forEach(p => {
-          const btn = document.getElementById(`tab-btn-${trackNum}-${p}`);
-          const panel = document.getElementById(`tab-panel-${trackNum}-${p}`);
-          if (btn && panel) {
-            if (p === tabName) {
-              btn.classList.add('active');
-              btn.setAttribute('aria-selected', 'true');
-              panel.classList.remove('hidden');
-              panel.classList.add('block');
-            } else {
-              btn.classList.remove('active');
-              btn.setAttribute('aria-selected', 'false');
-              panel.classList.remove('block');
-              panel.classList.add('hidden');
-            }
+      // Lyrics Drawer Toggle
+      window.toggleLyrics = function(slug) {
+        const drawer = document.getElementById(`drawer-${slug}`);
+        const btn = document.getElementById(`btn-lyrics-${slug}`);
+        const icon = document.getElementById(`icon-${slug}`);
+        if (!drawer || !btn) return;
+
+        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+        if (isExpanded) {
+          drawer.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+          if (icon) icon.style.transform = 'rotate(0deg)';
+        } else {
+          drawer.classList.remove('hidden');
+          btn.setAttribute('aria-expanded', 'true');
+          if (icon) icon.style.transform = 'rotate(180deg)';
+        }
+      };
+
+      // Copy Lyrics Helper
+      window.copyLyrics = function(slug) {
+        const track = data.tracks.find(t => t.slug === slug);
+        if (!track) return;
+
+        let lyricsText = '';
+        if (track.clean_lyrics_stanzas && Array.isArray(track.clean_lyrics_stanzas)) {
+          lyricsText = track.clean_lyrics_stanzas.map(stz => {
+            const head = stz.name ? `[${stz.name}]\n` : '';
+            return head + (stz.lines || []).join('\n');
+          }).join('\n\n');
+        } else if (track.lyrics) {
+          lyricsText = track.lyrics;
+        }
+
+        const copyText = `${track.title} (Track ${track.number_padded})\n` +
+          `Album 17: Yo Ho Ho and a Pocket Full of Greed | The Shady River Bard\n` +
+          `Act: ${track.act_title}\n\n` +
+          `"${track.quote || ''}"\n\n` +
+          `-- CLEAN LYRICS --\n\n` +
+          `${lyricsText}\n\n` +
+          `----------------------------------------------------\n` +
+          `${track.copyright_notice || 'All Rights Reserved.'}\n` +
+          `Authorized Vault: https://theshadyriverbard.com/yo-ho-ho-and-a-pocket-full-of-greed/`;
+
+        navigator.clipboard.writeText(copyText).then(() => {
+          const msg = document.getElementById(`copy-msg-${slug}`);
+          if (msg) {
+            msg.textContent = 'Copied!';
+            setTimeout(() => { msg.textContent = 'Copy'; }, 2000);
           }
+        }).catch(err => {
+          console.error("Clipboard copy failed:", err);
         });
       };
 
-      // DRAWER TOGGLE
-      window.toggleLyricsDrawer = function(trackNum) {
-        if (openDrawers.has(trackNum)) {
-          openDrawers.delete(trackNum);
-        } else {
-          openDrawers.add(trackNum);
-        }
-        renderTracks();
-      };
-
-      // EXPAND / COLLAPSE ALL
       window.expandAllDrawers = function() {
-        data.tracks.forEach(t => openDrawers.add(t.number));
-        renderTracks();
+        data.tracks.forEach(t => {
+          const drawer = document.getElementById(`drawer-${t.slug}`);
+          const btn = document.getElementById(`btn-lyrics-${t.slug}`);
+          const icon = document.getElementById(`icon-${t.slug}`);
+          if (drawer && btn) {
+            drawer.classList.remove('hidden');
+            btn.setAttribute('aria-expanded', 'true');
+            if (icon) icon.style.transform = 'rotate(180deg)';
+          }
+        });
       };
 
       window.collapseAllDrawers = function() {
-        openDrawers.clear();
-        renderTracks();
-      };
-
-      // SEARCH & FILTER LOGIC
-      window.handleSearch = function(val) {
-        searchQuery = val.trim();
-        updateFilterStatus();
-        renderTracks();
-      };
-
-      window.clearSearch = function() {
-        searchQuery = "";
-        currentActFilter = 0;
-        const input = document.getElementById('search-input');
-        if (input) input.value = "";
-        updateActPills();
-        updateFilterStatus();
-        renderTracks();
-      };
-
-      window.setActFilter = function(actNum) {
-        currentActFilter = actNum;
-        updateActPills();
-        updateFilterStatus();
-        renderTracks();
-
-        const vault = document.getElementById('vault-section');
-        if (vault) {
-          vault.scrollIntoView({ behavior: 'smooth' });
-        }
-      };
-
-      function updateActPills() {
-        const pills = document.querySelectorAll('.act-pill');
-        pills.forEach(p => {
-          const act = parseInt(p.getAttribute('data-act'), 10);
-          if (act === currentActFilter) {
-            p.className = 'act-pill px-3 py-1.5 rounded-lg text-xs font-mono font-semibold transition-colors bg-pirategold-500 text-ocean-950 font-bold';
-          } else {
-            p.className = 'act-pill px-3 py-1.5 rounded-lg text-xs font-mono font-semibold transition-colors bg-ocean-900 text-slate-300 hover:text-white border border-white/10';
+        data.tracks.forEach(t => {
+          const drawer = document.getElementById(`drawer-${t.slug}`);
+          const btn = document.getElementById(`btn-lyrics-${t.slug}`);
+          const icon = document.getElementById(`icon-${t.slug}`);
+          if (drawer && btn) {
+            drawer.classList.add('hidden');
+            btn.setAttribute('aria-expanded', 'false');
+            if (icon) icon.style.transform = 'rotate(0deg)';
           }
         });
-      }
-
-      function updateFilterStatus() {
-        const statusBar = document.getElementById('filter-status-bar');
-        const statusText = document.getElementById('filter-status-text');
-        if (!statusBar || !statusText) return;
-
-        if (searchQuery || currentActFilter !== 0) {
-          statusBar.classList.remove('hidden');
-          let parts = [];
-          if (currentActFilter !== 0) parts.push(`Act 0${currentActFilter}`);
-          if (searchQuery) parts.push(`matching "${searchQuery}"`);
-          statusText.textContent = `Filtered by: ${parts.join(', ')}`;
-        } else {
-          statusBar.classList.add('hidden');
-        }
-      }
-
-      // COPY CURRENT TAB CONTENT
-      window.copyCurrentTabContent = function(trackNum) {
-        const t = data.tracks.find(tr => tr.number === trackNum);
-        if (!t) return;
-
-        const tab = activeTrackTabs[trackNum] || 'clean';
-        let copyText = "";
-
-        if (tab === 'clean') {
-          copyText = `${t.title} (Track ${t.number_padded}) - Unabridged Lyrics\n` +
-            `Album 17: Yo Ho Ho and a Pocket Full of Greed | The Shady River Bard\n` +
-            `Act: ${t.act_title}\n\n` +
-            `\"${t.quote}\"\n\n` +
-            t.clean_lyrics_text + '\n\n' +
-            `----------------------------------------------------\n` +
-            `${t.copyright_notice}\n` +
-            `Authorized Vault: https://theshadyriverbard.com/yo-ho-ho-and-a-pocket-full-of-greed/`;
-        } else if (tab === 'story') {
-          copyText = `${t.title} (Track ${t.number_padded}) - The Bard's Story & Genesis\n\n` +
-            t.prelude.join('\n\n');
-        }
-
-        navigator.clipboard.writeText(copyText).then(() => {
-          showToast(`Copied ${tab.toUpperCase()} content for "${t.title}"!`);
-        }).catch(err => {
-          console.error("Clipboard copy failed:", err);
-          showToast(`Unable to copy automatically.`);
-        });
       };
 
-      // TOAST FEEDBACK
-      window.showToast = function(msg) {
-        const toast = document.getElementById('toast');
-        const toastMsg = document.getElementById('toast-message');
-        if (!toast || !toastMsg) return;
-
-        toastMsg.textContent = msg;
-        toast.classList.remove('hidden');
-        setTimeout(() => {
-          toast.classList.add('hidden');
-        }, 3000);
-      };
-
-      // TRACK VIDEO HELPER FUNCTION (Immune to escaping/apostrophes in track title)
       window.openTrackVideo = function(trackNum) {
         const track = data.tracks.find(item => item.number === trackNum);
         if (!track || !track.youtube_video_id) return;

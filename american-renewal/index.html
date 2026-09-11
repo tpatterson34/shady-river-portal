@@ -623,7 +623,7 @@
         </div>
 
         <!-- 19 Tracks Container Grid -->
-        <div class="space-y-6" id="tracks-container">
+        <div class="space-y-12" id="tracks-container">
           <!-- Dynamically populated from data.tracks -->
         </div>
 
@@ -880,7 +880,7 @@
           const titleMatch = t.title.toLowerCase().includes(q);
           const themeMatch = (t.core_theme || '').toLowerCase().includes(q);
           const roleMatch = (t.narrative_role || '').toLowerCase().includes(q);
-          const lyricsMatch = (t.clean_lyrics_text || '').toLowerCase().includes(q);
+          const lyricsMatch = (t.clean_lyrics_stanzas || []).some(stz => stz.lines.some(l => l.toLowerCase().includes(q)));
           const storyMatch = (t.prelude || []).some(p => p.toLowerCase().includes(q));
           return titleMatch || themeMatch || roleMatch || lyricsMatch || storyMatch;
         });
@@ -905,247 +905,241 @@
         }
 
         tracksContainer.innerHTML = filtered.map(t => {
-          const isOpen = openDrawers.has(t.number);
-          const activeTab = activeTrackTabs[t.number] || 'clean';
+          // Format clean lyrics stanzas
+          let formattedLyrics = '';
+          if (t.clean_lyrics_stanzas && Array.isArray(t.clean_lyrics_stanzas)) {
+            formattedLyrics = t.clean_lyrics_stanzas.map(stz => {
+              const header = stz.name ? `<span class="text-amberwood-400 font-mono font-bold block mt-3 mb-1">[${escapeHtml(stz.name)}]</span>` : '';
+              const lines = (stz.lines || []).map(line => `<div>${escapeHtml(line)}</div>`).join('');
+              return `<div class="mb-4">${header}${lines}</div>`;
+            }).join('');
+          } else if (t.lyrics) {
+            formattedLyrics = escapeHtml(t.lyrics).split('\n').map(line => {
+              const trimmed = line.trim();
+              if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
+                return `<span class="text-amberwood-400 font-mono font-bold block mt-3 mb-1">${trimmed}</span>`;
+              }
+              return `<div>${line}</div>`;
+            }).join('');
+          }
 
-          // Format Clean Lyrics
-          const lyricsHtml = (t.clean_lyrics_stanzas || []).map((stanza, sIdx) => `
-            <div class="space-y-1">
-              ${stanza.map(line => `<div class="leading-relaxed text-slate-300 font-serif text-sm">${escapeHtml(line)}</div>`).join('')}
-            </div>
-          `).join('<div class="h-3"></div>');
-
-          // Format The Bard's Story
-          const storyHtml = (t.prelude || []).length > 0 
-            ? t.prelude.map(p => `<p class="leading-relaxed text-slate-300">${escapeHtml(p)}</p>`).join('')
-            : `<p class="italic text-slate-500">Narrative reflections coming soon.</p>`;
+          // Format The Bard's Story (prelude)
+          let storyHtml = '';
+          if (t.prelude && Array.isArray(t.prelude)) {
+            storyHtml = t.prelude.map(p => `<p>${escapeHtml(p)}</p>`).join('');
+          } else if (t.summary) {
+            storyHtml = `<p>${escapeHtml(t.summary)}</p>`;
+          }
 
           return `
-            <article 
-              id="track-card-${t.number}" 
-              class="glass-panel rounded-2xl overflow-hidden border border-white/10 transition-all hover:border-white/20 shadow-xl"
-            >
-              <!-- Card Header / Compact Overview -->
-              <div class="p-5 sm:p-6 lg:p-7">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-                  
-                  <!-- Artwork Thumbnail with Duration Badge -->
-                  <div class="lg:col-span-4 xl:col-span-3">
-                    <div class="relative aspect-[16/9] lg:aspect-[1.83/1] rounded-xl overflow-hidden border border-white/10 shadow-md group">
-                      <img 
-                        src="${t.art_banner}" 
-                        alt="${escapeHtml(t.title)} widescreen movement banner" 
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
-                        width="1200"
-                        height="655"
-                      >
-                      <div class="absolute top-2.5 left-2.5">
-                        <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-stonebg-950/90 text-amberwood-400 border border-amberwood-500/30 backdrop-blur-sm">
-                          Track ${t.number_padded}
-                        </span>
-                      </div>
-                      <div class="absolute bottom-2.5 right-2.5">
-                        <span class="text-[10px] font-mono font-medium px-2 py-0.5 rounded bg-stonebg-950/90 text-slate-300 border border-white/10 backdrop-blur-sm">
-                          ${t.duration}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Track Details & Quote -->
-                  <div class="lg:col-span-5 xl:col-span-6 space-y-2.5">
-                    <div class="flex flex-wrap items-center gap-2">
-                      <span class="text-[10px] font-mono uppercase tracking-wider text-cedar-400">
-                        Vol ${t.volume_number} &bull; Act ${t.act_number}: ${escapeHtml(t.act_title)}
-                      </span>
-                      <span class="text-[10px] font-mono text-slate-500">&bull;</span>
-                      <span class="text-[10px] font-mono text-slate-400">
-                        Theme: <strong class="text-slate-300">${escapeHtml(t.core_theme || 'Systemic Renewal')}</strong>
-                      </span>
-                    </div>
-
-                    <h3 class="font-display text-xl sm:text-2xl font-bold text-white tracking-tight">
-                      ${escapeHtml(t.title)}
-                    </h3>
-
-                    <blockquote class="text-xs sm:text-sm text-slate-300 font-serif italic border-l-2 border-amberwood-500/60 pl-3 leading-relaxed">
-                      &ldquo;${escapeHtml(t.quote)}&rdquo;
-                    </blockquote>
-
-                    <p class="text-xs text-slate-400 line-clamp-2 leading-relaxed font-sans">
-                      ${escapeHtml(t.narrative_role || t.song_description || '')}
-                    </p>
-                  </div>
-
-                  <!-- Card Actions / Controls -->
-                  <div class="lg:col-span-3 flex flex-row lg:flex-col gap-2.5 justify-end">
-                    <!-- Play Video Modal -->
-                    <button 
-                      onclick="openTrackVideo(${t.number})" 
-                      class="flex-1 lg:flex-initial py-2.5 px-4 rounded-xl bg-stonebg-900 hover:bg-stonebg-800 text-slate-200 hover:text-white border border-white/10 font-mono text-xs font-bold transition-colors flex items-center justify-center gap-2 focus-ring"
-                      title="Watch official video for ${escapeHtml(t.title)}"
-                    >
-                      <i aria-hidden="true" class="fa-solid fa-play text-red-500 text-xs"></i>
-                      <span>Watch Video</span>
-                    </button>
-
-                    <!-- Toggle Lyrics & Story Drawer -->
-                    <button 
-                      onclick="toggleLyricsDrawer(${t.number})" 
-                      id="drawer-toggle-${t.number}"
-                      class="flex-1 lg:flex-initial py-2.5 px-4 rounded-xl ${isOpen ? 'bg-amberwood-600 text-stonebg-950 font-bold border-amberwood-500' : 'bg-stonebg-800 hover:bg-stonebg-750 text-slate-200 border-white/10'} border font-mono text-xs transition-colors flex items-center justify-center gap-2 focus-ring"
-                      aria-expanded="${isOpen}"
-                      aria-controls="drawer-panel-${t.number}"
-                    >
-                      <i aria-hidden="true" class="fa-solid ${isOpen ? 'fa-angles-up' : 'fa-align-left'} text-xs"></i>
-                      <span>${isOpen ? 'Collapse' : 'Lyrics & Story'}</span>
-                    </button>
-                  </div>
-
-                </div>
-              </div>
-
-              <!-- EXPANDED DRAWER CONTAINER -->
-              <div 
-                id="drawer-panel-${t.number}" 
-                class="${isOpen ? 'block' : 'hidden'} border-t border-white/10 bg-stonebg-950/90"
-                role="region"
-                aria-label="${escapeHtml(t.title)} lyrics and story details"
+          <article id="${t.slug}" class="bg-stonebg-900 border border-white/10 hover:border-amberwood-500/30 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300">
+            
+            <!-- Track Banner (16:9) -->
+            <div class="relative aspect-video w-full overflow-hidden bg-stonebg-950">
+              <img 
+                src="${t.art_banner}" 
+                alt="Art for Movement ${t.number_padded}: ${escapeHtml(t.title)}" 
+                class="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+                width="1200"
+                height="675"
               >
-                <div class="p-5 sm:p-6 lg:p-8 space-y-6">
-                  
-                  <!-- Tabs & Copy Controls Header -->
-                  <div class="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4">
-                    <!-- Tab Buttons -->
-                    <div class="flex items-center gap-2" role="tablist" aria-label="Movement content selection">
-                      <button 
-                        id="tab-btn-${t.number}-clean"
-                        onclick="switchSongTab(${t.number}, 'clean')"
-                        class="tab-btn px-4 py-2 rounded-lg border font-mono text-xs font-bold transition-colors ${activeTab === 'clean' ? 'active' : 'bg-stonebg-900 text-slate-400 border-white/5 hover:text-slate-200'}"
-                        role="tab"
-                        aria-selected="${activeTab === 'clean'}"
-                        aria-controls="tab-panel-${t.number}-clean"
-                      >
-                        <i aria-hidden="true" class="fa-solid fa-file-lines mr-1.5"></i>
-                        <span>Clean Lyrics</span>
-                      </button>
+              <div class="absolute inset-0 bg-gradient-to-t from-stonebg-900 via-transparent to-black/40"></div>
+              
+              <!-- Top Floating Meta -->
+              <div class="absolute top-4 left-4 flex flex-wrap items-center gap-2">
+                <span class="px-2.5 py-1 rounded-md bg-stonebg-950/90 border border-white/20 text-white font-mono text-xs font-bold shadow-lg">
+                  Movement ${t.number_padded}
+                </span>
+                <span class="px-2.5 py-1 rounded-md bg-stonebg-950/90 border border-amberwood-500/40 text-amberwood-400 font-mono text-xs shadow-lg">
+                  ${escapeHtml(t.act_title)}
+                </span>
+              </div>
 
-                      <button 
-                        id="tab-btn-${t.number}-story"
-                        onclick="switchSongTab(${t.number}, 'story')"
-                        class="tab-btn px-4 py-2 rounded-lg border font-mono text-xs font-bold transition-colors ${activeTab === 'story' ? 'active' : 'bg-stonebg-900 text-slate-400 border-white/5 hover:text-slate-200'}"
-                        role="tab"
-                        aria-selected="${activeTab === 'story'}"
-                        aria-controls="tab-panel-${t.number}-story"
-                      >
-                        <i aria-hidden="true" class="fa-solid fa-book-open mr-1.5"></i>
-                        <span>The Bard's Story</span>
-                      </button>
-                    </div>
+              <!-- Video Play Button Overlay -->
+              <div class="absolute bottom-4 right-4">
+                <button 
+                  onclick="openVideoModal('${t.youtube_video_id}', '${escapeHtml(t.title)}')" 
+                  class="px-4 py-2 rounded-xl bg-red-600/90 hover:bg-red-500 text-white font-mono text-xs font-bold flex items-center gap-2 shadow-2xl transition-all hover:scale-105 focus-ring"
+                  aria-label="Play music video for ${escapeHtml(t.title)}"
+                >
+                  <i aria-hidden="true" class="fa-brands fa-youtube text-base"></i>
+                  <span>Watch Video</span>
+                </button>
+              </div>
+            </div>
 
-                    <!-- Copy Content Button -->
-                    <div class="flex items-center gap-2">
-                      <button 
-                        onclick="copyTrackContent(${t.number})" 
-                        class="px-3 py-1.5 rounded-lg bg-stonebg-900 hover:bg-stonebg-800 text-slate-300 hover:text-white border border-white/10 font-mono text-xs transition-colors flex items-center gap-1.5 focus-ring"
-                        title="Copy current tab text to clipboard"
-                      >
-                        <i aria-hidden="true" class="fa-solid fa-copy text-xs"></i>
-                        <span>Copy ${activeTab === 'clean' ? 'Lyrics' : 'Story'}</span>
-                      </button>
-                    </div>
-                  </div>
-
-                  <!-- TAB 1: CLEAN LYRICS -->
-                  <div 
-                    id="tab-panel-${t.number}-clean" 
-                    role="tabpanel" 
-                    tabindex="0"
-                    aria-labelledby="tab-btn-${t.number}-clean" 
-                    class="${activeTab === 'clean' ? 'block' : 'hidden'} space-y-4"
-                  >
-                    <div class="max-w-2xl bg-stonebg-900/50 p-5 rounded-xl border border-white/5">
-                      ${lyricsHtml}
-                    </div>
-                    <div class="text-[11px] font-mono text-slate-500">
-                      ${escapeHtml(t.copyright_notice || '')}
-                    </div>
-                  </div>
-
-                  <!-- TAB 2: THE BARD'S STORY & GENESIS -->
-                  <div 
-                    id="tab-panel-${t.number}-story" 
-                    role="tabpanel" 
-                    tabindex="0"
-                    aria-labelledby="tab-btn-${t.number}-story" 
-                    class="${activeTab === 'story' ? 'block' : 'hidden'} space-y-4"
-                  >
-                    <div class="max-w-3xl space-y-4 font-sans text-xs sm:text-sm bg-stonebg-900/50 p-6 rounded-xl border border-white/5">
-                      <div class="flex items-center gap-2 text-cedar-400 font-mono text-xs uppercase tracking-wider pb-2 border-b border-white/5">
-                        <i aria-hidden="true" class="fa-solid fa-pen-nib"></i>
-                        <span>Narrative Context &amp; Reform Analysis</span>
-                      </div>
-                      ${storyHtml}
-                    </div>
-                  </div>
-
+            <!-- Track Body Content -->
+            <div class="p-6 sm:p-8 space-y-6">
+              
+              <!-- Title & Duration Header -->
+              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-white/10 pb-4">
+                <div>
+                  <h3 class="text-2xl sm:text-3xl font-display font-extrabold text-white tracking-tight">
+                    ${escapeHtml(t.title)}
+                  </h3>
+                  <span class="text-xs font-serif text-amberwood-300/90 italic mt-0.5 block">
+                    ${escapeHtml(t.core_theme)} &bull; ${escapeHtml(t.narrative_role)}
+                  </span>
+                </div>
+                <div class="flex items-center gap-3 text-xs font-mono text-slate-400">
+                  <span class="flex items-center gap-1">
+                    <i aria-hidden="true" class="fa-regular fa-clock text-amberwood-400"></i>
+                    <span>${t.duration}</span>
+                  </span>
                 </div>
               </div>
 
-            </article>
+              <!-- 100% Verbatim Lyric Quote -->
+              ${t.quote ? `
+              <blockquote class="border-l-4 border-amberwood-500 bg-stonebg-850/80 p-4 rounded-r-xl shadow-inner">
+                <p class="text-sm sm:text-base font-serif italic text-slate-200 leading-relaxed whitespace-pre-line">&ldquo;${escapeHtml(t.quote)}&rdquo;</p>
+                <cite class="text-[10px] font-mono text-amberwood-400 mt-2 block font-normal uppercase tracking-wider">— Verbatim Movement Excerpt</cite>
+              </blockquote>` : ''}
+
+              <!-- The Bard's Story (Directly Visible Narrative Commentary) -->
+              ${storyHtml ? `
+              <div class="space-y-3 bg-stonebg-950/60 p-5 rounded-xl border border-white/5">
+                <div class="flex items-center gap-2 text-xs font-mono text-slate-400 uppercase tracking-wider">
+                  <i aria-hidden="true" class="fa-solid fa-feather text-amberwood-400"></i>
+                  <span class="font-bold text-white">The Bard's Story &bull; Lore &amp; Context</span>
+                </div>
+                <div class="text-xs sm:text-sm text-slate-300 leading-relaxed space-y-2.5 font-sans">
+                  ${storyHtml}
+                </div>
+              </div>` : ''}
+
+              <!-- Style, Themes & Tags -->
+              <div class="flex flex-wrap items-center gap-2 pt-1 text-xs">
+                <span class="text-[11px] font-mono text-slate-400 mr-1">Narrative Role:</span>
+                <span class="px-2 py-0.5 rounded bg-stonebg-800 text-slate-300 border border-white/5 font-mono text-[11px]">
+                  ${escapeHtml(t.narrative_role)}
+                </span>
+                <span class="px-2 py-0.5 rounded bg-stonebg-850 text-amberwood-400/90 border border-amberwood-500/20 font-mono text-[11px]">
+                  #${escapeHtml(t.core_theme)}
+                </span>
+              </div>
+
+              <!-- Expandable Lyrics Drawer -->
+              <div class="pt-2 border-t border-white/10">
+                <div class="flex items-center justify-between">
+                  <button 
+                    onclick="toggleLyrics('${t.slug}')" 
+                    id="btn-lyrics-${t.slug}" 
+                    aria-expanded="false" 
+                    aria-controls="drawer-${t.slug}" 
+                    class="inline-flex items-center gap-2 text-xs font-mono text-amberwood-400 hover:text-amberwood-300 font-bold focus-ring py-1 rounded"
+                  >
+                    <i aria-hidden="true" class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-${t.slug}"></i>
+                    <span>View Complete Lyrics</span>
+                  </button>
+                  <button 
+                    onclick="copyLyrics('${t.slug}')" 
+                    class="text-[11px] font-mono text-slate-400 hover:text-white transition-colors focus-ring px-2 py-1 rounded"
+                    title="Copy lyrics to clipboard"
+                  >
+                    <i aria-hidden="true" class="fa-regular fa-copy"></i>
+                    <span id="copy-msg-${t.slug}">Copy</span>
+                  </button>
+                </div>
+
+                <div 
+                  id="drawer-${t.slug}" 
+                  class="hidden mt-4 p-5 bg-stonebg-950 rounded-xl border border-white/10 font-serif text-sm text-slate-300 leading-relaxed max-h-96 overflow-y-auto space-y-1 select-text"
+                >
+                  ${formattedLyrics}
+                </div>
+              </div>
+
+            </div>
+
+          </article>
           `;
         }).join('');
       }
 
-      // TAB SWITCHING
-      window.switchSongTab = function(trackNum, tab) {
-        activeTrackTabs[trackNum] = tab;
-        const panels = ['clean', 'story'];
-        panels.forEach(p => {
-          const btn = document.getElementById(`tab-btn-${trackNum}-${p}`);
-          const panel = document.getElementById(`tab-panel-${trackNum}-${p}`);
-          if (btn) {
-            if (p === tab) {
-              btn.classList.add('active');
-              btn.classList.remove('bg-stonebg-900', 'text-slate-400', 'border-white/5');
-              btn.setAttribute('aria-selected', 'true');
-            } else {
-              btn.classList.remove('active');
-              btn.classList.add('bg-stonebg-900', 'text-slate-400', 'border-white/5');
-              btn.setAttribute('aria-selected', 'false');
-            }
+      // Lyrics Drawer Toggle
+      window.toggleLyrics = function(slug) {
+        const drawer = document.getElementById(`drawer-${slug}`);
+        const btn = document.getElementById(`btn-lyrics-${slug}`);
+        const icon = document.getElementById(`icon-${slug}`);
+        if (!drawer || !btn) return;
+
+        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+        if (isExpanded) {
+          drawer.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+          if (icon) icon.style.transform = 'rotate(0deg)';
+        } else {
+          drawer.classList.remove('hidden');
+          btn.setAttribute('aria-expanded', 'true');
+          if (icon) icon.style.transform = 'rotate(180deg)';
+        }
+      };
+
+      // Copy Lyrics Helper
+      window.copyLyrics = function(slug) {
+        const track = data.tracks.find(t => t.slug === slug);
+        if (!track) return;
+
+        let lyricsText = '';
+        if (track.clean_lyrics_stanzas && Array.isArray(track.clean_lyrics_stanzas)) {
+          lyricsText = track.clean_lyrics_stanzas.map(stz => {
+            const head = stz.name ? `[${stz.name}]\n` : '';
+            return head + (stz.lines || []).join('\n');
+          }).join('\n\n');
+        } else if (track.lyrics) {
+          lyricsText = track.lyrics;
+        }
+
+        const copyText = `${track.title} (Movement ${track.number_padded})\n` +
+          `Album 19: American Renewal | The Shady River Bard\n` +
+          `Act: ${track.act_title}\n\n` +
+          `"${track.quote || ''}"\n\n` +
+          `-- CLEAN LYRICS --\n\n` +
+          `${lyricsText}\n\n` +
+          `----------------------------------------------------\n` +
+          `${track.copyright_notice || 'All Rights Reserved.'}\n` +
+          `Authorized Vault: https://theshadyriverbard.com/american-renewal/`;
+
+        navigator.clipboard.writeText(copyText).then(() => {
+          const msg = document.getElementById(`copy-msg-${slug}`);
+          if (msg) {
+            msg.textContent = 'Copied!';
+            setTimeout(() => { msg.textContent = 'Copy'; }, 2000);
           }
-          if (panel) {
-            panel.classList.toggle('hidden', p !== tab);
-            panel.classList.toggle('block', p === tab);
+        }).catch(err => {
+          console.error("Clipboard copy failed:", err);
+        });
+      };
+
+      window.expandAllDrawers = function() {
+        data.tracks.forEach(t => {
+          const drawer = document.getElementById(`drawer-${t.slug}`);
+          const btn = document.getElementById(`btn-lyrics-${t.slug}`);
+          const icon = document.getElementById(`icon-${t.slug}`);
+          if (drawer && btn) {
+            drawer.classList.remove('hidden');
+            btn.setAttribute('aria-expanded', 'true');
+            if (icon) icon.style.transform = 'rotate(180deg)';
           }
         });
       };
 
-      // DRAWER TOGGLE
-      window.toggleLyricsDrawer = function(trackNum) {
-        if (openDrawers.has(trackNum)) {
-          openDrawers.delete(trackNum);
-        } else {
-          openDrawers.add(trackNum);
-        }
-        renderTracks();
-      };
-
-      // EXPAND ALL
-      window.expandAllDrawers = function() {
-        data.tracks.forEach(t => openDrawers.add(t.number));
-        renderTracks();
-      };
-
-      // COLLAPSE ALL
       window.collapseAllDrawers = function() {
-        openDrawers.clear();
-        renderTracks();
+        data.tracks.forEach(t => {
+          const drawer = document.getElementById(`drawer-${t.slug}`);
+          const btn = document.getElementById(`btn-lyrics-${t.slug}`);
+          const icon = document.getElementById(`icon-${t.slug}`);
+          if (drawer && btn) {
+            drawer.classList.add('hidden');
+            btn.setAttribute('aria-expanded', 'false');
+            if (icon) icon.style.transform = 'rotate(0deg)';
+          }
+        });
       };
 
-      // FILTERING
       window.filterTracks = function(filter) {
         currentFilter = filter;
         const pills = ['all', 'vol-1', 'vol-2', 'act-1', 'act-2', 'act-3', 'act-4'];
