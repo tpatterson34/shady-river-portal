@@ -153,7 +153,7 @@ window.UNBROKEN_CHAIN_DATA = {
         "Survival"
       ],
       "core_theme": "Theme: The grueling, dehumanizing labor of the sugar or cotton plantation. Angle: A field work song, sung from the perspective of someone toiling under a relentless sun, where the rhythm of the song is the only thing separating order from exhaustion and injury. It focuses on the physical reality of the labor.",
-      "narrative_progression": "Progression: This track opens the album by immediately immersing the listener in the foundational sound and setting: the plantation field. It establishes the raw, percussive, a cappella style rooted in work songs.21 The focus is purely on the physical experience of forced labor, setting a baseline of suffering from which the rest of the narrative will grow.",
+      "narrative_progression": "Progression: This track opens the album by immediately immersing the listener in the foundational sound and setting: the plantation field. It establishes the raw, percussive, a cappella style rooted in work songs. The focus is purely on the physical experience of forced labor, setting a baseline of suffering from which the rest of the narrative will grow.",
       "summary": "\"A Different Kind of Sun\" opens the album by immersing the listener directly into the grueling physical reality of plantation labor. Structured as a historical field work song, it uses a call-and-response format between a lead worker and his crew. The rhythm is dictated by the swing of a tool, with stomps and body percussion providing a raw, hypnotic pulse. The lyrics contrast the oppressive, relentless sun of the workday with the life-giving sun of memory or faith, framing it as a malevolent force. The song's purpose is not to tell a complex story, but to establish the foundational sound and the baseline of physical suffering from which the entire album grows.",
       "suno_prompt": "A raw and authentic historical American work song with a somber, hypnotic, and resilient mood. The track should be led by a deep, gritty, and strained male lead vocalist, with a call-and-response male choir providing rhythmic, breathy backup vocals.",
       "image_prompt": "A cinematic and beautiful 16:9 image portraying a group of African American men and women, their forms silhouetted against a brilliant, white-hot sky. They are in the middle of a vast cotton field, their bodies bent in the exhausting rhythm of their work. The camera is low to the ground, capturing the cracked, dry earth and the shimmering heat haze that distorts the air. The oppressive sun is out of frame but its presence is overwhelming, bleaching all color and casting sharp, dark shadows. The mood is one of profound exhaustion and gritty, shared endurance under a relentless, alien sun.",
@@ -163,14 +163,14 @@ window.UNBROKEN_CHAIN_DATA = {
       "art_banner": "assets/art/a-different-kind-of-sun.webp",
       "art_square": "assets/art/a-different-kind-of-sun--sq.webp",
       "stanzas": [
-        "[Verse 1]\n(LEAD) This ain't the same sun\n(CHOIR) Huh! ... Rises in the morn\n(LEAD) This ain't God's own sun\n(CHOIR) Huh! ... Since the day I's born",
-        "[Verse 2]\n(LEAD) This one means to break you\n(CHOIR) Huh! ... Burns right to the bone\n(LEAD) This one means to take you\n(CHOIR) Huh! ... And never send you home",
+        "[Verse 1]\n(LEAD) This ain't the same sun\n(CHOIR) Huh!. Rises in the morn\n(LEAD) This ain't God's own sun\n(CHOIR) Huh!. Since the day I's born",
+        "[Verse 2]\n(LEAD) This one means to break you\n(CHOIR) Huh!. Burns right to the bone\n(LEAD) This one means to take you\n(CHOIR) Huh!. And never send you home",
         "[Chorus]\n(ALL) Oh, a different kind of sun\nKeep your head down low\nTill the long day's run\nAnd they call you from the row",
-        "[Verse 3]\n(LEAD) Hear the leather poppin'\n(CHOIR) Huh! ... Keep that rhythm true\n(LEAD) No, there ain't no stoppin'\n(CHOIR) Huh! ... 'Til it passes through",
-        "[Verse 4]\n(LEAD) Saw my brother stumble\n(CHOIR) Huh! ... Underneath its eye\n(LEAD) Heard the master grumble\n(CHOIR) Huh! ... And just pass him by",
+        "[Verse 3]\n(LEAD) Hear the leather poppin'\n(CHOIR) Huh!. Keep that rhythm true\n(LEAD) No, there ain't no stoppin'\n(CHOIR) Huh!. 'Til it passes through",
+        "[Verse 4]\n(LEAD) Saw my brother stumble\n(CHOIR) Huh!. Underneath its eye\n(LEAD) Heard the master grumble\n(CHOIR) Huh!. And just pass him by",
         "[Chorus]\n(ALL) Oh, a different kind of sun\nKeep your head down low\nTill the long day's run\nAnd they call you from the row",
         "[Bridge]\n(LEAD) One swing for the livin'\n(CHOIR) Huh!\n(LEAD) One swing for the gone\n(CHOIR) Huh!\n(LEAD) One swing God's forgivin'\n(CHOIR) To help us carry on",
-        "[Outro]\n(LEAD) A different kind of sun...\n(CHOIR) Huh...\n(LEAD) Different kind of sun...\n(CHOIR) Huh..."
+        "[Outro]\n(LEAD) A different kind of sun.\n(CHOIR) Huh.\n(LEAD) Different kind of sun.\n(CHOIR) Huh."
       ],
       "copyright_notice": "© 2025 The Shady River Bard • The Shady River Homestead, LLC. All rights reserved. | Track 01: A Different Kind of Sun • Album 10: The Unbroken Chain"
     },
@@ -191,12 +191,12 @@ window.UNBROKEN_CHAIN_DATA = {
         "Folk Ballad",
         "Sorrow"
       ],
-      "core_theme": "Theme: The commodification of human beings and the severing of families. Angle: A sparse, mournful ballad inspired by historical slave advertisements, focusing on a mother watching her child being sold, with the child's fate reduced to a footnote: \"baby available at the purchaser's option\".12",
-      "narrative_progression": "Progression: Building on the physical labor of Track 1, this song introduces the deeper emotional and psychological horror of the system: the destruction of the family unit.15 It moves from the collective pain of the work gang to an intimate, personal tragedy, showing that the economic system of slavery 15 had a devastating human cost. The music becomes more melodic and sorrowful.",
+      "core_theme": "Theme: The commodification of human beings and the severing of families. Angle: A sparse, mournful ballad inspired by historical slave advertisements, focusing on a mother watching her child being sold, with the child's fate reduced to a footnote: \"baby available at the purchaser's option\".",
+      "narrative_progression": "Progression: Building on the physical labor of Track 1, this song introduces the deeper emotional and psychological horror of the system: the destruction of the family unit. It moves from the collective pain of the work gang to an intimate, personal tragedy, showing that the economic system of slavery had a devastating human cost. The music becomes more melodic and sorrowful.",
       "summary": "\"At the Purchaser's Option\" is a sparse, mournful folk ballad that brings the listener face-to-face with the brutal commodification of human life. Inspired by the cold, transactional language found in historical slave advertisements, the song is told from the perspective of a parent watching their child being sold on the auction block. The title itself, a chilling contractual phrase, becomes the song's sorrowful refrain. Musically, it is stripped down and raw, carried by a lone, fingerpicked acoustic guitar and a haunting cello drone, leaving the raw, trembling vocal to convey the immense weight of a bond being irrevocently severed.",
       "suno_prompt": "A sparse and heartbreaking acoustic folk ballad with a mournful and desolate mood. Led by a raw, emotional male lead vocalist with a quiet, trembling intensity. Features ethereal, ghostly female harmony vocals in the background of the chorus.",
       "image_prompt": "A cinematic and beautiful 16:9 image portraying a dramatic, high-contrast, black and white scene. In the tight foreground, the worn, desperate hand of a Black mother is tightly clasping the small, trusting hand of her young child. The lighting is somber and directional, like a single beam of light in a dark room, catching only their hands and the rough texture of their clothes. In the deep, out-of-focus background, the menacing silhouette of a man in a formal 19th-century coat and hat is barely visible, his presence looming. The entire emotional weight of the image rests on the connection between the two hands, a bond about to be broken forever.",
-      "key_quote": "The dust is on the courthouse steps... At the purchaser's option, they'll sell you by the pound.",
+      "key_quote": "The dust is on the courthouse steps. At the purchaser's option, they'll sell you by the pound.",
       "video_id": "C4PrOdt7Plg",
       "youtube_watch_url": "https://www.youtube.com/watch?v=C4PrOdt7Plg",
       "art_banner": "assets/art/at-the-purchasers-option.webp",
@@ -210,7 +210,7 @@ window.UNBROKEN_CHAIN_DATA = {
         "[Verse 4]\nI try to catch your eye, my boy\nTo send a strength I do not own\nThey've stolen all our joy\nAnd they'll leave me here alone",
         "[Chorus]\nAnd they'll sell you by the pound\nPut a price upon your name\nWith the baby, safe and sound\nAvailable for the same\nAt the purchaser's option",
         "[Bridge]\nI remember whispers in the dark\nA promise that I couldn't keep\nTo guard you from this bitter mark\nNow all that's left to do is weep",
-        "[Outro]\nAt the purchaser's option..."
+        "[Outro]\nAt the purchaser's option."
       ],
       "copyright_notice": "© 2025 The Shady River Bard • The Shady River Homestead, LLC. All rights reserved. | Track 02: At the Purchaser's Option • Album 10: The Unbroken Chain"
     },
@@ -231,8 +231,8 @@ window.UNBROKEN_CHAIN_DATA = {
         "Coded Lyrics",
         "Escape"
       ],
-      "core_theme": "Theme: Coded communication and the hope of escape. Angle: An uptempo but tense spiritual, using the double-meaning of \"Follow the Drinking Gourd\".24 The song functions as both a worship song and a secret map for escape via the Underground Railroad. The performance would have an undercurrent of urgency and conspiracy.",
-      "narrative_progression": "Progression: This track introduces the first element of active resistance. After establishing the physical and emotional oppression, it reveals the ingenuity and courage of the enslaved. It shows how music was used as a technology of survival and liberation.25 This song closes Act I on a note of defiant hope, setting the stage for the promise of \"freedom\" to come.",
+      "core_theme": "Theme: Coded communication and the hope of escape. Angle: An uptempo but tense spiritual, using the double-meaning of \"Follow the Drinking Gourd\". The song functions as both a worship song and a secret map for escape via the Underground Railroad. The performance would have an undercurrent of urgency and conspiracy.",
+      "narrative_progression": "Progression: This track introduces the first element of active resistance. After establishing the physical and emotional oppression, it reveals the ingenuity and courage of the enslaved. It shows how music was used as a technology of survival and liberation. This song closes Act I on a note of defiant hope, setting the stage for the promise of \"freedom\" to come.",
       "summary": "\"The Drinking Gourd\" is an uptempo but tense spiritual that closes the first act of the album. The song operates on two levels: as a heartfelt hymn of faith and as a clandestine set of instructions for escape via the Underground Railroad. A driving rhythm from stomps, claps, and a rhythmic gourd banjo creates a sense of urgent forward motion. The lead vocal, filled with a conspiratorial energy, trades lines with a choir that answers in both powerful harmony and hushed whispers. This duality captures the song's core purpose—hiding a map to freedom in plain sight and transforming a song of worship into an anthem of liberation.",
       "suno_prompt": "An uptempo but tense traditional spiritual with a hopeful, urgent, and clandestine mood. Led by an urgent male lead vocalist, with an energetic call-and-response choir providing both powerful harmonies and hushed, conspiratorial whispers.",
       "image_prompt": "A cinematic and beautiful 16:9 image portraying a low-angle shot from within a dark, moonlit swamp. A small group of escaped slaves, their faces a mixture of fear and fierce determination, move silently through the knee-deep, murky water. The silhouettes of gnarled cypress trees loom around them like ancient sentinels. Above, through a break in the canopy, the night sky is brilliantly clear, with the constellation of the Big Dipper (The Drinking Gourd) glowing with an almost magical intensity, its light reflected in the dark water below, guiding their path. The atmosphere is thick with tension, danger, and a desperate, sacred hope.",
@@ -249,7 +249,7 @@ window.UNBROKEN_CHAIN_DATA = {
         "[Chorus]\n(ALL) So follow the drinkin' gourd!\nHush now and listen good!\nFollow the drinkin' gourd!\nHe's a-leadin' you out the wood!",
         "[Bridge]\nThe master's asleep, the dogs are in their pen\nThe old moon is holdin' its breath\nYou get one chance to be a free man then\nOr you'll find a quicker death",
         "[Chorus]\n(ALL) So follow the drinkin' gourd!\nHush now and listen good!\nFollow the drinkin' gourd!\nHe's a-leadin' you out the wood!",
-        "[Outro]\n(CHOIR) Follow... follow...\n(LEAD) The drinkin' gourd...\n(CHOIR) Follow him out the wood..."
+        "[Outro]\n(CHOIR) Follow. follow.\n(LEAD) The drinkin' gourd.\n(CHOIR) Follow him out the wood."
       ],
       "copyright_notice": "© 2025 The Shady River Bard • The Shady River Homestead, LLC. All rights reserved. | Track 03: The Drinking Gourd • Album 10: The Unbroken Chain"
     },
@@ -270,23 +270,23 @@ window.UNBROKEN_CHAIN_DATA = {
         "Spoken Word",
         "Legal Ruse"
       ],
-      "core_theme": "Theme: The false promise of the 13th Amendment. Angle: A stark, spoken-word or recitative-style piece over a dissonant drone. The lyrics would quote the amendment's text directly, focusing on the exception clause.1 The tone is one of dawning horror, as the \"freedom\" promised is revealed to be a legal trap.",
+      "core_theme": "Theme: The false promise of the 13th Amendment. Angle: A stark, spoken-word or recitative-style piece over a dissonant drone. The lyrics would quote the amendment's text directly, focusing on the exception clause. The tone is one of dawning horror, as the \"freedom\" promised is revealed to be a legal trap.",
       "narrative_progression": "Progression: This track serves as the pivotal turning point of the album. It shatters the hope established in Track 3. The musical style shifts dramatically to reflect the cold, legalistic nature of this betrayal. It explicitly states the album's core thesis: slavery was not abolished, but relocated into the justice system. It's the \"fine print\" of emancipation.",
       "summary": "\"Except as a Punishment (Amendment 13)\" marks the stark, dramatic turning point of the album. It is a cold, minimalist piece that abandons traditional song structure for a spoken-word recitation over a dissonant, unnerving drone. The narrator reads the text of the 13th Amendment, the words initially carrying the weight of liberation. This feeling curdles into dawning horror as the exception clause—\"except as a punishment for a crime\"—is repeated and emphasized, revealing the legal loophole that would enable a new form of bondage. The track serves as a chilling bridge from the world of the plantation to the rise of the convict lease system, sonically and thematically stating the album's core thesis.",
       "suno_prompt": "A stark and ominous spoken word piece with a cold, horrifying, and unsettling mood, set against a dissonant cello drone. Led by a male narrator whose tone shifts from somber recitation to dawning horror. The key phrase is punctuated by haunting, layered vocal whispers.",
       "image_prompt": "Scene 1: A cinematic and beautiful 16:9 image portraying a close-up on the hopeful face of a newly freed Black man in the Reconstruction era. He is looking up, his eyes filled with awe and reverence, as if listening to a sacred text being read. The light is warm and golden, catching the tears welling in his eyes. In the background, the blurred shape of an American flag suggests a moment of profound, patriotic deliverance. The mood is one of sacred, tearful relief. <br><br> Scene 2: A cinematic and beautiful 16:9 image portraying a jarring shift. The newly freed black man's face is now seen through the iron bars of a cell. The light is a cold, sterile blue, casting harsh shadows. His expression is no longer hopeful, but one of horrified, dawning comprehension and betrayal. A single, dark tear cuts a path down his cheek. The focus is sharp on the despair in his eyes, the promise of freedom having become a new cage.",
-      "key_quote": "Neither slavery nor involuntary servitude shall exist... except as a punishment for a crime.",
+      "key_quote": "Neither slavery nor involuntary servitude shall exist. except as a punishment for a crime.",
       "video_id": "K9Eg1fyS_8k",
       "youtube_watch_url": "https://www.youtube.com/watch?v=K9Eg1fyS_8k",
       "art_banner": "assets/art/except-as-a-punishment-amendment-13.webp",
       "art_square": "assets/art/except-as-a-punishment-amendment-13--sq.webp",
       "stanzas": [
-        "[Recitation 1]\nSection One.\nNeither slavery nor involuntary servitude...\n...shall exist within the United States,\nor any place subject to their jurisdiction.",
-        "[Refrain]\nExcept...\nas a punishment for a crime.",
-        "[Recitation 2]\nNeither slavery nor involuntary servitude...\nfor which the party shall have been duly convicted...\n...shall exist within these United States...",
+        "[Recitation 1]\nSection One.\nNeither slavery nor involuntary servitude.\n.shall exist within the United States,\nor any place subject to their jurisdiction.",
+        "[Refrain]\nExcept.\nas a punishment for a crime.",
+        "[Recitation 2]\nNeither slavery nor involuntary servitude.\nfor which the party shall have been duly convicted.\n.shall exist within these United States.",
         "[Refrain 2]\nExcept as a punishment.\nExcept for a crime.",
-        "[Bridge]\nThe words were a key... but the key built a new lock.\nFreedom was given... in the same breath it was mocked.\nNot a period at the end of the sentence...\nbut a comma.\nA breath.\nA door left open...",
-        "[Climax]\nNEITHER SLAVERY NOR INVOLUNTARY SERVITUDE SHALL EXIST!\n...except as a punishment for a crime whereof the party shall have been duly convicted.",
+        "[Bridge]\nThe words were a key. but the key built a new lock.\nFreedom was given. in the same breath it was mocked.\nNot a period at the end of the sentence.\nbut a comma.\nA breath.\nA door left open.",
+        "[Climax]\nNEITHER SLAVERY NOR INVOLUNTARY SERVITUDE SHALL EXIST!\n.except as a punishment for a crime whereof the party shall have been duly convicted.",
         "[Outro]"
       ],
       "copyright_notice": "© 2025 The Shady River Bard • The Shady River Homestead, LLC. All rights reserved. | Track 04: Except as a Punishment (Amendment 13) • Album 10: The Unbroken Chain"
@@ -308,12 +308,12 @@ window.UNBROKEN_CHAIN_DATA = {
         "Vagrancy Laws",
         "Reconstruction"
       ],
-      "core_theme": "Theme: The criminalization of Black life to feed the convict lease system. Angle: A cynical, talking-blues style song. The narrator lists the absurd \"crimes\" for which Black men were being arrested—vagrancy, loitering, not having a work contract—and the inevitability of being found guilty by a wink and a nod from the judge.32",
-      "narrative_progression": "Progression: Following the legal premise of Track 4, this song shows the on-the-ground implementation of the \"ruse.\" It makes the abstract legal language personal and predatory. The narrative moves from the halls of Congress to the dusty Southern courthouse, showing how the system was designed to ensnare people and turn them into convicts.1",
+      "core_theme": "Theme: The criminalization of Black life to feed the convict lease system. Angle: A cynical, talking-blues style song. The narrator lists the absurd \"crimes\" for which Black men were being arrested—vagrancy, loitering, not having a work contract—and the inevitability of being found guilty by a wink and a nod from the judge.",
+      "narrative_progression": "Progression: Following the legal premise of Track 4, this song shows the on-the-ground implementation of the \"ruse.\" It makes the abstract legal language personal and predatory. The narrative moves from the halls of Congress to the dusty Southern courthouse, showing how the system was designed to ensnare people and turn them into convicts.",
       "summary": "\"The Black Codes\" is a cynical, gritty talking-blues that chronicles the on-the-ground implementation of the 13th Amendment's loophole. The song's narrator, with a voice dripping in weary sarcasm, lists the absurd and inescapable \"crimes\" for which Black men were arrested—vagrancy, loitering, improper conduct, lacking a yearly work contract. Set against a shuffling acoustic guitar, a mournful harmonica, and a steady bass line, the track exposes the systematic criminalization of Black life. It's a bitter, darkly humorous, and ultimately tragic account of freedom being turned into a technicality, designed to feed the convict lease system.",
       "suno_prompt": "A cynical talking-blues song with a weary, sarcastic mood. Led by a male vocalist with a rhythmic, talk-singing delivery. Features a prominent acoustic guitar shuffle and mournful, wailing harmonica fills between vocal lines.",
       "image_prompt": "A cinematic and beautiful 16:9 image portraying a weary but defiant Black man from the late 19th century standing before a small-town sheriff's desk. The sheriff, a large man whose face is obscured in shadow, is casually writing out a ticket, not even looking up. The room is dusty, filled with the long shadows of late afternoon light cutting through a dirty window. The man's hands, worn from labor, are held loosely at his sides, his posture conveying a lifetime of enduring absurd injustice with a resilient, simmering dignity. The focus is on the casual, bureaucratic nature of the oppression.",
-      "key_quote": "The war was done, they said I'm free... but I didn't get ten steps down the road.",
+      "key_quote": "The war was done, they said I'm free. but I didn't get ten steps down the road.",
       "video_id": "X6EpgW1A9r4",
       "youtube_watch_url": "https://www.youtube.com/watch?v=X6EpgW1A9r4",
       "art_banner": "assets/art/the-black-codes.webp",
@@ -321,14 +321,14 @@ window.UNBROKEN_CHAIN_DATA = {
       "stanzas": [
         "[Verse 1]\nWell, the war was done, they said I'm free, gave me papers in my hand\nTold me, \"Son, you're your own man now, in this great and promised land\"\nBut I didn't get ten steps down the road 'fore the sheriff tipped his hat",
         "[Verse 2]\nHe said, \"Boy, where you headed in such a mighty rush?\" My feet were movin' slow\nHe said, \"That's itinerant behavior, in case you didn't know.\"\nSaid, \"You got a contract for the year?\" I said, \"Sir, it's only Jan'ry the first\"",
-        "[Chorus]\nAnd that's a crime... for standin' still\nAnd that's a crime... for walkin' up a hill\nIf you're too quiet, it's conspiracy, if you're too loud, it's a fight\nWhen they write the book of what's against the law, they just describe a black man's life",
+        "[Chorus]\nAnd that's a crime. for standin' still\nAnd that's a crime. for walkin' up a hill\nIf you're too quiet, it's conspiracy, if you're too loud, it's a fight\nWhen they write the book of what's against the law, they just describe a black man's life",
         "[Verse 3]\nMet a friend by the general store, stopped to pass the time of day\nSheriff said, \"That's loitering, boys, best be on your way.\"\nBut when we walked away too fast, he called it \"showin' guilty flight.\"",
         "[Verse 4]\nSaw a woman from our church, I said \"Good evening, ma'am,\" and bowed my head down low\nJudge said that's \"insultin' gestures,\" and \"puttin' on a show\"\nGave me thirty days for bein' polite, and a dollar for the fine",
-        "[Chorus]\nAnd that's a crime... for standin' still\nAnd that's a crime... for walkin' up a hill\nIf you're too quiet, it's conspiracy, if you're too loud, it's a fight\nWhen they write the book of what's against the law, they just describe a black man's life",
+        "[Chorus]\nAnd that's a crime. for standin' still\nAnd that's a crime. for walkin' up a hill\nIf you're too quiet, it's conspiracy, if you're too loud, it's a fight\nWhen they write the book of what's against the law, they just describe a black man's life",
         "[Instrumental]",
         "[Bridge]\nThe judge, he don't look up from his desk, the prosecutor just winks his eye\nThe fine is always more than you can make, no matter how you try\nAnd the man from the coal mine's waiting in the back, smilin' at the sheriff's lies\nSays, \"Don't you worry 'bout the money, son, I'll take your time.\"",
-        "[Chorus]\nAnd that's a crime... for standin' still\nAnd that's a crime... for walkin' up a hill\nIf you're too quiet, it's conspiracy, if you're too loud, it's a fight\nWhen they write the book of what's against the law, they just describe a black man's life",
-        "[Outro]\nYeah, they just describe my life..."
+        "[Chorus]\nAnd that's a crime. for standin' still\nAnd that's a crime. for walkin' up a hill\nIf you're too quiet, it's conspiracy, if you're too loud, it's a fight\nWhen they write the book of what's against the law, they just describe a black man's life",
+        "[Outro]\nYeah, they just describe my life."
       ],
       "copyright_notice": "© 2025 The Shady River Bard • The Shady River Homestead, LLC. All rights reserved. | Track 05: The Black Codes • Album 10: The Unbroken Chain"
     },
@@ -349,7 +349,7 @@ window.UNBROKEN_CHAIN_DATA = {
         "Industrial Slavery",
         "Mines"
       ],
-      "core_theme": "Theme: The brutal economics and conditions of the convict lease system. Angle: A percussive, rhythmic chain-gang chant. The lyrics contrast the life of a leased convict with that of a slave or even a farm animal, concluding that the convict is the most disposable of all, as the company has no investment in keeping him alive.29 The sound is dominated by the clang of hammers on rock or steel.",
+      "core_theme": "Theme: The brutal economics and conditions of the convict lease system. Angle: A percussive, rhythmic chain-gang chant. The lyrics contrast the life of a leased convict with that of a slave or even a farm animal, concluding that the convict is the most disposable of all, as the company has no investment in keeping him alive. The sound is dominated by the clang of hammers on rock or steel.",
       "narrative_progression": "Progression: This is the culmination of Act II. The listener is now fully inside the new system of bondage. The song's sound world is defined by the chain gang, sonically linking it to but distinguishing it from the plantation work songs of Act I. It delivers the chilling economic logic of the system, explaining why it was often deadlier than slavery, and closes the act in a state of grim, brutal reality.",
       "summary": "\"Cheaper Than a Mule (The Convict's Song)\" is a grim, percussive work chant that serves as the brutal finale to Act II. Built on the relentless, metallic rhythm of hammers striking steel, the song is sung from the perspective of a leased convict who has realized the horrifying economic truth of his situation. The lyrics starkly compare his value to that of an enslaved person or a farm animal—assets that were investments to be protected. The convict, however, is a disposable resource, leased for pennies and easily replaced upon death. The song is a raw, rhythmic cry of resignation, laying bare the inhuman calculus of the convict lease system.",
       "suno_prompt": "A grim and percussive historical chain-gang chant with a brutal, resigned mood. The soundscape is dominated by the rhythmic clang of hammers on steel and the clanking of chains. Led by a deep, gritty male lead caller with a male choir providing grunting, rhythmic responses.",
@@ -366,7 +366,7 @@ window.UNBROKEN_CHAIN_DATA = {
         "[Verse 3]\n(CALLER) Company's got a convict\n(RESPONDERS) Hah!\n(CALLER) Leased him for a dime\n(RESPONDERS) Hah!\n(CALLER) Don't care if he lives or dies\n(RESPONDERS) Hah!\n(CALLER) Just cares about his time\n(RESPONDERS) Hah!",
         "[Verse 4]\n(CALLER) If that mule gets sickly\n(RESPONDERS) Hah!\n(CALLER) Doctor comes to call\n(RESPONDERS) Hah!\n(CALLER) If a convict gets the fever\n(RESPONDERS) Hah!\n(CALLER) They just let him fall\n(RESPONDERS) Hah!",
         "[Chorus]\n(ALL) Yeah, we're cheaper than a mule\nAin't worth a bale of hay\nWork you 'til you fall down\nGet a new one the next day",
-        "[Bridge]\nNo, they don't own the body\nJust the sweat and bone\nThey don't own the body\nSo they can't leave it alone\nThey don't own the body\nSo they send you to the grave\nIt's cheaper than a mule... and cheaper than a slave.",
+        "[Bridge]\nNo, they don't own the body\nJust the sweat and bone\nThey don't own the body\nSo they can't leave it alone\nThey don't own the body\nSo they send you to the grave\nIt's cheaper than a mule. and cheaper than a slave.",
         "[Outro]\n(CALLER) Cheaper than a mule\n(RESPONDERS) Hah!\n(CALLER) Cheaper than a slave\n(RESPONDERS) Hah!"
       ],
       "copyright_notice": "© 2025 The Shady River Bard • The Shady River Homestead, LLC. All rights reserved. | Track 06: Cheaper Than a Mule (The Convict's Song) • Album 10: The Unbroken Chain"
@@ -388,7 +388,7 @@ window.UNBROKEN_CHAIN_DATA = {
         "Ragtime",
         "Lobbying"
       ],
-      "core_theme": "Theme: The profit-driven machinery of modern mass incarceration. Angle: A fast-paced, almost frantic song with a more modern, industrial-folk sound. The lyrics are a cynical list of all the entities that profit from a person's incarceration: the private prison corporation, the phone company, the food service contractor, the politician running on a \"tough on crime\" platform.46",
+      "core_theme": "Theme: The profit-driven machinery of modern mass incarceration. Angle: A fast-paced, almost frantic song with a more modern, industrial-folk sound. The lyrics are a cynical list of all the entities that profit from a person's incarceration: the private prison corporation, the phone company, the food service contractor, the politician running on a \"tough on crime\" platform.",
       "narrative_progression": "Progression: This track leaps forward in time, showing the evolution of the convict lease system into the modern PIC. The musical shift to an industrial sound reflects the cold, mechanical, and bureaucratic nature of this new \"machine.\" It expands the scope of exploitation from a single lessee to a vast network of corporate interests, showing how the chain has become more complex and systemic.",
       "summary": "\"The Prison-Industrial Rag\" kicks off Act III with a frantic, breathless energy, sonically mirroring the cold, complex machinery of modern mass incarceration. A cynical, industrial-folk patter song, it catalogues the vast network of corporate and political entities that profit from a person's imprisonment. Set to a frenetic acoustic guitar, driving bass, and punctuated by the sounds of cash registers and industrial stamping, the narrator lists the beneficiaries—from private prison contractors and phone companies to food suppliers and tough-on-crime politicians. The song is a dizzying, angry exposé of a system where human beings are no longer just disposable labor, but the raw material for a thriving, multifaceted industry.",
       "suno_prompt": "A frantic and cynical industrial-folk song with a manic, angry mood. Led by a male vocalist with a breathless, fast-paced patter-song delivery. Blends acoustic folk instruments like guitar and harmonica with industrial sound effects like cash registers and metallic stamping.",
@@ -429,12 +429,12 @@ window.UNBROKEN_CHAIN_DATA = {
         "Industrial Blues",
         "Exploitation"
       ],
-      "core_theme": "Theme: The reality of modern prison labor. Angle: A slow, grinding, blues-inflected song. The narrator describes their work in a prison factory, making goods for a well-known brand, and contrasts the value of their labor with the pittance they are paid.33 The song highlights the futility and exploitation, that this is not rehabilitation but just cheap labor.",
+      "core_theme": "Theme: The reality of modern prison labor. Angle: A slow, grinding, blues-inflected song. The narrator describes their work in a prison factory, making goods for a well-known brand, and contrasts the value of their labor with the pittance they are paid. The song highlights the futility and exploitation, that this is not rehabilitation but just cheap labor.",
       "narrative_progression": "Progression: This song brings the abstract concept of the PIC from Track 7 down to a single human experience. It is the modern equivalent of the convict's song from Act II, showing the direct continuity of forced labor. It connects the listener's own consumer life to the system, making the exploitation feel immediate and personal.",
       "summary": "\"Thirteen Cents an Hour\" is a slow, grinding industrial blues that serves as the human-scale counterpoint to the previous track's corporate frenzy. The song's narrator, a modern prison laborer, describes the monotonous reality of his work in a prison factory, assembling brand-name goods for a pittance. The music itself is heavy and repetitive, built on a plodding drum beat, a gritty electric guitar, and the monotonous hum of machinery. It's a bleak and powerful commentary on the futility of a system that calls forced, underpaid labor \"rehabilitation,\" highlighting the direct, unbroken line from the convict lease system to the modern prison workshop.",
       "suno_prompt": "A slow, grinding industrial blues song with a heavy, monotonous, and bleak mood. Led by a deep, weary male vocalist. The sound combines gritty electric blues instruments with the monotonous, rhythmic hum and clank of factory machinery.",
       "image_prompt": "A cinematic and beautiful 16:9 image portraying a stark, high-contrast scene inside a prison factory. A long row of inmates in uniform are hunched over their workstations under the harsh, sterile glare of fluorescent lights. The camera focuses on the hands of one Hispanic man in the foreground, calloused and worn, as he meticulously performs a repetitive task on a piece of pristine consumer electronics. His face is weary, his expression resigned. The air is thick with a visible haze of dust motes, and the mood is one of clinical, monotonous, and soul-crushing exploitation.",
-      "key_quote": "I'm sewing on the little patch, the one you know so well... and it's thirteen cents an hour.",
+      "key_quote": "I'm sewing on the little patch, the one you know so well. and it's thirteen cents an hour.",
       "video_id": "A0TG1fZoYJc",
       "youtube_watch_url": "https://www.youtube.com/watch?v=A0TG1fZoYJc",
       "art_banner": "assets/art/thirteen-cents-an-hour.webp",
@@ -449,7 +449,7 @@ window.UNBROKEN_CHAIN_DATA = {
         "[Instrumental]",
         "[Bridge]\nThe man on the TV talks about the value of hard work\nSays prison gives you discipline, and other little perks\nHe don't say his biggest donor owns the factory where I stand\nPuttin' the final polish on some product for your hand",
         "[Chorus]\nAnd it's thirteen cents an hour\nBeneath the pale white light\nThey got my youth and power\nFor the rest of my damn life",
-        "[Outro]\nThirteen cents an hour..."
+        "[Outro]\nThirteen cents an hour."
       ],
       "copyright_notice": "© 2025 The Shady River Bard • The Shady River Homestead, LLC. All rights reserved. | Track 08: Thirteen Cents an Hour • Album 10: The Unbroken Chain"
     },
@@ -470,12 +470,12 @@ window.UNBROKEN_CHAIN_DATA = {
         "Trip-Hop",
         "Digital Enslavement"
       ],
-      "core_theme": "Theme: Modern human trafficking and debt peonage in the digital age. Angle: An atmospheric, haunting track with electronic elements and a sense of dislocation. The perspective is of a migrant worker trapped in debt bondage, recruited online with false promises.58 The \"ghost\" is their digital self, the profile that was lured into the trap, while their physical self is imprisoned.",
-      "narrative_progression": "Progression: This track expands the album's scope globally, showing the latest mutation of slavery. It demonstrates how the core principles of fraud and coercion have adapted to new technologies.58 The sonic shift to an electronic, disembodied sound reflects the placeless, anonymous nature of modern trafficking networks, contrasting with the very grounded, earthy sounds of the album's beginning. It is the final, most modern link in the chain.",
+      "core_theme": "Theme: Modern human trafficking and debt peonage in the digital age. Angle: An atmospheric, haunting track with electronic elements and a sense of dislocation. The perspective is of a migrant worker trapped in debt bondage, recruited online with false promises. The \"ghost\" is their digital self, the profile that was lured into the trap, while their physical self is imprisoned.",
+      "narrative_progression": "Progression: This track expands the album's scope globally, showing the latest mutation of slavery. It demonstrates how the core principles of fraud and coercion have adapted to new technologies. The sonic shift to an electronic, disembodied sound reflects the placeless, anonymous nature of modern trafficking networks, contrasting with the very grounded, earthy sounds of the album's beginning. It is the final, most modern link in the chain.",
       "summary": "\"The Digital Ghost\" is a haunting, atmospheric track that concludes Act III by exploring modern human trafficking and debt peonage. Musically, it shifts into a darker, electronic space, blending trip-hop beats, ambient synth pads, and glitchy vocal effects to create a profound sense of dislocation. The song is narrated from the perspective of a victim lured by false online promises, whose hopeful digital profile—the \"digital ghost\"—still exists online as a testament to a life that was stolen. The track contrasts this glowing, smiling online image with the grim, trapped reality of the narrator, showing how the old tools of coercion and fraud have adapted to the digital age.",
       "suno_prompt": "A haunting and atmospheric trip-hop track with dark ambient and electronic folk elements. Led by a detached, half-whispered male vocalist with heavy reverb. Features atmospheric synth pads, a simple looping beat, and glitched vocal samples.",
       "image_prompt": "A cinematic and beautiful 16:9 image portraying a dark, moody shot of a young Asian woman's face, partially obscured by shadow, looking out through a dirty window streaked with rain. Superimposed over the glass, as if it were a ghostly reflection, is a bright, glowing social media profile—a perfect square showing the same woman smiling happily in a sunny, outdoor location. The contrast between the grim, trapped reality of her darkened room and the idealized, luminous digital \"ghost\" is the central focus. The overall mood is haunting, dislocated, and deeply tragic.",
-      "key_quote": "I am data, I am bandwidth, I'm a click that someone sold... the ghost that isn't me.",
+      "key_quote": "I am data, I am bandwidth, I'm a click that someone sold. the ghost that isn't me.",
       "video_id": "UciPMA8Jb0w",
       "youtube_watch_url": "https://www.youtube.com/watch?v=UciPMA8Jb0w",
       "art_banner": "assets/art/the-digital-ghost.webp",
@@ -487,10 +487,10 @@ window.UNBROKEN_CHAIN_DATA = {
         "[Verse 3]\nMy profile says I'm \"thriving\"\nIn a language I don't speak\nWhile my own two hands are weaving\nFor the strong to crush the weak",
         "[Verse 4]\nThey took my phone, they took my name\nBut they left the ghost online\nTo prove their little honest game\nAnd that everything is fine",
         "[Chorus]\nThere's a picture of me smiling\nOn a screen across the sea\nThat's the ghost that they were buying\nThat's the ghost that isn't me",
-        "[Bridge]\nI am data, I am bandwidth, I'm a click that someone sold\nI'm a password in a ledger, I'm a story to be told\nI'm a body in a dark room, and a phantom in the code\nJust a digital ghost... carryin' a heavy load.",
+        "[Bridge]\nI am data, I am bandwidth, I'm a click that someone sold\nI'm a password in a ledger, I'm a story to be told\nI'm a body in a dark room, and a phantom in the code\nJust a digital ghost. carryin' a heavy load.",
         "[Instrumental]",
         "[Chorus]\nThere's a picture of me smiling\nOn a screen across the sea\nThat's the ghost that they were buying\nThat's the ghost that isn't me",
-        "[Outro]\n...the ghost that isn't me...\n...isn't me..."
+        "[Outro]\n.the ghost that isn't me.\n.isn't me."
       ],
       "copyright_notice": "© 2025 The Shady River Bard • The Shady River Homestead, LLC. All rights reserved. | Track 09: The Digital Ghost • Album 10: The Unbroken Chain"
     },
@@ -511,7 +511,7 @@ window.UNBROKEN_CHAIN_DATA = {
         "Memory",
         "Generational Trauma"
       ],
-      "core_theme": "Theme: The persistence of history and the connection between past and present. Angle: A sweeping, cinematic ballad that explicitly connects the images of the album: the overseer's whip and the prison guard's baton, the slave auction block and the courtroom, the cotton field and the prison farm.52 It's a song about how the past isn't dead; it isn't even past.",
+      "core_theme": "Theme: The persistence of history and the connection between past and present. Angle: A sweeping, cinematic ballad that explicitly connects the images of the album: the overseer's whip and the prison guard's baton, the slave auction block and the courtroom, the cotton field and the prison farm. It's a song about how the past isn't dead; it isn't even past.",
       "narrative_progression": "Progression: This track begins the final act of reflection and synthesis. It explicitly draws the lines between all the previous songs, making the album's thesis statement undeniable. It functions as a mournful overture to the album's conclusion, looking back over the entire \"unbroken chain\" and acknowledging its weight.",
       "summary": "\"The Long Shadow\" is a sweeping, cinematic ballad that opens the album's final act. It serves as a powerful moment of synthesis, explicitly connecting the imagery and themes from the entire journey. The lyrics draw direct lines from the overseer's whip to the prison guard's baton, the auction block to the courtroom, and the cotton field to the modern prison farm. Musically, it builds from a sparse, reflective piano and acoustic guitar into a full-band Americana anthem, complete with soaring strings and powerful background vocals. It is a mournful, mighty song about the inescapable persistence of history and the ways the past continues to shape the present.",
       "suno_prompt": "A sweeping, cinematic Americana ballad with a powerful, reflective, and mournful mood. The arrangement builds from a solo piano into a full orchestral folk anthem. Led by a clear, somber male vocalist, with soaring male and female harmony vocals in the chorus.",
@@ -531,7 +531,7 @@ window.UNBROKEN_CHAIN_DATA = {
         "[Bridge]\nFrom the hold of the ship to the prison cell\nFrom the overseer's lash to the foreman's yell\nIt's a line you can draw straight and true\nFrom what they did back then to what they do to you",
         "[Instrumental]",
         "[Chorus]\nOh, the past ain't dead and buried\nIt ain't even past, you see\nIt's a long shadow that we carry\nFor the whole wide world to see",
-        "[Outro]\n...the long shadow..."
+        "[Outro]\n.the long shadow."
       ],
       "copyright_notice": "© 2025 The Shady River Bard • The Shady River Homestead, LLC. All rights reserved. | Track 10: The Long Shadow • Album 10: The Unbroken Chain"
     },
@@ -552,7 +552,7 @@ window.UNBROKEN_CHAIN_DATA = {
         "Field Recording",
         "Archival Voice"
       ],
-      "core_theme": "Theme: The act of bearing witness through music. Angle: A song that imagines the moment Alan Lomax arrives at a prison like Parchman Farm to record the inmates.5 It's told from the perspective of a prisoner who is skeptical at first, but then finds a sliver of power and humanity in having his voice, his song, and his story captured for posterity.",
+      "core_theme": "Theme: The act of bearing witness through music. Angle: A song that imagines the moment Alan Lomax arrives at a prison like Parchman Farm to record the inmates. It's told from the perspective of a prisoner who is skeptical at first, but then finds a sliver of power and humanity in having his voice, his song, and his story captured for posterity.",
       "narrative_progression": "Progression: After reflecting on the whole chain in Track 10, this song focuses on the power of the art that came from it. It honors the act of documentation and preservation that made much of this album's musical inspiration possible. It introduces the theme of art as a counter-narrative and an act of defiance, setting the stage for the album's final statement.",
       "summary": "\"Parchman Farm (The Lomax Sessions)\" is a raw, narrative acoustic blues that dramatizes a historic field recording session from the perspective of an incarcerated man. The song begins with the narrator's suspicion towards the \"man with the machine,\" a folklorist he's been ordered to sing for. As he performs, his cynicism gives way to a profound realization: the machine isn't stealing his song, but preserving it, giving his voice a chance at a life beyond the prison walls. The music itself is stripped bare—a single acoustic guitar and a stomping foot, echoing the authentic style of the very Lomax recordings it honors—and the vocal performance evolves from reserved to soulful as the narrator understands the defiant power of being heard.",
       "suno_prompt": "A raw, lo-fi acoustic blues song in the style of a 1930s field recording. Led by a gritty male vocalist whose delivery evolves from suspicious and reserved to powerful and soulful. The only instrumentation is a single, worn acoustic guitar and the sound of a foot stomping on a wooden floor.",
@@ -570,7 +570,7 @@ window.UNBROKEN_CHAIN_DATA = {
         "[Verse 4]\nSo I leaned in a little closer, and I sang with all my might\nSang about the ghosts I know, and the darkness in the night\nI put my father's anger in it, and my mother's secret prayer\nPuttin' everythin' I couldn't say right on that black disc there.",
         "[Chorus]\nOh, that little needle's dancin'\nOn a disc of shiny black\nIt's takin' more than music\nIt's takin' somethin' they can't take back",
         "[Instrumental]",
-        "[Outro]\nHe packed his box, he tipped his hat, and the Captain led him out\nI sat there in the silence, with the echo of my shout\nThe needle captured somethin' real, a truth they couldn't chain\nMy voice is on its way somewhere... out beyond the rain."
+        "[Outro]\nHe packed his box, he tipped his hat, and the Captain led him out\nI sat there in the silence, with the echo of my shout\nThe needle captured somethin' real, a truth they couldn't chain\nMy voice is on its way somewhere. out beyond the rain."
       ],
       "copyright_notice": "© 2025 The Shady River Bard • The Shady River Homestead, LLC. All rights reserved. | Track 11: Parchman Farm (The Lomax Sessions) • Album 10: The Unbroken Chain"
     },
@@ -591,7 +591,7 @@ window.UNBROKEN_CHAIN_DATA = {
         "African Roots",
         "Instrumental Suite"
       ],
-      "core_theme": "Theme: Reclaiming a stolen history and cultural identity. Angle: An instrumental track that showcases the banjo's journey. It begins with a sound reminiscent of its African origins (like the akonting), then moves through a mournful slave-era melody, is briefly co-opted by a jarring minstrel-style phrase, and finally resolves into a powerful, complex, and proud modern folk/blues performance.13",
+      "core_theme": "Theme: Reclaiming a stolen history and cultural identity. Angle: An instrumental track that showcases the banjo's journey. It begins with a sound reminiscent of its African origins (like the akonting), then moves through a mournful slave-era melody, is briefly co-opted by a jarring minstrel-style phrase, and finally resolves into a powerful, complex, and proud modern folk/blues performance.",
       "narrative_progression": "Progression: This instrumental piece is a purely musical act of reclamation. It tells the story of an instrument that is a central symbol of the album's themes of appropriation and recovery. It is a moment of non-verbal storytelling that powerfully reinforces the album's purpose before the final lyrical statement.",
       "summary": "\"Reclaiming the Banjo\" is a powerful, four-part instrumental suite that tells the cultural story of the banjo without a single word. The piece begins with the hypnotic, earthy rhythms of the banjo's West African ancestors, like the akonting. This sound then morphs into a mournful, soulful folk-blues melody, evoking the sorrow and resilience of the plantation era. The piece is then jarringly interrupted by a frantic, almost mocking minstrel-style phrase, representing the instrument's cultural appropriation. Finally, this phrase is cut short and transformed, resolving into a complex, defiant, and proud modern folk-blues performance where the banjo reclaims its full emotional range and historical depth.",
       "suno_prompt": "An epic, four-part instrumental banjo suite that tells a story. It begins with a hypnotic, African-style gourd banjo, transitions to a mournful folk-blues melody, is interrupted by a jarring and frantic minstrel banjo phrase, and finally resolves into a powerful, defiant, and soulful modern folk-blues anthem with a full band.",
@@ -638,7 +638,7 @@ window.UNBROKEN_CHAIN_DATA = {
       "art_banner": "assets/art/the-unbroken-chain.webp",
       "art_square": "assets/art/the-unbroken-chain--sq.webp",
       "stanzas": [
-        "[Intro]\nFrom the first sun... to the last hum...",
+        "[Intro]\nFrom the first sun. to the last hum.",
         "[Verse 1]\nI have felt the sun that breaks the back, I have followed the Gourd north\nI have seen the child upon the block, and known what she was worth\nI have heard the whispers in the dark, a promise in the cane\nFelt the first link of the unbroken chain",
         "[Verse 2]\nI have heard the gavel's empty sound, I've read the Black Code's lies\nFelt the hammer on the railroad stone beneath the cold gray skies\nI've known a life was cheaper than the cheapest summer rain\nFelt another link lock on the unbroken chain",
         "[Chorus]\nIt's the unbroken chain\nForged in the sun and the rain\nIt's the rhythm of the pain\nAnd the whisper of a name\nIt's the unbroken chain",
@@ -646,7 +646,7 @@ window.UNBROKEN_CHAIN_DATA = {
         "[Chorus]\nIt's the unbroken chain\nForged in the sun and the rain\nIt's the rhythm of the pain\nAnd the whisper of a name\nIt's the unbroken chain",
         "[Bridge]\nBut there's a chain of iron, and a chain of skin and bone\nAnd one that's made of memory, that the heart has always known\nA chain of voices rising up, a truth you can't contain\nThis song becomes a link in that unbroken chain!",
         "[Final Chorus]\n(LEAD) This is the unbroken chain!\n(CHOIR) The unbroken chain!\n(LEAD) Forged in the sun and the rain!\n(CHOIR) The sun and the rain!\n(LEAD) It's the rhythm of the pain!\n(CHOIR) And the whisper of a name!\n(LEAD) This is the unbroken chain!",
-        "[Outro]\n(CHOIR) Hallelujah... amen..."
+        "[Outro]\n(CHOIR) Hallelujah. amen."
       ],
       "copyright_notice": "© 2025 The Shady River Bard • The Shady River Homestead, LLC. All rights reserved. | Track 13: The Unbroken Chain • Album 10: The Unbroken Chain"
     },
@@ -672,7 +672,7 @@ window.UNBROKEN_CHAIN_DATA = {
       "summary": "The album closes by returning to the beginning, but the context is forever changed. This powerful reprise transforms the earthy, acoustic work song of the opening track into a modern, percussive, gospel anthem. Driven by the rhythms of foot stomping and the collective power of a gospel choir's clapping hands, the familiar lyrics take on a new, defiant meaning. It's a haunting echo that transforms the sound of solitary labor into a joyful, communal noise of survival and praise. The work song of the field becomes the triumphant anthem of the congregation, leaving the listener with the realization that the most powerful response to an unbroken chain of hardship is an unbreakable spirit of collective song.\n#GospelMusic #Reprise #Stomp @TheShadyRiverBard",
       "suno_prompt": "A modern, percussive gospel anthem reprise with driving foot stomping, full gospel choir hand claps, powerful collective harmonies, and soaring defiant vocal praise.",
       "image_prompt": "A cinematic and beautiful 16:9 image portraying a powerful and energetic musical performance in a historic, unadorned church with worn wooden floors. The main focus is a large, diverse gospel choir in the background, their faces filled with passionate, joyful expressions and their hands caught in the act of clapping a powerful rhythm. The are a mix of races, though predominantly black.  In the foreground, slightly to the side on a raised wooden platform, a small group of guest performers creates the percussive foundation, they too are of mixed race but predominantly black: two figures are engaged in a dynamic \"stomp\" dance, their feet blurring with motion, while a third plays a single, large bass drum with focused intensity. Dramatic beams of light, thick with dust motes, cut through the space, illuminating the choir and the stomping feet, creating an atmosphere that is both a sacred revival and a defiant stage performance.",
-      "key_quote": "This ain't the same sun rises in the morn... Oh, a different kind of sun.",
+      "key_quote": "This ain't the same sun rises in the morn. Oh, a different kind of sun.",
       "video_id": "qnT263BFL_w",
       "youtube_watch_url": "https://www.youtube.com/watch?v=qnT263BFL_w",
       "art_banner": "assets/art/a-different-kind-of-sun-reprise.webp",
@@ -685,7 +685,7 @@ window.UNBROKEN_CHAIN_DATA = {
         "'Til it passes through.\nSaw my brother stumble.\nUnderneath its eye.\nHeard the master grumble,",
         "And just pass him by.\nOh, a different kind of sun.\nKeep your head down low.\n'Til the long day's run,",
         "And they call you from the row.\nOne swing for the livin',\nOne swing for the gone,\nOne swing God's forgivin',",
-        "To help us carry on.\nA different kind of sun...\nDifferent kind of sun..."
+        "To help us carry on.\nA different kind of sun.\nDifferent kind of sun."
       ],
       "copyright_notice": "© 2025 The Shady River Bard • The Shady River Homestead, LLC. All rights reserved. | Track 14: A Different Kind of Sun (Reprise) • Album 10: The Unbroken Chain"
     }

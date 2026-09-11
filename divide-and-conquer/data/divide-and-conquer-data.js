@@ -927,7 +927,7 @@ window.DIVIDE_AND_CONQUER_DATA = {
       "act_title": "Act IV: Beyond the Colors",
       "working_title": "The Bridge Builders",
       "core_theme": "A hopeful, anthemic track inspired by real-world cross-partisan and community-based initiatives, telling stories of people from different tribes working together on local issues.",
-      "narrative_role": "Building on the personal act of rebellion in Track 11, this song shows a path toward collective action. It provides tangible, hopeful examples of how the divide can be overcome from the ground up, based on shared local interests rather than national political identities.75",
+      "narrative_role": "Building on the personal act of rebellion in Track 11, this song shows a path toward collective action. It provides tangible, hopeful examples of how the divide can be overcome from the ground up, based on shared local interests rather than national political identities.",
       "quote": "Yeah, the bridge builders are workin' with their hands / Finding common ground on these forgotten lands / They ain't building nations, they're just fixing what they see",
       "duration": "5:15",
       "duration_seconds": 315,

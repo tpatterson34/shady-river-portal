@@ -275,7 +275,7 @@ window.HOUSE_DIVIDED_DATA = {
     },
     {
       "policy": "Funding for Resilient Infrastructure",
-      "fiscal": "Saves an average of $6 in post-disaster costs for every $1 invested.75",
+      "fiscal": "Saves an average of $6 in post-disaster costs for every $1 invested.",
       "security": "Protects critical energy and transportation infrastructure from disruption.",
       "safety": "Fortifies communities against floods, storms, and fires, saving lives.",
       "stewardship": "Safeguards natural systems like wetlands that provide flood protection.",
