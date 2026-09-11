@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>When Power Wears a Halo | Trevor Swistchew</title>
+  <meta name="description" content="A forensic historical audit of sanctified authority, institutional crimes, and archival accountability by Trevor Swistchew (2026). Part of the Trevor Swistchew Compendium Archive.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              950: '#0c0b0a',
+              900: '#121110',
+              850: '#181614',
+              800: '#1f1c19',
+              700: '#2b2723',
+              600: '#3d3731',
+            },
+            parchment: {
+              50: '#fdfbf7',
+              100: '#f7f4ed',
+              200: '#efeae0',
+              300: '#e5ded2',
+              400: '#d8cdbe',
+              500: '#c5b8a5',
+            },
+            brass: {
+              400: '#dfbe75',
+              500: '#c5a059',
+              600: '#a6823c',
+              700: '#846427',
+            },
+            thistle: {
+              600: '#9d2b45',
+              700: '#7e2035',
+            },
+            loch: {
+              400: '#38bdf8',
+              700: '#0369a1',
+              900: '#0c4a6e',
+            }
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Lora', 'Georgia', 'serif'],
+            display: ['"Playfair Display"', 'Cinzel', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Web Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/a11y.css">
+
+  <!-- Scottish Literary Salon Theme Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950">
+
+  <!-- 1. WCAG Skip Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Essay Content</a>
+
+  <!-- 2. Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- 3. Top Sticky Reading Utility & Salon Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      
+      <!-- Salon Brand / Return Link -->
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2.5 text-stone-300 hover:text-amber-400 group transition-colors">
+          <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
+          <div class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:block">
+            Trevor Swistchew <span class="text-stone-500 font-sans font-normal mx-1">|</span> <span class="text-stone-400">Compendium Archive</span>
+          </div>
+        </a>
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="hidden md:flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 text-[11px] font-mono transition-colors" title="Visit The Shady River Bard Portal">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Reading Accommodations Controls -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Font Size Scaler -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs font-mono text-stone-300" role="group" aria-label="Font Size Scaling">
+          <button id="font-size-dec" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Decrease font size" aria-label="Decrease font size">A-</button>
+          <button id="font-size-reset" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors text-[10px] text-stone-400" title="Reset font size" aria-label="Reset font size">A</button>
+          <button id="font-size-inc" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Increase font size" aria-label="Increase font size">A+</button>
+        </div>
+
+        <!-- Tri-State Theme Switcher -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs" role="group" aria-label="Reading Theme Selection">
+          <button data-theme="dark" class="theme-toggle-btn px-2 py-1 rounded transition-colors active-theme" title="Dark Peat Theme" aria-label="Dark Peat Theme" aria-pressed="true">
+            <i class="fa-solid fa-moon text-amber-400"></i>
+          </button>
+          <button data-theme="sepia" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Aged Parchment Sepia Theme" aria-label="Aged Parchment Sepia Theme" aria-pressed="false">
+            <i class="fa-solid fa-book-open"></i>
+          </button>
+          <button data-theme="light" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Edinburgh Stone Light Theme" aria-label="Edinburgh Stone Light Theme" aria-pressed="false">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- 4. Main Essay Content Container -->
+  <main id="main-content" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+    <article class="space-y-10">
+      
+      <!-- HERO & ESSAY HEADER -->
+      <header class="space-y-6 text-center sm:text-left border-b border-stone-800 pb-10">
+        
+        <!-- Category & Reading Time Badge -->
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 text-xs font-mono">
+          <span class="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-semibold tracking-wider uppercase">
+            Forensic History &amp; Institutional Ethics
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400 flex items-center gap-1.5">
+            <i class="fa-regular fa-clock text-amber-500/70"></i>
+            5 min read
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400 flex items-center gap-1.5">
+            <i class="fa-solid fa-feather-pointed text-amber-500/70"></i>
+            815 words
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400">Trevor Swistchew 2026</span>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <div class="space-y-3">
+          <h1 class="font-cinzel text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            When Power Wears a Halo
+          </h1>
+          <p class="font-serif text-lg sm:text-xl text-stone-300 leading-relaxed font-light italic">
+            Primary Evidence, Archival History, and the Structural Anatomy of Sanctified Injustice
+          </p>
+        </div>
+
+        <!-- Author Byline -->
+        <div class="flex items-center justify-center sm:justify-start gap-3 pt-2">
+          <div class="w-10 h-10 rounded-full border border-amber-500/40 bg-peat-900 flex items-center justify-center text-amber-400 font-cinzel font-bold text-sm shadow-md">
+            TS
+          </div>
+          <div class="text-left">
+            <div class="font-cinzel font-bold text-white text-sm tracking-wider">Trevor Swistchew</div>
+            <div class="text-xs text-stone-400 font-mono">Essayist, Philosopher &amp; Historian &bull; Western Washington / Scotland</div>
+          </div>
+        </div>
+
+        <!-- Hero Fine-Art Banner Image -->
+        <figure class="pt-4 space-y-2">
+          <div class="aspect-video w-full rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl relative bg-peat-950">
+            <img src="../../assets/images/when-power-wears-a-halo-banner.jpg" alt="A colossal Gothic cathedral interior with a single shaft of light illuminating a dark throne with a golden halo hovering above, while legal records and scales of justice lie scattered across stone steps" class="w-full h-full object-cover" loading="eager">
+          </div>
+          <figcaption class="text-center text-xs text-stone-400 font-serif italic pt-1">
+            The judgment seat beneath the halo: where divine mandate cloaks institutional impunity and procedural cruelty.
+          </figcaption>
+        </figure>
+
+        <!-- Epigraph -->
+        <blockquote class="p-4 sm:p-5 rounded-xl bg-peat-900/80 border-l-4 border-amber-500 text-stone-300 font-serif italic text-sm sm:text-base leading-relaxed">
+          “When power wears a halo, it becomes harder to see and easier to obey... The evidence sits in archives, courtrooms, government inquiries, academic studies, and investigative journalism. The crimes are documented. The perpetrators are named. The victims are recorded. The pattern is unmistakable.” — Trevor Swistchew
+        </blockquote>
+
+      </header>
+
+      <!-- INTERACTIVE CONTEXTUAL DOSSIER -->
+      <section class="my-12 p-6 rounded-2xl bg-stone-900/90 border border-amber-500/30 shadow-2xl backdrop-blur-sm" aria-labelledby="dossier-heading-halo">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-white/10">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-sm">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </span>
+            <div>
+              <h3 id="dossier-heading-halo" class="font-cinzel font-bold text-base sm:text-lg text-amber-300">
+                The Forensic Archival Matrix: Sanctified Power on Trial
+              </h3>
+              <span class="text-[11px] font-mono text-stone-400">Primary Chronicles, Judicial Records, Royal Commissions &amp; UN Inquiries</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <button onclick="switchTab('halo', 'crusades')" id="btn-halo-crusades" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-amber-500 bg-amber-500/10 text-amber-400 font-bold">
+              <span>Crusades &amp; Inquisitions</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">1099–1492</span>
+            </button>
+            <button onclick="switchTab('halo', 'institutional')" id="btn-halo-institutional" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+              <span>Institutions &amp; Inquiries</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Forensics</span>
+            </button>
+            <button onclick="switchTab('halo', 'modern')" id="btn-halo-modern" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+              <span>Extremism &amp; Finance</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">UN &amp; Courts</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="min-h-[140px]">
+          <!-- Panel 1: Crusades & Inquisitions -->
+          <div id="panel-halo-crusades" class="dossier-tab-panel block space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">Medieval Chroniclers &amp; Crown Inquisitorial Archives</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-stone-300 mb-3">
+              <div class="p-3 rounded-lg bg-peat-900 border border-white/5">
+                <strong class="text-amber-400 block font-cinzel">Sack of Jerusalem (1099)</strong>
+                Raymond of Aguilers (<em>Historia Francorum</em>) records streets running with blood as Crusaders slaughtered Muslims, Jews, and Eastern Christians indiscriminately.
+              </div>
+              <div class="p-3 rounded-lg bg-peat-900 border border-white/5">
+                <strong class="text-amber-400 block font-cinzel">Massacre at Béziers (1209)</strong>
+                Caesarius of Heisterbach (<em>Dialogus Miraculorum</em>) documents Papal Legate Arnaud Amalric’s decree: <em>“Kill them all; God will know his own.”</em>
+              </div>
+              <div class="p-3 rounded-lg bg-peat-900 border border-white/5">
+                <strong class="text-amber-400 block font-cinzel">Spanish Inquisition (1478–1492)</strong>
+                Torquemada’s procedural torture dockets in the <em>Archivo Histórico Nacional</em>; the Alhambra Decree executing total expulsion of Spain's Jews.
+              </div>
+            </div>
+            <div class="p-3 rounded-lg bg-peat-900 border border-amber-500/20 text-xs font-mono text-amber-400">
+              “These events are not rhetorical inventions; they are documented by the very chroniclers who witnessed them.”
+            </div>
+          </div>
+
+          <!-- Panel 2: Institutions & Inquiries -->
+          <div id="panel-halo-institutional" class="dossier-tab-panel hidden space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">Official Commissions, Investigative Journalism &amp; Diocesan Litigation</h4>
+            <div class="overflow-x-auto text-xs">
+              <table class="w-full text-left font-mono">
+                <thead>
+                  <tr class="border-b border-white/10 text-stone-400">
+                    <th class="py-1">Jurisdiction / Entity</th>
+                    <th class="py-1 text-amber-400">Primary Source / Investigation</th>
+                    <th class="py-1">Documented Finding</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-white/5 text-stone-300">
+                  <tr>
+                    <td class="py-1 text-stone-400">Canadian Residential Schools</td>
+                    <td class="py-1">Truth &amp; Reconciliation Commission (2015) &amp; GPR radar</td>
+                    <td class="py-1">Cultural erasure, starvation, sexual abuse, mass graves of children</td>
+                  </tr>
+                  <tr>
+                    <td class="py-1 text-stone-400">Archdiocese of Boston</td>
+                    <td class="py-1">Boston Globe Spotlight (Pulitzer 2003) &amp; Court Files</td>
+                    <td class="py-1">Cardinal Bernard Law sheltered Geoghan across multiple parishes</td>
+                  </tr>
+                  <tr>
+                    <td class="py-1 text-stone-400">Legionaries of Christ</td>
+                    <td class="py-1">Vatican Dossiers &amp; NYT Investigations (2010)</td>
+                    <td class="py-1">Founder Marcial Maciel protected at the highest ecclesiastical levels</td>
+                  </tr>
+                  <tr>
+                    <td class="py-1 text-stone-400">Southern Baptist Convention</td>
+                    <td class="py-1">Houston Chronicle &amp; San Antonio Express-News (2019)</td>
+                    <td class="py-1">Internal database of 700+ accused leaders shielded from scrutiny</td>
+                  </tr>
+                  <tr>
+                    <td class="py-1 text-stone-400">Jehovah’s Witnesses</td>
+                    <td class="py-1">Australian Royal Commission Final Report (2017)</td>
+                    <td class="py-1">Two-witness rule weaponised to silence victims of child sexual assault</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Panel 3: Extremism & Finance -->
+          <div id="panel-halo-modern" class="dossier-tab-panel hidden space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">UN Tribunals, Sectarian Pogroms &amp; Sovereign Banking Scandals</h4>
+            <ul class="text-xs text-stone-300 space-y-2 list-disc pl-4">
+              <li><strong>ISIS Yazidi Genocide (2014–2017):</strong> UN Human Rights Council reports, Amnesty International, and HRW documenting systematic executions, sexual slavery, and theology-sanctioned genocide.</li>
+              <li><strong>Myanmar Rohingya Ethnic Cleansing (2017–2018):</strong> UN Fact-Finding Mission uncovering Buddhist nationalist agitation led by Ashin Wirathu driving military pogroms.</li>
+              <li><strong>2002 Gujarat Violence:</strong> Over 1,000 deaths documented in the Nanavati Commission Report, Indian Supreme Court dockets, and international press.</li>
+              <li><strong>Vatican Bank &amp; Banco Ambrosiano (1982):</strong> Italian criminal courts documenting Archbishop Paul Marcinkus’s shell corporations, money laundering, and sovereign immunity; complemented by modern televangelist financial fraud litigation (Bakker, Long, Copeland).</li>
+            </ul>
+            <div class="p-3 rounded-lg bg-peat-900 border border-red-500/30 text-xs font-mono text-red-300">
+              “When institutions claim divine authority, they become harder to challenge, easier to abuse, and nearly impossible to hold accountable.”
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ESSAY BODY TEXT -->
+      <div id="essay-article" class="prose prose-invert prose-stone max-w-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg">
+        
+        <p class="first-letter:font-cinzel first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:text-amber-500 first-letter:leading-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          When power wears a halo, it becomes harder to see and easier to obey, and the historical record shows that religious institutions have repeatedly used this advantage to commit acts that would have been condemned outright had they been carried out by any secular authority. The First Crusade is the earliest large‑scale example preserved in detail. In 1099, during the capture of Jerusalem, Crusader chronicler Raymond of Aguilers wrote in <em>Historia Francorum</em> that the streets &ldquo;ran with blood&rdquo; as Crusaders killed Muslims, Jews, and Eastern Christians indiscriminately; this is not legend but a primary source, and modern historians such as Thomas Asbridge in <em>The First Crusade</em> (Oxford University Press) confirm the scale of the massacre. A century later, the Albigensian Crusade repeated the same pattern of sanctified brutality. At B&eacute;ziers in 1209, papal legate Arnaud Amalric reportedly issued the command &ldquo;Kill them all; God will know his own,&rdquo; a line preserved in Caesarius of Heisterbach’s <em>Dialogus Miraculorum</em>, another medieval source. These events are not rhetorical inventions; they are documented by the very chroniclers who witnessed them.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          The Spanish Inquisition shows how religious authority, once fused with state power, can institutionalise cruelty. Under Tom&aacute;s de Torquemada, torture and execution became procedural tools. The orders, interrogations, and sentences are preserved in the <em>Archivo Hist&oacute;rico Nacional</em> in Madrid, and historians such as Henry Kamen in <em>The Spanish Inquisition: A Historical Revision</em> (Yale University Press) have analysed these records extensively. The 1492 expulsion of Jews, recorded in the Alhambra Decree signed by Ferdinand and Isabella, demonstrates how religious justification can be used to strip entire populations of their homes, rights, and safety with bureaucratic efficiency.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Centuries later, religious institutions in Canada and the United States operated residential schools designed to erase Indigenous cultures. The Truth and Reconciliation Commission of Canada’s Final Report documents physical abuse, sexual abuse, starvation, and death, supported by government archives and survivor testimony. The mass graves uncovered in 2021&ndash;2022, confirmed by ground‑penetrating radar and reported by CBC, BBC, and official Canadian government statements, reveal the scale of suffering that was concealed behind the language of moral uplift and civilising mission. These findings are forensic, not rhetorical.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Sexual abuse within religious institutions is not a modern eruption but a long‑hidden system. Marcial Maciel, founder of the Legionaries of Christ, abused minors for decades while protected by powerful clergy; this is documented in Vatican investigations and reported by Jason Berry and <em>The New York Times</em> (2010). The case of John Geoghan in Boston, exposed by the Boston Globe Spotlight Team (Pulitzer Prize, 2003), is preserved in court records showing how the Church repeatedly moved him between parishes despite knowing his crimes. Cardinal Bernard Law’s relocation of abusive priests is documented in diocesan files released during litigation. These are not allegations; they are verified cases supported by legal documents and investigative journalism.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          The Southern Baptist Convention’s internal abuse files, revealed in a 2019 investigation by the <em>Houston Chronicle</em> and <em>San Antonio Express‑News</em>, documented more than 700 accused leaders. The Jehovah’s Witnesses&rsquo; two‑witness rule, examined by the Australian Royal Commission into Institutional Responses to Child Sexual Abuse, shows how doctrine can become a barrier to justice, preventing victims from being heard unless their abuse was witnessed by another person&mdash;a condition that almost never exists in cases of child sexual assault. These findings are judicial, not speculative.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Religious extremism has produced some of the most thoroughly documented atrocities of the modern era. ISIS, under Abu Bakr al‑Baghdadi, committed mass executions, rape, slavery, and genocide against Yazidis, all recorded in United Nations Human Rights Council reports (2014&ndash;2017), Amnesty International investigations, and Human Rights Watch documentation. These acts were not spontaneous eruptions of cruelty; they were organised, justified, and carried out under the banner of divine authority. In Myanmar, Buddhist nationalist movements led by Ashin Wirathu incited hatred that contributed to ethnic cleansing of the Rohingya, documented by the UN Fact‑Finding Mission (2017&ndash;2018). In India, the 2002 Gujarat riots, resulting in over 1,000 deaths, are preserved in the Nanavati Commission Report, Indian court records, and reporting by BBC and <em>The Hindu</em>. In each case, religious identity was weaponised to justify organised violence.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Financial corruption follows the same pattern. The Vatican Bank’s involvement in money laundering and the Banco Ambrosiano collapse in 1982, implicating Archbishop Paul Marcinkus, is documented in Italian court records and investigative reporting such as David Yallop’s <em>In God’s Name</em>. Televangelist empires built by Jim Bakker, Eddie Long, and Kenneth Copeland have faced fraud charges, sexual misconduct lawsuits, and tax controversies, all preserved in court filings and major media investigations. These cases show how religious authority can be converted into wealth, influence, and immunity until external legal systems intervene.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Across all these examples, the severity is not in the volume of crimes but in the structure that allowed them. When institutions claim divine authority, they become harder to challenge, easier to abuse, and nearly impossible to hold accountable. They sanctify violence, conceal wrongdoing, hoard wealth, suppress dissent, and claim moral superiority while acting with political and financial motives. The evidence sits in archives, courtrooms, government inquiries, academic studies, and investigative journalism. The crimes are documented. The perpetrators are named. The victims are recorded. The pattern is unmistakable.
+        </p>
+
+      </div>
+
+      <!-- SCHOLARLY ANNOTATIONS & FOOTER -->
+      <footer class="mt-20 pt-10 border-t border-stone-800 text-xs text-stone-400 font-sans" aria-labelledby="notes-heading-halo">
+        <div class="flex items-center gap-2 mb-6 text-stone-300">
+          <i class="fa-solid fa-book-bookmark text-amber-500 text-sm"></i>
+          <h3 id="notes-heading-halo" class="font-cinzel font-bold text-sm tracking-wider uppercase">
+            Scholarly Citations &amp; Archival References
+          </h3>
+        </div>
+        <ol class="space-y-4 list-none pl-0">
+          <li class="pl-4 border-l-2 border-stone-800">
+            <span class="font-mono text-amber-500 font-bold mr-1">[1]</span>
+            <span>Thomas Asbridge, <em>The First Crusade: A New History</em> (Oxford University Press, 2004), analyzing Raymond of Aguilers, <em>Historia Francorum qui ceperunt Iherusalem</em>, on the massacre of Jerusalem's inhabitants in July 1099.</span>
+          </li>
+          <li class="pl-4 border-l-2 border-stone-800">
+            <span class="font-mono text-amber-500 font-bold mr-1">[2]</span>
+            <span>Henry Kamen, <em>The Spanish Inquisition: A Historical Revision</em> (Yale University Press, 1998), documenting procedural records preserved in the <em>Archivo Histórico Nacional</em> (Inquisición) in Madrid.</span>
+          </li>
+          <li class="pl-4 border-l-2 border-stone-800">
+            <span class="font-mono text-amber-500 font-bold mr-1">[3]</span>
+            <span>Truth and Reconciliation Commission of Canada, <em>Honouring the Truth, Reconciling for the Future: Summary of the Final Report of the Truth and Reconciliation Commission of Canada</em> (Montreal: McGill-Queen's University Press, 2015).</span>
+          </li>
+          <li class="pl-4 border-l-2 border-stone-800">
+            <span class="font-mono text-amber-500 font-bold mr-1">[4]</span>
+            <span>Commonwealth of Australia, <em>Royal Commission into Institutional Responses to Child Sexual Abuse</em>, Final Report, Vol. 16: Religious Institutions (Canberra, 2017), examining canonical and doctrinal obstacles to criminal disclosure.</span>
+          </li>
+          <li class="pl-4 border-l-2 border-stone-800">
+            <span class="font-mono text-amber-500 font-bold mr-1">[5]</span>
+            <span>United Nations Human Rights Council, <em>“They Came to Destroy”: ISIS Crimes Against the Yazidis</em>, Report A/HRC/32/CRP.2 (Geneva, June 2016).</span>
+          </li>
+        </ol>
+        
+        <!-- Creative Fellowship CTA -->
+        <div class="mt-12 p-6 rounded-2xl bg-gradient-to-br from-peat-900 to-peat-950 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="space-y-1 text-center sm:text-left">
+            <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold">Creative Fellowship</span>
+            <h4 class="font-cinzel text-lg font-bold text-white">The Shady River Bard Creative Ecosystem</h4>
+            <p class="text-xs text-stone-300 max-w-xl">
+              Trevor Swistchew's essays and forensic inquiries are published in fellowship with The Shady River Bard—exploring a 26-album concept discography, working permaculture, and reflections on human purpose.
+            </p>
+          </div>
+          <a href="https://tpatterson34.github.io/shady-river-portal/" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-peat-950 font-cinzel font-bold text-xs uppercase tracking-wider transition-colors shrink-0 shadow-lg flex items-center gap-1.5">
+            <span>Explore Shady River</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+          </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="mt-10 pt-6 border-t border-stone-800/60 text-center text-xs text-stone-400 font-sans space-y-2">
+          <p>Essay &copy; 2026 Trevor Swistchew. All rights reserved.</p>
+          <p class="text-stone-500">Published for the Trevor Swistchew Compendium &amp; Literary Salon Archive.</p>
+          <p class="pt-2">
+            <a href="../../index.html" class="text-stone-400 hover:text-amber-400 transition-colors mr-3">&larr; Return to Compendium Archive</a>
+            <a href="https://tpatterson34.github.io/shady-river-portal/friends-of-the-bard/" class="text-amber-400 hover:text-amber-300 transition-colors font-medium">Friends of the Bard Collective ↗</a>
+          </p>
+        </div>
+      </footer>
+
+    </article>
+  </main>
+
+  <!-- Client-Side Tab Switching Script -->
+  <script>
+    function switchTab(essayId, tabId) {
+      const container = document.querySelector('[aria-labelledby="dossier-heading-' + essayId + '"]');
+      if (!container) return;
+      
+      const buttons = container.querySelectorAll('.dossier-tab-btn');
+      const panels = container.querySelectorAll('.dossier-tab-panel');
+      
+      buttons.forEach(btn => {
+        btn.classList.remove('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+        btn.classList.add('border-transparent', 'text-stone-400');
+      });
+      
+      panels.forEach(p => p.classList.add('hidden'));
+      
+      const targetBtn = document.getElementById('btn-' + essayId + '-' + tabId);
+      const targetPanel = document.getElementById('panel-' + essayId + '-' + tabId);
+      
+      if (targetBtn) {
+        targetBtn.classList.remove('border-transparent', 'text-stone-400');
+        targetBtn.classList.add('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+      }
+      if (targetPanel) {
+        targetPanel.classList.remove('hidden');
+      }
+    }
+  </script>
+  <script src="../../assets/js/reading-experience.js"></script>
+</body>
+</html>
