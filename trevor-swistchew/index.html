@@ -76,6 +76,22 @@
   <!-- WCAG Skip Link -->
   <a href="#main-content" class="a11y-skip-link">Skip to Portal Content</a>
 
+  <!-- Top Affiliation / Fellowship Announcement Bar -->
+  <aside aria-label="Creative Fellowship Bar" class="bg-stone-950 border-b border-stone-800/90 px-4 py-2 text-xs text-stone-400">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2 font-mono text-[11px]">
+        <span class="inline-block w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+        <span class="text-stone-300">Creative Fellowship</span>
+        <span class="text-stone-600 hidden sm:inline">•</span>
+        <span class="text-stone-400 hidden sm:inline">Partnered with The Shady River Bard</span>
+      </div>
+      <a href="https://tpatterson34.github.io/shady-river-portal/" class="group flex items-center gap-1.5 font-mono text-[11px] text-amber-500 hover:text-amber-400 transition-colors">
+        <span>Visit The Shady River Bard Portal (26-Album Concept Vault)</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[9px] group-hover:translate-x-0.5 transition-transform"></i>
+      </a>
+    </div>
+  </aside>
+
   <!-- Top Navigation -->
   <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
@@ -92,12 +108,20 @@
       </a>
 
       <!-- Navigation & Controls -->
-      <div class="flex items-center gap-4">
-        <nav class="hidden sm:flex items-center gap-6 text-xs font-cinzel tracking-wider text-stone-400" aria-label="Main Navigation">
+      <div class="flex items-center gap-3 sm:gap-4">
+        <nav class="hidden sm:flex items-center gap-5 text-xs font-cinzel tracking-wider text-stone-400" aria-label="Main Navigation">
           <a href="#essays" class="hover:text-amber-400 transition-colors">Compendium</a>
           <a href="#music" class="hover:text-amber-400 transition-colors">Musical Chamber</a>
+          <a href="#fellowship" class="hover:text-amber-400 transition-colors text-amber-500/90">Fellowship</a>
           <a href="#about" class="hover:text-amber-400 transition-colors">About</a>
         </nav>
+
+        <!-- Direct Link to The Shady River Bard Portal -->
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="hidden md:flex items-center gap-1.5 px-3 py-1 rounded-md border border-amber-500/40 bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 hover:text-amber-300 font-cinzel text-xs font-bold transition-all shadow-sm">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+        </a>
 
         <!-- Tri-State Theme Switcher -->
         <div class="flex items-center bg-stone-950/50 border border-stone-700/60 rounded-md p-0.5 text-xs text-stone-400" role="group" aria-label="Reading atmosphere theme">
@@ -353,6 +377,63 @@
       </div>
     </section>
 
+    <!-- Creative Fellowship & The Shady River Bard Showcase Section -->
+    <section id="fellowship" class="py-16 border-t border-stone-800 bg-gradient-to-b from-stone-900/70 to-stone-950">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="rounded-xl border border-amber-500/40 bg-stone-900/90 p-8 sm:p-10 shadow-2xl relative overflow-hidden">
+          <!-- Ambient decorative glow -->
+          <div class="absolute -top-24 -right-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+            <div class="space-y-3 max-w-2xl">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-amber-500 text-stone-950 font-bold uppercase tracking-wider">
+                  Creative Fellowship
+                </span>
+                <span class="text-stone-400 text-xs font-mono">Friends of the Bard</span>
+              </div>
+              
+              <h2 class="font-display text-2xl sm:text-3xl font-bold text-stone-100">
+                The Shady River Bard &bull; Song, Soil &amp; Story
+              </h2>
+              
+              <p class="font-serif text-stone-300 text-sm sm:text-base leading-relaxed">
+                Trevor Swistchew's philosophical essays and cultural audits exist in dynamic resonance with the artistic universe of <strong>The Shady River Bard</strong>. Based in Western Washington, the Bard chronicles resilience, American soil, and existential freedom across a legendary <strong>26-album concept vault</strong>, as well as companion spoken-word collaborations including <em>"This Is It."</em>
+              </p>
+
+              <div class="flex flex-wrap gap-2 text-xs font-mono text-stone-400 pt-1">
+                <span class="px-2.5 py-1 rounded bg-stone-950 border border-stone-800 flex items-center gap-1.5">
+                  <i class="fa-solid fa-compact-disc text-amber-500"></i> 26 Full-Length Albums
+                </span>
+                <span class="px-2.5 py-1 rounded bg-stone-950 border border-stone-800 flex items-center gap-1.5">
+                  <i class="fa-solid fa-book-open text-sky-400"></i> The Hollow Herd Chronicles
+                </span>
+                <span class="px-2.5 py-1 rounded bg-stone-950 border border-stone-800 flex items-center gap-1.5">
+                  <i class="fa-solid fa-wheat-awn text-emerald-400"></i> Homestead &amp; Soil
+                </span>
+              </div>
+            </div>
+
+            <!-- Action CTA Buttons to Drive Traffic -->
+            <div class="flex flex-col sm:flex-row md:flex-col gap-3 w-full md:w-auto flex-shrink-0">
+              <a href="https://tpatterson34.github.io/shady-river-portal/" class="px-5 py-3 rounded-lg bg-amber-500 hover:bg-amber-400 text-stone-950 font-cinzel font-bold text-xs tracking-wider text-center shadow-lg hover:shadow-amber-500/20 transition-all flex items-center justify-center gap-2">
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                <span>Explore Shady River Portal</span>
+              </a>
+              <a href="https://tpatterson34.github.io/shady-river-portal/vault/" class="px-5 py-3 rounded-lg bg-stone-950 hover:bg-stone-800 border border-stone-700 hover:border-amber-500/40 text-stone-300 hover:text-amber-400 font-cinzel text-xs tracking-wider text-center transition-all flex items-center justify-center gap-2">
+                <i class="fa-solid fa-music text-xs"></i>
+                <span>Browse 26-Album Vault</span>
+              </a>
+              <a href="https://tpatterson34.github.io/shady-river-portal/friends-of-the-bard/" class="px-5 py-2.5 rounded-lg bg-stone-900/80 hover:bg-stone-800 border border-stone-800 text-stone-400 hover:text-stone-200 font-mono text-[11px] text-center transition-all flex items-center justify-center gap-1.5">
+                <span>Friends of the Bard Collective</span>
+                <i class="fa-solid fa-angle-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 text-center">
       <div class="w-16 h-16 rounded-full border border-amber-500/40 bg-stone-950 mx-auto flex items-center justify-center text-amber-500 font-cinzel text-xl font-bold mb-6">
@@ -372,15 +453,36 @@
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-stone-800 py-10 bg-stone-950 text-xs text-stone-400 font-sans">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div>
-        <p class="text-stone-300 font-cinzel font-semibold">The Trevor Swistchew Literary Archive</p>
-        <p class="text-stone-400 text-[11px] mt-0.5">Crafted with modern editorial architecture & Scottish heritage typography.</p>
+  <footer class="border-t border-stone-800 py-12 bg-stone-950 text-xs text-stone-400 font-sans">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
+      <!-- Fellowship Cross-Promotion Bar -->
+      <div class="p-4 rounded-lg bg-stone-900/60 border border-stone-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3 text-center sm:text-left">
+          <div class="w-9 h-9 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 text-base flex-shrink-0">
+            <i class="fa-solid fa-water"></i>
+          </div>
+          <div>
+            <p class="font-cinzel font-bold text-stone-200 text-sm">Part of The Shady River Fellowship</p>
+            <p class="text-stone-400 text-[11px]">Discover 26 concept albums, rural American narrative essays, and the Western Washington homestead.</p>
+          </div>
+        </div>
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="px-4 py-2 rounded-md bg-stone-800 hover:bg-stone-700 text-amber-400 hover:text-amber-300 font-cinzel font-bold text-xs flex items-center gap-2 border border-stone-700 transition-all flex-shrink-0">
+          <span>Go to Shady River Main Site</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
       </div>
-      <div class="flex items-center gap-4 text-[11px]">
-        <a href="#essays" class="hover:text-amber-400 transition-colors">Catalog</a>
-        <a href="#" class="hover:text-amber-400 transition-colors">Back to Top</a>
+
+      <!-- Copyright & Bottom Links -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-stone-800/50">
+        <div>
+          <p class="text-stone-300 font-cinzel font-semibold">The Trevor Swistchew Literary Archive &copy; 2026</p>
+          <p class="text-stone-400 text-[11px] mt-0.5">Crafted with modern editorial architecture & Scottish heritage typography.</p>
+        </div>
+        <div class="flex items-center gap-5 text-[11px] font-mono">
+          <a href="https://tpatterson34.github.io/shady-river-portal/" class="text-amber-500 hover:text-amber-400 transition-colors">The Shady River Bard ↗</a>
+          <a href="#essays" class="hover:text-amber-400 transition-colors">Catalog</a>
+          <a href="#" class="hover:text-amber-400 transition-colors">Back to Top</a>
+        </div>
       </div>
     </div>
   </footer>
