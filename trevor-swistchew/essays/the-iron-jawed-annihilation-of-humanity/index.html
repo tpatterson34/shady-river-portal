@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Iron-Jawed Annihilation of Humanity | Trevor Swistchew</title>
+  <meta name="description" content="A forensic indictment of predatory capitalism, ecological extraction, and civilizational cowardice by Trevor Swistchew (2026). Part of the Trevor Swistchew Compendium Archive.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              950: '#0c0b0a',
+              900: '#121110',
+              850: '#181614',
+              800: '#1f1c19',
+              700: '#2b2723',
+              600: '#3d3731',
+            },
+            parchment: {
+              50: '#fdfbf7',
+              100: '#f7f4ed',
+              200: '#efeae0',
+              300: '#e5ded2',
+              400: '#d8cdbe',
+              500: '#c5b8a5',
+            },
+            brass: {
+              400: '#dfbe75',
+              500: '#c5a059',
+              600: '#a6823c',
+              700: '#846427',
+            },
+            thistle: {
+              600: '#9d2b45',
+              700: '#7e2035',
+            },
+            loch: {
+              400: '#38bdf8',
+              700: '#0369a1',
+              900: '#0c4a6e',
+            }
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Lora', 'Georgia', 'serif'],
+            display: ['"Playfair Display"', 'Cinzel', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Web Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/a11y.css">
+
+  <!-- Scottish Literary Salon Theme Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950">
+
+  <!-- 1. WCAG Skip Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Essay Content</a>
+
+  <!-- 2. Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- 3. Top Sticky Reading Utility & Salon Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      
+      <!-- Salon Brand / Return Link -->
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2.5 text-stone-300 hover:text-amber-400 group transition-colors">
+          <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
+          <div class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:block">
+            Trevor Swistchew <span class="text-stone-500 font-sans font-normal mx-1">|</span> <span class="text-stone-400">Compendium Archive</span>
+          </div>
+        </a>
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="hidden md:flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 text-[11px] font-mono transition-colors" title="Visit The Shady River Bard Portal">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Reading Accommodations Controls -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Font Size Scaler -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs font-mono text-stone-300" role="group" aria-label="Font Size Scaling">
+          <button id="font-size-dec" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Decrease font size" aria-label="Decrease font size">A-</button>
+          <button id="font-size-reset" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors text-[10px] text-stone-400" title="Reset font size" aria-label="Reset font size">A</button>
+          <button id="font-size-inc" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Increase font size" aria-label="Increase font size">A+</button>
+        </div>
+
+        <!-- Tri-State Theme Switcher -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs" role="group" aria-label="Reading Theme Selection">
+          <button data-theme="dark" class="theme-toggle-btn px-2 py-1 rounded transition-colors active-theme" title="Dark Peat Theme" aria-label="Dark Peat Theme" aria-pressed="true">
+            <i class="fa-solid fa-moon text-amber-400"></i>
+          </button>
+          <button data-theme="sepia" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Aged Parchment Sepia Theme" aria-label="Aged Parchment Sepia Theme" aria-pressed="false">
+            <i class="fa-solid fa-book-open"></i>
+          </button>
+          <button data-theme="light" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Edinburgh Stone Light Theme" aria-label="Edinburgh Stone Light Theme" aria-pressed="false">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- 4. Main Essay Content Container -->
+  <main id="main-content" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+    <article class="space-y-10">
+      
+      <!-- HERO & ESSAY HEADER -->
+      <header class="space-y-6 text-center sm:text-left border-b border-stone-800 pb-10">
+        
+        <!-- Category & Reading Time Badge -->
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 text-xs font-mono">
+          <span class="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-semibold tracking-wider uppercase">
+            Political Economy &amp; Systemic Critique
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400 flex items-center gap-1.5">
+            <i class="fa-regular fa-clock text-amber-500/70"></i>
+            3 min read
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400 flex items-center gap-1.5">
+            <i class="fa-solid fa-feather-pointed text-amber-500/70"></i>
+            486 words
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400">Copyright &copy; 2026 Trevor Swistchew</span>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <div class="space-y-3">
+          <h1 class="font-cinzel text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            The Iron-Jawed Annihilation of Humanity
+          </h1>
+          <p class="font-serif text-lg sm:text-xl text-stone-300 leading-relaxed font-light italic">
+            A Forensic Indictment of Predatory Capitalism, Ecological Extraction, and Civilizational Cowardice
+          </p>
+        </div>
+
+        <!-- Author Byline -->
+        <div class="flex items-center justify-center sm:justify-start gap-3 pt-2">
+          <div class="w-10 h-10 rounded-full border border-amber-500/40 bg-peat-900 flex items-center justify-center text-amber-400 font-cinzel font-bold text-sm shadow-md">
+            TS
+          </div>
+          <div class="text-left">
+            <div class="font-cinzel font-bold text-white text-sm tracking-wider">Trevor Swistchew</div>
+            <div class="text-xs text-stone-400 font-mono">Essayist, Philosopher &amp; Historian &bull; Western Washington / Scotland</div>
+          </div>
+        </div>
+
+        <!-- Hero Fine-Art Banner Image -->
+        <figure class="pt-4 space-y-2">
+          <div class="aspect-video w-full rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl relative bg-peat-950">
+            <img src="../../assets/images/iron-jawed-annihilation-banner.jpg" alt="A colossal predatory iron titan towering over an industrial metropolis with chimneys, iron jaws, and a dark churning sky" class="w-full h-full object-cover" loading="eager">
+          </div>
+          <figcaption class="text-center text-xs text-stone-400 font-serif italic pt-1">
+            The insatiable engine of capital: a predatory titan consuming generations, ecosystems, and human futures.
+          </figcaption>
+        </figure>
+
+        <!-- Epigraph -->
+        <blockquote class="p-4 sm:p-5 rounded-xl bg-peat-900/80 border-l-4 border-amber-500 text-stone-300 font-serif italic text-sm sm:text-base leading-relaxed">
+          “Capitalism stands over the world like a titan of greed, its jaws dripping with the stolen lifeblood of generations. It is not a system; it is a predator, a ravenous engine that murders possibility and feasts on the wreckage.” — Trevor Swistchew
+        </blockquote>
+
+      </header>
+
+      <!-- INTERACTIVE CONTEXTUAL DOSSIER -->
+      <section class="my-12 p-6 rounded-2xl bg-stone-900/90 border border-amber-500/30 shadow-2xl backdrop-blur-sm" aria-labelledby="dossier-heading-iron-jawed">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-white/10">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-sm">
+              <i class="fa-solid fa-gears"></i>
+            </span>
+            <div>
+              <h3 id="dossier-heading-iron-jawed" class="font-cinzel font-bold text-base sm:text-lg text-amber-300">
+                The Anatomy of Economic Extraction &amp; Camouflage
+              </h3>
+              <span class="text-[11px] font-mono text-stone-400">Critical Theory &amp; Structural Deconstruction</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <button onclick="switchTab('iron-jawed', 'predator')" id="btn-iron-jawed-predator" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-amber-500 bg-amber-500/10 text-amber-400 font-bold">
+              <span>The Predatory Titan</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Mechanism</span>
+            </button>
+            <button onclick="switchTab('iron-jawed', 'camouflage')" id="btn-iron-jawed-camouflage" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+              <span>The Velvet Accomplice</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Ideology</span>
+            </button>
+            <button onclick="switchTab('iron-jawed', 'reckoning')" id="btn-iron-jawed-reckoning" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+              <span>The Fatal Silence</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Complicity</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="min-h-[140px]">
+          <!-- Panel 1 -->
+          <div id="panel-iron-jawed-predator" class="dossier-tab-panel block space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">The Machine of Metabolic Extraction</h4>
+            <p class="text-xs text-stone-300 leading-relaxed mb-2">
+              Capitalism operates not as an equilibrium market of free exchange, but as an asymmetrical metabolic pump. It strips surplus lifeblood from workers and ecologies alike, transforming living soil, oceanic biomes, and human labor into financial abstractions. By casting living communities as combustible fuel, the system ensures that human possibility is subordinated to balance-sheet accumulation.
+            </p>
+            <div class="p-3 rounded-lg bg-peat-900 border border-amber-500/20 text-xs font-mono text-amber-400">
+              “It sees them only as fuel, as marrow to be sucked dry and discarded into the dustbin of economic necessity.”
+            </div>
+          </div>
+
+          <!-- Panel 2 -->
+          <div id="panel-iron-jawed-camouflage" class="dossier-tab-panel hidden space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">Linguistic Laundering &amp; Economic Clerisy</h4>
+            <p class="text-xs text-stone-300 leading-relaxed mb-2">
+              Orthodox economic doctrine serves as a priestly caste, providing rhetorical laundering for systemic violence. Human immiseration is rebranded as “frictional adjustment,” environmental devastation is labeled an “unpriced externality,” and wage-theft is sanctified as “market efficiency.” The invisible hand becomes the ideological cloak hiding the brutal claw of capital.
+            </p>
+            <ul class="text-xs text-stone-300 space-y-1.5 list-disc pl-4">
+              <li><strong>“Efficiency”:</strong> The acceleration of labor extraction and elimination of social safeguards.</li>
+              <li><strong>“Growth”:</strong> The continuous conversion of living nature and human vitality into dead capital.</li>
+              <li><strong>“The Invisible Hand”:</strong> A theological narrative justifying violent enclosure and coerced obedience.</li>
+            </ul>
+          </div>
+
+          <!-- Panel 3 -->
+          <div id="panel-iron-jawed-reckoning" class="dossier-tab-panel hidden space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">The Architecture of Submission &amp; The Urgency to Rise</h4>
+            <p class="text-xs text-stone-300 leading-relaxed mb-2">
+              Swistchew identifies the greatest barrier to emancipation not merely in the brute power of capital, but in the insidious cowardice of comfort and diversion. Societies trade existential freedom for disposable consumables, rationalizing the tightening chokehold until submission feels like normal life. The essay demands a conscious refusal to normalize slaughter.
+            </p>
+            <div class="p-3 rounded-lg bg-peat-900 border border-red-500/30 text-xs font-mono text-red-300">
+              “We feel the iron jaws closing around our necks and pretend it is a collar we can wear with dignity... we were murdered by our own silence.”
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ESSAY BODY TEXT -->
+      <div id="essay-article" class="prose prose-invert prose-stone max-w-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg">
+        
+        <p class="first-letter:font-cinzel first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:text-amber-500 first-letter:leading-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Capitalism stands over the world like a titan of greed, its jaws dripping with the stolen lifeblood of generations. It is not a system; it is a predator, a ravenous engine that murders possibility and feasts on the wreckage. It shoves its snout into the trough of global wealth, gorging until it chokes, until it swells, until it becomes a grotesque monument to everything humanity should have left with the Dinosaur. It hoards riches with the obscene hunger of a beast that cannot be sated, a beast that devours futures, devours dignity, devours entire nations while billions claw at the dirt for crumbs. Capitalism is the iron fist around humanity’s throat, squeezing, tightening, crushing the last breath out of a species too terrified to resist.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          The world is not suffering by accident &mdash; it is suffering by design. The machinery of profit does not care about the child starving in the shadow of a luxury skyscraper, nor does it weep for the worker broken on the wheel of an eighty-hour week. It sees them only as fuel, as marrow to be sucked dry and discarded into the dustbin of economic necessity. The soil is poisoned, the oceans are turned to acid, the skies are choked with black venom, yet the masters of capital sit in towers of glass and marble, counting the silver they stripped from the corpse of the Earth. They look upon the ruins of our civilization not with horror, but with the cold, calculating satisfaction of a butcher admiring a slaughterhouse well-cleaned.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Economic theory slithers beside this carnage like a velvet-tongued accomplice, rewriting theft into “efficiency,” disguising murder as “growth,” and blessing the destruction of human life as the unavoidable cost of doing business. It is a lie, a venomous, manufactured myth whispered into the ears of the beaten so they will accept their chains. The economists speak of invisible hands, but the only hand at work is the heavy, brutal claw of capital, dragging humanity toward the slaughterhouse while pretending it is leading us to the promised land.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Millions suffer in silence while the system gorges. The sickness is everywhere: in the vacant eyes of parents who cannot feed their young, in the hollow promises of politicians bought and paid for like cattle, in the slow, grinding death of communities whose only crime was to be unprofitable. We have surrendered the wonders of the human spirit to the ledger book. We have traded the infinite capacity of our imagination for a handful of cheap trinkets, thrown down to us by the very lords who rob us blind.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Humanity is murdered not by fate but by cowardice &mdash; the cowardice of comfort, the cowardice of distraction, the cowardice of surrender. We watch the butcher sharpen the blade and convince ourselves it is meant for someone else. We feel the iron jaws closing around our necks and pretend it is a collar we can wear with dignity. But there is no dignity in slaughter, no honor in submission, and no future in a world that feeds its own children to the furnace of greed. If we do not rise, if we do not break the beast, if we do not tear the titan from its throne, then let history record that we did not fall to tragedy; we were murdered by our own silence, devoured by an iron-jawed monster we were too weak to kill.
+        </p>
+
+      </div>
+
+      <!-- SCHOLARLY ANNOTATIONS & FOOTER -->
+      <footer class="mt-20 pt-10 border-t border-stone-800 text-xs text-stone-400 font-sans" aria-labelledby="notes-heading-iron-jawed">
+        <div class="flex items-center gap-2 mb-6 text-stone-300">
+          <i class="fa-solid fa-book-bookmark text-amber-500 text-sm"></i>
+          <h3 id="notes-heading-iron-jawed" class="font-cinzel font-bold text-sm tracking-wider uppercase">
+            Scholarly Annotations &amp; Theoretical Context
+          </h3>
+        </div>
+        <ol class="space-y-4 list-none pl-0">
+          <li class="pl-4 border-l-2 border-stone-800">
+            <span class="font-mono text-amber-500 font-bold mr-1">[1]</span>
+            <span>Karl Marx, <em>Capital: Critique of Political Economy</em>, Vol. 1 (1867), Chapter 31: "Capital comes dripping from head to foot, from every pore, with blood and dirt." Swistchew extends this visceral anatomical metaphor to indict contemporary hyper-financialized extraction.</span>
+          </li>
+          <li class="pl-4 border-l-2 border-stone-800">
+            <span class="font-mono text-amber-500 font-bold mr-1">[2]</span>
+            <span>Karl Polanyi, <em>The Great Transformation</em> (1944). Polanyi documented the catastrophic fiction of subordinating human labor, land, and money to an unregulated market mechanism, creating the "satanic mill" that dismantles human society.</span>
+          </li>
+          <li class="pl-4 border-l-2 border-stone-800">
+            <span class="font-mono text-amber-500 font-bold mr-1">[3]</span>
+            <span>David Graeber, <em>Debt: The First 5,000 Years</em> (Melville House, 2011) and <em>Bullshit Jobs</em> (Simon &amp; Schuster, 2018), analyzing how economic moralities are manufactured to enforce psychological acquiescence to debt and exploitative labor structures.</span>
+          </li>
+        </ol>
+        
+        <!-- Creative Fellowship CTA -->
+        <div class="mt-12 p-6 rounded-2xl bg-gradient-to-br from-peat-900 to-peat-950 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="space-y-1 text-center sm:text-left">
+            <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold">Creative Fellowship</span>
+            <h4 class="font-cinzel text-lg font-bold text-white">The Shady River Bard Creative Ecosystem</h4>
+            <p class="text-xs text-stone-300 max-w-xl">
+              Trevor Swistchew's essays are published in fellowship with The Shady River Bard—exploring a 26-album concept discography, working permaculture, and reflections on human purpose.
+            </p>
+          </div>
+          <a href="https://tpatterson34.github.io/shady-river-portal/" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-peat-950 font-cinzel font-bold text-xs uppercase tracking-wider transition-colors shrink-0 shadow-lg flex items-center gap-1.5">
+            <span>Explore Shady River</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+          </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="mt-10 pt-6 border-t border-stone-800/60 text-center text-xs text-stone-400 font-sans space-y-2">
+          <p>Essay &copy; 2026 Trevor Swistchew. All rights reserved.</p>
+          <p class="text-stone-500">Published for the Trevor Swistchew Compendium &amp; Literary Salon Archive.</p>
+          <p class="pt-2">
+            <a href="../../index.html" class="text-stone-400 hover:text-amber-400 transition-colors mr-3">&larr; Return to Compendium Archive</a>
+            <a href="https://tpatterson34.github.io/shady-river-portal/friends-of-the-bard/" class="text-amber-400 hover:text-amber-300 transition-colors font-medium">Friends of the Bard Collective ↗</a>
+          </p>
+        </div>
+      </footer>
+
+    </article>
+  </main>
+
+  <!-- Client-Side Tab Switching Script -->
+  <script>
+    function switchTab(essayId, tabId) {
+      const container = document.querySelector('[aria-labelledby="dossier-heading-' + essayId + '"]');
+      if (!container) return;
+      
+      const buttons = container.querySelectorAll('.dossier-tab-btn');
+      const panels = container.querySelectorAll('.dossier-tab-panel');
+      
+      buttons.forEach(btn => {
+        btn.classList.remove('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+        btn.classList.add('border-transparent', 'text-stone-400');
+      });
+      
+      panels.forEach(p => p.classList.add('hidden'));
+      
+      const targetBtn = document.getElementById('btn-' + essayId + '-' + tabId);
+      const targetPanel = document.getElementById('panel-' + essayId + '-' + tabId);
+      
+      if (targetBtn) {
+        targetBtn.classList.remove('border-transparent', 'text-stone-400');
+        targetBtn.classList.add('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+      }
+      if (targetPanel) {
+        targetPanel.classList.remove('hidden');
+      }
+    }
+  </script>
+  <script src="../../assets/js/reading-experience.js"></script>
+</body>
+</html>
