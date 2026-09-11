@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Continuation of Awareness | Trevor Swistchew</title>
+  <meta name="description" content="A Gentle Inquest into the Conservation of Consciousness Beyond the Physical Form by Trevor Swistchew (2026). Part of the Trevor Swistchew Compendium Archive.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              950: '#0c0b0a',
+              900: '#121110',
+              850: '#181614',
+              800: '#1f1c19',
+              700: '#2b2723',
+              600: '#3d3731',
+            },
+            parchment: {
+              50: '#fdfbf7',
+              100: '#f7f4ed',
+              200: '#efeae0',
+              300: '#e5ded2',
+              400: '#d8cdbe',
+              500: '#c5b8a5',
+            },
+            brass: {
+              400: '#dfbe75',
+              500: '#c5a059',
+              600: '#a6823c',
+              700: '#846427',
+            },
+            thistle: {
+              600: '#9d2b45',
+              700: '#7e2035',
+            },
+            loch: {
+              400: '#38bdf8',
+              700: '#0369a1',
+              900: '#0c4a6e',
+            }
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Lora', 'Georgia', 'serif'],
+            display: ['"Playfair Display"', 'Cinzel', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Web Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/a11y.css">
+
+  <!-- Scottish Literary Salon Theme Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950">
+
+  <!-- 1. WCAG Skip Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Essay Content</a>
+
+  <!-- 2. Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- 3. Top Sticky Reading Utility & Salon Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      
+      <!-- Salon Brand / Return Link -->
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2.5 text-stone-300 hover:text-amber-400 group transition-colors">
+          <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
+          <div class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:block">
+            Trevor Swistchew <span class="text-stone-500 font-sans font-normal mx-1">|</span> <span class="text-stone-400">Compendium Archive</span>
+          </div>
+        </a>
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="hidden md:flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 text-[11px] font-mono transition-colors" title="Visit The Shady River Bard Portal">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Quick Jump Navigation -->
+      
+
+      <!-- Reading Accommodations Controls -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Font Size Scaler -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs font-mono text-stone-300" role="group" aria-label="Font Size Scaling">
+          <button id="font-size-dec" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Decrease font size" aria-label="Decrease font size">A-</button>
+          <button id="font-size-reset" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors text-[10px] text-stone-400" title="Reset font size" aria-label="Reset font size">A</button>
+          <button id="font-size-inc" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Increase font size" aria-label="Increase font size">A+</button>
+        </div>
+
+        <!-- Tri-State Theme Switcher -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs" role="group" aria-label="Reading Theme Selection">
+          <button data-theme="dark" class="theme-toggle-btn px-2 py-1 rounded transition-colors active-theme" title="Dark Peat Theme" aria-label="Dark Peat Theme" aria-pressed="true">
+            <i class="fa-solid fa-moon text-amber-400"></i>
+          </button>
+          <button data-theme="sepia" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Aged Parchment Sepia Theme" aria-label="Aged Parchment Sepia Theme" aria-pressed="false">
+            <i class="fa-solid fa-book-open"></i>
+          </button>
+          <button data-theme="light" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Edinburgh Stone Light Theme" aria-label="Edinburgh Stone Light Theme" aria-pressed="false">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- 4. Main Essay Content Container -->
+  <main id="main-content" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+    <article class="space-y-10">
+      
+      <!-- HERO & ESSAY HEADER -->
+      <header class="space-y-6 text-center sm:text-left border-b border-stone-800 pb-10">
+        
+        <!-- Category & Reading Time Badge -->
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 text-xs font-mono">
+          <span class="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-semibold tracking-wider uppercase">
+            Consciousness &amp; Mysticism
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400 flex items-center gap-1.5">
+            <i class="fa-regular fa-clock text-amber-500/70"></i>
+            6 min read
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400 flex items-center gap-1.5">
+            <i class="fa-solid fa-feather-pointed text-amber-500/70"></i>
+            1,201 words
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400">Copyright &copy; 2026 Trevor Swistchew</span>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <div class="space-y-3">
+          <h1 class="font-cinzel text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            The Continuation of Awareness
+          </h1>
+          <p class="font-serif text-lg sm:text-xl text-stone-300 leading-relaxed font-light italic">
+            A Gentle Inquest into the Conservation of Consciousness Beyond the Physical Form
+          </p>
+        </div>
+
+        <!-- Author Byline -->
+        <div class="flex items-center justify-center sm:justify-start gap-3 pt-2">
+          <div class="w-10 h-10 rounded-full border border-amber-500/40 bg-peat-900 flex items-center justify-center text-amber-400 font-cinzel font-bold text-sm shadow-md">
+            TS
+          </div>
+          <div class="text-left">
+            <div class="font-cinzel font-bold text-white text-sm tracking-wider">Trevor Swistchew</div>
+            <div class="text-xs text-stone-400 font-mono">Essayist, Philosopher &amp; Historian &bull; Western Washington / Scotland</div>
+          </div>
+        </div>
+
+        <!-- Hero Fine-Art Banner Image -->
+        <figure class="pt-4 space-y-2">
+          <div class="aspect-video w-full rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl relative bg-peat-950">
+            <img src="../../assets/images/continuation-of-awareness-banner.jpg" alt="Twilight coastal shore with glowing embers of awareness rising into the Milky Way" class="w-full h-full object-cover" loading="eager">
+          </div>
+          <figcaption class="text-center text-xs text-stone-400 font-serif italic pt-1">
+            Like waves rising and falling into the deep sea, awareness transforms rather than dissolves.
+          </figcaption>
+        </figure>
+
+        <!-- Epigraph -->
+        <blockquote class="p-4 sm:p-5 rounded-xl bg-peat-900/80 border-l-4 border-amber-500 text-stone-300 font-serif italic text-sm sm:text-base leading-relaxed">
+          “Everything transforms. Everything continues in a different form. If nature moves in cycles, perhaps awareness does too. Perhaps death is simply one of those cycles, a natural movement from one state to another.” — Trevor Swistchew
+        </blockquote>
+
+      </header>
+
+      
+    <!-- INTERACTIVE CONTEXTUAL DOSSIER -->
+    <section class="my-12 p-6 rounded-2xl bg-stone-900/90 border border-amber-500/30 shadow-2xl backdrop-blur-sm" aria-labelledby="dossier-heading-the-continuation-of-awareness">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-white/10">
+        <div class="flex items-center gap-2.5">
+          <span class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-sm">
+            <i class="fa-solid fa-scroll"></i>
+          </span>
+          <div>
+            <h3 id="dossier-heading-the-continuation-of-awareness" class="font-cinzel font-bold text-base sm:text-lg text-amber-300">
+              The Conservation of Being &amp; Consciousness Matrix
+            </h3>
+            <span class="text-[11px] font-mono text-stone-400">Archival Research &amp; Thematic Analysis</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+          
+        <button onclick="switchTab('the-continuation-of-awareness', 'arrival')" id="btn-the-continuation-of-awareness-arrival" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-amber-500 bg-amber-500/10 text-amber-400 font-bold">
+          <span>The Sudden Arrival</span>
+          <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">The Awakening</span>
+        </button>
+        
+        <button onclick="switchTab('the-continuation-of-awareness', 'physics')" id="btn-the-continuation-of-awareness-physics" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+          <span>Conservation of Being</span>
+          <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Thermodynamics of Mind</span>
+        </button>
+        
+        </div>
+      </div>
+      <div class="min-h-[140px]">
+        
+        <div id="panel-the-continuation-of-awareness-arrival" class="dossier-tab-panel block space-y-3">
+          <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">Dropped Into a World in Motion</h4><p class="text-xs text-stone-300 leading-relaxed">We arrive into physical life without prior warning, memory, or context, seamlessly accepting existence as natural. If consciousness can emerge unbidden into matter once, why should its transition out of matter signify annihilation rather than continuity?</p>
+        </div>
+        
+        <div id="panel-the-continuation-of-awareness-physics" class="dossier-tab-panel hidden space-y-3">
+          <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">Energy Cannot Be Destroyed</h4><p class="text-xs text-stone-300 leading-relaxed">The foundational law of physics dictates that energy is never created or extinguished; it shifts form. If the physical substrate of awareness obeys this law, consciousness itself participates in a continuous, unbroken conservation of reality.</p>
+        </div>
+        
+      </div>
+    </section>
+    
+
+      <!-- ESSAY BODY TEXT -->
+      <div id="essay-article" class="prose prose-invert prose-stone max-w-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg">
+        
+            <p class="first-letter:font-cinzel first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:text-amber-500 first-letter:leading-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Life begins in a way that feels sudden, as though we have been dropped into a world already in motion. We arrive without memory, without context, without any sense of where we came from or what we truly are. As children, we simply exist, carried along by the warmth of others, by the rhythms of the world, by the gentle unfolding of days. We do not question our presence. We do not wonder about beginnings or endings. We simply live, and living feels natural.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              As we grow older, something changes. Awareness deepens. We begin to notice the passing of time, the fragility of the body, the way moments slip away even as we try to hold them. We learn that life is not endless, that bodies age, that people we love disappear from our sight. This knowledge arrives slowly, sometimes painfully, and it shapes the way we understand our place in the world. Yet even as we learn these truths, something inside us remains untouched by them. There is a quiet presence within us that does not feel fragile, does not feel temporary, does not feel threatened by the idea of endings. It is the part of us that watches, listens, and continues.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              This inner presence is what many traditions call the soul, though the word itself is not important. What matters is the experience of being aware, the sense that there is something in us that is deeper than the body, quieter than the mind, and more enduring than the circumstances of our lives. This presence does not feel like an idea or a belief. It feels like the simple fact of being here, the gentle knowing that accompanies every moment. It is not loud. It does not demand attention. It simply exists, steady and calm, beneath everything else.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              When people speak of death, they often speak with fear, and that fear is understandable. The body is precious to us. It carries our memories, our relationships, our joys, our sorrows. It is the vessel through which we experience the world. To imagine its ending can feel overwhelming. Yet if we look closely, we notice that the fear does not come from the quiet presence within us. It comes from the part of us that identifies with the body, the part that believes the body is the whole of who we are. The deeper presence the one that watches does not tremble. It does not panic. It simply observes.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              There is a gentle way to think about death that does not frighten the heart. Instead of imagining death as a disappearance, we can imagine it as a transition, a soft movement from one kind of experience to another. Just as waking from sleep does not erase the sleeper, death may not erase the one who has lived. It may simply open a different door, one that leads to a new kind of learning, a new kind of awareness, a new way of being.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Many traditions hint at this idea, though they use different language. Some speak of “many mansions,” suggesting that reality is not limited to the world we see. Others speak of realms, planes, or states of consciousness. Still others describe death as a return, a homecoming, a gentle remembering of something we once knew but forgot when we entered the body. These images are not meant to be literal. They are meant to offer comfort, to remind us that existence may be larger than the physical world, and that awareness may continue even when the body rests.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              If we imagine life as a school, death becomes less frightening. In school, we learn the basics: how to speak, how to move, how to understand the world around us. Life in a body may be similar. It may be the beginning of learning, the introduction to awareness, the first chapter in a much larger story. When the body can no longer continue, the learning does not stop. It simply changes form. The soul or the quiet presence within us may continue to grow, to explore, to understand, to deepen.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              This way of thinking does not require belief in any particular religion. It does not require acceptance of any doctrine. It simply invites us to consider the possibility that awareness is not confined to the body, and that death may not be the end of the journey. It is a gentle idea, one that softens fear rather than intensifying it. It allows us to imagine that those who have gone before us are not lost, but simply moved into another room, another space, another chapter.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              If awareness continues, then learning continues. And if learning continues, then life continues in a new way. This idea is comforting because it aligns with something we already feel inside ourselves: the sense that we are more than the body, more than the mind, more than the circumstances of our lives. It aligns with the quiet presence that watches everything without fear.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Some people imagine an afterlife filled with eternal worship or endless repetition, but this image does not resonate with everyone. For many, it feels limiting, as though the soul would be confined rather than liberated. A gentler idea is that the soul continues to grow, to explore, to understand. Instead of imagining eternity as a static place, we can imagine it as a continuation of learning, a deepening of awareness, a movement toward greater clarity and peace.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              If the universe is vast, then awareness may be vast as well. If reality contains layers, dimensions or realms beyond our current understanding, then the soul may move through them, learning as it goes. This movement would not be rushed. It would not be forced. It would unfold naturally, just as life unfolds naturally. The soul would not be judged or punished. It would simply continue, gently and quietly, in the direction of greater understanding.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              This way of thinking about death does not remove grief. Grief is a natural response to losing someone we love. It is a sign of connection, of care, of shared experience. But grief becomes softer when we imagine that the person we miss is not gone, but simply elsewhere. It becomes easier to bear when we imagine that they are continuing their journey, learning in a new way, experiencing a new chapter. It becomes less sharp when we imagine that awareness does not end, but simply changes form.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              The idea that the soul continues is not meant to be a grand claim. It is meant to be a gentle possibility one that brings comfort rather than fear. It allows us to think of death without panic, without dread without the sense that everything ends. It allows us to imagine that life is part of something larger something ongoing, something quietly beautiful.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              When we look at the world, we see constant change. Seasons shift. Flowers bloom and fade. Waves rise and fall. Clouds form and dissolve. Nothing stays the same, yet nothing truly disappears. Everything transforms. Everything continues in a different form. If nature moves in cycles, perhaps awareness does too. Perhaps death is simply one of those cycles, a natural movement from one state to another.
+            </p>
+            
+      </div>
+
+      
+    <footer class="mt-20 pt-10 border-t border-stone-800 text-xs text-stone-400 font-sans" aria-labelledby="notes-heading-the-continuation-of-awareness">
+      <div class="flex items-center gap-2 mb-6 text-stone-300">
+        <i class="fa-solid fa-book-bookmark text-amber-500 text-sm"></i>
+        <h3 id="notes-heading-the-continuation-of-awareness" class="font-cinzel font-bold text-sm tracking-wider uppercase">
+          Scholarly Annotations &amp; Archival Context
+        </h3>
+      </div>
+      <ol class="space-y-4 list-none pl-0">
+        
+        <li class="pl-4 border-l-2 border-stone-800">
+          <span class="font-mono text-amber-500 font-bold mr-1">[1]</span>
+          <span>William James, <em>The Varieties of Religious Experience</em> (1902) and <em>Human Immortality: Two Supposed Objections to the Doctrine</em> (1898) on the transmission theory of consciousness.</span>
+        </li>
+        
+        <li class="pl-4 border-l-2 border-stone-800">
+          <span class="font-mono text-amber-500 font-bold mr-1">[2]</span>
+          <span>Erwin Schrödinger, <em>Mind and Matter</em> (Cambridge University Press, 1958) on the singular nature of universal consciousness.</span>
+        </li>
+        
+      </ol>
+      
+      <!-- Creative Fellowship CTA -->
+      <div class="mt-12 p-6 rounded-2xl bg-gradient-to-br from-peat-900 to-peat-950 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="space-y-1 text-center sm:text-left">
+          <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold">Creative Fellowship</span>
+          <h4 class="font-cinzel text-lg font-bold text-white">The Shady River Bard Creative Ecosystem</h4>
+          <p class="text-xs text-stone-300 max-w-xl">
+            Trevor Swistchew's essays are published in fellowship with The Shady River Bard—exploring a 26-album concept discography, working permaculture, and reflections on human purpose.
+          </p>
+        </div>
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-peat-950 font-cinzel font-bold text-xs uppercase tracking-wider transition-colors shrink-0 shadow-lg flex items-center gap-1.5">
+          <span>Explore Shady River</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+        </a>
+      </div>
+
+      <!-- Copyright -->
+      <div class="mt-10 pt-6 border-t border-stone-800/60 text-center text-xs text-stone-400 font-sans space-y-2">
+        <p>Essay &copy; 2026 Trevor Swistchew. All rights reserved.</p>
+        <p class="text-stone-500">Published for the Trevor Swistchew Compendium &amp; Literary Salon Archive.</p>
+        <p class="pt-2">
+          <a href="../../index.html" class="text-stone-400 hover:text-amber-400 transition-colors mr-3">&larr; Return to Compendium Archive</a>
+          <a href="https://tpatterson34.github.io/shady-river-portal/friends-of-the-bard/" class="text-amber-400 hover:text-amber-300 transition-colors font-medium">Friends of the Bard Collective ↗</a>
+        </p>
+      </div>
+    </footer>
+    
+
+    </article>
+  </main>
+
+  <!-- Client-Side Tab Switching Script -->
+  <script>
+    function switchTab(essayId, tabId) {
+      const container = document.querySelector('[aria-labelledby="dossier-heading-' + essayId + '"]');
+      if (!container) return;
+      
+      const buttons = container.querySelectorAll('.dossier-tab-btn');
+      const panels = container.querySelectorAll('.dossier-tab-panel');
+      
+      buttons.forEach(btn => {
+        btn.classList.remove('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+        btn.classList.add('border-transparent', 'text-stone-400');
+      });
+      
+      panels.forEach(p => p.classList.add('hidden'));
+      
+      const targetBtn = document.getElementById('btn-' + essayId + '-' + tabId);
+      const targetPanel = document.getElementById('panel-' + essayId + '-' + tabId);
+      
+      if (targetBtn) {
+        targetBtn.classList.remove('border-transparent', 'text-stone-400');
+        targetBtn.classList.add('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+      }
+      if (targetPanel) {
+        targetPanel.classList.remove('hidden');
+      }
+    }
+  </script>
+  <script src="../../assets/js/reading-experience.js"></script>
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The End of the Road | Trevor Swistchew</title>
+  <meta name="description" content="A Tale of John in the Kali Yuga and the Nectar on the Traveller’s Tongue by Trevor Swistchew (2026). Part of the Trevor Swistchew Compendium Archive.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              950: '#0c0b0a',
+              900: '#121110',
+              850: '#181614',
+              800: '#1f1c19',
+              700: '#2b2723',
+              600: '#3d3731',
+            },
+            parchment: {
+              50: '#fdfbf7',
+              100: '#f7f4ed',
+              200: '#efeae0',
+              300: '#e5ded2',
+              400: '#d8cdbe',
+              500: '#c5b8a5',
+            },
+            brass: {
+              400: '#dfbe75',
+              500: '#c5a059',
+              600: '#a6823c',
+              700: '#846427',
+            },
+            thistle: {
+              600: '#9d2b45',
+              700: '#7e2035',
+            },
+            loch: {
+              400: '#38bdf8',
+              700: '#0369a1',
+              900: '#0c4a6e',
+            }
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Lora', 'Georgia', 'serif'],
+            display: ['"Playfair Display"', 'Cinzel', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Web Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/a11y.css">
+
+  <!-- Scottish Literary Salon Theme Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950">
+
+  <!-- 1. WCAG Skip Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Essay Content</a>
+
+  <!-- 2. Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- 3. Top Sticky Reading Utility & Salon Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      
+      <!-- Salon Brand / Return Link -->
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2.5 text-stone-300 hover:text-amber-400 group transition-colors">
+          <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
+          <div class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:block">
+            Trevor Swistchew <span class="text-stone-500 font-sans font-normal mx-1">|</span> <span class="text-stone-400">Compendium Archive</span>
+          </div>
+        </a>
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="hidden md:flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 text-[11px] font-mono transition-colors" title="Visit The Shady River Bard Portal">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Quick Jump Navigation -->
+      
+
+      <!-- Reading Accommodations Controls -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Font Size Scaler -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs font-mono text-stone-300" role="group" aria-label="Font Size Scaling">
+          <button id="font-size-dec" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Decrease font size" aria-label="Decrease font size">A-</button>
+          <button id="font-size-reset" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors text-[10px] text-stone-400" title="Reset font size" aria-label="Reset font size">A</button>
+          <button id="font-size-inc" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Increase font size" aria-label="Increase font size">A+</button>
+        </div>
+
+        <!-- Tri-State Theme Switcher -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs" role="group" aria-label="Reading Theme Selection">
+          <button data-theme="dark" class="theme-toggle-btn px-2 py-1 rounded transition-colors active-theme" title="Dark Peat Theme" aria-label="Dark Peat Theme" aria-pressed="true">
+            <i class="fa-solid fa-moon text-amber-400"></i>
+          </button>
+          <button data-theme="sepia" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Aged Parchment Sepia Theme" aria-label="Aged Parchment Sepia Theme" aria-pressed="false">
+            <i class="fa-solid fa-book-open"></i>
+          </button>
+          <button data-theme="light" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Edinburgh Stone Light Theme" aria-label="Edinburgh Stone Light Theme" aria-pressed="false">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- 4. Main Essay Content Container -->
+  <main id="main-content" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+    <article class="space-y-10">
+      
+      <!-- HERO & ESSAY HEADER -->
+      <header class="space-y-6 text-center sm:text-left border-b border-stone-800 pb-10">
+        
+        <!-- Category & Reading Time Badge -->
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 text-xs font-mono">
+          <span class="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-semibold tracking-wider uppercase">
+            Parable &amp; Spiritual Wisdom
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400 flex items-center gap-1.5">
+            <i class="fa-regular fa-clock text-amber-500/70"></i>
+            5 min read
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400 flex items-center gap-1.5">
+            <i class="fa-solid fa-feather-pointed text-amber-500/70"></i>
+            982 words
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400">Copyright &copy; 2026 Trevor Swistchew</span>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <div class="space-y-3">
+          <h1 class="font-cinzel text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            The End of the Road
+          </h1>
+          <p class="font-serif text-lg sm:text-xl text-stone-300 leading-relaxed font-light italic">
+            A Tale of John in the Kali Yuga and the Nectar on the Traveller’s Tongue
+          </p>
+        </div>
+
+        <!-- Author Byline -->
+        <div class="flex items-center justify-center sm:justify-start gap-3 pt-2">
+          <div class="w-10 h-10 rounded-full border border-amber-500/40 bg-peat-900 flex items-center justify-center text-amber-400 font-cinzel font-bold text-sm shadow-md">
+            TS
+          </div>
+          <div class="text-left">
+            <div class="font-cinzel font-bold text-white text-sm tracking-wider">Trevor Swistchew</div>
+            <div class="text-xs text-stone-400 font-mono">Essayist, Philosopher &amp; Historian &bull; Western Washington / Scotland</div>
+          </div>
+        </div>
+
+        <!-- Hero Fine-Art Banner Image -->
+        <figure class="pt-4 space-y-2">
+          <div class="aspect-video w-full rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl relative bg-peat-950">
+            <img src="../../assets/images/end-of-the-road-banner.jpg" alt="Weary traveller pausing before a peaceful bearded sage seated under a massive ancient tree at sunset" class="w-full h-full object-cover" loading="eager">
+          </div>
+          <figcaption class="text-center text-xs text-stone-400 font-serif italic pt-1">
+            John E. Sprokitt meets the silent sage at the dusty crossroads of Kali Yuga.
+          </figcaption>
+        </figure>
+
+        <!-- Epigraph -->
+        <blockquote class="p-4 sm:p-5 rounded-xl bg-peat-900/80 border-l-4 border-amber-500 text-stone-300 font-serif italic text-sm sm:text-base leading-relaxed">
+          “Traveller, the nectar you seek is already on your tongue... The next step is not outward. It is inward. Into the quiet center where the road began.” — Trevor Swistchew
+        </blockquote>
+
+      </header>
+
+      
+    <!-- INTERACTIVE CONTEXTUAL DOSSIER -->
+    <section class="my-12 p-6 rounded-2xl bg-stone-900/90 border border-amber-500/30 shadow-2xl backdrop-blur-sm" aria-labelledby="dossier-heading-the-end-of-the-road">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-white/10">
+        <div class="flex items-center gap-2.5">
+          <span class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-sm">
+            <i class="fa-solid fa-scroll"></i>
+          </span>
+          <div>
+            <h3 id="dossier-heading-the-end-of-the-road" class="font-cinzel font-bold text-base sm:text-lg text-amber-300">
+              The Dialogue at the Crossroads in Kali Yuga
+            </h3>
+            <span class="text-[11px] font-mono text-stone-400">Archival Research &amp; Thematic Analysis</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+          
+        <button onclick="switchTab('the-end-of-the-road', 'runner')" id="btn-the-end-of-the-road-runner" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-amber-500 bg-amber-500/10 text-amber-400 font-bold">
+          <span>The Restless Runner</span>
+          <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">John E. Sprokitt</span>
+        </button>
+        
+        <button onclick="switchTab('the-end-of-the-road', 'sage')" id="btn-the-end-of-the-road-sage" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+          <span>The Still Sage</span>
+          <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">The Still Point</span>
+        </button>
+        
+        </div>
+      </div>
+      <div class="min-h-[140px]">
+        
+        <div id="panel-the-end-of-the-road-runner" class="dossier-tab-panel block space-y-3">
+          <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">The Sickness of the Age</h4><p class="text-xs text-stone-300 leading-relaxed">John represents the modern soul caught in the Kali Yuga—running ceaselessly from hunger, loneliness, memory, and death. Running becomes an addictive compulsion, a distraction from facing the hollow within.</p>
+        </div>
+        
+        <div id="panel-the-end-of-the-road-sage" class="dossier-tab-panel hidden space-y-3">
+          <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">Ceasing the Search</h4><p class="text-xs text-stone-300 leading-relaxed">“I did not seek peace,” the sage reveals. “I stopped seeking anything. And when seeking ended, peace remained. It had been here the whole time.”</p>
+        </div>
+        
+      </div>
+    </section>
+    
+
+      <!-- ESSAY BODY TEXT -->
+      <div id="essay-article" class="prose prose-invert prose-stone max-w-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg">
+        
+            <p class="first-letter:font-cinzel first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:text-amber-500 first-letter:leading-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Once upon a time in Kali Yuga, when the world felt thin and worn and every soul seemed to be running from something John E. Sprokitt legged it down a dusty road toward a village where he hoped to find work, a meal, and maybe a moment’s rest from the bite of existence. His boots were scuffed, his belly hollow, his mind full of half forgotten dreams and the rough charm of a wanderer who had seen too much and understood too little.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              By the roadside sat a man with a beard and a robe, quiet as a stone that had decided to breathe. He didn’t move, didn’t blink, didn’t call out. He simply was, wrapped in a stillness that seemed older than the age itself. John slowed, stared, then swaggered over with his finest Clockwork Orange flourish and said, “Brother, thou hast the look of Beethoven on thy fizzog and a most pleasing countenance. Pray tell this wandering traveller how thou camest to this blessed state.” The man lifted his eyes, and his smile widened just a fraction, the way dawn widens when it chooses to become day. “Friend,” he said, “I did not come to this state. I simply stopped leaving it.”
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              John frowned, because that wasn’t the sort of answer you could tuck into your pocket and take to the pub. But the man continued, his voice soft and heavy with ages.
+            </p>
+            
+
+            <div class="my-6 pl-5 border-l-2 border-amber-500/60 bg-stone-900/40 p-4 rounded-r-xl italic text-stone-200 font-serif text-base sm:text-lg leading-relaxed">
+              “In Kali Yuga, everyone runs. They run from hunger, from fear, from memory, from themselves. They run toward gold, toward comfort, toward distraction. They run so fast they forget the ground beneath their feet. I sat down one day and realised the ground was the same as the sky, and the sky was the same as the breath in my chest and the breath in my chest was the same as the life in every creature that ever walked or crawled or flew.”
+            </div>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              John blinked, unsure whether he was hearing poetry or truth.
+            </p>
+            
+
+            <div class="my-6 pl-5 border-l-2 border-amber-500/60 bg-stone-900/40 p-4 rounded-r-xl italic text-stone-200 font-serif text-base sm:text-lg leading-relaxed">
+              “I did not seek peace,” the man said. “I stopped seeking anything. And when seeking ended, peace remained. It had been here all along, waiting for me to stop running.”
+            </div>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              John shifted, the dust tasting suddenly sweeter. “Brother,” he said, “thou speakest like a man who’s swallowed the whole cosmos and found it tasted of warm milk and honey. But I’ll tell thee plain: the world bites. Hunger bites. Cold bites. Folk bite harder still. And when a man’s belly growls louder than his soul, he listens to the belly.”
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              The man’s smile didn’t change. He simply listened.
+            </p>
+            
+
+            <div class="my-6 pl-5 border-l-2 border-amber-500/60 bg-stone-900/40 p-4 rounded-r-xl italic text-stone-200 font-serif text-base sm:text-lg leading-relaxed">
+              “But,” John added, softer now, “when thou spakest, something in me stirred. Like a memory I never lived. Like a dream I forgot to dream. Maybe I’ve been running from something that wasn’t chasing me. Maybe I’ve been hungry for more than bread.” He looked at the man fully. “So tell me, brother, if the Self is everywhere, if the divine walks in my boots as much as in thy silence, what does a man do next?”
+            </div>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              The bearded man’s voice rose again, warm as nectar. “Traveller, the nectar you seek is already on your tongue. When you felt that stirring, that was the Self remembering itself through you. You speak of hunger and cold and you are right—Kali Yuga bites. But even in its darkest hour, the divine does not vanish. It hides in the breath you take without noticing. It hides in the ache in your feet. It hides in the stranger’s smile. It hides in the very hunger that drives you forward. The Self does not abandon you. It moves you.” John listened, the road quiet around them.
+            </p>
+            
+
+            <div class="my-6 pl-5 border-l-2 border-amber-500/60 bg-stone-900/40 p-4 rounded-r-xl italic text-stone-200 font-serif text-base sm:text-lg leading-relaxed">
+              “You ask whether you should sit or walk or seek. But the Self does not care for your posture. It cares only that you remember. Sit if sitting brings clarity. Walk if walking brings strength. Seek if seeking brings honesty. But know this: you cannot leave the Self, no matter how far you run. You cannot fall out of the divine, no matter how low you sink. You cannot be alone, because the one who feels alone is the same consciousness that fills the stars.”
+            </div>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              The man leaned closer, whispering like thunder wrapped in silk. “The next step is not outward. It is inward. Into the quiet space beneath thought. The place where the noise ends and the nectar begins. When you walk to the village, walk as the Self walking. When you eat your meal, eat as the Self nourishing itself. When you work, work as the Self expressing its strength through your hands. Nothing is separate. Nothing is lost. Nothing is outside the divine.”
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              He closed his eyes. “Go on, John. The nectar is already flowing in you.”
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              John stood there, boots planted, belly still hungry, but the hunger no longer felt like an enemy. The road no longer felt like exile. The village no longer felt like a destination. Everything was simply part of the same great breathing, and he was inside it, not outside looking in. The chase was over because he finally saw there was never anything to chase. The search resolved because the seeker had stopped running from himself. The circle completed because he recognised he had been walking its circumference all along.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              He nodded once to the bearded man—not in reverence, not in submission, but in recognition. Two sparks acknowledging the flame they share. Then he turned toward the village, and the road felt different beneath his feet, as though it had been waiting for him to walk it with this new clarity.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Behind him, the bearded man remained seated, silent as a mountain. No blessing. No farewell. Just completion.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              And John walked on, aware of his place in the world, aware of the unity beneath the noise, aware that the circle had run and brought him back to himself.
+            </p>
+            
+      </div>
+
+      
+    <footer class="mt-20 pt-10 border-t border-stone-800 text-xs text-stone-400 font-sans" aria-labelledby="notes-heading-the-end-of-the-road">
+      <div class="flex items-center gap-2 mb-6 text-stone-300">
+        <i class="fa-solid fa-book-bookmark text-amber-500 text-sm"></i>
+        <h3 id="notes-heading-the-end-of-the-road" class="font-cinzel font-bold text-sm tracking-wider uppercase">
+          Scholarly Annotations &amp; Archival Context
+        </h3>
+      </div>
+      <ol class="space-y-4 list-none pl-0">
+        
+        <li class="pl-4 border-l-2 border-stone-800">
+          <span class="font-mono text-amber-500 font-bold mr-1">[1]</span>
+          <span>The concept of Kali Yuga in Vedic cosmology: the age of conflict, moral confusion, and spiritual forgetfulness.</span>
+        </li>
+        
+        <li class="pl-4 border-l-2 border-stone-800">
+          <span class="font-mono text-amber-500 font-bold mr-1">[2]</span>
+          <span>Lao Tzu, <em>Tao Te Ching</em>, Chapter 47: "Without going outside, you may know the whole world. Without looking through the window, you may see the ways of heaven."</span>
+        </li>
+        
+      </ol>
+      
+      <!-- Creative Fellowship CTA -->
+      <div class="mt-12 p-6 rounded-2xl bg-gradient-to-br from-peat-900 to-peat-950 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="space-y-1 text-center sm:text-left">
+          <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold">Creative Fellowship</span>
+          <h4 class="font-cinzel text-lg font-bold text-white">The Shady River Bard Creative Ecosystem</h4>
+          <p class="text-xs text-stone-300 max-w-xl">
+            Trevor Swistchew's essays are published in fellowship with The Shady River Bard—exploring a 26-album concept discography, working permaculture, and reflections on human purpose.
+          </p>
+        </div>
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-peat-950 font-cinzel font-bold text-xs uppercase tracking-wider transition-colors shrink-0 shadow-lg flex items-center gap-1.5">
+          <span>Explore Shady River</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+        </a>
+      </div>
+
+      <!-- Copyright -->
+      <div class="mt-10 pt-6 border-t border-stone-800/60 text-center text-xs text-stone-400 font-sans space-y-2">
+        <p>Essay &copy; 2026 Trevor Swistchew. All rights reserved.</p>
+        <p class="text-stone-500">Published for the Trevor Swistchew Compendium &amp; Literary Salon Archive.</p>
+        <p class="pt-2">
+          <a href="../../index.html" class="text-stone-400 hover:text-amber-400 transition-colors mr-3">&larr; Return to Compendium Archive</a>
+          <a href="https://tpatterson34.github.io/shady-river-portal/friends-of-the-bard/" class="text-amber-400 hover:text-amber-300 transition-colors font-medium">Friends of the Bard Collective ↗</a>
+        </p>
+      </div>
+    </footer>
+    
+
+    </article>
+  </main>
+
+  <!-- Client-Side Tab Switching Script -->
+  <script>
+    function switchTab(essayId, tabId) {
+      const container = document.querySelector('[aria-labelledby="dossier-heading-' + essayId + '"]');
+      if (!container) return;
+      
+      const buttons = container.querySelectorAll('.dossier-tab-btn');
+      const panels = container.querySelectorAll('.dossier-tab-panel');
+      
+      buttons.forEach(btn => {
+        btn.classList.remove('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+        btn.classList.add('border-transparent', 'text-stone-400');
+      });
+      
+      panels.forEach(p => p.classList.add('hidden'));
+      
+      const targetBtn = document.getElementById('btn-' + essayId + '-' + tabId);
+      const targetPanel = document.getElementById('panel-' + essayId + '-' + tabId);
+      
+      if (targetBtn) {
+        targetBtn.classList.remove('border-transparent', 'text-stone-400');
+        targetBtn.classList.add('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+      }
+      if (targetPanel) {
+        targetPanel.classList.remove('hidden');
+      }
+    }
+  </script>
+  <script src="../../assets/js/reading-experience.js"></script>
+</body>
+</html>

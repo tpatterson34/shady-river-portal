@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Murder by the State | Trevor Swistchew</title>
+  <meta name="description" content="The 1820 Radical Rising and the Execution of Baird, Hardie, and Wilson by Trevor Swistchew (2026). Part of the Trevor Swistchew Compendium Archive.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              950: '#0c0b0a',
+              900: '#121110',
+              850: '#181614',
+              800: '#1f1c19',
+              700: '#2b2723',
+              600: '#3d3731',
+            },
+            parchment: {
+              50: '#fdfbf7',
+              100: '#f7f4ed',
+              200: '#efeae0',
+              300: '#e5ded2',
+              400: '#d8cdbe',
+              500: '#c5b8a5',
+            },
+            brass: {
+              400: '#dfbe75',
+              500: '#c5a059',
+              600: '#a6823c',
+              700: '#846427',
+            },
+            thistle: {
+              600: '#9d2b45',
+              700: '#7e2035',
+            },
+            loch: {
+              400: '#38bdf8',
+              700: '#0369a1',
+              900: '#0c4a6e',
+            }
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Lora', 'Georgia', 'serif'],
+            display: ['"Playfair Display"', 'Cinzel', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Web Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/a11y.css">
+
+  <!-- Scottish Literary Salon Theme Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950">
+
+  <!-- 1. WCAG Skip Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Essay Content</a>
+
+  <!-- 2. Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- 3. Top Sticky Reading Utility & Salon Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      
+      <!-- Salon Brand / Return Link -->
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2.5 text-stone-300 hover:text-amber-400 group transition-colors">
+          <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
+          <div class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:block">
+            Trevor Swistchew <span class="text-stone-500 font-sans font-normal mx-1">|</span> <span class="text-stone-400">Compendium Archive</span>
+          </div>
+        </a>
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="hidden md:flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 text-[11px] font-mono transition-colors" title="Visit The Shady River Bard Portal">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Quick Jump Navigation -->
+      
+
+      <!-- Reading Accommodations Controls -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Font Size Scaler -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs font-mono text-stone-300" role="group" aria-label="Font Size Scaling">
+          <button id="font-size-dec" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Decrease font size" aria-label="Decrease font size">A-</button>
+          <button id="font-size-reset" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors text-[10px] text-stone-400" title="Reset font size" aria-label="Reset font size">A</button>
+          <button id="font-size-inc" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Increase font size" aria-label="Increase font size">A+</button>
+        </div>
+
+        <!-- Tri-State Theme Switcher -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs" role="group" aria-label="Reading Theme Selection">
+          <button data-theme="dark" class="theme-toggle-btn px-2 py-1 rounded transition-colors active-theme" title="Dark Peat Theme" aria-label="Dark Peat Theme" aria-pressed="true">
+            <i class="fa-solid fa-moon text-amber-400"></i>
+          </button>
+          <button data-theme="sepia" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Aged Parchment Sepia Theme" aria-label="Aged Parchment Sepia Theme" aria-pressed="false">
+            <i class="fa-solid fa-book-open"></i>
+          </button>
+          <button data-theme="light" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Edinburgh Stone Light Theme" aria-label="Edinburgh Stone Light Theme" aria-pressed="false">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- 4. Main Essay Content Container -->
+  <main id="main-content" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+    <article class="space-y-10">
+      
+      <!-- HERO & ESSAY HEADER -->
+      <header class="space-y-6 text-center sm:text-left border-b border-stone-800 pb-10">
+        
+        <!-- Category & Reading Time Badge -->
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 text-xs font-mono">
+          <span class="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-semibold tracking-wider uppercase">
+            Historical Injustice &amp; Human Rights
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400 flex items-center gap-1.5">
+            <i class="fa-regular fa-clock text-amber-500/70"></i>
+            4 min read
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400 flex items-center gap-1.5">
+            <i class="fa-solid fa-feather-pointed text-amber-500/70"></i>
+            700 words
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400">Copyright &copy; 2026 Trevor Swistchew</span>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <div class="space-y-3">
+          <h1 class="font-cinzel text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Murder by the State
+          </h1>
+          <p class="font-serif text-lg sm:text-xl text-stone-300 leading-relaxed font-light italic">
+            The 1820 Radical Rising and the Execution of Baird, Hardie, and Wilson
+          </p>
+        </div>
+
+        <!-- Author Byline -->
+        <div class="flex items-center justify-center sm:justify-start gap-3 pt-2">
+          <div class="w-10 h-10 rounded-full border border-amber-500/40 bg-peat-900 flex items-center justify-center text-amber-400 font-cinzel font-bold text-sm shadow-md">
+            TS
+          </div>
+          <div class="text-left">
+            <div class="font-cinzel font-bold text-white text-sm tracking-wider">Trevor Swistchew</div>
+            <div class="text-xs text-stone-400 font-mono">Essayist, Philosopher &amp; Historian &bull; Western Washington / Scotland</div>
+          </div>
+        </div>
+
+        <!-- Hero Fine-Art Banner Image -->
+        <figure class="pt-4 space-y-2">
+          <div class="aspect-video w-full rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl relative bg-peat-950">
+            <img src="../../assets/images/murder-by-the-state-banner.jpg" alt="Stirling Castle looming over an empty execution scaffold and Scottish thistles under a bruised sky" class="w-full h-full object-cover" loading="eager">
+          </div>
+          <figcaption class="text-center text-xs text-stone-400 font-serif italic pt-1">
+            Stirling Castle stands witness to the state execution of John Baird and Andrew Hardie, September 1820.
+          </figcaption>
+        </figure>
+
+        <!-- Epigraph -->
+        <blockquote class="p-4 sm:p-5 rounded-xl bg-peat-900/80 border-l-4 border-amber-500 text-stone-300 font-serif italic text-sm sm:text-base leading-relaxed">
+          “The truth is simple. These men were not judged. They were not tried. They were not lawfully sentenced. They were killed.” — Trevor Swistchew
+        </blockquote>
+
+      </header>
+
+      
+    <!-- INTERACTIVE CONTEXTUAL DOSSIER -->
+    <section class="my-12 p-6 rounded-2xl bg-stone-900/90 border border-amber-500/30 shadow-2xl backdrop-blur-sm" aria-labelledby="dossier-heading-murder-by-the-state">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-white/10">
+        <div class="flex items-center gap-2.5">
+          <span class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-sm">
+            <i class="fa-solid fa-scroll"></i>
+          </span>
+          <div>
+            <h3 id="dossier-heading-murder-by-the-state" class="font-cinzel font-bold text-base sm:text-lg text-amber-300">
+              The 1820 Radical Rising &amp; State Treason Dossier
+            </h3>
+            <span class="text-[11px] font-mono text-stone-400">Archival Research &amp; Thematic Analysis</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+          
+        <button onclick="switchTab('murder-by-the-state', 'rising')" id="btn-murder-by-the-state-rising" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-amber-500 bg-amber-500/10 text-amber-400 font-bold">
+          <span>The 1820 Rising</span>
+          <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">The General Strike</span>
+        </button>
+        
+        <button onclick="switchTab('murder-by-the-state', 'martyrs')" id="btn-murder-by-the-state-martyrs" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+          <span>The Martyrs</span>
+          <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Baird, Hardie &amp; Wilson</span>
+        </button>
+        
+        <button onclick="switchTab('murder-by-the-state', 'provocation')" id="btn-murder-by-the-state-provocation" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+          <span>State Provocation</span>
+          <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Richmond the Spy</span>
+        </button>
+        
+        </div>
+      </div>
+      <div class="min-h-[140px]">
+        
+        <div id="panel-murder-by-the-state-rising" class="dossier-tab-panel block space-y-3">
+          <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">60,000 Workers Down Tools</h4><p class="text-xs text-stone-300 leading-relaxed mb-2">In April 1820, Scottish weavers, ironworkers, and miners staged the first national general strike in history, posting placards calling for an Address to the Inhabitants of Great Britain and Ireland demanding electoral reform and social equality.</p>
+        </div>
+        
+        <div id="panel-murder-by-the-state-martyrs" class="dossier-tab-panel hidden space-y-3">
+          <ul class="text-xs text-stone-300 space-y-2"><li><strong>John Baird (Condorrat):</strong> Military veteran and radical leader; spoke from the Stirling scaffold affirming his faith in human brotherhood.</li><li><strong>Andrew Hardie (Glasgow):</strong> 27-year-old radical weaver; declared on the scaffold: “I die a friend to my country and to the rights of mankind.”</li><li><strong>James Wilson (Strathaven):</strong> 63-year-old hosier; hanged and beheaded at Glasgow Green before 20,000 weeping citizens.</li></ul>
+        </div>
+        
+        <div id="panel-murder-by-the-state-provocation" class="dossier-tab-panel hidden space-y-3">
+          <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">The Apparatus of Entrapment</h4><p class="text-xs text-stone-300 leading-relaxed">The Rising was deliberately provoked and infiltrated by government agents provocateurs (most notably Alexander Richmond) to draw out reformers, justify military repression, and terrorize the Scottish working class into submission.</p>
+        </div>
+        
+      </div>
+    </section>
+    
+
+      <!-- ESSAY BODY TEXT -->
+      <div id="essay-article" class="prose prose-invert prose-stone max-w-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg">
+        
+            <p class="first-letter:font-cinzel first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:text-amber-500 first-letter:leading-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              In 1820 three Scots stood before a court that had no lawful right to judge them—three men whose names still burn through the centuries: John Baird, Andrew Hardie, James Wilson. They were not criminals. They were not traitors. They were not rebels against a foreign crown. They were Scots demanding the rights that any equal partner in a voluntary union should possess without fear. Yet they were dragged before a Special Commission headed by Lord President Hope with Solicitor General John Hope and English barrister John Hullock driving the prosecution, and they were tried under English treason law, a law that had no authority in Scotland under the Treaty of Union. Their fate was sealed not by justice but by domination.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              The Treaty of Union guaranteed that Scotland’s legal system would remain distinct, protected, untouched by English interference. Article XVIII made it explicit that Scots criminal procedure would continue, that Scotland’s courts would operate under Scotland’s laws, that England could not impose its own judicial machinery. Yet in 1820 England ignored this entirely. It did not bend the Treaty. It did not reinterpret it. It simply violated it. It imposed English treason procedure, English evidential rules, English sentencing powers, and the medieval English punishment of being drawn on a hurdle, hanged by the neck, and then beheaded, with quartering written into the sentence even if later remitted. This was not justice. This was not equality. This was not partnership. This was Murder by the State, carried out under the false banner of a Union that claimed to be voluntary and equal.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              The trials were a performance staged to crush Scottish political reform. The men were denied the protections of Scots law. They were denied the rights guaranteed by the Treaty. They were denied the equality England claimed existed. They were condemned by a court that had no lawful jurisdiction, sentenced by a legal system that had no constitutional authority, and executed by a state that refused to recognise its own obligations. James Wilson was drawn, hanged, and beheaded before a crowd on Glasgow Green. John Baird and Andrew Hardie were drawn, hanged, and beheaded in Stirling. Their bodies were treated as warnings. Their deaths were meant to silence Scotland. Their executioners acted not as judges but as instruments of political terror.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              England has never apologised. Not once. Not in any parliament. Not in any court. Not in any official record. It has never acknowledged the breach of the Treaty. It has never admitted that Scots law was overridden. It has never conceded that the Union was used as a weapon rather than a partnership. It has never recognised that these men were murdered under colour of law. Instead it continues to repeat the claim that the Union is voluntary, that the Union is equal, that Scotland is a partner. Yet the scaffold of 1820 exposes the truth: a voluntary union does not execute men for exercising political rights; an equal union does not impose foreign law; a just union does not violate its own founding treaty.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              The hypocrisy is total. England celebrates the Union as a noble arrangement while refusing to face the fact that it used that same Union to crush Scottish voices, violate Scottish law, and execute Scottish citizens under a sentence that Scotland had never recognised. It speaks of equality while standing on the graves of men it condemned without lawful authority. It speaks of partnership while refusing to apologise for the most blatant breach of the Treaty in its history. It speaks of voluntariness while enforcing obedience with rope and blade.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              The truth is simple. These men were not judged. They were not tried. They were not lawfully sentenced. They were killed. Their deaths were acts of state violence carried out under a legal framework that had no right to exist in Scotland. Their execution was not justice. It was murder. And until England apologises for this violation, acknowledges the breach, and confronts the hypocrisy of its own claims, the Union remains stained by the blood of Baird, Hardie, and Wilson—three Scots who died not because they were guilty, but because they dared to believe that equality meant something.
+            </p>
+            
+      </div>
+
+      
+    <footer class="mt-20 pt-10 border-t border-stone-800 text-xs text-stone-400 font-sans" aria-labelledby="notes-heading-murder-by-the-state">
+      <div class="flex items-center gap-2 mb-6 text-stone-300">
+        <i class="fa-solid fa-book-bookmark text-amber-500 text-sm"></i>
+        <h3 id="notes-heading-murder-by-the-state" class="font-cinzel font-bold text-sm tracking-wider uppercase">
+          Scholarly Annotations &amp; Archival Context
+        </h3>
+      </div>
+      <ol class="space-y-4 list-none pl-0">
+        
+        <li class="pl-4 border-l-2 border-stone-800">
+          <span class="font-mono text-amber-500 font-bold mr-1">[1]</span>
+          <span>Peter Berresford Ellis and Seumas Mac a' Ghobhainn, <em>The Scottish Insurrection of 1820</em> (Pluto Press, 1970).</span>
+        </li>
+        
+        <li class="pl-4 border-l-2 border-stone-800">
+          <span class="font-mono text-amber-500 font-bold mr-1">[2]</span>
+          <span>Trial Records of Oyer and Terminer, Stirling and Glasgow (1820), preserved at National Records of Scotland.</span>
+        </li>
+        
+      </ol>
+      
+      <!-- Creative Fellowship CTA -->
+      <div class="mt-12 p-6 rounded-2xl bg-gradient-to-br from-peat-900 to-peat-950 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="space-y-1 text-center sm:text-left">
+          <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold">Creative Fellowship</span>
+          <h4 class="font-cinzel text-lg font-bold text-white">The Shady River Bard Creative Ecosystem</h4>
+          <p class="text-xs text-stone-300 max-w-xl">
+            Trevor Swistchew's essays are published in fellowship with The Shady River Bard—exploring a 26-album concept discography, working permaculture, and reflections on human purpose.
+          </p>
+        </div>
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-peat-950 font-cinzel font-bold text-xs uppercase tracking-wider transition-colors shrink-0 shadow-lg flex items-center gap-1.5">
+          <span>Explore Shady River</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+        </a>
+      </div>
+
+      <!-- Copyright -->
+      <div class="mt-10 pt-6 border-t border-stone-800/60 text-center text-xs text-stone-400 font-sans space-y-2">
+        <p>Essay &copy; 2026 Trevor Swistchew. All rights reserved.</p>
+        <p class="text-stone-500">Published for the Trevor Swistchew Compendium &amp; Literary Salon Archive.</p>
+        <p class="pt-2">
+          <a href="../../index.html" class="text-stone-400 hover:text-amber-400 transition-colors mr-3">&larr; Return to Compendium Archive</a>
+          <a href="https://tpatterson34.github.io/shady-river-portal/friends-of-the-bard/" class="text-amber-400 hover:text-amber-300 transition-colors font-medium">Friends of the Bard Collective ↗</a>
+        </p>
+      </div>
+    </footer>
+    
+
+    </article>
+  </main>
+
+  <!-- Client-Side Tab Switching Script -->
+  <script>
+    function switchTab(essayId, tabId) {
+      const container = document.querySelector('[aria-labelledby="dossier-heading-' + essayId + '"]');
+      if (!container) return;
+      
+      const buttons = container.querySelectorAll('.dossier-tab-btn');
+      const panels = container.querySelectorAll('.dossier-tab-panel');
+      
+      buttons.forEach(btn => {
+        btn.classList.remove('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+        btn.classList.add('border-transparent', 'text-stone-400');
+      });
+      
+      panels.forEach(p => p.classList.add('hidden'));
+      
+      const targetBtn = document.getElementById('btn-' + essayId + '-' + tabId);
+      const targetPanel = document.getElementById('panel-' + essayId + '-' + tabId);
+      
+      if (targetBtn) {
+        targetBtn.classList.remove('border-transparent', 'text-stone-400');
+        targetBtn.classList.add('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+      }
+      if (targetPanel) {
+        targetPanel.classList.remove('hidden');
+      }
+    }
+  </script>
+  <script src="../../assets/js/reading-experience.js"></script>
+</body>
+</html>

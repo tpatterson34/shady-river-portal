@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Great Scots: Six Lives That Shaped the World | Trevor Swistchew</title>
+  <meta name="description" content="The Claymore, the Steam Engine, and the Forge of the Modern Mind by Trevor Swistchew (2026). Part of the Trevor Swistchew Compendium Archive.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              950: '#0c0b0a',
+              900: '#121110',
+              850: '#181614',
+              800: '#1f1c19',
+              700: '#2b2723',
+              600: '#3d3731',
+            },
+            parchment: {
+              50: '#fdfbf7',
+              100: '#f7f4ed',
+              200: '#efeae0',
+              300: '#e5ded2',
+              400: '#d8cdbe',
+              500: '#c5b8a5',
+            },
+            brass: {
+              400: '#dfbe75',
+              500: '#c5a059',
+              600: '#a6823c',
+              700: '#846427',
+            },
+            thistle: {
+              600: '#9d2b45',
+              700: '#7e2035',
+            },
+            loch: {
+              400: '#38bdf8',
+              700: '#0369a1',
+              900: '#0c4a6e',
+            }
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Lora', 'Georgia', 'serif'],
+            display: ['"Playfair Display"', 'Cinzel', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Web Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/a11y.css">
+
+  <!-- Scottish Literary Salon Theme Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950">
+
+  <!-- 1. WCAG Skip Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Essay Content</a>
+
+  <!-- 2. Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- 3. Top Sticky Reading Utility & Salon Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      
+      <!-- Salon Brand / Return Link -->
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2.5 text-stone-300 hover:text-amber-400 group transition-colors">
+          <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
+          <div class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:block">
+            Trevor Swistchew <span class="text-stone-500 font-sans font-normal mx-1">|</span> <span class="text-stone-400">Compendium Archive</span>
+          </div>
+        </a>
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="hidden md:flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 text-[11px] font-mono transition-colors" title="Visit The Shady River Bard Portal">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Quick Jump Navigation -->
+      
+
+      <!-- Reading Accommodations Controls -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Font Size Scaler -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs font-mono text-stone-300" role="group" aria-label="Font Size Scaling">
+          <button id="font-size-dec" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Decrease font size" aria-label="Decrease font size">A-</button>
+          <button id="font-size-reset" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors text-[10px] text-stone-400" title="Reset font size" aria-label="Reset font size">A</button>
+          <button id="font-size-inc" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Increase font size" aria-label="Increase font size">A+</button>
+        </div>
+
+        <!-- Tri-State Theme Switcher -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs" role="group" aria-label="Reading Theme Selection">
+          <button data-theme="dark" class="theme-toggle-btn px-2 py-1 rounded transition-colors active-theme" title="Dark Peat Theme" aria-label="Dark Peat Theme" aria-pressed="true">
+            <i class="fa-solid fa-moon text-amber-400"></i>
+          </button>
+          <button data-theme="sepia" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Aged Parchment Sepia Theme" aria-label="Aged Parchment Sepia Theme" aria-pressed="false">
+            <i class="fa-solid fa-book-open"></i>
+          </button>
+          <button data-theme="light" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Edinburgh Stone Light Theme" aria-label="Edinburgh Stone Light Theme" aria-pressed="false">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- 4. Main Essay Content Container -->
+  <main id="main-content" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+    <article class="space-y-10">
+      
+      <!-- HERO & ESSAY HEADER -->
+      <header class="space-y-6 text-center sm:text-left border-b border-stone-800 pb-10">
+        
+        <!-- Category & Reading Time Badge -->
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 text-xs font-mono">
+          <span class="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-semibold tracking-wider uppercase">
+            Scottish History &amp; Biography
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400 flex items-center gap-1.5">
+            <i class="fa-regular fa-clock text-amber-500/70"></i>
+            9 min read
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400 flex items-center gap-1.5">
+            <i class="fa-solid fa-feather-pointed text-amber-500/70"></i>
+            1,792 words
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400">Copyright &copy; 2026 Trevor Swistchew</span>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <div class="space-y-3">
+          <h1 class="font-cinzel text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Great Scots: Six Lives That Shaped the World
+          </h1>
+          <p class="font-serif text-lg sm:text-xl text-stone-300 leading-relaxed font-light italic">
+            The Claymore, the Steam Engine, and the Forge of the Modern Mind
+          </p>
+        </div>
+
+        <!-- Author Byline -->
+        <div class="flex items-center justify-center sm:justify-start gap-3 pt-2">
+          <div class="w-10 h-10 rounded-full border border-amber-500/40 bg-peat-900 flex items-center justify-center text-amber-400 font-cinzel font-bold text-sm shadow-md">
+            TS
+          </div>
+          <div class="text-left">
+            <div class="font-cinzel font-bold text-white text-sm tracking-wider">Trevor Swistchew</div>
+            <div class="text-xs text-stone-400 font-mono">Essayist, Philosopher &amp; Historian &bull; Western Washington / Scotland</div>
+          </div>
+        </div>
+
+        <!-- Hero Fine-Art Banner Image -->
+        <figure class="pt-4 space-y-2">
+          <div class="aspect-video w-full rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl relative bg-peat-950">
+            <img src="../../assets/images/great-scots-banner.jpg" alt="Scottish Highland vista overlooking Edinburgh Castle with books, gears, and claymore" class="w-full h-full object-cover" loading="eager">
+          </div>
+          <figcaption class="text-center text-xs text-stone-400 font-serif italic pt-1">
+            The instruments of Scottish genius: stone, steam, verse, and unyielding self-determination.
+          </figcaption>
+        </figure>
+
+        <!-- Epigraph -->
+        <blockquote class="p-4 sm:p-5 rounded-xl bg-peat-900/80 border-l-4 border-amber-500 text-stone-300 font-serif italic text-sm sm:text-base leading-relaxed">
+          “Their imaginations became reality, and their realities became legacies, but the meaning of those legacies is not fixed in history. Influence is a living force.” — Trevor Swistchew
+        </blockquote>
+
+      </header>
+
+      
+    <!-- INTERACTIVE CONTEXTUAL DOSSIER -->
+    <section class="my-12 p-6 rounded-2xl bg-stone-900/90 border border-amber-500/30 shadow-2xl backdrop-blur-sm" aria-labelledby="dossier-heading-great-scots-six-lives-that-shaped-the-world">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-white/10">
+        <div class="flex items-center gap-2.5">
+          <span class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-sm">
+            <i class="fa-solid fa-scroll"></i>
+          </span>
+          <div>
+            <h3 id="dossier-heading-great-scots-six-lives-that-shaped-the-world" class="font-cinzel font-bold text-base sm:text-lg text-amber-300">
+              The Six Titans of Scottish Thought &amp; Global Transformation
+            </h3>
+            <span class="text-[11px] font-mono text-stone-400">Archival Research &amp; Thematic Analysis</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+          
+        <button onclick="switchTab('great-scots-six-lives-that-shaped-the-world', 'builders')" id="btn-great-scots-six-lives-that-shaped-the-world-builders" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-amber-500 bg-amber-500/10 text-amber-400 font-bold">
+          <span>Telford &amp; Bruce</span>
+          <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Infrastructure &amp; Sovereignty</span>
+        </button>
+        
+        <button onclick="switchTab('great-scots-six-lives-that-shaped-the-world', 'poets')" id="btn-great-scots-six-lives-that-shaped-the-world-poets" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+          <span>Burns &amp; MacDonald</span>
+          <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Dignity &amp; Courage</span>
+        </button>
+        
+        <button onclick="switchTab('great-scots-six-lives-that-shaped-the-world', 'thinkers')" id="btn-great-scots-six-lives-that-shaped-the-world-thinkers" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+          <span>Smith &amp; Maclean</span>
+          <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Enlightenment &amp; Justice</span>
+        </button>
+        
+        </div>
+      </div>
+      <div class="min-h-[140px]">
+        
+        <div id="panel-great-scots-six-lives-that-shaped-the-world-builders" class="dossier-tab-panel block space-y-3">
+          <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-1">Thomas Telford (1757–1834)</h4><p class="text-xs text-stone-300 mb-3">Born into poverty in Dumfriesshire; stonemason who became the premier civil engineer of the modern era, pioneering the Menai Suspension Bridge, Caledonian Canal, and thousands of miles of national arteries.</p><h4 class="font-cinzel font-bold text-amber-300 text-sm mb-1">Robert the Bruce (1274–1329)</h4><p class="text-xs text-stone-300">King of Scots who led the defence of national self-determination at Bannockburn (1314), enshrined forever in the 1320 Declaration of Arbroath.</p>
+        </div>
+        
+        <div id="panel-great-scots-six-lives-that-shaped-the-world-poets" class="dossier-tab-panel hidden space-y-3">
+          <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-1">Robert Burns (1759–1796)</h4><p class="text-xs text-stone-300 mb-3">The Ploughman Poet of Ayrshire who democratized literature worldwide, celebrating the inherent dignity of ordinary working folk in "A Man's a Man for A' That."</p><h4 class="font-cinzel font-bold text-amber-300 text-sm mb-1">Flora MacDonald (1722–1790)</h4><p class="text-xs text-stone-300">Embodying quiet moral courage, risking her life for human compassion and moral duty during the brutal post-Culloden Highland pacification.</p>
+        </div>
+        
+        <div id="panel-great-scots-six-lives-that-shaped-the-world-thinkers" class="dossier-tab-panel hidden space-y-3">
+          <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-1">Adam Smith (1723–1790)</h4><p class="text-xs text-stone-300 mb-3">Kirkcaldy philosopher whose <em>Theory of Moral Sentiments</em> grounded human society in empathy, warning that economic systems without moral foundations breed catastrophic inequality.</p><h4 class="font-cinzel font-bold text-amber-300 text-sm mb-1">John Maclean (1879–1923)</h4><p class="text-xs text-stone-300">Revolutionary educator of Red Clydeside, appointed Soviet Consul to Scotland; fearless orator who fought for working-class enlightenment and international solidarity.</p>
+        </div>
+        
+      </div>
+    </section>
+    
+
+      <!-- ESSAY BODY TEXT -->
+      <div id="essay-article" class="prose prose-invert prose-stone max-w-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg">
+        
+            <p class="first-letter:font-cinzel first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:text-amber-500 first-letter:leading-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Scotland is a land that has always carried more weight in the world than its size would suggest, a country forged in hardship, sharpened by wind and stone, and animated by a fierce sense of identity that refuses to be diminished. In 2026, when people speak of global influence, they often look to the largest nations, the wealthiest economies, the loudest voices. Yet the truth remains that some of the most profound shifts in human thought, culture, politics, and infrastructure were shaped by individuals who emerged from a country once dismissed as the poorest in Europe. These six Scots—Thomas Telford, Robert Burns, Flora MacDonald, Robert the Bruce, Adam Smith, and John Maclean—did not merely contribute to their own time; they altered the trajectory of the world. Their lives were not accidents of history but expressions of a deeper Scottish spirit: resilient, imaginative, rebellious, compassionate, and unyielding. To understand their influence is to understand how a small nation carved its mark into the global story, and why their legacies still matter in 2026.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Thomas Telford&#x27;s life begins in the quiet humbleness that so often precedes greatness. Born into poverty in the rugged landscape of Dumfriesshire, he was not handed opportunity—he carved it out of stone. His early years as a stonemason taught him the language of materials, the patience of craft, and the discipline of precision. What set him apart was not simply skill but vision: the ability to see infrastructure not as cold engineering but as the lifeblood of a nation. Telford understood that roads, bridges, canals, and harbours were not inert structures; they were arteries through which commerce, culture, and human possibility flowed. His work across Britain and beyond transformed isolated regions into connected communities, enabling economic growth, social mobility, and national cohesion. In 2026, when people travel across bridges he designed or follow roads that trace his original routes, they are moving through the physical legacy of a man who believed that engineering was a moral duty. Telford&#x27;s influence reaches into every modern conversation about infrastructure, reminding us that the built environment is not merely functional but foundational to human flourishing.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Robert Burns, by contrast, shaped the world not through stone but through language. His life was a testament to the power of the ordinary voice, the voice that rises from the soil rather than the throne. Burns was a ploughman, a farmer, a man whose hands were calloused by labour, yet his mind carried a sensitivity and insight that transcended his circumstances. He wrote not to impress the elite but to honour the dignity of common folk, capturing their joys, sorrows, humour, and humanity with a clarity that still resonates centuries later. Burns gave Scotland a literary identity that was both fiercely local and universally human. His poems and songs travelled across oceans, inspiring movements for social justice, national pride, and democratic ideals. In 2026, his words continue to echo in classrooms, political speeches, cultural festivals, and private moments of reflection. Burns&#x27;s influence lies not only in his artistry but in his insistence that every human life, no matter how humble, carries worth. He democratized literature and, in doing so, he democratized the imagination of the world.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Flora MacDonald&#x27;s story enters the narrative with a different kind of power: the quiet courage that emerges when compassion overrides fear. She is remembered most for her role in aiding the escape of Charles Edward Stuart after the failed Jacobite rising, a moment that has become mythic in Scottish history. Yet Flora&#x27;s significance extends far beyond the romanticized image of a young woman guiding a fugitive prince through danger. Her actions were rooted in a profound sense of loyalty, humanity, and moral conviction. She risked her life not for political gain but because she believed in the duty to protect another human being. Flora&#x27;s legacy is a reminder that heroism is not always loud or violent; sometimes it is the steady resolve to do what is right in the face of overwhelming risk. In 2026, her story continues to inspire discussions about moral courage, civil resistance, and the role of individual conscience in times of political turmoil.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Their imaginations became reality, and their realities became legacies, but the meaning of those legacies is not fixed in history. Influence is a living force, shifting as the world shifts, revealing new dimensions as new generations reinterpret the past. In 2026, the stories of these six Scots do not sit quietly on library shelves; they move through conversations about identity, justice, creativity, infrastructure, and the moral responsibilities of nations. Their lives are mirrors held up to the present, asking what kind of world we are building and what kind of people we choose to be within it.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Telford’s world was one of stone, water, and iron, yet his vision speaks directly to an age of digital networks and global interdependence. He believed that connection was the foundation of progress, that a nation thrives when its people can move freely, share ideas, trade goods, and reach one another without obstruction. In 2026, when societies grapple with fractured politics, strained economies, and the consequences of neglecting public infrastructure, Telford’s legacy becomes a challenge to build not for profit alone but for the common good. His bridges were acts of faith in the future, and that faith is something the modern world desperately needs to reclaim.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Burns, writing in the eighteenth century, could not have imagined the technologies of the twenty‑first, yet he understood something deeper than circumstance: the human need to be seen, heard, and valued. His poetry carries a democratic spirit that resonates in an age of global communication, where voices rise from every corner of the world demanding recognition. Burns’s insistence on the dignity of ordinary people speaks directly to movements that challenge inequality, authoritarianism, and cultural erasure. In 2026, his words are not relics; they are ammunition for those who refuse to accept a world where power is hoarded and humanity is divided.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Flora MacDonald’s courage, quiet and unwavering, becomes newly relevant in a time when moral action is often drowned out by noise, outrage, and performative gestures. She acted not for applause but because she believed in the sanctity of human life. Her story reminds the modern world that compassion is not sentimental but radical, that the willingness to protect another person at personal risk is the foundation of any society that claims to value justice. In 2026, when humanitarian crises unfold across continents, Flora’s legacy becomes a question: what does courage look like now, and who will embody it?
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Robert the Bruce’s struggle for sovereignty echoes in a century defined by debates over national identity, self‑determination, and the right of people to shape their own political destiny. His endurance, his refusal to yield even when defeat seemed certain, speaks to nations and communities fighting for recognition, autonomy, and dignity. Bruce’s legacy is not a call to conflict but a reminder that identity is worth defending, that freedom is not an abstract ideal but a lived experience shaped by collective will. In 2026, his story becomes a lens through which the world examines its own fractures and aspirations.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Adam Smith’s insights into human behaviour and economic systems become sharper in a world grappling with inequality, automation, and the moral consequences of global capitalism. Smith understood that markets are not machines but human creations, and that without moral grounding they become destructive. His work challenges the modern world to rethink what prosperity means, who it serves, and how it can be shaped to reflect human values rather than distort them. In 2026, Smith’s legacy becomes a provocation to build economies that honour human dignity, not exploit it.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              John Maclean’s fire for justice burns fiercely in a century marked by social movements, political upheaval, and demands for structural change. His belief that education liberates, that solidarity strengthens, and that oppression must be confronted directly speaks to activists, teachers, workers, and communities fighting for a fairer world. Maclean’s legacy is not a historical footnote; it is a living force that challenges complacency and insists that justice is not optional. In 2026, his story becomes a rallying point for those who refuse to accept inequality as inevitable.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              What binds these six lives together is not simply nationality but a shared refusal to accept the world as it is. Each of them, in their own way, insisted on possibility. Telford insisted that nations could be connected. Burns insisted that voices could be heard. Flora insisted that compassion could triumph over fear. Bruce insisted that freedom could be won. Smith insisted that thought could reshape systems. Maclean insisted that justice could be demanded. Their insistence is the thread that runs through Scottish history—a thread woven from resilience, imagination, and moral conviction.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              In 2026, Scotland stands not as a relic of past glories but as a nation whose influence continues to ripple outward through the lives of its people and the stories of its giants. The world looks to Scotland not for dominance but for depth, not for power but for perspective. These six lives offer that perspective: a reminder that greatness is not measured by wealth or territory but by the courage to act, the clarity to think, the compassion to care, and the resilience to endure.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Their stories matter now because the world is once again at a crossroads, facing challenges that demand more than technical solutions. They demand character. They demand imagination. They demand the kind of moral courage that Flora embodied, the kind of intellectual clarity that Smith offered, the kind of creative fire that Burns ignited, the kind of structural vision that Telford built, the kind of political endurance that Bruce demonstrated, and the kind of social conviction that Maclean lived and died for. These qualities are not bound to the past; they are the tools with which the future must be shaped.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Scotland, once dismissed as the poorest country in Europe, produced individuals whose influence rivals that of empires. Their stories are proof that greatness emerges not from comfort but from struggle, not from privilege but from purpose. In 2026, their legacies stand as a challenge to every nation and every individual: what will you build, what will you imagine, what will you defend, what will you change?
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              The world they helped shape is still being shaped. Their work is not finished. Their influence is not spent. Their stories are not closed. They are invitations to courage, to clarity, to compassion, to justice, to imagination, to resilience. In answering those invitations, the world honours not only their memory but its own potential.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Their imaginations became reality, and their realities became legacies, but the meaning of those legacies is not fixed in history.
+            </p>
+            
+      </div>
+
+      
+    <footer class="mt-20 pt-10 border-t border-stone-800 text-xs text-stone-400 font-sans" aria-labelledby="notes-heading-great-scots-six-lives-that-shaped-the-world">
+      <div class="flex items-center gap-2 mb-6 text-stone-300">
+        <i class="fa-solid fa-book-bookmark text-amber-500 text-sm"></i>
+        <h3 id="notes-heading-great-scots-six-lives-that-shaped-the-world" class="font-cinzel font-bold text-sm tracking-wider uppercase">
+          Scholarly Annotations &amp; Archival Context
+        </h3>
+      </div>
+      <ol class="space-y-4 list-none pl-0">
+        
+        <li class="pl-4 border-l-2 border-stone-800">
+          <span class="font-mono text-amber-500 font-bold mr-1">[1]</span>
+          <span>Declaration of Arbroath (1320): "As long as but a hundred of us remain alive, never will we on any conditions be brought under English rule. It is in truth not for glory, nor riches, nor honours that we are fighting, but for freedom."</span>
+        </li>
+        
+        <li class="pl-4 border-l-2 border-stone-800">
+          <span class="font-mono text-amber-500 font-bold mr-1">[2]</span>
+          <span>Adam Smith, <em>The Theory of Moral Sentiments</em> (1759): "How selfish soever man may be supposed, there are evidently some principles in his nature, which interest him in the fortune of others, and render their happiness necessary to him."</span>
+        </li>
+        
+      </ol>
+      
+      <!-- Creative Fellowship CTA -->
+      <div class="mt-12 p-6 rounded-2xl bg-gradient-to-br from-peat-900 to-peat-950 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="space-y-1 text-center sm:text-left">
+          <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold">Creative Fellowship</span>
+          <h4 class="font-cinzel text-lg font-bold text-white">The Shady River Bard Creative Ecosystem</h4>
+          <p class="text-xs text-stone-300 max-w-xl">
+            Trevor Swistchew's essays are published in fellowship with The Shady River Bard—exploring a 26-album concept discography, working permaculture, and reflections on human purpose.
+          </p>
+        </div>
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-peat-950 font-cinzel font-bold text-xs uppercase tracking-wider transition-colors shrink-0 shadow-lg flex items-center gap-1.5">
+          <span>Explore Shady River</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+        </a>
+      </div>
+
+      <!-- Copyright -->
+      <div class="mt-10 pt-6 border-t border-stone-800/60 text-center text-xs text-stone-400 font-sans space-y-2">
+        <p>Essay &copy; 2026 Trevor Swistchew. All rights reserved.</p>
+        <p class="text-stone-500">Published for the Trevor Swistchew Compendium &amp; Literary Salon Archive.</p>
+        <p class="pt-2">
+          <a href="../../index.html" class="text-stone-400 hover:text-amber-400 transition-colors mr-3">&larr; Return to Compendium Archive</a>
+          <a href="https://tpatterson34.github.io/shady-river-portal/friends-of-the-bard/" class="text-amber-400 hover:text-amber-300 transition-colors font-medium">Friends of the Bard Collective ↗</a>
+        </p>
+      </div>
+    </footer>
+    
+
+    </article>
+  </main>
+
+  <!-- Client-Side Tab Switching Script -->
+  <script>
+    function switchTab(essayId, tabId) {
+      const container = document.querySelector('[aria-labelledby="dossier-heading-' + essayId + '"]');
+      if (!container) return;
+      
+      const buttons = container.querySelectorAll('.dossier-tab-btn');
+      const panels = container.querySelectorAll('.dossier-tab-panel');
+      
+      buttons.forEach(btn => {
+        btn.classList.remove('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+        btn.classList.add('border-transparent', 'text-stone-400');
+      });
+      
+      panels.forEach(p => p.classList.add('hidden'));
+      
+      const targetBtn = document.getElementById('btn-' + essayId + '-' + tabId);
+      const targetPanel = document.getElementById('panel-' + essayId + '-' + tabId);
+      
+      if (targetBtn) {
+        targetBtn.classList.remove('border-transparent', 'text-stone-400');
+        targetBtn.classList.add('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+      }
+      if (targetPanel) {
+        targetPanel.classList.remove('hidden');
+      }
+    }
+  </script>
+  <script src="../../assets/js/reading-experience.js"></script>
+</body>
+</html>

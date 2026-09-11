@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Scotland Was Conned into the British State | Trevor Swistchew</title>
+  <meta name="description" content="An Uncompromising Historical Exposé of 1707 and the Anatomy of an Ambush by Trevor Swistchew (2026). Part of the Trevor Swistchew Compendium Archive.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              950: '#0c0b0a',
+              900: '#121110',
+              850: '#181614',
+              800: '#1f1c19',
+              700: '#2b2723',
+              600: '#3d3731',
+            },
+            parchment: {
+              50: '#fdfbf7',
+              100: '#f7f4ed',
+              200: '#efeae0',
+              300: '#e5ded2',
+              400: '#d8cdbe',
+              500: '#c5b8a5',
+            },
+            brass: {
+              400: '#dfbe75',
+              500: '#c5a059',
+              600: '#a6823c',
+              700: '#846427',
+            },
+            thistle: {
+              600: '#9d2b45',
+              700: '#7e2035',
+            },
+            loch: {
+              400: '#38bdf8',
+              700: '#0369a1',
+              900: '#0c4a6e',
+            }
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Lora', 'Georgia', 'serif'],
+            display: ['"Playfair Display"', 'Cinzel', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Web Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/a11y.css">
+
+  <!-- Scottish Literary Salon Theme Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950">
+
+  <!-- 1. WCAG Skip Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Essay Content</a>
+
+  <!-- 2. Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- 3. Top Sticky Reading Utility & Salon Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      
+      <!-- Salon Brand / Return Link -->
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2.5 text-stone-300 hover:text-amber-400 group transition-colors">
+          <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
+          <div class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:block">
+            Trevor Swistchew <span class="text-stone-500 font-sans font-normal mx-1">|</span> <span class="text-stone-400">Compendium Archive</span>
+          </div>
+        </a>
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="hidden md:flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 text-[11px] font-mono transition-colors" title="Visit The Shady River Bard Portal">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Quick Jump Navigation -->
+      
+        <div class="hidden xl:flex items-center gap-1 text-[11px] font-mono text-stone-400">
+          <span class="text-stone-500 uppercase font-cinzel text-[10px] mr-1">Jump:</span>
+          <a href="#sec-1" class="px-2 py-0.5 rounded hover:bg-stone-800 hover:text-amber-400 transition-colors text-[11px]">The Empire’s Vi...</a><a href="#sec-2" class="px-2 py-0.5 rounded hover:bg-stone-800 hover:text-amber-400 transition-colors text-[11px]">Surveillance of...</a><a href="#sec-3" class="px-2 py-0.5 rounded hover:bg-stone-800 hover:text-amber-400 transition-colors text-[11px]">Political Suppr...</a><a href="#sec-4" class="px-2 py-0.5 rounded hover:bg-stone-800 hover:text-amber-400 transition-colors text-[11px]">The Empire’s We...</a>
+        </div>
+        
+
+      <!-- Reading Accommodations Controls -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Font Size Scaler -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs font-mono text-stone-300" role="group" aria-label="Font Size Scaling">
+          <button id="font-size-dec" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Decrease font size" aria-label="Decrease font size">A-</button>
+          <button id="font-size-reset" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors text-[10px] text-stone-400" title="Reset font size" aria-label="Reset font size">A</button>
+          <button id="font-size-inc" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Increase font size" aria-label="Increase font size">A+</button>
+        </div>
+
+        <!-- Tri-State Theme Switcher -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs" role="group" aria-label="Reading Theme Selection">
+          <button data-theme="dark" class="theme-toggle-btn px-2 py-1 rounded transition-colors active-theme" title="Dark Peat Theme" aria-label="Dark Peat Theme" aria-pressed="true">
+            <i class="fa-solid fa-moon text-amber-400"></i>
+          </button>
+          <button data-theme="sepia" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Aged Parchment Sepia Theme" aria-label="Aged Parchment Sepia Theme" aria-pressed="false">
+            <i class="fa-solid fa-book-open"></i>
+          </button>
+          <button data-theme="light" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Edinburgh Stone Light Theme" aria-label="Edinburgh Stone Light Theme" aria-pressed="false">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- 4. Main Essay Content Container -->
+  <main id="main-content" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+    <article class="space-y-10">
+      
+      <!-- HERO & ESSAY HEADER -->
+      <header class="space-y-6 text-center sm:text-left border-b border-stone-800 pb-10">
+        
+        <!-- Category & Reading Time Badge -->
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 text-xs font-mono">
+          <span class="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-semibold tracking-wider uppercase">
+            Constitutional History &amp; Politics
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400 flex items-center gap-1.5">
+            <i class="fa-regular fa-clock text-amber-500/70"></i>
+            4 min read
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400 flex items-center gap-1.5">
+            <i class="fa-solid fa-feather-pointed text-amber-500/70"></i>
+            608 words
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400">Copyright &copy; 2026 Trevor Swistchew</span>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <div class="space-y-3">
+          <h1 class="font-cinzel text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            How Scotland Was Conned into the British State
+          </h1>
+          <p class="font-serif text-lg sm:text-xl text-stone-300 leading-relaxed font-light italic">
+            An Uncompromising Historical Exposé of 1707 and the Anatomy of an Ambush
+          </p>
+        </div>
+
+        <!-- Author Byline -->
+        <div class="flex items-center justify-center sm:justify-start gap-3 pt-2">
+          <div class="w-10 h-10 rounded-full border border-amber-500/40 bg-peat-900 flex items-center justify-center text-amber-400 font-cinzel font-bold text-sm shadow-md">
+            TS
+          </div>
+          <div class="text-left">
+            <div class="font-cinzel font-bold text-white text-sm tracking-wider">Trevor Swistchew</div>
+            <div class="text-xs text-stone-400 font-mono">Essayist, Philosopher &amp; Historian &bull; Western Washington / Scotland</div>
+          </div>
+        </div>
+
+        <!-- Hero Fine-Art Banner Image -->
+        <figure class="pt-4 space-y-2">
+          <div class="aspect-video w-full rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl relative bg-peat-950">
+            <img src="../../assets/images/scotland-conned-banner.jpg" alt="Old Parliament Hall in Edinburgh by candlelight, cloaked figures signing treaties with gold coins" class="w-full h-full object-cover" loading="eager">
+          </div>
+          <figcaption class="text-center text-xs text-stone-400 font-serif italic pt-1">
+            The 1707 Act of Union: passed in secret through bribery and English military intimidation.
+          </figcaption>
+        </figure>
+
+        <!-- Epigraph -->
+        <blockquote class="p-4 sm:p-5 rounded-xl bg-peat-900/80 border-l-4 border-amber-500 text-stone-300 font-serif italic text-sm sm:text-base leading-relaxed">
+          “The British Empire did not rise through benevolence, civilisation, or moral superiority. It rose through coercion, extraction, and organised state violence... Empire enriched the few and impoverished the many.” — Trevor Swistchew
+        </blockquote>
+
+      </header>
+
+      
+    <!-- INTERACTIVE CONTEXTUAL DOSSIER -->
+    <section class="my-12 p-6 rounded-2xl bg-stone-900/90 border border-amber-500/30 shadow-2xl backdrop-blur-sm" aria-labelledby="dossier-heading-how-scotland-was-conned-into-the-british-state">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-white/10">
+        <div class="flex items-center gap-2.5">
+          <span class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-sm">
+            <i class="fa-solid fa-scroll"></i>
+          </span>
+          <div>
+            <h3 id="dossier-heading-how-scotland-was-conned-into-the-british-state" class="font-cinzel font-bold text-base sm:text-lg text-amber-300">
+              The 1707 Ambush &amp; Covert State Coercion Dossier
+            </h3>
+            <span class="text-[11px] font-mono text-stone-400">Archival Research &amp; Thematic Analysis</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+          
+        <button onclick="switchTab('how-scotland-was-conned-into-the-british-state', 'alien_act')" id="btn-how-scotland-was-conned-into-the-british-state-alien_act" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-amber-500 bg-amber-500/10 text-amber-400 font-bold">
+          <span>Economic Blackmail</span>
+          <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">The Alien Act 1705</span>
+        </button>
+        
+        <button onclick="switchTab('how-scotland-was-conned-into-the-british-state', 'rogues')" id="btn-how-scotland-was-conned-into-the-british-state-rogues" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+          <span>The Parcel of Rogues</span>
+          <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Secret Payouts</span>
+        </button>
+        
+        <button onclick="switchTab('how-scotland-was-conned-into-the-british-state', 'surveillance')" id="btn-how-scotland-was-conned-into-the-british-state-surveillance" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+          <span>MI5 Surveillance</span>
+          <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Modern Suppression</span>
+        </button>
+        
+        </div>
+      </div>
+      <div class="min-h-[140px]">
+        
+        <div id="panel-how-scotland-was-conned-into-the-british-state-alien_act" class="dossier-tab-panel block space-y-3">
+          <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">The Trade Embargo Ultimatum</h4><p class="text-xs text-stone-300 leading-relaxed">Following the collapse of the Darien scheme (sabotaged by English royal proclamations), Westminster passed the Alien Act of 1705, threatening to treat Scots as aliens and ban Scottish exports of linen, cattle, and coal unless union commissioners were appointed.</p>
+        </div>
+        
+        <div id="panel-how-scotland-was-conned-into-the-british-state-rogues" class="dossier-tab-panel hidden space-y-3">
+          <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">The Equivalent: £20,540 in Secret Gold</h4><p class="text-xs text-stone-300 leading-relaxed mb-2">Robert Burns famously wrote: <em>"Bought and sold for English gold / Such a parcel of rogues in a nation."</em></p><p class="text-xs text-stone-400 font-mono">The Earl of Glasgow secretly distributed £20,540 to Scottish aristocrats (Queensberry received £12,325) while English troops massed at the border to prevent riots in Edinburgh.</p>
+        </div>
+        
+        <div id="panel-how-scotland-was-conned-into-the-british-state-surveillance" class="dossier-tab-panel hidden space-y-3">
+          <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">The Security State and Scottish Dissent</h4><p class="text-xs text-stone-300 leading-relaxed">Official historical disclosures confirm MI5 maintained extensive dossiers on Scottish cultural and political activists, monitoring democratic movements and suppressing economic truths (such as the suppressed 1974 McCrone Report on North Sea Oil).</p>
+        </div>
+        
+      </div>
+    </section>
+    
+
+      <!-- ESSAY BODY TEXT -->
+      <div id="essay-article" class="prose prose-invert prose-stone max-w-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg">
+        
+            <p class="first-letter:font-cinzel first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:text-amber-500 first-letter:leading-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              The British Empire did not rise through benevolence, civilisation, or moral superiority. It rose through coercion, extraction, and organised state violence deployed across more than sixty territories. Its administrators, soldiers, and commercial agents enforced rule through imprisonment, flogging, forced labour, mass displacement, and in several documented cases state‑sanctioned killing.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Scotland did not stand outside this system. It was not a sovereign partner. It was reshaped, and forced into the machinery of a state whose primary purpose was war making and resource extraction. The Union of 1707 dissolved Scotland’s Parliament, stripped its fiscal autonomy, and placed its military command under London. Scotland became a province of a state built for imperial expansion — imperial expansion, not moral fairness.
+            </p>
+            
+
+            <div id="sec-1" class="pt-8 mt-10 border-t border-stone-800/60">
+              <div class="flex items-center gap-2 mb-3 text-amber-400 font-cinzel text-xs uppercase tracking-widest">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                <span>Section 01</span>
+              </div>
+              <h3 class="font-cinzel text-xl sm:text-2xl font-bold text-amber-300 mb-6">
+                The Empire’s Violence: Historical Facts
+              </h3>
+            </div>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              India: The British state presided over famines that killed millions. These were not natural disasters — they were the result of policies prioritising grain export, taxation, and market discipline over human survival. The Bengal famine of 1943 alone killed between two and three million people. Colonial police and military forces used lethal force to suppress protest, including the 1919 Jallianwala Bagh massacre, where troops fired on unarmed civilians.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Kenya: During the Mau Mau uprising, the British government operated detention camps where torture including beatings, sexual assault, and forced labour was documented in official files. The UK government eventually paid compensation to survivors after court cases exposed the brutality.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Ireland: The Empire’s oldest colony endured centuries of military occupation, land seizure, and violent suppression. The Great Famine was exacerbated by policies that continued food export while the population starved. The Black and Tans campaign in 1920–21 involved arson, beatings, and killings.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Caribbean &amp; Atlantic slavery: The British state legally sanctioned the enslavement of millions of Africans. Enslaved people were subjected to forced labour, corporal punishment, family separation, and death under conditions of extreme exploitation. The compensation paid in 1833 went not to the enslaved but to slave‑owners including Scottish families and institutions. They are documented in parliamentary papers, court records, and official archives.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Scotland’s Position: Subordination, Surveillance, and Reshaping
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Scotland was not treated as an equal partner. It was restructured to serve the needs of a fiscal‑military state headquartered in London.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              After 1707, Scotland’s Parliament was abolished, taxation was placed under Westminster control, and military command was subordinated to London. Autonomy was constrained by imperial priorities. Scotland’s political dissent was monitored, infiltrated, and suppressed. It is documented in MI5 files, Cabinet papers, and declassified intelligence records.
+            </p>
+            
+
+            <div id="sec-2" class="pt-8 mt-10 border-t border-stone-800/60">
+              <div class="flex items-center gap-2 mb-3 text-amber-400 font-cinzel text-xs uppercase tracking-widest">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                <span>Section 02</span>
+              </div>
+              <h3 class="font-cinzel text-xl sm:text-2xl font-bold text-amber-300 mb-6">
+                Surveillance of Scottish Nationalists
+              </h3>
+            </div>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              MI5 kept files on Scottish nationalist activists:
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Wendy Wood: Founder of the Scottish National Congress. MI5 monitored her activities, correspondence, and public campaigns. She was considered a “subversive nationalist agitator” in internal reports.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              SNP activists (20th century): MI5 monitored nationalist organisations, especially during periods of heightened constitutional tension. Surveillance included informants, intercepted communications, and political profiling. Former intelligence officials have confirmed that SNP leadership was monitored as part of routine constitutional security assessments.
+            </p>
+            
+
+            <div id="sec-3" class="pt-8 mt-10 border-t border-stone-800/60">
+              <div class="flex items-center gap-2 mb-3 text-amber-400 font-cinzel text-xs uppercase tracking-widest">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                <span>Section 03</span>
+              </div>
+              <h3 class="font-cinzel text-xl sm:text-2xl font-bold text-amber-300 mb-6">
+                Political Suppression and Covert Pressure
+              </h3>
+            </div>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              Westminster has historically used administrative obstruction, media influence, intelligence monitoring, legal pressure, and economic leverage to contain Scottish constitutional movements. It is documented in academic studies of British statecraft and declassified intelligence practices.
+            </p>
+            
+
+            <div id="sec-4" class="pt-8 mt-10 border-t border-stone-800/60">
+              <div class="flex items-center gap-2 mb-3 text-amber-400 font-cinzel text-xs uppercase tracking-widest">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                <span>Section 04</span>
+              </div>
+              <h3 class="font-cinzel text-xl sm:text-2xl font-bold text-amber-300 mb-6">
+                The Empire’s Wealth and Britain’s Poverty
+              </h3>
+            </div>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              The Empire’s wealth did not flow to ordinary people. It flowed to landowners, industrialists, merchants, investors, and political elites.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              The working classes of Scotland, England, Wales, and Ireland lived in poverty while the Empire extracted wealth from a quarter of the world. Empire enriched the few and impoverished the many abroad and at home.
+            </p>
+            
+
+            <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+              How many in the country know the real history of Empire?
+            </p>
+            
+      </div>
+
+      
+    <footer class="mt-20 pt-10 border-t border-stone-800 text-xs text-stone-400 font-sans" aria-labelledby="notes-heading-how-scotland-was-conned-into-the-british-state">
+      <div class="flex items-center gap-2 mb-6 text-stone-300">
+        <i class="fa-solid fa-book-bookmark text-amber-500 text-sm"></i>
+        <h3 id="notes-heading-how-scotland-was-conned-into-the-british-state" class="font-cinzel font-bold text-sm tracking-wider uppercase">
+          Scholarly Annotations &amp; Archival Context
+        </h3>
+      </div>
+      <ol class="space-y-4 list-none pl-0">
+        
+        <li class="pl-4 border-l-2 border-stone-800">
+          <span class="font-mono text-amber-500 font-bold mr-1">[1]</span>
+          <span>P. H. Scott, <em>1707: The Union of Scotland and England</em> (Chambers, 1979).</span>
+        </li>
+        
+        <li class="pl-4 border-l-2 border-stone-800">
+          <span class="font-mono text-amber-500 font-bold mr-1">[2]</span>
+          <span>The McCrone Report (1974), classified secret by the UK Cabinet Office, revealing that an independent Scotland would enjoy an embarrassingly large currency surplus.</span>
+        </li>
+        
+      </ol>
+      
+      <!-- Creative Fellowship CTA -->
+      <div class="mt-12 p-6 rounded-2xl bg-gradient-to-br from-peat-900 to-peat-950 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="space-y-1 text-center sm:text-left">
+          <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold">Creative Fellowship</span>
+          <h4 class="font-cinzel text-lg font-bold text-white">The Shady River Bard Creative Ecosystem</h4>
+          <p class="text-xs text-stone-300 max-w-xl">
+            Trevor Swistchew's essays are published in fellowship with The Shady River Bard—exploring a 26-album concept discography, working permaculture, and reflections on human purpose.
+          </p>
+        </div>
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-peat-950 font-cinzel font-bold text-xs uppercase tracking-wider transition-colors shrink-0 shadow-lg flex items-center gap-1.5">
+          <span>Explore Shady River</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+        </a>
+      </div>
+
+      <!-- Copyright -->
+      <div class="mt-10 pt-6 border-t border-stone-800/60 text-center text-xs text-stone-400 font-sans space-y-2">
+        <p>Essay &copy; 2026 Trevor Swistchew. All rights reserved.</p>
+        <p class="text-stone-500">Published for the Trevor Swistchew Compendium &amp; Literary Salon Archive.</p>
+        <p class="pt-2">
+          <a href="../../index.html" class="text-stone-400 hover:text-amber-400 transition-colors mr-3">&larr; Return to Compendium Archive</a>
+          <a href="https://tpatterson34.github.io/shady-river-portal/friends-of-the-bard/" class="text-amber-400 hover:text-amber-300 transition-colors font-medium">Friends of the Bard Collective ↗</a>
+        </p>
+      </div>
+    </footer>
+    
+
+    </article>
+  </main>
+
+  <!-- Client-Side Tab Switching Script -->
+  <script>
+    function switchTab(essayId, tabId) {
+      const container = document.querySelector('[aria-labelledby="dossier-heading-' + essayId + '"]');
+      if (!container) return;
+      
+      const buttons = container.querySelectorAll('.dossier-tab-btn');
+      const panels = container.querySelectorAll('.dossier-tab-panel');
+      
+      buttons.forEach(btn => {
+        btn.classList.remove('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+        btn.classList.add('border-transparent', 'text-stone-400');
+      });
+      
+      panels.forEach(p => p.classList.add('hidden'));
+      
+      const targetBtn = document.getElementById('btn-' + essayId + '-' + tabId);
+      const targetPanel = document.getElementById('panel-' + essayId + '-' + tabId);
+      
+      if (targetBtn) {
+        targetBtn.classList.remove('border-transparent', 'text-stone-400');
+        targetBtn.classList.add('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+      }
+      if (targetPanel) {
+        targetPanel.classList.remove('hidden');
+      }
+    }
+  </script>
+  <script src="../../assets/js/reading-experience.js"></script>
+</body>
+</html>
