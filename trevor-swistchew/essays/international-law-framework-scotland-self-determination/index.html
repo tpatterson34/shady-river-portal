@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The International-Law Framework Potentially Applicable to Scotland’s Claim to Self-Determination — Trevor Swistchew (2026)</title>
+  
+  <meta name="description" content="A comprehensive legal memorandum by Trevor Swistchew examining international law principles, treaty frameworks, and ICJ jurisprudence applicable to Scotland's constitutional position following [2022] UKSC 31.">
+  <meta name="author" content="Trevor Swistchew">
+  <link rel="canonical" href="https://tpatterson34.github.io/shady-river-portal/trevor-swistchew/essays/international-law-framework-scotland-self-determination/">
+
+  <!-- Tailwind CSS CDN with Typography Plugin -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography,aspect-ratio"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              50: '#f6f5f3',
+              100: '#e7e4df',
+              200: '#d1cbc2',
+              300: '#b5aca0',
+              400: '#9b8d7f',
+              500: '#847466',
+              600: '#6b5c50',
+              700: '#55493f',
+              800: '#463c35',
+              900: '#3c342e',
+              950: '#201b17',
+            },
+            brass: {
+              400: '#d4af37',
+              500: '#c59b27',
+              600: '#aa821c',
+            },
+            soil: {
+              850: '#26201b',
+              900: '#1c1815',
+            }
+          },
+          fontFamily: {
+            serif: ['Source Serif 4', 'Georgia', 'serif'],
+            display: ['Cinzel', 'Playfair Display', 'serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Web Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/a11y.css">
+
+  <!-- Scottish Literary Salon Theme Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950">
+
+  <!-- 1. WCAG Skip Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Essay Content</a>
+
+  <!-- 2. Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- 3. Top Sticky Reading Utility & Salon Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      
+      <!-- Salon Brand / Return Link -->
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2.5 text-stone-300 hover:text-amber-400 group transition-colors">
+          <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
+          <div class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:block">
+            Trevor Swistchew <span class="text-stone-500 font-sans font-normal mx-1">|</span> <span class="text-stone-400">Compendium Archive</span>
+          </div>
+        </a>
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="hidden md:flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 text-[11px] font-mono transition-colors" title="Visit The Shady River Bard Portal">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Reading Accommodations Controls -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Font Size Scaler -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs font-mono text-stone-300" role="group" aria-label="Font Size Scaling">
+          <button id="font-size-dec" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Decrease font size" aria-label="Decrease font size">A-</button>
+          <button id="font-size-reset" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors text-[10px] text-stone-400" title="Reset font size" aria-label="Reset font size">A</button>
+          <button id="font-size-inc" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Increase font size" aria-label="Increase font size">A+</button>
+        </div>
+
+        <!-- Tri-State Theme Switcher -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs" role="group" aria-label="Reading Theme Selection">
+          <button data-theme="dark" class="theme-toggle-btn px-2 py-1 rounded transition-colors active-theme" title="Dark Peat Theme" aria-label="Dark Peat Theme" aria-pressed="true">
+            <i class="fa-solid fa-moon text-amber-400"></i>
+          </button>
+          <button data-theme="sepia" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Aged Parchment Sepia Theme" aria-label="Aged Parchment Sepia Theme" aria-pressed="false">
+            <i class="fa-solid fa-book-open"></i>
+          </button>
+          <button data-theme="light" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Edinburgh Stone Light Theme" aria-label="Edinburgh Stone Light Theme" aria-pressed="false">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- 4. Main Essay Content Container -->
+  <main id="main-content" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+    <article class="space-y-10">
+      
+      <!-- HERO & ESSAY HEADER -->
+      <header class="space-y-6 text-center sm:text-left border-b border-stone-800 pb-10">
+        
+        <!-- Category & Reading Time Badge -->
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 text-xs font-mono">
+          <span class="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-semibold tracking-wider uppercase">
+            Constitutional Law &amp; International Jurisprudence
+          </span>
+          <span class="text-stone-500">•</span>
+          <span class="text-stone-400">6 min read</span>
+          <span class="text-stone-500">•</span>
+          <span class="text-stone-400">920 words</span>
+          <span class="text-stone-500">•</span>
+          <span class="text-amber-500 font-bold">Compendium #20</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-stone-100 leading-tight">
+          The International-Law Framework Potentially Applicable to Scotland’s Claim to Self-Determination
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="font-serif italic text-lg sm:text-xl text-stone-300 max-w-3xl leading-relaxed">
+          A Jurisprudential Memorandum on Treaty Sources, the [2022] UKSC 31 Domestic Impasse, Montevideo Statehood Criteria, and the Advisory Jurisdiction of the International Court of Justice.
+        </p>
+
+        <!-- Author & Metadata Block -->
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 pt-2 text-xs font-mono text-stone-400 border-t border-stone-800/60">
+          <div class="flex items-center gap-2">
+            <span class="text-amber-500"><i class="fa-solid fa-scale-balanced"></i></span>
+            <span class="text-stone-200 font-medium">Trevor Swistchew</span>
+          </div>
+          <span class="text-stone-600">•</span>
+          <div>
+            <span>Copyright &copy; 2026</span>
+          </div>
+          <span class="text-stone-600">•</span>
+          <div class="text-amber-400/90">
+            <span>The Scottish Literary Salon Archive</span>
+          </div>
+        </div>
+
+        <!-- Fine-Art Hero Banner -->
+        <figure class="mt-8 rounded-2xl overflow-hidden border border-stone-800 shadow-2xl bg-stone-950">
+          <div class="aspect-w-16 aspect-h-9 relative overflow-hidden">
+            <img 
+              src="../../assets/images/scotland-self-determination-banner.jpg" 
+              alt="International Court of Justice Great Hall and Scottish Saltire" 
+              class="w-full h-full object-cover"
+              loading="eager"
+            />
+          </div>
+          <figcaption class="text-center text-xs text-stone-400 font-serif italic pt-2 pb-1 bg-stone-900/60 border-t border-stone-800/80">
+            The Peace Palace at The Hague: where the international treaty order meets Scotland’s constitutional status under the UN Charter and Article 1 Covenants.
+          </figcaption>
+        </figure>
+
+        <!-- Epigraph / Memorandum Note -->
+        <blockquote class="p-4 sm:p-5 rounded-xl bg-peat-900/80 border-l-4 border-amber-500 text-stone-300 font-serif italic text-sm sm:text-base leading-relaxed">
+          “This memorandum sets out the international-law principles relevant to Scotland’s constitutional position, with reference to recognised sources, judicial decisions, and established doctrine. It does not assert that Scotland possesses a right to independence. It identifies the legal materials that could be relied upon by counsel seeking to frame Scotland’s situation within existing international-law categories.” — Trevor Swistchew
+        </blockquote>
+
+      </header>
+
+      <!-- INTERACTIVE CONTEXTUAL DOSSIER -->
+      <section class="my-12 p-6 rounded-2xl bg-stone-900/90 border border-amber-500/30 shadow-2xl backdrop-blur-sm" aria-labelledby="dossier-heading-selfdet">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-white/10">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-sm">
+              <i class="fa-solid fa-gavel"></i>
+            </span>
+            <div>
+              <h3 id="dossier-heading-selfdet" class="font-cinzel font-bold text-base sm:text-lg text-amber-300">
+                The Sovereign Jurisprudence Matrix
+              </h3>
+              <span class="text-[11px] font-mono text-stone-400">Treaty Frameworks, UKSC 31 Domestic Impasse &amp; ICJ Advisory Pathways</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <button onclick="switchTab('selfdet', 'treaties')" id="btn-selfdet-treaties" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-amber-500 bg-amber-500/10 text-amber-400 font-bold">
+              <span>Treaty Foundations</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">UN Charter / ICCPR</span>
+            </button>
+            <button onclick="switchTab('selfdet', 'standing')" id="btn-selfdet-standing" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+              <span>Domestic vs International</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">[2022] UKSC 31</span>
+            </button>
+            <button onclick="switchTab('selfdet', 'icjroute')" id="btn-selfdet-icjroute" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+              <span>ICJ Article 65 Route</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Advisory Opinions</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="min-h-[140px]">
+          <!-- Panel 1: Treaty Foundations -->
+          <div id="panel-selfdet-treaties" class="dossier-tab-panel block space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">The International Self-Determination Doctrine &amp; ICJ Precedents</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-stone-300 mb-3">
+              <div class="p-3 rounded-lg bg-peat-900 border border-white/5">
+                <strong class="text-amber-400 block font-cinzel mb-1">Common Article 1 (ICCPR &amp; ICESCR)</strong>
+                <em>“All peoples have the right of self-determination. By virtue of that right they freely determine their political status and freely pursue their economic, social and cultural development.”</em> Reaffirmed as an <em>erga omnes</em> principle binding upon the UK.
+              </div>
+              <div class="p-3 rounded-lg bg-peat-900 border border-white/5">
+                <strong class="text-amber-400 block font-cinzel mb-1">ICJ Advisory Jurisprudence</strong>
+                Applied in landmark rulings including <em>Namibia (1971)</em>, <em>Western Sahara (1975)</em>, <em>East Timor (1995)</em> (confirming it as a continuing right), and <em>Chagos Archipelago (2019)</em>.
+              </div>
+            </div>
+            <div class="p-3 rounded-lg bg-peat-900 border border-amber-500/20 text-xs font-mono text-amber-400">
+              “The clearest application concerns colonial territories. For claims arising within democratic parent states, international law recognises self-determination as a continuing right without an automatic mechanism for non-colonial secession.”
+            </div>
+          </div>
+
+          <!-- Panel 2: Domestic vs International -->
+          <div id="panel-selfdet-standing" class="dossier-tab-panel hidden space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">The UKSC 31 Constitutional Barrier &amp; The Montevideo Alignment</h4>
+            <ul class="text-xs text-stone-300 space-y-2 list-disc pl-4">
+              <li><strong>[2022] UKSC 31 (Lord Advocate’s Reference):</strong> The UK Supreme Court authoritatively ruled that Holyrood lacks legislative competence to hold a consultative independence referendum, establishing that domestic legal routes for unilateral self-determination are blocked.</li>
+              <li><strong>Internal vs. External Self-Determination:</strong> International jurisprudence (e.g., Canadian Supreme Court in <em>Reference re Secession of Quebec</em>) distinguishes internal autonomy from external statehood. When internal self-determination is structurally blocked, counsel may argue international scrutiny is engaged.</li>
+              <li><strong>Montevideo Convention (1933):</strong> Scotland satisfies all empirical objective criteria for statehood: defined territory, permanent population, effective government, and capacity to enter international relations.</li>
+              <li><strong>State Succession (Crawford &amp; Boyle 2013):</strong> UK Government’s own formal international law advice conceded that Scottish independence is legally possible, with rUK acting as the continuator state and Scotland as a new state.</li>
+            </ul>
+          </div>
+
+          <!-- Panel 3: ICJ Article 65 Route -->
+          <div id="panel-selfdet-icjroute" class="dossier-tab-panel hidden space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">Procedural Pathways: The United Nations General Assembly &amp; ICJ Advisory Opinions</h4>
+            <p class="text-xs text-stone-300 leading-relaxed mb-3">
+              Because Scotland is not an independent state, it cannot bring a contentious case against the UK under Article 36 of the ICJ Statute without UK consent. The viable international legal avenue requires invoking <strong>Article 65 of the ICJ Statute</strong> via a UN organ.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-stone-300">
+              <div class="p-3 rounded-lg bg-peat-900 border border-white/5">
+                <strong class="text-amber-400 block font-cinzel mb-1">UN General Assembly Majority</strong>
+                Persuading friendly member states in the UNGA to submit a formal resolution asking: <em>“Does the UK's domestic constitutional prohibition on testing popular will violate its Article 1 ICCPR obligations?”</em>
+              </div>
+              <div class="p-3 rounded-lg bg-peat-900 border border-white/5">
+                <strong class="text-amber-400 block font-cinzel mb-1">Precedent: Chagos (2019)</strong>
+                Mauritius successfully bypassed the UK's veto by obtaining a UNGA resolution referring the legal status of the Chagos Archipelago to the ICJ, resulting in an authoritative advisory opinion against the UK.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ESSAY / MEMORANDUM TEXT -->
+      <section id="essay-body" class="prose prose-invert prose-stone max-w-none font-serif text-base sm:text-lg leading-relaxed space-y-8">
+
+        <!-- SECTION 1 -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-stone-900/40 border border-stone-800/80 space-y-4">
+          <div class="flex items-center gap-2 text-xs font-mono text-amber-500 font-bold uppercase tracking-widest pb-2 border-b border-stone-800">
+            <i class="fa-solid fa-landmark text-[10px]"></i>
+            <span>1. Scotland’s Constitutional Position in Domestic Law</span>
+          </div>
+
+          <p class="drop-cap text-stone-200 leading-relaxed">
+            Scotland is a constituent nation of the United Kingdom. Its internal governance is defined by the Scotland Act 1998. The UK Supreme Court has held that the Scottish Parliament lacks competence to legislate for a referendum on independence, as such legislation “relates to” the Union and the UK Parliament, both reserved matters (<em>Reference by the Lord Advocate [2022] UKSC 31</em>). This judgment is authoritative and establishes that Scotland cannot unilaterally initiate a domestic process to test the will of its population regarding independence.
+          </p>
+
+          <p class="text-stone-300 leading-relaxed pl-4 border-l-2 border-amber-500/40">
+            This is relevant because international law examines whether internal self‑determination is meaningfully available within the parent state. The Supreme Court’s judgment is a primary source demonstrating the limits of Scotland’s internal constitutional autonomy.
+          </p>
+        </div>
+
+        <!-- SECTION 2 -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-stone-900/40 border border-stone-800/80 space-y-4">
+          <div class="flex items-center gap-2 text-xs font-mono text-amber-500 font-bold uppercase tracking-widest pb-2 border-b border-stone-800">
+            <i class="fa-solid fa-globe text-[10px]"></i>
+            <span>2. The International‑Law Doctrine of Self‑Determination</span>
+          </div>
+
+          <p class="text-stone-200 leading-relaxed">
+            The right of self‑determination is recognised in Article 1 of the UN Charter, Article 1 of the International Covenant on Civil and Political Rights (ICCPR), and Article 1 of the International Covenant on Economic, Social and Cultural Rights (ICESCR). The doctrine is further elaborated in UN General Assembly Resolutions 1514 (XV) and 1541 (XV), and has been applied by the International Court of Justice (ICJ) in advisory opinions including <em>Namibia</em> (1971), <em>Western Sahara</em> (1975), and <em>Chagos</em> (2019).
+          </p>
+
+          <p class="text-stone-300 leading-relaxed">
+            The clearest application of external self‑determination concerns colonial and non‑self‑governing territories. Scotland is not listed by the UN as a Non‑Self‑Governing Territory. Therefore, Scotland does not fall within the automatic decolonisation framework.
+          </p>
+
+          <p class="text-stone-300 leading-relaxed">
+            However, contemporary scholarship (e.g., Skoutaris, <em>Secession and the Right to Self‑Determination in International Law</em>, 2021) notes that international law provides limited guidance for claims arising within democratic states that are neither colonial nor occupied. The ICJ has acknowledged that self‑determination is a “continuing right” (<em>East Timor</em>, 1995), but has not defined a mechanism for non‑colonial secession.
+          </p>
+        </div>
+
+        <!-- SECTION 3 -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-stone-900/40 border border-stone-800/80 space-y-4">
+          <div class="flex items-center gap-2 text-xs font-mono text-amber-500 font-bold uppercase tracking-widest pb-2 border-b border-stone-800">
+            <i class="fa-solid fa-arrows-split-up-and-left text-[10px]"></i>
+            <span>3. The Relevance of “Internal” vs “External” Self‑Determination</span>
+          </div>
+
+          <p class="text-stone-200 leading-relaxed">
+            International law distinguishes between internal self‑determination (meaningful political participation and autonomy within the parent state) and external self‑determination (statehood). The Supreme Court’s 2022 judgment is relevant because it demonstrates that Scotland cannot unilaterally initiate a process to determine its constitutional future. Counsel may argue that this constitutes a limitation on internal self‑determination. Whether such limitation is sufficient to trigger external self‑determination is not settled in international law.
+          </p>
+        </div>
+
+        <!-- SECTION 4 -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-stone-900/40 border border-stone-800/80 space-y-4">
+          <div class="flex items-center gap-2 text-xs font-mono text-amber-500 font-bold uppercase tracking-widest pb-2 border-b border-stone-800">
+            <i class="fa-solid fa-building-columns text-[10px]"></i>
+            <span>4. The Role of the International Court of Justice</span>
+          </div>
+
+          <p class="text-stone-200 leading-relaxed">
+            The ICJ does not grant independence. It adjudicates disputes between states and provides advisory opinions to UN organs. For Scotland to appear before the ICJ, one of two routes would be required:
+          </p>
+
+          <ul class="text-stone-300 space-y-2 list-disc pl-5">
+            <li>A dispute between Scotland (or an entity purporting to represent Scotland) and the United Kingdom, accepted by both parties under Article 36 of the ICJ Statute.</li>
+            <li>A request for an advisory opinion from the UN General Assembly or Security Council under Article 65 of the ICJ Statute.</li>
+          </ul>
+
+          <p class="text-stone-300 leading-relaxed pl-4 border-l-2 border-amber-500/40">
+            The second route is more realistic. Advisory opinions have been used to clarify the legal status of territories (<em>Namibia</em>, <em>Western Sahara</em>, <em>Chagos</em>). To obtain such an opinion, Scotland would need to persuade a UN organ that a legal question exists concerning the UK’s compliance with its international obligations regarding self‑determination.
+          </p>
+        </div>
+
+        <!-- SECTION 5 -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-stone-900/40 border border-stone-800/80 space-y-4">
+          <div class="flex items-center gap-2 text-xs font-mono text-amber-500 font-bold uppercase tracking-widest pb-2 border-b border-stone-800">
+            <i class="fa-solid fa-file-contract text-[10px]"></i>
+            <span>5. State Succession and Scotland</span>
+          </div>
+
+          <p class="text-stone-200 leading-relaxed">
+            The UK Government has previously commissioned international‑law advice on Scottish independence (Crawford &amp; Boyle, <em>Referendum on the Independence of Scotland: International Law Aspects</em>, 2013). This opinion states that, in the event of independence, the remainder of the UK would likely be treated as the continuator state, and Scotland as a new state. This is consistent with state practice.
+          </p>
+
+          <p class="text-stone-300 leading-relaxed">
+            This opinion does not address the legality of Scotland’s path to independence. It is relevant because it demonstrates that the UK accepts that Scottish independence is legally possible and has analysed its consequences under international law.
+          </p>
+        </div>
+
+        <!-- SECTION 6 -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-stone-900/40 border border-stone-800/80 space-y-4">
+          <div class="flex items-center gap-2 text-xs font-mono text-amber-500 font-bold uppercase tracking-widest pb-2 border-b border-stone-800">
+            <i class="fa-solid fa-scale-unbalanced-flip text-[10px]"></i>
+            <span>6. Potential International‑Law Arguments Available to Scotland</span>
+          </div>
+
+          <p class="text-stone-200 leading-relaxed">
+            Counsel seeking to frame Scotland’s situation within international law would rely on the following propositions, each grounded in recognised doctrine:
+          </p>
+
+          <div class="space-y-3 pt-2">
+            <div class="p-3 rounded-lg bg-peat-900 border border-stone-800 text-stone-300 text-sm">
+              <strong class="text-amber-400 font-mono block mb-1">Proposition I &bull; Montevideo Statehood Criteria</strong>
+              Scotland possesses a distinct national identity, a defined territory, a permanent population, and institutions of self‑government. These characteristics align with the criteria for statehood in the Montevideo Convention (1933), although Scotland is not currently recognised as a state.
+            </div>
+
+            <div class="p-3 rounded-lg bg-peat-900 border border-stone-800 text-stone-300 text-sm">
+              <strong class="text-amber-400 font-mono block mb-1">Proposition II &bull; Domestic Internal Obstruction</strong>
+              The UK Supreme Court’s 2022 judgment demonstrates that Scotland cannot unilaterally initiate a domestic process to determine its constitutional future. This may be presented as evidence that internal self‑determination is constrained.
+            </div>
+
+            <div class="p-3 rounded-lg bg-peat-900 border border-stone-800 text-stone-300 text-sm">
+              <strong class="text-amber-400 font-mono block mb-1">Proposition III &bull; The “All Peoples” Right</strong>
+              International law recognises that self‑determination is a right of “all peoples” (ICCPR, ICESCR). The definition of “peoples” is not fixed, but Scotland’s status as a historic nation with distinct institutions strengthens its claim.
+            </div>
+
+            <div class="p-3 rounded-lg bg-peat-900 border border-stone-800 text-stone-300 text-sm">
+              <strong class="text-amber-400 font-mono block mb-1">Proposition IV &bull; The External Self-Determination Threshold</strong>
+              In situations where internal self‑determination is obstructed, some scholars argue that external self‑determination may become relevant. This is not settled law. It is an area of legal argument, not established doctrine.
+            </div>
+
+            <div class="p-3 rounded-lg bg-peat-900 border border-stone-800 text-stone-300 text-sm">
+              <strong class="text-amber-400 font-mono block mb-1">Proposition V &bull; The UN Advisory Question</strong>
+              A request for an ICJ advisory opinion could be framed around whether the UK’s constitutional arrangements comply with its obligations under Article 1 of the ICCPR and ICESCR. This would require support from a UN organ.
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 7 & 8 -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-stone-900/40 border border-stone-800/80 space-y-4">
+          <div class="flex items-center gap-2 text-xs font-mono text-amber-500 font-bold uppercase tracking-widest pb-2 border-b border-stone-800">
+            <i class="fa-solid fa-triangle-exclamation text-[10px]"></i>
+            <span>7. Limitations and Risks &bull; 8. Conclusion</span>
+          </div>
+
+          <h3 class="font-cinzel text-lg font-bold text-amber-300">Limitations and Risks</h3>
+          <p class="text-stone-300 leading-relaxed">
+            International law does not provide a clear, automatic path for non‑colonial secession. The ICJ has never recognised a right of unilateral secession for a region within a democratic state. Any argument advanced by Scotland would be novel and would rely on extending existing doctrine. Counsel must acknowledge this.
+          </p>
+
+          <h3 class="font-cinzel text-lg font-bold text-amber-300 pt-3">Conclusion</h3>
+          <p class="text-stone-200 leading-relaxed font-serif">
+            The international‑law route for Scotland is not a guaranteed path to independence. It is a legal strategy grounded in recognised doctrine, judicial decisions, and state practice. It relies on demonstrating that Scotland’s internal self‑determination is constrained and that a legal question exists regarding the UK’s compliance with its international obligations. The ICJ could be engaged only through a UN organ requesting an advisory opinion. This memorandum sets out the factual and doctrinal basis for such an argument without asserting outcomes.
+          </p>
+        </div>
+
+      </section>
+
+      <!-- NAVIGATION FOOTER -->
+      <footer class="mt-16 pt-8 border-t border-stone-800 space-y-8">
+        
+        <!-- Sequential Reading Links -->
+        <div class="grid sm:grid-cols-2 gap-4">
+          <a href="../the-plunder-of-our-exchange/index.html" class="p-4 rounded-xl bg-stone-900/60 border border-stone-800 hover:border-amber-500/40 transition-colors group">
+            <span class="text-[10px] font-mono uppercase text-stone-500 group-hover:text-amber-400 block mb-1">&larr; Previous Work (Compendium #19)</span>
+            <span class="font-display font-bold text-sm text-stone-200 group-hover:text-amber-300">The Plunder of Our Exchange</span>
+          </a>
+          <a href="../../poetry/index.html" class="p-4 rounded-xl bg-stone-900/60 border border-stone-800 hover:border-amber-500/40 transition-colors group text-right">
+            <span class="text-[10px] font-mono uppercase text-stone-500 group-hover:text-amber-400 block mb-1">Poetic Works Archive &rarr;</span>
+            <span class="font-display font-bold text-sm text-stone-200 group-hover:text-amber-300">The Poetry Chamber (28 Collected Poems)</span>
+          </a>
+        </div>
+
+        <!-- Creative Fellowship CTA -->
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-peat-900 to-peat-950 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="space-y-1 text-center sm:text-left">
+            <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold">Creative Fellowship</span>
+            <h4 class="font-cinzel text-lg font-bold text-white">The Shady River Bard Creative Ecosystem</h4>
+            <p class="text-xs text-stone-300 max-w-xl">
+              Trevor Swistchew's constitutional audits and philosophical inquiries are published in fellowship with The Shady River Bard—exploring a 26-album concept discography, working permaculture, and reflections on human sovereignty.
+            </p>
+          </div>
+          <a href="https://tpatterson34.github.io/shady-river-portal/" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-peat-950 font-cinzel font-bold text-xs uppercase tracking-wider transition-colors shrink-0 shadow-lg flex items-center gap-1.5">
+            <span>Explore Shady River</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+          </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="pt-6 border-t border-stone-800/60 text-center text-xs text-stone-400 font-sans space-y-2">
+          <p>Memorandum &copy; 2026 Trevor Swistchew. All rights reserved.</p>
+          <p class="text-stone-500">Published for the Trevor Swistchew Compendium &amp; Literary Salon Archive.</p>
+          <p class="pt-2">
+            <a href="../../index.html" class="text-stone-400 hover:text-amber-400 transition-colors mr-3">&larr; Return to Compendium Archive</a>
+            <a href="https://tpatterson34.github.io/shady-river-portal/friends-of-the-bard/" class="text-amber-400 hover:text-amber-300 transition-colors font-medium">Friends of the Bard Collective ↗</a>
+          </p>
+        </div>
+      </footer>
+
+    </article>
+  </main>
+
+  <!-- Client-Side Tab Switching Script -->
+  <script>
+    function switchTab(essayId, tabId) {
+      const container = document.querySelector('[aria-labelledby="dossier-heading-' + essayId + '"]');
+      if (!container) return;
+      
+      const buttons = container.querySelectorAll('.dossier-tab-btn');
+      const panels = container.querySelectorAll('.dossier-tab-panel');
+      
+      buttons.forEach(btn => {
+        btn.classList.remove('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+        btn.classList.add('border-transparent', 'text-stone-400');
+      });
+      
+      panels.forEach(p => p.classList.add('hidden'));
+      
+      const targetBtn = document.getElementById('btn-' + essayId + '-' + tabId);
+      const targetPanel = document.getElementById('panel-' + essayId + '-' + tabId);
+      
+      if (targetBtn) {
+        targetBtn.classList.remove('border-transparent', 'text-stone-400');
+        targetBtn.classList.add('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+      }
+      if (targetPanel) {
+        targetPanel.classList.remove('hidden');
+      }
+    }
+  </script>
+  <script src="../../assets/js/reading-experience.js"></script>
+</body>
+</html>
