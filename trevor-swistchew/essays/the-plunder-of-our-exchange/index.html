@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Plunder of Our Exchange: When Glasgow’s Future Was Sold for a Slip of Paper — Trevor Swistchew (2026)</title>
+  
+  <meta name="description" content="The Plunder of Our Exchange by Trevor Swistchew. How the 1973 absorption of the Glasgow Stock Exchange into the London Stock Exchange stripped Scotland of its financial sovereignty at the exact moment North Sea oil was struck.">
+  <meta name="author" content="Trevor Swistchew">
+  <link rel="canonical" href="https://tpatterson34.github.io/shady-river-portal/trevor-swistchew/essays/the-plunder-of-our-exchange/">
+
+  <!-- Tailwind CSS CDN with Typography Plugin -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography,aspect-ratio"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              50: '#f6f5f3',
+              100: '#e7e4df',
+              200: '#d1cbc2',
+              300: '#b5aca0',
+              400: '#9b8d7f',
+              500: '#847466',
+              600: '#6b5c50',
+              700: '#55493f',
+              800: '#463c35',
+              900: '#3c342e',
+              950: '#201b17',
+            },
+            brass: {
+              400: '#d4af37',
+              500: '#c59b27',
+              600: '#aa821c',
+            },
+            soil: {
+              850: '#26201b',
+              900: '#1c1815',
+            }
+          },
+          fontFamily: {
+            serif: ['Source Serif 4', 'Georgia', 'serif'],
+            display: ['Cinzel', 'Playfair Display', 'serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Web Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/a11y.css">
+
+  <!-- Scottish Literary Salon Theme Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950">
+
+  <!-- 1. WCAG Skip Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Essay Content</a>
+
+  <!-- 2. Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- 3. Top Sticky Reading Utility & Salon Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      
+      <!-- Salon Brand / Return Link -->
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2.5 text-stone-300 hover:text-amber-400 group transition-colors">
+          <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
+          <div class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:block">
+            Trevor Swistchew <span class="text-stone-500 font-sans font-normal mx-1">|</span> <span class="text-stone-400">Compendium Archive</span>
+          </div>
+        </a>
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="hidden md:flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 text-[11px] font-mono transition-colors" title="Visit The Shady River Bard Portal">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Reading Accommodations Controls -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Font Size Scaler -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs font-mono text-stone-300" role="group" aria-label="Font Size Scaling">
+          <button id="font-size-dec" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Decrease font size" aria-label="Decrease font size">A-</button>
+          <button id="font-size-reset" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors text-[10px] text-stone-400" title="Reset font size" aria-label="Reset font size">A</button>
+          <button id="font-size-inc" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Increase font size" aria-label="Increase font size">A+</button>
+        </div>
+
+        <!-- Tri-State Theme Switcher -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs" role="group" aria-label="Reading Theme Selection">
+          <button data-theme="dark" class="theme-toggle-btn px-2 py-1 rounded transition-colors active-theme" title="Dark Peat Theme" aria-label="Dark Peat Theme" aria-pressed="true">
+            <i class="fa-solid fa-moon text-amber-400"></i>
+          </button>
+          <button data-theme="sepia" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Aged Parchment Sepia Theme" aria-label="Aged Parchment Sepia Theme" aria-pressed="false">
+            <i class="fa-solid fa-book-open"></i>
+          </button>
+          <button data-theme="light" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Edinburgh Stone Light Theme" aria-label="Edinburgh Stone Light Theme" aria-pressed="false">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- 4. Main Essay Content Container -->
+  <main id="main-content" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+    <article class="space-y-10">
+      
+      <!-- HERO & ESSAY HEADER -->
+      <header class="space-y-6 text-center sm:text-left border-b border-stone-800 pb-10">
+        
+        <!-- Category & Reading Time Badge -->
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 text-xs font-mono">
+          <span class="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-semibold tracking-wider uppercase">
+            Scottish Political Economy &amp; Financial Sovereignty
+          </span>
+          <span class="text-stone-500">•</span>
+          <span class="text-stone-400">4 min read</span>
+          <span class="text-stone-500">•</span>
+          <span class="text-stone-400">650 words</span>
+          <span class="text-stone-500">•</span>
+          <span class="text-amber-500 font-bold">Compendium #19</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-stone-100 leading-tight">
+          The Plunder of Our Exchange: When Glasgow’s Future Was Sold for a Slip of Paper
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="font-serif italic text-lg sm:text-xl text-stone-300 max-w-3xl leading-relaxed">
+          How the quiet 1973 bureaucratic absorption of the Glasgow Stock Exchange severed Scotland’s financial autonomy at the precise hour North Sea oil was struck.
+        </p>
+
+        <!-- Author & Metadata Block -->
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 pt-2 text-xs font-mono text-stone-400 border-t border-stone-800/60">
+          <div class="flex items-center gap-2">
+            <span class="text-amber-500"><i class="fa-solid fa-pen-nib"></i></span>
+            <span class="text-stone-200 font-medium">Trevor Swistchew</span>
+          </div>
+          <span class="text-stone-600">•</span>
+          <div>
+            <span>Copyright &copy; 2026</span>
+          </div>
+          <span class="text-stone-600">•</span>
+          <div class="text-amber-400/90">
+            <span>The Scottish Literary Salon Archive</span>
+          </div>
+        </div>
+
+        <!-- Fine-Art Hero Banner -->
+        <figure class="mt-8 rounded-2xl overflow-hidden border border-stone-800 shadow-2xl bg-stone-950">
+          <div class="aspect-w-16 aspect-h-9 relative overflow-hidden">
+            <img 
+              src="../../assets/images/plunder-of-our-exchange-banner.jpg" 
+              alt="The Plunder of Our Exchange: Glasgow Stock Exchange and North Sea Oil Rigs" 
+              class="w-full h-full object-cover"
+              loading="eager"
+            />
+          </div>
+          <figcaption class="text-center text-xs text-stone-400 font-serif italic pt-2 pb-1 bg-stone-900/60 border-t border-stone-800/80">
+            Nelson Mandela Place meets the stormy North Sea: John Burnet’s 1877 cathedral of Scottish commerce juxtaposed with the flaming flares of the black gold strike of 1973.
+          </figcaption>
+        </figure>
+
+        <!-- Epigraph -->
+        <blockquote class="p-4 sm:p-5 rounded-xl bg-peat-900/80 border-l-4 border-amber-500 text-stone-300 font-serif italic text-sm sm:text-base leading-relaxed">
+          “They plundered us. Not with cannons and redcoats, but with pens and paper. They knew that if the oil was going to be ‘British’ oil, if its benefits were to flow to the Treasury in London, they couldn't have a Scottish stock exchange setting the price, floating the companies, and reaping the listing fees. The cart was fully assembled, and then they stole the horse.” — Trevor Swistchew
+        </blockquote>
+
+      </header>
+
+      <!-- INTERACTIVE CONTEXTUAL DOSSIER -->
+      <section class="my-12 p-6 rounded-2xl bg-stone-900/90 border border-amber-500/30 shadow-2xl backdrop-blur-sm" aria-labelledby="dossier-heading-exchange">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-white/10">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-sm">
+              <i class="fa-solid fa-building-columns"></i>
+            </span>
+            <div>
+              <h3 id="dossier-heading-exchange" class="font-cinzel font-bold text-base sm:text-lg text-amber-300">
+                The Sovereign Financial Ledger &bull; 1844 to 1973
+              </h3>
+              <span class="text-[11px] font-mono text-stone-400">Forensics of the 1973 LSE Merger, North Sea Black Gold &amp; The Sovereign Wealth Gap</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <button onclick="switchTab('exchange', 'timeline')" id="btn-exchange-timeline" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-amber-500 bg-amber-500/10 text-amber-400 font-bold">
+              <span>The 1973 Confluence</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Oil vs Merger</span>
+            </button>
+            <button onclick="switchTab('exchange', 'norway')" id="btn-exchange-norway" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+              <span>Scotland vs Norway</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">$1.6T Nest Egg</span>
+            </button>
+            <button onclick="switchTab('exchange', 'monument')" id="btn-exchange-monument" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+              <span>Burnet to Heather</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">1877–2018</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="min-h-[140px]">
+          <!-- Panel 1: The 1973 Confluence -->
+          <div id="panel-exchange-timeline" class="dossier-tab-panel block space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">The Uncanny Synchronization: 1971 Centralisation to 1973 Absorption</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-stone-300 mb-3">
+              <div class="p-3 rounded-lg bg-peat-900 border border-white/5">
+                <strong class="text-amber-400 block font-cinzel mb-1">1971: Unified Scottish Exchange</strong>
+                All regional bourses (Edinburgh, Dundee, Aberdeen) unified operations within Glasgow’s Buchanan Street exchange, creating a centralized, high-capacity Scottish trading engine with nearly 300 member brokers.
+              </div>
+              <div class="p-3 rounded-lg bg-peat-900 border border-white/5">
+                <strong class="text-amber-400 block font-cinzel mb-1">1973: Simultaneous Strip & Strike</strong>
+                On 25 March 1973, the Scottish Stock Exchange was formally dissolved into the London Stock Exchange. In the very same fiscal year, the colossal scale of North Sea oil fields (Forties, Brent) was officially confirmed.
+              </div>
+            </div>
+            <div class="p-3 rounded-lg bg-peat-900 border border-amber-500/20 text-xs font-mono text-amber-400">
+              “The cart was fully assembled, and then they stole the horse. They knew that if the oil was going to be ‘British’ oil... they couldn't have a Scottish stock exchange setting the price, floating the companies, and reaping the listing fees.”
+            </div>
+          </div>
+
+          <!-- Panel 2: Scotland vs Norway -->
+          <div id="panel-exchange-norway" class="dossier-tab-panel hidden space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">The Trillion-Dollar Divergence: Sovereign Endowment vs. Treasury Absorption</h4>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs text-stone-300 border border-stone-800">
+                <thead class="bg-stone-950 font-cinzel text-amber-400 text-[11px]">
+                  <tr>
+                    <th class="p-2.5 border-b border-stone-800">Policy Dimension</th>
+                    <th class="p-2.5 border-b border-stone-800">Norway (Ekofisk 1969)</th>
+                    <th class="p-2.5 border-b border-stone-800">Scotland / UK (Brent 1971)</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-stone-800/60 font-mono text-[11px]">
+                  <tr>
+                    <td class="p-2.5 font-bold text-stone-200">National Strategy</td>
+                    <td class="p-2.5 text-emerald-400">Statoil (1972) + 1990 Petroleum Fund</td>
+                    <td class="p-2.5 text-red-400">UK Consolidated Fund (Treasury Current Account)</td>
+                  </tr>
+                  <tr>
+                    <td class="p-2.5 font-bold text-stone-200">Current Endowment</td>
+                    <td class="p-2.5 text-emerald-400">Over $1.6 Trillion (GPFG)</td>
+                    <td class="p-2.5 text-red-400">£0 Sovereign Wealth Reserve</td>
+                  </tr>
+                  <tr>
+                    <td class="p-2.5 font-bold text-stone-200">Wealth Distribution</td>
+                    <td class="p-2.5 text-stone-300">~$300,000 per citizen held in perpetuity</td>
+                    <td class="p-2.5 text-stone-300">Spent on 1980s tax cuts &amp; unemployment support</td>
+                  </tr>
+                  <tr>
+                    <td class="p-2.5 font-bold text-stone-200">Financial Exchange</td>
+                    <td class="p-2.5 text-stone-300">Oslo Børs retained sovereign independence</td>
+                    <td class="p-2.5 text-stone-300">Glasgow bourse absorbed into LSE in 1973</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Panel 3: Burnet to Heather -->
+          <div id="panel-exchange-monument" class="dossier-tab-panel hidden space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">From John Burnet’s 1877 Gothic Cathedral to the 2018 Project Heather</h4>
+            <ul class="text-xs text-stone-300 space-y-2 list-disc pl-4">
+              <li><strong>Architectural Ambition:</strong> Designed in 1877 by renowned Scottish architect John Burnet on Nelson Mandela Place (formerly St George’s Place), featuring monumental Venetian Gothic arches, carved heraldry, and a soaring trading hall that embodied the capital of the Second City of the Empire.</li>
+              <li><strong>The Commercial Desecration:</strong> Following the 1973 London merger, local open-outcry trading ceased, the trading floor was partitioned, and this architectural temple of national enterprise was converted into retail clothing and consumer electronics outlets.</li>
+              <li><strong>Project Heather (2018–2020):</strong> A high-profile attempt led by Tomas Carruthers and Euronext to establish "SCOTEX" / the Scottish Stock Exchange as an independent, impact-focused exchange in Edinburgh and Glasgow. The initiative was stifled by regulatory inertia and establishment hostility, collapsing in December 2020.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ESSAY TEXT -->
+      <section class="prose prose-invert prose-stone max-w-none font-serif text-base sm:text-lg leading-relaxed space-y-6">
+
+        <p class="drop-cap text-lg sm:text-xl text-stone-200 leading-relaxed">
+          Look at it. Stand on Nelson Mandela Place and look at it. That magnificent five-storey cathedral of commerce, the one John Burnett designed with such ambition in 1877. It’s still there, but don’t be fooled. Its soul was ripped out. Today you might buy a dress or a phone where our forefathers once bought and sold the very future of this nation. And that, Glasgow, is a metaphor you can’t ignore.
+        </p>
+
+        <p class="text-stone-300">
+          That building was ours. It was the heart of the Glasgow Stock Exchange, founded in 1844 by 28 of our own. It wasn't just a place for the wealthy to count their gold. It was the engine room of Scottish enterprise. It was where the capital of this great industrial city was raised, where the wealth we generated was managed, for us, by us. By 1930, nearly 300 members were trading there. Banks, insurance companies, and the great industries of the Clyde all answered to a bell that rang in Glasgow.
+        </p>
+
+        <p class="text-stone-200 font-medium pl-4 border-l-2 border-amber-500/50">
+          And then, in a quiet, bureaucratic whisper in 1973, it was gone.
+        </p>
+
+        <p class="text-stone-300">
+          They call it a "merger." They call it "consolidation." Don’t you believe it. That was the year our stock exchange, along with Edinburgh’s, Dundee’s, and Aberdeen’s, was formally absorbed into the London Stock Exchange. They tell us it was part of a UK-wide trend to cut costs, to create a "single, powerful" market. A market that would, conveniently, be run not from Buchanan Street, but from the City of London.
+        </p>
+
+        <p class="text-stone-100 font-cinzel font-bold text-lg sm:text-xl text-amber-300 pt-2">
+          But let’s look at the date again. 1973.
+        </p>
+
+        <p class="text-stone-300">
+          Do you know what else happened in 1973? They struck oil. Vast, black, liquid fortunes were discovered beneath the North Sea. The very same year our ability to control our own financial destiny was quietly signed away, the greatest economic prize of the 20th century was found on our doorstep.
+        </p>
+
+        <p class="text-stone-200 italic font-medium">
+          Do you really believe that’s a coincidence?
+        </p>
+
+        <p class="text-stone-300">
+          Just two years earlier, in 1971, all of Scotland’s stock exchange operations had been centralised right here in that Glasgow building. We had a unified Scottish exchange. We had the expertise. We had the infrastructure. We were poised, ready to trade. And then, at the exact moment the black gold was discovered, the Westminster government ensured that the mechanism to trade it would not be in Scottish hands. The cart was fully assembled, and then they stole the horse.
+        </p>
+
+        <div class="p-6 rounded-2xl bg-stone-900/60 border border-amber-500/30 text-stone-200 space-y-4 my-6">
+          <p class="text-base sm:text-lg leading-relaxed">
+            They plundered us. Not with cannons and redcoats, but with pens and paper. They knew that if the oil was going to be "British" oil, if its benefits were to flow to the Treasury in London, they couldn't have a Scottish stock exchange setting the price, floating the companies, and reaping the listing fees. They couldn't have the profits landing here first.
+          </p>
+          <p class="text-base sm:text-lg leading-relaxed">
+            They framed it as modernisation. But what it really was, was asset stripping. They took the proud Glasgow Stock Exchange, with its 128 year history, and they turned it into a branch office. A provincial outpost taking orders from the capital.
+          </p>
+        </div>
+
+        <p class="text-stone-300">
+          And the result? For decades, the revenues from Scottish oil - our oil - were funnelled into a UK-wide pot. We were told it would benefit everyone. But look at Glasgow. Look at the communities that built the rigs and serviced the boats. Where is our sovereign wealth fund, the one any independent nation with our resources would have built? Norway looked at what we had and built a trillion-dollar nest egg for its people. We got a few years of tax breaks and a hole in the budget when the price dropped.
+        </p>
+
+        <p class="text-stone-300">
+          The attempts to bring it back, the calls for a new exchange in 2010, the "Project Heather" scheme in 2018 that collapsed because the establishment couldn't bear to see it succeed, they are the death throes of a body that was poisoned in 1973. They are the proof that the need, the desire, the right to control our own wealth never died. It’s still there, buried under the rubble of broken promises and political expediency.
+        </p>
+
+        <p class="text-stone-300">
+          So the next time you walk past that building on Nelson Mandela Place, don't just see the shops. See the ghost of what we had. See the thousands of deals that should have been done there, for Scottish companies, with Scottish capital, for the benefit of the Scottish people. See the oil money that flowed past our door, destined for London, because the door had been nailed shut by the very people who wanted what was behind it.
+        </p>
+
+        <blockquote class="p-4 sm:p-6 rounded-xl bg-peat-900 border-l-4 border-amber-500 text-stone-100 font-display text-base sm:text-lg leading-relaxed font-bold">
+          They didn't just merge our stock exchange. They locked it, threw away the key, and spent the next fifty years spending our inheritance. Never forget that. And never stop demanding what was, and always will be, ours.
+        </blockquote>
+
+      </section>
+
+      <!-- NAVIGATION FOOTER -->
+      <footer class="mt-16 pt-8 border-t border-stone-800 space-y-8">
+        
+        <!-- Sequential Reading Links -->
+        <div class="grid sm:grid-cols-2 gap-4">
+          <a href="../the-gospel-according-to-common-sense/index.html" class="p-4 rounded-xl bg-stone-900/60 border border-stone-800 hover:border-amber-500/40 transition-colors group">
+            <span class="text-[10px] font-mono uppercase text-stone-500 group-hover:text-amber-400 block mb-1">&larr; Previous Work (Compendium #18)</span>
+            <span class="font-display font-bold text-sm text-stone-200 group-hover:text-amber-300">Chapter One: The Gospel According to Common Sense</span>
+          </a>
+          <a href="../../poetry/index.html" class="p-4 rounded-xl bg-stone-900/60 border border-stone-800 hover:border-amber-500/40 transition-colors group text-right">
+            <span class="text-[10px] font-mono uppercase text-stone-500 group-hover:text-amber-400 block mb-1">Poetic Works Archive &rarr;</span>
+            <span class="font-display font-bold text-sm text-stone-200 group-hover:text-amber-300">The Poetry Chamber (28 Collected Poems)</span>
+          </a>
+        </div>
+
+        <!-- Creative Fellowship CTA -->
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-peat-900 to-peat-950 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="space-y-1 text-center sm:text-left">
+            <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold">Creative Fellowship</span>
+            <h4 class="font-cinzel text-lg font-bold text-white">The Shady River Bard Creative Ecosystem</h4>
+            <p class="text-xs text-stone-300 max-w-xl">
+              Trevor Swistchew's political economy audits and philosophical inquiries are published in fellowship with The Shady River Bard—exploring a 26-album concept discography, homestead narratives, and reflections on human self-determination.
+            </p>
+          </div>
+          <a href="https://tpatterson34.github.io/shady-river-portal/" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-peat-950 font-cinzel font-bold text-xs uppercase tracking-wider transition-colors shrink-0 shadow-lg flex items-center gap-1.5">
+            <span>Explore Shady River</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+          </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="pt-6 border-t border-stone-800/60 text-center text-xs text-stone-400 font-sans space-y-2">
+          <p>Essay &copy; 2026 Trevor Swistchew. All rights reserved.</p>
+          <p class="text-stone-500">Published for the Trevor Swistchew Compendium &amp; Literary Salon Archive.</p>
+          <p class="pt-2">
+            <a href="../../index.html" class="text-stone-400 hover:text-amber-400 transition-colors mr-3">&larr; Return to Compendium Archive</a>
+            <a href="https://tpatterson34.github.io/shady-river-portal/friends-of-the-bard/" class="text-amber-400 hover:text-amber-300 transition-colors font-medium">Friends of the Bard Collective ↗</a>
+          </p>
+        </div>
+      </footer>
+
+    </article>
+  </main>
+
+  <!-- Client-Side Tab Switching Script -->
+  <script>
+    function switchTab(essayId, tabId) {
+      const container = document.querySelector('[aria-labelledby="dossier-heading-' + essayId + '"]');
+      if (!container) return;
+      
+      const buttons = container.querySelectorAll('.dossier-tab-btn');
+      const panels = container.querySelectorAll('.dossier-tab-panel');
+      
+      buttons.forEach(btn => {
+        btn.classList.remove('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+        btn.classList.add('border-transparent', 'text-stone-400');
+      });
+      
+      panels.forEach(p => p.classList.add('hidden'));
+      
+      const targetBtn = document.getElementById('btn-' + essayId + '-' + tabId);
+      const targetPanel = document.getElementById('panel-' + essayId + '-' + tabId);
+      
+      if (targetBtn) {
+        targetBtn.classList.remove('border-transparent', 'text-stone-400');
+        targetBtn.classList.add('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+      }
+      if (targetPanel) {
+        targetPanel.classList.remove('hidden');
+      }
+    }
+  </script>
+  <script src="../../assets/js/reading-experience.js"></script>
+</body>
+</html>
