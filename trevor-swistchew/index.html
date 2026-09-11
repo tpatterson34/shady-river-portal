@@ -94,10 +94,6 @@
       <!-- Navigation & Controls -->
       <div class="flex items-center gap-4">
         <nav class="hidden sm:flex items-center gap-6 text-xs font-cinzel tracking-wider text-stone-400" aria-label="Main Navigation">
-          <a href="/friends-of-the-bard/" class="text-amber-500 hover:text-amber-400 font-semibold transition-colors flex items-center gap-1">
-            <i class="fa-solid fa-arrow-left text-[10px]"></i>
-            <span>Friends of the Bard</span>
-          </a>
           <a href="#essays" class="hover:text-amber-400 transition-colors">Compendium</a>
           <a href="#music" class="hover:text-amber-400 transition-colors">Musical Chamber</a>
           <a href="#about" class="hover:text-amber-400 transition-colors">About</a>
@@ -184,19 +180,58 @@
       <!-- Essays Showcase Grid -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <!-- Featured Demonstration Card: The Sovereign's Right -->
+        <!-- Card 1: Alan Watts: This Is It (Live Interactive Experience) -->
+        <article class="group rounded-lg border border-stone-800 bg-stone-900/60 hover:border-amber-500/50 transition-all duration-300 flex flex-col overflow-hidden shadow-xl hover:shadow-2xl">
+          <div class="aspect-w-16 aspect-h-9 relative overflow-hidden bg-stone-950">
+            <img 
+              src="assets/images/alan-watts-this-is-it-banner.webp" 
+              alt="Alan Watts: This Is It Artwork" 
+              class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute top-3 left-3 flex gap-2">
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/90 text-stone-950 font-bold">Featured Essay</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-sky-950/80 text-sky-400 border border-sky-800 flex items-center gap-1">
+                <i class="fa-solid fa-music text-[9px]"></i> Companion Track
+              </span>
+            </div>
+          </div>
+
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-[11px] font-mono text-stone-400 mb-2">
+                <span>Eastern Philosophy</span>
+                <span>•</span>
+                <span>4 min read</span>
+              </div>
+
+              <h3 class="font-display text-xl font-bold text-stone-100 group-hover:text-amber-400 transition-colors mb-2">
+                Alan Watts: This Is It
+              </h3>
+
+              <p class="font-serif text-sm text-stone-400 leading-relaxed mb-4">
+                On the myth of the "skin-encapsulated ego," the cosmic dance, and the ultimate chord of the living present.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-stone-800/80 flex items-center justify-between text-xs">
+              <span class="font-mono text-stone-400 truncate max-w-[170px]">Track: <em>"This Is It"</em></span>
+              <a href="essays/alan-watts-this-is-it/index.html" class="font-cinzel font-bold text-amber-500 hover:text-amber-400 flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                Read Experience <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: The Ten Outrages Imposed on Scotland (Next in Queue) -->
         <article class="group rounded-lg border border-stone-800 bg-stone-900/60 hover:border-amber-500/50 transition-all duration-300 flex flex-col overflow-hidden shadow-xl hover:shadow-2xl">
           <div class="aspect-w-16 aspect-h-9 relative overflow-hidden bg-stone-950">
             <img 
               src="assets/images/banner-placeholder.svg" 
-              alt="The Sovereign's Right Artwork" 
+              alt="The Ten Outrages Imposed on Scotland" 
               class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
             />
             <div class="absolute top-3 left-3 flex gap-2">
-              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/90 text-stone-950 font-bold">Featured</span>
-              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-sky-950/80 text-sky-400 border border-sky-800 flex items-center gap-1">
-                <i class="fa-solid fa-music text-[9px]"></i> Song Included
-              </span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-stone-800 text-stone-300 border border-stone-700 font-bold">Manuscript Vault</span>
             </div>
           </div>
 
@@ -209,68 +244,107 @@
               </div>
 
               <h3 class="font-display text-xl font-bold text-stone-100 group-hover:text-amber-400 transition-colors mb-2">
-                The Sovereign's Right
+                The Ten Outrages Imposed on Scotland
               </h3>
 
               <p class="font-serif text-sm text-stone-400 leading-relaxed mb-4">
-                An empirical audit of the 1689 Claim of Right, the doctrine of <em>salvo jure cujuslibet</em>, and the manufactured division of the modern working class.
+                A forensic audit of internal colonialism, the 1707 Treaty of Union, the Clearances, and resource extraction.
               </p>
             </div>
 
             <div class="pt-4 border-t border-stone-800/80 flex items-center justify-between text-xs">
-              <span class="font-mono text-stone-400">Companion: <em>Salvo Jure</em></span>
-              <a href="templates/essay-template.html" class="font-cinzel font-bold text-amber-500 hover:text-amber-400 flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
-                Read Experience <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              <span class="font-mono text-stone-400">3,054 words</span>
+              <a href="raw-essays/the-ten-outrages.md" class="font-cinzel font-semibold text-stone-400 hover:text-amber-400 flex items-center gap-1.5 transition-colors">
+                View Draft <i class="fa-solid fa-file-lines text-[10px]"></i>
               </a>
             </div>
           </div>
         </article>
 
-        <!-- Future Slot 1 -->
-        <article class="rounded-lg border border-dashed border-stone-800 bg-stone-950/40 p-6 flex flex-col items-center justify-center text-center">
-          <div class="w-12 h-12 rounded-full border border-stone-700/60 bg-stone-900 flex items-center justify-center text-stone-500 mb-4">
-            <i class="fa-solid fa-scroll text-lg"></i>
+        <!-- Card 3: The Explanation of the Universe (Masterwork) -->
+        <article class="group rounded-lg border border-stone-800 bg-stone-900/60 hover:border-amber-500/50 transition-all duration-300 flex flex-col overflow-hidden shadow-xl hover:shadow-2xl">
+          <div class="aspect-w-16 aspect-h-9 relative overflow-hidden bg-stone-950">
+            <img 
+              src="assets/images/banner-placeholder.svg" 
+              alt="The Explanation of the Universe" 
+              class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute top-3 left-3 flex gap-2">
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-stone-800 text-stone-300 border border-stone-700 font-bold">4-Part Treatise</span>
+            </div>
           </div>
-          <h3 class="font-cinzel text-sm font-bold text-stone-400 uppercase tracking-wider mb-2">Ingestion Chamber</h3>
-          <p class="font-serif text-xs text-stone-400 max-w-xs leading-relaxed mb-4">
-            Ready for Trevor's first incoming essay. The empirical research dossier and companion audio pipeline are primed.
-          </p>
-          <span class="px-2.5 py-1 rounded bg-stone-900 border border-stone-800 text-[11px] font-mono text-amber-500">
-            Awaiting Step 2 Ingestion
-          </span>
-        </article>
 
-        <!-- Future Slot 2 -->
-        <article class="rounded-lg border border-dashed border-stone-800 bg-stone-950/40 p-6 flex flex-col items-center justify-center text-center">
-          <div class="w-12 h-12 rounded-full border border-stone-700/60 bg-stone-900 flex items-center justify-center text-stone-500 mb-4">
-            <i class="fa-solid fa-music text-lg"></i>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-[11px] font-mono text-stone-400 mb-2">
+                <span>Cosmology &amp; Mind</span>
+                <span>•</span>
+                <span>23 min read</span>
+              </div>
+
+              <h3 class="font-display text-xl font-bold text-stone-100 group-hover:text-amber-400 transition-colors mb-2">
+                The Explanation of the Universe
+              </h3>
+
+              <p class="font-serif text-sm text-stone-400 leading-relaxed mb-4">
+                The Birth of Motion, Expansion of Awareness, Deepening of Insight, and the Realisation of 2026.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-stone-800/80 flex items-center justify-between text-xs">
+              <span class="font-mono text-stone-400">5,059 words</span>
+              <a href="raw-essays/the-explanation-of-the-universe.md" class="font-cinzel font-semibold text-stone-400 hover:text-amber-400 flex items-center gap-1.5 transition-colors">
+                View Draft <i class="fa-solid fa-file-lines text-[10px]"></i>
+              </a>
+            </div>
           </div>
-          <h3 class="font-cinzel text-sm font-bold text-stone-400 uppercase tracking-wider mb-2">The Musical Connection</h3>
-          <p class="font-serif text-xs text-stone-400 max-w-xs leading-relaxed mb-4">
-            Prose-to-melody adaptations, studio liner notes, and lyric matrices automatically pair with new writings.
-          </p>
-          <span class="px-2.5 py-1 rounded bg-stone-900 border border-stone-800 text-[11px] font-mono text-sky-400">
-            Acoustic & Folk-Rock Engine
-          </span>
         </article>
 
       </div>
     </section>
 
-    <!-- Musical Chamber Teaser Section -->
+    <!-- Musical Chamber Showcase Section -->
     <section id="music" class="py-16 border-t border-stone-800 bg-stone-950/60">
       <div class="max-w-5xl mx-auto px-4 sm:px-6">
         <div class="rounded-xl border border-amber-500/30 bg-stone-900/80 p-8 md:p-10 shadow-2xl backdrop-blur-sm">
-          <div class="max-w-2xl">
-            <span class="text-xs font-mono text-sky-400 uppercase tracking-widest block mb-2">The Musical Connection</span>
-            <h2 class="font-display text-3xl font-bold text-stone-100 mb-4">Words That Demand Harmony</h2>
-            <p class="font-serif text-stone-300 leading-relaxed mb-6">
-              In Trevor Swistchew’s creative cosmos, the boundary between political philosophy and Scottish folk-rock is porous. Essays distill the historical crisis; the compositions crystallize the emotional weight.
-            </p>
-            <div class="flex flex-wrap items-center gap-4 text-xs font-mono text-amber-400">
-              <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-dot text-[8px]"></i> Dick Gaughan Influence</span>
-              <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-dot text-[8px]"></i> DADGAD Tunings</span>
-              <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-dot text-[8px]"></i> Low Whistle & Cello</span>
+          <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-6 mb-6 border-b border-stone-800">
+            <div>
+              <span class="text-xs font-mono text-sky-400 uppercase tracking-widest block mb-1">The Musical Connection &bull; Featured Release</span>
+              <h2 class="font-display text-3xl font-bold text-stone-100">"This Is It" (Heavy Rock Spoken Word)</h2>
+              <p class="font-serif text-sm text-stone-400 mt-1">Inspired by Alan Watts &amp; Trevor Swistchew &bull; Recorded by The Shady River Bard</p>
+            </div>
+            <a href="https://youtu.be/1gfiP72WzZ8" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-red-950/80 hover:bg-red-900 border border-red-800/60 text-red-400 hover:text-white font-mono text-xs flex items-center gap-2 transition-all">
+              <i class="fa-brands fa-youtube text-sm"></i>
+              <span>Watch on YouTube ↗</span>
+            </a>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6 items-center">
+            <div class="space-y-4">
+              <p class="font-serif text-stone-300 leading-relaxed text-sm">
+                "The sacred is not elsewhere. It is not hidden behind the stars... There is no next. There is only THIS."
+              </p>
+              <p class="font-serif text-stone-400 leading-relaxed text-xs">
+                Trevor Swistchew's philosophical prose takes flight through thunderous overdriven guitars, driving drums, and an electrifying spoken-word cadence produced by The Shady River Bard.
+              </p>
+              <div class="flex flex-wrap items-center gap-3 text-xs font-mono text-amber-400 pt-2">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-dot text-[8px]"></i> Heavy Rock Riffs</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-dot text-[8px]"></i> Spoken Word Monologue</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-dot text-[8px]"></i> High-Energy Awakening</span>
+              </div>
+            </div>
+
+            <div class="rounded-lg overflow-hidden border border-stone-800 shadow-xl bg-black">
+              <div class="relative w-full" style="padding-top: 56.25%;">
+                <iframe 
+                  class="absolute inset-0 w-full h-full"
+                  src="https://www.youtube-nocookie.com/embed/1gfiP72WzZ8?rel=0" 
+                  title="This Is It — Heavy Rock Spoken Word" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+                </iframe>
+              </div>
             </div>
           </div>
         </div>
