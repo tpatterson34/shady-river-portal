@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Should There Be Limits on Free Speech? | Trevor Swistchew</title>
+  <meta name="description" content="A constitutional inquiry into freedom of expression, platform censorship, outrage culture, and Article 10 responsibilities by Trevor Swistchew (2026). Part of the Trevor Swistchew Compendium Archive.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              950: '#0c0b0a',
+              900: '#121110',
+              850: '#181614',
+              800: '#1f1c19',
+              700: '#2b2723',
+              600: '#3d3731',
+            },
+            parchment: {
+              50: '#fdfbf7',
+              100: '#f7f4ed',
+              200: '#efeae0',
+              300: '#e5ded2',
+              400: '#d8cdbe',
+              500: '#c5b8a5',
+            },
+            brass: {
+              400: '#dfbe75',
+              500: '#c5a059',
+              600: '#a6823c',
+              700: '#846427',
+            },
+            thistle: {
+              600: '#9d2b45',
+              700: '#7e2035',
+            },
+            loch: {
+              400: '#38bdf8',
+              700: '#0369a1',
+              900: '#0c4a6e',
+            }
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Lora', 'Georgia', 'serif'],
+            display: ['"Playfair Display"', 'Cinzel', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Web Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/a11y.css">
+
+  <!-- Scottish Literary Salon Theme Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950">
+
+  <!-- 1. WCAG Skip Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Essay Content</a>
+
+  <!-- 2. Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- 3. Top Sticky Reading Utility & Salon Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      
+      <!-- Salon Brand / Return Link -->
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2.5 text-stone-300 hover:text-amber-400 group transition-colors">
+          <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
+          <div class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:block">
+            Trevor Swistchew <span class="text-stone-500 font-sans font-normal mx-1">|</span> <span class="text-stone-400">Compendium Archive</span>
+          </div>
+        </a>
+        <a href="https://tpatterson34.github.io/shady-river-portal/" class="hidden md:flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 text-[11px] font-mono transition-colors" title="Visit The Shady River Bard Portal">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Reading Accommodations Controls -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Font Size Scaler -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs font-mono text-stone-300" role="group" aria-label="Font Size Scaling">
+          <button id="font-size-dec" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Decrease font size" aria-label="Decrease font size">A-</button>
+          <button id="font-size-reset" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors text-[10px] text-stone-400" title="Reset font size" aria-label="Reset font size">A</button>
+          <button id="font-size-inc" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Increase font size" aria-label="Increase font size">A+</button>
+        </div>
+
+        <!-- Tri-State Theme Switcher -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs" role="group" aria-label="Reading Theme Selection">
+          <button data-theme="dark" class="theme-toggle-btn px-2 py-1 rounded transition-colors active-theme" title="Dark Peat Theme" aria-label="Dark Peat Theme" aria-pressed="true">
+            <i class="fa-solid fa-moon text-amber-400"></i>
+          </button>
+          <button data-theme="sepia" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Aged Parchment Sepia Theme" aria-label="Aged Parchment Sepia Theme" aria-pressed="false">
+            <i class="fa-solid fa-book-open"></i>
+          </button>
+          <button data-theme="light" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Edinburgh Stone Light Theme" aria-label="Edinburgh Stone Light Theme" aria-pressed="false">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- 4. Main Essay Content Container -->
+  <main id="main-content" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+    <article class="space-y-10">
+      
+      <!-- HERO & ESSAY HEADER -->
+      <header class="space-y-6 text-center sm:text-left border-b border-stone-800 pb-10">
+        
+        <!-- Category & Reading Time Badge -->
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 text-xs font-mono">
+          <span class="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-semibold tracking-wider uppercase">
+            Constitutional Law &amp; Civil Liberties
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400 flex items-center gap-1.5">
+            <i class="fa-regular fa-clock text-amber-500/70"></i>
+            4 min read
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400 flex items-center gap-1.5">
+            <i class="fa-solid fa-feather-pointed text-amber-500/70"></i>
+            700 words
+          </span>
+          <span class="text-stone-500">&bull;</span>
+          <span class="text-stone-400">Trevor Swistchew &bull; 1/6/26</span>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <div class="space-y-3">
+          <h1 class="font-cinzel text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Should There Be Limits on Free Speech?
+          </h1>
+          <p class="font-serif text-lg sm:text-xl text-stone-300 leading-relaxed font-light italic">
+            Constitutional Rights, Platform Censorship, Outrage Culture, and the Essential Balance of Article 10
+          </p>
+        </div>
+
+        <!-- Author Byline -->
+        <div class="flex items-center justify-center sm:justify-start gap-3 pt-2">
+          <div class="w-10 h-10 rounded-full border border-amber-500/40 bg-peat-900 flex items-center justify-center text-amber-400 font-cinzel font-bold text-sm shadow-md">
+            TS
+          </div>
+          <div class="text-left">
+            <div class="font-cinzel font-bold text-white text-sm tracking-wider">Trevor Swistchew</div>
+            <div class="text-xs text-stone-400 font-mono">Essayist, Philosopher &amp; Jurist &bull; Western Washington / Scotland</div>
+          </div>
+        </div>
+
+        <!-- Hero Fine-Art Banner Image -->
+        <figure class="pt-4 space-y-2">
+          <div class="aspect-video w-full rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl relative bg-peat-950">
+            <img src="../../assets/images/limits-on-free-speech-banner.jpg" alt="Classical marble forum and orator's rostrum bathed in warm amber chiaroscuro light, with an illuminated declaration scroll, quill, and balanced brass scales of justice connected by subtle digital fiber optic threads" class="w-full h-full object-cover" loading="eager">
+          </div>
+          <figcaption class="text-center text-xs text-stone-400 font-serif italic pt-1">
+            The civic balance: where ancient declarations of liberty meet the algorithmic pressures of the digital public square.
+          </figcaption>
+        </figure>
+
+        <!-- Epigraph -->
+        <blockquote class="p-4 sm:p-5 rounded-xl bg-peat-900/80 border-l-4 border-amber-500 text-stone-300 font-serif italic text-sm sm:text-base leading-relaxed">
+          “Without reasonable and lawful checks and balances incorporated into legislation or the individual’s personal responsibility for being accountable for what they say, free speech can quickly become a free for all... the freedom of one is the freedom of all.” — Trevor Swistchew
+        </blockquote>
+
+      </header>
+
+      <!-- INTERACTIVE CONTEXTUAL DOSSIER -->
+      <section class="my-12 p-6 rounded-2xl bg-stone-900/90 border border-amber-500/30 shadow-2xl backdrop-blur-sm" aria-labelledby="dossier-heading-freespeech">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-white/10">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-sm">
+              <i class="fa-solid fa-gavel"></i>
+            </span>
+            <div>
+              <h3 id="dossier-heading-freespeech" class="font-cinzel font-bold text-base sm:text-lg text-amber-300">
+                The Jurisprudential Free Speech Matrix
+              </h3>
+              <span class="text-[11px] font-mono text-stone-400">Comparative Constitutional Law, Platform Governance &amp; Article 10 Audits</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <button onclick="switchTab('freespeech', 'constitutional')" id="btn-freespeech-constitutional" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-amber-500 bg-amber-500/10 text-amber-400 font-bold">
+              <span>Constitutional Models</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">US vs UK</span>
+            </button>
+            <button onclick="switchTab('freespeech', 'platforms')" id="btn-freespeech-platforms" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+              <span>Platforms &amp; Censorship</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Deplatforming</span>
+            </button>
+            <button onclick="switchTab('freespeech', 'incitement')" id="btn-freespeech-incitement" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+              <span>Incitement &amp; Harm</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Radicalisation</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="min-h-[140px]">
+          <!-- Panel 1: Constitutional Models -->
+          <div id="panel-freespeech-constitutional" class="dossier-tab-panel block space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">First Amendment Absolute Ideal vs. Article 10 Qualified Rights</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-stone-300 mb-3">
+              <div class="p-3 rounded-lg bg-peat-900 border border-white/5">
+                <strong class="text-amber-400 block font-cinzel mb-1">US First Amendment (1791)</strong>
+                A negative right restricting Congress from abridging speech. Highly protective of political discourse, with exceptions confined to narrow doctrines such as imminent lawless action (<em>Brandenburg v. Ohio</em>).
+              </div>
+              <div class="p-3 rounded-lg bg-peat-900 border border-white/5">
+                <strong class="text-amber-400 block font-cinzel mb-1">Human Rights Act 1998 (Article 10)</strong>
+                A qualified right explicitly carrying <em>“duties and responsibilities.”</em> Free expression may be subjected to formalities, conditions, and penalties prescribed by law for public safety and the protection of rights.
+              </div>
+            </div>
+            <div class="p-3 rounded-lg bg-peat-900 border border-amber-500/20 text-xs font-mono text-amber-400">
+              “While our right of freedoms in speech... are protected in law by Article 10 of the Human Rights Act 1998, we all have a duty to behave responsibly and to respect other people’s rights.”
+            </div>
+          </div>
+
+          <!-- Panel 2: Platforms & Censorship -->
+          <div id="panel-freespeech-platforms" class="dossier-tab-panel hidden space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">Corporate Gatekeeping, John Gray’s Dark Web Warning &amp; Outrage Culture</h4>
+            <ul class="text-xs text-stone-300 space-y-2 list-disc pl-4">
+              <li><strong>The Deplatforming Paradox:</strong> Private corporate monopolies (Twitter/X, Meta, WhatsApp) exercising sovereign control over the digital public square, moderating hate speech and electoral claims.</li>
+              <li><strong>John Gray (BBC Radio 4, <em>Whose Free Speech?</em>):</strong> Banning political leaders drives millions into encrypted networks and the Dark Web, creating unmonitored underground echo chambers and fracturing democratic legitimacy.</li>
+              <li><strong>Rowan Atkinson &amp; Salman Rushdie:</strong> The peril of <em>“outrage culture”</em>—expanding criminal and civil liability from direct threats to subjective offense, which paralyses satire, heterodoxy, and artistic freedom.</li>
+            </ul>
+          </div>
+
+          <!-- Panel 3: Incitement & Harm -->
+          <div id="panel-freespeech-incitement" class="dossier-tab-panel hidden space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">Digital Radicalisation, Threat to Protected Groups &amp; The Harm Boundary</h4>
+            <p class="text-xs text-stone-300 leading-relaxed mb-3">
+              Where free speech transitions into organized incitement to hatred, violence, or terror recruitment (such as online ISIS radicalisation leading to deadly atrocities), the absolute right to unfettered expression breaks down.
+            </p>
+            <div class="p-3 rounded-lg bg-peat-900 border border-red-500/30 text-xs font-mono text-red-300">
+              “Where such expression involves inciting other people to hatred or open revolution or prejudice which could lead to serious upheaval or even death... then the absolute right to say whatever one likes gets blurry.”
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ESSAY BODY TEXT -->
+      <div id="essay-article" class="prose prose-invert prose-stone max-w-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg">
+        
+        <h2 class="font-cinzel text-xl sm:text-2xl font-bold text-amber-400 mb-4 tracking-wider uppercase">
+          Introduction
+        </h2>
+
+        <p class="first-letter:font-cinzel first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:text-amber-500 first-letter:leading-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          When Donald J. Trump, the president of the USA, was banned on social media by Twitter, Facebook and WhatsApp, many of his Republican supporters argued and complained that he was being denied his right to free speech. They cited the legislation passed by Congress guaranteeing all Americans the right of free expression and said that the ban constituted the suppression of an individual’s right to express their views in public or on a public forum. <sup class="text-amber-400 font-mono text-xs font-bold">[1]</sup>
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Donald Trump had been contacted many times by Twitter and Facebook prior to having his accounts suspended. His reference to “Sleepy Joe” (President Joe Biden) “stealing the election” was shown to be totally unfounded by the fact that Congress had previously verified the security of the election and made this public. <sup class="text-amber-400 font-mono text-xs font-bold">[2]</sup>
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Hate speech is now monitored actively by Twitter, Facebook and WhatsApp. Reported offenders can have their access to these forms of social media restricted for a period of time, or permanently, if the network providers deem what is posted is willfully racist, constitutes a threat to a protected characteristic such as colour, race, nationality, gender or sexual orientation. In very serious instances of a direct threat to injure or maim, police are informed by the networks.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Rowan Atkinson in his talk on free speech which was broadcast on YouTube refers to a show he did for the “Not the Nine o’Clock News” comedy series in which he shows how speech can be exaggerated to be viewed and construed as insult. He asserts that can, and has, led to an overly authoritarian attitude in society toward freedom of expression. He further cites Salman Rushdie, the author, who coined the phrase “outrage culture” which simply means that people could find themselves in court if anything they say is seen or interpreted as offensive by any other person. This example would seem to illustrate just how sensitive people have become in the last few decades. <sup class="text-amber-400 font-mono text-xs font-bold">[3]</sup>
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          John Gray, on the BBC in his “Whose Free Speech?” programme, says that “turning off Trump” has already alienated many people in America from the American political system, citing that the ban is an attack on everyone in America’s freedom of speech. He explored many of the repercussions that the ban has already had and warns that further censorship might well lead to a very dangerous situation. Already many of Donald Trump’s supporters have retreated into what is known as “The Dark Web”—the part of the worldwide Internet which is only accessible through Private Networks and Software and not available for common use, (according to Gray) and that many of their activities have now gone underground. Not a good thing at all. (John Gray, 'Whose Free Speech?' BBC R4). <sup class="text-amber-400 font-mono text-xs font-bold">[4]</sup>
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          When Barack Obama was President of the USA he said in relation to free speech, “Laudable efforts to suppress free speech can lead to a more oppressive world”. In so saying these words, the president was referring to countries in the world where free speech is either limited or non-existent, not only in the spoken word but also in other forms of communication, such as the Press, public broadcasting and news output which are heavily monitored and censored in China. The right of everyone to free speech is right and proper and any moves that are introduced to curtail or limit that freedom or influence it in a particular direction must be carefully examined. On the other hand, along with the freedom of free expression surely comes individual and collective responsibility as well as the willingness of individuals and groups of people, including politicians and world leaders to take ownership of what they say in any public domain. Without reasonable and lawful checks and balances incorporated into legislation or the individual’s personal responsibility for being accountable for what they say, free speech can quickly become a free for all.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          It can be argued that free speech must never be interfered with, that everyone has the right to express their views, opinions or beliefs, yet where such expression involves inciting other people to hatred or open revolution or prejudice which could lead to serious upheaval or even death for other individuals or targeted groups of people then the absolute right to say whatever one likes gets blurry. Ideally, people should have passion, belief, and aims and the freedom to express those, but these must be balanced and logical so as not to incite hatred or violence towards other people, cultures or faiths which can lead to outrages.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          There are too many examples of assaults and atrocities that can be traced back to extreme ideas being articulated by people who appear to want to see outrage and suffering in the world. One only has to think about the young people from the UK who were “radicalised” by Islamic ISIS extremists online and elsewhere and then went on to Afghanistan and Syria for “terrorist training” and who subsequently caused the deaths of innocent people in outrages that were reported around the world by PBS, BBC, Al Jazeera and other major networks.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          That there are questions about how to manage or protect “free speech” is entirely understandable when such atrocities have taken place, but the question then comes about how to balance free speech with the duty of protecting people from the hate that can arise from extremist views being freely expressed.
+        </p>
+
+        <h2 class="font-cinzel text-xl sm:text-2xl font-bold text-amber-400 mt-10 mb-4 tracking-wider uppercase">
+          Conclusion
+        </h2>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          In summing up the points I have listed and elucidated in this essay, I am conscious of the fact that as human beings all of us have our own individual views, opinions and beliefs stemming from the country and culture in which we live and are conditioned by.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          It is our natural habit to try to uphold the values we have been taught and, indeed, this is very necessary for the peaceful co-existence of our country, our world and ourselves. It is of great importance that we also recognise that while our right of freedoms in speech and the expression of our views, opinions and beliefs are protected in law by Article 10 of the Human Rights Act 1998, we all have a duty to behave responsibly and to respect other people’s rights. These are logical and reasonable caveats and it is surely in all our best interests to observe and try to live by them. <sup class="text-amber-400 font-mono text-xs font-bold">[5]</sup> It has often been said that the freedom of one is the freedom of all, therefore this has to lead to all of us working towards establishing a more open, fair and non-threatening society.
+        </p>
+
+      </div>
+
+      <!-- SCHOLARLY ANNOTATIONS & FOOTER -->
+      <footer class="mt-20 pt-10 border-t border-stone-800 text-xs text-stone-400 font-sans" aria-labelledby="notes-heading-freespeech">
+        <div class="flex items-center gap-2 mb-6 text-stone-300">
+          <i class="fa-solid fa-book-bookmark text-amber-500 text-sm"></i>
+          <h3 id="notes-heading-freespeech" class="font-cinzel font-bold text-sm tracking-wider uppercase">
+            Primary References &amp; Legal Authorities
+          </h3>
+        </div>
+        <ol class="space-y-4 list-none pl-0">
+          <li class="pl-4 border-l-2 border-stone-800">
+            <span class="font-mono text-amber-500 font-bold mr-1">[1]</span>
+            <span>United States Bill of Rights (1791), First Amendment: <em>“Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.”</em> Library of Congress (<a href="https://constitution.congress.gov/constitution/amendment-1/" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline">constitution.congress.gov</a>).</span>
+          </li>
+          <li class="pl-4 border-l-2 border-stone-800">
+            <span class="font-mono text-amber-500 font-bold mr-1">[2]</span>
+            <span>2020 United States Presidential Election certification records: Congress completes official electoral vote count and security verification (<a href="https://edition.cnn.com/2021/01/06/politics/2020-election-congress" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline">CNN Politics Archives, Jan 6, 2021</a>).</span>
+          </li>
+          <li class="pl-4 border-l-2 border-stone-800">
+            <span class="font-mono text-amber-500 font-bold mr-1">[3]</span>
+            <span>Rowan Atkinson, Address on Freedom of Speech and Section 5 of the Public Order Act, invoking Salman Rushdie’s critique of the emergence of “outrage culture.”</span>
+          </li>
+          <li class="pl-4 border-l-2 border-stone-800">
+            <span class="font-mono text-amber-500 font-bold mr-1">[4]</span>
+            <span>John Gray, <em>“Whose Free Speech?”</em>, BBC Radio 4: <em>A Point of View</em>, broadcast January 15, 2021 (<a href="https://www.bbc.co.uk/programmes/m000r5pm" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline">bbc.co.uk/programmes/m000r5pm</a>).</span>
+          </li>
+          <li class="pl-4 border-l-2 border-stone-800">
+            <span class="font-mono text-amber-500 font-bold mr-1">[5]</span>
+            <span>United Kingdom Human Rights Act 1998, Schedule 1, Part I, Article 10 (Freedom of Expression): establishing both the right to freedom of expression and its explicit qualification regarding duties, responsibilities, public safety, and the protection of the reputation and rights of others (<a href="https://www.legislation.gov.uk/ukpga/1998/42/schedule/1/part/I/chapter/9/Article10" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline">legislation.gov.uk</a>).</span>
+          </li>
+        </ol>
+        
+        <!-- Creative Fellowship CTA -->
+        <div class="mt-12 p-6 rounded-2xl bg-gradient-to-br from-peat-900 to-peat-950 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="space-y-1 text-center sm:text-left">
+            <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold">Creative Fellowship</span>
+            <h4 class="font-cinzel text-lg font-bold text-white">The Shady River Bard Creative Ecosystem</h4>
+            <p class="text-xs text-stone-300 max-w-xl">
+              Trevor Swistchew's constitutional inquiries and philosophical essays are published in fellowship with The Shady River Bard—exploring a 26-album concept discography, working permaculture, and reflections on human purpose.
+            </p>
+          </div>
+          <a href="https://tpatterson34.github.io/shady-river-portal/" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-peat-950 font-cinzel font-bold text-xs uppercase tracking-wider transition-colors shrink-0 shadow-lg flex items-center gap-1.5">
+            <span>Explore Shady River</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+          </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="mt-10 pt-6 border-t border-stone-800/60 text-center text-xs text-stone-400 font-sans space-y-2">
+          <p>Essay &copy; 2026 Trevor Swistchew (Freedom of speech.docx 1/6/26). All rights reserved.</p>
+          <p class="text-stone-500">Published for the Trevor Swistchew Compendium &amp; Literary Salon Archive.</p>
+          <p class="pt-2">
+            <a href="../../index.html" class="text-stone-400 hover:text-amber-400 transition-colors mr-3">&larr; Return to Compendium Archive</a>
+            <a href="https://tpatterson34.github.io/shady-river-portal/friends-of-the-bard/" class="text-amber-400 hover:text-amber-300 transition-colors font-medium">Friends of the Bard Collective ↗</a>
+          </p>
+        </div>
+      </footer>
+
+    </article>
+  </main>
+
+  <!-- Client-Side Tab Switching Script -->
+  <script>
+    function switchTab(essayId, tabId) {
+      const container = document.querySelector('[aria-labelledby="dossier-heading-' + essayId + '"]');
+      if (!container) return;
+      
+      const buttons = container.querySelectorAll('.dossier-tab-btn');
+      const panels = container.querySelectorAll('.dossier-tab-panel');
+      
+      buttons.forEach(btn => {
+        btn.classList.remove('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+        btn.classList.add('border-transparent', 'text-stone-400');
+      });
+      
+      panels.forEach(p => p.classList.add('hidden'));
+      
+      const targetBtn = document.getElementById('btn-' + essayId + '-' + tabId);
+      const targetPanel = document.getElementById('panel-' + essayId + '-' + tabId);
+      
+      if (targetBtn) {
+        targetBtn.classList.remove('border-transparent', 'text-stone-400');
+        targetBtn.classList.add('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+      }
+      if (targetPanel) {
+        targetPanel.classList.remove('hidden');
+      }
+    }
+  </script>
+  <script src="../../assets/js/reading-experience.js"></script>
+</body>
+</html>
