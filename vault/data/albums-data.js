@@ -1,4 +1,4 @@
-window.CATALOG = {
+window.ALBUMS_DATA = {
   "summary": {
     "total_released": 26,
     "total_vault": 19,
@@ -1174,7 +1174,9 @@ window.CATALOG = {
         "niQmiFsL4ZE"
       ],
       "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_laTQyj9sz7jBhossCspS8L0Xc6YeytUSw",
-      "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEJAWlpL_w-X_nFgrJ4f4Bn"
+      "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEJAWlpL_w-X_nFgrJ4f4Bn",
+      "is_bespoke": true,
+      "custom_url": "/have-yourself-a-shady-little-christmas/"
     },
     {
       "id": "doomsday-clock",

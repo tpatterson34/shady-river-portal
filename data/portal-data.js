@@ -400,6 +400,25 @@ window.PORTAL_DATA = {
       "url": "/american-renewal/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcF3V0GG90EPJ_Tuhrpykvc5",
       "description": "The necessary answer to the diagnosis of Divide and Conquer and the dark prognosis of American Rubble. A 19-song epic of applied hope structured as a 2-volume, 4-act journey tackling corporate capture and labor liquidation before mending social cohesion and modernizing our constitutional blueprint."
+    },
+    {
+        "id": "have-yourself-a-shady-little-christmas",
+        "number": "20",
+        "title": "Have Yourself a Shady Little Christmas",
+        "subtitle": "A Social Realist Modern Christmas Carol",
+        "badge": "Bespoke Interactive Vault",
+        "cover": "/have-yourself-a-shady-little-christmas/assets/art/have-yourself-a-shady-little-christmas-cover.webp",
+        "tracks_count": 15,
+        "themes": [
+            "Social Invisibility",
+            "The Unholy Trinity",
+            "The Fentanyl Winter",
+            "Radical Empathy",
+            "The 76/32 Miracle"
+        ],
+        "url": "/have-yourself-a-shady-little-christmas/",
+        "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEJAWlpL_w-X_nFgrJ4f4Bn",
+        "description": "An unflinching 15-track modern Christmas carol told through the lens of social realism. Following William from the frozen shadows outside festive shop windows through addiction crisis to an unexpected encounter with Joe the store Santa, proving that the opposite of addiction is connection."
     }
   ],
   "merchandise": [
