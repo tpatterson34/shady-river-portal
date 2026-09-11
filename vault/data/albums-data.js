@@ -176,7 +176,7 @@ const ALBUMS_DATA = {
       "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_m0XNxuBlIZ5zv4Mrb1S3Nb_RzJ3QFBnpU",
       "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcHGcrGGVmhxgbmjlO4Z7SU2",
       "is_bespoke": true,
-      "custom_url": "/the-fracture/"
+      "custom_url": "../the-fracture/"
     },
     {
       "id": "the-great-inversion",
@@ -184,7 +184,7 @@ const ALBUMS_DATA = {
       "title": "The Great Inversion",
       "status": "released",
       "is_bespoke": true,
-      "custom_url": "/the-great-inversion/",
+      "custom_url": "../the-great-inversion/",
       "youtube_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcHpbQ_j63bh6NrvnSP-KwSM",
       "description": "\"The Great Inversion\" is the fourth compelling album from The Shady River Bard, offering a profound musical exploration of modern ambition and societal shifts. Building on the introspective country blues/folk foundation of \"Quiet Harvest\" and \"Beyond the Number,\" and the ambitious narrative of \"The Fracture,\" this album delves into the complex realities facing a generation redefining what a \"life well-lived\" truly means.\n\nFrom the economic anxieties felt in \"Fifty Percent Chance\" and \"The House That Nobody Built,\" to the isolated retreat of \"My Father's Son (In the Basement)\" and the digital allure of \"Dopamine Town,\" \"The Great Inversion\" unflinchingly examines the \"decline of ambition\" not as apathy, but as a rational adaptation to a world where old paths to success are increasingly blocked. It navigates the weariness of the modern workforce in \"Quiet Quitting Blues\" and the profound personal choices reflected in \"The Unwritten Vow\" and \"The Ghost of a Family Name,\" where traditional milestones are questioned or set aside.\n\nThe album pivots with its contemplative title track, \"An Ambitionless Dream,\" embracing a new state of being. The journey then shifts from diagnosis to hope, celebrating new philosophies of ambition: the fierce autonomy of \"The 4% Rule\" (FIRE movement), the creative freedom of \"My Own Little Corner of the Web\" (Creator Economy), and the tangible connection of \"The Farmer's Market on Saturday Morning\" (Localism). Concluding with the unifying anthem \"Beneath the Same Sun,\" \"The Great Inversion\" offers a nuanced portrait of a society in flux, ultimately finding purpose and connection in redefined terms. It’s an album for those navigating an inverted world, seeking authenticity, community, and a sovereign life.",
       "track_count": 13,
@@ -244,7 +244,7 @@ const ALBUMS_DATA = {
       "title": "The Poison We Trust",
       "status": "released",
       "is_bespoke": true,
-      "custom_url": "/the-poison-we-trust/",
+      "custom_url": "../the-poison-we-trust/",
       "youtube_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcG-3eJRamWMAXVCJEhO_sRa",
       "description": "Welcome to \"The Poison We Trust,\" the unflinching new album from The Shady River Bard.\nThis isn't just a collection of songs; it's a journey into the heart of the modern health crisis. It's an investigation set to the tune of Americana, folk, and country blues, a story for anyone who has ever felt lost, unheard, or betrayed by the very systems designed to keep us well.\nThe album begins in the quiet confusion of a kitchen, with the dawning realization that the official advice—the food pyramids, the \"heart-healthy\" labels, the quick-fix pills—might not have been the gospel we believed it to be (\"The Oath They Broke,\" \"Pyramid Scheme Blues\"). It pulls back the curtain on a history of corporate influence, where profits were often calculated using an equation that subtracted from public health (\"Oil Slick Heart,\" \"The Profit Equation\").\nWe explore the \"revolving door\" between government regulators and the industries they oversee, the \"blind spot science\" that results when research is funded by those with a vested interest, and the devastating human cost when a person becomes a patient—a \"ghost in the machine\" of their own body, navigating a world of chronic illness and pharmaceutical dependency (\"The Pill Trap\").\nBut \"The Poison We Trust\" is not an album about despair. It is an album about awakening.\nIt pivots from righteous anger to the quiet power of resilience (\"Reclaimed Ground\"), celebrating the moment that knowledge becomes action. It builds into an anthem for the collective movement of people sharing information, demanding accountability, and taking back control of their own health (\"The Great Awakening\").\nUltimately, this album is a testament to the enduring strength of the human spirit. It is a call for critical thinking, a plea for a return to foundational wisdom, and a hopeful vision of \"New Horizons,\" where an unclouded path to well-being is not just a dream, but a future we can build together.\nThank you for listening.",
       "track_count": 13,
@@ -304,7 +304,7 @@ const ALBUMS_DATA = {
       "title": "A House Divided",
       "status": "released",
       "is_bespoke": true,
-      "custom_url": "/a-house-divided/",
+      "custom_url": "../a-house-divided/",
       "youtube_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcGu-dyJFizG_351gSA6-jRn",
       "description": "From the searing inferno of \"The Roaring Fire\" to the haunting silence of \"Ghost Town,\" \"A House Divided\" is a profound and emotionally resonant journey through the heart of our planet's most pressing challenges and humanity's response. The Shady River Bard navigates the landscapes of climate division, painting vivid sonic portraits of loss and resilience—from the parched fields and silent mines to the floodwaters of forgotten rivers.\n\nThis album delves into the psychological dragons of inaction that hold us captive, before turning a pivotal corner towards hope. It seeks \"Common Ground,\" showcasing \"The Living Soil\" of regenerative solutions and the vibrant hum of \"The Clean Energy\" transforming communities. Culminating in \"The Unlikely Handshake,\" \"A House Divided\" celebrates the powerful alliances forged when historical adversaries unite for a shared future.\n\nMusically, the album is a testament to diversity, moving fluidly across a spectrum that includes the intense energy of industrial rock, atmospheric electronic soundscapes, contemplative folk, raw country blues, and the uplifting spirit of Americana. Each track is a carefully crafted narrative, designed not just to observe the division but to illuminate the pathways to healing and connection, offering a powerful challenge and a resolute commitment to building a future together.",
       "track_count": 14,
@@ -362,7 +362,7 @@ const ALBUMS_DATA = {
       "title": "Unequal Justice",
       "status": "released",
       "is_bespoke": true,
-      "custom_url": "/unequal-justice/",
+      "custom_url": "../unequal-justice/",
       "youtube_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcHMkTpFn5HegqFaTudnxu1L",
       "description": "In a world of fleeting headlines and endless noise, some albums don't just ask you to listen—they demand to be heard. \"Unequal Justice\" is one such album. This sprawling, 18-track narrative from The Shady River Bard is more than a collection of songs; it is an unflinching journey into the heart of a broken system, a modern folk epic for an age of profound disparity.\n\nFrom the opening chords, The Shady River Bard establishes himself as a master storyteller in the tradition of Guthrie and Dylan, a chronicler with a clear eye and a weary but resolute voice. The album is a meticulously crafted tapestry that examines the two Americas that exist under one flag. It begins with the \"Gilded Shield\"—a world of corporate malfeasance and political protection where justice is a commodity. In tracks like \"The Settlement\" and \"Too Big to Fail, Too Small to See,\" the Bard dissects the cold calculus of backroom deals and the impunity of the powerful, where billion-dollar crimes are washed away with a pen stroke, leaving devastation in their wake.\n\nBut just as you get comfortable in the sterile quiet of the boardroom, the album violently throws you across \"The County Line\" and into the \"Iron Funnel.\" This is the other America, where the powerless are caught in a brutal machinery of cash bail, racial profiling, and systemic neglect. Songs like \"The Red Line\" and \"The People's Lawyer\" are not just stories; they are harrowing character studies of lives undone by a minor charge and the unsung heroes fighting losing battles within a system designed to crush them.\n\nAs the journey continues, \"Unequal Justice\" peels back another layer to reveal the \"Crooked Architecture\" of the system itself. With a driving, paranoid energy, \"The ALEC Train\" exposes the shadowy world of legislative capture, where laws are written in secret to benefit the few. In the heartbreaking ballad \"The Judge's Hands Are Tied,\" we are given a surprising and poignant look from the bench, witnessing the internal conflict of a judge forced to enforce a mandatory minimum sentence they know is unjust.\n\nThe album's emotional core, however, lies in its unflinching examination of the human cost. From the gut-wrenching perspective of a victim in \"The Silenced Scream\" to the lifelong struggle of the formerly incarcerated in \"The Sentence After,\" The Shady River Bard never shies away from the ripples of ruin that a broken system leaves behind. The soulful anthem \"The Mama's Bail Jar\" becomes a powerful testament to the resilience of family and the quiet sacrifices made in the face of insurmountable odds.\n\nYet, \"Unequal Justice\" is not an album of pure despair. In its final act, a defiant spirit of hope emerges. It is the hard-won hope of \"The Innocence Man,\" celebrating the tireless advocates who fight for the wrongfully convicted. It is the courageous fire of \"The Lamplighter (Serpico's Song),\" honoring the whistleblower who stands alone against corruption. And finally, it culminates in \"The Unwavering Gaze,\" a soaring, anthemic call to collective action—a recognition that after bearing witness to so much pain, the only path forward is together, with our eyes fixed on a more just and equitable dawn.\n\nMusically, the album is a rich blend of raw, narrative folk, gritty country-blues, and soulful Americana, creating a cinematic soundscape that is as intimate as it is epic. Each song is a world unto itself, yet each is an essential piece of a larger, urgent, and profoundly necessary story. This is not background music. This is an album to be lived with, reflected upon, and discussed. Press play, and prepare to be changed.",
       "track_count": 18,
@@ -428,7 +428,7 @@ const ALBUMS_DATA = {
       "title": "Cognitive Inferno",
       "status": "released",
       "is_bespoke": true,
-      "custom_url": "/cognitive-inferno/",
+      "custom_url": "../cognitive-inferno/",
       "youtube_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcE3k_0lQhF30Bpo4ik5m6S_",
       "description": "Have you ever lost an hour to a screen and wondered where the time went? Have you felt the phantom buzz of a notification in your pocket, or the low-grade, constant hum of anxiety from a world that never, ever logs off? We live our lives inside a machine we built but no longer control. The Shady River Bard’s eighth album, Cognitive Inferno, is the soundtrack to this modern condition—a visceral and unflinching look at the war for our attention.\nThis is not background music. This is a journey into the heart of the digital age, a narrative descent that begins with the hypnotic, industrial rock allure of \"The Infinite Scroll.\" The album masterfully captures the seductive pull of the digital river, the cheap, addictive rush of \"Dopamine Debt,\" and the chilling realization in \"Ghost in the Machine\" that our free will may no longer be our own. The Shady River Bard holds up a mirror to the cognitive fallout we all feel but rarely name—the shattered focus of \"Attention Residue\" and the frantic, physical burnout of \"Wired Nerves.\"\nBut Cognitive Inferno goes deeper than personal struggle. It confronts the terrifying societal consequences of our digital existence. In the stomping, menacing track \"Digital Dogma,\" the album explores how our fractured minds seek shelter in the comforting certainty of echo chambers, building fortresses of belief that protect us from a world of nuance. This is a critical look at how the tools meant to connect us are now being used to forge us into tribes, paving the way for the slow, crushing intellectual decay lamented in the album’s bleakest moment, \"The Great Unlearning.\"\nThe album’s narrative hurtles towards an apocalyptic climax with \"Terminal Velocity,\" a blistering thrash-metal track that represents the total, out-of-control system failure of a society that has forgotten how to hit the brakes. It is the sonic equivalent of a catastrophic crash, leaving nothing but silence and wreckage in its wake.\nAnd yet, from that silence, Cognitive Inferno finds its defiant, human heart. The second half of the album is a powerful ascent, beginning with the anthemic call-to-arms in \"Reboot Sequence.\" This is where the album’s true purpose is forged: not in despair, but in resistance. The journey culminates in the epic, soaring title track, \"Cognitive Inferno,\" which offers a profound and powerful thesis: the only way to fight the inferno of digital chaos is to cultivate a brighter, more powerful fire within ourselves. It is a call to reclaim our focus, our connection, and our humanity.\nThis is The Shady River Bard at his most raw, relevant, and artistically ambitious. Press play. Enter the Inferno. And find your own fire within.",
       "track_count": 10,
@@ -479,7 +479,7 @@ const ALBUMS_DATA = {
       "title": "The Hammer and the Rust",
       "status": "released",
       "is_bespoke": true,
-      "custom_url": "/the-hammer-and-the-rust/",
+      "custom_url": "../the-hammer-and-the-rust/",
       "apple_music_url": "https://music.apple.com/us/album/the-hammer-and-the-rust/1833555239",
       "youtube_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcHpUBDbXPozRJgyZkJfX3ND",
       "description": "Welcome to The Hammer and the Rust: An Industrial Cantata, a sonic monument to a forgotten congregation: the American industrial worker. This is not merely an album but a four-act narrative journey, a requiem and a testament forged from the raw materials of its subject.\nThe album's musical journey mirrors its narrative arc. It is born from a bespoke genre, \"Industrial Folk Chant\"—a fusion of work songs, ancient drones, and literal industrial percussion—the unified sound for a unified people. But as the story fractures, so does the music. The monolithic chants give way to the arrhythmic rage of spoken-word industrial noise, the quiet desolation of minimalist folk, the mournful country-blues of a people on the road, and ultimately, a resilient, anthemic folk-rock that builds a new strength from the remnants of the old.\nThe story begins with Act I: The Forge (Tracks 1-4), immersing you in the awesome, overwhelming power of the boom years. You'll feel the ground shake with the \"Anvil's Chorus,\" witness a legacy passed down through \"These Calloused Hands,\" experience the paradoxical security of the \"Company Town,\" and stand in awe of the unstoppable \"Molten River\" of steel at the peak of its might.\nThe foundation cracks in Act II: The Fracture (Tracks 5-7). The confident roar is replaced by the creeping dread of \"A Different Kind of Cold,\" as the first rumors of shutdowns arrive. This dread gives way to the heartbreaking eulogy of \"Ghosts of the Assembly Line,\" a musical lament for the moment the great machine dies. From that silence erupts the raw, percussive fury of \"Signed, A Man in an Office,\" a cathartic tirade against the cold bureaucracy that dismantled a way of life.\nAct III: The Echo (Tracks 8-11) walks through the devastating aftermath. Here, we witness the quiet shame and lost identity of \"The Long Walk Home,\" the intimate tragedy of the \"Black Lung Lullaby,\" and the profane desperation of \"The Iron Wake,\" where a community is forced to dismantle its own history to survive. This act culminates in \"The Long Exodus,\" a mournful road song for a people cast out from their homeland in search of an uncertain future.\nFinally, Act IV: The Ember (Tracks 12-14) finds a complex and defiant hope in the ruins. It begins with the quiet, ambient peace of \"Weedyard,\" as nature patiently reclaims the scarred landscape. This gives way to the fragile, bittersweet hope of \"The Unlikely Handshake,\" where the new world of tech and art is built on the bones of the old. The journey concludes with the album's thesis in the powerful anthem, \"Rust and Bone.\" It is a final, cathartic declaration that the scars of the past—the rust—are not a weakness, but have been absorbed into the very bone, creating a new, harder-won, and ultimately unbreakable strength.\nThis is a story of a people, a place, and a promise. Thank you for taking the journey.",
@@ -538,7 +538,7 @@ const ALBUMS_DATA = {
       "title": "The Unbroken Chain",
       "status": "released",
       "is_bespoke": true,
-      "custom_url": "/unbroken-chain/",
+      "custom_url": "../unbroken-chain/",
       "youtube_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcH2lWQ4zDr7Kh4kW-TU8HFI",
       "description": "What is the unbroken chain? Is it the one made of iron, passed from the slave ship to the chain gang to the prison cell? Or is it the one made of spirit, a sequence of voices and melodies passed down through generations, refusing to be silenced? The tenth album from The Shady River Bard argues that both exist, intertwined in the very soul of American history.\n\"Unbroken Chain\" is not just an album; it is a four-act work of sonic testimony. It confronts a devastating truth hidden in plain sight: slavery was not abolished by the 13th Amendment, but given a new legal name. This album traces the evolution of that foundational sin, arguing that its cold logic was meticulously adapted to fuel new systems of bondage, from the brutal convict lease system of the Reconstruction era to the sprawling prison-industrial complex and the invisible digital chains of modern human trafficking.\nThe journey begins in Act I, amidst the raw, percussive grit of the plantation field, where music is a tool of survival (\"A Different Kind of Sun\"), a witness to the commodification of family (\"At the Purchaser's Option\"), and a secret map to freedom (\"The Drinking Gourd\").\nAct II marks the great betrayal. The album's sound turns cold and stark as the 13th Amendment's insidious loophole is exposed (\"Except as a Punishment\"). This legal sleight of hand gives birth to the Black Codes, weaponizing freedom itself (\"The Black Codes\") and creating a new, disposable workforce that is, horrifically, \"Cheaper Than a Mule.\"\nIn Act III, the machine modernizes. The music shifts, becoming frantic and industrial, then bleak and electronic. We follow the money through the dizzying network of corporations profiting from incarceration (\"The Prison-Industrial Rag\"), feel the monotonous grind of the prison factory worker making branded goods for pennies (\"Thirteen Cents an Hour\"), and vanish into the dislocated, placeless horror of modern trafficking in \"The Digital Ghost.\"\nFinally, Act IV is the Reckoning. The album returns to its folk and gospel roots to bear witness. It connects the long shadow of the past to the present (\"The Long Shadow\"), honors the defiant act of preserving a voice (\"Parchman Farm\"), reclaims the stolen soul of an instrument (\"Reclaiming the Banjo\"), and, in the climactic title track, reframes the central metaphor. We discover that the most enduring chain is the one of resistance—the unbroken lineage of song, spirit, and memory. The album closes with a haunting, percussive reprise, a reminder that the rhythms of forced labor still echo today.\nThis is The Shady River Bard's most ambitious and emotionally demanding work. It is a journey through the darkest parts of a nation's history, but it is also a testament to the unbreakable power of the human spirit to sing its truth, even in the deepest shadow. This is an invitation to listen, to learn, and to remember.",
       "track_count": 14,
@@ -597,7 +597,7 @@ const ALBUMS_DATA = {
       "title": "This Sacred Ground",
       "status": "released",
       "is_bespoke": true,
-      "custom_url": "/this-sacred-ground/",
+      "custom_url": "../this-sacred-ground/",
       "youtube_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcGKqJdE1F67neqmJgNBvouc",
       "description": "Welcome to This Sacred Ground, an album that is not just a collection of songs, but a journey through history, myth, and the enduring spirit of a people. This is the story of a continent, told from a perspective too often silenced. For listeners who appreciate thematic depth and nuanced storytelling, this album offers a rich, immersive, and ultimately unforgettable experience.\n\nThe journey begins in a world of myth and order with Act I: The Intact World. Here, we witness the creation of the land in the reverent folk overture, \"The Water Beetle's Mud.\" We then learn our place within it, not as owners, but as relatives, in the warm, spiritual ballad \"Kinship.\" The act concludes with \"The Council of Clans,\" a proud and intricate folk anthem that dismantles stereotypes by celebrating the sophisticated, consensus-based societies that governed this land for millennia. The music in this act is warm, acoustic, and full of wonder—the sound of a world in balance.\n\nThis peace is shattered with the arrival of Act II: The Shattering. The tone shifts dramatically to one of angry, raw protest. \"The Trail of Broken Treaties\" is a fiery, driving anthem in the vein of a historical protest song, chronicling the systematic betrayal of Native nations. This leads into the album's bleakest movement, a harrowing depiction of forced removal. \"The Long Removal\" is a minimalist, trudging folk dirge that captures the physical and spiritual devastation of being broken from one's ancestral lands, a haunting funeral march for a displaced people.\n\nFrom the frozen trail, we enter the chilling quiet of Act III: The Long Silence. This act confronts the systematic cultural erasure of the federal Indian boarding school system, a period of history designed with the explicit goal to \"kill the Indian. and save the man.\" The music becomes skeletal and claustrophobic. \"The Un-naming\" uses a sparse, detuned piano to tell the story of a child's identity being stripped away, while \"The Stolen Tongue\" is a heartbreaking folk ballad about the crime of forced language loss. These songs are the emotional nadir of the album, a quiet, intimate look at a war waged not on a battlefield, but on the soul of a child.\n\nAct IV: The Long Echo brings us into the harsh daylight of the present. These songs explore the complex legacy of this historical trauma. \"The Reservation Line\" is a gritty, world-weary folk-blues track that documents the socio-economic struggles of contemporary reservation life. This is followed by \"The Foxwoods Deal,\" a conflicted, cynical folk-rock song that tackles the controversial role of tribal casinos as a high-stakes gamble for economic survival.\n\nBut this is not a story that ends in despair. The album's final movement, Act V: We Are the Halluci Nation, is a surge of defiant, triumphant energy. \"The Longest Walk\" transforms the weary march of Act II into a powerful, purposeful stride towards justice, celebrating the unbroken chain of Indigenous activism. This culminates in \"The Speaker's Heart,\" the album's soaring, joyful climax—a massive rock anthem that celebrates the revitalization of Indigenous languages, the ultimate act of decolonization and healing. It is the sound of the circle being mended, a triumphant declaration that the speaker's heart is finally whole again.\n\nThis Sacred Ground is an invitation to listen—to a creation story, to a historical testimony, and to a vibrant, living culture that has endured. It is a journey from mythic beginnings, through profound darkness, and into a defiant, hopeful light.",
       "track_count": 12,
@@ -703,7 +703,7 @@ const ALBUMS_DATA = {
       "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_m9EzXBD6bu3G-C970d6j06U_jXezATBXI",
       "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcGtsazmtO3CYDLN3lgel91m",
       "is_bespoke": true,
-      "custom_url": "/the-balance-sheet-of-outrage/"
+      "custom_url": "../the-balance-sheet-of-outrage/"
     },
     {
       "id": "mama-s-boy",
@@ -756,7 +756,7 @@ const ALBUMS_DATA = {
       "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_mk1B0XDbatLygrdLjja04-xMSJSImbR6Q",
       "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcGsdstc3avnCK2Ttq3H-lLd",
       "is_bespoke": true,
-      "custom_url": "/mamas-boy/"
+      "custom_url": "../mamas-boy/"
     },
     {
       "id": "five-digit-fate",
@@ -820,7 +820,7 @@ const ALBUMS_DATA = {
       "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_k2mdyly8AhgJTCAC0Nh9Zt6F_cJa6QsW0",
       "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEI54M3aP3O8p9s84xcrHrT",
       "is_bespoke": true,
-      "custom_url": "/five-digit-fate/"
+      "custom_url": "../five-digit-fate/"
     },
     {
       "id": "sold-cheap",
@@ -874,7 +874,7 @@ const ALBUMS_DATA = {
       "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_nGj-ugJRRYhebyBxsqWrlOjKzIXiv4ahw",
       "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcFedvC4nuXNk7fDNzCwfZe0",
       "is_bespoke": true,
-      "custom_url": "/sold-cheap/"
+      "custom_url": "../sold-cheap/"
     },
     {
       "id": "divide-and-conquer",
@@ -932,7 +932,7 @@ const ALBUMS_DATA = {
       "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_mUA-AZ8GzwPkh1C7mnd6B3A8xT-GOk44g",
       "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEG-mE0vg_OVLqdIkxszN7C",
       "is_bespoke": true,
-      "custom_url": "/divide-and-conquer/"
+      "custom_url": "../divide-and-conquer/"
     },
     {
       "id": "yo-ho-ho-and-a-pocket-full-of-greed",
@@ -989,7 +989,7 @@ const ALBUMS_DATA = {
       "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_lsEEp9XNtrX2itoiJlVbt0rNWtxF7rlR0",
       "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcHr2R6eMk1Xd3DPGh4fPYtK",
       "is_bespoke": true,
-      "custom_url": "/yo-ho-ho-and-a-pocket-full-of-greed/"
+      "custom_url": "../yo-ho-ho-and-a-pocket-full-of-greed/"
     },
     {
       "id": "american-rubble",
@@ -1046,7 +1046,7 @@ const ALBUMS_DATA = {
       "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_kPRgQ208VwgpXAaad3r0gOMLBVf6hA0vA",
       "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEF1fY_cQrs4C2GfkNgO70J",
       "is_bespoke": true,
-      "custom_url": "/american-rubble/"
+      "custom_url": "../american-rubble/"
     },
     {
       "id": "american-renewal",
@@ -1116,7 +1116,7 @@ const ALBUMS_DATA = {
       "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_l_5xEDbLp-p7WGwPU80pfyzWMPJYkgvEo",
       "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcF3V0GG90EPJ_Tuhrpykvc5",
       "is_bespoke": true,
-      "custom_url": "/american-renewal/"
+      "custom_url": "../american-renewal/"
     },
     {
       "id": "have-yourself-a-shady-little-christmas",
@@ -1177,7 +1177,7 @@ const ALBUMS_DATA = {
       "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_laTQyj9sz7jBhossCspS8L0Xc6YeytUSw",
       "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEJAWlpL_w-X_nFgrJ4f4Bn",
       "is_bespoke": true,
-      "custom_url": "/have-yourself-a-shady-little-christmas/"
+      "custom_url": "../have-yourself-a-shady-little-christmas/"
     },
     {
       "id": "doomsday-clock",
@@ -1235,7 +1235,7 @@ const ALBUMS_DATA = {
       "youtube_music_url": "https://music.youtube.com/playlist?list=PLO_tWXIGUXcFJ4vC-R0d-N2XvsMwph5bj",
       "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcFJ4vC-R0d-N2XvsMwph5bj",
       "is_bespoke": true,
-      "custom_url": "/doomsday-clock/"
+      "custom_url": "../doomsday-clock/"
     },
     {
       "id": "the-inner-citadel-a-stoic-s-songbook",
@@ -1530,7 +1530,7 @@ const ALBUMS_DATA = {
       "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_mpc61Qn3VVVfyhyUHuggJtbD2ZhMYVYtk",
       "video_playlist_url": "https://www.youtube.com/playlist?list=PLZ3uWHmWOPCY",
       "is_bespoke": true,
-      "custom_url": "/the-hollow-herd/"
+      "custom_url": "../the-hollow-herd/"
     }
   ],
   "vault": [

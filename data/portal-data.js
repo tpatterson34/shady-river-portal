@@ -16,7 +16,7 @@ window.PORTAL_DATA = {
       "icon": "fa-solid fa-guitar",
       "accent": "amber",
       "description": "An ambitious, narrative-rich folk-rock catalog exploring human longing, societal fractures, and pathways to reconciliation. Featuring full lyrics vaults, musical analyses, and official video playlists.",
-      "link": "/vault/",
+      "link": "vault/",
       "cta": "Enter Complete Discography Vault"
     },
     {
@@ -48,7 +48,7 @@ window.PORTAL_DATA = {
       "title": "The Hollow Herd",
       "subtitle": "A Forensic Sonic Audit of the American Cattle Crisis",
       "badge": "Brand New Album Release",
-      "cover": "/the-hollow-herd/assets/art/the-hollow-herd-cover.webp",
+      "cover": "the-hollow-herd/assets/art/the-hollow-herd-cover.webp",
       "tracks_count": 15,
       "themes": [
         "Big Four Meatpackers",
@@ -57,7 +57,7 @@ window.PORTAL_DATA = {
         "Water Crisis & Drought",
         "The Prime Act"
       ],
-      "url": "/the-hollow-herd/",
+      "url": "the-hollow-herd/",
       "video_url": "https://www.youtube.com/watch?v=-PJtGDSmaMU",
       "description": "An uncompromising 4-act, 15-track conceptual investigation of the financialization of American ranching, the Big Four beef oligopoly, and the struggle for agrarian survival. Features rolling video premieres."
     },
@@ -67,7 +67,7 @@ window.PORTAL_DATA = {
       "title": "The Fracture",
       "subtitle": "A Societal Audit & Blueprint for Reconciliation",
       "badge": "Flagship Concept App",
-      "cover": "/assets/covers/album-03.webp",
+      "cover": "assets/covers/album-03.webp",
       "tracks_count": 14,
       "themes": [
         "Polarization",
@@ -76,7 +76,7 @@ window.PORTAL_DATA = {
         "Rural Chasm",
         "Common Ground"
       ],
-      "url": "/the-fracture/",
+      "url": "the-fracture/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcHGcrGGVmhxgbmjlO4Z7SU2",
       "description": "An empirical 4-movement audit of modern America's deep sociological divisions, followed by a compassionate roadmap toward vulnerability, community stewardship, and human reconnection."
     },
@@ -86,7 +86,7 @@ window.PORTAL_DATA = {
       "title": "The Great Inversion",
       "subtitle": "An Antidote to the Decline of Ambition & Modern Malaise",
       "badge": "Bespoke Interactive Vault",
-      "cover": "/the-great-inversion/assets/art/the-great-inversion-cover.webp",
+      "cover": "the-great-inversion/assets/art/the-great-inversion-cover.webp",
       "tracks_count": 13,
       "themes": [
         "Economics of Apathy",
@@ -95,7 +95,7 @@ window.PORTAL_DATA = {
         "Milestone Retreat",
         "FIRE & Autonomy"
       ],
-      "url": "/the-great-inversion/",
+      "url": "the-great-inversion/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcHpbQ_j63bh6NrvnSP-KwSM",
       "description": "An unflinching 3-movement examination of the modern retreat from traditional life milestones and the rise of quiet quitting—culminating in an empowering counter-current toward sovereignty, intentionalism, and redefined purpose."
     },
@@ -105,7 +105,7 @@ window.PORTAL_DATA = {
       "title": "The Poison We Trust",
       "subtitle": "A Social Analysis of Modern Public Health & The Body Politic",
       "badge": "Bespoke Interactive Vault",
-      "cover": "/the-poison-we-trust/assets/art/the-poison-we-trust-cover.webp",
+      "cover": "the-poison-we-trust/assets/art/the-poison-we-trust-cover.webp",
       "tracks_count": 13,
       "companion_novella": {
         "title": "The Lucidity Protocol",
@@ -118,7 +118,7 @@ window.PORTAL_DATA = {
         "Institutional Capture",
         "Health Sovereignty"
       ],
-      "url": "/the-poison-we-trust/",
+      "url": "the-poison-we-trust/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcG-3eJRamWMAXVCJEhO_sRa",
       "description": "An unflinching 4-movement investigation into dietary deceptions, corporate capture of regulatory agencies, and the modern chronic illness epidemic—accompanied by the serialized companion novella 'The Lucidity Protocol' on Substack."
     },
@@ -128,7 +128,7 @@ window.PORTAL_DATA = {
       "title": "A House Divided",
       "subtitle": "Navigating Climate Division & Forging Common Ground",
       "badge": "Bespoke Interactive Vault",
-      "cover": "/a-house-divided/assets/art/a-house-divided-cover.webp",
+      "cover": "a-house-divided/assets/art/a-house-divided-cover.webp",
       "tracks_count": 14,
       "themes": [
         "The Unquiet Earth",
@@ -137,7 +137,7 @@ window.PORTAL_DATA = {
         "Dragons of Inaction",
         "Transcendent Common Ground"
       ],
-      "url": "/a-house-divided/",
+      "url": "a-house-divided/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcGu-dyJFizG_351gSA6-jRn",
       "description": "A profound 6-movement narrative journey across ideological divides on climate, honoring the symmetrical pain of both changing weather and displaced heritage, and charting a pragmatic roadmap toward shared stewardship."
     },
@@ -147,7 +147,7 @@ window.PORTAL_DATA = {
       "title": "Unequal Justice",
       "subtitle": "Systemic Inequity, Mass Incarceration & The Scale of Law",
       "badge": "Bespoke Interactive Vault",
-      "cover": "/unequal-justice/assets/art/unequal-justice-cover.webp",
+      "cover": "unequal-justice/assets/art/unequal-justice-cover.webp",
       "tracks_count": 18,
       "themes": [
         "The Gilded Shield",
@@ -156,7 +156,7 @@ window.PORTAL_DATA = {
         "Ripples of Ruin",
         "Cracks in the Concrete"
       ],
-      "url": "/unequal-justice/",
+      "url": "unequal-justice/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcHMkTpFn5HegqFaTudnxu1L",
       "description": "An unflinching 4-act, 18-track modern folk epic examining the two Americas living under one flag. Guided by the metaphor of the 'two-weight stone,' it contrasts corporate impunity with the cash-bail meat grinder and mandatory sentencing, culminating in an anthem of earned, resolute hope."
     },
@@ -166,7 +166,7 @@ window.PORTAL_DATA = {
       "title": "Cognitive Inferno",
       "subtitle": "The Algorithmic War for Human Consciousness & Re-Humanization",
       "badge": "Bespoke Interactive Vault",
-      "cover": "/cognitive-inferno/assets/art/cognitive-inferno-cover.webp",
+      "cover": "cognitive-inferno/assets/art/cognitive-inferno-cover.webp",
       "tracks_count": 10,
       "themes": [
         "Attention Scarcity",
@@ -175,7 +175,7 @@ window.PORTAL_DATA = {
         "Epistemic Tribes",
         "Re-Humanization"
       ],
-      "url": "/cognitive-inferno/",
+      "url": "cognitive-inferno/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcE3k_0lQhF30Bpo4ik5m6S_",
       "description": "A visceral 4-phase rock symphony dissecting the algorithmic capture of human attention, the neurological toll of endless scrolling and dopamine debt, and the radical reclaiming of sovereign human presence."
     },
@@ -185,7 +185,7 @@ window.PORTAL_DATA = {
       "title": "The Hammer and the Rust",
       "subtitle": "An Industrial Cantata of the American Rust Belt",
       "badge": "Bespoke Interactive Vault",
-      "cover": "/the-hammer-and-the-rust/assets/art/the-hammer-and-the-rust-cover.webp",
+      "cover": "the-hammer-and-the-rust/assets/art/the-hammer-and-the-rust-cover.webp",
       "tracks_count": 14,
       "themes": [
         "The Forge and the Fire",
@@ -194,7 +194,7 @@ window.PORTAL_DATA = {
         "Rust and Bone",
         "Industrial Folk Chant"
       ],
-      "url": "/the-hammer-and-the-rust/",
+      "url": "the-hammer-and-the-rust/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcHpUBDbXPozRJgyZkJfX3ND",
       "description": "An epic 4-act, 14-track industrial cantata exploring the rise, brutal collapse, and hard-won resilience of the American manufacturing heartland. Fusing work chants, throat-singing drones, and scrap metal percussion into an unforgettable sonic monument."
     },
@@ -204,7 +204,7 @@ window.PORTAL_DATA = {
       "title": "The Unbroken Chain",
       "subtitle": "From Chattel to Convict Leasing to Modern Incarceration — and the Enduring Song of Freedom",
       "badge": "Bespoke Interactive Vault",
-      "cover": "/unbroken-chain/assets/art/unbroken-chain-cover.webp",
+      "cover": "unbroken-chain/assets/art/unbroken-chain-cover.webp",
       "tracks_count": 14,
       "themes": [
         "Antebellum Bondage",
@@ -213,7 +213,7 @@ window.PORTAL_DATA = {
         "Prison-Industrial Complex",
         "Cultural Reclamation"
       ],
-      "url": "/unbroken-chain/",
+      "url": "unbroken-chain/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcH2lWQ4zDr7Kh4kW-TU8HFI",
       "description": "A profound 4-act historical folk blues cantata tracing the continuous evolution of forced labor in America from plantation chattel to convict leasing and modern prison manufacturing, set against the enduring unbroken chain of spiritual and musical resilience."
     },
@@ -223,7 +223,7 @@ window.PORTAL_DATA = {
       "title": "This Sacred Ground",
       "subtitle": "From Creation and Betrayal to Defiant Resilience on Ancestral Earth",
       "badge": "Bespoke Interactive Vault",
-      "cover": "/this-sacred-ground/assets/art/this-sacred-ground-cover.webp",
+      "cover": "this-sacred-ground/assets/art/this-sacred-ground-cover.webp",
       "tracks_count": 12,
       "themes": [
         "Creation & Kinship",
@@ -232,7 +232,7 @@ window.PORTAL_DATA = {
         "Reservation Realities",
         "Language Rebirth"
       ],
-      "url": "/this-sacred-ground/",
+      "url": "this-sacred-ground/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcGKqJdE1F67neqmJgNBvouc",
       "description": "A sweeping 5-act folk epic bearing witness to the Native American experience—from mythic creation and sovereign clan governance, through broken treaties and boarding schools, to triumphant language revitalization and cultural rebirth."
     },
@@ -242,7 +242,7 @@ window.PORTAL_DATA = {
       "title": "The Balance Sheet of Outrage",
       "subtitle": "A Forensic Sonic Audit of the Military-Industrial Complex across Four Movements",
       "badge": "Bespoke Interactive Vault",
-      "cover": "/the-balance-sheet-of-outrage/assets/art/the-balance-sheet-of-outrage-cover.webp",
+      "cover": "the-balance-sheet-of-outrage/assets/art/the-balance-sheet-of-outrage-cover.webp",
       "tracks_count": 14,
       "themes": [
         "The Business Proposal",
@@ -250,7 +250,7 @@ window.PORTAL_DATA = {
         "The Externalities",
         "The Reckoning & The Cycle"
       ],
-      "url": "/the-balance-sheet-of-outrage/",
+      "url": "the-balance-sheet-of-outrage/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcGtsazmtO3CYDLN3lgel91m",
       "description": "An unflinching 4-act, 14-track forensic sonic audit stripping away the flags and anthems to expose the cold quarterly earnings, manufactured consent, civilian externalities, and permanent war cycle of the military-industrial complex."
     },
@@ -260,7 +260,7 @@ window.PORTAL_DATA = {
       "title": "Mama's Boy",
       "subtitle": "A Memoir of Judith Faye Adams & A Tribute to Single Mothers in America",
       "badge": "Bespoke Interactive Vault",
-      "cover": "/mamas-boy/assets/art/mamas-boy-cover.webp",
+      "cover": "mamas-boy/assets/art/mamas-boy-cover.webp",
       "tracks_count": 11,
       "themes": [
         "The Weight of Her World",
@@ -268,7 +268,7 @@ window.PORTAL_DATA = {
         "The Storm and the Shelter",
         "The Reckoning, Grief & Grace"
       ],
-      "url": "/mamas-boy/",
+      "url": "mamas-boy/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcGsdstc3avnCK2Ttq3H-lLd",
       "description": "An intimate, unflinching 11-track musical memoir of the Bard's mother, Judith Faye Adams ('Mama Judie'), and an empirical sociological data audit of Single Mothers in America. Journeying through pre-dawn shifts, boyhood drive-ins, domestic storms, and the healing gold of Kintsugi grace."
     },
@@ -278,7 +278,7 @@ window.PORTAL_DATA = {
       "title": "Five-Digit Fate",
       "subtitle": "A Social Cartography of American Poverty & Geographic Determinism",
       "badge": "Bespoke Interactive Vault",
-      "cover": "/five-digit-fate/assets/art/five-digit-fate-cover.webp",
+      "cover": "five-digit-fate/assets/art/five-digit-fate-cover.webp",
       "tracks_count": 17,
       "themes": [
         "Geographic Determinism",
@@ -286,7 +286,7 @@ window.PORTAL_DATA = {
         "Deaths of Despair",
         "The Unbranded Heart"
       ],
-      "url": "/five-digit-fate/",
+      "url": "five-digit-fate/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEI54M3aP3O8p9s84xcrHrT",
       "description": "An ambitious 5-act, 17-track social cartography translating the empirical research of Raj Chetty's Opportunity Atlas, Case & Deaton's Deaths of Despair, and Richard Rothstein's The Color of Law into a profound journey across America's heartland and the triumph of the human soul."
     },
@@ -296,7 +296,7 @@ window.PORTAL_DATA = {
       "title": "Sold Cheap",
       "subtitle": "A Three-Act Sonic Audit of the Systemic Devaluation of American Life",
       "badge": "Bespoke Interactive Vault",
-      "cover": "/sold-cheap/assets/art/sold-cheap-cover.webp",
+      "cover": "sold-cheap/assets/art/sold-cheap-cover.webp",
       "tracks_count": 12,
       "themes": [
         "Corporate Hostile Takeover",
@@ -304,7 +304,7 @@ window.PORTAL_DATA = {
         "Military-Industrial Complex",
         "Signal to Noise"
       ],
-      "url": "/sold-cheap/",
+      "url": "sold-cheap/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcFedvC4nuXNk7fDNzCwfZe0",
       "description": "An unflinching 12-track sonic documentary and forensic ledger auditing the half-century liquidation of American communities, pensions, public health, and democracy itself—culminating in an epic indictment of modern extraction."
     },
@@ -314,7 +314,7 @@ window.PORTAL_DATA = {
       "title": "Divide and Conquer",
       "subtitle": "A Four-Act Dissection of Manufactured Division & The Path to Reconnection",
       "badge": "Bespoke Interactive Vault",
-      "cover": "/divide-and-conquer/assets/art/divide-and-conquer-cover.webp",
+      "cover": "divide-and-conquer/assets/art/divide-and-conquer-cover.webp",
       "tracks_count": 13,
       "themes": [
         "Elite Overproduction",
@@ -322,7 +322,7 @@ window.PORTAL_DATA = {
         "Red vs Blue Trap",
         "Grassroots Solidarity"
       ],
-      "url": "/divide-and-conquer/",
+      "url": "divide-and-conquer/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEG-mE0vg_OVLqdIkxszN7C",
       "description": "The unifying theory of the entire discography. Grounded in Peter Turchin's structural-demographic dynamics, this 13-track, four-act magnum opus unmasks the architects of partisan warfare and calls for working-class reconnection."
     },
@@ -332,7 +332,7 @@ window.PORTAL_DATA = {
       "title": "Yo Ho Ho and a Pocket Full of Greed",
       "subtitle": "A Swashbuckling Satirical Sea Shanty Odyssey Auditing Corporate Privateers",
       "badge": "Bespoke Interactive Vault",
-      "cover": "/yo-ho-ho-and-a-pocket-full-of-greed/assets/art/yo-ho-ho-and-a-pocket-full-of-greed-cover.webp",
+      "cover": "yo-ho-ho-and-a-pocket-full-of-greed/assets/art/yo-ho-ho-and-a-pocket-full-of-greed-cover.webp",
       "tracks_count": 13,
       "themes": [
         "Modern Corporate Privateers",
@@ -341,7 +341,7 @@ window.PORTAL_DATA = {
         "Algorithmic Plunder",
         "Common Ground Reclamation"
       ],
-      "url": "/yo-ho-ho-and-a-pocket-full-of-greed/",
+      "url": "yo-ho-ho-and-a-pocket-full-of-greed/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcHr2R6eMk1Xd3DPGh4fPYtK",
       "description": "A swashbuckling 4-act, 13-track maritime satirical odyssey auditing corporate privateering, algorithmic plunder, and the pillaging of everyday life—reclaiming dignity and grassroots solidarity from the modern buccaneers."
     },
@@ -351,7 +351,7 @@ window.PORTAL_DATA = {
       "title": "American Rubble",
       "subtitle": "The Anatomy of Collapse, Civil Conflict & The Human Cost of Division",
       "badge": "Bespoke Interactive Vault",
-      "cover": "/american-rubble/assets/art/american-rubble-cover.webp",
+      "cover": "american-rubble/assets/art/american-rubble-cover.webp",
       "tracks_count": 13,
       "themes": [
         "Systemic Collapse",
@@ -360,7 +360,7 @@ window.PORTAL_DATA = {
         "Transgenerational Trauma",
         "Preventative Empathy"
       ],
-      "url": "/american-rubble/",
+      "url": "american-rubble/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEF1fY_cQrs4C2GfkNgO70J",
       "description": "The horrifying prognosis to the diagnosis of Divide and Conquer. A meticulously researched 4-act, 13-movement dark dystopian folk concept album tracing the systemic collapse of food and electrical grids, intimate neighborhood warfare, black-market warlordism, and the poisoned silence of memory."
     },
@@ -370,7 +370,7 @@ window.PORTAL_DATA = {
       "title": "The Sovereign's Right",
       "subtitle": "The 1689 Claim of Right & Historical Sovereignty",
       "badge": "Historical Deep Dive",
-      "cover": "/assets/covers/vault/the-forgotten-crown.webp",
+      "cover": "assets/covers/vault/the-forgotten-crown.webp",
       "tracks_count": 10,
       "themes": [
         "Scottish History",
@@ -378,7 +378,7 @@ window.PORTAL_DATA = {
         "Claim of Right",
         "Self-Determination"
       ],
-      "url": "/the-forgotten-crown/",
+      "url": "the-forgotten-crown/",
       "video_url": "https://www.youtube.com/@TheShadyRiverBard",
       "description": "An archivist's unearthing of suppressed constitutional truths, the 1689 Claim of Right, and the timeless principle of salvo jure cujuslibet."
     },
@@ -388,7 +388,7 @@ window.PORTAL_DATA = {
       "title": "American Renewal",
       "subtitle": "A Blueprint for Applied Hope, Systemic Reform & Grassroots Restoration",
       "badge": "Bespoke Interactive Vault",
-      "cover": "/american-renewal/assets/art/american-renewal-cover.webp",
+      "cover": "american-renewal/assets/art/american-renewal-cover.webp",
       "tracks_count": 19,
       "themes": [
         "Systemic Reform",
@@ -397,7 +397,7 @@ window.PORTAL_DATA = {
         "Community Resilience",
         "Democratic Renewal"
       ],
-      "url": "/american-renewal/",
+      "url": "american-renewal/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcF3V0GG90EPJ_Tuhrpykvc5",
       "description": "The necessary answer to the diagnosis of Divide and Conquer and the dark prognosis of American Rubble. A 19-song epic of applied hope structured as a 2-volume, 4-act journey tackling corporate capture and labor liquidation before mending social cohesion and modernizing our constitutional blueprint."
     },
@@ -407,7 +407,7 @@ window.PORTAL_DATA = {
         "title": "Have Yourself a Shady Little Christmas",
         "subtitle": "A Social Realist Modern Christmas Carol",
         "badge": "Bespoke Interactive Vault",
-        "cover": "/have-yourself-a-shady-little-christmas/assets/art/have-yourself-a-shady-little-christmas-cover.webp",
+        "cover": "have-yourself-a-shady-little-christmas/assets/art/have-yourself-a-shady-little-christmas-cover.webp",
         "tracks_count": 15,
         "themes": [
             "Social Invisibility",
@@ -416,7 +416,7 @@ window.PORTAL_DATA = {
             "Radical Empathy",
             "The 76/32 Miracle"
         ],
-        "url": "/have-yourself-a-shady-little-christmas/",
+        "url": "have-yourself-a-shady-little-christmas/",
         "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEJAWlpL_w-X_nFgrJ4f4Bn",
         "description": "An unflinching 15-track modern Christmas carol told through the lens of social realism. Following William from the frozen shadows outside festive shop windows through addiction crisis to an unexpected encounter with Joe the store Santa, proving that the opposite of addiction is connection."
     },
@@ -426,7 +426,7 @@ window.PORTAL_DATA = {
         "title": "Doomsday Clock",
         "subtitle": "An Album Blueprint for Existential Reckoning",
         "badge": "Bespoke Interactive Vault",
-        "cover": "/doomsday-clock/assets/art/doomsday-clock-cover.webp",
+        "cover": "doomsday-clock/assets/art/doomsday-clock-cover.webp",
         "tracks_count": 13,
         "themes": [
             "Existential Risk",
@@ -436,7 +436,7 @@ window.PORTAL_DATA = {
             "Nuclear Precipice",
             "89 Seconds to Midnight"
         ],
-        "url": "/doomsday-clock/",
+        "url": "doomsday-clock/",
         "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcFJ4vC-R0d-N2XvsMwph5bj",
         "description": "A 13-movement four-act concept album translating existential risk into visceral narrative art. Tracing humanity's precarious position 89 seconds to midnight from creeping objectless anxiety through catastrophic ruin to the final chilling silence."
     }

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
@@ -1762,7 +1762,7 @@
   </footer>
 
   <!-- LOAD PORTAL DATA -->
-  <script src="data/portal-data.js?v=20260910_04"></script>
+  <script src="data/portal-data.js?v=20260911_05"></script>
 
   <!-- APP LOGIC -->
   <script>
@@ -1772,11 +1772,14 @@
       if (!container || !window.PORTAL_DATA) return;
 
       const albums = window.PORTAL_DATA.featured_albums;
-      container.innerHTML = albums.map(a => `
+      container.innerHTML = albums.map(a => {
+        const coverSrc = a.cover ? a.cover.replace(/^\//, '') : '';
+        const appUrl = a.url ? a.url.replace(/^\//, '') : '#';
+        return `
         <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
           <div class="space-y-3">
             <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-              <img src="${a.cover}" alt="${a.title} cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <img src="${coverSrc}" alt="${a.title} cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
               <div class="absolute top-2.5 left-2.5">
                 <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
                   ${a.badge}
@@ -1811,7 +1814,7 @@
           </div>
 
           <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-            <a href="${a.url}" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-all">
+            <a href="${appUrl}" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-all">
               Launch App ↗
             </a>
             ${a.video_url ? `
@@ -1821,7 +1824,7 @@
             ` : ''}
           </div>
         </article>
-      `).join('');
+      `}).join('');
     }
 
     // Helper to render chronicle cards

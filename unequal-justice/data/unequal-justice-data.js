@@ -13,7 +13,7 @@ window.UNEQUAL_JUSTICE_DATA = {
     "total_lines": 589,
     "youtube_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcHMkTpFn5HegqFaTudnxu1L",
     "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_kB9UqNZJQoWpY_fRivd6kS1a5G0dZ7SR0",
-    "vault_url": "/vault/",
+    "vault_url": "../vault/",
     "liner_notes_url": "https://theshadyriverbard.substack.com/s/deconstructed",
     "cover_image": "assets/art/unequal-justice-cover.webp",
     "description": "In a world of fleeting headlines and endless noise, 'Unequal Justice' is an unflinching 18-track narrative folk epic examining the two Americas that exist under one flag. Beginning with the 'Gilded Shield' of corporate malfeasance and political immunity, the album casts a piercing light on the 'Iron Funnel' of cash bail, indigent defense, and coercive plea bargains.\n\nFrom the corporate lobbying on 'The ALEC Train' to the heartbreaking reality of 'The Sentence After' and 'His Father’s Son,' the Bard refuses to look away from the human cost of a broken legal architecture. Yet the album rises into hard-won hope through 'The Innocence Man,' 'The Lamplighter,' and 'The Mama’s Bail Jar,' culminating in the slow-burning masterpiece 'Two-weight Stone' and the resolute call of 'The Unwavering Gaze.'",

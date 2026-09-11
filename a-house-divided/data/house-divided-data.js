@@ -12,7 +12,7 @@ window.HOUSE_DIVIDED_DATA = {
     "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_kVj4riWTul8iywGb1QEo1Em_BToxzPU5c",
     "apple_music_url": "https://music.apple.com/us/album/a-house-divided/1831843858",
     "spotify_url": "https://open.spotify.com/artist/2QtTWiosF5IrrAib5b7arZ",
-    "discography_url": "/vault/",
+    "discography_url": "../vault/",
     "liner_notes_url": "https://theshadyriverbard.substack.com/s/deconstructed",
     "cover_image": "assets/art/a-house-divided-cover.webp"
   },
