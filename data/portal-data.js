@@ -515,28 +515,28 @@ window.PORTAL_DATA = {
   },
   "chronicles": [
     {
+      "title": "The Man Who Could Not Be Wrong",
+      "date": "September 12, 2026",
+      "category": "Essay & Analysis",
+      "summary": "What happens when political loyalty becomes stronger than evidence? An inquiry into conviction, certainty, and ideological drift.",
+      "url": "https://theshadyriverbard.substack.com/p/the-man-who-could-not-be-wrong",
+      "image": "https://substackcdn.com/image/fetch/$s_!7D75!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe36457d4-9901-4981-9b44-358f41623adf_2048x2048.jpeg"
+    },
+    {
+      "title": "The Liner Notes: Captive Supply",
+      "date": "September 11, 2026",
+      "category": "Track Notes: The Hollow Herd",
+      "summary": "Track 5 from the album The Hollow Herd — examining formula pricing, meatpacker concentration, and captive supply contracts squeezing independent ranchers.",
+      "url": "https://theshadyriverbard.substack.com/p/the-liner-notes-captive-supply",
+      "image": "https://substackcdn.com/image/youtube/w_728,c_limit/5yzm2IHzDLc"
+    },
+    {
       "title": "The Spark Under the Hood",
       "date": "September 8, 2026",
       "category": "Manifesto & Creative Process",
-      "summary": "An intimate look into human-AI co-creation, songwriting, and the creative spark that drives the Shady River Bard universe.",
+      "summary": "Musings on creative momentum, songwriting, and the philosophical spark that drives the Shady River Bard universe.",
       "url": "https://theshadyriverbard.substack.com/p/the-spark-under-the-hood",
       "image": "https://substackcdn.com/image/fetch/$s_!sTXg!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2a6e25c5-233e-4000-920f-c3a81117a80a_2816x1536.jpeg"
-    },
-    {
-      "title": "The Liner Notes: The Edinburgh Proclamation",
-      "date": "August 24, 2026",
-      "category": "Track Notes: The Forgotten Crown",
-      "summary": "Track 13 from the concept album The Forgotten Crown — exploring historical Scottish sovereignty, royal decrees, and the enduring 1689 Claim of Right.",
-      "url": "https://theshadyriverbard.substack.com/p/the-liner-notes-the-edinburgh-proclamation",
-      "image": "https://substackcdn.com/image/youtube/w_728,c_limit/2mq9H2ed09E"
-    },
-    {
-      "title": "The Liner Notes: The Calf in the Clay",
-      "date": "August 31, 2026",
-      "category": "Track Notes: The Hollow Herd",
-      "summary": "Track 1 from the album The Hollow Herd — rural life, homestead realities, and the persistent struggle against the mud, cold, and seasonal elements.",
-      "url": "https://theshadyriverbard.substack.com/p/the-liner-notes-the-calf-in-the-clay",
-      "image": "https://substackcdn.com/image/youtube/w_728,c_limit/-PJtGDSmaMU"
     },
     {
       "title": "The Liner Notes: The Big Four (The Hourglass)",
@@ -555,12 +555,12 @@ window.PORTAL_DATA = {
       "image": "https://substackcdn.com/image/youtube/w_728,c_limit/qvvKEIqE57w"
     },
     {
-      "title": "The Liner Notes: Old Gray Muzzle",
-      "date": "August 17, 2026",
-      "category": "Track Notes: A Dog's Life",
-      "summary": "Track 14 from the upcoming album A Dog's Life: The Tao of the Tail — a poignant tribute to aging companions, lifelong fidelity, and quiet love.",
-      "url": "https://theshadyriverbard.substack.com/p/the-liner-notes-old-gray-muzzle",
-      "image": "https://substackcdn.com/image/youtube/w_728,c_limit/G3B9LMSfKgs"
+      "title": "The Liner Notes: Air Force One (The Deal)",
+      "date": "September 4, 2026",
+      "category": "Track Notes: The Hollow Herd",
+      "summary": "Track 2 from the album The Hollow Herd — unpacking bilateral trade pacts, export subsidies, and the real-world fallout for family homesteads.",
+      "url": "https://theshadyriverbard.substack.com/p/the-liner-notes-air-force-one-the",
+      "image": "https://substackcdn.com/image/youtube/w_728,c_limit/cHPcJS68WfQ"
     }
   ],
   "streaming": [

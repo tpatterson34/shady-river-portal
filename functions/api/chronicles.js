@@ -24,9 +24,22 @@ export async function onRequest(context) {
 
     for (const itemXml of itemMatches.slice(0, 6)) {
       const getTag = (tag) => {
-        const m = itemXml.match(new RegExp(`<${tag}[^>]*><!\[CDATA\[([\s\S]*?)\]\]><\/${tag}>`, 'i'))
-               || itemXml.match(new RegExp(`<${tag}[^>]*>([\s\S]*?)<\/${tag}>`, 'i'));
-        return m ? m[1].trim() : '';
+        const cdataStart = `<${tag}><![CDATA[`;
+        const cdataEnd = `]]></${tag}>`;
+        const sIdx = itemXml.indexOf(cdataStart);
+        if (sIdx !== -1) {
+          const eIdx = itemXml.indexOf(cdataEnd, sIdx + cdataStart.length);
+          if (eIdx !== -1) return itemXml.substring(sIdx + cdataStart.length, eIdx).trim();
+        }
+        const tagStart = `<${tag}>`;
+        const tagEnd = `</${tag}>`;
+        const tIdx = itemXml.indexOf(tagStart);
+        if (tIdx !== -1) {
+          const teIdx = itemXml.indexOf(tagEnd, tIdx + tagStart.length);
+          if (teIdx !== -1) return itemXml.substring(tIdx + tagStart.length, teIdx).trim();
+        }
+        const m = itemXml.match(new RegExp('<' + tag + '[^>]*>(?:<!\\[CDATA\\[([\\s\\S]*?)\\]\\]>|([\\s\\S]*?))<\\/' + tag + '>', 'i'));
+        return m ? (m[1] || m[2] || '').trim() : '';
       };
 
       const title = getTag('title')
@@ -49,11 +62,16 @@ export async function onRequest(context) {
         }
       }
 
-      // Enclosure image
+      // Enclosure image with img tag fallback
       let image = '';
       const encMatch = itemXml.match(/<enclosure[^>]+url=["']([^"']+)["']/i);
       if (encMatch) {
         image = encMatch[1];
+      } else {
+        const imgMatch = itemXml.match(/<img[^>]+src=["']([^"']+)["']/i);
+        if (imgMatch) {
+          image = imgMatch[1];
+        }
       }
 
       // Summary
