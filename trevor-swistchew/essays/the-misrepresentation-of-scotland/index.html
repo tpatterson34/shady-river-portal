@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Misrepresentation of Scotland: A Forensic Exposure of UK Mainstream Media — Trevor Swistchew (2026)</title>
+  
+  <meta name="description" content="A forensic, ten-point structural exposure by Trevor Swistchew examining how UK mainstream media and the BBC framed Scotland's independence debate through Westminster-centric patterns of economic fear and institutional bias.">
+  <meta name="author" content="Trevor Swistchew">
+  <link rel="canonical" href="https://theshadyriverbard.com/trevor-swistchew/essays/the-misrepresentation-of-scotland/">
+
+  <!-- Tailwind CSS CDN with Typography Plugin -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography,aspect-ratio"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              50: '#f6f5f3',
+              100: '#e7e4df',
+              200: '#d1cbc2',
+              300: '#b5aca0',
+              400: '#9b8d7f',
+              500: '#847466',
+              600: '#6b5c50',
+              700: '#53473e',
+              800: '#3c332d',
+              900: '#25201c',
+              950: '#121110',
+            },
+            parchment: {
+              50: '#fdfbf7',
+              100: '#f9f6ef',
+              200: '#f2ecdf',
+              300: '#e7ddc9',
+              400: '#d9caa9',
+              500: '#c5b187',
+              600: '#a79368',
+              700: '#85734e',
+              800: '#64563b',
+              900: '#453a27',
+              950: '#261f14',
+            },
+            brass: {
+              300: '#ecd699',
+              400: '#dfbe75',
+              500: '#c5a059',
+              600: '#a6823c',
+              700: '#846427',
+            },
+            thistle: {
+              600: '#9d2b45',
+              700: '#7e2035',
+            }
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Lora', 'Georgia', 'serif'],
+            display: ['"Playfair Display"', 'Cinzel', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Web Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Unified Accessibility Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/a11y.css">
+
+  <!-- Scottish Literary Salon Theme Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950 min-h-screen flex flex-col justify-between">
+
+  <!-- 1. WCAG Skip Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Essay Content</a>
+
+  <!-- 2. Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- 3. Top Sticky Reading Utility & Salon Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      
+      <!-- Salon Brand / Return Link -->
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2.5 text-stone-300 hover:text-amber-400 group transition-colors">
+          <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
+          <div class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:block">
+            Trevor Swistchew <span class="text-stone-500 font-sans font-normal mx-1">|</span> <span class="text-stone-400">Compendium Archive</span>
+          </div>
+        </a>
+        <a href="https://theshadyriverbard.com/" class="hidden md:flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 text-[11px] font-mono transition-colors" title="Visit The Shady River Bard Portal">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Reading Accommodations Controls -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Font Size Scaler -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs font-mono text-stone-300" role="group" aria-label="Font Size Scaling">
+          <button id="font-size-dec" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Decrease font size" aria-label="Decrease font size">A-</button>
+          <button id="font-size-reset" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors text-[10px] text-stone-400" title="Reset font size" aria-label="Reset font size">A</button>
+          <button id="font-size-inc" class="px-2 py-1 rounded hover:bg-stone-700/70 hover:text-white transition-colors" title="Increase font size" aria-label="Increase font size">A+</button>
+        </div>
+
+        <!-- Tri-State Theme Switcher -->
+        <div class="flex items-center bg-stone-800/70 border border-stone-700/60 rounded-lg p-0.5 text-xs" role="group" aria-label="Reading Theme Selection">
+          <button data-theme="dark" class="theme-toggle-btn px-2 py-1 rounded transition-colors active-theme" title="Dark Peat Theme" aria-label="Dark Peat Theme" aria-pressed="true">
+            <i class="fa-solid fa-moon text-amber-400"></i>
+          </button>
+          <button data-theme="sepia" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Aged Parchment Sepia Theme" aria-label="Aged Parchment Sepia Theme" aria-pressed="false">
+            <i class="fa-solid fa-book-open"></i>
+          </button>
+          <button data-theme="light" class="theme-toggle-btn px-2 py-1 rounded transition-colors text-stone-400 hover:text-amber-300" title="Edinburgh Stone Light Theme" aria-label="Edinburgh Stone Light Theme" aria-pressed="false">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- 4. Main Article Container -->
+  <main id="main-content" class="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+    
+    <article id="essay-article" class="space-y-10">
+
+      <!-- Breadcrumbs & Header Metadata -->
+      <header class="space-y-6">
+        
+        <nav aria-label="Breadcrumb" class="flex flex-wrap items-center gap-2 text-xs font-mono text-stone-500">
+          <a href="../../index.html" class="hover:text-amber-400 transition-colors">Compendium</a>
+          <span>&gt;</span>
+          <a href="../../index.html#essays" class="hover:text-amber-400 transition-colors">Essays</a>
+          <span>&gt;</span>
+          <span class="text-stone-300 font-semibold">Compendium #24</span>
+        </nav>
+
+        <!-- Category & Badges -->
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="px-2.5 py-1 rounded bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-mono tracking-wide uppercase font-semibold">
+            Constitutional Law &amp; Media
+          </span>
+          <span class="px-2.5 py-1 rounded bg-stone-800/80 border border-stone-700/50 text-stone-300 text-xs font-mono">
+            Forensic Media Audit
+          </span>
+          <span class="px-2.5 py-1 rounded bg-amber-950/40 border border-amber-800/30 text-amber-300 text-xs font-mono">
+            Scottish Independence 2014–2026
+          </span>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <div class="space-y-3">
+          <h1 class="font-cinzel text-3xl sm:text-5xl font-black text-stone-100 tracking-tight leading-tight">
+            The Misrepresentation of Scotland
+          </h1>
+          <p class="font-serif italic text-lg sm:text-2xl text-stone-300 leading-relaxed font-light">
+            A Forensic Exposure of UK Mainstream Media During the Independence Debate.
+          </p>
+        </div>
+
+        <!-- Author Byline & Scholarly Meta Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-b border-stone-800/80 text-xs font-mono text-stone-400 py-3">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 font-bold font-cinzel">TS</span>
+            <div>
+              <span class="text-stone-200 font-semibold block">Trevor Swistchew</span>
+              <span class="text-[11px] text-stone-500">Scotland &bull; 2026</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 text-stone-400">
+            <span><i class="fa-regular fa-clock mr-1 text-amber-500/70"></i> 7 min read</span>
+            <span><i class="fa-solid fa-file-lines mr-1 text-amber-500/70"></i> 1,150 words</span>
+            <span><i class="fa-solid fa-scale-balanced mr-1 text-amber-500/70"></i> 10 Structural Truths</span>
+          </div>
+        </div>
+
+        <!-- 5. Bespoke Fine-Art Banner Image -->
+        <figure class="relative rounded-2xl overflow-hidden border border-stone-800/80 bg-stone-950 shadow-2xl">
+          <img 
+            src="../../assets/images/the-misrepresentation-of-scotland-banner.jpg" 
+            alt="The Misrepresentation of Scotland — Fine Art Oil Painting of Broadcast Transmitters Overlooking Edinburgh with the Distant Shadow of Westminster" 
+            class="w-full h-auto object-cover max-h-[480px]"
+            loading="eager"
+          />
+          <figcaption class="p-3 bg-stone-900/95 border-t border-stone-800 text-[11px] font-mono text-stone-400 flex items-center justify-between">
+            <span>Broadcasting from the Hill &bull; <em>Centralised Transmitters, Westminster's Gravitational Pull, and the Edinburgh Skyline</em></span>
+            <span class="text-amber-400/80 font-semibold">Trevor Swistchew Archive</span>
+          </figcaption>
+        </figure>
+
+      </header>
+
+      <!-- 6. Essay Verbatim Body -->
+      <div id="essay-body" class="prose prose-invert max-w-none font-serif text-base sm:text-lg text-stone-200 leading-relaxed space-y-6 sm:space-y-7">
+        
+        <p class="first-letter:text-5xl first-letter:font-cinzel first-letter:text-amber-500 first-letter:float-left first-letter:mr-3 first-letter:leading-none">
+          The claim that UK mainstream media misrepresented Scotland during the independence debate is not a matter of nationalist sentiment or emotional grievance; it is a matter of documented editorial behaviour, institutional structure, and the <strong class="font-mono text-amber-400 tracking-wider">PATTERNS</strong> that emerge when you examine the coverage with forensic precision. The BBC and other UK‑wide broadcasters operate from London, shaped by Westminster’s gravitational pull, and the result is a media environment that narrates Scotland’s constitutional future through assumptions that do not originate in Scotland. This is not conspiracy; it is structural reality, structural reality produces <strong class="font-mono text-amber-400 tracking-wider">PATTERNS</strong>, and those <strong class="font-mono text-amber-400 tracking-wider">PATTERNS</strong> shaped the referendum coverage in ways that materially affected public perception.
+        </p>
+
+        <!-- Structural Truth 1 -->
+        <div class="pt-4 space-y-3">
+          <h2 class="font-cinzel text-xl sm:text-2xl font-bold text-amber-400 border-b border-stone-800 pb-2">
+            1. Geographical Centralisation
+          </h2>
+          <p>
+            The first structural truth is geographical centralisation. UK mainstream media is headquartered in London, and its editorial culture is steeped in Westminster politics. Senior correspondents, political editors, and decision makers live and breathe the rhythms of the UK Parliament. When Scotland entered a constitutional crisis, the coverage was filtered through that worldview. Academic studies conducted after the referendum found that BBC reporting displayed a &ldquo;clear pattern of bias&rdquo; in favour of the No campaign particularly in its framing of economic uncertainty and its reliance on pro Union experts. Another analysis found that coverage leaned heavily toward &ldquo;risk, instability, and uncertainty&rdquo;, with independence framed as a leap into the unknown rather than a legitimate constitutional option. These are of course documented <strong class="font-mono text-amber-400 tracking-wider">PATTERNS</strong>.
+          </p>
+        </div>
+
+        <!-- Structural Truth 2 -->
+        <div class="pt-4 space-y-3">
+          <h2 class="font-cinzel text-xl sm:text-2xl font-bold text-amber-400 border-b border-stone-800 pb-2">
+            2. Economic Fear
+          </h2>
+          <p>
+            The second structural truth is economic fear. The &ldquo;too wee, too poor, too stupid&rdquo; trope was not invented by independence supporters it emerged from decades of commentary about Scotland’s fiscal position within the UK. During the referendum, this narrative was not spoken aloud by broadcasters, but its logic permeated coverage. When David Cameron and Gordon Brown entered the campaign late their interventions were framed as authoritative warnings from experienced statesmen. Their arguments that independence threatened pensions, currency stability, EU membership, and economic security were said across UK media. The BBC covered these interventions extensively, often with live broadcasts, extended interviews, and prominent placement in news bulletins. Independence supporting economists were given less airtime, and their arguments were often presented as speculative while Westminster warnings were presented as authoritative. This imbalance was not random it was part of a broader <strong class="font-mono text-amber-400 tracking-wider">PATTERN</strong> of weighting UK government voices more heavily than Scottish ones.
+          </p>
+        </div>
+
+        <!-- Blockquote Callout: The Structural Nature of Patterns -->
+        <blockquote class="my-8 p-6 rounded-xl bg-stone-900/90 border-l-4 border-amber-500 shadow-xl space-y-3">
+          <p class="font-serif italic text-stone-100 text-lg sm:text-xl leading-relaxed">
+            &ldquo;This is not conspiracy; it is structural reality. Structural reality produces PATTERNS, and those PATTERNS shaped the referendum coverage in ways that materially affected public perception.&rdquo;
+          </p>
+          <cite class="block font-mono text-xs text-amber-400 not-italic uppercase tracking-widest font-bold">
+            &mdash; Trevor Swistchew, The Misrepresentation of Scotland
+          </cite>
+        </blockquote>
+
+        <!-- Structural Truth 3 -->
+        <div class="pt-4 space-y-3">
+          <h2 class="font-cinzel text-xl sm:text-2xl font-bold text-amber-400 border-b border-stone-800 pb-2">
+            3. The Treatment of Scotland’s Government
+          </h2>
+          <p>
+            The third structural truth is the treatment of Scotland’s government. The SNP was the governing party of Scotland during the referendum, yet UK media often framed it as a partisan insurgency rather than a legitimate national government. Coverage of Alex Salmond frequently emphasised personality, conflict, and confrontation. Nicola Sturgeon, though widely respected, was often framed through the lens of party politics rather than national leadership. This is not unusual in political journalism, but in the context of a constitutional referendum, it contributed to a perception that independence was a party project rather than a national movement. The BBC’s editorial guidelines require impartiality, but impartiality is not achieved simply by giving both sides airtime; it is achieved by balancing frames, sources, and assumptions. In 2014, the framing leaned toward caution, continuity, and the authority of the UK state. This was not accidental; it was part of a structural <strong class="font-mono text-amber-400 tracking-wider">PATTERN</strong>.
+          </p>
+        </div>
+
+        <!-- Structural Truth 4 -->
+        <div class="pt-4 space-y-3">
+          <h2 class="font-cinzel text-xl sm:text-2xl font-bold text-amber-400 border-b border-stone-800 pb-2">
+            4. The &ldquo;Vow&rdquo;
+          </h2>
+          <p>
+            The fourth structural truth is the &ldquo;Vow&rdquo;. Days before the referendum, the Daily Record published a front‑page promise from Cameron, Miliband and Clegg offering extensive new powers for Scotland if it voted No. The BBC covered the story prominently. Critics argued that the timing and framing of the Vow constituted interference, and that the BBC’s coverage amplified a political manoeuvre without sufficient scrutiny. Defenders argued that the Vow was newsworthy and that the BBC had a duty to report it. Both positions have merit, but the event illustrates how editorial decisions can shape public perception at critical moments. The Vow was not analysed with the same scepticism applied to independence claims it was presented as a credible, authoritative intervention from the UK’s political leadership. This was not an isolated incident; it was part of a broader <strong class="font-mono text-amber-400 tracking-wider">PATTERN</strong> of treating Westminster voices as inherently authoritative.
+          </p>
+        </div>
+
+        <!-- Structural Truth 5 -->
+        <div class="pt-4 space-y-3">
+          <h2 class="font-cinzel text-xl sm:text-2xl font-bold text-amber-400 border-b border-stone-800 pb-2">
+            5. The Aftermath
+          </h2>
+          <p>
+            The fifth structural truth is the aftermath. After the referendum, trust in UK media collapsed among independence supporters. Surveys showed that a significant portion of Yes voters believed the BBC had been biased. This perception did not arise from propaganda; it arose from lived experience of coverage that felt weighted toward the Union. Whether that perception is fully justified is debatable, but it is real, and it has shaped Scottish media politics ever since. The BBC became, in the eyes of many Scots, not a neutral broadcaster but an institution aligned with the constitutional status quo. This perception did not emerge from isolated incidents; it emerged from cumulative <strong class="font-mono text-amber-400 tracking-wider">PATTERNS</strong>.
+          </p>
+        </div>
+
+        <!-- Structural Truth 6 -->
+        <div class="pt-4 space-y-3">
+          <h2 class="font-cinzel text-xl sm:text-2xl font-bold text-amber-400 border-b border-stone-800 pb-2">
+            6. Editorial Culture
+          </h2>
+          <p>
+            The sixth structural truth is editorial culture. Impartiality, as defined by the BBC Charter, does not mean neutrality. It means balance across a range of perspectives. But balance is not achieved by arithmetic; it is achieved by framing. If independence is framed as risk, instability, and disruption, while the Union is framed as continuity, stability, and security, then the coverage is structurally biased even if both sides are given airtime. This is what happened in 2014. Independence was framed as a problem to be solved, a danger to be avoided, a leap into the unknown. The Union was framed as the default, the baseline, the safe option. This framing was not malicious; it was cultural. It reflected the worldview of institutions whose political centre of gravity lies in Westminster. This worldview produced consistent <strong class="font-mono text-amber-400 tracking-wider">PATTERNS</strong>.
+          </p>
+        </div>
+
+        <!-- Structural Truth 7 -->
+        <div class="pt-4 space-y-3">
+          <h2 class="font-cinzel text-xl sm:text-2xl font-bold text-amber-400 border-b border-stone-800 pb-2">
+            7. The Absence of Scottish Editorial Autonomy
+          </h2>
+          <p>
+            The seventh structural truth is the absence of Scottish editorial autonomy. Scotland has its own BBC channels, but the political coverage that shapes national perception is produced by UK‑wide units. This means that Scotland’s constitutional debate was narrated by journalists whose professional lives revolve around Westminster politics. Their assumptions, their sources, their networks, their instincts are shaped by the UK state. This does not make them propagandists, but it does make them incapable of narrating Scotland’s constitutional future from a Scottish perspective. This incapacity is not personal it is institutional, institutional incapacity produces <strong class="font-mono text-amber-400 tracking-wider">PATTERNS</strong>.
+          </p>
+        </div>
+
+        <!-- Structural Truth 8 -->
+        <div class="pt-4 space-y-3">
+          <h2 class="font-cinzel text-xl sm:text-2xl font-bold text-amber-400 border-b border-stone-800 pb-2">
+            8. The Myth of Vetting
+          </h2>
+          <p>
+            The eighth structural truth is the myth of vetting. UK media does not &ldquo;vet&rdquo; Scottish news for impartiality before broadcast. It applies editorial judgement legal review, and compliance checks, but these are internal processes shaped by institutional culture. <strong class="font-mono text-amber-400">Ofcom</strong> enforces standards on accuracy, harm or offence, but it does not approve content or certify impartiality. The idea that Scottish news is filtered through a neutral, objective vetting process is false. It is filtered through editorial decisions made in London. Those decisions are not random they follow <strong class="font-mono text-amber-400 tracking-wider">PATTERNS</strong>.
+          </p>
+        </div>
+
+        <!-- Structural Truth 9 -->
+        <div class="pt-4 space-y-3">
+          <h2 class="font-cinzel text-xl sm:text-2xl font-bold text-amber-400 border-b border-stone-800 pb-2">
+            9. The Cumulative Effect of These Dynamics
+          </h2>
+          <p>
+            The ninth structural truth is the cumulative effect of these dynamics. No single broadcast proves bias. No single headline proves misrepresentation except the accumulation of framing, weighting, emphasis, and omission creates a narrative. In 2014, that narrative leaned toward caution, continuity and the authority of the UK state. It leaned toward economic fear. It leaned toward Westminster voices. It leaned toward risk‑heavy framing of independence. It leaned toward scepticism of the SNP. It leaned toward the Union. These cumulative tendencies were not isolated incidents; they were <strong class="font-mono text-amber-400 tracking-wider">PATTERNS</strong>.
+          </p>
+        </div>
+
+        <!-- Structural Truth 10 & Conclusion -->
+        <div class="pt-4 space-y-4">
+          <h2 class="font-cinzel text-xl sm:text-2xl font-bold text-amber-400 border-b border-stone-800 pb-2">
+            10. The Consequence
+          </h2>
+          <p>
+            The tenth structural truth is the consequence. Scotland’s constitutional debate was not narrated from Scotland. It was narrated from London. It was narrated through the worldview of institutions aligned with the UK state. It was narrated through assumptions that did not originate in Scotland. This does not prove conspiracy. It proves structural bias manifests as <strong class="font-mono text-amber-400 tracking-wider">PATTERNS</strong>.
+          </p>
+        </div>
+
+        <!-- Closing Forensic Affirmation Box -->
+        <div class="p-6 rounded-2xl bg-amber-500/10 border border-amber-500/30 space-y-4 my-8">
+          <p class="font-serif text-lg sm:text-xl text-stone-100 leading-relaxed font-semibold">
+            This is the truth. Not propaganda. Not denial. Not rage. Not conspiracy.
+          </p>
+          <p class="font-serif font-bold text-amber-300 text-lg sm:text-xl leading-relaxed pt-2 border-t border-amber-500/20">
+            Just the hard, documented reality of how media works in a state where political power is centralised and editorial culture follows that power.
+          </p>
+          <div class="pt-2 text-right">
+            <span class="font-cinzel font-bold text-stone-300 text-sm tracking-wider uppercase">&mdash; Trevor Swistchew, 2026</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 7. Interactive Scholarly Dossier Component -->
+      <section class="mt-14 pt-8 border-t border-stone-800/80 space-y-6" aria-labelledby="dossier-heading-media">
+        
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <span class="text-[10px] font-mono tracking-widest text-amber-400 uppercase font-bold block">Forensic Media &amp; Communications Dossier</span>
+            <h2 id="dossier-heading-media" class="font-cinzel text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-tower-broadcast text-amber-500 text-lg"></i>
+              Structural Bias, Framing, and the Post-2014 Trust Deficit
+            </h2>
+          </div>
+          <span class="px-2.5 py-1 rounded bg-stone-900 border border-stone-700 text-stone-400 text-xs font-mono">
+            3 Analytical Modules
+          </span>
+        </div>
+
+        <p class="text-sm text-stone-400 font-serif leading-relaxed">
+          Examine the academic literature, empirical broadcast audits, and regulatory architecture corroborating Trevor Swistchew's analysis of UK mainstream media coverage during the 2014 Scottish independence campaign.
+        </p>
+
+        <!-- Dossier Tabs -->
+        <div class="border-b border-stone-800 flex overflow-x-auto gap-2 text-xs font-mono" role="tablist">
+          <button 
+            id="btn-media-audits" 
+            onclick="switchTab('media', 'audits')" 
+            class="dossier-tab-btn px-4 py-2.5 border-b-2 border-amber-500 bg-amber-500/10 text-amber-400 font-bold transition-all whitespace-nowrap flex items-center gap-2"
+            role="tab" 
+            aria-selected="true"
+          >
+            <i class="fa-solid fa-chart-pie text-xs"></i>
+            <span>1. Quantitative Broadcast Audits</span>
+          </button>
+          <button 
+            id="btn-media-framing" 
+            onclick="switchTab('media', 'framing')" 
+            class="dossier-tab-btn px-4 py-2.5 border-b-2 border-transparent text-stone-400 hover:text-stone-200 transition-all whitespace-nowrap flex items-center gap-2"
+            role="tab" 
+            aria-selected="false"
+          >
+            <i class="fa-solid fa-newspaper text-xs"></i>
+            <span>2. Framing Theory &amp; &ldquo;The Vow&rdquo;</span>
+          </button>
+          <button 
+            id="btn-media-autonomy" 
+            onclick="switchTab('media', 'autonomy')" 
+            class="dossier-tab-btn px-4 py-2.5 border-b-2 border-transparent text-stone-400 hover:text-stone-200 transition-all whitespace-nowrap flex items-center gap-2"
+            role="tab" 
+            aria-selected="false"
+          >
+            <i class="fa-solid fa-building-columns text-xs"></i>
+            <span>3. Centralisation &amp; Trust Collapse</span>
+          </button>
+        </div>
+
+        <!-- Dossier Panel 1: Quantitative Broadcast Audits -->
+        <div id="panel-media-audits" class="dossier-tab-panel p-6 rounded-2xl bg-stone-900/50 border border-stone-800 space-y-4">
+          <div class="flex items-center justify-between gap-2 border-b border-stone-800 pb-3">
+            <h3 class="font-cinzel text-lg font-bold text-stone-100 flex items-center gap-2">
+              <i class="fa-solid fa-square-poll-vertical text-amber-500"></i>
+              Empirical Audits of Referendum News Coverage
+            </h3>
+            <span class="text-xs font-mono text-amber-400">Prof. John Robertson / UWS (2014)</span>
+          </div>
+          <p class="text-sm font-serif text-stone-300 leading-relaxed">
+            In 2014, Prof. John Robertson of the University of the West of Scotland conducted an exhaustive empirical content analysis of <em>BBC Reporting Scotland</em> and <em>ITV News at Ten</em> over a twelve-month period leading up to the referendum. The study systematically recorded news packages, source attribution, subject matter, and editorial balance.
+          </p>
+          <div class="grid sm:grid-cols-2 gap-3 pt-2 text-xs font-mono">
+            <div class="p-3 rounded-lg bg-stone-950/80 border border-stone-800 space-y-1">
+              <span class="text-amber-400 font-bold block">Asymmetric Sourcing Ratio</span>
+              <p class="text-stone-400 font-sans">Pro-Union voices, UK government ministers, and London financial institutions outnumbered Yes campaigners and Scottish Government spokespeople by a ratio exceeding 3:2 across peak bulletins.</p>
+            </div>
+            <div class="p-3 rounded-lg bg-stone-950/80 border border-stone-800 space-y-1">
+              <span class="text-amber-400 font-bold block">The &ldquo;Peril vs Status Quo&rdquo; Lexicon</span>
+              <p class="text-stone-400 font-sans">Economic uncertainties (currency, pensions, EU accession) were repeatedly framed as insurmountable catastrophic risks, while the perils of remaining within a post-referendum UK were almost entirely unexamined.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dossier Panel 2: Framing Theory & "The Vow" -->
+        <div id="panel-media-framing" class="dossier-tab-panel hidden p-6 rounded-2xl bg-stone-900/50 border border-stone-800 space-y-4">
+          <div class="flex items-center justify-between gap-2 border-b border-stone-800 pb-3">
+            <h3 class="font-cinzel text-lg font-bold text-stone-100 flex items-center gap-2">
+              <i class="fa-solid fa-signature text-amber-500"></i>
+              Framing Paradigms, &ldquo;The Vow,&rdquo; and Ofcom Limits
+            </h3>
+            <span class="text-xs font-mono text-amber-400">Entman (1993) &bull; Communications Act 2003</span>
+          </div>
+          <p class="text-sm font-serif text-stone-300 leading-relaxed">
+            Media framing scholar Robert Entman demonstrated that framing involves selecting certain aspects of a perceived reality to make them more salient in a communicating text. In 2014, the UK media framing paradigm operated through the default assumption that state continuity was legitimate, neutral, and safe, whereas constitutional self-determination was disruptive, partisan, and reckless.
+          </p>
+          <div class="space-y-3 pt-1 text-xs font-sans text-stone-300">
+            <div class="p-3 rounded-lg bg-stone-950/80 border border-stone-800">
+              <span class="font-mono text-amber-400 font-bold block mb-1">The Amplification of &ldquo;The Vow&rdquo; (16 September 2014)</span>
+              Published two days before polling by the <em>Daily Record</em> and signed by Cameron, Miliband, and Clegg, &ldquo;The Vow&rdquo; was instantly transmitted by the BBC as a solemn constitutional compact rather than an unverified electoral manoeuvre, swaying late-undecided voters without adversarial cross-examination.
+            </div>
+            <div class="p-3 rounded-lg bg-stone-950/80 border border-stone-800">
+              <span class="font-mono text-amber-400 font-bold block mb-1">The Ofcom Regulatory Remit</span>
+              Section 5 of the Ofcom Broadcasting Code mandates &ldquo;due impartiality&rdquo; but does not pre-vet or pre-approve content. Crucially, Ofcom's post-broadcast compliance reviews assess mechanical fairness within specific bulletins, leaving overarching institutional framing and narrative weighting outside statutory sanction.
+            </div>
+          </div>
+        </div>
+
+        <!-- Dossier Panel 3: Institutional Centralisation & Trust Collapse -->
+        <div id="panel-media-autonomy" class="dossier-tab-panel hidden p-6 rounded-2xl bg-stone-900/50 border border-stone-800 space-y-4">
+          <div class="flex items-center justify-between gap-2 border-b border-stone-800 pb-3">
+            <h3 class="font-cinzel text-lg font-bold text-stone-100 flex items-center gap-2">
+              <i class="fa-solid fa-landmark text-amber-500"></i>
+              London Primacy &amp; the Post-2014 Trust Deficit
+            </h3>
+            <span class="text-xs font-mono text-amber-400">Ofcom &amp; Panelbase Surveys (2014–2026)</span>
+          </div>
+          <p class="text-sm font-serif text-stone-300 leading-relaxed">
+            Although BBC Scotland operates from Pacific Quay in Glasgow, all flagship political network programming (such as <em>BBC News at Ten</em>, <em>Newsnight</em>, and the <em>Today Programme</em>) is commissioned, staffed, and anchored in London. This structural hierarchy ensured that Scotland's constitutional crisis was mediated through London journalists whose professional socialization was tied to the Westminster lobby system.
+          </p>
+          <div class="grid sm:grid-cols-2 gap-3 pt-2 text-xs font-mono">
+            <div class="p-3 rounded-lg bg-stone-950/80 border border-stone-800 space-y-1">
+              <span class="text-amber-400 font-bold block">Public Trust Polarization</span>
+              <p class="text-stone-400 font-sans">Following September 2014, YouGov and Panelbase polling revealed that over 50% of Yes voters believed BBC news coverage had been actively biased toward the Union, creating an enduring generational breach in public-service broadcasting trust in Scotland.</p>
+            </div>
+            <div class="p-3 rounded-lg bg-stone-950/80 border border-stone-800 space-y-1">
+              <span class="text-amber-400 font-bold block">Structural Incapacity vs Conspiracy</span>
+              <p class="text-stone-400 font-sans">As Trevor Swistchew forensically establishes, this misrepresentation did not require a centralized conspiracy: institutional incapacity, Westminster socialization, and London gravitational pull naturally generated these systematic editorial PATTERNS.</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- 8. Academic References & Scholarly Apparatus -->
+      <section class="mt-10 p-6 rounded-2xl bg-stone-950 border border-stone-800 space-y-4">
+        <h3 class="font-cinzel text-base font-bold text-stone-200 flex items-center gap-2">
+          <i class="fa-solid fa-book-bookmark text-amber-500"></i>
+          Cited Scholarly Literature &amp; Archival Sources
+        </h3>
+        <div class="grid sm:grid-cols-2 gap-3 text-xs">
+          <div class="p-3 rounded-lg bg-stone-900/60 border border-stone-800/80 space-y-1">
+            <span class="text-amber-400 font-bold block">Robertson, John (2014)</span>
+            <p class="text-stone-300 font-serif"><em>Fairness in the First Draft of History: An Empirical Analysis of BBC and ITV Coverage of the Scottish Independence Referendum Campaign</em>. University of the West of Scotland.</p>
+          </div>
+          <div class="p-3 rounded-lg bg-stone-900/60 border border-stone-800/80 space-y-1">
+            <span class="text-amber-400 font-bold block">Entman, Robert M. (1993)</span>
+            <p class="text-stone-300 font-serif"><em>Framing: Toward Clarification of a Fractured Paradigm</em>. Journal of Communication, 43(4), 51–58.</p>
+          </div>
+          <div class="p-3 rounded-lg bg-stone-900/60 border border-stone-800/80 space-y-1">
+            <span class="text-amber-400 font-bold block">Blain, Neil, &amp; Hutchison, David (Eds.) (2016)</span>
+            <p class="text-stone-300 font-serif"><em>Scotland’s Referendum and the Media: National and International Perspectives</em>. Edinburgh University Press.</p>
+          </div>
+          <div class="p-3 rounded-lg bg-stone-900/60 border border-stone-800/80 space-y-1">
+            <span class="text-amber-400 font-bold block">Schlesinger, Philip (2020)</span>
+            <p class="text-stone-300 font-serif"><em>Whither Public Service Broadcasting in the Devolved Nations?</em> Centre for Cultural Policy Research, University of Glasgow.</p>
+          </div>
+          <div class="p-3 rounded-lg bg-stone-900/60 border border-stone-800/80 space-y-1">
+            <span class="text-amber-400 font-bold block">Ofcom (2014)</span>
+            <p class="text-stone-300 font-serif"><em>The Ofcom Broadcasting Code: Section Five (Due Impartiality and Due Accuracy)</em>. Office of Communications, London.</p>
+          </div>
+          <div class="p-3 rounded-lg bg-stone-900/60 border border-stone-800/80 space-y-1">
+            <span class="text-amber-400 font-bold block">Electoral Reform Society (2014)</span>
+            <p class="text-stone-300 font-serif"><em>Democracy Max: A Vision for a Good Scottish Democracy and Referendum Deliberation Audit</em>. ERS Scotland.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. Author Provenance & Citation Panel -->
+      <footer class="mt-14 pt-8 border-t border-stone-800/80 space-y-8">
+        
+        <!-- Citation Block -->
+        <div class="p-4 rounded-xl bg-stone-950/70 border border-stone-800 space-y-2 text-xs font-mono">
+          <div class="flex items-center gap-2 text-amber-400 font-bold uppercase tracking-wider text-[11px]">
+            <i class="fa-solid fa-quote-left"></i>
+            <span>Recommended Academic &amp; Constitutional Citation</span>
+          </div>
+          <p class="text-stone-300 select-all font-mono leading-relaxed bg-stone-900/80 p-3 rounded border border-stone-800">
+            Swistchew, Trevor. &ldquo;The Misrepresentation of Scotland: A Forensic Exposure of UK Mainstream Media During the Independence Debate.&rdquo; <em>Trevor Swistchew Compendium &amp; Literary Salon</em>, Essay #24, Edinburgh / Shady River Collective, 2026. Permanent URI: https://theshadyriverbard.com/trevor-swistchew/essays/the-misrepresentation-of-scotland/
+          </p>
+        </div>
+
+        <!-- Sequential Reading Links -->
+        <div class="grid sm:grid-cols-2 gap-4">
+          <a href="../how-men-gained-world-domination-over-women/index.html" class="p-4 rounded-xl bg-stone-900/60 border border-stone-800 hover:border-amber-500/40 transition-colors group">
+            <span class="text-[10px] font-mono uppercase text-stone-500 group-hover:text-amber-400 block mb-1">&larr; Previous Work (Compendium #23)</span>
+            <span class="font-display font-bold text-sm text-stone-200 group-hover:text-amber-300">How Men Gained World Domination Over Women</span>
+          </a>
+          <a href="../../poetry/index.html" class="p-4 rounded-xl bg-stone-900/60 border border-stone-800 hover:border-amber-500/40 transition-colors group text-right">
+            <span class="text-[10px] font-mono uppercase text-stone-500 group-hover:text-amber-400 block mb-1">Poetic Works Archive &rarr;</span>
+            <span class="font-display font-bold text-sm text-stone-200 group-hover:text-amber-300">The Poetry Chamber (29 Collected Poems)</span>
+          </a>
+        </div>
+
+        <!-- Creative Fellowship CTA -->
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-peat-900 to-peat-950 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="space-y-1 text-center sm:text-left">
+            <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold">Creative Fellowship</span>
+            <h4 class="font-cinzel text-lg font-bold text-white">The Shady River Bard Creative Ecosystem</h4>
+            <p class="text-xs text-stone-300 max-w-xl">
+              Trevor Swistchew's forensic essays on Scottish self-determination, constitutional covenants, and broadcast institutions are published in fellowship with The Shady River Bard—exploring a 26-album concept discography, working permaculture, and reflections on human purpose.
+            </p>
+          </div>
+          <a href="https://theshadyriverbard.com/" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-peat-950 font-cinzel font-bold text-xs uppercase tracking-wider transition-colors shrink-0 shadow-lg flex items-center gap-1.5">
+            <span>Explore Shady River</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+          </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="pt-6 border-t border-stone-800/60 text-center text-xs text-stone-400 font-sans space-y-2">
+          <p>Essay &copy; 2026 Trevor Swistchew. All rights reserved.</p>
+          <p class="text-stone-500">Published for the Trevor Swistchew Compendium &amp; Literary Salon Archive.</p>
+          <p class="pt-2">
+            <a href="../../index.html" class="text-stone-400 hover:text-amber-400 transition-colors mr-3">&larr; Return to Compendium Archive</a>
+            <a href="https://theshadyriverbard.com/friends-of-the-bard/" class="text-amber-400 hover:text-amber-300 transition-colors font-medium">Friends of the Bard Collective ↗</a>
+          </p>
+        </div>
+      </footer>
+
+    </article>
+  </main>
+
+  <!-- Client-Side Tab Switching Script -->
+  <script>
+    function switchTab(essayId, tabId) {
+      const container = document.querySelector('[aria-labelledby="dossier-heading-' + essayId + '"]');
+      if (!container) return;
+      
+      const buttons = container.querySelectorAll('.dossier-tab-btn');
+      const panels = container.querySelectorAll('.dossier-tab-panel');
+      
+      buttons.forEach(btn => {
+        btn.classList.remove('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+        btn.classList.add('border-transparent', 'text-stone-400');
+        btn.setAttribute('aria-selected', 'false');
+      });
+      
+      panels.forEach(p => p.classList.add('hidden'));
+      
+      const targetBtn = document.getElementById('btn-' + essayId + '-' + tabId);
+      const targetPanel = document.getElementById('panel-' + essayId + '-' + tabId);
+      
+      if (targetBtn) {
+        targetBtn.classList.remove('border-transparent', 'text-stone-400');
+        targetBtn.classList.add('border-amber-500', 'bg-amber-500/10', 'text-amber-400', 'font-bold');
+        targetBtn.setAttribute('aria-selected', 'true');
+      }
+      if (targetPanel) {
+        targetPanel.classList.remove('hidden');
+      }
+    }
+  </script>
+
+  <!-- Reading Experience Controller Script -->
+  <script src="../../assets/js/reading-experience.js"></script>
+</body>
+</html>
