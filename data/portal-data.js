@@ -364,10 +364,10 @@ window.PORTAL_DATA = {
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEF1fY_cQrs4C2GfkNgO70J",
       "description": "The horrifying prognosis to the diagnosis of Divide and Conquer. A meticulously researched 4-act, 13-movement dark dystopian folk concept album tracing the systemic collapse of food and electrical grids, intimate neighborhood warfare, black-market warlordism, and the poisoned silence of memory."
     },
-{
+    {
       "id": "the-forgotten-crown",
       "number": "Vault",
-      "title": "The Sovereign's Right",
+      "title": "The Forgotten Crown",
       "subtitle": "The 1689 Claim of Right & Historical Sovereignty",
       "badge": "Historical Deep Dive",
       "cover": "assets/covers/vault/the-forgotten-crown.webp",
