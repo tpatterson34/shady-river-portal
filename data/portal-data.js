@@ -477,6 +477,25 @@ window.PORTAL_DATA = {
       "url": "the-inner-citadel/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcGOrLCqoVbqmEsp7dgIaZF6",
       "description": "An intimate, philosophical 4-act, 13-track folk and roots concept album translating the timeless principles of Marcus Aurelius, Epictetus, and Seneca into songs of resilience, acceptance, and quiet courage."
+    },
+    {
+      "id": "the-curtains-and-the-canned-goods",
+      "number": "23",
+      "title": "The Curtains and the Canned Goods",
+      "subtitle": "A Forensic Sonic Audit of Systemic Extraction, Macroeconomic Debt & Agrarian Survival",
+      "badge": "Bespoke Concept Landmark",
+      "cover": "assets/covers/album-23.webp",
+      "tracks_count": 15,
+      "themes": [
+        "Ruling Class vs Working Class",
+        "Manufactured Austerity",
+        "Veterans Care Backlog",
+        "Homestead Soil",
+        "Off-Grid Resilience"
+      ],
+      "url": "the-curtains-and-the-canned-goods/",
+      "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEOmlcU9ib_nV_8bJBZdb4Y",
+      "description": "An unflinching 15-track sonic documentary contrasting opulent White House window treatments with veterans waiting at rainy drive-through pantries, grounded in off-grid permaculture resilience."
     }
   ],
   "merchandise": [
