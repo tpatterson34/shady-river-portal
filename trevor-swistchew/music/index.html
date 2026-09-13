@@ -101,6 +101,25 @@
       border-radius: 9999px;
       background: #292524;
     }
+    /* Bulletproof Responsive Mobile Layout: Prevent layout blowout on dynamic track updates */
+    #chamber-player-stage, #chamber-player-stage * {
+      min-width: 0;
+    }
+    #chamber-player-stage {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    #player-track-tags {
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
+    #deck-song-tags {
+      word-break: break-all;
+    }
+    #player-lyrics-container {
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
   </style>
 </head>
 
@@ -229,27 +248,27 @@
     </section>
 
     <!-- Interactive Active Player Stage -->
-    <section id="chamber-player-stage" class="rounded-3xl border-2 border-amber-500/40 bg-stone-900/90 p-6 sm:p-8 shadow-2xl backdrop-blur-md space-y-6">
+    <section id="chamber-player-stage" class="rounded-3xl border-2 border-amber-500/40 bg-stone-900/90 p-4 sm:p-8 shadow-2xl backdrop-blur-md space-y-6 w-full max-w-full overflow-hidden">
       
       <!-- Stage Header -->
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-stone-800">
-        <div class="space-y-1">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-stone-800 w-full max-w-full min-w-0">
+        <div class="space-y-1 min-w-0 flex-1 w-full max-w-full">
           <div class="flex items-center gap-2 font-mono text-xs text-amber-400">
-            <span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping" id="playback-ping-indicator"></span>
-            <span class="uppercase tracking-widest font-bold" id="playback-status-label">Now Playing in Chamber</span>
-            <span class="text-stone-500">•</span>
-            <span id="player-track-index" class="font-bold text-stone-200">Track #01 of 55</span>
+            <span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping shrink-0" id="playback-ping-indicator"></span>
+            <span class="uppercase tracking-widest font-bold truncate" id="playback-status-label">Now Playing in Chamber</span>
+            <span class="text-stone-500 shrink-0">•</span>
+            <span id="player-track-index" class="font-bold text-stone-200 shrink-0">Track #01 of 55</span>
           </div>
-          <h2 id="player-track-title" class="font-display text-2xl sm:text-3xl font-bold text-stone-100">
+          <h2 id="player-track-title" class="font-display text-2xl sm:text-3xl font-bold text-stone-100 break-words line-clamp-2 sm:line-clamp-none">
             Thunder in the Wires
           </h2>
-          <p id="player-track-tags" class="font-mono text-xs text-stone-400">
+          <p id="player-track-tags" class="font-mono text-xs text-stone-400 line-clamp-2 sm:line-clamp-3 break-words">
             Loud beat, bodhrán instrumentation • Celtic Folk-Rock
           </p>
         </div>
 
         <!-- External Quick Links -->
-        <div class="flex flex-wrap items-center gap-2.5 shrink-0">
+        <div class="flex flex-wrap items-center gap-2.5 shrink-0 max-w-full">
           <a 
             id="player-suno-link"
             href="https://suno.com/song/df2cc4af-b5d8-4004-ab44-ebfba7199d48" 
@@ -273,25 +292,25 @@
       </div>
 
       <!-- Player Grid: In-Page Audio Deck on Left, Lyrics on Right -->
-      <div class="grid lg:grid-cols-12 gap-6 items-start">
+      <div class="grid lg:grid-cols-12 gap-6 items-start w-full max-w-full min-w-0">
         
         <!-- Left: Native High-Fidelity Audio Deck (7 Cols) -->
-        <div class="lg:col-span-7 space-y-4">
+        <div class="lg:col-span-7 space-y-4 w-full max-w-full min-w-0">
 
           <!-- Invisible HTML5 Audio Engine -->
           <audio id="chamber-audio-element" preload="metadata" playsinline></audio>
 
           <!-- Studio Player Deck Container -->
-          <div class="rounded-2xl border border-stone-800 bg-stone-950/80 p-5 sm:p-6 shadow-2xl space-y-5">
+          <div class="rounded-2xl border border-stone-800 bg-stone-950/80 p-4 sm:p-6 shadow-2xl space-y-5 w-full max-w-full min-w-0 overflow-hidden">
             
             <!-- Track Display & Cover Art Card -->
-            <div class="flex items-center gap-4 sm:gap-5">
+            <div class="flex items-center gap-3.5 sm:gap-5 min-w-0 max-w-full">
               <div class="relative shrink-0">
                 <img 
                   id="deck-cover-img" 
                   src="https://cdn2.suno.ai/1529c04e-be18-4972-ac1a-57fae7e9f9aa.jpeg" 
                   alt="Track Cover" 
-                  class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover shadow-xl border border-amber-500/40"
+                  class="w-16 h-16 sm:w-24 sm:h-24 rounded-2xl object-cover shadow-xl border border-amber-500/40 shrink-0"
                   loading="eager"
                 />
                 <div class="absolute -bottom-1 -right-1 px-1.5 py-0.5 rounded bg-stone-950 border border-amber-500/60 text-[10px] font-mono font-bold text-amber-400 shadow">
@@ -299,27 +318,27 @@
                 </div>
               </div>
 
-              <div class="min-w-0 flex-1 space-y-1">
+              <div class="min-w-0 flex-1 space-y-1 overflow-hidden max-w-full">
                 <div class="flex items-center gap-2">
-                  <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/40" id="deck-stream-badge">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/40 shrink-0" id="deck-stream-badge">
                     In-Page Stream
                   </span>
-                  <span class="text-[11px] font-mono text-stone-500 truncate" id="deck-artist-label">
+                  <span class="text-[11px] font-mono text-stone-500 truncate block" id="deck-artist-label">
                     Trevor Swistchew &bull; Suno
                   </span>
                 </div>
-                <h3 id="deck-song-title" class="font-display text-lg sm:text-xl font-bold text-stone-100 truncate">
+                <h3 id="deck-song-title" class="font-display text-base sm:text-xl font-bold text-stone-100 truncate block max-w-full">
                   Thunder in the Wires
                 </h3>
-                <p id="deck-song-tags" class="font-mono text-xs text-stone-400 truncate">
+                <p id="deck-song-tags" class="font-mono text-xs text-stone-400 truncate block max-w-full">
                   Loud beat, bodhrán instrumentation • Celtic Folk-Rock
                 </p>
               </div>
             </div>
 
             <!-- Timeline Scrubber & Duration -->
-            <div class="space-y-1.5 pt-1">
-              <div class="relative flex items-center">
+            <div class="space-y-1.5 pt-1 w-full max-w-full min-w-0">
+              <div class="relative flex items-center w-full max-w-full">
                 <input 
                   type="range" 
                   id="deck-seek-slider" 
@@ -331,20 +350,20 @@
                   aria-label="Seek track audio position"
                 />
               </div>
-              <div class="flex items-center justify-between text-[11px] font-mono text-stone-400">
+              <div class="flex items-center justify-between text-[11px] font-mono text-stone-400 w-full">
                 <span id="deck-time-current">0:00</span>
                 <span id="deck-time-total">--:--</span>
               </div>
             </div>
 
             <!-- Transport Control Bar: Prev, Play/Pause, Next -->
-            <div class="flex items-center justify-between gap-3 pt-1">
+            <div class="flex items-center justify-between gap-2 sm:gap-3 pt-1 w-full max-w-full min-w-0">
               
               <!-- Previous Track -->
               <button 
                 type="button" 
                 onclick="prevTrack()"
-                class="flex-1 min-h-[44px] px-3 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 active:scale-95 border border-stone-800 text-stone-300 hover:text-white flex items-center justify-center gap-2 font-mono text-xs transition-all select-none touch-manipulation cursor-pointer shadow-sm"
+                class="flex-1 min-h-[44px] px-2 sm:px-3 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 active:scale-95 border border-stone-800 text-stone-300 hover:text-white flex items-center justify-center gap-1.5 sm:gap-2 font-mono text-xs transition-all select-none touch-manipulation cursor-pointer shadow-sm"
                 style="touch-action: manipulation;"
                 title="Previous song (Track -1)"
               >
@@ -357,7 +376,7 @@
                 type="button" 
                 id="deck-play-pause-btn" 
                 onclick="togglePlayPause()"
-                class="min-h-[52px] min-w-[52px] sm:min-w-[140px] px-5 py-2.5 rounded-2xl bg-amber-500 hover:bg-amber-400 active:scale-95 text-stone-950 font-bold flex items-center justify-center gap-2.5 shadow-xl transition-all select-none touch-manipulation cursor-pointer"
+                class="min-h-[52px] min-w-[52px] sm:min-w-[140px] px-4 sm:px-5 py-2.5 rounded-2xl bg-amber-500 hover:bg-amber-400 active:scale-95 text-stone-950 font-bold flex items-center justify-center gap-2 sm:gap-2.5 shadow-xl transition-all select-none touch-manipulation cursor-pointer"
                 style="touch-action: manipulation;"
                 title="Play or pause audio"
               >
@@ -369,7 +388,7 @@
               <button 
                 type="button" 
                 onclick="nextTrack()"
-                class="flex-1 min-h-[44px] px-3 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 active:scale-95 border border-stone-800 text-stone-300 hover:text-white flex items-center justify-center gap-2 font-mono text-xs transition-all select-none touch-manipulation cursor-pointer shadow-sm"
+                class="flex-1 min-h-[44px] px-2 sm:px-3 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 active:scale-95 border border-stone-800 text-stone-300 hover:text-white flex items-center justify-center gap-1.5 sm:gap-2 font-mono text-xs transition-all select-none touch-manipulation cursor-pointer shadow-sm"
                 style="touch-action: manipulation;"
                 title="Next song (Track +1)"
               >
@@ -380,7 +399,7 @@
             </div>
 
             <!-- Volume & Option Bar -->
-            <div class="flex items-center justify-between gap-4 pt-2 border-t border-stone-900 text-xs font-mono text-stone-400">
+            <div class="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-stone-900 text-xs font-mono text-stone-400 w-full max-w-full min-w-0">
               
               <!-- Volume slider -->
               <div class="flex items-center gap-2">
@@ -417,14 +436,14 @@
             </div>
 
             <!-- Optional Collapsible Suno Waveform Embed -->
-            <div id="deck-embed-container" class="hidden pt-3 border-t border-stone-800/80">
+            <div id="deck-embed-container" class="hidden pt-3 border-t border-stone-800/80 w-full max-w-full min-w-0">
               <p class="text-[11px] font-mono text-stone-400 pb-2 flex items-center justify-between">
                 <span>Official Suno Waveform Player</span>
                 <span class="text-stone-500">Desktop Interactive Widget</span>
               </p>
-              <div class="rounded-xl overflow-hidden border border-stone-800 bg-black">
+              <div class="rounded-xl overflow-hidden border border-stone-800 bg-black w-full max-w-full">
                 <iframe 
-                  id="suno-embed-iframe"
+                  id="suno-embed-iframe" 
                   src="about:blank"
                   title="Suno Waveform Player" 
                   class="w-full h-40 border-0"
@@ -437,10 +456,10 @@
           </div>
 
           <!-- Bottom Mobile/Desktop Helper Callout -->
-          <div class="p-3 rounded-xl bg-stone-950/60 border border-stone-800/80 text-[11px] font-mono text-stone-400 flex items-center justify-between leading-relaxed">
-            <div class="flex items-center gap-2">
+          <div class="p-3 rounded-xl bg-stone-950/60 border border-stone-800/80 text-[11px] font-mono text-stone-400 flex items-center justify-between leading-relaxed w-full max-w-full min-w-0">
+            <div class="flex items-center gap-2 min-w-0">
               <i class="fa-solid fa-mobile-screen-button text-amber-500 shrink-0"></i>
-              <span>Supports background playback on mobile lock screens.</span>
+              <span class="truncate">Supports background playback on mobile lock screens.</span>
             </div>
             <a id="direct-suno-aux" href="https://suno.com/song/df2cc4af-b5d8-4004-ab44-ebfba7199d48" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline font-semibold shrink-0 ml-2">
               Suno Page ↗
@@ -450,21 +469,21 @@
         </div>
 
         <!-- Right: Active Song Lyrics & Notes (5 Cols) -->
-        <div class="lg:col-span-5 rounded-2xl bg-stone-950/70 border border-stone-800 p-5 flex flex-col justify-between space-y-3 max-h-[460px]">
-          <div class="flex items-center justify-between pb-2 border-b border-stone-800 text-xs font-mono text-stone-400">
-            <span class="flex items-center gap-1.5 text-amber-400 font-bold">
-              <i class="fa-solid fa-feather-pointed text-[11px]"></i> Lyrics &amp; Stanzas
+        <div class="lg:col-span-5 rounded-2xl bg-stone-950/70 border border-stone-800 p-4 sm:p-5 flex flex-col justify-between space-y-3 max-h-[460px] w-full max-w-full min-w-0 overflow-hidden">
+          <div class="flex items-center justify-between pb-2 border-b border-stone-800 text-xs font-mono text-stone-400 w-full min-w-0">
+            <span class="flex items-center gap-1.5 text-amber-400 font-bold truncate">
+              <i class="fa-solid fa-feather-pointed text-[11px] shrink-0"></i> Lyrics &amp; Stanzas
             </span>
-            <span id="lyrics-status-badge" class="text-[10px] text-stone-500">Official Recording</span>
+            <span id="lyrics-status-badge" class="text-[10px] text-stone-500 shrink-0">Official Recording</span>
           </div>
           
-          <div id="player-lyrics-container" class="overflow-y-auto pr-2 space-y-3 font-serif text-sm text-stone-300 leading-relaxed max-h-80 select-text whitespace-pre-line">
+          <div id="player-lyrics-container" class="overflow-y-auto pr-2 space-y-3 font-serif text-sm text-stone-300 leading-relaxed max-h-80 select-text whitespace-pre-line break-words w-full max-w-full min-w-0">
             Loading lyrics...
           </div>
 
-          <div class="pt-2 border-t border-stone-800/80 flex items-center justify-between text-[11px] font-mono text-stone-500">
-            <span>Trevor Swistchew Verse Archive</span>
-            <button type="button" onclick="copyLyrics()" class="hover:text-amber-400 transition-colors flex items-center gap-1 cursor-pointer">
+          <div class="pt-2 border-t border-stone-800/80 flex items-center justify-between text-[11px] font-mono text-stone-500 w-full min-w-0">
+            <span class="truncate">Trevor Swistchew Verse Archive</span>
+            <button type="button" onclick="copyLyrics()" class="hover:text-amber-400 transition-colors flex items-center gap-1 cursor-pointer shrink-0">
               <i class="fa-regular fa-copy"></i>
               <span>Copy Lyrics</span>
             </button>
