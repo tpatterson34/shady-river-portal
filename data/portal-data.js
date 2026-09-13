@@ -458,6 +458,25 @@ window.PORTAL_DATA = {
       "url": "the-republic-of-nobody/",
       "video_url": "https://www.youtube.com/@TheShadyRiverBard",
       "description": "An empirical 4-act, 15-track political folk-rock concept album examining how formal ballot equality collides with concentrated capital, dark money, and partisan division—culminating in a call for working-class civic organization."
+    },
+    {
+      "id": "the-inner-citadel",
+      "number": "22",
+      "title": "The Inner Citadel (A Stoic's Songbook)",
+      "subtitle": "A 4-Act Folk-Rock Journey Through Ancient Stoicism & Internal Fortitude",
+      "badge": "Stoic Concept Landmark",
+      "cover": "assets/covers/album-22.webp",
+      "tracks_count": 13,
+      "themes": [
+        "Amor Fati",
+        "Dichotomy of Control",
+        "The Obstacle is the Way",
+        "Memento Mori",
+        "Sympatheia"
+      ],
+      "url": "the-inner-citadel/",
+      "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcGOrLCqoVbqmEsp7dgIaZF6",
+      "description": "An intimate, philosophical 4-act, 13-track folk and roots concept album translating the timeless principles of Marcus Aurelius, Epictetus, and Seneca into songs of resilience, acceptance, and quiet courage."
     }
   ],
   "merchandise": [

@@ -1292,7 +1292,9 @@ const ALBUMS_DATA = {
         "egntUF_vsI4"
       ],
       "youtube_music_url": "https://music.youtube.com/playlist?list=PLO_tWXIGUXcGOrLCqoVbqmEsp7dgIaZF6",
-      "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcGOrLCqoVbqmEsp7dgIaZF6"
+      "video_playlist_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcGOrLCqoVbqmEsp7dgIaZF6",
+      "is_bespoke": true,
+      "custom_url": "/the-inner-citadel/"
     },
     {
       "id": "the-curtains-and-the-canned-goods",
