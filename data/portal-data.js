@@ -439,6 +439,25 @@ window.PORTAL_DATA = {
         "url": "doomsday-clock/",
         "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcFJ4vC-R0d-N2XvsMwph5bj",
         "description": "A 13-movement four-act concept album translating existential risk into visceral narrative art. Tracing humanity's precarious position 89 seconds to midnight from creeping objectless anxiety through catastrophic ruin to the final chilling silence."
+    },
+    {
+      "id": "the-republic-of-nobody",
+      "number": "Vault",
+      "title": "The Republic of Nobody",
+      "subtitle": "A 4-Act Political Folk-Rock Concept Album on Oligarchy & Civic Restoration",
+      "badge": "Political Concept Landmark",
+      "cover": "assets/covers/vault/the-republic-of-nobody.webp",
+      "tracks_count": 15,
+      "themes": [
+        "Biased Pluralism",
+        "Campaign Finance",
+        "The Two-Party Trap",
+        "The Long Ratchet",
+        "Civic Organization"
+      ],
+      "url": "the-republic-of-nobody/",
+      "video_url": "https://www.youtube.com/@TheShadyRiverBard",
+      "description": "An empirical 4-act, 15-track political folk-rock concept album examining how formal ballot equality collides with concentrated capital, dark money, and partisan division—culminating in a call for working-class civic organization."
     }
   ],
   "merchandise": [
