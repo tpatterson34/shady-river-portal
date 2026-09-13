@@ -9636,6 +9636,32 @@ Stole your freedom clean away
       return `${mins}:${secs.toString().padStart(2, '0')}`;
     }
 
+    // Screen Wake Lock API: Prevent phone from auto-sleeping while audio is playing
+    let wakeLock = null;
+
+    async function requestWakeLock() {
+      if ('wakeLock' in navigator && !wakeLock) {
+        try {
+          wakeLock = await navigator.wakeLock.request('screen');
+          wakeLock.addEventListener('release', () => {
+            wakeLock = null;
+          });
+        } catch (err) {}
+      }
+    }
+
+    function releaseWakeLock() {
+      if (wakeLock) {
+        wakeLock.release().then(() => { wakeLock = null; }).catch(() => {});
+      }
+    }
+
+    document.addEventListener('visibilitychange', async () => {
+      if (document.visibilityState === 'visible' && !audio.paused) {
+        await requestWakeLock();
+      }
+    });
+
     function updatePlayPauseUI(isPlaying) {
       if (isPlaying) {
         playIcon.className = 'fa-solid fa-pause text-base';
@@ -9643,12 +9669,21 @@ Stole your freedom clean away
         playPauseBtn.classList.remove('bg-amber-500');
         playPauseBtn.classList.add('bg-amber-400');
         if (pingIndicator) pingIndicator.classList.remove('hidden');
+        requestWakeLock();
       } else {
         playIcon.className = 'fa-solid fa-play text-base translate-x-0.5';
         playText.textContent = 'Play';
         playPauseBtn.classList.remove('bg-amber-400');
         playPauseBtn.classList.add('bg-amber-500');
         if (pingIndicator) pingIndicator.classList.add('hidden');
+        releaseWakeLock();
+      }
+
+      // Synchronize OS-level MediaSession playbackState for lock-screen controls
+      if ('mediaSession' in navigator) {
+        try {
+          navigator.mediaSession.playbackState = isPlaying ? 'playing' : 'paused';
+        } catch (e) {}
       }
     }
 
@@ -9832,12 +9867,32 @@ Stole your freedom clean away
         const pct = (audio.currentTime / audio.duration) * 100;
         seekSlider.value = pct;
         timeCurrent.textContent = formatTime(audio.currentTime);
+
+        // Update MediaSession lock-screen scrubber position
+        if ('mediaSession' in navigator && 'setPositionState' in navigator.mediaSession) {
+          try {
+            navigator.mediaSession.setPositionState({
+              duration: audio.duration,
+              playbackRate: audio.playbackRate || 1,
+              position: Math.min(audio.currentTime, audio.duration)
+            });
+          } catch (e) {}
+        }
       }
     });
 
     audio.addEventListener('loadedmetadata', () => {
       if (audio.duration && !isNaN(audio.duration)) {
         timeTotal.textContent = formatTime(audio.duration);
+        if ('mediaSession' in navigator && 'setPositionState' in navigator.mediaSession) {
+          try {
+            navigator.mediaSession.setPositionState({
+              duration: audio.duration,
+              playbackRate: audio.playbackRate || 1,
+              position: 0
+            });
+          } catch (e) {}
+        }
       }
     });
 
