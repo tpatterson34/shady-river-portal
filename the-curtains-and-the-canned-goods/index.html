@@ -853,12 +853,9 @@
                   <!-- Tabs Control -->
                   <div class="flex items-center justify-between flex-wrap gap-3 pb-4 border-b border-slate-800/80 mb-5">
                     <div class="flex items-center gap-2">
-                      <button onclick="switchTab(1, 'clean')" id="tab-clean-1" class="tab-btn active px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition-colors">
+                      <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
                         <i class="fa-solid fa-feather mr-1 text-[11px]" aria-hidden="true"></i>Clean Poetry
-                      </button>
-                      <button onclick="switchTab(1, 'arr')" id="tab-arr-1" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-400 hover:text-slate-200 border border-transparent transition-colors">
-                        <i class="fa-solid fa-sliders mr-1 text-[11px]" aria-hidden="true"></i>Performance &amp; Arrangement Notes
-                      </button>
+                      </span>
                     </div>
 
                     <button onclick="copyLyrics(1)" id="copy-btn-1" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
@@ -867,7 +864,7 @@
                     </button>
                   </div>
 
-                  <!-- Tab 1: Clean Poetry -->
+                  <!-- Clean Poetry Content -->
                   <div id="content-clean-1" class="tab-content block font-serif text-slate-200 text-sm sm:text-base max-h-[500px] overflow-y-auto pr-3 leading-relaxed whitespace-pre-line">
 <p class="mb-3 leading-relaxed">[Intro]
 [Verse 1]
@@ -899,72 +896,13 @@ It’s an insufficient funds error... while the whole thing burns.
 You can&#x27;t patch a broken promise with a velvet thread!
 When the foundation crumbles and the roots are dead!
 I unplugged my soul from the grid they made.
-I&#x27;m stepping out of the shade.
-[Guitar Solo]
-[Outro]
+I&#x27;m stepping out of the shade.</p>
+<p class="mb-3 leading-relaxed">[Outro]
 Just an insufficient funds error.
 In the land of the brave.
 Let the high towers hum.
 I&#x27;m walking away.
 © 2026 The Shady River Bard. All rights reserved.</p>
-                  </div>
-
-                  <!-- Tab 2: Arrangement & Performance Notes -->
-                  <div id="content-arr-1" class="tab-content hidden max-h-[500px] overflow-y-auto pr-3">
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Genre: Somber Americana, Building Folk-Rock]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Mood: Melancholic, Gritty, Defiant]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Male]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Gravelly]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Intro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Sparse Acoustic Guitar]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Mournful Cello]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 1]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I used to know the way the wires ran</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Every pulsing circuit in the master plan</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Now I watch the city from the quiet dirt</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Knowing exactly where it’s gonna hurt</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I hear the distant hum of the great machine</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">And the quiet little lies blinking on the screen</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Steady Kick Drum enters]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">&#x27;Cause there’s a blank check waiting for the gold and the greed</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">But the screen flashes red for the hands that bleed</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">When the heavy lifting&#x27;s done and the engine won&#x27;t turn</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">It’s an insufficient funds error... while the whole thing burns.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, an insufficient funds error... while the whole thing burns.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 2]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bass Guitar enters]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Cello swells]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They treat a human life like a rusty gear</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Run it till it strips, make it disappear</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Send a boy to the desert, bring a ghost back home</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Leave him out in the cold to wander all alone</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I saw the math they do, I saw the bottom line</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The cruelty ain&#x27;t a glitch, brother... it&#x27;s by design.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Heavy Acoustic Strumming]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">&#x27;Cause there’s a blank check waiting for the gold and the greed</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">But the screen flashes red for the hands that bleed</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">When the heavy lifting&#x27;s done and the engine won&#x27;t turn</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">It’s an insufficient funds error... while the whole thing burns.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bridge]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[shouted]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">You can&#x27;t patch a broken promise with a velvet thread!</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">When the foundation crumbles and the roots are dead!</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[spoken]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I unplugged my soul from the grid they made.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I&#x27;m stepping out of the shade.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Guitar Solo]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Electric Guitar, bluesy and distorted]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Outro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo slows]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Acoustic Guitar]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just an insufficient funds error.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">In the land of the brave.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Let the high towers hum.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I&#x27;m walking away.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Fade Out]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[End]</span></div>
                   </div>
 
                 </div>
@@ -1061,12 +999,9 @@ I&#x27;m walking away.
                   <!-- Tabs Control -->
                   <div class="flex items-center justify-between flex-wrap gap-3 pb-4 border-b border-slate-800/80 mb-5">
                     <div class="flex items-center gap-2">
-                      <button onclick="switchTab(2, 'clean')" id="tab-clean-2" class="tab-btn active px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition-colors">
+                      <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
                         <i class="fa-solid fa-feather mr-1 text-[11px]" aria-hidden="true"></i>Clean Poetry
-                      </button>
-                      <button onclick="switchTab(2, 'arr')" id="tab-arr-2" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-400 hover:text-slate-200 border border-transparent transition-colors">
-                        <i class="fa-solid fa-sliders mr-1 text-[11px]" aria-hidden="true"></i>Performance &amp; Arrangement Notes
-                      </button>
+                      </span>
                     </div>
 
                     <button onclick="copyLyrics(2)" id="copy-btn-2" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
@@ -1075,7 +1010,7 @@ I&#x27;m walking away.
                     </button>
                   </div>
 
-                  <!-- Tab 1: Clean Poetry -->
+                  <!-- Clean Poetry Content -->
                   <div id="content-clean-2" class="tab-content block font-serif text-slate-200 text-sm sm:text-base max-h-[500px] overflow-y-auto pr-3 leading-relaxed whitespace-pre-line">
 <p class="mb-3 leading-relaxed">[Intro]
 [Verse 1]
@@ -1113,9 +1048,8 @@ It’s the aesthetic of apathy.
 A sickness in the crown.
 They don&#x27;t even have the decency to look out when looking down.
 They buy the silk with borrowed blood, they never feel the stain.
-They decorate the ballroom while we navigate the rain.
-[Guitar Solo]
-[Outro]
+They decorate the ballroom while we navigate the rain.</p>
+<p class="mb-3 leading-relaxed">[Outro]
 Just a ten-second nod.
 And a heavy velvet drape.
 There ain&#x27;t no voting out of this.
@@ -1123,71 +1057,6 @@ There ain&#x27;t no grand escape.
 Just the curtains...
 And the canned goods.
 © 2026 The Shady River Bard. All rights reserved.</p>
-                  </div>
-
-                  <!-- Tab 2: Arrangement & Performance Notes -->
-                  <div id="content-arr-2" class="tab-content hidden max-h-[500px] overflow-y-auto pr-3">
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Genre: Austerity-Blues Americana]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Mood: Melancholic, Quiet Anger]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Male]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Gravelly]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Intro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Clean Fingerpicked Acoustic Guitar]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Solemn Sustained Cello]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 1]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I watched the press feed on a Tuesday afternoon</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A man in a tailored suit standing in a sterile room</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">He gave a ten-second nod to the four souls who fell</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Then pivoted right past the gates of hell</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">He smiled for the cameras, so proud and so vain</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Talking &#x27;bout the new gold window treatments... while out in the rain...</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Acoustic Guitar strums intensify slightly]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">We got the curtains and the canned goods.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The palace and the rust.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A velvet drape to hide the shame while the heroes eat the dust.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They wrap the halls in luxury, they wrap the young in flags</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">And leave the ones who made it back to carry home the bags.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, the gold thread for the winner, the aluminum for the damned.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just the curtains and the canned goods in a broken promised land.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 2]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Cello returns, low and mournful]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Down at the V.F.W., the line is stretching long</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A drive-through pantry in the mud for the ones who stayed strong</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Old men in faded caps, shivering in the cold</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Trading in their dignity for a shelf-stable hold</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I handed out some peaches to a sniper from the sand</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While the leader of the free world was measuring his grand...</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Electric Guitar swells softly in the background]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">We got the curtains and the canned goods.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The palace and the rust.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A velvet drape to hide the shame while the heroes eat the dust.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They wrap the halls in luxury, they wrap the young in flags</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">And leave the ones who made it back to carry home the bags.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, the gold thread for the winner, the aluminum for the damned.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just the curtains and the canned goods in a broken promised land.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bridge]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Sparse Percussion enters]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Gritty]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">It’s the aesthetic of apathy.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A sickness in the crown.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They don&#x27;t even have the decency to look out when looking down.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They buy the silk with borrowed blood, they never feel the stain.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They decorate the ballroom while we navigate the rain.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Guitar Solo]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Harmonica and Acoustic Guitar interplay, bluesy and sad]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Outro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo slows]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Acoustic Guitar]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just a ten-second nod.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">And a heavy velvet drape.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">There ain&#x27;t no voting out of this.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">There ain&#x27;t no grand escape.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just the curtains...</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">And the canned goods.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Fade Out]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[End]</span></div>
                   </div>
 
                 </div>
@@ -1284,12 +1153,9 @@ And the canned goods.
                   <!-- Tabs Control -->
                   <div class="flex items-center justify-between flex-wrap gap-3 pb-4 border-b border-slate-800/80 mb-5">
                     <div class="flex items-center gap-2">
-                      <button onclick="switchTab(3, 'clean')" id="tab-clean-3" class="tab-btn active px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition-colors">
+                      <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
                         <i class="fa-solid fa-feather mr-1 text-[11px]" aria-hidden="true"></i>Clean Poetry
-                      </button>
-                      <button onclick="switchTab(3, 'arr')" id="tab-arr-3" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-400 hover:text-slate-200 border border-transparent transition-colors">
-                        <i class="fa-solid fa-sliders mr-1 text-[11px]" aria-hidden="true"></i>Performance &amp; Arrangement Notes
-                      </button>
+                      </span>
                     </div>
 
                     <button onclick="copyLyrics(3)" id="copy-btn-3" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
@@ -1298,7 +1164,7 @@ And the canned goods.
                     </button>
                   </div>
 
-                  <!-- Tab 1: Clean Poetry -->
+                  <!-- Clean Poetry Content -->
                   <div id="content-clean-3" class="tab-content block font-serif text-slate-200 text-sm sm:text-base max-h-[500px] overflow-y-auto pr-3 leading-relaxed whitespace-pre-line">
 <p class="mb-3 leading-relaxed">[Intro]
 [Verse 1]
@@ -1332,80 +1198,14 @@ While the suits in the city buy another endless fight
 [Bridge]
 You can&#x27;t eat the ledger!
 You can&#x27;t drink the oil!
-The only truth left... is the blood in the soil.
-[Instrumental Break]
-[Outro]
+The only truth left... is the blood in the soil.</p>
+<p class="mb-3 leading-relaxed">[Outro]
 Let the skies burn.
 I&#x27;ll tend the dirt.
 Let the high towers hum.
 I know exactly where it hurts.
 Just seven acres.
 © 2026 The Shady River Bard. All rights reserved.</p>
-                  </div>
-
-                  <!-- Tab 2: Arrangement & Performance Notes -->
-                  <div id="content-arr-3" class="tab-content hidden max-h-[500px] overflow-y-auto pr-3">
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Genre: Gritty Americana Folk-Rock]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Mood: Brooding, Defiant]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Male]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Gravelly]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Intro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Dark Acoustic Guitar]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Heavy Kick Drum]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 1]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I pull my boots on before the morning breaks</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Walk the fence line just to see what it takes</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Got a handful of seeds and a bucket of rain</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Trying to coax a little life from this Maple Valley pain</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The soil is heavy, the work is slow</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">But it&#x27;s the only honest truth that I know</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Cello enters]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bass swells]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">&#x27;Cause I&#x27;m working seven acres of quiet ground</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While they got seven skies burning, tearing it all down</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I&#x27;m trying to grow a root in the muddy clay</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While the architects of ash blow the world away</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, I&#x27;m pulling up the weeds in the morning light</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While the suits in the city buy another endless fight</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 2]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Acoustic Strumming intensifies]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">There&#x27;s a Trillyun dollar budget for a desert campaign</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A boardroom clapping for the missiles that rain</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They don&#x27;t know the smell of the earth when it&#x27;s turned</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They only know the profit when the whole thing is burned</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They send the hometown boys to the fire and the sand</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">And leave &#x27;em begging for a peach from a neighbor&#x27;s hand</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Heavy Kick Drum drives the beat]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">&#x27;Cause I&#x27;m working seven acres of quiet ground</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While they got seven skies burning, tearing it all down</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I&#x27;m trying to grow a root in the muddy clay</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While the architects of ash blow the world away</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, I&#x27;m pulling up the weeds in the morning light</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While the suits in the city buy another endless fight</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bridge]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo drops]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Sparse Acoustic Plucking]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[shouted]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">You can&#x27;t eat the ledger!</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">You can&#x27;t drink the oil!</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[spoken]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The only truth left... is the blood in the soil.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Instrumental Break]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Furious Acoustic Guitar]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Distorted Cello]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Heavy Percussion]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Outro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo slows heavily]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Acoustic Guitar]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Let the skies burn.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I&#x27;ll tend the dirt.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Let the high towers hum.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I know exactly where it hurts.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just seven acres.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Fade Out]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[End]</span></div>
                   </div>
 
                 </div>
@@ -1502,12 +1302,9 @@ Just seven acres.
                   <!-- Tabs Control -->
                   <div class="flex items-center justify-between flex-wrap gap-3 pb-4 border-b border-slate-800/80 mb-5">
                     <div class="flex items-center gap-2">
-                      <button onclick="switchTab(4, 'clean')" id="tab-clean-4" class="tab-btn active px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition-colors">
+                      <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
                         <i class="fa-solid fa-feather mr-1 text-[11px]" aria-hidden="true"></i>Clean Poetry
-                      </button>
-                      <button onclick="switchTab(4, 'arr')" id="tab-arr-4" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-400 hover:text-slate-200 border border-transparent transition-colors">
-                        <i class="fa-solid fa-sliders mr-1 text-[11px]" aria-hidden="true"></i>Performance &amp; Arrangement Notes
-                      </button>
+                      </span>
                     </div>
 
                     <button onclick="copyLyrics(4)" id="copy-btn-4" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
@@ -1516,7 +1313,7 @@ Just seven acres.
                     </button>
                   </div>
 
-                  <!-- Tab 1: Clean Poetry -->
+                  <!-- Clean Poetry Content -->
                   <div id="content-clean-4" class="tab-content block font-serif text-slate-200 text-sm sm:text-base max-h-[500px] overflow-y-auto pr-3 leading-relaxed whitespace-pre-line">
 <p class="mb-3 leading-relaxed">[Intro]
 [Verse 1]
@@ -1550,74 +1347,12 @@ Just disposable hardware, waiting around to die
 [Bridge]
 You can&#x27;t buy a replacement for a shattered human soul.
 But they optimized the margins.
-And they let us take the toll!
-[Guitar Solo]
-[Outro]
+And they let us take the toll!</p>
+<p class="mb-3 leading-relaxed">[Outro]
 Power down the grid.
 Watch the system fail.
 Just disposable hardware.
 © 2026 The Shady River Bard. All rights reserved.</p>
-                  </div>
-
-                  <!-- Tab 2: Arrangement & Performance Notes -->
-                  <div id="content-arr-4" class="tab-content hidden max-h-[500px] overflow-y-auto pr-3">
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Genre: Somber Americana, Gritty Country Blues]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Key: E minor]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Mood: Melancholic, Resigned, Heavy]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Male]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Gravelly]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Intro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Clean Fingerpicked Acoustic Guitar]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Solemn Sustained Cello]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 1]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They cut a blank check for the fire and the steel</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">But they never calculate the way a body feels</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">We are just the copper wire, we are just the turning gear</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Run it till it strips, and watch it disappear</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They build a master server from the blood upon the sand</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">And wipe the ledger clean with a heavy, hidden hand</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Acoustic Strumming intensifies]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">It&#x27;s disposable hardware in a trillion-dollar game</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">We bleed into the ledger, but they never know our name</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">When the engine finally breaks and the parts begin to rust</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They leave the broken pieces out to gather in the dust</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, the machine keeps humming, but the system is a lie</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just disposable hardware, waiting around to die</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 2]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Cello swells, mournful and low]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A hundred thousand files sitting heavy in the stack</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Waiting eighty-five days just to get a little back</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They authorized the thunder, but they won&#x27;t repair the wire</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just toss another hometown boy into the endless fire</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The architects are sleeping in a bed of golden thread</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While the frontline boys are fighting just to get a little bread</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Heavy Kick Drum enters]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">It&#x27;s disposable hardware in a trillion-dollar game</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">We bleed into the ledger, but they never know our name</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">When the engine finally breaks and the parts begin to rust</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They leave the broken pieces out to gather in the dust</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, the machine keeps humming, but the system is a lie</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just disposable hardware, waiting around to die</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bridge]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo slows]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Spoken Word]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">You can&#x27;t buy a replacement for a shattered human soul.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">But they optimized the margins.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Shouted]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">And they let us take the toll!</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Guitar Solo]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Acoustic Slide Guitar, bluesy and weeping]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Cello drone]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Outro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo slows heavily]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Clean Fingerpicked Acoustic Guitar]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Power down the grid.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Watch the system fail.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just disposable hardware.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Fade Out]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[End]</span></div>
                   </div>
 
                 </div>
@@ -1714,12 +1449,9 @@ Just disposable hardware.
                   <!-- Tabs Control -->
                   <div class="flex items-center justify-between flex-wrap gap-3 pb-4 border-b border-slate-800/80 mb-5">
                     <div class="flex items-center gap-2">
-                      <button onclick="switchTab(5, 'clean')" id="tab-clean-5" class="tab-btn active px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition-colors">
+                      <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
                         <i class="fa-solid fa-feather mr-1 text-[11px]" aria-hidden="true"></i>Clean Poetry
-                      </button>
-                      <button onclick="switchTab(5, 'arr')" id="tab-arr-5" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-400 hover:text-slate-200 border border-transparent transition-colors">
-                        <i class="fa-solid fa-sliders mr-1 text-[11px]" aria-hidden="true"></i>Performance &amp; Arrangement Notes
-                      </button>
+                      </span>
                     </div>
 
                     <button onclick="copyLyrics(5)" id="copy-btn-5" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
@@ -1728,7 +1460,7 @@ Just disposable hardware.
                     </button>
                   </div>
 
-                  <!-- Tab 1: Clean Poetry -->
+                  <!-- Clean Poetry Content -->
                   <div id="content-clean-5" class="tab-content block font-serif text-slate-200 text-sm sm:text-base max-h-[500px] overflow-y-auto pr-3 leading-relaxed whitespace-pre-line">
 <p class="mb-3 leading-relaxed">[Intro]
 [Verse 1]
@@ -1765,78 +1497,12 @@ Thirty-eight trillion drops of heavy, heavy rain.
 The math doesn&#x27;t care about the politics.
 The math doesn&#x27;t care about the spin.
 When the water breaches the levee...
-The ocean always wins!
-[Guitar Solo]
-[Outro]
+The ocean always wins!</p>
+<p class="mb-3 leading-relaxed">[Outro]
 Just thirty-eight trillion.
 And the bill is coming due.
 Nowhere left to hide.
 © 2026 The Shady River Bard. All rights reserved.</p>
-                  </div>
-
-                  <!-- Tab 2: Arrangement & Performance Notes -->
-                  <div id="content-arr-5" class="tab-content hidden max-h-[500px] overflow-y-auto pr-3">
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Genre: Tense Americana, Fingerpicked Folk-Blues]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Key: D minor]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Mood: Brooding, Anxious, Impending Doom]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Male]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Gravelly]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Intro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Fast Fingerpicked Acoustic Guitar]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Ticking Woodblock Percussion]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 1]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I hear the ticking in the walls before the morning light</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Eight billyun dollars heavier in the middle of the night</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They print the paper promises and send &#x27;em overseas</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While the foundation of the homeland brings us to our knees</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">It’s a shadow on the ledger, it’s a phantom in the bank</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">We are pulling at the oars while the captains sink the tank</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Cello enters with a low, tense drone]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Thirty-eight trillyun.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A mountain made of ash.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Trading in the future for a momentary flash.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The storm is on the radar, the water&#x27;s getting high</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">You can&#x27;t buy an umbrella when the well is running dry.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, the numbers keep on rolling like a runaway train</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Thirty-eight trillyun drops of heavy, heavy rain.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 2]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Acoustic Strumming intensifies]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">One trillyun a year just to satisfy the fee</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">To feed the gaping maw of the beast across the sea</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They siphon off the harvest before the seed is sown</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">And leave the working man to reap the bitter dust alone</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The architects of ruin, they never feel the freeze</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">When the interest comes collecting on the vulnerable and weak</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Heavy Kick Drum joins the ticking]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Thirty-eight trillyun.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A mountain made of ash.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Trading in the future for a momentary flash.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The storm is on the radar, the water&#x27;s getting high</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">You can&#x27;t buy an umbrella when the well is running dry.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, the numbers keep on rolling like a runaway train</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Thirty-eight trillyun drops of heavy, heavy rain.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bridge]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo drops suddenly]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Sparse Acoustic Plucking]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Spoken Word]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The math doesn&#x27;t care about the politics.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The math doesn&#x27;t care about the spin.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Gritty]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">When the water breaches the levee...</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The ocean always wins!</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Guitar Solo]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Frantic Acoustic Fingerpicking]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Dissonant Cello Swell]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Outro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo slows heavily]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Ticking Woodblock Percussion fades]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just thirty-eight trillyun.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">And the bill is coming due.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Nowhere left to hide.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Fade Out]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[End]</span></div>
                   </div>
 
                 </div>
@@ -1933,12 +1599,9 @@ Nowhere left to hide.
                   <!-- Tabs Control -->
                   <div class="flex items-center justify-between flex-wrap gap-3 pb-4 border-b border-slate-800/80 mb-5">
                     <div class="flex items-center gap-2">
-                      <button onclick="switchTab(6, 'clean')" id="tab-clean-6" class="tab-btn active px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition-colors">
+                      <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
                         <i class="fa-solid fa-feather mr-1 text-[11px]" aria-hidden="true"></i>Clean Poetry
-                      </button>
-                      <button onclick="switchTab(6, 'arr')" id="tab-arr-6" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-400 hover:text-slate-200 border border-transparent transition-colors">
-                        <i class="fa-solid fa-sliders mr-1 text-[11px]" aria-hidden="true"></i>Performance &amp; Arrangement Notes
-                      </button>
+                      </span>
                     </div>
 
                     <button onclick="copyLyrics(6)" id="copy-btn-6" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
@@ -1947,7 +1610,7 @@ Nowhere left to hide.
                     </button>
                   </div>
 
-                  <!-- Tab 1: Clean Poetry -->
+                  <!-- Clean Poetry Content -->
                   <div id="content-clean-6" class="tab-content block font-serif text-slate-200 text-sm sm:text-base max-h-[500px] overflow-y-auto pr-3 leading-relaxed whitespace-pre-line">
 <p class="mb-3 leading-relaxed">[Intro]
 [Verse 1]
@@ -1981,74 +1644,12 @@ Just a broken piece of hardware waiting eighty-five days.
 [Bridge]
 Forty percent of the boys coming back need a lifetime of care.
 But the budget is empty...
-And the cupboards are bare!
-[Guitar Solo]
-[Outro]
+And the cupboards are bare!</p>
+<p class="mb-3 leading-relaxed">[Outro]
 Eighty-five days.
 One hundred thousand files.
 Just keep waiting.
 © 2026 The Shady River Bard. All rights reserved.</p>
-                  </div>
-
-                  <!-- Tab 2: Arrangement & Performance Notes -->
-                  <div id="content-arr-6" class="tab-content hidden max-h-[500px] overflow-y-auto pr-3">
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Genre: Ticking Acoustic Folk, Somber Americana]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Key: A minor]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Mood: Melancholic, Agonizing, Resigned]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Male]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Gravelly]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Intro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Repetitive, fast-ticking acoustic guitar picking]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Solemn sustained Cello drone]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 1]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">He packed up his medals and he filled out the forms</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A body still aching from the desert storms</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">He mailed off his ghost to a sterile machine</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just a number in a file on a glowing white screen</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They told him to wait, they told him to sit</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While the gears of the system grind down bit by bit</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Cello swells, adding heavy tension]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Eighty-five days. Eighty-five nights.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Waiting in the shadow of the capital lights.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A hundred thousand files sitting heavy in the stack</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While the architects of war turn their faces and their back</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, the clock keeps ticking but the ledger never pays</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just a broken piece of hardware waiting eighty-five days.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 2]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Acoustic picking maintains a relentless, ticking pace]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">It took &#x27;em one afternoon to put a rifle in his hand</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">And ship him on a transport to a foreign, bloody sand</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">But to fix what they shattered, to mend what they broke</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The promises they made were just a column of smoke</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Five hundred thousand names waiting out in the cold</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">For a shelf-stable promise that is growing too old</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Heavy kick drum joins the ticking rhythm]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Eighty-five days. Eighty-five nights.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Waiting in the shadow of the capital lights.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A hundred thousand files sitting heavy in the stack</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While the architects of war turn their faces and their back</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, the clock keeps ticking but the ledger never pays</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just a broken piece of hardware waiting eighty-five days.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bridge]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo abruptly slows]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Sparse Acoustic Plucking]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Spoken Word]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Forty percent of the boys coming back need a lifetime of care.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Gritty, rising anger]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">But the budget is empty...</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">And the cupboards are bare!</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Guitar Solo]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Frantic, bluesy acoustic fingerpicking mimicking a ticking clock]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Outro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo slows heavily]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Ticking Acoustic Guitar fades]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Eighty-five days.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">One hundred thousand files.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just keep waiting.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Fade Out]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[End]</span></div>
                   </div>
 
                 </div>
@@ -2145,12 +1746,9 @@ Just keep waiting.
                   <!-- Tabs Control -->
                   <div class="flex items-center justify-between flex-wrap gap-3 pb-4 border-b border-slate-800/80 mb-5">
                     <div class="flex items-center gap-2">
-                      <button onclick="switchTab(7, 'clean')" id="tab-clean-7" class="tab-btn active px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition-colors">
+                      <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
                         <i class="fa-solid fa-feather mr-1 text-[11px]" aria-hidden="true"></i>Clean Poetry
-                      </button>
-                      <button onclick="switchTab(7, 'arr')" id="tab-arr-7" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-400 hover:text-slate-200 border border-transparent transition-colors">
-                        <i class="fa-solid fa-sliders mr-1 text-[11px]" aria-hidden="true"></i>Performance &amp; Arrangement Notes
-                      </button>
+                      </span>
                     </div>
 
                     <button onclick="copyLyrics(7)" id="copy-btn-7" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
@@ -2159,7 +1757,7 @@ Just keep waiting.
                     </button>
                   </div>
 
-                  <!-- Tab 1: Clean Poetry -->
+                  <!-- Clean Poetry Content -->
                   <div id="content-clean-7" class="tab-content block font-serif text-slate-200 text-sm sm:text-base max-h-[500px] overflow-y-auto pr-3 leading-relaxed whitespace-pre-line">
 <p class="mb-3 leading-relaxed">[Intro]
 [Verse 1]
@@ -2194,74 +1792,12 @@ While they starve the foundation to pay for the fool.
 [Bridge]
 You can&#x27;t build a strong nation on the backs of hungry children.
 They talk about the future...
-But they are eating the seed!
-[Guitar Solo]
-[Outro]
+But they are eating the seed!</p>
+<p class="mb-3 leading-relaxed">[Outro]
 Twelve million.
 Just an empty tray.
 Nothing left to give.
 © 2026 The Shady River Bard. All rights reserved.</p>
-                  </div>
-
-                  <!-- Tab 2: Arrangement & Performance Notes -->
-                  <div id="content-arr-7" class="tab-content hidden max-h-[500px] overflow-y-auto pr-3">
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Genre: Austerity-Folk, Acoustic Ballad]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Key: A minor]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Mood: Somber, Heartbreaking, Quiet Anger]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Male]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Gravelly]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Intro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Slow, mournful acoustic guitar picking]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Subtle Cello drone]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 1]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The warning bell rings at a quarter to noon</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">In a cinderblock room with a plastic spoon</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">She wipes down the table, she counts out the bread</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">And remembers the words that the politicians said</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">About tightening belts and balancing sheets</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While the hunger sets in on the Harlan County streets</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Acoustic strumming builds slightly]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Twelve million kids pushed out of the line</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Erased from the ledger by shifting the sign</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They cut off the funding, they emptied the tray</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">To drop a new bomb half a world away</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Two billion a day for the fire and the cruel</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While they starve the foundation to pay for the fool.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just an empty tray.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 2]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bass enters softly]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">There&#x27;s a boy in a jacket that&#x27;s two sizes small</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Staring at the menu taped up on the wall</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">He&#x27;s learning a lesson they don&#x27;t teach in class</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">How the poorest of the poor are just treated like glass</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They&#x27;re burning up billions in the skies of Iran</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While the kids back at home catch the back of the hand</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Cello swells with emotion]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Twelve million kids pushed out of the line</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Erased from the ledger by shifting the sign</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They cut off the funding, they emptied the tray</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">To drop a new bomb half a world away</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Two billion a day for the fire and the cruel</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While they starve the foundation to pay for the fool.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bridge]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo slows]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Spoken Word]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">You can&#x27;t build a strong nation on the backs of hungry children.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Gritty]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They talk about the future...</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">But they are eating the seed!</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Guitar Solo]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Heartbreaking, slow acoustic fingerpicking]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Outro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo slows heavily]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Acoustic Guitar fades]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Twelve million.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just an empty tray.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Nothing left to give.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Fade Out]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[End]</span></div>
                   </div>
 
                 </div>
@@ -2358,12 +1894,9 @@ Nothing left to give.
                   <!-- Tabs Control -->
                   <div class="flex items-center justify-between flex-wrap gap-3 pb-4 border-b border-slate-800/80 mb-5">
                     <div class="flex items-center gap-2">
-                      <button onclick="switchTab(8, 'clean')" id="tab-clean-8" class="tab-btn active px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition-colors">
+                      <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
                         <i class="fa-solid fa-feather mr-1 text-[11px]" aria-hidden="true"></i>Clean Poetry
-                      </button>
-                      <button onclick="switchTab(8, 'arr')" id="tab-arr-8" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-400 hover:text-slate-200 border border-transparent transition-colors">
-                        <i class="fa-solid fa-sliders mr-1 text-[11px]" aria-hidden="true"></i>Performance &amp; Arrangement Notes
-                      </button>
+                      </span>
                     </div>
 
                     <button onclick="copyLyrics(8)" id="copy-btn-8" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
@@ -2372,7 +1905,7 @@ Nothing left to give.
                     </button>
                   </div>
 
-                  <!-- Tab 1: Clean Poetry -->
+                  <!-- Clean Poetry Content -->
                   <div id="content-clean-8" class="tab-content block font-serif text-slate-200 text-sm sm:text-base max-h-[500px] overflow-y-auto pr-3 leading-relaxed whitespace-pre-line">
 <p class="mb-3 leading-relaxed">[Intro]
 [Verse 1]
@@ -2414,64 +1947,6 @@ In the cold.
 In the rain.
 Nothing left to give.
 © 2026 The Shady River Bard. All rights reserved.</p>
-                  </div>
-
-                  <!-- Tab 2: Arrangement & Performance Notes -->
-                  <div id="content-arr-8" class="tab-content hidden max-h-[500px] overflow-y-auto pr-3">
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Genre: Bare Acoustic Folk, Somber Americana]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Key: D minor]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Mood: Profound Isolation, Devastating, Bare]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Male]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Gravelly, Broken]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Intro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Slow, hesitant acoustic guitar fingerpicking]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 1]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A hundred idling engines in the cold and driving rain</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A line of rusted metal winding down the fading lane</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They handed over everything, the marrow and the bone</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Now they&#x27;re waiting on a handout in the country they call home</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">No cameras on the sidewalk, no ribbons on the chest</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just a plastic tarp to cover up the best among the rest</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Acoustic picking remains sparse and quiet]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just a box of canned goods sitting in the rain</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A shelf-stable bandage for a lifetime of pain</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The empire is busy, the federal budget bled</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">So pass the hat around just to keep the heroes fed</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, the medals are rusting, the promises strain</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just a box of canned goods sitting in the rain.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 2]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Acoustic guitar strums softly, leaving empty space between chords]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I handed a tin of peaches to a driver in the gray</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">He had the thousand-yard stare from a desert far away</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">He didn&#x27;t ask for charity, he never wanted grace</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">But the hunger has a way of stripping pride right off your face</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The state will buy the missiles, the state will buy the wire</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">But they leave the broken pieces out to freeze beside the fire</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Acoustic picking]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just a box of canned goods sitting in the rain</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A shelf-stable bandage for a lifetime of pain</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The empire is busy, the federal budget bled</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">So pass the hat around just to keep the heroes fed</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, the medals are rusting, the promises strain</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just a box of canned goods sitting in the rain.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bridge]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo slows to a crawl]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Spoken Word, very quiet]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They authorized the thunder.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They signed the bloody check.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Gravelly, choked up]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Now they hang a plastic medal...</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">&#x27;Round a broken soldier&#x27;s neck.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Outro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Single acoustic guitar notes ringing out slowly]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A hundred idling engines.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">In the cold.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">In the rain.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Nothing left to give.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Fade Out]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[End]</span></div>
                   </div>
 
                 </div>
@@ -2568,12 +2043,9 @@ Nothing left to give.
                   <!-- Tabs Control -->
                   <div class="flex items-center justify-between flex-wrap gap-3 pb-4 border-b border-slate-800/80 mb-5">
                     <div class="flex items-center gap-2">
-                      <button onclick="switchTab(9, 'clean')" id="tab-clean-9" class="tab-btn active px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition-colors">
+                      <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
                         <i class="fa-solid fa-feather mr-1 text-[11px]" aria-hidden="true"></i>Clean Poetry
-                      </button>
-                      <button onclick="switchTab(9, 'arr')" id="tab-arr-9" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-400 hover:text-slate-200 border border-transparent transition-colors">
-                        <i class="fa-solid fa-sliders mr-1 text-[11px]" aria-hidden="true"></i>Performance &amp; Arrangement Notes
-                      </button>
+                      </span>
                     </div>
 
                     <button onclick="copyLyrics(9)" id="copy-btn-9" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
@@ -2582,7 +2054,7 @@ Nothing left to give.
                     </button>
                   </div>
 
-                  <!-- Tab 1: Clean Poetry -->
+                  <!-- Clean Poetry Content -->
                   <div id="content-clean-9" class="tab-content block font-serif text-slate-200 text-sm sm:text-base max-h-[500px] overflow-y-auto pr-3 leading-relaxed whitespace-pre-line">
 <p class="mb-3 leading-relaxed">[Intro]
 [Verse 1]
@@ -2619,78 +2091,12 @@ Just a stock ticker lullaby.
 The market always responds well to a crisis.
 Especially when you&#x27;re the one manufacturing it.
 Buy the rumor!
-Sell the blood!
-[Guitar Solo]
-[Outro]
+Sell the blood!</p>
+<p class="mb-3 leading-relaxed">[Outro]
 Watch the arrows rise.
 Cashing the checks.
 Market closes at four.
 © 2026 The Shady River Bard. All rights reserved.</p>
-                  </div>
-
-                  <!-- Tab 2: Arrangement & Performance Notes -->
-                  <div id="content-arr-9" class="tab-content hidden max-h-[500px] overflow-y-auto pr-3">
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Genre: Industrial-Acoustic Blues]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Key: E minor]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Mood: Cynical, Cold, Driving]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Male]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Gravelly, Bitter]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Intro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Heavy industrial stomp]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Percussive acoustic guitar slapping]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Dissonant slide guitar]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 1]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">There&#x27;s a bell ringing loud on the trading floor</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While the boots hit the sand in a brand new war</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The anchor on the screen got a tear in his eye</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While the blue-chip brokers watch the margins fly</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Four millyun dollars for a single flame</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just a line on a ledger in an infinite game</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bass enters, heavy and distorted]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Sing a stock ticker lullaby, watch the arrows rise</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Green numbers flashing in the hollow men&#x27;s eyes</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Every time a hometown boy goes down in the dirt</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Another dividend is paid to the ones who never hurt</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, the L. M. T. and the R. T. X.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Cashing in the blood on the latest checks.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just a stock ticker lullaby.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 2]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Relentless percussive acoustic rhythm]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They sit in the boardroom drinking top-shelf wine</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While the infantry holds the unapproved line</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They don&#x27;t hear the thunder, they don&#x27;t feel the heat</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They just track the returns from a penthouse suite</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A multi-billyun contract for the fire in the sky</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While the folks back home are just waving goodbye</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Industrial stomp intensifies]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Sing a stock ticker lullaby, watch the arrows rise</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Green numbers flashing in the hollow men&#x27;s eyes</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Every time a hometown boy goes down in the dirt</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Another dividend is paid to the ones who never hurt</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, the L. M. T. and the R. T. X.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Cashing in the blood on the latest checks.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just a stock ticker lullaby.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bridge]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo drops]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Spoken Word, very cynical]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The market always responds well to a crisis.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Especially when you&#x27;re the one manufacturing it.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Gritty, shouted]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Buy the rumor!</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Sell the blood!</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Guitar Solo]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Dissonant, screeching acoustic slide guitar]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Heavy kick drum]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Outro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo slows]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Acoustic guitar fades out to a single ticking rhythm]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Watch the arrows rise.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Cashing the checks.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Market closes at four.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Fade Out]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[End]</span></div>
                   </div>
 
                 </div>
@@ -2787,12 +2193,9 @@ Market closes at four.
                   <!-- Tabs Control -->
                   <div class="flex items-center justify-between flex-wrap gap-3 pb-4 border-b border-slate-800/80 mb-5">
                     <div class="flex items-center gap-2">
-                      <button onclick="switchTab(10, 'clean')" id="tab-clean-10" class="tab-btn active px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition-colors">
+                      <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
                         <i class="fa-solid fa-feather mr-1 text-[11px]" aria-hidden="true"></i>Clean Poetry
-                      </button>
-                      <button onclick="switchTab(10, 'arr')" id="tab-arr-10" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-400 hover:text-slate-200 border border-transparent transition-colors">
-                        <i class="fa-solid fa-sliders mr-1 text-[11px]" aria-hidden="true"></i>Performance &amp; Arrangement Notes
-                      </button>
+                      </span>
                     </div>
 
                     <button onclick="copyLyrics(10)" id="copy-btn-10" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
@@ -2801,7 +2204,7 @@ Market closes at four.
                     </button>
                   </div>
 
-                  <!-- Tab 1: Clean Poetry -->
+                  <!-- Clean Poetry Content -->
                   <div id="content-clean-10" class="tab-content block font-serif text-slate-200 text-sm sm:text-base max-h-[500px] overflow-y-auto pr-3 leading-relaxed whitespace-pre-line">
 <p class="mb-3 leading-relaxed">[Intro]
 [Verse 1]
@@ -2836,76 +2239,12 @@ For the unapproved war at the end of the day.
 The loudest sound in the capital...
 Is the silence of the vote.
 They took the voice of the people!
-And shoved it down our throat!
-[Guitar Solo]
-[Outro]
+And shoved it down our throat!</p>
+<p class="mb-3 leading-relaxed">[Outro]
 No declaration.
 No consent.
 Just the unapproved war.
 © 2026 The Shady River Bard. All rights reserved.</p>
-                  </div>
-
-                  <!-- Tab 2: Arrangement & Performance Notes -->
-                  <div id="content-arr-10" class="tab-content hidden max-h-[500px] overflow-y-auto pr-3">
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Genre: Driving Americana, Country-Rock]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Key: A minor]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Mood: Defiant, Angry, Rebellious]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Male]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Gravelly, Powerful]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Intro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Driving acoustic guitar strumming]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Heavy, marching snare drum]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 1]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They locked the heavy doors on the chamber hall</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">No debate on the floor, no roll call</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A quiet little whisper and a stroke of the pen</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">And they’re sending out the hometown boys again</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">There was no declaration for the people to see</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just a late-night memo and a shadow decree</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Distorted Electric Guitar enters]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Heavy Bass]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">It&#x27;s the unapproved war, flying under the night</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">No hands raised up in the morning light</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They bypassed the gavel and they buried the law</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Feeding the belly of the unapproved war</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, the people didn&#x27;t speak, but the people will pay</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">For the unapproved war at the end of the day.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 2]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Acoustic and Electric guitars intertwine]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Millions of dollars moving over the wire</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">To throw a little fuel on an endless fire</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The Constitution is a ghost in the marble hall</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While the executives rise and the young men fall</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They wrap up the treason in a security brief</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">And leave the working man alone with the grief</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Full band, driving and aggressive]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">It&#x27;s the unapproved war, flying under the night</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">No hands raised up in the morning light</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They bypassed the gavel and they buried the law</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Feeding the belly of the unapproved war</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, the people didn&#x27;t speak, but the people will pay</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">For the unapproved war at the end of the day.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bridge]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo drops slightly, tension builds]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Spoken Word, gritty]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The loudest sound in the capital...</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Is the silence of the vote.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Shouted]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They took the voice of the people!</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">And shoved it down our throat!</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Guitar Solo]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Aggressive, bluesy electric guitar solo]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Marching snare drum intensifies]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Outro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo slows]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Acoustic guitar only]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">No declaration.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">No consent.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just the unapproved war.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Fade Out]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[End]</span></div>
                   </div>
 
                 </div>
@@ -3002,12 +2341,9 @@ Just the unapproved war.
                   <!-- Tabs Control -->
                   <div class="flex items-center justify-between flex-wrap gap-3 pb-4 border-b border-slate-800/80 mb-5">
                     <div class="flex items-center gap-2">
-                      <button onclick="switchTab(11, 'clean')" id="tab-clean-11" class="tab-btn active px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition-colors">
+                      <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
                         <i class="fa-solid fa-feather mr-1 text-[11px]" aria-hidden="true"></i>Clean Poetry
-                      </button>
-                      <button onclick="switchTab(11, 'arr')" id="tab-arr-11" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-400 hover:text-slate-200 border border-transparent transition-colors">
-                        <i class="fa-solid fa-sliders mr-1 text-[11px]" aria-hidden="true"></i>Performance &amp; Arrangement Notes
-                      </button>
+                      </span>
                     </div>
 
                     <button onclick="copyLyrics(11)" id="copy-btn-11" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
@@ -3016,7 +2352,7 @@ Just the unapproved war.
                     </button>
                   </div>
 
-                  <!-- Tab 1: Clean Poetry -->
+                  <!-- Clean Poetry Content -->
                   <div id="content-clean-11" class="tab-content block font-serif text-slate-200 text-sm sm:text-base max-h-[500px] overflow-y-auto pr-3 leading-relaxed whitespace-pre-line">
 <p class="mb-3 leading-relaxed">[Intro]
 [Verse 1]
@@ -3051,72 +2387,11 @@ Welcome to the culture war distraction.
 Look to the left! Look to the right!
 Never look up at the thief in the night!
 They manufacture the anger, they bottle the rage!
-Just to keep us locked up in a different cage!
-[Guitar Solo]
-[Outro]
+Just to keep us locked up in a different cage!</p>
+<p class="mb-3 leading-relaxed">[Outro]
 Turn off the screen.
 Step out of the dark.
 © 2026 The Shady River Bard. All rights reserved.</p>
-                  </div>
-
-                  <!-- Tab 2: Arrangement & Performance Notes -->
-                  <div id="content-arr-11" class="tab-content hidden max-h-[500px] overflow-y-auto pr-3">
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Genre: Dark Americana, Building Folk-Rock]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Key: E minor]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Mood: Tense, Chaotic, Cynical]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Male]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Gravelly, Urgent]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Intro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Sparse, dark acoustic guitar fingerpicking]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Low, ominous cello drone]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 1]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They put a talking head on the evening screen</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">To tell you who to hate in the great machine</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They point a heavy finger at the border line</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While they quietly siphon off the bottom line</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They say your neighbor is the reason that you&#x27;re going broke</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just another magic trick hidden in the smoke</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Steady kick drum enters, driving the rhythm]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">It’s the culture war distraction, a sleight of hand</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A shadow play running on a broken land</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Keep the people fighting in the muddy dirt</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">So they never look up at the ones who hurt</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, burn the bridge and feed the faction</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Welcome to the culture war distraction.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 2]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bass guitar and snare drum join, building tension]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They blame the tired immigrant for the empty till</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">But they never talk about the contractor&#x27;s bill</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They give you a villain to curse and to fight</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While the executives steal the rest of the night</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">We are bleeding out the same, but they paint us red and blue</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just to hide the dirty math of what they&#x27;re doing to you</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Electric guitar swells, dissonant and loud]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">It’s the culture war distraction, a sleight of hand</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A shadow play running on a broken land</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Keep the people fighting in the muddy dirt</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">So they never look up at the ones who hurt</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, burn the bridge and feed the faction</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Welcome to the culture war distraction.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bridge]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo accelerates, chaotic full band]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Shouted, desperate]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Look to the left! Look to the right!</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Never look up at the thief in the night!</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They manufacture the anger, they bottle the rage!</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just to keep us locked up in a different cage!</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Guitar Solo]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Furious, chaotic electric and acoustic guitars clashing]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Percussion reaches a deafening, marching climax]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Outro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Music abruptly stops on a single, hard snare hit]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Total Silence for 2 seconds]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Spoken Word, very quiet and close to the mic]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Turn off the screen.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Step out of the dark.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[End]</span></div>
                   </div>
 
                 </div>
@@ -3213,12 +2488,9 @@ Step out of the dark.
                   <!-- Tabs Control -->
                   <div class="flex items-center justify-between flex-wrap gap-3 pb-4 border-b border-slate-800/80 mb-5">
                     <div class="flex items-center gap-2">
-                      <button onclick="switchTab(12, 'clean')" id="tab-clean-12" class="tab-btn active px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition-colors">
+                      <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
                         <i class="fa-solid fa-feather mr-1 text-[11px]" aria-hidden="true"></i>Clean Poetry
-                      </button>
-                      <button onclick="switchTab(12, 'arr')" id="tab-arr-12" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-400 hover:text-slate-200 border border-transparent transition-colors">
-                        <i class="fa-solid fa-sliders mr-1 text-[11px]" aria-hidden="true"></i>Performance &amp; Arrangement Notes
-                      </button>
+                      </span>
                     </div>
 
                     <button onclick="copyLyrics(12)" id="copy-btn-12" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
@@ -3227,7 +2499,7 @@ Step out of the dark.
                     </button>
                   </div>
 
-                  <!-- Tab 1: Clean Poetry -->
+                  <!-- Clean Poetry Content -->
                   <div id="content-clean-12" class="tab-content block font-serif text-slate-200 text-sm sm:text-base max-h-[500px] overflow-y-auto pr-3 leading-relaxed whitespace-pre-line">
 <p class="mb-3 leading-relaxed">[Intro]
 [Verse 1]
@@ -3263,77 +2535,12 @@ Just a line in the dirt.
 [Bridge]
 Control what you can.
 Let go of the rest.
-The empire is failing, but the soil is blessed!
-[Guitar Solo]
-[Outro]
+The empire is failing, but the soil is blessed!</p>
+<p class="mb-3 leading-relaxed">[Outro]
 Sever the wire.
 Plunge your hands in the earth.
 The healing begins.
 © 2026 The Shady River Bard. All rights reserved.</p>
-                  </div>
-
-                  <!-- Tab 2: Arrangement & Performance Notes -->
-                  <div id="content-arr-12" class="tab-content hidden max-h-[500px] overflow-y-auto pr-3">
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Genre: Warm Americana, Resonant Folk]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Key: G Major]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Mood: Stoic, Grounded, Healing]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Male]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Gravelly, Warm]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Intro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Warm, melodic acoustic guitar fingerpicking]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Soft, soothing Cello in the background]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 1]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I reached out my hand and I severed the wire</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I stepped away from the screen and the digital fire</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Let the architects argue, let the senators spin</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I&#x27;m closing the door and I&#x27;m looking within</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The noise of the empire was making me blind</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I&#x27;m leaving the ghosts of the city behind</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Acoustic strumming opens up, resonant and full]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Soft kick drum enters]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I&#x27;m drawing a line in the Maple Valley dirt</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A boundary of peace where the system can&#x27;t hurt</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">You can&#x27;t fix a machine that is built to decay</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">But you can plant a seed at the end of the day</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, the roots are running deep and the water is clear</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The madness of the crown has no power out here.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just a line in the dirt.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 2]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bass guitar enters smoothly]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">My hands are all calloused, my boots are all mud</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">But there&#x27;s a quiet religion in the sweat and the blood</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The seven acres I&#x27;m walking is a world of its own</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A closed-loop system where the truth is finally grown</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I can&#x27;t stop the thunder they call from the sky</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">But I can build a shelter before the well runs dry</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Cello swells warmly]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I&#x27;m drawing a line in the Maple Valley dirt</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A boundary of peace where the system can&#x27;t hurt</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">You can&#x27;t fix a machine that is built to decay</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">But you can plant a seed at the end of the day</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, the roots are running deep and the water is clear</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The madness of the crown has no power out here.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just a line in the dirt.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bridge]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo remains steady, feeling grounded]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Spoken Word, calm and stoic]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Control what you can.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Let go of the rest.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Sung with conviction]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The empire is failing, but the soil is blessed!</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Guitar Solo]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bright, melodic, and hopeful acoustic guitar solo]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Warm Cello accompaniment]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Outro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo slows gently]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Acoustic guitar fades beautifully]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Sever the wire.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Plunge your hands in the earth.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The healing begins.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Fade Out]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[End]</span></div>
                   </div>
 
                 </div>
@@ -3430,12 +2637,9 @@ The healing begins.
                   <!-- Tabs Control -->
                   <div class="flex items-center justify-between flex-wrap gap-3 pb-4 border-b border-slate-800/80 mb-5">
                     <div class="flex items-center gap-2">
-                      <button onclick="switchTab(13, 'clean')" id="tab-clean-13" class="tab-btn active px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition-colors">
+                      <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
                         <i class="fa-solid fa-feather mr-1 text-[11px]" aria-hidden="true"></i>Clean Poetry
-                      </button>
-                      <button onclick="switchTab(13, 'arr')" id="tab-arr-13" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-400 hover:text-slate-200 border border-transparent transition-colors">
-                        <i class="fa-solid fa-sliders mr-1 text-[11px]" aria-hidden="true"></i>Performance &amp; Arrangement Notes
-                      </button>
+                      </span>
                     </div>
 
                     <button onclick="copyLyrics(13)" id="copy-btn-13" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
@@ -3444,7 +2648,7 @@ The healing begins.
                     </button>
                   </div>
 
-                  <!-- Tab 1: Clean Poetry -->
+                  <!-- Clean Poetry Content -->
                   <div id="content-clean-13" class="tab-content block font-serif text-slate-200 text-sm sm:text-base max-h-[500px] overflow-y-auto pr-3 leading-relaxed whitespace-pre-line">
 <p class="mb-3 leading-relaxed">[Intro]
 [Verse 1]
@@ -3479,76 +2683,12 @@ Just seven acres in the middle, and a quiet watch to keep.
 The mansion on the left doesn&#x27;t know the trailer on the right.
 It’s the palace and the rust.
 I just leave a bag of squash on the fence...
-By the Winnebago in the dust.
-[Guitar Solo]
-[Outro]
+By the Winnebago in the dust.</p>
+<p class="mb-3 leading-relaxed">[Outro]
 Just a fence line.
 Between the curtains and the canned goods.
 Seven acres in the middle.
 © 2026 The Shady River Bard. All rights reserved.</p>
-                  </div>
-
-                  <!-- Tab 2: Arrangement & Performance Notes -->
-                  <div id="content-arr-13" class="tab-content hidden max-h-[500px] overflow-y-auto pr-3">
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Genre: Narrative Folk, Acoustic Americana]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Key: A Major]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Mood: Reflective, Observational, Grounded]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Male]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Warm, Storytelling]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Intro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Warm fingerpicked acoustic guitar]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Subtle Harmonica]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 1]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">On the left side of my fence line lives the king of pouring stone</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Building campuses for Microsoft, sitting on a concrete throne</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">He’s got a crew of hired gardeners keeping every blade in line</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A multi-million dollar castle where the windows always shine</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">He don&#x27;t need the dirt I&#x27;m turning, he buys his comfort by the pound</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While the big machines keep humming on his manicured ground</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Acoustic strumming fills out]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Soft Bass enters]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">And I’m seven acres in the middle, in the Maple Valley rain</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Watching the empire build its towers, watching the working take the strain</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">There ain’t no country-living postcard, no farmers trading in the street</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just me and the soil and the silence, trying to grow something to eat</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, the gap is getting wider, but the roots are digging deep</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just seven acres in the middle, and a quiet watch to keep.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 2]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Guitar picking becomes slightly more somber]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">On the right side is a rental, built back in forty-four</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Peeling paint and sagging timber, a broken latch upon the door</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">She pours drinks down at the tavern, fifty-something, on her own</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">With a fifties Winnebago in the backyard overgrown</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just a friend out in the camper, trying to make it through the year</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">While the shadow of the tech boom slowly swallows up the clear</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Harmonica weaves through the vocal gaps]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">And I’m seven acres in the middle, in the Maple Valley rain</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Watching the empire build its towers, watching the working take the strain</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">There ain’t no country-living postcard, no farmers trading in the street</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just me and the soil and the silence, trying to grow something to eat</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, the gap is getting wider, but the roots are digging deep</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just seven acres in the middle, and a quiet watch to keep.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bridge]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo slows slightly, intimate]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Spoken Word, gentle]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The mansion on the left doesn&#x27;t know the trailer on the right.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">It’s the palace and the rust.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Sung warmly]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I just leave a basket of tomatoes...</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">By the Winnebago in the dust.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Guitar Solo]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Classic, melodic acoustic folk solo]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Soft, weeping Harmonica]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Outro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo slows to a gentle halt]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Acoustic guitar rings out]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just a fence line.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Between the curtains and the canned goods.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Seven acres in the middle.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Fade Out]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[End]</span></div>
                   </div>
 
                 </div>
@@ -3645,12 +2785,9 @@ Seven acres in the middle.
                   <!-- Tabs Control -->
                   <div class="flex items-center justify-between flex-wrap gap-3 pb-4 border-b border-slate-800/80 mb-5">
                     <div class="flex items-center gap-2">
-                      <button onclick="switchTab(14, 'clean')" id="tab-clean-14" class="tab-btn active px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition-colors">
+                      <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
                         <i class="fa-solid fa-feather mr-1 text-[11px]" aria-hidden="true"></i>Clean Poetry
-                      </button>
-                      <button onclick="switchTab(14, 'arr')" id="tab-arr-14" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-400 hover:text-slate-200 border border-transparent transition-colors">
-                        <i class="fa-solid fa-sliders mr-1 text-[11px]" aria-hidden="true"></i>Performance &amp; Arrangement Notes
-                      </button>
+                      </span>
                     </div>
 
                     <button onclick="copyLyrics(14)" id="copy-btn-14" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
@@ -3659,7 +2796,7 @@ Seven acres in the middle.
                     </button>
                   </div>
 
-                  <!-- Tab 1: Clean Poetry -->
+                  <!-- Clean Poetry Content -->
                   <div id="content-clean-14" class="tab-content block font-serif text-slate-200 text-sm sm:text-base max-h-[500px] overflow-y-auto pr-3 leading-relaxed whitespace-pre-line">
 <p class="mb-3 leading-relaxed">[Intro]
 [Verse 1]
@@ -3696,80 +2833,13 @@ Pass it around!
 They can keep their gold curtains!
 They can keep their high towers!
 Because the dirt and the roots...
-Are entirely ours!
-[Instrumental Solo]
-[Outro]
+Are entirely ours!</p>
+<p class="mb-3 leading-relaxed">[Outro]
 Pass the hat!
 Take care of your own!
 Pass the hat!
 You ain&#x27;t alone!
 © 2026 The Shady River Bard. All rights reserved.</p>
-                  </div>
-
-                  <!-- Tab 2: Arrangement & Performance Notes -->
-                  <div id="content-arr-14" class="tab-content hidden max-h-[500px] overflow-y-auto pr-3">
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Genre: Uplifting Folk, Rhythmic Americana]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Key: D Major]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Mood: Triumphant, Resilient, Energetic]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Male]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Warm, Powerful]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Intro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Fast, energetic acoustic guitar strumming]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Upbeat tambourine and kick drum]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 1]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">My sister-in-law is working the county line</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A mental health worker working on borrowed time</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">She’s taking the calls from the boys who are falling apart</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Stitching together the pieces of a broken heart</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The federal budget forgot &#x27;em and left &#x27;em to fade</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">But she’s out in the trenches, standing right in the shade</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Full, driving acoustic rhythm]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Fiddle enters, bright and soaring]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">So pass the hat around for the hometown crew</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">When the government fails, it comes down to you</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">We don&#x27;t need a ledger, we don&#x27;t need a king</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">We just need the shelter that a neighbor can bring</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, the empire is hollow and the promises flat</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">But the people survive when they pass the hat!</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Pass it around!</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 2]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bass guitar driving the upbeat tempo]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Down at the drive-through pantry in the pouring rain</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A hundred old engines idling in the lane</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">But look at the hands that are handing the boxes of bread</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">It ain&#x27;t the politicians making sure they are fed</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">It&#x27;s the mechanic, the teacher, the guy from the mill</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Paying the balance of a broken-down bill</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Fiddle and Acoustic Guitar interplay]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">So pass the hat around for the hometown crew</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">When the government fails, it comes down to you</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">We don&#x27;t need a ledger, we don&#x27;t need a king</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">We just need the shelter that a neighbor can bring</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Yeah, the empire is hollow and the promises flat</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">But the people survive when they pass the hat!</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Pass it around!</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bridge]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo drops for a moment, building back up]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Handclaps begin, steady and loud]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They can keep their gold curtains!</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They can keep their high towers!</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Shouted joyfully]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Because the dirt and the roots...</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Are entirely ours!</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Instrumental Solo]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Joyful, foot-stomping Fiddle and Acoustic Guitar solo]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Heavy handclaps and tambourine]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Outro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo stays high]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Full band]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Pass the hat!</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Take care of your own!</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Pass the hat!</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">You ain&#x27;t alone!</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Fade Out]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[End]</span></div>
                   </div>
 
                 </div>
@@ -3866,12 +2936,9 @@ You ain&#x27;t alone!
                   <!-- Tabs Control -->
                   <div class="flex items-center justify-between flex-wrap gap-3 pb-4 border-b border-slate-800/80 mb-5">
                     <div class="flex items-center gap-2">
-                      <button onclick="switchTab(15, 'clean')" id="tab-clean-15" class="tab-btn active px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 transition-colors">
+                      <span class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
                         <i class="fa-solid fa-feather mr-1 text-[11px]" aria-hidden="true"></i>Clean Poetry
-                      </button>
-                      <button onclick="switchTab(15, 'arr')" id="tab-arr-15" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-400 hover:text-slate-200 border border-transparent transition-colors">
-                        <i class="fa-solid fa-sliders mr-1 text-[11px]" aria-hidden="true"></i>Performance &amp; Arrangement Notes
-                      </button>
+                      </span>
                     </div>
 
                     <button onclick="copyLyrics(15)" id="copy-btn-15" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
@@ -3880,7 +2947,7 @@ You ain&#x27;t alone!
                     </button>
                   </div>
 
-                  <!-- Tab 1: Clean Poetry -->
+                  <!-- Clean Poetry Content -->
                   <div id="content-clean-15" class="tab-content block font-serif text-slate-200 text-sm sm:text-base max-h-[500px] overflow-y-auto pr-3 leading-relaxed whitespace-pre-line">
 <p class="mb-3 leading-relaxed">[Intro]
 [Verse 1]
@@ -3917,76 +2984,12 @@ We&#x27;re gonna nourish the roots.
 You can&#x27;t reboot a dead planet.
 You can&#x27;t download a drop of rain.
 If you want to survive the blackout...
-You gotta step off the train!
-[Guitar Solo]
-[Outro]
+You gotta step off the train!</p>
+<p class="mb-3 leading-relaxed">[Outro]
 Air-gap the soul.
 Turn the soil.
 Nourish the roots.
 © 2026 The Shady River Bard. All rights reserved.</p>
-                  </div>
-
-                  <!-- Tab 2: Arrangement & Performance Notes -->
-                  <div id="content-arr-15" class="tab-content hidden max-h-[500px] overflow-y-auto pr-3">
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Genre: Gritty Acoustic Blues, Dark Folk]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Key: E minor]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Mood: Defiant, Grounded, Fierce]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Male]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Gravelly, Stoic]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Intro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Heavy, steady porch-stomping kick drum]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Dirty acoustic slide guitar snarls]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Percussive acoustic slapping]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 1]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">They’re running the servers till the motherboards melt</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Chasing a profit that they never even felt</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The grid is overloading from the weight of the lies</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">A multi-billion dollar system falling out of the skies</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I unplugged the terminal, I severed the wire</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I&#x27;m walking away from the digital fire</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bass drops in heavy and low]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Nourish the roots, let the canopy fall</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">We don&#x27;t need the power from the capital hall</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">When the screens go dark and the water won&#x27;t run</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I&#x27;ll be down in the dirt, looking up at the sun</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just a shovel and the mud and a heavy pair of boots</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Let the mainframe crash.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">We&#x27;re gonna nourish the roots.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Verse 2]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Slide guitar weaves through the vocals]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The neighbor on the left got the cameras on the gate</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">The neighbor on the right is just bending to the weight</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I&#x27;m standing in the middle with the water and the seed</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Air-gapping the garden from the engine of their greed</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">You can&#x27;t patch a system that is engineered to break</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">You just gather up the pieces that the devil didn&#x27;t take</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Chorus]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Kick drum stomps harder]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Nourish the roots, let the canopy fall</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">We don&#x27;t need the power from the capital hall</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">When the screens go dark and the water won&#x27;t run</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">I&#x27;ll be down in the dirt, looking up at the sun</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Just a shovel and the mud and a heavy pair of boots</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Let the mainframe crash.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">We&#x27;re gonna nourish the roots.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Bridge]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Music strips back to just the kick drum and vocal]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Vocalist: Gritty, spoken-word rhythm]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">You can&#x27;t reboot a dead planet.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">You can&#x27;t download a drop of rain.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">If you want to survive the blackout...</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">You gotta step off the train!</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Guitar Solo]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Fierce, biting acoustic slide guitar solo]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Heavy foot-stomping rhythm]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Outro]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Tempo remains steady, relentless]</span></div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Air-gap the soul.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Turn the soil.</div>
-<div class="text-stone-300 font-mono text-xs leading-relaxed pl-2">Nourish the roots.</div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[Slide guitar whines and cuts off sharply]</span></div>
-<div class="text-amber-400 font-bold font-mono text-xs tracking-wider uppercase my-1.5"><span class="bg-amber-950/40 border border-amber-500/30 px-2 py-0.5 rounded">[End]</span></div>
                   </div>
 
                 </div>
