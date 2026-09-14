@@ -1668,7 +1668,9 @@ const ALBUMS_DATA = {
       ],
       "deconstruction_url": "https://theshadyriverbard.substack.com/s/deconstructed",
       "genre_category": "Folk & Acoustic",
-      "hook": "Homestead philosophy set to acoustic strings, learning mindfulness, loyalty, and unconditional presence from canine companions."
+      "hook": "Homestead philosophy set to acoustic strings, learning mindfulness, loyalty, and unconditional presence from canine companions.",
+      "is_bespoke": true,
+      "custom_url": "../a-dogs-life-the-tao-of-the-tail/"
     },
     {
       "id": "the-hollow-herd",

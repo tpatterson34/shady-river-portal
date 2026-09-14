@@ -501,16 +501,48 @@ window.PORTAL_DATA = {
       "number": "24",
       "title": "Go Bake Some Apples",
       "subtitle": "Dark Folk Satire Deconstructing the Infinite Pie Myth",
-      "badge": "Brand New Interactive App",
+      "badge": "Interactive Landmark App",
       "cover": "go-bake-some-apples/assets/art/album-24-cover.webp",
+      "tracks_count": 13,
+      "themes": [
+        "Infinite Pie Myth",
+        "Trickle-Down Satire",
+        "Corporate Buybacks",
+        "Finite Game"
+      ],
       "url": "go-bake-some-apples/",
+      "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEsIHZulH2DwFQU7hgyaU9t",
       "year": "2026",
-      "tracks": 13,
       "description": "A dark folk satire deconstructing the central myth of modern American capitalism: the 'infinite pie'. Tracing an apple baker's trajectory from false consciousness to visceral economic collapse and clear-eyed emancipation.",
       "sample_track": {
         "title": "Go Bake Some Apples",
         "duration": "3:34",
         "youtube_id": "lYtW6ke-8Z8"
+      }
+    },
+    {
+      "id": "a-dogs-life-the-tao-of-the-tail",
+      "number": "25",
+      "title": "A Dog's Life: The Tao of the Tail",
+      "subtitle": "Homestead Philosophy Set to Acoustic Strings",
+      "badge": "Brand New Interactive App",
+      "cover": "a-dogs-life-the-tao-of-the-tail/assets/art/album-25-cover.webp",
+      "tracks_count": 16,
+      "themes": [
+        "Dog Philosophy",
+        "Presence & Soil",
+        "Taoism & Epicureanism",
+        "Screen Detox",
+        "Pack Loyalty"
+      ],
+      "url": "a-dogs-life-the-tao-of-the-tail/",
+      "video_url": "https://www.youtube.com/playlist?list=PLGcTnZFrWqO0",
+      "year": "2026",
+      "description": "An acoustic rebellion against modern algorithmic dread and sociopolitical tribalism. A 16-track odyssey exploring ancient Cynicism, Stoic acceptance within the leash radius, Epicurean sunbeams, and pack loyalty without passwords.",
+      "sample_track": {
+        "title": "A Wet Nose at Dawn",
+        "duration": "3:22",
+        "youtube_id": "XXrhuvCleuc"
       }
     }
   ],
