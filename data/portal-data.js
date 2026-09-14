@@ -1,4 +1,3 @@
-// Portal data for The Shady River flagship site
 window.PORTAL_DATA = {
   "brand": {
     "title": "The Shady River",
@@ -345,7 +344,7 @@ window.PORTAL_DATA = {
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcHr2R6eMk1Xd3DPGh4fPYtK",
       "description": "A swashbuckling 4-act, 13-track maritime satirical odyssey auditing corporate privateering, algorithmic plunder, and the pillaging of everyday life—reclaiming dignity and grassroots solidarity from the modern buccaneers."
     },
-        {
+    {
       "id": "american-rubble",
       "number": "18",
       "title": "American Rubble",
@@ -402,43 +401,43 @@ window.PORTAL_DATA = {
       "description": "The necessary answer to the diagnosis of Divide and Conquer and the dark prognosis of American Rubble. A 19-song epic of applied hope structured as a 2-volume, 4-act journey tackling corporate capture and labor liquidation before mending social cohesion and modernizing our constitutional blueprint."
     },
     {
-        "id": "have-yourself-a-shady-little-christmas",
-        "number": "20",
-        "title": "Have Yourself a Shady Little Christmas",
-        "subtitle": "A Social Realist Modern Christmas Carol",
-        "badge": "Interactive Experience",
-        "cover": "have-yourself-a-shady-little-christmas/assets/art/have-yourself-a-shady-little-christmas-cover.webp",
-        "tracks_count": 15,
-        "themes": [
-            "Social Invisibility",
-            "The Unholy Trinity",
-            "The Fentanyl Winter",
-            "Radical Empathy",
-            "The 76/32 Miracle"
-        ],
-        "url": "have-yourself-a-shady-little-christmas/",
-        "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEJAWlpL_w-X_nFgrJ4f4Bn",
-        "description": "An unflinching 15-track modern Christmas carol told through the lens of social realism. Following William from the frozen shadows outside festive shop windows through addiction crisis to an unexpected encounter with Joe the store Santa, proving that the opposite of addiction is connection."
+      "id": "have-yourself-a-shady-little-christmas",
+      "number": "20",
+      "title": "Have Yourself a Shady Little Christmas",
+      "subtitle": "A Social Realist Modern Christmas Carol",
+      "badge": "Interactive Experience",
+      "cover": "have-yourself-a-shady-little-christmas/assets/art/have-yourself-a-shady-little-christmas-cover.webp",
+      "tracks_count": 15,
+      "themes": [
+        "Social Invisibility",
+        "The Unholy Trinity",
+        "The Fentanyl Winter",
+        "Radical Empathy",
+        "The 76/32 Miracle"
+      ],
+      "url": "have-yourself-a-shady-little-christmas/",
+      "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEJAWlpL_w-X_nFgrJ4f4Bn",
+      "description": "An unflinching 15-track modern Christmas carol told through the lens of social realism. Following William from the frozen shadows outside festive shop windows through addiction crisis to an unexpected encounter with Joe the store Santa, proving that the opposite of addiction is connection."
     },
     {
-        "id": "doomsday-clock",
-        "number": "21",
-        "title": "Doomsday Clock",
-        "subtitle": "An Album Blueprint for Existential Reckoning",
-        "badge": "Interactive Experience",
-        "cover": "doomsday-clock/assets/art/doomsday-clock-cover.webp",
-        "tracks_count": 13,
-        "themes": [
-            "Existential Risk",
-            "AI Misalignment",
-            "Climate Tipping Points",
-            "Engineered Pandemics",
-            "Nuclear Precipice",
-            "89 Seconds to Midnight"
-        ],
-        "url": "doomsday-clock/",
-        "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcFJ4vC-R0d-N2XvsMwph5bj",
-        "description": "A 13-movement four-act concept album translating existential risk into visceral narrative art. Tracing humanity's precarious position 89 seconds to midnight from creeping objectless anxiety through catastrophic ruin to the final chilling silence."
+      "id": "doomsday-clock",
+      "number": "21",
+      "title": "Doomsday Clock",
+      "subtitle": "An Album Blueprint for Existential Reckoning",
+      "badge": "Interactive Experience",
+      "cover": "doomsday-clock/assets/art/doomsday-clock-cover.webp",
+      "tracks_count": 13,
+      "themes": [
+        "Existential Risk",
+        "AI Misalignment",
+        "Climate Tipping Points",
+        "Engineered Pandemics",
+        "Nuclear Precipice",
+        "89 Seconds to Midnight"
+      ],
+      "url": "doomsday-clock/",
+      "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcFJ4vC-R0d-N2XvsMwph5bj",
+      "description": "A 13-movement four-act concept album translating existential risk into visceral narrative art. Tracing humanity's precarious position 89 seconds to midnight from creeping objectless anxiety through catastrophic ruin to the final chilling silence."
     },
     {
       "id": "the-republic-of-nobody",
@@ -496,6 +495,23 @@ window.PORTAL_DATA = {
       "url": "the-curtains-and-the-canned-goods/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcEOmlcU9ib_nV_8bJBZdb4Y",
       "description": "An unflinching 15-track sonic documentary contrasting opulent White House window treatments with veterans waiting at rainy drive-through pantries, grounded in off-grid permaculture resilience."
+    },
+    {
+      "id": "go-bake-some-apples",
+      "number": "24",
+      "title": "Go Bake Some Apples",
+      "subtitle": "Dark Folk Satire Deconstructing the Infinite Pie Myth",
+      "badge": "Brand New Interactive App",
+      "cover": "go-bake-some-apples/assets/art/album-24-cover.webp",
+      "url": "go-bake-some-apples/",
+      "year": "2026",
+      "tracks": 13,
+      "description": "A dark folk satire deconstructing the central myth of modern American capitalism: the 'infinite pie'. Tracing an apple baker's trajectory from false consciousness to visceral economic collapse and clear-eyed emancipation.",
+      "sample_track": {
+        "title": "Go Bake Some Apples",
+        "duration": "3:34",
+        "youtube_id": "lYtW6ke-8Z8"
+      }
     }
   ],
   "merchandise": [
