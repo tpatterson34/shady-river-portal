@@ -485,6 +485,22 @@
               </div>
             </div>
 
+            <!-- Substack Deconstructed Callout -->
+            <div id="modal-deconstructed-box" class="p-4 rounded-xl bg-orange-950/40 border border-orange-800/40 hidden">
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <div class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 fill-current text-orange-400 flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+                    <span class="text-xs font-mono text-orange-400 uppercase tracking-wider font-bold">Substack "Deconstructed" Series</span>
+                  </div>
+                  <div class="text-stone-200 font-serif text-xs sm:text-sm font-semibold mt-0.5">Track-by-Track Liner Notes &amp; Narrative Audits</div>
+                </div>
+                <a id="modal-deconstructed-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Read Deconstructed liner notes on Substack (opens in new tab)" class="px-3 py-1.5 rounded-lg bg-orange-600 hover:bg-orange-500 text-white text-xs font-medium transition-colors flex-shrink-0 flex items-center gap-1.5 shadow-sm focus-visible:ring-2 focus-visible:ring-brand-500">
+                  <span>Read on Substack ↗</span>
+                </a>
+              </div>
+            </div>
+
             <!-- Themes -->
             <div>
               <span class="text-xs font-mono text-stone-400 uppercase tracking-wider">Societal Themes</span>
@@ -1025,6 +1041,15 @@
         bespokeBox.classList.add('hidden');
       }
 
+      // Substack Deconstructed box
+      const deconstructBox = document.getElementById('modal-deconstructed-box');
+      if (item.deconstruction_url) {
+        document.getElementById('modal-deconstructed-link').href = item.deconstruction_url;
+        deconstructBox.classList.remove('hidden');
+      } else {
+        deconstructBox.classList.add('hidden');
+      }
+
       // Themes
       const themesContainer = document.getElementById('modal-themes');
       themesContainer.innerHTML = (item.themes || []).map(t => `
@@ -1045,17 +1070,27 @@
               trackUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent("The Shady River Bard " + tr)}`;
             }
           }
+          const deconstructUrl = (item.track_deconstructions && item.track_deconstructions[idx]) ? item.track_deconstructions[idx] : null;
+
           return `
-          <li class="flex items-center justify-between p-2.5 rounded-lg bg-soil-900/60 hover:bg-soil-800 transition-colors border border-white/5">
-            <div class="flex items-center gap-3">
-              <span class="font-mono text-xs text-brand-500 w-5">${String(idx + 1).padStart(2, '0')}</span>
+          <li class="flex flex-col sm:flex-row sm:items-center justify-between p-2.5 rounded-lg bg-soil-900/60 hover:bg-soil-800 transition-colors border border-white/5 gap-2">
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <span class="font-mono text-xs text-brand-500 w-5 flex-shrink-0">${String(idx + 1).padStart(2, '0')}</span>
               <span class="font-medium text-stone-200">${tr}</span>
             </div>
-            ${trackUrl ? `
-              <a href="${trackUrl}" target="_blank" rel="noopener noreferrer" aria-label="Listen to ${tr} on YouTube" class="text-xs text-stone-400 hover:text-brand-400 flex items-center gap-1 focus-visible:ring-1 focus-visible:ring-brand-500 rounded px-1.5 py-0.5 transition-colors">
-                Listen ↗
-              </a>
-            ` : ''}
+            <div class="flex items-center gap-2 flex-shrink-0 self-end sm:self-center">
+              ${deconstructUrl ? `
+                <a href="${deconstructUrl}" target="_blank" rel="noopener noreferrer" aria-label="Read Deconstruction notes for ${tr.replace(/"/g, '&quot;')} on Substack (opens in new tab)" class="text-[11px] font-mono text-orange-400 hover:text-orange-300 bg-orange-950/70 hover:bg-orange-900/90 border border-orange-700/50 flex items-center gap-1.5 rounded-md px-2 py-1 transition-colors shadow-sm focus-visible:ring-1 focus-visible:ring-brand-500" title="Read Deconstruction notes on Substack">
+                  <svg class="w-3 h-3 fill-current text-orange-400 flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+                  <span>Deconstruction ↗</span>
+                </a>
+              ` : ''}
+              ${trackUrl ? `
+                <a href="${trackUrl}" target="_blank" rel="noopener noreferrer" aria-label="Listen to ${tr.replace(/"/g, '&quot;')} on YouTube (opens in new tab)" class="text-xs text-stone-400 hover:text-brand-400 flex items-center gap-1 focus-visible:ring-1 focus-visible:ring-brand-500 rounded px-1.5 py-0.5 transition-colors">
+                  Listen ↗
+                </a>
+              ` : ''}
+            </div>
           </li>
         `;
         }).join('');
