@@ -285,9 +285,124 @@
     }
   };
 
-  // 3. Global Modal Trapping & Escape Key Handlers
+  // 3. Copyright, Fair Use & Sampling Policy Modal
+  function ensureCopyrightModalExists() {
+    if (document.getElementById('copyright-modal')) return;
+
+    const modalHtml = `
+      <div id="copyright-modal" role="dialog" aria-modal="true" aria-labelledby="copyright-modal-title" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md hidden transition-opacity duration-300">
+        <div class="relative w-full max-w-2xl bg-soil-900 border border-amber-500/40 rounded-3xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
+          <div class="p-6 border-b border-white/10 bg-soil-850 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-amber-950/80 border border-amber-500/40 flex items-center justify-center text-amber-400 text-sm">
+                <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 id="copyright-modal-title" class="text-xl font-display font-bold text-stone-100">Copyright, Fair Use &amp; Sampling Policy</h3>
+                <span class="text-[11px] font-mono text-stone-400">The Shady River Homestead, LLC &bull; Western Washington State</span>
+              </div>
+            </div>
+            <button id="copyright-close-btn" onclick="closeCopyrightModal()" aria-label="Close licensing and sampling policy modal" class="p-2 text-stone-400 hover:text-white transition-colors rounded-lg focus-visible:ring-2 focus-visible:ring-amber-500">
+              <i class="fa-solid fa-xmark text-lg" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="p-6 sm:p-8 overflow-y-auto space-y-6 text-stone-300 text-sm leading-relaxed font-body">
+            
+            <div class="p-4 bg-soil-850 border border-white/10 rounded-2xl text-xs font-mono text-stone-300 space-y-1">
+              <div class="text-amber-400 font-bold uppercase tracking-wider">&copy; 2026 The Shady River Homestead, LLC &amp; The Shady River Bard</div>
+              <p class="text-stone-400">All sound recordings, musical compositions, lyrics, written prose, and visual artwork are protected under United States and international copyright law. All rights reserved.</p>
+            </div>
+
+            <!-- Section 1: Fair Use & Cultural Commentary -->
+            <div>
+              <h4 class="font-display font-bold text-stone-100 text-base flex items-center gap-2 mb-2">
+                <i class="fa-solid fa-graduation-cap text-amber-400 text-xs" aria-hidden="true"></i>
+                <span>1. Fair Use &amp; Educational Commentary</span>
+              </h4>
+              <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-body">
+                We believe in open cultural critique and rigorous civic discussion. Quoting song lyrics, referencing historical dossiers, or utilizing excerpted audio snippets for commentary, scholarship, podcast reviews, academic research, or educational instruction is warmly supported under traditional Fair Use principles (17 U.S.C. &sect; 107).
+              </p>
+            </div>
+
+            <!-- Section 2: Sampling Policy for Hip-Hop Artists, Beatmakers & DJs -->
+            <div>
+              <h4 class="font-display font-bold text-stone-100 text-base flex items-center gap-2 mb-2">
+                <i class="fa-solid fa-compact-disc text-amber-400 text-xs" aria-hidden="true"></i>
+                <span>2. Sampling Policy for Producers, Beatmakers &amp; DJs</span>
+              </h4>
+              <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-body mb-3">
+                The Shady River Bard honors the American musical tradition: songs are meant to live in the air and speak to new generations. Independent music producers, hip-hop artists, remixers, and DJs are granted <strong>explicit non-commercial permission</strong> to sample vocal stanzas, acoustic hooks, or instrumental phrases from any released album for:
+              </p>
+              <ul class="list-disc pl-5 space-y-1.5 text-xs text-stone-300 font-body mb-3">
+                <li>Non-commercial mixtapes, SoundCloud/Bandcamp beat tapes, and remix showcases.</li>
+                <li>Live DJ sets, club routines, and performance mixes.</li>
+                <li>Social media production breakdowns, beat-making videos, and studio process reels.</li>
+              </ul>
+              <div class="p-3.5 bg-amber-950/40 border border-amber-500/30 rounded-xl text-xs text-amber-300 font-mono">
+                <strong>Required Attribution:</strong> Include credit in your track description or liner notes: <br>
+                <span class="text-white mt-1 block font-mono">&ldquo;Sampled from The Shady River Bard &ndash; [Song Title] (theshadyriverbard.com)&rdquo;</span>
+              </div>
+            </div>
+
+            <!-- Section 3: Commercial Releases & Master Sync Clearance -->
+            <div>
+              <h4 class="font-display font-bold text-stone-100 text-base flex items-center gap-2 mb-2">
+                <i class="fa-solid fa-file-signature text-amber-400 text-xs" aria-hidden="true"></i>
+                <span>3. Commercial Releases &amp; Master Sync Licensing</span>
+              </h4>
+              <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-body mb-3">
+                If you are planning a commercial release (monetized streaming distribution, physical vinyl/CD pressing) or seeking synchronization rights for independent documentary films, video games, podcasts, or broadcast media:
+              </p>
+              <div class="p-4 bg-soil-850 rounded-2xl border border-white/10 text-xs font-mono text-stone-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                <div>
+                  <div class="text-stone-400 text-[11px]">Direct Licensing Inquiries:</div>
+                  <span class="font-bold text-amber-400">theshadyriverbard@gmail.com</span>
+                </div>
+                <a href="mailto:theshadyriverbard@gmail.com?subject=Licensing%20%2F%20Sampling%20Clearance%20Inquiry" class="px-4 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 font-bold transition-colors text-xs whitespace-nowrap shadow-md">
+                  Contact for Licensing &rarr;
+                </a>
+              </div>
+              <p class="text-xs text-stone-400 mt-2">
+                We support fellow independent creators with straightforward, fair-rate, and accessible clearance terms.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', modalHtml);
+  }
+
+  window.openCopyrightModal = function () {
+    ensureCopyrightModalExists();
+    const modal = document.getElementById('copyright-modal');
+    if (!modal) return;
+    previousActiveElement = document.activeElement;
+    modal.classList.remove('hidden');
+    const closeBtn = document.getElementById('copyright-close-btn');
+    if (closeBtn) closeBtn.focus();
+  };
+
+  window.closeCopyrightModal = function () {
+    const modal = document.getElementById('copyright-modal');
+    if (!modal) return;
+    modal.classList.add('hidden');
+    if (previousActiveElement && typeof previousActiveElement.focus === 'function') {
+      previousActiveElement.focus();
+    }
+  };
+
+  // 4. Global Modal Trapping & Escape Key Handlers
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
+      // Close copyright modal
+      const cModal = document.getElementById('copyright-modal');
+      if (cModal && !cModal.classList.contains('hidden')) {
+        closeCopyrightModal();
+        return;
+      }
       // Close accessibility modal
       const a11yModal = document.getElementById('a11y-modal');
       if (a11yModal && !a11yModal.classList.contains('hidden')) {
@@ -355,6 +470,15 @@
         });
       }
     });
+
+    // Auto-open Copyright / Sampling Policy modal if hash matches
+    if (window.location.hash === '#copyright-policy' || window.location.hash === '#licensing-sampling-policy' || window.location.hash === '#sampling-policy') {
+      setTimeout(() => {
+        if (typeof window.openCopyrightModal === 'function') {
+          window.openCopyrightModal();
+        }
+      }, 350);
+    }
   }
 
   if (document.readyState === 'loading') {

@@ -66,7 +66,7 @@ window.PORTAL_DATA = {
       "number": "03",
       "title": "The Fracture",
       "subtitle": "A Societal Audit & Blueprint for Reconciliation",
-      "badge": "Flagship Concept App",
+      "badge": "Flagship Experience",
       "cover": "assets/covers/album-03.webp",
       "tracks_count": 14,
       "themes": [
@@ -85,7 +85,7 @@ window.PORTAL_DATA = {
       "number": "04",
       "title": "The Great Inversion",
       "subtitle": "An Antidote to the Decline of Ambition & Modern Malaise",
-      "badge": "Bespoke Interactive Vault",
+      "badge": "Interactive Experience",
       "cover": "the-great-inversion/assets/art/the-great-inversion-cover.webp",
       "tracks_count": 13,
       "themes": [
@@ -104,7 +104,7 @@ window.PORTAL_DATA = {
       "number": "05",
       "title": "The Poison We Trust",
       "subtitle": "A Social Analysis of Modern Public Health & The Body Politic",
-      "badge": "Bespoke Interactive Vault",
+      "badge": "Interactive Experience",
       "cover": "the-poison-we-trust/assets/art/the-poison-we-trust-cover.webp",
       "tracks_count": 13,
       "companion_novella": {
@@ -127,7 +127,7 @@ window.PORTAL_DATA = {
       "number": "06",
       "title": "A House Divided",
       "subtitle": "Navigating Climate Division & Forging Common Ground",
-      "badge": "Bespoke Interactive Vault",
+      "badge": "Interactive Experience",
       "cover": "a-house-divided/assets/art/a-house-divided-cover.webp",
       "tracks_count": 14,
       "themes": [
@@ -146,7 +146,7 @@ window.PORTAL_DATA = {
       "number": "07",
       "title": "Unequal Justice",
       "subtitle": "Systemic Inequity, Mass Incarceration & The Scale of Law",
-      "badge": "Bespoke Interactive Vault",
+      "badge": "Interactive Experience",
       "cover": "unequal-justice/assets/art/unequal-justice-cover.webp",
       "tracks_count": 18,
       "themes": [
@@ -165,7 +165,7 @@ window.PORTAL_DATA = {
       "number": "08",
       "title": "Cognitive Inferno",
       "subtitle": "The Algorithmic War for Human Consciousness & Re-Humanization",
-      "badge": "Bespoke Interactive Vault",
+      "badge": "Interactive Experience",
       "cover": "cognitive-inferno/assets/art/cognitive-inferno-cover.webp",
       "tracks_count": 10,
       "themes": [
@@ -184,7 +184,7 @@ window.PORTAL_DATA = {
       "number": "09",
       "title": "The Hammer and the Rust",
       "subtitle": "An Industrial Cantata of the American Rust Belt",
-      "badge": "Bespoke Interactive Vault",
+      "badge": "Interactive Experience",
       "cover": "the-hammer-and-the-rust/assets/art/the-hammer-and-the-rust-cover.webp",
       "tracks_count": 14,
       "themes": [
@@ -203,7 +203,7 @@ window.PORTAL_DATA = {
       "number": "10",
       "title": "The Unbroken Chain",
       "subtitle": "From Chattel to Convict Leasing to Modern Incarceration — and the Enduring Song of Freedom",
-      "badge": "Bespoke Interactive Vault",
+      "badge": "Interactive Experience",
       "cover": "unbroken-chain/assets/art/unbroken-chain-cover.webp",
       "tracks_count": 14,
       "themes": [
@@ -222,7 +222,7 @@ window.PORTAL_DATA = {
       "number": "11",
       "title": "This Sacred Ground",
       "subtitle": "From Creation and Betrayal to Defiant Resilience on Ancestral Earth",
-      "badge": "Bespoke Interactive Vault",
+      "badge": "Interactive Experience",
       "cover": "this-sacred-ground/assets/art/this-sacred-ground-cover.webp",
       "tracks_count": 12,
       "themes": [
@@ -241,7 +241,7 @@ window.PORTAL_DATA = {
       "number": "12",
       "title": "The Balance Sheet of Outrage",
       "subtitle": "A Forensic Sonic Audit of the Military-Industrial Complex across Four Movements",
-      "badge": "Bespoke Interactive Vault",
+      "badge": "Interactive Experience",
       "cover": "the-balance-sheet-of-outrage/assets/art/the-balance-sheet-of-outrage-cover.webp",
       "tracks_count": 14,
       "themes": [
@@ -259,7 +259,7 @@ window.PORTAL_DATA = {
       "number": "13",
       "title": "Mama's Boy",
       "subtitle": "A Memoir of Judith Faye Adams & A Tribute to Single Mothers in America",
-      "badge": "Bespoke Interactive Vault",
+      "badge": "Interactive Experience",
       "cover": "mamas-boy/assets/art/mamas-boy-cover.webp",
       "tracks_count": 11,
       "themes": [
@@ -277,7 +277,7 @@ window.PORTAL_DATA = {
       "number": "14",
       "title": "Five-Digit Fate",
       "subtitle": "A Social Cartography of American Poverty & Geographic Determinism",
-      "badge": "Bespoke Interactive Vault",
+      "badge": "Interactive Experience",
       "cover": "five-digit-fate/assets/art/five-digit-fate-cover.webp",
       "tracks_count": 17,
       "themes": [
@@ -295,7 +295,7 @@ window.PORTAL_DATA = {
       "number": "15",
       "title": "Sold Cheap",
       "subtitle": "A Three-Act Sonic Audit of the Systemic Devaluation of American Life",
-      "badge": "Bespoke Interactive Vault",
+      "badge": "Interactive Experience",
       "cover": "sold-cheap/assets/art/sold-cheap-cover.webp",
       "tracks_count": 12,
       "themes": [
@@ -313,7 +313,7 @@ window.PORTAL_DATA = {
       "number": "16",
       "title": "Divide and Conquer",
       "subtitle": "A Four-Act Dissection of Manufactured Division & The Path to Reconnection",
-      "badge": "Bespoke Interactive Vault",
+      "badge": "Interactive Experience",
       "cover": "divide-and-conquer/assets/art/divide-and-conquer-cover.webp",
       "tracks_count": 13,
       "themes": [
@@ -331,7 +331,7 @@ window.PORTAL_DATA = {
       "number": "17",
       "title": "Yo Ho Ho and a Pocket Full of Greed",
       "subtitle": "A Swashbuckling Satirical Sea Shanty Odyssey Auditing Corporate Privateers",
-      "badge": "Bespoke Interactive Vault",
+      "badge": "Interactive Experience",
       "cover": "yo-ho-ho-and-a-pocket-full-of-greed/assets/art/yo-ho-ho-and-a-pocket-full-of-greed-cover.webp",
       "tracks_count": 13,
       "themes": [
@@ -350,7 +350,7 @@ window.PORTAL_DATA = {
       "number": "18",
       "title": "American Rubble",
       "subtitle": "The Anatomy of Collapse, Civil Conflict & The Human Cost of Division",
-      "badge": "Bespoke Interactive Vault",
+      "badge": "Interactive Experience",
       "cover": "american-rubble/assets/art/american-rubble-cover.webp",
       "tracks_count": 13,
       "themes": [
@@ -387,7 +387,7 @@ window.PORTAL_DATA = {
       "number": "19",
       "title": "American Renewal",
       "subtitle": "A Blueprint for Applied Hope, Systemic Reform & Grassroots Restoration",
-      "badge": "Bespoke Interactive Vault",
+      "badge": "Interactive Experience",
       "cover": "american-renewal/assets/art/american-renewal-cover.webp",
       "tracks_count": 19,
       "themes": [
@@ -406,7 +406,7 @@ window.PORTAL_DATA = {
         "number": "20",
         "title": "Have Yourself a Shady Little Christmas",
         "subtitle": "A Social Realist Modern Christmas Carol",
-        "badge": "Bespoke Interactive Vault",
+        "badge": "Interactive Experience",
         "cover": "have-yourself-a-shady-little-christmas/assets/art/have-yourself-a-shady-little-christmas-cover.webp",
         "tracks_count": 15,
         "themes": [
@@ -425,7 +425,7 @@ window.PORTAL_DATA = {
         "number": "21",
         "title": "Doomsday Clock",
         "subtitle": "An Album Blueprint for Existential Reckoning",
-        "badge": "Bespoke Interactive Vault",
+        "badge": "Interactive Experience",
         "cover": "doomsday-clock/assets/art/doomsday-clock-cover.webp",
         "tracks_count": 13,
         "themes": [
@@ -483,7 +483,7 @@ window.PORTAL_DATA = {
       "number": "23",
       "title": "The Curtains and the Canned Goods",
       "subtitle": "A Forensic Sonic Audit of Systemic Extraction, Macroeconomic Debt & Agrarian Survival",
-      "badge": "Bespoke Concept Landmark",
+      "badge": "Concept Landmark Experience",
       "cover": "assets/covers/album-23.webp",
       "tracks_count": 15,
       "themes": [

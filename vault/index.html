@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="data/albums-data.js?v=20260911_01"></script>
+  <script src="data/albums-data.js?v=20260914_02"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -303,9 +303,9 @@
         <!-- Search & Sort Controls -->
         <div class="flex items-center gap-3 w-full md:w-auto" role="search">
           <div class="relative flex-1 md:w-80">
-            <label for="search-input" class="sr-only">Search catalog by title, song, theme, or lyric</label>
+            <label for="search-input" class="sr-only">Search catalog by song title, genre (e.g. Blues, Folk), or theme</label>
             <svg class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-            <input type="search" id="search-input" aria-label="Search catalog by title, song, theme, or lyric" oninput="handleFilterChange()" placeholder="Search by title, song, theme, or lyric..." class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-soil-800/90 border border-white/10 text-stone-200 placeholder-stone-400 text-sm focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500 transition-all">
+            <input type="search" id="search-input" aria-label="Search catalog by song title, genre (e.g. Blues, Folk), or theme" oninput="handleFilterChange()" placeholder="Search by song title, genre (e.g. Blues, Folk), or theme..." class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-soil-800/90 border border-white/10 text-stone-200 placeholder-stone-400 text-sm focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500 transition-all">
           </div>
 
           <div>
@@ -320,10 +320,30 @@
         </div>
       </div>
 
-      <!-- Tag Filters Scrollable Row -->
-      <nav aria-label="Societal theme filters" id="theme-tags-container" class="flex items-center gap-2 overflow-x-auto pb-1 text-xs custom-scrollbar">
-        <!-- Injected dynamically by JS -->
-      </nav>
+      <!-- Filter Controls: Musical Genre Discovery & Thematic Filters -->
+      <div class="space-y-2 pt-1 border-t border-white/5">
+        <!-- Genre Discovery Row -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-1 text-xs custom-scrollbar" role="region" aria-label="Genre discovery filters">
+          <span class="text-[11px] font-mono uppercase tracking-wider text-brand-400 font-semibold shrink-0 flex items-center gap-1.5 mr-1">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+            Genre:
+          </span>
+          <nav aria-label="Musical genre categories" id="genre-filters-container" class="flex items-center gap-1.5">
+            <!-- Injected dynamically by JS -->
+          </nav>
+        </div>
+
+        <!-- Tag Filters Scrollable Row -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-1 text-xs custom-scrollbar" role="region" aria-label="Thematic topic filters">
+          <span class="text-[11px] font-mono uppercase tracking-wider text-stone-400 shrink-0 mr-1 flex items-center gap-1">
+            <svg class="w-3 h-3 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"/></svg>
+            Theme:
+          </span>
+          <nav aria-label="Societal theme filters" id="theme-tags-container" class="flex items-center gap-1.5">
+            <!-- Injected dynamically by JS -->
+          </nav>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -472,15 +492,15 @@
               </div>
             </div>
 
-            <!-- Bespoke App Callout -->
+            <!-- Interactive Album Experience Callout -->
             <div id="modal-bespoke-box" class="p-4 rounded-xl bg-sky-950/50 border border-sky-800/40 hidden">
-              <div class="flex items-center justify-between">
+              <div class="flex items-center justify-between gap-3">
                 <div>
-                  <span class="text-xs font-mono text-sky-400 uppercase tracking-wider font-bold">Bespoke Interactive Exploration</span>
-                  <div class="text-stone-100 font-serif font-bold mt-0.5">Interactive Concept & Analysis Platform</div>
+                  <span class="text-xs font-mono text-sky-400 uppercase tracking-wider font-bold">Interactive Album Experience</span>
+                  <div class="text-stone-100 font-serif font-bold mt-0.5">Concept Architecture &amp; Thematic Analysis</div>
                 </div>
-                <a id="modal-bespoke-link" href="#" target="_blank" class="px-3 py-1.5 rounded-lg bg-sky-600 hover:bg-sky-500 text-white text-xs font-medium transition-colors">
-                  Launch Explorer →
+                <a id="modal-bespoke-link" href="#" class="px-3.5 py-2 rounded-lg bg-sky-600 hover:bg-sky-500 text-white text-xs font-medium transition-colors flex items-center gap-1.5 shadow focus-visible:ring-2 focus-visible:ring-white">
+                  <span>Explore Experience &rarr;</span>
                 </a>
               </div>
             </div>
@@ -644,10 +664,18 @@
       <a href="https://www.youtube.com/@TheShadyRiverBard" target="_blank" class="hover:text-brand-400 transition-colors underline-target">YouTube</a>
       <a href="https://www.facebook.com/profile.php?id=61578707414516" target="_blank" class="hover:text-brand-400 transition-colors underline-target">Facebook Community</a>
     </div>
-    <div class="pt-4 border-t border-white/5 flex items-center justify-center gap-4 text-[11px] text-stone-500">
+    <div class="pt-4 border-t border-white/5 flex flex-wrap items-center justify-center gap-4 text-[11px] text-stone-500">
+      <div>
+        &copy; 2026 The Shady River Homestead, LLC &amp; The Shady River Bard. All rights reserved.
+      </div>
+      <span>&bull;</span>
       <button onclick="openA11yModal()" class="text-stone-400 hover:text-brand-400 underline transition-colors">
         Accessibility Statement (WCAG 2.1 AA)
       </button>
+      <span>&bull;</span>
+      <a href="../#licensing-sampling-policy" class="text-stone-400 hover:text-brand-400 underline transition-colors">
+        Licensing &amp; Sampling Policy
+      </a>
       <span>&bull;</span>
       <button onclick="toggleA11yToolbar()" class="text-stone-400 hover:text-brand-400 underline transition-colors">
         Accessibility Display Preferences
@@ -659,6 +687,7 @@
   <script>
     let catalog = { released: [], vault: [] };
     let currentSection = 'released';
+    let activeGenre = 'all';
     let activeTag = 'all';
 
     async function init() {
@@ -666,7 +695,7 @@
         if (window.CATALOG || window.BARD_CATALOG || window.DISCOGRAPHY_DATA) {
           catalog = window.CATALOG || window.BARD_CATALOG || window.DISCOGRAPHY_DATA;
         } else {
-          const res = await fetch('data/albums.json?v=20260910_01');
+          const res = await fetch('data/albums.json?v=20260914_02');
           catalog = await res.json();
         }
         
@@ -677,6 +706,7 @@
         let totalTracks = catalog.released.reduce((acc, alb) => acc + (alb.track_count || 0), 0);
         document.getElementById('stat-tracks').innerText = totalTracks + '+';
 
+        buildGenreFilters();
         buildThemeTags();
         renderGrid();
         checkUrlHash();
@@ -687,6 +717,7 @@
 
     function switchSection(sec) {
       currentSection = sec;
+      activeGenre = 'all';
       activeTag = 'all';
       
       const tabRel = document.getElementById('tab-released');
@@ -710,7 +741,50 @@
         secDesc.innerText = "Unreleased concept documents, narrative outlines, and blueprints from the workshop. Vote on what to record next!";
       }
 
+      buildGenreFilters();
       buildThemeTags();
+      renderGrid();
+    }
+
+    function buildGenreFilters() {
+      const items = currentSection === 'released' ? catalog.released : catalog.vault;
+      const genreCategories = [
+        'All Genres',
+        'Folk & Acoustic',
+        'Blues & Country Blues',
+        'Folk Rock & Roots',
+        'Protest & Narrative Folk',
+        'Satire & Sea Shanty'
+      ];
+
+      const container = document.getElementById('genre-filters-container');
+      if (!container) return;
+
+      let html = '';
+      genreCategories.forEach(cat => {
+        const isAll = cat === 'All Genres';
+        const value = isAll ? 'all' : cat;
+        const isActive = activeGenre === value;
+        const count = isAll ? items.length : items.filter(item => item.genre_category === cat).length;
+        if (!isAll && count === 0) return;
+
+        html += `
+          <button onclick="filterByGenre('${value.replace(/'/g, "\\'")}')" 
+                  aria-pressed="${isActive}" 
+                  aria-label="Filter catalog by ${cat} (${count} records)" 
+                  class="px-3 py-1 rounded-lg font-medium transition-all whitespace-nowrap focus-visible:ring-2 focus-visible:ring-brand-500 flex items-center gap-1.5 text-xs ${isActive ? 'bg-brand-500 text-white shadow font-semibold' : 'bg-soil-800 text-stone-300 hover:text-white hover:bg-soil-700'}">
+            <span>${cat}</span>
+            <span class="text-[10px] px-1.5 py-0.2 rounded-full ${isActive ? 'bg-white/20 text-white' : 'bg-soil-700 text-stone-400 font-mono'}">${count}</span>
+          </button>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    function filterByGenre(genre) {
+      activeGenre = genre;
+      buildGenreFilters();
       renderGrid();
     }
 
@@ -725,7 +799,7 @@
       const sortedTags = Array.from(tagSet).sort();
 
       let html = `
-        <button onclick="filterByTag('all')" aria-pressed="${activeTag === 'all'}" aria-label="Show all themes" class="px-3 py-1.5 rounded-lg font-medium transition-all whitespace-nowrap focus-visible:ring-2 focus-visible:ring-brand-500 ${activeTag === 'all' ? 'bg-brand-500 text-white shadow' : 'bg-soil-800 text-stone-300 hover:text-white hover:bg-soil-700'}">
+        <button onclick="filterByTag('all')" aria-pressed="${activeTag === 'all'}" aria-label="Show all themes" class="px-2.5 py-1 rounded-lg font-medium transition-all whitespace-nowrap focus-visible:ring-2 focus-visible:ring-brand-500 ${activeTag === 'all' ? 'bg-soil-600 text-white shadow font-semibold' : 'bg-soil-800 text-stone-400 hover:text-white hover:bg-soil-700'}">
           #All Themes
         </button>
       `;
@@ -733,7 +807,7 @@
       sortedTags.forEach(tag => {
         const isActive = activeTag === tag;
         html += `
-          <button onclick="filterByTag('${tag.replace(/'/g, "\'")}')" aria-pressed="${isActive}" aria-label="Filter catalog by ${tag}" class="px-3 py-1.5 rounded-lg font-medium transition-all whitespace-nowrap focus-visible:ring-2 focus-visible:ring-brand-500 ${isActive ? 'bg-brand-500 text-white shadow' : 'bg-soil-800 text-stone-300 hover:text-white hover:bg-soil-700'}">
+          <button onclick="filterByTag('${tag.replace(/'/g, "\\'")}')" aria-pressed="${isActive}" aria-label="Filter catalog by ${tag}" class="px-2.5 py-1 rounded-lg font-medium transition-all whitespace-nowrap focus-visible:ring-2 focus-visible:ring-brand-500 ${isActive ? 'bg-brand-500 text-white shadow font-semibold' : 'bg-soil-800 text-stone-400 hover:text-stone-200 hover:bg-soil-700'}">
             #${tag}
           </button>
         `;
@@ -754,7 +828,9 @@
 
     function resetFilters() {
       document.getElementById('search-input').value = '';
+      activeGenre = 'all';
       activeTag = 'all';
+      buildGenreFilters();
       buildThemeTags();
       renderGrid();
     }
@@ -766,6 +842,10 @@
 
       // Filter
       let filtered = items.filter(item => {
+        // Genre filter
+        if (activeGenre !== 'all' && item.genre_category !== activeGenre) {
+          return false;
+        }
         // Tag filter
         if (activeTag !== 'all' && !(item.themes || []).includes(activeTag)) {
           return false;
@@ -774,11 +854,12 @@
         if (query) {
           const matchTitle = (item.title || '').toLowerCase().includes(query);
           const matchDesc = (item.description || item.pitch || '').toLowerCase().includes(query);
-          const matchGenre = (item.genre || '').toLowerCase().includes(query);
+          const matchGenre = (item.genre || '').toLowerCase().includes(query) || (item.genre_category || '').toLowerCase().includes(query);
           const matchThemes = (item.themes || []).some(t => t.toLowerCase().includes(query));
           const matchTracks = (item.tracks || []).some(tr => tr.toLowerCase().includes(query));
-          const matchBespoke = (query.includes('bespoke') || query.includes('interactive') || query.includes('app')) && item.is_bespoke;
-          return matchTitle || matchDesc || matchGenre || matchThemes || matchTracks || matchBespoke;
+          const matchHook = (item.hook || '').toLowerCase().includes(query);
+          const matchBespoke = (query.includes('bespoke') || query.includes('interactive') || query.includes('app') || query.includes('experience')) && item.is_bespoke;
+          return matchTitle || matchDesc || matchGenre || matchThemes || matchTracks || matchHook || matchBespoke;
         }
         return true;
       });
@@ -796,7 +877,14 @@
       const emptyState = document.getElementById('empty-state');
       const countLabel = document.getElementById('results-count');
 
-      countLabel.innerText = `Showing ${filtered.length} of ${items.length} records`;
+      const filterDesc = [];
+      if (activeGenre !== 'all') filterDesc.push(`genre "${activeGenre}"`);
+      if (activeTag !== 'all') filterDesc.push(`theme "#${activeTag}"`);
+      if (query) filterDesc.push(`query "${query}"`);
+
+      countLabel.innerText = filterDesc.length > 0
+        ? `Showing ${filtered.length} of ${items.length} records (${filterDesc.join(', ')})`
+        : `Showing ${filtered.length} of ${items.length} records`;
 
       if (filtered.length === 0) {
         grid.innerHTML = '';
@@ -812,15 +900,15 @@
       const isReleased = currentSection === 'released';
       const cover = item.cover_image || 'assets/covers/album-01.webp';
       const numberBadge = isReleased ? `#${String(item.number).padStart(2, '0')}` : 'VAULT';
-      const desc = item.description || item.pitch || '';
-      const truncatedDesc = desc.length > 140 ? desc.substring(0, 137) + '...' : desc;
+      const hookText = item.hook || (item.description || item.pitch || '').split('.')[0] + '.';
       const trackCount = item.track_count || item.tracks?.length || 0;
+      const genreCat = item.genre_category || 'Folk & Acoustic';
 
       // Has voted?
       const voted = localStorage.getItem('voted_' + item.id);
 
       return `
-        <article class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group" aria-label="${item.title}">
+        <article class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group border border-white/5 hover:border-brand-500/30 transition-all duration-300 shadow-lg" aria-label="${item.title}">
           <div>
             <!-- Image Frame (Keyboard accessible) -->
             <div onclick="openModal('${item.id}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); openModal('${item.id}');}" class="relative aspect-square overflow-hidden bg-soil-950 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-t-2xl" role="button" tabindex="0" aria-label="Open album details and liner notes for ${item.title}">
@@ -844,10 +932,10 @@
                     NOVELLA
                   </span>
                 ` : ''}
-                ${item.is_bespoke ? `
-                  <span class="px-2 py-0.5 rounded-md text-[10px] font-mono font-semibold bg-sky-950/90 text-sky-300 border border-sky-500/40 backdrop-blur-sm">
-                    INTERACTIVE APP
-                  </span>
+                ${item.is_bespoke && item.custom_url ? `
+                  <a href="${item.custom_url}" onclick="event.stopPropagation();" class="px-2 py-0.5 rounded-md text-[10px] font-mono font-semibold bg-sky-950/90 text-sky-300 border border-sky-500/40 hover:bg-sky-900 hover:text-white transition-colors backdrop-blur-sm flex items-center gap-1" title="Interactive Album Experience">
+                    <span>Experience &rarr;</span>
+                  </a>
                 ` : ''}
               </div>
 
@@ -858,22 +946,29 @@
 
             <!-- Content -->
             <div class="p-5">
-              <div class="text-[11px] font-mono text-brand-400 uppercase tracking-wider mb-1">
-                ${item.genre || 'Concept Folk'}
+              <!-- Clickable Genre Badge for Fast Discovery -->
+              <div class="mb-1.5 flex items-center justify-between gap-2">
+                <button onclick="filterByGenre('${genreCat.replace(/'/g, "\\'")}')" class="text-[11px] font-mono text-brand-400 hover:text-brand-300 uppercase tracking-wider transition-colors text-left font-semibold flex items-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-brand-500 rounded px-1 -ml-1 py-0.5" title="Filter catalog by ${genreCat}">
+                  <span class="text-brand-500 text-xs">◈</span>
+                  <span>${item.genre || genreCat}</span>
+                </button>
               </div>
+
               <h3 onclick="openModal('${item.id}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); openModal('${item.id}');}" class="text-lg font-serif font-bold text-stone-100 group-hover:text-brand-400 transition-colors leading-snug mb-2 cursor-pointer focus:outline-none focus-visible:ring-1 focus-visible:ring-brand-500 rounded" role="button" tabindex="0" aria-label="Explore details for ${item.title}">
                 ${item.title}
               </h3>
-              <p class="text-xs text-stone-300 leading-relaxed mb-4">
-                ${truncatedDesc}
+              
+              <!-- Punchy Narrative Hook (No mid-word truncation) -->
+              <p class="text-xs text-stone-300 leading-relaxed mb-4 min-h-[2.75rem]">
+                ${hookText}
               </p>
 
-              <!-- Tags -->
+              <!-- Thematic Tags -->
               <div class="flex flex-wrap gap-1.5 mb-2" aria-label="Themes for ${item.title}">
                 ${(item.themes || []).slice(0, 3).map(t => `
-                  <span class="px-2 py-0.5 rounded text-[10px] font-medium bg-soil-800 text-stone-300 border border-white/5">
+                  <button onclick="filterByTag('${t.replace(/'/g, "\\'")}')" class="px-2 py-0.5 rounded text-[10px] font-medium bg-soil-800 hover:bg-soil-700 text-stone-400 hover:text-stone-200 border border-white/5 transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-brand-500">
                     #${t}
-                  </span>
+                  </button>
                 `).join('')}
               </div>
             </div>
@@ -883,40 +978,23 @@
           <div class="p-5 pt-0 mt-auto border-t border-white/5 pt-4">
             ${isReleased ? `
               <div class="flex items-center gap-2">
-                <button onclick="openModal('${item.id}')" aria-label="View tracklist and liner notes for ${item.title}" class="${item.is_bespoke && item.custom_url ? 'py-2 px-2.5' : 'flex-1 py-2 px-3'} rounded-xl bg-soil-800 hover:bg-soil-700 text-stone-200 text-xs font-medium transition-colors border border-white/5 flex items-center justify-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                  ${item.is_bespoke && item.custom_url ? 'Details' : 'Tracklist & Details'}
+                <button onclick="openModal('${item.id}')" aria-label="Explore tracklist and liner notes for ${item.title}" class="flex-1 py-2.5 px-3 rounded-xl bg-soil-800 hover:bg-soil-700 text-stone-200 hover:text-white text-xs font-medium transition-colors border border-white/10 flex items-center justify-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 shadow-sm">
+                  <svg class="w-3.5 h-3.5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                  <span>Explore Album &amp; Tracks &rarr;</span>
                 </button>
-                ${item.is_bespoke && item.custom_url ? `
-                  <a href="${item.custom_url}" target="_blank" aria-label="Launch interactive app for ${item.title} (opens in new tab)" class="flex-1 py-2 px-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-medium transition-colors flex items-center justify-center gap-1 shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
-                    <span>App ↗</span>
-                  </a>
-                ` : ''}
-                <a href="${item.youtube_url || 'https://www.youtube.com/@TheShadyRiverBard'}" target="_blank" aria-label="Play ${item.title} on YouTube (opens in new tab)" class="${item.is_bespoke && item.custom_url ? 'py-2 px-2.5' : 'py-2 px-3'} rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-xs font-medium transition-colors flex items-center justify-center gap-1.5 shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+                <a href="${item.youtube_url || 'https://www.youtube.com/@TheShadyRiverBard'}" target="_blank" rel="noopener noreferrer" aria-label="Listen to ${item.title} on YouTube (opens in new tab)" class="py-2.5 px-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold transition-colors flex items-center justify-center gap-1.5 shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
                   <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-                  Play
+                  <span>Listen &#x2197;</span>
                 </a>
               </div>
             ` : `
               <div class="flex items-center gap-2">
-                ${item.is_bespoke ? `
-                  <button onclick="openModal('${item.id}')" aria-label="Inspect concept details for ${item.title}" class="py-2 px-3 rounded-xl bg-soil-800 hover:bg-soil-700 text-stone-200 text-xs font-medium transition-colors border border-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
-                    Inspect
-                  </button>
-                  <a href="${item.custom_url}" target="_blank" aria-label="Launch interactive app for ${item.title} (opens in new tab)" class="flex-1 py-2 px-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-medium transition-colors flex items-center justify-center gap-1.5 shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
-                    Interactive App →
-                  </a>
-                  <button onclick="openVoteModal('${item.id}')" aria-label="Vote to release ${item.title}" class="py-2 px-3 rounded-xl ${voted ? 'bg-emerald-950 text-emerald-400 border border-emerald-800' : 'bg-amber-600 hover:bg-amber-500 text-white'} text-xs font-medium transition-colors flex items-center gap-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
-                    <span>${voted ? '✓' : 'Vote'}</span>
-                  </button>
-                ` : `
-                  <button onclick="openModal('${item.id}')" aria-label="Inspect concept details for ${item.title}" class="flex-1 py-2 px-3 rounded-xl bg-soil-800 hover:bg-soil-700 text-stone-200 text-xs font-medium transition-colors border border-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
-                    Inspect Concept
-                  </button>
-                  <button onclick="openVoteModal('${item.id}')" aria-label="Vote to release ${item.title}" class="py-2 px-3 rounded-xl ${voted ? 'bg-emerald-950 text-emerald-400 border border-emerald-800' : 'bg-amber-600 hover:bg-amber-500 text-white'} text-xs font-medium transition-colors flex items-center gap-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
-                    <span>${voted ? '✓ Voted' : 'Vote to Release'}</span>
-                  </button>
-                `}
+                <button onclick="openModal('${item.id}')" aria-label="Inspect concept details for ${item.title}" class="flex-1 py-2.5 px-3 rounded-xl bg-soil-800 hover:bg-soil-700 text-stone-200 hover:text-white text-xs font-medium transition-colors border border-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
+                  Inspect Concept &rarr;
+                </button>
+                <button onclick="openVoteModal('${item.id}')" aria-label="Vote to release ${item.title}" class="py-2.5 px-3.5 rounded-xl ${voted ? 'bg-emerald-950 text-emerald-400 border border-emerald-800' : 'bg-amber-600 hover:bg-amber-500 text-white'} text-xs font-medium transition-colors flex items-center gap-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+                  <span>${voted ? '&#x2713; Voted' : 'Vote to Release'}</span>
+                </button>
               </div>
             `}
           </div>
