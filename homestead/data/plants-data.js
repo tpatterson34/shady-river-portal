@@ -1,6 +1,6 @@
-// The Shady River Homestead — Living Botanical & Cultivar Catalog
-// 110 Cultivars with Verified Botanical Photography
-window.HOMESTEAD_PLANTS = [
+// The Shady River Homestead - Complete Botanical Cultivar Library
+// 110 Planted Cultivars in USDA Zone 8b (Western Washington)
+const HOMESTEAD_PLANTS = [
   {
     "id": "amere-de-berthcourt-cider-apple-tree",
     "commonName": "Amere de Berthcourt Cider Apple Tree",
@@ -9,8 +9,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy Fruit Tree",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "A popular variety in French cider orchards, the Amere de Berthcourt Cider Apple Tree has bittersweet juice that is used for making alcoholic cider or adding body to sweet cider. Easy to grow and productive, Amere de Berthcourt bears good crops of greenish-yellow fruit with a pink blush.M-7 is considered a semi-dwarf rootstock growing 12-16 ft. in height. M-7 is very hardy and adapted to most soils. More drought tolerant and vigorous than M-26.",
     "planting": "",
     "size": "Semi-dwarf 12-16 ft.",
@@ -29,7 +27,8 @@ window.HOMESTEAD_PLANTS = [
       "Edible",
       "Medicinal",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "amish-gooseberry",
@@ -39,8 +38,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "Amish Gooseberry are highly vigorous with sturdy upright canes. The fruits are deep red with good flavor when they ripen in July. Yields are consistently high due to some resistance to powdery mildew and other fungi. Fruits are of medium size and easily harvested. Hardiness Zones 4-8. Most of the gooseberries in our selection are a cross between the flavorful, larger varieties from Europe (R. uva-crispa) and hardy, disease-resistant varieties of North American (R. hirtellum). The result is the jewel of the fruit world. Gooseberries come in a rainbow of colors from translucent white to green-gold and yellow to peach-pink and deep-red. They are highly nutritious, especially rich in vitamin A and phosphorus. Traditionally used in deserts and preserves with a delicious affinity for honey and cream. they are also great eaten fresh out of the garden. Not suited for southern climates that do not receive at least 1000 chill hours. Remove all canes older than four years to maintain healthy harvest of large, sweet fruit.",
     "planting": "Site and Soil: Moderately fertile, well-drained soil with full to partial sun.",
     "size": "2-3 ft. in height and 4-6 ft. in width",
@@ -59,7 +56,8 @@ window.HOMESTEAD_PLANTS = [
       "Edible",
       "Medicinal",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "autumn-beauty-jujube-tree",
@@ -69,8 +67,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Sub-Canopy Fruit Tree",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "Autumn Beauty Jujube Tree is one of the best tasting jujubes with a spicy apple-like flavor. The fruits ripen early and the tree stays smaller than many other varieties, making it a great option for small spaces or containers. A striking ornamental as well as fruiting plant, Jujube are a rare and unique small tree displaying attractive contorted branched, fine lacy foliage, and abundant small, fragrant, white flowers which bloom in mid-summer. Also known as Chinese Date, Jujube unique and tasty fruit becomes reddish brown when ripe, with a sweet apple-like flavor and crisp texture. Easy to grow, Jujube can stand some drought and grows well in the Northwest as well as in other regions of the US.",
     "planting": "Jujube likes 1/2 day to full sun and well-drained soil. Pollination Requirements: Partially self-fertile. Plant two varieties for cross-pollination and heavier crops.",
     "size": "8-10 ft. in height",
@@ -90,7 +86,8 @@ window.HOMESTEAD_PLANTS = [
       "Medicinal",
       "Natural Dye",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "black-sea-jujube",
@@ -100,8 +97,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Sub-Canopy Fruit Tree",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "Black Sea Jujube is a popular selection from the Nikita Botanic Garden in Yalta, Ukraine, Black Sea bears abundant crops of long, pointed fruit. Especially sweet and flavorful, they turn a beautiful chocolate brown when ripe. Black Sea Jujube is a striking ornamental as well as fruiting plant, Jujube are a rare and unique small tree displaying attractive contorted branched, fine lacy foliage, and abundant small, fragrant, white flowers which bloom in mid-summer. Also known as Chinese Date, Jujube unique and tasty fruit becomes reddish brown when ripe, with a sweet apple-like flavor and crisp texture. Easy to grow, Jujube can stand some drought and grows well in the Northwest as well as in other regions of the US. Jujube has a wide culinary history throughout the world. In addition to being eaten fresh, Jujubes are smoked in Vietnam, used in a sweet tea syrup in Korea and China, picked in Bangladesh, used to make wine in China, Brandy in Croatia, and marmalades and juices everywhere. Jujube also has many medicinal purposes as well. It was been said to alleviate stress, is anti fungal, anti-bacterial, anti-ulcer, and anti-inflammatory.",
     "planting": "Jujube likes 1/2 day to full sun and well-drained soil. Pollination Requirements: Partially self-fertile. Plant two varieties for cross-pollination and heavier crops.",
     "size": "8-10 ft. in height",
@@ -121,7 +116,8 @@ window.HOMESTEAD_PLANTS = [
       "Medicinal",
       "Natural Dye",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "chehalis-apple-tree",
@@ -131,8 +127,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy Fruit Tree",
-    "isCutList": true,
-    "plantedCount": 2,
     "description": "Chehalis Apple is very flavorful and great for fresh eating, this unique Northwest variety produces huge, beautiful, yellow fruit with crisp, sweet and juicy flesh. One of the best disease-resistant varieties, Chehalis Apple ripens in mid to late September. M-7 is considered a semi-dwarf rootstock growing 12-16 ft. in height. M-7 is very hardy and adapted to most soils. Vigorous, drought tolerant, and well anchored, trees on M-7 should not require staking.",
     "planting": "",
     "size": "Semi-dwarf 12-16 ft.",
@@ -151,7 +145,8 @@ window.HOMESTEAD_PLANTS = [
       "Edible",
       "Medicinal",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "chilean-hazelnut",
@@ -161,8 +156,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy / Sub-Canopy Tree",
-    "isCutList": true,
-    "plantedCount": 2,
     "description": "Of all the botanical wonders to come out of Chile the Chilean Hazelnut is likely our favorite. Worth growing for its tasty nuts alone, the Chilean Hazelnut also features beautifully textured evergreen leaves that are so stunning they are often used in flower arrangements along with the beautiful and fragrant Proteaceous flowers that are a favorite nectar source for bees. The nut is highly valued in Chile where it is collected and sold at fresh markets and is very much like a macadamia nut for cooler climates, both coming from the Proteaceae family and being very high in oils and protein. And speaking of the Proteaceae family, this is part of the reason why the Chilean Hazelnut is not more common. Plants in the Proteaceae family are native to the Southern Hemisphere where they are adapted to very old nutrient poor soils. They even have special root structures adapted to thriving in such conditions but they are very difficult to grow in container culture, dislike root disturbance, and are incredibly finicky about climate and soil requirements. If it gets too hot they can die, if it gets too cold over winter they can die, if the cold comes too fast in the fall they sometimes suffer tip dieback. If you give them any phosphorous at all they will be very upset. Still willing to give them a try? So are we! Not well suited to incredibly hot climates or areas where winters regularly get below 10 F. This one might be exclusive to coastal areas of the west coast, though we have had success with them here in Portland, OR. Pacific Northwest Coast, Bay Area and Northern California fog belt gardeners, this is one is for you! Heavy mulch and ground covers are recommended to keep the soil cool in summer and a sheltered spot with dappled shade to mimic a woodland edge is recommended. Do NOT fertilize with anything besides Cottonseed Meal, Alfalfa Meal, or Feather Meal. Sometimes the best ones aren't easy.",
     "planting": "Site and Soil: Chilean Hazels prefer dappled shade. A forests edge or similar sunlight condition is ideal. Soil conditions should not be enriched as they prefer a nutrient poor mineral soil with NO added fertilizers. Pollination Requirements: Generally thought to be self-fertile but often sets heavier crops with another Gevuina planted nearby",
     "size": "15-45 ft. in height",
@@ -181,7 +174,8 @@ window.HOMESTEAD_PLANTS = [
       "Edible",
       "Medicinal",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "chilean-myrtle-berry",
@@ -191,8 +185,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Shrub / Small Tree Layer",
-    "isCutList": true,
-    "plantedCount": 2,
     "description": "Known in Chile as Arrayán or Palo Colorado, and often called by its genus name, \"Luma\", here in North America. With its delicate and fragrant waxy foliage, contorted, muscular orange trunks, and peeling bark Chilean Myrtle Berry is one of the most gorgeous species in the myrtle family! It's one of the first woody species to colonize an area after ground disturbance, along with Maqui berry, in southern Chile. Fast-growing, it can eventually reach 30 feet but can be kept a manageable size with pruning. Abundant white flowers are followed by deep purple myrtle berries perfect for fresh eating, jams, smoothies, or cheesecake.",
     "planting": "1/2 day to full sun and well-drained soil.",
     "size": "15-30 ft. in height",
@@ -212,7 +204,8 @@ window.HOMESTEAD_PLANTS = [
       "Medicinal",
       "Natural Dye",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "coco-jujube",
@@ -222,8 +215,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Sub-Canopy Fruit Tree",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "We brought Coco Jujube from the Nikita Botanic Garden in Yalta, Ukraine. It is prized for its abundant crops of golden brown fruit with a unique, coconut-like flavor. A striking ornamental as well as fruiting plant, this rare and unique small tree displays attractive contorted branched, fine lacy foliage, and abundant small, fragrant, white flowers which bloom in mid-summer. Also known as chinese Chinese Date, Jujube unique and tasty fruit becomes reddish brown when ripe, with a sweet apple-like flavor and crisp texture. Easy to grow, Jujube can stand some drought and grows well in the Northwest as well as in other regions of the US. Jujube has a wide culinary history throughout the world. In addition to being eaten fresh, Jujubes are smoked in Vietnam, used in a sweet tea syrup in Korea and China, picked in Bangladesh, used to make wine in China, Brandy in Croatia, and marmalades and juices everywhere. Jujube also has many medicinal purposes as well. It was been said to alleviate stress, is anti fungal, anti-bacterial, anti-ulcer, and anti-inflammatory.",
     "planting": "Jujube likes 1/2 day to full sun and well-drained soil. Pollination Requirements: Partially self-fertile. Plant two varieties for cross-pollination and heavier crops.",
     "size": "8-10 ft. in height",
@@ -243,7 +234,8 @@ window.HOMESTEAD_PLANTS = [
       "Medicinal",
       "Natural Dye",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "confetti-jujube-tree",
@@ -253,8 +245,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Sub-Canopy Fruit Tree",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "(Yalta No. 2 cv.) Confetti Jujube was imported from the Nikita Botanic Garden in the 1990's and bears abundant crops of medium-size, very sweet, crisp, juicy and delicious fruit. Excellent for fresh eating, Confetti ripens quite early and is a great variety for the home garden. A striking ornamental as well as fruiting plant, Jujube are a rare and unique small tree displaying attractive contorted branched, fine lacy foliage, and abundant small, fragrant, white flowers which bloom in mid-summer. Also known as Chinese Date, Jujube unique and tasty fruit becomes reddish brown when ripe, with a sweet apple-like flavor and crisp texture. Easy to grow, Jujube can stand some drought and grows well in the Northwest as well as in other regions of the US. Jujube has a wide culinary history throughout the world. In addition to being eaten fresh, Jujubes are smoked in Vietnam, used in a sweet tea syrup in Korea and China, picked in Bangladesh, used to make wine in China, Brandy in Croatia, and marmalades and juices everywhere.",
     "planting": "Jujube likes 1/2 day to full sun and well-drained soil. Pollination Requirements: Partially self-fertile. Plant two varieties for cross-pollination and heavier crops.",
     "size": "8-10 ft. in height",
@@ -274,7 +264,8 @@ window.HOMESTEAD_PLANTS = [
       "Medicinal",
       "Natural Dye",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "cortland-apple",
@@ -284,8 +275,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy Fruit Tree",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "One of the first McIntosh crosses, Cortland Apple Tree features that familiar vinous Mac flavor, crimson skin and bright white flesh with a slightly larger fruit than McIntosh. Cortland bears heavily each year and is very popular for fresh eating, especially in salads as the fruit does not brown quickly when exposed to air.",
     "planting": "",
     "size": "Semi-dwarf 12-16 ft.",
@@ -304,7 +293,8 @@ window.HOMESTEAD_PLANTS = [
       "Edible",
       "Medicinal",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "criterion-apple-tree",
@@ -314,8 +304,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy Fruit Tree",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "Discovered as a chance seedling in Washington State, Criterion Apple Tree is an excellent multi-purpose apple, great for fresh eating, cooking, drying and cider. Skin is yellow with a red blush and the flavor has a tangy sweetness to it.",
     "planting": "",
     "size": "Semi-dwarf 12-16 ft.",
@@ -334,7 +322,8 @@ window.HOMESTEAD_PLANTS = [
       "Edible",
       "Medicinal",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "darrow-blueberry",
@@ -344,8 +333,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "Darrow Blueberry produces fruit as big as a quarter! You'll love the delectable, sweet-tart flavor of these huge, dark-blue berries in the heart of summer. Try Darrow blueberries with ice cream or yogurt – Delicious!",
     "planting": "Blueberries like 1/2 day to full sun and well-drained, acidic soil",
     "size": "4-5 ft. in height and spread.",
@@ -364,7 +351,8 @@ window.HOMESTEAD_PLANTS = [
       "Edible",
       "Medicinal",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "empress-gee-jujube-tree",
@@ -374,8 +362,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Sub-Canopy Fruit Tree",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "(Wang-dae-choo cv.) A new variety from Korea, Empress Gee jujube is prized for its incredibly large and sweet, dark brown fruit. Crisp and flavorful, it is great for fresh eating and good for drying. Empress Gee forms an attractive, compact tree. A striking ornamental as well as fruiting plant, Jujube are a rare and unique small tree displaying attractive contorted branched, fine lacy foliage, and abundant small, fragrant, white flowers which bloom in mid-summer. Also known as Chinese Date, Jujube unique and tasty fruit becomes reddish brown when ripe, with a sweet apple-like flavor and crisp texture. Easy to grow, Jujube can stand some drought and grows well in the Northwest as well as in other regions of the US. Jujube has a wide culinary history throughout the world. In addition to being eaten fresh, Jujubes are smoked in Vietnam, used in a sweet tea syrup in Korea and China, picked in Bangladesh, used to make wine in China, Brandy in Croatia, and marmalades and juices everywhere. Jujube also has many medicinal purposes as well. It has been said to alleviate stress, is anti fungal, anti-bacterial, anti-ulcer, and anti-inflammatory.",
     "planting": "Jujube likes 1/2 day to full sun and well-drained soil. Pollination Requirements: Partially self-fertile. Plant two varieties for cross-pollination and heavier crops.",
     "size": "8-10 ft. in height",
@@ -395,7 +381,8 @@ window.HOMESTEAD_PLANTS = [
       "Medicinal",
       "Natural Dye",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "enterprise-apple-tree",
@@ -405,8 +392,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy Fruit Tree",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "The Enterprise Apple Tree is very disease-resistant and easy to grow, this new, patented variety from Purdue U. bears good crops of beautiful, deep red, juicy, flavorful fruit. Enterprise ripens in early October and can be stored for several months. Enterprise is great for fresh eating and makes delicious sauce, pies and crisps.",
     "planting": "",
     "size": "Semi-dwarf 12-16 ft.",
@@ -425,7 +410,8 @@ window.HOMESTEAD_PLANTS = [
       "Edible",
       "Medicinal",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "era-redlove-apple",
@@ -435,8 +421,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy Fruit Tree",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "Very productive and disease resistant, Era Redlove Apple is a great variety for the home garden. Era features large, red fruit with almost solid red flesh. Firm, crisp, juicy and refreshingly sweet with a hint of tartness, it is great for fresh eating and makes tasty juice. Era ripens in mid-September and can be stored for several months. M-7 is considered a semi-dwarf rootstock growing 12-16 ft. in height. M-7 is very hardy and adapted to most soils. Vigorous, drought tolerant, and well anchored, trees on M-7 should not require staking.",
     "planting": "Apples need another variety nearby for pollination. Neighboring trees often offer sufficient pollen for good fruit set. Consider Mason Bees to help pollinate and increase fruit production.",
     "size": "12-16 ft. in height",
@@ -455,7 +439,8 @@ window.HOMESTEAD_PLANTS = [
       "Edible",
       "Medicinal",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "eva-sea-berry",
@@ -465,8 +450,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Nitrogen-Fixing Shrub",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "Another of the prized Canadian Sea Berry varieties, Eva Seaberry is very similar to the popular Sunny variety but with less thorns. Berries are very large, juicy and deliciously sweet tart. Eva is also valued for its high amounts of polyphenols, the highest of any recorded sea buckthorn variety. Very Popular in Eastern Europe, Russia and China, Sea Berry is a new and very valuable plant for North American gardeners. Also known as Sea Buckthorn, Sea Berry is prized for its exceptional ornamental value, tasty and healthy fruit, and the ability to grow in and improve poor soils. In late summer and fall, large clusters of bright orange-yellow berries cover the branches and, on some varieties, can persist well into winter. Eva Sea Berry fruit is very high in Vitamin C (about 7 times more than lemons), Vitamin A, and E, and has a pleasant acidic flavor which, when sweetened, makes delicious juice. During the Cold War, East Germany used Sea Berry as a healthful substitute for orange juice. The fruit is also unique for its oil content, which is used as a treatment for burns and skin diseases as well as for ulcers and other illnesses. You will often see Sea Buckthorn as an ingredient in many nutritional supplements and cosmetics. We harvest our fruit by hand or by cutting off the fruit laden branches and freezing them. The frozen berries can easily be shaken off and, after thawing, make great juice and preserves. Like cranberry juice, Sea Berry juice is usually diluted with up to 70% water.",
     "planting": "Site and Soil: Sea Berry likes full to 1/2 day sun and well-drained soil. Rootstock Description: These are grown from cuttings. Pollination Requirements: Wind pollinated. Plant with a male plant for cross-pollination.",
     "size": "6-8 ft. in height.",
@@ -487,7 +470,8 @@ window.HOMESTEAD_PLANTS = [
       "Natural Dye",
       "Nitrogen Fixer",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "frosty-blue-whales-tongue-agave",
@@ -497,8 +481,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Cold-Hardy Subtropicals",
     "categoryName": "Cold-Hardy Subtropicals",
     "layer": "Microclimate Succulent",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "Yet another superb selection by Sean Hogan of an already spectacular species! Frosty Blue Whale's Tongue Agave is likely the largest growing of any of the cold hardy century plants and tolerates our winter rain and cold better than almost any other cold hardy agave. Native to northeastern Mexico, this selection was made for its extremely blue foliage and we absolutely adore it! Specimens around Portland have stood the test of time for at least the past 10 years and are the pride and joy of anyone who's been lucky enough to grab one from Cistus Nursery. And thanks to the wonders of tissue culture this valuable variety is now much more widely available and we are thrilled to be growing it! Frosty Blue grows as a solitary rosette, not forming offsets, and flowers every 50-100 years or so which has lead to it being called a \"century plant\".",
     "planting": "Full sun and very well-drained soil. Very drought tolerant once established and will need little to no supplemental watering during the summer season, though a bit of summer water speeds growth",
     "size": "3-4 ft. in height by 6 ft. wide",
@@ -518,7 +500,8 @@ window.HOMESTEAD_PLANTS = [
       "Medicinal",
       "Natural Dye",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "garden-delicious-dwarf-apple-tree",
@@ -528,8 +511,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy Fruit Tree",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "Garden Delicious Dwarf Apple Tree is a genetic dwarf that can easily be maintained at 8 feet in a pot or in the ground. Garden Delicious produces sweet, crisp greenish-yellow apples that have a slight red blush and occasional russeting. Produces well even in hot climates and apples are great for dessert, as a storage apple and for cooking.",
     "planting": "",
     "size": "dwarf 8 ft",
@@ -548,7 +529,8 @@ window.HOMESTEAD_PLANTS = [
       "Edible",
       "Medicinal",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "goldrush-apple-tree",
@@ -558,8 +540,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy Fruit Tree",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "GoldRush Apple Tree is from Purdue U. bears abundant crops of large,uju golden-yellow, sweet, crisp, and flavorful fruit. Great for fresh eating and baking, GoldRush ripens in October, and can be stored until late spring. GoldRush is very disease resistant and easy to grow.",
     "planting": "M-26 is considered a dwarf rootstock, growing 8-12 ft. in height. M-26 induces early bearing, usually in 2-3 years after planting, and grows well in most soils, except very wet and poorly drained ones. On windy sites, trees grafted on M-26 may need staking.",
     "size": "Semi-dwarf 12-16 ft.",
@@ -578,7 +558,8 @@ window.HOMESTEAD_PLANTS = [
       "Edible",
       "Medicinal",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "golden-russet-apple",
@@ -588,8 +569,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy Fruit Tree",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "Golden Russet Apple produces a gray-green to golden-bronze apple with crisp, flavorful, creamy, yellow flesh. The champagne of old-time cider apples, Golden Russet is excellent pressed into cider, dried, eaten fresh or cooked. It is an excellent storage apple, keeping from December until April under proper moisture conditions.",
     "planting": "",
     "size": "Semi-dwarf 12-16 ft.",
@@ -608,7 +587,8 @@ window.HOMESTEAD_PLANTS = [
       "Edible",
       "Medicinal",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "gray-santolina",
@@ -618,8 +598,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Soil Builders & Craft Allies",
     "categoryName": "Soil Builders & Craft",
     "layer": "Aromatic Herbaceous Border",
-    "isCutList": true,
-    "plantedCount": 2,
     "description": "A tough and lovely evergreen sub-shrub for the Mediterranean garden, Gray Santolina has fine textured grey foliage that is amazingly fragrant when the afternoon sun hits it. Native to sunny hillsides in the western and central Mediterranean, Gray Santolina is very drought adapted and adds great color and texture to the Mediterranean border. Has masses of lovely little yellow flowers in late spring that attract pollinators. Mixes well with rosemary, sages, lavender, and phlomis. Has traditionally been used as a medicinal herb and to make a very fragrant essential oil.",
     "planting": "Full sun and very well-drained soil. Drought tolerant evergreen",
     "size": "2′ in height by 3-4′ feet wide.",
@@ -639,7 +617,8 @@ window.HOMESTEAD_PLANTS = [
       "Medicinal",
       "Natural Dye",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "koroneiki-olive-tree",
@@ -649,8 +628,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Evergreen Sub-Canopy",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "Koroneiki Olive is a Greek variety originally cultivated on the lower hillsides, plains and coastal areas of Crete. Cold hardiness in northern climates is still being tested but Koroneiki has performed well in commercial orchards, coming into production early and setting heavy crops. Olives are very small but of excellent quality for oil. Blooms at the same time as Arbequina",
     "planting": "Olives like a warm, protected location with 1/2 day to full sun and well drained soil. We recommend planting Koroneiki with another variety such as Arbequina. Olives are wind pollinated and should be planted no more than 20 ft. apart. You can assist pollination by moving pollen from flower to flower with a small brush",
     "size": "10-20 ft. in height",
@@ -670,7 +647,8 @@ window.HOMESTEAD_PLANTS = [
       "Medicinal",
       "Natural Dye",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "liberty-apple-tree",
@@ -680,8 +658,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy Fruit Tree",
-    "isCutList": true,
-    "plantedCount": 2,
     "description": "Grow Liberty and enjoy freedom from apple scab and other diseases! Liberty bears large, attractive, bright red fruit with sweet, flavorful, crisp and juicy flesh. One of the best disease-resistant varieties, Liberty is great for eating fresh and baking. Liberty ripens in mid to late September and stores well until January.",
     "planting": "",
     "size": "Semi-dwarf 12-16 ft.",
@@ -700,7 +676,8 @@ window.HOMESTEAD_PLANTS = [
       "Edible",
       "Medicinal",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "mango-pawpaw",
@@ -710,8 +687,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Sub-Canopy Native Fruit",
-    "isCutList": true,
-    "plantedCount": 2,
     "description": "One of the most vigorous Pawpaw trees we grow, Mango Pawpaw quickly becomes a small tree and bears large, tasty fruit with attractive, orange-yellow flesh. Pawpaws (Asimina triloba) are one of the most unique and delicious fruits that can be grown in the backyard orchard. Native to eastern North America, pawpaws are the only member of the Annonaceae, or custard apple family, that is adapted to temperate climates. Its tropical relatives include the cherimoya, atemoya, guanabana, and soursop, and it is easy to see the resemblance between the pawpaw fruit and that of its tropical cousins. Pawpaw fruit combines delectable, fruity, banana-like flavor with creamy, custard-like flesh. Nutritious as well as delicious, the greenish yellow, 3″-6″ long fruit is unusually high in protein and is a good source of vitamins and minerals. Everything about this plant, from its leaf size and shape to the way its fruits look, taste and smell is tropical, yet it is cold hardy to zone 5 and can be grown in temperate climates from coast to coast. A slow growing, small tree, Pawpaw is naturally disease and pest resistant and features long, tropical-looking foliage that turns a striking bright yellow in the fall. The largest native American fruit, Pawpaw was a significant part of the Native American diet, and with our superior large-fruited varieties, is enjoying new popularity.",
     "planting": "Pawpaw likes rich, well-drained soil, high in organic matter. Can be grown in shade or sun. Summer Sunburn affects the young trees, so protect against the intense afternoon sun.",
     "size": "12-15 ft. in height",
@@ -731,7 +706,8 @@ window.HOMESTEAD_PLANTS = [
       "Medicinal",
       "Natural Dye",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "marseilles-black-fig",
@@ -741,8 +717,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Sub-Canopy / Small Tree",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "A very popular but still somewhat rare fig, Marseilles Black is one of the finest tasting of any fig that we can reliably ripen here. The flavor is often compared to Black Madeira though it ripens much earlier than that variety. It's often called a Mt. Etna type fig as it is similar to Chicago Hardy and a host of other figs that supposedly come from around Mt. Etna in Italy, though we'd assume this one to be French in origin. The only downside of this fig is that it does seem to be quite susceptible to Fig Mosaic Virus when it's young but it really doesn't seem to slow it down much at all or effect the fruit quality. Skin is a beautiful purple black when fully ripe with a red interior and notes of dark berry and a very high sugar content. Absolutely delicious!",
     "planting": "Figs do well in a variety of soils, but require at least 8 hours of sunlight during the growing season.",
     "size": "10-20 ft in height, smaller with pruning",
@@ -761,7 +735,8 @@ window.HOMESTEAD_PLANTS = [
       "Edible",
       "Medicinal",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "mary-sea-berry",
@@ -771,8 +746,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Nitrogen-Fixing Shrub",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "Mary Sea Berry is a new cultivar from Canada that is nearly thornless! Mary bears large crops of bright orange berries that remain firm on the branch, extending the harvest time to last for up to four to six weeks. Berries from this cultivar are a favorite for use in nutraceuticals due to its high nutritional content. Mary sea berries have a mild and pleasant flavor, much lower in acidity than other varieties. Very Popular in Eastern Europe, Russia and China, Sea Berry is a new and very valuable plant for North American gardeners. Also known as Sea Buckthorn, Sea Berry is prized for its exceptional ornamental value, tasty and healthy fruit, and the ability to grow in and improve poor soils. In late summer and fall, large clusters of bright orange-yellow berries cover the branches and, on some varieties, can persist well into winter. We harvest out fruit by hand or by cutting off the fruit laden branches and freezing them. The frozen berries can easily be shaken off and, after thawing, make great juice and preserves. Like cranberry juice, Sea Berry juice is usually diluted with up to 70% water.",
     "planting": "Sea Berry likes full to 1/2 day sun and well-drained soil.",
     "size": "12-15 ft. in height.",
@@ -793,7 +766,8 @@ window.HOMESTEAD_PLANTS = [
       "Natural Dye",
       "Nitrogen Fixer",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "nikita-jubilee-olive-tree",
@@ -803,8 +777,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Evergreen Sub-Canopy",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "Early ripening and very cold hardy, Nikita Jubilee Olive is a unique variety prized for its productivity and its flavorful, large fruit. Good for making green or black olives, it also make flavorful olive oil.",
     "planting": "Olives like a warm, protected location with 1/2 day to full sun and well drained soil. Pollination Requirements: Pereptua requires another olive nearby for cross-pollination.",
     "size": "10-20 ft. in height but smaller with pruning",
@@ -824,7 +796,8 @@ window.HOMESTEAD_PLANTS = [
       "Medicinal",
       "Natural Dye",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "rhododendron-albert-schweitzer",
@@ -834,8 +807,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Soil Builders & Craft Allies",
     "categoryName": "Soil Builders & Craft",
     "layer": "Windbreak Shrub Layer",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "Lovely deep pink buds open to rosy-pink flowers with a dark reddish blotch in late May. This is a tough and hardy variety with an upright habit. It is named after Albert Schweitzer, the missionary working in Africa.",
     "planting": "",
     "size": "",
@@ -854,7 +825,8 @@ window.HOMESTEAD_PLANTS = [
       "Medicinal",
       "Natural Dye",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "sudachi-hybrid-yuzu",
@@ -864,8 +836,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Cold-Hardy Subtropicals",
     "categoryName": "Cold-Hardy Subtropicals",
     "layer": "Subtropical Microclimate Layer",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "Prized in Japan for its very flavorful juice, Sudachi is a cross of Mandarin Orange and Yuzu. The unique, spicy juice from golf ball size Sudachi fruit is used to flavor soups, fish dishes and even ice cream and other desserts. Higher in Vitamin C than Lemons, Sudachi fruit is often picked green, when its flavor is most pronounced.",
     "planting": "Site and Soil: This Hybrid Yuzu can be grown outdoors in regions with mild winters. It likes 1/2 day to full sun and well drained soil. If growing it in a pot, in the winter place your plant in a well-lit room. Potting soil should be coarse, acidic, and well-drained. Rootstock Description: Flying Dragon is a hardy and very dwarfing rootstock for Citrus that induces very early flowering and fruit production. Trees grown on Flying Dragon will rarely exceed 8 ft. in height and will often produce fruit the year they are planted.",
     "size": "4-5 ft.",
@@ -885,7 +855,8 @@ window.HOMESTEAD_PLANTS = [
       "Medicinal",
       "Natural Dye",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "sunny-sea-berry",
@@ -895,8 +866,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Nitrogen-Fixing Shrub",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "A Siberian variety, Sunny Sea Berry is prized for its uniquely sweet, high quality fruit. Sunny Sea Berry has bright orange berries that are easy to harvest and are delicious eaten fresh as well as used to make juice and preserves.",
     "planting": "Site and Soil: Sea Berry likes full to 1/2 day sun and well-drained soil. Pollination Requirements: Wind pollinated. Plant with a male plant for cross-pollination.",
     "size": "6-8 ft. in height.",
@@ -917,7 +886,8 @@ window.HOMESTEAD_PLANTS = [
       "Natural Dye",
       "Nitrogen Fixer",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "tatiana-sea-berry",
@@ -927,8 +897,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Nitrogen-Fixing Shrub",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "A Siberian variety, Sunny Sea Berry is prized for its uniquely sweet, high quality fruit. Sunny Sea Berry has bright orange berries that are easy to harvest and are delicious eaten fresh as well as used to make juice and preserves.",
     "planting": "Site and Soil: Sea Berry likes full to 1/2 day sun and well-drained soil. Pollination Requirements: Wind pollinated. Plant with a male plant for cross-pollination.",
     "size": "6-8 ft. in height.",
@@ -949,7 +917,8 @@ window.HOMESTEAD_PLANTS = [
       "Natural Dye",
       "Nitrogen Fixer",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "welcome-gooseberry",
@@ -959,8 +928,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": true,
-    "plantedCount": 1,
     "description": "Welcome Gooseberry is a more shade-tolerant cultivar that produces globular, red, sweet-tart berries that ripen on curving branches. Most of the gooseberries in our selection are a cross between the flavorful, larger varieties from Europe (R. uva-crispa) and hardy, disease-resistant varieties of North American (R. hirtellum). The result is the jewel of the fruit world. Gooseberries come in a rainbow of colors from translucent white to green-gold and yellow to peach-pink and deep-red. They are highly nutritious, especially rich in vitamin A and phosphorus. Traditionally used in deserts and preserves with a delicious affinity for honey and cream. they are also great eaten fresh out of the garden. Not suited for southern climates that do not receive at least 1000 chill hours. Remove all canes older than four years to maintain healthy harvest of large, sweet fruit.",
     "planting": "Moderately fertile, well-drained soil with full to partial sun.",
     "size": "2-3 ft. in height and 4-6 ft. in width",
@@ -979,7 +946,8 @@ window.HOMESTEAD_PLANTS = [
       "Edible",
       "Medicinal",
       "Homestead Planting"
-    ]
+    ],
+    "isPlanted": true
   },
   {
     "id": "adams-elderberry",
@@ -989,8 +957,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Large clusters of fragrant, white flowers appear in spring and are followed by clusters of large, dark, purple to black berries in late summer to fall. Fruit can be harvested for making elderberry wine and jam, or left on the plant to provide seasonal forage for wildlife. Grow it as a shrub, or cut it back each year and use it as a bold perennial. Tons of appeal! Deciduous.",
     "planting": "Full sun, Partial sun",
     "size": "5 to 10 ft. wide by 5 to 10 ft. tall.",
@@ -1008,8 +974,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Dynamic Accumulator"
-    ]
+      "Dynamic Accumulator",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "allegheny-pawpaw",
@@ -1019,8 +987,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Sub-Canopy Native Fruit",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Allegheny Pawpaw is very productive and flavorful. This pawpaw features large fruit (up to 1/2 lb.) and delicious, sweet, creamy-yellow flesh. Allegheny Pawpaw appears to be the earliest ripening of the Peterson Pawpaw varieties. Pawpaws (Asimina triloba) are one of the most unique and delicious fruits that can be grown in the backyard orchard. Native to eastern North America, pawpaws are the only member of the Annonaceae, or custard apple family, that is adapted to temperate climates. Its tropical relatives include the cherimoya, atemoya, guanabana, and soursop, and it is easy to see the resemblance between the pawpaw fruit and that of its tropical cousins. Pawpaw fruit combines delectable, fruity, banana-like flavor with creamy, custard-like flesh. Nutritious as well as delicious, the greenish yellow, 3″-6″ long fruit is unusually high in protein and is a good source of vitamins and minerals.",
     "planting": "Site and Soil: Pawpaw likes rich, well-drained soil, high in organic matter. Can be grown in shade or sun. Summer Sunburn affects the young trees, so protect against the intense afternoon sun. Rootstock Description: Grafted onto Pawpaw seedling rootstock. Pollination Requirements: Plant two varieties or a combination of seedlings and varieties for cross-pollination.",
     "size": "12-15 ft. in height",
@@ -1038,8 +1004,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "aronia-aka-chokeberry",
@@ -1049,8 +1017,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "This easy-to-grow native plant is loaded with black berries that ripen in late summer and can hang on the bush throughout winter. Berries are very high in antioxidants and are great used for wine, jam, baking and more. Highly ornamental shrub features white blooms and glossy green foliage.",
     "planting": "Full Sun",
     "size": "3-6 ft",
@@ -1068,8 +1034,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Dynamic Accumulator"
-    ]
+      "Dynamic Accumulator",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "ashmead-kernel-apple",
@@ -1079,8 +1047,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy Fruit Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "An old nondescript green russeted apple, originating in the 1700s. The appearance is, let's be honest, not especially attractive. Ashmead's Kernel is lumpy, misshapen, and rather small. The underlying bright green skin is entirely covered in russet. Russet can be very appealing- think of the dull golden glow of Egremont Russet for example - but somehow on Ashmead's Kernel it just looks plain dull. Yet appearances can be deceiving. Ashmeads Kernel has remained popular for well over 2 centuries, and with good reason: it has a distinctive flavour which is quite different from most other varieties. Tasters rarely agree on exactly what the elusive flavour reminds them of, but pear drops is probably close. Ashmead's Kernel is a versatile apple, not just for eating fresh, it can also be used for salads and cooking, and it is a highly-valued apple for juicing and hard cider.",
     "planting": "For gardeners Ashmead's Kernel quirky character can make it less than straightforward to grow. Unlike modern apple varieties which tend to be quite precocious, Ashmead's Kernel takes its time (3-4 years) to come into bearing. Once it does, cropping can be still be light to average because Ashmead's Kernel flowers erratically. Pollination is also difficult. Although Ashmead's Kernel is considered a conventional diploid variety (2 sets of chromosomes), its unreliable pollination characteristics have led some researchers to suggest it might be a triploid variety (3 sets of chromosomes). In any case, Ashmead's Kernel greatly benefits from having other good pollinating varieties nearby - Golden Delicious is a good choice.",
     "size": "",
@@ -1097,8 +1063,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/apple.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "blue-damson-plum",
@@ -1108,8 +1076,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy / Sub-Canopy Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "The Blue Damson Plum Tree is a great plum for fresh eating but is more tart than sweet making it great for jams, jelly, or pruning",
     "planting": "Site and Soil: Plums like 1/2 day to full sun and well-drained soil. Rootstock Description: A semi-dwarf rootstock for Plums and other stone fruits, Marianna produces trees 10′-12′ in height or less. Pollination Requirements: Partially self-fertile. Plant with another European variety for best crops",
     "size": "10-12 ft. in height",
@@ -1127,8 +1093,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "brooks-plum",
@@ -1138,8 +1106,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy / Sub-Canopy Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "This very large and sweet, dark purple plum is great for fresh eating, preserves, canning and drying. The Brooks Plum Tree was the main variety in Oregon's dried plum industry and makes superior, very large, dried prunes, great for baking and for nutritious mid winter snacks.",
     "planting": "Site and Soil: Plums like 1/2 day to full sun and well-drained soil. Rootstock Description: A semi-dwarf rootstock for Plums and other stone fruits, Marianna produces trees 10′-12′ in height or less. Pollination Requirements: Self-fertile. Plant with another European variety like Nichols Plum for the best crops.",
     "size": "10-12 ft. in height",
@@ -1157,8 +1123,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "baby-shipova-mt-ash",
@@ -1168,8 +1136,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Sub-Canopy / Small Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "This newly rediscovered Baby Shipova Mt. Ash variety features fruit similar to Shipova, but on a much smaller tree. This attractive variety is very early bearing and produces good crops of delectable, yellow-orange fruit. While Mountain Ash is widely grown for its ornamental value, we are pleased to offer several unique and attractive Eastern European and Russian varieties which were selected for their fruit. Mountain Ash fruit is high in Vitamins A and C, niacin, pectic and trace elements. Fruit of our varieties is eaten fresh and used in preserves, jam, pastry, and wine. Many of our varieties are hybrids of Mountain Ash and other species that vary in form as noted. Mountain Ash like full to half day sun, well drained soil, and can grow 10-15 ft. in height, depending on the variety. Certain varieties like, Dwarf Shipova begin bearing the 2nd or 3rd year after planting and produce 30 lbs. or more of fruit at maturity while other can take up to 7 years. Mountain Ash blooms in late spring and fruit ripens in early fall. Our varieties are pest and disease resistant and hardy to minus 40 degrees F., USDA Zone 3.",
     "planting": "Site and Soil: Mountain Ash and its hybrids like 1/2 day to full sun and well-drained soil. Rootstock Description: Pollination Requirements: Baby Shipova is self-fertile.",
     "size": "6-8 ft. in height.",
@@ -1186,8 +1152,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/mountain-ash.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "black-lace-elderberry",
@@ -1197,8 +1165,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Black Lace Elderberry is a fantastic selection that features deep purple, nearly black leaves and deep pink flowers! Quite the sight when it's in bloom. The foliage is finely cut to add to the texture and when mature they can even resemble a well pruned Japanese Maple. And of course the fruit is deep purple, highly nutritious and produced in abundance on this wonderful plant.",
     "planting": "Site and Soil: Elderberries like 1/2 day to full sun and well-drained soil. Pollination Requirements: Partially self-fertile. Plant two varieties for heavier crops.",
     "size": "6-12 ft. in height.",
@@ -1216,8 +1182,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Dynamic Accumulator"
-    ]
+      "Dynamic Accumulator",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "black-tartarian-cherry",
@@ -1227,8 +1195,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy / Sub-Canopy Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Rated as one of the most flavorful cherries, Black Tartarian Cherry bears great crops of very dark red, juicy, sweet fruit.",
     "planting": "",
     "size": "12-15 ft. in height",
@@ -1246,8 +1212,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "black-topaz-clove-currant",
@@ -1257,8 +1225,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Black Topaz is a new superior selection of the Clove currant with very large fruit. An abundance of fragrant yellow flowers is followed by the tasty jet black fruit. Popular in much of the rest of the world but less common in the U.S., black currants are one of the most nutritious berries \"currently\" overlooked by many Americans. Their unique flavor is excellent for fresh eating, juicing, or baking. Their nutritional profile in relation to other popular berries and fruits is very impressive. Black currants are particularly high in antioxidants and contain more vitamin C than oranges, and nine times the calcium, five times the iron, and four times the magnesium and potassium of blueberries.",
     "planting": "Currants like 1/2 day to full sun and well-drained soil Self-fertile.",
     "size": "3-5 ft. in height",
@@ -1275,8 +1241,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/clove-currant.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "blue-banana-honeyberry",
@@ -1286,8 +1254,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Early Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "A brand new honeyberry introduction, hailing from Berries Unlimited's illustrious collection, it's one of the sweetest varieties of honeyberry we've ever tasted! Named for its elongated shape and delicious texture, Blue Banana will become a staple for home gardeners who are looking for a honeyberry with large, sweet, delicious fruit right off the bush.",
     "planting": "Site and Soil: Moderately fertile, well-drained soil with full to partial sun. Bearing Age: 2-3 years after planting.",
     "size": "4-6 ft. in height and 3-5 ft. in width",
@@ -1304,8 +1270,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/honeyberry.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "blueberry-chandler",
@@ -1315,8 +1283,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Perhaps the world's largest blueberry, the Chandler blueberry is an outstanding selection from New Jersey that bears spectacular, cherry-size, delicious fruit. Chandler blueberries begin ripening in mid-summer and harvest extends over several weeks.",
     "planting": "Blueberry bushes like 1/2 day to full sun and well-drained, acidic soil. Pollination Requirements: Partially self-fertile. Plant two varieties for greater fruit production Hardiness: Hardy to minus 30° F.",
     "size": "",
@@ -1333,8 +1299,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/blueberry.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "blueberry-duke",
@@ -1344,8 +1312,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "The Duke Blueberry is a Northern Highbush Blueberry, growing well in cooler climates and northern regions. Developed by the USDA in Beltsville, Maryland, this variety was released to the public in 1987. It is known both for its early season fruit, which is large with a firm, crisp texture, and its high yield of berries. The fruit has a tangy, sweet, delicate flavor. Blueberries are a top fruit source of antioxidants, and they are high in fiber and vitamin C.",
     "planting": "Duke blueberry bushes are cold-hardy. They prefer acidic soil and full sun, and they should be pruned annually.",
     "size": "",
@@ -1362,8 +1328,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/blueberry.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "blueberry-patriot",
@@ -1373,8 +1341,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "his cold-hardy Blueberry variety is famous for its sweet berries that can be eaten fresh, frozen or canned. Patriot flowers in the spring and produces berries in the early season, followed by striking orange fall color.",
     "planting": "Choose a spot in the garden with good drainage in full sun to partial shade. Blueberries are high in antioxidants and good for your health.",
     "size": "3-5' Tall 36-60\" wide",
@@ -1391,8 +1357,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/blueberry.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "blueberry-top-hat",
@@ -1402,8 +1370,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Tophat Blueberry is a recent dwarf blueberry variety released by the Michigan State Experiment Station. The miniature bush plants grow only 2' tall and about 12'' in diameter. The Tophat Blueberries are medium large, bright blue, firm, with good flavor and ripen in August.",
     "planting": "Full sun",
     "size": "24\" x 24\"",
@@ -1420,8 +1386,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/blueberry.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "boreal-beauty-honeyberry",
@@ -1431,8 +1399,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Early Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Boreal Beauty Honeyberry is another late season variety to extend your honeyberry season. Fruit ripens in June. Boreal Beauty should be planted alongside the likes of Boreal Beast, Strawberry Sensation, Aurora, Tundra or Indigo as these varieties have overlapping pollination and will therefore bless you with rewarding fruit production. Boreal Beauty is especially choice for growers looking to harvest large, high quality, flavorsome berries; because of its strong, upright branching, it is well suited for mechanical harvesting. Lastly Boreal Beauty has the potential to produce up to ten pounds of berries upon full maturity.",
     "planting": "Site and Soil: Moderately fertile, well-drained soil with full to partial sun. Pollination Requirements: Two varieties with similar bloom time are needed for cross-pollination.",
     "size": "4-6 ft. in height and 3-5 ft. in width",
@@ -1449,8 +1415,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/honeyberry.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "braeburn-apple-tree",
@@ -1460,8 +1428,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy Fruit Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "This unique New Zealand variety bears large, crisp, and juicy fruit with a deliciously tangy flesh. Look for this variety when shopping apples in the supermarket. Braeburn ripens in mid-October and can be stored until spring.",
     "planting": "All apples need another variety nearby for pollination. Neighboring trees often offer sufficient pollen for good fruit set. Consider Mason Bees to help pollinate and increase fruit production",
     "size": "Semi-dwarf 12-16 ft.",
@@ -1478,8 +1444,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/apple.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "burbank-japanese-plum",
@@ -1489,8 +1457,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy / Sub-Canopy Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "This classic Plum, Burbank Japanese Plum was selected by Luther Burbank and is one of the best of his many introductions. The tree is hardy and low growing with a flat top. Fruit is large with red skin and a yellow blush and is firm and juicy.",
     "planting": "Site and Soil: Plums like 1/2 day to full sun and well-drained soil. Rootstock Description: A semi-dwarf rootstock for Plums and other stone fruits, Citation produces trees 12′-18′ in height or less. Pollination Requirements: Partially self-fertile. Plant with another Japanese variety like Santa Rosa for better crops.",
     "size": "12-18 ft. in height.",
@@ -1508,8 +1474,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "chang-bai-hardy-kiwi",
@@ -1519,8 +1487,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Vines & Trellis",
     "categoryName": "Vines & Trellis",
     "layer": "Vertical Climber",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Found near the border of North Korea by the Chang Bai Mountain Research Institute of the Chinese Academy of Agriculture, this unique variety of Hardy Kiwi is very sweet and has a unique almost apple shape to the fruit. Chang Bai hardy kiwi is great if you are looking to add some variety to your kiwi orchard or as your primary fruit producer.",
     "planting": "Site and Soil: Hardy Kiwi likes 1/2 day to full sun and well-drained soil. Pollination Requirements: Plant with female variety like Anna for cross-pollination. One male plant can pollinate up to 8 females. Hardiness: -25° F.",
     "size": "10-12 ft. in width on trellis, arbor or other support.",
@@ -1538,8 +1504,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "chilean-gunnera",
@@ -1549,8 +1517,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Perennial Vegetables, Herbs & Exotics",
     "categoryName": "Perennial Herbs & Exotics",
     "layer": "Herbaceous Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "A truly monstrous Jurassic looking plant, Chilean Gunnera, known as nalca in Chile, is also a wonderful edible plant! One hot afternoon hitchhiking from a remote area in Los Lagos to Osorno our driver pulled over in front of a giant Chilean Gunnera, cut a young stalk off, stripped the slightly spiky skin off with the blade of his knife, sprinkled some salt on the fleshy green stem and offered it to us. Delicious! Sometimes called dinosaur food due to its massive textured leaves that can reach up to 6′ across, it is the preferred food source of the Underground Spiritual Alligator.",
     "planting": "Gunnera prefers half to full day sun with moist soils. Does very well planted on the edge of a pond. Self-fertile, may spread aggressively in certain climates but seems to be well-behaved enough here in North America",
     "size": "5-8 ft. tall",
@@ -1570,8 +1536,10 @@ window.HOMESTEAD_PLANTS = [
       "Medicinal",
       "Natural Dye",
       "Nitrogen Fixer",
-      "Dynamic Accumulator"
-    ]
+      "Dynamic Accumulator",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "columbia-star-thornless-blackberry",
@@ -1581,8 +1549,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "The Columbia Star Thornless Blackberry is another exciting new addition to the blackberry world courtesy of the USDA and Oregon State University! Columbia Star has the beloved Marionberry in its lineage and the flavor of these large berries has been rated as good or even better than the Marionberry! Vines are vigorous and trailing and fruits ripen in mid July here in the Willamette Valley. Another added bonus for the Columbia Star is that it is reportedly even more cold hardy than the Marionberry. Fruit is easy to pick by hand or by machine harvesting making it a winner for home gardeners as well as commercial growers.",
     "planting": "Site and Soil: Blackberries like 1/2 day to full sun and well-drained soil. Pollination Requirements: Blackberries are self-fertile.",
     "size": "6 ft. in height on trellis",
@@ -1599,8 +1565,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/blackberry.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "comfrey-aka-knitbone-bruisewort",
@@ -1610,8 +1578,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Soil Builders & Craft Allies",
     "categoryName": "Soil Builders & Craft",
     "layer": "Dynamic Mineral Accumulator",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "A controversial plant used both medicinally and as a food source (particularly for livestock). Medicinal parts are root and leaves. Constituents: Mucilage, allantoin, B12, Vit C & E, inulin, steroidal saponins. Key actions: Vulnerary, demulcent, anti-hemorrhagic, anti-rheumatic, anti-inflammatory, astringent, expectorant, anti-ulcer. Commonly used in tincture and teas (cold infusion is best). According to Mt Sinai: \"Comfrey has toxic substances that can cause severe liver damage and even death. You should never take comfrey by mouth. The toxic substances in comfrey can be absorbed by the skin. Even creams and ointments should be used for only a short time, and only under a doctor's supervision.\" The NIH says, \"The available evidence suggests that the active metabolites of PA in comfrey interact with DNA in liver endothelial cells and hepatocytes, resulting in DNA damage, mutation induction, and cancer development.\" There is quite a debate by herbalists and naturists vs science. Use with caution! A non-risky use is as a fertilizer either by making comfrey tea (soaking comfrey in water) or as \"chop and drop\".",
     "planting": "",
     "size": "",
@@ -1629,8 +1595,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Medicinal",
       "Natural Dye",
-      "Dynamic Accumulator"
-    ]
+      "Dynamic Accumulator",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "compact-stella-cherry",
@@ -1640,8 +1608,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy / Sub-Canopy Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Compact Stella Cherry is a unique, self-fertile Cherry that should grow to only about 10-12 ft. in height. Compact Stella begins bearing within a year or two after planting and bears large, tasty, almost black fruit.",
     "planting": "",
     "size": "10-12 ft. in height",
@@ -1659,8 +1625,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "conadria-fig-tree",
@@ -1670,8 +1638,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Sub-Canopy / Small Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Conadria is an excellent fig that was introduced by Ira Condit and bred by him at the California Agricultural Experiment Station in Riverside, California. It's been a popular fig since its release in 1955 and has proven an excellent choice for cooler climates, both in its ability to ripen sweet fruits and handle cold winters. Flesh is a strawberry red with a green skin.One of the easiest fruits to grow, and a true gourmet delight, you should not live your life without feasting on this sweet, delectable fruit. To fully enjoy fresh Figs you must grow your own. When fully ripe and at their tender, shipping them long distances is virtually impossible. Another plus for Figs – deer don't like them (most of the time)!",
     "planting": "Figs do well in a variety of soils, but require at least 8 hours of sunlight during the growing season. Pollination Requirements: Self-fruitful",
     "size": "8-12 ft in height, smaller with pruning",
@@ -1688,8 +1654,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/fig.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "cosmic-crisp-apple",
@@ -1699,8 +1667,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy Fruit Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "The Cosmic Crisp brand apple is the remarkable result of 20 years of study and research by Washington State University's world-class tree fruit breeding program. Classically bred and grown in Washington State, the Cosmic Crisp is a cross of the Enterprise and Honeycrisp varieties. The large, juicy and red apple has a perfectly balanced flavor and firm texture, making it ideal for snacking, cooking, baking, and entertaining.",
     "planting": "",
     "size": "12-18ft in height",
@@ -1717,8 +1683,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/apple.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "evergreen-huckleberry",
@@ -1728,8 +1696,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Growing throughout our Northwest coastal forests, this very attractive, upright growing shrub, Evergreen Huckleberry is prized for its deep green, evergreen foliage and flavorful, juicy, dark blue fruit, which is great for fresh eating and makes delicious preserves and Huckleberry pies. Likes shade or sun and moist, well-drained, acidic soil. It will grow to 8 ft. in height in the shade and 3-4 ft. in height in the sun. Space 2-3 ft. apart to make a beautiful, edible, evergreen hedge. Works well planted amongst Salal for a gorgeous Northwest Native edible landscape.",
     "planting": "Site and Soil: Can grow in sun or shade and likes moist, well-drained soil. Pollination Requirements: Evergreen Huck is self-fertile.",
     "size": "3-4 ft. in height in full sun, 6-8 ft. in shade",
@@ -1746,8 +1712,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/evergreen-huckleberry.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "flag-poppy",
@@ -1757,8 +1725,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Perennial Vegetables & Roots",
     "categoryName": "Perennial Herbs & Exotics",
     "layer": "Self-Seeding Herb Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "blend of reds, purples, pinks and whites with lots of multi-hued blooms. Easy to grow breadseed poppies produce breathtaking single blooms followed by attractive pods filled with edible seed. Allow the pods to dry on the plants, and use them in flower arrangements and dried wreaths. The tiny seeds are delicious in breads and muffins. Plants reach 2–3 feet tall overall",
     "planting": "",
     "size": "",
@@ -1775,8 +1741,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/poppy.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "flavor-queen-pluot-tree",
@@ -1786,8 +1754,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy / Sub-Canopy Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "The matriarch of flavor! Flavor Queen Pluot produces greenish-yellow skinned fruits with an amber flesh that have a sugary sweet candy-like sweetness to them. Fruits ripen in late July.",
     "planting": "Site and Soil: 1/2 day to full sun and well-drained soil. Rootstock Description: A semi-dwarf rootstock for Plums and other stone fruits, Citation produces trees 12′-18′ in height or less. Pollination Requirements: Another Japanese plum or interspecific hybrid that contains Japanese plum is necessary for pollination. Pollinized by Dapple Dandy Pluot or Flavor Supreme Pluot.",
     "size": "12-18 ft. in height.",
@@ -1805,8 +1771,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "flying-dragon-citrus",
@@ -1816,8 +1784,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Cold-Hardy Subtropicals",
     "categoryName": "Cold-Hardy Subtropicals",
     "layer": "Subtropical Microclimate Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "A unique and exotic Citrus relative, Flying Dragon is a deciduous, very dwarf tree with attractive, contorted branches and equally attractive, hook shaped thorns. Flying Dragon bears yellow, 2″ diameter fruits that yield juice that can be used as a lemon-like seasoning. In China we have seen Flying Dragon used as a compact, impenetrable hedge. Flying Dragon is reportedly hardy to at least 0 F. and can be grown outside in many areas of the Pacific Northwest and other regions of the U.S. with mild winters.",
     "planting": "Site and Soil: In spring, summer and fall, keep your potted Citrus in a location with 1/2 day to full sun. In the winter, place your plant in a well-lit room. Potting soil should be coarse, acidic, and well-drained. Rootstock Description: Self-rooted. Pollination Requirements: Self-fertile. You can help it set fruit by taking a small brush and moving pollen from flower to flower.",
     "size": "2-3 ft.",
@@ -1834,8 +1800,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/flying-dragon-citrus.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "giant-timber-bamboo",
@@ -1845,8 +1813,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Soil Builders & Craft Allies",
     "categoryName": "Soil Builders & Craft",
     "layer": "Timber & Biomass Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Phyllostachys vivax is one of the hardiest timber bamboo. In most circumstances P. vivax will mature to 45 feet in height, with 3-4 inch diameter canes, but if given ideal conditions in SE USA, or China and Japan, it can grow to 70 feet and 5 inches in diameter. This may be the largest hardy bamboo growing in the Pacific Northwest along with P. edulis Moso. It has grown over 4 inches in diameter in Oregon and has been present in this area for over 100 years. It is usually the quickest to attain large size in the PNW. Even though they have a large diameter, the culms have a thinner wall than average thus are not especially strong. They are very attractive and can be used for many craft or decorative projects, but not recommended for building grade material. Shoots from this bamboo are among the best eating, and they are prolific in the late spring. Often the new shoots emerge in mid to late May, depending on the weather pattern which influences the soil temperature. Even though this bamboo is very large, it can still be contained using the basic root pruning techniques we recommend. Unlike most bamboos, P. vivax can achieve large size and diameter in a relatively small area, as seen on the 2nd and 3rd images. This bamboo is over 30 feet tall and is growing on a raised berm that is less than 30 feet in circumference. A miniature grove has formed a very effective vertical screen.",
     "planting": "",
     "size": "",
@@ -1864,8 +1830,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "giants-heart-honeyberry",
@@ -1875,8 +1843,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Early Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Giant's Heart Honeyberry is a patented cultivar from Berries Unlimited belonging to the Blue Treasure group of very late ripening honeyberries. Pollination and production would benefit greatly from being planted alongside another very late variety such as Boreal Beast, Strawberry Sensation, Aurora, and possibly even Tundra which overlap within a week of one another. Fruit matures into late June and early July extended your honeyberry season. Its name matches the appearance of the ovular heart shaped fruit and as honeyberries go, they are rather giant. The fruit is sweet, firm, rewarding to pick, and the giant's heart is said to provide up to an eight pound yield after reaching full maturity. Really suitable for commercial growth, it has a vigorous and upright growth habit that forms into a dense dome shaped crown.",
     "planting": "Site and Soil: Honeyberry likes 1/2 day to full sun in the Pacific Northwest and other cool regions, partial shade in hot regions, and well-drained soil. Pollination Requirements: Two varieties with similar bloom time are needed for cross-pollination.",
     "size": "5 ft by 5 ft",
@@ -1893,8 +1859,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/honeyberry.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "golden-silverberry",
@@ -1904,8 +1872,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Soil Builders & Craft Allies",
     "categoryName": "Soil Builders & Craft",
     "layer": "Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "This very ornamental variety, Golden Silverberry features beautiful yellow and green variegated foliage, silvery beneath, and covered with golden brown spots. Silverberries begin flowering in October and produce attractive and tasty red fruit covered with silver specks in late Spring.",
     "planting": "Site and Soil: Silverberry likes 1/2 day to full sun and well-drained soil. Rootstock Description: Pollination Requirements: Self-fertile",
     "size": "6-8 ft. in height.",
@@ -1923,8 +1889,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Nitrogen Fixer"
-    ]
+      "Nitrogen Fixer",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "golden-sweet-sea-berry",
@@ -1934,8 +1902,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Nitrogen-Fixing Shrub",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Golden Sweet Sea Berry is an attractive, medium size shrub that is prized for its large and very sweet fruit. It is one of the most reliable and quickly becoming a favorite at One Green World. Very Popular in Eastern Europe, Russia and China, Sea Berry is a new and very valuable plant for North American gardeners. Also known as Sea Buckthorn, Sea Berry is prized for its exceptional ornamental value, tasty and healthy fruit, and the ability to grow in and improve poor soils. In late summer and fall, large clusters of bright orange-yellow berries cover the branches and, on some varieties, can persist well into winter. Golden Sweet Sea Berry fruit is very high in Vitamin C (about 7 times more than lemons), Vitamin A, and E, and has a pleasant acidic flavor which, when sweetened, makes delicious juice. During the Cold War, East Germany used Sea Berry as a healthful substitute for orange juice. The fruit is also unique for its oil content, which is used as a treatment for burns and skin diseases as well as for ulcers and other illnesses. You will often see Sea Buckthorn as an ingredient in many nutritional supplements and cosmetics. We harvest out fruit by hand or by cutting off the fruit laden branches and freezing them. The frozen berries can easily be shaken off and, after thawing, make great juice and preserves. Like cranberry juice, Sea Berry juice is usually diluted with up to 70% water.",
     "planting": "Site and Soil: Sea Berry likes full to 1/2 day sun and well-drained soil. Rootstock Description: Grown from cuttings. Pollination Requirements: Wind pollinated. Plant with a Male Sea Berry plant for cross-pollination.",
     "size": "6-8 ft. in height.",
@@ -1954,8 +1920,10 @@ window.HOMESTEAD_PLANTS = [
       "Edible",
       "Medicinal",
       "Natural Dye",
-      "Nitrogen Fixer"
-    ]
+      "Nitrogen Fixer",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "havard-agave",
@@ -1965,8 +1933,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Cold-Hardy Subtropicals",
     "categoryName": "Cold-Hardy Subtropicals",
     "layer": "Microclimate Succulent",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "One of the most cold hardy agaves, Havard Agave can survive temperatures well below zero, reportedly all the way to -20, though it would still very much prefers to be dry when it gets cold. Rosettes are medium to large sized, quite upright and strikingly blue. It really has quite the presence in the garden! Produces pups, sometimes a good distance away and these can be allowed to grow where they appear or dug up and moved wherever you want a new agave. Flower stalks whenever it reaches the end of its life are incredible!",
     "planting": "Full sun and very well-drained soil. Very drought tolerant once established and will need little to no supplemental watering during the summer season, though a bit of summer water speeds growth.",
     "size": "36 inches in height by 36 inches wide",
@@ -1984,8 +1950,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "hinnomaki-red-gooseberry",
@@ -1995,8 +1963,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Plant this attractive new variety from Finland, Hinnomaki Red Gooseberry, and enjoy its abundant, dark red, sweet, large, and delicious berries. Hinnomaki Red is a delicious addition to your edible landscape.",
     "planting": "Gooseberries like full to 1/2 day sun and well-drained soil.",
     "size": "2-3 ft. in height",
@@ -2013,8 +1979,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/gooseberry.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "honeyberry-maxines-opus",
@@ -2024,8 +1992,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Early Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Watch out blueberries! The honeyberry (also known as haskap berry) is a big and flavorful up-and-comer, especially in the Northern parts of the country, because of its ability to thrive in cooler climes. With its extra large and sweet fruit, Maxine's Opus is the pride of top berry breeder Dr. Maxine Thompson. Plant's open habit and big berries make it easy to pick.",
     "planting": "Full Sun, Partial Shade Pollinator:Need two varieties for cross pollination and increased fruit production. Kawai is a great pollinator for Maxine's Opus",
     "size": "4 1/2 - 5 feet",
@@ -2042,8 +2008,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/honeyberry.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "hopin-alba-oca",
@@ -2053,8 +2021,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Perennial Vegetables & Roots",
     "categoryName": "Perennial Vegetables & Roots",
     "layer": "Perennial Tuber Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Hopin Alba Oca tubers are usually red in color and fade to pink and then white toward the ends of the tubers. The eyes may have the same color as the skin or may be white. There is a lot of color variation with this one. Smaller tubers may be almost entirely white. Most have stems that are green, becoming red at the base. White flesh with a red center. This variety seems to have thicker stolons and bulkier tubers than many varieties, a trait that it shares with Amarillo and White. An early sprouting and vigorous variety. Hopin is the most widely available variety among suppliers in the Pacific Northwest. If you are looking to get started with oca in a similar climate, it is a good choice. It forms fewer tubers than Sunset, but they tend to be larger. Hopin seems to produce more fasciated stems than other varieties – as many as 1 in every 15 plants. A somewhat acidic variety. After a few days of exposure to sunlight, it sweetens considerably. Longer than average dormancy.",
     "planting": "",
     "size": "",
@@ -2071,8 +2037,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/oca-tuber.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "indian-free-peach",
@@ -2082,8 +2050,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy / Sub-Canopy Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Indian Free Peach is one of the tastiest peaches around. The large freestone fruits have a firm cream colored flesh with red striations that bleed in from the gorgeous speckled red flesh. Truly one of the most beautiful looking peaches we've seen and with a taste to match. Did not originate in India, not sure where the name came from. It does need another peach or nectarine to pollinize it but it's highly resistant to peach leaf curl, so it's got that going for it. Which is nice.",
     "planting": "dwarf on Citation rootstock Site and Soil: Peaches and Nectarines like full to 1/2 day sun and well-drained soil. Rootstock: Citation Pollination Requirements: Self-fruitful",
     "size": "10-12 ft. in height",
@@ -2101,8 +2067,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "italian-plum",
@@ -2112,8 +2080,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy / Sub-Canopy Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "A sweet, dark purple, freestone Plum with firm, amber flesh, the Italian Plum Tree is great for fresh eating and excellent for drying. Widely planted in the Northwest, this European variety is productive, reliable and easy to grow. The Italian Plum Tree ripens in late August into September.",
     "planting": "Site and Soil: Plums like 1/2 day to full sun and well-drained soil. Rootstock Description: A semi-dwarf rootstock for Plums and other stone fruits, Marianna produces trees 10′-12′ in height or less. Pollination Requirements: Self-fertile. Plant with another European variety like Nichols Plum for the best crops.",
     "size": "10-12 ft. in height",
@@ -2131,8 +2097,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "illinois-everbearing-mulberry",
@@ -2142,8 +2110,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy / Sub-Canopy Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "One of the best Mulberry varieties for the Northwest and other regions of the US, Illinois Everbearing Mulberry is prized for its tasty, 1-1/2″ long fruit and its long ripening season, late June until early fall. Exotic, sweet, and delicious, Mulberries are very popular in Central Asia and the Middle East. Now you can grow and enjoy this juicy and nutritious fruit! Mulberry fruit resembles a Blackberry and is delicious eaten fresh. It can also be dried for tasty winter snacks. Mulberries are pest and disease resistant and form an attractive, small tree with dark green, tropical foliage. Along the ancient Silk Road in Central Asia, Mulberries are widely grown for their foliage, which is used to feed silkworms.",
     "planting": "Site and Soil: Mulberries like 1/2 day to full sun and well-drained soil. Pollination Requirements: Self-fertile.",
     "size": "15-20ft. in height (occasionally up to 25+ ft)",
@@ -2160,8 +2126,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/mulberry.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "ksu-atwood-pawpaw",
@@ -2171,8 +2139,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Sub-Canopy Native Fruit",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Allegheny Pawpaw is very productive and flavorful. This pawpaw features large fruit (up to 1/2 lb.) and delicious, sweet, creamy-yellow flesh. Allegheny Pawpaw appears to be the earliest ripening of the Peterson Pawpaw varieties. Pawpaws (Asimina triloba) are one of the most unique and delicious fruits that can be grown in the backyard orchard. Native to eastern North America, pawpaws are the only member of the Annonaceae, or custard apple family, that is adapted to temperate climates. Its tropical relatives include the cherimoya, atemoya, guanabana, and soursop, and it is easy to see the resemblance between the pawpaw fruit and that of its tropical cousins. Pawpaw fruit combines delectable, fruity, banana-like flavor with creamy, custard-like flesh. Nutritious as well as delicious, the greenish yellow, 3″-6″ long fruit is unusually high in protein and is a good source of vitamins and minerals.",
     "planting": "Site and Soil: Pawpaw likes rich, well-drained soil, high in organic matter. Can be grown in shade or sun. Summer Sunburn affects the young trees, so protect against the intense afternoon sun. Rootstock Description: Grafted onto Pawpaw seedling rootstock. Pollination Requirements: Plant two varieties or a combination of seedlings and varieties for cross-pollination.",
     "size": "12-15 ft. in height",
@@ -2190,8 +2156,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "kens-red-hardy-kiwi",
@@ -2201,8 +2169,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Vines & Trellis",
     "categoryName": "Vines & Trellis",
     "layer": "Vertical Climber",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Named for its creator, the late New Zealand horticulturist Ken Nobbs, Ken's Red Hardy Kiwi bears good crops of very large, sweet, and tasty fruit with reddish purple skin and flesh.",
     "planting": "Site and Soil: Hardy Kiwi likes 1/2 day to full sun and well-drained soil. Pollination Requirements: Plant with female variety like Anna for cross-pollination. One male plant can pollinate up to 8 females. Hardiness: -25° F.",
     "size": "10-12 ft. in width on trellis, arbor or other support.",
@@ -2220,8 +2186,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "korean-tea-tree",
@@ -2231,8 +2199,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Perennial Vegetables & Roots",
     "categoryName": "Perennial Herbs & Exotics",
     "layer": "Perennial Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Hardy and productive, our Korean Tea plants come from the mountains of the Boseong region. Boseong also features an annual Green Tea Festival in September. White tea, yellow tea, green tea, oolong, dark tea (which includes pu-erh tea) and black tea are all harvested from one of two major varieties grown today, C. sinensis var. sinensis and C. s. var. assamica,[3] but are processed differently to attain varying levels of oxidation with black tea being the most oxidized and green being the least.[4] Kukicha (twig tea) is also harvested from C. sinensis, but uses twigs and stems rather than leaves.",
     "planting": "Site and Soil: Tea can grow in full sun in cool areas but prefers partial shade in hot regions. Tea likes rich, well-drained, acidic soil. Hardiness: Tea is hardy to about 10° F.",
     "size": "8-10 ft. in height and width.",
@@ -2250,8 +2216,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Nitrogen Fixer"
-    ]
+      "Nitrogen Fixer",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "lambert-cherry",
@@ -2261,8 +2229,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy / Sub-Canopy Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Lambert Cherry has been grown in the Pacific Northwest for over 150 years and is still in commercial production. Lambert Cherry features large, dark-red, richly flavorful, heart-shaped fruit, which ripens in early to mid-July.",
     "planting": "",
     "size": "12-15 ft. in height.",
@@ -2280,8 +2246,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "lemongrass",
@@ -2291,8 +2259,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Perennial Vegetables & Roots",
     "categoryName": "Perennial Herbs & Exotics",
     "layer": "Aromatic Herbaceous Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "The leaves and the oil are used to make medicine. Lemongrass is used for treating digestive tract spasms, stomachache, high blood pressure, convulsions, pain, vomiting, cough, achy joints (rheumatism), fever, the common cold, and exhaustion. It is also used to kill germs and as a mild astringent. In food and beverages, lemongrass is used as a flavoring. For example, lemongrass leaves are commonly used as \"lemon\" flavoring in herbal teas.",
     "planting": "",
     "size": "",
@@ -2309,8 +2275,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/lemongrass.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "muir-peach",
@@ -2320,8 +2288,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy / Sub-Canopy Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Perhaps a few of the paraphrased quotes about the heirloom Muir Peach Tree (Prunus persica 'Muir') from a convention of fruit growers in 1884 described it as: 'The very finest canning peaches we have ever seen.' 'So sweet you almost don't need to add sugar.' 'Very small pit that almost falls out as you cut it.' 'Cooks very satisfactorily.' 'Very dry fleshed, easier to dry than other varieties.' 'Unattractive yellow-green skin.'",
     "planting": "dwarf on Citation rootstock Full Sun Moderate Moisture & Well-Drained Enriched Soil Prune When Dormant & Thin For Largest Fruit 600-700 Chill Hours Disease Resistant to Peach Leaf Curl",
     "size": "",
@@ -2339,8 +2305,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "male-hardy-kiwi",
@@ -2350,8 +2318,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Vines & Trellis",
     "categoryName": "Vines & Trellis",
     "layer": "Vertical Climber",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Male Hardy Kiwi is covered with fragrant, bright white flowers in May. This attractive, vigorous and easy-to-grow Male Hardy Kiwi can be used to pollinate all our female Hardy Kiwi varieties. One male plant can pollinate up to 8 female plants. Male plants do not bear fruit.",
     "planting": "Site and Soil: Hardy Kiwi likes 1/2 day to full sun and well-drained soil. Pollination Requirements: Plant with female variety like Anna for cross-pollination. One male plant can pollinate up to 8 females. Hardiness: -25° F.",
     "size": "10-12 ft. in width on trellis, arbor or other support.",
@@ -2369,8 +2335,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "male-sea-berry",
@@ -2380,8 +2348,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Nitrogen-Fixing Shrub",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "A good pollinator for the many varieties we offer, our Male Sea Berry variety is also a fine ornamental with large, dark golden-brown, flower buds. One Male plant can pollinate up to 8 female plants. Could be either Pollmix or Lord Male Sea Berry plants.",
     "planting": "Site and Soil: Sea Berry likes full to 1/2 day sun and well-drained soil. Rootstock Description: Self rooted. Pollination Requirements: Wind pollinated. A male sea berry can pollinate up to 8 females. The male plant does not bear fruit.",
     "size": "6-8 ft. in height.",
@@ -2400,8 +2366,10 @@ window.HOMESTEAD_PLANTS = [
       "Edible",
       "Medicinal",
       "Natural Dye",
-      "Nitrogen Fixer"
-    ]
+      "Nitrogen Fixer",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "maurino-olive-tree",
@@ -2411,8 +2379,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Evergreen Sub-Canopy",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "The Maurino Olive Tree is an excellent Tuscan oil cultivar prized for its delicate and aromatic oil. Maurino Olive Trees are somewhat compact with medium vigor and a graceful pendulous shape to them. Fruits turn purplish-black when fully ripe and mature early in the season, making it a good cultivar for northern growers trying to push the limits of where olives can be grown. Maurino is a great pollinator due its prolific flowering but is a self-sterile variety so another variety is needed for fruit production. Frantoio and Leccino are known to be good pollinators for Maurino.",
     "planting": "Olives like full sun and lots of warmth",
     "size": "12-15 ft. in height",
@@ -2430,8 +2396,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "methley-plum-tree",
@@ -2441,8 +2409,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy / Sub-Canopy Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Methley Plum is a cultivar of a Japanese plum that is small and upright with just enough of a spreading form to make this an absolutely beautiful tree. It produces heavy, annual crops of juicy, sweet, red purple fruit. The fruit is juicy, sweet and mild with a distinctive flavor which is good for fresh eating or jelly.",
     "planting": "Site and Soil: Plums like 1/2 day to full sun and well-drained soil. Rootstock Description: A semi-dwarf rootstock for Plums and other stone fruits, Marianna produces trees 10′-12′ in height or less. Pollination Requirements: Self-fertile but will produce more with another variety. It is a great pollinator for other early Japanese Variety.",
     "size": "10-12 ft. in height.",
@@ -2460,8 +2426,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "missouri-giant-clove-currant",
@@ -2471,8 +2439,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "A deliciously fragrant currant species native to the midwest, the Missouri Giant Clove Currant covers itself in bright yellow fragrant flowers that are followed by perfumed black berries. A treat for humans and wildlife! Popular in much of the rest of the world but less common in the U.S., black currants are one of the most nutritious berries \"currently\" overlooked by many Americans. Their unique flavor is excellent for fresh eating, juicing, or baking. Their nutritional profile in relation to other popular berries and fruits is very impressive. Black currants are particularly high in antioxidants and contain more vitamin C than oranges, and nine times the calcium, five times the iron, and four times the magnesium and potassium of blueberries. Their unique taste and health benefits should not be overlooked!",
     "planting": "Site and Soil: Currants like 1/2 day to full sun and well-drained soil. Rootstock Description: self rooted Pollination Requirements: Self-fertile.",
     "size": "3-5 ft. in height",
@@ -2489,8 +2455,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/clove-currant.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "nero-aronia",
@@ -2500,8 +2468,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "An easy to grow, productive small shrub, Nero grows 3- 4 ft. in height and bears abundant crops of large, jet-black berries, good for juice and wine. A beautiful ornamental, you'll enjoy Nero's abundant clusters of very dark blue fruit and striking, bright red, fall foliage.",
     "planting": "Site and Soil: Aronia like full to 1/2 day sun and most soils. Pollination Requirements: Self-fertile.",
     "size": "3 – 4 ft. in height.",
@@ -2519,8 +2485,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Dynamic Accumulator"
-    ]
+      "Dynamic Accumulator",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "nikita-pineapple-guava",
@@ -2530,8 +2498,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Cold-Hardy Subtropicals",
     "layer": "Canopy Fruit Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "We found Nikita Pineapple Guava at the Nikita Botanic Garden in Yalta, Ukraine. Among the earliest to ripen, it is prized for its tasty fruit and its compact growth habit. You deserve to have this hardy, exotic and beautiful evergreen shrub on your patio or in your yard. Pineapple Guava features dark, glossy green foliage with a whitish-silver cast underneath and striking flowers, crimson red in the center with sweet and tasty pink petals. Some compare the flavor to cotton candy. Following the flowers are dark green, apricot size or larger fruit with the flavors of mint and pineapple. Naturally compact, Pineapple Guava is also one the most drought resistant plants we know of.",
     "planting": "Pineapple Guava likes half day to full sun and well-drained soil. Some varieties are self-fertile while other need another variety or seedling for cross-pollination. Pineapple Guava is hardy to 5 degrees F or below (USDA Zone 7) and grows to 6 ft. in height at maturity. It blooms in July and the fruit ripens in November. Pineapple Guava is not bothered by pest or diseases.",
     "size": "5-6 ft. in height",
@@ -2548,8 +2514,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/pineapple-guava.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "nikitas-pride-almond-tree",
@@ -2559,8 +2527,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy / Sub-Canopy Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "This hardy, very late blooming variety, Nikita's Pride Almond Tree , bears good crops of large, high-quality, soft-shell nuts. Plant with Bounty and Oracle for cross pollination and large crops of these delicious and nutritious nuts.",
     "planting": "ite and Soil: Almonds like full to 1/2 day sun and well-drained soil. Rootstock Description: Our Almonds are grafted on Lovell Peach rootstock. Lovell Peach is well adapted to different soil types. Pollination Requirements: Almonds are partially self-fertile. Plant with another variety for cross pollination and larger crops.",
     "size": "10-12 ft. in height",
@@ -2578,8 +2544,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "northstar-pie-cherry",
@@ -2589,8 +2557,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy / Sub-Canopy Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Try this unique and tasty pie cherry from Minnesota! This self-fertile, naturally dwarf tree bears heavy crops of large, tasty, bright red fruit with red flesh and red juice.",
     "planting": "Pie Cherries like full to 1/2 day sun and well-drained soil.",
     "size": "6-8 ft. in height",
@@ -2608,8 +2574,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "orange-glow-siberian-seaberry",
@@ -2619,8 +2587,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Nitrogen-Fixing Shrub",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "One of the earliest ripening Sea Berry varieties, Orange Glow bears striking clusters of bright orange, large, tasty berries. This very reliable and productive variety produces abundant crops, great for fresh eating and making delicious juice and preserves. Very Popular in Eastern Europe, Russia and China, Sea Berry is a new and very valuable plant for North American gardeners. Also known as Sea Buckthorn, Sea Berry is prized for its exceptional ornamental value, tasty and healthy fruit, and the ability to grow in and improve poor soils. In late summer and fall, large clusters of bright orange-yellow berries cover the branches and, on some varieties, can persist well into winter. Orange Glow Sea Berry fruit is very high in Vitamin C (about 7 times more than lemons), Vitamin A, and E, and has a pleasant acidic flavor which, when sweetened, makes delicious juice. During the Cold War, East Germany used Sea Berry as a healthful substitute for orange juice. The fruit is also unique for its oil content, which is used as a treatment for burns and skin diseases as well as for ulcers and other illnesses. You will often see Sea Buckthorn as an ingredient in many nutritional supplements and cosmetics. We harvest out fruit by hand or by cutting off the fruit laden branches and freezing them. The frozen berries can easily be shaken off and, after thawing, make great juice and preserves. Like cranberry juice, Sea Berry juice is usually diluted with up to 70% water.",
     "planting": "Site and Soil: Sea Berry likes full to 1/2 day sun and well-drained soil. Rootstock Description: Grown from cuttings. Pollination Requirements: Wind pollinated. Plant with a male plant for cross-pollination.",
     "size": "",
@@ -2639,8 +2605,10 @@ window.HOMESTEAD_PLANTS = [
       "Edible",
       "Medicinal",
       "Natural Dye",
-      "Nitrogen Fixer"
-    ]
+      "Nitrogen Fixer",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "orange-glow-sea-berry",
@@ -2650,8 +2618,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Nitrogen-Fixing Shrub",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "One of the earliest ripening Sea Berry varieties, Orange Glow bears striking clusters of bright orange, large, tasty berries. This very reliable and productive variety produces abundant crops, great for fresh eating and making delicious juice and preserves. Very Popular in Eastern Europe, Russia and China, Sea Berry is a new and very valuable plant for North American gardeners. Also known as Sea Buckthorn, Sea Berry is prized for its exceptional ornamental value, tasty and healthy fruit, and the ability to grow in and improve poor soils. In late summer and fall, large clusters of bright orange-yellow berries cover the branches and, on some varieties, can persist well into winter. Orange Glow Sea Berry fruit is very high in Vitamin C (about 7 times more than lemons), Vitamin A, and E, and has a pleasant acidic flavor which, when sweetened, makes delicious juice",
     "planting": "Site and Soil: Sea Berry likes full to 1/2 day sun and well-drained soil. Rootstock Description: Grown from cuttings. Pollination Requirements: Wind pollinated. Plant with a male plant for cross-pollination.",
     "size": "6-8 ft. in height.",
@@ -2670,8 +2636,10 @@ window.HOMESTEAD_PLANTS = [
       "Edible",
       "Medicinal",
       "Natural Dye",
-      "Nitrogen Fixer"
-    ]
+      "Nitrogen Fixer",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "oregon-grape",
@@ -2681,8 +2649,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Native Berries & Understory",
     "layer": "Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Oregon's State Flower, Oregon Grape is an attractive, drought-resistant, evergreen shrub that grows to about 6 ft. in height and spread. Oregon Grape displays abundant, small yellow flowers in early spring accented by glossy green foliage, which often turns purple-red or bronze in the winter. Following the flowers are heavy crops of dark blue berries, which make excellent jelly.",
     "planting": "Site and Soil: This Plant likes 1/2 day to full sun (partial shade in hot climates) and well drained soil. It is quite drought tolerant. Pollination Requirements: Oregon Grape is self-fertile",
     "size": "6 ft. in height",
@@ -2699,8 +2665,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/oregon-grape.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "pakistan-mulberry",
@@ -2710,8 +2678,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy / Sub-Canopy Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Pakistan Mulberry has often been touted as the queen of mulberries due to its incredibly large 4″ long deep purple fruits. Fruits are so elongated they are almost bizarre looking and sure to wow your friends! Hardy to Zone 7. Exotic, sweet, and delicious, Mulberries are very popular in Central Asia and the Middle East. Now we can grow and enjoy this juicy and nutritious fruit! Mulberry fruit resembles a Blackberry and is delicious eaten fresh and can be dried for tasty winter snacks. Mulberries are pest and disease resistant and form an attractive, small tree with dark green, tropical foliage. Along the ancient Silk Road in Central Asia, Mulberries are widely grown for their foliage, which is used to feed silkworms.",
     "planting": "Site and Soil: Mulberries like 1/2 day to full sun and well-drained soil. Pollination Requirements: Self-fertile.",
     "size": "15-30 ft. in height",
@@ -2728,8 +2694,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/mulberry.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "perpetua-olive-tree",
@@ -2739,8 +2707,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Evergreen Sub-Canopy",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "A valuable selection from the Nikita Botanic Garden, Perpetua Olive is very cold hardy and productive. The large, tasty olives are excellent for curing and oil production.",
     "planting": "Olives like a warm, protected location with 1/2 day to full sun and well drained soil. Pollination Requirements: Pereptua requires another olive nearby for cross-pollination.",
     "size": "10-20 ft. in height but smaller with pruning",
@@ -2758,8 +2724,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "prolific-pawpaw-tree",
@@ -2769,8 +2737,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Sub-Canopy Native Fruit",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Allegheny Pawpaw is very productive and flavorful. This pawpaw features large fruit (up to 1/2 lb.) and delicious, sweet, creamy-yellow flesh. Allegheny Pawpaw appears to be the earliest ripening of the Peterson Pawpaw varieties. Pawpaws (Asimina triloba) are one of the most unique and delicious fruits that can be grown in the backyard orchard. Native to eastern North America, pawpaws are the only member of the Annonaceae, or custard apple family, that is adapted to temperate climates. Its tropical relatives include the cherimoya, atemoya, guanabana, and soursop, and it is easy to see the resemblance between the pawpaw fruit and that of its tropical cousins. Pawpaw fruit combines delectable, fruity, banana-like flavor with creamy, custard-like flesh. Nutritious as well as delicious, the greenish yellow, 3″-6″ long fruit is unusually high in protein and is a good source of vitamins and minerals.",
     "planting": "Site and Soil: Pawpaw likes rich, well-drained soil, high in organic matter. Can be grown in shade or sun. Summer Sunburn affects the young trees, so protect against the intense afternoon sun. Rootstock Description: Grafted onto Pawpaw seedling rootstock. Pollination Requirements: Plant two varieties or a combination of seedlings and varieties for cross-pollination.",
     "size": "12-15 ft. in height",
@@ -2788,8 +2754,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "rabbiteye-blueberry-florida-rose",
@@ -2799,8 +2767,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "'Florida Rose' is a highly photogenic, uniquely delicious rabbiteye blueberry variety with beautiful fruit that are bright pink to red in color!",
     "planting": "Blueberries like 1/2 day to full sun and well-drained, acidic soil. Pollination Requirements: Plant another Rabbiteye variety for cross pollination.",
     "size": "5′ high and wide",
@@ -2817,8 +2783,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/blueberry.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "rabina-mt-ash",
@@ -2828,8 +2796,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Sub-Canopy / Small Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Rabina Mt. Ash was selected in Russia for its non-bitter, sweet-tart, tasty and nutritious fruit. Rabina's abundant and attractive, bright orange berries can be eaten fresh and make tasty juice and preserves. Rabina Mt. Ash forms an upright-growing, small to medium-size tree which can easily be kept at 12 ft. in height or less with pruning. While Mountain Ash is widely grown for its ornamental value, we are pleased to offer several unique and attractive Eastern European and Russian varieties which were selected for their fruit. Mountain Ash fruit is high in Vitamins A and C, niacin, pectic and trace elements. Fruit of our varieties is eaten fresh and used in preserves, jam, pastry, and wine.",
     "planting": "Site and Soil: Mountain Ash and its hybrids like 1/2 day to full sun and well-drained soil. Rootstock Description: Pollination Requirements: Rabina is partially self-fertile. Plant with another variety for cross-pollination and heavier crops.",
     "size": "12-15 ft. in height",
@@ -2846,8 +2812,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/mountain-ash.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "ranch-american-elderberry",
@@ -2857,8 +2825,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Ranch American Elderberry tends to be more compact and upright. Shorter plants make for easier harvesting, and this plant might be good fit for a \"You Pick\" operation. Tolerates marginal or less fertile soils.",
     "planting": "Site and Soil: American Elderberries like 1/2 day to full sun and well-drained soil. Pollination Requirements: Plant with another American Elderberry variety for cross-pollination.",
     "size": "6-8 ft. in height.",
@@ -2876,8 +2842,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Dynamic Accumulator"
-    ]
+      "Dynamic Accumulator",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "red-star-cornelian-cherry",
@@ -2887,8 +2855,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Sub-Canopy / Small Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Red Star Cornelian Cherry bears good crops of large, 1-1/4″ long, oval fruit. A later ripening variety, Red Star holds its fruit well into September. The glossy, dark red fruit has an appealing sweet-tart flavor and is very juicy and aromatic. A unique and attractive form of Dogwood, Cornelian Cherry is native to Ukraine and other regions around the Black Sea. Growing as a shrub or small tree, it is valued for its tasty fruit and for its ornamental value. Our unique Ukrainian varieties produce unusually large, sweet, and flavorful fruit. As an ornamental, Cornelian Cherry is prized for its very early, delicate flowers appearing in early March before the leaves, its yellow and red fall color, and it's bright, red fruit, which taste like a Cherry or a wild Plum. Cornelian Cherry is good for fresh eating, preserves, juice, and wine.",
     "planting": "Cornelian Cherry likes 1/2 day to full sun and well-drained soil. Pollination Requirements: Plant two varieties for cross-pollination and to ensure good crops.",
     "size": "8-10 ft.",
@@ -2905,8 +2871,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/cornelian-cherry.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "salal-evergreen-shrub",
@@ -2916,8 +2884,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Native Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Salal is an attractive, evergreen, small shrub that displays profuse, delicate, white and pink, bell-shaped flowers accented by glossy, dark green foliage. The abundant, dark purple, blueberry-size berries ripen in late summer and are juicy, sweet and tasty. Good for fresh eating and drying, they also make tasty jam and preserves. A very valuable food source for millennia in the Pacific Northwest. Salal grows in full sun or partial shade on the coast and in partial shade in warmer, interior regions.",
     "planting": "Site and Soil: Likes 1/2 day to full sun on the coast, partial shade in warmer, interior regions and acidic, well-drained soil. Pollination Requirements: Salal is self-fertile",
     "size": "4-6 ft.",
@@ -2934,8 +2900,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/salal.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "samyl-elderberry",
@@ -2945,8 +2913,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "This productive, commercial cultivar from Denmark has a vigorous, bushy habit that is similar to Samdal, but not as dense. Plants are partially self fruitful, but planting two S. nigra cultivars will assure better fruit production for both.",
     "planting": "Full Sun, Partial Shade Pollinator:Need two varieties for cross pollination and increased fruit production. Kawai is a great pollinator for Maxine's Opus",
     "size": "8 ft",
@@ -2964,8 +2930,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Dynamic Accumulator"
-    ]
+      "Dynamic Accumulator",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "sea-kale",
@@ -2975,8 +2943,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Perennial Vegetables & Roots",
     "categoryName": "Perennial Vegetables",
     "layer": "Perennial Vegetable Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Despite its name, Sea Kale does not need a nearby ocean to thrive. This perennial vegetable has edible roots, shoots like asparagus, leaves like kale, cabbage, or spinach, and flower heads like broccoli. It's quickly becoming a cult classic in permaculture gardens everywhere.",
     "planting": "Full to part sun and well-drained soil.",
     "size": "2′ in height by 3′ feet wide",
@@ -2993,8 +2959,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/sea-kale.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "seascape-strawberry",
@@ -3004,8 +2972,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "Receiving rave reviews by all who try it, this new day-neutral strawberry variety should be in everyone's garden. Seascape Strawberry will excite you with its wonderful flavor, large size, heavy crops, and disease resistance. Seascape is hardy to 0°F.",
     "planting": "Strawberries like 1/2 day to full sun and well-drained soil. Pollination Requirements: Strawberries are self fertile.",
     "size": "6-8″ in height.",
@@ -3022,8 +2988,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/strawberry.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "seaside-almond-tree",
@@ -3033,8 +3001,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy / Sub-Canopy Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "A very productive and reliable variety, Seaside Almond Tree is very late blooming and early ripening and bears good crops of sweet, semi-softshell nuts.",
     "planting": "Site and Soil: Almonds like full to 1/2 day sun and well-drained soil. Rootstock Description: Our Almonds are grafted on Lovell Peach rootstock. Lovell Peach is well adapted to different soil types. Pollination Requirements: Almonds are partially self-fertile. Plant with another variety for cross pollination and larger crops.",
     "size": "10-12 ft. in height",
@@ -3052,8 +3018,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "siberian-splendor-sea-berry",
@@ -3063,8 +3031,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Nitrogen-Fixing Shrub",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "A unique and productive variety from southern Siberia, Siberian Splendor produces heavy crops of large, light orange, unusually sweet berries. Siberian Splendor's fruit is tasty eaten fresh and makes delicious jelly.",
     "planting": "Site and Soil: Sea Berry likes full to 1/2 day sun and well-drained soil. Rootstock Description: Grown from cuttings. Pollination Requirements: Wind pollinated. Plant with a male plant for cross-pollination.",
     "size": "10-12 ft. in height.",
@@ -3083,8 +3049,10 @@ window.HOMESTEAD_PLANTS = [
       "Edible",
       "Medicinal",
       "Natural Dye",
-      "Nitrogen Fixer"
-    ]
+      "Nitrogen Fixer",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "splash-pluot-tree",
@@ -3094,8 +3062,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Canopy / Sub-Canopy Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "One of the most striking colored fruits you might ever see, Splash Pluots look like a bunch of miniature suns hanging from the tree as they ripen to a bright orange-red. Splash Pluot fruits are intensely sweet, medium sized and heart shaped and also make excellent dried fruit if you find yourself in a sugar coma after trying to eat every pluot that this copious upright tree produces.",
     "planting": "Site and Soil: 1/2 day to full sun and well-drained soil. Rootstock Description: Myrobalan 29C Pollination Requirements: Pollinized by Santa Rosa plum or Flavor Grenade Pluot.",
     "size": "15-20 ft. in height",
@@ -3113,8 +3079,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "triple-crown-blackberry",
@@ -3124,8 +3092,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "The Triple Crown Blackberry is a remarkably disease-resistant blackberry and easy to grow. This outstanding variety can produce over 30 lbs. of large, juicy, flavorful fruit. Good for fresh eating, it also makes delicious pies, sauce and jam. Upright and thorn-less this variety can produce canes over 12 ft long that need wire trellis. Nursery taste test winner for best flavor. Fruit can be up to 2 inches long making it one of the biggest blackberry fruits. Small seeds and firm core give it the best texture too. Some say it taste like blackberry apple juice.",
     "planting": "Site and Soil: Blackberries like 1/2 day to full sun and well-drained soil. Pollination Requirements: Blackberries are self-fertile.",
     "size": "7 ft. in height on trellis",
@@ -3142,8 +3108,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/blackberry.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "truffle-tree",
@@ -3153,8 +3121,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Soil Builders & Craft Allies",
     "categoryName": "Soil Builders & Craft",
     "layer": "Subterranean Fungal Guild",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "This Truffle Tree Oak seedling has been inoculated with the prized French Perigord Black Truffle (Tuber melanosporum) spores, which are necessary to form truffles when the tree reaches reproductive maturity. Holly Oak, as it is an excellent, long lived and gorgeous evergreen oak well adapted to the West Coast. A truly stunning evergreen oak, the Holly Oak (Holm Oak) is an icon of the Mediterranean and quickly gaining popularity as a valuable climate adapted tree here in the Pacific Northwest. The Holly Oak is named for its leaves that resemble holl but on a much more attractive tree in our opinion. One of the hardiest evergreen oaks, this long lived tree will eventually become a very large spreading specimen that casts deep shade. Some thinning of the canopy makes for a nicer open look, but otherwise it's a very low to no maintenance oak tree. Deserves to be much more widely planted on the West Coast.",
     "planting": "Site and Soil: Cork Oaks like 1/2 day to full sun and well-drained soil. Pollination Requirements: Self-fertile. Will freely hybridize with other Quercus species planted nearby",
     "size": "70-100 ft.",
@@ -3171,8 +3137,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/truffle-oak.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "viking-aronia",
@@ -3182,8 +3150,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Berries & Understory",
     "categoryName": "Berries & Understory",
     "layer": "Berry Shrub Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "An attractive, vigorous, and productive small shrub, Viking Aronia is a popular commercial variety in Europe. Viking bears abundant crops of large, almost black berries which make tasty and nutritious juice and wine. Viking's lustrous, dark green foliage turns a beautiful fire-engine red in the fall. This American native has become very popular throughout the world. Prized for nutritious fruit and and ornamental value in the spring, Aronia is covered with large clusters of snowy white flowers followed in September by large, attractive, blue-black berries. The grand finale is the striking, fire-engine-red foliage in the fall. Very nutritious and high in antioxidants and anthocyanins, Aronia berries are eaten fresh, but more commonly used to make tasty juice and preserves. The very dark blue juice is also a high quality, stable, natural food coloring.",
     "planting": "Site and Soil: Viking Aronia like full to 1/2 day sun and most soils. Pollination Requirements: Self-fertile.",
     "size": "3 – 4 ft. in height.",
@@ -3201,8 +3167,10 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Dynamic Accumulator"
-    ]
+      "Dynamic Accumulator",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "violet-sepor-fig",
@@ -3212,8 +3180,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Sub-Canopy / Small Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "A superb and early ripening fig for the Pacific Northwest, Violet Sepor ripens one of the earliest main crops of any figs in our trials. Taste is a bright juicy strawberry flavor, not quite as concentrated as some varieties but undoubtedly delicious. We've been very impressed with its productivity here and it seems to perform and taste better in areas with dry summers, so a real winner for Northwest fig growers! One of the easiest fruits to grow, and a true gourmet delight, you should not live your life without feasting on this sweet, delectable fruit. To fully enjoy fresh figs you must grow your own. When fully ripe and at their most tender, shipping them long distances is virtually impossible. Another plus for Figs – deer don't like them (most of the time)!",
     "planting": "Site and Soil: Figs do well in a variety of soils, but require at least 8 hours of sunlight during the growing season. Pollination Requirements: Self-figful.",
     "size": "8-15 ft in height, smaller with pruning",
@@ -3230,8 +3196,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/fig.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "yellow-cornelian-cherry-tree",
@@ -3241,8 +3209,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Fruit & Nut Trees",
     "categoryName": "Fruit & Nut Trees",
     "layer": "Sub-Canopy / Small Tree",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "A very unique variety, Yellow Cornelian Cherry Tree bears large crops of attractive, lemon yellow, tasty, sweet-tart fruit. The 1″ long fruit is good for fresh eating and makes particularly good jam, juice and compote. A unique and attractive form of Dogwood, Cornelian Cherry is native to Ukraine and other regions around the Black Sea. Growing as a shrub or small tree, it is valued for its tasty fruit and for its ornamental value. Our unique Ukrainian varieties produce unusually large, sweet, and flavorful fruit. As an ornamental, Cornelian Cherry is prized for its very early, delicate flowers appearing in early March before the leaves, its yellow and red fall color, and it's bright, yellow fruit, which taste like a Cherry or a wild Plum. Cornelian Cherry is good for fresh eating, preserves, juice, and wine.",
     "planting": "Site and Soil: Cornelian Cherry likes 1/2 day to full sun and well-drained soil. Rootstock Description: Cornus Mas Seedlings Pollination Requirements: Plant two varieties for cross-pollination and to ensure good crops.",
     "size": "8-10 ft.",
@@ -3259,8 +3225,10 @@ window.HOMESTEAD_PLANTS = [
     "imageUrl": "assets/images/cornelian-cherry.jpg",
     "tags": [
       "Edible",
-      "Medicinal"
-    ]
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   },
   {
     "id": "yuzu-ichandrin-hardy-citrus",
@@ -3270,8 +3238,6 @@ window.HOMESTEAD_PLANTS = [
     "category": "Cold-Hardy Subtropicals",
     "categoryName": "Cold-Hardy Subtropicals",
     "layer": "Subtropical Microclimate Layer",
-    "isCutList": false,
-    "plantedCount": 0,
     "description": "The Yuzu Ichandrin Hardy Citrus Tree is prized in Japan for flavoring, juice and preserves. This hardy variety bears abundant, easy-to-peel, 3 inch diameter fruit with tasty, lemon-lime flavor. Yuzu Ichandrin is reportedly hardy to 0°F",
     "planting": "Flying Dragon is a hardy and very dwarfing rootstock for Citrus that induces very early flowering and fruit production. Trees grown on Flying Dragon will rarely exceed 5 ft. in height and will often produce fruit the year they are planted. Pollination Requirements: Self-fertile. You can help it set fruit by taking a small brush and moving pollen from flower to flower.",
     "size": "4-6 ft",
@@ -3289,7 +3255,13 @@ window.HOMESTEAD_PLANTS = [
     "tags": [
       "Edible",
       "Medicinal",
-      "Natural Dye"
-    ]
+      "Natural Dye",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
   }
 ];
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = HOMESTEAD_PLANTS;
+}

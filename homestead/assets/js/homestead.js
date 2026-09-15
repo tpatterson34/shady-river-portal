@@ -11,7 +11,6 @@
   let searchQuery = '';
   let activeCategory = 'all';
   let activeUse = 'all';
-  let plantingFilter = 'all'; // 'all' or 'planted'
 
   // DOM Elements
   const gridEl = document.getElementById('plant-grid');
@@ -89,20 +88,6 @@
       });
     });
 
-    // Planting status toggle
-    document.querySelectorAll('[data-status-filter]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        document.querySelectorAll('[data-status-filter]').forEach(function (b) {
-          b.classList.remove('bg-stone-200', 'text-stone-950', 'font-bold');
-          b.classList.add('bg-stone-900', 'text-stone-400');
-        });
-        btn.classList.add('bg-stone-200', 'text-stone-950', 'font-bold');
-        btn.classList.remove('bg-stone-900', 'text-stone-400');
-        plantingFilter = btn.getAttribute('data-status-filter');
-        applyFilters();
-      });
-    });
-
     // Modal Close
     const closeBtn = document.getElementById('modal-close-btn');
     if (closeBtn) closeBtn.addEventListener('click', closeModal);
@@ -123,7 +108,6 @@
     if (clearSearchBtn) clearSearchBtn.classList.add('hidden');
     activeCategory = 'all';
     activeUse = 'all';
-    plantingFilter = 'all';
 
     document.querySelectorAll('[data-category-filter]').forEach(function (b) {
       const isAll = b.getAttribute('data-category-filter') === 'all';
@@ -143,21 +127,10 @@
       b.classList.toggle('text-stone-300', !isAll);
     });
 
-    document.querySelectorAll('[data-status-filter]').forEach(function (b) {
-      const isAll = b.getAttribute('data-status-filter') === 'all';
-      b.classList.toggle('bg-stone-200', isAll);
-      b.classList.toggle('text-stone-950', isAll);
-      b.classList.toggle('font-bold', isAll);
-      b.classList.toggle('bg-stone-900', !isAll);
-      b.classList.toggle('text-stone-400', !isAll);
-    });
-
     applyFilters();
   }
 
   function filterPlant(p) {
-    if (plantingFilter === 'planted' && !p.isCutList) return false;
-
     if (activeCategory !== 'all' && p.category !== activeCategory) {
       return false;
     }
@@ -229,9 +202,7 @@
         return '<span class="px-2 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider ' + cls + '">' + t + '</span>';
       }).join(' ');
 
-      const plantingBadge = plant.isCutList
-        ? '<div class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-emerald-500/90 text-stone-950 font-mono font-bold text-xs shadow-md flex items-center gap-1.5 backdrop-blur-sm"><i class="fa-solid fa-seedling text-[11px]" aria-hidden="true"></i><span>Planted: Qty ' + plant.plantedCount + '</span></div>'
-        : '';
+      const plantingBadge = '<div class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-emerald-950/85 text-emerald-400 border border-emerald-500/40 font-mono text-xs shadow-md flex items-center gap-1.5 backdrop-blur-sm"><i class="fa-solid fa-seedling text-[10px]" aria-hidden="true"></i><span>Planted</span></div>';
 
       const cleanHardiness = (plant.hardiness || '')
         .replace('Hardy to approx. ', '')
@@ -295,20 +266,19 @@
       return '<span class="px-2.5 py-1 rounded-full text-xs font-mono uppercase tracking-wider ' + cls + '">' + t + '</span>';
     }).join(' ');
 
-    const plantedNotice = plant.isCutList
-      ? '<div class="p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/40 flex items-center justify-between mb-6">' +
-        '  <div class="flex items-center gap-3">' +
-        '    <div class="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400">' +
-        '      <i class="fa-solid fa-seedling text-lg" aria-hidden="true"></i>' +
-        '    </div>' +
-        '    <div>' +
-        '      <div class="font-display font-bold text-emerald-300 text-sm">Active Homestead Planting</div>' +
-        '      <div class="font-serif text-stone-300 text-xs">Recorded in Cut List inventory with ' + plant.plantedCount + ' specimen(s) established.</div>' +
-        '    </div>' +
-        '  </div>' +
-        '  <span class="px-3 py-1 rounded-full bg-emerald-500 text-stone-950 font-mono font-bold text-xs">Qty: ' + plant.plantedCount + '</span>' +
-        '</div>'
-      : '';
+    const plantedNotice =
+      '<div class="p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/40 flex items-center justify-between mb-6">' +
+      '  <div class="flex items-center gap-3">' +
+      '    <div class="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">' +
+      '      <i class="fa-solid fa-seedling text-lg" aria-hidden="true"></i>' +
+      '    </div>' +
+      '    <div>' +
+      '      <div class="font-display font-bold text-emerald-300 text-sm">Established Homestead Cultivar</div>' +
+      '      <div class="font-serif text-stone-300 text-xs">Actively cultivated and thriving on the 7-acre Shady River homestead &middot; USDA Zone 8b.</div>' +
+      '    </div>' +
+      '  </div>' +
+      '  <span class="px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-mono text-xs font-semibold">Planted</span>' +
+      '</div>';
 
     modalContentEl.innerHTML = [
       '<div class="relative h-64 sm:h-80 w-full overflow-hidden bg-stone-950">',
