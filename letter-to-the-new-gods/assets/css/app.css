@@ -1,0 +1,127 @@
+/* Letter to the New Gods — Cathedral vs. Garden Stylesheet */
+
+:root {
+  --color-obsidian-950: #080a0e;
+  --color-obsidian-900: #0d1117;
+  --color-obsidian-850: #131822;
+  --color-obsidian-800: #1a2230;
+  --color-cyan-500: #06b6d4;
+  --color-cyan-400: #22d3ee;
+  --color-emerald-500: #10b981;
+  --color-emerald-400: #34d399;
+}
+
+/* Accessibility: Focus visible */
+:focus-visible {
+  outline: 2px solid #22d3ee;
+  outline-offset: 2px;
+}
+
+/* Skip navigation link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 100;
+  background: #06b6d4;
+  color: #080a0e;
+  padding: 0.75rem 1.25rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080a0e;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f293d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4;
+}
+
+/* Atmospheric Glows */
+.ambient-cathedral-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.15) 0%, rgba(8, 10, 14, 0) 70%);
+}
+
+.ambient-garden-glow {
+  background: radial-gradient(circle at 50% 100%, rgba(16, 185, 129, 0.15) 0%, rgba(8, 10, 14, 0) 70%);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.35);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.35);
+}
+
+/* Range input sliders */
+input[type="range"] {
+  accent-color: #06b6d4;
+}
+
+/* Track list active indicator */
+.track-row.active {
+  background: linear-gradient(90deg, rgba(6, 182, 212, 0.18) 0%, rgba(16, 185, 129, 0.1) 100%) !important;
+  border-color: rgba(34, 211, 238, 0.6) !important;
+}
+
+.track-row.active .track-title {
+  color: #22d3ee !important;
+}
+
+/* Lyrics block font and line height */
+.lyrics-text {
+  font-family: 'Merriweather', 'Georgia', serif;
+  line-height: 1.85;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.suno-cues {
+  color: #22d3ee;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High Contrast Mode */
+body.high-contrast {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+body.high-contrast .bg-obsidian-950,
+body.high-contrast .bg-obsidian-900,
+body.high-contrast .bg-obsidian-850,
+body.high-contrast .bg-stone-900 {
+  background-color: #000000 !important;
+  border-color: #ffffff !important;
+}
+
+body.high-contrast .text-cyan-400,
+body.high-contrast .text-emerald-400 {
+  color: #00ffff !important;
+}
