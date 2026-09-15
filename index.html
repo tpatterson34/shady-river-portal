@@ -3,9 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Shady River | Song, Soil, and Story</title>
-  <meta name="description" content="Official home of The Shady River: 26 concept albums by The Shady River Bard, The Shady River Homestead, LLC in Western Washington, and The Shady River Chronicles.">
-  
+  <title>The Shady River Bard | Where the Soil Meets the Signal</title>
+  <meta name="description" content="A unified creative ecosystem: a 26-album concept discography chronicling the human spirit, a working permaculture homestead in Western Washington, reflective essays, and the Friends of the Bard fellowship.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+  <!-- Typography: Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -14,1965 +27,827 @@
       theme: {
         extend: {
           colors: {
-            soil: {
-              950: '#06080b',
-              900: '#0b0f14',
-              850: '#11161f',
-              800: '#171e2a',
-              750: '#1e2736',
-              700: '#273244',
-              600: '#38465d',
+            stone: {
+              850: '#171412',
+              925: '#0f0c0b',
+              950: '#0a0807',
             },
             amber: {
-              300: '#fcd34d',
-              400: '#fbbf24',
-              500: '#f59e0b',
-              600: '#d97706',
-              700: '#b45309',
-              800: '#92400e',
-              900: '#78350f',
+              450: '#f59e0b',
+              550: '#d97706',
               950: '#451a03',
-            },
-            evergreen: {
-              400: '#34d399',
-              500: '#10b981',
-              600: '#059669',
-              700: '#047857',
-              800: '#065f46',
-              900: '#064e3b',
-              950: '#022c22',
-            },
-            river: {
-              300: '#7dd3fc',
-              400: '#38bdf8',
-              500: '#0ea5e9',
-              600: '#0284c7',
-              700: '#0369a1',
-              800: '#075985',
-              900: '#0c4a6e',
-              950: '#082f49',
             }
           },
           fontFamily: {
             display: ['Cinzel', 'Georgia', 'serif'],
-            body: ['Lora', 'Georgia', 'serif'],
+            serif: ['Lora', 'Georgia', 'serif'],
             sans: ['Inter', 'system-ui', 'sans-serif'],
-            mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+            mono: ['"JetBrains Mono"', 'monospace'],
           }
         }
       }
     }
   </script>
 
-  <!-- Google Fonts: Cinzel (Display), Lora (Editorial), Inter (UI), JetBrains Mono (Data) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome 6.5.1 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <style>
-    /* Custom scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #0b0f14;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #273244;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #d97706;
-    }
-
-    /* Ambient atmospheric glow */
-    .glow-gold {
-      box-shadow: 0 0 35px -5px rgba(245, 158, 11, 0.22);
-    }
-    .glow-evergreen {
-      box-shadow: 0 0 35px -5px rgba(16, 185, 129, 0.22);
-    }
-    .glow-river {
-      box-shadow: 0 0 35px -5px rgba(2, 132, 199, 0.25);
-    }
-    
-    /* Card elevation */
-    .portal-card {
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .portal-card:hover {
-      transform: translateY(-4px);
-    }
-  </style>
-  <!-- Unified Accessibility Stylesheet -->
+  <!-- Accessibility & Custom Styles -->
   <link rel="stylesheet" href="assets/css/a11y.css">
-  <!-- Official Favicon & Icons -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="bg-soil-950 text-stone-200 font-sans antialiased selection:bg-amber-600 selection:text-white min-h-screen flex flex-col">
-  <!-- Skip Navigation Link (WCAG 2.4.1 Bypass Blocks) -->
-  <a href="#main-content" class="a11y-skip-link">Skip to main content</a>
 
+<body class="bg-stone-950 text-stone-200 antialiased selection:bg-amber-500 selection:text-stone-950 pb-28">
 
-  <!-- TOP BREADCRUMB BAR -->
-  <aside aria-label="Official Domain Notice" class="bg-soil-900 border-b border-white/10 px-4 py-2 text-xs text-stone-400">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-      <div class="flex items-center gap-2">
-        <span class="inline-block w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-        <span class="font-mono text-stone-300">The Shady River Ecosystem &bull; Western Washington State</span>
-      </div>
-      <div class="flex items-center gap-4 text-[11px] font-mono">
-        <a href="https://theshadyriverbard.substack.com/s/deconstructed" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-colors flex items-center gap-1" title="Read all track-by-track liner notes on Substack">
-          <i aria-hidden="true" class="fa-solid fa-bookmark text-amber-500"></i>
-          <span>"Deconstructed" Liner Notes</span>
+  <!-- A11y Skip Navigation -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Main Content</a>
+
+  <!-- Header / Navigation Bar -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-stone-950/85 border-b border-stone-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo Mark & Brand -->
+      <a href="#" class="flex items-center space-x-3 group focus:outline-none">
+        <div class="w-10 h-10 rounded-full border border-amber-600/40 overflow-hidden bg-stone-900 p-0.5 group-hover:border-amber-400 transition-colors">
+          <img src="assets/images/logo-mark.webp" alt="The Shady River Bard Sigil" class="w-full h-full object-cover rounded-full">
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-lg sm:text-xl text-stone-100 tracking-wide group-hover:text-amber-400 transition-colors">The Shady River Bard</span>
+          <span class="font-mono text-[10px] tracking-widest uppercase text-amber-500/80">Song &middot; Soil &middot; Story &middot; Fellowship</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav aria-label="Primary Navigation" class="hidden md:flex items-center space-x-7 text-sm font-medium">
+        <a href="#gateway" class="text-stone-300 hover:text-amber-400 transition-colors">The Gateway</a>
+        <a href="#doors" class="text-stone-300 hover:text-amber-400 transition-colors">Four Pillars</a>
+        <a href="friends-of-the-bard/" class="text-amber-400 hover:text-amber-300 transition-colors flex items-center gap-1.5 font-semibold">
+          <i class="fa-solid fa-user-group text-xs" aria-hidden="true"></i>
+          <span>Friends of the Bard</span>
         </a>
-        <span class="text-stone-700">|</span>
-        <a href="https://www.youtube.com/@TheShadyRiverBard" target="_blank" rel="noopener noreferrer" class="hover:text-red-400 transition-colors flex items-center gap-1">
-          <i class="fa-brands fa-youtube text-red-500" aria-hidden="true"></i>
-          <span>YouTube Channel</span>
+        <a href="vault/" class="text-stone-300 hover:text-amber-400 transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-database text-xs" aria-hidden="true"></i>
+          <span>26-Album Vault</span>
         </a>
-        <span class="text-stone-700" aria-hidden="true">|</span>
-        <button id="a11y-toggle-btn" onclick="toggleA11yToolbar()" aria-expanded="false" aria-controls="a11y-toolbar" class="hover:text-amber-400 text-stone-300 transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded px-1.5 py-0.5 font-mono text-[11px]" aria-label="Toggle accessibility display preferences">
-          <i class="fa-solid fa-universal-access text-amber-400" aria-hidden="true"></i>
-          <span>Accessibility</span>
+        <button onclick="toggleA11yModal()" class="text-stone-400 hover:text-amber-400 transition-colors p-2 rounded-lg hover:bg-stone-900 focus:outline-none" title="Accessibility Guide">
+          <i class="fa-solid fa-universal-access text-base" aria-hidden="true"></i>
+          <span class="sr-only">Accessibility Controls</span>
         </button>
+      </nav>
+
+      <!-- Quick Action CTA -->
+      <div class="flex items-center space-x-3">
+        <a href="#gateway" class="inline-flex items-center justify-center px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-stone-950 bg-amber-500 hover:bg-amber-400 shadow-md shadow-amber-950/40 transition-all hover:scale-105 active:scale-95">
+          Enter Odyssey
+        </a>
       </div>
     </div>
-  </aside>
+  </header>
 
-  <!-- EXPANDABLE ACCESSIBILITY TOOLBAR (WCAG 2.1 AA) -->
-  <div id="a11y-toolbar" class="hidden bg-soil-900 border-b border-amber-500/40 py-3 px-4 text-xs transition-all shadow-2xl relative z-40" role="region" aria-label="Accessibility Display Preferences">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
-      <div class="flex items-center gap-2.5">
-        <div class="w-7 h-7 rounded-lg bg-amber-950/80 border border-amber-500/40 flex items-center justify-center text-amber-400 text-xs">
-          <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
-        </div>
-        <div>
-          <span class="font-display font-bold text-stone-100 block">Accessibility Preferences</span>
-          <span class="text-stone-400 text-[11px] font-body">Custom display controls for readability & vision assistance</span>
-        </div>
-      </div>
-      <div class="flex flex-wrap items-center gap-2 sm:gap-3 font-mono text-xs">
-        <button id="btn-contrast" onclick="toggleA11yOption('contrast')" class="px-3 py-1.5 rounded-lg bg-soil-800 hover:bg-soil-700 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
-          High Contrast: <span id="val-contrast" class="text-stone-400">Off</span>
-        </button>
-        <button id="btn-textsize" onclick="cycleTextSize()" class="px-3 py-1.5 rounded-lg bg-soil-800 hover:bg-soil-700 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
-          Text Size: <span id="val-textsize" class="text-stone-400">Normal</span>
-        </button>
-        <button id="btn-underline" onclick="toggleA11yOption('underline')" class="px-3 py-1.5 rounded-lg bg-soil-800 hover:bg-soil-700 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
-          Underline Links: <span id="val-underline" class="text-stone-400">Off</span>
-        </button>
-        <button id="btn-motion" onclick="toggleA11yOption('motion')" class="px-3 py-1.5 rounded-lg bg-soil-800 hover:bg-soil-700 text-stone-200 border border-white/10 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
-          Reduced Motion: <span id="val-motion" class="text-stone-400">System</span>
-        </button>
-        <button onclick="resetA11yOptions()" class="px-2 py-1 text-stone-400 hover:text-white underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-white">
-          Reset
-        </button>
-      </div>
-    </div>
-  </div>
+  <main id="main-content">
 
-  <!-- STICKY PRIMARY NAVIGATION -->
-  <nav class="sticky top-0 z-50 bg-soil-950/90 backdrop-blur-md border-b border-white/10 shadow-2xl">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
+    <!-- ================================================================= -->
+    <!-- 1. Minimalist Atmospheric Hero (The 5-Second Hook)                 -->
+    <!-- ================================================================= -->
+    <section class="relative overflow-hidden ambient-hero-glow pt-20 pb-24 md:pt-28 md:pb-36 border-b border-stone-800/60">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
         
-        <!-- Brand Logo & Emblem -->
-        <a href="#top" class="flex items-center gap-3.5 group focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-lg p-1">
-          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-600/30 via-soil-850 to-river-900/40 border border-amber-500/40 shadow-lg flex items-center justify-center text-amber-400 group-hover:scale-105 group-hover:border-amber-400 transition-all duration-300 flex-shrink-0">
-            <img src="assets/images/logo-mark.webp" alt="The Shady River Bard official logo" class="w-9 h-9 object-contain group-hover:scale-105 transition-transform">
-          </div>
-          <div class="flex flex-col">
-            <span class="font-display font-bold text-white tracking-widest text-lg sm:text-xl group-hover:text-amber-300 transition-colors">THE SHADY RIVER</span>
-            <span class="text-[10px] font-mono text-stone-400 uppercase tracking-widest">Song &bull; Soil &bull; Story</span>
-          </div>
-        </a>
-
-        <!-- Desktop Navigation Links -->
-        <div class="hidden md:flex items-center space-x-6 text-xs font-mono tracking-widest uppercase">
-          <a href="the-hollow-herd/" class="text-amber-400 hover:text-amber-300 font-bold transition-colors py-1 flex items-center gap-1.5">
-            <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
-            <span>The Hollow Herd</span>
-          </a>
-          <a href="#music-section" class="text-stone-300 hover:text-amber-400 transition-colors py-1 flex items-center gap-1.5">
-            <i aria-hidden="true" class="fa-solid fa-music text-[11px] text-amber-500"></i>
-            <span>The Bard</span>
-          </a>
-          <a href="#homestead-section" class="text-stone-300 hover:text-emerald-400 transition-colors py-1 flex items-center gap-1.5">
-            <i aria-hidden="true" class="fa-solid fa-seedling text-[11px] text-emerald-500"></i>
-            <span>Homestead, LLC</span>
-          </a>
-          <a href="#chronicles-section" class="text-stone-300 hover:text-amber-400 transition-colors py-1 flex items-center gap-1.5">
-            <i aria-hidden="true" class="fa-solid fa-feather-pointed text-[11px] text-amber-400"></i>
-            <span>Chronicles</span>
-          </a>
-          <a href="friends-of-the-bard/" class="text-stone-300 hover:text-amber-400 transition-colors py-1 flex items-center gap-1.5">
-            <i aria-hidden="true" class="fa-solid fa-user-group text-[11px] text-amber-500"></i>
-            <span>Friends of the Bard</span>
-          </a>
+        <!-- Subtle Origin Tag -->
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-stone-900/90 border border-stone-800 text-stone-300 text-xs font-mono uppercase tracking-widest mb-8">
+          <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse" aria-hidden="true"></span>
+          <span>Song &middot; Soil &middot; Story &middot; Fellowship &mdash; Western Washington</span>
         </div>
 
-        <!-- Quick Discography Vault CTA -->
-        <div class="hidden lg:flex items-center space-x-3">
-          <a href="vault/" class="px-4 py-2 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-white/10 hover:border-amber-500/50 text-xs font-mono tracking-wider transition-all flex items-center gap-2">
-            <i aria-hidden="true" class="fa-solid fa-compact-disc text-amber-400"></i>
-            <span>26-Album Catalog &rarr;</span>
+        <!-- The Headline (Printed exactly once) -->
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-black text-stone-100 tracking-tight mb-6 drop-shadow-sm">
+          Where the Soil Meets the Signal.
+        </h1>
+
+        <!-- Curated Subheadline -->
+        <p class="text-lg sm:text-xl md:text-2xl font-serif text-stone-300/95 leading-relaxed max-w-3xl mx-auto mb-10 font-normal">
+          A unified creative ecosystem: a 26-album concept discography chronicling the human spirit, a working permaculture homestead in Western Washington, deep reflective essays, and the Friends of the Bard creative fellowship.
+        </p>
+
+        <!-- CTA & 1-Click Sensory Soundbite Row -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+          <a href="#gateway" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold text-stone-950 bg-amber-500 hover:bg-amber-400 shadow-xl shadow-amber-950/60 transition-all hover:-translate-y-0.5 active:translate-y-0">
+            <span>Start the Journey</span>
+            <i class="fa-solid fa-arrow-down ml-2.5 text-sm" aria-hidden="true"></i>
           </a>
+
+          <!-- Instant 1-Click Soundbite Button (Playing "How I Disintegrated") -->
+          <button id="hero-soundbite-btn" type="button" aria-pressed="false" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 rounded-xl text-base font-medium text-stone-200 bg-stone-900/90 hover:bg-stone-850 border border-stone-700/80 hover:border-amber-500/60 transition-all group">
+            <span class="w-8 h-8 rounded-full bg-amber-500/10 flex items-center justify-center mr-3 group-hover:bg-amber-500/20 transition-colors">
+              <i id="hero-soundbite-icon" class="fa-solid fa-play text-amber-400 text-xs ml-0.5" aria-hidden="true"></i>
+            </span>
+            <span id="hero-soundbite-text" class="text-sm font-medium">Hear the Acoustic Signature (1-Click)</span>
+          </button>
         </div>
 
-        <!-- Mobile Menu Toggle Button -->
-        <div class="md:hidden flex items-center">
-          <button id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu" class="text-stone-300 hover:text-white p-2 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-lg">
-            <i aria-hidden="true" class="fa-solid fa-bars text-xl"></i>
+        <!-- Ambient Metadata Indicators -->
+        <div class="mt-14 grid grid-cols-4 gap-4 pt-8 border-t border-stone-800/60 max-w-2xl mx-auto text-center">
+          <div>
+            <div class="font-display font-bold text-xl sm:text-2xl text-stone-100">26</div>
+            <div class="font-mono text-[11px] text-stone-400 uppercase tracking-wider">Concept Albums</div>
+          </div>
+          <div>
+            <div class="font-display font-bold text-xl sm:text-2xl text-amber-400">7 Acres</div>
+            <div class="font-mono text-[11px] text-stone-400 uppercase tracking-wider">Homestead Soil</div>
+          </div>
+          <div>
+            <div class="font-display font-bold text-xl sm:text-2xl text-stone-100">4</div>
+            <div class="font-mono text-[11px] text-stone-400 uppercase tracking-wider">Novellas on Substack</div>
+          </div>
+          <div>
+            <div class="font-display font-bold text-xl sm:text-2xl text-amber-400">Fellowship</div>
+            <div class="font-mono text-[11px] text-stone-400 uppercase tracking-wider">Trevor's Salon</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 2. The Curated Gateway (Two Inseparable Anchors)                  -->
+    <!-- ================================================================= -->
+    <section id="gateway" class="section-pad max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-stone-800/60">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="font-mono text-xs uppercase tracking-widest text-amber-500 font-semibold">The Curated Gateway</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-stone-100 mt-2 mb-4">
+          Two Inseparable Anchors
+        </h2>
+        <p class="font-serif text-stone-300 text-lg leading-relaxed">
+          Begin with our deeply personal, raw acoustic folk blues or anchor your inquiry in the international creative fellowship of the Scottish Literary Salon.
+        </p>
+      </div>
+
+      <!-- Atomic "Song + Fellowship" Pairing Pattern -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        
+        <!-- Entry Point 1: Featured Track "How I Disintegrated" (Album 20) -->
+        <div class="interactive-card bg-stone-900/60 border border-stone-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-amber-600/50 hover:shadow-2xl hover:shadow-amber-950/20">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 font-mono text-xs font-bold text-amber-400 tracking-wider uppercase">
+                Featured Audio &middot; Album 20
+              </span>
+              <span class="font-mono text-xs text-stone-400">Raw Acoustic Folk Blues</span>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center my-4">
+              <div class="sm:col-span-1 aspect-square rounded-xl overflow-hidden border border-stone-700/80 shadow-lg relative group">
+                <img src="assets/images/how-i-disintegrated-cover.webp" alt="Cover artwork for How I Disintegrated" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <button onclick="GlobalAudio.playTrackByIdx(0)" class="absolute inset-0 bg-stone-950/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity focus:opacity-100" aria-label="Play How I Disintegrated preview">
+                  <div class="w-12 h-12 rounded-full bg-amber-500 text-stone-950 flex items-center justify-center shadow-lg">
+                    <i class="fa-solid fa-play text-sm ml-0.5" aria-hidden="true"></i>
+                  </div>
+                </button>
+              </div>
+              <div class="sm:col-span-2">
+                <h3 class="text-2xl font-display font-bold text-stone-100 mb-2">How I Disintegrated</h3>
+                <p class="font-serif text-stone-300 text-sm sm:text-base leading-relaxed mb-4">
+                  A devastatingly honest acoustic portrait of the slow, compounding landslide of loss and grief. Fingerpicked acoustic guitar and unforgettable vocal resonance.
+                </p>
+                <div class="flex items-center space-x-2 text-xs font-mono text-stone-400">
+                  <i class="fa-solid fa-compact-disc text-amber-500/70" aria-hidden="true"></i>
+                  <span>Track 03 &middot; Have Yourself a Shady Little Christmas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-stone-800/80 mt-6 flex flex-wrap items-center justify-between gap-3">
+            <button onclick="GlobalAudio.playTrackByIdx(0)" class="inline-flex items-center px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 font-semibold text-xs tracking-wide uppercase transition-all shadow-md">
+              <i class="fa-solid fa-circle-play mr-2 text-sm" aria-hidden="true"></i>
+              Play Preview
+            </button>
+            <a href="#doors" onclick="toggleDoor('music')" class="inline-flex items-center text-xs font-mono text-amber-400 hover:text-amber-300 underline underline-offset-4">
+              Explore All 6 Featured Tracks &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Entry Point 2: Fellowship Anchor "Friends of the Bard & Trevor Swistchew" -->
+        <div class="interactive-card bg-stone-900/60 border border-stone-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-amber-600/50 hover:shadow-2xl hover:shadow-amber-950/20">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/30 font-mono text-xs font-bold text-violet-300 tracking-wider uppercase">
+                Creative Fellowship &middot; Key Pillar
+              </span>
+              <span class="font-mono text-xs text-stone-400">Edinburgh, Scotland</span>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center my-4">
+              <div class="sm:col-span-1 aspect-square rounded-xl overflow-hidden border border-stone-700/80 shadow-lg relative group bg-peat-950">
+                <img src="trevor-swistchew/assets/images/alan-watts-this-is-it-banner.webp" alt="Trevor Swistchew This Is It Artwork" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='assets/images/logo-mark.webp'">
+              </div>
+              <div class="sm:col-span-2">
+                <h3 class="text-2xl font-display font-bold text-stone-100 mb-2">Friends of the Bard</h3>
+                <p class="font-serif text-stone-300 text-sm sm:text-base leading-relaxed mb-4">
+                  Kindred essayists, poets, and thinkers. Enter <strong>Trevor Swistchew's Scottish Literary Salon</strong>, featuring 27 essays, a 55-song Suno music chamber, and 29 collected poems.
+                </p>
+                <div class="flex items-center space-x-2 text-xs font-mono text-stone-400">
+                  <i class="fa-solid fa-feather-pointed text-amber-500/70" aria-hidden="true"></i>
+                  <span>27 Works &middot; 55 Songs &middot; 29 Poems</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-stone-800/80 mt-6 flex flex-wrap items-center justify-between gap-3">
+            <a href="trevor-swistchew/" class="inline-flex items-center px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 font-semibold text-xs tracking-wide uppercase transition-all shadow-md">
+              <i class="fa-solid fa-door-open mr-2 text-sm" aria-hidden="true"></i>
+              Enter Trevor's Salon Hub
+            </a>
+            <a href="friends-of-the-bard/" class="inline-flex items-center text-xs font-mono text-amber-400 hover:text-amber-300 underline underline-offset-4">
+              View Fellowship Directory &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 3. Categorized Pathways: The Four Pillars                         -->
+    <!-- ================================================================= -->
+    <section id="doors" class="section-pad max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-stone-800/60">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="font-mono text-xs uppercase tracking-widest text-amber-500 font-semibold">Progressive Exploration</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-stone-100 mt-2 mb-4">
+          Four Pillars of the River
+        </h2>
+        <p class="font-serif text-stone-300 text-lg leading-relaxed">
+          Open a pathway to explore each domain: the 26-album concept discography, the working homestead soil, the Substack chronicles, or the Friends of the Bard fellowship.
+        </p>
+      </div>
+
+      <!-- The 4 Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Pillar 1: The Discography (Song) -->
+        <div class="bg-stone-900/80 border border-stone-800 rounded-2xl p-6 flex flex-col justify-between hover:border-stone-700 transition-all">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-5">
+              <i class="fa-solid fa-compact-disc text-xl" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-xl font-display font-bold text-stone-100 mb-2">The Discography</h3>
+            <p class="font-serif text-stone-300 text-sm leading-relaxed mb-6">
+              26 full-length concept albums spanning folk, acoustic blues, americana, and political folk-rock.
+            </p>
+          </div>
+          <button id="door-btn-music" onclick="toggleDoor('music')" aria-expanded="false" aria-controls="door-drawer-music" class="w-full py-3 px-4 rounded-xl bg-stone-800 hover:bg-stone-750 text-stone-200 text-xs font-mono font-semibold flex items-center justify-between border border-stone-700 transition-colors">
+            <span id="door-label-music">Explore Depth</span>
+            <i id="door-icon-music" class="fa-solid fa-chevron-down text-xs transition-transform" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <!-- Pillar 2: The Homestead (Soil) -->
+        <div class="bg-stone-900/80 border border-stone-800 rounded-2xl p-6 flex flex-col justify-between hover:border-stone-700 transition-all">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-5">
+              <i class="fa-solid fa-seedling text-xl" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-xl font-display font-bold text-stone-100 mb-2">The Homestead</h3>
+            <p class="font-serif text-stone-300 text-sm leading-relaxed mb-6">
+              A working 7-acre homestead in Western Washington practicing soil building, forestry, and self-reliance.
+            </p>
+          </div>
+          <button id="door-btn-homestead" onclick="toggleDoor('homestead')" aria-expanded="false" aria-controls="door-drawer-homestead" class="w-full py-3 px-4 rounded-xl bg-stone-800 hover:bg-stone-750 text-stone-200 text-xs font-mono font-semibold flex items-center justify-between border border-stone-700 transition-colors">
+            <span id="door-label-homestead">Explore Depth</span>
+            <i id="door-icon-homestead" class="fa-solid fa-chevron-down text-xs transition-transform" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <!-- Pillar 3: The Chronicles (Story) -->
+        <div class="bg-stone-900/80 border border-stone-800 rounded-2xl p-6 flex flex-col justify-between hover:border-stone-700 transition-all">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-5">
+              <i class="fa-solid fa-feather-pointed text-xl" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-xl font-display font-bold text-stone-100 mb-2">The Chronicles</h3>
+            <p class="font-serif text-stone-300 text-sm leading-relaxed mb-6">
+              Long-form essays, track-by-track deconstructions, and four companion novellas on Substack.
+            </p>
+          </div>
+          <button id="door-btn-chronicles" onclick="toggleDoor('chronicles')" aria-expanded="false" aria-controls="door-drawer-chronicles" class="w-full py-3 px-4 rounded-xl bg-stone-800 hover:bg-stone-750 text-stone-200 text-xs font-mono font-semibold flex items-center justify-between border border-stone-700 transition-colors">
+            <span id="door-label-chronicles">Explore Depth</span>
+            <i id="door-icon-chronicles" class="fa-solid fa-chevron-down text-xs transition-transform" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <!-- Pillar 4: Friends of the Bard (Fellowship) -->
+        <div class="bg-stone-900/80 border border-amber-600/40 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500 transition-all shadow-lg">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-5">
+              <i class="fa-solid fa-user-group text-xl" aria-hidden="true"></i>
+            </div>
+            <div class="flex items-center gap-2 mb-1">
+              <h3 class="text-xl font-display font-bold text-stone-100">Friends of the Bard</h3>
+            </div>
+            <p class="font-serif text-stone-300 text-sm leading-relaxed mb-6">
+              Kindred thinkers and literary fellows. Featuring Trevor Swistchew's Scottish Salon, 55 songs &amp; 29 poems.
+            </p>
+          </div>
+          <button id="door-btn-fellowship" onclick="toggleDoor('fellowship')" aria-expanded="false" aria-controls="door-drawer-fellowship" class="w-full py-3 px-4 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 text-xs font-mono font-bold flex items-center justify-between transition-colors shadow-md">
+            <span id="door-label-fellowship">Explore Fellowship</span>
+            <i id="door-icon-fellowship" class="fa-solid fa-chevron-down text-xs transition-transform" aria-hidden="true"></i>
           </button>
         </div>
 
       </div>
-    </div>
 
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-soil-900 border-b border-white/10 px-4 pt-3 pb-5 space-y-3 text-sm font-mono uppercase tracking-wider">
-      <a href="the-hollow-herd/" class="block py-2 text-amber-400 font-bold flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-        <span>The Hollow Herd (Album 26) &rarr;</span>
-      </a>
-      <a href="#music-section" class="block py-2 text-stone-300 hover:text-amber-400">The Bard (Music)</a>
-      <a href="#homestead-section" class="block py-2 text-stone-300 hover:text-emerald-400">The Shady River Homestead, LLC</a>
-      <a href="#chronicles-section" class="block py-2 text-stone-300 hover:text-amber-400">Chronicles &amp; Substack</a>
-      <a href="friends-of-the-bard/" class="block py-2 text-stone-300 hover:text-amber-400 flex items-center gap-2">
-        <i aria-hidden="true" class="fa-solid fa-user-group text-amber-500 text-xs"></i>
-        <span>Friends of the Bard &rarr;</span>
-      </a>
-      <a href="vault/" class="block py-2 text-amber-400 font-bold">26-Album Discography Vault &rarr;</a>
-    </div>
-  </nav>
-
-  <main id="main-content" tabindex="-1" class="flex-grow focus:outline-none">
-
-    <!-- HERO SECTION -->
-    <section class="relative py-20 sm:py-32 overflow-hidden border-b border-white/10">
-      <!-- Ambient Lighting -->
-      <div class="absolute top-10 left-1/4 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div class="absolute bottom-10 right-1/4 w-96 h-96 bg-evergreen-600/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div class="absolute top-1/2 right-10 w-80 h-80 bg-river-600/10 rounded-full blur-3xl pointer-events-none"></div>
-
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
-        
-        <div class="flex flex-wrap items-center justify-center gap-3">
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-soil-900 border border-amber-500/30 text-amber-400 text-xs font-mono uppercase tracking-widest shadow-inner">
-            <i aria-hidden="true" class="fa-solid fa-compass text-[11px]"></i>
-            <span>Official Creative Portal</span>
+      <!-- =============================================================== -->
+      <!-- Door Drawers (Progressive Disclosure Expandable Panels)         -->
+      <!-- =============================================================== -->
+      
+      <!-- Drawer 1: The Discography Expanded (Showcasing User's 6 Songs) -->
+      <div id="door-drawer-music" class="accordion-content mt-8">
+        <div class="bg-stone-900/95 border border-amber-600/30 rounded-2xl p-6 sm:p-8">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-stone-800 mb-6">
+            <div>
+              <span class="font-mono text-xs text-amber-400 uppercase tracking-wider font-semibold">Curated Jukebox</span>
+              <h3 class="text-2xl font-display font-bold text-stone-100">Selected Acoustic &amp; Narrative Compositions</h3>
+            </div>
+            <a href="vault/" class="inline-flex items-center text-xs font-mono text-amber-400 hover:text-amber-300 font-semibold">
+              <span>View All 26 Albums in Vault</span>
+              <i class="fa-solid fa-arrow-right ml-2" aria-hidden="true"></i>
+            </a>
           </div>
-          <a href="the-hollow-herd/" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-soil-900 border border-orange-500/50 hover:border-orange-400 text-orange-400 hover:text-orange-300 text-xs font-mono uppercase tracking-wider transition-all shadow-inner group">
-            <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-            <span class="font-bold">New Album 26:</span>
-            <span>The Hollow Herd &rarr;</span>
-          </a>
-        </div>
 
-        <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight max-w-5xl mx-auto">
-          WHERE SONG, SOIL &amp; STORY CONVERGE
-        </h1>
-
-        <p class="font-display text-xl sm:text-2xl text-amber-400/90 font-medium italic max-w-3xl mx-auto">
-          The Living Ecosystem of The Shady River
-        </p>
-
-        <p class="text-stone-300 text-base sm:text-lg leading-relaxed font-body max-w-3xl mx-auto">
-          Rooted in the Pacific Northwest timber and fertile soil of Western Washington, <strong>The Shady River</strong> brings together an epic 26-album concept discography by <em>The Shady River Bard</em>, a working permaculture farm honoring sustainable land stewardship, and deep reflective essays exploring craft, AI co-creation, and community repair.
-        </p>
-
-        <!-- Gateway Action Buttons -->
-        <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
-          <a href="the-hollow-herd/" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-orange-600 via-amber-600 to-amber-500 hover:from-orange-500 hover:to-amber-400 text-soil-950 font-display font-bold text-sm tracking-wider uppercase transition-all shadow-xl hover:shadow-orange-500/25 flex items-center gap-2.5 ring-2 ring-orange-400/40">
-            <i aria-hidden="true" class="fa-solid fa-play"></i>
-            <span>Experience The Hollow Herd</span>
-          </a>
-          <a href="#music-section" class="px-7 py-3.5 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-amber-500/40 hover:border-amber-400 font-display font-bold text-sm tracking-wider uppercase transition-all flex items-center gap-2.5 shadow-lg">
-            <i aria-hidden="true" class="fa-solid fa-guitar text-amber-400"></i>
-            <span>The Music &amp; Vaults</span>
-          </a>
-          <a href="#homestead-section" class="px-7 py-3.5 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-emerald-500/40 hover:border-emerald-400 font-display font-bold text-sm tracking-wider uppercase transition-all flex items-center gap-2.5 shadow-lg">
-            <i aria-hidden="true" class="fa-solid fa-seedling text-emerald-400"></i>
-            <span>The Homestead, LLC</span>
-          </a>
-          <a href="#chronicles-section" class="px-7 py-3.5 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-amber-500/40 hover:border-amber-400 font-display font-bold text-sm tracking-wider uppercase transition-all flex items-center gap-2.5 shadow-lg">
-            <i aria-hidden="true" class="fa-solid fa-feather-pointed text-amber-400"></i>
-            <span>The Chronicles</span>
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECTION: THE TRIAD PILLARS (THE THREE GATEWAYS) -->
-    <section class="py-16 sm:py-24 border-b border-white/10 bg-soil-900/40">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <span class="text-xs font-mono uppercase tracking-widest text-amber-500 font-bold block">The Foundation</span>
-          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-wide">
-            Three Pillars of the River
-          </h2>
-          <p class="text-sm sm:text-base text-stone-400 leading-relaxed font-body">
-            Each branch of The Shady River informs and deepens the others—creative storytelling drawn from real earth, physical labor, and reflective craft.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          <!-- Pillar 1: The Music -->
-          <article class="portal-card p-8 rounded-3xl bg-soil-850 border border-amber-500/30 hover:border-amber-400 transition-all flex flex-col justify-between shadow-2xl space-y-6 group">
-            <div class="space-y-4">
-              <div class="w-14 h-14 rounded-2xl bg-amber-950/80 border border-amber-500/50 flex items-center justify-center text-amber-400 text-2xl group-hover:scale-110 transition-transform shadow-md">
-                <i aria-hidden="true" class="fa-solid fa-compact-disc"></i>
-              </div>
+          <!-- 6 Songs Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Song 1: How I Disintegrated -->
+            <div class="bg-stone-950/80 border border-stone-800 rounded-xl p-4 flex flex-col justify-between hover:border-amber-600/40 transition-colors">
               <div>
-                <span class="text-[11px] font-mono uppercase tracking-widest text-amber-400 font-bold block mb-1">Acoustic &amp; Electric Folk</span>
-                <h3 class="font-display text-2xl font-bold text-white group-hover:text-amber-300 transition-colors">
-                  The Shady River Bard
-                </h3>
+                <img src="assets/images/how-i-disintegrated-cover.webp" alt="How I Disintegrated cover" class="w-full aspect-square object-cover rounded-lg mb-3 border border-stone-800">
+                <div class="flex items-center justify-between text-xs font-mono text-amber-400 mb-1">
+                  <span>Album 20</span>
+                  <span>Folk Blues</span>
+                </div>
+                <h4 class="font-display font-bold text-stone-100 text-lg">How I Disintegrated</h4>
+                <p class="font-serif text-stone-300 text-xs leading-relaxed mt-1">
+                  A raw acoustic ballad charting the gradual landslide of loss, grief, and human unraveling.
+                </p>
               </div>
-              <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-body">
-                An intentional 26-album concept discography mapping American fractures, generational asset moats, male vulnerability, and paths to common ground.
-              </p>
-              <ul class="text-xs font-mono text-stone-400 space-y-2 pt-2 border-t border-white/5">
-                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-amber-400 text-[10px]"></i> 26 Full Concept Albums &amp; Vaults</li>
-                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-amber-400 text-[10px]"></i> Standalone Interactive Experiences</li>
-                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-amber-400 text-[10px]"></i> Official Music Video Playlists</li>
-              </ul>
+              <button onclick="GlobalAudio.playTrackByIdx(0)" data-track-idx="0" class="mt-4 w-full py-2 bg-stone-800 hover:bg-amber-600 hover:text-stone-950 text-stone-200 text-xs font-mono rounded-lg transition-colors flex items-center justify-center gap-2">
+                <i class="fa-solid fa-play text-[10px]" aria-hidden="true"></i> Play Preview
+              </button>
             </div>
-            <div class="pt-4 border-t border-white/10">
-              <a href="vault/" class="w-full py-3 px-4 rounded-xl bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 font-mono text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2">
-                <span>Enter Discography Vault</span>
-                <i aria-hidden="true" class="fa-solid fa-arrow-right text-[10px]"></i>
-              </a>
-            </div>
-          </article>
 
-          <!-- Pillar 2: The Homestead -->
-          <article class="portal-card p-8 rounded-3xl bg-soil-850 border border-emerald-500/30 hover:border-emerald-400 transition-all flex flex-col justify-between shadow-2xl space-y-6 group">
-            <div class="space-y-4">
-              <div class="w-14 h-14 rounded-2xl bg-emerald-950/80 border border-emerald-500/50 flex items-center justify-center text-emerald-400 text-2xl group-hover:scale-110 transition-transform shadow-md">
-                <i aria-hidden="true" class="fa-solid fa-seedling"></i>
-              </div>
+            <!-- Song 2: The Same Boot -->
+            <div class="bg-stone-950/80 border border-stone-800 rounded-xl p-4 flex flex-col justify-between hover:border-amber-600/40 transition-colors">
               <div>
-                <span class="text-[11px] font-mono uppercase tracking-widest text-emerald-400 font-bold block mb-1">Permaculture &amp; Soil</span>
-                <h3 class="font-display text-2xl font-bold text-white group-hover:text-emerald-300 transition-colors">
-                  The Homestead, LLC
-                </h3>
+                <img src="assets/images/the-same-boot-cover.webp" alt="The Same Boot cover" class="w-full aspect-square object-cover rounded-lg mb-3 border border-stone-800">
+                <div class="flex items-center justify-between text-xs font-mono text-amber-400 mb-1">
+                  <span>Album 16</span>
+                  <span>Divide &amp; Conquer</span>
+                </div>
+                <h4 class="font-display font-bold text-stone-100 text-lg">The Same Boot</h4>
+                <p class="font-serif text-stone-300 text-xs leading-relaxed mt-1">
+                  Political folk-rock anthem exposing how manufactured division keeps working citizens under one boot.
+                </p>
               </div>
-              <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-body">
-                The living earth beneath the music. A working permaculture homestead in Western Washington dedicated to regenerative soil building, heirloom fruit orchards, and self-reliance.
-              </p>
-              <ul class="text-xs font-mono text-stone-400 space-y-2 pt-2 border-t border-white/5">
-                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-emerald-400 text-[10px]"></i> Pacific Northwest Agroecology</li>
-                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-emerald-400 text-[10px]"></i> Zero Synthetic Soil Stewardship</li>
-                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-emerald-400 text-[10px]"></i> The Living Inspiration for the Songs</li>
-              </ul>
+              <button onclick="GlobalAudio.playTrackByIdx(1)" data-track-idx="1" class="mt-4 w-full py-2 bg-stone-800 hover:bg-amber-600 hover:text-stone-950 text-stone-200 text-xs font-mono rounded-lg transition-colors flex items-center justify-center gap-2">
+                <i class="fa-solid fa-play text-[10px]" aria-hidden="true"></i> Play Preview
+              </button>
             </div>
-            <div class="pt-4 border-t border-white/10">
-              <a href="#homestead-section" class="w-full py-3 px-4 rounded-xl bg-emerald-600/20 hover:bg-emerald-600 text-emerald-300 hover:text-soil-950 border border-emerald-500/40 font-mono text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2">
-                <span>The Homestead Story</span>
-                <i aria-hidden="true" class="fa-solid fa-arrow-down text-[10px]"></i>
-              </a>
-            </div>
-          </article>
 
-          <!-- Pillar 3: The Chronicles -->
-          <article class="portal-card p-8 rounded-3xl bg-soil-850 border border-river-500/30 hover:border-amber-400 transition-all flex flex-col justify-between shadow-2xl space-y-6 group">
-            <div class="space-y-4">
-              <div class="w-14 h-14 rounded-2xl bg-soil-900 border border-amber-500/50 flex items-center justify-center text-amber-400 text-2xl group-hover:scale-110 transition-transform shadow-md">
-                <i aria-hidden="true" class="fa-solid fa-feather-pointed"></i>
-              </div>
+            <!-- Song 3: Nobody's Listening -->
+            <div class="bg-stone-950/80 border border-stone-800 rounded-xl p-4 flex flex-col justify-between hover:border-amber-600/40 transition-colors">
               <div>
-                <span class="text-[11px] font-mono uppercase tracking-widest text-amber-400 font-bold block mb-1">Substack Journal &amp; Notes</span>
-                <h3 class="font-display text-2xl font-bold text-white group-hover:text-amber-300 transition-colors">
-                  The Chronicles
-                </h3>
+                <img src="assets/images/nobodys-listening-cover.webp" alt="Nobody's Listening cover" class="w-full aspect-square object-cover rounded-lg mb-3 border border-stone-800">
+                <div class="flex items-center justify-between text-xs font-mono text-amber-400 mb-1">
+                  <span>Republic of Nobody</span>
+                  <a href="https://suno.com/song/307a253e-cc50-4bf5-bd42-beb75b3b3b87" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline flex items-center gap-1">Suno ↗</a>
+                </div>
+                <h4 class="font-display font-bold text-stone-100 text-lg">Nobody's Listening</h4>
+                <p class="font-serif text-stone-300 text-xs leading-relaxed mt-1">
+                  The visceral isolation of everyday citizens speaking truth into institutional deafness.
+                </p>
               </div>
-              <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-body">
-                Long-form essays on human-AI songwriting, track-by-track liner notes, historical sovereignty investigations, and dispatches from the Washington homestead.
-              </p>
-              <ul class="text-xs font-mono text-stone-400 space-y-2 pt-2 border-t border-white/5">
-                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-amber-400 text-[10px]"></i> "The Spark Under the Hood" Process Manifesto</li>
-                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-amber-400 text-[10px]"></i> <a href="https://theshadyriverbard.substack.com/s/deconstructed" target="_blank" rel="noopener noreferrer" class="hover:text-amber-300 underline font-bold">"Deconstructed" Track Liner Notes ↗</a></li>
-                <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-amber-400 text-[10px]"></i> Direct Reader Discussions on Substack</li>
-              </ul>
+              <button onclick="GlobalAudio.playTrackByIdx(2)" data-track-idx="2" class="mt-4 w-full py-2 bg-stone-800 hover:bg-amber-600 hover:text-stone-950 text-stone-200 text-xs font-mono rounded-lg transition-colors flex items-center justify-center gap-2">
+                <i class="fa-solid fa-play text-[10px]" aria-hidden="true"></i> Play Preview
+              </button>
             </div>
-            <div class="pt-4 border-t border-white/10">
-              <a href="#chronicles-section" class="w-full py-3 px-4 rounded-xl bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 font-mono text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2">
-                <span>Explore the Journal</span>
-                <i aria-hidden="true" class="fa-solid fa-arrow-down text-[10px]"></i>
-              </a>
-            </div>
-          </article>
 
+            <!-- Song 4: The Curtains and the Canned Goods -->
+            <div class="bg-stone-950/80 border border-stone-800 rounded-xl p-4 flex flex-col justify-between hover:border-amber-600/40 transition-colors">
+              <div>
+                <img src="assets/images/curtains-and-canned-goods-cover.webp" alt="The Curtains and the Canned Goods cover" class="w-full aspect-square object-cover rounded-lg mb-3 border border-stone-800">
+                <div class="flex items-center justify-between text-xs font-mono text-amber-400 mb-1">
+                  <span>Album 23</span>
+                  <span>Winter Homestead</span>
+                </div>
+                <h4 class="font-display font-bold text-stone-100 text-lg">The Curtains &amp; Canned Goods</h4>
+                <p class="font-serif text-stone-300 text-xs leading-relaxed mt-1">
+                  A bittersweet winter portrait of rural survival, stocked pantry shelves, and quiet resilience.
+                </p>
+              </div>
+              <button onclick="GlobalAudio.playTrackByIdx(3)" data-track-idx="3" class="mt-4 w-full py-2 bg-stone-800 hover:bg-amber-600 hover:text-stone-950 text-stone-200 text-xs font-mono rounded-lg transition-colors flex items-center justify-center gap-2">
+                <i class="fa-solid fa-play text-[10px]" aria-hidden="true"></i> Play Preview
+              </button>
+            </div>
+
+            <!-- Song 5: My Brother is a Mark -->
+            <div class="bg-stone-950/80 border border-stone-800 rounded-xl p-4 flex flex-col justify-between hover:border-amber-600/40 transition-colors">
+              <div>
+                <img src="assets/images/my-brother-is-a-mark-cover.webp" alt="My Brother is a Mark cover" class="w-full aspect-square object-cover rounded-lg mb-3 border border-stone-800">
+                <div class="flex items-center justify-between text-xs font-mono text-amber-400 mb-1">
+                  <span>Gardener's Rebellion</span>
+                  <a href="https://suno.com/s/r2TxuXMCedi0jgJn" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline flex items-center gap-1">Suno ↗</a>
+                </div>
+                <h4 class="font-display font-bold text-stone-100 text-lg">My Brother is a Mark</h4>
+                <p class="font-serif text-stone-300 text-xs leading-relaxed mt-1">
+                  A stinging critique of populist cons, algorithmic hooks, and watching a sibling get played.
+                </p>
+              </div>
+              <button onclick="GlobalAudio.playTrackByIdx(4)" data-track-idx="4" class="mt-4 w-full py-2 bg-stone-800 hover:bg-amber-600 hover:text-stone-950 text-stone-200 text-xs font-mono rounded-lg transition-colors flex items-center justify-center gap-2">
+                <i class="fa-solid fa-play text-[10px]" aria-hidden="true"></i> Play Preview
+              </button>
+            </div>
+
+            <!-- Song 6: Strings and Scythes -->
+            <div class="bg-stone-950/80 border border-stone-800 rounded-xl p-4 flex flex-col justify-between hover:border-amber-600/40 transition-colors">
+              <div>
+                <img src="assets/images/strings-and-scythes-cover.webp" alt="Strings and Scythes cover" class="w-full aspect-square object-cover rounded-lg mb-3 border border-stone-800">
+                <div class="flex items-center justify-between text-xs font-mono text-amber-400 mb-1">
+                  <span>Gardener's Rebellion</span>
+                  <a href="https://suno.com/s/d6iDuhossJGPqZ0x" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline flex items-center gap-1">Suno ↗</a>
+                </div>
+                <h4 class="font-display font-bold text-stone-100 text-lg">Strings and Scythes</h4>
+                <p class="font-serif text-stone-300 text-xs leading-relaxed mt-1">
+                  Intricate acoustic strings matched with the rhythm of manual scythe harvesting and agrarian dignity.
+                </p>
+              </div>
+              <button onclick="GlobalAudio.playTrackByIdx(5)" data-track-idx="5" class="mt-4 w-full py-2 bg-stone-800 hover:bg-amber-600 hover:text-stone-950 text-stone-200 text-xs font-mono rounded-lg transition-colors flex items-center justify-center gap-2">
+                <i class="fa-solid fa-play text-[10px]" aria-hidden="true"></i> Play Preview
+              </button>
+            </div>
+
+          </div>
+
+          <div class="mt-8 text-center pt-6 border-t border-stone-800">
+            <a href="vault/" class="inline-flex items-center text-sm font-mono text-amber-400 hover:text-amber-300 font-semibold">
+              <span>View All 26 Albums &amp; Full Lyrics in the Vault</span>
+              <i class="fa-solid fa-arrow-right ml-2" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- SECTION: LANDMARK ALBUM EXPERIENCES (THE INTERACTIVE EXPERIENCES) -->
-    <section id="music-section" class="py-16 sm:py-24 border-b border-white/10 relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 border-b border-white/10 pb-8">
-          <div class="space-y-2">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950 border border-amber-800/40 text-amber-400 text-xs font-mono uppercase tracking-widest">
-              <i aria-hidden="true" class="fa-solid fa-star text-[10px]"></i>
-              <span>Featured Concept Landmarks</span>
-            </div>
-            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-wide">
-              Interactive Album Experiences
-            </h2>
-            <p class="text-sm text-stone-400 max-w-2xl font-body">
-              Beyond standard streaming, select albums feature dedicated interactive concept websites with empirical dossiers, historical archives, and complete formatted lyrics.
+      <!-- Drawer 2: The Homestead Expanded -->
+      <div id="door-drawer-homestead" class="accordion-content mt-8">
+        <div class="bg-stone-900/95 border border-emerald-600/30 rounded-2xl p-6 sm:p-8">
+          <div class="max-w-3xl">
+            <span class="font-mono text-xs text-emerald-400 uppercase tracking-wider font-semibold">Land, Soil &amp; Permaculture Roots</span>
+            <h3 class="text-2xl font-display font-bold text-stone-100 mt-1 mb-4">The Shady River Homestead, LLC</h3>
+            <p class="font-serif text-stone-300 leading-relaxed mb-6">
+              The songs do not emerge from an abstract vacuum. They are anchored in a working 7-acre homestead on the Cedar River in Western Washington, where soil building, regenerative agriculture, and physical labor inform the music's agrarian ethos.
             </p>
           </div>
-          <div>
-            <a href="vault/" class="px-5 py-2.5 rounded-xl bg-soil-850 hover:bg-soil-800 text-amber-400 border border-amber-500/40 font-mono text-xs font-bold uppercase tracking-wider transition-colors inline-flex items-center gap-2">
-              <span>View All 26 Albums</span>
-              <i aria-hidden="true" class="fa-solid fa-arrow-right text-[10px]"></i>
-            </a>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            <div class="bg-stone-950/80 border border-stone-800 rounded-xl p-5">
+              <div class="font-mono text-xs text-emerald-400 font-bold mb-2">01 &middot; Living Soil</div>
+              <h4 class="font-display font-bold text-stone-100 mb-1">Regenerative Care</h4>
+              <p class="font-serif text-stone-400 text-xs leading-relaxed">
+                Compost layering, perennial plantings, and rotational systems that heal degraded timberland into biologically rich soil.
+              </p>
+            </div>
+            <div class="bg-stone-950/80 border border-stone-800 rounded-xl p-5">
+              <div class="font-mono text-xs text-emerald-400 font-bold mb-2">02 &middot; Wood Stove Warmth</div>
+              <h4 class="font-display font-bold text-stone-100 mb-1">Physical Labor</h4>
+              <p class="font-serif text-stone-400 text-xs leading-relaxed">
+                Growing food, growing the soil, supporting the community, and living through the Pacific Northwest rainy seasons.
+              </p>
+            </div>
+            <div class="bg-stone-950/80 border border-stone-800 rounded-xl p-5">
+              <div class="font-mono text-xs text-emerald-400 font-bold mb-2">03 &middot; Tangible Sovereignty</div>
+              <h4 class="font-display font-bold text-stone-100 mb-1">Self-Reliance</h4>
+              <p class="font-serif text-stone-400 text-xs leading-relaxed">
+                A sanctuary from digital frenzy where human purpose is measured in garden yields, warm hearths, and lasting songs.
+              </p>
+            </div>
           </div>
         </div>
-
-        <!-- Landmark Albums Grid -->
-        <div id="landmark-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-          <!-- Card: The Hollow Herd -->
-          <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <img src="the-hollow-herd/assets/art/the-hollow-herd-cover.webp" alt="The Hollow Herd cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-2.5 left-2.5">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                    Brand New Album Release
-                  </span>
-                </div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                    15 Tracks
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album 26</div>
-                <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                  The Hollow Herd
-                </h3>
-                <p class="text-xs text-stone-400 font-mono mt-0.5">A Forensic Sonic Audit of the American Cattle Crisis</p>
-              </div>
-
-              <p class="text-xs text-stone-300 leading-relaxed font-body">
-                An uncompromising 4-act, 15-track conceptual investigation of the financialization of American ranching, the Big Four beef oligopoly, and the struggle for agrarian survival. Features rolling video premieres.
-              </p>
-
-              <div class="flex flex-wrap gap-1 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Big Four Meatpackers</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Argentine Betrayal</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Paper Cattle Fraud</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <a href="the-hollow-herd/" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-all">
-                Explore Album &rarr;
-              </a>
-            <a href="https://www.youtube.com/watch?v=-PJtGDSmaMU" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="Watch Videos" aria-label="Watch The Hollow Herd videos on YouTube">
-              <i aria-hidden="true" class="fa-brands fa-youtube"></i>
-            </a>
-            </div>
-          </article>
-
-          <!-- Card: The Fracture -->
-          <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <img src="assets/covers/album-03.webp" alt="The Fracture cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-2.5 left-2.5">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                    Flagship Experience
-                  </span>
-                </div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                    14 Tracks
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album 03</div>
-                <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                  The Fracture
-                </h3>
-                <p class="text-xs text-stone-400 font-mono mt-0.5">A Societal Audit & Blueprint for Reconciliation</p>
-              </div>
-
-              <p class="text-xs text-stone-300 leading-relaxed font-body">
-                An empirical 4-movement audit of modern America's deep sociological divisions, followed by a compassionate roadmap toward vulnerability, community stewardship, and human reconnection.
-              </p>
-
-              <div class="flex flex-wrap gap-1 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Polarization</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Generational Wealth</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Young Men</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <a href="the-fracture/" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-all">
-                Explore Album &rarr;
-              </a>
-            <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcHGcrGGVmhxgbmjlO4Z7SU2" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="Watch Videos" aria-label="Watch The Fracture videos on YouTube">
-              <i aria-hidden="true" class="fa-brands fa-youtube"></i>
-            </a>
-            </div>
-          </article>
-
-          <!-- Card: The Great Inversion -->
-          <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <img src="the-great-inversion/assets/art/the-great-inversion-cover.webp" alt="The Great Inversion cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-2.5 left-2.5">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                    Interactive Experience
-                  </span>
-                </div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                    13 Tracks
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album 04</div>
-                <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                  The Great Inversion
-                </h3>
-                <p class="text-xs text-stone-400 font-mono mt-0.5">An Antidote to the Decline of Ambition</p>
-              </div>
-
-              <p class="text-xs text-stone-300 leading-relaxed font-body">
-                An unflinching 3-movement examination of the retreat from traditional life milestones and quiet quitting—culminating in an empowering counter-current toward sovereignty, intentionalism, and redefined purpose.
-              </p>
-
-              <div class="flex flex-wrap gap-1 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Economics of Apathy</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Young Men</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#FIRE &amp; Autonomy</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <a href="the-great-inversion/" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-all">
-                Explore Album &rarr;
-              </a>
-              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcHpbQ_j63bh6NrvnSP-KwSM" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="Watch Videos" aria-label="Watch The Great Inversion videos on YouTube">
-                <i aria-hidden="true" class="fa-brands fa-youtube"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card: The Poison We Trust -->
-          <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <img src="the-poison-we-trust/assets/art/the-poison-we-trust-cover.webp" alt="The Poison We Trust cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-2.5 left-2.5">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                    Interactive Experience
-                  </span>
-                </div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                    13 Tracks
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album 05</div>
-                <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                  The Poison We Trust
-                </h3>
-                <p class="text-xs text-stone-400 font-mono mt-0.5">Public Health &amp; The Body Politic</p>
-              </div>
-
-              <p class="text-xs text-stone-300 leading-relaxed font-body">
-                An unflinching 4-movement forensic investigation into dietary deceptions, corporate regulatory capture, and the chronic illness epidemic—culminating in an empowering revival of health sovereignty.
-              </p>
-
-              <div class="flex flex-wrap gap-1 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Food Pyramid</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Health Sovereignty</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#The Lucidity Protocol</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <a href="the-poison-we-trust/" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-all">
-                Explore Album &rarr;
-              </a>
-              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcG-3eJRamWMAXVCJEhO_sRa" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="Watch Videos" aria-label="Watch The Poison We Trust videos on YouTube">
-                <i aria-hidden="true" class="fa-brands fa-youtube"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card: A House Divided -->
-          <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <img src="a-house-divided/assets/art/a-house-divided-cover.webp" alt="A House Divided cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-2.5 left-2.5">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                    Interactive Experience
-                  </span>
-                </div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                    14 Tracks
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album 06</div>
-                <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                  A House Divided
-                </h3>
-                <p class="text-xs text-stone-400 font-mono mt-0.5">Climate Division &amp; Common Ground</p>
-              </div>
-
-              <p class="text-xs text-stone-300 leading-relaxed font-body">
-                A profound 6-movement narrative journey across ideological divides on climate, honoring symmetrical loss while charting a pragmatic roadmap toward shared stewardship.
-              </p>
-
-              <div class="flex flex-wrap gap-1 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Unquiet Earth</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Human Loss</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Common Ground</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <a href="a-house-divided/" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-all">
-                Explore Album &rarr;
-              </a>
-              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcGu-dyJFizG_351gSA6-jRn" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="Watch Videos" aria-label="Watch A House Divided videos on YouTube">
-                <i aria-hidden="true" class="fa-brands fa-youtube"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card: Unequal Justice -->
-          <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <img src="unequal-justice/assets/art/unequal-justice-cover.webp" alt="Unequal Justice cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-2.5 left-2.5">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                    Interactive Experience
-                  </span>
-                </div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                    18 Tracks
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album 07</div>
-                <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                  Unequal Justice
-                </h3>
-                <p class="text-xs text-stone-400 font-mono mt-0.5">Systemic Inequity &amp; The Scale of Law</p>
-              </div>
-
-              <p class="text-xs text-stone-300 leading-relaxed font-body">
-                An unflinching 18-track narrative folk epic examining the two Americas living under one flag, guided by the ancient metaphor of the "two-weight stone."
-              </p>
-
-              <div class="flex flex-wrap gap-1 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Gilded Shield</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Iron Funnel</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Two-Weight Stone</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <a href="unequal-justice/" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-all">
-                Explore Album &rarr;
-              </a>
-              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcHMkTpFn5HegqFaTudnxu1L" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="Watch Videos" aria-label="Watch Unequal Justice videos on YouTube">
-                <i aria-hidden="true" class="fa-brands fa-youtube"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card: Cognitive Inferno -->
-          <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <img src="cognitive-inferno/assets/art/cognitive-inferno-cover.webp" alt="Cognitive Inferno cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-2.5 left-2.5">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                    Interactive Experience
-                  </span>
-                </div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                    10 Tracks
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album 08</div>
-                <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                  Cognitive Inferno
-                </h3>
-                <p class="text-xs text-stone-400 font-mono mt-0.5">Attention Economy &amp; Re-Humanization</p>
-              </div>
-
-              <p class="text-xs text-stone-300 leading-relaxed font-body">
-                A visceral 4-phase rock symphony dissecting algorithmic captivity, dopamine debt, and the radical reclaiming of sovereign human presence and focus.
-              </p>
-
-              <div class="flex flex-wrap gap-1 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Attention Economy</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Dopamine Debt</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Re-Humanization</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <a href="cognitive-inferno/" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-all">
-                Explore Album &rarr;
-              </a>
-              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcE3k_0lQhF30Bpo4ik5m6S_" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="Watch Videos" aria-label="Watch Cognitive Inferno videos on YouTube">
-                <i aria-hidden="true" class="fa-brands fa-youtube"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card: The Hammer and the Rust -->
-          <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <img src="the-hammer-and-the-rust/assets/art/the-hammer-and-the-rust-cover.webp" alt="The Hammer and the Rust cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-2.5 left-2.5">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                    Interactive Experience
-                  </span>
-                </div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                    14 Tracks
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album 09</div>
-                <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                  The Hammer and the Rust
-                </h3>
-                <p class="text-xs text-stone-400 font-mono mt-0.5">An Industrial Cantata of the Rust Belt</p>
-              </div>
-
-              <p class="text-xs text-stone-300 leading-relaxed font-body">
-                An epic 4-act, 14-track industrial cantata exploring the rise, brutal collapse, and hard-won resilience of the American manufacturing heartland through work songs, throat-singing drones, and scrap percussion.
-              </p>
-
-              <div class="flex flex-wrap gap-1 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Rust Belt</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Deindustrialization</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Rust and Bone</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <a href="the-hammer-and-the-rust/" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-all">
-                Explore Album &rarr;
-              </a>
-              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcHpUBDbXPozRJgyZkJfX3ND" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="Watch Videos" aria-label="Watch The Hammer and the Rust videos on YouTube">
-                <i aria-hidden="true" class="fa-brands fa-youtube"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card: The Unbroken Chain -->
-          <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <img src="unbroken-chain/assets/art/unbroken-chain-cover.webp" alt="The Unbroken Chain cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-2.5 left-2.5">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                    Interactive Experience
-                  </span>
-                </div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                    14 Tracks
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album 10</div>
-                <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                  The Unbroken Chain
-                </h3>
-                <p class="text-xs text-stone-400 font-mono mt-0.5">Historical Folk Blues &amp; Cantata</p>
-              </div>
-
-              <p class="text-xs text-stone-300 leading-relaxed font-body">
-                A 4-act historical folk blues cantata tracing the continuous evolution of forced labor in America from plantation chattel to convict leasing and modern prison labor, set against the enduring unbroken chain of spiritual and musical resilience.
-              </p>
-
-              <div class="flex flex-wrap gap-1 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Labor Exploitation</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Convict Leasing</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Reclamation</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <a href="unbroken-chain/" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-all">
-                Explore Album &rarr;
-              </a>
-              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcH2lWQ4zDr7Kh4kW-TU8HFI" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="Watch Videos" aria-label="Watch The Unbroken Chain videos on YouTube">
-                <i aria-hidden="true" class="fa-brands fa-youtube"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card: This Sacred Ground -->
-          <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <img src="this-sacred-ground/assets/art/this-sacred-ground-cover.webp" alt="This Sacred Ground cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-2.5 left-2.5">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                    Interactive Experience
-                  </span>
-                </div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                    12 Tracks
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album 11</div>
-                <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                  This Sacred Ground
-                </h3>
-                <p class="text-xs text-stone-400 font-mono mt-0.5">Indigenous Resilience &amp; Native American History</p>
-              </div>
-
-              <p class="text-xs text-stone-300 leading-relaxed font-body">
-                A 5-act epic folk acoustic and cinematic cantata chronicling five centuries of Native American survival, the devastation of broken treaties and boarding schools, and the unyielding spiritual sovereignty of Indigenous peoples.
-              </p>
-
-              <div class="flex flex-wrap gap-1 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Indigenous Resilience</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Treaty Rights</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Boarding Schools</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <a href="this-sacred-ground/" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-all">
-                Explore Album &rarr;
-              </a>
-              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcGKqJdE1F67neqmJgNBvouc" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="Watch Videos" aria-label="Watch This Sacred Ground videos on YouTube">
-                <i aria-hidden="true" class="fa-brands fa-youtube"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card: The Balance Sheet of Outrage -->
-          <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <img src="the-balance-sheet-of-outrage/assets/art/the-balance-sheet-of-outrage-cover.webp" alt="The Balance Sheet of Outrage cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-2.5 left-2.5">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                    Interactive Experience
-                  </span>
-                </div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                    14 Tracks
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album 12</div>
-                <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                  The Balance Sheet of Outrage
-                </h3>
-                <p class="text-xs text-stone-400 font-mono mt-0.5">Military-Industrial Audit &amp; Systemic War Costs</p>
-              </div>
-
-              <p class="text-xs text-stone-300 leading-relaxed font-body">
-                An unflinching 4-act, 14-track forensic sonic audit stripping away the flags and anthems to expose the cold quarterly earnings, manufactured consent, civilian externalities, and permanent war cycle of the military-industrial complex.
-              </p>
-
-              <div class="flex flex-wrap gap-1 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#War Profiteering</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Manufactured Consent</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Externalities</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <a href="the-balance-sheet-of-outrage/" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-all">
-                Explore Album &rarr;
-              </a>
-              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcGtsazmtO3CYDLN3lgel91m" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="Watch Videos" aria-label="Watch The Balance Sheet of Outrage videos on YouTube">
-                <i aria-hidden="true" class="fa-brands fa-youtube"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card: Mama's Boy -->
-          <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <img src="mamas-boy/assets/art/mamas-boy-cover.webp" alt="Mama's Boy album cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-2.5 left-2.5">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                    Interactive Experience
-                  </span>
-                </div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                    11 Tracks
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album 13</div>
-                <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                  Mama's Boy
-                </h3>
-                <p class="text-xs text-stone-400 font-mono mt-0.5">Memoir of Judith Faye Adams &amp; Single Mothers Audit</p>
-              </div>
-
-              <p class="text-xs text-stone-300 leading-relaxed font-body">
-                An intimate, unflinching 11-track musical memoir of the Bard's mother, Judith Faye Adams ("Mama Judie"), and an empirical sociological data audit of Single Mothers in America. Tracing third-shift exhaustion, domestic storms, and Kintsugi grace.
-              </p>
-
-              <div class="flex flex-wrap gap-1 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Single Mothers</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Working Class Memoir</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Kintsugi Grace</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <a href="mamas-boy/" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-all">
-                Explore Album &rarr;
-              </a>
-              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcGsdstc3avnCK2Ttq3H-lLd" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="Watch Videos" aria-label="Watch Mama's Boy videos on YouTube">
-                <i aria-hidden="true" class="fa-brands fa-youtube"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card: Five-Digit Fate -->
-          <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <img src="five-digit-fate/assets/art/five-digit-fate-cover.webp" alt="Five-Digit Fate album cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-2.5 left-2.5">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                    Interactive Experience
-                  </span>
-                </div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                    17 Tracks
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album 14</div>
-                <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                  Five-Digit Fate
-                </h3>
-                <p class="text-xs text-stone-400 font-mono mt-0.5">Social Cartography &amp; Geographic Determinism</p>
-              </div>
-
-              <p class="text-xs text-stone-300 leading-relaxed font-body">
-                An ambitious 17-track social cartography translating the empirical research of Raj Chetty's Opportunity Atlas, Case &amp; Deaton's Deaths of Despair, and Richard Rothstein's The Color of Law into a profound journey across America's heartland and the triumph of the human soul.
-              </p>
-
-              <div class="flex flex-wrap gap-1 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Opportunity Atlas</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Geographic Determinism</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#The Unbranded Heart</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <a href="five-digit-fate/" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-all">
-                Explore Album &rarr;
-              </a>
-              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcEI54M3aP3O8p9s84xcrHrT" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="Watch Videos" aria-label="Watch Five-Digit Fate videos on YouTube">
-                <i aria-hidden="true" class="fa-brands fa-youtube"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card: Sold Cheap -->
-          <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <img src="sold-cheap/assets/art/sold-cheap-cover.webp" alt="Sold Cheap album cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-2.5 left-2.5">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                    Interactive Experience
-                  </span>
-                </div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                    12 Tracks
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album 15</div>
-                <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                  Sold Cheap
-                </h3>
-                <p class="text-xs text-stone-400 font-mono mt-0.5">Sonic Documentary &amp; Forensic Audit</p>
-              </div>
-
-              <p class="text-xs text-stone-300 leading-relaxed font-body">
-                An unflinching 12-track sonic documentary and forensic ledger auditing the half-century liquidation of American communities, pensions, public health, and democracy itself—culminating in an epic indictment of modern extraction.
-              </p>
-
-              <div class="flex flex-wrap gap-1 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Forensic Ledger</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Corporate Hostile Takeover</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Signal to Noise</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <a href="sold-cheap/" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-all">
-                Explore Album &rarr;
-              </a>
-              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcFedvC4nuXNk7fDNzCwfZe0" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="Watch Videos" aria-label="Watch Sold Cheap videos on YouTube">
-                <i aria-hidden="true" class="fa-brands fa-youtube"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card: Divide and Conquer -->
-          <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <img src="divide-and-conquer/assets/art/divide-and-conquer-cover.webp" alt="Divide and Conquer album cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-2.5 left-2.5">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                    Interactive Experience
-                  </span>
-                </div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                    13 Tracks
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album 16</div>
-                <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                  Divide and Conquer
-                </h3>
-                <p class="text-xs text-stone-400 font-mono mt-0.5">Manufactured Division &amp; Reconnection</p>
-              </div>
-
-              <p class="text-xs text-stone-300 leading-relaxed font-body">
-                The unifying theory of the entire discography. Grounded in Peter Turchin's structural-demographic dynamics, this 13-track, four-act magnum opus unmasks the architects of partisan warfare and calls for working-class reconnection.
-              </p>
-
-              <div class="flex flex-wrap gap-1 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Elite Overproduction</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Red vs Blue Trap</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Solidarity</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <a href="divide-and-conquer/" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-all">
-                Explore Album &rarr;
-              </a>
-              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcEG-mE0vg_OVLqdIkxszN7C" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="Watch Videos" aria-label="Watch Divide and Conquer videos on YouTube">
-                <i aria-hidden="true" class="fa-brands fa-youtube"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card: Yo Ho Ho and a Pocket Full of Greed -->
-          <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <img src="yo-ho-ho-and-a-pocket-full-of-greed/assets/art/yo-ho-ho-and-a-pocket-full-of-greed-cover.webp" alt="Yo Ho Ho and a Pocket Full of Greed album cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-2.5 left-2.5">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                    Interactive Experience
-                  </span>
-                </div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                    13 Tracks
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album 17</div>
-                <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                  Yo Ho Ho and a Pocket Full of Greed
-                </h3>
-                <p class="text-xs text-stone-400 font-mono mt-0.5">Corporate Privateers &amp; Modern Buccaneers</p>
-              </div>
-
-              <p class="text-xs text-stone-300 leading-relaxed font-body">
-                A swashbuckling 4-act, 13-track maritime satirical odyssey auditing corporate privateering, algorithmic plunder, and the pillaging of everyday life—reclaiming dignity and grassroots solidarity from the modern buccaneers.
-              </p>
-
-              <div class="flex flex-wrap gap-1 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Corporate Privateers</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Algorithmic Plunder</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Sea Shanties</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <a href="yo-ho-ho-and-a-pocket-full-of-greed/" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-all">
-                Explore Album &rarr;
-              </a>
-              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcHr2R6eMk1Xd3DPGh4fPYtK" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="Watch Videos" aria-label="Watch Yo Ho Ho and a Pocket Full of Greed videos on YouTube">
-                <i aria-hidden="true" class="fa-brands fa-youtube"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card: American Rubble (Album 18) -->
-          <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <img src="american-rubble/assets/art/american-rubble-cover.webp" alt="American Rubble album cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-2.5 left-2.5">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                    Interactive Experience
-                  </span>
-                </div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                    13 Movements
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album 18</div>
-                <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                  American Rubble
-                </h3>
-                <p class="text-xs text-stone-400 font-mono mt-0.5">The Anatomy of Collapse &amp; Civil Conflict</p>
-              </div>
-
-              <p class="text-xs text-stone-300 leading-relaxed font-body">
-                The horrifying prognosis to the diagnosis of Divide and Conquer. A meticulously researched 4-act, 13-movement dark dystopian folk concept album tracing the systemic collapse of food and electrical grids, intimate neighborhood warfare, black-market warlordism, and the poisoned silence of memory.
-              </p>
-
-              <div class="flex flex-wrap gap-1 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Systemic Collapse</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Moral Injury</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Dark Folk</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <a href="american-rubble/" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-colors">
-                Launch Experience
-              </a>
-              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcEF1fY_cQrs4C2GfkNgO70J" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-soil-900 hover:bg-soil-800 text-stone-300 hover:text-red-400 border border-white/10 transition-colors" title="Watch Video Playlist" aria-label="Watch American Rubble video playlist">
-                <i aria-hidden="true" class="fa-brands fa-youtube text-sm"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card: The Forgotten Crown -->
-          <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <img src="assets/covers/vault/the-forgotten-crown.webp" alt="The Forgotten Crown cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-2.5 left-2.5">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                    Historical Deep Dive
-                  </span>
-                </div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                    10 Tracks
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album Vault</div>
-                <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                  The Forgotten Crown
-                </h3>
-                <p class="text-xs text-stone-400 font-mono mt-0.5">The 1689 Claim of Right & Historical Sovereignty</p>
-              </div>
-
-              <p class="text-xs text-stone-300 leading-relaxed font-body">
-                An archivist's unearthing of suppressed constitutional truths, the 1689 Claim of Right, and the timeless principle of salvo jure cujuslibet.
-              </p>
-
-              <div class="flex flex-wrap gap-1 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Scottish History</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Constitutional Law</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Claim of Right</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <a href="the-forgotten-crown/" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-all">
-                Explore Album &rarr;
-              </a>
-            <a href="https://www.youtube.com/@TheShadyRiverBard" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-red-950/60 hover:bg-red-900/80 text-red-400 border border-red-800/40 text-xs transition-colors" title="Watch Videos" aria-label="Watch The Forgotten Crown videos on YouTube">
-              <i aria-hidden="true" class="fa-brands fa-youtube"></i>
-            </a>
-            </div>
-          </article>
-
-          <!-- Card: American Renewal (Album 19) -->
-          <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <img src="american-renewal/assets/art/american-renewal-cover.webp" alt="American Renewal album cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-2.5 left-2.5">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                    Interactive Experience
-                  </span>
-                </div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                    19 Movements
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album 19</div>
-                <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                  American Renewal
-                </h3>
-                <p class="text-xs text-stone-400 font-mono mt-0.5">Applied Hope, Systemic Reform &amp; Democratic Repair</p>
-              </div>
-
-              <p class="text-xs text-stone-300 leading-relaxed font-body">
-                The necessary answer to the diagnosis of Divide and Conquer and the dark prognosis of American Rubble. A 19-song epic of applied hope structured as a 2-volume, 4-act journey tackling corporate capture and labor liquidation before mending social cohesion and modernizing our constitutional blueprint.
-              </p>
-
-              <div class="flex flex-wrap gap-1 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Systemic Reform</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Applied Hope</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Grassroots Folk</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <a href="american-renewal/" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-colors">
-                Launch Experience
-              </a>
-              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcF3V0GG90EPJ_Tuhrpykvc5" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-soil-900 hover:bg-soil-800 text-stone-300 hover:text-red-400 border border-white/10 transition-colors" title="Watch Video Playlist" aria-label="Watch American Renewal video playlist">
-                <i aria-hidden="true" class="fa-brands fa-youtube text-sm"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card: Have Yourself a Shady Little Christmas (Album 20) -->
-          <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <img src="have-yourself-a-shady-little-christmas/assets/art/have-yourself-a-shady-little-christmas-cover.webp" alt="Have Yourself a Shady Little Christmas album cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-2.5 left-2.5">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                    Interactive Experience
-                  </span>
-                </div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                    15 Movements
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album 20</div>
-                <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                  Have Yourself a Shady Little Christmas
-                </h3>
-                <p class="text-xs text-stone-400 font-mono mt-0.5">A Social Realist Modern Christmas Carol</p>
-              </div>
-
-              <p class="text-xs text-stone-300 leading-relaxed font-body">
-                An unflinching look at the &ldquo;shady&rdquo; paradox at the heart of the holidays. Following William from social invisibility and freezing concrete through addiction crisis to an unlikely friendship with Joe the store Santa&mdash;proving that the opposite of addiction is connection.
-              </p>
-
-              <div class="flex flex-wrap gap-1 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Social Realism</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Addiction Recovery</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Radical Connection</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <a href="have-yourself-a-shady-little-christmas/" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-colors">
-                Launch Experience
-              </a>
-              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcEJAWlpL_w-X_nFgrJ4f4Bn" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-soil-900 hover:bg-soil-800 text-stone-300 hover:text-red-400 border border-white/10 transition-colors" title="Watch Video Playlist" aria-label="Watch Have Yourself a Shady Little Christmas video playlist">
-                <i aria-hidden="true" class="fa-brands fa-youtube text-sm"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card: Doomsday Clock (Album 21) -->
-          <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-            <div class="space-y-3">
-              <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-                <img src="doomsday-clock/assets/art/doomsday-clock-cover.webp" alt="Doomsday Clock album cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                <div class="absolute top-2.5 left-2.5">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                    Interactive Experience
-                  </span>
-                </div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                    13 Movements
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album 21</div>
-                <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                  Doomsday Clock
-                </h3>
-                <p class="text-xs text-stone-400 font-mono mt-0.5">An Album Blueprint for Existential Reckoning</p>
-              </div>
-
-              <p class="text-xs text-stone-300 leading-relaxed font-body">
-                A 13-movement, four-act concept epic translating existential risk into visceral narrative art. Measuring our proximity to self-annihilation at 89 seconds to midnight&mdash;from creeping objectless anxiety through nuclear and algorithmic ruin to the final chilling silence.
-              </p>
-
-              <div class="flex flex-wrap gap-1 pt-1">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Existential Risk</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#AI Misalignment</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">#Nuclear Midnight</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-              <a href="doomsday-clock/" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-colors">
-                Launch Experience
-              </a>
-              <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcFJ4vC-R0d-N2XvsMwph5bj" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-soil-900 hover:bg-soil-800 text-stone-300 hover:text-red-400 border border-white/10 transition-colors" title="Watch Video Playlist" aria-label="Watch Doomsday Clock video playlist">
-                <i aria-hidden="true" class="fa-brands fa-youtube text-sm"></i>
-              </a>
-            </div>
-          </article>
-
-        </div>
-
       </div>
-    </section>
 
-    <!-- SECTION: THE SHADY RIVER HOMESTEAD, LLC (THE LAND & SOIL) -->
-    <section id="homestead-section" class="py-16 sm:py-24 border-b border-white/10 relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          <!-- Left Column: Homestead Narrative -->
-          <div class="lg:col-span-7 space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950 border border-emerald-800/50 text-emerald-400 text-xs font-mono uppercase tracking-widest">
-              <i aria-hidden="true" class="fa-solid fa-tree text-[10px]"></i>
-              <span>The Land &amp; The Soil</span>
-            </div>
-
-            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-wide">
-              The Shady River Homestead, LLC
-            </h2>
-
-            <p class="font-display text-xl text-emerald-400 italic">
-              "The Soil Beneath the Songs"
+      <!-- Drawer 3: The Chronicles Expanded -->
+      <div id="door-drawer-chronicles" class="accordion-content mt-8">
+        <div class="bg-stone-900/95 border border-cyan-600/30 rounded-2xl p-6 sm:p-8">
+          <div class="max-w-3xl">
+            <span class="font-mono text-xs text-cyan-400 uppercase tracking-wider font-semibold">Essays, Track Deconstructions &amp; Companion Novellas</span>
+            <h3 class="text-2xl font-display font-bold text-stone-100 mt-1 mb-4">The Shady River Chronicles</h3>
+            <p class="font-serif text-stone-300 leading-relaxed mb-6">
+              Published on Substack, the Chronicles host long-form essays on human-AI co-creation, track-by-track lyric analyses, and four dedicated companion novellas that deeply explore the characters and themes behind key albums.
             </p>
-
-            <div class="space-y-4 text-stone-300 text-sm sm:text-base leading-relaxed font-body">
-              <p>
-                The music of The Shady River Bard is not composed in a sterile urban studio. It is forged in the dirt, timber, and rain of a working permaculture homestead in Western Washington.
-              </p>
-              <p>
-                When a song like <em>The Farmer's Broken Back</em> or <em>This Sacred Ground</em> speaks of agrarian sacrifice, rural hospital closures, and the generational fight for dignity, it draws from living observation: hands calloused by tractor steel, soil biology nurtured through seasonal cycles, and deep community solidarity.
-              </p>
-            </div>
-
-            <!-- Tenets Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-white/10">
-              <div class="p-4 rounded-2xl bg-soil-850 border border-white/5 space-y-2">
-                <i aria-hidden="true" class="fa-solid fa-mountain-sun text-emerald-400 text-lg"></i>
-                <h4 class="font-display text-sm font-bold text-white">Regenerative Soil</h4>
-                <p class="text-xs text-stone-400 font-body">Fungal networks, compost teas, and zero synthetic shortcuts.</p>
-              </div>
-              <div class="p-4 rounded-2xl bg-soil-850 border border-white/5 space-y-2">
-                <i aria-hidden="true" class="fa-solid fa-apple-whole text-emerald-400 text-lg"></i>
-                <h4 class="font-display text-sm font-bold text-white">Heirloom Orchards</h4>
-                <p class="text-xs text-stone-400 font-body">Cultivating Pacific Northwest adapted heritage fruits and berries.</p>
-              </div>
-              <div class="p-4 rounded-2xl bg-soil-850 border border-white/5 space-y-2">
-                <i aria-hidden="true" class="fa-solid fa-hands-holding-circle text-emerald-400 text-lg"></i>
-                <h4 class="font-display text-sm font-bold text-white">Honest Craft</h4>
-                <p class="text-xs text-stone-400 font-body">Proving that physical labor and deep philosophical storytelling belong together.</p>
-              </div>
-            </div>
-
           </div>
 
-          <!-- Right Column: Homestead Feature Box -->
-          <div class="lg:col-span-5">
-            <div class="p-8 rounded-3xl bg-gradient-to-br from-emerald-950/40 via-soil-850 to-soil-900 border border-emerald-500/30 shadow-2xl space-y-6">
-              <div class="flex items-center gap-3">
-                <div class="w-12 h-12 rounded-xl bg-emerald-900/60 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-xl">
-                  <i aria-hidden="true" class="fa-solid fa-wheat-awn"></i>
-                </div>
+          <!-- Four Real Novellas Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+            <!-- Novella 1 -->
+            <div class="bg-stone-950/80 border border-stone-800 rounded-xl p-4 flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-mono uppercase tracking-widest text-cyan-400 font-bold">Album 02 Companion</span>
+                <h4 class="font-display font-bold text-stone-100 text-base mt-1">The Gray Ledger</h4>
+                <p class="font-serif text-stone-400 text-xs leading-relaxed mt-1">
+                  Ageism, invisible lives, and discarded wisdom.
+                </p>
+              </div>
+              <a href="https://theshadyriverbard.substack.com/s/the-grey-ledger" target="_blank" rel="noopener noreferrer" class="mt-3 text-[11px] font-mono text-amber-400 hover:text-amber-300 inline-flex items-center">
+                <span>Substack</span>
+                <i class="fa-solid fa-arrow-up-right-from-square ml-1.5 text-[9px]" aria-hidden="true"></i>
+              </a>
+            </div>
+
+            <!-- Novella 2 -->
+            <div class="bg-stone-950/80 border border-stone-800 rounded-xl p-4 flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-mono uppercase tracking-widest text-cyan-400 font-bold">Album 03 Companion</span>
+                <h4 class="font-display font-bold text-stone-100 text-base mt-1">The Fracture</h4>
+                <p class="font-serif text-stone-400 text-xs leading-relaxed mt-1">
+                  Generational fault lines and common ground.
+                </p>
+              </div>
+              <a href="https://theshadyriverbard.substack.com/s/the-fracture" target="_blank" rel="noopener noreferrer" class="mt-3 text-[11px] font-mono text-amber-400 hover:text-amber-300 inline-flex items-center">
+                <span>Substack</span>
+                <i class="fa-solid fa-arrow-up-right-from-square ml-1.5 text-[9px]" aria-hidden="true"></i>
+              </a>
+            </div>
+
+            <!-- Novella 3 -->
+            <div class="bg-stone-950/80 border border-stone-800 rounded-xl p-4 flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-mono uppercase tracking-widest text-cyan-400 font-bold">Album 04 Companion</span>
+                <h4 class="font-display font-bold text-stone-100 text-base mt-1">The Great Inversion</h4>
+                <p class="font-serif text-stone-400 text-xs leading-relaxed mt-1">
+                  Financialization and socioeconomic realignment.
+                </p>
+              </div>
+              <a href="https://theshadyriverbard.substack.com/s/the-great-inversion" target="_blank" rel="noopener noreferrer" class="mt-3 text-[11px] font-mono text-amber-400 hover:text-amber-300 inline-flex items-center">
+                <span>Substack</span>
+                <i class="fa-solid fa-arrow-up-right-from-square ml-1.5 text-[9px]" aria-hidden="true"></i>
+              </a>
+            </div>
+
+            <!-- Novella 4 -->
+            <div class="bg-stone-950/80 border border-stone-800 rounded-xl p-4 flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-mono uppercase tracking-widest text-cyan-400 font-bold">Album 05 Companion</span>
+                <h4 class="font-display font-bold text-stone-100 text-base mt-1">The Lucidity Protocol</h4>
+                <p class="font-serif text-stone-400 text-xs leading-relaxed mt-1">
+                  Algorithmic addiction and cognitive sovereignty.
+                </p>
+              </div>
+              <a href="https://theshadyriverbard.substack.com/s/the-lucidity-protocol" target="_blank" rel="noopener noreferrer" class="mt-3 text-[11px] font-mono text-amber-400 hover:text-amber-300 inline-flex items-center">
+                <span>Substack</span>
+                <i class="fa-solid fa-arrow-up-right-from-square ml-1.5 text-[9px]" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-stone-800 flex flex-wrap items-center justify-between gap-4">
+            <span class="text-xs font-mono text-stone-400">Plus track-by-track liner notes, prompt blueprints, and dispatches from the land.</span>
+            <a href="https://theshadyriverbard.substack.com/s/deconstructed" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-mono text-cyan-400 hover:text-cyan-300 font-semibold">
+              <span>Explore Deconstructed Liner Notes on Substack</span>
+              <i class="fa-solid fa-arrow-up-right-from-square ml-2" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drawer 4: Friends of the Bard & Trevor Swistchew Expanded -->
+      <div id="door-drawer-fellowship" class="accordion-content mt-8">
+        <div class="bg-stone-900/95 border border-amber-500/40 rounded-2xl p-6 sm:p-8">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-stone-800 mb-6">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono uppercase tracking-widest mb-2">
+                <i class="fa-solid fa-user-group text-xs" aria-hidden="true"></i>
+                <span>Creative Fellowship Spotlight</span>
+              </div>
+              <h3 class="text-2xl font-display font-bold text-stone-100">Trevor Swistchew &bull; The Scottish Literary Salon</h3>
+            </div>
+            <a href="friends-of-the-bard/" class="inline-flex items-center px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-mono font-semibold border border-stone-700 transition-colors">
+              <span>View Full Fellowship Directory</span>
+              <i class="fa-solid fa-arrow-right ml-2" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <!-- Trevor Swistchew Feature Card -->
+          <div class="bg-stone-950/80 border border-amber-500/30 rounded-2xl overflow-hidden p-6 lg:p-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              
+              <div class="lg:col-span-5 aspect-video rounded-xl overflow-hidden border border-stone-800 relative group bg-peat-950">
+                <a href="trevor-swistchew/" class="block w-full h-full">
+                  <img src="trevor-swistchew/assets/images/alan-watts-this-is-it-banner.webp" alt="Trevor Swistchew Salon Banner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='assets/images/logo-mark.webp'">
+                  <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent"></div>
+                  <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[11px] font-mono text-amber-400">
+                    <span>Edinburgh, Scotland</span>
+                    <span class="underline">Enter Salon &rarr;</span>
+                  </div>
+                </a>
+              </div>
+
+              <div class="lg:col-span-7 space-y-4">
                 <div>
-                  <h3 class="font-display text-lg font-bold text-white">Agrarian Connection</h3>
-                  <span class="text-xs font-mono text-emerald-400">Western Washington Soil</span>
+                  <span class="text-xs font-mono uppercase tracking-widest text-amber-400">Songwriter &bull; Essayist &bull; Cultural Thinker</span>
+                  <h4 class="text-2xl font-display font-bold text-stone-100 mt-0.5">Trevor Swistchew</h4>
+                  <p class="font-serif italic text-stone-400 text-sm">
+                    The Scottish Literary Salon, Empirical Inquiries &amp; Companion Compositions
+                  </p>
+                </div>
+
+                <p class="font-serif text-stone-300 text-sm sm:text-base leading-relaxed">
+                  Trevor writes deeply considered prose interrogating constitutional covenants (the 1689 Claim of Right), non-duality, and the human condition. His writing inspired the heavy-rock spoken-word composition <em class="text-amber-400">&ldquo;This Is It&rdquo;</em> recorded with The Shady River Bard.
+                </p>
+
+                <!-- Salon Hub Navigation Hub Buttons -->
+                <div class="pt-2 flex flex-wrap gap-3">
+                  <a href="trevor-swistchew/" class="inline-flex items-center px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-semibold text-xs uppercase font-mono tracking-wider transition-all shadow-md">
+                    <i class="fa-solid fa-door-open mr-2 text-xs" aria-hidden="true"></i>
+                    <span>Salon Hub (27 Works)</span>
+                  </a>
+
+                  <a href="trevor-swistchew/music/" class="inline-flex items-center px-4 py-2.5 rounded-xl bg-stone-800 hover:bg-stone-700 text-rose-300 hover:text-white border border-rose-900/60 font-mono text-xs font-bold transition-all">
+                    <i class="fa-solid fa-guitar mr-2 text-xs" aria-hidden="true"></i>
+                    <span>Musical Chamber (55 Songs Vault)</span>
+                  </a>
+
+                  <a href="trevor-swistchew/poetry/" class="inline-flex items-center px-4 py-2.5 rounded-xl bg-stone-800 hover:bg-stone-700 text-amber-300 hover:text-white border border-amber-800/60 font-mono text-xs font-bold transition-all">
+                    <i class="fa-solid fa-feather-pointed mr-2 text-xs" aria-hidden="true"></i>
+                    <span>Poetry Chamber (29 Works)</span>
+                  </a>
                 </div>
               </div>
 
-              <blockquote class="text-stone-300 italic font-body text-sm leading-relaxed border-l-2 border-emerald-500 pl-4">
-                &ldquo;Two hands—one calloused by tractor steel, one blistered from an office keyboard—lifting the same spade to clear a ditch before the floodwaters rise. The ditch does not care how either man voted.&rdquo;
-              </blockquote>
-              <div class="text-[11px] font-mono text-stone-400">
-                &mdash; From <em>The Fracture</em>, Pillar 07
-              </div>
-
-              <div class="p-4 rounded-2xl bg-soil-900/90 border border-white/5 space-y-2">
-                <span class="text-[11px] font-mono uppercase tracking-wider text-stone-300 font-semibold block">Homestead Entity</span>
-                <p class="text-xs text-stone-400">The Shady River Homestead, LLC is an officially registered agricultural entity in the State of Washington.</p>
-              </div>
             </div>
           </div>
-
         </div>
-
       </div>
+
     </section>
 
-    <!-- SECTION: THE CHRONICLES & DISPATCHES (SUBSTACK JOURNAL) -->
-    <section id="chronicles-section" class="py-16 sm:py-24 border-b border-white/10 bg-soil-900/30 relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- ================================================================= -->
+    <!-- 4. Complete 26-Album Vault Callout (Links to Local Staging Vault)  -->
+    <!-- ================================================================= -->
+    <section id="vault" class="section-pad max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-br from-stone-900 via-stone-900 to-stone-950 border border-stone-800 rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-2xl">
+        <div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-amber-500/5 blur-3xl pointer-events-none" aria-hidden="true"></div>
         
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 border-b border-white/10 pb-8">
-          <div class="space-y-2">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-soil-800 border border-white/10 text-stone-300 text-xs font-mono uppercase tracking-widest">
-              <i aria-hidden="true" class="fa-solid fa-bookmark text-amber-500 text-[10px]"></i>
-              <span>The Shady River Chronicles</span>
-              <span id="live-sync-indicator" class="hidden text-[10px] text-emerald-400 font-mono lowercase flex items-center gap-1 ml-1 border-l border-white/10 pl-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                live sync
-              </span>
-            </div>
-            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-wide">
-              Essays, Dispatches &amp; Liner Notes
-            </h2>
-            <p class="text-sm text-stone-400 max-w-2xl font-body">
-              Long-form writing examining the convergence of technology and craft, track-by-track album liner notes, and reflections on life, land, and songwriting.
-            </p>
+        <div class="max-w-3xl relative z-10">
+          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono mb-6">
+            <i class="fa-solid fa-database text-xs" aria-hidden="true"></i>
+            <span>Living Discography Vault &middot; 26 Discs</span>
           </div>
-          <div class="flex flex-wrap items-center gap-3">
-            <a href="https://theshadyriverbard.substack.com/s/deconstructed" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-soil-950 font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-md inline-flex items-center gap-2">
-              <i aria-hidden="true" class="fa-solid fa-bookmark text-[11px]"></i>
-              <span>"Deconstructed" Liner Notes ↗</span>
-            </a>
-            <a href="https://theshadyriverbard.substack.com" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-300 hover:text-white border border-white/10 hover:border-amber-500/40 font-mono text-xs font-medium uppercase tracking-wider transition-colors inline-flex items-center gap-2">
-              <span>Main Publication ↗</span>
-            </a>
-          </div>
-        </div>
 
-        <!-- Chronicles Grid (All 6 Real Posts) -->
-        <div id="chronicles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Populated dynamically via portal-data.js -->
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECTION: FRIENDS OF THE BARD -->
-    <section id="friends-section" class="py-20 sm:py-24 bg-gradient-to-b from-soil-900 to-soil-950 border-t border-white/10">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-8">
-          <div class="space-y-3">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-soil-850 border border-amber-500/30 text-amber-400 text-xs font-mono uppercase tracking-widest">
-              <i aria-hidden="true" class="fa-solid fa-user-group text-amber-500 text-[10px]"></i>
-              <span>Creative Fellowship</span>
-            </div>
-            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-wide">
-              Friends of the Bard
-            </h2>
-            <p class="text-sm text-stone-400 max-w-2xl font-body">
-              Kindred creators, independent essayists, and storytellers who explore the deeper currents of society, art, memory, and wonder.
-            </p>
-          </div>
-          <div>
-            <a href="friends-of-the-bard/" class="px-5 py-2.5 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 hover:text-amber-400 border border-white/10 hover:border-amber-500/40 font-mono text-xs font-bold uppercase tracking-wider transition-all inline-flex items-center gap-2">
-              <span>View Fellowship Directory ↗</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
-          <!-- Trevor Swistchew Spotlight Card -->
-          <article class="portal-card p-6 sm:p-8 rounded-2xl bg-soil-850 border border-amber-500/40 shadow-xl flex flex-col justify-between space-y-6 group">
-            <div class="space-y-4">
-              <div class="flex items-center justify-between text-xs font-mono">
-                <span class="px-2.5 py-0.5 rounded bg-amber-950/80 text-amber-400 border border-amber-800/40 font-bold">Featured Friend</span>
-                <span class="text-stone-400">Edinburgh, Scotland</span>
-              </div>
-              <h3 class="font-display text-2xl font-bold text-white group-hover:text-amber-300 transition-colors">
-                Trevor Swistchew
-              </h3>
-              <p class="text-xs font-mono text-amber-500/90 uppercase tracking-wider">
-                Songwriter • Essayist • Cultural Thinker
-              </p>
-              <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-body">
-                Deeply considered prose, constitutional inquiries into the 1689 Claim of Right, and empirical research dossiers—paired with companion Scottish folk-rock compositions in DADGAD tuning.
-              </p>
-              <div class="flex flex-wrap gap-1.5 pt-1 text-[10px] font-mono text-stone-400">
-                <span class="px-2 py-0.5 rounded bg-soil-900 border border-white/5">#ScottishSovereignty</span>
-                <span class="px-2 py-0.5 rounded bg-soil-900 border border-white/5">#ReadingSalon</span>
-                <span class="px-2 py-0.5 rounded bg-soil-900 border border-white/5">#FolkCompositions</span>
-              </div>
-            </div>
-            <div class="pt-4 border-t border-white/10 flex items-center justify-between">
-              <a href="trevor-swistchew/" class="py-2.5 px-4 rounded-xl bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-soil-950 font-mono text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2">
-                <span>Enter Trevor's Salon ↗</span>
-              </a>
-              <a href="https://github.com/tpatterson34/trevor-swistchew-portal" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-stone-400 hover:text-white flex items-center gap-1.5">
-                <i aria-hidden="true" class="fa-brands fa-github"></i>
-                <span>GitHub Repo</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- Upcoming Children's Book Author Card -->
-          <article class="portal-card p-6 sm:p-8 rounded-2xl bg-soil-850/60 border border-dashed border-white/20 shadow-xl flex flex-col justify-between space-y-6">
-            <div class="space-y-4">
-              <div class="flex items-center justify-between text-xs font-mono">
-                <span class="px-2.5 py-0.5 rounded bg-evergreen-950/80 text-emerald-400 border border-emerald-800/40 font-semibold flex items-center gap-1">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  Coming Soon
-                </span>
-                <span class="text-stone-500">The Storyteller's Glade</span>
-              </div>
-              <h3 class="font-display text-2xl font-bold text-stone-200">
-                Author of Children's Books
-              </h3>
-              <p class="text-xs font-mono text-emerald-400/90 uppercase tracking-wider">
-                Illustrated Stories • Wonder • Musical Lullabies
-              </p>
-              <p class="text-xs sm:text-sm text-stone-400 leading-relaxed font-body">
-                A cherished creator joining the fellowship soon with enchanting illustrated stories, playful nature adventures, and musical nursery tales for children and families.
-              </p>
-              <div class="flex flex-wrap gap-1.5 pt-1 text-[10px] font-mono text-stone-500">
-                <span class="px-2 py-0.5 rounded bg-soil-900 border border-white/5">#Storybooks</span>
-                <span class="px-2 py-0.5 rounded bg-soil-900 border border-white/5">#WoodlandTales</span>
-                <span class="px-2 py-0.5 rounded bg-soil-900 border border-white/5">#YoungHearts</span>
-              </div>
-            </div>
-            <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-stone-500 italic">
-              <span>Publishing portal in preparation...</span>
-              <span class="px-2.5 py-1 rounded bg-soil-900 text-stone-400 border border-white/5">Stay Tuned</span>
-            </div>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECTION: STREAMING & COMMUNITY ECOSYSTEM -->
-    <section class="py-16 sm:py-20 bg-soil-950">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-        
-        <div class="space-y-2">
-          <h2 class="font-display text-2xl sm:text-3xl font-bold text-white tracking-wide">
-            Listen Across All Streaming Platforms
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-stone-100 mb-6 leading-tight">
+            Explore the Complete 26-Album Discography Vault
           </h2>
-          <p class="text-xs sm:text-sm text-stone-400 max-w-xl mx-auto font-body">
-            Stream all 26 released albums and companion releases on your preferred audio and video service.
+
+          <p class="font-serif text-stone-300 text-lg sm:text-xl leading-relaxed mb-8">
+            Access the deep archives containing full lyrics vaults, musical analyses, track deconstructions, and official video playlists for all 26 concept albums—completely integrated in staging.
           </p>
-        </div>
 
-        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
-          <a href="https://www.youtube.com/@TheShadyRiverBard" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-white/10 hover:border-red-500/50 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2.5 shadow-md">
-            <i aria-hidden="true" class="fa-brands fa-youtube text-red-500 text-base"></i>
-            <span>YouTube Videos</span>
-          </a>
-          <a href="https://open.spotify.com/artist/2QtTWiosF5IrrAib5b7arZ" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-white/10 hover:border-emerald-500/50 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2.5 shadow-md">
-            <i aria-hidden="true" class="fa-brands fa-spotify text-emerald-500 text-base"></i>
-            <span>Spotify</span>
-          </a>
-          <a href="https://music.apple.com/us/artist/the-shady-river-bard/1829561760" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-white/10 hover:border-pink-500/50 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2.5 shadow-md">
-            <i aria-hidden="true" class="fa-brands fa-apple text-pink-400 text-base"></i>
-            <span>Apple Music</span>
-          </a>
-          <a href="https://music.amazon.com/search/The+Shady+River+Bard" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-white/10 hover:border-amber-500/50 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2.5 shadow-md">
-            <i aria-hidden="true" class="fa-brands fa-amazon text-amber-500 text-base"></i>
-            <span>Amazon Music</span>
-          </a>
-          <a href="https://theshadyriverbard.substack.com" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-soil-850 hover:bg-soil-800 text-stone-200 border border-white/10 hover:border-orange-500/50 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2.5 shadow-md">
-            <i aria-hidden="true" class="fa-solid fa-bookmark text-orange-400 text-sm"></i>
-            <span>Substack</span>
-          </a>
-        </div>
+          <div class="flex flex-wrap items-center gap-4">
+            <!-- Local Relative Vault Link -->
+            <a href="vault/" class="inline-flex items-center px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-semibold text-sm transition-all shadow-lg hover:scale-105">
+              <span>Open 26-Album Discography Vault</span>
+              <i class="fa-solid fa-arrow-right ml-2 text-xs" aria-hidden="true"></i>
+            </a>
 
+            <a href="friends-of-the-bard/" class="inline-flex items-center px-6 py-3.5 rounded-xl bg-stone-800 hover:bg-stone-700 border border-stone-700 text-stone-200 font-semibold text-sm transition-all">
+              <i class="fa-solid fa-user-group mr-2 text-amber-400" aria-hidden="true"></i>
+              <span>Friends of the Bard Collective</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="bg-soil-950 border-t border-white/10 py-16 text-stone-400 text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-      
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        
-        <!-- Col 1: Brand -->
-        <div class="space-y-3 md:col-span-2">
-          <span class="font-display font-bold text-lg text-white tracking-widest block">THE SHADY RIVER</span>
-          <p class="text-stone-400 leading-relaxed font-body max-w-md">
-            An independent American creative endeavor. One human heart, one digital muse, and the living soil of Western Washington State.
-          </p>
-          <div class="pt-2 font-mono text-[11px] text-stone-500">
-            Official Entities: The Shady River Homestead, LLC &amp; The Shady River Bard
-          </div>
-        </div>
-
-        <!-- Col 2: Hubs -->
-        <div class="space-y-2">
-          <span class="font-mono text-xs uppercase tracking-widest text-stone-300 font-bold block mb-2">Gateways</span>
-          <ul class="space-y-1.5 font-mono text-xs">
-            <li><a href="the-hollow-herd/" class="text-amber-400 font-bold hover:underline transition-colors flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>The Hollow Herd (Album 26)</a></li>
-            <li><a href="the-fracture/" class="hover:text-amber-400 transition-colors">The Fracture Concept Site</a></li>
-            <li><a href="the-great-inversion/" class="hover:text-amber-400 transition-colors">The Great Inversion Experience</a></li>
-            <li><a href="the-poison-we-trust/" class="hover:text-amber-400 transition-colors">The Poison We Trust Experience</a></li>
-            <li><a href="a-house-divided/" class="hover:text-amber-400 transition-colors">A House Divided Experience</a></li>
-            <li><a href="unequal-justice/" class="hover:text-amber-400 transition-colors">Unequal Justice Experience</a></li>
-            <li><a href="cognitive-inferno/" class="hover:text-amber-400 transition-colors">Cognitive Inferno Experience</a></li>
-            <li><a href="the-hammer-and-the-rust/" class="hover:text-amber-400 transition-colors">The Hammer and the Rust Experience</a></li>
-            <li><a href="unbroken-chain/" class="hover:text-amber-400 transition-colors">The Unbroken Chain Experience</a></li>
-            <li><a href="this-sacred-ground/" class="hover:text-amber-400 transition-colors">This Sacred Ground Experience</a></li>
-            <li><a href="the-balance-sheet-of-outrage/" class="hover:text-amber-400 transition-colors">The Balance Sheet of Outrage Experience</a></li>
-            <li><a href="mamas-boy/" class="hover:text-amber-400 transition-colors">Mama's Boy Experience</a></li>
-            <li><a href="five-digit-fate/" class="hover:text-amber-400 transition-colors">Five-Digit Fate Experience</a></li>
-            <li><a href="sold-cheap/" class="hover:text-amber-400 transition-colors">Sold Cheap Experience</a></li>
-            <li><a href="divide-and-conquer/" class="hover:text-amber-400 transition-colors">Divide and Conquer Experience</a></li>
-            <li><a href="yo-ho-ho-and-a-pocket-full-of-greed/" class="hover:text-amber-400 transition-colors">Yo Ho Ho and a Pocket Full of Greed Experience</a></li>
-            <li><a href="friends-of-the-bard/" class="text-amber-400 font-bold hover:underline transition-colors flex items-center gap-1.5"><i aria-hidden="true" class="fa-solid fa-user-group text-[10px]"></i>Friends of the Bard</a></li>
-            <li><a href="trevor-swistchew/" class="hover:text-amber-400 transition-colors">Trevor Swistchew Salon</a></li>
-            <li><a href="the-forgotten-crown/" class="hover:text-amber-400 transition-colors">The Forgotten Crown</a></li>
-            <li><a href="the-republic-of-nobody/" class="hover:text-amber-400 transition-colors text-amber-400 font-semibold">The Republic of Nobody</a></li>
-            <li><a href="the-inner-citadel/" class="hover:text-amber-400 transition-colors text-amber-400 font-semibold">The Inner Citadel Experience</a></li>
-            <li><a href="the-curtains-and-the-canned-goods/" class="hover:text-amber-400 transition-colors text-amber-400 font-semibold">The Curtains and the Canned Goods Experience</a></li>
-            <li><a href="go-bake-some-apples/" class="hover:text-amber-400 transition-colors text-amber-400 font-semibold">Go Bake Some Apples Experience</a></li>
-            <li><a href="a-dogs-life-the-tao-of-the-tail/" class="hover:text-amber-400 transition-colors text-amber-400 font-semibold">A Dog's Life: The Tao of the Tail Experience</a></li>
-            <li><a href="vault/" class="hover:text-amber-400 transition-colors">26-Album Discography</a></li>
-            <li><a href="#homestead-section" class="hover:text-emerald-400 transition-colors">The Homestead, LLC</a></li>
-            <li><a href="#chronicles-section" class="hover:text-amber-400 transition-colors">The Chronicles (Substack)</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 3: Media & Contact -->
-        <div class="space-y-2">
-          <span class="font-mono text-xs uppercase tracking-widest text-stone-300 font-bold block mb-2">Community</span>
-          <ul class="space-y-1.5 font-mono text-xs">
-            <li><a href="https://theshadyriverbard.substack.com/s/deconstructed" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 font-bold transition-colors">"Deconstructed" Liner Notes ↗</a></li>
-            <li><a href="https://theshadyriverbard.substack.com" target="_blank" rel="noopener noreferrer" class="hover:text-stone-300 transition-colors">Substack Journal ↗</a></li>
-            <li><a href="https://www.youtube.com/@TheShadyRiverBard" target="_blank" rel="noopener noreferrer" class="hover:text-red-400 transition-colors">YouTube Channel ↗</a></li>
-            <li><a href="https://www.facebook.com/profile.php?id=61578707414516" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors">Facebook Community ↗</a></li>
-            <li><a href="mailto:theshadyriverbard@gmail.com" class="hover:text-stone-200 transition-colors">theshadyriverbard@gmail.com</a></li>
-          </ul>
-        </div>
-
+  <!-- ================================================================= -->
+  <!-- 5. Minimal Curated Footer                                         -->
+  <!-- ================================================================= -->
+  <footer class="border-t border-stone-800/80 bg-stone-950 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center space-x-3">
+        <img src="assets/images/logo-badge.webp" alt="The Shady River Bard Badge" class="w-8 h-8 rounded-full opacity-80">
+        <span class="font-display text-sm font-semibold text-stone-400">The Shady River Bard &copy; 2026. All Rights Reserved.</span>
       </div>
 
-      <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-stone-600 font-mono text-[11px]">
-        <div>
-          &copy; 2026 The Shady River Homestead, LLC &amp; The Shady River Bard. All music, artwork, and narrative content reserved.
-        </div>
-        <div>
-          <a href="#top" class="text-stone-400 hover:text-amber-400 transition-colors uppercase">Back to Top &uarr;</a>
-        </div>
-      </div>
-
-      <div class="pt-6 border-t border-white/5 flex flex-wrap items-center justify-between gap-4 text-[11px] text-stone-500 font-mono">
-        <div class="flex items-center gap-2">
-          <i class="fa-solid fa-universal-access text-amber-400" aria-hidden="true"></i>
-          <span>WCAG 2.1 AA &bull; ADA Title III Compliant Experience</span>
-        </div>
-        <div class="flex items-center gap-4">
-          <button onclick="openA11yModal()" class="text-stone-400 hover:text-amber-400 underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400">
-            Accessibility Statement
-          </button>
-          <span>&bull;</span>
-          <button onclick="openCopyrightModal()" class="text-stone-400 hover:text-amber-400 underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400">
-            Licensing &amp; Sampling Policy
-          </button>
-          <span>&bull;</span>
-          <button onclick="toggleA11yToolbar()" class="text-stone-400 hover:text-amber-400 underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400">
-            Display Preferences
-          </button>
-        </div>
+      <div class="flex items-center space-x-6 text-xs font-mono text-stone-400">
+        <a href="#main-content" class="hover:text-amber-400 transition-colors">Top</a>
+        <a href="#gateway" class="hover:text-amber-400 transition-colors">Gateway</a>
+        <a href="#doors" class="hover:text-amber-400 transition-colors">Four Pillars</a>
+        <a href="friends-of-the-bard/" class="hover:text-amber-400 transition-colors">Friends of the Bard</a>
+        <a href="vault/" class="hover:text-amber-400 transition-colors">Vault</a>
       </div>
     </div>
   </footer>
 
-  <!-- LOAD PORTAL DATA -->
-  <script src="data/portal-data.js?v=20260914_01"></script>
+  <!-- ================================================================= -->
+  <!-- 6. Persistent Bottom-Docked Global Audio Player                    -->
+  <!-- ================================================================= -->
+  <div id="persistent-player" class="fixed bottom-0 left-0 right-0 z-50 bg-stone-950/95 backdrop-blur-xl border-t border-stone-800 shadow-2xl transition-all" role="region" aria-label="Persistent Audio Player">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
+      
+      <!-- Track Meta (Left) -->
+      <div class="flex items-center space-x-3 w-1/3 min-w-[180px] max-w-xs">
+        <div class="relative w-12 h-12 rounded-lg overflow-hidden border border-stone-700/80 flex-shrink-0 bg-stone-900">
+          <img id="player-track-cover" src="assets/images/how-i-disintegrated-cover.webp" alt="Currently playing track artwork" class="w-full h-full object-cover">
+        </div>
+        <div class="overflow-hidden">
+          <div id="player-track-title" class="font-display text-xs sm:text-sm font-bold text-stone-100 truncate">How I Disintegrated (Preview)</div>
+          <div id="player-track-subtitle" class="font-mono text-[10px] text-stone-400 truncate">Album 20 &middot; Folk Blues</div>
+        </div>
 
-  <!-- APP LOGIC -->
-  <script>
-    // 1. Render Landmark Concept Albums
-    function renderLandmarkAlbums() {
-      const container = document.getElementById('landmark-grid');
-      if (!container || !window.PORTAL_DATA) return;
+        <!-- Waveform Visualizer Bars -->
+        <div class="hidden sm:flex items-center space-x-1 ml-2 h-6" aria-hidden="true">
+          <div class="audio-bar"></div>
+          <div class="audio-bar"></div>
+          <div class="audio-bar"></div>
+          <div class="audio-bar"></div>
+          <div class="audio-bar"></div>
+        </div>
+      </div>
 
-      const albums = window.PORTAL_DATA.featured_albums;
-      container.innerHTML = albums.map(a => {
-        const coverSrc = a.cover ? a.cover.replace(/^\//, '') : '';
-        const appUrl = a.url ? a.url.replace(/^\//, '') : '#';
-        return `
-        <article class="portal-card p-5 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/50 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-          <div class="space-y-3">
-            <div class="relative aspect-square rounded-xl overflow-hidden border border-white/10 shadow-md">
-              <img src="${coverSrc}" alt="${a.title} cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-              <div class="absolute top-2.5 left-2.5">
-                <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-soil-950/90 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
-                  ${a.badge}
-                </span>
-              </div>
-              <div class="absolute bottom-2.5 right-2.5">
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-stone-300 backdrop-blur-sm">
-                  ${a.tracks_count} Tracks
-                </span>
-              </div>
-            </div>
+      <!-- Playback Controls & Progress Scrubber (Center) -->
+      <div class="flex flex-col items-center w-full max-w-xl px-2">
+        <div class="flex items-center space-x-4 mb-1">
+          <!-- Prev Button -->
+          <button id="player-prev-btn" type="button" aria-label="Previous Track" class="text-stone-400 hover:text-stone-100 transition-colors p-1.5 focus:outline-none">
+            <i class="fa-solid fa-backward-step text-sm" aria-hidden="true"></i>
+          </button>
+          
+          <!-- Play / Pause Button -->
+          <button id="player-play-btn" type="button" aria-label="Play audio" class="w-9 h-9 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 flex items-center justify-center transition-transform hover:scale-105 active:scale-95 shadow-md">
+            <i class="fa-solid fa-play text-xs ml-0.5" aria-hidden="true"></i>
+          </button>
 
-            <div>
-              <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mb-0.5">Album ${a.number}</div>
-              <h3 class="font-display text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                ${a.title}
-              </h3>
-              <p class="text-xs text-stone-400 font-mono mt-0.5">${a.subtitle}</p>
-            </div>
+          <!-- Next Button -->
+          <button id="player-next-btn" type="button" aria-label="Next Track" class="text-stone-400 hover:text-stone-100 transition-colors p-1.5 focus:outline-none">
+            <i class="fa-solid fa-forward-step text-sm" aria-hidden="true"></i>
+          </button>
+        </div>
 
-            <p class="text-xs text-stone-300 leading-relaxed font-body">
-              ${a.description}
-            </p>
-
-            <div class="flex flex-wrap gap-1 pt-1">
-              ${a.themes.slice(0, 3).map(t => `
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-soil-900 text-stone-400 border border-white/5">
-                  #${t}
-                </span>
-              `).join('')}
-            </div>
+        <!-- Scrubber and Time -->
+        <div class="w-full flex items-center space-x-3 text-[11px] font-mono text-stone-400">
+          <span id="player-current-time">0:00</span>
+          <div id="player-scrub-bar" class="relative flex-1 h-1.5 bg-stone-800 rounded-full cursor-pointer overflow-hidden group">
+            <div id="player-scrub-fill" class="absolute top-0 left-0 bottom-0 bg-amber-500 rounded-full w-0 transition-all duration-75"></div>
           </div>
+          <span id="player-total-time">0:45</span>
+        </div>
+      </div>
 
-          <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-            <a href="${appUrl}" class="flex-1 py-2 px-3 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-soil-950 border border-amber-500/40 text-center font-mono text-xs font-bold transition-all">
-              Explore Album &rarr;
-            </a>
-            ${a.video_url ? `
-              <a href="${a.video_url}" target="_blank" rel="noopener noreferrer" class="py-2 px-3 rounded-lg bg-soil-800 hover:bg-soil-700 text-stone-300 border border-white/10 hover:border-red-500 font-mono text-xs transition-all flex items-center gap-1.5" title="Watch full concept album video">
-                <i aria-hidden="true" class="fa-brands fa-youtube text-red-500"></i>
-                <span class="hidden sm:inline">Film</span>
-              </a>
-            ` : ''}
-          </div>
-        </article>
-        `;
-      }).join('');
-    }
+      <!-- Volume & Utility Controls (Right) -->
+      <div class="hidden md:flex items-center justify-end space-x-3 w-1/3 max-w-xs">
+        <button id="player-volume-btn" type="button" aria-label="Mute or unmute volume" class="text-stone-400 hover:text-stone-200 transition-colors p-1.5 focus:outline-none">
+          <i class="fa-solid fa-volume-high text-sm" aria-hidden="true"></i>
+        </button>
+        <input id="player-volume-slider" type="range" min="0" max="1" step="0.05" value="0.85" aria-label="Volume slider" class="w-20 h-1 bg-stone-800 accent-amber-500 rounded-lg cursor-pointer">
+      </div>
 
-    // Helper to render chronicle cards
-    function renderChronicleCards(container, essays) {
-      container.innerHTML = essays.map(e => {
-        const safeTitle = (e.title || '').replace(/"/g, '&quot;');
-        return `
-        <article class="portal-card p-5 sm:p-6 rounded-2xl bg-soil-850 border border-white/10 hover:border-amber-500/40 transition-all shadow-xl flex flex-col justify-between space-y-4 group">
-          <div class="space-y-3">
-            ${e.image ? `
-              <div class="aspect-video w-full rounded-xl overflow-hidden border border-white/10 shadow-md relative bg-soil-950">
-                <img src="${e.image}" alt="${safeTitle}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-              </div>
-            ` : ''}
-            <div class="flex items-center justify-between text-[11px] font-mono">
-              <span class="text-amber-400 px-2 py-0.5 rounded bg-amber-950/70 border border-amber-800/40 font-semibold">${e.category}</span>
-              <span class="text-stone-400">${e.date}</span>
-            </div>
-            <h3 class="font-display text-lg sm:text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-              ${e.title}
-            </h3>
-            <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-body">
-              ${e.summary}
-            </p>
-          </div>
-          <div class="pt-3 border-t border-white/10">
-            <a href="${e.url}" target="_blank" rel="noopener noreferrer" class="w-full py-2 px-3 rounded-lg bg-soil-800 hover:bg-amber-600 text-stone-300 hover:text-soil-950 border border-white/10 hover:border-amber-500 font-mono text-xs font-semibold uppercase tracking-wider transition-all flex items-center justify-between">
-              <span>Read on Substack</span>
-              <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
-            </a>
-          </div>
-        </article>
-      `;
-      }).join('');
-    }
+    </div>
+  </div>
 
-    // 2. Render Chronicles / Substack Section
-    function renderChronicles() {
-      const container = document.getElementById('chronicles-grid');
-      if (!container || !window.PORTAL_DATA) return;
+  <!-- ================================================================= -->
+  <!-- 7. Accessibility Modal Dialog                                     -->
+  <!-- ================================================================= -->
+  <div id="a11y-modal" class="fixed inset-0 z-50 bg-stone-950/80 backdrop-blur-sm hidden flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="a11y-title">
+    <div class="bg-stone-900 border border-stone-700 rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl">
+      <div class="flex items-center justify-between pb-4 border-b border-stone-800 mb-6">
+        <div class="flex items-center space-x-3">
+          <i class="fa-solid fa-universal-access text-amber-400 text-xl" aria-hidden="true"></i>
+          <h3 id="a11y-title" class="font-display font-bold text-xl text-stone-100">Accessibility &amp; Controls</h3>
+        </div>
+        <button onclick="closeA11yModal()" class="text-stone-400 hover:text-stone-100 p-2 rounded-lg hover:bg-stone-800" aria-label="Close modal">
+          <i class="fa-solid fa-xmark text-lg" aria-hidden="true"></i>
+        </button>
+      </div>
 
-      // Render instant cached dispatches (0ms)
-      renderChronicleCards(container, window.PORTAL_DATA.chronicles);
+      <div class="space-y-4 font-serif text-stone-300 text-sm leading-relaxed">
+        <p>This staged portal conforms to WCAG 2.1 AA specifications with enhanced focus rings, screen-reader navigation, and progressive disclosure patterns.</p>
+        
+        <div class="bg-stone-950 p-4 rounded-xl font-mono text-xs space-y-2 border border-stone-800">
+          <div class="text-amber-400 font-bold uppercase tracking-wider mb-2">Keyboard Shortcuts</div>
+          <div class="flex justify-between"><span>[Space]</span><span class="text-stone-400">Play / Pause Global Audio</span></div>
+          <div class="flex justify-between"><span>[Esc]</span><span class="text-stone-400">Close Modals / Drawers</span></div>
+          <div class="flex justify-between"><span>[Tab]</span><span class="text-stone-400">Navigate Interactive Nodes</span></div>
+        </div>
 
-      // Connect to live Substack feed asynchronously
-      syncLiveSubstack(container);
-    }
+        <p class="text-xs text-stone-400">For users with vestibular or motion sensitivity, animation states automatically respect your system's <code class="text-stone-300">prefers-reduced-motion</code> setting.</p>
+      </div>
 
-    // Background live feed synchronization
-    async function syncLiveSubstack(container) {
-      try {
-        let items = null;
+      <div class="mt-6 pt-4 border-t border-stone-800 flex justify-end">
+        <button onclick="closeA11yModal()" class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-semibold text-xs uppercase tracking-wider transition-all">
+          Close Window
+        </button>
+      </div>
+    </div>
+  </div>
 
-        // Try Cloudflare Edge Function first
-        try {
-          const edgeRes = await fetch('/api/chronicles');
-          const ct = edgeRes.headers.get('content-type') || '';
-          if (edgeRes.ok && ct.includes('json')) {
-            items = await edgeRes.json();
-          }
-        } catch (err) {
-          // Edge function unavailable, fallback below
-        }
-
-        // Fallback to public RSS proxy
-        if (!items || !items.length) {
-          const proxyUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent('https://theshadyriverbard.substack.com/feed');
-          const proxyRes = await fetch(proxyUrl);
-          if (proxyRes.ok) {
-            const data = await proxyRes.json();
-            if (data && data.items && data.items.length) {
-              items = data.items.slice(0, 6).map(item => {
-                const img = item.thumbnail || (item.enclosure && item.enclosure.link) || '';
-                let summary = item.description ? item.description.replace(/<[^>]+>/g, '').trim() : '';
-                summary = summary.replace(/&amp;/g, '&').replace(/&#8217;/g, "'").replace(/&#8220;/g, '"').replace(/&#8221;/g, '"');
-                if (summary.length > 180) summary = summary.slice(0, 177) + '...';
-
-                let dateStr = '';
-                if (item.pubDate) {
-                  try {
-                    const d = new Date(item.pubDate.replace(/-/g, '/'));
-                    dateStr = d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-                  } catch (e) {
-                    dateStr = item.pubDate.slice(0, 16);
-                  }
-                }
-
-                let category = 'Substack Journal';
-                const lowTitle = item.title.toLowerCase();
-                if (lowTitle.includes('liner notes')) {
-                  const parts = item.title.split(':');
-                  category = parts.length > 1 ? 'Track Notes: ' + parts[1].trim() : 'Track Liner Notes';
-                } else if (lowTitle.includes('spark') || lowTitle.includes('manifesto')) {
-                  category = 'Manifesto & Process';
-                }
-
-                return {
-                  title: item.title.replace(/&amp;/g, '&').replace(/&#8217;/g, "'").replace(/&#39;/g, "'"),
-                  url: item.link,
-                  date: dateStr,
-                  category,
-                  summary,
-                  image: img
-                };
-              });
-            }
-          }
-        }
-
-        if (items && items.length) {
-          renderChronicleCards(container, items);
-          const syncBadge = document.getElementById('live-sync-indicator');
-          if (syncBadge) syncBadge.classList.remove('hidden');
-        }
-      } catch (err) {
-        console.warn('Substack feed sync note:', err);
-      }
-    }
-
-    // Initialize on DOM load
-    document.addEventListener('DOMContentLoaded', () => {
-      renderLandmarkAlbums();
-      renderChronicles();
-
-      // Mobile Menu
-      const mobileBtn = document.getElementById('mobile-menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      if (mobileBtn && mobileMenu) {
-        mobileBtn.addEventListener('click', () => {
-          const isClosed = mobileMenu.classList.toggle('hidden'); mobileBtn.setAttribute('aria-expanded', !isClosed);
-        });
-      }
-    });
-  </script>
-  <!-- Unified Accessibility Controller -->
-  <script src="assets/js/a11y.js?v=20260914_01"></script>
+  <!-- Scripts -->
+  <script src="assets/js/player.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>
-
-

@@ -933,7 +933,7 @@
                   </span>
                 ` : ''}
                 ${item.is_bespoke && item.custom_url ? `
-                  <a href="${item.custom_url}" onclick="event.stopPropagation();" class="px-2 py-0.5 rounded-md text-[10px] font-mono font-semibold bg-sky-950/90 text-sky-300 border border-sky-500/40 hover:bg-sky-900 hover:text-white transition-colors backdrop-blur-sm flex items-center gap-1" title="Interactive Album Experience">
+                  <a href="${item.custom_url.startsWith('http') ? item.custom_url : (item.custom_url.startsWith('../') ? item.custom_url : '../' + item.custom_url.replace(/^\//, ''))}" onclick="event.stopPropagation();" class="px-2 py-0.5 rounded-md text-[10px] font-mono font-semibold bg-sky-950/90 text-sky-300 border border-sky-500/40 hover:bg-sky-900 hover:text-white transition-colors backdrop-blur-sm flex items-center gap-1" title="Interactive Album Experience">
                     <span>Experience &rarr;</span>
                   </a>
                 ` : ''}
@@ -1113,7 +1113,7 @@
       // Bespoke box
       const bespokeBox = document.getElementById('modal-bespoke-box');
       if (item.is_bespoke && item.custom_url) {
-        document.getElementById('modal-bespoke-link').href = item.custom_url;
+        document.getElementById('modal-bespoke-link').href = item.custom_url.startsWith('http') ? item.custom_url : (item.custom_url.startsWith('../') ? item.custom_url : '../' + item.custom_url.replace(/^\//, ''));
         bespokeBox.classList.remove('hidden');
       } else {
         bespokeBox.classList.add('hidden');
