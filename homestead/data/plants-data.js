@@ -1,5 +1,5 @@
 // The Shady River Homestead — Living Botanical & Cultivar Catalog
-// Generated from G:\My Drive\Homestead\plant-data.xlsx — 110 Varieties
+// 110 Cultivars with Verified Botanical Photography
 window.HOMESTEAD_PLANTS = [
   {
     "id": "amere-de-berthcourt-cider-apple-tree",
@@ -24,7 +24,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Apple wood is the premier wood for smoking bacon, sausages, and poultry. Pruned winter branches make excellent biochar and natural cooking fuel.",
     "dyeColor": "Apple bark and autumn leaves produce warm antique golds, brassy yellows, and soft tans.",
     "permacultureRole": "Central canopy anchor of the food forest guild; supports mycorrhizal fungal webs and perennial herb understories.",
-    "imageUrl": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/cider-apple.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -54,7 +54,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Thorny gooseberry bushes make protective small hedgerows; fragrant clove currant blossoms perfume the entire spring garden.",
     "dyeColor": "Berries yield delicate purples and soft pinks; leaves yield warm yellow-greens.",
     "permacultureRole": "Thrives in partial shade beneath fruit trees; ideal middle-tier shrub in multi-story orchard guilds.",
-    "imageUrl": "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/gooseberry.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -84,7 +84,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Extremely hard, rot-resistant wood used for turnery and mallets. Naturally pest-free and requires zero chemical sprays.",
     "dyeColor": "Bark and fruit skins yield rich golden tan and light brown dyes.",
     "permacultureRole": "Immune to late spring frosts (leafs out very late); highly drought and heat tolerant once established.",
-    "imageUrl": "https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/jujube.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -115,7 +115,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Extremely hard, rot-resistant wood used for turnery and mallets. Naturally pest-free and requires zero chemical sprays.",
     "dyeColor": "Bark and fruit skins yield rich golden tan and light brown dyes.",
     "permacultureRole": "Immune to late spring frosts (leafs out very late); highly drought and heat tolerant once established.",
-    "imageUrl": "https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/jujube.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -146,7 +146,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Apple wood is the premier wood for smoking bacon, sausages, and poultry. Pruned winter branches make excellent biochar and natural cooking fuel.",
     "dyeColor": "Apple bark and autumn leaves produce warm antique golds, brassy yellows, and soft tans.",
     "permacultureRole": "Central canopy anchor of the food forest guild; supports mycorrhizal fungal webs and perennial herb understories.",
-    "imageUrl": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/apple.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -176,7 +176,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "The dense, beautifully figured timber is prized for fine woodworking, cabinetry, and musical instruments. Shells make high-energy smokeless fuel.",
     "dyeColor": "Husks and inner bark yield rich tan, walnut-brown, and chestnut hues.",
     "permacultureRole": "Evergreen Valdivian rainforest native well-adapted to maritime PNW climates; high-value perennial lipid and protein crop.",
-    "imageUrl": "https://images.unsplash.com/photo-1589927986089-35812388d1f4?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/chilean-hazelnut.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -206,7 +206,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Renowned for its breathtaking cinnamon-orange peeling bark with stark white inner wood. Exceptionally hard wood used for tool handles.",
     "dyeColor": "Bark and berries yield soft reddish-brown and mauve dyes.",
     "permacultureRole": "Year-round evergreen windbreak; profuse fragrant white flowers bloom in late summer when other forage is scarce.",
-    "imageUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/chilean-myrtle.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -237,7 +237,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Extremely hard, rot-resistant wood used for turnery and mallets. Naturally pest-free and requires zero chemical sprays.",
     "dyeColor": "Bark and fruit skins yield rich golden tan and light brown dyes.",
     "permacultureRole": "Immune to late spring frosts (leafs out very late); highly drought and heat tolerant once established.",
-    "imageUrl": "https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/jujube.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -268,7 +268,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Extremely hard, rot-resistant wood used for turnery and mallets. Naturally pest-free and requires zero chemical sprays.",
     "dyeColor": "Bark and fruit skins yield rich golden tan and light brown dyes.",
     "permacultureRole": "Immune to late spring frosts (leafs out very late); highly drought and heat tolerant once established.",
-    "imageUrl": "https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/jujube.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -299,7 +299,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Apple wood is the premier wood for smoking bacon, sausages, and poultry. Pruned winter branches make excellent biochar and natural cooking fuel.",
     "dyeColor": "Apple bark and autumn leaves produce warm antique golds, brassy yellows, and soft tans.",
     "permacultureRole": "Central canopy anchor of the food forest guild; supports mycorrhizal fungal webs and perennial herb understories.",
-    "imageUrl": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/apple.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -329,7 +329,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Apple wood is the premier wood for smoking bacon, sausages, and poultry. Pruned winter branches make excellent biochar and natural cooking fuel.",
     "dyeColor": "Apple bark and autumn leaves produce warm antique golds, brassy yellows, and soft tans.",
     "permacultureRole": "Central canopy anchor of the food forest guild; supports mycorrhizal fungal webs and perennial herb understories.",
-    "imageUrl": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/apple.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -359,7 +359,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Dark berries yield soft blue-purple natural fabric dyes; evergreen huckleberry branches are prized long-lasting floristry greens.",
     "dyeColor": "Soft purplish blue, lavender, and dusty gray.",
     "permacultureRole": "Acid-loving shrub that thrives in peat, sawdust, and pine needles; feeds native pollinators and migratory birds.",
-    "imageUrl": "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/blueberry.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -389,7 +389,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Extremely hard, rot-resistant wood used for turnery and mallets. Naturally pest-free and requires zero chemical sprays.",
     "dyeColor": "Bark and fruit skins yield rich golden tan and light brown dyes.",
     "permacultureRole": "Immune to late spring frosts (leafs out very late); highly drought and heat tolerant once established.",
-    "imageUrl": "https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/jujube.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -420,7 +420,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Apple wood is the premier wood for smoking bacon, sausages, and poultry. Pruned winter branches make excellent biochar and natural cooking fuel.",
     "dyeColor": "Apple bark and autumn leaves produce warm antique golds, brassy yellows, and soft tans.",
     "permacultureRole": "Central canopy anchor of the food forest guild; supports mycorrhizal fungal webs and perennial herb understories.",
-    "imageUrl": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/apple.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -450,7 +450,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Apple wood is the premier wood for smoking bacon, sausages, and poultry. Pruned winter branches make excellent biochar and natural cooking fuel.",
     "dyeColor": "Apple bark and autumn leaves produce warm antique golds, brassy yellows, and soft tans.",
     "permacultureRole": "Central canopy anchor of the food forest guild; supports mycorrhizal fungal webs and perennial herb understories.",
-    "imageUrl": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/apple-redlove.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -480,7 +480,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Actinorhizal Frankia bacteria on roots fix immense quantities of nitrogen into the soil. Dense thorny branches create impenetrable livestock windbreaks and erosion barriers.",
     "dyeColor": "Berries and leaves produce brilliant sunshine yellow, golden ochre, and warm orange dyes.",
     "permacultureRole": "Premier permaculture soil builder; fixes nitrogen in gravel and sand; feeds over-wintering birds.",
-    "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/sea-berry.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -512,7 +512,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Exceptional fiber plant: leaves yield coarse, incredibly strong sisal cordage used for rope, sandals, and matting. The sharp terminal spine was historically used as an organic needle with fiber thread already attached. Architectural cold-hardy microclimate anchor.",
     "dyeColor": "Decomposed leaf pulp yields muted khaki and olive-green dye baths.",
     "permacultureRole": "Drought-resilient living security barrier; winter rain-hardy architectural succulent for gravel beds and stone mulches.",
-    "imageUrl": "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/agave-ovatifolia.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -543,7 +543,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Apple wood is the premier wood for smoking bacon, sausages, and poultry. Pruned winter branches make excellent biochar and natural cooking fuel.",
     "dyeColor": "Apple bark and autumn leaves produce warm antique golds, brassy yellows, and soft tans.",
     "permacultureRole": "Central canopy anchor of the food forest guild; supports mycorrhizal fungal webs and perennial herb understories.",
-    "imageUrl": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/apple.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -573,7 +573,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Apple wood is the premier wood for smoking bacon, sausages, and poultry. Pruned winter branches make excellent biochar and natural cooking fuel.",
     "dyeColor": "Apple bark and autumn leaves produce warm antique golds, brassy yellows, and soft tans.",
     "permacultureRole": "Central canopy anchor of the food forest guild; supports mycorrhizal fungal webs and perennial herb understories.",
-    "imageUrl": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/apple.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -603,7 +603,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Apple wood is the premier wood for smoking bacon, sausages, and poultry. Pruned winter branches make excellent biochar and natural cooking fuel.",
     "dyeColor": "Apple bark and autumn leaves produce warm antique golds, brassy yellows, and soft tans.",
     "permacultureRole": "Central canopy anchor of the food forest guild; supports mycorrhizal fungal webs and perennial herb understories.",
-    "imageUrl": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/russet-apple.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -633,7 +633,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Traditional moth-repellent herb: dried sprigs placed in wool chests deter moths and insects. Dense silver foliage makes crisp formal knot-garden edging.",
     "dyeColor": "Flowering tops yield brilliant, bright yellow and olive-gold dyes.",
     "permacultureRole": "Drought-tolerant insectary; silver foliage reflects intense summer heat and deters browsing herbivores.",
-    "imageUrl": "https://images.unsplash.com/photo-1508873696983-2df5293cb32f?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/santolina.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -664,7 +664,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Olive leaves produce gentle herbal teas. Pruned olive wood has dense, swirling grain prized for artisanal cutting boards, spoons, and carving.",
     "dyeColor": "Leaves and bark yield rich khaki, olive-green, and warm yellow-tan dyes.",
     "permacultureRole": "Drought-tolerant evergreen; thrives in dry summer maritime PNW microclimates with gravel drainage.",
-    "imageUrl": "https://images.unsplash.com/photo-1541457523724-95f54f7740cc?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/olive.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -695,7 +695,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Apple wood is the premier wood for smoking bacon, sausages, and poultry. Pruned winter branches make excellent biochar and natural cooking fuel.",
     "dyeColor": "Apple bark and autumn leaves produce warm antique golds, brassy yellows, and soft tans.",
     "permacultureRole": "Central canopy anchor of the food forest guild; supports mycorrhizal fungal webs and perennial herb understories.",
-    "imageUrl": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/apple.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -725,7 +725,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "The inner fibrous bark was historically stripped to make strong cordage, fishnets, and basket bindings. Natural insecticidal compounds in twigs deter herbivores and deer.",
     "dyeColor": "Inner bark and yellow autumn leaves yield warm olive and mustard-yellow dyes.",
     "permacultureRole": "Sole larval host plant for the spectacular Zebra Swallowtail butterfly; thriving native understory tree that produces heavy tropical yields in PNW microclimates.",
-    "imageUrl": "https://images.unsplash.com/photo-1596434300655-e48d3ff3dd5e?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/pawpaw.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -756,7 +756,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Fig leaf tea has a delicate coconut-vanilla aroma. Fig leaves wrapped around cheeses or fish provide aromatics and natural food preservation.",
     "dyeColor": "Mature summer leaves produce vibrant chartreuse, olive greens, and sunshine yellows.",
     "permacultureRole": "High-calorie homestead producer; thrives along south-facing thermal heat walls.",
-    "imageUrl": "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/fig.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -786,7 +786,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Actinorhizal Frankia bacteria on roots fix immense quantities of nitrogen into the soil. Dense thorny branches create impenetrable livestock windbreaks and erosion barriers.",
     "dyeColor": "Berries and leaves produce brilliant sunshine yellow, golden ochre, and warm orange dyes.",
     "permacultureRole": "Premier permaculture soil builder; fixes nitrogen in gravel and sand; feeds over-wintering birds.",
-    "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/sea-berry.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -818,7 +818,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Olive leaves produce gentle herbal teas. Pruned olive wood has dense, swirling grain prized for artisanal cutting boards, spoons, and carving.",
     "dyeColor": "Leaves and bark yield rich khaki, olive-green, and warm yellow-tan dyes.",
     "permacultureRole": "Drought-tolerant evergreen; thrives in dry summer maritime PNW microclimates with gravel drainage.",
-    "imageUrl": "https://images.unsplash.com/photo-1541457523724-95f54f7740cc?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/olive.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -849,7 +849,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Hard, dense branch wood makes durable garden stakes and rustic carving; broad evergreen leaves act as living thermal windbreaks.",
     "dyeColor": "Leaves yield soft yellow and bronze dyes on mordanted wool.",
     "permacultureRole": "Acid-soil loving evergreen shrub that anchors windbreak borders and provides immense early summer floral displays for pollinators.",
-    "imageUrl": "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/rhododendron.jpg",
     "tags": [
       "Medicinal",
       "Natural Dye",
@@ -879,7 +879,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Citrus essential oils in the peel have potent natural degreasing, antimicrobial, and aromatic properties for homestead soaps, salves, and potpourri.",
     "dyeColor": "Dried peels yield sunny lemon-yellow and pale butter dye tones.",
     "permacultureRole": "Rare sub-zero hardy citrus that reliably produces in PNW coastal microclimates; fragrant spring blossoms attract native bees.",
-    "imageUrl": "https://images.unsplash.com/photo-1582979512210-99b6a53386f9?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/sudachi-citrus.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -910,7 +910,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Actinorhizal Frankia bacteria on roots fix immense quantities of nitrogen into the soil. Dense thorny branches create impenetrable livestock windbreaks and erosion barriers.",
     "dyeColor": "Berries and leaves produce brilliant sunshine yellow, golden ochre, and warm orange dyes.",
     "permacultureRole": "Premier permaculture soil builder; fixes nitrogen in gravel and sand; feeds over-wintering birds.",
-    "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/sea-berry.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -942,7 +942,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Actinorhizal Frankia bacteria on roots fix immense quantities of nitrogen into the soil. Dense thorny branches create impenetrable livestock windbreaks and erosion barriers.",
     "dyeColor": "Berries and leaves produce brilliant sunshine yellow, golden ochre, and warm orange dyes.",
     "permacultureRole": "Premier permaculture soil builder; fixes nitrogen in gravel and sand; feeds over-wintering birds.",
-    "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/sea-berry.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -974,7 +974,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Thorny gooseberry bushes make protective small hedgerows; fragrant clove currant blossoms perfume the entire spring garden.",
     "dyeColor": "Berries yield delicate purples and soft pinks; leaves yield warm yellow-greens.",
     "permacultureRole": "Thrives in partial shade beneath fruit trees; ideal middle-tier shrub in multi-story orchard guilds.",
-    "imageUrl": "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/gooseberry.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -1004,7 +1004,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Premier natural dye: ripe berries yield gorgeous shades of lilac, purple, and blue-gray; leaves yield brilliant green. Stems have soft pith that pushes out to make flutes and spiles.",
     "dyeColor": "Deep lilac, dusky purple, slate blue with alum; greenish gray with iron.",
     "permacultureRole": "Dynamic mineral accumulator (potassium and phosphorus); beloved by over 50 native bird species; rapid windbreak growth.",
-    "imageUrl": "https://images.unsplash.com/photo-1506459225024-1428097a7e18?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/elderberry.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -1034,7 +1034,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "The inner fibrous bark was historically stripped to make strong cordage, fishnets, and basket bindings. Natural insecticidal compounds in twigs deter herbivores and deer.",
     "dyeColor": "Inner bark and yellow autumn leaves yield warm olive and mustard-yellow dyes.",
     "permacultureRole": "Sole larval host plant for the spectacular Zebra Swallowtail butterfly; thriving native understory tree that produces heavy tropical yields in PNW microclimates.",
-    "imageUrl": "https://images.unsplash.com/photo-1596434300655-e48d3ff3dd5e?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/pawpaw.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -1064,7 +1064,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "The deep pigments yield rich purple, mauve, and soft slate-gray natural dyes for wool and raw linen fibers. Sturdy upright canes create excellent wildlife hedgerows.",
     "dyeColor": "Deep mauve-purple to dusky lavender with alum; slate gray with iron mordant.",
     "permacultureRole": "Pest-impervious native insectary shrub; dynamic accumulator of minerals; brilliant crimson autumn foliage.",
-    "imageUrl": "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/aronia.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -1094,7 +1094,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Apple wood is the premier wood for smoking bacon, sausages, and poultry. Pruned winter branches make excellent biochar and natural cooking fuel.",
     "dyeColor": "Apple bark and autumn leaves produce warm antique golds, brassy yellows, and soft tans.",
     "permacultureRole": "Central canopy anchor of the food forest guild; supports mycorrhizal fungal webs and perennial herb understories.",
-    "imageUrl": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/apple.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -1123,7 +1123,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Cherry and plum timbers have exquisite reddish-brown grain prized for fine furniture, spoons, and smokehouse chips for pork and poultry.",
     "dyeColor": "Bark and roots produce rich salmon pinks, cinnamon browns, and copper dyes.",
     "permacultureRole": "Massive early-spring nectar flow for honeybees; central sub-canopy fruit producers in the homestead orchard.",
-    "imageUrl": "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/plum.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -1153,7 +1153,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Cherry and plum timbers have exquisite reddish-brown grain prized for fine furniture, spoons, and smokehouse chips for pork and poultry.",
     "dyeColor": "Bark and roots produce rich salmon pinks, cinnamon browns, and copper dyes.",
     "permacultureRole": "Massive early-spring nectar flow for honeybees; central sub-canopy fruit producers in the homestead orchard.",
-    "imageUrl": "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/plum.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -1183,7 +1183,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Hard, close-grained wood historically used for tool handles, spinning wheels, and woodcarving; berries yield orange-salmon dyes.",
     "dyeColor": "Berries yield warm salmon pink, peach, and rusty orange tones.",
     "permacultureRole": "Cold-hardy native sub-canopy tree; fiery orange-red autumn foliage and heavy winter bird forage.",
-    "imageUrl": "https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/mountain-ash.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -1212,7 +1212,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Premier natural dye: ripe berries yield gorgeous shades of lilac, purple, and blue-gray; leaves yield brilliant green. Stems have soft pith that pushes out to make flutes and spiles.",
     "dyeColor": "Deep lilac, dusky purple, slate blue with alum; greenish gray with iron.",
     "permacultureRole": "Dynamic mineral accumulator (potassium and phosphorus); beloved by over 50 native bird species; rapid windbreak growth.",
-    "imageUrl": "https://images.unsplash.com/photo-1506459225024-1428097a7e18?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/elderberry.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -1242,7 +1242,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Cherry and plum timbers have exquisite reddish-brown grain prized for fine furniture, spoons, and smokehouse chips for pork and poultry.",
     "dyeColor": "Bark and roots produce rich salmon pinks, cinnamon browns, and copper dyes.",
     "permacultureRole": "Massive early-spring nectar flow for honeybees; central sub-canopy fruit producers in the homestead orchard.",
-    "imageUrl": "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/cherry.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -1272,7 +1272,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Thorny gooseberry bushes make protective small hedgerows; fragrant clove currant blossoms perfume the entire spring garden.",
     "dyeColor": "Berries yield delicate purples and soft pinks; leaves yield warm yellow-greens.",
     "permacultureRole": "Thrives in partial shade beneath fruit trees; ideal middle-tier shrub in multi-story orchard guilds.",
-    "imageUrl": "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/clove-currant.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -1301,7 +1301,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Extreme cold hardiness: flowers tolerate -7°C (20°F) frost in full bloom without damage. Early spring forage for bumblebees.",
     "dyeColor": "Deep berry juice produces soft purple-blue, violet, and lavender stains.",
     "permacultureRole": "Earliest berry of the season (ripening weeks before strawberries); impervious to spring frosts.",
-    "imageUrl": "https://images.unsplash.com/photo-1506459225024-1428097a7e18?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/honeyberry.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -1330,7 +1330,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Dark berries yield soft blue-purple natural fabric dyes; evergreen huckleberry branches are prized long-lasting floristry greens.",
     "dyeColor": "Soft purplish blue, lavender, and dusty gray.",
     "permacultureRole": "Acid-loving shrub that thrives in peat, sawdust, and pine needles; feeds native pollinators and migratory birds.",
-    "imageUrl": "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/blueberry.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -1359,7 +1359,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Dark berries yield soft blue-purple natural fabric dyes; evergreen huckleberry branches are prized long-lasting floristry greens.",
     "dyeColor": "Soft purplish blue, lavender, and dusty gray.",
     "permacultureRole": "Acid-loving shrub that thrives in peat, sawdust, and pine needles; feeds native pollinators and migratory birds.",
-    "imageUrl": "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/blueberry.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -1388,7 +1388,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Dark berries yield soft blue-purple natural fabric dyes; evergreen huckleberry branches are prized long-lasting floristry greens.",
     "dyeColor": "Soft purplish blue, lavender, and dusty gray.",
     "permacultureRole": "Acid-loving shrub that thrives in peat, sawdust, and pine needles; feeds native pollinators and migratory birds.",
-    "imageUrl": "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/blueberry.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -1417,7 +1417,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Dark berries yield soft blue-purple natural fabric dyes; evergreen huckleberry branches are prized long-lasting floristry greens.",
     "dyeColor": "Soft purplish blue, lavender, and dusty gray.",
     "permacultureRole": "Acid-loving shrub that thrives in peat, sawdust, and pine needles; feeds native pollinators and migratory birds.",
-    "imageUrl": "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/blueberry.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -1446,7 +1446,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Extreme cold hardiness: flowers tolerate -7°C (20°F) frost in full bloom without damage. Early spring forage for bumblebees.",
     "dyeColor": "Deep berry juice produces soft purple-blue, violet, and lavender stains.",
     "permacultureRole": "Earliest berry of the season (ripening weeks before strawberries); impervious to spring frosts.",
-    "imageUrl": "https://images.unsplash.com/photo-1506459225024-1428097a7e18?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/honeyberry.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -1475,7 +1475,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Apple wood is the premier wood for smoking bacon, sausages, and poultry. Pruned winter branches make excellent biochar and natural cooking fuel.",
     "dyeColor": "Apple bark and autumn leaves produce warm antique golds, brassy yellows, and soft tans.",
     "permacultureRole": "Central canopy anchor of the food forest guild; supports mycorrhizal fungal webs and perennial herb understories.",
-    "imageUrl": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/apple.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -1504,7 +1504,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Cherry and plum timbers have exquisite reddish-brown grain prized for fine furniture, spoons, and smokehouse chips for pork and poultry.",
     "dyeColor": "Bark and roots produce rich salmon pinks, cinnamon browns, and copper dyes.",
     "permacultureRole": "Massive early-spring nectar flow for honeybees; central sub-canopy fruit producers in the homestead orchard.",
-    "imageUrl": "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/plum.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -1534,7 +1534,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Vigorous woody twining vines provide dense summer solar shading on south-facing pergolas; pruned winter lianas are used for rustic basketry and natural garden trellising.",
     "dyeColor": "Leaves produce soft buttery-yellow and muted bronze dyes with alum mordant.",
     "permacultureRole": "Vertical space maximizer; prolific late-autumn nectar and pollen source for native bumblebees.",
-    "imageUrl": "https://images.unsplash.com/photo-1585059895524-72359e06133a?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/hardy-kiwi.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -1564,7 +1564,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Symbiotic Nostoc cyanobacteria in Gunnera stem tissues fix atmospheric nitrogen; the colossal architectural umbrella leaves (up to 8 ft across) provide instant shading and biomass.",
     "dyeColor": "Tannin-rich roots and leaf stalks yield deep black and dark slate-gray dyes.",
     "permacultureRole": "Spectacular biomass generator; nitrogen-fixing bog ally; shade accumulator for microclimate cooling.",
-    "imageUrl": "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/gunnera.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -1596,7 +1596,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Strong summer canes can be stripped of prickles and split for rustic basket weft; berries provide historical purple ink.",
     "dyeColor": "Berries yield rich mauve-purple, dusky rose, and charcoal gray with iron.",
     "permacultureRole": "Heavy mid-summer yields; vigorous root system binds slopes and edges.",
-    "imageUrl": "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/blackberry.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -1625,7 +1625,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "The holy grail of permaculture: immense taproots (10+ feet) mine subsoil potassium, calcium, and trace minerals, depositing them in lush leaves. Cut 4-5 times a year as 'chop-and-drop' mulch.",
     "dyeColor": "Leaves yield soft yellow, buttery gold, and muted green dyes.",
     "permacultureRole": "Premier permaculture dynamic accumulator; nutrient-dense organic fertilizer engine; weed barrier along orchard borders.",
-    "imageUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/comfrey.jpg",
     "tags": [
       "Medicinal",
       "Natural Dye",
@@ -1655,7 +1655,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Cherry and plum timbers have exquisite reddish-brown grain prized for fine furniture, spoons, and smokehouse chips for pork and poultry.",
     "dyeColor": "Bark and roots produce rich salmon pinks, cinnamon browns, and copper dyes.",
     "permacultureRole": "Massive early-spring nectar flow for honeybees; central sub-canopy fruit producers in the homestead orchard.",
-    "imageUrl": "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/cherry.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -1685,7 +1685,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Fig leaf tea has a delicate coconut-vanilla aroma. Fig leaves wrapped around cheeses or fish provide aromatics and natural food preservation.",
     "dyeColor": "Mature summer leaves produce vibrant chartreuse, olive greens, and sunshine yellows.",
     "permacultureRole": "High-calorie homestead producer; thrives along south-facing thermal heat walls.",
-    "imageUrl": "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/fig.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -1714,7 +1714,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Apple wood is the premier wood for smoking bacon, sausages, and poultry. Pruned winter branches make excellent biochar and natural cooking fuel.",
     "dyeColor": "Apple bark and autumn leaves produce warm antique golds, brassy yellows, and soft tans.",
     "permacultureRole": "Central canopy anchor of the food forest guild; supports mycorrhizal fungal webs and perennial herb understories.",
-    "imageUrl": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/apple.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -1743,7 +1743,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Dark berries yield soft blue-purple natural fabric dyes; evergreen huckleberry branches are prized long-lasting floristry greens.",
     "dyeColor": "Soft purplish blue, lavender, and dusty gray.",
     "permacultureRole": "Acid-loving shrub that thrives in peat, sawdust, and pine needles; feeds native pollinators and migratory birds.",
-    "imageUrl": "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/evergreen-huckleberry.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -1772,7 +1772,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Dried architectural seed pods are prized for rustic floral arrangements; oil used in fine oil paints for centuries.",
     "dyeColor": "Petals yield soft gray-mauve and lavender tones.",
     "permacultureRole": "Self-seeding annual/perennial that blooms profusely in early summer, feeding honeybees.",
-    "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/poppy.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -1801,7 +1801,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Cherry and plum timbers have exquisite reddish-brown grain prized for fine furniture, spoons, and smokehouse chips for pork and poultry.",
     "dyeColor": "Bark and roots produce rich salmon pinks, cinnamon browns, and copper dyes.",
     "permacultureRole": "Massive early-spring nectar flow for honeybees; central sub-canopy fruit producers in the homestead orchard.",
-    "imageUrl": "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/pluot.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -1831,7 +1831,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Contorted, twisted green branches with wicked 2-inch spines form an impenetrable, deer-proof, living defensive hedgerow that no intruder can breach.",
     "dyeColor": "Green twigs and peel yield muted yellow-olive tones.",
     "permacultureRole": "Universal cold-hardy citrus rootstock; bulletproof barrier hedge with gorgeous twisted winter architecture.",
-    "imageUrl": "https://images.unsplash.com/photo-1582979512210-99b6a53386f9?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/flying-dragon-citrus.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -1860,7 +1860,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Ultimate homestead utility timber: yields 40-50 ft poles with 4-inch diameters. Used for greenhouse frames, trellis poles, fencing, water pipes, tool handles, and premium biochar.",
     "dyeColor": "Leaves yield warm yellow-green and soft chartreuse dyes.",
     "permacultureRole": "Fastest-growing biomass plant on earth; exceptional carbon sequestration and high-silica mulch producer.",
-    "imageUrl": "https://images.unsplash.com/photo-1508873696983-2df5293cb32f?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/timber-bamboo.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -1890,7 +1890,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Extreme cold hardiness: flowers tolerate -7°C (20°F) frost in full bloom without damage. Early spring forage for bumblebees.",
     "dyeColor": "Deep berry juice produces soft purple-blue, violet, and lavender stains.",
     "permacultureRole": "Earliest berry of the season (ripening weeks before strawberries); impervious to spring frosts.",
-    "imageUrl": "https://images.unsplash.com/photo-1506459225024-1428097a7e18?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/honeyberry.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -1919,7 +1919,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Actinorhizal nitrogen fixation: forms symbiotic relationships with Frankia bacteria in root nodules to fix atmospheric nitrogen directly into depleted soil, fertilizing surrounding fruit trees.",
     "dyeColor": "Bark and roots produce warm cinnamon and tan leather tones.",
     "permacultureRole": "Core permaculture dynamic nurse plant; evergreen windbreak hedge with intensely sweet-scented autumn blossoms.",
-    "imageUrl": "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/silverberry.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -1949,7 +1949,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Actinorhizal Frankia bacteria on roots fix immense quantities of nitrogen into the soil. Dense thorny branches create impenetrable livestock windbreaks and erosion barriers.",
     "dyeColor": "Berries and leaves produce brilliant sunshine yellow, golden ochre, and warm orange dyes.",
     "permacultureRole": "Premier permaculture soil builder; fixes nitrogen in gravel and sand; feeds over-wintering birds.",
-    "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/sea-berry.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -1980,7 +1980,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Exceptional fiber plant: leaves yield coarse, incredibly strong sisal cordage used for rope, sandals, and matting. The sharp terminal spine was historically used as an organic needle with fiber thread already attached. Architectural cold-hardy microclimate anchor.",
     "dyeColor": "Decomposed leaf pulp yields muted khaki and olive-green dye baths.",
     "permacultureRole": "Drought-resilient living security barrier; winter rain-hardy architectural succulent for gravel beds and stone mulches.",
-    "imageUrl": "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/agave-havardiana.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2010,7 +2010,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Thorny gooseberry bushes make protective small hedgerows; fragrant clove currant blossoms perfume the entire spring garden.",
     "dyeColor": "Berries yield delicate purples and soft pinks; leaves yield warm yellow-greens.",
     "permacultureRole": "Thrives in partial shade beneath fruit trees; ideal middle-tier shrub in multi-story orchard guilds.",
-    "imageUrl": "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/gooseberry.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -2039,7 +2039,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Extreme cold hardiness: flowers tolerate -7°C (20°F) frost in full bloom without damage. Early spring forage for bumblebees.",
     "dyeColor": "Deep berry juice produces soft purple-blue, violet, and lavender stains.",
     "permacultureRole": "Earliest berry of the season (ripening weeks before strawberries); impervious to spring frosts.",
-    "imageUrl": "https://images.unsplash.com/photo-1506459225024-1428097a7e18?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/honeyberry.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -2068,7 +2068,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Tender clover-like leaves and stems are completely edible with a pleasant lemony tang. Excellent autumn groundcover that produces tubers in late November.",
     "dyeColor": "Foliage produces pale yellow-green rinses.",
     "permacultureRole": "No-dig perennial root crop harvested after first light frosts; fills autumn harvest gap.",
-    "imageUrl": "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/oca-tuber.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -2097,7 +2097,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Cherry and plum timbers have exquisite reddish-brown grain prized for fine furniture, spoons, and smokehouse chips for pork and poultry.",
     "dyeColor": "Bark and roots produce rich salmon pinks, cinnamon browns, and copper dyes.",
     "permacultureRole": "Massive early-spring nectar flow for honeybees; central sub-canopy fruit producers in the homestead orchard.",
-    "imageUrl": "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/peach.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2127,7 +2127,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Cherry and plum timbers have exquisite reddish-brown grain prized for fine furniture, spoons, and smokehouse chips for pork and poultry.",
     "dyeColor": "Bark and roots produce rich salmon pinks, cinnamon browns, and copper dyes.",
     "permacultureRole": "Massive early-spring nectar flow for honeybees; central sub-canopy fruit producers in the homestead orchard.",
-    "imageUrl": "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/plum.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2157,7 +2157,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Silkworms feed exclusively on mulberry leaves. The tough, flexible bast fiber from young shoots makes strong bark cordage and paper. Exceptional coppicing timber.",
     "dyeColor": "Leaves yield warm yellow-greens; fruit yields purples; root bark produces golden yellows.",
     "permacultureRole": "Premier animal forage and wild bird distractor that diverts birds away from orchard crops; extremely rapid growth.",
-    "imageUrl": "https://images.unsplash.com/photo-1596434300655-e48d3ff3dd5e?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/mulberry.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -2186,7 +2186,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "The inner fibrous bark was historically stripped to make strong cordage, fishnets, and basket bindings. Natural insecticidal compounds in twigs deter herbivores and deer.",
     "dyeColor": "Inner bark and yellow autumn leaves yield warm olive and mustard-yellow dyes.",
     "permacultureRole": "Sole larval host plant for the spectacular Zebra Swallowtail butterfly; thriving native understory tree that produces heavy tropical yields in PNW microclimates.",
-    "imageUrl": "https://images.unsplash.com/photo-1596434300655-e48d3ff3dd5e?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/pawpaw.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2216,7 +2216,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Vigorous woody twining vines provide dense summer solar shading on south-facing pergolas; pruned winter lianas are used for rustic basketry and natural garden trellising.",
     "dyeColor": "Leaves produce soft buttery-yellow and muted bronze dyes with alum mordant.",
     "permacultureRole": "Vertical space maximizer; prolific late-autumn nectar and pollen source for native bumblebees.",
-    "imageUrl": "https://images.unsplash.com/photo-1585059895524-72359e06133a?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/hardy-kiwi.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2246,7 +2246,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Spent tea leaves are rich in nitrogen for compost teas. High tannin content makes strong tea infusions an ancient, light-fast wood stain and natural paper antiquing dye.",
     "dyeColor": "Warm earthy tans, soft rose-browns, and antique golds on cotton and wool.",
     "permacultureRole": "Evergreen glossy foliage provides year-round wind protection; delicate white-and-gold autumn blossoms feed late-season pollinators.",
-    "imageUrl": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/tea-plant.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2276,7 +2276,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Cherry and plum timbers have exquisite reddish-brown grain prized for fine furniture, spoons, and smokehouse chips for pork and poultry.",
     "dyeColor": "Bark and roots produce rich salmon pinks, cinnamon browns, and copper dyes.",
     "permacultureRole": "Massive early-spring nectar flow for honeybees; central sub-canopy fruit producers in the homestead orchard.",
-    "imageUrl": "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/cherry.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2306,7 +2306,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Potent insect-repelling essential oils (citronella) keep mosquitoes away from patios; dried leaves make fragrant mulch and insect-deterrent potpourri.",
     "dyeColor": "Yields sunny yellow and khaki-tan shades on pre-mordanted wool.",
     "permacultureRole": "Aromatic pest-confusing companion plant; thick fibrous root clumps control soil erosion.",
-    "imageUrl": "https://images.unsplash.com/photo-1608686207856-001b95cf60ca?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/lemongrass.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -2335,7 +2335,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Cherry and plum timbers have exquisite reddish-brown grain prized for fine furniture, spoons, and smokehouse chips for pork and poultry.",
     "dyeColor": "Bark and roots produce rich salmon pinks, cinnamon browns, and copper dyes.",
     "permacultureRole": "Massive early-spring nectar flow for honeybees; central sub-canopy fruit producers in the homestead orchard.",
-    "imageUrl": "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/peach.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2365,7 +2365,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Vigorous woody twining vines provide dense summer solar shading on south-facing pergolas; pruned winter lianas are used for rustic basketry and natural garden trellising.",
     "dyeColor": "Leaves produce soft buttery-yellow and muted bronze dyes with alum mordant.",
     "permacultureRole": "Vertical space maximizer; prolific late-autumn nectar and pollen source for native bumblebees.",
-    "imageUrl": "https://images.unsplash.com/photo-1585059895524-72359e06133a?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/hardy-kiwi.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2395,7 +2395,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Actinorhizal Frankia bacteria on roots fix immense quantities of nitrogen into the soil. Dense thorny branches create impenetrable livestock windbreaks and erosion barriers.",
     "dyeColor": "Berries and leaves produce brilliant sunshine yellow, golden ochre, and warm orange dyes.",
     "permacultureRole": "Premier permaculture soil builder; fixes nitrogen in gravel and sand; feeds over-wintering birds.",
-    "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/sea-berry.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2426,7 +2426,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Olive leaves produce gentle herbal teas. Pruned olive wood has dense, swirling grain prized for artisanal cutting boards, spoons, and carving.",
     "dyeColor": "Leaves and bark yield rich khaki, olive-green, and warm yellow-tan dyes.",
     "permacultureRole": "Drought-tolerant evergreen; thrives in dry summer maritime PNW microclimates with gravel drainage.",
-    "imageUrl": "https://images.unsplash.com/photo-1541457523724-95f54f7740cc?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/olive.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2456,7 +2456,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Cherry and plum timbers have exquisite reddish-brown grain prized for fine furniture, spoons, and smokehouse chips for pork and poultry.",
     "dyeColor": "Bark and roots produce rich salmon pinks, cinnamon browns, and copper dyes.",
     "permacultureRole": "Massive early-spring nectar flow for honeybees; central sub-canopy fruit producers in the homestead orchard.",
-    "imageUrl": "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/plum.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2486,7 +2486,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Thorny gooseberry bushes make protective small hedgerows; fragrant clove currant blossoms perfume the entire spring garden.",
     "dyeColor": "Berries yield delicate purples and soft pinks; leaves yield warm yellow-greens.",
     "permacultureRole": "Thrives in partial shade beneath fruit trees; ideal middle-tier shrub in multi-story orchard guilds.",
-    "imageUrl": "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/clove-currant.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -2515,7 +2515,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "The deep pigments yield rich purple, mauve, and soft slate-gray natural dyes for wool and raw linen fibers. Sturdy upright canes create excellent wildlife hedgerows.",
     "dyeColor": "Deep mauve-purple to dusky lavender with alum; slate gray with iron mordant.",
     "permacultureRole": "Pest-impervious native insectary shrub; dynamic accumulator of minerals; brilliant crimson autumn foliage.",
-    "imageUrl": "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/aronia.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2545,7 +2545,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Stunning evergreen ornamental with silver-backed leaves that withstands coastal winds; edible petals make exquisite homestead dessert garnishes.",
     "dyeColor": "Pruned leaves produce soft sage and olive tones on wool.",
     "permacultureRole": "Windbreak hedge; edible flowers provide early summer pollinator forage.",
-    "imageUrl": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/pineapple-guava.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -2574,7 +2574,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Cherry and plum timbers have exquisite reddish-brown grain prized for fine furniture, spoons, and smokehouse chips for pork and poultry.",
     "dyeColor": "Bark and roots produce rich salmon pinks, cinnamon browns, and copper dyes.",
     "permacultureRole": "Massive early-spring nectar flow for honeybees; central sub-canopy fruit producers in the homestead orchard.",
-    "imageUrl": "https://images.unsplash.com/photo-1508873696983-2df5293cb32f?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/almond.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2604,7 +2604,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Cherry and plum timbers have exquisite reddish-brown grain prized for fine furniture, spoons, and smokehouse chips for pork and poultry.",
     "dyeColor": "Bark and roots produce rich salmon pinks, cinnamon browns, and copper dyes.",
     "permacultureRole": "Massive early-spring nectar flow for honeybees; central sub-canopy fruit producers in the homestead orchard.",
-    "imageUrl": "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/cherry.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2634,7 +2634,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Actinorhizal Frankia bacteria on roots fix immense quantities of nitrogen into the soil. Dense thorny branches create impenetrable livestock windbreaks and erosion barriers.",
     "dyeColor": "Berries and leaves produce brilliant sunshine yellow, golden ochre, and warm orange dyes.",
     "permacultureRole": "Premier permaculture soil builder; fixes nitrogen in gravel and sand; feeds over-wintering birds.",
-    "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/sea-berry.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2665,7 +2665,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Actinorhizal Frankia bacteria on roots fix immense quantities of nitrogen into the soil. Dense thorny branches create impenetrable livestock windbreaks and erosion barriers.",
     "dyeColor": "Berries and leaves produce brilliant sunshine yellow, golden ochre, and warm orange dyes.",
     "permacultureRole": "Premier permaculture soil builder; fixes nitrogen in gravel and sand; feeds over-wintering birds.",
-    "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/sea-berry.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2696,7 +2696,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Famous dye plant: roots and inner bark yield brilliant, luminous, light-fast canary yellow dye; berries yield purple-blue dye.",
     "dyeColor": "Brilliant canary yellow and golden amber from roots; soft purple from berries.",
     "permacultureRole": "Pacific Northwest state flower; drought-tolerant evergreen; provides crucial early-spring nectar for hummingbirds.",
-    "imageUrl": "https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/oregon-grape.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -2725,7 +2725,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Silkworms feed exclusively on mulberry leaves. The tough, flexible bast fiber from young shoots makes strong bark cordage and paper. Exceptional coppicing timber.",
     "dyeColor": "Leaves yield warm yellow-greens; fruit yields purples; root bark produces golden yellows.",
     "permacultureRole": "Premier animal forage and wild bird distractor that diverts birds away from orchard crops; extremely rapid growth.",
-    "imageUrl": "https://images.unsplash.com/photo-1596434300655-e48d3ff3dd5e?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/mulberry.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -2754,7 +2754,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Olive leaves produce gentle herbal teas. Pruned olive wood has dense, swirling grain prized for artisanal cutting boards, spoons, and carving.",
     "dyeColor": "Leaves and bark yield rich khaki, olive-green, and warm yellow-tan dyes.",
     "permacultureRole": "Drought-tolerant evergreen; thrives in dry summer maritime PNW microclimates with gravel drainage.",
-    "imageUrl": "https://images.unsplash.com/photo-1541457523724-95f54f7740cc?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/olive.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2784,7 +2784,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "The inner fibrous bark was historically stripped to make strong cordage, fishnets, and basket bindings. Natural insecticidal compounds in twigs deter herbivores and deer.",
     "dyeColor": "Inner bark and yellow autumn leaves yield warm olive and mustard-yellow dyes.",
     "permacultureRole": "Sole larval host plant for the spectacular Zebra Swallowtail butterfly; thriving native understory tree that produces heavy tropical yields in PNW microclimates.",
-    "imageUrl": "https://images.unsplash.com/photo-1596434300655-e48d3ff3dd5e?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/pawpaw.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2814,7 +2814,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Dark berries yield soft blue-purple natural fabric dyes; evergreen huckleberry branches are prized long-lasting floristry greens.",
     "dyeColor": "Soft purplish blue, lavender, and dusty gray.",
     "permacultureRole": "Acid-loving shrub that thrives in peat, sawdust, and pine needles; feeds native pollinators and migratory birds.",
-    "imageUrl": "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/blueberry.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -2843,7 +2843,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Hard, close-grained wood historically used for tool handles, spinning wheels, and woodcarving; berries yield orange-salmon dyes.",
     "dyeColor": "Berries yield warm salmon pink, peach, and rusty orange tones.",
     "permacultureRole": "Cold-hardy native sub-canopy tree; fiery orange-red autumn foliage and heavy winter bird forage.",
-    "imageUrl": "https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/mountain-ash.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -2872,7 +2872,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Premier natural dye: ripe berries yield gorgeous shades of lilac, purple, and blue-gray; leaves yield brilliant green. Stems have soft pith that pushes out to make flutes and spiles.",
     "dyeColor": "Deep lilac, dusky purple, slate blue with alum; greenish gray with iron.",
     "permacultureRole": "Dynamic mineral accumulator (potassium and phosphorus); beloved by over 50 native bird species; rapid windbreak growth.",
-    "imageUrl": "https://images.unsplash.com/photo-1506459225024-1428097a7e18?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/elderberry.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2902,7 +2902,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "The wood of Cornus mas is legendary: so dense and hard that it sinks in water. Ancient Greek spearmakers crafted legendary hoplite javelins ('dory') from this wood; ideal for durable homestead tool handles.",
     "dyeColor": "Bark and fruit skins yield soft salmon pinks and muted rosewood tones.",
     "permacultureRole": "One of the absolute earliest spring blooms (February-March), providing crucial first-season pollen for emerging honeybees; extremely disease resistant.",
-    "imageUrl": "https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/cornelian-cherry.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -2931,7 +2931,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Valuable floral greenery with exceptionally long vase life; berries yield deep, rich purple-blue natural dyes for basket cedar and wool.",
     "dyeColor": "Rich purple-blue, violet, and dark slate gray.",
     "permacultureRole": "Evergreen Pacific Northwest native; acid-soil lover that builds humus beneath conifer canopies.",
-    "imageUrl": "https://images.unsplash.com/photo-1541457523724-95f54f7740cc?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/salal.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -2960,7 +2960,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Premier natural dye: ripe berries yield gorgeous shades of lilac, purple, and blue-gray; leaves yield brilliant green. Stems have soft pith that pushes out to make flutes and spiles.",
     "dyeColor": "Deep lilac, dusky purple, slate blue with alum; greenish gray with iron.",
     "permacultureRole": "Dynamic mineral accumulator (potassium and phosphorus); beloved by over 50 native bird species; rapid windbreak growth.",
-    "imageUrl": "https://images.unsplash.com/photo-1506459225024-1428097a7e18?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/elderberry.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2990,7 +2990,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Deep taproot breaks up compacted soil and mines minerals; magnificent mounding sea-blue glaucous foliage provides stunning perennial beauty.",
     "dyeColor": "Mature leaves can produce faint yellow-green herbal tints with alum.",
     "permacultureRole": "Resilient perennial green that lives 10-15+ years without replanting; drought and salt tolerant.",
-    "imageUrl": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/sea-kale.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -3019,7 +3019,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Dense runners knit the soil together, forming a living weed-suppressing mulch under apple trees.",
     "dyeColor": "Berries yield fugitive pinks; roots produce subtle reddish-brown hues.",
     "permacultureRole": "Living groundcover; protects mycorrhizal fungi and conserves topsoil moisture in orchard guilds.",
-    "imageUrl": "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/strawberry.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -3048,7 +3048,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Cherry and plum timbers have exquisite reddish-brown grain prized for fine furniture, spoons, and smokehouse chips for pork and poultry.",
     "dyeColor": "Bark and roots produce rich salmon pinks, cinnamon browns, and copper dyes.",
     "permacultureRole": "Massive early-spring nectar flow for honeybees; central sub-canopy fruit producers in the homestead orchard.",
-    "imageUrl": "https://images.unsplash.com/photo-1508873696983-2df5293cb32f?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/almond.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -3078,7 +3078,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Actinorhizal Frankia bacteria on roots fix immense quantities of nitrogen into the soil. Dense thorny branches create impenetrable livestock windbreaks and erosion barriers.",
     "dyeColor": "Berries and leaves produce brilliant sunshine yellow, golden ochre, and warm orange dyes.",
     "permacultureRole": "Premier permaculture soil builder; fixes nitrogen in gravel and sand; feeds over-wintering birds.",
-    "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/sea-berry.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -3109,7 +3109,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Cherry and plum timbers have exquisite reddish-brown grain prized for fine furniture, spoons, and smokehouse chips for pork and poultry.",
     "dyeColor": "Bark and roots produce rich salmon pinks, cinnamon browns, and copper dyes.",
     "permacultureRole": "Massive early-spring nectar flow for honeybees; central sub-canopy fruit producers in the homestead orchard.",
-    "imageUrl": "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/pluot.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -3139,7 +3139,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Strong summer canes can be stripped of prickles and split for rustic basket weft; berries provide historical purple ink.",
     "dyeColor": "Berries yield rich mauve-purple, dusky rose, and charcoal gray with iron.",
     "permacultureRole": "Heavy mid-summer yields; vigorous root system binds slopes and edges.",
-    "imageUrl": "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/blackberry.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -3168,7 +3168,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Evergreen oak wood is dense, heavy, and rot-resistant; acorn caps and oak galls provide the world's most historic tannin mordant and black iron gall ink.",
     "dyeColor": "Oak galls and bark yield rich black with iron, and rich khaki-tan with alum.",
     "permacultureRole": "Keystone ecological tree supporting hundreds of beneficial insect species; host for subterranean gourmet truffles.",
-    "imageUrl": "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/truffle-oak.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -3197,7 +3197,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "The deep pigments yield rich purple, mauve, and soft slate-gray natural dyes for wool and raw linen fibers. Sturdy upright canes create excellent wildlife hedgerows.",
     "dyeColor": "Deep mauve-purple to dusky lavender with alum; slate gray with iron mordant.",
     "permacultureRole": "Pest-impervious native insectary shrub; dynamic accumulator of minerals; brilliant crimson autumn foliage.",
-    "imageUrl": "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/aronia.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -3227,7 +3227,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Fig leaf tea has a delicate coconut-vanilla aroma. Fig leaves wrapped around cheeses or fish provide aromatics and natural food preservation.",
     "dyeColor": "Mature summer leaves produce vibrant chartreuse, olive greens, and sunshine yellows.",
     "permacultureRole": "High-calorie homestead producer; thrives along south-facing thermal heat walls.",
-    "imageUrl": "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/fig.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -3256,7 +3256,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "The wood of Cornus mas is legendary: so dense and hard that it sinks in water. Ancient Greek spearmakers crafted legendary hoplite javelins ('dory') from this wood; ideal for durable homestead tool handles.",
     "dyeColor": "Bark and fruit skins yield soft salmon pinks and muted rosewood tones.",
     "permacultureRole": "One of the absolute earliest spring blooms (February-March), providing crucial first-season pollen for emerging honeybees; extremely disease resistant.",
-    "imageUrl": "https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/cornelian-cherry.jpg",
     "tags": [
       "Edible",
       "Medicinal"
@@ -3285,7 +3285,7 @@ window.HOMESTEAD_PLANTS = [
     "craftAndUtilitarian": "Citrus essential oils in the peel have potent natural degreasing, antimicrobial, and aromatic properties for homestead soaps, salves, and potpourri.",
     "dyeColor": "Dried peels yield sunny lemon-yellow and pale butter dye tones.",
     "permacultureRole": "Rare sub-zero hardy citrus that reliably produces in PNW coastal microclimates; fragrant spring blossoms attract native bees.",
-    "imageUrl": "https://images.unsplash.com/photo-1582979512210-99b6a53386f9?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "assets/images/yuzu-citrus.jpg",
     "tags": [
       "Edible",
       "Medicinal",
