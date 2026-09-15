@@ -1,4 +1,5 @@
-window.CATALOG = {
+// The Shady River Bard - Vault Albums Data
+window.VAULT_ALBUMS_DATA = {
   "summary": {
     "total_released": 26,
     "total_vault": 19,
@@ -1815,10 +1816,10 @@ window.CATALOG = {
         "The Empty Throne",
         "Who We Became",
         "Still the Choice",
-        "The End of Virtue"
+        "The End of Virtue (Reprise)"
       ],
-      "art_files_count": 0,
-      "art_sample": null,
+      "art_files_count": 1,
+      "art_sample": "Hooded_man_holding_acoustic_guitar_4K_202609090841.jpeg",
       "themes": [
         "Hubris of Leadership",
         "Spectacle vs Substance",
@@ -1831,7 +1832,9 @@ window.CATALOG = {
       "track_deconstructions": null,
       "deconstruction_url": null,
       "genre_category": "Folk & Acoustic",
-      "hook": "Baroque folk unmasking the fragile illusions, court flatterers, and gilded rot of modern oligarchy."
+      "hook": "Baroque folk unmasking the fragile illusions, court flatterers, and gilded rot of modern oligarchy.",
+      "is_bespoke": true,
+      "custom_url": "../golden-mirrors-empty-thrones/"
     },
     {
       "id": "letter-to-the-new-gods",

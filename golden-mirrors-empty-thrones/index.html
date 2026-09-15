@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Mirrors & Empty Thrones (The End of Virtue) | The Shady River Bard</title>
+  
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="Album XX by The Shady River Bard. A 13-track documentary concept album examining the erosion of classical civic virtues in contemporary American leadership.">
+  <meta name="keywords" content="Shady River Bard, Golden Mirrors, The End of Virtue, Folk Rock, Americana, Concept Album, Music Incubator">
+  <meta property="og:title" content="Golden Mirrors & Empty Thrones | The Shady River Bard">
+  <meta property="og:description" content="A 13-track documentary folk-rock concept album examining the replacement of character with spectacle, truth with narrative control, and the enduring choice to reclaim the republic.">
+  <meta property="og:image" content="assets/art/og-golden-mirrors-empty-thrones.jpg">
+  <meta property="og:type" content="music.album">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Golden Mirrors & Empty Thrones | The Shady River Bard">
+  <meta name="twitter:description" content="Explore the interactive 13-track jukebox, lyrics studio, thematic exhibits, and virtues ledger.">
+  <meta name="twitter:image" content="assets/art/og-golden-mirrors-empty-thrones.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cinzel+Decorative:wght@700&family=JetBrains+Mono:wght@400;600&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+
+  <!-- Accessibility Toolbar -->
+  <aside class="a11y-toolbar" aria-label="Accessibility Settings">
+    <div class="container a11y-inner">
+      <div class="a11y-label"><i class="fas fa-universal-access"></i> Accessibility Mode:</div>
+      <div class="a11y-buttons">
+        <button id="btnHighContrast" class="a11y-btn" title="Toggle High Contrast"><i class="fas fa-adjust"></i> Contrast</button>
+        <button id="btnFontUp" class="a11y-btn" title="Increase Font Size">A+</button>
+        <button id="btnFontDown" class="a11y-btn" title="Decrease Font Size">A-</button>
+        <button id="btnUnderlineLinks" class="a11y-btn" title="Underline All Links"><i class="fas fa-underline"></i> Underline</button>
+        <button id="btnReducedMotion" class="a11y-btn" title="Toggle Reduced Motion"><i class="fas fa-running"></i> Motion</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <div class="brand-wrap">
+        <img src="assets/art/album-cover.webp" alt="Album Cover Thumbnail" class="brand-icon">
+        <div class="brand-titles">
+          <h1>THE SHADY RIVER BARD</h1>
+          <div class="brand-tag">Album XX Incubator • Concept Premiere</div>
+        </div>
+      </div>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#exhibits">Exhibits</a></li>
+          <li><a href="#jukebox">Jukebox</a></li>
+          <li><a href="#ledger">The Ledger</a></li>
+          <li><a href="../vault/" class="btn-vault-back"><i class="fas fa-archive"></i> Vault Catalog</a></li>
+          <li><button id="btnOpenVote" class="btn-primary" style="padding: 0.4rem 0.9rem; font-size: 0.75rem;"><i class="fas fa-vote-yea"></i> Vote</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="overview" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-art-box">
+          <div class="art-frame">
+            <img id="heroCoverImg" src="assets/art/album-cover.webp" alt="Golden Mirrors & Empty Thrones Artwork - Hooded Bard with Guitar" title="Click to inspect full-resolution artwork">
+            <div class="art-badge-strip">
+              <span><i class="fas fa-expand"></i> Click to Zoom</span>
+              <span>4096 × 4096 Master Art</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-content">
+          <div class="eyebrow">The Shady River Bard Presents</div>
+          <h2 class="hero-title gold-gradient-text">Golden Mirrors & Empty Thrones</h2>
+          <div class="hero-subtitle crimson-gradient-text">(The End of Virtue)</div>
+
+          <div class="constraint-pill">
+            <i class="fas fa-ban"></i> Strict Studio Constraint: No Banjos • No Cellos
+          </div>
+
+          <p class="hero-thesis">
+            "The End of Virtue does not ask the listener to hate a man. It asks the listener to recognize a pattern: the systematic replacement of character with performance, of truth with narrative control, and of restraint with shameless appetite. When those substitutions become the operating system of leadership, the republic loses the moral vocabulary required to correct itself."
+          </p>
+
+          <div class="metric-strip">
+            <div class="metric-item">
+              <div class="metric-value">13</div>
+              <div class="metric-label">Studio Tracks</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-value">4</div>
+              <div class="metric-label">Thematic Acts</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-value">30,573</div>
+              <div class="metric-label">Ledger Falsehoods</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-value">1</div>
+              <div class="metric-label">Reclaimed Republic</div>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#jukebox" class="btn-primary"><i class="fas fa-play"></i> Launch 13-Track Jukebox</a>
+            <a href="#exhibits" class="btn-secondary"><i class="fas fa-landmark"></i> Explore Exhibits</a>
+            <button id="btnHeroVote" class="btn-secondary"><i class="fas fa-check-to-slot"></i> Vote to Release</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thematic Exhibits Section -->
+    <section id="exhibits" class="section-padding">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-eyebrow">Curated Thematic Portals</div>
+          <h2 class="section-title">The Four Exhibits of Gilded Governance</h2>
+          <p class="section-desc">Explore the sociopolitical anatomy of democratic erosion, from narcissistic performance to the final call for moral reclamation.</p>
+        </div>
+
+        <nav class="exhibit-nav" aria-label="Exhibit Selector">
+          <button class="exhibit-tab active" data-exhibit="1">I. The Golden Stage</button>
+          <button class="exhibit-tab" data-exhibit="2">II. The Alternative Reality</button>
+          <button class="exhibit-tab" data-exhibit="3">III. The Wedge & The Slumber</button>
+          <button class="exhibit-tab" data-exhibit="4">IV. The Fractured Hearth & Resolve</button>
+        </nav>
+
+        <!-- Exhibit 1 -->
+        <article id="exhibit-1" class="exhibit-pane active">
+          <div class="exhibit-content-grid">
+            <div class="exhibit-article">
+              <h3>The Narcissistic Mirror & The Podium</h3>
+              <p>Leadership begins not with policy or service, but with an insatiable compulsion for external adoration. The public square is re-engineered into an amphitheater for self-mythologizing. Every crowd size is contested; every reflection must gleam with gilded perfection.</p>
+              
+              <div class="exhibit-quote">
+                "He stands before the glass to check the shine / And tells the room the weather is divine / He counts the faces standing in the square / And claims there is no other gathering there..."
+              </div>
+
+              <p>Unchecked vanity starves the polity of humility. When appearance outranks substance, institutions cease to function as instruments of the public good and become mere backdrops for the personal brand.</p>
+            </div>
+
+            <div class="exhibit-sidebar">
+              <h4>Featured Track Exhibits</h4>
+              <div class="exhibit-song-card">
+                <div class="exhibit-song-info">
+                  <h5>Track 1: Golden Mirror</h5>
+                  <p>Key: Am • 85 BPM • Heavy Blues-Rock</p>
+                </div>
+                <button class="btn-primary" style="padding:0.3rem 0.6rem; font-size:0.75rem;" data-jump-track="1"><i class="fas fa-play"></i></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Exhibit 2 -->
+        <article id="exhibit-2" class="exhibit-pane">
+          <div class="exhibit-content-grid">
+            <div class="exhibit-article">
+              <h3>The Alternative Reality Machine & The Fairway</h3>
+              <p>During a single presidential term, the Washington Post Fact Checker cataloged 30,573 false or misleading statements. From Sharpie-altered hurricane maps to invented crime waves, falsehood is deployed in such suffocating volume that reality itself becomes negotiable.</p>
+
+              <div class="exhibit-quote">
+                "He moved the ball three paces to the green / And swore it was the straightest shot they'd seen / The caddie shook his head and kept the score / A dozen strokes he shaved and wanted more..."
+              </div>
+
+              <p>Rule-bending is not an anomaly; it is a habituated operating system. Habitual small-scale cheating on the fairway or in the ledger provides the muscle memory for large-scale contempt for constitutional boundaries.</p>
+            </div>
+
+            <div class="exhibit-sidebar">
+              <h4>Featured Track Exhibits</h4>
+              <div class="exhibit-song-card">
+                <div class="exhibit-song-info">
+                  <h5>Track 2: Alternative Facts</h5>
+                  <p>Key: Em • 95 BPM • Industrial-Blues</p>
+                </div>
+                <button class="btn-primary" style="padding:0.3rem 0.6rem; font-size:0.75rem;" data-jump-track="2"><i class="fas fa-play"></i></button>
+              </div>
+              <div class="exhibit-song-card">
+                <div class="exhibit-song-info">
+                  <h5>Track 3: Ball in the Rough</h5>
+                  <p>Key: Am • 110 BPM • Sardonic Country-Rock</p>
+                </div>
+                <button class="btn-primary" style="padding:0.3rem 0.6rem; font-size:0.75rem;" data-jump-track="3"><i class="fas fa-play"></i></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Exhibit 3 -->
+        <article id="exhibit-3" class="exhibit-pane">
+          <div class="exhibit-content-grid">
+            <div class="exhibit-article">
+              <h3>The Dehumanizing Wedge & The Courtroom Sleep</h3>
+              <p>When leadership abandons the vocabulary of democratic persuasion, it resorts to the rhetoric of contamination and extermination—proclaiming that outsiders are "poisoning the blood" and asserting messianic self-sufficiency ("I alone can fix it").</p>
+
+              <div class="exhibit-quote">
+                "The cameras turn to catch his roaring pride / But in the chair he slowly slips aside / While verdicts hang and solemn bailiffs weep / The strongman settles into quiet sleep..."
+              </div>
+
+              <p>Yet behind the bluster lies an astonishing abdication of duty: observed sleeping in courtrooms when held to solemn legal account, proving that the office was never a post of stewardship, but a theater of narcissism.</p>
+            </div>
+
+            <div class="exhibit-sidebar">
+              <h4>Featured Track Exhibits</h4>
+              <div class="exhibit-song-card">
+                <div class="exhibit-song-info">
+                  <h5>Track 4: Closed Eyes, Open Mouth</h5>
+                  <p>Key: Em • 72 BPM • Industrial Slow-Burn</p>
+                </div>
+                <button class="btn-primary" style="padding:0.3rem 0.6rem; font-size:0.75rem;" data-jump-track="4"><i class="fas fa-play"></i></button>
+              </div>
+              <div class="exhibit-song-card">
+                <div class="exhibit-song-info">
+                  <h5>Track 5: Poison in the Blood</h5>
+                  <p>Key: Am • 125 BPM • Power-Folk Anthem</p>
+                </div>
+                <button class="btn-primary" style="padding:0.3rem 0.6rem; font-size:0.75rem;" data-jump-track="5"><i class="fas fa-play"></i></button>
+              </div>
+              <div class="exhibit-song-card">
+                <div class="exhibit-song-info">
+                  <h5>Track 6: I Alone</h5>
+                  <p>Key: Em • 130 BPM • Alt-Rock Anthem</p>
+                </div>
+                <button class="btn-primary" style="padding:0.3rem 0.6rem; font-size:0.75rem;" data-jump-track="6"><i class="fas fa-play"></i></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Exhibit 4 -->
+        <article id="exhibit-4" class="exhibit-pane">
+          <div class="exhibit-content-grid">
+            <div class="exhibit-article">
+              <h3>The Fractured Hearth & The Refusal of Despair</h3>
+              <p>The wreckage does not stop at the steps of the Capitol. It travels down every highway and settles around the family dinner table. Relatives stop speaking, neighbors view each other with existential suspicion, and public institutions sit hollowed out like empty thrones.</p>
+
+              <div class="exhibit-quote">
+                "The mirror breaks when truth is spoken plain / The golden frame cannot outlast the strain / For character is not a gift you buy / It is the choice to live without the lie..."
+              </div>
+
+              <p>Yet the conclusion of *Golden Mirrors & Empty Thrones* refuses nihilism. The death of virtue is not a natural disaster or an inevitable historical law; it is a choice made daily, and therefore a choice that can still be refused.</p>
+            </div>
+
+            <div class="exhibit-sidebar">
+              <h4>Featured Track Exhibits</h4>
+              <div class="exhibit-song-card">
+                <div class="exhibit-song-info">
+                  <h5>Track 8: Spoken: The Ledger</h5>
+                  <p>Key: Am • 65 BPM • Spoken Word Audit</p>
+                </div>
+                <button class="btn-primary" style="padding:0.3rem 0.6rem; font-size:0.75rem;" data-jump-track="8"><i class="fas fa-play"></i></button>
+              </div>
+              <div class="exhibit-song-card">
+                <div class="exhibit-song-info">
+                  <h5>Track 9: Fractured Table</h5>
+                  <p>Key: Am • 80 BPM • Heavy Blues Duet</p>
+                </div>
+                <button class="btn-primary" style="padding:0.3rem 0.6rem; font-size:0.75rem;" data-jump-track="9"><i class="fas fa-play"></i></button>
+              </div>
+              <div class="exhibit-song-card">
+                <div class="exhibit-song-info">
+                  <h5>Track 12: Still the Choice</h5>
+                  <p>Key: G • 95 BPM • Heartland Rock</p>
+                </div>
+                <button class="btn-primary" style="padding:0.3rem 0.6rem; font-size:0.75rem;" data-jump-track="12"><i class="fas fa-play"></i></button>
+              </div>
+              <div class="exhibit-song-card">
+                <div class="exhibit-song-info">
+                  <h5>Track 13: The End of Virtue</h5>
+                  <p>Key: D • 105 BPM • Grand Reprise Ballad</p>
+                </div>
+                <button class="btn-primary" style="padding:0.3rem 0.6rem; font-size:0.75rem;" data-jump-track="13"><i class="fas fa-play"></i></button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Master Audio Player & 13-Track Jukebox -->
+    <section id="jukebox" class="section-padding" style="background: rgba(4, 6, 9, 0.6);">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-eyebrow">The Complete Studio Recordings</div>
+          <h2 class="section-title">The 13-Track Jukebox & Lyric Studio</h2>
+          <p class="section-desc">Listen to all 13 mastered album tracks, inspect Suno studio cues, toggle clean publishing lyrics, and study the musical prompt architecture.</p>
+        </div>
+
+        <!-- Master Floating/Sticky Player Bar -->
+        <div id="masterPlayer" class="master-player">
+          <div class="player-track-info">
+            <div>
+              <div id="currentTrackTitle" class="current-title">1. Golden Mirror</div>
+              <div id="currentTrackAct" class="current-act">Act I: The Golden Stage</div>
+            </div>
+            <div class="volume-wrap">
+              <button id="btnMute" class="ctrl-btn" title="Toggle Mute"><i class="fas fa-volume-up"></i></button>
+              <input type="range" id="volumeSlider" class="vol-slider" min="0" max="1" step="0.05" value="0.9" aria-label="Volume Slider">
+            </div>
+          </div>
+
+          <div class="player-controls">
+            <button id="btnPrev" class="ctrl-btn" title="Previous Track"><i class="fas fa-step-backward"></i></button>
+            <button id="btnPlayPause" class="ctrl-btn ctrl-play" title="Play / Pause"><i class="fas fa-play"></i></button>
+            <button id="btnNext" class="ctrl-btn" title="Next Track"><i class="fas fa-step-forward"></i></button>
+          </div>
+
+          <div class="scrubber-container">
+            <span id="currentTime" class="time-label">0:00</span>
+            <div id="progressBar" class="progress-bar-wrap" role="slider" aria-label="Audio Scrubber">
+              <div id="progressFill" class="progress-fill"></div>
+            </div>
+            <span id="totalDuration" class="time-label">0:00</span>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:0.7rem; color:var(--text-muted);">
+            <span>Shortcuts: [Space] Play/Pause • [←/→] Seek 5s • [M] Mute</span>
+            <span>Mastered Stereo • 160 kbps</span>
+          </div>
+        </div>
+
+        <!-- Jukebox Layout: Tracklist & Details -->
+        <div class="jukebox-layout">
+          <!-- Left Column: Search & Tracklist -->
+          <div class="jukebox-sidebar">
+            <div class="track-filters">
+              <input type="text" id="trackSearchInput" class="search-box" placeholder="Search tracks, lyrics, themes...">
+              <div class="act-pills">
+                <button class="act-pill active" data-act="all">All (13)</button>
+                <button class="act-pill" data-act="1">Act I</button>
+                <button class="act-pill" data-act="2">Act II</button>
+                <button class="act-pill" data-act="3">Act III</button>
+                <button class="act-pill" data-act="4">Act IV</button>
+              </div>
+            </div>
+
+            <div id="trackList" class="track-list">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Right Column: Track Detail & Lyrics Viewer -->
+          <div class="track-detail-pane">
+            <div class="track-header-banner">
+              <div class="track-banner-top">
+                <h3 id="trackDisplayTitle" class="track-display-title">1. Golden Mirror</h3>
+                <span id="trackDisplayAct" class="track-display-act">Act I: The Golden Stage</span>
+              </div>
+              <div id="trackDisplayTagline" class="track-tagline">The spectacle is introduced. Vanity, golden mirrors, and crowd obsession.</div>
+              
+              <div class="track-specs-bar">
+                <span>Key: <strong id="specKey" class="spec-badge">Am</strong></span>
+                <span>Tempo: <strong id="specTempo" class="spec-badge">85 BPM</strong></span>
+                <span>Mood: <strong id="specMood" class="spec-badge">Brooding & Heavy</strong></span>
+                <span>Theme: <strong id="specElement" class="spec-badge">Vanity & Self-Mythologizing</strong></span>
+              </div>
+            </div>
+
+            <div class="lyrics-view-controls">
+              <div class="lyrics-tabs">
+                <button id="tabLyrics" class="lyric-tab-btn active"><i class="fas fa-align-left"></i> Lyrics Sheet</button>
+                <button id="tabSummary" class="lyric-tab-btn"><i class="fas fa-book-open"></i> Narrative Analysis</button>
+                <button id="tabPrompt" class="lyric-tab-btn"><i class="fas fa-sliders-h"></i> Suno Prompt</button>
+              </div>
+
+              <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <div class="lyrics-tabs">
+                  <button id="lyricModeClean" class="lyric-tab-btn active" title="View Clean Literary Lyrics">Clean</button>
+                  <button id="lyricModeStudio" class="lyric-tab-btn" title="View Suno Studio Structure Tags">Studio Cues</button>
+                </div>
+                <button id="btnCopyLyrics" class="btn-copy-lyrics" title="Copy current lyrics to clipboard"><i class="fas fa-copy"></i> Copy</button>
+              </div>
+            </div>
+
+            <!-- Content Panes -->
+            <div id="lyricsBody" class="lyrics-body">
+              <!-- Dynamically populated -->
+            </div>
+
+            <div id="narrativeSummaryBox" class="narrative-summary-box">
+              <!-- Dynamically populated -->
+            </div>
+
+            <div id="promptInspectorBox" class="prompt-inspector-box">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Virtues Ledger Section -->
+    <section id="ledger" class="section-padding">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-eyebrow">Ethical Architecture</div>
+          <h2 class="section-title">The Virtues Ledger Matrix</h2>
+          <p class="section-desc">A direct documentary comparison between classical republican virtues and the modern mechanics of gilded decay.</p>
+        </div>
+
+        <div class="matrix-wrap">
+          <table class="virtues-table">
+            <thead>
+              <tr>
+                <th>Classical Civic Virtue</th>
+                <th>The Gilded Rot</th>
+                <th>Observable Manifestation</th>
+                <th>Catalog Track</th>
+              </tr>
+            </thead>
+            <tbody id="virtuesTableBody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Vote to Release Modal -->
+  <div id="voteModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="voteModalTitle">
+    <div class="modal-box">
+      <button id="btnCloseVote" class="modal-close" aria-label="Close modal">&times;</button>
+      <h3 id="voteModalTitle" class="font-display" style="font-size: 1.5rem; color: var(--gold-light); margin-bottom: 0.5rem;">Community Release Vote</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem;">Cast your stance on the incubator status of <em>Golden Mirrors & Empty Thrones</em>.</p>
+
+      <div class="vote-options">
+        <label class="vote-opt">
+          <input type="radio" name="voteTier" value="immediate" checked>
+          <div>
+            <strong>Immediate Commercial Release</strong>
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0;">Distribute to Spotify, Apple Music, and streaming platforms immediately.</p>
+          </div>
+        </label>
+        <label class="vote-opt">
+          <input type="radio" name="voteTier" value="curated">
+          <div>
+            <strong>Interactive Portal Exclusive</strong>
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0;">Preserve as a high-fidelity multimedia documentary experience inside the Shady River Bard Portal.</p>
+          </div>
+        </label>
+        <label class="vote-opt">
+          <input type="radio" name="voteTier" value="vinyl">
+          <div>
+            <strong>Limited Edition Vinyl & Ledger Folio</strong>
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0;">Print a physical gatefold double LP accompanied by the complete documentary text.</p>
+          </div>
+        </label>
+      </div>
+
+      <button id="btnSubmitVote" class="btn-primary" style="width: 100%; justify-content: center;"><i class="fas fa-check"></i> Record Community Vote</button>
+    </div>
+  </div>
+
+  <!-- Fullscreen Cover Artwork Modal -->
+  <div id="coverModal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-box" style="max-width: 800px; padding: 1.5rem; text-align: center;">
+      <button id="btnCloseCover" class="modal-close" aria-label="Close modal">&times;</button>
+      <img src="assets/art/album-cover.webp" alt="Golden Mirrors Master Artwork" style="width: 100%; max-height: 75vh; object-fit: contain; border-radius: var(--radius-sm); margin-bottom: 1rem;">
+      <h4 class="font-display" style="color: var(--gold-light); margin-bottom: 0.3rem;">Golden Mirrors & Empty Thrones</h4>
+      <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">The Hooded Bard of Hobart • Master 4K Acoustic Canvas</p>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toastNotice" class="toast-notice">Notice</div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h5>The Shady River Bard</h5>
+          <p>Documentary songwriting exploring labor, technological displacement, civic ethics, and American democratic renewal from Hobart, Washington.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Incubator Navigation</h5>
+          <ul>
+            <li><a href="#overview">Album Overview</a></li>
+            <li><a href="#exhibits">Thematic Exhibits</a></li>
+            <li><a href="#jukebox">13-Track Jukebox</a></li>
+            <li><a href="#ledger">Virtues Matrix</a></li>
+            <li><a href="../vault/">The Vault Catalog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Thematic Trilogy</h5>
+          <ul>
+            <li><a href="../the-hammer-and-the-rust/">The Hammer and the Rust</a></li>
+            <li><a href="../chaff-from-the-wheat/">Chaff from the Wheat</a></li>
+            <li><a href="../letter-to-the-new-gods/">Letter to the New Gods</a></li>
+            <li><a href="../our-heavy-load/">Our Heavy Load</a></li>
+            <li><strong style="color:var(--gold-primary)">Golden Mirrors & Empty Thrones</strong></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 The Shady River Bard. All rights reserved. Recorded & Mastered in Hobart, Washington.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data/album-data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
