@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Heavy Load &mdash; The Shady River Bard | Interactive Concept Experience</title>
+  <meta name="description" content="An interactive concept experience and complete lyrics jukebox for 'Our Heavy Load' by The Shady River Bard. A sonic document of the $38T sovereign debt collision and the human ledger.">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Our Heavy Load &mdash; The Shady River Bard">
+  <meta property="og:description" content="A 13-track Industrial Dark Americana concept album exploring the $38 Trillion national debt, the Cantillon Effect, and human resilience.">
+  <meta property="og:image" content="assets/art/og-our-heavy-load.jpg">
+  <meta property="og:type" content="music.album">
+  <meta property="og:url" content="https://theshadyriverbard.com/our-heavy-load/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Heavy Load &mdash; The Shady River Bard">
+  <meta name="twitter:description" content="A sonic document of the American debt crisis, the Cantillon flow, and the stoic antidote of the soil.">
+  <meta name="twitter:image" content="assets/art/og-our-heavy-load.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            stone: {
+              850: '#211d19',
+              950: '#0c0f14',
+            },
+            bronze: {
+              400: '#e5a93c',
+              500: '#c59b27',
+              600: '#a37c18',
+              700: '#846210',
+            },
+            rust: {
+              400: '#e06f53',
+              500: '#b85437',
+              600: '#943f26',
+            }
+          },
+          fontFamily: {
+            display: ['Cinzel', 'Georgia', 'serif'],
+            serif: ['Merriweather', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom App Stylesheet -->
+  <link rel="stylesheet" href="assets/css/app.css">
+
+  <!-- Accessibility Toolbar Styles -->
+  <style>
+    .skip-link:focus {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 100;
+      background: #c59b27;
+      color: #0b0f14;
+      padding: 0.75rem 1.25rem;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+    body.high-contrast {
+      background-color: #000000 !important;
+      color: #ffffff !important;
+    }
+    body.high-contrast .bg-stone-900,
+    body.high-contrast .bg-stone-950,
+    body.high-contrast .bg-stone-850 {
+      background-color: #0a0a0a !important;
+      border-color: #ffffff !important;
+    }
+    body.large-text p, body.large-text span {
+      font-size: 1.15rem !important;
+    }
+    body.underline-links a {
+      text-decoration: underline !important;
+      text-underline-offset: 3px !important;
+    }
+  </style>
+</head>
+<body class="bg-[#0b0f14] text-stone-200 font-sans antialiased selection:bg-orange-600 selection:text-white min-h-screen flex flex-col">
+
+  <!-- Skip Navigation Link -->
+  <a href="#main-content" class="skip-link sr-only focus:not-sr-only">Skip to main content</a>
+
+  <!-- TOP ANNOUNCEMENT & ACCESSIBILITY BAR -->
+  <aside aria-label="Incubator Breadcrumb" class="bg-[#080b0f] border-b border-stone-800 px-4 py-2 text-xs font-mono text-stone-400">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+        <span class="text-stone-300 font-bold">The Shady River Bard &bull; Research Vault Incubator</span>
+        <span class="hidden sm:inline text-stone-600">|</span>
+        <span class="hidden sm:inline text-amber-400/90">Album XX Concept Experience</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px]">
+        <a href="../vault/index.html" class="hover:text-amber-400 text-stone-300 transition-colors flex items-center gap-1.5 font-medium">
+          <i class="fa-solid fa-arrow-left text-[10px]" aria-hidden="true"></i>
+          <span>Back to Vault</span>
+        </a>
+        <span class="text-stone-700" aria-hidden="true">|</span>
+        <a href="../index.html" class="hover:text-amber-400 text-stone-300 transition-colors flex items-center gap-1">
+          <i class="fa-solid fa-house text-[10px]" aria-hidden="true"></i>
+          <span>Portal</span>
+        </a>
+        <span class="text-stone-700" aria-hidden="true">|</span>
+        <button id="a11y-toggle-btn" onclick="toggleA11yToolbar()" aria-expanded="false" class="hover:text-amber-400 text-stone-300 transition-colors flex items-center gap-1 focus:outline-none">
+          <i class="fa-solid fa-universal-access text-amber-400" aria-hidden="true"></i>
+          <span>Accessibility</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ACCESSIBILITY TOOLBAR PANEL -->
+  <div id="a11y-toolbar" class="hidden bg-[#0e131a] border-b border-amber-500/30 py-2.5 px-4 text-xs font-mono shadow-2xl relative z-40">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2 text-stone-300">
+        <i class="fa-solid fa-sliders text-amber-400"></i>
+        <span>Display Preferences:</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-2">
+        <button onclick="toggleContrast()" id="btn-contrast" class="px-2.5 py-1 rounded bg-stone-900 hover:bg-stone-800 text-stone-300 border border-stone-700 transition-colors">
+          Contrast: <span id="contrast-status" class="text-amber-400">Standard</span>
+        </button>
+        <button onclick="toggleLargeText()" id="btn-text-size" class="px-2.5 py-1 rounded bg-stone-900 hover:bg-stone-800 text-stone-300 border border-stone-700 transition-colors">
+          Font Size: <span id="text-size-status" class="text-amber-400">Default</span>
+        </button>
+        <button onclick="toggleUnderlineLinks()" id="btn-underline" class="px-2.5 py-1 rounded bg-stone-900 hover:bg-stone-800 text-stone-300 border border-stone-700 transition-colors">
+          Underline: <span id="underline-status" class="text-amber-400">Off</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY PRIMARY NAVIGATION -->
+  <header class="sticky top-0 z-40 bg-[#0b0f14]/95 backdrop-blur-md border-b border-stone-800 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Brand & Title -->
+        <a href="#top" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-amber-400 rounded-lg p-1">
+          <div class="w-9 h-9 rounded-lg bg-[#141a22] border border-amber-500/40 flex items-center justify-center text-amber-400 font-bold shadow-md shadow-amber-500/10 group-hover:border-amber-400 transition-colors">
+            <i class="fa-solid fa-scale-unbalanced text-sm"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-bold text-white tracking-wider text-base sm:text-lg group-hover:text-amber-300 transition-colors">
+              OUR HEAVY LOAD
+            </span>
+            <span class="text-[10px] font-mono text-amber-500 uppercase tracking-widest">
+              The Shady River Bard &bull; Album XX
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav aria-label="Page Sections" class="hidden md:flex items-center space-x-6 text-xs font-mono tracking-wider uppercase">
+          <a href="#overview" class="text-stone-300 hover:text-amber-400 transition-colors py-1">Overview</a>
+          <a href="#thematic-exhibits" class="text-stone-300 hover:text-amber-400 transition-colors py-1">Exhibits</a>
+          <a href="#jukebox" class="text-amber-400 font-bold hover:text-amber-300 transition-colors py-1 flex items-center gap-1.5">
+            <i class="fa-solid fa-compact-disc"></i>
+            <span>All 13 Songs &amp; Player</span>
+          </a>
+          <a href="../vault/index.html" class="px-3 py-1 rounded bg-stone-900 hover:bg-stone-800 text-stone-300 border border-stone-700 transition-colors">
+            <i class="fa-solid fa-box-archive mr-1 text-amber-400"></i> Vault
+          </a>
+        </nav>
+
+        <!-- Vote Action Button -->
+        <div class="flex items-center gap-2">
+          <button id="vote-hero-btn" class="px-3.5 py-1.5 rounded-lg bg-orange-600 hover:bg-orange-500 text-stone-950 font-mono text-xs font-bold transition-all shadow-md shadow-orange-600/20 flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-white">
+            <i class="fa-solid fa-vote-yea mr-1"></i> Vote to Release
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT LANDMARK -->
+  <main id="main-content" tabindex="-1" class="flex-grow focus:outline-none">
+
+    <!-- HERO SECTION -->
+    <section id="overview" class="relative py-12 sm:py-16 md:py-20 border-b border-stone-800 bg-gradient-to-b from-[#10161f] via-[#0b0f14] to-[#0b0f14] overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-950/25 via-transparent to-transparent pointer-events-none" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          <!-- Album Artwork Preview Column -->
+          <div class="lg:col-span-5 flex flex-col items-center">
+            <div class="relative group cursor-pointer max-w-sm sm:max-w-md w-full" onclick="openArtModal('assets/art/album-cover.webp', 'Our Heavy Load - Official Artwork')">
+              <div class="aspect-square rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl shadow-black/80 bg-[#141a22] transition-transform duration-300 group-hover:scale-[1.01] group-hover:border-amber-400">
+                <img src="assets/art/album-cover.webp" alt="Cover artwork for Our Heavy Load showing a solitary working figure bearing the massive weight of an industrial rusted sovereign balance" class="w-full h-full object-cover">
+              </div>
+              <div class="absolute bottom-3 right-3 px-2.5 py-1 bg-black/80 backdrop-blur-md rounded-md text-[10px] font-mono text-amber-300 border border-stone-700 flex items-center gap-1.5 opacity-90 group-hover:opacity-100 transition-opacity">
+                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Click to Enlarge Art
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Narrative Details Column -->
+          <div class="lg:col-span-7 space-y-6">
+            <!-- Badges -->
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30">
+                <i class="fa-solid fa-flask-vial mr-1" aria-hidden="true"></i> Incubator Vault &bull; Album XX
+              </span>
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-stone-900 text-stone-300 border border-stone-800">
+                Industrial Dark Americana / Gospel Folk
+              </span>
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-stone-900 text-stone-300 border border-stone-800">
+                4 Acts &bull; 13 Tracks
+              </span>
+            </div>
+
+            <!-- Title & Subtitle -->
+            <div class="space-y-2">
+              <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-none">
+                Our Heavy Load
+              </h1>
+              <p class="text-base sm:text-lg text-amber-400 font-serif italic">
+                A Sonic Document of the Sovereign Debt Collision &amp; The Human Ledger
+              </p>
+            </div>
+
+            <!-- Core Pitch Lead -->
+            <p class="text-sm sm:text-base text-stone-300 font-serif leading-relaxed">
+              The United States approaches an unprecedented financial reckoning: a \$38.09 trillion national debt colliding with compound interest and soaring debt-to-GDP ratios. <em>Our Heavy Load</em> translates these dry fiscal mechanics into visceral, blood-and-rust Industrial Dark Americana. Following the Cantillon Effect from the Federal Reserve headwaters down to the grocery aisles, the album documents the unretired elders, the algorithmic micro-debt traps, and the commercial credit freezes&mdash;ultimately locating an unshakeable stoic antidote in the soil and mutual aid.
+            </p>
+
+            <!-- Macro Data Dashboard -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+              <div class="bg-[#121820]/90 border border-stone-800 rounded-xl p-3 text-center">
+                <div class="font-mono text-xl sm:text-2xl font-bold text-orange-400">$38.09T</div>
+                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mt-0.5">U.S. National Debt</div>
+              </div>
+              <div class="bg-[#121820]/90 border border-stone-800 rounded-xl p-3 text-center">
+                <div class="font-mono text-xl sm:text-2xl font-bold text-amber-400">120-125%</div>
+                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mt-0.5">Debt-to-GDP Ratio</div>
+              </div>
+              <div class="bg-[#121820]/90 border border-stone-800 rounded-xl p-3 text-center">
+                <div class="font-mono text-xl sm:text-2xl font-bold text-orange-400">$970B+</div>
+                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mt-0.5">Annual Net Interest</div>
+              </div>
+              <div class="bg-[#121820]/90 border border-stone-800 rounded-xl p-3 text-center">
+                <div class="font-mono text-xl sm:text-2xl font-bold text-amber-400">13 Tracks</div>
+                <div class="text-[10px] font-mono text-stone-400 uppercase tracking-wider mt-0.5">Full Studio Audio</div>
+              </div>
+            </div>
+
+            <!-- Action Hub -->
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <a href="#jukebox" class="px-5 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-stone-950 font-mono font-bold text-xs uppercase tracking-wider transition-colors flex items-center gap-2 shadow-lg shadow-orange-600/20 focus:outline-none focus:ring-2 focus:ring-orange-300">
+                <i class="fa-solid fa-play text-xs" aria-hidden="true"></i> Listen to Jukebox
+              </a>
+              <a href="#thematic-exhibits" class="px-4 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-stone-300 border border-stone-700 font-mono text-xs uppercase tracking-wider transition-colors flex items-center gap-2">
+                <i class="fa-solid fa-chart-line text-xs" aria-hidden="true"></i> Thematic Exhibits
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THEMATIC EXHIBITS SECTION -->
+    <section id="thematic-exhibits" class="py-16 border-b border-stone-800 bg-[#0e131a]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-10 space-y-3">
+          <span class="text-xs font-mono font-semibold text-amber-400 uppercase tracking-widest block">
+            Conceptual Architecture &amp; Research
+          </span>
+          <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+            The Thematic Exhibits
+          </h2>
+          <p class="text-stone-400 text-sm font-serif">
+            Examine the macroeconomic research, lived sociological profiles, and sound design philosophies underpinning the album's narrative arc.
+          </p>
+        </div>
+
+        <!-- Exhibit Tabs Navigation -->
+        <div class="flex border-b border-stone-800 overflow-x-auto gap-2 sm:gap-6 justify-start sm:justify-center mb-8 pb-px">
+          <button data-exhibit-tab="cantillon" class="px-4 py-2.5 font-mono text-xs font-bold tracking-wider uppercase border-b-2 border-orange-500 text-orange-400 hover:text-orange-300 transition-all flex items-center gap-2 whitespace-nowrap">
+            <i class="fa-solid fa-faucet-drip"></i>
+            <span>The Cantillon Flow</span>
+          </button>
+          <button data-exhibit-tab="downstream" class="px-4 py-2.5 font-mono text-xs font-semibold tracking-wider uppercase border-b-2 border-transparent text-stone-400 hover:text-stone-200 transition-all flex items-center gap-2 whitespace-nowrap">
+            <i class="fa-solid fa-users-rays"></i>
+            <span>The Downstream Triad</span>
+          </button>
+          <button data-exhibit-tab="sonic" class="px-4 py-2.5 font-mono text-xs font-semibold tracking-wider uppercase border-b-2 border-transparent text-stone-400 hover:text-stone-200 transition-all flex items-center gap-2 whitespace-nowrap">
+            <i class="fa-solid fa-wave-square"></i>
+            <span>Sonic Architecture</span>
+          </button>
+          <button data-exhibit-tab="stoic" class="px-4 py-2.5 font-mono text-xs font-semibold tracking-wider uppercase border-b-2 border-transparent text-stone-400 hover:text-stone-200 transition-all flex items-center gap-2 whitespace-nowrap">
+            <i class="fa-solid fa-seedling"></i>
+            <span>Stoic Antidote &amp; Soil</span>
+          </button>
+        </div>
+
+        <!-- Tab 1: The Cantillon Flow -->
+        <div data-exhibit-panel="cantillon" class="space-y-6">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-7 space-y-4">
+              <h3 class="font-display text-xl font-bold text-white flex items-center gap-2">
+                <i class="fa-solid fa-water text-orange-400"></i>
+                <span>Money Is Not Neutral: The 1755 Insight</span>
+              </h3>
+              <p class="text-sm font-serif text-stone-300 leading-relaxed">
+                In his 1755 treatise, economist Richard Cantillon observed that money does not disperse throughout an economy like rain over a field; it flows like a river from a single spring. Those who stand closest to the source&mdash;primary dealer banks, asset-backed corporations, and the fiscal apparatus&mdash;receive the newly created capital first, before wages and prices have adjusted.
+              </p>
+              <p class="text-sm font-serif text-stone-300 leading-relaxed">
+                They acquire tangible assets, real estate, and equities at current baseline valuations. By the time this liquidity trickles downstream to wage-earners and retirees, consumer prices have surged, eroding real purchasing power. The Cantillon Effect is the silent, structural redistributor that has defined late-stage American financialization.
+              </p>
+              <div class="p-4 rounded-xl bg-stone-900 border border-stone-800 space-y-2">
+                <span class="text-xs font-mono font-bold text-orange-400 uppercase tracking-wider block">
+                  Cantillon Axiom in Track 02 ("The Cantillon Waltz")
+                </span>
+                <p class="text-xs font-serif italic text-stone-300">
+                  &ldquo;The closer to the spring you drink, the sweeter is the wine / But downstream in the Shady River, they're paying for the vine.&rdquo;
+                </p>
+              </div>
+            </div>
+
+            <!-- Cantillon Flow Diagram Card -->
+            <div class="lg:col-span-5 p-6 rounded-2xl bg-[#121820] border border-stone-800 space-y-4">
+              <span class="text-xs font-mono font-bold text-stone-400 uppercase tracking-wider block">
+                The Four-Stage Cantillon Pipeline
+              </span>
+              <div class="space-y-3 font-mono text-xs">
+                <div class="p-3 rounded-lg bg-orange-950/30 border border-orange-600/40">
+                  <div class="font-bold text-orange-400">1. Headwaters &bull; The Source</div>
+                  <div class="text-[11px] text-stone-400 mt-0.5">Central bank credit creation, primary dealers, Treasury debt issuance.</div>
+                </div>
+                <div class="p-3 rounded-lg bg-stone-900 border border-stone-800">
+                  <div class="font-bold text-stone-200">2. Asset Elevation &bull; The Elites</div>
+                  <div class="text-[11px] text-stone-400 mt-0.5">Surge in equities, commercial real estate, leveraged buyouts, private credit funds.</div>
+                </div>
+                <div class="p-3 rounded-lg bg-stone-900 border border-stone-800">
+                  <div class="font-bold text-stone-200">3. Price Diffusion &bull; The Squeeze</div>
+                  <div class="text-[11px] text-stone-400 mt-0.5">Elevated grocery bills, rent increases, insurance spikes, utility rate escalations.</div>
+                </div>
+                <div class="p-3 rounded-lg bg-red-950/30 border border-red-800/40">
+                  <div class="font-bold text-red-400">4. Downstream &bull; The Trap</div>
+                  <div class="text-[11px] text-stone-400 mt-0.5">Wage workers, gig labor, fixed-income seniors bearing the full inflationary brunt.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: The Downstream Triad -->
+        <div data-exhibit-panel="downstream" class="hidden space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Character 1: The Greeter -->
+            <div class="p-6 rounded-2xl bg-[#121820] border border-stone-800 flex flex-col justify-between space-y-4">
+              <div class="space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-orange-950/50 border border-orange-500/40 flex items-center justify-center text-orange-400">
+                  <i class="fa-solid fa-person-walking-with-cane"></i>
+                </div>
+                <h4 class="font-display font-bold text-base text-white">The Unretired Greeter</h4>
+                <span class="text-[11px] font-mono text-amber-400 uppercase tracking-wider block">
+                  Track 05 &bull; "The Greeter's Lament"
+                </span>
+                <p class="text-xs font-serif text-stone-300 leading-relaxed">
+                  A 73-year-old former machinist standing eight hours on a yellow floor mat at a big-box retail giant. His pension evaporated during 2008 restructuring, and 3% fixed-income yields vanished under ZIRP (zero interest rate policy). He smiles at shoppers while fighting arthritis in his knees.
+                </p>
+              </div>
+              <div class="pt-3 border-t border-stone-800/80 text-[11px] font-mono text-stone-400">
+                Archetype: Unretired Elder / Weary Folk
+              </div>
+            </div>
+
+            <!-- Character 2: The Indentured Youth -->
+            <div class="p-6 rounded-2xl bg-[#121820] border border-stone-800 flex flex-col justify-between space-y-4">
+              <div class="space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-orange-950/50 border border-orange-500/40 flex items-center justify-center text-orange-400">
+                  <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <h4 class="font-display font-bold text-base text-white">The Indentured Gig Worker</h4>
+                <span class="text-[11px] font-mono text-amber-400 uppercase tracking-wider block">
+                  Track 04 &bull; "Pay in Four"
+                </span>
+                <p class="text-xs font-serif text-stone-300 leading-relaxed">
+                  A 24-year-old delivery driver trapped in a web of Buy Now, Pay Later installments. Groceries, steel-toed work boots, and routine car repairs are amortized in bi-weekly \$18 deductions across four fintech apps, disguising systemic insolvency as algorithmic convenience.
+                </p>
+              </div>
+              <div class="pt-3 border-t border-stone-800/80 text-[11px] font-mono text-stone-400">
+                Archetype: Indentured Youth / Trap-Folk
+              </div>
+            </div>
+
+            <!-- Character 3: The Crowded-Out Merchant -->
+            <div class="p-6 rounded-2xl bg-[#121820] border border-stone-800 flex flex-col justify-between space-y-4">
+              <div class="space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-orange-950/50 border border-orange-500/40 flex items-center justify-center text-orange-400">
+                  <i class="fa-solid fa-shop-slash"></i>
+                </div>
+                <h4 class="font-display font-bold text-base text-white">The Crowded-Out Merchant</h4>
+                <span class="text-[11px] font-mono text-amber-400 uppercase tracking-wider block">
+                  Track 06 &bull; "Crowded Out"
+                </span>
+                <p class="text-xs font-serif text-stone-300 leading-relaxed">
+                  A third-generation hardware store owner watching regional banks pull back credit lines. As sovereign Treasury issuance devours global loanable funds to finance interest payments, local commercial rates rise to 11%, leaving no room for main-street working capital.
+                </p>
+              </div>
+              <div class="pt-3 border-t border-stone-800/80 text-[11px] font-mono text-stone-400">
+                Archetype: Displaced Artisan / Dark Blues
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tab 3: Sonic Architecture -->
+        <div data-exhibit-panel="sonic" class="hidden space-y-6">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-6 space-y-4">
+              <h3 class="font-display text-xl font-bold text-white">
+                Industrial Dark Americana: Sound of Rust and Debt
+              </h3>
+              <p class="text-sm font-serif text-stone-300 leading-relaxed">
+                The soundscape of <em>Our Heavy Load</em> avoids conventional studio polish. It blends antique acoustic roots&mdash;Drop D resonant resonator guitars, open-back banjos, pump organs, and weeping fiddles&mdash;with harsh, mechanical industrial artifacts.
+              </p>
+              <p class="text-sm font-serif text-stone-300 leading-relaxed">
+                Percussion was built using salvage yard scrap: struck cast iron brake drums, clanking dock chains, and the harsh metallic snap of a mechanical cash drawer. Lofi tape flutter and sub-bass drones simulate the oppressive weight of compound interest pressing downward on human ribs.
+              </p>
+            </div>
+            <div class="lg:col-span-6 grid grid-cols-2 gap-4 font-mono text-xs">
+              <div class="p-4 rounded-xl bg-[#121820] border border-stone-800">
+                <div class="text-orange-400 font-bold mb-1">Acoustic Roots</div>
+                <div class="text-stone-400 text-[11px]">Resonator guitars, clawhammer banjo, pump organ, weeping fiddle, parlor piano.</div>
+              </div>
+              <div class="p-4 rounded-xl bg-[#121820] border border-stone-800">
+                <div class="text-orange-400 font-bold mb-1">Junk Percussion</div>
+                <div class="text-stone-400 text-[11px]">Cast-iron brake rotors, anvil strikes, loose chains, mechanical cash drawers.</div>
+              </div>
+              <div class="p-4 rounded-xl bg-[#121820] border border-stone-800">
+                <div class="text-orange-400 font-bold mb-1">Industrial Dirt</div>
+                <div class="text-stone-400 text-[11px]">Sub-harmonic 808 rumbles, cassette tape wow/flutter, room mic grit, factory hiss.</div>
+              </div>
+              <div class="p-4 rounded-xl bg-[#121820] border border-stone-800">
+                <div class="text-orange-400 font-bold mb-1">Vocal Stance</div>
+                <div class="text-stone-400 text-[11px]">Weathered baritone, porch-stomp gospel chants, dry spoken-word soliloquies.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: Stoic Antidote & Soil -->
+        <div data-exhibit-panel="stoic" class="hidden space-y-6">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-7 space-y-4">
+              <h3 class="font-display text-xl font-bold text-white flex items-center gap-2">
+                <i class="fa-solid fa-tree text-emerald-400"></i>
+                <span>From Minsky's Moment to the Ground: The True Citadel</span>
+              </h3>
+              <p class="text-sm font-serif text-stone-300 leading-relaxed">
+                When financial systems reach hyper-fragility (the Minsky Moment), panic ensues. Economists scramble to refinance Ponzi debt, and institutions debase currencies to sustain the illusion. But the album does not terminate in despair.
+              </p>
+              <p class="text-sm font-serif text-stone-300 leading-relaxed">
+                Act IV ("The Grounding") shifts focus from abstract balance sheets to physical reality: the orchard, the garden bed, the hand-hewn fence, and tangible sound assets (Track 11: "The Anchor"). Grounded in Stoic philosophy (Epictetus's Dichotomy of Control) and permaculture ethics (Earth Care, People Care, Fair Share), the narrative concludes that true sovereignty is found not in monetary games, but in soil, mutual loyalty, and the unyielding human spirit.
+              </p>
+            </div>
+            <div class="lg:col-span-5 p-6 rounded-2xl bg-[#121820] border border-stone-800 space-y-3 font-mono text-xs">
+              <div class="text-amber-400 font-bold uppercase tracking-wider">The Resilience Matrix</div>
+              <div class="space-y-2 text-stone-300">
+                <div class="p-2.5 rounded bg-stone-900 border border-stone-800">
+                  <span class="text-orange-400 font-bold">Paper Assets:</span> Vulnerable to inflationary dilution &amp; digital confiscation.
+                </div>
+                <div class="p-2.5 rounded bg-stone-900 border border-stone-800">
+                  <span class="text-amber-400 font-bold">Sound Money:</span> Gold, silver, and bearer sovereignty that carry no counterparty liability.
+                </div>
+                <div class="p-2.5 rounded bg-emerald-950/40 border border-emerald-800/40 text-emerald-200">
+                  <span class="text-emerald-400 font-bold">The Living Soil:</span> Tangible sustenance, neighborly trade, and rooted permaculture independence.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- JUKEBOX & LYRICS VAULT SECTION -->
+    <section id="jukebox" class="py-16 bg-[#0b0f14]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-10 space-y-2">
+          <span class="text-xs font-mono font-semibold text-orange-400 uppercase tracking-widest block">
+            Complete Audio &amp; Narrative Archive
+          </span>
+          <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+            13-Track Jukebox &amp; Lyrics Vault
+          </h2>
+          <p class="text-stone-400 text-sm font-serif">
+            Select any song to stream full studio audio, inspect economic exhibits, and examine clean poetry or raw Suno musical prompts.
+          </p>
+        </div>
+
+        <!-- Filter & Search Toolbar -->
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-8 bg-[#121820] p-4 rounded-2xl border border-stone-800">
+          <!-- Act Filters -->
+          <div class="flex flex-wrap items-center gap-1.5 font-mono text-xs">
+            <button data-act-filter="all" class="px-3 py-1.5 rounded-lg bg-orange-600 text-stone-950 font-bold transition-colors">
+              All Tracks (13)
+            </button>
+            <button data-act-filter="1" class="px-3 py-1.5 rounded-lg bg-stone-900 text-stone-300 hover:text-white transition-colors">
+              Act I: The Headwaters
+            </button>
+            <button data-act-filter="2" class="px-3 py-1.5 rounded-lg bg-stone-900 text-stone-300 hover:text-white transition-colors">
+              Act II: Downstream
+            </button>
+            <button data-act-filter="3" class="px-3 py-1.5 rounded-lg bg-stone-900 text-stone-300 hover:text-white transition-colors">
+              Act III: The Reckoning
+            </button>
+            <button data-act-filter="4" class="px-3 py-1.5 rounded-lg bg-stone-900 text-stone-300 hover:text-white transition-colors">
+              Act IV: The Grounding
+            </button>
+          </div>
+
+          <!-- Search Input -->
+          <div class="w-full sm:w-64 relative">
+            <input type="text" id="track-search" placeholder="Search lyrics, titles, themes..." class="w-full bg-stone-900 border border-stone-700/80 rounded-xl px-3 py-1.5 text-xs font-mono text-stone-200 placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-orange-500">
+            <i class="fa-solid fa-magnifying-glass absolute right-3 top-2.5 text-stone-500 text-xs pointer-events-none"></i>
+          </div>
+        </div>
+
+        <!-- Main Jukebox Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Track List Column (Left, 5 cols) -->
+          <div class="lg:col-span-5 space-y-3">
+            <div class="flex items-center justify-between text-xs font-mono text-stone-400 px-1">
+              <span>Track Listing</span>
+              <span>Select to Load</span>
+            </div>
+            <div id="track-list" class="space-y-2 max-h-[700px] overflow-y-auto pr-1">
+              <!-- Rendered dynamically by app.js -->
+            </div>
+          </div>
+
+          <!-- Active Track & Audio Player Column (Right, 7 cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <!-- Sticky Audio Player Container -->
+            <div class="p-6 rounded-2xl bg-[#121820] border border-orange-500/40 shadow-2xl space-y-5">
+              
+              <!-- Player Header Info -->
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <div id="player-track-act" class="text-[11px] font-mono text-orange-400 uppercase tracking-widest font-semibold">
+                    Act I &bull; Track 01
+                  </div>
+                  <h3 id="player-track-title" class="font-display text-xl sm:text-2xl font-bold text-white mt-0.5">
+                    1. 38 Trillion Ghosts
+                  </h3>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="px-2.5 py-1 rounded bg-stone-900 border border-stone-800 text-[10px] font-mono text-stone-300">
+                    <i class="fa-solid fa-music text-orange-400 mr-1"></i> Studio Master
+                  </span>
+                </div>
+              </div>
+
+              <!-- Audio Controls Bar -->
+              <div class="flex items-center justify-center gap-4 pt-1">
+                <button id="prev-btn" aria-label="Previous track" class="w-10 h-10 rounded-full bg-stone-900 hover:bg-stone-800 text-stone-300 flex items-center justify-center transition-colors">
+                  <i class="fa-solid fa-backward-step"></i>
+                </button>
+                <button id="play-btn" aria-label="Play or pause track" class="w-14 h-14 rounded-full bg-orange-600 hover:bg-orange-500 text-stone-950 font-bold text-lg flex items-center justify-center transition-transform hover:scale-105 shadow-lg shadow-orange-600/30">
+                  <i id="play-icon" class="fa-solid fa-play ml-0.5"></i>
+                </button>
+                <button id="next-btn" aria-label="Next track" class="w-10 h-10 rounded-full bg-stone-900 hover:bg-stone-800 text-stone-300 flex items-center justify-center transition-colors">
+                  <i class="fa-solid fa-forward-step"></i>
+                </button>
+              </div>
+
+              <!-- Scrub Slider & Timers -->
+              <div class="space-y-1.5">
+                <input type="range" id="progress-slider" min="0" max="100" value="0" class="w-full accent-orange-500 h-1.5 bg-stone-800 rounded-lg cursor-pointer">
+                <div class="flex justify-between text-[11px] font-mono text-stone-400">
+                  <span id="current-time">0:00</span>
+                  <span id="total-time">0:00</span>
+                </div>
+              </div>
+
+              <!-- Volume Control -->
+              <div class="flex items-center justify-end gap-2 text-xs font-mono text-stone-400 pt-1">
+                <i class="fa-solid fa-volume-high text-stone-500"></i>
+                <input type="range" id="volume-slider" min="0" max="100" value="85" class="w-24 accent-orange-500 h-1 bg-stone-800 rounded-lg cursor-pointer">
+              </div>
+            </div>
+
+            <!-- Track Narrative Details Card -->
+            <div class="p-6 rounded-2xl bg-[#121820] border border-stone-800 space-y-4">
+              <div>
+                <span id="active-track-act" class="text-[11px] font-mono text-orange-400 uppercase tracking-widest font-semibold">
+                  Act I &bull; Track 01
+                </span>
+                <h3 id="active-track-title" class="font-display text-xl font-bold text-white mt-0.5">
+                  1. 38 Trillion Ghosts
+                </h3>
+                <p id="active-track-tagline" class="text-xs font-serif italic text-amber-400 mt-1">
+                  The weight of an abstraction made manifest.
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono">
+                <div class="p-3 rounded-lg bg-stone-900 border border-stone-800">
+                  <span class="text-stone-500 uppercase tracking-wider block text-[10px]">Tempo &amp; Key</span>
+                  <span id="active-track-tempo" class="text-stone-200 font-bold">Mid-tempo (82 BPM) &bull; D minor</span>
+                </div>
+                <div class="p-3 rounded-lg bg-stone-900 border border-stone-800">
+                  <span class="text-stone-500 uppercase tracking-wider block text-[10px]">Lead Archetype</span>
+                  <span id="active-track-archetype" class="text-stone-200 font-bold">The Chronicler</span>
+                </div>
+              </div>
+
+              <!-- Theory & Context -->
+              <div class="space-y-2">
+                <span class="text-[10px] font-mono uppercase text-orange-400 tracking-wider font-bold block">
+                  Theoretical Basis &amp; Economic Citation
+                </span>
+                <p id="active-track-theory" class="text-xs font-mono text-stone-300 bg-stone-950/80 p-3 rounded-xl border border-stone-800/80">
+                  Debt-to-GDP dynamics and the sovereign balance sheet threshold.
+                </p>
+              </div>
+
+              <!-- Narrative Summary -->
+              <div class="space-y-2">
+                <span class="text-[10px] font-mono uppercase text-stone-400 tracking-wider font-bold block">
+                  Narrative Exposition
+                </span>
+                <p id="active-track-summary" class="text-sm font-serif text-stone-300 leading-relaxed">
+                  Summary loading...
+                </p>
+              </div>
+
+              <!-- AI Music Prompt Accordion -->
+              <div class="pt-2">
+                <details class="group bg-stone-950/60 rounded-xl border border-stone-800 p-3">
+                  <summary class="text-xs font-mono text-amber-400 font-semibold cursor-pointer flex items-center justify-between">
+                    <span><i class="fa-solid fa-terminal mr-2"></i>Suno Musical Architecture Prompt</span>
+                    <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform text-stone-500"></i>
+                  </summary>
+                  <p id="active-track-prompt" class="text-xs font-mono text-stone-400 mt-3 pt-3 border-t border-stone-800 whitespace-pre-wrap leading-relaxed">
+                    Loading prompt...
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Complete Lyrics Card -->
+            <div class="p-6 rounded-2xl bg-[#121820] border border-stone-800 space-y-4">
+              <div class="flex flex-wrap items-center justify-between gap-3 border-b border-stone-800 pb-3">
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-align-left text-orange-400"></i>
+                  <span class="font-display font-bold text-white text-base">Song Lyrics</span>
+                </div>
+                <div class="flex items-center gap-2 font-mono text-xs">
+                  <button id="btn-lyrics-clean" class="px-2.5 py-1 rounded bg-orange-500 text-stone-950 font-bold transition-colors">
+                    Clean Poetry
+                  </button>
+                  <button id="btn-lyrics-suno" class="px-2.5 py-1 rounded bg-stone-800 text-stone-300 hover:text-white transition-colors">
+                    Studio Suno Tags
+                  </button>
+                  <button id="btn-copy-lyrics" class="px-2.5 py-1 rounded bg-stone-900 border border-stone-700 text-stone-300 hover:text-white transition-colors flex items-center gap-1">
+                    <i class="fa-regular fa-copy"></i>
+                    <span>Copy</span>
+                  </button>
+                </div>
+              </div>
+
+              <div id="copy-feedback" class="hidden text-xs font-mono text-emerald-400 flex items-center gap-1.5">
+                <i class="fa-solid fa-check"></i> Lyrics copied to clipboard!
+              </div>
+
+              <!-- Lyrics Display Area -->
+              <pre id="lyrics-container" class="font-serif text-sm text-stone-300 whitespace-pre-wrap leading-relaxed bg-[#0b0f14] p-5 rounded-xl border border-stone-800/80 max-h-[500px] overflow-y-auto">
+Lyrics loading...
+              </pre>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ALBUM ARTWORK MODAL -->
+    <div id="art-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md" onclick="closeArtModal()">
+      <div class="relative max-w-3xl w-full bg-stone-950 rounded-2xl border border-stone-800 overflow-hidden shadow-2xl" onclick="event.stopPropagation()">
+        <div class="p-4 border-b border-stone-800 flex items-center justify-between">
+          <span id="art-modal-title" class="font-display font-bold text-white text-sm">Album Artwork</span>
+          <button onclick="closeArtModal()" class="text-stone-400 hover:text-white p-1">
+            <i class="fa-solid fa-xmark text-lg"></i>
+          </button>
+        </div>
+        <div class="p-4 flex items-center justify-center">
+          <img id="art-modal-img" src="" alt="Album Artwork Expanded" class="max-h-[75vh] w-auto object-contain rounded-lg">
+        </div>
+      </div>
+    </div>
+
+    <!-- VOTE TO RELEASE MODAL -->
+    <div id="vote-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+      <div id="vote-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm"></div>
+      <div class="relative max-w-md w-full bg-[#121820] rounded-2xl border border-amber-500/40 p-6 shadow-2xl space-y-4 z-10">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-orange-950 border border-orange-500/40 flex items-center justify-center text-orange-400">
+            <i class="fa-solid fa-vote-yea"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-lg text-white">Vote to Prioritize</h3>
+            <span class="text-xs font-mono text-amber-400">Album XX: Our Heavy Load</span>
+          </div>
+        </div>
+        <p class="text-xs font-serif text-stone-300 leading-relaxed">
+          The Shady River Bard Research Vault relies on community engagement to sequence public streaming releases, vinyl pressings, and live concept performances. Casting your vote flags <em>Our Heavy Load</em> as a high-priority work.
+        </p>
+        <div class="flex justify-end gap-2 pt-2 font-mono text-xs">
+          <button id="close-vote-btn" class="px-4 py-2 rounded-lg bg-stone-900 hover:bg-stone-800 text-stone-300 transition-colors">
+            Cancel
+          </button>
+          <button id="confirm-vote-btn" class="px-4 py-2 rounded-lg bg-orange-600 hover:bg-orange-500 text-stone-950 font-bold transition-colors">
+            Cast Priority Vote
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#080b0f] border-t border-stone-800 py-12 text-xs font-mono text-stone-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div class="space-y-1">
+          <div class="font-display font-bold text-stone-200 text-sm">THE SHADY RIVER BARD</div>
+          <div class="text-[11px] text-stone-400">Incubator Vault Concept &bull; Album XX: Our Heavy Load</div>
+        </div>
+        <div class="flex flex-wrap items-center gap-4 text-xs">
+          <a href="../vault/index.html" class="hover:text-amber-400 transition-colors">Vault Directory</a>
+          <a href="../the-fracture/index.html" class="hover:text-amber-400 transition-colors">The Fracture</a>
+          <a href="../chaff-from-the-wheat/index.html" class="hover:text-amber-400 transition-colors">Chaff from the Wheat</a>
+          <a href="../homestead/index.html" class="hover:text-amber-400 transition-colors">Homestead</a>
+          <a href="../index.html" class="hover:text-amber-400 transition-colors">Portal Home</a>
+        </div>
+      </div>
+      <div class="border-t border-stone-800/80 pt-6 flex flex-wrap items-center justify-between gap-4 text-[11px] text-stone-400">
+        <div>
+          &copy; 2026 The Shady River Bard. Research &amp; Musical Composition. All rights reserved.
+        </div>
+        <div class="flex items-center gap-3">
+          <span>Drop C# / Drop D &bull; Industrial Dark Americana</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Inline Utilities for Art Modal & A11y Toolbar -->
+  <script>
+    function openArtModal(src, title) {
+      const m = document.getElementById('art-modal');
+      const img = document.getElementById('art-modal-img');
+      const t = document.getElementById('art-modal-title');
+      if (m && img) {
+        img.src = src;
+        if (t && title) t.textContent = title;
+        m.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    function closeArtModal() {
+      const m = document.getElementById('art-modal');
+      if (m) {
+        m.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+    function toggleA11yToolbar() {
+      const bar = document.getElementById('a11y-toolbar');
+      const btn = document.getElementById('a11y-toggle-btn');
+      if (bar) {
+        const isHidden = bar.classList.toggle('hidden');
+        if (btn) btn.setAttribute('aria-expanded', !isHidden);
+      }
+    }
+    function toggleContrast() {
+      const active = document.body.classList.toggle('high-contrast');
+      const status = document.getElementById('contrast-status');
+      if (status) status.textContent = active ? 'High' : 'Standard';
+    }
+    function toggleLargeText() {
+      const active = document.body.classList.toggle('large-text');
+      const status = document.getElementById('text-size-status');
+      if (status) status.textContent = active ? 'Large' : 'Default';
+    }
+    function toggleUnderlineLinks() {
+      const active = document.body.classList.toggle('underline-links');
+      const status = document.getElementById('underline-status');
+      if (status) status.textContent = active ? 'On' : 'Off';
+    }
+  </script>
+
+  <!-- Data Script -->
+  <script src="data/album-data.js"></script>
+  <!-- Application Engine -->
+  <script src="assets/js/app.js"></script>
+
+</body>
+</html>

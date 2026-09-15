@@ -1,0 +1,119 @@
+/* Our Heavy Load — Industrial Dark Americana Stylesheet */
+
+:root {
+  --color-basalt-950: #08090b;
+  --color-basalt-900: #0e1116;
+  --color-basalt-850: #141820;
+  --color-basalt-800: #1c222e;
+  --color-rust-600: #c2410c;
+  --color-rust-500: #ea580c;
+  --color-copper-400: #fb923c;
+  --color-amber-400: #fbbf24;
+}
+
+/* Accessibility: Focus visible */
+:focus-visible {
+  outline: 2px solid #ea580c;
+  outline-offset: 2px;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 100;
+  background: #ea580c;
+  color: #08090b;
+  padding: 0.75rem 1.25rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0e1116;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a3242;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ea580c;
+}
+
+/* Ambient Glows */
+.ambient-rust-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(234, 88, 12, 0.14) 0%, rgba(8, 9, 11, 0) 70%);
+}
+
+.ambient-anvil-glow {
+  background: radial-gradient(circle at 85% 25%, rgba(194, 65, 12, 0.1) 0%, rgba(8, 9, 11, 0) 65%);
+}
+
+/* Audio Player Range Input */
+input[type="range"] {
+  accent-color: #ea580c;
+}
+
+/* Track list active indicator */
+.track-row.active {
+  background-color: rgba(234, 88, 12, 0.14) !important;
+  border-color: rgba(234, 88, 12, 0.6) !important;
+}
+
+.track-row.active .track-title {
+  color: #fb923c !important;
+}
+
+/* Lyrics block font and line height */
+.lyrics-text {
+  font-family: 'Merriweather', 'Georgia', serif;
+  line-height: 1.85;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.suno-cues {
+  color: #fb923c;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High Contrast Mode */
+body.high-contrast {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+body.high-contrast .bg-basalt-900,
+body.high-contrast .bg-basalt-850,
+body.high-contrast .bg-stone-900 {
+  background-color: #000000 !important;
+  border-color: #ffffff !important;
+}
+
+body.high-contrast .text-amber-400,
+body.high-contrast .text-copper-400,
+body.high-contrast .text-rust-500 {
+  color: #ffff00 !important;
+}
