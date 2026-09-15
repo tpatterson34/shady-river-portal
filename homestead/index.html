@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Living Homestead Catalog | The Shady River Bard</title>
+  <meta name="description" content="Explore the living botanical collection and permaculture food forest at Shady River Homestead: 110 cultivars across orchard canopy, cold-hardy subtropicals, berry understory, and medicinal guilds in Western Washington.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Living Homestead Catalog | The Shady River Bard">
+  <meta property="og:description" content="Where the Soil Meets the Signal: 110 cultivars, 32 documented plantings, cold-hardy citrus, native pawpaws, ancient jujubes, and natural dye plants on a 7-acre PNW homestead.">
+  <meta property="og:image" content="../assets/images/logo-mark.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            stone: {
+              850: '#171412',
+              925: '#0f0c0b',
+              950: '#0a0807',
+            },
+            amber: {
+              450: '#f59e0b',
+              550: '#d97706',
+              950: '#451a03',
+            },
+            emerald: {
+              450: '#10b981',
+              950: '#022c22',
+            }
+          },
+          fontFamily: {
+            display: ['Cinzel', 'Georgia', 'serif'],
+            serif: ['Lora', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/a11y.css">
+  <link rel="stylesheet" href="assets/css/homestead.css">
+
+  <!-- Plant Data -->
+  <script src="data/plants-data.js"></script>
+</head>
+
+<body class="bg-stone-950 text-stone-200 antialiased selection:bg-emerald-500 selection:text-stone-950 pb-28">
+
+  <!-- A11y Skip Link -->
+  <a href="#catalog-content" class="a11y-skip-link">Skip to Plant Catalog</a>
+
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-stone-950/90 border-b border-stone-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo & Breadcrumb -->
+      <a href="../" class="flex items-center space-x-3 group focus:outline-none">
+        <div class="w-10 h-10 rounded-full border border-emerald-600/40 overflow-hidden bg-stone-900 p-0.5 group-hover:border-emerald-400 transition-colors">
+          <img src="../assets/images/logo-mark.webp" alt="The Shady River Bard Sigil" class="w-full h-full object-cover rounded-full">
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-lg sm:text-xl text-stone-100 tracking-wide group-hover:text-emerald-400 transition-colors">The Shady River Bard</span>
+          <span class="font-mono text-[10px] tracking-widest uppercase text-emerald-500/80">Homestead &middot; Soil &middot; Food Forest</span>
+        </div>
+      </a>
+
+      <!-- Nav Links -->
+      <nav aria-label="Primary Navigation" class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="../" class="text-stone-300 hover:text-emerald-400 transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-arrow-left text-xs" aria-hidden="true"></i>
+          <span>Main Portal</span>
+        </a>
+        <a href="../index.html#doors" class="text-stone-300 hover:text-emerald-400 transition-colors">Four Pillars</a>
+        <a href="../vault/" class="text-stone-300 hover:text-emerald-400 transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-compact-disc text-xs" aria-hidden="true"></i>
+          <span>26-Album Vault</span>
+        </a>
+        <a href="../friends-of-the-bard/" class="text-stone-300 hover:text-emerald-400 transition-colors">Friends of the Bard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="catalog-content">
+
+    <!-- Atmospheric Hero Section -->
+    <section class="relative overflow-hidden ambient-homestead-glow pt-16 pb-20 md:pt-24 md:pb-28 border-b border-stone-800/60">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
+        
+        <!-- Region Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-xs mb-6 shadow-sm">
+          <i class="fa-solid fa-compass text-xs" aria-hidden="true"></i>
+          <span>USDA Zone 8b &middot; Cedar River Valley, Western Washington</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-display font-black text-stone-100 tracking-tight leading-tight mb-6">
+          The Living <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300">Homestead Catalog</span>
+        </h1>
+
+        <p class="font-serif text-stone-300 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed mb-10">
+          Where the soil meets the signal. Discover 110 documented cultivars across orchard canopy, cold-hardy citrus, native pawpaw patches, nutrient-mining comfrey, and natural dye plants that anchor the 7-acre Shady River food forest.
+        </p>
+
+        <!-- Metric Badges Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto text-center">
+          <div class="bg-stone-900/80 border border-stone-800 rounded-2xl p-4 sm:p-5">
+            <div class="text-2xl sm:text-3xl font-display font-bold text-emerald-400">110</div>
+            <div class="text-xs font-mono uppercase tracking-wider text-stone-400 mt-1">Total Cultivars</div>
+          </div>
+          <div class="bg-stone-900/80 border border-stone-800 rounded-2xl p-4 sm:p-5">
+            <div class="text-2xl sm:text-3xl font-display font-bold text-amber-400">32</div>
+            <div class="text-xs font-mono uppercase tracking-wider text-stone-400 mt-1">Documented Plantings</div>
+          </div>
+          <div class="bg-stone-900/80 border border-stone-800 rounded-2xl p-4 sm:p-5">
+            <div class="text-2xl sm:text-3xl font-display font-bold text-teal-400">6</div>
+            <div class="text-xs font-mono uppercase tracking-wider text-stone-400 mt-1">Permaculture Layers</div>
+          </div>
+          <div class="bg-stone-900/80 border border-stone-800 rounded-2xl p-4 sm:p-5">
+            <div class="text-2xl sm:text-3xl font-display font-bold text-cyan-400">100%</div>
+            <div class="text-xs font-mono uppercase tracking-wider text-stone-400 mt-1">Regenerative Care</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Interactive Filter & Search Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6">
+      
+      <!-- Top Search & Status Row -->
+      <div class="flex flex-col md:flex-row gap-4 items-stretch md:items-center justify-between mb-8">
+        
+        <!-- Search Input -->
+        <div class="relative flex-1 max-w-2xl">
+          <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-stone-400">
+            <i class="fa-solid fa-magnifying-glass text-sm" aria-hidden="true"></i>
+          </div>
+          <input type="text" id="plant-search" placeholder="Search by common name, Latin botanical, flavor, recipe, or dye..." class="w-full pl-11 pr-10 py-3.5 rounded-xl bg-stone-900/90 border border-stone-800 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 text-stone-100 placeholder-stone-400 text-sm font-sans transition-all outline-none">
+          <button id="clear-search-btn" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-stone-400 hover:text-stone-200 hidden" aria-label="Clear search query">
+            <i class="fa-solid fa-circle-xmark text-sm" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <!-- Planting Status Toggle (All vs Planted) -->
+        <div class="inline-flex rounded-xl bg-stone-900 p-1 border border-stone-800 self-start md:self-auto shadow-sm">
+          <button data-status-filter="all" class="px-4 py-2 rounded-lg text-xs font-mono font-bold bg-stone-200 text-stone-950 transition-all">
+            All Cultivars (110)
+          </button>
+          <button data-status-filter="planted" class="px-4 py-2 rounded-lg text-xs font-mono text-stone-400 hover:text-stone-200 transition-all flex items-center gap-1.5">
+            <i class="fa-solid fa-seedling text-emerald-400 text-[11px]" aria-hidden="true"></i>
+            <span>Active Plantings (32)</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Category Filter Pills (Permaculture Guild Layers) -->
+      <div class="mb-5">
+        <div class="text-xs font-mono uppercase tracking-widest text-stone-400 mb-2.5 font-semibold">
+          Permaculture Guild Layer:
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <button data-category-filter="all" class="px-3.5 py-1.5 rounded-xl text-xs font-mono bg-emerald-600 text-stone-950 font-bold transition-all">
+            All Layers
+          </button>
+          <button data-category-filter="Fruit & Nut Trees" class="px-3.5 py-1.5 rounded-xl text-xs font-mono bg-stone-900 text-stone-300 hover:bg-stone-800 transition-all border border-stone-800">
+            Fruit &amp; Nut Trees
+          </button>
+          <button data-category-filter="Cold-Hardy Subtropicals" class="px-3.5 py-1.5 rounded-xl text-xs font-mono bg-stone-900 text-stone-300 hover:bg-stone-800 transition-all border border-stone-800">
+            Cold-Hardy Subtropicals
+          </button>
+          <button data-category-filter="Berries & Understory" class="px-3.5 py-1.5 rounded-xl text-xs font-mono bg-stone-900 text-stone-300 hover:bg-stone-800 transition-all border border-stone-800">
+            Berries &amp; Understory
+          </button>
+          <button data-category-filter="Vines & Trellis" class="px-3.5 py-1.5 rounded-xl text-xs font-mono bg-stone-900 text-stone-300 hover:bg-stone-800 transition-all border border-stone-800">
+            Vines &amp; Trellis
+          </button>
+          <button data-category-filter="Perennial Vegetables & Roots" class="px-3.5 py-1.5 rounded-xl text-xs font-mono bg-stone-900 text-stone-300 hover:bg-stone-800 transition-all border border-stone-800">
+            Perennial Vegetables &amp; Roots
+          </button>
+          <button data-category-filter="Soil Builders & Craft Allies" class="px-3.5 py-1.5 rounded-xl text-xs font-mono bg-stone-900 text-stone-300 hover:bg-stone-800 transition-all border border-stone-800">
+            Soil Builders &amp; Craft
+          </button>
+        </div>
+      </div>
+
+      <!-- Functional Use Filter Pills -->
+      <div class="mb-8">
+        <div class="text-xs font-mono uppercase tracking-widest text-stone-400 mb-2.5 font-semibold">
+          Functional Homestead Use:
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <button data-use-filter="all" class="px-3.5 py-1.5 rounded-xl text-xs font-mono bg-amber-600 text-stone-950 font-bold transition-all">
+            All Uses
+          </button>
+          <button data-use-filter="edible" class="px-3.5 py-1.5 rounded-xl text-xs font-mono bg-stone-900 text-stone-300 hover:bg-stone-800 transition-all border border-stone-800 flex items-center gap-1.5">
+            <i class="fa-solid fa-utensils text-emerald-400 text-[10px]" aria-hidden="true"></i>
+            <span>Fresh Table Harvest</span>
+          </button>
+          <button data-use-filter="medicinal" class="px-3.5 py-1.5 rounded-xl text-xs font-mono bg-stone-900 text-stone-300 hover:bg-stone-800 transition-all border border-stone-800 flex items-center gap-1.5">
+            <i class="fa-solid fa-mortar-pestle text-cyan-400 text-[10px]" aria-hidden="true"></i>
+            <span>Historic Folk Medicine</span>
+          </button>
+          <button data-use-filter="recipes" class="px-3.5 py-1.5 rounded-xl text-xs font-mono bg-stone-900 text-stone-300 hover:bg-stone-800 transition-all border border-stone-800 flex items-center gap-1.5">
+            <i class="fa-solid fa-fire-burner text-amber-400 text-[10px]" aria-hidden="true"></i>
+            <span>Homestead Recipes</span>
+          </button>
+          <button data-use-filter="dye" class="px-3.5 py-1.5 rounded-xl text-xs font-mono bg-stone-900 text-stone-300 hover:bg-stone-800 transition-all border border-stone-800 flex items-center gap-1.5">
+            <i class="fa-solid fa-palette text-purple-400 text-[10px]" aria-hidden="true"></i>
+            <span>Natural Dyes &amp; Fiber</span>
+          </button>
+          <button data-use-filter="soil" class="px-3.5 py-1.5 rounded-xl text-xs font-mono bg-stone-900 text-stone-300 hover:bg-stone-800 transition-all border border-stone-800 flex items-center gap-1.5">
+            <i class="fa-solid fa-arrows-spin text-blue-400 text-[10px]" aria-hidden="true"></i>
+            <span>Soil Fixers &amp; Miners</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Results Stats & Reset -->
+      <div class="flex items-center justify-between py-3 border-y border-stone-800/80 mb-8 text-xs font-mono">
+        <span id="results-count" class="text-stone-300">Loading catalog...</span>
+        <button id="reset-filters-btn" class="text-amber-400 hover:text-amber-300 underline underline-offset-4">
+          Reset All Filters
+        </button>
+      </div>
+
+    </section>
+
+    <!-- Plant Cards Grid -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Grid Container -->
+      <div id="plant-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Injected dynamically by homestead.js -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="empty-state" class="hidden text-center py-20 max-w-md mx-auto">
+        <div class="w-16 h-16 rounded-full bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-400 mx-auto mb-4 text-2xl">
+          <i class="fa-solid fa-seedling"></i>
+        </div>
+        <h3 class="text-xl font-display font-bold text-stone-200 mb-2">No Cultivars Found</h3>
+        <p class="font-serif text-stone-400 text-sm mb-6">
+          No plants match your current filter and search query. Try broadening your keywords or resetting filters.
+        </p>
+        <button onclick="document.getElementById('reset-filters-btn').click()" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-stone-950 font-mono font-semibold text-xs transition-colors">
+          Reset All Filters
+        </button>
+      </div>
+
+    </section>
+
+    <!-- Narrative Section: Where the Soil Meets the Signal -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 mt-28 pt-16 border-t border-stone-800/80 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-900 border border-stone-800 text-amber-500 font-mono text-xs mb-4">
+        <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+        <span>Agrarian Philosophy</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-display font-bold text-stone-100 mb-6">
+        Where the Soil Meets the Signal
+      </h2>
+      <p class="font-serif text-stone-300 text-base sm:text-lg leading-relaxed mb-6">
+        The Shady River Bard is not purely an algorithmic creation. The musical discography, the Substack chronicles, and the companion novellas were born around wood stoves in Western Washington, surrounded by the physical labor of stacking firewood, planting food forests, and watching the seasons turn along the Cedar River.
+      </p>
+      <p class="font-serif text-stone-400 text-sm leading-relaxed mb-8">
+        Every jar of fermented yuzu kosho, every cold-pressed olive trial, and every sweet bite of autumn pawpaw reminds us that true art requires both the highest technological signal and the deepest physical roots in the living earth.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="../vault/" class="px-5 py-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 font-mono font-semibold text-xs tracking-wider uppercase transition-colors shadow-md">
+          Explore 26-Album Discography &rarr;
+        </a>
+        <a href="../" class="px-5 py-3 rounded-xl bg-stone-900 hover:bg-stone-850 text-stone-200 border border-stone-700 font-mono font-semibold text-xs tracking-wider uppercase transition-colors">
+          Return to Portal Gateway
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Botanical Dossier Modal Dialog -->
+  <div id="plant-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-8 hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <!-- Backdrop -->
+    <div id="modal-backdrop" class="fixed inset-0 bg-stone-950/85 modal-backdrop"></div>
+
+    <!-- Modal Card -->
+    <div class="relative w-full max-w-3xl max-h-[90vh] bg-stone-900 border border-stone-700 rounded-2xl shadow-2xl overflow-y-auto modal-dialog z-10">
+      <div id="modal-content">
+        <!-- Dynamically populated by homestead.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-28 border-t border-stone-800/80 bg-stone-950 text-stone-400 py-12 text-center text-xs font-mono">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <p class="text-stone-300 font-serif text-sm mb-2">The Shady River Homestead, LLC &middot; Western Washington</p>
+      <p class="text-stone-400">Song &middot; Soil &middot; Story &middot; Fellowship</p>
+      <div class="flex justify-center space-x-6 mt-4">
+        <a href="../" class="hover:text-emerald-400 transition-colors">Portal Home</a>
+        <a href="../index.html#doors" class="hover:text-emerald-400 transition-colors">Four Pillars</a>
+        <a href="../vault/" class="hover:text-emerald-400 transition-colors">26-Album Vault</a>
+        <a href="../friends-of-the-bard/" class="hover:text-emerald-400 transition-colors">Friends of the Bard</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main Catalog JS -->
+  <script src="assets/js/homestead.js"></script>
+</body>
+</html>

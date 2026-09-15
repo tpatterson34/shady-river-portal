@@ -73,10 +73,12 @@
         </div>
       </a>
 
-      <!-- Desktop Nav Links -->
-      <nav aria-label="Primary Navigation" class="hidden md:flex items-center space-x-8 text-sm font-medium">
         <a href="#gateway" class="text-stone-300 hover:text-amber-400 transition-colors">The Gateway</a>
         <a href="#doors" class="text-stone-300 hover:text-amber-400 transition-colors">Four Pillars</a>
+        <a href="homestead/" class="text-stone-300 hover:text-emerald-400 transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-leaf text-xs text-emerald-400" aria-hidden="true"></i>
+          <span>Homestead Catalog</span>
+        </a>
         <a href="vault/" class="text-stone-300 hover:text-amber-400 transition-colors flex items-center gap-1.5">
           <i class="fa-solid fa-database text-xs" aria-hidden="true"></i>
           <span>26-Album Vault</span>
@@ -288,15 +290,21 @@
         </div>
 
         <!-- Pillar 2: The Homestead (Soil) -->
-        <div class="bg-stone-900/80 border border-stone-800 rounded-2xl p-6 flex flex-col justify-between hover:border-stone-700 transition-all">
+        <div class="bg-stone-900/80 border border-stone-800 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-600/50 transition-all">
           <div>
             <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-5">
               <i class="fa-solid fa-seedling text-xl" aria-hidden="true"></i>
             </div>
             <h3 class="text-xl font-display font-bold text-stone-100 mb-2">The Homestead</h3>
-            <p class="font-serif text-stone-300 text-sm leading-relaxed mb-6">
+            <p class="font-serif text-stone-300 text-sm leading-relaxed mb-3">
               A working 7-acre homestead in Western Washington practicing soil building, forestry, and self-reliance.
             </p>
+            <div class="mb-5">
+              <a href="homestead/" class="inline-flex items-center text-xs font-mono text-emerald-400 hover:text-emerald-300 underline underline-offset-4">
+                <i class="fa-solid fa-leaf mr-1.5 text-[10px]"></i>
+                Explore Plant Catalog (110 Cultivars) &rarr;
+              </a>
+            </div>
           </div>
           <button id="door-btn-homestead" onclick="toggleDoor('homestead')" aria-expanded="false" aria-controls="door-drawer-homestead" class="w-full py-3 px-4 rounded-xl bg-stone-800 hover:bg-stone-750 text-stone-200 text-xs font-mono font-semibold flex items-center justify-between border border-stone-700 transition-colors">
             <span id="door-label-homestead">Explore Depth</span>
@@ -516,6 +524,26 @@
               </p>
             </div>
           </div>
+
+          <!-- Interactive Plant Catalog Callout Banner -->
+          <div class="mt-8 pt-6 border-t border-stone-800 flex flex-col md:flex-row items-center justify-between gap-6 bg-stone-950/70 p-6 rounded-2xl border border-emerald-500/20">
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl shrink-0">
+                <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+              </div>
+              <div>
+                <span class="font-mono text-xs text-emerald-400 uppercase tracking-wider font-semibold">Interactive Permaculture Library</span>
+                <h4 class="text-xl font-display font-bold text-stone-100 mt-0.5">The Living Homestead Catalog</h4>
+                <p class="font-serif text-stone-300 text-xs sm:text-sm mt-1 max-w-xl">
+                  Explore all 110 documented cultivars and 32 active plantings: cold-hardy citrus, native pawpaw patches, ancient jujubes, berry understories, natural dye sources, and dynamic soil accumulators.
+                </p>
+              </div>
+            </div>
+            <a href="homestead/" class="inline-flex items-center px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-stone-950 font-semibold text-xs tracking-wider uppercase transition-all shadow-md shrink-0">
+              <i class="fa-solid fa-book-open mr-2 text-sm" aria-hidden="true"></i>
+              Explore Living Plant Catalog (110 Cultivars) &rarr;
+            </a>
+          </div>
         </div>
       </div>
 
@@ -727,6 +755,7 @@
         <a href="#main-content" class="hover:text-amber-400 transition-colors">Top</a>
         <a href="#gateway" class="hover:text-amber-400 transition-colors">Gateway</a>
         <a href="#doors" class="hover:text-amber-400 transition-colors">Four Pillars</a>
+        <a href="homestead/" class="hover:text-emerald-400 transition-colors">Homestead Catalog</a>
         <a href="friends-of-the-bard/" class="hover:text-amber-400 transition-colors">Friends of the Bard</a>
         <a href="vault/" class="hover:text-amber-400 transition-colors">Vault</a>
       </div>
