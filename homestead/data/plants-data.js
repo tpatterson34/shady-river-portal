@@ -1,6 +1,6 @@
 // The Shady River Homestead - Complete Botanical Cultivar Library
 // 110 Planted Cultivars in USDA Zone 8b (Western Washington)
-const HOMESTEAD_PLANTS = [
+window.HOMESTEAD_PLANTS = [
   {
     "id": "amere-de-berthcourt-cider-apple-tree",
     "commonName": "Amere de Berthcourt Cider Apple Tree",
@@ -3262,6 +3262,8 @@ const HOMESTEAD_PLANTS = [
   }
 ];
 
+var HOMESTEAD_PLANTS = (typeof window !== 'undefined' ? window.HOMESTEAD_PLANTS : null);
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = HOMESTEAD_PLANTS;
 }
+

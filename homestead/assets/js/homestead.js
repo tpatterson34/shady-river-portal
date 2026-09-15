@@ -7,7 +7,9 @@
   'use strict';
 
   // State
-  let allPlants = window.HOMESTEAD_PLANTS || [];
+  let allPlants = (typeof window !== 'undefined' && window.HOMESTEAD_PLANTS)
+    ? window.HOMESTEAD_PLANTS
+    : (typeof HOMESTEAD_PLANTS !== 'undefined' && HOMESTEAD_PLANTS ? HOMESTEAD_PLANTS : []);
   let searchQuery = '';
   let activeCategory = 'all';
   let activeUse = 'all';
@@ -30,9 +32,29 @@
   };
 
   function init() {
-    renderPlants();
     bindEvents();
-    checkUrlHash();
+
+    if (!allPlants || allPlants.length === 0) {
+      if (typeof window !== 'undefined' && window.HOMESTEAD_PLANTS && window.HOMESTEAD_PLANTS.length > 0) {
+        allPlants = window.HOMESTEAD_PLANTS;
+      }
+    }
+
+    if (allPlants && allPlants.length > 0) {
+      renderPlants();
+      checkUrlHash();
+    } else {
+      fetch('data/plants-data.json')
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          allPlants = data;
+          renderPlants();
+          checkUrlHash();
+        })
+        .catch(function (err) {
+          console.error('Failed to load plants data:', err);
+        });
+    }
   }
 
   function bindEvents() {
@@ -373,5 +395,9 @@
     }
   }
 
-  document.addEventListener('DOMContentLoaded', init);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();
