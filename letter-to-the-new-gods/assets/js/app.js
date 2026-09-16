@@ -10,7 +10,6 @@
   let tracks = [];
   let currentTrackIndex = 0;
   let isPlaying = false;
-  let lyricsMode = 'clean'; // 'clean' or 'suno'
   let activeAct = 'all';
   let searchQuery = '';
 
@@ -27,7 +26,6 @@
   const trackTheoryEl = document.getElementById('active-track-theory');
   const trackTempoEl = document.getElementById('active-track-tempo');
   const trackArchetypeEl = document.getElementById('active-track-archetype');
-  const musicalPromptEl = document.getElementById('active-track-prompt');
 
   const playerBarTitle = document.getElementById('player-track-title');
   const playerBarAct = document.getElementById('player-track-act');
@@ -42,8 +40,6 @@
 
   const searchInput = document.getElementById('track-search');
   const actFilterBtns = document.querySelectorAll('[data-act-filter]');
-  const cleanLyricsBtn = document.getElementById('btn-lyrics-clean');
-  const sunoLyricsBtn = document.getElementById('btn-lyrics-suno');
   const copyLyricsBtn = document.getElementById('btn-copy-lyrics');
   const copyFeedback = document.getElementById('copy-feedback');
 
@@ -178,8 +174,6 @@
     if (trackTheoryEl) trackTheoryEl.textContent = track.theory;
     if (trackTempoEl) trackTempoEl.textContent = track.tempo + ' • ' + track.key;
     if (trackArchetypeEl) trackArchetypeEl.textContent = track.leadArchetype;
-    if (musicalPromptEl) musicalPromptEl.textContent = track.musicalPrompt;
-
     if (playerBarTitle) playerBarTitle.textContent = track.number + '. ' + track.title;
     if (playerBarAct) playerBarAct.textContent = track.act;
 
@@ -199,12 +193,7 @@
     if (!lyricsContainerEl) return;
     const track = tracks[currentTrackIndex];
     if (!track) return;
-
-    if (lyricsMode === 'clean') {
-      lyricsContainerEl.textContent = track.cleanLyrics || 'No lyrics available.';
-    } else {
-      lyricsContainerEl.textContent = track.decoratedLyrics || 'No studio tags available.';
-    }
+    lyricsContainerEl.textContent = track.cleanLyrics || 'No lyrics available.';
   }
 
   function playAudio() {
@@ -313,38 +302,18 @@
       }
     });
 
-    if (cleanLyricsBtn) cleanLyricsBtn.addEventListener('click', function () {
-      lyricsMode = 'clean';
-      cleanLyricsBtn.classList.add('bg-cyan-500', 'text-stone-950', 'font-bold');
-      cleanLyricsBtn.classList.remove('bg-stone-800', 'text-stone-300');
-      if (sunoLyricsBtn) {
-        sunoLyricsBtn.classList.remove('bg-cyan-500', 'text-stone-950', 'font-bold');
-        sunoLyricsBtn.classList.add('bg-stone-800', 'text-stone-300');
-      }
-      renderLyrics();
-    });
-
-    if (sunoLyricsBtn) sunoLyricsBtn.addEventListener('click', function () {
-      lyricsMode = 'suno';
-      sunoLyricsBtn.classList.add('bg-cyan-500', 'text-stone-950', 'font-bold');
-      sunoLyricsBtn.classList.remove('bg-stone-800', 'text-stone-300');
-      if (cleanLyricsBtn) {
-        cleanLyricsBtn.classList.remove('bg-cyan-500', 'text-stone-950', 'font-bold');
-        cleanLyricsBtn.classList.add('bg-stone-800', 'text-stone-300');
-      }
-      renderLyrics();
-    });
-
-    if (copyLyricsBtn) copyLyricsBtn.addEventListener('click', function () {
-      const track = tracks[currentTrackIndex];
-      const textToCopy = (lyricsMode === 'clean' ? track.cleanLyrics : track.decoratedLyrics);
-      navigator.clipboard.writeText(textToCopy).then(function () {
-        if (copyFeedback) {
-          copyFeedback.classList.remove('hidden');
-          setTimeout(function () { copyFeedback.classList.add('hidden'); }, 2000);
-        }
+    if (copyLyricsBtn) {
+      copyLyricsBtn.addEventListener('click', function () {
+        const track = tracks[currentTrackIndex];
+        const textToCopy = track ? (track.cleanLyrics || '') : '';
+        navigator.clipboard.writeText(textToCopy).then(function () {
+          if (copyFeedback) {
+            copyFeedback.classList.remove('hidden');
+            setTimeout(function () { copyFeedback.classList.add('hidden'); }, 2000);
+          }
+        });
       });
-    });
+    }
 
     if (searchInput) {
       searchInput.addEventListener('input', function (e) {

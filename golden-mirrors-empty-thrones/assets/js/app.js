@@ -12,8 +12,7 @@
     tracks: [],
     currentTrackIndex: 0,
     isPlaying: false,
-    lyricMode: 'clean', // 'clean' or 'studio'
-    activeDetailTab: 'lyrics', // 'lyrics', 'summary', 'prompt'
+    activeDetailTab: 'lyrics', // 'lyrics' or 'summary'
     activeActFilter: 'all',
     searchQuery: '',
     audio: new Audio(),
@@ -76,13 +75,9 @@
 
     DOM.lyricsBody = document.getElementById('lyricsBody');
     DOM.narrativeSummaryBox = document.getElementById('narrativeSummaryBox');
-    DOM.promptInspectorBox = document.getElementById('promptInspectorBox');
 
     DOM.btnTabLyrics = document.getElementById('tabLyrics');
     DOM.btnTabSummary = document.getElementById('tabSummary');
-    DOM.btnTabPrompt = document.getElementById('tabPrompt');
-    DOM.btnLyricModeClean = document.getElementById('lyricModeClean');
-    DOM.btnLyricModeStudio = document.getElementById('lyricModeStudio');
     DOM.btnCopyLyrics = document.getElementById('btnCopyLyrics');
 
     DOM.toastNotice = document.getElementById('toastNotice');
@@ -195,11 +190,6 @@
     // Detail Tabs
     DOM.btnTabLyrics.addEventListener('click', () => switchDetailTab('lyrics'));
     DOM.btnTabSummary.addEventListener('click', () => switchDetailTab('summary'));
-    DOM.btnTabPrompt.addEventListener('click', () => switchDetailTab('prompt'));
-
-    // Lyric Mode Toggle
-    DOM.btnLyricModeClean.addEventListener('click', () => setLyricMode('clean'));
-    DOM.btnLyricModeStudio.addEventListener('click', () => setLyricMode('studio'));
 
     // Copy Lyrics
     DOM.btnCopyLyrics.addEventListener('click', copyCurrentLyrics);
@@ -358,23 +348,9 @@
     DOM.specMood.textContent = track.mood || 'Brooding & Relentless';
     DOM.specElement.textContent = track.thematicElement;
 
-    // Lyrics & Content
-    updateLyricsDisplay();
+    // Lyrics & Narrative Summary
+    DOM.lyricsBody.textContent = track.cleanLyrics;
     DOM.narrativeSummaryBox.textContent = track.summary;
-    DOM.promptInspectorBox.textContent = track.musicalPrompt;
-  }
-
-  function updateLyricsDisplay() {
-    const track = state.tracks[state.currentTrackIndex];
-    if (!track) return;
-
-    if (state.lyricMode === 'clean') {
-      DOM.lyricsBody.classList.remove('studio-mode');
-      DOM.lyricsBody.textContent = track.cleanLyrics;
-    } else {
-      DOM.lyricsBody.classList.add('studio-mode');
-      DOM.lyricsBody.textContent = track.decoratedLyrics;
-    }
   }
 
   function togglePlay() {
@@ -413,26 +389,16 @@
     state.activeDetailTab = tabName;
     DOM.btnTabLyrics.classList.toggle('active', tabName === 'lyrics');
     DOM.btnTabSummary.classList.toggle('active', tabName === 'summary');
-    DOM.btnTabPrompt.classList.toggle('active', tabName === 'prompt');
 
     DOM.lyricsBody.style.display = tabName === 'lyrics' ? 'block' : 'none';
     DOM.narrativeSummaryBox.style.display = tabName === 'summary' ? 'block' : 'none';
-    DOM.promptInspectorBox.style.display = tabName === 'prompt' ? 'block' : 'none';
-  }
-
-  function setLyricMode(mode) {
-    state.lyricMode = mode;
-    DOM.btnLyricModeClean.classList.toggle('active', mode === 'clean');
-    DOM.btnLyricModeStudio.classList.toggle('active', mode === 'studio');
-    updateLyricsDisplay();
   }
 
   function copyCurrentLyrics() {
     const track = state.tracks[state.currentTrackIndex];
     if (!track) return;
 
-    const textToCopy = state.lyricMode === 'clean' ? track.cleanLyrics : track.decoratedLyrics;
-    navigator.clipboard.writeText(textToCopy).then(() => {
+    navigator.clipboard.writeText(track.cleanLyrics).then(() => {
       showToast('Lyrics copied to clipboard!');
     }).catch(err => {
       console.error('Clipboard copy failed:', err);

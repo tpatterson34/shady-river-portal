@@ -581,15 +581,7 @@ window.INFERNO_DATA = {
         {
           "name": "[Outro]",
           "lines": [
-            "4. Suno Musical Style Prompt",
-            "A chaotic and jarring industrial grunge track with a heavy, sludgy feel. Features a frantic, strained male lead vocal and ghostly female harmonies over a thick, distorted drop-tuned guitar riff and punchy drums. The song is defined by abrupt structural changes and bursts of industrial noise, creating a desperate mood of mental fragmentation.",
-            "5. Social Media Caption Ideas",
-            "That feeling when you have 100 tabs open in your brain. This is a song about what’s left behind. #AttentionResidue #InformationOverload #Grunge",
-            "For anyone who can't think a single thought all the way through anymore. You are not alone. #MentalClutter #DigitalAge #IndustrialMusic",
-            "A song built from fragmented thoughts and mental static. This is the sound of a broken focus. #NewMusic #AlternativeMetal #CognitiveInferno",
-            "It’s not you, it’s the design. Your attention is a battlefield. #AttentionEconomy #Doomscrolling #NoiseRock",
-            "6. The Cover Art Image Prompt",
-            "A vertically oriented 9:16 portrait image in a gritty, high-contrast, black-and-white style. The image depicts a human face viewed through a shattered mirror. Each shard of the mirror reflects a different, distorted fragment: a glitching phone screen, a single wide-open eye, a blurred news headline, and abstract digital static. The overall mood is chaotic, desperate, and fragmented. IMPORTANT: Do not include any text, words, or labels on the image itself, and avoid any hard borders or frames within the image."
+            "(Song collapses into static and cuts to silence.)"
           ]
         }
       ]
