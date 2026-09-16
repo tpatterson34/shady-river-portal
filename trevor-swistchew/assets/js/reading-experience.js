@@ -21,7 +21,7 @@ function initThemeManager() {
   setTheme(savedTheme);
 
   // Match all theme buttons: data-set-theme, data-theme, or class theme-toggle-btn
-  const themeButtons = document.querySelectorAll('[data-set-theme], [data-theme], .theme-toggle-btn');
+  const themeButtons = document.querySelectorAll('button[data-set-theme], button[data-theme], .theme-toggle-btn');
   themeButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -47,7 +47,7 @@ function initThemeManager() {
     localStorage.setItem(THEME_KEY, theme);
 
     // Update active button indicators across all formats
-    document.querySelectorAll('[data-set-theme], [data-theme], .theme-toggle-btn').forEach(b => {
+    document.querySelectorAll('button[data-set-theme], button[data-theme], .theme-toggle-btn').forEach(b => {
       const bTheme = b.getAttribute('data-set-theme') || b.getAttribute('data-theme');
       const isCurrent = (bTheme === theme);
       b.setAttribute('aria-pressed', isCurrent ? 'true' : 'false');
