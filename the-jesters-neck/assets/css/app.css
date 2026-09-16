@@ -1,0 +1,289 @@
+/* ==========================================================================
+   The Jester's Neck — Bespoke Concept Web Application Stylesheet
+   Palette: Medieval Chiaroscuro / Dungeon Obsidian, Torchlight Amber, Royal Scarlet
+   Typography: Cinzel (Display), Lora (Narrative / Lyrics), JetBrains Mono (Code/Metadata)
+   ========================================================================== */
+
+:root {
+  --bg-primary: #0c0a09;
+  --bg-secondary: #141210;
+  --bg-tertiary: #1c1917;
+  --bg-elevated: #292524;
+  --border-subtle: #292524;
+  --border-strong: #44403c;
+  --border-amber: rgba(245, 158, 11, 0.35);
+  --border-crimson: rgba(220, 38, 38, 0.4);
+  
+  --text-primary: #f5f5f4;
+  --text-secondary: #d6d3d1;
+  --text-muted: #a8a29e;
+  --text-dim: #78716c;
+  
+  --amber-primary: #f59e0b;
+  --amber-hover: #d97706;
+  --amber-glow: rgba(245, 158, 11, 0.25);
+  --crimson-primary: #dc2626;
+  --crimson-hover: #b91c1c;
+  --crimson-glow: rgba(220, 38, 38, 0.3);
+  
+  --font-display: 'Cinzel', serif;
+  --font-body: 'Lora', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --base-font-size: 16px;
+  --transition-speed: 0.25s;
+}
+
+/* Accessibility Modifiers */
+html {
+  font-size: var(--base-font-size);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* High Contrast Mode */
+body.high-contrast {
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0a;
+  --bg-tertiary: #141414;
+  --bg-elevated: #222222;
+  --border-subtle: #ffffff;
+  --border-strong: #ffffff;
+  --border-amber: #facc15;
+  --text-primary: #ffffff;
+  --text-secondary: #f4f4f5;
+  --text-muted: #e4e4e7;
+  --text-dim: #d4d4d8;
+  --amber-primary: #facc15;
+  --crimson-primary: #ef4444;
+}
+
+/* Dyslexic Font Mode */
+body.dyslexic-font {
+  font-family: 'OpenDyslexic', 'Comic Sans MS', sans-serif !important;
+}
+
+/* Reduced Motion Mode */
+@media (prefers-reduced-motion: reduce), (update: slow) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+body.reduced-motion * {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}
+
+/* Typography Classes */
+.font-display { font-family: var(--font-display); }
+.font-body { font-family: var(--font-body); }
+.font-mono { font-family: var(--font-mono); }
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--amber-primary);
+  color: #000000;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  z-index: 9999;
+  border-radius: 4px;
+  transition: top var(--transition-speed);
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0a09;
+}
+::-webkit-scrollbar-thumb {
+  background: #292524;
+  border-radius: 4px;
+  border: 1px solid #44403c;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--amber-hover);
+}
+
+/* Parchment / Dark Medieval Panels */
+.medieval-panel {
+  background: linear-gradient(180deg, rgba(28, 25, 23, 0.95) 0%, rgba(20, 18, 16, 0.98) 100%);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+.medieval-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--amber-primary) 50%, transparent 100%);
+  opacity: 0.4;
+}
+
+.glow-amber {
+  box-shadow: 0 0 25px var(--amber-glow);
+}
+.glow-crimson {
+  box-shadow: 0 0 25px var(--crimson-glow);
+}
+
+/* Track Card States */
+.track-card {
+  transition: all var(--transition-speed) ease;
+  border: 1px solid var(--border-subtle);
+  background: rgba(20, 18, 16, 0.7);
+}
+.track-card:hover {
+  border-color: var(--border-amber);
+  background: rgba(28, 25, 23, 0.9);
+  transform: translateY(-1px);
+}
+.track-card.active {
+  border-color: var(--amber-primary);
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.12) 0%, rgba(28, 25, 23, 0.95) 100%);
+  box-shadow: inset 3px 0 0 var(--amber-primary), 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+.track-card.active .track-num-badge {
+  background: var(--amber-primary);
+  color: #000;
+  font-weight: 700;
+}
+
+/* Custom Audio Scrub Bar */
+.audio-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #292524;
+  height: 6px;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.audio-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--amber-primary);
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.8);
+  transition: transform 0.1s ease;
+}
+.audio-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.25);
+}
+.audio-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--amber-primary);
+  cursor: pointer;
+  border: none;
+}
+
+/* Audio Player Equalizer Bars */
+.eq-bars {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 14px;
+}
+.eq-bar {
+  width: 3px;
+  background: var(--amber-primary);
+  border-radius: 1px;
+  animation: eq-bounce 1s infinite ease-in-out;
+}
+.eq-bar:nth-child(1) { height: 40%; animation-delay: 0.1s; }
+.eq-bar:nth-child(2) { height: 80%; animation-delay: 0.3s; }
+.eq-bar:nth-child(3) { height: 60%; animation-delay: 0.2s; }
+.eq-bar:nth-child(4) { height: 100%; animation-delay: 0.4s; }
+
+@keyframes eq-bounce {
+  0%, 100% { height: 25%; }
+  50% { height: 100%; }
+}
+
+.paused .eq-bar {
+  animation-play-state: paused;
+  height: 25% !important;
+}
+
+/* Lyrics Box Styling */
+.lyrics-container {
+  white-space: pre-wrap;
+  line-height: 1.9;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: #e7e5e4;
+  letter-spacing: 0.015em;
+}
+
+/* Table 0 Matrix Styling */
+.matrix-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+.matrix-table th {
+  background: #1c1917;
+  color: var(--amber-primary);
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  padding: 1rem;
+  border-bottom: 2px solid #44403c;
+  text-align: left;
+}
+.matrix-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #292524;
+  background: rgba(20, 18, 16, 0.6);
+  vertical-align: top;
+}
+.matrix-table tr:hover td {
+  background: rgba(41, 37, 36, 0.6);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
