@@ -2424,19 +2424,19 @@ window.ALBUMS_DATA = {
       "folder_name": "XX - The Outer Citadel",
       "track_count": 13,
       "tracks": [
+        "The Gate Swings Out (Prologue)",
         "A Crack in the Wall",
+        "The First Stone",
+        "The Other Side of the Sign",
         "A Quiet Kind of War",
-        "Beyond the Yard Sign",
+        "The Poison Well",
+        "The Lullaby of Rage",
+        "The Anchor",
         "Do No Harm (But Take No Shit)",
         "Hierocles' Circles",
+        "Beyond the Yard Sign",
         "My Brother's Keeper, My Brother's Kin",
-        "The Anchor",
-        "The First Stone",
-        "The Gate Swings Out",
-        "The Lullaby of Rage",
-        "The Other Side of the Sign",
-        "The Outer Citadel",
-        "The Poison Well"
+        "The Outer Citadel"
       ],
       "art_files_count": 1,
       "art_sample": null,
@@ -2453,7 +2453,10 @@ window.ALBUMS_DATA = {
       "track_deconstructions": null,
       "deconstruction_url": null,
       "genre_category": "Folk & Acoustic",
-      "hook": "Acoustic philosophy exploring civic duty, public engagement, and extending personal stoic resilience out into the town square."
+      "hook": "Acoustic philosophy exploring civic duty, public engagement, and extending personal stoic resilience out into the town square.",
+      "is_bespoke": true,
+      "custom_url": "../the-outer-citadel/",
+      "duration": "53:40"
     },
     {
       "id": "the-republic-of-nobody",

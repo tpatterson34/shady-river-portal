@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Outer Citadel (A Citizen's Songbook) | The Shady River Bard</title>
+  <meta name="description" content="Album XX by The Shady River Bard: A Gothic Americana and Folk Rock concept album exploring Stoic civic virtues (Justice, Courage, Temperance, Duty) and community solidarity." />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="music.album" />
+  <meta property="og:title" content="The Outer Citadel (A Citizen's Songbook)" />
+  <meta property="og:description" content="A Gothic Americana concept album on Stoic civic virtues, local solidarity, and bridging private resilience into public courage." />
+  <meta property="og:image" content="assets/images/og-the-outer-citadel.jpg" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:image" content="assets/images/og-the-outer-citadel.jpg" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/app.css" />
+</head>
+<body>
+  <!-- WCAG Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="../vault/" class="brand-link" aria-label="Return to Discography Vault">
+        <i class="ph-bold ph-shield-chevron" style="color: var(--gold-primary);"></i>
+        <span>THE SHADY RIVER BARD</span>
+        <span class="brand-badge">ALBUM XX</span>
+      </a>
+      <div class="header-actions">
+        <button id="contrast-toggle" class="btn-icon" aria-label="Toggle High Contrast" title="Toggle High Contrast">
+          <i class="ph-bold ph-eye"></i>
+        </button>
+        <button id="font-toggle" class="btn-icon" aria-label="Adjust Font Size" title="Adjust Font Size">
+          <i class="ph-bold ph-text-t"></i>
+        </button>
+        <button id="dyslexic-toggle" class="btn-icon" aria-label="Toggle Dyslexic Font" title="Toggle Dyslexic Font">
+          <i class="ph-bold ph-book-open"></i>
+        </button>
+        <a href="../vault/" class="vault-link">
+          <i class="ph-bold ph-arrow-left"></i>
+          <span>Discography Vault</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-art-wrapper">
+          <img src="assets/images/album-art.webp" alt="The Outer Citadel Album Master Cover Art" id="master-art-img" />
+          <button class="art-zoom-btn" id="art-zoom-btn" aria-label="Enlarge Album Artwork">
+            <i class="ph-bold ph-magnifying-glass-plus"></i>
+            <span>Inspect Art</span>
+          </button>
+        </div>
+        <div class="hero-content">
+          <h1>The Outer Citadel</h1>
+          <div class="hero-subtitle">A Citizen's Songbook</div>
+          <p class="hero-desc">
+            The direct thematic sequel to <em>The Inner Citadel</em>. Moving from the quiet cultivation of inward resilience to the urgent application of external civic virtue, this 13-track Gothic Americana odyssey applies Stoic philosophy&mdash;Justice, Courage, Temperance, and Duty&mdash;as an active antidote to polarization, outrage, and civic exhaustion.
+          </p>
+          <div class="metric-badges">
+            <div class="metric-pill"><i class="ph-bold ph-disc"></i> <span><strong>13</strong> Studio Tracks</span></div>
+            <div class="metric-pill"><i class="ph-bold ph-bookmark-simple"></i> <span><strong>4</strong> Narrative Acts</span></div>
+            <div class="metric-pill"><i class="ph-bold ph-clock"></i> <span><strong>53:40</strong> Total Runtime</span></div>
+            <div class="metric-pill"><i class="ph-bold ph-scales"></i> <span><strong>4</strong> Civic Virtues Matrix</span></div>
+          </div>
+          <div class="hero-actions">
+            <a href="#jukebox-section" class="btn btn-primary">
+              <i class="ph-fill ph-play"></i>
+              <span>Stream Album</span>
+            </a>
+            <a href="#matrix-section" class="btn btn-secondary">
+              <i class="ph-bold ph-grid-four"></i>
+              <span>Civic Virtues Matrix</span>
+            </a>
+            <a href="#exhibits-section" class="btn btn-secondary">
+              <i class="ph-bold ph-image"></i>
+              <span>Visual Exhibits</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Streaming Jukebox & Active Track Deck -->
+    <section class="app-section" id="jukebox-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <i class="ph-bold ph-broadcast" style="color: var(--gold-primary);"></i>
+            <span>Interactive Streaming Jukebox</span>
+          </h2>
+          <p class="section-subtitle">
+            Explore all 13 songs organized by narrative acts, with live lyrics, philosophical frameworks, and acoustic deconstructions.
+          </p>
+        </div>
+
+        <!-- Filter and Search Bar -->
+        <div class="filter-bar">
+          <div class="act-filters" role="tablist" aria-label="Filter tracks by Act">
+            <button class="filter-btn active" data-act="all" role="tab" aria-selected="true">All Tracks (13)</button>
+            <button class="filter-btn" data-act="1" role="tab" aria-selected="false">Act I: The Call (3)</button>
+            <button class="filter-btn" data-act="2" role="tab" aria-selected="false">Act II: The Forge (3)</button>
+            <button class="filter-btn" data-act="3" role="tab" aria-selected="false">Act III: The Anchor (3)</button>
+            <button class="filter-btn" data-act="4" role="tab" aria-selected="false">Act IV: Unbroken Thread (4)</button>
+          </div>
+          <div class="search-wrapper">
+            <i class="ph-bold ph-magnifying-glass search-icon"></i>
+            <input type="text" id="track-search" class="search-input" placeholder="Search title, virtue, lyrics..." aria-label="Search tracks" />
+          </div>
+        </div>
+
+        <!-- Split Grid: Tracklist & Active Deck -->
+        <div class="jukebox-grid">
+          <!-- Tracklist Column -->
+          <div class="tracklist-card">
+            <div class="tracklist-header">
+              <span># &nbsp; TRACK TITLE & VIRTUE</span>
+              <span>TIME &nbsp; PLAY</span>
+            </div>
+            <div class="tracklist-scroll" id="tracklist-scroll" role="list">
+              <!-- Rendered via JavaScript -->
+            </div>
+          </div>
+
+          <!-- Active Track Deck Column -->
+          <div class="deck-card" id="deck-card">
+            <div class="deck-header">
+              <span class="deck-act-badge" id="deck-act-badge">Act I: The Call from the Citadel</span>
+              <h3 class="deck-title" id="deck-title">1. The Gate Swings Out (Prologue)</h3>
+              <div class="deck-virtue" id="deck-virtue">Spoken Word / The Bridge</div>
+            </div>
+
+            <!-- Narrative Context -->
+            <div class="deck-context">
+              <h4>The Citizen's Journey & Narrative Role</h4>
+              <p id="deck-narrative-role" style="margin-bottom: 8px; font-weight: 600; color: var(--text-main);"></p>
+              <p id="deck-summary"></p>
+            </div>
+
+            <!-- Lyrics Container -->
+            <div class="lyrics-box">
+              <div class="lyrics-header">
+                <h4><i class="ph-bold ph-feather"></i> Literary Lyrics</h4>
+                <button class="copy-btn" id="copy-lyrics-btn" aria-label="Copy lyrics to clipboard">
+                  <i class="ph-bold ph-copy"></i>
+                  <span>Copy Poetry</span>
+                </button>
+              </div>
+              <div class="lyrics-content" id="deck-lyrics">
+                <!-- Clean Literary Poetry Rendered Here -->
+              </div>
+            </div>
+
+            <!-- Pull Quotes -->
+            <div class="deck-quotes">
+              <h4><i class="ph-bold ph-chat-centered-text"></i> Epistemic Pull Quotes</h4>
+              <div id="deck-quotes"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The 4 Civic Virtues Matrix (Table 0) -->
+    <section class="app-section" id="matrix-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <i class="ph-bold ph-scales" style="color: var(--gold-primary);"></i>
+            <span>The 4 Civic Virtues: Systemic Matrix</span>
+          </h2>
+          <p class="section-subtitle">
+            How ancient Stoic virtues serve as psychological anchors and practical instruments for modern democratic life.
+          </p>
+        </div>
+
+        <div class="matrix-card">
+          <table class="matrix-table">
+            <thead>
+              <tr>
+                <th style="width: 22%;">Civic Virtue & Metaphor</th>
+                <th style="width: 26%;">Core Causes & Stoic Roots</th>
+                <th style="width: 26%;">Key Manifestations in Practice</th>
+                <th style="width: 26%;">Societal Outcomes (Positive vs Negative)</th>
+              </tr>
+            </thead>
+            <tbody id="matrix-tbody">
+              <!-- Rendered via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Exhibits Section -->
+    <section class="app-section" id="exhibits-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <i class="ph-bold ph-image" style="color: var(--gold-primary);"></i>
+            <span>Curated Visual Exhibits</span>
+          </h2>
+          <p class="section-subtitle">
+            Cinematic widescreen visual representations of the threshold, the civic trenches, the poisoned discourse, and collective rescue.
+          </p>
+        </div>
+
+        <div class="exhibits-container">
+          <div class="exhibit-view">
+            <img src="assets/images/exhibit-1-gate-swings-out.webp" alt="Visual Exhibit View" id="exhibit-main-img" />
+            <button class="exhibit-nav-btn exhibit-prev" id="prev-exhibit-btn" aria-label="Previous Exhibit">
+              <i class="ph-bold ph-caret-left"></i>
+            </button>
+            <button class="exhibit-nav-btn exhibit-next" id="next-exhibit-btn" aria-label="Next Exhibit">
+              <i class="ph-bold ph-caret-right"></i>
+            </button>
+            <div class="exhibit-overlay">
+              <div class="exhibit-subtitle" id="exhibit-subtitle">The Threshold of Civic Courage</div>
+              <h3 class="exhibit-title" id="exhibit-title">Exhibit I: The Gate Swings Out</h3>
+              <p class="exhibit-caption" id="exhibit-caption"></p>
+            </div>
+          </div>
+          <div class="exhibit-thumbs" id="exhibit-thumbs">
+            <!-- Rendered via JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky Bottom Audio Player Bar -->
+  <aside class="sticky-player" aria-label="Audio Player">
+    <div class="container player-grid">
+      <!-- Track Meta -->
+      <div class="player-track-info">
+        <div class="player-thumb">
+          <img src="assets/images/album-art.webp" alt="Playing Track Cover" />
+        </div>
+        <div class="player-details">
+          <div class="player-title" id="player-title">1. The Gate Swings Out (Prologue)</div>
+          <div class="player-sub" id="player-sub">Spoken Word / The Bridge</div>
+        </div>
+      </div>
+
+      <!-- Controls & Scrubber -->
+      <div class="player-controls">
+        <div class="player-buttons">
+          <button class="p-btn" id="prev-btn" aria-label="Previous Track" title="Previous Track (Shift+P)">
+            <i class="ph-bold ph-skip-back"></i>
+          </button>
+          <button class="p-btn p-btn-main" id="play-btn" aria-label="Play" title="Play / Pause (Space)">
+            <i class="ph-fill ph-play"></i>
+          </button>
+          <button class="p-btn" id="next-btn" aria-label="Next Track" title="Next Track (Shift+N)">
+            <i class="ph-bold ph-skip-forward"></i>
+          </button>
+        </div>
+        <div class="player-progress-row">
+          <span class="p-time curr" id="curr-time">00:00</span>
+          <div class="p-scrubber" id="scrubber" role="progressbar" aria-label="Audio seek bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div class="p-scrubber-fill" id="scrubber-fill"></div>
+          </div>
+          <span class="p-time" id="total-time">03:40</span>
+        </div>
+      </div>
+
+      <!-- Volume -->
+      <div class="player-volume">
+        <button class="p-btn" id="mute-btn" aria-label="Mute Audio" title="Mute (M)">
+          <i class="ph-fill ph-speaker-high"></i>
+        </button>
+        <input type="range" class="vol-slider" id="vol-slider" min="0" max="1" step="0.02" value="0.9" aria-label="Volume Slider" />
+      </div>
+    </div>
+  </aside>
+
+  <!-- Lightbox Modal -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-label="Image Zoom Inspector">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Close Lightbox">
+        <i class="ph-bold ph-x"></i>
+      </button>
+      <img src="" alt="Fullscreen Inspection" id="modal-img" />
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-msg" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- App Data & Logic -->
+  <script src="data/album-data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
