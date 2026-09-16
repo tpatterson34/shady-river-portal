@@ -2505,8 +2505,17 @@ window.ALBUMS_DATA = {
       "title": "The Unspoken Sermon",
       "status": "vault",
       "folder_name": "XX - The Unspoken Sermon",
-      "track_count": 0,
-      "tracks": [],
+      "track_count": 8,
+      "tracks": [
+        "The Invocation",
+        "The Good Samaritan of Jericho Road",
+        "The Golden Steeple",
+        "The Sojourner's Heart",
+        "The Woman Pushed to the Ground",
+        "Maria's Prayer (The Other Side)",
+        "The Weight of Gold (The Rich Young Ruler)",
+        "A Lower Place"
+      ],
       "art_files_count": 1,
       "art_sample": "Album.jpg",
       "themes": [
@@ -2521,7 +2530,10 @@ window.ALBUMS_DATA = {
       "track_deconstructions": null,
       "deconstruction_url": null,
       "genre_category": "Blues & Country Blues",
-      "hook": "Contemplative gospel blues exploring unspoken moral compasses, everyday grace, and redemptive deeds over dogmatic rhetoric."
+      "hook": "Contemplative gospel blues exploring unspoken moral compasses, everyday grace, and redemptive deeds over dogmatic rhetoric.",
+      "is_bespoke": true,
+      "custom_url": "../the-unspoken-sermon/",
+      "duration": "37:12"
     }
   ]
 };

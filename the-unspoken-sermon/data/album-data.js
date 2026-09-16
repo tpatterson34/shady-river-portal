@@ -1,0 +1,259 @@
+window.ALBUM_DATA = {
+  "id": "the-unspoken-sermon",
+  "title": "The Unspoken Sermon",
+  "subtitle": "A Contemplative Gospel Blues Odyssey on Radical Mercy and Quiet Faith",
+  "artist": "The Shady River Bard",
+  "release_date": "2026",
+  "runtime": "37:12",
+  "track_count": 8,
+  "genre": "Contemplative Gospel Blues & Roots Americana",
+  "hook": "Contemplative gospel blues exploring unspoken moral compasses, everyday grace, and redemptive deeds over dogmatic rhetoric.",
+  "pitch": "The Unspoken Sermon is an allegorical and contemplative gospel blues concept album examining Jesus's core parables through the lens of modern rural and civic life. Employing a 'Trojan Horse' narrative framework, it uses warm traditional Americana to explore radical mercy, welcoming the stranger, and unmasking religious hypocrisy.",
+  "master_cover_art": "assets/images/album-art.webp",
+  "og_image": "assets/images/og-the-unspoken-sermon.jpg",
+  "acts": [
+    {
+      "act_number": 1,
+      "title": "Movement I: The Call & The Road",
+      "theme": "The Prophet's Mandate & The Roadside Rescue",
+      "description": "Grounding in the Beatitudes and the radical ethic of the Samaritan on the dusty highway.",
+      "tracks": [
+        1,
+        2
+      ]
+    },
+    {
+      "act_number": 2,
+      "title": "Movement II: The False Spires & The Stranger",
+      "theme": "Idolatry Unmasked & Welcoming the Alien",
+      "description": "Contrasting commercialized, gilded religion with the sacred command to love the immigrant and wanderer.",
+      "tracks": [
+        3,
+        4
+      ]
+    },
+    {
+      "act_number": 3,
+      "title": "Movement III: The Stone & The Crossing",
+      "theme": "Hypocrisy Broken & The Borderland Prayer",
+      "description": "Dropping the stones of moral outrage, and looking into the face of a praying mother across the river.",
+      "tracks": [
+        5,
+        6
+      ]
+    },
+    {
+      "act_number": 4,
+      "title": "Movement IV: The Relinquishment & The Banquet",
+      "theme": "Spiritual Freedom & The Table of the Meek",
+      "description": "Shedding the crushing shackles of gold to take the lowest seat at the great banquet of grace.",
+      "tracks": [
+        7,
+        8
+      ]
+    }
+  ],
+  "theological_matrix": [
+    {
+      "dimension": "Narrative Transportation vs. Critique",
+      "theological_concept": "Ambiguous Parables (Luke 10)",
+      "strategy": "Avoids political jargon or overt polemics. Uses narrative immersion to disarm cognitive defenses and bypass partisan counter-arguing.",
+      "moral_foundation": "Sanctity & Authority",
+      "redemptive_outcome": "Listeners identify with the vulnerable and discover self-conviction from within the story."
+    },
+    {
+      "dimension": "The Pastoral Shell & Prophetic Core",
+      "theological_concept": "The Craftsman's Reverence (Wendell Berry)",
+      "strategy": "Warm, organic porch guitars, fiddle, and cello create an atmosphere of traditional safety, while the lyrics deliver a radical gospel payload.",
+      "moral_foundation": "Loyalty & Tradition",
+      "redemptive_outcome": "Traditional American roots music becomes the vehicle for radical biblical hospitality and peacemaking."
+    },
+    {
+      "dimension": "The Out-Group as Moral Center",
+      "theological_concept": "The Samaritan Hero (Luke 10:33)",
+      "strategy": "Inverts institutional hierarchy. The respected preacher and judge step over the dying man, while the rough, despised outsider shows mercy.",
+      "moral_foundation": "Care & Fairness",
+      "redemptive_outcome": "Subverts xenophobia and religious superiority, revealing Christ in the face of the marginalized."
+    },
+    {
+      "dimension": "Idolatry vs. True Worship",
+      "theological_concept": "The Gilded Calf (Matthew 21 / Ezekiel 34)",
+      "strategy": "Frames Christian Nationalism and prosperity theology as rival pagan religions that fleece the poor to fund private vanity.",
+      "moral_foundation": "Sanctity & Liberty",
+      "redemptive_outcome": "Empowers believers to reject greed and nationalism not as a concession to politics, but as faithfulness to Christ."
+    },
+    {
+      "dimension": "The Banquet of the Lowly",
+      "theological_concept": "The Great Inversion (Luke 14:10)",
+      "strategy": "Replaces competitive culture-war dominance with the invitation to voluntarily seek the lowest place at the table.",
+      "moral_foundation": "Humility & Sympatheia",
+      "redemptive_outcome": "Liberation from the anxiety of status, finding deep joy in fellowship with the broken and forgotten."
+    }
+  ],
+  "exhibits": [
+    {
+      "id": "exhibit-1-the-invocation",
+      "title": "Exhibit I: The Invocation",
+      "subtitle": "The Twilight Porch of Quiet Contemplation (Track 1)",
+      "image_webp": "assets/images/exhibit-1-the-invocation.webp",
+      "image_jpg": "assets/images/exhibit-1-the-invocation.jpg",
+      "caption": "A weathered acoustic guitar, an open Bible, and an iron lantern resting on a rustic timber porch overlooking a twilight river valley.",
+      "analysis": "The prologue to the Unspoken Sermon: true faith begins not in the clamor of the public square or political rallies, but in the quiet discipline of doing justly, loving mercy, and walking humbly.",
+      "quote": "What does the Lord require of you? To act justly, to love mercy, and to walk humbly with your God."
+    },
+    {
+      "id": "exhibit-2-jericho-road",
+      "title": "Exhibit II: The Jericho Road",
+      "subtitle": "The Radical Mercy of the Outsider (Track 2)",
+      "image_webp": "assets/images/exhibit-2-jericho-road.webp",
+      "image_jpg": "assets/images/exhibit-2-jericho-road.jpg",
+      "caption": "A working-class man in dusty denim kneels on a cracked highway shoulder to bandage an injured traveler as sleek cars speed past.",
+      "analysis": "Jesus's most subversive parable relocated to the modern roadside. Respectability and institutional piety hurry past to keep their schedules clean, while real holiness gets its hands dirty in the ditch.",
+      "quote": "Tell me who is your neighbor on the Jericho Road?"
+    },
+    {
+      "id": "exhibit-3-golden-steeple",
+      "title": "Exhibit III: The Golden Steeple",
+      "subtitle": "The Cold Shadow of Prosperity (Track 3)",
+      "image_webp": "assets/images/exhibit-3-golden-steeple.webp",
+      "image_jpg": "assets/images/exhibit-3-golden-steeple.jpg",
+      "caption": "A gleaming, colossal golden church steeple casting a long winter shadow across a humble brick food pantry and soup kitchen line.",
+      "analysis": "The architectural and moral indictment of the modern temple: when the church spends millions on gilded spires and Gulfstream jets while hungry neighbors stand in the snow, the gospel has been hollowed out.",
+      "quote": "You can build a golden steeple that can touch the starry skies, but you cannot hide the hunger from the Savior's weeping eyes."
+    },
+    {
+      "id": "exhibit-4-marias-prayer",
+      "title": "Exhibit IV: Maria's Prayer",
+      "subtitle": "Sacred Motherhood in the Desert Sanctuary (Track 6)",
+      "image_webp": "assets/images/exhibit-4-marias-prayer.webp",
+      "image_jpg": "assets/images/exhibit-4-marias-prayer.jpg",
+      "caption": "A young mother praying with clasped hands in a candlelit adobe sanctuary as her two small children sleep wrapped in a wool blanket.",
+      "analysis": "Connecting modern asylum-seekers to the Holy Family's desperate flight into Egypt. In this intimate sanctuary, political talking points dissolve before the timeless dignity of a praying mother.",
+      "quote": "Keep my babies warm tonight beneath this adobe floor, and soften the cold stone hearts on the other side of the door."
+    },
+    {
+      "id": "exhibit-5-lower-place",
+      "title": "Exhibit V: A Lower Place",
+      "subtitle": "The Banquet of the Meek (Track 8)",
+      "image_webp": "assets/images/exhibit-5-lower-place.webp",
+      "image_jpg": "assets/images/exhibit-5-lower-place.jpg",
+      "caption": "A long rustic barn banquet table bathed in amber lantern light where the humble, the elderly, and the weary are seated at the head of the feast.",
+      "analysis": "The triumphant climax of the album. The kingdom of grace reverses earthly hierarchies: those who scramble for the head of the table are humbled, while the meek and lowly are invited up higher.",
+      "quote": "When you are invited, go and sit down in the lowest place."
+    }
+  ],
+  "tracks": [
+    {
+      "id": "the-invocation",
+      "number": 1,
+      "title": "The Invocation",
+      "act_number": 1,
+      "act_title": "Movement I: The Call & The Road",
+      "parable_reference": "The Beatitudes & The Prophet's Mandate (Matthew 5:3-12 & Micah 6:8)",
+      "duration": "02:14",
+      "duration_seconds": 134.36,
+      "audio_file": "assets/audio/01-the-invocation.mp3",
+      "narrative_role": "Establishes the quiet porch of contemplation before stepping out into the broken world. God is not discovered in political warfare, but in mercy, humility, and peacemaking.",
+      "summary": "A hushed, reverent acoustic opening quoting Micah's ancient question—what does the Lord require?—and Jesus's Beatitudes, setting the moral foundation of the Unspoken Sermon.",
+      "lyrics": "Here's shown you are mortal, what is good. And what does the Lord require of you to act justly, to love mercy and to walk humbly with your God? Blessed are the poor in spirit, for theirs is the kingdom of heaven.\n\nBlessed are those who mourn, for they will be comforted. Blessed are the meek, for they will inherit the earth. Blessed are those who are hunger and thirst for righteousness. Blessed are the merciful, blessed are the pure in heart.\n\nBlessed are the peacemakers, if you have ears to hear, then listen. Blessed are those who mourn, for they will inherit the earth."
+    },
+    {
+      "id": "the-good-samaritan-of-jericho-road",
+      "number": 2,
+      "title": "The Good Samaritan of Jericho Road",
+      "act_number": 1,
+      "act_title": "Movement I: The Call & The Road",
+      "parable_reference": "The Parable of the Good Samaritan (Luke 10:25-37)",
+      "duration": "05:54",
+      "duration_seconds": 354.84,
+      "audio_file": "assets/audio/02-the-good-samaritan-of-jericho-road.mp3",
+      "narrative_role": "Subverts self-righteous in-group comfort by valorizing the 'rough, dirty working man' of the out-group over respectable religious gatekeepers who preserve their clean cuffs.",
+      "summary": "A modern retelling of the roadside robbery where religious officials in black town cars hurry past with busy schedules, while a despised stranger with calloused hands stops to dress the victim's wounds.",
+      "lyrics": "There's a man lying face down in the gutter of the street. He's been beaten by the world. He's been broken by the heat. He was stripped of his wallet. He was stripped of his pride. Left bleeding in the open while the traffic passed him by. Now long came a preacher in a long black car. He saw the truck old coming from a distance from a farm.\n\nHe checked his golden watch said I run in kind of late. I got a sermon to deliver on the kindness of the state. He rolled up the window and he drove on by. He rolled to Jericho. He longed it his call. It's big with good intentions and the stories we are told. You can wear the finest linen. You can't know the holy code but tell me who is your neighbor on the Jericho road.\n\nThe next came a judge with a gavel in his hand. A pillar of the justice in this righteous little land. He saw the bloody finger and he fell the little feet. He said I cannot get involved. I shouldn't interfere. He probably deserved it. He's the addict of the fire called the proper people to provide him some relief. So he crossed through the other side and hurried on his way. Even love them but the shadows and the died of the dead.\n\nHe rolled to Jericho. It's long and it his call. It's big with good intentions and the stories we are told. You can't wear the finest linen. You can't know the holy code but tell me who is your neighbor on the Jericho road. In a truck pulled over with the rust upon a rim driven by a stranger looking dangerous and down. He attacked two on his knuckles. He had dust upon his face. The kind of man and preacher wouldn't welcome in the place.\n\nHe didn't ask for papers. He didn't ask for names. He didn't turn about the politics or who's holding back. He said he was the right man. He said he was the right man. He said he was the right man. But he didn't. He didn't finish the three. He put him in the truck. And he paid the motel deal. He said I'll cover any death. safe and still. Now Jesus asked the question and I'm asking it to you. Which one was a neighbor?\n\nWhich one was the truth? Does it look pretty tough? No, no. Does it detect? No, no. It was a one day. It was a one day. Mercy is the only pain that makes the vision clear. I'm get here before악goa workout. For 번, yeah, be fun."
+    },
+    {
+      "id": "the-golden-steeple",
+      "number": 3,
+      "title": "The Golden Steeple",
+      "act_number": 2,
+      "act_title": "Movement II: The False Spires & The Stranger",
+      "parable_reference": "The Cleansing of the Temple & False Shepherds (Matthew 21:12-13 & Ezekiel 34)",
+      "duration": "04:19",
+      "duration_seconds": 259.48,
+      "audio_file": "assets/audio/03-the-golden-steeple.mp3",
+      "narrative_role": "Exposes commercialized, flag-draped religion as golden-calf idolatry, challenging the institutional corruption that substitutes fundraising for Christian charity.",
+      "summary": "A biting, rhythmically driving blues track lampooning prosperity hucksters and gilded mega-churches that fleece the flock for private jets while the town below freezes in breadlines.",
+      "lyrics": "Ladies and gentlemen, brothers and sisters, the doors are open and the wallets are. I mean, the hearts are white. I got a suit made of silk imported from these. I got a smile that could tame the savage beast.\n\nI got a direct line to the man of stairs and for a minimal fee. I afford your praise. You see the Lord told me just the overnight he said Sunday, Gulf Stream is looking kind of tacky. Need a shiny moob bird to spread the word even if the logic seems a little absurd.\n\nAnd then you'll see you planted in the dirt. You'll get me in cage and I'll take a herd. Build me a tower, build me a throne, build me a kingdom. A moderny stone, don't worry about the, but we go worry about the people.\n\nJust keep piling bricks. All my gold and steel. Yes, I'm a little light on the gold and steel boat. Now, sister Mary is down to her very last time.\n\nShe's hooking for a miracle she's running out of time. I look into the camera with a tear in my eye and tell her that her blessing is up in the sky. Just search the screen, put it on the car. God loves a giver, plays in real hard.\n\nI'm sipping champagne in a first-past seat and you can afford to bottle it away. That awesome and you'll see planted in the dirt. Give me the cash and I'll take a herd. Build me a tower, build me a throne, build me a kingdom.\n\nA moderny stone, don't worry about the, but we go worry about the people. Just keep piling bricks. All my gold and steel. Yes, I'm a little light on the gold and steel boat.\n\nYes, it's a camel through a needle's eye, but I found a loophole and I'm gonna fly. We'll need to say they're walking the dust when you can have a statue made of gold and gold. So operators are standing by the telephone line called in the next minute for a special sign. We take visa, MX and the widow's might, but gonna keep on robin' till the morning light.\n\nYeah, the highlight is people, I ask people, the stronger people. Thank you."
+    },
+    {
+      "id": "the-sojourner-s-heart",
+      "number": 4,
+      "title": "The Sojourner's Heart",
+      "act_number": 2,
+      "act_title": "Movement II: The False Spires & The Stranger",
+      "parable_reference": "The Command to Love the Alien (Leviticus 19:33-34 & Hebrews 13:2)",
+      "duration": "04:29",
+      "duration_seconds": 269.68,
+      "audio_file": "assets/audio/04-the-sojourners-heart.mp3",
+      "narrative_role": "Bypasses partisan border disputes by reframing the stranger as a sacred guest and potential angel unawares, invoking the listener's own ancestral migration stories.",
+      "summary": "A deeply empathetic Americana ballad reflecting on the immigrant, the wanderer, and the displaced, recalling the ancient biblical mandate that we were all once strangers in a strange land.",
+      "lyrics": "İyi- For a V- With a dust on his shoe, then a lookin' is mine He was carrying a lot in a burlap sack With a wind in his face, and a storm at his bed\n\nThey say build up the wall to set barbed door They say we can't afford to feed the hungry and poor But I look at his eyes, and I see my home can Wondering where the wandering truly begins\n\nOh, remember the gussard, remember the sand Remember when you were the guest in the land We are all just dead at the song that's been in stone Just ghost in the flesh, hung alone from the throne\n\nSo, in the window, unlike the gate For the hard heartens, and it gets too late Yeah, treat the stranger like a long lost brother Cause we're all just walking home to each other\n\nNow the deed to the far-mout of your name and ink But the land was here long before you could think And the land will be here when your body is gone So who owns the dirt that we're standing upon\n\nThe king of the glory, the king as a guest With no place to lay his head down for ex So when you turn away, the tribal Lord and Eve You might be a jub dig, you're meant to deceive\n\nOh, remember the desert, remember the sand Remember when you were the guest in the land We are all just dead at the song that's been in stone Just ghost in the flesh, hung alone from the throne\n\nSo, in the window, unlike the gate For the hard heartens, and it gets too late Yeah, treat the stranger like a long lost brother Cause we're all just walking home to each other\n\nFor you is stranger In the land of Egypt, in the land of Egypt Don't forget the hunger, don't forget the fence The last shall be first, and the first shall be land\n\nSo, in the battle land, at least a door shall But doesn't matter where they're from or who they are Cause they're walking the road, then they're sharing the load And kindness is the only bet that is old\n\nWe are all just old jurner, just as in true We are all just tabular, be a Jew"
+    },
+    {
+      "id": "the-woman-pushed-to-the-ground",
+      "number": 5,
+      "title": "The Woman Pushed to the Ground",
+      "act_number": 3,
+      "act_title": "Movement III: The Stone & The Crossing",
+      "parable_reference": "The Adulterous Woman & The Stone (John 8:1-11)",
+      "duration": "04:57",
+      "duration_seconds": 297.92,
+      "audio_file": "assets/audio/05-the-woman-pushed-to-the-ground.mp3",
+      "narrative_role": "Directly confronts modern cancel culture, self-righteous outrage, and moral lynching, forcing each listener to feel the heavy, shameful weight of the stone in their own hand.",
+      "summary": "A chilling, atmospheric acoustic drama depicting a mob eager to cast stones of condemnation, only to have their moral hypocrisy unmasked by silence and a finger writing in the dust.",
+      "lyrics": "Oh Drag her from the bedroom to the middle of the street Where the bruises on her arms and the dust upon her feet The badges were all polished and the evidence was clear\n\nThey shouted out the verdict for the neighborhood here Wait! Wait! We caught her in the air, we ever did the right\n\nWe're cleaning up the city, we're turning on the lights The circle formed around her, all of angry men Ready to defend the law by killing once again Pick up the stone, weigh it in your hand\n\nIt's easy to be righteous when you force the other hand Pick up the stone, aim it at the sin But don't look at the darkness that is hiding deep within Yeah, don't look at the darkness deep within\n\nMake a teacher split the circle, but he didn't say a word He didn't raise a fist, he didn't reach for a sword He dropped down to his knees right beside the sinless face And he started riding something in the dirty dusty space\n\nThe captain screamed the loss as she asked to die today So tell us, Master, what do you have to say? He stood up slow, he looked them in the eye The one without a sin can let the first stone fly\n\nHe stood up slow, the first stone fly He stood up slow, he looked them in the eye The first stone fly The oldest dropped his rock and he turned to walk away\n\nThe young ones followed after with nothing left to say The silence on that street was louder than the shout When the fire of their anger finally burned out He looked at the woman shaking on the ground\n\nWhere are your accusers? Is there no one to be found? Then neither do I condemn you Going sin no more Going sin no more"
+    },
+    {
+      "id": "maria-s-prayer-the-other-side",
+      "number": 6,
+      "title": "Maria's Prayer (The Other Side)",
+      "act_number": 3,
+      "act_title": "Movement III: The Stone & The Crossing",
+      "parable_reference": "The Holy Family's Flight into Egypt (Matthew 2:13-15)",
+      "duration": "05:12",
+      "duration_seconds": 312.36,
+      "audio_file": "assets/audio/06-marias-prayer-the-other-side.mp3",
+      "narrative_role": "Delivers the emotional core of the album, collapsing dehumanizing political rhetoric by bringing the listener face-to-face with a terrified mother's love and piety.",
+      "summary": "An intimate, heartbreaking prayer from a young mother resting in a dusty church waystation with her sleeping babies after crossing the river, praying for protection and bread.",
+      "lyrics": "Hey Listen Heave Tears Hey, hey, hey, kind of flickers on the kitchen stand I'm tracing lines upon a paper map within my head Two days ago you said that you would call\n\nBut the silence is the loudest thing inside these plaster walls The newsman on the radio, he talks about a threat About the flood of faceless numbers that the border agents met But I don't see a number, I just see a weary face\n\nTrying to run a marathon inside a losing race Oh my dreaded ears keep themselves denied Guide us feedeth the frozen devils highway by the moonlight Hide them from the shadows shielding from the thirst\n\nProtect them from the ones who prey upon the very worst And all the losses he has eroned across the real light But he is doing it for love to feed this family of mine So carry him across the divide\n\nTill the other side He sold his father's watch to pay the men Who promised he would drive him via Vendorsen and Tom But I heard the stories of the ones they leave behind\n\nIn the miskeyed and the cactus where his son is never kind Is he sleeping in a ditch? Is he running from a light? Is he looking at the same stars that I'm looking at tonight? They call him an invader\n\nA danger to the state but he's just a carpenter Who wants to put some food upon the blade Oh my dreaded ears keep themselves denied Guide us feedeth across the devils highway by the moonlight\n\nHide them from the shadows shielding from the thirst Protect them from the ones who prey upon the very worst And all the losses he has eroned across the real light But he is doing it for love to feed this family of mine\n\nSo carry him across the divide Till the other side Send down my rear In the canyon, pray for him in a heat\n\nPray for him in the cold, bring him home The sun is coming up above the hill The phone is set in silence and the house is very still I will leave the candle burning for another day\n\nIt's the only thing that I can do Till light is lonely way Till the other side Just till the other side\n\nOoh"
+    },
+    {
+      "id": "the-weight-of-gold-the-rich-young-ruler",
+      "number": 7,
+      "title": "The Weight of Gold (The Rich Young Ruler)",
+      "act_number": 4,
+      "act_title": "Movement IV: The Relinquishment & The Banquet",
+      "parable_reference": "The Rich Young Ruler & The Eye of the Needle (Mark 10:17-27)",
+      "duration": "05:17",
+      "duration_seconds": 317.04,
+      "audio_file": "assets/audio/07-the-weight-of-gold-the-rich-young-ruler.mp3",
+      "narrative_role": "Reframes anti-materialism not as punitive redistribution, but as spiritual liberation: you cannot walk through the narrow gate while burdened with chests of dead coin.",
+      "summary": "A swampy, stomping gospel blues track chronicling a wealthy man chained by his own accumulated possessions, realizing that gold is a heavy cage rather than true freedom.",
+      "lyrics": "He would look in a cherry with rams of shinder chrome Thinking he could buy a ticket to the heavenly home He had the law in his pocket He had the verses memorized\n\nHe was looking for a trophy Looking for a prize He said, God, teach it, tell me What he left to do?\n\nI've kept the ten commandments Since I was barely two He stood there polished Waiting for the praise\n\nBut the master lute arrived through him In a silent searing gas Oh, the eye of the needle is an air hole And you gave\n\nAnd you cast squeeze through it with all that heavy freight Yeah, the chains that bind you Are shiny and cold There ain't no prison stronger than the weight of gold\n\nNo, there ain't no prison stronger than the weight of gold No, there ain't no gold The master said, warm-fanging is mission From your perfect little life\n\nTake your stars and your bonds And your comfortable strife Go set it to the merchant Give them on it to the poor\n\nThen come and walk with me Through the open door Where the young master did And his face turned pale\n\nLike a ship without a runner Lost in a gale He locked it and saved your Did he lock it in stone\n\nAnd the silence that could save you Just wasn't enough Oh, the eye of the needle is an air hole And you gave\n\nAnd you cast squeeze through it with all that heavy freight Yeah, the chains that bind you Are shiny and cold There ain't no prison stronger than the weight of gold\n\nNo, there ain't no prison stronger than the weight of gold No, there ain't no gold You call me a molasses I call it a cave\n\nYou're the star of the show Trailed on the stage Was this proposition Said I went you home\n\nSeen over yourself On a cardboard tile Throw me to learn his back on glory And he walked away straight\n\nAnd tied to the treasure And he wished he never had He kept his seal up And he kept his pride\n\nAnd he was hoping in the center Of the air And I He walked away straight\n\nOh, say, oh, say With a way over gold He walked away straight Oh, say, oh, say"
+    },
+    {
+      "id": "a-lower-place",
+      "number": 8,
+      "title": "A Lower Place",
+      "act_number": 4,
+      "act_title": "Movement IV: The Relinquishment & The Banquet",
+      "parable_reference": "Taking the Lowest Seat at the Banquet (Luke 14:7-14)",
+      "duration": "04:46",
+      "duration_seconds": 286.84,
+      "audio_file": "assets/audio/08-a-lower-place.mp3",
+      "narrative_role": "The ultimate resolution of the Unspoken Sermon: true greatness is found not on thrones or podiums, but in washing feet, sharing soup, and breaking bread with the least of these.",
+      "summary": "The redemptive, triumphant finale celebrating the Great Inversion: when called to the feast, seek out the lowest seat in humility, where fellowship, joy, and grace overflow.",
+      "lyrics": "Music They're fighting for the podium They are scrambling for the crown Building towers out of any\n\nJust to look a little further down But the air is thin upon that hill And the wind is cold and sharp I think I'll stay right here below\n\nAnd listen to my heart Oh, there is safety in the shadow There is wisdom in the shape There is freedom in the kneeling\n\nIn the dead that has been paid Let the water seat the valley Let the river find the sea There is grace in a lower place\n\nAnd that's where I want to be You can shout to be heard above the noise You can demand they know your name You can burn your life to ashes\n\nJust to find a little flame But the master washed the dusty feet He didn't see getting out the throne He found the strength in silence\n\nThat the proud have never known Oh, there is safety in the shadow There is wisdom in the shape There is freedom in the kneeling\n\nIn the dead that has been paid Let the water seat the valley Let the river find the sea There is grace in a lower place\n\nAnd that's where I want to be You can demand they know your name You can demand they know your name You can demand they know your name\n\nYou can demand they know your name To rise you have to fall To hear you have to pause To win you have to lose it all\n\nAnd surrender to the cause So take the seat beside the door Don't worry about the view You don't need the eyes of men\n\nTo tell you what is true The view is different from down here Looking up at everyone I'd rather be the same\n\nBut I'm not the same I'm not the same I'm not the same I'd rather be a servant\n\nThan a king who's come undone Oh, there is safety in the shadow There is wisdom in the shape There is freedom in the kneeling\n\nIn the dead that has been paid Let the water seat the valley Let the river find the sea There is grace in a lower place\n\nAnd that's where I want to be Yeah, that's where I want to be In the lower place"
+    }
+  ]
+};
