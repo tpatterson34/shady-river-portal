@@ -2293,7 +2293,9 @@ window.ALBUMS_DATA = {
       "track_deconstructions": null,
       "deconstruction_url": null,
       "genre_category": "Protest & Narrative Folk",
-      "hook": "Acoustic rebel folk celebrating radical seed-saving, guerilla planting, and quiet defiance against industrial monoculture."
+      "hook": "Acoustic rebel folk celebrating radical seed-saving, guerilla planting, and quiet defiance against industrial monoculture.",
+      "is_bespoke": true,
+      "custom_url": "../the-gardeners-rebellion/"
     },
     {
       "id": "the-glitch-in-the-machine",

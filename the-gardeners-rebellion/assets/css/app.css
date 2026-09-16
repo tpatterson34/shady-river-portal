@@ -1,0 +1,190 @@
+/* 
+ * The Gardener's Rebellion — Album XX
+ * Bespoke Permaculture Defiance & Hyper-Local Resistance Design System
+ * The Shady River Bard
+ */
+
+:root {
+  --bg-main: #0a0d0a;
+  --bg-card: #111611;
+  --bg-card-hover: #171e17;
+  --border-subtle: #232c23;
+  --border-focus: #10b981;
+  --emerald-accent: #10b981;
+  --emerald-light: #34d399;
+  --emerald-dark: #059669;
+  --brass-accent: #d97706;
+  --brass-light: #f59e0b;
+  --copper-rust: #b45309;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --text-dim: #6b7280;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Lora', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: 'Cinzel', serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-serif {
+  font-family: 'Lora', serif;
+}
+
+/* Hero Glow Title */
+.hero-glow-title {
+  background: linear-gradient(135deg, #ffffff 0%, #34d399 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 35px rgba(16, 185, 129, 0.25);
+}
+
+/* Metric Pills */
+.metric-pill {
+  background-color: #111611;
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.metric-pill:hover {
+  border-color: rgba(16, 185, 129, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #0a0d0a;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #232c23;
+  border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--emerald-accent);
+}
+
+/* Audio Player Sliders */
+input[type=range] {
+  accent-color: #10b981;
+}
+
+/* Track Row active styling */
+.track-row.active {
+  background: linear-gradient(90deg, rgba(16, 185, 129, 0.15) 0%, rgba(17, 22, 17, 0.95) 100%);
+  border-color: rgba(16, 185, 129, 0.6);
+  box-shadow: 0 4px 20px -2px rgba(16, 185, 129, 0.2);
+}
+
+/* Exhibit Tabs */
+.exhibit-tab-btn.active {
+  border-color: var(--emerald-accent);
+  color: var(--emerald-light);
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+/* Matrix Table Styling */
+.matrix-table-container th {
+  letter-spacing: 0.05em;
+}
+
+/* Skip link for Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #10b981;
+  color: #05180c;
+  padding: 8px 16px;
+  z-index: 100;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: bold;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* --- WCAG 2.1 AA Accessibility Overrides --- */
+
+/* 1. High Contrast Mode */
+html.high-contrast {
+  --bg-main: #000000;
+  --bg-card: #050505;
+  --bg-card-hover: #151515;
+  --border-subtle: #ffffff;
+  --border-focus: #ffff00;
+  --emerald-accent: #00ff66;
+  --emerald-light: #55ff99;
+  --brass-accent: #ffcc00;
+  --text-main: #ffffff;
+  --text-muted: #e0e0e0;
+  --text-dim: #cccccc;
+}
+
+html.high-contrast body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+html.high-contrast .hero-glow-title {
+  background: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+html.high-contrast header,
+html.high-contrast footer,
+html.high-contrast aside {
+  background-color: #000000 !important;
+  border-color: #ffffff !important;
+}
+
+html.high-contrast .metric-pill,
+html.high-contrast .track-row,
+html.high-contrast #vote-modal > div,
+html.high-contrast .p-4 {
+  border-color: #ffffff !important;
+}
+
+/* 2. Large Font Size Mode */
+html.large-font {
+  font-size: 118%;
+}
+
+html.large-font .font-display {
+  letter-spacing: 0.04em;
+}
+
+/* 3. Underlined Links Mode */
+html.underlined-links a:not([class*="no-underline"]) {
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+
+/* 4. Reduced Motion Mode */
+html.reduced-motion *,
+html.reduced-motion *::before,
+html.reduced-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
