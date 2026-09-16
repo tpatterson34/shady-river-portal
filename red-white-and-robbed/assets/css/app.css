@@ -1,0 +1,258 @@
+/* ==========================================================================
+   Album XX: Red, White, and Robbed (The Ghost in the Server Room)
+   The Shady River Bard - Bespoke Interactive Concept & Jukebox Stylesheet
+   ========================================================================== */
+
+:root {
+  --bg-primary: #07090e;
+  --bg-secondary: #0c1017;
+  --bg-tertiary: #131923;
+  --bg-card: rgba(12, 16, 23, 0.90);
+  --bg-card-hover: rgba(19, 25, 35, 0.96);
+  --bg-glass: rgba(7, 9, 14, 0.88);
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-highlight: #38bdf8;
+
+  --cyan-primary: #0284c7;
+  --cyan-glow: #38bdf8;
+  --cyan-light: #bae6fd;
+  --cyan-dark: #0369a1;
+
+  --crimson-primary: #dc2626;
+  --crimson-glow: #ef4444;
+  --crimson-dark: #991b1b;
+
+  --amber-primary: #d97706;
+  --amber-glow: #f59e0b;
+
+  --bone-primary: #e2e8f0;
+  --bone-muted: #cbd5e1;
+
+  --slate-dark: #0b0f19;
+  --slate-border: #1e293b;
+  --slate-light: #334155;
+
+  --font-display: 'Cinzel', Georgia, serif;
+  --font-body: 'Lora', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --shadow-cyan: 0 0 25px rgba(56, 189, 248, 0.22);
+  --shadow-crimson: 0 0 25px rgba(220, 38, 38, 0.28);
+  --shadow-amber: 0 0 25px rgba(245, 158, 11, 0.22);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-full: 9999px;
+
+  --transition-fast: 0.18s ease;
+  --transition-normal: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Accessibility Overrides */
+body.high-contrast {
+  --bg-primary: #000000;
+  --bg-secondary: #050505;
+  --bg-tertiary: #111111;
+  --bg-card: #000000;
+  --text-primary: #ffffff;
+  --text-secondary: #e2e8f0;
+  --text-muted: #cbd5e1;
+  --cyan-glow: #00ffff;
+  --crimson-glow: #ff3333;
+  --amber-glow: #ffbb00;
+  --slate-border: #ffffff;
+}
+
+body.large-font {
+  font-size: 118%;
+}
+
+body.underline-links a {
+  text-decoration: underline !important;
+}
+
+body.reduced-motion * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.75;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 10% 12%, rgba(220, 38, 38, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 90% 45%, rgba(2, 132, 199, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 45% 85%, rgba(245, 158, 11, 0.04) 0%, transparent 60%);
+  background-attachment: fixed;
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.font-serif {
+  font-family: var(--font-body);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--slate-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--crimson-dark);
+}
+
+/* Skip to Content */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 20px;
+  background: var(--crimson-glow);
+  color: #fff;
+  padding: 8px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: bold;
+  z-index: 1000;
+  transition: top var(--transition-fast);
+  border-radius: 0 0 6px 6px;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Glass Panels */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--slate-border);
+}
+
+.glass-panel-interactive {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--slate-border);
+  transition: all var(--transition-normal);
+}
+.glass-panel-interactive:hover {
+  background: var(--bg-card-hover);
+  border-color: rgba(220, 38, 38, 0.4);
+  box-shadow: var(--shadow-crimson);
+}
+
+/* Hero Section */
+.hero-glow-title {
+  text-shadow: 0 0 35px rgba(220, 38, 38, 0.35);
+}
+
+.metric-pill {
+  border: 1px solid var(--slate-border);
+  background: rgba(11, 15, 25, 0.7);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+}
+.metric-pill:hover {
+  border-color: var(--crimson-glow);
+  background: rgba(11, 15, 25, 0.95);
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.2);
+}
+
+/* Track Row */
+.track-row {
+  transition: all var(--transition-fast);
+}
+.track-row.active {
+  background: rgba(220, 38, 38, 0.12) !important;
+  border-color: rgba(239, 68, 68, 0.5) !important;
+}
+.track-row.active .track-num {
+  color: var(--crimson-glow) !important;
+  font-weight: bold;
+}
+.track-row.active .track-title-text {
+  color: #ffffff !important;
+}
+
+/* Lyrics Display */
+.lyrics-text {
+  font-family: var(--font-body);
+  line-height: 1.85;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Seek Slider */
+input[type="range"] {
+  accent-color: var(--crimson-glow);
+}
+
+/* Audio Player Bar */
+.sticky-player-bar {
+  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.85);
+}
+
+/* Exhibit Cards */
+.exhibit-tab-btn.active {
+  border-bottom-color: var(--crimson-glow) !important;
+  color: var(--crimson-glow) !important;
+  font-weight: 700;
+}
+
+/* Animation */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+.animate-pulse-subtle {
+  animation: pulse-subtle 2.5s infinite ease-in-out;
+}
+
+/* Arbitrage Table */
+.ledger-table th, .ledger-table td {
+  padding: 0.75rem 1rem;
+}
+.ledger-table tr:nth-child(even) {
+  background-color: rgba(15, 23, 42, 0.35);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero-stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
