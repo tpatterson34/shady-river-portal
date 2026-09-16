@@ -1,0 +1,328 @@
+/* ==========================================================================
+   Album XX: Sanity's Edge
+   The Shady River Bard - Bespoke Interactive Concept & Jukebox Stylesheet
+   ========================================================================== */
+
+:root {
+  --bg-primary: #090a0f;
+  --bg-secondary: #0e1118;
+  --bg-tertiary: #141924;
+  --bg-card: rgba(14, 17, 24, 0.92);
+  --bg-card-hover: rgba(20, 25, 36, 0.98);
+  --bg-glass: rgba(9, 10, 15, 0.90);
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-highlight: #ef4444;
+
+  --crimson-primary: #dc2626;
+  --crimson-glow: #ef4444;
+  --crimson-dark: #991b1b;
+  --crimson-subtle: rgba(239, 68, 68, 0.15);
+
+  --amber-primary: #d97706;
+  --amber-glow: #f59e0b;
+  --amber-dark: #b45309;
+  --amber-subtle: rgba(245, 158, 11, 0.15);
+
+  --steel-border: #1e2433;
+  --steel-light: #334155;
+  --steel-muted: #475569;
+
+  --font-display: 'Cinzel', Georgia, serif;
+  --font-body: 'Lora', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --shadow-crimson: 0 0 25px rgba(239, 68, 68, 0.28);
+  --shadow-amber: 0 0 25px rgba(245, 158, 11, 0.25);
+  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  --transition-fast: 0.18s ease;
+  --transition-normal: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Accessibility Overrides */
+body.high-contrast {
+  --bg-primary: #000000;
+  --bg-secondary: #050505;
+  --bg-tertiary: #111111;
+  --bg-card: #000000;
+  --text-primary: #ffffff;
+  --text-secondary: #e2e8f0;
+  --text-muted: #cbd5e1;
+  --crimson-glow: #ff3333;
+  --amber-glow: #ffbb00;
+  --steel-border: #ffffff;
+}
+
+body.large-font {
+  font-size: 118%;
+}
+
+body.underline-links a {
+  text-decoration: underline !important;
+}
+
+body.reduced-motion * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.75;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 15% 10%, rgba(220, 38, 38, 0.07) 0%, transparent 45%),
+    radial-gradient(circle at 85% 40%, rgba(217, 119, 6, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(239, 68, 68, 0.05) 0%, transparent 60%);
+  background-attachment: fixed;
+}
+
+/* Focus outline for accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid var(--crimson-glow);
+  outline-offset: 3px;
+}
+
+/* Container */
+.site-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .site-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Typography Utility */
+.font-display { font-family: var(--font-display); }
+.font-body { font-family: var(--font-body); }
+.font-mono { font-family: var(--font-mono); }
+
+/* Navigation Bar */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--steel-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Glow Utilities */
+.glow-crimson {
+  box-shadow: var(--shadow-crimson);
+}
+.glow-amber {
+  box-shadow: var(--shadow-amber);
+}
+
+/* Pulse Animation for Countdown */
+@keyframes sirenPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.08); }
+}
+.pulse-siren {
+  animation: sirenPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Card Styling */
+.card-obsidian {
+  background: var(--bg-card);
+  border: 1px solid var(--steel-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-normal), border-color var(--transition-normal), background-color var(--transition-normal);
+}
+.card-obsidian:hover {
+  border-color: rgba(239, 68, 68, 0.4);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+}
+
+/* Chart Canvas Container */
+.chart-container-dark {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  height: 340px;
+}
+@media (min-width: 768px) {
+  .chart-container-dark {
+    height: 380px;
+  }
+}
+
+/* Sticky Jukebox Player Bar */
+.jukebox-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 45;
+  background-color: rgba(9, 10, 15, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(239, 68, 68, 0.3);
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.7);
+  padding: 0.75rem 1.25rem;
+  transition: transform var(--transition-normal);
+}
+
+/* Custom Audio Range Scrubber */
+.audio-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: var(--steel-light);
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+.audio-slider:hover {
+  background: var(--steel-muted);
+}
+.audio-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--crimson-glow);
+  box-shadow: 0 0 10px var(--crimson-glow);
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+.audio-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.25);
+}
+.audio-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--crimson-glow);
+  box-shadow: 0 0 10px var(--crimson-glow);
+  cursor: pointer;
+}
+
+/* Interactive Archetype Cards */
+.archetype-card {
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+.archetype-card.active {
+  border-color: var(--crimson-glow) !important;
+  background: rgba(220, 38, 38, 0.12) !important;
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-crimson);
+}
+
+/* Matrix Table Styling */
+.matrix-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.matrix-table th {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 1rem 1.25rem;
+  border-bottom: 2px solid var(--steel-border);
+  text-align: left;
+}
+.matrix-table td {
+  padding: 1.25rem;
+  border-bottom: 1px solid var(--steel-border);
+  font-size: 0.875rem;
+  vertical-align: top;
+}
+.matrix-table tr:hover td {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Modal Backdrop & Dialog */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+.modal-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-dialog {
+  background: var(--bg-secondary);
+  border: 1px solid var(--crimson-glow);
+  border-radius: var(--radius-lg);
+  max-width: 680px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-crimson);
+  transform: scale(0.95);
+  transition: transform var(--transition-normal);
+}
+.modal-backdrop.open .modal-dialog {
+  transform: scale(1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--steel-light);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--steel-muted);
+}
