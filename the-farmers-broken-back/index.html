@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Farmer's Broken Back — Album XX | The Shady River Bard</title>
+  <meta name="description" content="The Farmer's Broken Back: A Thematic and Sonic Architecture of Agrarian Collapse. An interactive concept album and 15-track jukebox exploring the 1970s boom, 1980s crisis, Big Four meatpacker monopoly, seed patents, digital right-to-repair lockouts, and the fight for agrarian parity.">
+  <link rel="canonical" href="https://theshadyriverbard.com/the-farmers-broken-back/">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="music.album">
+  <meta property="og:title" content="The Farmer's Broken Back — Album XX | The Shady River Bard">
+  <meta property="og:description" content="A Thematic and Sonic Architecture of Agrarian Collapse. 15 studio tracks chronicling 50 years of farm consolidation, predatory seed contracts, digital equipment locks, and the human cost of industrial agriculture.">
+  <meta property="og:image" content="https://theshadyriverbard.com/the-farmers-broken-back/assets/images/og-the-farmers-broken-back.jpg">
+  <meta property="og:url" content="https://theshadyriverbard.com/the-farmers-broken-back/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Farmer's Broken Back — Album XX | The Shady River Bard">
+  <meta name="twitter:description" content="A Thematic and Sonic Architecture of Agrarian Collapse. 15 studio tracks exploring 50 years of American agricultural history.">
+  <meta name="twitter:image" content="https://theshadyriverbard.com/the-farmers-broken-back/assets/images/og-the-farmers-broken-back.jpg">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=JetBrains+Mono:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body class="min-h-screen flex flex-col selection:bg-amber-600/30 selection:text-amber-200">
+
+  <!-- Skip to main content -->
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <!-- Top Global Navigation -->
+  <header class="sticky top-0 z-40 bg-[#0c0d0a]/90 backdrop-blur-md border-b border-stone-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="../" class="group flex items-center gap-2.5 text-stone-300 hover:text-white transition-colors" title="Back to The Shady River Bard Gateway">
+          <i class="fa-solid fa-arrow-left text-xs text-amber-500 group-hover:-translate-x-1 transition-transform"></i>
+          <span class="font-display font-bold text-sm tracking-wider uppercase">The Shady River Bard</span>
+        </a>
+        <span class="text-stone-700">/</span>
+        <a href="../vault/" class="text-xs font-mono uppercase tracking-widest text-amber-400/90 hover:text-amber-300 transition-colors">
+          Vault Archive
+        </a>
+        <span class="text-stone-700 hidden sm:inline">/</span>
+        <span class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-950/60 border border-amber-600/40 text-amber-400 font-mono text-[11px]">
+          <i class="fa-solid fa-wheat-awn text-[10px]"></i>
+          <span>14.3&cent; Food Dollar</span>
+        </span>
+      </div>
+
+      <!-- Accessibility Toolbar -->
+      <div class="flex items-center gap-2 font-mono text-xs text-stone-400">
+        <button id="toggle-high-contrast" class="px-2 py-1 rounded bg-stone-900 border border-stone-800 hover:border-amber-500 hover:text-stone-200 transition-colors" title="Toggle High Contrast Mode">
+          <i class="fa-solid fa-circle-half-stroke mr-1"></i><span class="hidden sm:inline">Contrast</span>
+        </button>
+        <button id="toggle-large-font" class="px-2 py-1 rounded bg-stone-900 border border-stone-800 hover:border-amber-500 hover:text-stone-200 transition-colors" title="Toggle Larger Font Size">
+          <i class="fa-solid fa-text-height mr-1"></i><span class="hidden sm:inline">Font</span>
+        </button>
+        <button id="toggle-underline" class="px-2 py-1 rounded bg-stone-900 border border-stone-800 hover:border-amber-500 hover:text-stone-200 transition-colors" title="Toggle Underlined Links">
+          <i class="fa-solid fa-underline mr-1"></i><span class="hidden sm:inline">Links</span>
+        </button>
+        <button id="toggle-reduced-motion" class="px-2 py-1 rounded bg-stone-900 border border-stone-800 hover:border-amber-500 hover:text-stone-200 transition-colors" title="Toggle Reduced Motion">
+          <i class="fa-solid fa-person-walking mr-1"></i><span class="hidden sm:inline">Motion</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="flex-grow">
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 overflow-hidden border-b border-stone-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          
+          <!-- Hero Text & Narrative -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-amber-950/60 border border-amber-600/40 text-amber-400 font-mono text-xs uppercase tracking-widest">
+              <i class="fa-solid fa-tractor text-[10px]"></i>
+              <span>Album XX &middot; Vault Concept Archive &middot; Agrarian Political Economy</span>
+            </div>
+
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight hero-glow-title leading-tight">
+              THE FARMER&rsquo;S BROKEN BACK
+            </h1>
+
+            <div class="font-serif text-lg sm:text-xl text-amber-200/90 font-medium italic">
+              A Thematic and Sonic Architecture of Agrarian Collapse
+            </div>
+
+            <p class="text-stone-300 font-serif text-base sm:text-lg leading-relaxed max-w-2xl">
+              A monumental, 15-track acoustic and roots-rock cycle chronicling fifty years of American agricultural upheaval. From Earl Butz&rsquo;s 1970s decree to &ldquo;get big or get out&rdquo; and the catastrophic 1980s interest-rate collapse, through the consolidation of the Big Four meatpackers, predatory sterile-seed patents, and digital DRM tractor lockouts, to chemical drift lawsuits and the rallying cry of Sherman&rsquo;s ghost to break the agricultural trusts.
+            </p>
+
+            <!-- Lyrical Epigraph -->
+            <div class="p-4 rounded-xl bg-[#12140e] border-l-4 border-amber-500 border-y border-r border-stone-800 font-serif text-sm text-stone-300 italic">
+              &ldquo;They break our bodies on the wheel of greed / They patent hunger in a sterile seed / But stone by stone this empire&rsquo;s gonna crack / Beneath the weight of the farmer&rsquo;s broken back.&rdquo;
+              <span class="block mt-1 font-mono text-xs text-amber-400 not-italic">&mdash; Track 15: The Farmer&rsquo;s Broken Back (Anthem)</span>
+            </div>
+
+            <!-- Metrics Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 hero-stats-grid">
+              <div class="metric-pill">
+                <div class="text-xl font-mono font-bold text-amber-400">15</div>
+                <div class="text-[11px] font-mono uppercase text-stone-400">Studio Tracks</div>
+              </div>
+              <div class="metric-pill">
+                <div class="text-xl font-mono font-bold text-amber-400">5</div>
+                <div class="text-[11px] font-mono uppercase text-stone-400">Narrative Acts</div>
+              </div>
+              <div class="metric-pill">
+                <div class="text-xl font-mono font-bold text-amber-400">14.3&cent;</div>
+                <div class="text-[11px] font-mono uppercase text-stone-400">Farm Dollar Share</div>
+              </div>
+              <div class="metric-pill">
+                <div class="text-xl font-mono font-bold text-amber-400">72:51</div>
+                <div class="text-[11px] font-mono uppercase text-stone-400">Running Time</div>
+              </div>
+            </div>
+
+            <!-- Call to Action Buttons -->
+            <div class="flex flex-wrap items-center gap-4 pt-4">
+              <a href="#jukebox" class="px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono font-bold text-sm tracking-wider uppercase transition-all shadow-lg shadow-amber-950/40 flex items-center gap-2">
+                <i class="fa-solid fa-play text-xs"></i>
+                <span>Stream Jukebox</span>
+              </a>
+              <button id="vote-hero-btn" class="px-5 py-3 rounded-xl bg-stone-900 border border-stone-800 hover:border-amber-500/60 text-stone-300 hover:text-white font-mono text-sm tracking-wider transition-all flex items-center gap-2">
+                <i class="fa-solid fa-box-archive text-amber-400"></i>
+                <span>Vote to Prioritize Release</span>
+              </button>
+              <a href="#exhibits" class="px-5 py-3 rounded-xl bg-stone-900/60 border border-stone-800 hover:border-stone-700 text-stone-400 hover:text-stone-200 font-mono text-sm tracking-wider transition-all">
+                <span>Thematic Exhibits</span>
+              </a>
+              <a href="#matrix" class="px-5 py-3 rounded-xl bg-stone-900/60 border border-stone-800 hover:border-stone-700 text-stone-400 hover:text-stone-200 font-mono text-sm tracking-wider transition-all">
+                <span>Policy Matrix</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Hero Artwork Card -->
+          <div class="lg:col-span-5 flex flex-col items-center">
+            <div class="relative group w-full max-w-md rounded-2xl overflow-hidden shadow-2xl border border-stone-800 bg-[#12140e]">
+              <img src="assets/images/album-art.webp" alt="The Farmer's Broken Back Album Cover Artwork" class="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                <button id="art-zoom-btn" class="px-4 py-2 rounded-lg bg-amber-500/90 hover:bg-amber-400 text-stone-950 font-mono font-bold text-xs uppercase tracking-wider flex items-center gap-2 backdrop-blur-md transition-colors">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i>
+                  <span>Inspect High-Res Artwork</span>
+                </button>
+              </div>
+            </div>
+            <div class="mt-3 text-center text-xs font-mono text-stone-500">
+              Master Artwork &middot; 2048 &times; 2048 &middot; Oil & Canvas Texture
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Jukebox & Lyrics Section -->
+    <section id="jukebox" class="py-16 border-b border-stone-800/80 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div>
+            <div class="inline-flex items-center gap-2 text-amber-400 font-mono text-xs uppercase tracking-widest mb-2">
+              <i class="fa-solid fa-compact-disc"></i>
+              <span>Full 15-Track Agrarian Suite</span>
+            </div>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">
+              The Agrarian Jukebox
+            </h2>
+            <p class="text-stone-400 font-serif text-sm mt-1 max-w-2xl">
+              Stream the complete 15-track album cycle with pure literary lyrics, economic mechanisms, and narrative sociological analysis.
+            </p>
+          </div>
+
+          <!-- Live Search Bar -->
+          <div class="w-full md:w-80">
+            <div class="relative">
+              <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-500 text-xs"></i>
+              <input type="text" id="track-search" placeholder="Search lyrics, policy, or archetypes..." class="w-full pl-9 pr-4 py-2.5 rounded-xl bg-[#12140e] border border-stone-800 text-stone-200 text-xs font-mono placeholder:text-stone-500 focus:outline-none focus:border-amber-500 transition-colors">
+            </div>
+          </div>
+        </div>
+
+        <!-- Act Filter Buttons -->
+        <div class="flex flex-wrap items-center gap-2 mb-8 font-mono text-xs">
+          <span class="text-stone-500 mr-2 uppercase text-[11px] tracking-wider">Filter Act:</span>
+          <button data-act-filter="all" class="px-3.5 py-1.5 rounded-lg bg-amber-500 text-stone-950 font-bold transition-colors">All (15)</button>
+          <button data-act-filter="1" class="px-3.5 py-1.5 rounded-lg bg-stone-900 text-stone-300 hover:text-white transition-colors">Act I: The Boom (1&ndash;3)</button>
+          <button data-act-filter="2" class="px-3.5 py-1.5 rounded-lg bg-stone-900 text-stone-300 hover:text-white transition-colors">Act II: The Squeeze (4&ndash;6)</button>
+          <button data-act-filter="3" class="px-3.5 py-1.5 rounded-lg bg-stone-900 text-stone-300 hover:text-white transition-colors">Act III: Feudalism (7&ndash;9)</button>
+          <button data-act-filter="4" class="px-3.5 py-1.5 rounded-lg bg-stone-900 text-stone-300 hover:text-white transition-colors">Act IV: The Fracture (10&ndash;12)</button>
+          <button data-act-filter="5" class="px-3.5 py-1.5 rounded-lg bg-stone-900 text-stone-300 hover:text-white transition-colors">Act V: Renewal (13&ndash;15)</button>
+        </div>
+
+        <!-- 2-Column Jukebox Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left: 15 Track Playlist -->
+          <div class="lg:col-span-5 space-y-2.5 max-h-[820px] overflow-y-auto pr-2 custom-scrollbar" id="track-list">
+            <!-- Dynamically injected track rows -->
+          </div>
+
+          <!-- Right: Active Track Deck (Lyrics, Theory, Summary) -->
+          <div class="lg:col-span-7 bg-[#12140e] border border-stone-800 rounded-2xl p-6 sm:p-8 space-y-6 shadow-xl">
+            
+            <!-- Track Meta Header -->
+            <div class="border-b border-stone-800/80 pb-6">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <span id="active-track-act" class="px-2.5 py-1 rounded-full bg-amber-950/80 border border-amber-600/40 text-amber-400 font-mono text-[11px] uppercase tracking-wider">
+                  Act I: The Golden Age & The Trap
+                </span>
+                <div class="flex items-center gap-3 text-xs font-mono text-stone-400">
+                  <span id="active-track-tempo" class="text-stone-400">116 BPM &bull; G Major</span>
+                  <span class="text-stone-700">&bull;</span>
+                  <span id="active-track-archetype" class="text-amber-400">The Optimistic Expander</span>
+                </div>
+              </div>
+
+              <!-- Active Track Artwork Preview -->
+              <div class="relative w-full h-44 sm:h-52 rounded-xl overflow-hidden border border-stone-800 mb-4 bg-stone-900">
+                <img id="active-track-art" src="assets/images/tracks/01-fencerow.webp" alt="Track Artwork" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-3 left-4 right-4 flex items-end justify-between">
+                  <div>
+                    <h3 id="active-track-title" class="font-display text-2xl sm:text-3xl font-bold text-white tracking-tight drop-shadow-md">
+                      1. Fencerow to Fencerow
+                    </h3>
+                    <div id="active-track-tagline" class="font-serif text-sm text-amber-300/90 italic drop-shadow">
+                      The Earl&rsquo;s Command & The Illusion of Infinite Boom
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Content Tabs / Copy Action -->
+            <div class="flex items-center justify-between gap-4 border-b border-stone-800 pb-3">
+              <div class="flex items-center gap-4 text-xs font-mono uppercase tracking-wider">
+                <span class="text-amber-400 font-bold flex items-center gap-1.5">
+                  <i class="fa-solid fa-align-left text-[11px]"></i> Pure Literary Lyrics
+                </span>
+              </div>
+              <div class="relative">
+                <button id="btn-copy-lyrics" class="px-3 py-1.5 rounded-lg bg-stone-900 border border-stone-800 hover:border-amber-500/60 text-stone-300 hover:text-white font-mono text-xs flex items-center gap-1.5 transition-colors" title="Copy clean lyrics to clipboard">
+                  <i class="fa-regular fa-copy"></i>
+                  <span>Copy Clean Lyrics</span>
+                </button>
+                <div id="copy-feedback" class="hidden absolute right-0 -bottom-8 px-2.5 py-1 rounded bg-amber-500 text-stone-950 font-bold font-mono text-[10px] whitespace-nowrap shadow-lg z-20">
+                  Copied to clipboard!
+                </div>
+              </div>
+            </div>
+
+            <!-- Lyrics Container -->
+            <div class="max-h-[380px] overflow-y-auto pr-3 font-serif text-stone-300 text-sm sm:text-base leading-relaxed whitespace-pre-wrap selection:bg-amber-900/40" id="lyrics-container">
+              Loading lyrics...
+            </div>
+
+            <!-- Theory & Narrative Split Analysis -->
+            <div class="pt-6 border-t border-stone-800/80 grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="p-4 rounded-xl bg-[#181b13] border border-stone-800/80 space-y-2">
+                <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-amber-400 font-bold">
+                  <i class="fa-solid fa-scale-balanced text-[11px]"></i>
+                  <span>Agrarian Economic Mechanism</span>
+                </div>
+                <p id="active-track-theory" class="font-serif text-xs text-stone-300 leading-relaxed">
+                  In 1973, Secretary of Agriculture Earl Butz dismantled the New Deal supply management system, ordering farmers to plant &ldquo;fencerow to fencerow&rdquo; to feed the world.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-[#181b13] border border-stone-800/80 space-y-2">
+                <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-amber-300 font-bold">
+                  <i class="fa-solid fa-book-open text-[11px]"></i>
+                  <span>Song Narrative Context</span>
+                </div>
+                <p id="active-track-summary" class="font-serif text-xs text-stone-300 leading-relaxed">
+                  The opening movement of the cycle. A Midwestern grain farmer tears down hedgerows and drains wetlands under federal instructions, caught in the euphoric trap of subsidized industrial expansion.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Thematic Exhibits Section -->
+    <section id="exhibits" class="py-16 border-b border-stone-800/80 bg-[#12140e]/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="mb-10">
+          <div class="inline-flex items-center gap-2 text-amber-400 font-mono text-xs uppercase tracking-widest mb-2">
+            <i class="fa-solid fa-building-wheat"></i>
+            <span>Curated Historical Exhibits</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            Thematic Exhibits: Anatomy of Consolidation
+          </h2>
+          <p class="text-stone-400 font-serif text-sm mt-1 max-w-2xl">
+            Explore the economic, technological, legal, and community mechanisms that reshaped American family agriculture over half a century.
+          </p>
+        </div>
+
+        <!-- Exhibit Tabs Header -->
+        <div class="flex flex-wrap border-b border-stone-800 mb-8 font-mono text-xs">
+          <button data-exhibit-tab="exhibit-1" class="exhibit-tab-btn active px-4 py-3 border-b-2 border-amber-500 text-amber-400 font-bold transition-colors">
+            Exhibit I: The 1980s Trap
+          </button>
+          <button data-exhibit-tab="exhibit-2" class="exhibit-tab-btn px-4 py-3 border-b-2 border-transparent text-stone-400 hover:text-stone-200 transition-colors">
+            Exhibit II: The 14.3&cent; Food Dollar
+          </button>
+          <button data-exhibit-tab="exhibit-3" class="exhibit-tab-btn px-4 py-3 border-b-2 border-transparent text-stone-400 hover:text-stone-200 transition-colors">
+            Exhibit III: The Digital Leash
+          </button>
+          <button data-exhibit-tab="exhibit-4" class="exhibit-tab-btn px-4 py-3 border-b-2 border-transparent text-stone-400 hover:text-stone-200 transition-colors">
+            Exhibit IV: Bust the Trust
+          </button>
+        </div>
+
+        <!-- Exhibit Panels -->
+        <div class="space-y-6">
+          
+          <!-- Exhibit 1 -->
+          <div id="exhibit-1" class="exhibit-panel grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-6 space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950/60 border border-amber-600/40 text-amber-400 font-mono text-xs uppercase tracking-wider">
+                Historical Milestone &middot; 1973&ndash;1985
+              </div>
+              <h3 class="font-display text-2xl sm:text-3xl font-bold text-white">
+                Exhibit I: The Expansion Trap & The 1980s Interest Spike
+              </h3>
+              <p class="font-serif text-stone-300 text-sm sm:text-base leading-relaxed">
+                In 1973, USDA Secretary Earl Butz urged American farmers to plant &ldquo;fencerow to fencerow&rdquo; to meet export demand from the Soviet Union. Guaranteed land appreciation and bank cheerleading drove unprecedented debt accumulation. But in 1979, the Federal Reserve under Paul Volcker hiked prime interest rates to 21.5% to curb inflation, while President Carter imposed a Soviet grain embargo in 1980.
+              </p>
+              <p class="font-serif text-stone-300 text-sm sm:text-base leading-relaxed">
+                Land values plummeted by more than 60% across the Corn Belt overnight. Farmers who held 80% equity on paper saw their collateral vanish while variable-rate debt skyrocketed. The resulting tidal wave of foreclosures precipitated the deepest rural crisis since the Great Depression and altered the demographic fabric of the heartland forever.
+              </p>
+              <div class="grid grid-cols-2 gap-3 pt-2 font-mono text-xs">
+                <div class="p-3 rounded-lg bg-[#181b13] border border-stone-800">
+                  <div class="text-stone-400">Peak Prime Interest</div>
+                  <div class="text-lg font-bold text-amber-400">21.5% in 1981</div>
+                </div>
+                <div class="p-3 rounded-lg bg-[#181b13] border border-stone-800">
+                  <div class="text-stone-400">Farmland Value Drop</div>
+                  <div class="text-lg font-bold text-red-400">-60% (1981&ndash;1986)</div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-6">
+              <div class="rounded-2xl overflow-hidden border border-stone-800 shadow-2xl">
+                <img src="assets/images/tracks/03-the-crash.webp" alt="The Crash of 80 Historical Illustration" class="w-full h-80 sm:h-96 object-cover">
+              </div>
+            </div>
+          </div>
+
+          <!-- Exhibit 2 -->
+          <div id="exhibit-2" class="exhibit-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-6 space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950/60 border border-amber-600/40 text-amber-400 font-mono text-xs uppercase tracking-wider">
+                Economic Reality &middot; USDA ERS Data
+              </div>
+              <h3 class="font-display text-2xl sm:text-3xl font-bold text-white">
+                Exhibit II: The 14.3&cent; Food Dollar & The Big Four
+              </h3>
+              <p class="font-serif text-stone-300 text-sm sm:text-base leading-relaxed">
+                According to the USDA Economic Research Service, the farmer&rsquo;s share of the retail consumer food dollar has steadily eroded from over 50 cents in the 1950s to just 14.3 cents today. The remaining 85.7 cents is captured by processors, packaging conglomerates, transportation logistics, distributors, and mega-retailers.
+              </p>
+              <p class="font-serif text-stone-300 text-sm sm:text-base leading-relaxed">
+                In beef packing, just four multinational corporations (Tyson, JBS, Cargill, and National Beef) control over 85% of steer and heifer slaughter. This extreme market concentration creates a captive buyer bottleneck: ranchers and feedlots have no alternative buyers, forcing them to accept predatory grid-pricing formulas while supermarket meat prices soar.
+              </p>
+              <div class="grid grid-cols-2 gap-3 pt-2 font-mono text-xs">
+                <div class="p-3 rounded-lg bg-[#181b13] border border-stone-800">
+                  <div class="text-stone-400">Current Farmer Share</div>
+                  <div class="text-lg font-bold text-amber-400">14.3&cent; / Retail Dollar</div>
+                </div>
+                <div class="p-3 rounded-lg bg-[#181b13] border border-stone-800">
+                  <div class="text-stone-400">Big 4 Beef Monopoly</div>
+                  <div class="text-lg font-bold text-red-400">85%+ Market Share</div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-6">
+              <div class="rounded-2xl overflow-hidden border border-stone-800 shadow-2xl">
+                <img src="assets/images/tracks/05-14-cents.webp" alt="14 Cents The Grocers Lie Illustration" class="w-full h-80 sm:h-96 object-cover">
+              </div>
+            </div>
+          </div>
+
+          <!-- Exhibit 3 -->
+          <div id="exhibit-3" class="exhibit-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-6 space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950/60 border border-amber-600/40 text-amber-400 font-mono text-xs uppercase tracking-wider">
+                Technological Enclosure &middot; Seed & Software
+              </div>
+              <h3 class="font-display text-2xl sm:text-3xl font-bold text-white">
+                Exhibit III: The Digital Leash & Sterile Seed Patents
+              </h3>
+              <p class="font-serif text-stone-300 text-sm sm:text-base leading-relaxed">
+                The shift from traditional capital equipment to corporate-controlled technological enclosures has redefined property rights on the farm. Modern tractors, combines, and sprayers are equipped with digital rights management (DRM) and Controller Area Network (CAN) bus encryption that lock farmers out of independent diagnostic repairs. When an arbitrary &ldquo;Code 502&rdquo; sensor error triggers during harvest, the machine halts until a certified dealer travels out with proprietary software keys.
+              </p>
+              <p class="font-serif text-stone-300 text-sm sm:text-base leading-relaxed">
+                Simultaneously, seed patents on genetically modified traits prohibit the ancient practice of seed saving. Farmers purchase one-time usage licenses alongside mandatory chemical packages, subject to private corporate investigators and patent infringement litigation.
+              </p>
+              <div class="grid grid-cols-2 gap-3 pt-2 font-mono text-xs">
+                <div class="p-3 rounded-lg bg-[#181b13] border border-stone-800">
+                  <div class="text-stone-400">Seed Cost Increase</div>
+                  <div class="text-lg font-bold text-amber-400">+700% Since 1990</div>
+                </div>
+                <div class="p-3 rounded-lg bg-[#181b13] border border-stone-800">
+                  <div class="text-stone-400">Right to Repair</div>
+                  <div class="text-lg font-bold text-amber-400">Software Enclosure</div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-6">
+              <div class="rounded-2xl overflow-hidden border border-stone-800 shadow-2xl">
+                <img src="assets/images/tracks/09-code-502.webp" alt="Code 502 The Digital Leash Illustration" class="w-full h-80 sm:h-96 object-cover">
+              </div>
+            </div>
+          </div>
+
+          <!-- Exhibit 4 -->
+          <div id="exhibit-4" class="exhibit-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-6 space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950/60 border border-amber-600/40 text-amber-400 font-mono text-xs uppercase tracking-wider">
+                Agrarian Policy &middot; The Path Forward
+              </div>
+              <h3 class="font-display text-2xl sm:text-3xl font-bold text-white">
+                Exhibit IV: Bust the Trust & Parity Restoration
+              </h3>
+              <p class="font-serif text-stone-300 text-sm sm:text-base leading-relaxed">
+                True agrarian renewal does not lie in emergency corporate bailout checks, but in systemic antitrust enforcement, supply-demand management, and mandatory market transparency. Drawing on the legacy of the 1890 Sherman Antitrust Act, the 1921 Packers and Stockyards Act, and the original 1933 Agricultural Adjustment Act, family farm advocates demand the revival of agricultural parity.
+              </p>
+              <p class="font-serif text-stone-300 text-sm sm:text-base leading-relaxed">
+                Key policy remediation includes breaking up meatpacking and seed monopolies, passing federal Right to Repair legislation for all farm equipment, banning predatory tournament systems in contract poultry production, and establishing national strategic grain reserves that decouple farm livelihood from Wall Street commodity speculation.
+              </p>
+              <div class="grid grid-cols-2 gap-3 pt-2 font-mono text-xs">
+                <div class="p-3 rounded-lg bg-[#181b13] border border-stone-800">
+                  <div class="text-stone-400">Core Legal Tool</div>
+                  <div class="text-lg font-bold text-amber-400">1921 Packers Act</div>
+                </div>
+                <div class="p-3 rounded-lg bg-[#181b13] border border-stone-800">
+                  <div class="text-stone-400">Remediation Vector</div>
+                  <div class="text-lg font-bold text-amber-400">Antitrust & Parity</div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-6">
+              <div class="rounded-2xl overflow-hidden border border-stone-800 shadow-2xl">
+                <img src="assets/images/tracks/14-bust-the-trust.webp" alt="Bust the Trust Sherman's Ghost Illustration" class="w-full h-80 sm:h-96 object-cover">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Agrarian Policy & Economic Matrix Section -->
+    <section id="matrix" class="py-16 border-b border-stone-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="mb-10">
+          <div class="inline-flex items-center gap-2 text-amber-400 font-mono text-xs uppercase tracking-widest mb-2">
+            <i class="fa-solid fa-table-cells"></i>
+            <span>Systemic Comparative Matrix</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            5-Act Agrarian Policy & Economic Architecture
+          </h2>
+          <p class="text-stone-400 font-serif text-sm mt-1 max-w-2xl">
+            A cross-sectional breakdown comparing historical eras, corporate mechanisms, financial metrics, and grassroots resistance vectors across all five acts.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-stone-800 bg-[#12140e] shadow-xl custom-scrollbar">
+          <table class="w-full text-left text-xs font-serif text-stone-300 border-collapse">
+            <thead>
+              <tr class="border-b border-stone-800 bg-[#181b13] font-mono text-amber-400 uppercase tracking-wider">
+                <th class="p-4">Dimension</th>
+                <th class="p-4">Act I: The Boom (1&ndash;3)</th>
+                <th class="p-4">Act II: The Squeeze (4&ndash;6)</th>
+                <th class="p-4">Act III: Feudalism (7&ndash;9)</th>
+                <th class="p-4">Act IV: Fracture (10&ndash;12)</th>
+                <th class="p-4">Act V: Renewal (13&ndash;15)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-stone-800/60 leading-relaxed">
+              <tr>
+                <td class="p-4 font-mono text-amber-400 font-bold whitespace-nowrap">Historical Era</td>
+                <td class="p-4">1970s &ldquo;Get Big or Get Out&rdquo; export boom</td>
+                <td class="p-4">1980s&ndash;1990s Meatpacking & Grain consolidation</td>
+                <td class="p-4">2000s&ndash;2010s Seed patents & Digital equipment DRM</td>
+                <td class="p-4">2010s&ndash;Present Main Street decay & Rural health crisis</td>
+                <td class="p-4">Future Horizons: Antitrust revival & Parity pricing</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-mono text-amber-400 font-bold whitespace-nowrap">Dominant Mechanism</td>
+                <td class="p-4">Debt-financed land expansion, ditch-to-ditch planting</td>
+                <td class="p-4">Monopsony buyer power, vertical integration</td>
+                <td class="p-4">Tournament poultry contracts, proprietary seed licenses</td>
+                <td class="p-4">Foreclosure auctions, out-migration, mental health crisis</td>
+                <td class="p-4">Packers & Stockyards enforcement, Right to Repair, soil restoration</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-mono text-amber-400 font-bold whitespace-nowrap">Economic Metric</td>
+                <td class="p-4">Farmland debt surges 300%; prime interest hits 21.5%</td>
+                <td class="p-4">Farmer food dollar share drops from 50&cent; to 14.3&cent;</td>
+                <td class="p-4">Seed costs rise 700%; grower tournament spread >40%</td>
+                <td class="p-4">Rural bank failure wave; tractor auction pennies-on-dollar</td>
+                <td class="p-4">Parity pricing formula: cost of production + fair wage</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-mono text-amber-400 font-bold whitespace-nowrap">Corporate Actor</td>
+                <td class="p-4">Federal Land Bank, USDA Secretary Earl Butz</td>
+                <td class="p-4">Big Four meatpackers (Tyson, JBS, Cargill, National)</td>
+                <td class="p-4">Bayer-Monsanto, Corteva, John Deere DRM lockouts</td>
+                <td class="p-4">County sheriffs, private auction firms, distressed asset funds</td>
+                <td class="p-4">Sherman Antitrust regulators, independent farm unions</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-mono text-amber-400 font-bold whitespace-nowrap">Farm Impact</td>
+                <td class="p-4">Euphoric overextension turning into sudden insolvency</td>
+                <td class="p-4">Price-taking helplessness; captive supply pricing</td>
+                <td class="p-4">Tenant farmer status on owned land; repair dependency</td>
+                <td class="p-4">Loss of multi-generational homesteads; church closures</td>
+                <td class="p-4">Generational reclamation; seed sovereignty; cooperativism</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-mono text-amber-400 font-bold whitespace-nowrap">Resistance Vector</td>
+                <td class="p-4">Tractorcade protests, Washington D.C. rallies (1979)</td>
+                <td class="p-4">Farm Aid benefit concerts (1985), grassroots organizing</td>
+                <td class="p-4">Jailbroken Ukrainian firmware, Right to Repair bills</td>
+                <td class="p-4">Penny auctions, rural community mutual aid circles</td>
+                <td class="p-4">National Family Farm Coalition, FTC right-to-repair action</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Sticky Audio Player Bar -->
+  <aside class="sticky bottom-0 z-50 bg-[#0c0d0a]/95 backdrop-blur-md border-t border-stone-800/90 py-3.5 px-4 sm:px-8 sticky-player-bar">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+      
+      <!-- Current Track Info -->
+      <div class="flex items-center gap-4 min-w-0 w-full md:w-1/3">
+        <div class="w-11 h-11 rounded-lg overflow-hidden shrink-0 border border-stone-800 hidden sm:block bg-[#12140e]">
+          <img id="player-track-art" src="assets/images/album-art.webp" alt="Now Playing" class="w-full h-full object-cover">
+        </div>
+        <div class="min-w-0">
+          <div id="player-track-title" class="font-display font-bold text-sm text-white truncate">
+            1. Fencerow to Fencerow
+          </div>
+          <div id="player-track-act" class="font-mono text-[11px] text-amber-400 truncate">
+            Act I: The Golden Age & The Trap
+          </div>
+        </div>
+      </div>
+
+      <!-- Playback Controls & Scrubber -->
+      <div class="flex flex-col items-center gap-1.5 w-full md:w-1/2">
+        <div class="flex items-center gap-4">
+          <button id="prev-btn" class="text-stone-400 hover:text-white transition-colors p-1" aria-label="Previous track">
+            <i class="fa-solid fa-backward-step text-sm"></i>
+          </button>
+          <button id="play-btn" class="w-10 h-10 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 flex items-center justify-center text-sm font-bold shadow-lg shadow-amber-950/50 transition-colors" aria-label="Play audio">
+            <i id="play-icon" class="fa-solid fa-play ml-0.5"></i>
+          </button>
+          <button id="next-btn" class="text-stone-400 hover:text-white transition-colors p-1" aria-label="Next track">
+            <i class="fa-solid fa-forward-step text-sm"></i>
+          </button>
+        </div>
+
+        <div class="flex items-center gap-2.5 w-full font-mono text-[11px] text-stone-400">
+          <span id="current-time">0:00</span>
+          <input type="range" id="progress-slider" min="0" max="100" value="0" class="w-full h-1.5 bg-stone-800 rounded-lg cursor-pointer" aria-label="Audio playback seek bar">
+          <span id="total-time">0:00</span>
+        </div>
+      </div>
+
+      <!-- Volume & Keyboard Hint -->
+      <div class="hidden md:flex items-center justify-end gap-3 w-1/3">
+        <button id="mute-btn" class="text-stone-400 hover:text-white transition-colors" aria-label="Mute / Unmute">
+          <i id="volume-icon" class="fa-solid fa-volume-high text-xs text-stone-400"></i>
+        </button>
+        <input type="range" id="volume-slider" min="0" max="100" value="100" class="w-20 h-1.5 bg-stone-800 rounded-lg cursor-pointer" aria-label="Volume slider">
+        <span class="text-[10px] font-mono text-stone-500 ml-2 border border-stone-800 px-1.5 py-0.5 rounded">Space = Play</span>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- Community Release Priority Voting Modal -->
+  <div id="vote-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+    <div id="vote-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm"></div>
+    <div class="relative bg-[#12140e] border border-stone-800 rounded-2xl max-w-md w-full p-6 sm:p-8 space-y-5 shadow-2xl z-10">
+      <div class="flex items-center justify-between border-b border-stone-800 pb-3">
+        <div class="flex items-center gap-2 text-amber-400 font-mono text-xs uppercase tracking-wider">
+          <i class="fa-solid fa-box-archive"></i>
+          <span>Incubator Priority Ballot</span>
+        </div>
+        <button id="close-vote-btn" class="text-stone-500 hover:text-stone-300 p-1" aria-label="Close modal">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+
+      <div>
+        <h3 class="font-display text-xl font-bold text-white">Prioritize The Farmer&rsquo;s Broken Back</h3>
+        <p class="font-serif text-xs text-stone-400 mt-1">
+          Vote to bump <em>The Farmer&rsquo;s Broken Back</em> to the top of the physical production queue for deluxe vinyl pressings, lossless studio archive downloads, and family farm solidarity editions.
+        </p>
+      </div>
+
+      <div class="space-y-2.5 font-mono text-xs">
+        <label class="flex items-center gap-3 p-3 rounded-xl border border-stone-800 bg-[#181b13] cursor-pointer hover:border-amber-500/50 transition-colors">
+          <input type="radio" name="release_format" value="vinyl" checked class="accent-amber-500">
+          <span class="text-stone-200">Double Heavyweight Topsoil-Black Vinyl Pressing</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 rounded-xl border border-stone-800 bg-[#181b13] cursor-pointer hover:border-amber-500/50 transition-colors">
+          <input type="radio" name="release_format" value="digital" class="accent-amber-500">
+          <span class="text-stone-200">24-Bit / 192kHz Master Audio Studio Archive</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 rounded-xl border border-stone-800 bg-[#181b13] cursor-pointer hover:border-amber-500/50 transition-colors">
+          <input type="radio" name="release_format" value="charity" class="accent-amber-500">
+          <span class="text-stone-200">Family Farm Solidarity Edition (Farm Aid / NFFC Support)</span>
+        </label>
+      </div>
+
+      <div class="flex items-center justify-end gap-3 pt-3 border-t border-stone-800">
+        <button id="confirm-vote-btn" class="w-full py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono font-bold text-xs uppercase tracking-wider transition-colors shadow-lg shadow-amber-950/50">
+          Cast Production Ballot
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- High-Resolution Artwork Zoom Modal -->
+  <div id="art-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+    <div id="art-backdrop" class="fixed inset-0 bg-black/90 backdrop-blur-md"></div>
+    <div class="relative max-w-4xl w-full p-2 z-10 flex flex-col items-center">
+      <button id="close-art-btn" class="self-end mb-2 text-stone-400 hover:text-white font-mono text-xs flex items-center gap-1.5 p-1" aria-label="Close artwork zoom">
+        <i class="fa-solid fa-xmark text-sm"></i>
+        <span>Close</span>
+      </button>
+      <div class="rounded-2xl overflow-hidden border border-stone-800 shadow-2xl max-h-[85vh]">
+        <img src="assets/images/album-art.webp" alt="The Farmer's Broken Back High-Res Artwork" class="w-full h-full object-contain">
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-stone-800/80 bg-[#0c0d0a] py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="space-y-1 text-center sm:text-left">
+        <div class="font-display font-bold text-sm text-white tracking-wider uppercase">The Shady River Bard</div>
+        <p class="font-serif text-xs text-stone-500">Album XX &middot; The Farmer&rsquo;s Broken Back &middot; &copy; 2026 The Shady River Bard</p>
+      </div>
+      <div class="flex items-center gap-6 font-mono text-xs text-stone-400">
+        <a href="../" class="hover:text-amber-400 transition-colors">Gateway</a>
+        <a href="../vault/" class="hover:text-amber-400 transition-colors">Vault Archive</a>
+        <a href="#jukebox" class="hover:text-amber-400 transition-colors">Jukebox</a>
+        <a href="#exhibits" class="hover:text-amber-400 transition-colors">Exhibits</a>
+        <a href="#matrix" class="hover:text-amber-400 transition-colors">Matrix</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data/album-data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
