@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Have the Tories Ever Done for Scotland in 300 Years? — Trevor Swistchew (2026)</title>
+  <meta name="description" content="A Forensic Historical Audit of 150 Years of Conservative Rule, Treasury Extraction, Industrial Demolition, and Constitutional Refusal by Trevor Swistchew.">
+  <link rel="canonical" href="https://theshadyriverbard.com/trevor-swistchew/essays/what-have-the-tories-ever-done-for-scotland-in-300-years/">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              950: '#0c0b0a',
+              900: '#121110',
+              850: '#181614',
+              800: '#1f1c19',
+              700: '#2b2723',
+              600: '#3d3731',
+            },
+            parchment: {
+              50: '#fdfbf7',
+              100: '#f7f4ed',
+              200: '#efeae0',
+              300: '#e5ded2',
+              400: '#d8cdbe',
+              500: '#c5b8a5',
+            },
+            brass: {
+              400: '#dfbe75',
+              500: '#c5a059',
+              600: '#a6823c',
+              700: '#846427',
+            },
+            thistle: {
+              600: '#9d2b45',
+              700: '#7e2035',
+            },
+            loch: {
+              400: '#38bdf8',
+              700: '#0369a1',
+              900: '#0c4a6e',
+            }
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Lora', 'Georgia', 'serif'],
+            display: ['"Playfair Display"', 'Cinzel', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Accessibility & Salon Theme Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/a11y.css">
+  <link rel="stylesheet" href="../../assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950 min-h-screen flex flex-col justify-between">
+
+  <!-- 1. WCAG Skip Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Essay Content</a>
+
+  <!-- 2. Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- 3. Top Sticky Reading Utility & Salon Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      
+      <!-- Salon Brand / Return Link -->
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2.5 text-stone-300 hover:text-amber-400 group transition-colors">
+          <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
+          <div class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:block">
+            Trevor Swistchew <span class="text-stone-500 font-sans font-normal mx-1">|</span> <span class="text-stone-400">Compendium Archive</span>
+          </div>
+        </a>
+        <a href="https://theshadyriverbard.com/" class="hidden md:flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 text-[11px] font-mono transition-colors" title="Visit The Shady River Bard Portal">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Center / Right Utilities: Theme & Font Controls -->
+      <div class="flex items-center gap-2 sm:gap-4">
+        
+        <!-- Tri-State Theme Switcher -->
+        <div class="flex items-center bg-stone-950/80 border border-stone-800 rounded-lg p-0.5 text-xs text-stone-400" role="group" aria-label="Reading Atmosphere Theme">
+          <button type="button" data-set-theme="dark" class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" title="Peat &amp; Loch (Dark)">
+            <i class="fa-solid fa-moon text-[11px]"></i>
+            <span class="sr-only">Dark Theme</span>
+          </button>
+          <button type="button" data-set-theme="sepia" class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" title="Aged Parchment (Sepia)">
+            <i class="fa-solid fa-scroll text-[11px]"></i>
+            <span class="sr-only">Sepia Theme</span>
+          </button>
+          <button type="button" data-set-theme="light" class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" title="Edinburgh Stone (Light)">
+            <i class="fa-solid fa-sun text-[11px]"></i>
+            <span class="sr-only">Light Theme</span>
+          </button>
+        </div>
+
+        <!-- Typography Scaler -->
+        <div class="hidden sm:flex items-center bg-stone-950/80 border border-stone-800 rounded-lg p-0.5 text-xs text-stone-400" role="group" aria-label="Text Size Controls">
+          <button type="button" id="font-decrease" class="px-2 py-1 hover:text-stone-200 transition-colors" title="Decrease font size" aria-label="Decrease text size">A-</button>
+          <button type="button" id="font-reset" class="px-2 py-1 font-bold text-amber-500 hover:text-amber-400 transition-colors" title="Reset font size" aria-label="Reset text size">A</button>
+          <button type="button" id="font-increase" class="px-2 py-1 hover:text-stone-200 transition-colors" title="Increase font size" aria-label="Increase text size">A+</button>
+        </div>
+
+        <!-- Back to Compendium Link -->
+        <a href="../../index.html#essays" class="text-xs font-mono text-stone-400 hover:text-amber-400 transition-colors flex items-center gap-1 pl-2 border-l border-stone-800">
+          <i class="fa-solid fa-arrow-left text-[10px]"></i>
+          <span>Catalog</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main id="main-content" class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-10 min-w-0 w-full">
+    
+    <!-- Breadcrumbs -->
+    <nav aria-label="Breadcrumb" class="text-xs font-mono text-stone-400 flex items-center gap-2">
+      <a href="../../index.html" class="hover:text-amber-400 transition-colors">Compendium</a>
+      <span>/</span>
+      <a href="../../index.html#essays" class="hover:text-amber-400 transition-colors">Essays</a>
+      <span>/</span>
+      <span class="text-amber-500 font-semibold">Compendium #29</span>
+    </nav>
+
+    <!-- Essay Article Header -->
+    <article class="space-y-8" id="essay-reading-wrapper">
+      
+      <header class="space-y-6">
+        
+        <!-- Category Pill & Badges -->
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="px-2.5 py-1 rounded bg-amber-500/20 border border-amber-500/40 text-amber-400 text-xs font-mono font-bold uppercase tracking-wider">
+            Compendium #29
+          </span>
+          <span class="px-2.5 py-1 rounded bg-rose-500/15 border border-rose-500/30 text-rose-300 text-xs font-mono font-semibold">
+            Constitutional History
+          </span>
+          <span class="px-2.5 py-1 rounded bg-stone-800/80 border border-stone-700/50 text-stone-300 text-xs font-mono">
+            300 Years of Union &bull; 1707–2026
+          </span>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <div class="space-y-3">
+          <h1 class="font-cinzel text-3xl sm:text-5xl font-black text-stone-100 tracking-tight leading-tight">
+            What Have the Tories Ever Done for Scotland in 300 Years?
+          </h1>
+          <p class="font-serif italic text-lg sm:text-2xl text-stone-300 leading-relaxed font-light">
+            A Forensic Historical Audit of One Hundred and Fifty Years of Conservative Rule, Fiscal Extraction, Industrial Demolition, and Constitutional Refusal.
+          </p>
+        </div>
+
+        <!-- Author Byline & Scholarly Meta Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-b border-stone-800/80 text-xs font-mono text-stone-400 py-3">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 font-bold font-cinzel">TS</span>
+            <div>
+              <span class="text-stone-200 font-semibold block">Trevor Swistchew</span>
+              <span class="text-[11px] text-stone-500">2026 &bull; Forensic Constitutional Audit</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 text-stone-400">
+            <span><i class="fa-regular fa-clock mr-1 text-amber-500/70"></i> 5 min read</span>
+            <span><i class="fa-solid fa-file-lines mr-1 text-amber-500/70"></i> 640 words</span>
+            <span><i class="fa-solid fa-building-columns mr-1 text-amber-500/70"></i> HM Treasury &amp; Hansard Audit</span>
+          </div>
+        </div>
+
+        <!-- Bespoke Fine-Art Banner Image -->
+        <figure class="relative rounded-2xl overflow-hidden border border-stone-800/80 bg-stone-950 shadow-2xl">
+          <img 
+            src="../../assets/images/what-have-the-tories-ever-done-for-scotland-in-300-years-banner.jpg" 
+            alt="What Have the Tories Ever Done for Scotland in 300 Years? — Fine Art Oil Painting depicting Scottish Highland crofts and barren pastures juxtaposed with Clydeside shipyard cranes, coal colliery towers, and Westminster across the misty waters" 
+            class="w-full h-auto object-cover max-h-[480px]"
+            loading="eager"
+          />
+          <figcaption class="p-3 bg-stone-900/95 border-t border-stone-800 text-[11px] font-mono text-stone-400 flex items-center justify-between">
+            <span>The Three Centuries of the Union &bull; <em>Clearance, extraction, and industrial decline under distant executive rule</em></span>
+            <span class="text-amber-400/80 font-semibold">Trevor Swistchew Archive</span>
+          </figcaption>
+        </figure>
+
+      </header>
+
+      <!-- Interactive Empirical Research Dossier Component -->
+      <section class="rounded-2xl border border-stone-800 bg-stone-900/70 backdrop-blur-sm p-6 sm:p-8 space-y-6 shadow-xl" aria-label="Empirical Research Dossier">
+        
+        <div class="border-b border-stone-800 pb-4">
+          <div class="flex items-center gap-2 text-xs font-mono text-amber-500 uppercase tracking-widest mb-1">
+            <i class="fa-solid fa-scale-unbalanced"></i>
+            <span>Empirical Research Dossier</span>
+          </div>
+          <h2 class="font-display text-2xl font-bold text-stone-100">
+            Historical Audit: The 150-Year Conservative Balance Sheet
+          </h2>
+          <p class="font-serif text-sm text-stone-400 mt-1">
+            Primary Parliamentary records (Hansard), HM Treasury Country and Regional Analysis (CRA), and official economic commissions on Conservative rule in Scotland.
+          </p>
+        </div>
+
+        <!-- Dossier Navigation Tabs -->
+        <div class="flex flex-wrap gap-2 border-b border-stone-800/80 pb-2" role="tablist">
+          <button class="dossier-tab-btn active-tab px-4 py-2 rounded-lg text-xs font-mono font-semibold transition-all bg-amber-500 text-stone-950 shadow-md" data-dossier-tab="premierships">
+            1. 150-Year Premiership Audit (1783–2024)
+          </button>
+          <button class="dossier-tab-btn px-4 py-2 rounded-lg text-xs font-mono font-semibold transition-all bg-stone-900 text-stone-400 border border-stone-800 hover:text-stone-200" data-dossier-tab="extraction">
+            2. Fiscal Extraction &amp; The Poll Tax
+          </button>
+          <button class="dossier-tab-btn px-4 py-2 rounded-lg text-xs font-mono font-semibold transition-all bg-stone-900 text-stone-400 border border-stone-800 hover:text-stone-200" data-dossier-tab="democracy">
+            3. Democratic Deficit &amp; Constitutional Vetoes
+          </button>
+        </div>
+
+        <!-- Panel 1: The 150-Year Premiership Audit -->
+        <div id="panel-premierships" class="dossier-tab-panel space-y-4">
+          <h3 class="font-cinzel text-base font-bold text-amber-400 flex items-center gap-2">
+            <i class="fa-solid fa-landmark"></i> Twenty-Seven Conservative &amp; Tory Prime Ministers (1783–2024)
+          </h3>
+          <p class="font-serif text-xs sm:text-sm text-stone-300 leading-relaxed">
+            Conservative and Tory administrations governed Scotland for roughly 150 of the Union’s 300+ years. Across every administration cited in the text, policy remained centralized around imperial order and market finance rather than Scottish-specific welfare or protection.
+          </p>
+          <div class="space-y-3 font-mono text-xs text-stone-300">
+            
+            <div class="p-3.5 rounded-lg bg-stone-950/80 border border-stone-800 flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+              <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 border border-amber-500/40 font-bold shrink-0">1783–1806</span>
+              <div>
+                <strong class="text-stone-100 font-sans text-sm block">William Pitt the Younger &amp; Henry Dundas</strong>
+                <span class="text-stone-400 font-serif text-xs">Governed Scotland through Henry Dundas ("Harry the Ninth") as an electoral fiefdom. Maintained laissez-faire indifference to the Highland Clearances, executed radical trials (1793 Sedition Trials), and offered zero legislative relief for displaced crofters.</span>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-lg bg-stone-950/80 border border-stone-800 flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+              <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 border border-amber-500/40 font-bold shrink-0">1812–1830</span>
+              <div>
+                <strong class="text-stone-100 font-sans text-sm block">Liverpool, Canning, Goderich &amp; Wellington</strong>
+                <span class="text-stone-400 font-serif text-xs">Military suppression of the 1820 Radical War in Strathclyde (execution of James Wilson, John Baird, Andrew Hardie). Policies focused strictly on post-Napoleonic imperial debt consolidation and Corn Law tariffs favoring landed aristocrats.</span>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-lg bg-stone-950/80 border border-stone-800 flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+              <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 border border-amber-500/40 font-bold shrink-0">1885–1902</span>
+              <div>
+                <strong class="text-stone-100 font-sans text-sm block">Lord Salisbury &amp; Arthur Balfour</strong>
+                <span class="text-stone-400 font-serif text-xs">Resisted land reform in the Highlands; dispatched naval gunboats to the Isle of Skye during the Crofters' War (1882–1884). Salisbury opposed home rule bills and maintained that the imperial Parliament was indivisible.</span>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-lg bg-stone-950/80 border border-stone-800 flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+              <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 border border-amber-500/40 font-bold shrink-0">1979–1990</span>
+              <div>
+                <strong class="text-stone-100 font-sans text-sm block">Margaret Thatcher</strong>
+                <span class="text-stone-400 font-serif text-xs">Rapid deindustrialisation across Lanarkshire and Clydeside (Ravenscraig steelworks, linwood car assembly, Scottish coal mines). Early imposition of the Community Charge (Poll Tax) in Scotland in 1989. Siphoned North Sea oil revenues to pay for UK tax cuts.</span>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-lg bg-stone-950/80 border border-stone-800 flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+              <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 border border-amber-500/40 font-bold shrink-0">2010–2024</span>
+              <div>
+                <strong class="text-stone-100 font-sans text-sm block">Cameron, May, Johnson, Truss &amp; Sunak</strong>
+                <span class="text-stone-400 font-serif text-xs">Fourteen years of public sector austerity; forced removal of Scotland from the European Union despite a 62% Remain mandate; Internal Market Act 2020 eroding devolution; and unprecedented Section 35 orders vetoing Holyrood legislation.</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Panel 2: Fiscal Extraction & The Poll Tax -->
+        <div id="panel-extraction" class="dossier-tab-panel hidden space-y-4">
+          <h3 class="font-cinzel text-base font-bold text-amber-400 flex items-center gap-2">
+            <i class="fa-solid fa-coins"></i> Deindustrialisation, Housing Depletion, and North Sea Extraction
+          </h3>
+          <p class="font-serif text-xs sm:text-sm text-stone-300 leading-relaxed">
+            Treasury records reveal that Conservative industrial and fiscal policies repeatedly treated Scotland as an experimental extraction zone without reinvesting capital into sovereign Scottish institutions.
+          </p>
+          <div class="overflow-x-auto rounded-lg border border-stone-800">
+            <table class="w-full text-left font-mono text-xs border-collapse">
+              <thead>
+                <tr class="bg-stone-950/90 text-stone-400 border-b border-stone-800">
+                  <th class="p-3">Policy / Sector</th>
+                  <th class="p-3">Conservative Government Action</th>
+                  <th class="p-3">Documented Impact on Scotland</th>
+                  <th class="p-3">Treasury / Social Outcome</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-stone-800/80 bg-stone-900/40 text-stone-300">
+                <tr>
+                  <td class="p-3 font-semibold text-stone-200">The Poll Tax (1989)</td>
+                  <td class="p-3 text-stone-300">Abolition of Domestic Rates (Scotland) Act 1987</td>
+                  <td class="p-3 text-rose-400">Imposed on Scotland 12 months ahead of England &amp; Wales</td>
+                  <td class="p-3 text-amber-400">1+ million Scots on non-payment lists; warrant sales &amp; civil unrest</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-stone-200">Ravenscraig Steel (1992)</td>
+                  <td class="p-3 text-stone-300">Privatisation of British Steel &amp; refuse of state aid</td>
+                  <td class="p-3 text-rose-400">Destruction of Motherwell hot-strip mill</td>
+                  <td class="p-3 text-amber-400">10,000+ heavy industrial jobs eliminated in Lanarkshire</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-stone-200">Right to Buy (1980)</td>
+                  <td class="p-3 text-stone-300">Tenants' Rights, Etc. (Scotland) Act 1980</td>
+                  <td class="p-3 text-rose-400">495,000 council houses sold with large discounts</td>
+                  <td class="p-3 text-amber-400">Capital receipts retained by HM Treasury; acute 2020s social housing deficit</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-stone-200">North Sea Petroleum</td>
+                  <td class="p-3 text-stone-300">Oil Taxation Act 1975 &amp; Consolidations</td>
+                  <td class="p-3 text-stone-400">£350+ billion in direct petroleum revenues absorbed</td>
+                  <td class="p-3 text-rose-400">£0 placed in a sovereign wealth fund (vs. Norway's $1.7T fund)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-stone-200">Coalfields &amp; Shipyards</td>
+                  <td class="p-3 text-stone-300">National Coal Board pit closure program</td>
+                  <td class="p-3 text-rose-400">Scottish deep coal mining wiped from 15 pits to zero</td>
+                  <td class="p-3 text-amber-400">Generational economic hysteresis in Fife, Ayrshire &amp; Lothian</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="p-3 rounded-lg bg-stone-950/70 border border-stone-800/80 text-[11px] font-mono text-stone-400">
+            <strong class="text-amber-400">Treasury Citation:</strong> HM Treasury, <em>Country and Regional Analysis (CRA)</em>; Hansard, HC Deb 15 January 1992, Vol 201, cc921–930 (Closure of Ravenscraig); Gavin McCrone, <em>The Economics of Nationalism Re-examined</em> (1974 declassified cabinet document).
+          </div>
+        </div>
+
+        <!-- Panel 3: Democratic Deficit & Constitutional Vetoes -->
+        <div id="panel-democracy" class="dossier-tab-panel hidden space-y-4">
+          <h3 class="font-cinzel text-base font-bold text-amber-400 flex items-center gap-2">
+            <i class="fa-solid fa-landmark-dome"></i> The "Democratic Deficit" &amp; Devolved Power Rollback
+          </h3>
+          <p class="font-serif text-xs sm:text-sm text-stone-300 leading-relaxed">
+            Conservative administrations consistently maintained power over Scotland with negligible domestic democratic consent, rejecting sovereign Scottish referendums and actively curtailing Holyrood’s statutory autonomy.
+          </p>
+          <div class="grid sm:grid-cols-2 gap-3 font-mono text-xs">
+            <div class="p-4 rounded-xl bg-stone-950 border border-stone-800 space-y-2">
+              <span class="text-amber-400 font-bold uppercase text-xs block flex items-center gap-1.5">
+                <i class="fa-solid fa-gavel"></i> The 1979 "40% Rule" Hijack
+              </span>
+              <p class="text-stone-300 text-[11px] font-serif leading-relaxed">
+                In the 1 March 1979 referendum on the Scotland Act 1978, a majority of Scots voted YES (51.6% to 48.4%). The newly elected Thatcher administration invoked the George Cunningham amendment (requiring 40% of the entire registered electorate, counting deceased citizens as 'No') to repeal the Act and delay self-government by twenty years.
+              </p>
+            </div>
+            <div class="p-4 rounded-xl bg-stone-950 border border-stone-800 space-y-2">
+              <span class="text-amber-400 font-bold uppercase text-xs block flex items-center gap-1.5">
+                <i class="fa-solid fa-users-slash"></i> The 1987–1997 Wipeout Mandate
+              </span>
+              <p class="text-stone-300 text-[11px] font-serif leading-relaxed">
+                In the 1987 General Election, the Conservatives were reduced to just 10 of Scotland’s 72 MPs, yet ruled with absolute executive authority. By 1997, the party was completely annihilated in Scotland, winning 0 out of 72 parliamentary seats—crystallizing the classic definition of the "Democratic Deficit."
+              </p>
+            </div>
+            <div class="p-4 rounded-xl bg-stone-950 border border-stone-800 space-y-2">
+              <span class="text-amber-400 font-bold uppercase text-xs block flex items-center gap-1.5">
+                <i class="fa-solid fa-flag"></i> The 2016 Brexit Override
+              </span>
+              <p class="text-stone-300 text-[11px] font-serif leading-relaxed">
+                Every one of Scotland’s 32 council areas voted to Remain in the European Union (62.0% Remain). The May and Johnson Conservative governments refused any Scottish compromise (e.g. European Single Market membership) and forced Scotland out of the EU against its declared democratic will.
+              </p>
+            </div>
+            <div class="p-4 rounded-xl bg-stone-950 border border-stone-800 space-y-2">
+              <span class="text-amber-400 font-bold uppercase text-xs block flex items-center gap-1.5">
+                <i class="fa-solid fa-ban"></i> The Section 35 Precedent (2023)
+              </span>
+              <p class="text-stone-300 text-[11px] font-serif leading-relaxed">
+                In January 2023, the Sunak administration issued the first-ever Section 35 Order under the Scotland Act 1998 to strike down legislation passed by a cross-party two-thirds majority of the Scottish Parliament, accompanied by the Internal Market Act 2020 overriding devolved standards.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- 6. Essay Text Content — Verbatim Preservation with Classical Typography -->
+      <div class="space-y-8 font-serif text-base sm:text-lg text-stone-300 leading-relaxed pt-6" id="essay-reading-content">
+        
+        <!-- Section I -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3 text-xs font-mono text-amber-500/80 uppercase tracking-widest">
+            <span>Section I</span>
+            <span class="h-px flex-1 bg-stone-800"></span>
+            <span>The Century-and-a-Half Calculus</span>
+          </div>
+
+          <p class="text-justify first-letter:text-5xl first-letter:font-bold first-letter:font-cinzel first-letter:text-amber-500 first-letter:mr-3 first-letter:float-left first-letter:leading-none">
+            Across the three centuries of the Union, Tory, Conservative and Conservative &amp; Unionist governments have held power for roughly one hundred and fifty years. That figure comes from adding the full periods in office of every Conservative or Tory Prime Minister from the late eighteenth century to today: Pitt the Younger, Addington, Portland, Perceval, Liverpool, Canning, Goderich, Wellington, Peel, Derby, Disraeli, Salisbury, Balfour, Bonar Law, Baldwin, Chamberlain, Churchill, Eden, Macmillan, Douglas‑Home, Heath, Thatcher, Major, Cameron, May, Johnson, Truss and Sunak. These are the administrations that ruled Scotland whenever the Conservatives controlled Westminster. The question is whether any of them delivered proven, measurable, Scotland‑specific improvements to the lives of Scotland’s voters. The verified record shows they did not.
+          </p>
+        </div>
+
+        <!-- Section II -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3 text-xs font-mono text-amber-500/80 uppercase tracking-widest">
+            <span>Section II</span>
+            <span class="h-px flex-1 bg-stone-800"></span>
+            <span>A Three-Hundred-Year Line of Administrations</span>
+          </div>
+
+          <p class="text-justify">
+            Tory governments treated Scotland as a territorial component of a centralised British state, not as a nation with its own needs. Pitt’s long rule did nothing to stop the Highland Clearances or rural poverty. Addington, Portland, Perceval and Liverpool governed through war and repression without introducing any Scotland‑focused protections. Canning, Goderich and Wellington were crisis governments whose policies were aimed at imperial stability, not Scottish welfare. Peel’s reforms reshaped policing and the economy but did not deliver improvements targeted at Scotland’s voters. Derby and Disraeli extended the franchise, but Scotland’s gains were simply the UK‑wide expansion of voting rights, not measures designed for Scotland’s benefit. Salisbury’s long Conservative rule did nothing to halt Highland depopulation or to give Scotland meaningful self‑government. Balfour, Bonar Law and Baldwin governed through constitutional and economic turbulence without creating Scotland‑specific welfare or industrial protections. Chamberlain’s premiership was consumed by appeasement and war preparation, with no distinct Scottish advantage. Churchill’s wartime leadership mobilised the whole UK, but the creation of the NHS in Scotland, the welfare state and modern social housing came from Attlee’s Labour government, not from the Conservatives. Eden, Macmillan and Douglas‑Home maintained the post‑war settlement but did not design new Scottish social or economic gains. Heath presided over industrial conflict and decline without protecting Scotland’s heavy industries. Thatcher’s governments shut mines, steelworks, shipyards and factories across Scotland, imposed the Poll Tax early, and left long‑term economic scars. Major continued privatisation and austerity without Scotland‑specific protections. Cameron imposed austerity, rejected Scotland’s constitutional mandates, and allowed Scotland’s Remain vote to be overridden. May continued Brexit against Scotland’s expressed will. Johnson sidelined Scotland’s government and dismissed Scotland’s democratic mandates. Truss destabilised the economy. Sunak maintained the Brexit settlement and austerity‑style constraints. None of these actions can be described as acting in Scotland’s best interests.
+          </p>
+
+          <!-- Dramatic Pull Quote -->
+          <blockquote class="my-8 p-6 border-l-4 border-amber-500 bg-stone-900/80 rounded-r-xl space-y-2 shadow-lg">
+            <p class="font-serif italic text-lg sm:text-xl text-stone-100 leading-snug">
+              &ldquo;Tory governments treated Scotland as a territorial component of a centralised British state, not as a nation with its own needs... Thatcher’s governments shut mines, steelworks, shipyards and factories across Scotland, imposed the Poll Tax early, and left long-term economic scars.&rdquo;
+            </p>
+            <footer class="font-mono text-xs text-amber-500/90 tracking-wider uppercase">
+              &mdash; Trevor Swistchew &bull; <em>What Have the Tories Ever Done for Scotland in 300 Years?</em>
+            </footer>
+          </blockquote>
+        </div>
+
+        <!-- Section III -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3 text-xs font-mono text-amber-500/80 uppercase tracking-widest">
+            <span>Section III</span>
+            <span class="h-px flex-1 bg-stone-800"></span>
+            <span>Incidental, Centralised, or Outweighed</span>
+          </div>
+
+          <p class="text-justify">
+            The only developments that brought any benefit to Scotland under Conservative rule were incidental, shared across the UK, or outweighed by negative consequences. The Forth Road Bridge was completed under a Conservative government, but the project was cross‑party and not designed as a Scotland specific uplift. North Sea oil created jobs, but the revenue was centralised in London and used for UK‑wide spending rather than building a Scottish sovereign wealth fund. Right to Buy allowed some Scottish tenants to purchase their homes, but it stripped Scotland of social housing and created long term shortages. Motorway and rail expansions reached Scotland, but they were UK‑wide programmes, not targeted Scottish investment. None of these can be described as deliberate acts of governing in Scotland’s best interests.
+          </p>
+        </div>
+
+        <!-- Section IV -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3 text-xs font-mono text-amber-500/80 uppercase tracking-widest">
+            <span>Section IV</span>
+            <span class="h-px flex-1 bg-stone-800"></span>
+            <span>The Structural Benchmarks: Welfare, Health, and Parliament</span>
+          </div>
+
+          <p class="text-justify">
+            On every major test &mdash; health, education, housing, welfare, industry, constitutional status &mdash; the verified improvements in Scottish life were not Conservative creations. The NHS in Scotland, the welfare state, modern social housing, and the Scottish Parliament were delivered by non Conservative governments or cross party pressure. Conservative governments either inherited these structures, managed them, or attempted to cut them back. They did not design them for Scotland’s benefit. Economically, Conservative policy repeatedly exposed Scotland to market forces without building protective institutions or long‑term investment tailored to Scottish needs. Constitutionally, Conservative governments resisted meaningful Scottish self‑government and refused to recognise Scotland’s democratic mandates.
+          </p>
+
+          <!-- Second Pull Quote -->
+          <blockquote class="my-8 p-6 border-l-4 border-rose-500/80 bg-stone-900/80 rounded-r-xl space-y-2 shadow-lg">
+            <p class="font-serif italic text-lg sm:text-xl text-stone-100 leading-snug">
+              &ldquo;The NHS in Scotland, the welfare state, modern social housing, and the Scottish Parliament were delivered by non-Conservative governments or cross-party pressure. Conservative governments either inherited these structures, managed them, or attempted to cut them back.&rdquo;
+            </p>
+            <footer class="font-mono text-xs text-rose-400 tracking-wider uppercase">
+              &mdash; Trevor Swistchew &bull; <em>Constitutional Balance Sheet</em>
+            </footer>
+          </blockquote>
+        </div>
+
+        <!-- Section V -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3 text-xs font-mono text-amber-500/80 uppercase tracking-widest">
+            <span>Section V</span>
+            <span class="h-px flex-1 bg-stone-800"></span>
+            <span>The Stark Monetary Ledger</span>
+          </div>
+
+          <p class="text-justify">
+            Across one hundred and fifty years of Conservative rule, the official record shows that no Conservative government enacted a Scotland‑specific policy that delivered a proven, measurable, positive improvement to Scotland’s voters. The policies that the Conservatives sometimes claim as helping Scotland were UK wide measures whose negative consequences outweighed any gain. Treasury data, parliamentary archives and official economic studies show that no Conservative Prime Minister introduced a policy designed specifically for Scotland’s benefit, and no Conservative administration delivered a programme with proven positive outcomes for Scottish groups. The verified monetary reality is equally stark. There is no official Treasury figure showing a Conservative government providing Scotland with a Scotland only financial benefit.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Essay Postscript & Scholarly Attribution -->
+      <footer class="pt-8 border-t border-stone-800 space-y-6">
+        <div class="p-4 rounded-xl bg-stone-950/60 border border-stone-800 text-xs font-mono text-stone-400 space-y-2">
+          <div class="flex items-center gap-2 text-amber-500 font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-book-bookmark"></i>
+            <span>Archival &amp; Parliamentary Primary Sources</span>
+          </div>
+          <p class="font-serif text-stone-400 leading-relaxed text-xs">
+            1. <strong>Hansard Parliamentary Debates:</strong> House of Commons Official Reports on the Highland Clearances (1790–1850); <em>Abolition of Domestic Rates (Scotland) Act 1987</em>; <em>Ravenscraig Closure Debates</em> (HC Deb 15 January 1992, Vol 201, cc921–930).<br>
+            2. <strong>HM Treasury Country and Regional Analysis (CRA):</strong> Historical expenditure records, public sector revenue aggregation, and petroleum revenue allocations to the UK Consolidated Fund (1975–2024).<br>
+            3. <strong>Cabinet Office Declassified Files:</strong> Professor Gavin McCrone, <em>The Economics of Nationalism Re-examined</em> (Cabinet Office, April 1974 / declassified 2005).<br>
+            4. <strong>Scottish Parliament Official Report:</strong> Section 35 Order Debates (17 January 2023) and legislative competence disputes under the Scotland Act 1998.
+          </p>
+        </div>
+
+        <!-- Author Profile Box -->
+        <div class="p-6 rounded-xl bg-gradient-to-r from-stone-900 via-stone-900/80 to-stone-950 border border-stone-800 flex flex-col sm:flex-row items-center gap-5">
+          <div class="w-16 h-16 rounded-full bg-amber-500/20 border-2 border-amber-500/50 flex items-center justify-center text-amber-400 font-cinzel font-bold text-2xl shrink-0">
+            TS
+          </div>
+          <div class="space-y-1.5 text-center sm:text-left">
+            <h3 class="font-cinzel text-lg font-bold text-stone-100">Trevor Swistchew</h3>
+            <p class="font-serif italic text-xs text-amber-500/90">Essayist &bull; Cultural Thinker &bull; Songwriter</p>
+            <p class="font-serif text-xs text-stone-400 leading-relaxed">
+              Trevor Swistchew writes on Scottish constitutional history, legal covenants, philosophy, and societal transformation. His 29 curated masterwork essays form the core of the digital literary compendium.
+            </p>
+          </div>
+        </div>
+
+        <!-- Return / Next Navigation -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-stone-800/80 text-xs font-mono">
+          <a href="../the-scottish-elite-and-the-empire/index.html" class="text-stone-400 hover:text-amber-400 transition-colors flex items-center gap-2">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Previous: The Scottish Elite and the Empire (Compendium #28)</span>
+          </a>
+          <a href="../../index.html#essays" class="text-amber-500 hover:text-amber-400 font-bold transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-list"></i>
+            <span>Browse Full Compendium (30 Works)</span>
+          </a>
+        </div>
+
+      </footer>
+
+    </article>
+
+  </main>
+
+  <!-- Global Salon Footer -->
+  <footer class="border-t border-stone-800 bg-stone-950/90 mt-16 py-8 text-xs font-mono text-stone-400">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <span class="text-stone-200 font-cinzel font-bold">Trevor Swistchew Archive</span> &bull; 2026 Literary Salon
+      </div>
+      <div class="flex items-center gap-4 text-stone-400">
+        <a href="../../index.html#essays" class="hover:text-amber-400 transition-colors">Catalog</a>
+        <a href="../../poetry/index.html" class="hover:text-amber-400 transition-colors">Poetry</a>
+        <a href="../../music/index.html" class="hover:text-amber-400 transition-colors">Music</a>
+        <a href="https://theshadyriverbard.com/" class="text-amber-500/90 hover:text-amber-400 transition-colors">The Shady River Bard ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Client-side Reading Accommodations and Tab Script -->
+  <script src="../../assets/js/reading-experience.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Reading Progress Bar Logic
+      const bar = document.getElementById('reading-progress-bar');
+      if (bar) {
+        window.addEventListener('scroll', () => {
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const scrolled = (window.scrollY / docHeight) * 100;
+          bar.style.width = Math.min(Math.max(scrolled, 0), 100) + '%';
+        }, { passive: true });
+      }
+
+      // 2. Interactive Empirical Dossier Tabs
+      const tabButtons = document.querySelectorAll('.dossier-tab-btn');
+      const tabPanels = document.querySelectorAll('.dossier-tab-panel');
+
+      tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetTab = btn.getAttribute('data-dossier-tab');
+
+          tabButtons.forEach(b => {
+            b.classList.remove('active-tab', 'bg-amber-500', 'text-stone-950', 'shadow-md');
+            b.classList.add('bg-stone-900', 'text-stone-400', 'border', 'border-stone-800');
+          });
+          btn.classList.add('active-tab', 'bg-amber-500', 'text-stone-950', 'shadow-md');
+          btn.classList.remove('bg-stone-900', 'text-stone-400', 'border', 'border-stone-800');
+
+          tabPanels.forEach(p => {
+            if (p.id === `panel-${targetTab}`) {
+              p.classList.remove('hidden');
+            } else {
+              p.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      // 3. Text Size Adjuster
+      const content = document.getElementById('essay-reading-content');
+      const incBtn = document.getElementById('font-increase');
+      const decBtn = document.getElementById('font-decrease');
+      const resetBtn = document.getElementById('font-reset');
+
+      let currentScale = 1.0;
+      const step = 0.1;
+      const minScale = 0.85;
+      const maxScale = 1.35;
+
+      if (content && incBtn && decBtn && resetBtn) {
+        incBtn.addEventListener('click', () => {
+          if (currentScale < maxScale) {
+            currentScale += step;
+            content.style.fontSize = `${currentScale}rem`;
+          }
+        });
+        decBtn.addEventListener('click', () => {
+          if (currentScale > minScale) {
+            currentScale -= step;
+            content.style.fontSize = `${currentScale}rem`;
+          }
+        });
+        resetBtn.addEventListener('click', () => {
+          currentScale = 1.0;
+          content.style.fontSize = '';
+        });
+      }
+    });
+  </script>
+</body>
+</html>
