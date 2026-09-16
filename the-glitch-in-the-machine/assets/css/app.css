@@ -1,0 +1,179 @@
+/* 
+ * The Glitch in the Machine — Album XX
+ * Bespoke Cybernetic Industrial Folk Design System
+ * The Shady River Bard
+ */
+
+:root {
+  --bg-main: #07080d;
+  --bg-card: #0d111a;
+  --bg-card-hover: #141a27;
+  --border-subtle: #1e2638;
+  --border-focus: #06b6d4;
+  --cyan-accent: #06b6d4;
+  --cyan-light: #22d3ee;
+  --cyan-dark: #0891b2;
+  --cyan-glow: rgba(6, 182, 212, 0.25);
+  --magenta-accent: #d946ef;
+  --magenta-light: #f472b6;
+  --magenta-dark: #c026d3;
+  --purple-accent: #a855f7;
+  --green-accent: #10b981;
+  --green-light: #34d399;
+  --text-main: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: 'Rajdhani', 'Orbitron', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-serif {
+  font-family: 'Lora', Georgia, serif;
+}
+
+/* Hero Glow Title */
+.hero-glow-title {
+  background: linear-gradient(135deg, #ffffff 0%, #22d3ee 45%, #d946ef 85%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 35px rgba(6, 182, 212, 0.3);
+}
+
+/* Cybernetic Badges */
+.metric-pill {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.metric-pill:hover {
+  border-color: var(--cyan-accent);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #07080d;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #1e2638;
+  border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--cyan-accent);
+}
+
+/* Audio Player Sliders */
+input[type=range] {
+  accent-color: #06b6d4;
+}
+
+/* Track Row active styling */
+.track-row.active {
+  background: linear-gradient(90deg, rgba(6, 182, 212, 0.15) 0%, rgba(13, 17, 26, 0.95) 100%);
+  border-color: rgba(6, 182, 212, 0.6);
+  box-shadow: 0 4px 20px -2px rgba(6, 182, 212, 0.25);
+}
+
+/* Exhibit Tabs */
+.exhibit-tab-btn.active {
+  border-color: var(--cyan-accent);
+  color: var(--cyan-light);
+  background-color: rgba(6, 182, 212, 0.12);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.15);
+}
+
+/* Scanline Overlay */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 255, 0, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Subtle Neon Glitch Pulsing */
+@keyframes neon-pulse {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 0.6; }
+}
+
+.animate-pulse-subtle {
+  animation: neon-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* WCAG Accessibility Modes */
+body.high-contrast {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+body.high-contrast .bg-\[\#07080d\],
+body.high-contrast .bg-\[\#0d111a\],
+body.high-contrast .bg-\[\#141a27\],
+body.high-contrast .metric-pill,
+body.high-contrast .track-row {
+  background-color: #000000 !important;
+  border-color: #ffffff !important;
+}
+body.high-contrast a,
+body.high-contrast button {
+  color: #ffff00 !important;
+}
+body.high-contrast .text-stone-400,
+body.high-contrast .text-stone-300,
+body.high-contrast .text-slate-400,
+body.high-contrast .text-slate-300 {
+  color: #ffffff !important;
+}
+
+body.large-font {
+  font-size: 1.15rem;
+}
+body.large-font .text-xs { font-size: 0.9rem !important; }
+body.large-font .text-sm { font-size: 1.05rem !important; }
+body.large-font .text-base { font-size: 1.25rem !important; }
+body.large-font .text-lg { font-size: 1.4rem !important; }
+body.large-font .text-xl { font-size: 1.6rem !important; }
+body.large-font .text-2xl { font-size: 1.85rem !important; }
+
+body.underline-links a {
+  text-decoration: underline !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
