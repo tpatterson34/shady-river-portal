@@ -1,4 +1,4 @@
-// The Shady River Homestead - Complete Botanical Cultivar Library
+// The Shady River Homestead — Living Botanical & Cultivar Catalog
 // 110 Planted Cultivars in USDA Zone 8b (Western Washington)
 window.HOMESTEAD_PLANTS = [
   {
@@ -435,6 +435,35 @@ window.HOMESTEAD_PLANTS = [
     "dyeColor": "Apple bark and autumn leaves produce warm antique golds, brassy yellows, and soft tans.",
     "permacultureRole": "Central canopy anchor of the food forest guild; supports mycorrhizal fungal webs and perennial herb understories.",
     "imageUrl": "assets/images/apple-redlove.jpg",
+    "tags": [
+      "Edible",
+      "Medicinal",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
+  },
+  {
+    "id": "firecracker-apple-tree",
+    "commonName": "Firecracker Red Flesh Apple Tree",
+    "latinName": "Malus domestica",
+    "genus": "Malus",
+    "category": "Fruit & Nut Trees",
+    "categoryName": "Fruit & Nut Trees",
+    "layer": "Canopy Fruit Tree",
+    "description": "This little apple is a real blast! You will love the intense, sweet-tart flavor of the Firecracker™ Red Flesh Apple Tree and its striking, deep red flesh. Resembling a miniature Red Delicious, Firecracker™ is a great apple for salads, desserts and juice. A naturally dwarf tree, Firecracker™ produces abundant crops and is hardy to minus 40° F. Enjoy these unique, red-fleshed apples in your yard or landscape. They bear abundant crops of fruit, which makes a tasty and attractive addition to salads, are good for baking and make delicious pink applesauce and juice. Of course, they are also great for fresh eating too. Fine ornamentals as well, they are prized for their beautiful pink flowers.",
+    "planting": "Site and Soil: Apples like 1/2 day to full sun and well-drained soil. Rootstock Description: M-7 is considered a semi-dwarf rootstock growing 12-16 ft. in height. M-7 is very hardy and adapted to most soils. Vigorous, drought tolerant, and well anchored, trees on M-7 should not require staking. Pollination Requirements: Apples need another variety nearby for pollination. Neighboring trees often offer sufficient pollen for good fruit set. Consider Mason Bees to help pollinate and increase fruit production.",
+    "size": "Semi-dwarf 12-16 ft.",
+    "hardiness": "Hardy to minus 40° F (USDA Zone 3)",
+    "blooms": "April (Showy pink blossoms)",
+    "harvest": "Mid-September",
+    "pests": "Firecracker™ can be affected by Apple Scab, particularly in wet PNW springs. Can be managed with sulfur and organic dormant sprays. Codling moth and aphids may occasionally affect foliage.",
+    "edibility": "Striking deep-red interior flesh with an intense, sweet-tart flavor. Outstanding for fresh eating, ruby salads, baking, cider pressing, and naturally pink applesauce.",
+    "medicinalUse": "Red-fleshed apples possess significantly higher concentrations of anthocyanins and quercetin polyphenols than white-fleshed varieties, supporting cardiovascular resilience, anti-inflammatory pathways, and immune health.",
+    "recipes": "Homestead Ruby Cider, naturally pink Firecracker applesauce, rustic red-flesh apple galette, and dehydrated red-ring apple crisps.",
+    "craftAndUtilitarian": "Dense apple hardwood is prized for smoking meats and fine woodworking; stunning ornamental spring display of vibrant pink blooms.",
+    "dyeColor": "Apple bark and pruned twigs produce warm antique golds, soft ambers, and tan dye baths.",
+    "permacultureRole": "Productive mid-story fruit producer; showy pink blossoms provide early nectar for native mason bees; companion to nitrogen-fixing comfrey guilds.",
+    "imageUrl": "assets/images/apple-firecracker.jpg",
     "tags": [
       "Edible",
       "Medicinal",
@@ -2520,36 +2549,6 @@ window.HOMESTEAD_PLANTS = [
     "isPlanted": true
   },
   {
-    "id": "nikitas-pride-almond-tree",
-    "commonName": "Nikita's Pride Almond Tree",
-    "latinName": "Prunus dulcis",
-    "genus": "Prunus",
-    "category": "Fruit & Nut Trees",
-    "categoryName": "Fruit & Nut Trees",
-    "layer": "Canopy / Sub-Canopy Tree",
-    "description": "This hardy, very late blooming variety, Nikita's Pride Almond Tree , bears good crops of large, high-quality, soft-shell nuts. Plant with Bounty and Oracle for cross pollination and large crops of these delicious and nutritious nuts.",
-    "planting": "ite and Soil: Almonds like full to 1/2 day sun and well-drained soil. Rootstock Description: Our Almonds are grafted on Lovell Peach rootstock. Lovell Peach is well adapted to different soil types. Pollination Requirements: Almonds are partially self-fertile. Plant with another variety for cross pollination and larger crops.",
-    "size": "10-12 ft. in height",
-    "hardiness": "Almonds are hardy to minus 20º F or below.",
-    "blooms": "March",
-    "harvest": "September",
-    "pests": "Almonds are not bothered by pests. They appear to be very resistant to damage by bacterial canker, a disease that can affect Plums, Cherries, Peaches and other stone fruits.",
-    "edibility": "Diverse stone fruits: sweet dessert cherries, tart pie cherries, rich European plums, sweet Japanese plums, juicy peaches, pluot hybrids, and edible sweet almonds.",
-    "medicinalUse": "Cherry juice is clinically recognized for reducing gout flare-ups and exercise inflammation due to anthocyanins. Prunes provide prebiotic fiber and sorbitol for digestive health.",
-    "recipes": "Homestead Italian Plum Tart, Spiced Cherry Chutney, roasted peach compote, and homemade amaretto liqueur from almond kernels.",
-    "craftAndUtilitarian": "Cherry and plum timbers have exquisite reddish-brown grain prized for fine furniture, spoons, and smokehouse chips for pork and poultry.",
-    "dyeColor": "Bark and roots produce rich salmon pinks, cinnamon browns, and copper dyes.",
-    "permacultureRole": "Massive early-spring nectar flow for honeybees; central sub-canopy fruit producers in the homestead orchard.",
-    "imageUrl": "assets/images/almond.jpg",
-    "tags": [
-      "Edible",
-      "Medicinal",
-      "Natural Dye",
-      "Homestead Planting"
-    ],
-    "isPlanted": true
-  },
-  {
     "id": "northstar-pie-cherry",
     "commonName": "Northstar Pie Cherry",
     "latinName": "Prunus cerasus",
@@ -3262,8 +3261,6 @@ window.HOMESTEAD_PLANTS = [
   }
 ];
 
-var HOMESTEAD_PLANTS = (typeof window !== 'undefined' ? window.HOMESTEAD_PLANTS : null);
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = HOMESTEAD_PLANTS;
+  module.exports = window.HOMESTEAD_PLANTS;
 }
-
