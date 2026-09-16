@@ -1,0 +1,467 @@
+window.ALBUM_DATA = {
+  "title": "The Merchant of Echoes",
+  "subtitle": "A Gothic Americana Concept Album on Epistemic Traps, Algorithmic Rage, and Shared Humanity",
+  "artist": "The Shady River Bard",
+  "release_year": "2026",
+  "album_number": "XX",
+  "track_count": 12,
+  "total_duration": "52:22",
+  "total_duration_seconds": 3142,
+  "genre": "Cello-Driven Gothic Americana / Dark Folk / Murder Folk",
+  "themes": [
+    "The Epistemic Trap & Confirmation Bias",
+    "The Algorithm of Rage (5x Anger Weighting)",
+    "The Gish Gallop & Brandolini's Law",
+    "Epistemic Closure & The Phantom Village",
+    "The Purity Spiral & In-Group Purges",
+    "Source Monitoring Error & Memory Drift",
+    "Affective Polarization & Family Rupture",
+    "The Nietzschean Abyss & Shared Humanity"
+  ],
+  "master_cover_art": "assets/images/album-art.webp",
+  "og_image": "assets/images/og-the-merchant-of-echoes.jpg",
+  "acts": [
+    {
+      "act_number": 1,
+      "title": "The Arrival & The Seduction",
+      "subtitle": "The Warmth of the Echo",
+      "description": "The charismatic merchant arrives at dusk with his mirrored wagon, peddling comforting self-flattery, establishing rage as the town's primary currency (5x engagement weighting), and unleashing an overwhelming Gish Gallop that drowns critical discernment.",
+      "track_range": "Tracks 1–3"
+    },
+    {
+      "act_number": 2,
+      "title": "The Sale & The Trap",
+      "subtitle": "The Gish Gallop & Epistemic Closure",
+      "description": "The community seals itself inside self-constructed phantom villages of isolation, enforces militant purity spirals against any dissenting neighbors, and succumbs to source-monitoring amnesia where fabricated outrage becomes unquestioned scripture.",
+      "track_range": "Tracks 4–6"
+    },
+    {
+      "act_number": 3,
+      "title": "The Cost & The Abyss",
+      "subtitle": "Radicalization & Rupture",
+      "description": "The intimate human tragedy unfolds across silent holiday dinner tables and broken family relationships, online rage metastasizes into marching street hostility, and individuals descend into the sleepless paranoia of the conspiratorial crank.",
+      "track_range": "Tracks 7–9"
+    },
+    {
+      "act_number": 4,
+      "title": "The Collapse",
+      "subtitle": "The Silence & Shared Humanity",
+      "description": "The fever dream breaks in the cold post-truth morning silence; peering into the Nietzschean abyss to discover that our demonized adversaries remain human, while the unrepentant merchant packs his wagon to seduce the next town.",
+      "track_range": "Tracks 10–12"
+    }
+  ],
+  "systemic_matrix": [
+    {
+      "id": "pillar-epistemic-trap",
+      "number": 1,
+      "name": "The Epistemic Trap & The Comfort of Lies",
+      "core_concept": "A closed belief system that redirects good-faith inquiry to preserve comfortable distortions and protect fragile identity.",
+      "mechanism": "Intellectual playfulness and confirmation bias create an echo chamber that shields the ego from cognitive dissonance and confusion.",
+      "modern_manifestation": "Algorithmic rabbit holes, conspiratorial forums, and hyper-personalized feeds that feel like unvarnished truth.",
+      "societal_consequence": "Loss of shared empirical ground; intellectual surrender disguised as enlightened skepticism."
+    },
+    {
+      "id": "pillar-algorithm-of-rage",
+      "number": 2,
+      "name": "The Algorithm of Rage & The Red Face Currency",
+      "core_concept": "The economic monetization of anger reactions, documented in the Facebook Papers where rage reactions were weighted 5x over likes.",
+      "mechanism": "Platform algorithms optimize for emotional heat and controversy because outrage drives prolonged screen time and ad impressions.",
+      "modern_manifestation": "Clickbait outrage farming, rage-baiting political commentators, and viral dunking culture.",
+      "societal_consequence": "Societal hostility is financially incentivized; calm deliberation, reconciliation, and nuance are economically punished."
+    },
+    {
+      "id": "pillar-gish-gallop",
+      "number": 3,
+      "name": "The Gish Gallop & Brandolini's Law",
+      "core_concept": "Drowning an audience in an overwhelming cascade of specious claims, half-truths, and manufactured controversies.",
+      "mechanism": "Brandolini's Law (Bullshit Asymmetry Principle): The energy needed to refute bullshit is an order of magnitude larger than needed to produce it.",
+      "modern_manifestation": "24/7 hyper-speed news cycles, podcast firehoses, and disinformation dumps engineered to induce cognitive paralysis.",
+      "societal_consequence": "Total mental exhaustion and cynical cognitive surrender: 'I believe it all because I have no time to check it all.'"
+    },
+    {
+      "id": "pillar-phantom-village",
+      "number": 4,
+      "name": "Epistemic Closure & The Phantom Village",
+      "core_concept": "The complete insulation of a community from any outside critique or contradictory empirical evidence.",
+      "mechanism": "All external evidence is pre-emptively classified as malicious deception produced by an evil out-group.",
+      "modern_manifestation": "Parallel media ecosystems, alternative search platforms, and closed encrypted messaging networks.",
+      "societal_consequence": "Profound loneliness and alienation; living in a solitary, ghostly community that exists only as an ideological reflection."
+    },
+    {
+      "id": "pillar-purity-spiral",
+      "number": 5,
+      "name": "The Purity Spiral & In-Group Witch Hunts",
+      "core_concept": "The relentless escalation of ideological orthodoxy where members prove loyalty by hunting internal heretics.",
+      "mechanism": "To avoid suspicion of apostasy or insufficient zeal, individuals signal commitment by purging slightly less extreme members.",
+      "modern_manifestation": "Cancel culture campaigns, partisan primary purges, doctrinal litmus tests, and fear of social excommunication.",
+      "societal_consequence": "An atmosphere of pervasive fear, paranoia, and conformity where lifelong comrades turn on one another overnight."
+    },
+    {
+      "id": "pillar-source-monitoring",
+      "number": 6,
+      "name": "Source Monitoring Error & Cognitive Dissonance",
+      "core_concept": "The psychological failure to remember where or how information was acquired, while retaining absolute emotional conviction.",
+      "mechanism": "A reader absorbs a sensational fabricated headline, forgets the unreliable tabloid origin, but later recalls it as verified fact.",
+      "modern_manifestation": "Viral screenshot hoaxes, memetic history, and collective amnesia regarding retracted stories.",
+      "societal_consequence": "Complete detachment of subjective certainty from objective reality: 'I can't remember who told me, but I know it's true.'"
+    },
+    {
+      "id": "pillar-the-abyss",
+      "number": 7,
+      "name": "The Nietzschean Abyss & Reclaiming Shared Humanity",
+      "core_concept": "He who fights monsters must see to it that he himself does not become a monster. When you stare into the abyss, the abyss stares back.",
+      "mechanism": "Recognizing that demonizing and dehumanizing the opponent inevitably destroys the soul and morality of the accuser: 'Monsters remain human.'",
+      "modern_manifestation": "Reconciliation across political chasms, deliberate bridge-building, and moving from affective polarization to radical interpersonal empathy.",
+      "societal_consequence": "The only sustainable path out of civil self-destruction: acknowledging our shared frailty and stepping back from retribution."
+    }
+  ],
+  "exhibits": [
+    {
+      "id": "mirror-wagon",
+      "title": "The Man with the Mirror Wagon",
+      "act": "Act I",
+      "image": "assets/images/exhibit-1-mirror-wagon.webp",
+      "image_jpg": "assets/images/exhibit-1-mirror-wagon.jpg",
+      "caption": "An ornate dark wooden wagon with mirrored panels arrives at dusk on a dusty frontier crossroads, its amber lanterns glowing as townspeople see their own fears and flattering illusions reflected back at them.",
+      "quote": "I don't sell what you are, son, I sell what you fear. Step right up... step right up."
+    },
+    {
+      "id": "currency-of-the-scream",
+      "title": "The Currency of the Scream",
+      "act": "Act I",
+      "image": "assets/images/exhibit-2-currency-of-the-scream.webp",
+      "image_jpg": "assets/images/exhibit-2-currency-of-the-scream.jpg",
+      "caption": "An antique brass cash register on a dark oak counter rings up the merchant's true profit: '5x RAGE'. Beside it sit heavy brass coins stamped with screaming faces, fueled by an open drawer of burning embers.",
+      "quote": "He said a smile costs a penny, but a scream is worth a pound. Anger weighs five times as much in this town."
+    },
+    {
+      "id": "avalanche-of-words",
+      "title": "The Avalanche of Words",
+      "act": "Act I / II",
+      "image": "assets/images/exhibit-3-avalanche-of-words.webp",
+      "image_jpg": "assets/images/exhibit-3-avalanche-of-words.jpg",
+      "caption": "A surreal vortex of vintage broadsheets, urgent headlines, and tangled telegraph wires descends from stormy clouds like an intellectual avalanche, suffocating critical reflection beneath rapid-fire claims.",
+      "quote": "The energy to fight it is a mountain to your stone. A thousand lies before breakfast, and you swallow them alone."
+    },
+    {
+      "id": "silent-dinner",
+      "title": "The Unfriending (The Silent Dinner)",
+      "act": "Act III",
+      "image": "assets/images/exhibit-4-silent-dinner.webp",
+      "image_jpg": "assets/images/exhibit-4-silent-dinner.jpg",
+      "caption": "A cold, deep shadow cuts across the center of an antique dining table, dividing a family into rigid, heartbroken silence over untouched plates and dying candlelight.",
+      "quote": "The plates are set, the glasses shine, but no one speaks across the line. A lifetime built on bread and care, now poison in the quiet air."
+    },
+    {
+      "id": "monsters-remain-human",
+      "title": "The Abyss Stares Back",
+      "act": "Act IV",
+      "image": "assets/images/exhibit-5-monsters-remain-human.webp",
+      "image_jpg": "assets/images/exhibit-5-monsters-remain-human.jpg",
+      "caption": "At sunrise on a high desolate ridge overlooking a mist-filled valley, two weary working men stand ten paces apart in quiet mutual grief, setting down their weapons and realizing that even demonized adversaries remain human.",
+      "quote": "It is easy to kill a monster, hard to kill a man. But the hardest truth of all... is that monsters remain human."
+    }
+  ],
+  "tracks": [
+    {
+      "id": "the-man-with-the-mirror-wagon",
+      "number": 1,
+      "title": "The Man with the Mirror Wagon",
+      "tagline": "The Seductive Arrival & The Traveling Reflection",
+      "act_number": 1,
+      "act_title": "The Arrival & The Seduction",
+      "key": "E minor",
+      "bpm": "110 BPM (6/8 Dark Waltz)",
+      "duration": "03:56",
+      "duration_seconds": 236,
+      "audio_url": "assets/audio/01-the-man-with-the-mirror-wagon.mp3",
+      "thematic_pillar": "The Epistemic Trap & The Comfort of Lies",
+      "summary": "The album opens with the arrival of a charismatic salesman who peddles comforting illusions instead of cures. This narrative explores the seductive nature of epistemic traps, where individuals willingly lock themselves away from dissenting voices in exchange for the validation of an echo chamber.",
+      "narrative_role": "The narrative introduces a charismatic traveling salesman who arrives in town offering validation rather than traditional elixirs. The story explores how a community willingly steps into a comforting illusion, trading the chaotic reality of the public square for an insulated echo chamber. The protagonist paints a picture of a wagon adorned with mirrors that only reflect what the people want to see, masking a deeper, more sinister trap.    #TheMerchantOfEchoes #TheShadyRiverBard #FilterBubble #DarkFolk @TheShadyRiverBard",
+      "image_prompt": "16:9 cinematic, photorealistic shot of an ornate wooden covered wagon from the Old West parked on the edge of a dusty, shadowed town square at twilight. The wagon's sides are lined with large, polished mirrors reflecting a distorted, slightly sinister version of the town. A warm, eerie lantern light glows from the driver's seat.",
+      "tags": [
+        "Dark Folk",
+        "Storytelling",
+        "Filter Bubble",
+        "Misinformation",
+        "Gothic Americana"
+      ],
+      "lyrics": "Step right up and gather round\nThe finest wagon in this town\nI do not sell the snake's dark oil\nTo cure your aching or your toil\nI heard you crying in the night\nAbout the world and what is right\nYour heavy head is spinning fast\nCome look into my looking glass\n\nOh I don't sell what you are, son\nI sell what you fear\nStep right up and see the wolf in the mirror\nClose the windows, lock the door\nYou don't need to hear the outside anymore\nI sell the truth that makes you strong\nYou are right and they are wrong\n\nThe town square is a noisy place\nA crowded, dirty, shouting space\nThey do not see your brilliant mind\nThey leave your brilliant thoughts behind\nBut in my wagon, step inside\nThere is nothing you must hide\nWe just ask questions in the dark\nAnd fan the fire of the spark\n\nOh I don't sell what you are, son\nI sell what you fear\nStep right up and see the wolf in the mirror\nClose the windows, lock the door\nYou don't need to hear the outside anymore\nI sell the truth that makes you strong\nYou are right and they are wrong\n\nA momentary stay against the noise\nA quiet club for the clever boys\nJust entertain the thought with me\nHow simple all of this could be\n\nOh I don't sell what you are, son\nI sell what you fear\nStep right up and see the wolf in the mirror\nClose the windows, lock the door\nYou don't need to hear the outside anymore\nI sell the truth that makes you strong\nYou are right and they are wrong\n\nStep right up."
+    },
+    {
+      "id": "the-currency-of-the-scream",
+      "number": 2,
+      "title": "The Currency of the Scream",
+      "tagline": "Algorithmic Outrage & The 5x Rage Multiplier",
+      "act_number": 1,
+      "act_title": "The Arrival & The Seduction",
+      "key": "A minor",
+      "bpm": "78 BPM (Heavy Stomp-and-Clap Blues)",
+      "duration": "04:32",
+      "duration_seconds": 272,
+      "audio_url": "assets/audio/02-the-currency-of-the-scream.mp3",
+      "thematic_pillar": "The Algorithm of Rage & The Red Face Currency",
+      "summary": "This story unveils the dark economics of algorithmic manipulation. It reveals how natural worries are harvested and sold back as righteous fury, demonstrating that the machine prioritizes outrage over connection to keep its audience engaged and exhausted.",
+      "narrative_role": "The story exposes the exhausting, mechanical heart of algorithmic manipulation. The narrator reveals how natural frustrations are harvested, amplified, and sold back as righteous fury. This narrative details the realization that the mirror doesn't reflect a smile, but demands anger as its primary currency, trapping the community in a cycle where they must constantly shout to fuel the machine.    #TheMerchantOfEchoes #TheShadyRiverBard #AlgorithmicRage #IndustrialBlues @TheShadyRiverBard",
+      "image_prompt": "16:9 dimly lit, photorealistic close-up of an antique brass cash register sitting on a rough wooden barrel. The open cash drawer overflows with tangled, jagged pieces of rusted iron wire and broken glass instead of money. A faint, glowing red light emanates from deep inside the drawer, casting long, sharp shadows in a gritty, industrial atmosphere.",
+      "tags": [
+        "Industrial Blues",
+        "Algorithmic Rage",
+        "Social Media",
+        "Dehumanization",
+        "Americana"
+      ],
+      "lyrics": "The velvet curtain falls away\nThe mirror turns a shade of gray\nIt doesn't show my smiling face\nIt shows a dark and bitter place\nIt shows the shadows at the door\nIt tells me I should want for more\nA little spark becomes a flame\nAnd then the mirror whispers my name\n\nYou gotta scream to keep the engine turning\nYou gotta bleed to keep the fire burning\nThere is no quiet in the wire\nThe merchant operates a choir\nHe doesn't want your hopeful dreams\nHe only deals in the currency of screams\n\nI gave him a worry about my town\nHe ground it up and he broke it down\nHe fed it to the churning wheel\nHe told me exactly how to feel\nHe pointed a finger at the street\nAnd put the anger in my feet\nI do not know who I am fighting for\nBut I am marching to the war\n\nYou gotta scream to keep the engine turning\nYou gotta bleed to keep the fire burning\nThere is no quiet in the wire\nThe merchant operates a choir\nHe doesn't want your hopeful dreams\nHe only deals in the currency of screams\n\nEvery click is a little bite.\nEvery comment is a bitter fight.\nWe are the fuel.\nWe are the coal.\nWe are the hollowed-out soul.\n\nYou gotta scream to keep the engine turning\nYou gotta bleed to keep the fire burning\nThere is no quiet in the wire\nThe merchant operates a choir\nHe doesn't want your hopeful dreams\nHe only deals in the currency of screams\n\nPay the man."
+    },
+    {
+      "id": "the-avalanche-of-words",
+      "number": 3,
+      "title": "The Avalanche of Words",
+      "tagline": "The Gish Gallop, Brandolini's Law & Cognitive Overload",
+      "act_number": 1,
+      "act_title": "The Arrival & The Seduction",
+      "key": "G minor",
+      "bpm": "140 BPM (Frantic Chugging Cello)",
+      "duration": "03:55",
+      "duration_seconds": 235,
+      "audio_url": "assets/audio/03-the-avalanche-of-words.mp3",
+      "thematic_pillar": "The Gish Gallop & Brandolini's Law",
+      "summary": "The narrative captures the disorienting assault of the \"Gish Gallop,\" a technique that overwhelms the listener with a rapid-fire flood of falsehoods. It details the psychological breaking point where a person simply surrenders to the noise rather than attempting to fight the current.",
+      "narrative_role": "The narrative captures the overwhelming psychological breaking point of being flooded with conspiracies and contradictory information. It describes a frantic flood where the protagonist drowns under an avalanche of sound, unable to discern truth from fiction. The story chronicles the desperate surrender to a chaotic current of half-truths, realizing that building a levee of facts is impossible against such a massive storm.    #TheMerchantOfEchoes #TheShadyRiverBard #GishGallop #PowerFolk @TheShadyRiverBard",
+      "image_prompt": "16:9 surreal, terrifying perspective looking straight up from underwater at the surface. An absolute avalanche of falling objects—crumpled newspapers, glowing smartphones, and jagged pieces of mirror—crashes violently into the water, churning it into a dark, suffocating mess. Flashes of cold, unnatural blue light cut through the murk.",
+      "tags": [
+        "Power Folk",
+        "Gish Gallop",
+        "Propaganda",
+        "Information Overload",
+        "Acoustic"
+      ],
+      "lyrics": "A drop of rain is easy to catch\nA single lie you can easily match\nBut the merchant opened the river wide\nAnd the water is coming from every side\nThere is a shadow in the water, there is poison in the well\nThere are fifty different stories that the criers try to tell\nThey say the moon is made of paper, they say the sun is getting cold\nI cannot hold the water, I am getting far too old\n\nIt is the gallop of the ghosts, it is the avalanche of sound\nYou cannot fight the flood when you are pinned unto the ground\nJust close your heavy eyes and let the current pull you down\nWhen a thousand talking tongues are spinning in your head\nYou will believe the sky is green and the river runs red\n\nI tried to build a levee with the facts that I could find\nBut the water washed right over my finite mind\nHe told me that the mayor was a devil in disguise\nHe told me that the morning was a trick upon my eyes\nI cannot check the ledger, I cannot read the page\nI am drowning in the middle of this golden, modern age\n\nThey are coming for your money, they are coming for your land.\nThey are hiding in the shadows, they are forcing your hand.\nThe sky is falling down, the water is rising up.\nThere is venom in the bottle, there is poison in the cup.\nThe left is on the right and the right is on the run.\nThere is nowhere left to hide beneath the burning of the sun.\nSTOP!\n\nIt is the gallop of the ghosts, it is the avalanche of sound\nYou cannot fight the flood when you are pinned unto the ground\nJust close your heavy eyes and let the current pull you down\nWhen a thousand talking tongues are spinning in your head\nYou will believe the sky is green and the river runs red\n\nI believe you.\nI believe it all."
+    },
+    {
+      "id": "the-phantom-village",
+      "number": 4,
+      "title": "The Phantom Village",
+      "tagline": "Epistemic Closure, Filter Bubbles & Digital Loneliness",
+      "act_number": 2,
+      "act_title": "The Sale & The Trap",
+      "key": "C major / A minor",
+      "bpm": "64 BPM (Mournful Americana Dirge)",
+      "duration": "03:54",
+      "duration_seconds": 234,
+      "audio_url": "assets/audio/04-the-phantom-village.mp3",
+      "thematic_pillar": "Epistemic Closure & The Phantom Village",
+      "summary": "A chilling exploration of the absolute isolation found within a closed belief system. The protagonist realizes their flawless, unified community is merely a hollow hall of mirrors, emphasizing the profound loneliness that accompanies the loss of genuine, challenging human interaction.",
+      "narrative_role": "The story transitions into the chilling, artificial comfort of absolute isolation. The narrator believes they have found a perfect, peaceful community where everyone agrees, only to realize the town is entirely devoid of genuine life. It is a haunting reflection on the profound loneliness of an environment made entirely of mirrors and shadows, where one ultimately speaks only to the wall.    #TheMerchantOfEchoes #TheShadyRiverBard #EchoChamber #AmericanaBallad @TheShadyRiverBard",
+      "image_prompt": "16:9 haunting, atmospheric shot of a deserted, dusty Main Street in an old Western town at midnight. The buildings are constructed entirely of massive, slightly tarnished mirrors reflecting the empty street back upon itself endlessly. Cold, pale moonlight illuminates the desolate, profoundly empty scene.",
+      "tags": [
+        "Americana Ballad",
+        "Epistemic Closure",
+        "Isolation",
+        "Loneliness",
+        "Acoustic"
+      ],
+      "lyrics": "The water receded and left me behind\nIn a quiet new valley that perfectly aligned\nThe people walk softly and nod when I speak\nThey never push back and they never critique\nThe houses are painted the color I chose\nThere is never a weed in the bed of the rose\nIt is perfectly peaceful and perfectly still\nAt the top of the perfectly isolating hill\n\nWelcome to the phantom village\nWhere the ghosts all know your name\nWhere every single face you meet\nLooks exactly the same\nWe traded in the messy street\nFor a flawless, empty hall\nAnd the merchant smiles to see us\nTalking to the wall\n\nI went to the tavern to purchase a round\nBut my coin went right through and it fell to the ground\nI reached for a hand but the fingers were cold\nA synthetic reflection of something quite old\nWe are winning the argument day after day\nBut the flesh and the bone have all faded away\nI am the mayor, the judge, and the priest\nAt this beautiful, hollow, and terrible feast\n\nWelcome to the phantom village\nWhere the ghosts all know your name\nWhere every single face you meet\nLooks exactly the same\nWe traded in the messy street\nFor a flawless, empty hall\nAnd the merchant smiles to see us\nTalking to the wall\n\nLook in the glass.\nThere is nobody there.\nJust a finite loop.\nJust the empty air.\n\nTalking to the wall.\nJust talking to the wall."
+    },
+    {
+      "id": "the-purity-test",
+      "number": 5,
+      "title": "The Purity Test",
+      "tagline": "The Purity Spiral, Tribal Paranoia & In-Group Purges",
+      "act_number": 2,
+      "act_title": "The Sale & The Trap",
+      "key": "B minor",
+      "bpm": "100 BPM (Driving Percussive Folk)",
+      "duration": "04:09",
+      "duration_seconds": 249,
+      "audio_url": "assets/audio/05-the-purity-test.mp3",
+      "thematic_pillar": "The Purity Spiral & In-Group Witch Hunts",
+      "summary": "This narrative delves into the paranoia of the \"purity spiral\". Cut off from the outside world, the isolated group turns its hostility inward, forcing members to constantly prove their absolute loyalty by hunting for traitors and extinguishing any remaining nuance.",
+      "narrative_role": "The narrative delves into the deep paranoia that breeds when a community isolates itself from the outside world. It explores how followers within an enclosed group begin hunting for traitors among their own ranks, demanding absolute loyalty. The story captures the terrifying transformation of a sanctuary into a paranoid witch hunt, where any hint of nuance or doubt is treated as a lethal threat.    #TheMerchantOfEchoes #TheShadyRiverBard #PuritySpiral #DarkFolk @TheShadyRiverBard",
+      "image_prompt": "16:9 close-up, highly textured photorealistic image of rough, dirt-stained hands holding a jagged, broken piece of mirror against a heavy, ancient stone grinding wheel. Bright, aggressive orange and yellow sparks fly violently from the friction point into the darkness. The reflection in the mirror shard shows a single, unblinking, paranoid human eye.",
+      "tags": [
+        "Dark Folk",
+        "Paranoia",
+        "Purity Spiral",
+        "Tribalism",
+        "Witch Hunt"
+      ],
+      "lyrics": "We locked the gates to keep them out\nThe ones who trade in fear and doubt\nBut looking round this holy room\nI see a shadow in the gloom\nThe merchant says the water is clean\nBut I know what the ripples mean\nSomebody here is wearing a mask\nIt is time to take the flock to task\n\nWho is pure and who is finite?\nWho is hiding in the daylight?\nSharpen the blade and build the fire\nWe have to purge the merchant's choir\nIf you are not an absolute friend\nYou are the enemy in the end\n\nI saw the neighbor hesitate\nBefore he swallowed down the bait\nI heard him ask a question why\nBeneath the artificial sky\nHe did not scream it loud enough\nHe did not make the edges rough\nIf he can think a different way\nHe cannot be allowed to stay\n\nWho is pure and who is finite?\nWho is hiding in the daylight?\nSharpen the blade and build the fire\nWe have to purge the merchant's choir\nIf you are not an absolute friend\nYou are the enemy in the end\n\nLook to your left.\nLook to your right.\nWho will survive the coming night?\nThe mirror demands a sacrifice.\nThe mirror demands a heavy price.\n\nWho is pure and who is finite?\nWho is hiding in the daylight?\nSharpen the blade and build the fire\nWe have to purge the merchant's choir\nIf you are not an absolute friend\nYou are the enemy in the end\n\nWho is next."
+    },
+    {
+      "id": "source-monitoring-error",
+      "number": 6,
+      "title": "Source Monitoring Error",
+      "tagline": "Manufactured Memory, Rumor Cascades & Conviction Without Origin",
+      "act_number": 2,
+      "act_title": "The Sale & The Trap",
+      "key": "D minor",
+      "bpm": "90 BPM (Tense Dissonant Acoustic)",
+      "duration": "04:16",
+      "duration_seconds": 256,
+      "audio_url": "assets/audio/06-source-monitoring-error.mp3",
+      "thematic_pillar": "Source Monitoring Error & Manufactured Memory",
+      "summary": "A tense look at the cognitive dissonance caused by consuming endless manufactured outrage. The story follows a protagonist who retains a deep, unquestionable anger but has entirely forgotten the source or truth of the claims that ignited it, leaving only a lingering poison.",
+      "narrative_role": "The story explores the disorienting phenomenon of remembering a powerful feeling of outrage while completely forgetting its origin. The protagonist grapples with a heavy, righteous fury built on forgotten headlines and erased details, realizing their anger has become an unquestionable gut feeling. It captures the dizzying reality of defending a truth that has lost its foundation, leaving only emotional residue behind.    #TheMerchantOfEchoes #TheShadyRiverBard #CognitiveDissonance #DissonantFolk @TheShadyRiverBard",
+      "image_prompt": "16:9 surreal, high-contrast image of a vintage newspaper clipping held up by a trembling hand. The headline and text are completely blurred and smeared, as if washed away by water. The empty white space of the paper glows with a faint, toxic, neon orange hue that reflects onto the fingers, set against a pitch-black background.",
+      "tags": [
+        "Dissonant Folk",
+        "Cognitive Dissonance",
+        "Memory",
+        "Rage",
+        "Gothic Americana"
+      ],
+      "lyrics": "I saw the headline flashing in the middle of the night\nIt told me who to blame and it told me who to fight\nI scrolled a little further and the letters washed away\nBut the heavy, sinking feeling in my stomach chose to stay\nI tried to tell the neighbor what the enemy had planned\nBut the details slipped like water falling through an open hand\n\nI do not know the author and I cannot find the page\nBut I kept the righteous fury and I memorized the rage\nThe merchant sold a story that I swallowed like a pill\nI forgot the dirty water but the poison lingers still\nIf I cannot name the liar, how can I deny the lie?\nIt is just a heavy feeling underneath a heavy sky\n\nDo not ask me for the paper, do not ask me for the proof\nI am standing on the foundation of a very modern truth\nI know it in my marrow and I feel it in my chest\nBecause the algorithm put it to the ultimate test\nIt was printed on the screen so it was written in the stone\nNow the ghost of the idea is living inside my bone\n\nI do not know the author and I cannot find the page\nBut I kept the righteous fury and I memorized the rage\nThe merchant sold a story that I swallowed like a pill\nI forgot the dirty water but the poison lingers still\nIf I cannot name the liar, how can I deny the lie?\nIt is just a heavy feeling underneath a heavy sky\n\nWhere did I read that?\nWho told me that was true?\nWas it the merchant in the wagon?\nWas it me?\nWas it you?\n\nI just know that I am angry.\nI just know that I am right."
+    },
+    {
+      "id": "the-unfriending-the-silent-dinner",
+      "number": 7,
+      "title": "The Unfriending (The Silent Dinner)",
+      "tagline": "Affective Polarization, Fractured Families & The Severed Table",
+      "act_number": 3,
+      "act_title": "The Cost & The Abyss",
+      "key": "E minor",
+      "bpm": "58 BPM (Intimate Weeping Cello Ballad)",
+      "duration": "04:29",
+      "duration_seconds": 269,
+      "audio_url": "assets/audio/07-the-unfriending-the-silent-dinner.mp3",
+      "thematic_pillar": "Affective Polarization & The Silent Dinner",
+      "summary": "The narrative slows to examine the intimate, tragic casualties of ideological radicalization. Centered on a quiet family dinner, it mourns the severed bonds and empty chairs resulting from trading real flesh-and-blood relationships for the artificial glow of a validation mirror.",
+      "narrative_role": "The narrative centers on a devastatingly quiet family dinner, symbolizing the deep personal costs of ideological division. It illustrates the painful severance of relationships as the narrator realizes they have traded their loved ones for the glow of a mirror. The story reflects the tragic aftermath of winning an online argument at the expense of genuine human connection, leaving only empty chairs at the table.    #TheMerchantOfEchoes #TheShadyRiverBard #Polarization #GothicAmericana @TheShadyRiverBard",
+      "image_prompt": "16:9 dimly lit, top-down photorealistic view of an antique wooden dining table set for a meal. At one setting, sitting directly in the center of a perfectly clean plate, is a smashed, jagged piece of a mirror. Cold, lonely lighting casts long shadows across the wood grain.",
+      "tags": [
+        "Dark Folk Ballad",
+        "Polarization",
+        "Family",
+        "Tragedy",
+        "Cello"
+      ],
+      "lyrics": "The plates are set, the glasses shine\nWe pour the water and the wine\nBut looking down the wooden board\nI see a broken, severed cord\nThe faces that I used to know\nAre buried in the winter snow\nWe pass the bread but keep our peace\nAnd pray the ticking clock will cease\n\nOh, the silent dinner, the empty chair\nThere is a ghost in the heavy air\nWe traded our blood for a mirror's glow\nAnd cut the ties to the folks we know\nThe merchant promised a perfect friend\nBut we are dining alone in the bitter end\n\nI carved a line across the sand\nAnd let go of my brother's hand\nI thought I had the higher ground\nBut now I hate the quiet sound\nThe telegraph is full of rage\nWe locked ourselves inside the cage\nThe argument was finally won\nBut look at what the victory's done\n\nOh, the silent dinner, the empty chair\nThere is a ghost in the heavy air\nWe traded our blood for a mirror's glow\nAnd cut the ties to the folks we know\nThe merchant promised a perfect friend\nBut we are dining alone in the bitter end\n\nNo one is shouting.\nNo one is fighting.\nWe are just fading away.\nThe echo is the only voice left in the room.\n\nOh, the silent dinner, the empty chair\nThere is a ghost in the heavy air\nWe traded our blood for a mirror's glow\nAnd cut the ties to the folks we know\nThe merchant promised a perfect friend\nBut we are dining alone in the bitter end\n\nPass the salt.\nLook away."
+    },
+    {
+      "id": "red-face-rising",
+      "number": 8,
+      "title": "Red Face Rising",
+      "tagline": "The Marching Boots: When Online Rage Turns to Street Violence",
+      "act_number": 3,
+      "act_title": "The Cost & The Abyss",
+      "key": "F# minor",
+      "bpm": "80 BPM (Militant Industrial Folk)",
+      "duration": "04:18",
+      "duration_seconds": 258,
+      "audio_url": "assets/audio/08-red-face-rising.mp3",
+      "thematic_pillar": "The Algorithm of Rage & The Red Face Currency",
+      "summary": "The story captures the horrifying transition from online outrage to militant, real-world hostility. Driven by a marching beat, it portrays a radicalized community eagerly dehumanizing their neighbors into monsters, fully consumed by the hate algorithm's demand for conflict.",
+      "narrative_role": "The story portrays the tragic climax of radicalization, where the paranoia of the group boils over into a militant march. It reflects a grim reality where neighbors are transformed into unrecognizable monsters through the lens of twisted information. The narrator voices the destructive mobilization of a community that has traded its humanity for righteous fury, staring directly into the abyss.    #TheMerchantOfEchoes #TheShadyRiverBard #Radicalization #HeavyDarkFolk @TheShadyRiverBard",
+      "image_prompt": "16:9 stark, top-down view of heavily worn leather marching boots stepping aggressively onto a pristine, white suburban sidewalk. Reflected perfectly in the polished toe of the boots is a distorted, towering inferno of bright red and orange flames. Dark, cinematic lighting contrasts heavily with the fiery reflection to create a violent, ominous tone.",
+      "tags": [
+        "Heavy Folk",
+        "Radicalization",
+        "Civil War",
+        "Aggression",
+        "Industrial"
+      ],
+      "lyrics": "The machine eats love and spits out fire\nWe are marching now in the merchant's choir\nThe filter bubble is made of iron\nWe woke the wolf and we starved the lion\nThe neighbor's yard is a battlefield\nWe raise the banner and bang the shield\nThe more you burn, the higher you climb\nWe measure our worth in the end of time\n\nRed face rising in the dark\nA burning forest from a single spark\nThe algorithm drums, the algorithm hums\nLook at what the quiet town becomes\nWe stare into the deep abyss\nAnd trade our brothers for a venomous kiss\n\nThey are monsters now, they are beasts of prey\nThat is what the mirrors always say\nA vile shape of the men we knew\nA twisted version of the false and true\nThe telegraph wire is a hanging rope\nWe killed the nuance and we buried the hope\nIf you are not with us in the final stand\nYou are a stranger in a foreign land\n\nRed face rising in the dark\nA burning forest from a single spark\nThe algorithm drums, the algorithm hums\nLook at what the quiet town becomes\nWe stare into the deep abyss\nAnd trade our brothers for a venomous kiss\n\nLeft. Right. Left. Right.\nMarching out into the night.\nWho is the enemy?\nWho is the friend?\nWe will fight them all in the bitter end.\n\nRed face rising in the dark\nA burning forest from a single spark\nThe algorithm drums, the algorithm hums\nLook at what the quiet town becomes\nWe stare into the deep abyss\nAnd trade our brothers for a venomous kiss\n\nThe algorithm drums.\nThe algorithm hums.\nMarch."
+    },
+    {
+      "id": "the-cranks-lullaby",
+      "number": 9,
+      "title": "The Crank's Lullaby",
+      "tagline": "Naive Realism, Insomnia & The Delusion of Being the Only One Awake",
+      "act_number": 3,
+      "act_title": "The Cost & The Abyss",
+      "key": "C# minor",
+      "bpm": "72 BPM (Eerie Fingerpicked Acoustic)",
+      "duration": "05:26",
+      "duration_seconds": 326,
+      "audio_url": "assets/audio/09-the-cranks-lullaby.mp3",
+      "thematic_pillar": "The Epistemic Trap & The Comfort of Lies",
+      "summary": "A twisted look inside a mind fortified by naive realism and paranoia. The narrative voices the eerie comfort of absolute delusion, where the protagonist views their isolating trap not as a prison, but as a necessary fortress against a world they believe is entirely deceived.",
+      "narrative_role": "The narrative steps into the chilling internal monologue of a mind completely consumed by paranoia. It functions as a twisted lullaby, where the protagonist finds peace and safety in their own delusions, convinced they are the only one truly awake. The story captures the eerie comfort of absolute certainty, as the narrator defends the very trap that has isolated them from the rest of the world.    #TheMerchantOfEchoes #TheShadyRiverBard #NaiveRealism #EerieAcoustic @TheShadyRiverBard",
+      "image_prompt": "16:9 dimly lit shot looking through a heavily smudged and cracked antique window pane from inside a dark room out into the night. A heavy, ornate iron padlock hangs from the top of the window frame. A faint, sickly yellow glow illuminates the dust motes, revealing a single, paranoid human eye peering through the clearest part of the glass.",
+      "tags": [
+        "Eerie Acoustic",
+        "Paranoia",
+        "Naive Realism",
+        "Delusion",
+        "Atmospheric"
+      ],
+      "lyrics": "Hush now, keep the lantern low\nThere are things outside you do not know\nI see the shadows on the glass\nI hear them creeping through the grass\nThey say the fever broke my mind\nThey say I left the truth behind\nBut I am the only one awake\nWatching the gentle ripples break\n\nThey are coming to take what is yours in the night\nThey are hiding the sun and erasing the light\nI built us a fortress, I built us a snare\nIf I want to stay in it, why do you care?\nGo back to your sleep in the belly of lies\nI am watching the world with my open eyes\n\nThe merchant left a heavy key\nFor the lock that only I can see\nThe rest of the town is blind and weak\nThey do not hear the floorboards creak\nThey do not know the subtle signs\nThey cannot read between the lines\nBut I have the map and I have the chart\nI know the darkness in their heart\n\nThey are coming to take what is yours in the night\nThey are hiding the sun and erasing the light\nI built us a fortress, I built us a snare\nIf I want to stay in it, why do you care?\nGo back to your sleep in the belly of lies\nI am watching the world with my open eyes\n\nIt is not a trap if it keeps you safe.\nIt is not a lie if it feels right.\nThey are the ones who are sick.\nI am the cure.\n\nThey are coming to take what is yours in the night\nThey are hiding the sun and erasing the light\nI built us a fortress, I built us a snare\nIf I want to stay in it, why do you care?\nGo back to your sleep in the belly of lies\nI am watching the world with my open eyes\n\nWhy do you care?\nI am the only one awake."
+    },
+    {
+      "id": "when-the-echo-stops",
+      "number": 10,
+      "title": "When the Echo Stops",
+      "tagline": "The Post-Truth Hangover & The Haunting Morning Silence",
+      "act_number": 4,
+      "act_title": "The Collapse",
+      "key": "E major",
+      "bpm": "68 BPM (Stripped-Down Solitary Acoustic)",
+      "duration": "03:57",
+      "duration_seconds": 237,
+      "audio_url": "assets/audio/10-when-the-echo-stops.mp3",
+      "thematic_pillar": "The Epistemic Trap & The Comfort of Lies",
+      "summary": "The sobering morning after the fever dream breaks. The narrative finds the protagonist alone in the quiet devastation of their community, coming to the heavy realization that the comforting lies they bought have burned their town to the ground.",
+      "narrative_role": "The story chronicles the sobering morning after the fever dream, when the noise finally ceases and the illusion breaks. The protagonist wakes to find the salesman gone, leaving them standing in the smoldering wreckage of their own community. The narrative is a heavy, exhausted realization of the devastation caused by fighting ghosts and burning bridges for a lie.    #TheMerchantOfEchoes #TheShadyRiverBard #PostTruth #AcousticBlues @TheShadyRiverBard",
+      "image_prompt": "16:9 stark wide shot of a dusty, 19th-century town square at the very first light of dawn. The square is completely empty, save for deep, muddy wagon tracks leading away out of frame. The ground is littered with thousands of tiny, shattered shards of mirror glass reflecting the pale, cold morning sky, with a few remaining embers smoldering in the background.",
+      "tags": [
+        "Acoustic Blues",
+        "Post Truth",
+        "Regret",
+        "Awakening",
+        "Stripped Down"
+      ],
+      "lyrics": "The smoke is clearing from the street\nThe ash is falling at my feet\nThe wagon tracks are in the mud\nI wipe the soot and wash the blood\nThe iron cage is broken down\nJust twisted metal on the ground\nThe mirror shattered in the night\nAnd now I have to face the light\n\nThe Merchant's gone, the wagon's rolled\nAnd we are left here with the lies we sold\nIn the post-truth dawn, the shadows bend\nWe fought the ghost and lost the friend\nThe fever broke, the echo stops\nAnd the final, heavy penny drops\n\nI thought I held the righteous sword\nI thought I struck the perfect chord\nBut looking at the quiet square\nThere is nothing but the ruin there\nThe algorithmic drum is dead\nJust ringing silence in my head\nI cannot look my brother in the eye\nBeneath this naked, empty sky\n\nThe Merchant's gone, the wagon's rolled\nAnd we are left here with the lies we sold\nIn the post-truth dawn, the shadows bend\nWe fought the ghost and lost the friend\nThe fever broke, the echo stops\nAnd the final, heavy penny drops\n\nIt was all a trick of the light.\nA shadow play in the dead of night.\nWe burned the house to catch a mouse.\nAnd now we freeze.\n\nThe Merchant's gone, the wagon's rolled\nAnd we are left here with the lies we sold\nIn the post-truth dawn, the shadows bend\nWe fought the ghost and lost the friend\nThe fever broke, the echo stops\nAnd the final, heavy penny drops\n\nThe echo stops.\nThe silence starts."
+    },
+    {
+      "id": "the-abyss-stares-back",
+      "number": 11,
+      "title": "The Abyss Stares Back (Monsters Remain Human)",
+      "tagline": "Nietzsche's Mirror, Radical Empathy & The Ridge of Truce",
+      "act_number": 4,
+      "act_title": "The Collapse",
+      "key": "A major",
+      "bpm": "70 BPM (Cathedral Cello & Soulful Americana)",
+      "duration": "05:26",
+      "duration_seconds": 326,
+      "audio_url": "assets/audio/11-the-abyss-stares-back.mp3",
+      "thematic_pillar": "The Nietzschean Abyss & Reclaiming Shared Humanity",
+      "summary": "A grounded, cathartic story of stoic realization and empathy. Stepping down from a self-righteous high ground, the narrator examines the \"monster\" they fought, only to recognize a fellow human being bearing the same burdens and digging in the same dark dirt.",
+      "narrative_role": "The narrative offers a grounded, stoic realization of shared humanity in the aftermath of conflict. The narrator steps down from the high ground to examine the enemy they had demonized, only to find a fellow human bearing the same callouses and heavy load. The story is a cathartic acceptance that the terrifying beasts drawn by the mirror were just neighbors working the same dark dirt.    #TheMerchantOfEchoes #TheShadyRiverBard #Empathy #EmotionalFolk @TheShadyRiverBard",
+      "image_prompt": "Scene 1: 16:9. A weary Black woman in soot-stained work clothes kneels in a muddy, ash-covered field, examining a worn, discarded work glove. Scene 2: 16:9. Two Australian Shepherds, a blue merle and a black tri-color, stand watchfully nearby as a gentle, warm golden-hour light begins to break through the heavy grey clouds, illuminating the shared earth.",
+      "tags": [
+        "Emotional Folk",
+        "Empathy",
+        "Shared Humanity",
+        "Redemption",
+        "Indie Folk"
+      ],
+      "lyrics": "I watched the valley from the ridge above\nI traded in my mercy and my love\nI called the fire down upon the plain\nAnd cheered when I saw nothing but the rain\nBut walking through the ashes and the wood\nI'm standing where the painted devil stood\nI wipe the heavy soot from off his face\nAnd find another sinner in his place\n\nWe are digging in the same dark dirt\nWe are carrying the same old hurt\nI wanted him to be the beast I drew\nBut his blood is running just as red and true\nThe Merchant sold a mirror made of night\nBut monsters remain human in the light\n\nI forged a heavy armor out of pride\nAnd built a wall to keep the ghost outside\nI told myself the world was black and white\nTo justify the poison in the bite\nBut looking at the callouses and scars\nWe are sleeping underneath the same cold stars\nHe's got a family and a heavy load\nJust trying not to stumble on the road\n\nWe are digging in the same dark dirt\nWe are carrying the same old hurt\nI wanted him to be the beast I drew\nBut his blood is running just as red and true\nThe Merchant sold a mirror made of night\nBut monsters remain human in the light\n\nDrop the stone!\nLet the gavel fall!\nThe echo was a liar to us all!\nThe enemy is breathing in the dust!\nA fragile piece of marrow and of trust!\n\nOh, we are digging in the same dark dirt!\nWe are carrying the same old hurt!\nI wanted him to be the beast I drew!\nBut his blood is running just as red and true!\nThe Merchant sold a mirror made of night!\nBut monsters remain human in the light!\n\nThe same dark dirt.\nJust as red and true.\nThe morning light."
+    },
+    {
+      "id": "merchants-reprise-he-moves-on",
+      "number": 12,
+      "title": "Merchant's Reprise (He Moves On)",
+      "tagline": "The Cyclical Tragedy & The Wagon Wheels Rolling to the Next Town",
+      "act_number": 4,
+      "act_title": "The Collapse",
+      "key": "E minor",
+      "bpm": "96 BPM (Slow Cynical Dark Waltz)",
+      "duration": "03:59",
+      "duration_seconds": 239,
+      "audio_url": "assets/audio/12-merchants-reprise-he-moves-on.mp3",
+      "thematic_pillar": "The Epistemic Trap & The Comfort of Lies",
+      "summary": "A grim, unresolved epilogue highlighting the cyclical nature of exploitation. The story watches the peddler of echoes pack his wagon and roll away to the next susceptible town, proving that the market for a comforting, pretty lie never truly disappears.",
+      "narrative_role": "The story provides a grim and unresolved bookend, revealing that the purveyor of lies hasn't been defeated, merely relocated. As the ashes cool on the cobblestones, the protagonist watches the wagon roll away toward the next unsuspecting village. The narrative serves as a haunting reminder of the cyclical nature of misinformation and the enduring market for a comforting, pretty lie.    #TheMerchantOfEchoes #TheShadyRiverBard #Misinformation #GothicAmericana @TheShadyRiverBard",
+      "image_prompt": "16:9 cinematic shot from behind an ornate, dark wooden covered wagon slowly rolling away down a muddy, fog-covered road. The wagon moves away from a smoldering, ruined 19th-century town. The pale, cold early morning light casts long shadows, and a single glowing lantern hangs from the back of the wagon, fading into the thick mist.",
+      "tags": [
+        "Gothic Americana",
+        "Cynicism",
+        "Misinformation",
+        "Cyclical",
+        "Waltz"
+      ],
+      "lyrics": "The ashes are cold on the cobblestone street\nI sweep up the glass from the edge of my feet\nThe mirrors are packed and the horses are tied\nThere is nothing left here but the ruin and pride\nI tip my dark hat to the smoke in the air\nAnd leave the good people to rot in the square\n\nOh, the wheel keeps on turning, the wagon rolls on\nI vanish away in the pale, post-truth dawn\nThe echo is quiet, the fire has died\nBut there's always a buyer for a pretty lie\n\nI see a new village just over the hill\nWith a fresh crop of worries and bellies to fill\nThey think they are smarter, they think they are free\nBut they'll open their doors to a merchant like me\nI'll sell them their anger, I'll sell them their fear\nAnd build them a brand new reflection right here\n\nOh, the wheel keeps on turning, the wagon rolls on\nI vanish away in the pale, post-truth dawn\nThe echo is quiet, the fire has died\nBut there's always a buyer for a pretty lie\n\nStep right up.\nJust over the hill.\nStep right up."
+    }
+  ]
+};

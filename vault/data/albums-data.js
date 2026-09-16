@@ -2380,11 +2380,24 @@ window.ALBUMS_DATA = {
     },
     {
       "id": "the-merchant-of-echos",
-      "title": "The Merchant of Echos",
+      "title": "The Merchant of Echoes",
       "status": "vault",
       "folder_name": "XX - The Merchant of Echos",
-      "track_count": 0,
-      "tracks": [],
+      "track_count": 12,
+      "tracks": [
+        "The Man with the Mirror Wagon",
+        "The Currency of the Scream",
+        "The Avalanche of Words",
+        "The Phantom Village",
+        "The Purity Test",
+        "Source Monitoring Error",
+        "The Unfriending (The Silent Dinner)",
+        "Red Face Rising",
+        "The Crank's Lullaby",
+        "When the Echo Stops",
+        "The Abyss Stares Back (Monsters Remain Human)",
+        "Merchant's Reprise (He Moves On)"
+      ],
       "art_files_count": 2,
       "art_sample": "Album.jpg",
       "themes": [
@@ -2399,7 +2412,10 @@ window.ALBUMS_DATA = {
       "track_deconstructions": null,
       "deconstruction_url": null,
       "genre_category": "Folk & Acoustic",
-      "hook": "Dark acoustic folk examining algorithmic dopamine loops, digital echo chambers, and the monetization of loneliness."
+      "hook": "Dark acoustic folk examining algorithmic dopamine loops, digital echo chambers, and the monetization of loneliness.",
+      "is_bespoke": true,
+      "custom_url": "../the-merchant-of-echoes/",
+      "duration": "52:22"
     },
     {
       "id": "the-outer-citadel",
