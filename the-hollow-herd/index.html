@@ -182,7 +182,7 @@
         <div class="hidden lg:flex items-center space-x-3">
           <div class="px-3.5 py-1.5 rounded-xl bg-prairie-850 border border-rust-500/40 text-[11px] font-mono flex items-center gap-2">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span id="header-videos-badge" class="text-stone-300">7 Videos Public &bull; Rolling Release</span>
+            <span id="header-videos-badge" class="text-stone-300">8 Videos Public &bull; Rolling Release</span>
           </div>
         </div>
 
@@ -277,7 +277,7 @@
                 <span>Rolling Track-by-Track Video Premiere</span>
               </div>
               <p class="text-stone-400 leading-normal font-sans">
-                The full 15-track musical album is available on all streamers today. Official music videos are premiering track-by-track 2&ndash;3 times weekly. <span id="hero-tracks-live-text">Tracks 1&ndash;7 are live now below!</span>
+                The full 15-track musical album is available on all streamers today. Official music videos are premiering track-by-track 2&ndash;3 times weekly. <span id="hero-tracks-live-text">Tracks 1&ndash;8 are live now below!</span>
               </p>
             </div>
 
@@ -285,7 +285,7 @@
             <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4">
               <a href="#songs-section" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-rust-600 to-rust-500 hover:from-rust-500 hover:to-rust-400 text-white font-display font-bold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-xl hover:shadow-rust-500/30 flex items-center gap-2.5">
                 <i aria-hidden="true" class="fa-solid fa-play"></i>
-                <span id="hero-watch-btn-text">Watch Released Videos (1–7)</span>
+                <span id="hero-watch-btn-text">Watch Released Videos (1&ndash;8)</span>
               </a>
               <a href="#streaming" class="px-6 py-3.5 rounded-xl bg-prairie-850 hover:bg-prairie-800 text-stone-200 border border-wheat-500/40 hover:border-wheat-400 font-display font-bold text-xs sm:text-sm tracking-wider uppercase transition-all flex items-center gap-2.5 shadow-lg">
                 <i aria-hidden="true" class="fa-solid fa-music text-wheat-400"></i>
@@ -424,7 +424,7 @@
             </button>
             <button onclick="filterTracks('videos')" id="btn-filter-videos" class="px-3.5 py-2 rounded-xl bg-prairie-800 text-stone-300 hover:text-white border border-white/10 text-xs font-mono transition-all flex items-center gap-1.5">
               <i aria-hidden="true" class="fa-solid fa-video text-rust-400 text-[10px]"></i>
-              <span id="videos-live-count">Videos Live (7)</span>
+              <span id="videos-live-count">Videos Live (8)</span>
             </button>
             <button onclick="expandAllLyrics()" class="px-3.5 py-2 rounded-xl bg-prairie-800 text-stone-400 hover:text-stone-200 border border-white/10 text-xs font-mono transition-all">
               Expand All
@@ -504,9 +504,15 @@
 
       <div class="flex items-center justify-between pt-2 text-xs font-mono text-stone-400">
         <span>The Shady River Bard Official Channel</span>
-        <a id="modal-yt-link" href="#" target="_blank" rel="noopener noreferrer" class="text-rust-400 hover:text-white flex items-center gap-1 font-bold">
-          <span>Watch on YouTube ↗</span>
-        </a>
+        <div class="flex items-center gap-4">
+          <a id="modal-substack-link" href="#" target="_blank" rel="noopener noreferrer" class="hidden text-orange-400 hover:text-orange-300 flex items-center gap-1.5 font-bold">
+            <i aria-hidden="true" class="fa-solid fa-book-open text-[11px]"></i>
+            <span>Liner Notes ↗</span>
+          </a>
+          <a id="modal-yt-link" href="#" target="_blank" rel="noopener noreferrer" class="text-rust-400 hover:text-white flex items-center gap-1 font-bold">
+            <span>Watch on YouTube ↗</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -849,17 +855,33 @@
 
             <!-- Expandable Lyrics Drawer -->
             <div class="pt-2 border-t border-white/10">
-              <div class="flex items-center justify-between">
-                <button 
-                  onclick="toggleLyrics('${slug}')" 
-                  id="btn-lyrics-${slug}" 
-                  aria-expanded="false" 
-                  aria-controls="drawer-${slug}" 
-                  class="inline-flex items-center gap-2 text-xs font-mono text-rust-400 hover:text-rust-300 font-bold focus-ring py-1 rounded"
-                >
-                  <i aria-hidden="true" class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-${slug}"></i>
-                  <span>View Complete Lyrics</span>
-                </button>
+              <div class="flex flex-wrap items-center justify-between gap-3">
+                <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+                  <button 
+                    onclick="toggleLyrics('${slug}')" 
+                    id="btn-lyrics-${slug}" 
+                    aria-expanded="false" 
+                    aria-controls="drawer-${slug}" 
+                    class="inline-flex items-center gap-2 text-xs font-mono text-rust-400 hover:text-rust-300 font-bold focus-ring py-1 rounded"
+                  >
+                    <i aria-hidden="true" class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-${slug}"></i>
+                    <span>View Complete Lyrics</span>
+                  </button>
+                  ${t.substack_url ? `
+                  <a 
+                    href="${t.substack_url}" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="inline-flex items-center gap-1.5 text-[11px] font-mono text-orange-400 hover:text-orange-300 font-medium py-1 px-2.5 rounded bg-orange-950/60 hover:bg-orange-900/60 border border-orange-800/40 transition-colors shadow-sm focus-ring"
+                    title="Read Liner Notes on Substack (opens in new tab)"
+                    aria-label="Read Liner Notes for ${escapeHtml(t.title)} on Substack"
+                  >
+                    <i aria-hidden="true" class="fa-solid fa-book-open text-[10px]"></i>
+                    <span>Liner Notes</span>
+                    <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-70"></i>
+                  </a>
+                  ` : ''}
+                </div>
                 <button 
                   onclick="copyLyrics('${slug}')" 
                   class="text-[11px] font-mono text-stone-400 hover:text-white transition-colors focus-ring px-2 py-1 rounded"
@@ -940,12 +962,24 @@
       const titleEl = document.getElementById('modal-video-title');
       const labelEl = document.getElementById('modal-track-label');
       const ytLink = document.getElementById('modal-yt-link');
+      const subLink = document.getElementById('modal-substack-link');
 
       if (modal && iframe) {
         iframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1`;
         if (titleEl) titleEl.innerText = title;
         if (labelEl) labelEl.innerText = `Track ${trackNum} Official Video`;
         if (ytLink) ytLink.href = `https://www.youtube.com/watch?v=${youtubeId}`;
+
+        if (subLink) {
+          const trackObj = (window.HOLLOW_HERD_DATA && window.HOLLOW_HERD_DATA.tracks) ? window.HOLLOW_HERD_DATA.tracks.find(t => t.track_number === trackNum) : null;
+          if (trackObj && trackObj.substack_url) {
+            subLink.href = trackObj.substack_url;
+            subLink.classList.remove('hidden');
+          } else {
+            subLink.classList.add('hidden');
+          }
+        }
+
         modal.classList.remove('hidden');
         const closeBtn = document.getElementById('modal-close-btn');
         if (closeBtn) closeBtn.focus();
