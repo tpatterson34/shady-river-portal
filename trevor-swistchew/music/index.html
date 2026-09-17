@@ -10053,6 +10053,93 @@ The only permanent is change.
     </div>
   </footer>
 
+  <!-- ================================================================= -->
+  <!-- PERSISTENT BOTTOM-DOCKED GLOBAL AUDIO PLAYER                      -->
+  <!-- ================================================================= -->
+  <aside id="persistent-bottom-player" class="fixed bottom-0 left-0 right-0 z-50 bg-stone-950/95 backdrop-blur-xl border-t border-stone-800 shadow-[0_-10px_35px_rgba(0,0,0,0.7)] transition-transform duration-300" role="region" aria-label="Persistent Audio Player" style="padding-bottom: max(0.5rem, env(safe-area-inset-bottom));">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2.5 sm:py-3 flex items-center justify-between gap-2 sm:gap-4">
+      
+      <!-- Track Meta (Left) -->
+      <div class="flex items-center gap-2.5 sm:gap-3.5 min-w-0 flex-1 sm:flex-initial sm:w-1/3 max-w-xs">
+        <div class="relative w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden border border-stone-700/80 shrink-0 bg-stone-900 shadow cursor-pointer group" onclick="scrollToPlayerStage()" title="Click to view stage and lyrics">
+          <img id="bottom-track-cover" src="../assets/images/trevors-grooves-playlist-cover.jpg" alt="Now Playing Track Artwork" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <div id="bottom-playing-pulse" class="absolute inset-0 bg-amber-500/15 hidden animate-pulse"></div>
+        </div>
+        <div class="min-w-0 overflow-hidden space-y-0.5">
+          <div class="flex items-center gap-1.5 min-w-0">
+            <span id="bottom-track-badge" class="px-1.5 py-0.2 rounded text-[9px] font-mono bg-amber-500/20 text-amber-400 font-bold border border-amber-500/30 shrink-0">#01</span>
+            <div id="bottom-track-title" class="font-display text-xs sm:text-sm font-bold text-stone-100 truncate hover:text-amber-400 cursor-pointer transition-colors" onclick="scrollToPlayerStage()" title="Click to view stage and lyrics">
+              The Old Ways
+            </div>
+          </div>
+          <div id="bottom-track-meta" class="font-mono text-[10px] text-stone-400 truncate">
+            Trevor Swistchew &bull; Celtic Rock
+          </div>
+        </div>
+      </div>
+
+      <!-- Playback Controls & Progress Scrubber (Center) -->
+      <div class="flex flex-col items-center flex-1 max-w-xl px-1 sm:px-4">
+        <!-- Controls Buttons Row -->
+        <div class="flex items-center gap-3 sm:gap-5 mb-1 sm:mb-1.5">
+          <!-- Previous Track -->
+          <button type="button" id="bottom-prev-btn" onclick="prevTrack()" aria-label="Previous Track" class="text-stone-400 hover:text-white active:scale-95 transition-all p-1">
+            <i class="fa-solid fa-backward-step text-sm sm:text-base"></i>
+          </button>
+          
+          <!-- Play / Pause Button -->
+          <button type="button" id="bottom-play-btn" onclick="togglePlayPause()" aria-label="Play or Pause Track" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-amber-500 hover:bg-amber-400 active:scale-90 text-stone-950 flex items-center justify-center font-bold transition-all shadow-md">
+            <i id="bottom-play-icon" class="fa-solid fa-play text-xs sm:text-sm ml-0.5"></i>
+          </button>
+
+          <!-- Next Track -->
+          <button type="button" id="bottom-next-btn" onclick="nextTrack()" aria-label="Next Track" class="text-stone-400 hover:text-white active:scale-95 transition-all p-1">
+            <i class="fa-solid fa-forward-step text-sm sm:text-base"></i>
+          </button>
+        </div>
+
+        <!-- Scrubber and Time Indicators -->
+        <div class="w-full flex items-center gap-2 sm:gap-3 text-[10px] sm:text-[11px] font-mono text-stone-400">
+          <span id="bottom-time-current" class="w-8 sm:w-9 text-right shrink-0">0:00</span>
+          <div class="relative flex-1 flex items-center">
+            <input type="range" id="bottom-seek-slider" min="0" max="100" value="0" class="w-full h-1.5 bg-stone-800 rounded-full appearance-none cursor-pointer accent-amber-500" aria-label="Audio scrubber">
+          </div>
+          <span id="bottom-time-total" class="w-8 sm:w-9 shrink-0">--:--</span>
+        </div>
+      </div>
+
+      <!-- Volume & Quick Utilities (Right) -->
+      <div class="hidden md:flex items-center justify-end gap-2.5 sm:gap-3 w-1/3 max-w-xs">
+        <!-- Volume Toggle & Slider -->
+        <button type="button" id="bottom-volume-btn" onclick="toggleMute()" aria-label="Mute or Unmute" class="text-stone-400 hover:text-stone-200 transition-colors p-1">
+          <i id="bottom-volume-icon" class="fa-solid fa-volume-high text-xs sm:text-sm"></i>
+        </button>
+        <input id="bottom-volume-slider" type="range" min="0" max="1" step="0.05" value="0.9" aria-label="Volume slider" class="w-16 sm:w-20 h-1 bg-stone-800 accent-amber-500 rounded-lg cursor-pointer">
+
+        <!-- Stage Jump Link -->
+        <button type="button" onclick="scrollToPlayerStage()" class="px-2.5 py-1 rounded-lg bg-stone-800/90 hover:bg-stone-700 text-stone-300 hover:text-amber-400 border border-stone-700/80 text-[10px] font-mono flex items-center gap-1 transition-colors" title="Scroll to main stage and full lyrics">
+          <i class="fa-solid fa-arrow-up text-[9px]"></i>
+          <span>Stage</span>
+        </button>
+
+        <!-- Suno Direct Link -->
+        <a id="bottom-suno-link" href="#" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 border border-amber-500/30 text-[10px] font-mono font-semibold flex items-center gap-1 transition-colors" title="Open on Suno">
+          <span>Suno ↗</span>
+        </a>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- Autoplay Prompt Toast Banner (Appears if browser autoplay is blocked on cross-page navigation) -->
+  <div id="autoplay-prompt-banner" class="hidden fixed bottom-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-xl bg-amber-500 text-stone-950 font-bold font-mono text-xs shadow-2xl flex items-center gap-2 cursor-pointer hover:bg-amber-400 transition-all border border-amber-300" onclick="triggerUserGesturePlay()">
+    <i class="fa-solid fa-circle-play text-base animate-pulse"></i>
+    <span id="autoplay-prompt-text">Click to Play Track #57 &ldquo;An Explanation of the Universe&rdquo;</span>
+    <i class="fa-solid fa-xmark text-xs ml-1 opacity-70 hover:opacity-100" onclick="event.stopPropagation(); dismissAutoplayPrompt();"></i>
+  </div>
+
+
+
   <!-- Application Controller Script -->
   <script>
     const TRACKS_DATA = [
@@ -11071,7 +11158,7 @@ The only permanent is change.
     let isSeeking = false;
     let isEmbedOpen = false;
 
-    // Elements
+    // Elements - Top Stage Player Deck
     const audio = document.getElementById('chamber-audio-element');
     const playPauseBtn = document.getElementById('deck-play-pause-btn');
     const playIcon = document.getElementById('deck-play-icon');
@@ -11082,6 +11169,66 @@ The only permanent is change.
     const volumeSlider = document.getElementById('deck-volume-slider');
     const volumeIcon = document.getElementById('deck-volume-icon');
     const pingIndicator = document.getElementById('playback-ping-indicator');
+
+    // Elements - Persistent Bottom Player Bar
+    const bottomPlayer = document.getElementById('persistent-bottom-player');
+    const bottomTrackCover = document.getElementById('bottom-track-cover');
+    const bottomTrackBadge = document.getElementById('bottom-track-badge');
+    const bottomTrackTitle = document.getElementById('bottom-track-title');
+    const bottomTrackMeta = document.getElementById('bottom-track-meta');
+    const bottomPlayingPulse = document.getElementById('bottom-playing-pulse');
+    const bottomPlayBtn = document.getElementById('bottom-play-btn');
+    const bottomPlayIcon = document.getElementById('bottom-play-icon');
+    const bottomSeekSlider = document.getElementById('bottom-seek-slider');
+    const bottomTimeCurrent = document.getElementById('bottom-time-current');
+    const bottomTimeTotal = document.getElementById('bottom-time-total');
+    const bottomVolumeSlider = document.getElementById('bottom-volume-slider');
+    const bottomVolumeIcon = document.getElementById('bottom-volume-icon');
+    const bottomSunoLink = document.getElementById('bottom-suno-link');
+    const autoplayBanner = document.getElementById('autoplay-prompt-banner');
+    const autoplayBannerText = document.getElementById('autoplay-prompt-text');
+
+    function scrollToPlayerStage() {
+      const stage = document.getElementById('chamber-player-stage');
+      if (stage) {
+        stage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function showAutoplayPrompt(track) {
+      if (!autoplayBanner) return;
+      if (autoplayBannerText) {
+        autoplayBannerText.innerHTML = `Click anywhere to Play Track #${track.index} &ldquo;${track.title}&rdquo;`;
+      }
+      autoplayBanner.classList.remove('hidden');
+      if (bottomPlayBtn) {
+        bottomPlayBtn.classList.add('ring-4', 'ring-amber-400/80', 'animate-pulse');
+      }
+      // One-time click anywhere to activate playback
+      const onDocClick = () => {
+        triggerUserGesturePlay();
+        document.removeEventListener('click', onDocClick);
+      };
+      setTimeout(() => {
+        document.addEventListener('click', onDocClick, { once: true });
+      }, 50);
+    }
+
+    function dismissAutoplayPrompt() {
+      if (autoplayBanner) autoplayBanner.classList.add('hidden');
+      if (bottomPlayBtn) {
+        bottomPlayBtn.classList.remove('ring-4', 'ring-amber-400/80', 'animate-pulse');
+      }
+    }
+
+    function triggerUserGesturePlay() {
+      dismissAutoplayPrompt();
+      audio.play().then(() => {
+        updatePlayPauseUI(true);
+      }).catch(err => {
+        console.log('User gesture play error:', err);
+      });
+    }
 
     function formatTime(seconds) {
       if (isNaN(seconds) || seconds < 0) return '0:00';
@@ -11118,22 +11265,42 @@ The only permanent is change.
 
     function updatePlayPauseUI(isPlaying) {
       if (isPlaying) {
+        // Top stage deck
         playIcon.className = 'fa-solid fa-pause text-base';
         playText.textContent = 'Pause';
         playPauseBtn.classList.remove('bg-amber-500');
         playPauseBtn.classList.add('bg-amber-400');
         if (pingIndicator) pingIndicator.classList.remove('hidden');
+
+        // Bottom player bar
+        if (bottomPlayIcon) bottomPlayIcon.className = 'fa-solid fa-pause text-xs sm:text-sm';
+        if (bottomPlayBtn) {
+          bottomPlayBtn.classList.remove('bg-amber-500');
+          bottomPlayBtn.classList.add('bg-amber-400');
+        }
+        if (bottomPlayingPulse) bottomPlayingPulse.classList.remove('hidden');
+
+        dismissAutoplayPrompt();
         requestWakeLock();
       } else {
+        // Top stage deck
         playIcon.className = 'fa-solid fa-play text-base translate-x-0.5';
         playText.textContent = 'Play';
         playPauseBtn.classList.remove('bg-amber-400');
         playPauseBtn.classList.add('bg-amber-500');
         if (pingIndicator) pingIndicator.classList.add('hidden');
+
+        // Bottom player bar
+        if (bottomPlayIcon) bottomPlayIcon.className = 'fa-solid fa-play text-xs sm:text-sm ml-0.5';
+        if (bottomPlayBtn) {
+          bottomPlayBtn.classList.remove('bg-amber-400');
+          bottomPlayBtn.classList.add('bg-amber-500');
+        }
+        if (bottomPlayingPulse) bottomPlayingPulse.classList.add('hidden');
+
         releaseWakeLock();
       }
 
-      // Synchronize OS-level MediaSession playbackState for lock-screen controls
       if ('mediaSession' in navigator) {
         try {
           navigator.mediaSession.playbackState = isPlaying ? 'playing' : 'paused';
@@ -11191,6 +11358,22 @@ The only permanent is change.
         lyricsContainer.textContent = track.prompt || 'Instrumental composition / Lyrics not available.';
       }
 
+      
+      // 3.5. Update Persistent Bottom Player Bar
+      if (bottomTrackBadge) bottomTrackBadge.textContent = `#${String(track.index).padStart(2, '0')}`;
+      if (bottomTrackTitle) bottomTrackTitle.textContent = track.title;
+      if (bottomTrackMeta) {
+        const shortTags = (track.tags || '').split(',').slice(0, 2).map(s => s.trim()).join(' &bull; ');
+        bottomTrackMeta.innerHTML = `Track #${track.index} &bull; ${shortTags || 'Original Studio Recording'}`;
+      }
+      if (bottomTrackCover) {
+        bottomTrackCover.src = track.image_url || '../assets/images/trevors-grooves-playlist-cover.jpg';
+      }
+      if (bottomSunoLink) bottomSunoLink.href = track.suno_url;
+      if (bottomSeekSlider) bottomSeekSlider.value = 0;
+      if (bottomTimeCurrent) bottomTimeCurrent.textContent = '0:00';
+      if (bottomTimeTotal) bottomTimeTotal.textContent = track.duration ? formatTime(track.duration) : '--:--';
+
       // 4. Catalog Card Highlight
       document.querySelectorAll('.music-card').forEach(card => {
         if (card.getAttribute('data-id') === track.id) {
@@ -11225,12 +11408,17 @@ The only permanent is change.
 
       // 6. Autoplay if requested
       if (autoplay) {
-        audio.play().then(() => {
-          updatePlayPauseUI(true);
-        }).catch(err => {
-          console.log('Autoplay waiting for user gesture:', err);
-          updatePlayPauseUI(false);
-        });
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            updatePlayPauseUI(true);
+            dismissAutoplayPrompt();
+          }).catch(err => {
+            console.log('Autoplay waiting for user gesture:', err);
+            updatePlayPauseUI(false);
+            showAutoplayPrompt(track);
+          });
+        }
       } else {
         updatePlayPauseUI(false);
       }
@@ -11321,6 +11509,8 @@ The only permanent is change.
         const pct = (audio.currentTime / audio.duration) * 100;
         seekSlider.value = pct;
         timeCurrent.textContent = formatTime(audio.currentTime);
+        if (bottomSeekSlider) bottomSeekSlider.value = pct;
+        if (bottomTimeCurrent) bottomTimeCurrent.textContent = formatTime(audio.currentTime);
 
         // Update MediaSession lock-screen scrubber position
         if ('mediaSession' in navigator && 'setPositionState' in navigator.mediaSession) {
@@ -11338,6 +11528,7 @@ The only permanent is change.
     audio.addEventListener('loadedmetadata', () => {
       if (audio.duration && !isNaN(audio.duration)) {
         timeTotal.textContent = formatTime(audio.duration);
+        if (bottomTimeTotal) bottomTimeTotal.textContent = formatTime(audio.duration);
         if ('mediaSession' in navigator && 'setPositionState' in navigator.mediaSession) {
           try {
             navigator.mediaSession.setPositionState({
@@ -11374,6 +11565,45 @@ The only permanent is change.
       isSeeking = false;
     });
 
+    
+    // Bottom Player Seek Slider Listeners
+    if (bottomSeekSlider) {
+      bottomSeekSlider.addEventListener('input', (e) => {
+        isSeeking = true;
+        if (audio.duration) {
+          const targetTime = (e.target.value / 100) * audio.duration;
+          timeCurrent.textContent = formatTime(targetTime);
+          bottomTimeCurrent.textContent = formatTime(targetTime);
+        }
+      });
+
+      bottomSeekSlider.addEventListener('change', (e) => {
+        if (audio.duration) {
+          audio.currentTime = (e.target.value / 100) * audio.duration;
+        }
+        isSeeking = false;
+      });
+    }
+
+    // Bottom Player Volume Slider Listener
+    if (bottomVolumeSlider) {
+      bottomVolumeSlider.addEventListener('input', (e) => {
+        audio.volume = e.target.value;
+        audio.muted = false;
+        if (volumeSlider) volumeSlider.value = e.target.value;
+        if (e.target.value == 0) {
+          if (volumeIcon) volumeIcon.className = 'fa-solid fa-volume-xmark text-xs text-rose-400';
+          if (bottomVolumeIcon) bottomVolumeIcon.className = 'fa-solid fa-volume-xmark text-xs text-rose-400';
+        } else if (e.target.value < 0.5) {
+          if (volumeIcon) volumeIcon.className = 'fa-solid fa-volume-low text-xs';
+          if (bottomVolumeIcon) bottomVolumeIcon.className = 'fa-solid fa-volume-low text-xs';
+        } else {
+          if (volumeIcon) volumeIcon.className = 'fa-solid fa-volume-high text-xs';
+          if (bottomVolumeIcon) bottomVolumeIcon.className = 'fa-solid fa-volume-high text-xs';
+        }
+      });
+    }
+
     // Volume Slider Listener
     if (volumeSlider) {
       volumeSlider.addEventListener('input', (e) => {
@@ -11389,12 +11619,73 @@ The only permanent is change.
       });
     }
 
-    // Filter & Search Logic
-    document.addEventListener('DOMContentLoaded', function() {
-      // Initialize first track state
-      if (TRACKS_DATA.length > 0) {
+    
+    // URL Routing: Parse #track-57, #play-57, ?play=57, ?track=57
+    function getRequestedTrack() {
+      const hash = window.location.hash || '';
+      const params = new URLSearchParams(window.location.search);
+
+      // 1. Query parameter check (?play=57 or ?track=57)
+      const queryVal = params.get('play') || params.get('track');
+      if (queryVal) {
+        const num = parseInt(queryVal, 10);
+        if (!isNaN(num)) {
+          const t = TRACKS_DATA.find(x => x.index === num);
+          if (t) return { track: t, autoPlay: true };
+        }
+        const t = TRACKS_DATA.find(x => x.id === queryVal);
+        if (t) return { track: t, autoPlay: true };
+      }
+
+      // 2. Hash parameter check (#track-57, #play-57, #track-<uuid>)
+      if (hash) {
+        const clean = hash.replace(/^#/, '');
+        const numMatch = clean.match(/(?:track|play)[-_]?(\d+)/i) || clean.match(/^(\d+)$/);
+        if (numMatch) {
+          const num = parseInt(numMatch[1], 10);
+          const t = TRACKS_DATA.find(x => x.index === num);
+          if (t) return { track: t, autoPlay: true };
+        }
+        const uuidMatch = clean.match(/[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}/i);
+        if (uuidMatch) {
+          const t = TRACKS_DATA.find(x => x.id.toLowerCase() === uuidMatch[0].toLowerCase());
+          if (t) return { track: t, autoPlay: true };
+        }
+      }
+
+      return null;
+    }
+
+    function handleUrlNavigation() {
+      const req = getRequestedTrack();
+      if (req) {
+        loadTrack(req.track.id, false, req.autoPlay);
+        // Highlight and center card if available
+        setTimeout(() => {
+          const card = document.querySelector(`article[data-id="${req.track.id}"]`);
+          if (card) {
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 300);
+      } else if (TRACKS_DATA.length > 0) {
         loadTrack(TRACKS_DATA[0].id, false, false);
       }
+    }
+
+    window.addEventListener('hashchange', handleUrlNavigation);
+
+    // Filter & Search Logic
+    document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.music-card');
+      const totalCount = cards.length;
+
+      // Assign HTML anchor IDs to cards and route URL request
+      cards.forEach(card => {
+        const idxVal = card.getAttribute('data-index');
+        if (idxVal) card.id = `track-${idxVal}`;
+      });
+
+      handleUrlNavigation();
 
       const filterButtons = document.querySelectorAll('#music-filters .filter-btn');
       const searchInput = document.getElementById('music-search-input');
@@ -11403,8 +11694,6 @@ The only permanent is change.
       const resultsCountText = document.getElementById('results-count-text');
       const emptyState = document.getElementById('music-empty-state');
       const emptyStateResetBtn = document.getElementById('empty-state-reset-btn');
-      const cards = document.querySelectorAll('.music-card');
-      const totalCount = cards.length;
 
       let activeCategory = 'all';
       let searchQuery = '';
@@ -11542,5 +11831,5 @@ The only permanent is change.
 
   <!-- Reading Experience Controller Script -->
   <script src="../assets/js/reading-experience.js"></script>
-</body>
+  </body>
 </html>
