@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Adolf Fucked Europe. — Trevor Swistchew (2026)</title>
+  <meta name="description" content="A forensic reckoning with administrative horror, the casual bureaucracy of Wannsee, the financial accounting of genocide, and a nation seduced into moral oblivion.">
+  <link rel="canonical" href="https://theshadyriverbard.com/trevor-swistchew/essays/how-adolf-fucked-europe/">
+
+  <!-- Open Graph Meta -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How Adolf Fucked Europe. — Trevor Swistchew (2026)">
+  <meta property="og:description" content="A forensic reckoning with administrative horror, the casual bureaucracy of Wannsee, the financial accounting of genocide, and a nation seduced into moral oblivion.">
+  <meta property="og:image" content="https://theshadyriverbard.com/trevor-swistchew/assets/images/how-adolf-fucked-europe-banner.jpg">
+  <meta property="og:url" content="https://theshadyriverbard.com/trevor-swistchew/essays/how-adolf-fucked-europe/">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              950: '#0c0b0a',
+              900: '#121110',
+              850: '#181614',
+              800: '#1f1c19',
+              700: '#2b2723',
+              600: '#3d3731',
+            },
+            parchment: {
+              50: '#fdfbf7',
+              100: '#f7f4ed',
+              200: '#efeae0',
+              300: '#e5ded2',
+              400: '#d8cdbe',
+              500: '#c5b8a5',
+            },
+            brass: {
+              400: '#dfbe75',
+              500: '#c5a059',
+              600: '#a6823c',
+              700: '#846427',
+            },
+            thistle: {
+              600: '#9d2b45',
+              700: '#7e2035',
+            },
+            loch: {
+              400: '#38bdf8',
+              700: '#0369a1',
+              900: '#0c4a6e',
+            }
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Lora', 'Georgia', 'serif'],
+            display: ['"Playfair Display"', 'Cinzel', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Accessibility & Salon Theme Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/a11y.css">
+  <link rel="stylesheet" href="../../assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950 min-h-screen flex flex-col justify-between bg-stone-950 text-stone-200">
+
+  <!-- 1. WCAG Skip Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Essay Content</a>
+
+  <!-- 2. Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- 3. Top Sticky Reading Utility & Salon Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      
+      <!-- Salon Brand / Return Link -->
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2.5 text-stone-300 hover:text-amber-400 group transition-colors">
+          <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
+          <div class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:block">
+            Trevor Swistchew <span class="text-stone-500 font-sans font-normal mx-1">|</span> <span class="text-stone-400">Compendium Archive</span>
+          </div>
+        </a>
+        <a href="https://theshadyriverbard.com/" class="hidden md:flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 text-[11px] font-mono transition-colors" title="Visit The Shady River Bard Portal">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Center / Right Utilities: Theme & Font Controls -->
+      <div class="flex items-center gap-2 sm:gap-4">
+        <!-- Tri-State Theme Switcher -->
+        <div class="flex items-center bg-stone-950/80 border border-stone-800 rounded-lg p-0.5 text-xs text-stone-400" role="group" aria-label="Reading Atmosphere Theme">
+          <button type="button" data-set-theme="dark" class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" title="Peat &amp; Loch (Dark)">
+            <i class="fa-solid fa-moon text-[11px]"></i>
+            <span class="sr-only">Dark Theme</span>
+          </button>
+          <button type="button" data-set-theme="sepia" class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" title="Aged Parchment (Sepia)">
+            <i class="fa-solid fa-scroll text-[11px]"></i>
+            <span class="sr-only">Sepia Theme</span>
+          </button>
+          <button type="button" data-set-theme="light" class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" title="Edinburgh Stone (Light)">
+            <i class="fa-solid fa-sun text-[11px]"></i>
+            <span class="sr-only">Light Theme</span>
+          </button>
+        </div>
+
+        <!-- Typography Scaler -->
+        <div class="hidden sm:flex items-center bg-stone-950/80 border border-stone-800 rounded-lg p-0.5 text-xs text-stone-400" role="group" aria-label="Text Size Controls">
+          <button type="button" id="font-decrease" class="px-2 py-1 hover:text-stone-200 transition-colors" title="Decrease font size" aria-label="Decrease text size">A-</button>
+          <button type="button" id="font-reset" class="px-2 py-1 font-bold text-amber-500 hover:text-amber-400 transition-colors" title="Reset font size" aria-label="Reset text size">A</button>
+          <button type="button" id="font-increase" class="px-2 py-1 hover:text-stone-200 transition-colors" title="Increase font size" aria-label="Increase text size">A+</button>
+        </div>
+
+        <!-- Return to Essays Catalog -->
+        <a 
+          href="../../index.html#essays" 
+          class="px-3 py-1.5 rounded-lg border border-stone-700/80 bg-stone-800/90 hover:bg-amber-500 hover:text-stone-950 text-stone-300 text-xs font-mono font-semibold transition-all flex items-center gap-1.5 shadow-sm"
+        >
+          <i class="fa-solid fa-arrow-left text-[10px]"></i>
+          <span>Essays</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Reading Stage -->
+  <main id="main-content" class="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16 space-y-12 flex-grow w-full min-w-0">
+    
+    <!-- Essay Header / Meta Zone -->
+    <article class="space-y-8" id="essay-reading-wrapper">
+      <header class="space-y-6">
+        
+        <!-- Category Badges & Chronology -->
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="px-2.5 py-1 rounded bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-mono font-bold tracking-wide uppercase">
+            Compendium #37
+          </span>
+          <span class="px-2.5 py-1 rounded bg-stone-800/80 border border-stone-700/50 text-stone-300 text-xs font-mono font-semibold">
+            European History &amp; Fascism
+          </span>
+          <span class="px-2.5 py-1 rounded bg-rose-500/15 border border-rose-500/30 text-rose-300 text-xs font-mono font-semibold">
+            Administrative Atrocity
+          </span>
+          <span class="px-2.5 py-1 rounded bg-stone-900 border border-stone-800 text-stone-400 text-xs font-mono">
+            Trevor Swistchew &bull; 2026
+          </span>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <div class="space-y-3">
+          <h1 class="font-display text-3xl sm:text-5xl font-extrabold text-stone-100 tracking-tight leading-tight">
+            How Adolf Fucked Europe.
+          </h1>
+          <p class="font-serif text-lg sm:text-xl text-stone-400 italic max-w-2xl leading-relaxed">
+            A forensic reckoning with administrative horror, the casual bureaucracy of Wannsee, the financial accounting of genocide, and a nation seduced into moral and physical oblivion.
+          </p>
+        </div>
+
+        <!-- Author Byline & Scholarly Meta Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-b border-stone-800/80 text-xs font-mono text-stone-400 py-3">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 font-bold font-cinzel">TS</span>
+            <div>
+              <span class="text-stone-200 font-semibold block">Trevor Swistchew</span>
+              <span class="text-[11px] text-stone-500">2026 &bull; Historical Critique</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 text-stone-400">
+            <span><i class="fa-regular fa-clock mr-1 text-amber-500/70"></i> 2 min read</span>
+            <span><i class="fa-solid fa-file-lines mr-1 text-amber-500/70"></i> 217 words</span>
+            <span><i class="fa-solid fa-scale-unbalanced mr-1 text-amber-500/70"></i> Wannsee Protocol &bull; 1942–2026</span>
+          </div>
+        </div>
+
+        <!-- Bespoke Fine-Art Banner Image -->
+        <figure class="relative rounded-2xl overflow-hidden border border-stone-800/80 bg-stone-950 shadow-2xl">
+          <img 
+            src="../../assets/images/how-adolf-fucked-europe-banner.jpg" 
+            alt="How Adolf Fucked Europe — Chiaroscuro oil painting in the style of Rembrandt and Caspar David Friedrich depicting the 1942 Wannsee villa conference room with administrative ledgers, European railway maps, champagne glasses, and candlelit shadows" 
+            class="w-full h-auto object-cover max-h-[480px]"
+            loading="eager"
+          />
+          <figcaption class="p-3 bg-stone-900/95 border-t border-stone-800 text-[11px] font-mono text-stone-400 flex items-center justify-between">
+            <span>The Wannsee Conference, Berlin (1942) &bull; <em>The routine administrative machinery of catastrophic genocide</em></span>
+            <span class="text-amber-400/80 font-semibold">Trevor Swistchew Archive</span>
+          </figcaption>
+        </figure>
+
+      </header>
+
+      <!-- Interactive Empirical Research Dossier: The Administrative Anatomy of Atrocity -->
+      <section class="rounded-2xl border border-stone-800 bg-stone-900/70 backdrop-blur-sm p-6 sm:p-8 space-y-6 shadow-xl" aria-label="Empirical Research Dossier">
+        
+        <div class="border-b border-stone-800 pb-4">
+          <div class="flex items-center gap-2 text-xs font-mono text-amber-500 uppercase tracking-widest mb-1">
+            <i class="fa-solid fa-landmark"></i>
+            <span>Historical &amp; Philosophical Dossier</span>
+          </div>
+          <h2 class="font-display text-2xl font-bold text-stone-100">
+            The Banality of Evil: Administrative Annihilation
+          </h2>
+          <p class="font-serif text-sm text-stone-400 mt-1">
+            Deconstructing the mechanisms highlighted by Trevor Swistchew: casual executive meetings, bureaucratic ledgers, and catastrophic moral collapse.
+          </p>
+        </div>
+
+        <!-- Dossier Tabs -->
+        <div class="flex flex-wrap gap-2 text-xs font-mono border-b border-stone-800 pb-3" role="tablist">
+          <button 
+            type="button" 
+            class="dossier-tab-btn active-tab px-3.5 py-1.5 rounded-lg bg-amber-500 text-stone-950 font-bold transition-all flex items-center gap-1.5 shadow-md"
+            data-dossier-tab="wannsee"
+          >
+            <i class="fa-solid fa-wine-glass"></i>
+            <span>1. The Wannsee Gathering</span>
+          </button>
+          <button 
+            type="button" 
+            class="dossier-tab-btn px-3.5 py-1.5 rounded-lg bg-stone-900 text-stone-400 hover:text-stone-200 border border-stone-800 transition-all flex items-center gap-1.5"
+            data-dossier-tab="ledgers"
+          >
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+            <span>2. The 10 Billion Marks Myth</span>
+          </button>
+          <button 
+            type="button" 
+            class="dossier-tab-btn px-3.5 py-1.5 rounded-lg bg-stone-900 text-stone-400 hover:text-stone-200 border border-stone-800 transition-all flex items-center gap-1.5"
+            data-dossier-tab="illogical"
+          >
+            <i class="fa-solid fa-train-subway"></i>
+            <span>3. The Illogical Enterprise</span>
+          </button>
+          <button 
+            type="button" 
+            class="dossier-tab-btn px-3.5 py-1.5 rounded-lg bg-stone-900 text-stone-400 hover:text-stone-200 border border-stone-800 transition-all flex items-center gap-1.5"
+            data-dossier-tab="impact2026"
+          >
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <span>4. 2026: Enduring Impact</span>
+          </button>
+        </div>
+
+        <!-- Tab Panels -->
+        <div class="space-y-4 text-sm font-sans text-stone-300">
+          
+          <!-- Panel 1: Wannsee Gathering -->
+          <div id="panel-wannsee" class="dossier-tab-panel space-y-3">
+            <div class="p-4 rounded-xl bg-stone-950 border border-stone-800 space-y-2">
+              <h3 class="font-display font-bold text-amber-400 text-base flex items-center gap-2">
+                <i class="fa-solid fa-wine-glass text-xs"></i>
+                The 90-Minute Administrative Routine (January 20, 1942)
+              </h3>
+              <p class="leading-relaxed font-serif text-stone-300">
+                At a secluded villa on Lake Wannsee outside Berlin (<em>Am Großen Wannsee 56–58</em>), fifteen senior Nazi officials, SS leaders, and ministry state secretaries convened. Over a luncheon of fine food, champagne, and tobacco, they coordinated the continental extermination of 11 million human beings in less than an hour and a half.
+              </p>
+              <p class="leading-relaxed font-serif text-stone-300">
+                As Trevor observes, the atmosphere was casual, dull, and routinely bureaucratic: typed up by Adolf Eichmann and an attendant secretary into an administrative minute protocol with euphemisms like <em>&ldquo;evacuation&rdquo;</em> and <em>&ldquo;special treatment&rdquo;</em> disguising unfathomable mass slaughter.
+              </p>
+            </div>
+          </div>
+
+          <!-- Panel 2: The 10 Billion Marks Myth -->
+          <div id="panel-ledgers" class="dossier-tab-panel hidden space-y-3">
+            <div class="p-4 rounded-xl bg-stone-950 border border-stone-800 space-y-2">
+              <h3 class="font-display font-bold text-amber-400 text-base flex items-center gap-2">
+                <i class="fa-solid fa-file-invoice-dollar text-xs"></i>
+                The Budgeting of Genocide: &ldquo;AFFORDABLE&rdquo;
+              </h3>
+              <p class="leading-relaxed font-serif text-stone-300">
+                The genocide was managed with ruthless double-entry bookkeeping. Rail track allocations, Deutsche Reichsbahn billing tariffs (charging passenger fares for one-way cattle cars), requisitioned land, barracks, guards, and chemical suppliers were all accounted for in filed government systems.
+              </p>
+              <p class="leading-relaxed font-serif text-stone-300">
+                When estimated fiscal costs exceeded billions of Reichsmarks, Hitler dismissed it with an arrogant gesture: declaring that under his personal dictatorship Germany was the most powerful entity in Europe and that continental extermination was fully affordable.
+              </p>
+            </div>
+          </div>
+
+          <!-- Panel 3: The Illogical Enterprise -->
+          <div id="panel-illogical" class="dossier-tab-panel hidden space-y-3">
+            <div class="p-4 rounded-xl bg-stone-950 border border-stone-800 space-y-2">
+              <h3 class="font-display font-bold text-amber-400 text-base flex items-center gap-2">
+                <i class="fa-solid fa-train-subway text-xs"></i>
+                Strategic Insanity: War Against One&rsquo;s Own Survival
+              </h3>
+              <p class="leading-relaxed font-serif text-stone-300">
+                Even hardline Wehrmacht generals were appalled not merely by the barbarism, but by its catastrophic strategic irrationality. In the middle of an existential, two-front conflict facing the Soviet Union and the Western Allies, thousands of locomotives, miles of rail infrastructure, and critical industrial manpower were diverted away from the war effort to feed the extermination camps.
+              </p>
+              <p class="leading-relaxed font-serif text-stone-300">
+                The Nazi enterprise was completely illogical&mdash;an ideological death cult consuming its own state, infrastructure, and populace in service of an insane racial fantasy.
+              </p>
+            </div>
+          </div>
+
+          <!-- Panel 4: 2026: Enduring Impact -->
+          <div id="panel-impact2026" class="dossier-tab-panel hidden space-y-3">
+            <div class="p-4 rounded-xl bg-stone-950 border border-stone-800 space-y-2">
+              <h3 class="font-display font-bold text-amber-400 text-base flex items-center gap-2">
+                <i class="fa-solid fa-clock-rotate-left text-xs"></i>
+                Oblivion and the Century-Long Reckoning (Vergangenheitsbew&auml;ltigung)
+              </h3>
+              <p class="leading-relaxed font-serif text-stone-300">
+                When Hitler&rsquo;s regime collapsed into ashes in 1945, there was no glorious Thousand-Year Reich&mdash;only a pulverized continent, millions of murdered souls, and the overwhelming guilt of a population that had surrendered its moral autonomy to follow a madman into total oblivion.
+              </p>
+              <p class="leading-relaxed font-serif text-stone-300">
+                Trevor concludes with stark contemporary clarity: <em>&ldquo;In 2026 Germany is still impacted.&rdquo;</em> Eight decades later, the constitutional, political, architectural, and psychological scars remain deeply embedded in modern European reality.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- The Verbatim Essay Reading Stage -->
+      <section 
+        id="essay-reading-content" 
+        class="prose prose-stone dark:prose-invert max-w-none text-base sm:text-lg leading-relaxed font-serif space-y-6 pt-4 border-t border-stone-800"
+      >
+        <p class="first-letter:text-5xl first-letter:font-cinzel first-letter:text-amber-500 first-letter:float-left first-letter:mr-3 first-letter:leading-none text-stone-200">
+          In the Reich&nbsp; Hitler wanted the extermination of every European Jew.&nbsp; The Nazis&nbsp; met at Wannsee in Berlin&nbsp; to decide the Final Solution in a most casual way with champagne and&nbsp; &nbsp;food and&nbsp; plenty of&nbsp; things to&nbsp; use as&nbsp; relaxants for the&nbsp; Gathering.
+        </p>
+
+        <p class="text-stone-300">
+          They talked as if they were organising a festival of events. The talk was routine&nbsp; almost dull with an atmosphere quiet&nbsp; with interjections and suggestions noted by the attendant secretary then&nbsp; typed into the Report.
+        </p>
+
+        <p class="text-stone-300">
+          The planning&nbsp; was inclusive of land&nbsp; materials&nbsp; rail tracks&nbsp; personnel&nbsp; &nbsp;media suppression in a filed system of accounts&nbsp; &nbsp; &nbsp;Estimated costs&nbsp; exceeded 10 Billion Marks. Hitler laughed the amount off&nbsp; with a gesture then said <span class="font-semibold text-stone-100">&ldquo;Germany with MY Leadership&nbsp; is the most powerful land in Europe.&rdquo;</span>
+        </p>
+
+        <blockquote class="my-8 pl-6 border-l-4 border-amber-500/80 italic font-serif text-lg sm:text-xl text-stone-200 bg-stone-900/50 py-5 pr-5 rounded-r-xl shadow-lg">
+          &ldquo;Exteminating all Jews in Europe was AFFORDABLE. The manner of the Nazis was almost&nbsp; astounding with&nbsp; the extermination of&nbsp; millions of men women and children talked about&nbsp; in a way to embarrass&nbsp; even the hardest Generals in the Reich.&rdquo;
+        </blockquote>
+
+        <p class="text-stone-300">
+          There is no explaining it although&nbsp; many have tried&nbsp; for&nbsp; the entire German enterprise was illogical and&nbsp; outwith&nbsp; anything&nbsp; most&nbsp; of the world had ever seen.
+        </p>
+
+        <p class="text-stone-300">
+          When Hitlers&nbsp; regime were gone there was only the&nbsp; guilt of a country who had followed an&nbsp; idea to their own oblivion.
+        </p>
+
+        <p class="font-semibold text-amber-400 text-lg sm:text-xl pt-4 border-t border-stone-800/80">
+          In 2026&nbsp; Germany is still impacted.
+        </p>
+      </section>
+
+      <!-- Article Footer & Sequential Navigation -->
+      <footer class="pt-8 border-t border-stone-800/80 space-y-6">
+        
+        <!-- Sequential Essay Navigation Links -->
+        <div class="grid sm:grid-cols-2 gap-4 pt-4">
+          <a 
+            href="../eat-as-thou-wilt-shall-be-the-whole-of-the-law/index.html" 
+            class="p-4 rounded-xl border border-stone-800/80 bg-stone-900/40 hover:bg-stone-900 hover:border-amber-500/40 transition-all flex items-center gap-3 group"
+          >
+            <i class="fa-solid fa-arrow-left text-amber-500 group-hover:-translate-x-1 transition-transform"></i>
+            <div>
+              <span class="block text-[11px] font-mono uppercase tracking-wider text-stone-400">Previous Essay (Compendium #36)</span>
+              <span class="font-display font-bold text-stone-200 group-hover:text-amber-400 transition-colors text-sm">EAT AS THOU WILT SHALL BE THE WHOLE OF THE LAW.</span>
+            </div>
+          </a>
+
+          <a 
+            href="../../index.html#essays" 
+            class="p-4 rounded-xl border border-stone-800/80 bg-stone-900/40 hover:bg-stone-900 hover:border-amber-500/40 transition-all flex items-center justify-between group text-right"
+          >
+            <div class="flex-1">
+              <span class="block text-[11px] font-mono uppercase tracking-wider text-stone-400">Compendium Index</span>
+              <span class="font-display font-bold text-stone-200 group-hover:text-amber-400 transition-colors text-sm">Complete 37-Essay Compendium Archive</span>
+            </div>
+            <i class="fa-solid fa-layer-group text-amber-500 group-hover:scale-110 transition-transform ml-3"></i>
+          </a>
+        </div>
+
+        <!-- Colophon Card -->
+        <div class="p-6 rounded-2xl bg-stone-950 border border-stone-800/80 text-xs font-mono space-y-3">
+          <div class="flex items-center justify-between text-stone-400">
+            <span class="font-semibold text-stone-300">TREVOR SWISTCHEW ARCHIVE &bull; COMPENDIUM #37</span>
+            <span>Recorded in 2026 &bull; Edinburgh / The Shady River Bard Collaborative</span>
+          </div>
+          <p class="text-stone-400 leading-relaxed font-serif text-xs">
+            Text: &copy; 2026 Trevor Swistchew. Preserved verbatim according to the author's original manuscript, moral rights, and historical integrity.
+          </p>
+        </div>
+
+      </footer>
+    </article>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="border-t border-stone-800/80 bg-stone-900/80 mt-16 py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-stone-400">
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="font-cinzel font-bold text-stone-200 hover:text-amber-400 transition-colors">
+          TREVOR SWISTCHEW
+        </a>
+        <span>&bull;</span>
+        <span>The Shady River Bard Collaborative</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="../../music/index.html" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-guitar text-[10px]"></i>
+          <span>Music Chamber (62)</span>
+        </a>
+        <a href="../../poetry/index.html" class="hover:text-amber-400 transition-colors">Poetry (29)</a>
+        <a href="../../index.html#essays" class="hover:text-amber-400 transition-colors">Essays (37)</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Features Script: Reading Progress, Tabs, Scaler, Theme -->
+  <script>
+    // 1. Scroll Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      const bar = document.getElementById('reading-progress-bar');
+      if (bar) bar.style.width = scrolled + '%';
+    });
+
+    // 2. Interactive Dossier Tab Switching
+    const tabButtons = document.querySelectorAll('.dossier-tab-btn');
+    const tabPanels = document.querySelectorAll('.dossier-tab-panel');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetTab = btn.getAttribute('data-dossier-tab');
+        
+        tabButtons.forEach(b => {
+          b.classList.remove('active-tab', 'bg-amber-500', 'text-stone-950', 'shadow-md');
+          b.classList.add('bg-stone-900', 'text-stone-400', 'border', 'border-stone-800');
+        });
+
+        btn.classList.add('active-tab', 'bg-amber-500', 'text-stone-950', 'shadow-md');
+        btn.classList.remove('bg-stone-900', 'text-stone-400', 'border', 'border-stone-800');
+
+        tabPanels.forEach(panel => {
+          if (panel.id === `panel-${targetTab}`) {
+            panel.classList.remove('hidden');
+          } else {
+            panel.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // 3. Typography Scaler
+    const content = document.getElementById('essay-reading-content');
+    const decreaseBtn = document.getElementById('font-decrease');
+    const resetBtn = document.getElementById('font-reset');
+    const increaseBtn = document.getElementById('font-increase');
+    
+    const fontSizes = ['text-sm', 'text-base', 'text-lg', 'text-xl'];
+    let currentIdx = 1;
+
+    if (decreaseBtn && increaseBtn && resetBtn && content) {
+      decreaseBtn.addEventListener('click', () => {
+        if (currentIdx > 0) {
+          content.classList.remove(fontSizes[currentIdx]);
+          currentIdx--;
+          content.classList.add(fontSizes[currentIdx]);
+        }
+      });
+      increaseBtn.addEventListener('click', () => {
+        if (currentIdx < fontSizes.length - 1) {
+          content.classList.remove(fontSizes[currentIdx]);
+          currentIdx++;
+          content.classList.add(fontSizes[currentIdx]);
+        }
+      });
+      resetBtn.addEventListener('click', () => {
+        fontSizes.forEach(s => content.classList.remove(s));
+        currentIdx = 1;
+        content.classList.add(fontSizes[currentIdx]);
+      });
+    }
+
+    // 4. Dark/Light Theme Switcher
+    const themeButtons = document.querySelectorAll('[data-set-theme]');
+    themeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const theme = btn.getAttribute('data-set-theme');
+        const root = document.documentElement;
+        root.setAttribute('data-theme', theme);
+        if (theme === 'light') {
+          root.classList.remove('dark');
+        } else {
+          root.classList.add('dark');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
