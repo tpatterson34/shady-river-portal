@@ -182,6 +182,7 @@
         <a href="#roadmap" class="text-stone-300 hover:text-amber-400 transition-colors">Song Roadmap</a>
         <a href="#tracks" class="text-stone-300 hover:text-amber-400 transition-colors">All 16 Tracks</a>
         <a href="#sources" class="text-stone-300 hover:text-amber-400 transition-colors">Works Cited</a>
+        <a href="https://suno.com/playlist/dfba058f-12ca-4da1-88a4-032ab5c25fae" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-750 text-amber-400 border border-amber-500/40 transition-colors font-bold flex items-center gap-1.5" title="Listen to all 15 master tracks on Suno"><i class="fa-solid fa-compact-disc text-amber-400" aria-hidden="true"></i> Suno Playlist <i class="fa-solid fa-arrow-up-right-from-square text-[9px]" aria-hidden="true"></i></a>
         <a href="../vault/index.html" class="px-3 py-1.5 rounded-lg bg-amber-600/20 hover:bg-amber-600/30 text-amber-400 border border-amber-500/40 transition-colors font-bold">
           <i class="fa-solid fa-box-archive mr-1" aria-hidden="true"></i> The Vault
         </a>
@@ -196,7 +197,7 @@
   </header>
 
   <!-- Main Landmark -->
-  <main id="main-content" tabindex="-1" class="flex-grow focus:outline-none">
+  <main id="main-content" tabindex="-1" class="flex-grow focus:outline-none pb-28">
 
     <!-- HERO SECTION -->
     <section class="relative py-12 sm:py-16 md:py-20 border-b border-stone-800 bg-gradient-to-b from-stone-900 via-stone-950 to-stone-950 overflow-hidden">
@@ -228,11 +229,11 @@
           <div class="lg:col-span-7 space-y-6">
             <!-- Badges -->
             <div class="flex flex-wrap items-center gap-2">
-              <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30">
-                <i class="fa-solid fa-flask-vial mr-1" aria-hidden="true"></i> Incubator Concept &bull; Album XX
+              <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-amber-500/15 text-amber-300 border border-amber-500/40 flex items-center gap-1.5">
+                <i class="fa-solid fa-compact-disc text-amber-400" aria-hidden="true"></i> Recorded Studio Album &bull; 15 Suno Masters
               </span>
-              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-stone-800 text-stone-300 border border-stone-700">
-                Historical-Industrial Folk
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-emerald-950/60 text-emerald-300 border border-emerald-800/60 font-semibold flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> In-Page Audio Active
               </span>
               <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-stone-800 text-stone-300 border border-stone-700">
                 4 Acts &bull; 16 Tracks
@@ -276,8 +277,14 @@
 
             <!-- Action Hub -->
             <div class="flex flex-wrap items-center gap-3 pt-2">
-              <a href="#tracks" class="px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 font-mono font-bold text-xs uppercase tracking-wider transition-colors flex items-center gap-2 shadow-lg shadow-amber-600/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300">
-                <i class="fa-solid fa-list-ol text-xs" aria-hidden="true"></i> Explore All 16 Tracks
+              <button type="button" onclick="playTrackById(1)" class="px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 font-mono font-bold text-xs uppercase tracking-wider transition-all flex items-center gap-2 shadow-lg shadow-amber-600/30 hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300" aria-label="Play full album starting at Track 1">
+                <i class="fa-solid fa-circle-play text-sm" aria-hidden="true"></i> Play Full Album (15 Tracks)
+              </button>
+              <a href="https://suno.com/playlist/dfba058f-12ca-4da1-88a4-032ab5c25fae" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-amber-400 border border-amber-500/40 font-mono font-bold text-xs transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Listen to master playlist on Suno">
+                <i class="fa-solid fa-compact-disc text-amber-400" aria-hidden="true"></i> Suno Playlist <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+              </a>
+              <a href="#tracks" class="px-4 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-stone-200 border border-stone-700 font-mono font-bold text-xs uppercase tracking-wider transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
+                <i class="fa-solid fa-list-ol text-xs text-amber-400" aria-hidden="true"></i> Track Vault
               </a>
               <a href="#thesis" class="px-4 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-stone-200 border border-stone-700 font-mono font-bold text-xs transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                 <i class="fa-solid fa-book-open text-xs text-amber-400" aria-hidden="true"></i> The 3 Eras of Displacement
@@ -712,9 +719,7 @@
                   <span class="px-2.5 py-0.5 rounded text-xs font-mono font-semibold bg-stone-800 text-amber-400 border border-stone-700">
                     Track 01 of 16
                   </span>
-                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-stone-950 text-stone-400 border border-stone-800">
-                    Recorded Demo Ready
-                  </span>
+                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-emerald-950/80 text-emerald-300 border border-emerald-800/80 font-bold flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Suno Master Ready</span>
                 </div>
                 <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
                   01. The Golden Age
@@ -726,11 +731,59 @@
 
               <!-- Quick Buttons -->
               <div class="flex items-center gap-2 shrink-0">
+                <button type="button" id="play-btn-1" onclick="togglePlayPause(1)" class="px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 text-xs font-mono font-bold transition-all shadow-md shadow-amber-600/20 flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 hover:scale-[1.02]" aria-label="Play The Golden Age">
+                  <i class="fa-solid fa-play text-xs" aria-hidden="true" id="play-icon-1"></i>
+                  <span id="play-label-1">Play Song</span>
+                </button>
                 <button onclick="toggleDrawer(1)" id="drawer-btn-1" aria-expanded="false" aria-controls="drawer-1" class="px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-750 text-amber-400 border border-stone-700 text-xs font-mono font-bold transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                   <i class="fa-solid fa-scroll text-xs" aria-hidden="true"></i>
                   <span id="drawer-label-1">View Lyrics &amp; Details</span>
                   <i id="drawer-icon-1" class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
                 </button>
+              </div>
+            </div>
+
+            <!-- In-Card Audio Player Deck -->
+            <div id="player-deck-1" class="mt-6 p-4 rounded-xl bg-stone-950/80 border border-stone-800/90 space-y-3 transition-colors">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30 shrink-0 flex items-center gap-1.5">
+                    <i class="fa-solid fa-compact-disc text-amber-500" aria-hidden="true"></i> Suno v5.5 Master
+                  </span>
+                  <span class="text-[11px] font-mono text-stone-400 truncate max-w-xs sm:max-w-md" title="English Folk • Acoustic Ballad • 3/4 Waltz">
+                    English Folk • Acoustic Ballad • 3/4 Waltz
+                  </span>
+                </div>
+                <a href="https://suno.com/song/aa26485a-774d-4ed0-a741-fb632538f613" target="_blank" rel="noopener noreferrer" class="text-[11px] font-mono text-amber-400 hover:text-amber-300 hover:underline flex items-center gap-1 shrink-0 ml-auto focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400 rounded px-1" title="Open song on Suno.com">
+                  <span>Suno</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                </a>
+              </div>
+              
+              <!-- Deck Controls & Scrubber -->
+              <div class="flex items-center gap-3">
+                <button type="button" id="deck-play-btn-1" onclick="togglePlayPause(1)" class="w-8 h-8 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 flex items-center justify-center shrink-0 transition-transform active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 shadow" aria-label="Play The Golden Age">
+                  <i class="fa-solid fa-play text-xs text-stone-950 ml-0.5" id="deck-play-icon-1" aria-hidden="true"></i>
+                </button>
+                <div class="flex-1 space-y-1 min-w-0">
+                  <div class="relative flex items-center w-full">
+                    <input 
+                      type="range" 
+                      id="seek-slider-1" 
+                      min="0" 
+                      max="100" 
+                      value="0" 
+                      step="0.1" 
+                      oninput="onSeekInput(1, this.value)"
+                      onchange="onSeekChange(1, this.value)"
+                      class="w-full h-1.5 rounded-lg bg-stone-800 accent-amber-500 cursor-pointer appearance-none transition-all"
+                      aria-label="Seek track audio position for The Golden Age"
+                    />
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] font-mono text-stone-400">
+                    <span id="time-curr-1">0:00</span>
+                    <span id="time-dur-1">--:--</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -777,6 +830,16 @@
                 >
                   <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button 
+                  type="button"
+                  onclick="shareTrackLink('The Golden Age', 'Chaff from the Wheat', 1)"
+                  class="bard-note-btn track-share-btn mr-2"
+                  aria-label="Share link for The Golden Age"
+                  title="Share this track"
+                >
+                  <svg class="bard-note-icon track-share-icon" width="16" height="16" style="width: 16px; height: 16px; max-width: 16px; max-height: 16px; min-width: 16px; min-height: 16px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                  <span class="bard-note-tooltip track-share-tooltip">Share track</span>
                 </button>
                 <button onclick="copyLyrics(1)" aria-label="Copy lyrics for The Golden Age" class="px-3.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                       <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> <span id="copy-btn-text-1">Copy Lyrics</span>
@@ -907,9 +970,7 @@ With a skill that&#x27;s all his own.</textarea>
                   <span class="px-2.5 py-0.5 rounded text-xs font-mono font-semibold bg-stone-800 text-amber-400 border border-stone-700">
                     Track 02 of 16
                   </span>
-                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-stone-950 text-stone-400 border border-stone-800">
-                    Recorded Demo Ready
-                  </span>
+                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-emerald-950/80 text-emerald-300 border border-emerald-800/80 font-bold flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Suno Master Ready</span>
                 </div>
                 <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
                   02. The Water Frame
@@ -921,11 +982,59 @@ With a skill that&#x27;s all his own.</textarea>
 
               <!-- Quick Buttons -->
               <div class="flex items-center gap-2 shrink-0">
+                <button type="button" id="play-btn-2" onclick="togglePlayPause(2)" class="px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 text-xs font-mono font-bold transition-all shadow-md shadow-amber-600/20 flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 hover:scale-[1.02]" aria-label="Play The Water Frame">
+                  <i class="fa-solid fa-play text-xs" aria-hidden="true" id="play-icon-2"></i>
+                  <span id="play-label-2">Play Song</span>
+                </button>
                 <button onclick="toggleDrawer(2)" id="drawer-btn-2" aria-expanded="false" aria-controls="drawer-2" class="px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-750 text-amber-400 border border-stone-700 text-xs font-mono font-bold transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                   <i class="fa-solid fa-scroll text-xs" aria-hidden="true"></i>
                   <span id="drawer-label-2">View Lyrics &amp; Details</span>
                   <i id="drawer-icon-2" class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
                 </button>
+              </div>
+            </div>
+
+            <!-- In-Card Audio Player Deck -->
+            <div id="player-deck-2" class="mt-6 p-4 rounded-xl bg-stone-950/80 border border-stone-800/90 space-y-3 transition-colors">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30 shrink-0 flex items-center gap-1.5">
+                    <i class="fa-solid fa-compact-disc text-amber-500" aria-hidden="true"></i> Suno v5.5 Master
+                  </span>
+                  <span class="text-[11px] font-mono text-stone-400 truncate max-w-xs sm:max-w-md" title="Dark Folk • Industrial Americana • Heavy Groan">
+                    Dark Folk • Industrial Americana • Heavy Groan
+                  </span>
+                </div>
+                <a href="https://suno.com/song/8ba0a260-b56f-411d-b511-275463b4f060" target="_blank" rel="noopener noreferrer" class="text-[11px] font-mono text-amber-400 hover:text-amber-300 hover:underline flex items-center gap-1 shrink-0 ml-auto focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400 rounded px-1" title="Open song on Suno.com">
+                  <span>Suno</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                </a>
+              </div>
+              
+              <!-- Deck Controls & Scrubber -->
+              <div class="flex items-center gap-3">
+                <button type="button" id="deck-play-btn-2" onclick="togglePlayPause(2)" class="w-8 h-8 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 flex items-center justify-center shrink-0 transition-transform active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 shadow" aria-label="Play The Water Frame">
+                  <i class="fa-solid fa-play text-xs text-stone-950 ml-0.5" id="deck-play-icon-2" aria-hidden="true"></i>
+                </button>
+                <div class="flex-1 space-y-1 min-w-0">
+                  <div class="relative flex items-center w-full">
+                    <input 
+                      type="range" 
+                      id="seek-slider-2" 
+                      min="0" 
+                      max="100" 
+                      value="0" 
+                      step="0.1" 
+                      oninput="onSeekInput(2, this.value)"
+                      onchange="onSeekChange(2, this.value)"
+                      class="w-full h-1.5 rounded-lg bg-stone-800 accent-amber-500 cursor-pointer appearance-none transition-all"
+                      aria-label="Seek track audio position for The Water Frame"
+                    />
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] font-mono text-stone-400">
+                    <span id="time-curr-2">0:00</span>
+                    <span id="time-dur-2">--:--</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -972,6 +1081,16 @@ With a skill that&#x27;s all his own.</textarea>
                 >
                   <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button 
+                  type="button"
+                  onclick="shareTrackLink('The Water Frame', 'Chaff from the Wheat', 2)"
+                  class="bard-note-btn track-share-btn mr-2"
+                  aria-label="Share link for The Water Frame"
+                  title="Share this track"
+                >
+                  <svg class="bard-note-icon track-share-icon" width="16" height="16" style="width: 16px; height: 16px; max-width: 16px; max-height: 16px; min-width: 16px; min-height: 16px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                  <span class="bard-note-tooltip track-share-tooltip">Share track</span>
                 </button>
                 <button onclick="copyLyrics(2)" aria-label="Copy lyrics for The Water Frame" class="px-3.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                       <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> <span id="copy-btn-text-2">Copy Lyrics</span>
@@ -1110,9 +1229,7 @@ Half the coin for twice the work...</textarea>
                   <span class="px-2.5 py-0.5 rounded text-xs font-mono font-semibold bg-stone-800 text-amber-400 border border-stone-700">
                     Track 03 of 16
                   </span>
-                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-stone-950 text-stone-400 border border-stone-800">
-                    Recorded Demo Ready
-                  </span>
+                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-emerald-950/80 text-emerald-300 border border-emerald-800/80 font-bold flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Suno Master Ready</span>
                 </div>
                 <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
                   03. General Ludd&#x27;s Proclamation
@@ -1124,11 +1241,59 @@ Half the coin for twice the work...</textarea>
 
               <!-- Quick Buttons -->
               <div class="flex items-center gap-2 shrink-0">
+                <button type="button" id="play-btn-3" onclick="togglePlayPause(3)" class="px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 text-xs font-mono font-bold transition-all shadow-md shadow-amber-600/20 flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 hover:scale-[1.02]" aria-label="Play General Ludd's Proclamation">
+                  <i class="fa-solid fa-play text-xs" aria-hidden="true" id="play-icon-3"></i>
+                  <span id="play-label-3">Play Song</span>
+                </button>
                 <button onclick="toggleDrawer(3)" id="drawer-btn-3" aria-expanded="false" aria-controls="drawer-3" class="px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-750 text-amber-400 border border-stone-700 text-xs font-mono font-bold transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                   <i class="fa-solid fa-scroll text-xs" aria-hidden="true"></i>
                   <span id="drawer-label-3">View Lyrics &amp; Details</span>
                   <i id="drawer-icon-3" class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
                 </button>
+              </div>
+            </div>
+
+            <!-- In-Card Audio Player Deck -->
+            <div id="player-deck-3" class="mt-6 p-4 rounded-xl bg-stone-950/80 border border-stone-800/90 space-y-3 transition-colors">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30 shrink-0 flex items-center gap-1.5">
+                    <i class="fa-solid fa-compact-disc text-amber-500" aria-hidden="true"></i> Suno v5.5 Master
+                  </span>
+                  <span class="text-[11px] font-mono text-stone-400 truncate max-w-xs sm:max-w-md" title="Defiant Percussive Work-Chant • Industrial Folk">
+                    Defiant Percussive Work-Chant • Industrial Folk
+                  </span>
+                </div>
+                <a href="https://suno.com/song/70528355-616b-4da5-9e57-f8250a966a86" target="_blank" rel="noopener noreferrer" class="text-[11px] font-mono text-amber-400 hover:text-amber-300 hover:underline flex items-center gap-1 shrink-0 ml-auto focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400 rounded px-1" title="Open song on Suno.com">
+                  <span>Suno</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                </a>
+              </div>
+              
+              <!-- Deck Controls & Scrubber -->
+              <div class="flex items-center gap-3">
+                <button type="button" id="deck-play-btn-3" onclick="togglePlayPause(3)" class="w-8 h-8 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 flex items-center justify-center shrink-0 transition-transform active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 shadow" aria-label="Play General Ludd's Proclamation">
+                  <i class="fa-solid fa-play text-xs text-stone-950 ml-0.5" id="deck-play-icon-3" aria-hidden="true"></i>
+                </button>
+                <div class="flex-1 space-y-1 min-w-0">
+                  <div class="relative flex items-center w-full">
+                    <input 
+                      type="range" 
+                      id="seek-slider-3" 
+                      min="0" 
+                      max="100" 
+                      value="0" 
+                      step="0.1" 
+                      oninput="onSeekInput(3, this.value)"
+                      onchange="onSeekChange(3, this.value)"
+                      class="w-full h-1.5 rounded-lg bg-stone-800 accent-amber-500 cursor-pointer appearance-none transition-all"
+                      aria-label="Seek track audio position for General Ludd's Proclamation"
+                    />
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] font-mono text-stone-400">
+                    <span id="time-curr-3">0:00</span>
+                    <span id="time-dur-3">--:--</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -1175,6 +1340,16 @@ Half the coin for twice the work...</textarea>
                 >
                   <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button 
+                  type="button"
+                  onclick="shareTrackLink('General Ludd\\'s Proclamation', 'Chaff from the Wheat', 3)"
+                  class="bard-note-btn track-share-btn mr-2"
+                  aria-label="Share link for General Ludd\\'s Proclamation"
+                  title="Share this track"
+                >
+                  <svg class="bard-note-icon track-share-icon" width="16" height="16" style="width: 16px; height: 16px; max-width: 16px; max-height: 16px; min-width: 16px; min-height: 16px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                  <span class="bard-note-tooltip track-share-tooltip">Share track</span>
                 </button>
                 <button onclick="copyLyrics(3)" aria-label="Copy lyrics for General Ludd&#x27;s Proclamation" class="px-3.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                       <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> <span id="copy-btn-text-3">Copy Lyrics</span>
@@ -1319,9 +1494,7 @@ General Ludd is King!</textarea>
                   <span class="px-2.5 py-0.5 rounded text-xs font-mono font-semibold bg-stone-800 text-amber-400 border border-stone-700">
                     Track 04 of 16
                   </span>
-                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-stone-950 text-stone-400 border border-stone-800">
-                    Recorded Demo Ready
-                  </span>
+                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-emerald-950/80 text-emerald-300 border border-emerald-800/80 font-bold flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Suno Master Ready</span>
                 </div>
                 <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
                   04. The Philosophy of Mr. Ure
@@ -1333,11 +1506,59 @@ General Ludd is King!</textarea>
 
               <!-- Quick Buttons -->
               <div class="flex items-center gap-2 shrink-0">
+                <button type="button" id="play-btn-4" onclick="togglePlayPause(4)" class="px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 text-xs font-mono font-bold transition-all shadow-md shadow-amber-600/20 flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 hover:scale-[1.02]" aria-label="Play The Philosophy of Mr. Ure">
+                  <i class="fa-solid fa-play text-xs" aria-hidden="true" id="play-icon-4"></i>
+                  <span id="play-label-4">Play Song</span>
+                </button>
                 <button onclick="toggleDrawer(4)" id="drawer-btn-4" aria-expanded="false" aria-controls="drawer-4" class="px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-750 text-amber-400 border border-stone-700 text-xs font-mono font-bold transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                   <i class="fa-solid fa-scroll text-xs" aria-hidden="true"></i>
                   <span id="drawer-label-4">View Lyrics &amp; Details</span>
                   <i id="drawer-icon-4" class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
                 </button>
+              </div>
+            </div>
+
+            <!-- In-Card Audio Player Deck -->
+            <div id="player-deck-4" class="mt-6 p-4 rounded-xl bg-stone-950/80 border border-stone-800/90 space-y-3 transition-colors">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30 shrink-0 flex items-center gap-1.5">
+                    <i class="fa-solid fa-compact-disc text-amber-500" aria-hidden="true"></i> Suno v5.5 Master
+                  </span>
+                  <span class="text-[11px] font-mono text-stone-400 truncate max-w-xs sm:max-w-md" title="Spoken Word • Dark Classical • Minimalist Drone">
+                    Spoken Word • Dark Classical • Minimalist Drone
+                  </span>
+                </div>
+                <a href="https://suno.com/song/dfa11939-47af-4afc-a857-c1e614965c91" target="_blank" rel="noopener noreferrer" class="text-[11px] font-mono text-amber-400 hover:text-amber-300 hover:underline flex items-center gap-1 shrink-0 ml-auto focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400 rounded px-1" title="Open song on Suno.com">
+                  <span>Suno</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                </a>
+              </div>
+              
+              <!-- Deck Controls & Scrubber -->
+              <div class="flex items-center gap-3">
+                <button type="button" id="deck-play-btn-4" onclick="togglePlayPause(4)" class="w-8 h-8 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 flex items-center justify-center shrink-0 transition-transform active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 shadow" aria-label="Play The Philosophy of Mr. Ure">
+                  <i class="fa-solid fa-play text-xs text-stone-950 ml-0.5" id="deck-play-icon-4" aria-hidden="true"></i>
+                </button>
+                <div class="flex-1 space-y-1 min-w-0">
+                  <div class="relative flex items-center w-full">
+                    <input 
+                      type="range" 
+                      id="seek-slider-4" 
+                      min="0" 
+                      max="100" 
+                      value="0" 
+                      step="0.1" 
+                      oninput="onSeekInput(4, this.value)"
+                      onchange="onSeekChange(4, this.value)"
+                      class="w-full h-1.5 rounded-lg bg-stone-800 accent-amber-500 cursor-pointer appearance-none transition-all"
+                      aria-label="Seek track audio position for The Philosophy of Mr. Ure"
+                    />
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] font-mono text-stone-400">
+                    <span id="time-curr-4">0:00</span>
+                    <span id="time-dur-4">--:--</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -1384,6 +1605,16 @@ General Ludd is King!</textarea>
                 >
                   <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button 
+                  type="button"
+                  onclick="shareTrackLink('The Philosophy of Mr. Ure', 'Chaff from the Wheat', 4)"
+                  class="bard-note-btn track-share-btn mr-2"
+                  aria-label="Share link for The Philosophy of Mr. Ure"
+                  title="Share this track"
+                >
+                  <svg class="bard-note-icon track-share-icon" width="16" height="16" style="width: 16px; height: 16px; max-width: 16px; max-height: 16px; min-width: 16px; min-height: 16px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                  <span class="bard-note-tooltip track-share-tooltip">Share track</span>
                 </button>
                 <button onclick="copyLyrics(4)" aria-label="Copy lyrics for The Philosophy of Mr. Ure" class="px-3.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                       <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> <span id="copy-btn-text-4">Copy Lyrics</span>
@@ -1492,9 +1723,7 @@ To silver... and to gold.
                   <span class="px-2.5 py-0.5 rounded text-xs font-mono font-semibold bg-stone-800 text-amber-400 border border-stone-700">
                     Track 05 of 16
                   </span>
-                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-stone-950 text-stone-400 border border-stone-800">
-                    Recorded Demo Ready
-                  </span>
+                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-emerald-950/80 text-emerald-300 border border-emerald-800/80 font-bold flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Suno Master Ready</span>
                 </div>
                 <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
                   05. A Giant Sucking Sound
@@ -1506,11 +1735,59 @@ To silver... and to gold.
 
               <!-- Quick Buttons -->
               <div class="flex items-center gap-2 shrink-0">
+                <button type="button" id="play-btn-5" onclick="togglePlayPause(5)" class="px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 text-xs font-mono font-bold transition-all shadow-md shadow-amber-600/20 flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 hover:scale-[1.02]" aria-label="Play A Giant Sucking Sound">
+                  <i class="fa-solid fa-play text-xs" aria-hidden="true" id="play-icon-5"></i>
+                  <span id="play-label-5">Play Song</span>
+                </button>
                 <button onclick="toggleDrawer(5)" id="drawer-btn-5" aria-expanded="false" aria-controls="drawer-5" class="px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-750 text-amber-400 border border-stone-700 text-xs font-mono font-bold transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                   <i class="fa-solid fa-scroll text-xs" aria-hidden="true"></i>
                   <span id="drawer-label-5">View Lyrics &amp; Details</span>
                   <i id="drawer-icon-5" class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
                 </button>
+              </div>
+            </div>
+
+            <!-- In-Card Audio Player Deck -->
+            <div id="player-deck-5" class="mt-6 p-4 rounded-xl bg-stone-950/80 border border-stone-800/90 space-y-3 transition-colors">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30 shrink-0 flex items-center gap-1.5">
+                    <i class="fa-solid fa-compact-disc text-amber-500" aria-hidden="true"></i> Suno v5.5 Master
+                  </span>
+                  <span class="text-[11px] font-mono text-stone-400 truncate max-w-xs sm:max-w-md" title="Driving 90s Heartland Rock • Blue-Collar Anthem">
+                    Driving 90s Heartland Rock • Blue-Collar Anthem
+                  </span>
+                </div>
+                <a href="https://suno.com/song/d5c4f744-feca-4ff8-8a82-dae1dc16d4f0" target="_blank" rel="noopener noreferrer" class="text-[11px] font-mono text-amber-400 hover:text-amber-300 hover:underline flex items-center gap-1 shrink-0 ml-auto focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400 rounded px-1" title="Open song on Suno.com">
+                  <span>Suno</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                </a>
+              </div>
+              
+              <!-- Deck Controls & Scrubber -->
+              <div class="flex items-center gap-3">
+                <button type="button" id="deck-play-btn-5" onclick="togglePlayPause(5)" class="w-8 h-8 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 flex items-center justify-center shrink-0 transition-transform active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 shadow" aria-label="Play A Giant Sucking Sound">
+                  <i class="fa-solid fa-play text-xs text-stone-950 ml-0.5" id="deck-play-icon-5" aria-hidden="true"></i>
+                </button>
+                <div class="flex-1 space-y-1 min-w-0">
+                  <div class="relative flex items-center w-full">
+                    <input 
+                      type="range" 
+                      id="seek-slider-5" 
+                      min="0" 
+                      max="100" 
+                      value="0" 
+                      step="0.1" 
+                      oninput="onSeekInput(5, this.value)"
+                      onchange="onSeekChange(5, this.value)"
+                      class="w-full h-1.5 rounded-lg bg-stone-800 accent-amber-500 cursor-pointer appearance-none transition-all"
+                      aria-label="Seek track audio position for A Giant Sucking Sound"
+                    />
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] font-mono text-stone-400">
+                    <span id="time-curr-5">0:00</span>
+                    <span id="time-dur-5">--:--</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -1557,6 +1834,16 @@ To silver... and to gold.
                 >
                   <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button 
+                  type="button"
+                  onclick="shareTrackLink('A Giant Sucking Sound', 'Chaff from the Wheat', 5)"
+                  class="bard-note-btn track-share-btn mr-2"
+                  aria-label="Share link for A Giant Sucking Sound"
+                  title="Share this track"
+                >
+                  <svg class="bard-note-icon track-share-icon" width="16" height="16" style="width: 16px; height: 16px; max-width: 16px; max-height: 16px; min-width: 16px; min-height: 16px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                  <span class="bard-note-tooltip track-share-tooltip">Share track</span>
                 </button>
                 <button onclick="copyLyrics(5)" aria-label="Copy lyrics for A Giant Sucking Sound" class="px-3.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                       <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> <span id="copy-btn-text-5">Copy Lyrics</span>
@@ -1727,9 +2014,7 @@ I hear that giant suckin&#x27; sound.</textarea>
                   <span class="px-2.5 py-0.5 rounded text-xs font-mono font-semibold bg-stone-800 text-amber-400 border border-stone-700">
                     Track 06 of 16
                   </span>
-                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-stone-950 text-stone-400 border border-stone-800">
-                    Recorded Demo Ready
-                  </span>
+                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-emerald-950/80 text-emerald-300 border border-emerald-800/80 font-bold flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Suno Master Ready</span>
                 </div>
                 <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
                   06. Pink Slip Blues
@@ -1741,11 +2026,59 @@ I hear that giant suckin&#x27; sound.</textarea>
 
               <!-- Quick Buttons -->
               <div class="flex items-center gap-2 shrink-0">
+                <button type="button" id="play-btn-6" onclick="togglePlayPause(6)" class="px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 text-xs font-mono font-bold transition-all shadow-md shadow-amber-600/20 flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 hover:scale-[1.02]" aria-label="Play Pink Slip Blues">
+                  <i class="fa-solid fa-play text-xs" aria-hidden="true" id="play-icon-6"></i>
+                  <span id="play-label-6">Play Song</span>
+                </button>
                 <button onclick="toggleDrawer(6)" id="drawer-btn-6" aria-expanded="false" aria-controls="drawer-6" class="px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-750 text-amber-400 border border-stone-700 text-xs font-mono font-bold transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                   <i class="fa-solid fa-scroll text-xs" aria-hidden="true"></i>
                   <span id="drawer-label-6">View Lyrics &amp; Details</span>
                   <i id="drawer-icon-6" class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
                 </button>
+              </div>
+            </div>
+
+            <!-- In-Card Audio Player Deck -->
+            <div id="player-deck-6" class="mt-6 p-4 rounded-xl bg-stone-950/80 border border-stone-800/90 space-y-3 transition-colors">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30 shrink-0 flex items-center gap-1.5">
+                    <i class="fa-solid fa-compact-disc text-amber-500" aria-hidden="true"></i> Suno v5.5 Master
+                  </span>
+                  <span class="text-[11px] font-mono text-stone-400 truncate max-w-xs sm:max-w-md" title="Rust Belt Blues • Slide Guitar • 12/8 Shuffle">
+                    Rust Belt Blues • Slide Guitar • 12/8 Shuffle
+                  </span>
+                </div>
+                <a href="https://suno.com/song/310a5b42-6ab9-473d-948e-4c7e351e919e" target="_blank" rel="noopener noreferrer" class="text-[11px] font-mono text-amber-400 hover:text-amber-300 hover:underline flex items-center gap-1 shrink-0 ml-auto focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400 rounded px-1" title="Open song on Suno.com">
+                  <span>Suno</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                </a>
+              </div>
+              
+              <!-- Deck Controls & Scrubber -->
+              <div class="flex items-center gap-3">
+                <button type="button" id="deck-play-btn-6" onclick="togglePlayPause(6)" class="w-8 h-8 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 flex items-center justify-center shrink-0 transition-transform active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 shadow" aria-label="Play Pink Slip Blues">
+                  <i class="fa-solid fa-play text-xs text-stone-950 ml-0.5" id="deck-play-icon-6" aria-hidden="true"></i>
+                </button>
+                <div class="flex-1 space-y-1 min-w-0">
+                  <div class="relative flex items-center w-full">
+                    <input 
+                      type="range" 
+                      id="seek-slider-6" 
+                      min="0" 
+                      max="100" 
+                      value="0" 
+                      step="0.1" 
+                      oninput="onSeekInput(6, this.value)"
+                      onchange="onSeekChange(6, this.value)"
+                      class="w-full h-1.5 rounded-lg bg-stone-800 accent-amber-500 cursor-pointer appearance-none transition-all"
+                      aria-label="Seek track audio position for Pink Slip Blues"
+                    />
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] font-mono text-stone-400">
+                    <span id="time-curr-6">0:00</span>
+                    <span id="time-dur-6">--:--</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -1792,6 +2125,16 @@ I hear that giant suckin&#x27; sound.</textarea>
                 >
                   <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button 
+                  type="button"
+                  onclick="shareTrackLink('Pink Slip Blues', 'Chaff from the Wheat', 6)"
+                  class="bard-note-btn track-share-btn mr-2"
+                  aria-label="Share link for Pink Slip Blues"
+                  title="Share this track"
+                >
+                  <svg class="bard-note-icon track-share-icon" width="16" height="16" style="width: 16px; height: 16px; max-width: 16px; max-height: 16px; min-width: 16px; min-height: 16px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                  <span class="bard-note-tooltip track-share-tooltip">Share track</span>
                 </button>
                 <button onclick="copyLyrics(6)" aria-label="Copy lyrics for Pink Slip Blues" class="px-3.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                       <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> <span id="copy-btn-text-6">Copy Lyrics</span>
@@ -1954,9 +2297,7 @@ Got the pink slip blues...</textarea>
                   <span class="px-2.5 py-0.5 rounded text-xs font-mono font-semibold bg-stone-800 text-amber-400 border border-stone-700">
                     Track 07 of 16
                   </span>
-                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-stone-950 text-stone-400 border border-stone-800">
-                    Recorded Demo Ready
-                  </span>
+                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-emerald-950/80 text-emerald-300 border border-emerald-800/80 font-bold flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Suno Master Ready</span>
                 </div>
                 <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
                   07. The TAA Shuffle
@@ -1968,11 +2309,59 @@ Got the pink slip blues...</textarea>
 
               <!-- Quick Buttons -->
               <div class="flex items-center gap-2 shrink-0">
+                <button type="button" id="play-btn-7" onclick="togglePlayPause(7)" class="px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 text-xs font-mono font-bold transition-all shadow-md shadow-amber-600/20 flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 hover:scale-[1.02]" aria-label="Play The TAA Shuffle">
+                  <i class="fa-solid fa-play text-xs" aria-hidden="true" id="play-icon-7"></i>
+                  <span id="play-label-7">Play Song</span>
+                </button>
                 <button onclick="toggleDrawer(7)" id="drawer-btn-7" aria-expanded="false" aria-controls="drawer-7" class="px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-750 text-amber-400 border border-stone-700 text-xs font-mono font-bold transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                   <i class="fa-solid fa-scroll text-xs" aria-hidden="true"></i>
                   <span id="drawer-label-7">View Lyrics &amp; Details</span>
                   <i id="drawer-icon-7" class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
                 </button>
+              </div>
+            </div>
+
+            <!-- In-Card Audio Player Deck -->
+            <div id="player-deck-7" class="mt-6 p-4 rounded-xl bg-stone-950/80 border border-stone-800/90 space-y-3 transition-colors">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30 shrink-0 flex items-center gap-1.5">
+                    <i class="fa-solid fa-compact-disc text-amber-500" aria-hidden="true"></i> Suno v5.5 Master
+                  </span>
+                  <span class="text-[11px] font-mono text-stone-400 truncate max-w-xs sm:max-w-md" title="Upbeat 90s Country-Rock • Satirical Shuffle">
+                    Upbeat 90s Country-Rock • Satirical Shuffle
+                  </span>
+                </div>
+                <a href="https://suno.com/song/df566002-0431-401f-94eb-fa50af3646e7" target="_blank" rel="noopener noreferrer" class="text-[11px] font-mono text-amber-400 hover:text-amber-300 hover:underline flex items-center gap-1 shrink-0 ml-auto focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400 rounded px-1" title="Open song on Suno.com">
+                  <span>Suno</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                </a>
+              </div>
+              
+              <!-- Deck Controls & Scrubber -->
+              <div class="flex items-center gap-3">
+                <button type="button" id="deck-play-btn-7" onclick="togglePlayPause(7)" class="w-8 h-8 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 flex items-center justify-center shrink-0 transition-transform active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 shadow" aria-label="Play The TAA Shuffle">
+                  <i class="fa-solid fa-play text-xs text-stone-950 ml-0.5" id="deck-play-icon-7" aria-hidden="true"></i>
+                </button>
+                <div class="flex-1 space-y-1 min-w-0">
+                  <div class="relative flex items-center w-full">
+                    <input 
+                      type="range" 
+                      id="seek-slider-7" 
+                      min="0" 
+                      max="100" 
+                      value="0" 
+                      step="0.1" 
+                      oninput="onSeekInput(7, this.value)"
+                      onchange="onSeekChange(7, this.value)"
+                      class="w-full h-1.5 rounded-lg bg-stone-800 accent-amber-500 cursor-pointer appearance-none transition-all"
+                      aria-label="Seek track audio position for The TAA Shuffle"
+                    />
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] font-mono text-stone-400">
+                    <span id="time-curr-7">0:00</span>
+                    <span id="time-dur-7">--:--</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -2019,6 +2408,16 @@ Got the pink slip blues...</textarea>
                 >
                   <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button 
+                  type="button"
+                  onclick="shareTrackLink('The TAA Shuffle', 'Chaff from the Wheat', 7)"
+                  class="bard-note-btn track-share-btn mr-2"
+                  aria-label="Share link for The TAA Shuffle"
+                  title="Share this track"
+                >
+                  <svg class="bard-note-icon track-share-icon" width="16" height="16" style="width: 16px; height: 16px; max-width: 16px; max-height: 16px; min-width: 16px; min-height: 16px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                  <span class="bard-note-tooltip track-share-tooltip">Share track</span>
                 </button>
                 <button onclick="copyLyrics(7)" aria-label="Copy lyrics for The TAA Shuffle" class="px-3.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                       <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> <span id="copy-btn-text-7">Copy Lyrics</span>
@@ -2189,9 +2588,7 @@ Gotta &quot;interview for success.&quot;</textarea>
                   <span class="px-2.5 py-0.5 rounded text-xs font-mono font-semibold bg-stone-800 text-amber-400 border border-stone-700">
                     Track 08 of 16
                   </span>
-                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-stone-950 text-stone-400 border border-stone-800">
-                    Recorded Demo Ready
-                  </span>
+                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-emerald-950/80 text-emerald-300 border border-emerald-800/80 font-bold flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Suno Master Ready</span>
                 </div>
                 <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
                   08. The Prompt
@@ -2203,11 +2600,59 @@ Gotta &quot;interview for success.&quot;</textarea>
 
               <!-- Quick Buttons -->
               <div class="flex items-center gap-2 shrink-0">
+                <button type="button" id="play-btn-8" onclick="togglePlayPause(8)" class="px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 text-xs font-mono font-bold transition-all shadow-md shadow-amber-600/20 flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 hover:scale-[1.02]" aria-label="Play The Prompt">
+                  <i class="fa-solid fa-play text-xs" aria-hidden="true" id="play-icon-8"></i>
+                  <span id="play-label-8">Play Song</span>
+                </button>
                 <button onclick="toggleDrawer(8)" id="drawer-btn-8" aria-expanded="false" aria-controls="drawer-8" class="px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-750 text-amber-400 border border-stone-700 text-xs font-mono font-bold transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                   <i class="fa-solid fa-scroll text-xs" aria-hidden="true"></i>
                   <span id="drawer-label-8">View Lyrics &amp; Details</span>
                   <i id="drawer-icon-8" class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
                 </button>
+              </div>
+            </div>
+
+            <!-- In-Card Audio Player Deck -->
+            <div id="player-deck-8" class="mt-6 p-4 rounded-xl bg-stone-950/80 border border-stone-800/90 space-y-3 transition-colors">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30 shrink-0 flex items-center gap-1.5">
+                    <i class="fa-solid fa-compact-disc text-amber-500" aria-hidden="true"></i> Suno v5.5 Master
+                  </span>
+                  <span class="text-[11px] font-mono text-stone-400 truncate max-w-xs sm:max-w-md" title="Electronic-Folk • Sterile Glitch • Anxious Alto">
+                    Electronic-Folk • Sterile Glitch • Anxious Alto
+                  </span>
+                </div>
+                <a href="https://suno.com/song/c7305fb9-4484-41a2-b046-a25fa9562b0a" target="_blank" rel="noopener noreferrer" class="text-[11px] font-mono text-amber-400 hover:text-amber-300 hover:underline flex items-center gap-1 shrink-0 ml-auto focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400 rounded px-1" title="Open song on Suno.com">
+                  <span>Suno</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                </a>
+              </div>
+              
+              <!-- Deck Controls & Scrubber -->
+              <div class="flex items-center gap-3">
+                <button type="button" id="deck-play-btn-8" onclick="togglePlayPause(8)" class="w-8 h-8 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 flex items-center justify-center shrink-0 transition-transform active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 shadow" aria-label="Play The Prompt">
+                  <i class="fa-solid fa-play text-xs text-stone-950 ml-0.5" id="deck-play-icon-8" aria-hidden="true"></i>
+                </button>
+                <div class="flex-1 space-y-1 min-w-0">
+                  <div class="relative flex items-center w-full">
+                    <input 
+                      type="range" 
+                      id="seek-slider-8" 
+                      min="0" 
+                      max="100" 
+                      value="0" 
+                      step="0.1" 
+                      oninput="onSeekInput(8, this.value)"
+                      onchange="onSeekChange(8, this.value)"
+                      class="w-full h-1.5 rounded-lg bg-stone-800 accent-amber-500 cursor-pointer appearance-none transition-all"
+                      aria-label="Seek track audio position for The Prompt"
+                    />
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] font-mono text-stone-400">
+                    <span id="time-curr-8">0:00</span>
+                    <span id="time-dur-8">--:--</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -2258,6 +2703,16 @@ Scene 2: 16:9 wide macro shot focusing on her hands trembling slightly over an i
                 >
                   <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button 
+                  type="button"
+                  onclick="shareTrackLink('The Prompt', 'Chaff from the Wheat', 8)"
+                  class="bard-note-btn track-share-btn mr-2"
+                  aria-label="Share link for The Prompt"
+                  title="Share this track"
+                >
+                  <svg class="bard-note-icon track-share-icon" width="16" height="16" style="width: 16px; height: 16px; max-width: 16px; max-height: 16px; min-width: 16px; min-height: 16px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                  <span class="bard-note-tooltip track-share-tooltip">Share track</span>
                 </button>
                 <button onclick="copyLyrics(8)" aria-label="Copy lyrics for The Prompt" class="px-3.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                       <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> <span id="copy-btn-text-8">Copy Lyrics</span>
@@ -2410,9 +2865,7 @@ I hear the water frame.
                   <span class="px-2.5 py-0.5 rounded text-xs font-mono font-semibold bg-stone-800 text-amber-400 border border-stone-700">
                     Track 09 of 16
                   </span>
-                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-stone-950 text-stone-400 border border-stone-800">
-                    Recorded Demo Ready
-                  </span>
+                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-emerald-950/80 text-emerald-300 border border-emerald-800/80 font-bold flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Suno Master Ready</span>
                 </div>
                 <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
                   09. Devalued
@@ -2424,11 +2877,59 @@ I hear the water frame.
 
               <!-- Quick Buttons -->
               <div class="flex items-center gap-2 shrink-0">
+                <button type="button" id="play-btn-9" onclick="togglePlayPause(9)" class="px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 text-xs font-mono font-bold transition-all shadow-md shadow-amber-600/20 flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 hover:scale-[1.02]" aria-label="Play Devalued">
+                  <i class="fa-solid fa-play text-xs" aria-hidden="true" id="play-icon-9"></i>
+                  <span id="play-label-9">Play Song</span>
+                </button>
                 <button onclick="toggleDrawer(9)" id="drawer-btn-9" aria-expanded="false" aria-controls="drawer-9" class="px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-750 text-amber-400 border border-stone-700 text-xs font-mono font-bold transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                   <i class="fa-solid fa-scroll text-xs" aria-hidden="true"></i>
                   <span id="drawer-label-9">View Lyrics &amp; Details</span>
                   <i id="drawer-icon-9" class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
                 </button>
+              </div>
+            </div>
+
+            <!-- In-Card Audio Player Deck -->
+            <div id="player-deck-9" class="mt-6 p-4 rounded-xl bg-stone-950/80 border border-stone-800/90 space-y-3 transition-colors">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30 shrink-0 flex items-center gap-1.5">
+                    <i class="fa-solid fa-compact-disc text-amber-500" aria-hidden="true"></i> Suno v5.5 Master
+                  </span>
+                  <span class="text-[11px] font-mono text-stone-400 truncate max-w-xs sm:max-w-md" title="Dark Ambient • Minimalist Industrial Drone">
+                    Dark Ambient • Minimalist Industrial Drone
+                  </span>
+                </div>
+                <a href="https://suno.com/song/dd9a1e0a-c3dc-440e-a34d-326fe48f9115" target="_blank" rel="noopener noreferrer" class="text-[11px] font-mono text-amber-400 hover:text-amber-300 hover:underline flex items-center gap-1 shrink-0 ml-auto focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400 rounded px-1" title="Open song on Suno.com">
+                  <span>Suno</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                </a>
+              </div>
+              
+              <!-- Deck Controls & Scrubber -->
+              <div class="flex items-center gap-3">
+                <button type="button" id="deck-play-btn-9" onclick="togglePlayPause(9)" class="w-8 h-8 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 flex items-center justify-center shrink-0 transition-transform active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 shadow" aria-label="Play Devalued">
+                  <i class="fa-solid fa-play text-xs text-stone-950 ml-0.5" id="deck-play-icon-9" aria-hidden="true"></i>
+                </button>
+                <div class="flex-1 space-y-1 min-w-0">
+                  <div class="relative flex items-center w-full">
+                    <input 
+                      type="range" 
+                      id="seek-slider-9" 
+                      min="0" 
+                      max="100" 
+                      value="0" 
+                      step="0.1" 
+                      oninput="onSeekInput(9, this.value)"
+                      onchange="onSeekChange(9, this.value)"
+                      class="w-full h-1.5 rounded-lg bg-stone-800 accent-amber-500 cursor-pointer appearance-none transition-all"
+                      aria-label="Seek track audio position for Devalued"
+                    />
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] font-mono text-stone-400">
+                    <span id="time-curr-9">0:00</span>
+                    <span id="time-dur-9">--:--</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -2475,6 +2976,16 @@ I hear the water frame.
                 >
                   <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button 
+                  type="button"
+                  onclick="shareTrackLink('Devalued', 'Chaff from the Wheat', 9)"
+                  class="bard-note-btn track-share-btn mr-2"
+                  aria-label="Share link for Devalued"
+                  title="Share this track"
+                >
+                  <svg class="bard-note-icon track-share-icon" width="16" height="16" style="width: 16px; height: 16px; max-width: 16px; max-height: 16px; min-width: 16px; min-height: 16px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                  <span class="bard-note-tooltip track-share-tooltip">Share track</span>
                 </button>
                 <button onclick="copyLyrics(9)" aria-label="Copy lyrics for Devalued" class="px-3.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                       <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> <span id="copy-btn-text-9">Copy Lyrics</span>
@@ -2623,9 +3134,7 @@ Devalued.</textarea>
                   <span class="px-2.5 py-0.5 rounded text-xs font-mono font-semibold bg-stone-800 text-amber-400 border border-stone-700">
                     Track 10 of 16
                   </span>
-                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-stone-950 text-stone-400 border border-stone-800">
-                    Recorded Demo Ready
-                  </span>
+                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-emerald-950/80 text-emerald-300 border border-emerald-800/80 font-bold flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Suno Master Ready</span>
                 </div>
                 <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
                   10. The Ghost Rig
@@ -2637,11 +3146,59 @@ Devalued.</textarea>
 
               <!-- Quick Buttons -->
               <div class="flex items-center gap-2 shrink-0">
+                <button type="button" id="play-btn-10" onclick="togglePlayPause(10)" class="px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 text-xs font-mono font-bold transition-all shadow-md shadow-amber-600/20 flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 hover:scale-[1.02]" aria-label="Play The Ghost Rig">
+                  <i class="fa-solid fa-play text-xs" aria-hidden="true" id="play-icon-10"></i>
+                  <span id="play-label-10">Play Song</span>
+                </button>
                 <button onclick="toggleDrawer(10)" id="drawer-btn-10" aria-expanded="false" aria-controls="drawer-10" class="px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-750 text-amber-400 border border-stone-700 text-xs font-mono font-bold transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                   <i class="fa-solid fa-scroll text-xs" aria-hidden="true"></i>
                   <span id="drawer-label-10">View Lyrics &amp; Details</span>
                   <i id="drawer-icon-10" class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
                 </button>
+              </div>
+            </div>
+
+            <!-- In-Card Audio Player Deck -->
+            <div id="player-deck-10" class="mt-6 p-4 rounded-xl bg-stone-950/80 border border-stone-800/90 space-y-3 transition-colors">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30 shrink-0 flex items-center gap-1.5">
+                    <i class="fa-solid fa-compact-disc text-amber-500" aria-hidden="true"></i> Suno v5.5 Master
+                  </span>
+                  <span class="text-[11px] font-mono text-stone-400 truncate max-w-xs sm:max-w-md" title="Lonesome Americana Ballad • Dark Modern Folk">
+                    Lonesome Americana Ballad • Dark Modern Folk
+                  </span>
+                </div>
+                <a href="https://suno.com/song/c967df6b-6dbf-40be-81be-3048fb3f806e" target="_blank" rel="noopener noreferrer" class="text-[11px] font-mono text-amber-400 hover:text-amber-300 hover:underline flex items-center gap-1 shrink-0 ml-auto focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400 rounded px-1" title="Open song on Suno.com">
+                  <span>Suno</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                </a>
+              </div>
+              
+              <!-- Deck Controls & Scrubber -->
+              <div class="flex items-center gap-3">
+                <button type="button" id="deck-play-btn-10" onclick="togglePlayPause(10)" class="w-8 h-8 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 flex items-center justify-center shrink-0 transition-transform active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 shadow" aria-label="Play The Ghost Rig">
+                  <i class="fa-solid fa-play text-xs text-stone-950 ml-0.5" id="deck-play-icon-10" aria-hidden="true"></i>
+                </button>
+                <div class="flex-1 space-y-1 min-w-0">
+                  <div class="relative flex items-center w-full">
+                    <input 
+                      type="range" 
+                      id="seek-slider-10" 
+                      min="0" 
+                      max="100" 
+                      value="0" 
+                      step="0.1" 
+                      oninput="onSeekInput(10, this.value)"
+                      onchange="onSeekChange(10, this.value)"
+                      class="w-full h-1.5 rounded-lg bg-stone-800 accent-amber-500 cursor-pointer appearance-none transition-all"
+                      aria-label="Seek track audio position for The Ghost Rig"
+                    />
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] font-mono text-stone-400">
+                    <span id="time-curr-10">0:00</span>
+                    <span id="time-dur-10">--:--</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -2688,6 +3245,16 @@ Devalued.</textarea>
                 >
                   <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button 
+                  type="button"
+                  onclick="shareTrackLink('The Ghost Rig', 'Chaff from the Wheat', 10)"
+                  class="bard-note-btn track-share-btn mr-2"
+                  aria-label="Share link for The Ghost Rig"
+                  title="Share this track"
+                >
+                  <svg class="bard-note-icon track-share-icon" width="16" height="16" style="width: 16px; height: 16px; max-width: 16px; max-height: 16px; min-width: 16px; min-height: 16px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                  <span class="bard-note-tooltip track-share-tooltip">Share track</span>
                 </button>
                 <button onclick="copyLyrics(10)" aria-label="Copy lyrics for The Ghost Rig" class="px-3.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                       <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> <span id="copy-btn-text-10">Copy Lyrics</span>
@@ -2860,9 +3427,7 @@ Rollin&#x27; on...</textarea>
                   <span class="px-2.5 py-0.5 rounded text-xs font-mono font-semibold bg-stone-800 text-amber-400 border border-stone-700">
                     Track 11 of 16
                   </span>
-                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-stone-950 text-stone-400 border border-stone-800">
-                    Recorded Demo Ready
-                  </span>
+                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-emerald-950/80 text-emerald-300 border border-emerald-800/80 font-bold flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Suno Master Ready</span>
                 </div>
                 <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
                   11. The Digital Dustbowl
@@ -2874,11 +3439,59 @@ Rollin&#x27; on...</textarea>
 
               <!-- Quick Buttons -->
               <div class="flex items-center gap-2 shrink-0">
+                <button type="button" id="play-btn-11" onclick="togglePlayPause(11)" class="px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 text-xs font-mono font-bold transition-all shadow-md shadow-amber-600/20 flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 hover:scale-[1.02]" aria-label="Play The Digital Dustbowl">
+                  <i class="fa-solid fa-play text-xs" aria-hidden="true" id="play-icon-11"></i>
+                  <span id="play-label-11">Play Song</span>
+                </button>
                 <button onclick="toggleDrawer(11)" id="drawer-btn-11" aria-expanded="false" aria-controls="drawer-11" class="px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-750 text-amber-400 border border-stone-700 text-xs font-mono font-bold transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                   <i class="fa-solid fa-scroll text-xs" aria-hidden="true"></i>
                   <span id="drawer-label-11">View Lyrics &amp; Details</span>
                   <i id="drawer-icon-11" class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
                 </button>
+              </div>
+            </div>
+
+            <!-- In-Card Audio Player Deck -->
+            <div id="player-deck-11" class="mt-6 p-4 rounded-xl bg-stone-950/80 border border-stone-800/90 space-y-3 transition-colors">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30 shrink-0 flex items-center gap-1.5">
+                    <i class="fa-solid fa-compact-disc text-amber-500" aria-hidden="true"></i> Suno v5.5 Master
+                  </span>
+                  <span class="text-[11px] font-mono text-stone-400 truncate max-w-xs sm:max-w-md" title="Rapid-Fire Spoken Industrial Folk • Synth Bass">
+                    Rapid-Fire Spoken Industrial Folk • Synth Bass
+                  </span>
+                </div>
+                <a href="https://suno.com/song/ed1f0f00-3b27-41db-a41b-00be740c078d" target="_blank" rel="noopener noreferrer" class="text-[11px] font-mono text-amber-400 hover:text-amber-300 hover:underline flex items-center gap-1 shrink-0 ml-auto focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400 rounded px-1" title="Open song on Suno.com">
+                  <span>Suno</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                </a>
+              </div>
+              
+              <!-- Deck Controls & Scrubber -->
+              <div class="flex items-center gap-3">
+                <button type="button" id="deck-play-btn-11" onclick="togglePlayPause(11)" class="w-8 h-8 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 flex items-center justify-center shrink-0 transition-transform active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 shadow" aria-label="Play The Digital Dustbowl">
+                  <i class="fa-solid fa-play text-xs text-stone-950 ml-0.5" id="deck-play-icon-11" aria-hidden="true"></i>
+                </button>
+                <div class="flex-1 space-y-1 min-w-0">
+                  <div class="relative flex items-center w-full">
+                    <input 
+                      type="range" 
+                      id="seek-slider-11" 
+                      min="0" 
+                      max="100" 
+                      value="0" 
+                      step="0.1" 
+                      oninput="onSeekInput(11, this.value)"
+                      onchange="onSeekChange(11, this.value)"
+                      class="w-full h-1.5 rounded-lg bg-stone-800 accent-amber-500 cursor-pointer appearance-none transition-all"
+                      aria-label="Seek track audio position for The Digital Dustbowl"
+                    />
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] font-mono text-stone-400">
+                    <span id="time-curr-11">0:00</span>
+                    <span id="time-dur-11">--:--</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -2925,6 +3538,16 @@ Rollin&#x27; on...</textarea>
                 >
                   <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button 
+                  type="button"
+                  onclick="shareTrackLink('The Digital Dustbowl', 'Chaff from the Wheat', 11)"
+                  class="bard-note-btn track-share-btn mr-2"
+                  aria-label="Share link for The Digital Dustbowl"
+                  title="Share this track"
+                >
+                  <svg class="bard-note-icon track-share-icon" width="16" height="16" style="width: 16px; height: 16px; max-width: 16px; max-height: 16px; min-width: 16px; min-height: 16px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                  <span class="bard-note-tooltip track-share-tooltip">Share track</span>
                 </button>
                 <button onclick="copyLyrics(11)" aria-label="Copy lyrics for The Digital Dustbowl" class="px-3.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                       <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> <span id="copy-btn-text-11">Copy Lyrics</span>
@@ -3121,9 +3744,7 @@ The algorithm hums.</textarea>
                   <span class="px-2.5 py-0.5 rounded text-xs font-mono font-semibold bg-stone-800 text-amber-400 border border-stone-700">
                     Track 12 of 16
                   </span>
-                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-stone-950 text-stone-400 border border-stone-800">
-                    Recorded Demo Ready
-                  </span>
+                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-emerald-950/80 text-emerald-300 border border-emerald-800/80 font-bold flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Suno Master Ready</span>
                 </div>
                 <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
                   12. Universal Extreme Wealth
@@ -3135,11 +3756,59 @@ The algorithm hums.</textarea>
 
               <!-- Quick Buttons -->
               <div class="flex items-center gap-2 shrink-0">
+                <button type="button" id="play-btn-12" onclick="togglePlayPause(12)" class="px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 text-xs font-mono font-bold transition-all shadow-md shadow-amber-600/20 flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 hover:scale-[1.02]" aria-label="Play Universal Extreme Wealth">
+                  <i class="fa-solid fa-play text-xs" aria-hidden="true" id="play-icon-12"></i>
+                  <span id="play-label-12">Play Song</span>
+                </button>
                 <button onclick="toggleDrawer(12)" id="drawer-btn-12" aria-expanded="false" aria-controls="drawer-12" class="px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-750 text-amber-400 border border-stone-700 text-xs font-mono font-bold transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                   <i class="fa-solid fa-scroll text-xs" aria-hidden="true"></i>
                   <span id="drawer-label-12">View Lyrics &amp; Details</span>
                   <i id="drawer-icon-12" class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
                 </button>
+              </div>
+            </div>
+
+            <!-- In-Card Audio Player Deck -->
+            <div id="player-deck-12" class="mt-6 p-4 rounded-xl bg-stone-950/80 border border-stone-800/90 space-y-3 transition-colors">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30 shrink-0 flex items-center gap-1.5">
+                    <i class="fa-solid fa-compact-disc text-amber-500" aria-hidden="true"></i> Suno v5.5 Master
+                  </span>
+                  <span class="text-[11px] font-mono text-stone-400 truncate max-w-xs sm:max-w-md" title="Hypnotic Electronic • Keynote Spoken Word">
+                    Hypnotic Electronic • Keynote Spoken Word
+                  </span>
+                </div>
+                <a href="https://suno.com/song/4add4906-6336-4dae-9e10-c9e72407eed6" target="_blank" rel="noopener noreferrer" class="text-[11px] font-mono text-amber-400 hover:text-amber-300 hover:underline flex items-center gap-1 shrink-0 ml-auto focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400 rounded px-1" title="Open song on Suno.com">
+                  <span>Suno</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                </a>
+              </div>
+              
+              <!-- Deck Controls & Scrubber -->
+              <div class="flex items-center gap-3">
+                <button type="button" id="deck-play-btn-12" onclick="togglePlayPause(12)" class="w-8 h-8 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 flex items-center justify-center shrink-0 transition-transform active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 shadow" aria-label="Play Universal Extreme Wealth">
+                  <i class="fa-solid fa-play text-xs text-stone-950 ml-0.5" id="deck-play-icon-12" aria-hidden="true"></i>
+                </button>
+                <div class="flex-1 space-y-1 min-w-0">
+                  <div class="relative flex items-center w-full">
+                    <input 
+                      type="range" 
+                      id="seek-slider-12" 
+                      min="0" 
+                      max="100" 
+                      value="0" 
+                      step="0.1" 
+                      oninput="onSeekInput(12, this.value)"
+                      onchange="onSeekChange(12, this.value)"
+                      class="w-full h-1.5 rounded-lg bg-stone-800 accent-amber-500 cursor-pointer appearance-none transition-all"
+                      aria-label="Seek track audio position for Universal Extreme Wealth"
+                    />
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] font-mono text-stone-400">
+                    <span id="time-curr-12">0:00</span>
+                    <span id="time-dur-12">--:--</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -3186,6 +3855,16 @@ The algorithm hums.</textarea>
                 >
                   <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button 
+                  type="button"
+                  onclick="shareTrackLink('Universal Extreme Wealth', 'Chaff from the Wheat', 12)"
+                  class="bard-note-btn track-share-btn mr-2"
+                  aria-label="Share link for Universal Extreme Wealth"
+                  title="Share this track"
+                >
+                  <svg class="bard-note-icon track-share-icon" width="16" height="16" style="width: 16px; height: 16px; max-width: 16px; max-height: 16px; min-width: 16px; min-height: 16px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                  <span class="bard-note-tooltip track-share-tooltip">Share track</span>
                 </button>
                 <button onclick="copyLyrics(12)" aria-label="Copy lyrics for Universal Extreme Wealth" class="px-3.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                       <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> <span id="copy-btn-text-12">Copy Lyrics</span>
@@ -3354,9 +4033,7 @@ We&#x27;ll provide... Universal Extreme Wealth.&quot;
                   <span class="px-2.5 py-0.5 rounded text-xs font-mono font-semibold bg-stone-800 text-amber-400 border border-stone-700">
                     Track 13 of 16
                   </span>
-                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-stone-950 text-stone-400 border border-stone-800">
-                    Recorded Demo Ready
-                  </span>
+                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-emerald-950/80 text-emerald-300 border border-emerald-800/80 font-bold flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Suno Master Ready</span>
                 </div>
                 <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
                   13. Your Grandfather&#x27;s Ghost
@@ -3368,11 +4045,59 @@ We&#x27;ll provide... Universal Extreme Wealth.&quot;
 
               <!-- Quick Buttons -->
               <div class="flex items-center gap-2 shrink-0">
+                <button type="button" id="play-btn-13" onclick="togglePlayPause(13)" class="px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 text-xs font-mono font-bold transition-all shadow-md shadow-amber-600/20 flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 hover:scale-[1.02]" aria-label="Play Your Grandfather's Ghost">
+                  <i class="fa-solid fa-play text-xs" aria-hidden="true" id="play-icon-13"></i>
+                  <span id="play-label-13">Play Song</span>
+                </button>
                 <button onclick="toggleDrawer(13)" id="drawer-btn-13" aria-expanded="false" aria-controls="drawer-13" class="px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-750 text-amber-400 border border-stone-700 text-xs font-mono font-bold transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                   <i class="fa-solid fa-scroll text-xs" aria-hidden="true"></i>
                   <span id="drawer-label-13">View Lyrics &amp; Details</span>
                   <i id="drawer-icon-13" class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
                 </button>
+              </div>
+            </div>
+
+            <!-- In-Card Audio Player Deck -->
+            <div id="player-deck-13" class="mt-6 p-4 rounded-xl bg-stone-950/80 border border-stone-800/90 space-y-3 transition-colors">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30 shrink-0 flex items-center gap-1.5">
+                    <i class="fa-solid fa-compact-disc text-amber-500" aria-hidden="true"></i> Suno v5.5 Master
+                  </span>
+                  <span class="text-[11px] font-mono text-stone-400 truncate max-w-xs sm:max-w-md" title="Intimate Acoustic Ballad • Mournful Cello & Harp">
+                    Intimate Acoustic Ballad • Mournful Cello & Harp
+                  </span>
+                </div>
+                <a href="https://suno.com/song/a41cb363-e417-4507-bb2d-83114e09eabc" target="_blank" rel="noopener noreferrer" class="text-[11px] font-mono text-amber-400 hover:text-amber-300 hover:underline flex items-center gap-1 shrink-0 ml-auto focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400 rounded px-1" title="Open song on Suno.com">
+                  <span>Suno</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                </a>
+              </div>
+              
+              <!-- Deck Controls & Scrubber -->
+              <div class="flex items-center gap-3">
+                <button type="button" id="deck-play-btn-13" onclick="togglePlayPause(13)" class="w-8 h-8 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 flex items-center justify-center shrink-0 transition-transform active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 shadow" aria-label="Play Your Grandfather's Ghost">
+                  <i class="fa-solid fa-play text-xs text-stone-950 ml-0.5" id="deck-play-icon-13" aria-hidden="true"></i>
+                </button>
+                <div class="flex-1 space-y-1 min-w-0">
+                  <div class="relative flex items-center w-full">
+                    <input 
+                      type="range" 
+                      id="seek-slider-13" 
+                      min="0" 
+                      max="100" 
+                      value="0" 
+                      step="0.1" 
+                      oninput="onSeekInput(13, this.value)"
+                      onchange="onSeekChange(13, this.value)"
+                      class="w-full h-1.5 rounded-lg bg-stone-800 accent-amber-500 cursor-pointer appearance-none transition-all"
+                      aria-label="Seek track audio position for Your Grandfather's Ghost"
+                    />
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] font-mono text-stone-400">
+                    <span id="time-curr-13">0:00</span>
+                    <span id="time-dur-13">--:--</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -3419,6 +4144,16 @@ We&#x27;ll provide... Universal Extreme Wealth.&quot;
                 >
                   <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button 
+                  type="button"
+                  onclick="shareTrackLink('Your Grandfather\\'s Ghost', 'Chaff from the Wheat', 13)"
+                  class="bard-note-btn track-share-btn mr-2"
+                  aria-label="Share link for Your Grandfather\\'s Ghost"
+                  title="Share this track"
+                >
+                  <svg class="bard-note-icon track-share-icon" width="16" height="16" style="width: 16px; height: 16px; max-width: 16px; max-height: 16px; min-width: 16px; min-height: 16px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                  <span class="bard-note-tooltip track-share-tooltip">Share track</span>
                 </button>
                 <button onclick="copyLyrics(13)" aria-label="Copy lyrics for Your Grandfather&#x27;s Ghost" class="px-3.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                       <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> <span id="copy-btn-text-13">Copy Lyrics</span>
@@ -3587,9 +4322,7 @@ It&#x27;s the oldest story ever told.</textarea>
                   <span class="px-2.5 py-0.5 rounded text-xs font-mono font-semibold bg-stone-800 text-amber-400 border border-stone-700">
                     Track 14 of 16
                   </span>
-                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-stone-950 text-stone-400 border border-stone-800">
-                    In Production
-                  </span>
+                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-stone-900 text-stone-400 border border-stone-700 font-semibold flex items-center gap-1.5"><i class="fa-solid fa-hourglass-half text-amber-500" aria-hidden="true"></i> Unrecorded Concept &bull; Demo Pending</span>
                 </div>
                 <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
                   14. The Liar&#x27;s Ballad
@@ -3607,6 +4340,19 @@ It&#x27;s the oldest story ever told.</textarea>
                   <i id="drawer-icon-14" class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
                 </button>
               </div>
+            </div>
+
+            <!-- Studio Concept Notice Deck -->
+            <div class="mt-6 p-4 rounded-xl bg-stone-950/60 border border-stone-800/80 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-stone-400">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-stone-800 text-stone-300 border border-stone-700">
+                  <i class="fa-solid fa-pen-ruler mr-1 text-amber-500" aria-hidden="true"></i> Studio Concept
+                </span>
+                <span>Studio recording in progress &bull; Unreleased lyrical thesis deconstruction below</span>
+              </div>
+              <span class="text-[11px] text-amber-400/90 italic flex items-center gap-1">
+                <span>Album Queue: auto-advances Track 13 &rarr; Track 15</span>
+              </span>
             </div>
 
             <!-- Narrative Role & Summary -->
@@ -3652,6 +4398,16 @@ It&#x27;s the oldest story ever told.</textarea>
                 >
                   <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button 
+                  type="button"
+                  onclick="shareTrackLink('The Liar\\'s Ballad', 'Chaff from the Wheat', 14)"
+                  class="bard-note-btn track-share-btn mr-2"
+                  aria-label="Share link for The Liar\\'s Ballad"
+                  title="Share this track"
+                >
+                  <svg class="bard-note-icon track-share-icon" width="16" height="16" style="width: 16px; height: 16px; max-width: 16px; max-height: 16px; min-width: 16px; min-height: 16px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                  <span class="bard-note-tooltip track-share-tooltip">Share track</span>
                 </button>
                 <button onclick="copyLyrics(14)" aria-label="Copy lyrics for The Liar&#x27;s Ballad" class="px-3.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                       <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> <span id="copy-btn-text-14">Copy Lyrics</span>
@@ -3830,9 +4586,7 @@ The Liar&#x27;s Ballad... sung through time.</textarea>
                   <span class="px-2.5 py-0.5 rounded text-xs font-mono font-semibold bg-stone-800 text-amber-400 border border-stone-700">
                     Track 15 of 16
                   </span>
-                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-stone-950 text-stone-400 border border-stone-800">
-                    Recorded Demo Ready
-                  </span>
+                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-emerald-950/80 text-emerald-300 border border-emerald-800/80 font-bold flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Suno Master Ready</span>
                 </div>
                 <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
                   15. Chaff from the Wheat
@@ -3844,11 +4598,59 @@ The Liar&#x27;s Ballad... sung through time.</textarea>
 
               <!-- Quick Buttons -->
               <div class="flex items-center gap-2 shrink-0">
+                <button type="button" id="play-btn-15" onclick="togglePlayPause(15)" class="px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 text-xs font-mono font-bold transition-all shadow-md shadow-amber-600/20 flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 hover:scale-[1.02]" aria-label="Play Chaff from the Wheat">
+                  <i class="fa-solid fa-play text-xs" aria-hidden="true" id="play-icon-15"></i>
+                  <span id="play-label-15">Play Song</span>
+                </button>
                 <button onclick="toggleDrawer(15)" id="drawer-btn-15" aria-expanded="false" aria-controls="drawer-15" class="px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-750 text-amber-400 border border-stone-700 text-xs font-mono font-bold transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                   <i class="fa-solid fa-scroll text-xs" aria-hidden="true"></i>
                   <span id="drawer-label-15">View Lyrics &amp; Details</span>
                   <i id="drawer-icon-15" class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
                 </button>
+              </div>
+            </div>
+
+            <!-- In-Card Audio Player Deck -->
+            <div id="player-deck-15" class="mt-6 p-4 rounded-xl bg-stone-950/80 border border-stone-800/90 space-y-3 transition-colors">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30 shrink-0 flex items-center gap-1.5">
+                    <i class="fa-solid fa-compact-disc text-amber-500" aria-hidden="true"></i> Suno v5.5 Master
+                  </span>
+                  <span class="text-[11px] font-mono text-stone-400 truncate max-w-xs sm:max-w-md" title="Industrial Rock Anthem • Defiant Baritone & B3 Organ">
+                    Industrial Rock Anthem • Defiant Baritone & B3 Organ
+                  </span>
+                </div>
+                <a href="https://suno.com/song/e71a01cb-f8d5-4f6b-9258-f33bcce64a62" target="_blank" rel="noopener noreferrer" class="text-[11px] font-mono text-amber-400 hover:text-amber-300 hover:underline flex items-center gap-1 shrink-0 ml-auto focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400 rounded px-1" title="Open song on Suno.com">
+                  <span>Suno</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                </a>
+              </div>
+              
+              <!-- Deck Controls & Scrubber -->
+              <div class="flex items-center gap-3">
+                <button type="button" id="deck-play-btn-15" onclick="togglePlayPause(15)" class="w-8 h-8 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 flex items-center justify-center shrink-0 transition-transform active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 shadow" aria-label="Play Chaff from the Wheat">
+                  <i class="fa-solid fa-play text-xs text-stone-950 ml-0.5" id="deck-play-icon-15" aria-hidden="true"></i>
+                </button>
+                <div class="flex-1 space-y-1 min-w-0">
+                  <div class="relative flex items-center w-full">
+                    <input 
+                      type="range" 
+                      id="seek-slider-15" 
+                      min="0" 
+                      max="100" 
+                      value="0" 
+                      step="0.1" 
+                      oninput="onSeekInput(15, this.value)"
+                      onchange="onSeekChange(15, this.value)"
+                      class="w-full h-1.5 rounded-lg bg-stone-800 accent-amber-500 cursor-pointer appearance-none transition-all"
+                      aria-label="Seek track audio position for Chaff from the Wheat"
+                    />
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] font-mono text-stone-400">
+                    <span id="time-curr-15">0:00</span>
+                    <span id="time-dur-15">--:--</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -3895,6 +4697,16 @@ The Liar&#x27;s Ballad... sung through time.</textarea>
                 >
                   <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button 
+                  type="button"
+                  onclick="shareTrackLink('Chaff from the Wheat', 'Chaff from the Wheat', 15)"
+                  class="bard-note-btn track-share-btn mr-2"
+                  aria-label="Share link for Chaff from the Wheat"
+                  title="Share this track"
+                >
+                  <svg class="bard-note-icon track-share-icon" width="16" height="16" style="width: 16px; height: 16px; max-width: 16px; max-height: 16px; min-width: 16px; min-height: 16px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                  <span class="bard-note-tooltip track-share-tooltip">Share track</span>
                 </button>
                 <button onclick="copyLyrics(15)" aria-label="Copy lyrics for Chaff from the Wheat" class="px-3.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                       <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> <span id="copy-btn-text-15">Copy Lyrics</span>
@@ -4043,9 +4855,7 @@ NOT THE CHAFF!</textarea>
                   <span class="px-2.5 py-0.5 rounded text-xs font-mono font-semibold bg-stone-800 text-amber-400 border border-stone-700">
                     Track 16 of 16
                   </span>
-                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-stone-950 text-stone-400 border border-stone-800">
-                    Recorded Demo Ready
-                  </span>
+                  <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-emerald-950/80 text-emerald-300 border border-emerald-800/80 font-bold flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Suno Master Ready</span>
                 </div>
                 <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
                   16. We Are the Wheat
@@ -4057,11 +4867,59 @@ NOT THE CHAFF!</textarea>
 
               <!-- Quick Buttons -->
               <div class="flex items-center gap-2 shrink-0">
+                <button type="button" id="play-btn-16" onclick="togglePlayPause(16)" class="px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 text-xs font-mono font-bold transition-all shadow-md shadow-amber-600/20 flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 hover:scale-[1.02]" aria-label="Play We Are the Wheat">
+                  <i class="fa-solid fa-play text-xs" aria-hidden="true" id="play-icon-16"></i>
+                  <span id="play-label-16">Play Song</span>
+                </button>
                 <button onclick="toggleDrawer(16)" id="drawer-btn-16" aria-expanded="false" aria-controls="drawer-16" class="px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-750 text-amber-400 border border-stone-700 text-xs font-mono font-bold transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                   <i class="fa-solid fa-scroll text-xs" aria-hidden="true"></i>
                   <span id="drawer-label-16">View Lyrics &amp; Details</span>
                   <i id="drawer-icon-16" class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
                 </button>
+              </div>
+            </div>
+
+            <!-- In-Card Audio Player Deck -->
+            <div id="player-deck-16" class="mt-6 p-4 rounded-xl bg-stone-950/80 border border-stone-800/90 space-y-3 transition-colors">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30 shrink-0 flex items-center gap-1.5">
+                    <i class="fa-solid fa-compact-disc text-amber-500" aria-hidden="true"></i> Suno v5.5 Master
+                  </span>
+                  <span class="text-[11px] font-mono text-stone-400 truncate max-w-xs sm:max-w-md" title="Resolute Acoustic Folk Anthem • Marching Cadence">
+                    Resolute Acoustic Folk Anthem • Marching Cadence
+                  </span>
+                </div>
+                <a href="https://suno.com/song/82301fe3-96bc-4fa6-801b-db52beeb18bf" target="_blank" rel="noopener noreferrer" class="text-[11px] font-mono text-amber-400 hover:text-amber-300 hover:underline flex items-center gap-1 shrink-0 ml-auto focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400 rounded px-1" title="Open song on Suno.com">
+                  <span>Suno</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                </a>
+              </div>
+              
+              <!-- Deck Controls & Scrubber -->
+              <div class="flex items-center gap-3">
+                <button type="button" id="deck-play-btn-16" onclick="togglePlayPause(16)" class="w-8 h-8 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 flex items-center justify-center shrink-0 transition-transform active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 shadow" aria-label="Play We Are the Wheat">
+                  <i class="fa-solid fa-play text-xs text-stone-950 ml-0.5" id="deck-play-icon-16" aria-hidden="true"></i>
+                </button>
+                <div class="flex-1 space-y-1 min-w-0">
+                  <div class="relative flex items-center w-full">
+                    <input 
+                      type="range" 
+                      id="seek-slider-16" 
+                      min="0" 
+                      max="100" 
+                      value="0" 
+                      step="0.1" 
+                      oninput="onSeekInput(16, this.value)"
+                      onchange="onSeekChange(16, this.value)"
+                      class="w-full h-1.5 rounded-lg bg-stone-800 accent-amber-500 cursor-pointer appearance-none transition-all"
+                      aria-label="Seek track audio position for We Are the Wheat"
+                    />
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] font-mono text-stone-400">
+                    <span id="time-curr-16">0:00</span>
+                    <span id="time-dur-16">--:--</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -4108,6 +4966,16 @@ NOT THE CHAFF!</textarea>
                 >
                   <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button 
+                  type="button"
+                  onclick="shareTrackLink('We Are the Wheat', 'Chaff from the Wheat', 16)"
+                  class="bard-note-btn track-share-btn mr-2"
+                  aria-label="Share link for We Are the Wheat"
+                  title="Share this track"
+                >
+                  <svg class="bard-note-icon track-share-icon" width="16" height="16" style="width: 16px; height: 16px; max-width: 16px; max-height: 16px; min-width: 16px; min-height: 16px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                  <span class="bard-note-tooltip track-share-tooltip">Share track</span>
                 </button>
                 <button onclick="copyLyrics(16)" aria-label="Copy lyrics for We Are the Wheat" class="px-3.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                       <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> <span id="copy-btn-text-16">Copy Lyrics</span>
@@ -4977,6 +5845,93 @@ We are the wheat.</textarea>
     </div>
   </footer>
 
+  <!-- Invisible Global Audio Engine -->
+  <audio id="global-cftw-audio" preload="none" playsinline></audio>
+
+  <!-- Persistent Bottom-Docked Player Bar -->
+  <aside id="persistent-bottom-player" class="fixed bottom-0 left-0 right-0 z-50 bg-stone-950/95 backdrop-blur-md border-t border-amber-600/40 shadow-2xl transition-transform duration-300 translate-y-full" aria-label="Persistent Album Audio Player">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+        
+        <!-- Track Metadata & Jump to Card -->
+        <div class="flex items-center gap-3 min-w-0 md:w-1/3">
+          <div class="relative shrink-0">
+            <img src="assets/art/album-cover.webp" alt="Album Art" class="w-12 h-12 rounded-lg object-cover border border-amber-500/40 shadow-md">
+            <span id="player-bar-track-num" class="absolute -top-1.5 -left-1.5 px-1 py-0.2 rounded bg-stone-950 border border-amber-500/60 text-[9px] font-mono font-bold text-amber-400">#01</span>
+          </div>
+          <div class="min-w-0 flex-1 space-y-0.5">
+            <div class="flex items-center gap-2">
+              <span id="player-bar-act" class="px-1.5 py-0.2 rounded text-[9px] font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">Act I</span>
+              <span id="player-bar-genre" class="text-[10px] font-mono text-stone-400 truncate">Suno v5.5 Master</span>
+            </div>
+            <h4 id="player-bar-title" class="text-sm sm:text-base font-display font-bold text-white truncate">The Golden Age</h4>
+          </div>
+          <button type="button" onclick="scrollToCurrentTrack()" class="p-2 rounded-lg bg-stone-900 hover:bg-stone-800 text-stone-400 hover:text-amber-400 border border-stone-800 text-xs shrink-0 transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400" title="Scroll to song card and lyrics" aria-label="Jump to track lyrics in card">
+            <i class="fa-solid fa-up-right-from-square text-xs" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <!-- Center Controls: Transport & Scrubber -->
+        <div class="flex flex-col items-center gap-1.5 flex-1 max-w-xl w-full">
+          <div class="flex items-center gap-5">
+            <button type="button" onclick="prevTrack()" class="p-2 text-stone-400 hover:text-white transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400 rounded" title="Previous Track (Ctrl+Left)" aria-label="Previous Track">
+              <i class="fa-solid fa-backward-step text-sm" aria-hidden="true"></i>
+            </button>
+            <button type="button" id="player-bar-play-btn" onclick="globalTogglePlayPause()" class="w-10 h-10 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 flex items-center justify-center transition-all shadow-md shadow-amber-500/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white active:scale-95" title="Play / Pause" aria-label="Play or Pause">
+              <i class="fa-solid fa-play text-sm ml-0.5" aria-hidden="true" id="player-bar-play-icon"></i>
+            </button>
+            <button type="button" onclick="nextTrack()" class="p-2 text-stone-400 hover:text-white transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400 rounded" title="Next Track (Ctrl+Right)" aria-label="Next Track">
+              <i class="fa-solid fa-forward-step text-sm" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="flex items-center gap-2.5 w-full">
+            <span id="player-bar-time-curr" class="text-[10px] font-mono text-stone-400 w-8 text-right shrink-0">0:00</span>
+            <input 
+              type="range" 
+              id="player-bar-seek-slider" 
+              min="0" 
+              max="100" 
+              value="0" 
+              step="0.1" 
+              oninput="onGlobalSeekInput(this.value)"
+              onchange="onGlobalSeekChange(this.value)"
+              class="flex-1 h-1.5 rounded-lg bg-stone-800 accent-amber-500 cursor-pointer appearance-none"
+              aria-label="Track progress seek slider"
+            />
+            <span id="player-bar-time-dur" class="text-[10px] font-mono text-stone-400 w-8 shrink-0">--:--</span>
+          </div>
+        </div>
+
+        <!-- Right Controls: Volume, Suno Link, Minimize -->
+        <div class="flex items-center justify-end gap-3 md:w-1/3 shrink-0">
+          <div class="hidden sm:flex items-center gap-2">
+            <button type="button" onclick="toggleMute()" id="player-bar-mute-btn" class="text-stone-400 hover:text-white transition-colors text-xs p-1" title="Mute/Unmute" aria-label="Mute or Unmute">
+              <i class="fa-solid fa-volume-high text-xs" id="player-bar-volume-icon" aria-hidden="true"></i>
+            </button>
+            <input 
+              type="range" 
+              id="player-bar-volume-slider" 
+              min="0" 
+              max="1" 
+              step="0.05" 
+              value="1" 
+              oninput="setVolume(this.value)"
+              class="w-16 h-1 rounded-lg bg-stone-800 accent-amber-500 cursor-pointer appearance-none"
+              aria-label="Volume slider"
+            />
+          </div>
+          <a href="https://suno.com/playlist/dfba058f-12ca-4da1-88a4-032ab5c25fae" target="_blank" rel="noopener noreferrer" id="player-bar-suno-link" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-stone-800 text-amber-400 border border-stone-800 text-xs font-mono transition-colors flex items-center gap-1 focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400" title="Open full playlist on Suno">
+            <span>Suno</span> <i class="fa-solid fa-arrow-up-right-from-square text-[9px]" aria-hidden="true"></i>
+          </a>
+          <button type="button" onclick="closeBottomPlayer()" class="p-1.5 text-stone-500 hover:text-stone-300 transition-colors rounded focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400" title="Hide Player Bar" aria-label="Hide audio player bar">
+            <i class="fa-solid fa-xmark text-sm" aria-hidden="true"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </aside>
+
   <!-- MODALS -->
 
   <!-- 1. IMAGE ZOOM MODAL -->
@@ -5310,6 +6265,492 @@ We are the wheat.</textarea>
         document.getElementById('underline-status').innerText = 'Underlined';
       }
     });
+
+    // ==========================================
+    // Chaff from the Wheat - Suno Master Audio Engine
+    // ==========================================
+    const CFTW_TRACKS = [
+      {
+            "trackNum": 1,
+            "title": "The Golden Age",
+            "act": "Act I",
+            "genre": "English Folk \u2022 Acoustic Ballad \u2022 3/4 Waltz",
+            "clipId": "aa26485a-774d-4ed0-a741-fb632538f613",
+            "streamUrl": "https://cdn1.suno.ai/aa26485a-774d-4ed0-a741-fb632538f613.mp4",
+            "sunoUrl": "https://suno.com/song/aa26485a-774d-4ed0-a741-fb632538f613"
+      },
+      {
+            "trackNum": 2,
+            "title": "The Water Frame",
+            "act": "Act I",
+            "genre": "Dark Folk \u2022 Industrial Americana \u2022 Heavy Groan",
+            "clipId": "8ba0a260-b56f-411d-b511-275463b4f060",
+            "streamUrl": "https://cdn1.suno.ai/8ba0a260-b56f-411d-b511-275463b4f060.mp4",
+            "sunoUrl": "https://suno.com/song/8ba0a260-b56f-411d-b511-275463b4f060"
+      },
+      {
+            "trackNum": 3,
+            "title": "General Ludd's Proclamation",
+            "act": "Act I",
+            "genre": "Defiant Percussive Work-Chant \u2022 Industrial Folk",
+            "clipId": "70528355-616b-4da5-9e57-f8250a966a86",
+            "streamUrl": "https://cdn1.suno.ai/70528355-616b-4da5-9e57-f8250a966a86.mp4",
+            "sunoUrl": "https://suno.com/song/70528355-616b-4da5-9e57-f8250a966a86"
+      },
+      {
+            "trackNum": 4,
+            "title": "The Philosophy of Mr. Ure",
+            "act": "Act I",
+            "genre": "Spoken Word \u2022 Dark Classical \u2022 Minimalist Drone",
+            "clipId": "dfa11939-47af-4afc-a857-c1e614965c91",
+            "streamUrl": "https://cdn1.suno.ai/dfa11939-47af-4afc-a857-c1e614965c91.mp4",
+            "sunoUrl": "https://suno.com/song/dfa11939-47af-4afc-a857-c1e614965c91"
+      },
+      {
+            "trackNum": 5,
+            "title": "A Giant Sucking Sound",
+            "act": "Act II",
+            "genre": "Driving 90s Heartland Rock \u2022 Blue-Collar Anthem",
+            "clipId": "d5c4f744-feca-4ff8-8a82-dae1dc16d4f0",
+            "streamUrl": "https://cdn1.suno.ai/d5c4f744-feca-4ff8-8a82-dae1dc16d4f0.mp4",
+            "sunoUrl": "https://suno.com/song/d5c4f744-feca-4ff8-8a82-dae1dc16d4f0"
+      },
+      {
+            "trackNum": 6,
+            "title": "Pink Slip Blues",
+            "act": "Act II",
+            "genre": "Rust Belt Blues \u2022 Slide Guitar \u2022 12/8 Shuffle",
+            "clipId": "310a5b42-6ab9-473d-948e-4c7e351e919e",
+            "streamUrl": "https://cdn1.suno.ai/310a5b42-6ab9-473d-948e-4c7e351e919e.mp4",
+            "sunoUrl": "https://suno.com/song/310a5b42-6ab9-473d-948e-4c7e351e919e"
+      },
+      {
+            "trackNum": 7,
+            "title": "The TAA Shuffle",
+            "act": "Act II",
+            "genre": "Upbeat 90s Country-Rock \u2022 Satirical Shuffle",
+            "clipId": "df566002-0431-401f-94eb-fa50af3646e7",
+            "streamUrl": "https://cdn1.suno.ai/df566002-0431-401f-94eb-fa50af3646e7.mp4",
+            "sunoUrl": "https://suno.com/song/df566002-0431-401f-94eb-fa50af3646e7"
+      },
+      {
+            "trackNum": 8,
+            "title": "The Prompt",
+            "act": "Act III",
+            "genre": "Electronic-Folk \u2022 Sterile Glitch \u2022 Anxious Alto",
+            "clipId": "c7305fb9-4484-41a2-b046-a25fa9562b0a",
+            "streamUrl": "https://cdn1.suno.ai/c7305fb9-4484-41a2-b046-a25fa9562b0a.mp4",
+            "sunoUrl": "https://suno.com/song/c7305fb9-4484-41a2-b046-a25fa9562b0a"
+      },
+      {
+            "trackNum": 9,
+            "title": "Devalued",
+            "act": "Act III",
+            "genre": "Dark Ambient \u2022 Minimalist Industrial Drone",
+            "clipId": "dd9a1e0a-c3dc-440e-a34d-326fe48f9115",
+            "streamUrl": "https://cdn1.suno.ai/dd9a1e0a-c3dc-440e-a34d-326fe48f9115.mp4",
+            "sunoUrl": "https://suno.com/song/dd9a1e0a-c3dc-440e-a34d-326fe48f9115"
+      },
+      {
+            "trackNum": 10,
+            "title": "The Ghost Rig",
+            "act": "Act III",
+            "genre": "Lonesome Americana Ballad \u2022 Dark Modern Folk",
+            "clipId": "c967df6b-6dbf-40be-81be-3048fb3f806e",
+            "streamUrl": "https://cdn1.suno.ai/c967df6b-6dbf-40be-81be-3048fb3f806e.mp4",
+            "sunoUrl": "https://suno.com/song/c967df6b-6dbf-40be-81be-3048fb3f806e"
+      },
+      {
+            "trackNum": 11,
+            "title": "The Digital Dustbowl",
+            "act": "Act III",
+            "genre": "Rapid-Fire Spoken Industrial Folk \u2022 Synth Bass",
+            "clipId": "ed1f0f00-3b27-41db-a41b-00be740c078d",
+            "streamUrl": "https://cdn1.suno.ai/ed1f0f00-3b27-41db-a41b-00be740c078d.mp4",
+            "sunoUrl": "https://suno.com/song/ed1f0f00-3b27-41db-a41b-00be740c078d"
+      },
+      {
+            "trackNum": 12,
+            "title": "Universal Extreme Wealth",
+            "act": "Act III",
+            "genre": "Hypnotic Electronic \u2022 Keynote Spoken Word",
+            "clipId": "4add4906-6336-4dae-9e10-c9e72407eed6",
+            "streamUrl": "https://cdn1.suno.ai/4add4906-6336-4dae-9e10-c9e72407eed6.mp4",
+            "sunoUrl": "https://suno.com/song/4add4906-6336-4dae-9e10-c9e72407eed6"
+      },
+      {
+            "trackNum": 13,
+            "title": "Your Grandfather's Ghost",
+            "act": "Act III",
+            "genre": "Intimate Acoustic Ballad \u2022 Mournful Cello & Harp",
+            "clipId": "a41cb363-e417-4507-bb2d-83114e09eabc",
+            "streamUrl": "https://cdn1.suno.ai/a41cb363-e417-4507-bb2d-83114e09eabc.mp4",
+            "sunoUrl": "https://suno.com/song/a41cb363-e417-4507-bb2d-83114e09eabc"
+      },
+      {
+            "trackNum": 15,
+            "title": "Chaff from the Wheat",
+            "act": "Act IV",
+            "genre": "Industrial Rock Anthem \u2022 Defiant Baritone & B3 Organ",
+            "clipId": "e71a01cb-f8d5-4f6b-9258-f33bcce64a62",
+            "streamUrl": "https://cdn1.suno.ai/e71a01cb-f8d5-4f6b-9258-f33bcce64a62.mp4",
+            "sunoUrl": "https://suno.com/song/e71a01cb-f8d5-4f6b-9258-f33bcce64a62"
+      },
+      {
+            "trackNum": 16,
+            "title": "We Are the Wheat",
+            "act": "Act IV",
+            "genre": "Resolute Acoustic Folk Anthem \u2022 Marching Cadence",
+            "clipId": "82301fe3-96bc-4fa6-801b-db52beeb18bf",
+            "streamUrl": "https://cdn1.suno.ai/82301fe3-96bc-4fa6-801b-db52beeb18bf.mp4",
+            "sunoUrl": "https://suno.com/song/82301fe3-96bc-4fa6-801b-db52beeb18bf"
+      }
+];
+
+    let currentTrackIdx = -1;
+    let isSeeking = false;
+    let lastVolume = 1.0;
+    const globalAudio = document.getElementById('global-cftw-audio');
+    const bottomPlayer = document.getElementById('persistent-bottom-player');
+
+    function formatTime(seconds) {
+      if (isNaN(seconds) || seconds === null || seconds === undefined) return '0:00';
+      const m = Math.floor(seconds / 60);
+      const s = Math.floor(seconds % 60);
+      return `${m}:${s < 10 ? '0' : ''}${s}`;
+    }
+
+    function getTrackByIndex(idx) {
+      if (idx >= 0 && idx < CFTW_TRACKS.length) {
+        return CFTW_TRACKS[idx];
+      }
+      return null;
+    }
+
+    function getTrackByNumber(trackNum) {
+      return CFTW_TRACKS.find(t => t.trackNum === trackNum) || null;
+    }
+
+    function getTrackIndexByNumber(trackNum) {
+      return CFTW_TRACKS.findIndex(t => t.trackNum === trackNum);
+    }
+
+    function showBottomPlayer() {
+      if (bottomPlayer) {
+        bottomPlayer.classList.remove('translate-y-full');
+      }
+    }
+
+    function closeBottomPlayer() {
+      if (bottomPlayer) {
+        bottomPlayer.classList.add('translate-y-full');
+      }
+    }
+
+    function updatePlayButtonUI(trackNum, isPlaying) {
+      // Header quick button
+      const btn = document.getElementById(`play-btn-${trackNum}`);
+      const icon = document.getElementById(`play-icon-${trackNum}`);
+      const label = document.getElementById(`play-label-${trackNum}`);
+      if (btn && icon && label) {
+        if (isPlaying) {
+          icon.className = 'fa-solid fa-pause text-xs';
+          label.innerText = 'Pause';
+          btn.classList.add('bg-amber-500');
+          btn.classList.remove('bg-amber-600');
+        } else {
+          icon.className = 'fa-solid fa-play text-xs';
+          label.innerText = 'Play Song';
+          btn.classList.remove('bg-amber-500');
+          btn.classList.add('bg-amber-600');
+        }
+      }
+
+      // In-card deck play button
+      const deckBtn = document.getElementById(`deck-play-btn-${trackNum}`);
+      const deckIcon = document.getElementById(`deck-play-icon-${trackNum}`);
+      if (deckBtn && deckIcon) {
+        if (isPlaying) {
+          deckIcon.className = 'fa-solid fa-pause text-xs text-stone-950';
+          deckBtn.classList.add('bg-amber-400');
+          deckBtn.classList.remove('bg-amber-500');
+          deckBtn.setAttribute('aria-label', 'Pause audio');
+        } else {
+          deckIcon.className = 'fa-solid fa-play text-xs text-stone-950 ml-0.5';
+          deckBtn.classList.add('bg-amber-500');
+          deckBtn.classList.remove('bg-amber-400');
+          deckBtn.setAttribute('aria-label', 'Play audio');
+        }
+      }
+
+      // Highlight deck border when active
+      const deck = document.getElementById(`player-deck-${trackNum}`);
+      if (deck) {
+        if (isPlaying) {
+          deck.classList.add('border-amber-500/60', 'bg-stone-950');
+          deck.classList.remove('border-stone-800/90', 'bg-stone-950/80');
+        } else {
+          deck.classList.remove('border-amber-500/60', 'bg-stone-950');
+          deck.classList.add('border-stone-800/90', 'bg-stone-950/80');
+        }
+      }
+    }
+
+    function updateGlobalBarUI(track, isPlaying) {
+      if (!track) return;
+      const tNum = track.trackNum < 10 ? `0${track.trackNum}` : track.trackNum;
+      const numEl = document.getElementById('player-bar-track-num');
+      const actEl = document.getElementById('player-bar-act');
+      const genreEl = document.getElementById('player-bar-genre');
+      const titleEl = document.getElementById('player-bar-title');
+      const sunoLink = document.getElementById('player-bar-suno-link');
+      const playIcon = document.getElementById('player-bar-play-icon');
+
+      if (numEl) numEl.innerText = `#${tNum}`;
+      if (actEl) actEl.innerText = track.act;
+      if (genreEl) genreEl.innerText = track.genre;
+      if (titleEl) titleEl.innerText = `${tNum}. ${track.title}`;
+      if (sunoLink) sunoLink.href = track.sunoUrl;
+
+      if (playIcon) {
+        playIcon.className = isPlaying ? 'fa-solid fa-pause text-sm' : 'fa-solid fa-play text-sm ml-0.5';
+      }
+    }
+
+    function playTrackById(trackNum) {
+      const idx = getTrackIndexByNumber(trackNum);
+      if (idx !== -1) {
+        playTrackByIndex(idx);
+      }
+    }
+
+    function playTrackByIndex(idx) {
+      if (idx < 0 || idx >= CFTW_TRACKS.length) return;
+
+      const prevTrack = getTrackByIndex(currentTrackIdx);
+      if (prevTrack && prevTrack.trackNum !== CFTW_TRACKS[idx].trackNum) {
+        updatePlayButtonUI(prevTrack.trackNum, false);
+      }
+
+      currentTrackIdx = idx;
+      const track = CFTW_TRACKS[idx];
+
+      if (!globalAudio.src || !globalAudio.src.includes(track.clipId)) {
+        globalAudio.src = track.streamUrl;
+      }
+
+      showBottomPlayer();
+      updateGlobalBarUI(track, true);
+      updatePlayButtonUI(track.trackNum, true);
+
+      globalAudio.play().catch(err => {
+        console.warn('Playback error or blocked by autoplay policy:', err);
+        updatePlayButtonUI(track.trackNum, false);
+        updateGlobalBarUI(track, false);
+      });
+    }
+
+    function togglePlayPause(trackNum) {
+      const idx = getTrackIndexByNumber(trackNum);
+      if (idx === -1) return;
+
+      if (currentTrackIdx === idx) {
+        if (globalAudio.paused) {
+          globalAudio.play();
+        } else {
+          globalAudio.pause();
+        }
+      } else {
+        playTrackByIndex(idx);
+      }
+    }
+
+    function globalTogglePlayPause() {
+      if (currentTrackIdx === -1) {
+        playTrackByIndex(0);
+        return;
+      }
+      if (globalAudio.paused) {
+        globalAudio.play();
+      } else {
+        globalAudio.pause();
+      }
+    }
+
+    function prevTrack() {
+      if (currentTrackIdx > 0) {
+        playTrackByIndex(currentTrackIdx - 1);
+      } else if (CFTW_TRACKS.length > 0) {
+        playTrackByIndex(CFTW_TRACKS.length - 1);
+      }
+    }
+
+    function nextTrack() {
+      if (currentTrackIdx !== -1 && currentTrackIdx < CFTW_TRACKS.length - 1) {
+        // Automatically plays next item in CFTW_TRACKS array.
+        // For track 13 (index 12), next item is track 15 (index 13).
+        playTrackByIndex(currentTrackIdx + 1);
+      } else {
+        playTrackByIndex(0);
+      }
+    }
+
+    function onSeekInput(trackNum, val) {
+      isSeeking = true;
+      const currTimeEl = document.getElementById(`time-curr-${trackNum}`);
+      if (currTimeEl && globalAudio.duration) {
+        const time = (val / 100) * globalAudio.duration;
+        currTimeEl.innerText = formatTime(time);
+      }
+    }
+
+    function onSeekChange(trackNum, val) {
+      if (globalAudio.duration) {
+        globalAudio.currentTime = (val / 100) * globalAudio.duration;
+      }
+      isSeeking = false;
+    }
+
+    function onGlobalSeekInput(val) {
+      isSeeking = true;
+      const currTimeEl = document.getElementById('player-bar-time-curr');
+      if (currTimeEl && globalAudio.duration) {
+        const time = (val / 100) * globalAudio.duration;
+        currTimeEl.innerText = formatTime(time);
+      }
+    }
+
+    function onGlobalSeekChange(val) {
+      if (globalAudio.duration) {
+        globalAudio.currentTime = (val / 100) * globalAudio.duration;
+      }
+      isSeeking = false;
+    }
+
+    function setVolume(val) {
+      const vol = parseFloat(val);
+      globalAudio.volume = vol;
+      const volIcon = document.getElementById('player-bar-volume-icon');
+      if (!volIcon) return;
+      if (vol === 0) {
+        volIcon.className = 'fa-solid fa-volume-xmark text-xs';
+      } else if (vol < 0.5) {
+        volIcon.className = 'fa-solid fa-volume-low text-xs';
+      } else {
+        volIcon.className = 'fa-solid fa-volume-high text-xs';
+      }
+    }
+
+    function toggleMute() {
+      const volSlider = document.getElementById('player-bar-volume-slider');
+      if (globalAudio.volume > 0) {
+        lastVolume = globalAudio.volume;
+        globalAudio.volume = 0;
+        if (volSlider) volSlider.value = 0;
+        setVolume(0);
+      } else {
+        const restored = lastVolume > 0 ? lastVolume : 1.0;
+        globalAudio.volume = restored;
+        if (volSlider) volSlider.value = restored;
+        setVolume(restored);
+      }
+    }
+
+    function scrollToCurrentTrack() {
+      const track = getTrackByIndex(currentTrackIdx);
+      if (!track) return;
+      const card = document.getElementById(`track-${track.trackNum}`);
+      if (card) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        card.classList.add('ring-2', 'ring-amber-500', 'shadow-2xl');
+        setTimeout(() => {
+          card.classList.remove('ring-2', 'ring-amber-500', 'shadow-2xl');
+        }, 2000);
+      }
+    }
+
+    // Global Audio Engine Event Listeners
+    if (globalAudio) {
+      globalAudio.addEventListener('play', () => {
+        const track = getTrackByIndex(currentTrackIdx);
+        if (track) {
+          updatePlayButtonUI(track.trackNum, true);
+          updateGlobalBarUI(track, true);
+        }
+      });
+
+      globalAudio.addEventListener('pause', () => {
+        const track = getTrackByIndex(currentTrackIdx);
+        if (track) {
+          updatePlayButtonUI(track.trackNum, false);
+          updateGlobalBarUI(track, false);
+        }
+      });
+
+      globalAudio.addEventListener('ended', () => {
+        // Automatically advance to the next recorded track in the sequence
+        nextTrack();
+      });
+
+      globalAudio.addEventListener('timeupdate', () => {
+        if (isSeeking) return;
+        const current = globalAudio.currentTime;
+        const duration = globalAudio.duration;
+        const track = getTrackByIndex(currentTrackIdx);
+
+        // Global bar updates
+        const gTimeCurr = document.getElementById('player-bar-time-curr');
+        const gTimeDur = document.getElementById('player-bar-time-dur');
+        const gSlider = document.getElementById('player-bar-seek-slider');
+
+        if (gTimeCurr) gTimeCurr.innerText = formatTime(current);
+        if (gTimeDur && duration) gTimeDur.innerText = formatTime(duration);
+        if (gSlider && duration) {
+          gSlider.value = (current / duration) * 100;
+        }
+
+        // In-card deck updates
+        if (track) {
+          const cardCurr = document.getElementById(`time-curr-${track.trackNum}`);
+          const cardDur = document.getElementById(`time-dur-${track.trackNum}`);
+          const cardSlider = document.getElementById(`seek-slider-${track.trackNum}`);
+          if (cardCurr) cardCurr.innerText = formatTime(current);
+          if (cardDur && duration) cardDur.innerText = formatTime(duration);
+          if (cardSlider && duration) {
+            cardSlider.value = (current / duration) * 100;
+          }
+        }
+      });
+
+      globalAudio.addEventListener('loadedmetadata', () => {
+        const duration = globalAudio.duration;
+        const track = getTrackByIndex(currentTrackIdx);
+        const gTimeDur = document.getElementById('player-bar-time-dur');
+        if (gTimeDur) gTimeDur.innerText = formatTime(duration);
+        if (track) {
+          const cardDur = document.getElementById(`time-dur-${track.trackNum}`);
+          if (cardDur) cardDur.innerText = formatTime(duration);
+        }
+      });
+    }
+
+    // Keyboard Hotkeys for Audio Playback
+    document.addEventListener('keydown', (e) => {
+      // Don't intercept when user is typing in forms/inputs
+      if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+
+      if (e.code === 'Space' && currentTrackIdx !== -1 && !document.activeElement.closest('button')) {
+        e.preventDefault();
+        globalTogglePlayPause();
+      } else if (e.ctrlKey && e.code === 'ArrowRight') {
+        e.preventDefault();
+        nextTrack();
+      } else if (e.ctrlKey && e.code === 'ArrowLeft') {
+        e.preventDefault();
+        prevTrack();
+      }
+    });
+
   </script>
   <script src="../assets/js/a11y.js"></script>
   <script src="../assets/js/bard-notes.js?v=20260920b"></script>
