@@ -97,7 +97,7 @@ window.CURTAINS_DATA = {
       ],
       "video_id": "kJn-980eABE",
       "video_url": "https://www.youtube.com/watch?v=kJn-980eABE",
-      "image_landscape": "https://img.youtube.com/vi/kJn-980eABE/maxresdefault.jpg",
+      "image_landscape": "assets/art/insufficient-funds-error.webp",
       "image_square": "assets/art/album-23.webp"
     },
     {
@@ -167,7 +167,7 @@ window.CURTAINS_DATA = {
       ],
       "video_id": "oXxxyN880_U",
       "video_url": "https://www.youtube.com/watch?v=oXxxyN880_U",
-      "image_landscape": "https://img.youtube.com/vi/oXxxyN880_U/maxresdefault.jpg",
+      "image_landscape": "assets/art/the-curtains-and-the-canned-goods.webp",
       "image_square": "assets/art/album-23.webp"
     },
     {
@@ -232,7 +232,7 @@ window.CURTAINS_DATA = {
       ],
       "video_id": "e8jSLN8ovLc",
       "video_url": "https://www.youtube.com/watch?v=e8jSLN8ovLc",
-      "image_landscape": "https://img.youtube.com/vi/e8jSLN8ovLc/maxresdefault.jpg",
+      "image_landscape": "assets/art/seven-skies-burning.webp",
       "image_square": "assets/art/album-23.webp"
     },
     {
@@ -295,7 +295,7 @@ window.CURTAINS_DATA = {
       ],
       "video_id": "TTnrUZl4eys",
       "video_url": "https://www.youtube.com/watch?v=TTnrUZl4eys",
-      "image_landscape": "https://img.youtube.com/vi/TTnrUZl4eys/maxresdefault.jpg",
+      "image_landscape": "assets/art/disposable-hardware.webp",
       "image_square": "assets/art/album-23.webp"
     },
     {
@@ -361,7 +361,7 @@ window.CURTAINS_DATA = {
       ],
       "video_id": "WLz8i7be9Ps",
       "video_url": "https://www.youtube.com/watch?v=WLz8i7be9Ps",
-      "image_landscape": "https://img.youtube.com/vi/WLz8i7be9Ps/maxresdefault.jpg",
+      "image_landscape": "assets/art/thirty-eight-trillion.webp",
       "image_square": "assets/art/album-23.webp"
     },
     {
@@ -424,7 +424,7 @@ window.CURTAINS_DATA = {
       ],
       "video_id": "ZOYvw2aGJHc",
       "video_url": "https://www.youtube.com/watch?v=ZOYvw2aGJHc",
-      "image_landscape": "https://img.youtube.com/vi/ZOYvw2aGJHc/maxresdefault.jpg",
+      "image_landscape": "assets/art/eighty-five-days.webp",
       "image_square": "assets/art/album-23.webp"
     },
     {
@@ -488,7 +488,7 @@ window.CURTAINS_DATA = {
       ],
       "video_id": "KFJPQMq9HnQ",
       "video_url": "https://www.youtube.com/watch?v=KFJPQMq9HnQ",
-      "image_landscape": "https://img.youtube.com/vi/KFJPQMq9HnQ/maxresdefault.jpg",
+      "image_landscape": "assets/art/twelve-million-the-empty-tray.webp",
       "image_square": "assets/art/album-23.webp"
     },
     {
@@ -549,7 +549,7 @@ window.CURTAINS_DATA = {
       ],
       "video_id": "dZBxcEmd_mo",
       "video_url": "https://www.youtube.com/watch?v=dZBxcEmd_mo",
-      "image_landscape": "https://img.youtube.com/vi/dZBxcEmd_mo/maxresdefault.jpg",
+      "image_landscape": "assets/art/canned-goods-in-the-rain.webp",
       "image_square": "assets/art/album-23.webp"
     },
     {
@@ -615,7 +615,7 @@ window.CURTAINS_DATA = {
       ],
       "video_id": "4hoZDLWvOkw",
       "video_url": "https://www.youtube.com/watch?v=4hoZDLWvOkw",
-      "image_landscape": "https://img.youtube.com/vi/4hoZDLWvOkw/maxresdefault.jpg",
+      "image_landscape": "assets/art/stock-ticker-lullaby.webp",
       "image_square": "assets/art/album-23.webp"
     },
     {
@@ -679,7 +679,7 @@ window.CURTAINS_DATA = {
       ],
       "video_id": "qTXBG0gKCgU",
       "video_url": "https://www.youtube.com/watch?v=qTXBG0gKCgU",
-      "image_landscape": "https://img.youtube.com/vi/qTXBG0gKCgU/maxresdefault.jpg",
+      "image_landscape": "assets/art/the-unapproved-war.webp",
       "image_square": "assets/art/album-23.webp"
     },
     {
@@ -742,7 +742,7 @@ window.CURTAINS_DATA = {
       ],
       "video_id": "6rRH5fENMfY",
       "video_url": "https://www.youtube.com/watch?v=6rRH5fENMfY",
-      "image_landscape": "https://img.youtube.com/vi/6rRH5fENMfY/maxresdefault.jpg",
+      "image_landscape": "assets/art/the-culture-war-distraction.webp",
       "image_square": "assets/art/album-23.webp"
     },
     {
@@ -807,7 +807,7 @@ window.CURTAINS_DATA = {
       ],
       "video_id": "83Dy3k8ARDI",
       "video_url": "https://www.youtube.com/watch?v=83Dy3k8ARDI",
-      "image_landscape": "https://img.youtube.com/vi/83Dy3k8ARDI/maxresdefault.jpg",
+      "image_landscape": "assets/art/a-line-in-the-dirt.webp",
       "image_square": "assets/art/album-23.webp"
     },
     {
@@ -871,7 +871,7 @@ window.CURTAINS_DATA = {
       ],
       "video_id": "C5ENbg0LyWM",
       "video_url": "https://www.youtube.com/watch?v=C5ENbg0LyWM",
-      "image_landscape": "https://img.youtube.com/vi/C5ENbg0LyWM/maxresdefault.jpg",
+      "image_landscape": "assets/art/seven-acres-in-the-middle.webp",
       "image_square": "assets/art/album-23.webp"
     },
     {
@@ -938,7 +938,7 @@ window.CURTAINS_DATA = {
       ],
       "video_id": "Oi-Ngh4L19g",
       "video_url": "https://www.youtube.com/watch?v=Oi-Ngh4L19g",
-      "image_landscape": "https://img.youtube.com/vi/Oi-Ngh4L19g/maxresdefault.jpg",
+      "image_landscape": "assets/art/pass-the-hat.webp",
       "image_square": "assets/art/album-23.webp"
     },
     {
@@ -1004,7 +1004,7 @@ window.CURTAINS_DATA = {
       ],
       "video_id": "IJ9lSf3WxdE",
       "video_url": "https://www.youtube.com/watch?v=IJ9lSf3WxdE",
-      "image_landscape": "https://img.youtube.com/vi/IJ9lSf3WxdE/maxresdefault.jpg",
+      "image_landscape": "assets/art/nourish-the-roots.webp",
       "image_square": "assets/art/album-23.webp"
     }
   ]
