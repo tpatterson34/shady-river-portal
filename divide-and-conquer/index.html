@@ -138,7 +138,7 @@
   <link rel="icon" type="image/x-icon" href="../favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
-  <link rel="stylesheet" href="../assets/css/bard-notes.css">
+  <link rel="stylesheet" href="../assets/css/bard-notes.css?v=20260920b">
 </head>
 
 <body class="bg-void-950 text-slate-100 font-sans min-h-screen antialiased selection:bg-goldunity-600 selection:text-white">
@@ -999,19 +999,19 @@
                       aria-label="Drop a note to the bard about ${escapeHtml(t.title)}"
                       title="Drop a note to the bard"
                     >
-                      <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                      <svg class="bard-note-icon" width="16" height="16" style="width: 16px; height: 16px; max-width: 16px; max-height: 16px; min-width: 16px; min-height: 16px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                       <span class="bard-note-tooltip">Drop a note to the bard</span>
                     </button>
                     <button 
                       type="button"
                       onclick="shareTrackLink(this.dataset.song, 'Divide and Conquer', ${t.track_number})"
                       data-song="${escapeHtml(t.title)}"
-                      class="track-share-btn"
+                      class="bard-note-btn track-share-btn"
                       aria-label="Share this track"
                       title="Share this track"
                     >
-                      <svg class="track-share-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
-                      <span class="track-share-tooltip">Share this track</span>
+                      <svg class="bard-note-icon track-share-icon" width="16" height="16" style="width: 16px; height: 16px; max-width: 16px; max-height: 16px; min-width: 16px; min-height: 16px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                      <span class="bard-note-tooltip track-share-tooltip">Share this track</span>
                     </button>
                     <button 
                     onclick="copyLyrics('${t.slug}')" 
@@ -1175,6 +1175,6 @@
     })();
   </script>
 
-  <script src="../assets/js/bard-notes.js"></script>
+  <script src="../assets/js/bard-notes.js?v=20260920b"></script>
 </body>
 </html>
