@@ -326,3 +326,154 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+/* ==========================================================================
+   TRACK SHARE BUTTON & DEEP LINK HIGHLIGHT STYLES
+   ========================================================================== */
+
+.track-share-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 0.5rem;
+  font-size: 0.8125rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: #a8a29e; /* stone-400 */
+  background: rgba(41, 37, 36, 0.6); /* stone-800/60 */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.track-share-btn:hover,
+.track-share-btn:focus-visible {
+  color: #fef08a; /* yellow-200 / warm gold */
+  background: rgba(120, 53, 15, 0.5); /* amber-900/50 */
+  border-color: rgba(245, 158, 11, 0.6); /* amber-500/60 */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 0 8px rgba(245, 158, 11, 0.2);
+}
+
+.track-share-btn:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+.track-share-btn .track-share-icon {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+.track-share-btn:hover .track-share-icon {
+  transform: scale(1.1);
+}
+
+/* Tooltip for track share */
+.track-share-btn .track-share-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: #1c1917; /* stone-900 */
+  color: #f5f5f4; /* stone-100 */
+  padding: 0.35rem 0.65rem;
+  border-radius: 0.375rem;
+  font-size: 0.6875rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  z-index: 50;
+}
+
+.track-share-btn .track-share-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #1c1917 transparent transparent transparent;
+}
+
+.track-share-btn:hover .track-share-tooltip,
+.track-share-btn:focus-visible .track-share-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Floating Share Toast Notification */
+.track-share-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: #1c1917;
+  color: #f5f5f4;
+  border: 1px solid rgba(245, 158, 11, 0.6);
+  border-radius: 0.75rem;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.8125rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7), 0 0 15px rgba(245, 158, 11, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  z-index: 99999;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+.track-share-toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.track-share-toast-icon {
+  color: #fbbf24;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* Card Highlight Animation on Deep Link Arrival */
+@keyframes trackCardGlowPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  20% {
+    box-shadow: 0 0 30px 4px rgba(245, 158, 11, 0.5);
+    border-color: rgba(245, 158, 11, 0.9);
+  }
+  60% {
+    box-shadow: 0 0 20px 2px rgba(245, 158, 11, 0.3);
+    border-color: rgba(245, 158, 11, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.track-card-highlighted {
+  animation: trackCardGlowPulse 2.8s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+}
+

@@ -225,4 +225,183 @@
     }
   };
 
+  // ============================================================================
+  // TRACK SHARE & DEEP LINKING ENGINE
+  // ============================================================================
+
+  function fallbackCopyText(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-9999px';
+    textArea.style.top = '0';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    try {
+      document.execCommand('copy');
+    } catch (err) {
+      console.warn('Fallback copy failed', err);
+    }
+    document.body.removeChild(textArea);
+  }
+
+  function showTrackShareToast(message) {
+    let toast = document.getElementById('track-share-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'track-share-toast';
+      toast.className = 'track-share-toast';
+      toast.setAttribute('role', 'status');
+      toast.setAttribute('aria-live', 'polite');
+      document.body.appendChild(toast);
+    }
+    toast.innerHTML = `<span class="track-share-toast-icon">&#10003;</span><span>${message}</span>`;
+    toast.classList.add('show');
+
+    if (window._trackShareToastTimer) {
+      clearTimeout(window._trackShareToastTimer);
+    }
+    window._trackShareToastTimer = setTimeout(() => {
+      toast.classList.remove('show');
+    }, 2800);
+  }
+
+  // Share Track Link Action
+  window.shareTrackLink = function (songTitle, albumTitle, trackIdentifier) {
+    const trackNum = (typeof trackIdentifier === 'number' || /^\d+$/.test(trackIdentifier)) ? parseInt(trackIdentifier, 10) : null;
+    const anchor = trackNum !== null ? `track-${trackNum}` : String(trackIdentifier).replace(/^#/, '');
+
+    const baseUrl = window.location.origin + window.location.pathname;
+    const fullShareUrl = `${baseUrl}#${anchor}`;
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(fullShareUrl).catch(() => {
+        fallbackCopyText(fullShareUrl);
+      });
+    } else {
+      fallbackCopyText(fullShareUrl);
+    }
+
+    const titleStr = songTitle ? `"${songTitle}"` : (trackNum !== null ? `Track #${trackNum}` : 'Track');
+    showTrackShareToast(`Link for ${titleStr} copied to clipboard!`);
+
+    // Update browser URL hash without jump
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, '', `#${anchor}`);
+    }
+
+    // Temporary tooltip feedback on active button if triggered by event
+    const activeBtn = document.activeElement;
+    if (activeBtn && activeBtn.classList.contains('track-share-btn')) {
+      const tooltip = activeBtn.querySelector('.track-share-tooltip');
+      if (tooltip) {
+        const origText = tooltip.textContent;
+        tooltip.textContent = '✓ Link Copied!';
+        setTimeout(() => {
+          tooltip.textContent = origText;
+        }, 2000);
+      }
+    }
+
+    // Flash highlight on the target card
+    const targetCard = document.getElementById(anchor) ||
+                       (trackNum !== null ? (document.getElementById(`track-${trackNum}`) ||
+                                            document.getElementById(`track-${String(trackNum).padStart(2, '0')}`) ||
+                                            document.getElementById(`track-card-${trackNum}`) ||
+                                            document.querySelector(`[data-track="${trackNum}"]`)) : null);
+    if (targetCard) {
+      targetCard.classList.remove('track-card-highlighted');
+      void targetCard.offsetWidth;
+      targetCard.classList.add('track-card-highlighted');
+    }
+  };
+
+  // Deep Link Resolver: Automatically scroll & highlight track on direct link arrival
+  function handleTrackDeepLink() {
+    const rawHash = window.location.hash ? window.location.hash.replace(/^#/, '').trim() : '';
+    if (!rawHash) return;
+
+    let trackNum = null;
+    const match = rawHash.match(/track[-_]?(\d+)/i) || rawHash.match(/song[-_]?(\d+)/i) || rawHash.match(/^(\d+)$/);
+    if (match) {
+      trackNum = parseInt(match[1], 10);
+    }
+
+    let attempts = 0;
+    const maxAttempts = 35; // 35 * 60ms = ~2.1s
+    const pollInterval = setInterval(() => {
+      attempts++;
+      let targetEl = document.getElementById(rawHash);
+
+      if (!targetEl && trackNum !== null) {
+        targetEl = document.getElementById(`track-${trackNum}`) ||
+                   document.getElementById(`track-${String(trackNum).padStart(2, '0')}`) ||
+                   document.getElementById(`track-card-${trackNum}`) ||
+                   document.querySelector(`[data-track="${trackNum}"]`);
+      }
+
+      // If still not found and a filter might be active, attempt resetting filter
+      if (!targetEl && trackNum !== null && attempts === 10) {
+        if (typeof filterTracks === 'function') {
+          try { filterTracks('all'); } catch (e) {}
+        }
+        if (typeof clearSearch === 'function') {
+          try { clearSearch(); } catch (e) {}
+        }
+      }
+
+      if (targetEl || attempts >= maxAttempts) {
+        clearInterval(pollInterval);
+        if (targetEl) {
+          // Check if parent act needs switching
+          const actAttr = targetEl.getAttribute('data-act');
+          if (actAttr && typeof filterByAct === 'function') {
+            const actNumMatch = actAttr.match(/\d+/);
+            if (actNumMatch) {
+              try { filterByAct(parseInt(actNumMatch[0], 10)); } catch (e) {}
+            }
+          }
+
+          // Smooth scroll into view
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+          // Pulse glow animation
+          targetEl.classList.remove('track-card-highlighted');
+          void targetEl.offsetWidth;
+          targetEl.classList.add('track-card-highlighted');
+
+          // Auto-expand lyrics drawer if collapsed
+          if (trackNum !== null) {
+            const padded = String(trackNum).padStart(2, '0');
+            const lyricsDrawer = document.getElementById(`lyrics-drawer-${trackNum}`) ||
+                                 document.getElementById(`lyrics-drawer-${padded}`) ||
+                                 document.getElementById(`drawer-track-${trackNum}`) ||
+                                 document.getElementById(`drawer-${targetEl.id}`);
+            if (lyricsDrawer && (lyricsDrawer.classList.contains('hidden') || lyricsDrawer.style.display === 'none')) {
+              if (typeof toggleTrackLyrics === 'function') {
+                try { toggleTrackLyrics(trackNum); } catch (e) {}
+              } else if (typeof toggleLyrics === 'function') {
+                try { toggleLyrics(targetEl.id || `track-${trackNum}`); } catch (e) {}
+              } else {
+                const toggleBtn = document.getElementById(`toggle-btn-${trackNum}`) ||
+                                  document.getElementById(`btn-lyrics-track-${trackNum}`) ||
+                                  document.getElementById(`btn-lyrics-${targetEl.id}`);
+                if (toggleBtn) toggleBtn.click();
+              }
+            }
+          }
+        }
+      }
+    }, 60);
+  }
+
+  window.addEventListener('hashchange', handleTrackDeepLink);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', handleTrackDeepLink);
+  } else {
+    setTimeout(handleTrackDeepLink, 100);
+  }
+
 })();
+

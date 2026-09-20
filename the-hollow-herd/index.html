@@ -887,13 +887,25 @@
                 <div class="flex items-center gap-2">
                   <button 
                     type="button"
-                    onclick="openBardNoteModal('${escapeHtml(t.title).replace(/'/g, "\\'")}', 'The Hollow Herd', ${t.track_number})"
+                    onclick="openBardNoteModal(this.dataset.song, 'The Hollow Herd', ${t.track_number})"
+                    data-song="${escapeHtml(t.title)}"
                     class="bard-note-btn focus-ring"
                     aria-label="Drop a note to the bard about ${escapeHtml(t.title)}"
                     title="Drop a note to the bard"
                   >
-                    <i aria-hidden="true" class="fa-solid fa-envelope bard-note-icon"></i>
+                    <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                     <span class="bard-note-tooltip">Drop a note to the bard</span>
+                  </button>
+                  <button 
+                    type="button"
+                    onclick="shareTrackLink(this.dataset.song, 'The Hollow Herd', ${t.track_number})"
+                    data-song="${escapeHtml(t.title)}"
+                    class="track-share-btn focus-ring"
+                    aria-label="Share link for ${escapeHtml(t.title)}"
+                    title="Share this track"
+                  >
+                    <svg class="track-share-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                    <span class="track-share-tooltip">Share this track</span>
                   </button>
                   <button 
                     onclick="copyLyrics('${slug}')" 
