@@ -1041,15 +1041,17 @@
       modalArt.alt = `Official cover artwork for ${item.title} by The Shady River Bard`;
       
       const rawDesc = item.description || item.pitch || '';
-      let paragraphs = rawDesc.split(/\n\s*\n/).map(p => p.trim()).filter(Boolean);
-      if (paragraphs.length <= 1 && rawDesc.includes('\n')) {
-        const lines = rawDesc.split(/\n+/).map(p => p.trim()).filter(Boolean);
-        if (lines.length > 1) {
-          paragraphs = lines;
-        }
-      }
+      const paragraphs = rawDesc.split(/\n+/).map(p => p.trim()).filter(Boolean);
       if (paragraphs.length > 0) {
-        document.getElementById('modal-desc').innerHTML = paragraphs.map(p => `<p class="leading-relaxed">${p}</p>`).join('');
+        document.getElementById('modal-desc').innerHTML = paragraphs.map(p => {
+          if (p.startsWith('#')) {
+            return `<p class="text-xs font-mono text-stone-400 pt-3 border-t border-white/10 leading-relaxed">${p}</p>`;
+          }
+          if (p.startsWith('@')) {
+            return `<p class="text-xs font-mono text-brand-400 font-semibold">${p}</p>`;
+          }
+          return `<p class="leading-relaxed">${p}</p>`;
+        }).join('');
       } else {
         document.getElementById('modal-desc').innerText = rawDesc;
       }
