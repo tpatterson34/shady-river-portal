@@ -888,17 +888,19 @@
                       <i aria-hidden="true" class="fa-solid fa-chevron-down transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}" id="icon-${t.number}"></i>
                       <span>${isExpanded ? 'Hide Lyrics' : 'View Complete Lyrics'}</span>
                     </button>
+                    <div class="flex items-center gap-2">
                     <button 
-                    type="button"
-                    onclick="openBardNoteModal('${t.title.replace(/'/g, \"\\\'\")}', 'The Balance Sheet of Outrage', ${t.number})"
-                    class="bard-note-btn mr-2"
-                    aria-label="Drop a note to the bard about ${t.title.replace(/\"/g, '&quot;')}"
-                    title="Drop a note to the bard"
-                  >
-                    <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                    <span class="bard-note-tooltip">Drop a note to the bard</span>
-                  </button>
-                  <button 
+                      type="button"
+                      onclick="openBardNoteModal(this.dataset.song, 'The Balance Sheet of Outrage', ${t.number})"
+                      data-song="${escapeHtml(t.title)}"
+                      class="bard-note-btn"
+                      aria-label="Drop a note to the bard about ${escapeHtml(t.title)}"
+                      title="Drop a note to the bard"
+                    >
+                      <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                      <span class="bard-note-tooltip">Drop a note to the bard</span>
+                    </button>
+                    <button 
                       onclick="window.copyTrackLyrics(${t.number})" 
                       class="text-[11px] font-mono text-stone-400 hover:text-white transition-colors focus-ring px-2 py-1 rounded"
                       title="Copy lyrics to clipboard"
@@ -906,6 +908,7 @@
                       <i aria-hidden="true" class="fa-regular fa-copy"></i>
                       <span>Copy Lyrics</span>
                     </button>
+                  </div>
                   </div>
 
                   <div 
