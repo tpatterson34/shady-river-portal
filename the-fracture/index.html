@@ -602,11 +602,11 @@
             </div>
 
             <!-- Connected Songs Button Bar -->
-            <div class="pt-4 border-t border-white/5 flex items-center justify-between">
-              <span class="text-[10px] font-mono text-stone-500 uppercase">Connected Tracks:</span>
-              <div class="flex items-center gap-1.5">
+            <div class="pt-4 border-t border-white/5 flex flex-wrap items-center justify-between gap-2">
+              <span class="text-[10px] font-mono text-stone-500 uppercase shrink-0">Connected Tracks:</span>
+              <div class="flex flex-wrap items-center gap-1.5 sm:justify-end">
                 ${p.connected_tracks.map(tNum => `
-                  <button onclick="expandSingleTrack(${tNum})" class="text-[11px] font-mono px-2 py-0.5 rounded bg-fissure-950 text-fissure-400 border border-fissure-800/40 hover:bg-fissure-900 hover:border-fissure-500 transition-colors">
+                  <button onclick="expandSingleTrack(${tNum})" class="text-[11px] font-mono px-2 py-0.5 rounded bg-fissure-950 text-fissure-400 border border-fissure-800/40 hover:bg-fissure-900 hover:border-fissure-500 transition-colors focus:outline-none focus:ring-1 focus:ring-fissure-400">
                     Track ${tNum}
                   </button>
                 `).join('')}
