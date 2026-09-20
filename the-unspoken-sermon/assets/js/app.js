@@ -164,6 +164,16 @@ document.addEventListener('DOMContentLoaded', () => {
     deckNarrativeRole.textContent = track.narrative_role;
     deckLyrics.textContent = track.lyrics || "(Hushed acoustic reflection)";
 
+    const noteBtn = document.getElementById('deck-bard-note-btn');
+    if (noteBtn) {
+      noteBtn.onclick = () => {
+        if (typeof window.openBardNoteModal === 'function') {
+          window.openBardNoteModal(track.title, "The Unspoken Sermon", track.number);
+        }
+      };
+      noteBtn.setAttribute('aria-label', `Drop a note to the bard about ${track.title}`);
+    }
+
     // Update Sticky Player Info
     playerTitle.textContent = `${track.number}. ${track.title}`;
     playerSub.textContent = track.parable_reference;

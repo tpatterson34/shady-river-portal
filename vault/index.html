@@ -137,6 +137,8 @@
   </style>
   <!-- Unified Accessibility Stylesheet -->
   <link rel="stylesheet" href="../assets/css/a11y.css">
+  <!-- Drop a Note to the Bard Stylesheet -->
+  <link rel="stylesheet" href="../assets/css/bard-notes.css">
   <!-- Official Favicon & Icons -->
   <link rel="icon" type="image/x-icon" href="../favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
@@ -1162,6 +1164,16 @@
               <span class="font-medium text-stone-200">${tr}</span>
             </div>
             <div class="flex items-center gap-2 flex-shrink-0 self-end sm:self-center">
+              <button 
+                type="button"
+                onclick="openBardNoteModal('${tr.replace(/'/g, "\\'")}', '${item.title.replace(/'/g, "\\'")}', ${idx + 1})"
+                class="bard-note-btn"
+                aria-label="Drop a note to the bard about ${tr.replace(/"/g, '&quot;')}"
+                title="Drop a note to the bard"
+              >
+                <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <span class="bard-note-tooltip">Drop a note to the bard</span>
+              </button>
               ${deconstructUrl ? `
                 <a href="${deconstructUrl}" target="_blank" rel="noopener noreferrer" aria-label="Read Deconstruction notes for ${tr.replace(/"/g, '&quot;')} on Substack (opens in new tab)" class="text-[11px] font-mono text-orange-400 hover:text-orange-300 bg-orange-950/70 hover:bg-orange-900/90 border border-orange-700/50 flex items-center gap-1.5 rounded-md px-2 py-1 transition-colors shadow-sm focus-visible:ring-1 focus-visible:ring-brand-500" title="Read Deconstruction notes on Substack">
                   <svg class="w-3 h-3 fill-current text-orange-400 flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
@@ -1531,5 +1543,6 @@
     initA11y();
     init();
   </script>
+  <script src="../assets/js/bard-notes.js"></script>
 </body>
 </html>

@@ -285,6 +285,16 @@
     if (elements.stageNarrative) elements.stageNarrative.textContent = track.narrative_role || track.summary;
     if (elements.stageLyrics) elements.stageLyrics.textContent = track.lyrics;
 
+    const noteBtn = document.getElementById('stage-bard-note-btn');
+    if (noteBtn) {
+      noteBtn.onclick = () => {
+        if (typeof window.openBardNoteModal === 'function') {
+          window.openBardNoteModal(track.title, "The Merchant of Echoes", track.number);
+        }
+      };
+      noteBtn.setAttribute('aria-label', `Drop a note to the bard about ${track.title}`);
+    }
+
     // Render Tags
     if (elements.stageTagsContainer) {
       elements.stageTagsContainer.innerHTML = '';

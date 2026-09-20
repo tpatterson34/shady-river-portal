@@ -1,0 +1,302 @@
+/* ==========================================================================
+   THE SHADY RIVER BARD - "DROP A NOTE TO THE BARD" SHARED STYLES
+   ========================================================================== */
+
+/* Button & Tooltip Container */
+.bard-note-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 0.5rem;
+  font-size: 0.8125rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: #a8a29e; /* stone-400 */
+  background: rgba(41, 37, 36, 0.6); /* stone-800/60 */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.bard-note-btn:hover,
+.bard-note-btn:focus-visible {
+  color: #fef08a; /* yellow-200 / warm gold */
+  background: rgba(120, 53, 15, 0.5); /* amber-900/50 */
+  border-color: rgba(245, 158, 11, 0.6); /* amber-500/60 */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 0 8px rgba(245, 158, 11, 0.2);
+}
+
+.bard-note-btn:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+.bard-note-btn .bard-note-icon {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+.bard-note-btn:hover .bard-note-icon {
+  transform: scale(1.1);
+}
+
+/* Tooltip */
+.bard-note-btn .bard-note-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: #1c1917; /* stone-900 */
+  color: #f5f5f4; /* stone-100 */
+  padding: 0.35rem 0.65rem;
+  border-radius: 0.375rem;
+  font-size: 0.6875rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  z-index: 50;
+}
+
+/* Tooltip arrow */
+.bard-note-btn .bard-note-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #1c1917 transparent transparent transparent;
+}
+
+.bard-note-btn:hover .bard-note-tooltip,
+.bard-note-btn:focus-visible .bard-note-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Modal Overlay */
+.bard-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(12, 10, 9, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.bard-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal Dialog */
+.bard-modal-dialog {
+  position: relative;
+  width: 100%;
+  max-width: 32rem; /* 512px */
+  background: #1c1917; /* stone-900 */
+  border: 1px solid rgba(245, 158, 11, 0.35); /* amber border */
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 25px rgba(245, 158, 11, 0.15);
+  color: #e7e5e4;
+  transform: scale(0.95);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.bard-modal-overlay.active .bard-modal-dialog {
+  transform: scale(1);
+}
+
+/* Modal Header */
+.bard-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.bard-modal-title {
+  font-family: "Cinzel", "Playfair Display", Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fafaf9;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bard-modal-title-icon {
+  color: #f59e0b;
+}
+
+.bard-modal-context {
+  margin-top: 0.35rem;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 0.75rem;
+  color: #fbbf24; /* amber-400 */
+  background: rgba(120, 53, 15, 0.3);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.375rem;
+  display: inline-block;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.bard-modal-close {
+  background: transparent;
+  border: none;
+  color: #a8a29e;
+  padding: 0.35rem;
+  cursor: pointer;
+  border-radius: 0.375rem;
+  line-height: 1;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.bard-modal-close:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Modal Form Controls */
+.bard-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bard-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.bard-form-label {
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #d6d3d1;
+}
+
+.bard-form-input,
+.bard-form-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: #0c0a09; /* stone-950 */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  color: #fafaf9;
+  font-size: 0.875rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bard-form-input:focus,
+.bard-form-textarea:focus {
+  outline: none;
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.25);
+}
+
+.bard-form-textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.bard-modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: 0.5rem;
+}
+
+.bard-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(135deg, #d97706, #b45309);
+  color: #ffffff;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(180, 83, 9, 0.3);
+}
+
+.bard-btn-primary:hover {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.4);
+  transform: translateY(-1px);
+}
+
+.bard-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.6rem 1rem;
+  background: rgba(41, 37, 36, 0.7);
+  color: #d6d3d1;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.bard-btn-secondary:hover {
+  background: rgba(68, 64, 60, 0.8);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.bard-modal-footer-note {
+  font-size: 0.7rem;
+  color: #78716c;
+  text-align: center;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  margin-top: 0.25rem;
+}

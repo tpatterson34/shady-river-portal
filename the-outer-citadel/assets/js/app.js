@@ -165,6 +165,16 @@ document.addEventListener('DOMContentLoaded', () => {
     deckNarrativeRole.textContent = track.narrative_role;
     deckLyrics.textContent = track.lyrics || "(Instrumental or spoken word)";
 
+    const noteBtn = document.getElementById('deck-bard-note-btn');
+    if (noteBtn) {
+      noteBtn.onclick = () => {
+        if (typeof window.openBardNoteModal === 'function') {
+          window.openBardNoteModal(track.title, "The Outer Citadel", track.number);
+        }
+      };
+      noteBtn.setAttribute('aria-label', `Drop a note to the bard about ${track.title}`);
+    }
+
     // Update Quotes
     if (track.pull_quotes && track.pull_quotes.length > 0) {
       deckQuotes.parentElement.style.display = 'block';

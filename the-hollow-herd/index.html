@@ -106,6 +106,8 @@
   </style>
   <!-- Unified Accessibility Stylesheet -->
   <link rel="stylesheet" href="../assets/css/a11y.css">
+  <!-- Drop a Note to the Bard Stylesheet -->
+  <link rel="stylesheet" href="../assets/css/bard-notes.css">
   <!-- Official Favicon & Icons -->
   <link rel="icon" type="image/x-icon" href="../favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
@@ -882,14 +884,26 @@
                   </a>
                   ` : ''}
                 </div>
-                <button 
-                  onclick="copyLyrics('${slug}')" 
-                  class="text-[11px] font-mono text-stone-400 hover:text-white transition-colors focus-ring px-2 py-1 rounded"
-                  title="Copy lyrics to clipboard"
-                >
-                  <i aria-hidden="true" class="fa-regular fa-copy"></i>
-                  <span id="copy-msg-${slug}">Copy</span>
-                </button>
+                <div class="flex items-center gap-2">
+                  <button 
+                    type="button"
+                    onclick="openBardNoteModal('${escapeHtml(t.title).replace(/'/g, "\\'")}', 'The Hollow Herd', ${t.track_number})"
+                    class="bard-note-btn focus-ring"
+                    aria-label="Drop a note to the bard about ${escapeHtml(t.title)}"
+                    title="Drop a note to the bard"
+                  >
+                    <i aria-hidden="true" class="fa-solid fa-envelope bard-note-icon"></i>
+                    <span class="bard-note-tooltip">Drop a note to the bard</span>
+                  </button>
+                  <button 
+                    onclick="copyLyrics('${slug}')" 
+                    class="text-[11px] font-mono text-stone-400 hover:text-white transition-colors focus-ring px-2 py-1 rounded"
+                    title="Copy lyrics to clipboard"
+                  >
+                    <i aria-hidden="true" class="fa-regular fa-copy"></i>
+                    <span id="copy-msg-${slug}">Copy</span>
+                  </button>
+                </div>
               </div>
 
               <div 
@@ -1040,6 +1054,8 @@
       });
     });
   </script>
+  <!-- Drop a Note to the Bard Controller -->
+  <script src="../assets/js/bard-notes.js"></script>
   <!-- Unified Accessibility Controller -->
   <script src="../assets/js/a11y.js"></script>
 </body>
