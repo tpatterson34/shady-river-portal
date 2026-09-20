@@ -97,6 +97,22 @@
 
   // --- AUDIO LOGIC ---
   function loadTrack(index, autoPlay = false) {
+    const noteBtn = document.getElementById('deck-bard-note-btn');
+    if (noteBtn) {
+      noteBtn.onclick = () => {
+        const trackObj = (typeof albumData !== 'undefined' && albumData.tracks && albumData.tracks[index]) 
+          ? albumData.tracks[index] 
+          : (typeof state !== 'undefined' && state.albumData && state.albumData.tracks && state.albumData.tracks[index])
+            ? state.albumData.tracks[index]
+            : null;
+        const sTitle = trackObj ? trackObj.title : ('Track ' + (index+1));
+        const sNum = trackObj ? trackObj.number : (index+1);
+        if (typeof window.openBardNoteModal === 'function') {
+          window.openBardNoteModal(sTitle, "The Glitch in the Machine", sNum);
+        }
+      };
+    }
+
     if (!albumData || !albumData.tracks || !albumData.tracks[index]) return;
     currentTrackIndex = index;
     const track = albumData.tracks[index];

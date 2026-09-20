@@ -334,6 +334,16 @@
     const track = state.tracks[state.currentTrackIndex];
     if (!track) return;
 
+    const noteBtn = document.getElementById('deck-bard-note-btn');
+    if (noteBtn) {
+      noteBtn.onclick = () => {
+        if (typeof window.openBardNoteModal === 'function') {
+          window.openBardNoteModal(track.title, "Golden Mirrors & Empty Thrones", track.number);
+        }
+      };
+      noteBtn.setAttribute('aria-label', `Drop a note to the bard about ${track.title}`);
+    }
+
     // Master Player Bar
     DOM.currentTrackTitle.textContent = `${track.number}. ${track.title}`;
     DOM.currentTrackAct.textContent = track.act;

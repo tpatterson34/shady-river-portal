@@ -78,6 +78,7 @@
 
   <!-- Plant Data -->
   <script src="data/plants-data.js"></script>
+  <link rel="stylesheet" href="../assets/css/bard-notes.css">
 </head>
 
 <body class="bg-stone-950 text-stone-200 antialiased selection:bg-emerald-500 selection:text-stone-950 pb-28">
@@ -111,6 +112,10 @@
           <span>26-Album Vault</span>
         </a>
         <a href="../friends-of-the-bard/" class="text-stone-300 hover:text-emerald-400 transition-colors">Friends of the Bard</a>
+        <button type="button" onclick="openBardNoteModal('', 'The Living Homestead Catalog')" class="bard-note-btn" aria-label="Drop a note to the bard" title="Drop a note to the bard">
+          <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <span class="bard-note-tooltip">Drop a note to the bard</span>
+        </button>
       </nav>
     </div>
   </header>
@@ -335,5 +340,6 @@
 
   <!-- Main Catalog JS -->
   <script src="assets/js/homestead.js"></script>
+  <script src="../assets/js/bard-notes.js"></script>
 </body>
 </html>

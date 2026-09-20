@@ -132,6 +132,7 @@
   <link rel="icon" type="image/x-icon" href="../favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="../assets/css/bard-notes.css">
 </head>
 <body class="bg-frostbg-950 text-slate-200 min-h-screen flex flex-col font-sans antialiased selection:bg-lantern-500 selection:text-frostbg-950">
 
@@ -969,6 +970,16 @@
                     <span>View Complete Lyrics</span>
                   </button>
                   <button 
+                    type="button"
+                    onclick="openBardNoteModal('${t.title.replace(/'/g, \"\\\'\")}', 'Have Yourself a Shady Little Christmas', ${t.track_number})"
+                    class="bard-note-btn mr-2"
+                    aria-label="Drop a note to the bard about ${t.title.replace(/\"/g, '&quot;')}"
+                    title="Drop a note to the bard"
+                  >
+                    <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <span class="bard-note-tooltip">Drop a note to the bard</span>
+                  </button>
+                  <button 
                     onclick="copyLyrics('${slug}')" 
                     class="text-[11px] font-mono text-slate-400 hover:text-white transition-colors focus-ring px-2 py-1 rounded"
                     title="Copy lyrics to clipboard"
@@ -1218,5 +1229,6 @@
   <script src="../assets/js/a11y.js"></script>
   <script src="../assets/js/a11y.js"></script>
 
+  <script src="../assets/js/bard-notes.js"></script>
 </body>
 </html>

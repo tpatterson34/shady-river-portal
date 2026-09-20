@@ -125,6 +125,7 @@
       background: rgba(245, 158, 11, 0.6);
     }
   </style>
+  <link rel="stylesheet" href="../assets/css/bard-notes.css">
 </head>
 
 <body class="bg-stone-950 text-stone-100 font-serif antialiased selection:bg-amber-500/30 selection:text-amber-200">
@@ -838,7 +839,17 @@ Vocal Delivery: The lead vocals should be weathered, serious, and deeply sincere
                   <div id="panel-1-lyrics" class="track-tab-panel p-4 max-h-64 overflow-y-auto custom-scrollbar" role="tabpanel" aria-labelledby="tab-btn-1-lyrics">
                     <div class="flex items-center justify-between mb-3 pb-2 border-b border-stone-800">
                       <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Clean Published Lyrics</span>
-                      <button onclick="copyLyrics(1)" aria-label="Copy lyrics for The Silver Hound&#x27;s Awake (Prologue)" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
+                      <button 
+                  type="button"
+                  onclick="openBardNoteModal('The Silver Hound\'s Awake (Prologue)', 'A Dog\'s Life: The Tao of the Tail', 1)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The Silver Hound\'s Awake (Prologue)"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(1)" aria-label="Copy lyrics for The Silver Hound&#x27;s Awake (Prologue)" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                         <i class="fa-regular fa-copy text-[10px]" aria-hidden="true"></i> <span id="copy-text-1">Copy</span>
                       </button>
                     </div>
@@ -1006,7 +1017,17 @@ Let us go.
                   <div id="panel-2-lyrics" class="track-tab-panel p-4 max-h-64 overflow-y-auto custom-scrollbar" role="tabpanel" aria-labelledby="tab-btn-2-lyrics">
                     <div class="flex items-center justify-between mb-3 pb-2 border-b border-stone-800">
                       <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Clean Published Lyrics</span>
-                      <button onclick="copyLyrics(2)" aria-label="Copy lyrics for A Wet Nose at Dawn" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
+                      <button 
+                  type="button"
+                  onclick="openBardNoteModal('A Wet Nose at Dawn', 'A Dog\'s Life: The Tao of the Tail', 2)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about A Wet Nose at Dawn"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(2)" aria-label="Copy lyrics for A Wet Nose at Dawn" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                         <i class="fa-regular fa-copy text-[10px]" aria-hidden="true"></i> <span id="copy-text-2">Copy</span>
                       </button>
                     </div>
@@ -1212,7 +1233,17 @@ To a wet nose at dawn.
                   <div id="panel-3-lyrics" class="track-tab-panel p-4 max-h-64 overflow-y-auto custom-scrollbar" role="tabpanel" aria-labelledby="tab-btn-3-lyrics">
                     <div class="flex items-center justify-between mb-3 pb-2 border-b border-stone-800">
                       <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Clean Published Lyrics</span>
-                      <button onclick="copyLyrics(3)" aria-label="Copy lyrics for Perimeter Check" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
+                      <button 
+                  type="button"
+                  onclick="openBardNoteModal('Perimeter Check', 'A Dog\'s Life: The Tao of the Tail', 3)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Perimeter Check"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(3)" aria-label="Copy lyrics for Perimeter Check" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                         <i class="fa-regular fa-copy text-[10px]" aria-hidden="true"></i> <span id="copy-text-3">Copy</span>
                       </button>
                     </div>
@@ -1430,7 +1461,17 @@ The yard is safe today.
                   <div id="panel-4-lyrics" class="track-tab-panel p-4 max-h-64 overflow-y-auto custom-scrollbar" role="tabpanel" aria-labelledby="tab-btn-4-lyrics">
                     <div class="flex items-center justify-between mb-3 pb-2 border-b border-stone-800">
                       <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Clean Published Lyrics</span>
-                      <button onclick="copyLyrics(4)" aria-label="Copy lyrics for The Ball is the Ball" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
+                      <button 
+                  type="button"
+                  onclick="openBardNoteModal('The Ball is the Ball', 'A Dog\'s Life: The Tao of the Tail', 4)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The Ball is the Ball"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(4)" aria-label="Copy lyrics for The Ball is the Ball" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                         <i class="fa-regular fa-copy text-[10px]" aria-hidden="true"></i> <span id="copy-text-4">Copy</span>
                       </button>
                     </div>
@@ -1648,7 +1689,17 @@ The ball is the ball.
                   <div id="panel-5-lyrics" class="track-tab-panel p-4 max-h-64 overflow-y-auto custom-scrollbar" role="tabpanel" aria-labelledby="tab-btn-5-lyrics">
                     <div class="flex items-center justify-between mb-3 pb-2 border-b border-stone-800">
                       <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Clean Published Lyrics</span>
-                      <button onclick="copyLyrics(5)" aria-label="Copy lyrics for The Tether and the Radius" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
+                      <button 
+                  type="button"
+                  onclick="openBardNoteModal('The Tether and the Radius', 'A Dog\'s Life: The Tao of the Tail', 5)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The Tether and the Radius"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(5)" aria-label="Copy lyrics for The Tether and the Radius" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                         <i class="fa-regular fa-copy text-[10px]" aria-hidden="true"></i> <span id="copy-text-5">Copy</span>
                       </button>
                     </div>
@@ -1850,7 +1901,17 @@ In the radius.
                   <div id="panel-6-lyrics" class="track-tab-panel p-4 max-h-64 overflow-y-auto custom-scrollbar" role="tabpanel" aria-labelledby="tab-btn-6-lyrics">
                     <div class="flex items-center justify-between mb-3 pb-2 border-b border-stone-800">
                       <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Clean Published Lyrics</span>
-                      <button onclick="copyLyrics(6)" aria-label="Copy lyrics for The Other Side of the Door" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
+                      <button 
+                  type="button"
+                  onclick="openBardNoteModal('The Other Side of the Door', 'A Dog\'s Life: The Tao of the Tail', 6)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The Other Side of the Door"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(6)" aria-label="Copy lyrics for The Other Side of the Door" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                         <i class="fa-regular fa-copy text-[10px]" aria-hidden="true"></i> <span id="copy-text-6">Copy</span>
                       </button>
                     </div>
@@ -2044,7 +2105,17 @@ On the door.
                   <div id="panel-7-lyrics" class="track-tab-panel p-4 max-h-64 overflow-y-auto custom-scrollbar" role="tabpanel" aria-labelledby="tab-btn-7-lyrics">
                     <div class="flex items-center justify-between mb-3 pb-2 border-b border-stone-800">
                       <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Clean Published Lyrics</span>
-                      <button onclick="copyLyrics(7)" aria-label="Copy lyrics for Thunder in the Distance" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
+                      <button 
+                  type="button"
+                  onclick="openBardNoteModal('Thunder in the Distance', 'A Dog\'s Life: The Tao of the Tail', 7)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Thunder in the Distance"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(7)" aria-label="Copy lyrics for Thunder in the Distance" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                         <i class="fa-regular fa-copy text-[10px]" aria-hidden="true"></i> <span id="copy-text-7">Copy</span>
                       </button>
                     </div>
@@ -2256,7 +2327,17 @@ The thunder in the distance.
                   <div id="panel-8-lyrics" class="track-tab-panel p-4 max-h-64 overflow-y-auto custom-scrollbar" role="tabpanel" aria-labelledby="tab-btn-8-lyrics">
                     <div class="flex items-center justify-between mb-3 pb-2 border-b border-stone-800">
                       <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Clean Published Lyrics</span>
-                      <button onclick="copyLyrics(8)" aria-label="Copy lyrics for Sunbeam Drifter" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
+                      <button 
+                  type="button"
+                  onclick="openBardNoteModal('Sunbeam Drifter', 'A Dog\'s Life: The Tao of the Tail', 8)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Sunbeam Drifter"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(8)" aria-label="Copy lyrics for Sunbeam Drifter" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                         <i class="fa-regular fa-copy text-[10px]" aria-hidden="true"></i> <span id="copy-text-8">Copy</span>
                       </button>
                     </div>
@@ -2460,7 +2541,17 @@ Leave the hustle to the world.
                   <div id="panel-9-lyrics" class="track-tab-panel p-4 max-h-64 overflow-y-auto custom-scrollbar" role="tabpanel" aria-labelledby="tab-btn-9-lyrics">
                     <div class="flex items-center justify-between mb-3 pb-2 border-b border-stone-800">
                       <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Clean Published Lyrics</span>
-                      <button onclick="copyLyrics(9)" aria-label="Copy lyrics for Don&#x27;t Save the Good Bones" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
+                      <button 
+                  type="button"
+                  onclick="openBardNoteModal('Don\'t Save the Good Bones', 'A Dog\'s Life: The Tao of the Tail', 9)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Don\'t Save the Good Bones"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(9)" aria-label="Copy lyrics for Don&#x27;t Save the Good Bones" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                         <i class="fa-regular fa-copy text-[10px]" aria-hidden="true"></i> <span id="copy-text-9">Copy</span>
                       </button>
                     </div>
@@ -2676,7 +2767,17 @@ Don&#x27;t save the good bones.
                   <div id="panel-10-lyrics" class="track-tab-panel p-4 max-h-64 overflow-y-auto custom-scrollbar" role="tabpanel" aria-labelledby="tab-btn-10-lyrics">
                     <div class="flex items-center justify-between mb-3 pb-2 border-b border-stone-800">
                       <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Clean Published Lyrics</span>
-                      <button onclick="copyLyrics(10)" aria-label="Copy lyrics for I Know You&#x27;re Sad (The Head on the Knee)" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
+                      <button 
+                  type="button"
+                  onclick="openBardNoteModal('I Know You\'re Sad (The Head on the Knee)', 'A Dog\'s Life: The Tao of the Tail', 10)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about I Know You\'re Sad (The Head on the Knee)"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(10)" aria-label="Copy lyrics for I Know You&#x27;re Sad (The Head on the Knee)" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                         <i class="fa-regular fa-copy text-[10px]" aria-hidden="true"></i> <span id="copy-text-10">Copy</span>
                       </button>
                     </div>
@@ -2880,7 +2981,17 @@ The hound will hold the line.
                   <div id="panel-11-lyrics" class="track-tab-panel p-4 max-h-64 overflow-y-auto custom-scrollbar" role="tabpanel" aria-labelledby="tab-btn-11-lyrics">
                     <div class="flex items-center justify-between mb-3 pb-2 border-b border-stone-800">
                       <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Clean Published Lyrics</span>
-                      <button onclick="copyLyrics(11)" aria-label="Copy lyrics for The Pack is All" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
+                      <button 
+                  type="button"
+                  onclick="openBardNoteModal('The Pack is All', 'A Dog\'s Life: The Tao of the Tail', 11)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The Pack is All"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(11)" aria-label="Copy lyrics for The Pack is All" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                         <i class="fa-regular fa-copy text-[10px]" aria-hidden="true"></i> <span id="copy-text-11">Copy</span>
                       </button>
                     </div>
@@ -3074,7 +3185,17 @@ Leave the ghosts on the wire.
                   <div id="panel-12-lyrics" class="track-tab-panel p-4 max-h-64 overflow-y-auto custom-scrollbar" role="tabpanel" aria-labelledby="tab-btn-12-lyrics">
                     <div class="flex items-center justify-between mb-3 pb-2 border-b border-stone-800">
                       <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Clean Published Lyrics</span>
-                      <button onclick="copyLyrics(12)" aria-label="Copy lyrics for Let Sleeping Dogs Lie" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
+                      <button 
+                  type="button"
+                  onclick="openBardNoteModal('Let Sleeping Dogs Lie', 'A Dog\'s Life: The Tao of the Tail', 12)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Let Sleeping Dogs Lie"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(12)" aria-label="Copy lyrics for Let Sleeping Dogs Lie" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                         <i class="fa-regular fa-copy text-[10px]" aria-hidden="true"></i> <span id="copy-text-12">Copy</span>
                       </button>
                     </div>
@@ -3294,7 +3415,17 @@ Let the sleeping dogs lie.
                   <div id="panel-13-lyrics" class="track-tab-panel p-4 max-h-64 overflow-y-auto custom-scrollbar" role="tabpanel" aria-labelledby="tab-btn-13-lyrics">
                     <div class="flex items-center justify-between mb-3 pb-2 border-b border-stone-800">
                       <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Clean Published Lyrics</span>
-                      <button onclick="copyLyrics(13)" aria-label="Copy lyrics for Barking at the Moon" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
+                      <button 
+                  type="button"
+                  onclick="openBardNoteModal('Barking at the Moon', 'A Dog\'s Life: The Tao of the Tail', 13)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Barking at the Moon"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(13)" aria-label="Copy lyrics for Barking at the Moon" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                         <i class="fa-regular fa-copy text-[10px]" aria-hidden="true"></i> <span id="copy-text-13">Copy</span>
                       </button>
                     </div>
@@ -3514,7 +3645,17 @@ Turn off the glass.
                   <div id="panel-14-lyrics" class="track-tab-panel p-4 max-h-64 overflow-y-auto custom-scrollbar" role="tabpanel" aria-labelledby="tab-btn-14-lyrics">
                     <div class="flex items-center justify-between mb-3 pb-2 border-b border-stone-800">
                       <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Clean Published Lyrics</span>
-                      <button onclick="copyLyrics(14)" aria-label="Copy lyrics for The Old Gray Muzzle (Shady&#x27;s Song)" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
+                      <button 
+                  type="button"
+                  onclick="openBardNoteModal('The Old Gray Muzzle (Shady\'s Song)', 'A Dog\'s Life: The Tao of the Tail', 14)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The Old Gray Muzzle (Shady\'s Song)"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(14)" aria-label="Copy lyrics for The Old Gray Muzzle (Shady&#x27;s Song)" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                         <i class="fa-regular fa-copy text-[10px]" aria-hidden="true"></i> <span id="copy-text-14">Copy</span>
                       </button>
                     </div>
@@ -3726,7 +3867,17 @@ Her day was done.
                   <div id="panel-15-lyrics" class="track-tab-panel p-4 max-h-64 overflow-y-auto custom-scrollbar" role="tabpanel" aria-labelledby="tab-btn-15-lyrics">
                     <div class="flex items-center justify-between mb-3 pb-2 border-b border-stone-800">
                       <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Clean Published Lyrics</span>
-                      <button onclick="copyLyrics(15)" aria-label="Copy lyrics for Good Girl" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
+                      <button 
+                  type="button"
+                  onclick="openBardNoteModal('Good Girl', 'A Dog\'s Life: The Tao of the Tail', 15)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Good Girl"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(15)" aria-label="Copy lyrics for Good Girl" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                         <i class="fa-regular fa-copy text-[10px]" aria-hidden="true"></i> <span id="copy-text-15">Copy</span>
                       </button>
                     </div>
@@ -3936,7 +4087,17 @@ The fire is warm.
                   <div id="panel-16-lyrics" class="track-tab-panel p-4 max-h-64 overflow-y-auto custom-scrollbar" role="tabpanel" aria-labelledby="tab-btn-16-lyrics">
                     <div class="flex items-center justify-between mb-3 pb-2 border-b border-stone-800">
                       <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Clean Published Lyrics</span>
-                      <button onclick="copyLyrics(16)" aria-label="Copy lyrics for I&#x27;ll Catch You (Luna&#x27;s Song)" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
+                      <button 
+                  type="button"
+                  onclick="openBardNoteModal('I\'ll Catch You (Luna\'s Song)', 'A Dog\'s Life: The Tao of the Tail', 16)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about I\'ll Catch You (Luna\'s Song)"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(16)" aria-label="Copy lyrics for I&#x27;ll Catch You (Luna&#x27;s Song)" class="px-2 py-1 rounded text-[11px] font-mono bg-stone-800 hover:bg-stone-700 text-stone-300 flex items-center gap-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
                         <i class="fa-regular fa-copy text-[10px]" aria-hidden="true"></i> <span id="copy-text-16">Copy</span>
                       </button>
                     </div>
@@ -4750,5 +4911,6 @@ Rest now, baby.
     });
   </script>
 
+  <script src="../assets/js/bard-notes.js"></script>
 </body>
 </html>

@@ -97,6 +97,7 @@
       text-decoration: underline !important;
     }
   </style>
+  <link rel="stylesheet" href="../assets/css/bard-notes.css">
 </head>
 
 <body class="bg-slate-950 text-slate-100 font-serif antialiased selection:bg-amber-500/30 selection:text-amber-200">
@@ -858,7 +859,17 @@
                       </span>
                     </div>
 
-                    <button onclick="copyLyrics(1)" id="copy-btn-1" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
+                    <button 
+                  type="button"
+                  onclick="openBardNoteModal('Insufficient Funds Error', 'The Curtains and the Canned Goods', 1)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Insufficient Funds Error"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(1)" id="copy-btn-1" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
                       <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                       <span class="copy-text">Copy Lyrics</span>
                     </button>
@@ -1004,7 +1015,17 @@ I&#x27;m walking away.
                       </span>
                     </div>
 
-                    <button onclick="copyLyrics(2)" id="copy-btn-2" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
+                    <button 
+                  type="button"
+                  onclick="openBardNoteModal('The Curtains and the Canned Goods', 'The Curtains and the Canned Goods', 2)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The Curtains and the Canned Goods"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(2)" id="copy-btn-2" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
                       <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                       <span class="copy-text">Copy Lyrics</span>
                     </button>
@@ -1158,7 +1179,17 @@ And the canned goods.
                       </span>
                     </div>
 
-                    <button onclick="copyLyrics(3)" id="copy-btn-3" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
+                    <button 
+                  type="button"
+                  onclick="openBardNoteModal('Seven Skies Burning', 'The Curtains and the Canned Goods', 3)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Seven Skies Burning"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(3)" id="copy-btn-3" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
                       <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                       <span class="copy-text">Copy Lyrics</span>
                     </button>
@@ -1307,7 +1338,17 @@ Just seven acres.
                       </span>
                     </div>
 
-                    <button onclick="copyLyrics(4)" id="copy-btn-4" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
+                    <button 
+                  type="button"
+                  onclick="openBardNoteModal('Disposable Hardware', 'The Curtains and the Canned Goods', 4)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Disposable Hardware"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(4)" id="copy-btn-4" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
                       <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                       <span class="copy-text">Copy Lyrics</span>
                     </button>
@@ -1454,7 +1495,17 @@ Just disposable hardware.
                       </span>
                     </div>
 
-                    <button onclick="copyLyrics(5)" id="copy-btn-5" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
+                    <button 
+                  type="button"
+                  onclick="openBardNoteModal('Thirty-Eight Trillion', 'The Curtains and the Canned Goods', 5)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Thirty-Eight Trillion"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(5)" id="copy-btn-5" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
                       <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                       <span class="copy-text">Copy Lyrics</span>
                     </button>
@@ -1604,7 +1655,17 @@ Nowhere left to hide.
                       </span>
                     </div>
 
-                    <button onclick="copyLyrics(6)" id="copy-btn-6" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
+                    <button 
+                  type="button"
+                  onclick="openBardNoteModal('Eighty-Five Days', 'The Curtains and the Canned Goods', 6)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Eighty-Five Days"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(6)" id="copy-btn-6" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
                       <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                       <span class="copy-text">Copy Lyrics</span>
                     </button>
@@ -1751,7 +1812,17 @@ Just keep waiting.
                       </span>
                     </div>
 
-                    <button onclick="copyLyrics(7)" id="copy-btn-7" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
+                    <button 
+                  type="button"
+                  onclick="openBardNoteModal('Twelve Million (The Empty Tray)', 'The Curtains and the Canned Goods', 7)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Twelve Million (The Empty Tray)"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(7)" id="copy-btn-7" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
                       <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                       <span class="copy-text">Copy Lyrics</span>
                     </button>
@@ -1899,7 +1970,17 @@ Nothing left to give.
                       </span>
                     </div>
 
-                    <button onclick="copyLyrics(8)" id="copy-btn-8" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
+                    <button 
+                  type="button"
+                  onclick="openBardNoteModal('Canned Goods in the Rain', 'The Curtains and the Canned Goods', 8)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Canned Goods in the Rain"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(8)" id="copy-btn-8" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
                       <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                       <span class="copy-text">Copy Lyrics</span>
                     </button>
@@ -2048,7 +2129,17 @@ Nothing left to give.
                       </span>
                     </div>
 
-                    <button onclick="copyLyrics(9)" id="copy-btn-9" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
+                    <button 
+                  type="button"
+                  onclick="openBardNoteModal('Stock Ticker Lullaby', 'The Curtains and the Canned Goods', 9)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Stock Ticker Lullaby"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(9)" id="copy-btn-9" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
                       <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                       <span class="copy-text">Copy Lyrics</span>
                     </button>
@@ -2198,7 +2289,17 @@ Market closes at four.
                       </span>
                     </div>
 
-                    <button onclick="copyLyrics(10)" id="copy-btn-10" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
+                    <button 
+                  type="button"
+                  onclick="openBardNoteModal('The Unapproved War', 'The Curtains and the Canned Goods', 10)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The Unapproved War"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(10)" id="copy-btn-10" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
                       <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                       <span class="copy-text">Copy Lyrics</span>
                     </button>
@@ -2346,7 +2447,17 @@ Just the unapproved war.
                       </span>
                     </div>
 
-                    <button onclick="copyLyrics(11)" id="copy-btn-11" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
+                    <button 
+                  type="button"
+                  onclick="openBardNoteModal('The Culture War Distraction', 'The Curtains and the Canned Goods', 11)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The Culture War Distraction"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(11)" id="copy-btn-11" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
                       <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                       <span class="copy-text">Copy Lyrics</span>
                     </button>
@@ -2493,7 +2604,17 @@ Step out of the dark.
                       </span>
                     </div>
 
-                    <button onclick="copyLyrics(12)" id="copy-btn-12" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
+                    <button 
+                  type="button"
+                  onclick="openBardNoteModal('A Line in the Dirt', 'The Curtains and the Canned Goods', 12)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about A Line in the Dirt"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(12)" id="copy-btn-12" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
                       <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                       <span class="copy-text">Copy Lyrics</span>
                     </button>
@@ -2642,7 +2763,17 @@ The healing begins.
                       </span>
                     </div>
 
-                    <button onclick="copyLyrics(13)" id="copy-btn-13" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
+                    <button 
+                  type="button"
+                  onclick="openBardNoteModal('Seven Acres in the Middle', 'The Curtains and the Canned Goods', 13)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Seven Acres in the Middle"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(13)" id="copy-btn-13" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
                       <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                       <span class="copy-text">Copy Lyrics</span>
                     </button>
@@ -2790,7 +2921,17 @@ Seven acres in the middle.
                       </span>
                     </div>
 
-                    <button onclick="copyLyrics(14)" id="copy-btn-14" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
+                    <button 
+                  type="button"
+                  onclick="openBardNoteModal('Pass the Hat', 'The Curtains and the Canned Goods', 14)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Pass the Hat"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(14)" id="copy-btn-14" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
                       <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                       <span class="copy-text">Copy Lyrics</span>
                     </button>
@@ -2941,7 +3082,17 @@ You ain&#x27;t alone!
                       </span>
                     </div>
 
-                    <button onclick="copyLyrics(15)" id="copy-btn-15" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
+                    <button 
+                  type="button"
+                  onclick="openBardNoteModal('Nourish the Roots', 'The Curtains and the Canned Goods', 15)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Nourish the Roots"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(15)" id="copy-btn-15" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-stone-300 border border-slate-700 flex items-center gap-1.5 transition-colors" title="Copy text to clipboard">
                       <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                       <span class="copy-text">Copy Lyrics</span>
                     </button>
@@ -3240,5 +3391,6 @@ Nourish the roots.
       if (e.key === 'Escape') closeA11yModal();
     });
   </script>
+  <script src="../assets/js/bard-notes.js"></script>
 </body>
 </html>

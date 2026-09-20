@@ -83,6 +83,7 @@
       background: rgba(245, 158, 11, 0.05);
     }
   </style>
+  <link rel="stylesheet" href="../assets/css/bard-notes.css">
 </head>
 
 <body class="bg-ballot-dark text-slate-200 font-body antialiased selection:bg-amber-500 selection:text-black">
@@ -1096,6 +1097,16 @@
                     Arrangement & Performance Notes
                   </button>
                 </div>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('The Republic of Nobody', 'The Republic of Nobody', 1)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The Republic of Nobody"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(1)" id="btn-copy-1" aria-label="Copy lyrics for The Republic of Nobody to clipboard" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400">
                   <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                   <span class="copy-label">Copy Lyrics</span>
@@ -1276,6 +1287,16 @@ The voice is not.
                     Arrangement & Performance Notes
                   </button>
                 </div>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('One Man, One Vote', 'The Republic of Nobody', 2)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about One Man, One Vote"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(2)" id="btn-copy-2" aria-label="Copy lyrics for One Man, One Vote to clipboard" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400">
                   <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                   <span class="copy-label">Copy Lyrics</span>
@@ -1458,6 +1479,16 @@ One man, one vote, one steady hand
                     Arrangement & Performance Notes
                   </button>
                 </div>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('The Price of the Ballot', 'The Republic of Nobody', 3)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The Price of the Ballot"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(3)" id="btn-copy-3" aria-label="Copy lyrics for The Price of the Ballot to clipboard" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400">
                   <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                   <span class="copy-label">Copy Lyrics</span>
@@ -1640,6 +1671,16 @@ But the voice is bought.
                     Arrangement & Performance Notes
                   </button>
                 </div>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('The Men Behind the Curtain', 'The Republic of Nobody', 4)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The Men Behind the Curtain"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(4)" id="btn-copy-4" aria-label="Copy lyrics for The Men Behind the Curtain to clipboard" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400">
                   <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                   <span class="copy-label">Copy Lyrics</span>
@@ -1818,6 +1859,16 @@ Some people can afford to knock all day.
                     Arrangement & Performance Notes
                   </button>
                 </div>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('The Ratchet', 'The Republic of Nobody', 5)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The Ratchet"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(5)" id="btn-copy-5" aria-label="Copy lyrics for The Ratchet to clipboard" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400">
                   <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                   <span class="copy-label">Copy Lyrics</span>
@@ -2006,6 +2057,16 @@ Until the handle breaks.
                     Arrangement & Performance Notes
                   </button>
                 </div>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('The Buyback Man', 'The Republic of Nobody', 6)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The Buyback Man"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(6)" id="btn-copy-6" aria-label="Copy lyrics for The Buyback Man to clipboard" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400">
                   <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                   <span class="copy-label">Copy Lyrics</span>
@@ -2194,6 +2255,16 @@ The value is not.
                     Arrangement & Performance Notes
                   </button>
                 </div>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('The Other Side of Town', 'The Republic of Nobody', 7)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The Other Side of Town"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(7)" id="btn-copy-7" aria-label="Copy lyrics for The Other Side of Town to clipboard" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400">
                   <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                   <span class="copy-label">Copy Lyrics</span>
@@ -2384,6 +2455,16 @@ But the target was wrong.
                     Arrangement & Performance Notes
                   </button>
                 </div>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('Every Four Years', 'The Republic of Nobody', 8)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Every Four Years"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(8)" id="btn-copy-8" aria-label="Copy lyrics for Every Four Years to clipboard" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400">
                   <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                   <span class="copy-label">Copy Lyrics</span>
@@ -2574,6 +2655,16 @@ The machinery remains.
                     Arrangement & Performance Notes
                   </button>
                 </div>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('The Empty Chair', 'The Republic of Nobody', 9)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The Empty Chair"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(9)" id="btn-copy-9" aria-label="Copy lyrics for The Empty Chair to clipboard" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400">
                   <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                   <span class="copy-label">Copy Lyrics</span>
@@ -2762,6 +2853,16 @@ And the engine is running hot.
                     Arrangement & Performance Notes
                   </button>
                 </div>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('Red, White, and Blue Blood', 'The Republic of Nobody', 10)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Red, White, and Blue Blood"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(10)" id="btn-copy-10" aria-label="Copy lyrics for Red, White, and Blue Blood to clipboard" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400">
                   <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                   <span class="copy-label">Copy Lyrics</span>
@@ -2946,6 +3047,16 @@ The scars remain.
                     Arrangement & Performance Notes
                   </button>
                 </div>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('Nobody\'s Listening', 'The Republic of Nobody', 11)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Nobody\'s Listening"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(11)" id="btn-copy-11" aria-label="Copy lyrics for Nobody&#x27;s Listening to clipboard" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400">
                   <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                   <span class="copy-label">Copy Lyrics</span>
@@ -3122,6 +3233,16 @@ I hear you.
                     Arrangement & Performance Notes
                   </button>
                 </div>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('Find the Others', 'The Republic of Nobody', 12)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Find the Others"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(12)" id="btn-copy-12" aria-label="Copy lyrics for Find the Others to clipboard" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400">
                   <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                   <span class="copy-label">Copy Lyrics</span>
@@ -3312,6 +3433,16 @@ We were never really alone.
                     Arrangement & Performance Notes
                   </button>
                 </div>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('The People Organize', 'The Republic of Nobody', 13)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The People Organize"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(13)" id="btn-copy-13" aria-label="Copy lyrics for The People Organize to clipboard" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400">
                   <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                   <span class="copy-label">Copy Lyrics</span>
@@ -3502,6 +3633,16 @@ The machine belongs to us now.
                     Arrangement & Performance Notes
                   </button>
                 </div>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('Not Red, Not Blue', 'The Republic of Nobody', 14)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Not Red, Not Blue"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(14)" id="btn-copy-14" aria-label="Copy lyrics for Not Red, Not Blue to clipboard" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400">
                   <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                   <span class="copy-label">Copy Lyrics</span>
@@ -3688,6 +3829,16 @@ Good to finally meet you.
                     Arrangement & Performance Notes
                   </button>
                 </div>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('Nobody No More', 'The Republic of Nobody', 15)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Nobody No More"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(15)" id="btn-copy-15" aria-label="Copy lyrics for Nobody No More to clipboard" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400">
                   <i class="fa-regular fa-clone text-xs" aria-hidden="true"></i>
                   <span class="copy-label">Copy Lyrics</span>
@@ -4132,5 +4283,6 @@ The Republic belongs to the people again.
 
   <!-- Unified Accessibility Script -->
   <script src="../assets/js/a11y.js"></script>
+  <script src="../assets/js/bard-notes.js"></script>
 </body>
 </html>

@@ -77,6 +77,7 @@
   <link rel="icon" type="image/x-icon" href="../favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="../assets/css/bard-notes.css">
 </head>
     <!-- EXPANDABLE ACCESSIBILITY TOOLBAR (WCAG 2.1 AA) -->
     <div id="a11y-toolbar" class="hidden bg-scottish-muted border-b border-gold-accent/40 py-3 px-6 text-xs transition-all shadow-2xl relative z-40" role="region" aria-label="Accessibility Display Preferences">
@@ -413,7 +414,19 @@
                     <!-- Track 1 Card -->
                     <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
                         <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 01</span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 01</span>
+                                <button 
+                                  type="button"
+                                  onclick="openBardNoteModal('Prologue: The Dust of Estates', 'The Forgotten Crown', 1)"
+                                  class="bard-note-btn"
+                                  aria-label="Drop a note to the bard about Prologue: The Dust of Estates"
+                                  title="Drop a note to the bard"
+                                >
+                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                                </button>
+                              </div>
                             <h3 class="font-display text-2xl text-parchment mt-1">Prologue: The Dust of Estates</h3>
                             <div class="flex flex-wrap gap-2 mt-3">
                                 <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Cinematic Spoken Word</span>
@@ -451,7 +464,19 @@ It is time to remember.
                     <!-- Track 2 Card -->
                     <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
                         <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 02</span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 02</span>
+                                <button 
+                                  type="button"
+                                  onclick="openBardNoteModal('The Orchestrated Divide', 'The Forgotten Crown', 2)"
+                                  class="bard-note-btn"
+                                  aria-label="Drop a note to the bard about The Orchestrated Divide"
+                                  title="Drop a note to the bard"
+                                >
+                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                                </button>
+                              </div>
                             <h3 class="font-display text-2xl text-parchment mt-1">The Orchestrated Divide</h3>
                             <div class="flex flex-wrap gap-2 mt-3">
                                 <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Gritty Scottish Bothy Ballad</span>
@@ -513,7 +538,19 @@ We will not stay down.
                     <!-- Track 3 Card -->
                     <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
                         <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 03</span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 03</span>
+                                <button 
+                                  type="button"
+                                  onclick="openBardNoteModal('The Common Good', 'The Forgotten Crown', 3)"
+                                  class="bard-note-btn"
+                                  aria-label="Drop a note to the bard about The Common Good"
+                                  title="Drop a note to the bard"
+                                >
+                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                                </button>
+                              </div>
                             <h3 class="font-display text-2xl text-parchment mt-1">The Common Good</h3>
                             <div class="flex flex-wrap gap-2 mt-3">
                                 <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Melancholic Scottish Folk</span>
@@ -565,7 +602,19 @@ The common good. They sold the common good.
                     <!-- Track 4 Card -->
                     <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
                         <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 04</span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 04</span>
+                                <button 
+                                  type="button"
+                                  onclick="openBardNoteModal('Shadows on Holyrood', 'The Forgotten Crown', 4)"
+                                  class="bard-note-btn"
+                                  aria-label="Drop a note to the bard about Shadows on Holyrood"
+                                  title="Drop a note to the bard"
+                                >
+                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                                </button>
+                              </div>
                             <h3 class="font-display text-2xl text-parchment mt-1">Shadows on Holyrood</h3>
                             <div class="flex flex-wrap gap-2 mt-3">
                                 <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Urgent Scottish Folk-Rock</span>
@@ -627,7 +676,19 @@ Look past the shadow. Look past the stone.
                     <!-- Track 5 Card -->
                     <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
                         <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 05</span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 05</span>
+                                <button 
+                                  type="button"
+                                  onclick="openBardNoteModal('1707', 'The Forgotten Crown', 5)"
+                                  class="bard-note-btn"
+                                  aria-label="Drop a note to the bard about 1707"
+                                  title="Drop a note to the bard"
+                                >
+                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                                </button>
+                              </div>
                             <h3 class="font-display text-2xl text-parchment mt-1">1707 (The Annexation)</h3>
                             <div class="flex flex-wrap gap-2 mt-3">
                                 <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Archival Celtic Folk-Rock</span>
@@ -692,7 +753,19 @@ Just a voluntary lie.
                     <!-- Track 6 Card -->
                     <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
                         <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 06</span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 06</span>
+                                <button 
+                                  type="button"
+                                  onclick="openBardNoteModal('Freeport Lullaby', 'The Forgotten Crown', 6)"
+                                  class="bard-note-btn"
+                                  aria-label="Drop a note to the bard about Freeport Lullaby"
+                                  title="Drop a note to the bard"
+                                >
+                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                                </button>
+                              </div>
                             <h3 class="font-display text-2xl text-parchment mt-1">Freeport Lullaby</h3>
                             <div class="flex flex-wrap gap-2 mt-3">
                                 <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Slow Scottish Blues</span>
@@ -744,7 +817,19 @@ Where only the corporate hand has reigned.
                     <!-- Track 7 Card -->
                     <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
                         <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 07</span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 07</span>
+                                <button 
+                                  type="button"
+                                  onclick="openBardNoteModal('Chimera', 'The Forgotten Crown', 7)"
+                                  class="bard-note-btn"
+                                  aria-label="Drop a note to the bard about Chimera"
+                                  title="Drop a note to the bard"
+                                >
+                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                                </button>
+                              </div>
                             <h3 class="font-display text-2xl text-parchment mt-1">Chimera</h3>
                             <div class="flex flex-wrap gap-2 mt-3">
                                 <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Dark Celtic Legal-Folk</span>
@@ -809,7 +894,19 @@ Just a chimera in the dark.
                     <!-- Track 8 Card -->
                     <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
                         <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 08</span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 08</span>
+                                <button 
+                                  type="button"
+                                  onclick="openBardNoteModal('The Archivist\'s Midnight', 'The Forgotten Crown', 8)"
+                                  class="bard-note-btn"
+                                  aria-label="Drop a note to the bard about The Archivist\'s Midnight"
+                                  title="Drop a note to the bard"
+                                >
+                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                                </button>
+                              </div>
                             <h3 class="font-display text-2xl text-parchment mt-1">The Archivist's Midnight</h3>
                             <div class="flex flex-wrap gap-2 mt-3">
                                 <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Intimate Scottish Folk Ballad</span>
@@ -863,7 +960,19 @@ Till we uncover the right.
                     <!-- Track 9 Card -->
                     <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
                         <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 09</span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 09</span>
+                                <button 
+                                  type="button"
+                                  onclick="openBardNoteModal('Salvo Jure Cujuslibet', 'The Forgotten Crown', 9)"
+                                  class="bard-note-btn"
+                                  aria-label="Drop a note to the bard about Salvo Jure Cujuslibet"
+                                  title="Drop a note to the bard"
+                                >
+                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                                </button>
+                              </div>
                             <h3 class="font-display text-2xl text-parchment mt-1">Salvo Jure Cujuslibet</h3>
                             <div class="flex flex-wrap gap-2 mt-3">
                                 <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Triumphant Folk</span>
@@ -928,7 +1037,19 @@ Salvo jure cujuslibet.
                     <!-- Track 10 Card -->
                     <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
                         <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 10</span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 10</span>
+                                <button 
+                                  type="button"
+                                  onclick="openBardNoteModal('Healing the Divide', 'The Forgotten Crown', 10)"
+                                  class="bard-note-btn"
+                                  aria-label="Drop a note to the bard about Healing the Divide"
+                                  title="Drop a note to the bard"
+                                >
+                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                                </button>
+                              </div>
                             <h3 class="font-display text-2xl text-parchment mt-1">Healing the Divide</h3>
                             <div class="flex flex-wrap gap-2 mt-3">
                                 <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Uplifting Celtic Folk</span>
@@ -993,7 +1114,19 @@ Time to awake.
                     <!-- Track 11 Card -->
                     <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
                         <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 11</span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 11</span>
+                                <button 
+                                  type="button"
+                                  onclick="openBardNoteModal('The Stirling Directive', 'The Forgotten Crown', 11)"
+                                  class="bard-note-btn"
+                                  aria-label="Drop a note to the bard about The Stirling Directive"
+                                  title="Drop a note to the bard"
+                                >
+                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                                </button>
+                              </div>
                             <h3 class="font-display text-2xl text-parchment mt-1">The Stirling Directive</h3>
                             <div class="flex flex-wrap gap-2 mt-3">
                                 <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Celtic-Rock</span>
@@ -1058,7 +1191,19 @@ We hold it still.
                     <!-- Track 12 Card -->
                     <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
                         <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 12</span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 12</span>
+                                <button 
+                                  type="button"
+                                  onclick="openBardNoteModal('Echoes of Arbroath', 'The Forgotten Crown', 12)"
+                                  class="bard-note-btn"
+                                  aria-label="Drop a note to the bard about Echoes of Arbroath"
+                                  title="Drop a note to the bard"
+                                >
+                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                                </button>
+                              </div>
                             <h3 class="font-display text-2xl text-parchment mt-1">Echoes of Arbroath</h3>
                             <div class="flex flex-wrap gap-2 mt-3">
                                 <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Somber Scottish Folk Ballad</span>
@@ -1120,7 +1265,19 @@ Rooted in the land.
                     <!-- Track 13 Card -->
                     <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
                         <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 13</span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 13</span>
+                                <button 
+                                  type="button"
+                                  onclick="openBardNoteModal('The Edinburgh Proclamation', 'The Forgotten Crown', 13)"
+                                  class="bard-note-btn"
+                                  aria-label="Drop a note to the bard about The Edinburgh Proclamation"
+                                  title="Drop a note to the bard"
+                                >
+                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                                </button>
+                              </div>
                             <h3 class="font-display text-2xl text-parchment mt-1">The Edinburgh Proclamation</h3>
                             <div class="flex flex-wrap gap-2 mt-3">
                                 <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Triumphant Celtic-Rock</span>
@@ -1188,7 +1345,19 @@ The parliament serves.
                     <!-- Track 14 Card -->
                     <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
                         <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 14</span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 14</span>
+                                <button 
+                                  type="button"
+                                  onclick="openBardNoteModal('C-24', 'The Forgotten Crown', 14)"
+                                  class="bard-note-btn"
+                                  aria-label="Drop a note to the bard about C-24"
+                                  title="Drop a note to the bard"
+                                >
+                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                                </button>
+                              </div>
                             <h3 class="font-display text-2xl text-parchment mt-1">C-24 (The World is Watching)</h3>
                             <div class="flex flex-wrap gap-2 mt-3">
                                 <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Expansive Celtic Rock</span>
@@ -1255,7 +1424,19 @@ The world is watching.
                     <!-- Track 15 Card -->
                     <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
                         <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 15</span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 15</span>
+                                <button 
+                                  type="button"
+                                  onclick="openBardNoteModal('The Sovereign People', 'The Forgotten Crown', 15)"
+                                  class="bard-note-btn"
+                                  aria-label="Drop a note to the bard about The Sovereign People"
+                                  title="Drop a note to the bard"
+                                >
+                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                                </button>
+                              </div>
                             <h3 class="font-display text-2xl text-parchment mt-1">The Sovereign People</h3>
                             <div class="flex flex-wrap gap-2 mt-3">
                                 <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Stripped-Down Folk</span>
@@ -1364,5 +1545,6 @@ The people are the crown.
     </script>
     <!-- Unified Accessibility Controller -->
     <script src="../assets/js/a11y.js"></script>
+  <script src="../assets/js/bard-notes.js"></script>
 </body>
 </html>

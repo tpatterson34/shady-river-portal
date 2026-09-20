@@ -55,6 +55,7 @@
 
   <!-- Local Custom CSS -->
   <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="../assets/css/bard-notes.css">
 </head>
 <body class="bg-[#07080d] text-slate-100 min-h-screen flex flex-col antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
 
@@ -319,7 +320,11 @@
                   Zero Prompts Policy
                 </span>
               </div>
-              <button id="copy-lyrics-btn" class="px-3 py-1.5 rounded-lg bg-[#141a27] hover:bg-[#1e2638] border border-[#1e2638] text-cyan-300 hover:text-cyan-200 text-xs font-mono flex items-center gap-1.5 transition-colors">
+              <button type="button" id="deck-bard-note-btn" class="bard-note-btn" aria-label="Drop a note to the bard about this song" title="Drop a note to the bard">
+              <i class="fa-solid fa-envelope bard-note-icon"></i>
+              <span class="bard-note-tooltip">Drop a note to the bard</span>
+            </button>
+            <button id="copy-lyrics-btn" class="px-3 py-1.5 rounded-lg bg-[#141a27] hover:bg-[#1e2638] border border-[#1e2638] text-cyan-300 hover:text-cyan-200 text-xs font-mono flex items-center gap-1.5 transition-colors">
                 <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
                 <span>Copy Lyrics</span>
               </button>
@@ -608,5 +613,6 @@
   <!-- Scripts -->
   <script src="data/album-data.js"></script>
   <script src="assets/js/app.js"></script>
+  <script src="../assets/js/bard-notes.js"></script>
 </body>
 </html>

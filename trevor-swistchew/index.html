@@ -74,7 +74,8 @@
           .filter-item-visible {
             animation: compendiumFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
           }
-        </style></head>
+        </style>  <link rel="stylesheet" href="../assets/css/bard-notes.css">
+</head>
 <body class="selection:bg-brass-500 selection:text-peat-950">
 <!-- WCAG Skip Link -->
 <a class="a11y-skip-link" href="#main-content">Skip to Portal Content</a>
@@ -121,6 +122,10 @@
 <span>The Shady River Bard</span>
 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
 </a>
+<button type="button" onclick="openBardNoteModal('', 'Trevor Swistchew Reading Experience')" class="bard-note-btn" aria-label="Drop a note to the bard" title="Drop a note to the bard">
+  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+  <span class="bard-note-tooltip">Drop a note to the bard</span>
+</button>
 <!-- Tri-State Theme Switcher -->
 <div aria-label="Reading atmosphere theme" class="flex items-center bg-stone-950/50 border border-stone-700/60 rounded-md p-0.5 text-xs text-stone-400" role="group">
 <button class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" data-set-theme="dark" title="Peat &amp; Loch (Dark)" type="button">
@@ -1830,5 +1835,6 @@ Read Experience <i class="fa-solid fa-arrow-right text-[10px]"></i>
         emptyStateResetBtn.addEventListener('click', resetAll);
       }
     });
-  </script></body>
+  </script>  <script src="../assets/js/bard-notes.js"></script>
+</body>
 </html>

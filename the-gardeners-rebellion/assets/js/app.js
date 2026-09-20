@@ -184,6 +184,21 @@
 
   // --- TRACK SELECTION & DISPLAY ---
   function selectTrack(index, autoplay) {
+    const noteBtn = document.getElementById('deck-bard-note-btn');
+    if (noteBtn) {
+      noteBtn.onclick = () => {
+        const activeTrack = (typeof tracks !== 'undefined' && tracks[index]) ? tracks[index] : (typeof t !== 'undefined' ? t : null);
+        const sTitle = activeTrack ? (activeTrack.title || 'Track ' + (index+1)) : 'Track ' + (index+1);
+        const sNum = activeTrack ? (activeTrack.number || index+1) : (index+1);
+        if (typeof window.openBardNoteModal === 'function') {
+          window.openBardNoteModal(sTitle, "The Gardener's Rebellion", sNum);
+        }
+      };
+      if (typeof tracks !== 'undefined' && tracks[index]) {
+        noteBtn.setAttribute('aria-label', `Drop a note to the bard about ${tracks[index].title}`);
+      }
+    }
+
     if (index < 0 || index >= tracks.length) return;
     currentTrackIndex = index;
     const t = tracks[currentTrackIndex];

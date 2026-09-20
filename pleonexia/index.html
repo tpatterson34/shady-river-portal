@@ -33,6 +33,7 @@
 
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="../assets/css/bard-notes.css">
 </head>
 <body class="min-h-screen flex flex-col selection:bg-sky-500/30 selection:text-sky-200">
 
@@ -283,6 +284,10 @@
                   <span class="font-display font-bold text-white text-base">Pure Literary Lyrics</span>
                 </div>
                 <div class="flex items-center gap-2 font-mono text-xs">
+                  <button type="button" id="deck-bard-note-btn" class="bard-note-btn" aria-label="Drop a note to the bard about this song" title="Drop a note to the bard">
+                    <i class="fa-solid fa-envelope bard-note-icon"></i>
+                    <span class="bard-note-tooltip">Drop a note to the bard</span>
+                  </button>
                   <button id="btn-copy-lyrics" class="px-3 py-1.5 rounded-lg bg-stone-900 border border-stone-700 text-stone-300 hover:text-white hover:border-sky-500 transition-colors flex items-center gap-1.5">
                     <i class="fa-regular fa-copy"></i>
                     <span>Copy Lyrics</span>
@@ -670,5 +675,6 @@ Lyrics loading...
   <!-- Album Data and App Script -->
   <script src="data/album-data.js"></script>
   <script src="assets/js/app.js"></script>
+  <script src="../assets/js/bard-notes.js"></script>
 </body>
 </html>

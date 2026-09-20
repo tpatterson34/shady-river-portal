@@ -99,6 +99,7 @@
       text-underline-offset: 3px !important;
     }
   </style>
+  <link rel="stylesheet" href="../assets/css/bard-notes.css">
 </head>
 <body class="bg-[#0b0f14] text-stone-200 font-sans antialiased selection:bg-orange-600 selection:text-white min-h-screen flex flex-col">
 
@@ -670,6 +671,10 @@
                   <span class="font-display font-bold text-white text-base">Song Lyrics</span>
                 </div>
                 <div class="flex items-center gap-2 font-mono text-xs">
+                  <button type="button" id="deck-bard-note-btn" class="bard-note-btn" aria-label="Drop a note to the bard about this song" title="Drop a note to the bard">
+                    <i class="fa-solid fa-envelope bard-note-icon"></i>
+                    <span class="bard-note-tooltip">Drop a note to the bard</span>
+                  </button>
                   <button id="btn-copy-lyrics" class="px-2.5 py-1 rounded bg-stone-900 border border-stone-700 text-stone-300 hover:text-white transition-colors flex items-center gap-1">
                     <i class="fa-regular fa-copy"></i>
                     <span>Copy</span>
@@ -815,5 +820,6 @@ Lyrics loading...
   <!-- Application Engine -->
   <script src="assets/js/app.js"></script>
 
+  <script src="../assets/js/bard-notes.js"></script>
 </body>
 </html>

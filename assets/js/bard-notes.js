@@ -2,6 +2,8 @@
  * ============================================================================
  * THE SHADY RIVER BARD - "DROP A NOTE TO THE BARD" FEEDBACK CONTROLLER
  * ============================================================================
+ * Embeds provenance metadata (page URL, song title, album, track number, timestamp)
+ * into listener feedback notes to ensure the Bard knows the exact context.
  */
 
 (function () {
@@ -12,6 +14,24 @@
   let currentSong = '';
   let currentAlbum = '';
   let currentTrackNum = '';
+
+  function buildProvenanceBlock() {
+    const pageUrl = window.location.href || 'https://theshadyriverbard.com';
+    let block = '\n\n─────────────────────────────────────────\n';
+    block += 'NOTE METADATA & ORIGIN:\n';
+    if (currentSong && currentSong !== 'A Song') {
+      block += `• Song: "${currentSong}"\n`;
+    }
+    if (currentTrackNum) {
+      block += `• Track Number: #${String(currentTrackNum).padStart(2, '0')}\n`;
+    }
+    block += `• Album: ${currentAlbum}\n`;
+    block += `• Source Page: ${pageUrl}\n`;
+    block += `• Sent: ${new Date().toLocaleString()}\n`;
+    block += `• Sent via The Shady River Bard Portal (https://theshadyriverbard.com)\n`;
+    block += '─────────────────────────────────────────';
+    return block;
+  }
 
   // Inject modal into DOM once
   function ensureModalExists() {
@@ -49,6 +69,11 @@
             Have a thought, memory, or reflection stirred by this song? Send your note directly to the Bard's desk.
           </p>
 
+          <div class="bard-modal-origin-pill" id="bard-modal-origin-info">
+            <span class="bard-origin-icon">&#128205;</span>
+            <span class="bard-origin-text" id="bard-origin-path">Capturing origin URL...</span>
+          </div>
+
           <div class="bard-form-group">
             <label class="bard-form-label" for="bard-note-name">Your Name or Call-sign (Optional)</label>
             <input type="text" id="bard-note-name" class="bard-form-input" placeholder="e.g. A Traveler by the River" />
@@ -69,7 +94,7 @@
           </div>
 
           <div class="bard-modal-footer-note">
-            Direct to: <strong>theshadyriverbard@gmail.com</strong>
+            Direct to: <strong>${BARD_EMAIL}</strong> &bull; Origin data auto-attached
           </div>
         </div>
       </div>
@@ -94,18 +119,22 @@
     document.getElementById('bard-note-send-mailto').addEventListener('click', () => {
       const name = document.getElementById('bard-note-name').value.trim();
       const message = document.getElementById('bard-note-message').value.trim();
+      const provenance = buildProvenanceBlock();
 
-      const subject = `Note for the Bard: "${currentSong}" (${currentAlbum})`;
+      const subject = (currentSong && currentSong !== 'A Song')
+        ? `Note for the Bard: "${currentSong}" (${currentAlbum})`
+        : `Note for the Bard: ${currentAlbum}`;
+
       let body = `Dear Bard,\n\n`;
       if (message) {
         body += `${message}\n\n`;
       } else {
-        body += `[I wanted to share my thoughts on "${currentSong}"]\n\n`;
+        body += `[I wanted to share my thoughts on "${currentSong || currentAlbum}"]\n\n`;
       }
       if (name) {
         body += `From: ${name}\n`;
       }
-      body += `Sent via The Shady River Bard Portal (https://theshadyriverbard.com)`;
+      body += provenance;
 
       const mailtoUrl = `mailto:${BARD_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       window.location.href = mailtoUrl;
@@ -120,8 +149,13 @@
       const name = document.getElementById('bard-note-name').value.trim();
       const message = document.getElementById('bard-note-message').value.trim();
       const btn = document.getElementById('bard-note-copy-btn');
+      const provenance = buildProvenanceBlock();
 
-      const copyText = `To: ${BARD_EMAIL}\nSubject: Note for the Bard: "${currentSong}" (${currentAlbum})\n\n${message || '(No message written)'}\n\nFrom: ${name || 'Anonymous listener'}`;
+      const subject = (currentSong && currentSong !== 'A Song')
+        ? `Note for the Bard: "${currentSong}" (${currentAlbum})`
+        : `Note for the Bard: ${currentAlbum}`;
+
+      const copyText = `To: ${BARD_EMAIL}\nSubject: ${subject}\n\n${message || '(No message written)'}\n\nFrom: ${name || 'Anonymous listener'}${provenance}`;
 
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(copyText).then(() => {
@@ -154,7 +188,18 @@
 
     const pill = document.getElementById('bard-modal-context-pill');
     if (pill) {
-      pill.textContent = `Regarding: "${currentSong}" • ${currentAlbum}`;
+      const trackPrefix = currentTrackNum ? `Track #${String(currentTrackNum).padStart(2, '0')}: ` : '';
+      if (currentSong && currentSong !== 'A Song') {
+        pill.textContent = `Regarding: ${trackPrefix}"${currentSong}" • ${currentAlbum}`;
+      } else {
+        pill.textContent = `Regarding Album: ${currentAlbum}`;
+      }
+    }
+
+    const originPathEl = document.getElementById('bard-origin-path');
+    if (originPathEl) {
+      const displayUrl = window.location.pathname.replace(/^\//, '') || 'theshadyriverbard.com';
+      originPathEl.textContent = `Origin: ${displayUrl} (Full URL auto-attached)`;
     }
 
     const msgBox = document.getElementById('bard-note-message');

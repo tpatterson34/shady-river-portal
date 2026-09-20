@@ -27,6 +27,7 @@
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="../assets/css/bard-notes.css">
 </head>
 <body>
 
@@ -372,7 +373,11 @@
               </div>
 
               <div>
-                <button id="btnCopyLyrics" class="btn-copy-lyrics" title="Copy lyrics to clipboard"><i class="fas fa-copy"></i> Copy Lyrics</button>
+                <button type="button" id="deck-bard-note-btn" class="bard-note-btn" aria-label="Drop a note to the bard about this song" title="Drop a note to the bard">
+            <i class="fas fa-envelope bard-note-icon"></i>
+            <span class="bard-note-tooltip">Drop a note to the bard</span>
+          </button>
+          <button id="btnCopyLyrics" class="btn-copy-lyrics" title="Copy lyrics to clipboard"><i class="fas fa-copy"></i> Copy Lyrics</button>
               </div>
             </div>
 
@@ -503,5 +508,6 @@
   <!-- Scripts -->
   <script src="data/album-data.js"></script>
   <script src="assets/js/app.js"></script>
+  <script src="../assets/js/bard-notes.js"></script>
 </body>
 </html>

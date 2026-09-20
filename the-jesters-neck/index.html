@@ -33,6 +33,7 @@
 
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="../assets/css/bard-notes.css">
 </head>
 <body class="min-h-screen flex flex-col selection:bg-amber-600/30 selection:text-amber-200 pb-28">
 
@@ -298,6 +299,10 @@
             </div>
 
             <!-- One-Click Copy Lyrics Button -->
+            <button type="button" id="deck-bard-note-btn" class="bard-note-btn" aria-label="Drop a note to the bard about this song" title="Drop a note to the bard">
+              <i class="fa-solid fa-envelope bard-note-icon"></i>
+              <span class="bard-note-tooltip">Drop a note to the bard</span>
+            </button>
             <button id="copy-lyrics-btn" class="px-3 py-1.5 rounded bg-stone-900 hover:bg-stone-800 text-stone-300 hover:text-white border border-stone-800 text-xs font-mono flex items-center gap-1.5 transition-colors" title="Copy clean lyrics to clipboard">
               <i class="fa-regular fa-copy"></i>
               <span>Copy Lyrics</span>
@@ -534,5 +539,6 @@
   <!-- Album Data Payload & Application Logic -->
   <script src="data/album-data.js"></script>
   <script src="assets/js/app.js"></script>
+  <script src="../assets/js/bard-notes.js"></script>
 </body>
 </html>

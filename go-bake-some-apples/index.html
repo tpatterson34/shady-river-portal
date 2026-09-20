@@ -100,6 +100,7 @@
       text-decoration: underline !important;
     }
   </style>
+  <link rel="stylesheet" href="../assets/css/bard-notes.css">
 </head>
 
 <body class="bg-slate-950 text-slate-100 font-serif antialiased selection:bg-amber-500/30 selection:text-amber-200">
@@ -834,6 +835,16 @@
                 <a href="https://theshadyriverbard.substack.com/p/the-liner-notes-overture-in-c-for" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-orange-950/50 hover:bg-orange-900/60 text-orange-200 border border-orange-700/50 text-xs font-mono font-semibold transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400">
                   <i class="fa-solid fa-book-open text-xs" aria-hidden="true"></i> Substack Deconstruction <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-75" aria-hidden="true"></i>
                 </a>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('Overture in C (for Consumption)', 'Go Bake Some Apples', 1)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Overture in C (for Consumption)"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(1)" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                   <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> Copy Lyrics
                 </button>
@@ -1015,6 +1026,16 @@ Go bake some apples.</textarea>
                 <a href="https://theshadyriverbard.substack.com/p/the-liner-notes-go-bake-some-apples" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-orange-950/50 hover:bg-orange-900/60 text-orange-200 border border-orange-700/50 text-xs font-mono font-semibold transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400">
                   <i class="fa-solid fa-book-open text-xs" aria-hidden="true"></i> Substack Deconstruction <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-75" aria-hidden="true"></i>
                 </a>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('Go Bake Some Apples', 'Go Bake Some Apples', 2)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Go Bake Some Apples"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(2)" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                   <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> Copy Lyrics
                 </button>
@@ -1274,6 +1295,16 @@ Gotta bake my apples</textarea>
                 <a href="https://theshadyriverbard.substack.com/p/the-liner-notes-my-boats-got-a-hole" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-orange-950/50 hover:bg-orange-900/60 text-orange-200 border border-orange-700/50 text-xs font-mono font-semibold transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400">
                   <i class="fa-solid fa-book-open text-xs" aria-hidden="true"></i> Substack Deconstruction <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-75" aria-hidden="true"></i>
                 </a>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('My Boat\'s Got a Hole', 'Go Bake Some Apples', 3)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about My Boat\'s Got a Hole"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(3)" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                   <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> Copy Lyrics
                 </button>
@@ -1532,6 +1563,16 @@ My boat&#x27;s got a hole...</textarea>
                 <a href="https://theshadyriverbard.substack.com/p/the-liner-notes-whats-the-matter" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-orange-950/50 hover:bg-orange-900/60 text-orange-200 border border-orange-700/50 text-xs font-mono font-semibold transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400">
                   <i class="fa-solid fa-book-open text-xs" aria-hidden="true"></i> Substack Deconstruction <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-75" aria-hidden="true"></i>
                 </a>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('What\'s the Matter with Me? (The Kansas Song)', 'Go Bake Some Apples', 4)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about What\'s the Matter with Me? (The Kansas Song)"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(4)" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                   <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> Copy Lyrics
                 </button>
@@ -1778,6 +1819,16 @@ What&#x27;s the matter with me?</textarea>
                 <a href="https://theshadyriverbard.substack.com/p/the-liner-notes-the-laffer-in" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-orange-950/50 hover:bg-orange-900/60 text-orange-200 border border-orange-700/50 text-xs font-mono font-semibold transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400">
                   <i class="fa-solid fa-book-open text-xs" aria-hidden="true"></i> Substack Deconstruction <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-75" aria-hidden="true"></i>
                 </a>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('The Laffer-In', 'Go Bake Some Apples', 5)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The Laffer-In"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(5)" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                   <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> Copy Lyrics
                 </button>
@@ -2059,6 +2110,16 @@ Amen! Hallelujah! Saved!</textarea>
                 <a href="https://theshadyriverbard.substack.com/p/the-liner-notes-american-dreamin" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-orange-950/50 hover:bg-orange-900/60 text-orange-200 border border-orange-700/50 text-xs font-mono font-semibold transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400">
                   <i class="fa-solid fa-book-open text-xs" aria-hidden="true"></i> Substack Deconstruction <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-75" aria-hidden="true"></i>
                 </a>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('American Dreamin\'', 'Go Bake Some Apples', 6)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about American Dreamin\'"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(6)" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                   <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> Copy Lyrics
                 </button>
@@ -2305,6 +2366,16 @@ American Dreamin&#x27;...</textarea>
                 <a href="https://theshadyriverbard.substack.com/p/the-liner-notes-the-knife" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-orange-950/50 hover:bg-orange-900/60 text-orange-200 border border-orange-700/50 text-xs font-mono font-semibold transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400">
                   <i class="fa-solid fa-book-open text-xs" aria-hidden="true"></i> Substack Deconstruction <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-75" aria-hidden="true"></i>
                 </a>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('The Knife', 'Go Bake Some Apples', 7)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The Knife"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(7)" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                   <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> Copy Lyrics
                 </button>
@@ -2548,6 +2619,16 @@ Just... the knife.</textarea>
                 <a href="https://theshadyriverbard.substack.com/p/the-liner-notes-the-finite-pie" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-orange-950/50 hover:bg-orange-900/60 text-orange-200 border border-orange-700/50 text-xs font-mono font-semibold transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400">
                   <i class="fa-solid fa-book-open text-xs" aria-hidden="true"></i> Substack Deconstruction <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-75" aria-hidden="true"></i>
                 </a>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('The Finite Pie', 'Go Bake Some Apples', 8)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The Finite Pie"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(8)" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                   <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> Copy Lyrics
                 </button>
@@ -2793,6 +2874,16 @@ It was just... theirs.</textarea>
                 <a href="https://theshadyriverbard.substack.com/p/the-liner-notes-the-iron-triangle" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-orange-950/50 hover:bg-orange-900/60 text-orange-200 border border-orange-700/50 text-xs font-mono font-semibold transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400">
                   <i class="fa-solid fa-book-open text-xs" aria-hidden="true"></i> Substack Deconstruction <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-75" aria-hidden="true"></i>
                 </a>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('The Iron Triangle (A Sugary Hymn)', 'Go Bake Some Apples', 9)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The Iron Triangle (A Sugary Hymn)"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(9)" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                   <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> Copy Lyrics
                 </button>
@@ -3040,6 +3131,16 @@ He&#x27;ll sell you back his can...</textarea>
                 <a href="https://theshadyriverbard.substack.com/p/the-liner-notes-my-dentist-is-a-communist" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-orange-950/50 hover:bg-orange-900/60 text-orange-200 border border-orange-700/50 text-xs font-mono font-semibold transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400">
                   <i class="fa-solid fa-book-open text-xs" aria-hidden="true"></i> Substack Deconstruction <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-75" aria-hidden="true"></i>
                 </a>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('My Dentist Is a Communist', 'Go Bake Some Apples', 10)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about My Dentist Is a Communist"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(10)" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                   <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> Copy Lyrics
                 </button>
@@ -3272,6 +3373,16 @@ A long, pained breath</textarea>
                 <a href="https://theshadyriverbard.substack.com/p/the-liner-notes-sold-by-the-merchants" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-orange-950/50 hover:bg-orange-900/60 text-orange-200 border border-orange-700/50 text-xs font-mono font-semibold transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400">
                   <i class="fa-solid fa-book-open text-xs" aria-hidden="true"></i> Substack Deconstruction <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-75" aria-hidden="true"></i>
                 </a>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('Sold (By the Merchants of Outrage)', 'Go Bake Some Apples', 11)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about Sold (By the Merchants of Outrage)"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(11)" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                   <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> Copy Lyrics
                 </button>
@@ -3538,6 +3649,16 @@ Your show is over... I&#x27;m changin&#x27; the dial</textarea>
                 <a href="https://theshadyriverbard.substack.com/s/deconstructed" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-orange-950/50 hover:bg-orange-900/60 text-orange-200 border border-orange-700/50 text-xs font-mono font-semibold transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400">
                   <i class="fa-solid fa-book-open text-xs" aria-hidden="true"></i> Substack Deconstruction <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-75" aria-hidden="true"></i>
                 </a>
+                <button 
+                  type="button"
+                  onclick="openBardNoteModal('The Infinite Game', 'Go Bake Some Apples', 12)"
+                  class="bard-note-btn mr-2"
+                  aria-label="Drop a note to the bard about The Infinite Game"
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(12)" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-stone-200 text-xs font-mono transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400" title="Copy clean lyrics to clipboard">
                   <i class="fa-regular fa-copy text-xs" aria-hidden="true"></i> Copy Lyrics
                 </button>
@@ -4330,5 +4451,6 @@ And it&#x27;s rotten.</textarea>
       if (localStorage.getItem('a11y-underline') === 'on') document.body.classList.add('underline-links');
     });
   </script>
+  <script src="../assets/js/bard-notes.js"></script>
 </body>
 </html>

@@ -360,7 +360,11 @@
             </div>
 
             <div class="flex flex-wrap items-center gap-3 lg:self-center">
-              <button onclick="copyLyrics(${t.track_number})" id="copy-btn-${t.track_number}" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-stone-200 border border-white/10 text-xs font-mono transition-colors flex items-center gap-2">
+              <button type="button" onclick="openBardNoteModal('${escapeHtml(t.title).replace(/'/g, "\\'")}', 'Sanity\\'s Edge', ${t.track_number})" class="bard-note-btn mr-2" aria-label="Drop a note to the bard about ${escapeHtml(t.title)}" title="Drop a note to the bard">
+                  <i class="fa-solid fa-envelope bard-note-icon"></i>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
+                <button onclick="copyLyrics(${t.track_number})" id="copy-btn-${t.track_number}" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-stone-200 border border-white/10 text-xs font-mono transition-colors flex items-center gap-2">
                 <i class="fa-regular fa-copy"></i>
                 <span>Copy Lyrics</span>
               </button>
@@ -383,6 +387,10 @@
                 <span class="font-mono text-xs text-crimson-400 uppercase tracking-widest font-bold flex items-center gap-2">
                   <i class="fa-solid fa-align-left text-sm"></i> Pure Literary Lyrics (Zero AI Tags)
                 </span>
+                <button type="button" onclick="openBardNoteModal('${escapeHtml(t.title).replace(/'/g, "\\'")}', 'Sanity\\'s Edge', ${t.track_number})" class="bard-note-btn mr-2" aria-label="Drop a note to the bard about ${escapeHtml(t.title)}" title="Drop a note to the bard">
+                  <i class="fa-solid fa-envelope bard-note-icon"></i>
+                  <span class="bard-note-tooltip">Drop a note to the bard</span>
+                </button>
                 <button onclick="copyLyrics(${t.track_number})" class="text-xs font-mono text-stone-400 hover:text-white transition-colors">
                   <i class="fa-regular fa-copy mr-1"></i> Copy
                 </button>

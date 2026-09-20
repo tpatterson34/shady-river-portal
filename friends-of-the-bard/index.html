@@ -90,6 +90,7 @@
       box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.7), 0 0 25px -5px rgba(245, 158, 11, 0.15);
     }
   </style>
+  <link rel="stylesheet" href="../assets/css/bard-notes.css">
 </head>
 
 <body class="bg-soil-950 text-stone-200 font-sans antialiased selection:bg-amber-600 selection:text-white min-h-screen flex flex-col">
@@ -125,6 +126,10 @@
 
       <!-- Quick Nav Links -->
       <div class="flex items-center gap-4 text-xs font-mono tracking-wider">
+        <button type="button" onclick="openBardNoteModal('', 'Friends of the Bard Collective')" class="bard-note-btn" aria-label="Drop a note to the bard" title="Drop a note to the bard">
+          <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <span class="bard-note-tooltip">Drop a note to the bard</span>
+        </button>
         <a href="../vault/" class="text-stone-300 hover:text-amber-400 transition-colors hidden sm:inline">26-Album Vault ↗</a>
         <a href="../the-hollow-herd/" class="text-stone-300 hover:text-amber-400 transition-colors hidden sm:inline">The Hollow Herd ↗</a>
         <a href="../trevor-swistchew/" class="px-3.5 py-1.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 border border-amber-500/40 font-bold transition-all flex items-center gap-2">
@@ -731,5 +736,6 @@
 
   <!-- Unified Accessibility Script -->
   <script src="../assets/js/a11y.js"></script>
+  <script src="../assets/js/bard-notes.js"></script>
 </body>
 </html>
