@@ -28,7 +28,7 @@
   let voteModal, artZoomModal;
 
   // Initialize Application
-  document.addEventListener('DOMContentLoaded', () => {
+  function initApp() {
     cacheDom();
     setupAudioListeners();
     setupKeyboardShortcuts();
@@ -38,7 +38,13 @@
     initCharts();
     initA11yToolbar();
     loadVolumePreference();
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApp);
+  } else {
+    initApp();
+  }
 
   function cacheDom() {
     playerBar = document.getElementById('jukebox-bar');
@@ -430,14 +436,15 @@
           <!-- Track Header with Artwork -->
           <div class="flex flex-col sm:flex-row items-start gap-5 sm:gap-6 pb-5 border-b border-white/10">
             <!-- Track Artwork Square Thumbnail -->
-            <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden shrink-0 border border-white/10 shadow-lg relative group bg-stone-950">
+            <div class="track-art-thumb w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden shrink-0 border border-white/10 shadow-lg relative group bg-stone-950" style="width: 104px; height: 104px; min-width: 104px; min-height: 104px;">
               <img 
                 src="${t.art_square || t.art || 'assets/art/sanitys-edge-cover.jpg'}" 
                 alt="${escapeHtml(t.title)} artwork" 
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                class="track-art-img w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                style="width: 100%; height: 100%; object-fit: cover; display: block;"
                 loading="lazy"
-                width="112"
-                height="112"
+                width="104"
+                height="104"
               >
               <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
             </div>

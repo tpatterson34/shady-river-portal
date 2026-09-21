@@ -120,25 +120,23 @@
   }
 
   /**
-   * Build MediaInfo for Google Cast with rich metadata and track-specific artwork
+   * Build MediaInfo for Google Cast with universal GenericMediaMetadata and artwork
    */
   function buildMediaInfo(track, albumMeta, index) {
     const rawAudio = track.audio_file || track.src || track.streamUrl;
     const audioUrl = toAbsoluteUrl(rawAudio);
 
-    // Google Cast Default Media Receiver requires standard audio/mpeg for MP3 files
+    // Standard audio/mpeg MediaInfo for Google Cast Default Media Receiver
     const mediaInfo = new chrome.cast.media.MediaInfo(audioUrl, 'audio/mpeg');
-    mediaInfo.contentUrl = audioUrl;
     mediaInfo.streamType = chrome.cast.media.StreamType.BUFFERED;
 
-    const metadata = new chrome.cast.media.MusicTrackMediaMetadata();
-    metadata.metadataType = chrome.cast.media.MetadataType.MUSIC_TRACK;
+    // Use GenericMediaMetadata for universal compatibility with Default Media Receiver CC1AD845
+    const metadata = new chrome.cast.media.GenericMediaMetadata();
+    metadata.metadataType = chrome.cast.media.MetadataType.GENERIC;
     metadata.title = track.title || ('Track ' + (index + 1));
-    metadata.songName = track.title || ('Track ' + (index + 1));
-    metadata.artist = (albumMeta && albumMeta.artist) || 'The Shady River Bard';
-    metadata.albumArtist = (albumMeta && albumMeta.artist) || 'The Shady River Bard';
-    metadata.albumName = (albumMeta && albumMeta.title) || "Sanity's Edge";
-    metadata.trackNumber = track.track_number || (index + 1);
+    const albumTitle = (albumMeta && albumMeta.title) || "Sanity's Edge";
+    const artist = (albumMeta && albumMeta.artist) || 'The Shady River Bard';
+    metadata.subtitle = `${albumTitle} • ${artist}`;
 
     // Track-specific artwork or fallback album cover
     const coverPath = track.art_square || track.art || track.image || track.cover ||
@@ -154,13 +152,6 @@
     }
 
     mediaInfo.metadata = metadata;
-    mediaInfo.customData = {
-      trackIndex: index,
-      trackNumber: track.track_number || (index + 1),
-      title: track.title,
-      audioUrl: audioUrl
-    };
-
     return mediaInfo;
   }
 
@@ -379,7 +370,7 @@
     loadRequest.currentTime = 0;
 
     const dev = deviceName || 'Google TV';
-    console.log(`[CastManager] Streaming to ${dev}: "${track.title}" (${mediaInfo.contentUrl})...`);
+    console.log(`[CastManager] Streaming to ${dev}: "${track.title}" (${mediaInfo.contentId})...`);
     showToast(`Streaming "${track.title}" to ${dev}...`, 'info', 4000);
 
     currentSession.loadMedia(loadRequest).then((res) => {
