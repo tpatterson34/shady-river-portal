@@ -865,7 +865,8 @@
           }
 
           return `
-          <article id="${slug}" class="bg-frostbg-900 border border-white/10 hover:border-lantern-500/30 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300">
+          <article id="track-${t.number || t.track_number}" data-track="${t.number || t.track_number}" data-slug="${slug}" class="track-card relative scroll-mt-24 bg-frostbg-900 border border-white/10 hover:border-lantern-500/30 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300">
+            <span id="${slug}" class="absolute -top-24 pointer-events-none" aria-hidden="true"></span>
             
             <!-- Track Banner (16:9) -->
             <div class="relative aspect-video w-full overflow-hidden bg-frostbg-950">
@@ -972,7 +973,7 @@
                   <div class="flex items-center gap-2">
                     <button 
                       type="button"
-                      onclick="openBardNoteModal(this.dataset.song, 'Have Yourself a Shady Little Christmas', ${t.track_number})"
+                      onclick="openBardNoteModal(this.dataset.song, 'Have Yourself a Shady Little Christmas', ${t.number || t.track_number})"
                       data-song="${escapeHtml(t.title)}"
                       class="bard-note-btn"
                       aria-label="Drop a note to the bard about ${escapeHtml(t.title)}"
@@ -983,7 +984,7 @@
                     </button>
                     <button 
                       type="button"
-                      onclick="shareTrackLink(this.dataset.song, 'Have Yourself a Shady Little Christmas', ${t.track_number})"
+                      onclick="shareTrackLink(this.dataset.song, 'Have Yourself a Shady Little Christmas', ${t.number || t.track_number})"
                       data-song="${escapeHtml(t.title)}"
                       class="bard-note-btn track-share-btn"
                       aria-label="Share this track"

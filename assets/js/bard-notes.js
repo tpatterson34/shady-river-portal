@@ -184,7 +184,22 @@
 
     currentSong = songTitle || 'A Song';
     currentAlbum = albumTitle || 'The Shady River Bard';
-    currentTrackNum = trackNum || '';
+    if (trackNum === undefined || trackNum === null || trackNum === 'undefined' || trackNum === 'null') {
+      currentTrackNum = '';
+    } else {
+      currentTrackNum = trackNum;
+    }
+
+    // Attempt recovery from active element or closest card if missing
+    if (!currentTrackNum && activeTriggerEl) {
+      const card = activeTriggerEl.closest('[data-track], .track-card, article');
+      if (card) {
+        const dt = card.getAttribute('data-track') || card.dataset.track;
+        if (dt && /^\d+$/.test(dt)) {
+          currentTrackNum = parseInt(dt, 10);
+        }
+      }
+    }
 
     const pill = document.getElementById('bard-modal-context-pill');
     if (pill) {
@@ -269,11 +284,40 @@
 
   // Share Track Link Action
   window.shareTrackLink = function (songTitle, albumTitle, trackIdentifier) {
-    const trackNum = (typeof trackIdentifier === 'number' || /^\d+$/.test(trackIdentifier)) ? parseInt(trackIdentifier, 10) : null;
-    const anchor = trackNum !== null ? `track-${trackNum}` : String(trackIdentifier).replace(/^#/, '');
+    let trackNum = (typeof trackIdentifier === 'number' || /^\d+$/.test(trackIdentifier)) ? parseInt(trackIdentifier, 10) : null;
+    if (trackIdentifier === undefined || trackIdentifier === null || trackIdentifier === 'undefined' || trackIdentifier === 'null' || trackIdentifier === '') {
+      trackNum = null;
+      trackIdentifier = null;
+    }
+
+    // Try recovering trackNum or identifier from active element / closest card if missing
+    const activeBtn = document.activeElement;
+    if (trackNum === null && !trackIdentifier && activeBtn) {
+      const card = activeBtn.closest('[data-track], .track-card, article');
+      if (card) {
+        const dt = card.getAttribute('data-track') || card.dataset.track;
+        if (dt && /^\d+$/.test(dt)) {
+          trackNum = parseInt(dt, 10);
+        } else if (card.id && /^track-(\d+)$/.test(card.id)) {
+          trackNum = parseInt(card.id.replace('track-', ''), 10);
+        } else if (card.id && card.id !== 'undefined') {
+          trackIdentifier = card.id;
+        }
+      }
+    }
+
+    let anchor = '';
+    if (trackNum !== null) {
+      anchor = `track-${trackNum}`;
+    } else if (trackIdentifier && trackIdentifier !== 'undefined' && trackIdentifier !== 'null') {
+      anchor = String(trackIdentifier).replace(/^#/, '');
+    } else if (songTitle) {
+      // Fallback to songTitle slug rather than undefined
+      anchor = songTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    }
 
     const baseUrl = window.location.origin + window.location.pathname;
-    const fullShareUrl = `${baseUrl}#${anchor}`;
+    const fullShareUrl = anchor ? `${baseUrl}#${anchor}` : baseUrl;
 
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(fullShareUrl).catch(() => {
@@ -287,12 +331,11 @@
     showTrackShareToast(`Link for ${titleStr} copied to clipboard!`);
 
     // Update browser URL hash without jump
-    if (window.history && window.history.replaceState) {
+    if (window.history && window.history.replaceState && anchor) {
       window.history.replaceState(null, '', `#${anchor}`);
     }
 
     // Temporary tooltip feedback on active button if triggered by event
-    const activeBtn = document.activeElement;
     if (activeBtn && activeBtn.classList.contains('track-share-btn')) {
       const tooltip = activeBtn.querySelector('.track-share-tooltip');
       if (tooltip) {
@@ -305,22 +348,23 @@
     }
 
     // Flash highlight on the target card
-    const targetCard = document.getElementById(anchor) ||
+    const targetCard = (anchor ? document.getElementById(anchor) : null) ||
                        (trackNum !== null ? (document.getElementById(`track-${trackNum}`) ||
                                             document.getElementById(`track-${String(trackNum).padStart(2, '0')}`) ||
                                             document.getElementById(`track-card-${trackNum}`) ||
                                             document.querySelector(`[data-track="${trackNum}"]`)) : null);
     if (targetCard) {
-      targetCard.classList.remove('track-card-highlighted');
-      void targetCard.offsetWidth;
-      targetCard.classList.add('track-card-highlighted');
+      const cardEl = targetCard.closest('.track-card, article') || targetCard;
+      cardEl.classList.remove('track-card-highlighted');
+      void cardEl.offsetWidth;
+      cardEl.classList.add('track-card-highlighted');
     }
   };
 
   // Deep Link Resolver: Automatically scroll & highlight track on direct link arrival
   function handleTrackDeepLink() {
     const rawHash = window.location.hash ? window.location.hash.replace(/^#/, '').trim() : '';
-    if (!rawHash) return;
+    if (!rawHash || rawHash === 'undefined' || rawHash === 'null') return;
 
     let trackNum = null;
     const match = rawHash.match(/track[-_]?(\d+)/i) || rawHash.match(/song[-_]?(\d+)/i) || rawHash.match(/^(\d+)$/);
@@ -341,6 +385,11 @@
                    document.querySelector(`[data-track="${trackNum}"]`);
       }
 
+      if (!targetEl) {
+        targetEl = document.querySelector(`[data-slug="${rawHash}"]`) ||
+                   document.getElementById(`track-${rawHash}`);
+      }
+
       // If still not found and a filter might be active, attempt resetting filter
       if (!targetEl && trackNum !== null && attempts === 10) {
         if (typeof filterTracks === 'function') {
@@ -354,8 +403,10 @@
       if (targetEl || attempts >= maxAttempts) {
         clearInterval(pollInterval);
         if (targetEl) {
+          const cardEl = targetEl.closest('.track-card, article') || targetEl;
+
           // Check if parent act needs switching
-          const actAttr = targetEl.getAttribute('data-act');
+          const actAttr = cardEl.getAttribute('data-act') || targetEl.getAttribute('data-act');
           if (actAttr && typeof filterByAct === 'function') {
             const actNumMatch = actAttr.match(/\d+/);
             if (actNumMatch) {
@@ -364,32 +415,22 @@
           }
 
           // Smooth scroll into view
-          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          cardEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
           // Pulse glow animation
-          targetEl.classList.remove('track-card-highlighted');
-          void targetEl.offsetWidth;
-          targetEl.classList.add('track-card-highlighted');
+          cardEl.classList.remove('track-card-highlighted');
+          void cardEl.offsetWidth;
+          cardEl.classList.add('track-card-highlighted');
 
           // Auto-expand lyrics drawer if collapsed
-          if (trackNum !== null) {
-            const padded = String(trackNum).padStart(2, '0');
-            const lyricsDrawer = document.getElementById(`lyrics-drawer-${trackNum}`) ||
-                                 document.getElementById(`lyrics-drawer-${padded}`) ||
-                                 document.getElementById(`drawer-track-${trackNum}`) ||
-                                 document.getElementById(`drawer-${targetEl.id}`);
-            if (lyricsDrawer && (lyricsDrawer.classList.contains('hidden') || lyricsDrawer.style.display === 'none')) {
-              if (typeof toggleTrackLyrics === 'function') {
-                try { toggleTrackLyrics(trackNum); } catch (e) {}
-              } else if (typeof toggleLyrics === 'function') {
-                try { toggleLyrics(targetEl.id || `track-${trackNum}`); } catch (e) {}
-              } else {
-                const toggleBtn = document.getElementById(`toggle-btn-${trackNum}`) ||
-                                  document.getElementById(`btn-lyrics-track-${trackNum}`) ||
-                                  document.getElementById(`btn-lyrics-${targetEl.id}`);
-                if (toggleBtn) toggleBtn.click();
-              }
-            }
+          const slug = cardEl.getAttribute('data-slug') || targetEl.getAttribute('data-slug') || (cardEl.id !== `track-${trackNum}` ? cardEl.id : null);
+          const toggleBtn = (slug ? document.getElementById(`btn-lyrics-${slug}`) : null) ||
+                            (trackNum !== null ? document.getElementById(`btn-lyrics-track-${trackNum}`) : null) ||
+                            (trackNum !== null ? document.getElementById(`toggle-btn-${trackNum}`) : null) ||
+                            cardEl.querySelector('[id^="btn-lyrics-"]') ||
+                            cardEl.querySelector('button[onclick*="toggleLyrics"]');
+          if (toggleBtn && (toggleBtn.getAttribute('aria-expanded') === 'false' || cardEl.querySelector('.lyrics-drawer.hidden') || cardEl.querySelector('[id^="drawer-"].hidden'))) {
+            try { toggleBtn.click(); } catch (e) {}
           }
         }
       }
