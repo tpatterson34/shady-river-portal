@@ -5,10 +5,11 @@
  * Implements native Google Cast Web Sender SDK integration for the portal:
  * - Default Media Receiver (CC1AD845) with rich track metadata & bespoke 720p artwork
  * - ORIGIN_SCOPED auto-join policy for seamless persistence across pages
+ * - initiateSessionPlayback: Single-flight guarantee (never missed, never duplicated)
  * - Resilient connection state tracking (checkIsConnected) - no false disconnects
  * - Native progressive audio/mp3 streaming (omits streamType BUFFERED to prevent MSE failure)
  * - Strictly serialized, concurrency-safe loadMedia requests (prevents collision hangs)
- * - Safe receiver cold-boot timing buffer (600ms) for Google TV app mount
+ * - Safe receiver cold-boot timing buffer (400ms) for Google TV app mount
  * - Automatic hands-free continuous track advance on remote track completion
  * - Bidirectional remote playback, track navigation, & timeline sync
  * - On-screen visual feedback toast & live status badge
@@ -22,7 +23,7 @@
   let isConnected = false;
   let isMediaLoading = false;
   let loadSequence = 0;
-  let initialBootTimer = null;
+  let sessionLoadedMediaId = null;
   let remotePlayer = null;
   let remotePlayerController = null;
   let currentSession = null;
@@ -32,6 +33,7 @@
   let activeTracks = [];
   let activeAlbumMeta = null;
   let toastTimeout = null;
+  const debugLogs = [];
 
   const eventListeners = {
     stateChange: [],
@@ -41,10 +43,113 @@
     disconnected: []
   };
 
+  function logDebug(msg) {
+    const time = new Date().toLocaleTimeString();
+    const formatted = `[${time}] ${msg}`;
+    debugLogs.push(formatted);
+    if (debugLogs.length > 20) debugLogs.shift();
+    console.log('[CastManager]', msg);
+    updateDebugPill(msg);
+  }
+
+  function updateDebugPill(latestMsg) {
+    let pill = document.getElementById('cast-debug-pill');
+    if (!pill) {
+      pill = document.createElement('div');
+      pill.id = 'cast-debug-pill';
+      pill.style.position = 'fixed';
+      pill.style.bottom = '84px';
+      pill.style.left = '20px';
+      pill.style.zIndex = '999990';
+      pill.style.backgroundColor = 'rgba(15, 23, 42, 0.92)';
+      pill.style.border = '1px solid rgba(56, 189, 248, 0.35)';
+      pill.style.borderRadius = '20px';
+      pill.style.padding = '5px 14px';
+      pill.style.fontFamily = 'monospace';
+      pill.style.fontSize = '11px';
+      pill.style.color = '#38bdf8';
+      pill.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.7)';
+      pill.style.display = 'flex';
+      pill.style.alignItems = 'center';
+      pill.style.gap = '8px';
+      pill.style.cursor = 'pointer';
+      pill.style.backdropFilter = 'blur(8px)';
+      pill.style.webkitBackdropFilter = 'blur(8px)';
+      pill.title = 'Click to view Cast diagnostics';
+      pill.onclick = showDebugModal;
+      document.body.appendChild(pill);
+    }
+
+    const icon = isConnected ? '<span style="color:#10b981;">●</span>' : '<span style="color:#64748b;">○</span>';
+    const dev = deviceName || (isConnected ? 'Connected' : 'Cast Standby');
+    pill.innerHTML = `${icon} <span style="color:#f1f5f9;font-weight:600;">Cast:</span> <span style="color:#38bdf8;">${dev}</span> <span style="color:#64748b;">|</span> <span style="color:#94a3b8;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${latestMsg || 'Ready'}</span>`;
+  }
+
+  function showDebugModal() {
+    let modal = document.getElementById('cast-debug-modal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'cast-debug-modal';
+      modal.style.position = 'fixed';
+      modal.style.inset = '0';
+      modal.style.zIndex = '999999';
+      modal.style.backgroundColor = 'rgba(0,0,0,0.8)';
+      modal.style.display = 'flex';
+      modal.style.alignItems = 'center';
+      modal.style.justifyContent = 'center';
+      modal.style.padding = '16px';
+      modal.onclick = () => { modal.style.display = 'none'; };
+
+      const content = document.createElement('div');
+      content.id = 'cast-debug-content';
+      content.style.backgroundColor = '#0f172a';
+      content.style.border = '1px solid #38bdf8';
+      content.style.borderRadius = '12px';
+      content.style.padding = '20px';
+      content.style.maxWidth = '600px';
+      content.style.width = '100%';
+      content.style.maxHeight = '80vh';
+      content.style.overflowY = 'auto';
+      content.style.fontFamily = 'monospace';
+      content.style.fontSize = '12px';
+      content.style.color = '#e2e8f0';
+      content.onclick = (e) => e.stopPropagation();
+
+      modal.appendChild(content);
+      document.body.appendChild(modal);
+    }
+
+    const content = document.getElementById('cast-debug-content');
+    content.innerHTML = `
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;border-bottom:1px solid #334155;padding-bottom:8px;">
+        <span style="font-weight:bold;color:#38bdf8;font-size:14px;">Google Cast Diagnostics</span>
+        <button onclick="document.getElementById('cast-debug-modal').style.display='none'" style="color:#94a3b8;background:none;border:none;cursor:pointer;font-size:16px;">✕</button>
+      </div>
+      <div style="margin-bottom:10px;line-height:1.6;">
+        <div><strong>Cast API:</strong> ${isApiAvailable ? 'Available' : 'Pending/Unavailable'}</div>
+        <div><strong>Connected:</strong> ${checkIsConnected() ? 'YES' : 'NO'} (${deviceName || 'None'})</div>
+        <div><strong>Active Track:</strong> ${activeTrackIndex >= 0 ? 'Track ' + (activeTrackIndex + 1) : 'None'}</div>
+        <div><strong>Remote Player State:</strong> ${remotePlayer ? remotePlayer.playerState : 'N/A'} (idleReason: ${remotePlayer ? remotePlayer.idleReason : 'N/A'})</div>
+        <div><strong>Current Time / Duration:</strong> ${remotePlayer ? remotePlayer.currentTime.toFixed(1) : 0}s / ${remotePlayer ? remotePlayer.duration.toFixed(1) : 0}s</div>
+      </div>
+      <div style="font-weight:bold;color:#f59e0b;margin-bottom:6px;">Event Log (Last 20):</div>
+      <div style="background:#020617;padding:10px;border-radius:6px;max-height:220px;overflow-y:auto;line-height:1.5;color:#cbd5e1;font-size:11px;">
+        ${debugLogs.map(l => `<div>${l}</div>`).join('')}
+      </div>
+      <div style="margin-top:14px;display:flex;gap:10px;">
+        <button onclick="window.castTrack(0)" style="padding:6px 12px;background:#0284c7;color:white;border:none;border-radius:6px;cursor:pointer;font-size:11px;">Test Cast Track 1</button>
+        <button onclick="document.getElementById('cast-debug-modal').style.display='none'" style="padding:6px 12px;background:#334155;color:white;border:none;border-radius:6px;cursor:pointer;font-size:11px;">Close</button>
+      </div>
+    `;
+
+    modal.style.display = 'flex';
+  }
+
   /**
    * On-screen Toast notification system for instant Cast feedback
    */
   function showToast(message, type = 'info', durationMs = 5000) {
+    logDebug(`Toast (${type}): ${message}`);
     let toast = document.getElementById('cast-toast');
     if (!toast) {
       toast = document.createElement('div');
@@ -101,7 +206,6 @@
 
   /**
    * Resolve relative file path to absolute URL for Google Cast receiver.
-   * Rock-solid across trailing slashes, index.html, query strings, and hash fragments.
    */
   function toAbsoluteUrl(path) {
     if (!path) return '';
@@ -110,28 +214,20 @@
 
     try {
       let base = document.baseURI || window.location.href;
-      // Strip query string and hash
       base = base.split('?')[0].split('#')[0];
-      // If not ending in slash and not ending in a file extension (.html, etc), add slash
       if (!base.endsWith('/') && !/\/[^/]+\.[a-zA-Z0-9]+$/.test(base)) {
         base += '/';
       }
       return new URL(path, base).href;
     } catch (e) {
-      console.warn('[CastManager] Could not resolve absolute URL for:', path, e);
-      try {
-        const a = document.createElement('a');
-        a.href = path;
-        return a.href;
-      } catch (err) {
-        return path;
-      }
+      console.warn('[CastManager] URL resolve error:', path, e);
+      return path;
     }
   }
 
   /**
    * Determine true connection state with Google Cast framework.
-   * Resilient against RemotePlayer state delay.
+   * Robust against RemotePlayer connection event delays.
    */
   function checkIsConnected() {
     if (!window.cast || !window.cast.framework) return false;
@@ -140,10 +236,6 @@
       const session = castContext.getCurrentSession();
       if (session) {
         const state = session.getSessionState();
-        if (state === cast.framework.SessionState.SESSION_STARTED ||
-            state === cast.framework.SessionState.SESSION_RESUMED) {
-          return true;
-        }
         if (state !== cast.framework.SessionState.SESSION_ENDING &&
             state !== cast.framework.SessionState.SESSION_ENDED) {
           return true;
@@ -160,44 +252,38 @@
 
   /**
    * Build MediaInfo for Google Cast Default Media Receiver.
-   * Note: Uses audio/mp3 MIME type without streamType BUFFERED to let
-   * Google TV decode standard progressive audio natively without MediaSource buffer errors.
+   * - Uses audio/mp3 MIME type
+   * - Omits streamType BUFFERED so Google TV uses native progressive audio decoding
    */
-  function buildMediaInfo(track, albumMeta, index, forceGeneric = false) {
+  function buildMediaInfo(track, albumMeta, index, forceMinimal = false) {
     const rawAudio = track.audio_file || track.src || track.streamUrl;
     const audioUrl = toAbsoluteUrl(rawAudio);
 
-    // Progressive MP3 specification for CAF Default Media Receiver
     const mediaInfo = new chrome.cast.media.MediaInfo(audioUrl, 'audio/mp3');
     mediaInfo.contentUrl = audioUrl;
     mediaInfo.contentId = audioUrl;
     mediaInfo.contentType = 'audio/mp3';
+
+    if (forceMinimal) {
+      return mediaInfo;
+    }
 
     const albumTitle = (albumMeta && albumMeta.title) || "Sanity's Edge";
     const artist = (albumMeta && albumMeta.artist) || 'The Shady River Bard';
     const trackTitle = track.title || ('Track ' + (index + 1));
     const trackNum = track.track_number || (index + 1);
 
-    // Track-specific artwork or fallback album cover
     const coverPath = track.art_square || track.art || track.image || track.cover ||
       (albumMeta && (albumMeta.master_cover_art || albumMeta.cover_art || albumMeta.cover)) ||
       'assets/art/sanitys-edge-cover.jpg';
     const coverUrl = toAbsoluteUrl(coverPath);
 
-    let metadata;
-    if (forceGeneric) {
-      metadata = new chrome.cast.media.GenericMediaMetadata();
-      metadata.metadataType = chrome.cast.media.MetadataType.GENERIC;
-      metadata.title = trackTitle;
-      metadata.subtitle = `${albumTitle} • ${artist}`;
-    } else {
-      metadata = new chrome.cast.media.MusicTrackMediaMetadata();
-      metadata.metadataType = chrome.cast.media.MetadataType.MUSIC_TRACK; // 3
-      metadata.title = trackTitle;
-      metadata.artist = artist;
-      metadata.albumName = albumTitle;
-      metadata.trackNumber = trackNum;
-    }
+    const metadata = new chrome.cast.media.MusicTrackMediaMetadata();
+    metadata.metadataType = chrome.cast.media.MetadataType.MUSIC_TRACK; // 3
+    metadata.title = trackTitle;
+    metadata.artist = artist;
+    metadata.albumName = albumTitle;
+    metadata.trackNumber = trackNum;
 
     if (coverUrl) {
       metadata.images = [new chrome.cast.Image(coverUrl)];
@@ -205,6 +291,42 @@
 
     mediaInfo.metadata = metadata;
     return mediaInfo;
+  }
+
+  /**
+   * Single-flight session playback initializer.
+   * Both SESSION_STARTED and requestSession().then() call this,
+   * but it is guaranteed to execute only once per connected session.
+   */
+  function initiateSessionPlayback(trackIdx, triggerSource) {
+    const castContext = cast.framework.CastContext.getInstance();
+    currentSession = castContext.getCurrentSession();
+
+    if (!currentSession) {
+      logDebug(`initiateSessionPlayback (${triggerSource}) skipped: no active session`);
+      return;
+    }
+
+    const sessionId = currentSession.getSessionId() || 'current_session';
+    if (sessionLoadedMediaId === sessionId) {
+      logDebug(`initiateSessionPlayback (${triggerSource}) ignored: already initiated for session ${sessionId}`);
+      return;
+    }
+    sessionLoadedMediaId = sessionId;
+
+    isConnected = true;
+    const castDevice = currentSession.getCastDevice();
+    deviceName = (castDevice && castDevice.friendlyName) ? castDevice.friendlyName : 'Google TV';
+    logDebug(`Session established with ${deviceName} (via ${triggerSource}). Cueing Track ${trackIdx + 1}`);
+
+    pauseLocalAudio();
+    onConnectedChanged();
+    showToast(`Connected to ${deviceName}. Loading track...`, 'info', 3500);
+
+    // 400ms buffer gives Google TV receiver DOM & audio player time to mount cleanly
+    setTimeout(() => {
+      loadTrackOnReceiver(trackIdx);
+    }, 400);
   }
 
   /**
@@ -226,86 +348,69 @@
       remotePlayer = new cast.framework.RemotePlayer();
       remotePlayerController = new cast.framework.RemotePlayerController(remotePlayer);
 
-      // Listen for connection state changes via RemotePlayer
+      // Connection event
       remotePlayerController.addEventListener(
         cast.framework.RemotePlayerEventType.IS_CONNECTED_CHANGED,
-        onConnectedChanged
+        () => {
+          logDebug(`RemotePlayer isConnected changed: ${remotePlayer.isConnected}`);
+          onConnectedChanged();
+        }
       );
 
-      // Listen for playback state changes (PLAYING, PAUSED, IDLE, BUFFERING)
+      // Playback state (PLAYING, PAUSED, IDLE, BUFFERING)
       remotePlayerController.addEventListener(
         cast.framework.RemotePlayerEventType.PLAYER_STATE_CHANGED,
         onPlayerStateChanged
       );
 
-      // Listen for media info changes (track advance)
+      // Media info change
       remotePlayerController.addEventListener(
         cast.framework.RemotePlayerEventType.MEDIA_INFO_CHANGED,
         onMediaInfoChanged
       );
 
-      // Listen for time updates from remote player
+      // Current time update
       remotePlayerController.addEventListener(
         cast.framework.RemotePlayerEventType.CURRENT_TIME_CHANGED,
         onCurrentTimeChanged
       );
 
-      // Listen for pause/play/volume changes
+      // Pause/play state toggle
       remotePlayerController.addEventListener(
         cast.framework.RemotePlayerEventType.IS_PAUSED_CHANGED,
         () => { notifyState(); updateAllCastUI(); }
       );
 
-      // Listen for CastContext session state transitions
+      // CastContext session state transitions
       castContext.addEventListener(
         cast.framework.CastContextEventType.SESSION_STATE_CHANGED,
         (event) => {
-          console.log('[CastManager] Cast session state changed:', event.sessionState);
+          logDebug(`SESSION_STATE_CHANGED: ${event.sessionState}`);
           switch (event.sessionState) {
             case cast.framework.SessionState.SESSION_STARTED:
             case cast.framework.SessionState.SESSION_RESUMED:
-              currentSession = castContext.getCurrentSession();
-              isConnected = true;
-              onConnectedChanged();
-
-              // Determine initial track to play
               const targetIdx = (pendingTrackIndex !== null && pendingTrackIndex >= 0)
                 ? pendingTrackIndex
                 : ((typeof window.currentTrackIndex === 'number' && window.currentTrackIndex >= 0) ? window.currentTrackIndex : 0);
               pendingTrackIndex = null;
-
-              console.log(`[CastManager] Session established with ${deviceName || 'Google TV'}, queuing Track ${targetIdx + 1}`);
-              showToast(`Connected to ${deviceName || 'Google TV'}. Loading track...`, 'info', 3500);
-
-              // Clear any pending boot timer
-              if (initialBootTimer) {
-                clearTimeout(initialBootTimer);
-                initialBootTimer = null;
-              }
-
-              // 600ms buffer allows Default Media Receiver on Google TV to finish DOM mount & audio engine initialization
-              initialBootTimer = setTimeout(() => {
-                loadTrackOnReceiver(targetIdx);
-              }, 600);
+              initiateSessionPlayback(targetIdx, 'SESSION_STATE_CHANGED');
               break;
 
             case cast.framework.SessionState.SESSION_START_FAILED:
-              console.warn('[CastManager] Session start failed');
+              logDebug('SESSION_START_FAILED');
               showToast('Cast connection failed. Please try again.', 'error');
               pendingTrackIndex = null;
               isMediaLoading = false;
+              sessionLoadedMediaId = null;
               onConnectedChanged();
               break;
 
             case cast.framework.SessionState.SESSION_ENDED:
-              console.log('[CastManager] Session ended');
-              if (initialBootTimer) {
-                clearTimeout(initialBootTimer);
-                initialBootTimer = null;
-              }
+              logDebug('SESSION_ENDED');
               currentSession = null;
               isConnected = false;
               isMediaLoading = false;
+              sessionLoadedMediaId = null;
               pendingTrackIndex = null;
               onConnectedChanged();
               showToast('Cast session ended', 'info', 3000);
@@ -314,7 +419,7 @@
         }
       );
 
-      // Check if session already exists
+      // Restore if session already exists
       currentSession = castContext.getCurrentSession();
       if (currentSession) {
         isConnected = checkIsConnected();
@@ -324,9 +429,10 @@
       }
 
       isApiAvailable = true;
-      console.log('[CastManager] Google Cast framework initialized successfully');
+      logDebug('Google Cast framework initialized');
     } catch (e) {
       console.error('[CastManager] Initialization failed:', e);
+      logDebug(`Init error: ${e.message}`);
     }
   }
 
@@ -342,18 +448,14 @@
       } else if (!deviceName) {
         deviceName = 'Google TV';
       }
-      console.log(`[CastManager] Connected to ${deviceName}`);
-
-      // Pause local audio in page
       pauseLocalAudio();
-
       emit('connected', { deviceName });
       updateAllCastUI();
     } else if (!isConnected) {
-      console.log('[CastManager] Disconnected from Cast device');
       deviceName = '';
       activeTrackIndex = -1;
       isMediaLoading = false;
+      sessionLoadedMediaId = null;
       emit('disconnected', {});
       updateAllCastUI();
     }
@@ -366,20 +468,20 @@
 
     const state = remotePlayer.playerState;
     const idleReason = remotePlayer.idleReason;
-    console.log(`[CastManager] Remote player state: ${state}, idleReason: ${idleReason}`);
+    logDebug(`PlayerState: ${state} (${idleReason || 'active'})`);
 
     if (state === cast.framework.PlayerState.IDLE) {
       isMediaLoading = false;
       if (idleReason === 'FINISHED') {
-        console.log('[CastManager] Track completed playing on Google TV receiver');
+        logDebug('Track finished playing on TV receiver');
         if (activeTrackIndex >= 0 && activeTrackIndex < activeTracks.length - 1) {
           const nextIdx = activeTrackIndex + 1;
-          console.log(`[CastManager] Auto-advancing to Track ${nextIdx + 1}: "${activeTracks[nextIdx]?.title}"`);
+          logDebug(`Auto-advancing to Track ${nextIdx + 1}`);
           showToast(`Next: ${activeTracks[nextIdx]?.title || 'Track ' + (nextIdx + 1)}`, 'info', 3000);
           loadTrackOnReceiver(nextIdx);
         }
       } else if (idleReason === 'ERROR') {
-        console.error('[CastManager] Receiver reported PlayerState IDLE with idleReason ERROR');
+        logDebug('Receiver reported ERROR state');
         showToast('Playback error on TV (Receiver reported error)', 'error', 5000);
       }
     }
@@ -392,8 +494,6 @@
     if (!remotePlayer || !remotePlayer.mediaInfo) return;
 
     const mediaInfo = remotePlayer.mediaInfo;
-    console.log('[CastManager] Remote media info changed:', mediaInfo);
-
     let detectedIndex = -1;
     if (mediaInfo.customData && typeof mediaInfo.customData.trackIndex === 'number') {
       detectedIndex = mediaInfo.customData.trackIndex;
@@ -408,7 +508,7 @@
 
     if (detectedIndex !== -1 && detectedIndex !== activeTrackIndex) {
       activeTrackIndex = detectedIndex;
-      console.log(`[CastManager] Now active on Google TV: Track ${activeTrackIndex + 1} (${activeTracks[activeTrackIndex]?.title || ''})`);
+      logDebug(`Active track on TV: Track ${activeTrackIndex + 1} (${activeTracks[activeTrackIndex]?.title || ''})`);
       emit('trackChange', activeTrackIndex);
       updateAllCastUI();
     }
@@ -434,7 +534,6 @@
 
   /**
    * Load and stream an individual track directly onto Google TV.
-   * Serialized and concurrency-guarded to prevent receiver collisions.
    */
   function loadTrackOnReceiver(trackIndex, seekTime = 0, isRetry = false) {
     const castContext = cast.framework.CastContext.getInstance();
@@ -442,15 +541,14 @@
     isConnected = checkIsConnected();
 
     if (!currentSession) {
-      console.warn('[CastManager] No active Cast session. Queuing as pendingTrackIndex:', trackIndex);
+      logDebug(`loadTrackOnReceiver: No active session. Storing pending track ${trackIndex + 1}`);
       pendingTrackIndex = trackIndex;
       showToast('Connecting to Cast device...', 'info', 4000);
       return;
     }
 
-    // Concurrency guard: if another load is active, queue this track and return
     if (isMediaLoading && !isRetry) {
-      console.log(`[CastManager] Media load currently in flight. Queuing Track ${trackIndex + 1}`);
+      logDebug(`loadTrackOnReceiver: Load in flight. Queuing track ${trackIndex + 1}`);
       pendingTrackIndex = trackIndex;
       return;
     }
@@ -459,7 +557,7 @@
     activeAlbumMeta = activeAlbumMeta || window.ALBUM_DATA || null;
 
     if (!activeTracks || !activeTracks[trackIndex]) {
-      console.warn('[CastManager] Invalid track index to load:', trackIndex);
+      logDebug(`loadTrackOnReceiver: Invalid track index ${trackIndex}`);
       return;
     }
 
@@ -477,35 +575,33 @@
     loadRequest.currentTime = seekTime || 0;
 
     const dev = deviceName || 'Google TV';
-    console.log(`[CastManager] [Seq ${currentSeq}] Streaming to ${dev}: "${track.title}" (${mediaInfo.contentUrl})...`);
+    logDebug(`[Seq ${currentSeq}] Streaming to ${dev}: "${track.title}" -> ${mediaInfo.contentUrl}`);
     showToast(`Streaming "${track.title}" to ${dev}...`, 'info', 4000);
     updateAllCastUI();
 
     currentSession.loadMedia(loadRequest).then((res) => {
       isMediaLoading = false;
       if (currentSeq !== loadSequence) {
-        console.log(`[CastManager] [Seq ${currentSeq}] Stale load completion ignored (latest: ${loadSequence})`);
+        logDebug(`[Seq ${currentSeq}] Stale load response ignored`);
         return;
       }
 
-      // Check if CAF resolved with an error string (e.g. 'cancel')
       if (res && typeof res === 'string') {
-        console.warn(`[CastManager] [Seq ${currentSeq}] loadMedia resolved with code:`, res);
+        logDebug(`[Seq ${currentSeq}] loadMedia resolved with code: ${res}`);
         if (res === 'cancel') {
-          console.log('[CastManager] Load request was cancelled');
+          logDebug('Load request cancelled');
         } else {
-          showToast(`Cast load notice: ${res}`, 'warn', 4000);
+          showToast(`Cast notice: ${res}`, 'warn', 4000);
         }
         return;
       }
 
-      console.log(`[CastManager] [Seq ${currentSeq}] Successfully playing Track ${trackIndex + 1} on ${dev}`);
+      logDebug(`[Seq ${currentSeq}] ✓ loadMedia succeeded for Track ${trackIndex + 1} on ${dev}`);
       showToast(`✓ Playing "${track.title}" on ${dev}`, 'success', 5000);
       emit('trackChange', activeTrackIndex);
       updateAllCastUI();
       notifyState();
 
-      // If another track was queued while loading, fire it now
       if (pendingTrackIndex !== null && pendingTrackIndex !== activeTrackIndex) {
         const nextIdx = pendingTrackIndex;
         pendingTrackIndex = null;
@@ -515,11 +611,11 @@
       isMediaLoading = false;
       if (currentSeq !== loadSequence) return;
 
-      console.error(`[CastManager] [Seq ${currentSeq}] loadMedia failed:`, err);
+      logDebug(`[Seq ${currentSeq}] loadMedia failed: ${JSON.stringify(err)}`);
       const errStr = (err && (err.description || err.message || err.name)) || (typeof err === 'string' ? err : 'Media load error');
 
       if (!isRetry && err !== 'cancel') {
-        console.log('[CastManager] Primary load failed, retrying in 500ms with generic metadata...');
+        logDebug('Primary load failed, retrying in 500ms with minimal media payload...');
         showToast(`Retrying playback on ${dev}...`, 'warn', 3000);
         setTimeout(() => {
           loadTrackOnReceiver(trackIndex, seekTime, true);
@@ -545,25 +641,23 @@
     isConnected = checkIsConnected();
 
     if (isConnected && currentSession) {
-      // Session is already running: load requested track immediately
-      console.log(`[CastManager] Session already running with ${deviceName || 'Google TV'}. Loading track ${trackIndex + 1}`);
+      logDebug(`Already connected to ${deviceName || 'Google TV'}. Loading track ${trackIndex + 1}`);
       loadTrackOnReceiver(trackIndex);
       updateAllCastUI();
     } else {
-      // No active session: store track as pending, then open device chooser
       pendingTrackIndex = trackIndex;
       showToast('Select your Google TV or Chromecast...', 'info', 5000);
 
       castContext.requestSession().then(() => {
-        console.log('[CastManager] requestSession picker resolved successfully');
-        currentSession = castContext.getCurrentSession();
-        isConnected = checkIsConnected();
-        onConnectedChanged();
+        logDebug('requestSession picker resolved');
+        const target = (pendingTrackIndex !== null && pendingTrackIndex >= 0) ? pendingTrackIndex : trackIndex;
+        pendingTrackIndex = null;
+        initiateSessionPlayback(target, 'REQUEST_SESSION_THEN');
       }).catch(err => {
         pendingTrackIndex = null;
         isMediaLoading = false;
         if (err !== 'cancel') {
-          console.warn('[CastManager] Cast session request cancelled or failed:', err);
+          logDebug(`Cast session request rejected/cancelled: ${JSON.stringify(err)}`);
           showToast('Cast cancelled or unavailable', 'warn', 3000);
         }
       });
@@ -571,7 +665,7 @@
   }
 
   /**
-   * Play / Pause toggle on remote receiver (loads current track if idle)
+   * Play / Pause toggle on remote receiver
    */
   function playOrPause() {
     isConnected = checkIsConnected();
@@ -581,19 +675,15 @@
           remotePlayerController.playOrPause();
         }
       } else {
-        // If receiver is connected but idle or has no media loaded, load current track immediately
         const curIdx = (typeof activeTrackIndex === 'number' && activeTrackIndex >= 0)
           ? activeTrackIndex
           : ((typeof window.currentTrackIndex === 'number' && window.currentTrackIndex >= 0) ? window.currentTrackIndex : 0);
-        console.log(`[CastManager] playOrPause invoked while idle. Loading track ${curIdx + 1}`);
+        logDebug(`playOrPause invoked while idle. Loading track ${curIdx + 1}`);
         loadTrackOnReceiver(curIdx);
       }
     }
   }
 
-  /**
-   * Seek remote playback to specific time in seconds
-   */
   function seek(timeInSeconds) {
     if (remotePlayer && remotePlayerController && checkIsConnected()) {
       remotePlayer.currentTime = timeInSeconds;
@@ -601,9 +691,6 @@
     }
   }
 
-  /**
-   * Skip to next track with auto-advance
-   */
   function nextTrack() {
     if (!checkIsConnected()) return;
     activeTracks = (activeTracks && activeTracks.length) ? activeTracks : ((window.ALBUM_DATA && window.ALBUM_DATA.tracks) || []);
@@ -613,9 +700,6 @@
     loadTrackOnReceiver(nextIdx);
   }
 
-  /**
-   * Return to previous track or restart current
-   */
   function prevTrack() {
     if (!checkIsConnected()) return;
     activeTracks = (activeTracks && activeTracks.length) ? activeTracks : ((window.ALBUM_DATA && window.ALBUM_DATA.tracks) || []);
@@ -629,9 +713,6 @@
     loadTrackOnReceiver(prevIdx);
   }
 
-  /**
-   * Adjust remote volume level (0.0 to 1.0)
-   */
   function setVolume(level) {
     if (remotePlayer && remotePlayerController && checkIsConnected()) {
       remotePlayer.volumeLevel = Math.max(0, Math.min(1, level));
@@ -639,9 +720,6 @@
     }
   }
 
-  /**
-   * Disconnect from active Cast session
-   */
   function disconnect() {
     if (!checkIsConnected()) return;
     try {
@@ -653,9 +731,6 @@
     }
   }
 
-  /**
-   * Subscribe to CastManager events
-   */
   function on(eventName, callback) {
     if (eventListeners[eventName]) {
       eventListeners[eventName].push(callback);
@@ -709,11 +784,13 @@
     const jukeboxCastBtn = document.getElementById('jukebox-cast-btn');
     if (jukeboxCastBtn) {
       const label = document.getElementById('jukebox-cast-device');
+      const castWord = document.getElementById('jukebox-cast-label');
 
       if (isConnected) {
         jukeboxCastBtn.classList.add('text-amber-400', 'border-amber-500/50', 'bg-amber-950/40');
         jukeboxCastBtn.classList.remove('text-stone-400');
         jukeboxCastBtn.setAttribute('title', `Connected to ${deviceName || 'Google TV'} (Click to disconnect)`);
+        if (castWord) castWord.textContent = 'Casting:';
         if (label) {
           const pState = remotePlayer ? remotePlayer.playerState : '';
           let stateTag = '';
@@ -728,16 +805,19 @@
         jukeboxCastBtn.classList.remove('text-amber-400', 'border-amber-500/50', 'bg-amber-950/40');
         jukeboxCastBtn.classList.add('text-stone-400');
         jukeboxCastBtn.setAttribute('title', 'Cast to Google TV');
+        if (castWord) castWord.textContent = 'Cast';
         if (label) {
           label.classList.add('hidden');
         }
       }
     }
+
+    updateDebugPill(isConnected ? `Connected: ${deviceName}` : 'Standby');
   }
 
   // Hook Google Cast framework bootstrap - MUST be defined globally
   window.__onGCastApiAvailable = function (isAvailable) {
-    console.log('[CastManager] __onGCastApiAvailable called with:', isAvailable);
+    logDebug(`__onGCastApiAvailable called with: ${isAvailable}`);
     if (isAvailable) {
       initCast();
     }
@@ -759,6 +839,7 @@
     disconnect,
     updateAllCastUI,
     showToast,
+    showDebugModal,
     on,
     isConnected: function () { return checkIsConnected(); },
     getDeviceName: function () { return deviceName || 'Google TV'; },
