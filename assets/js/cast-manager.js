@@ -5,11 +5,11 @@
  * Implements native Google Cast Web Sender SDK integration for the portal:
  * - Default Media Receiver (CC1AD845) with rich track metadata & bespoke 720p artwork
  * - ORIGIN_SCOPED auto-join policy for seamless persistence across pages
+ * - Resilient connection state tracking (checkIsConnected) - no false disconnects
+ * - Native progressive audio/mp3 streaming (omits streamType BUFFERED to prevent MSE failure)
  * - Strictly serialized, concurrency-safe loadMedia requests (prevents collision hangs)
  * - Safe receiver cold-boot timing buffer (600ms) for Google TV app mount
  * - Automatic hands-free continuous track advance on remote track completion
- * - Universal audio/mpeg MIME formatting with normalized absolute URLs
- * - Dual-layer metadata with automatic fallback retry on receiver rejection
  * - Bidirectional remote playback, track navigation, & timeline sync
  * - On-screen visual feedback toast & live status badge
  */
@@ -100,21 +100,6 @@
   }
 
   /**
-   * Helper: Parse "MM:SS" or "HH:MM:SS" duration to total seconds
-   */
-  function parseDurationToSeconds(str) {
-    if (!str || typeof str !== 'string') return 0;
-    const parts = str.split(':').map(Number);
-    if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])) {
-      return parts[0] * 60 + parts[1];
-    }
-    if (parts.length === 3 && !isNaN(parts[0]) && !isNaN(parts[1]) && !isNaN(parts[2])) {
-      return parts[0] * 3600 + parts[1] * 60 + parts[2];
-    }
-    return 0;
-  }
-
-  /**
    * Resolve relative file path to absolute URL for Google Cast receiver.
    * Rock-solid across trailing slashes, index.html, query strings, and hash fragments.
    */
@@ -145,23 +130,48 @@
   }
 
   /**
-   * Build MediaInfo for Google Cast with MusicTrackMediaMetadata, contentUrl, and bespoke artwork
+   * Determine true connection state with Google Cast framework.
+   * Resilient against RemotePlayer state delay.
+   */
+  function checkIsConnected() {
+    if (!window.cast || !window.cast.framework) return false;
+    try {
+      const castContext = cast.framework.CastContext.getInstance();
+      const session = castContext.getCurrentSession();
+      if (session) {
+        const state = session.getSessionState();
+        if (state === cast.framework.SessionState.SESSION_STARTED ||
+            state === cast.framework.SessionState.SESSION_RESUMED) {
+          return true;
+        }
+        if (state !== cast.framework.SessionState.SESSION_ENDING &&
+            state !== cast.framework.SessionState.SESSION_ENDED) {
+          return true;
+        }
+      }
+      if (remotePlayer && remotePlayer.isConnected) {
+        return true;
+      }
+    } catch (e) {
+      console.warn('[CastManager] checkIsConnected exception:', e);
+    }
+    return false;
+  }
+
+  /**
+   * Build MediaInfo for Google Cast Default Media Receiver.
+   * Note: Uses audio/mp3 MIME type without streamType BUFFERED to let
+   * Google TV decode standard progressive audio natively without MediaSource buffer errors.
    */
   function buildMediaInfo(track, albumMeta, index, forceGeneric = false) {
     const rawAudio = track.audio_file || track.src || track.streamUrl;
     const audioUrl = toAbsoluteUrl(rawAudio);
 
-    // Explicitly set both contentId and contentUrl for CAF Default Media Receiver
-    const mediaInfo = new chrome.cast.media.MediaInfo(audioUrl, 'audio/mpeg');
+    // Progressive MP3 specification for CAF Default Media Receiver
+    const mediaInfo = new chrome.cast.media.MediaInfo(audioUrl, 'audio/mp3');
     mediaInfo.contentUrl = audioUrl;
     mediaInfo.contentId = audioUrl;
-    mediaInfo.streamType = chrome.cast.media.StreamType.BUFFERED;
-    mediaInfo.contentType = 'audio/mpeg';
-
-    const durSec = parseDurationToSeconds(track.duration);
-    if (durSec > 0) {
-      mediaInfo.duration = durSec;
-    }
+    mediaInfo.contentType = 'audio/mp3';
 
     const albumTitle = (albumMeta && albumMeta.title) || "Sanity's Edge";
     const artist = (albumMeta && albumMeta.artist) || 'The Shady River Bard';
@@ -185,7 +195,6 @@
       metadata.metadataType = chrome.cast.media.MetadataType.MUSIC_TRACK; // 3
       metadata.title = trackTitle;
       metadata.artist = artist;
-      metadata.albumArtist = artist;
       metadata.albumName = albumTitle;
       metadata.trackNumber = trackNum;
     }
@@ -285,6 +294,7 @@
               showToast('Cast connection failed. Please try again.', 'error');
               pendingTrackIndex = null;
               isMediaLoading = false;
+              onConnectedChanged();
               break;
 
             case cast.framework.SessionState.SESSION_ENDED:
@@ -306,8 +316,11 @@
 
       // Check if session already exists
       currentSession = castContext.getCurrentSession();
-      if (currentSession && remotePlayer.isConnected) {
-        onConnectedChanged();
+      if (currentSession) {
+        isConnected = checkIsConnected();
+        if (isConnected) {
+          onConnectedChanged();
+        }
       }
 
       isApiAvailable = true;
@@ -320,11 +333,15 @@
   function onConnectedChanged() {
     const castContext = cast.framework.CastContext.getInstance();
     currentSession = castContext.getCurrentSession();
-    isConnected = remotePlayer ? remotePlayer.isConnected : !!currentSession;
+    isConnected = checkIsConnected();
 
     if (isConnected && currentSession) {
       const castDevice = currentSession.getCastDevice();
-      deviceName = castDevice ? castDevice.friendlyName : 'Google TV';
+      if (castDevice && castDevice.friendlyName) {
+        deviceName = castDevice.friendlyName;
+      } else if (!deviceName) {
+        deviceName = 'Google TV';
+      }
       console.log(`[CastManager] Connected to ${deviceName}`);
 
       // Pause local audio in page
@@ -332,7 +349,7 @@
 
       emit('connected', { deviceName });
       updateAllCastUI();
-    } else {
+    } else if (!isConnected) {
       console.log('[CastManager] Disconnected from Cast device');
       deviceName = '';
       activeTrackIndex = -1;
@@ -402,7 +419,7 @@
   function onCurrentTimeChanged() {
     if (!remotePlayer) return;
     const curTime = remotePlayer.currentTime || 0;
-    const duration = remotePlayer.duration || (activeTracks[activeTrackIndex] && parseDurationToSeconds(activeTracks[activeTrackIndex].duration)) || 0;
+    const duration = remotePlayer.duration || 0;
     emit('timeUpdate', { currentTime: curTime, duration });
   }
 
@@ -422,6 +439,7 @@
   function loadTrackOnReceiver(trackIndex, seekTime = 0, isRetry = false) {
     const castContext = cast.framework.CastContext.getInstance();
     currentSession = castContext.getCurrentSession();
+    isConnected = checkIsConnected();
 
     if (!currentSession) {
       console.warn('[CastManager] No active Cast session. Queuing as pendingTrackIndex:', trackIndex);
@@ -461,6 +479,7 @@
     const dev = deviceName || 'Google TV';
     console.log(`[CastManager] [Seq ${currentSeq}] Streaming to ${dev}: "${track.title}" (${mediaInfo.contentUrl})...`);
     showToast(`Streaming "${track.title}" to ${dev}...`, 'info', 4000);
+    updateAllCastUI();
 
     currentSession.loadMedia(loadRequest).then((res) => {
       isMediaLoading = false;
@@ -481,7 +500,7 @@
       }
 
       console.log(`[CastManager] [Seq ${currentSeq}] Successfully playing Track ${trackIndex + 1} on ${dev}`);
-      showToast(`✓ Playing "${track.title}" on ${dev}`, 'success', 4000);
+      showToast(`✓ Playing "${track.title}" on ${dev}`, 'success', 5000);
       emit('trackChange', activeTrackIndex);
       updateAllCastUI();
       notifyState();
@@ -516,7 +535,6 @@
 
   /**
    * Request Cast session and start playing from trackIndex.
-   * Note: Single source of truth for initial media loading is SESSION_STARTED.
    */
   function castTrack(trackIndex, tracks, albumMeta) {
     activeTracks = (tracks && tracks.length) ? tracks : activeTracks;
@@ -524,11 +542,13 @@
 
     const castContext = cast.framework.CastContext.getInstance();
     currentSession = castContext.getCurrentSession();
-    isConnected = remotePlayer ? remotePlayer.isConnected : !!currentSession;
+    isConnected = checkIsConnected();
 
     if (isConnected && currentSession) {
       // Session is already running: load requested track immediately
+      console.log(`[CastManager] Session already running with ${deviceName || 'Google TV'}. Loading track ${trackIndex + 1}`);
       loadTrackOnReceiver(trackIndex);
+      updateAllCastUI();
     } else {
       // No active session: store track as pending, then open device chooser
       pendingTrackIndex = trackIndex;
@@ -536,8 +556,9 @@
 
       castContext.requestSession().then(() => {
         console.log('[CastManager] requestSession picker resolved successfully');
-        // Do NOT call loadTrackOnReceiver here!
-        // SESSION_STARTED event listener will handle loading pendingTrackIndex safely with the 600ms boot buffer.
+        currentSession = castContext.getCurrentSession();
+        isConnected = checkIsConnected();
+        onConnectedChanged();
       }).catch(err => {
         pendingTrackIndex = null;
         isMediaLoading = false;
@@ -553,6 +574,7 @@
    * Play / Pause toggle on remote receiver (loads current track if idle)
    */
   function playOrPause() {
+    isConnected = checkIsConnected();
     if (isConnected) {
       if (remotePlayer && (remotePlayer.playerState === cast.framework.PlayerState.PLAYING || remotePlayer.playerState === cast.framework.PlayerState.PAUSED)) {
         if (remotePlayerController) {
@@ -573,7 +595,7 @@
    * Seek remote playback to specific time in seconds
    */
   function seek(timeInSeconds) {
-    if (remotePlayer && remotePlayerController && isConnected) {
+    if (remotePlayer && remotePlayerController && checkIsConnected()) {
       remotePlayer.currentTime = timeInSeconds;
       remotePlayerController.seek();
     }
@@ -583,7 +605,7 @@
    * Skip to next track with auto-advance
    */
   function nextTrack() {
-    if (!isConnected) return;
+    if (!checkIsConnected()) return;
     activeTracks = (activeTracks && activeTracks.length) ? activeTracks : ((window.ALBUM_DATA && window.ALBUM_DATA.tracks) || []);
     if (!activeTracks || activeTracks.length === 0) return;
     let nextIdx = (activeTrackIndex >= 0 ? activeTrackIndex : 0) + 1;
@@ -595,7 +617,7 @@
    * Return to previous track or restart current
    */
   function prevTrack() {
-    if (!isConnected) return;
+    if (!checkIsConnected()) return;
     activeTracks = (activeTracks && activeTracks.length) ? activeTracks : ((window.ALBUM_DATA && window.ALBUM_DATA.tracks) || []);
     if (!activeTracks || activeTracks.length === 0) return;
     if (remotePlayer && remotePlayer.currentTime > 4) {
@@ -611,7 +633,7 @@
    * Adjust remote volume level (0.0 to 1.0)
    */
   function setVolume(level) {
-    if (remotePlayer && remotePlayerController && isConnected) {
+    if (remotePlayer && remotePlayerController && checkIsConnected()) {
       remotePlayer.volumeLevel = Math.max(0, Math.min(1, level));
       remotePlayerController.setVolumeLevel();
     }
@@ -621,7 +643,7 @@
    * Disconnect from active Cast session
    */
   function disconnect() {
-    if (!isConnected) return;
+    if (!checkIsConnected()) return;
     try {
       const castContext = cast.framework.CastContext.getInstance();
       castContext.endCurrentSession(true);
@@ -651,7 +673,7 @@
   function notifyState() {
     const isPlaying = remotePlayer ? (remotePlayer.playerState === cast.framework.PlayerState.PLAYING) : false;
     emit('stateChange', {
-      isConnected,
+      isConnected: checkIsConnected(),
       isPlaying,
       trackIndex: activeTrackIndex,
       deviceName,
@@ -664,6 +686,8 @@
    * Update visual states of all Cast buttons and indicators on the page
    */
   function updateAllCastUI() {
+    isConnected = checkIsConnected();
+
     // 1. Update track card cast buttons
     document.querySelectorAll('.track-cast-btn').forEach(btn => {
       const trackIdx = parseInt(btn.dataset.trackIndex, 10);
@@ -689,7 +713,7 @@
       if (isConnected) {
         jukeboxCastBtn.classList.add('text-amber-400', 'border-amber-500/50', 'bg-amber-950/40');
         jukeboxCastBtn.classList.remove('text-stone-400');
-        jukeboxCastBtn.setAttribute('title', `Connected to ${deviceName} (Click to disconnect)`);
+        jukeboxCastBtn.setAttribute('title', `Connected to ${deviceName || 'Google TV'} (Click to disconnect)`);
         if (label) {
           const pState = remotePlayer ? remotePlayer.playerState : '';
           let stateTag = '';
@@ -736,8 +760,8 @@
     updateAllCastUI,
     showToast,
     on,
-    isConnected: function () { return isConnected; },
-    getDeviceName: function () { return deviceName; },
+    isConnected: function () { return checkIsConnected(); },
+    getDeviceName: function () { return deviceName || 'Google TV'; },
     getActiveTrackIndex: function () { return activeTrackIndex; },
     isAvailable: function () { return isApiAvailable; }
   };
