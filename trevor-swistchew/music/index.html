@@ -269,6 +269,17 @@
 
         <!-- External Quick Links -->
         <div class="flex flex-wrap items-center gap-2.5 shrink-0 max-w-full">
+          <!-- Share Song in Chamber Button -->
+          <button 
+            type="button" 
+            id="stage-share-song-btn" 
+            onclick="shareCurrentPlayingSong()" 
+            class="px-4 py-2 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 text-amber-400 hover:text-amber-300 border border-amber-500/40 hover:border-amber-500 font-mono text-xs font-semibold flex items-center gap-2 transition-all shadow-md active:scale-95 cursor-pointer"
+            title="Share direct link to play this song immediately in Chamber"
+          >
+            <i id="stage-share-btn-icon" class="fa-solid fa-share-nodes text-sm"></i>
+            <span id="stage-share-btn-text">Share Song</span>
+          </button>
           <a 
             id="player-suno-link"
             href="https://suno.com/song/df2cc4af-b5d8-4004-ab44-ebfba7199d48" 
@@ -508,7 +519,7 @@
         </div>
       </div>
 
-      <!-- Search Input -->
+      <!-- Search Input & Share Row -->
       <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
         <div class="relative flex-1" role="search">
           <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-stone-500 text-sm"></i>
@@ -529,9 +540,21 @@
           </button>
         </div>
 
+        <!-- Prominent Share Filter/Search Button -->
+        <button 
+          id="share-search-btn" 
+          onclick="shareFilteredCatalogView()"
+          class="px-4 py-3 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 active:scale-95 text-amber-400 hover:text-amber-300 border border-amber-500/40 hover:border-amber-500 font-mono text-xs font-semibold flex items-center justify-center gap-2 transition-all shadow-md shrink-0 cursor-pointer"
+          title="Share link with active filters and search query"
+          type="button"
+        >
+          <i id="share-search-icon" class="fa-solid fa-share-nodes text-sm"></i>
+          <span id="share-search-label">Share View</span>
+        </button>
+
         <button 
           id="reset-all-filters-btn" 
-          class="hidden px-4 py-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-300 text-xs font-mono border border-stone-700 items-center gap-1.5 transition-colors shrink-0"
+          class="hidden px-4 py-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-300 text-xs font-mono border border-stone-700 items-center justify-center gap-1.5 transition-colors shrink-0"
           type="button"
         >
           <i class="fa-solid fa-rotate-left"></i>
@@ -539,70 +562,127 @@
         </button>
       </div>
 
-      <!-- Genre Category Filter Pills -->
-      <div class="flex flex-wrap gap-2 pt-1" id="music-filters" role="tablist" aria-label="Genre categories">
-        <button 
-          class="filter-btn px-4 py-2 rounded-xl text-xs font-mono transition-all border flex items-center gap-2 bg-amber-500 text-stone-950 font-bold border-amber-500 shadow-md"
-          data-filter="all" 
-          role="tab" 
-          aria-selected="true"
-          type="button"
-        >
-          <i class="fa-solid fa-border-all text-[11px]"></i>
-          <span>All Compositions</span>
-          <span class="px-1.5 py-0.5 rounded text-[10px] bg-stone-950/20 text-stone-950">63</span>
-        </button>
+      <!-- Genre & Topic Filter Pills with Multi-Select and Any/All Match Toggle -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1">
+        <div class="flex flex-wrap gap-2" id="music-filters" role="tablist" aria-label="Genre categories">
+          <button 
+            class="filter-btn px-3.5 py-2 rounded-xl text-xs font-mono transition-all border flex items-center gap-2 bg-amber-500 text-stone-950 font-bold border-amber-500 shadow-md"
+            data-filter="all" 
+            role="tab" 
+            aria-selected="true"
+            type="button"
+          >
+            <i class="fa-solid fa-border-all text-[11px]"></i>
+            <span>All</span>
+            <span class="px-1.5 py-0.5 rounded text-[10px] bg-stone-950/20 text-stone-950">63</span>
+          </button>
 
-        <button 
-          class="filter-btn px-4 py-2 rounded-xl text-xs font-mono transition-all border flex items-center gap-2 bg-stone-900 text-stone-400 border-stone-800 hover:border-amber-500/40 hover:text-stone-200"
-          data-filter="rock" 
-          role="tab" 
-          aria-selected="false"
-          type="button"
-        >
-          <i class="fa-solid fa-bolt text-[11px] text-amber-500"></i>
-          <span>Rock &amp; Punk</span>
-          <span class="px-1.5 py-0.5 rounded text-[10px] bg-stone-950 text-stone-400">50</span>
-        </button>
+          <button 
+            class="filter-btn px-3.5 py-2 rounded-xl text-xs font-mono transition-all border flex items-center gap-2 bg-stone-900 text-stone-400 border-stone-800 hover:border-amber-500/40 hover:text-stone-200"
+            data-filter="rock" 
+            role="tab" 
+            aria-selected="false"
+            type="button"
+          >
+            <i class="fa-solid fa-bolt text-[11px] text-amber-500"></i>
+            <span>Rock</span>
+            <span class="px-1.5 py-0.5 rounded text-[10px] bg-stone-950 text-stone-400">50</span>
+          </button>
 
-        <button 
-          class="filter-btn px-4 py-2 rounded-xl text-xs font-mono transition-all border flex items-center gap-2 bg-stone-900 text-stone-400 border-stone-800 hover:border-amber-500/40 hover:text-stone-200"
-          data-filter="folk" 
-          role="tab" 
-          aria-selected="false"
-          type="button"
-        >
-          <i class="fa-solid fa-guitar text-[11px] text-emerald-400"></i>
-          <span>Scottish &amp; Celtic Folk</span>
-          <span class="px-1.5 py-0.5 rounded text-[10px] bg-stone-950 text-stone-400">23</span>
-        </button>
+          <button 
+            class="filter-btn px-3.5 py-2 rounded-xl text-xs font-mono transition-all border flex items-center gap-2 bg-stone-900 text-stone-400 border-stone-800 hover:border-amber-500/40 hover:text-stone-200"
+            data-filter="punk" 
+            role="tab" 
+            aria-selected="false"
+            type="button"
+          >
+            <i class="fa-solid fa-skull text-[11px] text-orange-400"></i>
+            <span>Punk</span>
+            <span class="px-1.5 py-0.5 rounded text-[10px] bg-stone-950 text-stone-400">17</span>
+          </button>
 
-        <button 
-          class="filter-btn px-4 py-2 rounded-xl text-xs font-mono transition-all border flex items-center gap-2 bg-stone-900 text-stone-400 border-stone-800 hover:border-amber-500/40 hover:text-stone-200"
-          data-filter="blues" 
-          role="tab" 
-          aria-selected="false"
-          type="button"
-        >
-          <i class="fa-solid fa-compact-disc text-[11px] text-blue-400"></i>
-          <span>Blues &amp; Roots</span>
-          <span class="px-1.5 py-0.5 rounded text-[10px] bg-stone-950 text-stone-400">21</span>
-        </button>
+          <button 
+            class="filter-btn px-3.5 py-2 rounded-xl text-xs font-mono transition-all border flex items-center gap-2 bg-stone-900 text-stone-400 border-stone-800 hover:border-amber-500/40 hover:text-stone-200"
+            data-filter="blues" 
+            role="tab" 
+            aria-selected="false"
+            type="button"
+          >
+            <i class="fa-solid fa-compact-disc text-[11px] text-blue-400"></i>
+            <span>Blues</span>
+            <span class="px-1.5 py-0.5 rounded text-[10px] bg-stone-950 text-stone-400">23</span>
+          </button>
 
-        <button 
-          class="filter-btn px-4 py-2 rounded-xl text-xs font-mono transition-all border flex items-center gap-2 bg-stone-900 text-stone-400 border-stone-800 hover:border-amber-500/40 hover:text-stone-200"
-          data-filter="satire" 
-          role="tab" 
-          aria-selected="false"
-          type="button"
-        >
-          <i class="fa-solid fa-masks-theater text-[11px] text-rose-400"></i>
-          <span>Satire &amp; Spoken Word</span>
-          <span class="px-1.5 py-0.5 rounded text-[10px] bg-stone-950 text-stone-400">17</span>
-        </button>
+          <button 
+            class="filter-btn px-3.5 py-2 rounded-xl text-xs font-mono transition-all border flex items-center gap-2 bg-stone-900 text-stone-400 border-stone-800 hover:border-amber-500/40 hover:text-stone-200"
+            data-filter="folk" 
+            role="tab" 
+            aria-selected="false"
+            type="button"
+          >
+            <i class="fa-solid fa-guitar text-[11px] text-emerald-400"></i>
+            <span>Folk</span>
+            <span class="px-1.5 py-0.5 rounded text-[10px] bg-stone-950 text-stone-400">23</span>
+          </button>
+
+          <button 
+            class="filter-btn px-3.5 py-2 rounded-xl text-xs font-mono transition-all border flex items-center gap-2 bg-stone-900 text-stone-400 border-stone-800 hover:border-amber-500/40 hover:text-stone-200"
+            data-filter="celtic" 
+            role="tab" 
+            aria-selected="false"
+            type="button"
+          >
+            <i class="fa-solid fa-clover text-[11px] text-green-400"></i>
+            <span>Celtic</span>
+            <span class="px-1.5 py-0.5 rounded text-[10px] bg-stone-950 text-stone-400">6</span>
+          </button>
+
+          <button 
+            class="filter-btn px-3.5 py-2 rounded-xl text-xs font-mono transition-all border flex items-center gap-2 bg-stone-900 text-stone-400 border-stone-800 hover:border-amber-500/40 hover:text-stone-200"
+            data-filter="satire" 
+            role="tab" 
+            aria-selected="false"
+            type="button"
+          >
+            <i class="fa-solid fa-masks-theater text-[11px] text-rose-400"></i>
+            <span>Satire</span>
+            <span class="px-1.5 py-0.5 rounded text-[10px] bg-stone-950 text-stone-400">17</span>
+          </button>
+
+          <button 
+            class="filter-btn px-3.5 py-2 rounded-xl text-xs font-mono transition-all border flex items-center gap-2 bg-stone-900 text-stone-400 border-stone-800 hover:border-amber-500/40 hover:text-stone-200"
+            data-filter="spoken" 
+            role="tab" 
+            aria-selected="false"
+            type="button"
+          >
+            <i class="fa-solid fa-microphone-lines text-[11px] text-purple-400"></i>
+            <span>Spoken Word</span>
+            <span class="px-1.5 py-0.5 rounded text-[10px] bg-stone-950 text-stone-400">11</span>
+          </button>
+
+          <button 
+            class="filter-btn px-3.5 py-2 rounded-xl text-xs font-mono transition-all border flex items-center gap-2 bg-stone-900 text-stone-400 border-stone-800 hover:border-amber-500/40 hover:text-stone-200"
+            data-filter="freedom" 
+            role="tab" 
+            aria-selected="false"
+            type="button"
+          >
+            <i class="fa-solid fa-dove text-[11px] text-amber-300"></i>
+            <span>Freedom</span>
+            <span class="px-1.5 py-0.5 rounded text-[10px] bg-stone-950 text-stone-400">7</span>
+          </button>
+        </div>
+
+        <!-- Multi-filter Mode Toggle (visible when 2+ filters are selected) -->
+        <div id="filter-mode-container" class="hidden items-center text-xs font-mono text-stone-400 bg-stone-900/90 px-2.5 py-1.5 rounded-xl border border-stone-800 gap-1.5 shrink-0 self-start sm:self-auto">
+          <span class="text-stone-500 text-[11px]">Match:</span>
+          <button type="button" id="filter-mode-any-btn" onclick="setFilterMatchMode('any')" class="px-2.5 py-0.5 rounded-lg text-[11px] font-bold bg-amber-500 text-stone-950 transition-all cursor-pointer shadow" title="Match any of the selected filters (Union / OR)">Any</button>
+          <button type="button" id="filter-mode-all-btn" onclick="setFilterMatchMode('all')" class="px-2.5 py-0.5 rounded-lg text-[11px] text-stone-400 hover:text-stone-200 transition-all cursor-pointer" title="Match all of the selected filters (Intersection / AND)">All</button>
+        </div>
       </div>
 
-      <!-- 55-Track Catalog Grid -->
+      <!-- 63-Track Catalog Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 pt-2" id="tracks-grid">
 
       <article 
@@ -11204,14 +11284,14 @@ What the hell are LEADERS for
         </div>
         <div class="space-y-1">
           <h3 class="font-display text-lg font-bold text-stone-200">No songs match your search</h3>
-          <p class="text-stone-400 text-xs">Try clearing your search terms or genre filter to see all 55 compositions.</p>
+          <p class="text-stone-400 text-xs">Try clearing your search terms or genre filter to see all 63 compositions.</p>
         </div>
         <button 
           type="button" 
           id="empty-state-reset-btn" 
           class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono text-xs font-bold transition-all shadow-md"
         >
-          View All 55 Songs
+          View All 63 Songs
         </button>
       </div>
 
@@ -11295,6 +11375,11 @@ What the hell are LEADERS for
             Trevor Swistchew &bull; Celtic Rock
           </div>
         </div>
+      
+        <!-- Mobile Quick Share Song Button -->
+        <button type="button" class="md:hidden text-stone-400 hover:text-amber-400 p-1.5 shrink-0 ml-auto transition-colors cursor-pointer" onclick="shareCurrentPlayingSong()" title="Share link to play this song immediately in Chamber">
+          <i class="fa-solid fa-share-nodes text-xs text-amber-400"></i>
+        </button>
       </div>
 
       <!-- Playback Controls & Progress Scrubber (Center) -->
@@ -11341,6 +11426,12 @@ What the hell are LEADERS for
           <span>Stage</span>
         </button>
 
+        <!-- Share Song Link -->
+        <button type="button" id="bottom-share-song-btn" onclick="shareCurrentPlayingSong()" class="px-2.5 py-1 rounded-lg bg-stone-800/90 hover:bg-stone-700 text-stone-300 hover:text-amber-400 border border-stone-700/80 text-[10px] font-mono flex items-center gap-1.5 transition-colors cursor-pointer" title="Share direct link to play this song immediately in Chamber">
+          <i id="bottom-share-btn-icon" class="fa-solid fa-share-nodes text-amber-400 text-[10px]"></i>
+          <span id="bottom-share-btn-text">Share</span>
+        </button>
+
         <!-- Suno Direct Link -->
         <a id="bottom-suno-link" href="#" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 border border-amber-500/30 text-[10px] font-mono font-semibold flex items-center gap-1 transition-colors" title="Open on Suno">
           <span>Suno ↗</span>
@@ -11349,6 +11440,12 @@ What the hell are LEADERS for
 
     </div>
   </aside>
+
+  <!-- Share Notification Toast Popup -->
+  <div id="share-toast" class="fixed bottom-24 sm:bottom-20 left-1/2 -translate-x-1/2 z-[60] px-4 py-2.5 rounded-xl bg-stone-900/95 text-stone-100 font-mono text-xs border border-amber-500/50 shadow-2xl flex items-center gap-2.5 pointer-events-none transition-all duration-300 opacity-0 translate-y-2">
+    <i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
+    <span id="share-toast-msg">Link copied to clipboard!</span>
+  </div>
 
   <!-- Autoplay Prompt Toast Banner (Appears if browser autoplay is blocked on cross-page navigation) -->
   <div id="autoplay-prompt-banner" class="hidden fixed bottom-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-xl bg-amber-500 text-stone-950 font-bold font-mono text-xs shadow-2xl flex items-center gap-2 cursor-pointer hover:bg-amber-400 transition-all border border-amber-300" onclick="triggerUserGesturePlay()">
@@ -12988,19 +13085,184 @@ What the hell are LEADERS for
       const req = getRequestedTrack();
       if (req) {
         loadTrack(req.track.id, false, req.autoPlay);
-        // Highlight and center card if available
-        setTimeout(() => {
-          const card = document.querySelector(`article[data-id="${req.track.id}"]`);
-          if (card) {
-            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          }
-        }, 300);
+        const hash = window.location.hash;
+        if (hash === '#chamber-player-stage' || !hash || !hash.match(/track/i)) {
+          setTimeout(() => {
+            const stage = document.getElementById('chamber-player-stage');
+            if (stage) {
+              stage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }, 300);
+        } else {
+          setTimeout(() => {
+            const card = document.querySelector(`article[data-id="${req.track.id}"]`);
+            if (card) {
+              card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          }, 300);
+        }
       } else if (TRACKS_DATA.length > 0) {
         loadTrack(TRACKS_DATA[0].id, false, false);
       }
     }
 
     window.addEventListener('hashchange', handleUrlNavigation);
+
+// Global Sharing & Clipboard Utilities
+    function copyTextToClipboard(text, successCallback) {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(() => {
+          if (successCallback) successCallback();
+        }).catch(() => {
+          fallbackCopyText(text, successCallback);
+        });
+      } else {
+        fallbackCopyText(text, successCallback);
+      }
+    }
+
+    function fallbackCopyText(text, successCallback) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.left = '-999999px';
+      ta.style.top = '-999999px';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      try {
+        document.execCommand('copy');
+        if (successCallback) successCallback();
+      } catch (err) {
+        console.error('Fallback copy failed', err);
+      }
+      document.body.removeChild(ta);
+    }
+
+    let toastTimeout = null;
+    function showToast(message) {
+      const toast = document.getElementById('share-toast');
+      const msg = document.getElementById('share-toast-msg');
+      if (!toast || !msg) return;
+      msg.textContent = message;
+      toast.classList.remove('opacity-0', 'translate-y-2');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'translate-y-2');
+      }, 3000);
+    }
+
+    function shareCurrentPlayingSong() {
+      if (!TRACKS_DATA || TRACKS_DATA.length === 0) return;
+      const track = TRACKS_DATA[currentTrackIndex];
+      if (!track) return;
+
+      const url = new URL(window.location.origin + window.location.pathname);
+      url.searchParams.set('play', track.index);
+      url.hash = 'chamber-player-stage';
+
+      const shareUrl = url.toString();
+      copyTextToClipboard(shareUrl, () => {
+        // Stage Deck button feedback
+        const stageBtnText = document.getElementById('stage-share-btn-text');
+        const stageIcon = document.getElementById('stage-share-btn-icon');
+        if (stageBtnText) {
+          const orig = stageBtnText.textContent;
+          stageBtnText.textContent = 'Link Copied!';
+          if (stageIcon) stageIcon.className = 'fa-solid fa-check text-emerald-400 text-sm';
+          setTimeout(() => {
+            stageBtnText.textContent = orig;
+            if (stageIcon) stageIcon.className = 'fa-solid fa-share-nodes text-sm';
+          }, 2500);
+        }
+
+        // Bottom Player Bar button feedback
+        const bottomBtnText = document.getElementById('bottom-share-btn-text');
+        const bottomIcon = document.getElementById('bottom-share-btn-icon');
+        if (bottomBtnText) {
+          const orig = bottomBtnText.textContent;
+          bottomBtnText.textContent = 'Copied!';
+          if (bottomIcon) bottomIcon.className = 'fa-solid fa-check text-emerald-400 text-[10px]';
+          setTimeout(() => {
+            bottomBtnText.textContent = orig;
+            if (bottomIcon) bottomIcon.className = 'fa-solid fa-share-nodes text-amber-400 text-[10px]';
+          }, 2500);
+        }
+
+        showToast(`✓ Copied link to play Track #${track.index}: "${track.title}"`);
+      });
+    }
+
+    // Global state for filtering and search
+    let selectedFilters = new Set();
+    let filterMatchMode = 'any'; // 'any' or 'all'
+    let globalSetFilterMatchMode = null;
+
+    function setFilterMatchMode(mode) {
+      if (globalSetFilterMatchMode) {
+        globalSetFilterMatchMode(mode);
+      }
+    }
+
+    function shareFilteredCatalogView() {
+      const searchInput = document.getElementById('music-search-input');
+      const q = searchInput ? searchInput.value.trim() : '';
+
+      const url = new URL(window.location.origin + window.location.pathname);
+      if (selectedFilters.size > 0) {
+        url.searchParams.set('genres', Array.from(selectedFilters).join(','));
+        if (filterMatchMode === 'all') {
+          url.searchParams.set('mode', 'all');
+        } else {
+          url.searchParams.delete('mode');
+        }
+      } else {
+        url.searchParams.delete('genres');
+        url.searchParams.delete('mode');
+      }
+
+      if (q) {
+        url.searchParams.set('q', q);
+      } else {
+        url.searchParams.delete('q');
+      }
+
+      url.hash = 'track-catalog';
+      const shareUrl = url.toString();
+
+      copyTextToClipboard(shareUrl, () => {
+        const btn = document.getElementById('share-search-btn');
+        const icon = document.getElementById('share-search-icon');
+        const label = document.getElementById('share-search-label');
+        if (btn && icon && label) {
+          const origIconClass = icon.className;
+          const origLabelText = label.textContent;
+          icon.className = 'fa-solid fa-check text-emerald-400 text-sm';
+          label.textContent = 'Link Copied!';
+          btn.classList.add('border-emerald-500/60', 'bg-emerald-500/10');
+          setTimeout(() => {
+            icon.className = origIconClass;
+            label.textContent = origLabelText;
+            btn.classList.remove('border-emerald-500/60', 'bg-emerald-500/10');
+          }, 2500);
+        }
+
+        let toastDetail = 'Search view';
+        if (selectedFilters.size > 0 && q) {
+          toastDetail = `Filters (${Array.from(selectedFilters).join(', ')}) + "${q}"`;
+        } else if (selectedFilters.size > 0) {
+          toastDetail = `Filtered by ${Array.from(selectedFilters).join(', ')}`;
+        } else if (q) {
+          toastDetail = `Search "${q}"`;
+        } else {
+          toastDetail = 'Full catalog';
+        }
+        showToast(`✓ Copied link for ${toastDetail}`);
+      });
+    }
 
     // Filter & Search Logic
     document.addEventListener('DOMContentLoaded', function() {
@@ -13022,14 +13284,63 @@ What the hell are LEADERS for
       const resultsCountText = document.getElementById('results-count-text');
       const emptyState = document.getElementById('music-empty-state');
       const emptyStateResetBtn = document.getElementById('empty-state-reset-btn');
+      const filterModeContainer = document.getElementById('filter-mode-container');
+      const filterModeAnyBtn = document.getElementById('filter-mode-any-btn');
+      const filterModeAllBtn = document.getElementById('filter-mode-all-btn');
 
-      let activeCategory = 'all';
       let searchQuery = '';
 
-      function updateActiveFilterButton(selectedCategory) {
+      function testCardFilter(card, filterToken) {
+        if (filterToken === 'all') return true;
+        const cats = (card.getAttribute('data-categories') || '').toLowerCase();
+        const tags = (card.getAttribute('data-tags') || '').toLowerCase();
+        const title = (card.getAttribute('data-title') || '').toLowerCase();
+        const lyrics = (card.getAttribute('data-lyrics') || '').toLowerCase();
+
+        switch (filterToken) {
+          case 'rock':
+            return cats.includes('rock') || tags.includes('rock') || title.includes('rock');
+          case 'punk':
+            return cats.includes('punk') || tags.includes('punk') || title.includes('punk');
+          case 'blues':
+            return cats.includes('blues') || tags.includes('blues') || title.includes('blues');
+          case 'folk':
+            return cats.includes('folk') || tags.includes('folk') || title.includes('folk');
+          case 'celtic':
+            return cats.includes('celtic') || tags.includes('celtic') || title.includes('celtic') || lyrics.includes('celtic');
+          case 'satire':
+            return cats.includes('satire') || tags.includes('satire') || title.includes('satire');
+          case 'spoken':
+            return cats.includes('spoken') || tags.includes('spoken') || title.includes('spoken');
+          case 'freedom':
+            return title.includes('freedom') || tags.includes('freedom') || lyrics.includes('freedom');
+          default:
+            return cats.includes(filterToken) || tags.includes(filterToken) || title.includes(filterToken) || lyrics.includes(filterToken);
+        }
+      }
+
+      function updateFilterModeUI() {
+        if (filterModeContainer) {
+          const showToggle = selectedFilters.size >= 2;
+          filterModeContainer.classList.toggle('hidden', !showToggle);
+          filterModeContainer.classList.toggle('flex', showToggle);
+        }
+        if (filterModeAnyBtn && filterModeAllBtn) {
+          if (filterMatchMode === 'all') {
+            filterModeAllBtn.className = 'px-2.5 py-0.5 rounded-lg text-[11px] font-bold bg-amber-500 text-stone-950 transition-all cursor-pointer shadow';
+            filterModeAnyBtn.className = 'px-2.5 py-0.5 rounded-lg text-[11px] text-stone-400 hover:text-stone-200 transition-all cursor-pointer';
+          } else {
+            filterModeAnyBtn.className = 'px-2.5 py-0.5 rounded-lg text-[11px] font-bold bg-amber-500 text-stone-950 transition-all cursor-pointer shadow';
+            filterModeAllBtn.className = 'px-2.5 py-0.5 rounded-lg text-[11px] text-stone-400 hover:text-stone-200 transition-all cursor-pointer';
+          }
+        }
+      }
+
+      function updateActiveFilterButtons() {
+        const isAll = selectedFilters.size === 0;
         filterButtons.forEach(btn => {
           const filter = btn.getAttribute('data-filter');
-          const isSelected = filter === selectedCategory;
+          const isSelected = (filter === 'all' && isAll) || (filter !== 'all' && selectedFilters.has(filter));
           btn.setAttribute('aria-selected', isSelected ? 'true' : 'false');
           const badge = btn.querySelector('span:last-child');
 
@@ -13049,15 +13360,30 @@ What the hell are LEADERS for
             }
           }
         });
+
+        updateFilterModeUI();
       }
+
+      globalSetFilterMatchMode = function(mode) {
+        filterMatchMode = mode === 'all' ? 'all' : 'any';
+        updateFilterModeUI();
+        filterAndRender();
+      };
 
       function filterAndRender() {
         const query = searchQuery.toLowerCase().trim();
         let visibleCount = 0;
 
         cards.forEach(card => {
-          const cats = (card.getAttribute('data-categories') || '').split(' ');
-          const matchesCategory = (activeCategory === 'all') || cats.includes(activeCategory);
+          let matchesFilter = true;
+          if (selectedFilters.size > 0) {
+            const arr = Array.from(selectedFilters);
+            if (filterMatchMode === 'all') {
+              matchesFilter = arr.every(tok => testCardFilter(card, tok));
+            } else {
+              matchesFilter = arr.some(tok => testCardFilter(card, tok));
+            }
+          }
 
           let matchesSearch = true;
           if (query) {
@@ -13067,7 +13393,7 @@ What the hell are LEADERS for
             matchesSearch = title.includes(query) || tags.includes(query) || lyrics.includes(query);
           }
 
-          if (matchesCategory && matchesSearch) {
+          if (matchesFilter && matchesSearch) {
             card.style.display = '';
             card.classList.remove('hidden');
             card.classList.add('music-item-visible');
@@ -13088,7 +13414,7 @@ What the hell are LEADERS for
         }
 
         if (resetFiltersBtn) {
-          const isFiltered = query.length > 0 || activeCategory !== 'all';
+          const isFiltered = query.length > 0 || selectedFilters.size > 0;
           resetFiltersBtn.classList.toggle('hidden', !isFiltered);
           resetFiltersBtn.classList.toggle('flex', isFiltered);
         }
@@ -13100,8 +13426,17 @@ What the hell are LEADERS for
 
       filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
-          activeCategory = btn.getAttribute('data-filter') || 'all';
-          updateActiveFilterButton(activeCategory);
+          const filter = btn.getAttribute('data-filter') || 'all';
+          if (filter === 'all') {
+            selectedFilters.clear();
+          } else {
+            if (selectedFilters.has(filter)) {
+              selectedFilters.delete(filter);
+            } else {
+              selectedFilters.add(filter);
+            }
+          }
+          updateActiveFilterButtons();
           filterAndRender();
         });
       });
@@ -13145,15 +13480,64 @@ What the hell are LEADERS for
       }
 
       function resetAll() {
-        activeCategory = 'all';
+        selectedFilters.clear();
+        filterMatchMode = 'any';
         searchQuery = '';
         if (searchInput) searchInput.value = '';
-        updateActiveFilterButton('all');
+        updateActiveFilterButtons();
         filterAndRender();
       }
 
       if (resetFiltersBtn) resetFiltersBtn.addEventListener('click', resetAll);
       if (emptyStateResetBtn) emptyStateResetBtn.addEventListener('click', resetAll);
+
+      // Initialize filters and search query from incoming URL parameters (?genres=..., ?mode=..., ?q=...)
+      function initFiltersAndSearchFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const genresParam = params.get('genres') || params.get('filters') || params.get('filter');
+        const modeParam = params.get('mode');
+        const qParam = params.get('q') || params.get('search');
+
+        let hasFilterParam = false;
+
+        if (genresParam) {
+          const list = genresParam.split(',').map(s => s.trim().toLowerCase()).filter(Boolean);
+          selectedFilters.clear();
+          list.forEach(g => {
+            if (g !== 'all') selectedFilters.add(g);
+          });
+          if (modeParam === 'all') {
+            filterMatchMode = 'all';
+          } else {
+            filterMatchMode = 'any';
+          }
+          hasFilterParam = true;
+        }
+
+        if (qParam) {
+          searchQuery = qParam;
+          if (searchInput) searchInput.value = qParam;
+          hasFilterParam = true;
+        }
+
+        if (hasFilterParam) {
+          updateActiveFilterButtons();
+          filterAndRender();
+
+          // If play is not requested, or if #track-catalog is in hash, smoothly scroll to catalog
+          const playRequested = params.get('play') || params.get('track');
+          if (!playRequested || window.location.hash === '#track-catalog') {
+            setTimeout(() => {
+              const catalogSec = document.getElementById('track-catalog');
+              if (catalogSec) {
+                catalogSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }, 350);
+          }
+        }
+      }
+
+      initFiltersAndSearchFromUrl();
     });
   </script>
 
