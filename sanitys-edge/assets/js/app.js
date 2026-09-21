@@ -427,20 +427,34 @@
       return `
         <article class="track-card card-obsidian p-6 sm:p-8 rounded-2xl relative transition-all space-y-6 ${isCurrent ? 'border-amber-500/80 shadow-xl shadow-amber-500/15' : 'border border-white/10'}" id="track-${t.track_number}">
           
-          <!-- Track Header -->
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-white/10">
-            <div class="flex items-start gap-4">
-              <!-- Audio Play Disc (Circular, Amber Accent - Distinct from YouTube) -->
-              <button 
-                onclick="playTrack(${realIndex})" 
-                class="card-play-badge w-11 h-11 sm:w-12 sm:h-12 rounded-full ${isCurrent ? 'bg-amber-500 text-stone-950 shadow-md shadow-amber-500/30' : 'bg-stone-900 text-amber-400 border border-amber-500/50 hover:border-amber-400 hover:bg-amber-600 hover:text-stone-950'} flex items-center justify-center text-base transition-all hover:scale-105 flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-amber-400" 
-                aria-label="Play audio track ${escapeHtml(t.title)}"
-                title="Play audio track"
+          <!-- Track Header with Artwork -->
+          <div class="flex flex-col sm:flex-row items-start gap-5 sm:gap-6 pb-5 border-b border-white/10">
+            <!-- Track Artwork Square Thumbnail -->
+            <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden shrink-0 border border-white/10 shadow-lg relative group bg-stone-950">
+              <img 
+                src="${t.art_square || t.art || 'assets/art/sanitys-edge-cover.jpg'}" 
+                alt="${escapeHtml(t.title)} artwork" 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+                width="112"
+                height="112"
               >
-                <i class="fa-solid ${isCurrent ? 'fa-pause' : 'fa-play ml-0.5'}"></i>
-              </button>
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+            </div>
 
-              <div class="space-y-1">
+            <!-- Track Info & Controls -->
+            <div class="flex-1 space-y-2">
+              <div class="flex items-center gap-3">
+                <!-- Audio Play Disc (Circular, Amber Accent - Distinct from YouTube) -->
+                <button 
+                  onclick="playTrack(${realIndex})" 
+                  class="card-play-badge w-10 h-10 sm:w-11 sm:h-11 rounded-full ${isCurrent ? 'bg-amber-500 text-stone-950 shadow-md shadow-amber-500/30' : 'bg-stone-900 text-amber-400 border border-amber-500/50 hover:border-amber-400 hover:bg-amber-600 hover:text-stone-950'} flex items-center justify-center text-sm transition-all hover:scale-105 shrink-0 focus:outline-none focus:ring-2 focus:ring-amber-400" 
+                  aria-label="Play audio track ${escapeHtml(t.title)}"
+                  title="Play audio track"
+                >
+                  <i class="fa-solid ${isCurrent ? 'fa-pause' : 'fa-play ml-0.5'}"></i>
+                </button>
+
                 <!-- Pills Row -->
                 <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
                   <span class="px-2.5 py-0.5 rounded-full bg-stone-900 border border-amber-500/40 text-amber-400 font-bold uppercase tracking-wider text-[11px]">
@@ -457,17 +471,17 @@
                     <span>${t.duration}</span>
                   </span>
                 </div>
-
-                <!-- Title -->
-                <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
-                  ${escapeHtml(t.title)}
-                </h3>
-
-                <!-- Vocal Architecture -->
-                <p class="text-xs sm:text-sm font-mono text-stone-400">
-                  <span class="text-stone-500 uppercase tracking-widest text-[11px]">Vocal Architecture:</span> ${escapeHtml(t.vocal_profile)}
-                </p>
               </div>
+
+              <!-- Title -->
+              <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
+                ${escapeHtml(t.title)}
+              </h3>
+
+              <!-- Vocal Architecture -->
+              <p class="text-xs sm:text-sm font-mono text-stone-400">
+                <span class="text-stone-500 uppercase tracking-widest text-[11px]">Vocal Architecture:</span> ${escapeHtml(t.vocal_profile)}
+              </p>
             </div>
           </div>
 

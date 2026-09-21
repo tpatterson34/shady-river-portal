@@ -9,6 +9,7 @@
  * - Automatic hands-free continuous track advance on remote track completion
  * - Universal audio/mpeg MIME formatting with normalized absolute URLs
  * - Bidirectional remote playback, track navigation, & timeline sync
+ * - On-screen visual feedback toast with connection & playback diagnostic states
  */
 
 (function () {
@@ -22,8 +23,10 @@
   let currentSession = null;
   let deviceName = '';
   let activeTrackIndex = -1;
+  let pendingTrackIndex = null;
   let activeTracks = [];
   let activeAlbumMeta = null;
+  let toastTimeout = null;
 
   const eventListeners = {
     stateChange: [],
@@ -34,8 +37,61 @@
   };
 
   /**
-   * Resolve relative file path to absolute URL for Google Cast receiver
-   * Handles paths with or without trailing slash, index.html, hashes, and query params.
+   * On-screen Toast notification system for instant Cast feedback
+   */
+  function showToast(message, type = 'info', durationMs = 4000) {
+    let toast = document.getElementById('cast-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'cast-toast';
+      toast.className = 'fixed bottom-24 right-6 z-50 transform transition-all duration-300 translate-y-8 opacity-0 pointer-events-none flex items-center gap-3 px-4 py-3 rounded-xl shadow-2xl font-mono text-xs border backdrop-blur-md';
+      toast.setAttribute('role', 'status');
+      toast.setAttribute('aria-live', 'polite');
+      toast.innerHTML = `
+        <div id="cast-toast-icon" class="w-5 h-5 flex items-center justify-center shrink-0"></div>
+        <div id="cast-toast-message" class="text-xs font-mono font-medium"></div>
+      `;
+      document.body.appendChild(toast);
+    }
+
+    const iconEl = toast.querySelector('#cast-toast-icon') || toast.children[0];
+    const msgEl = toast.querySelector('#cast-toast-message') || toast.children[1];
+
+    if (toastTimeout) {
+      clearTimeout(toastTimeout);
+      toastTimeout = null;
+    }
+
+    // Styles based on type
+    toast.className = 'fixed bottom-24 right-6 z-50 transform transition-all duration-300 translate-y-0 opacity-100 pointer-events-auto flex items-center gap-3 px-4 py-3 rounded-xl shadow-2xl font-mono text-xs border backdrop-blur-md ';
+    
+    if (type === 'success') {
+      toast.className += 'bg-stone-950/95 text-emerald-200 border-emerald-500/60 shadow-emerald-950/40';
+      iconEl.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-400"></i>';
+    } else if (type === 'error') {
+      toast.className += 'bg-stone-950/95 text-rose-200 border-rose-500/60 shadow-rose-950/40';
+      iconEl.innerHTML = '<i class="fa-solid fa-circle-exclamation text-rose-400"></i>';
+    } else if (type === 'warn') {
+      toast.className += 'bg-stone-950/95 text-amber-200 border-amber-500/60 shadow-amber-950/40';
+      iconEl.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-amber-400"></i>';
+    } else { // info
+      toast.className += 'bg-slate-950/95 text-sky-200 border-sky-500/60 shadow-sky-950/40';
+      iconEl.innerHTML = '<i class="fa-solid fa-satellite-dish text-sky-400 animate-pulse"></i>';
+    }
+
+    msgEl.textContent = message;
+
+    if (durationMs > 0) {
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+        toast.classList.add('translate-y-8', 'opacity-0', 'pointer-events-none');
+      }, durationMs);
+    }
+  }
+
+  /**
+   * Resolve relative file path to absolute URL for Google Cast receiver.
+   * Rock-solid across trailing slashes, index.html, query strings, and hash fragments.
    */
   function toAbsoluteUrl(path) {
     if (!path) return '';
@@ -43,17 +99,23 @@
     if (path.startsWith('//')) return window.location.protocol + path;
 
     try {
-      let base = window.location.origin + window.location.pathname;
-      // Strip trailing filename if present (e.g. index.html)
-      if (/\/[^/]+\.[^/]+$/.test(base)) {
-        base = base.substring(0, base.lastIndexOf('/') + 1);
-      } else if (!base.endsWith('/')) {
-        base = base + '/';
+      let base = document.baseURI || window.location.href;
+      // Strip query string and hash
+      base = base.split('?')[0].split('#')[0];
+      // If not ending in slash and not ending in a file extension (.html, etc), add slash
+      if (!base.endsWith('/') && !/\/[^/]+\.[a-zA-Z0-9]+$/.test(base)) {
+        base += '/';
       }
       return new URL(path, base).href;
     } catch (e) {
       console.warn('[CastManager] Could not resolve absolute URL for:', path, e);
-      return path;
+      try {
+        const a = document.createElement('a');
+        a.href = path;
+        return a.href;
+      } catch (err) {
+        return path;
+      }
     }
   }
 
@@ -72,7 +134,9 @@
     const metadata = new chrome.cast.media.MusicTrackMediaMetadata();
     metadata.metadataType = chrome.cast.media.MetadataType.MUSIC_TRACK;
     metadata.title = track.title || ('Track ' + (index + 1));
+    metadata.songName = track.title || ('Track ' + (index + 1));
     metadata.artist = (albumMeta && albumMeta.artist) || 'The Shady River Bard';
+    metadata.albumArtist = (albumMeta && albumMeta.artist) || 'The Shady River Bard';
     metadata.albumName = (albumMeta && albumMeta.title) || "Sanity's Edge";
     metadata.trackNumber = track.track_number || (index + 1);
 
@@ -154,11 +218,25 @@
               currentSession = castContext.getCurrentSession();
               isConnected = true;
               onConnectedChanged();
+              // If a track was queued before or during session handshake, play it now
+              if (pendingTrackIndex !== null && pendingTrackIndex >= 0) {
+                const idx = pendingTrackIndex;
+                pendingTrackIndex = null;
+                console.log(`[CastManager] Session established, firing queued track ${idx + 1}`);
+                loadTrackOnReceiver(idx);
+              }
+              break;
+            case cast.framework.SessionState.SESSION_START_FAILED:
+              console.warn('[CastManager] Session start failed');
+              showToast('Cast connection failed. Please try again.', 'error');
+              pendingTrackIndex = null;
               break;
             case cast.framework.SessionState.SESSION_ENDED:
               currentSession = null;
               isConnected = false;
+              pendingTrackIndex = null;
               onConnectedChanged();
+              showToast('Cast session ended', 'info', 3000);
               break;
           }
         }
@@ -216,6 +294,7 @@
       if (activeTrackIndex >= 0 && activeTrackIndex < activeTracks.length - 1) {
         const nextIdx = activeTrackIndex + 1;
         console.log(`[CastManager] Auto-advancing to Track ${nextIdx + 1}: "${activeTracks[nextIdx]?.title}"`);
+        showToast(`Next: ${activeTracks[nextIdx]?.title || 'Track ' + (nextIdx + 1)}`, 'info', 3000);
         loadTrackOnReceiver(nextIdx);
       }
     }
@@ -275,7 +354,9 @@
     currentSession = castContext.getCurrentSession();
 
     if (!currentSession) {
-      console.warn('[CastManager] No active Cast session to load media');
+      console.warn('[CastManager] No active Cast session yet. Storing as pendingTrackIndex:', trackIndex);
+      pendingTrackIndex = trackIndex;
+      showToast('Connecting to Cast session...', 'info', 4000);
       return;
     }
 
@@ -297,20 +378,26 @@
     loadRequest.autoplay = true;
     loadRequest.currentTime = 0;
 
-    console.log(`[CastManager] Streaming to Google TV: "${track.title}" (${mediaInfo.contentUrl})...`);
+    const dev = deviceName || 'Google TV';
+    console.log(`[CastManager] Streaming to ${dev}: "${track.title}" (${mediaInfo.contentUrl})...`);
+    showToast(`Streaming "${track.title}" to ${dev}...`, 'info', 4000);
 
     currentSession.loadMedia(loadRequest).then((res) => {
       console.log('[CastManager] loadMedia completed. Result:', res);
-      if (res) {
+      if (res && typeof res === 'string') {
         console.warn('[CastManager] Receiver returned loadMedia response:', res);
+        showToast(`Cast response: ${res}`, 'warn', 4000);
       } else {
-        console.log(`[CastManager] Successfully playing Track ${trackIndex + 1} on ${deviceName}`);
+        console.log(`[CastManager] Successfully playing Track ${trackIndex + 1} on ${dev}`);
+        showToast(`✓ Playing "${track.title}" on ${dev}`, 'success', 4000);
       }
       emit('trackChange', activeTrackIndex);
       updateAllCastUI();
       notifyState();
     }).catch(err => {
       console.error('[CastManager] loadMedia failed:', err);
+      const errMsg = (err && (err.description || err.message)) || (typeof err === 'string' ? err : 'Media load error');
+      showToast(`Cast failed: ${errMsg}`, 'error', 6000);
     });
   }
 
@@ -328,14 +415,22 @@
     if (isConnected && currentSession) {
       loadTrackOnReceiver(trackIndex);
     } else {
+      pendingTrackIndex = trackIndex;
+      showToast('Select your Google TV or Chromecast...', 'info', 5000);
       castContext.requestSession().then(() => {
         currentSession = castContext.getCurrentSession();
         isConnected = true;
         onConnectedChanged();
-        loadTrackOnReceiver(trackIndex);
+        if (pendingTrackIndex !== null) {
+          const idx = pendingTrackIndex;
+          pendingTrackIndex = null;
+          loadTrackOnReceiver(idx);
+        }
       }).catch(err => {
+        pendingTrackIndex = null;
         if (err !== 'cancel') {
           console.warn('[CastManager] Cast session request cancelled or failed:', err);
+          showToast('Cast cancelled or unavailable', 'warn', 3000);
         }
       });
     }
@@ -402,6 +497,7 @@
     try {
       const castContext = cast.framework.CastContext.getInstance();
       castContext.endCurrentSession(true);
+      showToast('Disconnected from ' + (deviceName || 'TV'), 'info', 3000);
     } catch (e) {
       console.warn('[CastManager] Error during disconnect:', e);
     }
@@ -481,8 +577,9 @@
     }
   }
 
-  // Hook Google Cast framework bootstrap
+  // Hook Google Cast framework bootstrap - MUST be defined globally
   window.__onGCastApiAvailable = function (isAvailable) {
+    console.log('[CastManager] __onGCastApiAvailable called with:', isAvailable);
     if (isAvailable) {
       initCast();
     }
@@ -503,6 +600,7 @@
     prevTrack,
     disconnect,
     updateAllCastUI,
+    showToast,
     on,
     isConnected: function () { return isConnected; },
     getDeviceName: function () { return deviceName; },
