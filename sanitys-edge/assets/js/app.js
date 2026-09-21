@@ -96,8 +96,17 @@
 
     if (progressBar) {
       progressBar.addEventListener('input', (e) => {
+        const pct = e.target.value / 100;
+        if (window.CastManager && window.CastManager.isConnected()) {
+          const track = window.ALBUM_DATA && window.ALBUM_DATA.tracks[currentTrackIndex];
+          const durStr = track ? track.duration : '5:00';
+          const parts = durStr.split(':');
+          const totalSec = parts.length === 2 ? parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10) : 300;
+          window.CastManager.seek(pct * totalSec);
+          return;
+        }
         if (!isNaN(audio.duration) && audio.duration > 0) {
-          const seekTime = (e.target.value / 100) * audio.duration;
+          const seekTime = pct * audio.duration;
           audio.currentTime = seekTime;
         }
       });
@@ -106,6 +115,9 @@
     if (volumeBar) {
       volumeBar.addEventListener('input', (e) => {
         const vol = parseFloat(e.target.value);
+        if (window.CastManager && window.CastManager.isConnected()) {
+          window.CastManager.setVolume(vol);
+        }
         audio.volume = vol;
         audio.muted = (vol === 0);
         updateVolumeIcon(vol);
@@ -125,6 +137,49 @@
           if (volumeBar) volumeBar.value = audio.volume;
           updateVolumeIcon(audio.volume);
         }
+      });
+    }
+
+    // Hook Google Cast Synchronization
+    if (window.CastManager) {
+      window.CastManager.on('trackChange', (newIndex) => {
+        if (typeof newIndex === 'number' && newIndex >= 0) {
+          currentTrackIndex = newIndex;
+          window.currentTrackIndex = newIndex;
+          isPlaying = true;
+          updatePlayerUI();
+          highlightActiveCard();
+        }
+      });
+
+      window.CastManager.on('stateChange', (state) => {
+        isPlaying = state.isPlaying;
+        if (typeof state.trackIndex === 'number' && state.trackIndex >= 0) {
+          currentTrackIndex = state.trackIndex;
+          window.currentTrackIndex = state.trackIndex;
+        }
+        updatePlayerUI();
+        highlightActiveCard();
+      });
+
+      window.CastManager.on('timeUpdate', ({ currentTime, duration }) => {
+        if (!window.CastManager.isConnected()) return;
+        if (trackTimeEl) trackTimeEl.textContent = formatTime(currentTime);
+        if (trackDurationEl && duration > 0) trackDurationEl.textContent = formatTime(duration);
+        if (progressBar && duration > 0) {
+          progressBar.value = (currentTime / duration) * 100;
+        }
+      });
+
+      window.CastManager.on('connected', () => {
+        if (!audio.paused) audio.pause();
+        highlightActiveCard();
+        updatePlayerUI();
+      });
+
+      window.CastManager.on('disconnected', () => {
+        highlightActiveCard();
+        updatePlayerUI();
       });
     }
 
@@ -175,7 +230,14 @@
     const tracks = window.ALBUM_DATA.tracks;
     if (index < 0 || index >= tracks.length) return;
 
+    // Route through Google Cast if connected
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.castTrack(index, tracks, window.ALBUM_DATA);
+      return;
+    }
+
     currentTrackIndex = index;
+    window.currentTrackIndex = index;
     const track = tracks[index];
 
     audio.src = track.audio_file;
@@ -189,6 +251,10 @@
   };
 
   function togglePlay() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.playOrPause();
+      return;
+    }
     if (!audio.src && window.ALBUM_DATA && window.ALBUM_DATA.tracks) {
       playTrack(currentTrackIndex);
       return;
@@ -206,6 +272,10 @@
   }
 
   function prevTrack() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.prevTrack();
+      return;
+    }
     if (!window.ALBUM_DATA) return;
     let newIndex = currentTrackIndex - 1;
     if (newIndex < 0) newIndex = window.ALBUM_DATA.tracks.length - 1;
@@ -213,6 +283,10 @@
   }
 
   function nextTrack() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.nextTrack();
+      return;
+    }
     if (!window.ALBUM_DATA) return;
     let newIndex = currentTrackIndex + 1;
     if (newIndex >= window.ALBUM_DATA.tracks.length) newIndex = 0;
@@ -242,11 +316,19 @@
       const isCurrent = (idx === currentTrackIndex);
       const playBadge = card.querySelector('.card-play-badge');
       if (isCurrent && isPlaying) {
-        card.classList.add('border-crimson-500', 'glow-crimson');
-        if (playBadge) playBadge.innerHTML = '<i class="fa-solid fa-pause"></i>';
+        card.classList.add('border-amber-500/80', 'shadow-xl', 'shadow-amber-500/15');
+        card.classList.remove('border-white/10');
+        if (playBadge) {
+          playBadge.innerHTML = '<i class="fa-solid fa-pause"></i>';
+          playBadge.className = 'card-play-badge w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-amber-500 text-stone-950 shadow-md shadow-amber-500/30 flex items-center justify-center text-base transition-all hover:scale-105 flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-amber-400';
+        }
       } else {
-        card.classList.remove('border-crimson-500', 'glow-crimson');
-        if (playBadge) playBadge.innerHTML = '<i class="fa-solid fa-play translate-x-0.5"></i>';
+        card.classList.remove('border-amber-500/80', 'shadow-xl', 'shadow-amber-500/15');
+        card.classList.add('border-white/10');
+        if (playBadge) {
+          playBadge.innerHTML = '<i class="fa-solid fa-play ml-0.5"></i>';
+          playBadge.className = 'card-play-badge w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-stone-900 text-amber-400 border border-amber-500/50 hover:border-amber-400 hover:bg-amber-600 hover:text-stone-950 flex items-center justify-center text-base transition-all hover:scale-105 flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-amber-400';
+        }
       }
     });
   }
@@ -293,6 +375,24 @@
   }
 
   // --- RENDER TRACKS & LYRICS VAULT ---
+  const TRACK_QUOTES = {
+    1: "Welcome to the new normal\nWhere the fever is the baseline and the anchors pray",
+    2: "The hand on the switch is trembling tonight\nThe fuse is burning in the sterile light",
+    3: "The chaos is the weather here today\nWe watch the warning signs just wash away",
+    4: "Oh the engine remembers exactly how to feed\nIt plants a profit inside a violent seed",
+    5: "We cast a ballot for a steady hand\nBut now we are sowing salt across the land",
+    6: "Oh there is rust beneath the painted local spire\nWe toss the neighborhood into a distant fire",
+    7: "Oh the bottle and the blade, they cut so deep\nThey steal the morning and they take the sleep",
+    8: "Oh the price of victory is climbing steep\nA mountain of treasure that we cannot keep",
+    9: "Oh the dogs are barking at the border gate\nThey sell the anger and they push the weight",
+    10: "Iran is at the door and every option starts to shrink\nWe push the heavy vessel right up to the very brink",
+    11: "Eighty five seconds till the midnight bell\nWe built a staircase to the bottom well",
+    12: "Oh brother on the other side of this\nWe share the tears and share the parting kiss",
+    13: "The phantom of a leader walks the floor\nHe knows the peril of the open door",
+    14: "Wake up the masses, we carry the load\nWe travel together upon the same road",
+    15: "We are walking along sanity's edge\nPulling our feet from the crumbling ledge"
+  };
+
   function renderTracks() {
     if (!tracksContainer || !window.ALBUM_DATA || !window.ALBUM_DATA.tracks) return;
 
@@ -322,80 +422,153 @@
     tracksContainer.innerHTML = filtered.map(t => {
       const realIndex = window.ALBUM_DATA.tracks.findIndex(item => item.track_number === t.track_number);
       const isCurrent = (realIndex === currentTrackIndex && isPlaying);
+      const quote = t.quote || TRACK_QUOTES[t.track_number] || '';
 
       return `
-        <article class="track-card card-obsidian p-6 sm:p-8 rounded-2xl relative transition-all ${isCurrent ? 'border-crimson-500 glow-crimson' : ''}" id="track-${t.track_number}">
+        <article class="track-card card-obsidian p-6 sm:p-8 rounded-2xl relative transition-all space-y-6 ${isCurrent ? 'border-amber-500/80 shadow-xl shadow-amber-500/15' : 'border border-white/10'}" id="track-${t.track_number}">
           
-          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-white/10">
-            <div class="flex items-start gap-4 sm:gap-6">
-              <!-- Play Button Badge -->
-              <button onclick="playTrack(${realIndex})" class="card-play-badge w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-crimson-600 to-crimson-700 hover:from-crimson-500 hover:to-crimson-600 text-white flex items-center justify-center text-xl shadow-lg transition-transform hover:scale-105 flex-shrink-0" aria-label="Play ${escapeHtml(t.title)}">
-                <i class="fa-solid ${isCurrent ? 'fa-pause' : 'fa-play translate-x-0.5'}"></i>
+          <!-- Track Header -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-white/10">
+            <div class="flex items-start gap-4">
+              <!-- Audio Play Disc (Circular, Amber Accent - Distinct from YouTube) -->
+              <button 
+                onclick="playTrack(${realIndex})" 
+                class="card-play-badge w-11 h-11 sm:w-12 sm:h-12 rounded-full ${isCurrent ? 'bg-amber-500 text-stone-950 shadow-md shadow-amber-500/30' : 'bg-stone-900 text-amber-400 border border-amber-500/50 hover:border-amber-400 hover:bg-amber-600 hover:text-stone-950'} flex items-center justify-center text-base transition-all hover:scale-105 flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-amber-400" 
+                aria-label="Play audio track ${escapeHtml(t.title)}"
+                title="Play audio track"
+              >
+                <i class="fa-solid ${isCurrent ? 'fa-pause' : 'fa-play ml-0.5'}"></i>
               </button>
 
-              <div class="space-y-1.5">
+              <div class="space-y-1">
+                <!-- Pills Row -->
                 <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
-                  <span class="px-2.5 py-0.5 rounded-full bg-crimson-950/80 border border-crimson-500/40 text-crimson-400 font-bold uppercase tracking-wider">
-                    Track ${t.track_number}
+                  <span class="px-2.5 py-0.5 rounded-full bg-stone-900 border border-amber-500/40 text-amber-400 font-bold uppercase tracking-wider text-[11px]">
+                    Track ${String(t.track_number).padStart(2, '0')}
                   </span>
-                  <span class="px-2.5 py-0.5 rounded-full bg-slate-800 text-stone-300">
+                  <span class="px-2.5 py-0.5 rounded-full bg-stone-800 text-stone-300 text-[11px]">
                     Act ${t.act_number}: ${escapeHtml(t.act_title)}
                   </span>
-                  <span class="px-2.5 py-0.5 rounded-full bg-slate-900/80 text-amber-400 border border-amber-500/30">
-                    ${escapeHtml(t.key)} • ${escapeHtml(t.tempo)}
+                  <span class="px-2.5 py-0.5 rounded-full bg-stone-900 text-stone-300 border border-white/10 text-[11px]">
+                    ${escapeHtml(t.key)} &bull; ${escapeHtml(t.tempo)}
                   </span>
-                  <span class="text-stone-400 ml-1">
-                    <i class="fa-regular fa-clock mr-1 text-[11px]"></i>${t.duration}
+                  <span class="text-stone-400 text-xs flex items-center gap-1 ml-1 font-mono">
+                    <i class="fa-regular fa-clock text-[11px] text-amber-400/80"></i>
+                    <span>${t.duration}</span>
                   </span>
                 </div>
 
-                <h3 class="font-display text-2xl sm:text-3xl font-bold text-white tracking-wide">
+                <!-- Title -->
+                <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
                   ${escapeHtml(t.title)}
                 </h3>
 
+                <!-- Vocal Architecture -->
                 <p class="text-xs sm:text-sm font-mono text-stone-400">
                   <span class="text-stone-500 uppercase tracking-widest text-[11px]">Vocal Architecture:</span> ${escapeHtml(t.vocal_profile)}
                 </p>
               </div>
             </div>
+          </div>
 
-            <div class="flex flex-wrap items-center gap-3 lg:self-center">
-              <button type="button" onclick="openBardNoteModal('${escapeHtml(t.title).replace(/'/g, "\\'")}', 'Sanity\\'s Edge', ${t.track_number})" class="bard-note-btn mr-2" aria-label="Drop a note to the bard about ${escapeHtml(t.title)}" title="Drop a note to the bard">
-                  <i class="fa-solid fa-envelope bard-note-icon"></i>
-                  <span class="bard-note-tooltip">Drop a note to the bard</span>
-                </button>
-                <button onclick="copyLyrics(${t.track_number})" id="copy-btn-${t.track_number}" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-stone-200 border border-white/10 text-xs font-mono transition-colors flex items-center gap-2">
-                <i class="fa-regular fa-copy"></i>
-                <span>Copy Lyrics</span>
-              </button>
-              <button onclick="toggleLyricsDeck(${t.track_number})" id="toggle-deck-btn-${t.track_number}" class="px-4 py-2 rounded-xl bg-crimson-900/40 hover:bg-crimson-900/70 border border-crimson-500/40 text-crimson-300 text-xs font-mono font-bold transition-colors flex items-center gap-2">
-                <span>View Lyrics &amp; Analysis</span>
-                <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300" id="chevron-${t.track_number}"></i>
-              </button>
+          <!-- 100% Verbatim Lyric Quote -->
+          ${quote ? `
+          <blockquote class="border-l-4 border-amber-500 bg-stone-950/80 p-4 rounded-r-xl shadow-inner">
+            <p class="text-sm sm:text-base font-serif italic text-amber-100/90 leading-relaxed whitespace-pre-line">&ldquo;${escapeHtml(quote)}&rdquo;</p>
+            <cite class="text-[10px] font-mono text-amber-400 mt-2 block font-normal uppercase tracking-wider">— Verbatim Movement Excerpt</cite>
+          </blockquote>` : ''}
+
+          <!-- The Bard's Story (Lore & Context) -->
+          <div class="space-y-3 bg-stone-950/60 p-5 rounded-xl border border-white/5">
+            <div class="flex items-center gap-2 text-xs font-mono text-stone-400 uppercase tracking-wider">
+              <i aria-hidden="true" class="fa-solid fa-feather text-amber-400"></i>
+              <span class="font-bold text-white">The Bard's Story &bull; Lore &amp; Context</span>
+            </div>
+            <div class="text-xs sm:text-sm text-stone-300 leading-relaxed space-y-2.5 font-sans">
+              <p>${escapeHtml(t.summary)}</p>
             </div>
           </div>
 
-          <!-- Narrative Summary -->
-          <div class="pt-5 text-sm sm:text-base text-stone-300 font-body leading-relaxed">
-            <p>${escapeHtml(t.summary)}</p>
-          </div>
+          <!-- Action Bar & Expandable Lyrics Toggle -->
+          <div class="pt-2 border-t border-white/10">
+            <div class="flex items-center justify-between flex-wrap gap-3">
+              <!-- Expandable Lyrics Toggle Button -->
+              <button 
+                onclick="toggleLyricsDeck(${t.track_number})" 
+                id="toggle-deck-btn-${t.track_number}" 
+                aria-expanded="false" 
+                aria-controls="lyrics-deck-${t.track_number}" 
+                class="inline-flex items-center gap-2 text-xs font-mono text-amber-400 hover:text-amber-300 font-bold focus:outline-none focus:ring-1 focus:ring-amber-400 py-1 rounded transition-colors"
+              >
+                <i aria-hidden="true" class="fa-solid fa-chevron-down transition-transform duration-300" id="chevron-${t.track_number}"></i>
+                <span>View Complete Lyrics</span>
+              </button>
 
-          <!-- Collapsible Lyrics & Tactical Deck -->
-          <div id="lyrics-deck-${t.track_number}" class="hidden mt-6 pt-6 border-t border-white/10 space-y-6">
-            <div class="p-6 rounded-2xl bg-black/40 border border-white/10">
-              <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/10">
-                <span class="font-mono text-xs text-crimson-400 uppercase tracking-widest font-bold flex items-center gap-2">
-                  <i class="fa-solid fa-align-left text-sm"></i> Pure Literary Lyrics (Zero AI Tags)
-                </span>
-                <button type="button" onclick="openBardNoteModal('${escapeHtml(t.title).replace(/'/g, "\\'")}', 'Sanity\\'s Edge', ${t.track_number})" class="bard-note-btn mr-2" aria-label="Drop a note to the bard about ${escapeHtml(t.title)}" title="Drop a note to the bard">
-                  <i class="fa-solid fa-envelope bard-note-icon"></i>
+              <!-- Action Buttons Row: Message, Share, Copy, Cast -->
+              <div class="flex items-center gap-2">
+                <!-- Message / Bard Note -->
+                <button 
+                  type="button" 
+                  onclick="openBardNoteModal('${escapeHtml(t.title).replace(/'/g, "\\'")}', 'Sanity\\'s Edge', ${t.track_number})" 
+                  class="bard-note-btn" 
+                  aria-label="Drop a note to the bard about ${escapeHtml(t.title)}" 
+                  title="Drop a note to the bard"
+                >
+                  <svg class="bard-note-icon" width="16" height="16" style="width: 16px; height: 16px; max-width: 16px; max-height: 16px; min-width: 16px; min-height: 16px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                  </svg>
                   <span class="bard-note-tooltip">Drop a note to the bard</span>
                 </button>
-                <button onclick="copyLyrics(${t.track_number})" class="text-xs font-mono text-stone-400 hover:text-white transition-colors">
-                  <i class="fa-regular fa-copy mr-1"></i> Copy
+
+                <!-- Share Track -->
+                <button 
+                  type="button" 
+                  onclick="shareTrackLink('${escapeHtml(t.title).replace(/'/g, "\\'")}', 'Sanity\\'s Edge', ${t.track_number})" 
+                  class="bard-note-btn track-share-btn" 
+                  aria-label="Share link for ${escapeHtml(t.title)}" 
+                  title="Share this track"
+                >
+                  <svg class="bard-note-icon track-share-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/>
+                    <line x1="12" y1="2" x2="12" y2="15"/>
+                  </svg>
+                  <span class="track-share-tooltip">Share this track</span>
+                </button>
+
+                <!-- Copy Lyrics -->
+                <button 
+                  onclick="copyLyrics(${t.track_number})" 
+                  id="copy-btn-${t.track_number}" 
+                  class="text-xs font-mono text-stone-400 hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-white px-2.5 py-1 rounded bg-stone-800 border border-white/10 hover:border-white/20 flex items-center gap-1.5" 
+                  title="Copy lyrics to clipboard" 
+                  aria-label="Copy lyrics for ${escapeHtml(t.title)}"
+                >
+                  <i aria-hidden="true" class="fa-regular fa-copy"></i>
+                  <span id="copy-text-${t.track_number}">Copy</span>
+                </button>
+
+                <!-- Cast to Google TV -->
+                <button 
+                  type="button" 
+                  onclick="castTrack(${realIndex})" 
+                  class="bard-note-btn track-cast-btn" 
+                  data-track-index="${realIndex}" 
+                  data-track-number="${t.track_number}" 
+                  aria-label="Cast ${escapeHtml(t.title)} to Google TV" 
+                  title="Cast track to Google TV"
+                >
+                  <svg class="track-cast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6"/>
+                    <line x1="2" y1="20" x2="2.01" y2="20"/>
+                  </svg>
+                  <span class="bard-note-tooltip track-cast-tooltip">Cast track to Google TV</span>
                 </button>
               </div>
-              <pre class="font-mono text-xs sm:text-sm text-stone-200 whitespace-pre-wrap leading-relaxed selection:bg-crimson-600">${escapeHtml(t.lyrics)}</pre>
+            </div>
+
+            <!-- Collapsible Lyrics Drawer -->
+            <div id="lyrics-deck-${t.track_number}" class="hidden mt-4 p-5 bg-stone-950/90 rounded-xl border border-white/10 font-mono text-xs sm:text-sm text-stone-200 leading-relaxed whitespace-pre-wrap select-text">
+${escapeHtml(t.lyrics)}
             </div>
           </div>
 
@@ -404,6 +577,9 @@
     }).join('');
 
     highlightActiveCard();
+    if (window.CastManager) {
+      window.CastManager.updateAllCastUI();
+    }
   }
 
   window.toggleLyricsDeck = function (trackNum) {
@@ -415,11 +591,11 @@
     if (deck.classList.contains('hidden')) {
       deck.classList.remove('hidden');
       if (chevron) chevron.style.transform = 'rotate(180deg)';
-      if (btn) btn.classList.add('bg-crimson-800/80');
+      if (btn) btn.setAttribute('aria-expanded', 'true');
     } else {
       deck.classList.add('hidden');
       if (chevron) chevron.style.transform = 'rotate(0deg)';
-      if (btn) btn.classList.remove('bg-crimson-800/80');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
     }
   };
 
