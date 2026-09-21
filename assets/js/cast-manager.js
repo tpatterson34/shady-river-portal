@@ -39,52 +39,57 @@
   /**
    * On-screen Toast notification system for instant Cast feedback
    */
-  function showToast(message, type = 'info', durationMs = 4000) {
+  function showToast(message, type = 'info', durationMs = 5000) {
     let toast = document.getElementById('cast-toast');
     if (!toast) {
       toast = document.createElement('div');
       toast.id = 'cast-toast';
-      toast.className = 'fixed bottom-24 right-6 z-50 transform transition-all duration-300 translate-y-8 opacity-0 pointer-events-none flex items-center gap-3 px-4 py-3 rounded-xl shadow-2xl font-mono text-xs border backdrop-blur-md';
       toast.setAttribute('role', 'status');
       toast.setAttribute('aria-live', 'polite');
-      toast.innerHTML = `
-        <div id="cast-toast-icon" class="w-5 h-5 flex items-center justify-center shrink-0"></div>
-        <div id="cast-toast-message" class="text-xs font-mono font-medium"></div>
-      `;
       document.body.appendChild(toast);
     }
-
-    const iconEl = toast.querySelector('#cast-toast-icon') || toast.children[0];
-    const msgEl = toast.querySelector('#cast-toast-message') || toast.children[1];
 
     if (toastTimeout) {
       clearTimeout(toastTimeout);
       toastTimeout = null;
     }
 
-    // Styles based on type
-    toast.className = 'fixed bottom-24 right-6 z-50 transform transition-all duration-300 translate-y-0 opacity-100 pointer-events-auto flex items-center gap-3 px-4 py-3 rounded-xl shadow-2xl font-mono text-xs border backdrop-blur-md ';
-    
-    if (type === 'success') {
-      toast.className += 'bg-stone-950/95 text-emerald-200 border-emerald-500/60 shadow-emerald-950/40';
-      iconEl.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-400"></i>';
-    } else if (type === 'error') {
-      toast.className += 'bg-stone-950/95 text-rose-200 border-rose-500/60 shadow-rose-950/40';
-      iconEl.innerHTML = '<i class="fa-solid fa-circle-exclamation text-rose-400"></i>';
-    } else if (type === 'warn') {
-      toast.className += 'bg-stone-950/95 text-amber-200 border-amber-500/60 shadow-amber-950/40';
-      iconEl.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-amber-400"></i>';
-    } else { // info
-      toast.className += 'bg-slate-950/95 text-sky-200 border-sky-500/60 shadow-sky-950/40';
-      iconEl.innerHTML = '<i class="fa-solid fa-satellite-dish text-sky-400 animate-pulse"></i>';
-    }
+    const bg = type === 'success' ? 'rgba(6, 78, 59, 0.96)' : (type === 'error' ? 'rgba(136, 19, 55, 0.96)' : (type === 'warn' ? 'rgba(120, 53, 15, 0.96)' : 'rgba(15, 23, 42, 0.96)'));
+    const border = type === 'success' ? '#10b981' : (type === 'error' ? '#f43f5e' : (type === 'warn' ? '#f59e0b' : '#38bdf8'));
+    const text = type === 'success' ? '#a7f3d0' : (type === 'error' ? '#fecdd3' : (type === 'warn' ? '#fef3c7' : '#bae6fd'));
+    const icon = type === 'success' ? '<i class="fa-solid fa-circle-check text-emerald-400"></i>' : (type === 'error' ? '<i class="fa-solid fa-circle-exclamation text-rose-400"></i>' : (type === 'warn' ? '<i class="fa-solid fa-triangle-exclamation text-amber-400"></i>' : '<i class="fa-solid fa-satellite-dish text-sky-400 animate-pulse"></i>'));
 
-    msgEl.textContent = message;
+    toast.style.position = 'fixed';
+    toast.style.bottom = '84px';
+    toast.style.right = '20px';
+    toast.style.zIndex = '999999';
+    toast.style.backgroundColor = bg;
+    toast.style.border = `1.5px solid ${border}`;
+    toast.style.borderRadius = '12px';
+    toast.style.padding = '10px 18px';
+    toast.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.85)';
+    toast.style.fontFamily = 'monospace';
+    toast.style.fontSize = '12px';
+    toast.style.display = 'flex';
+    toast.style.alignItems = 'center';
+    toast.style.gap = '10px';
+    toast.style.opacity = '1';
+    toast.style.transform = 'translateY(0)';
+    toast.style.transition = 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)';
+    toast.style.pointerEvents = 'auto';
+    toast.style.backdropFilter = 'blur(12px)';
+    toast.style.webkitBackdropFilter = 'blur(12px)';
+
+    toast.innerHTML = `
+      <div style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">${icon}</div>
+      <div style="color: ${text}; font-weight: 500; letter-spacing: 0.02em;">${message}</div>
+    `;
 
     if (durationMs > 0) {
       toastTimeout = setTimeout(() => {
-        toast.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
-        toast.classList.add('translate-y-8', 'opacity-0', 'pointer-events-none');
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(16px)';
+        toast.style.pointerEvents = 'none';
       }, durationMs);
     }
   }
@@ -120,31 +125,48 @@
   }
 
   /**
-   * Build MediaInfo for Google Cast with universal GenericMediaMetadata and artwork
+   * Build MediaInfo for Google Cast with MusicTrackMediaMetadata, contentUrl, and bespoke artwork
    */
-  function buildMediaInfo(track, albumMeta, index) {
+  function buildMediaInfo(track, albumMeta, index, forceGeneric = false) {
     const rawAudio = track.audio_file || track.src || track.streamUrl;
     const audioUrl = toAbsoluteUrl(rawAudio);
 
-    // Standard audio/mpeg MediaInfo for Google Cast Default Media Receiver
+    // Explicitly set both contentId and contentUrl for CAF Default Media Receiver
     const mediaInfo = new chrome.cast.media.MediaInfo(audioUrl, 'audio/mpeg');
+    mediaInfo.contentUrl = audioUrl;
+    mediaInfo.contentId = audioUrl;
     mediaInfo.streamType = chrome.cast.media.StreamType.BUFFERED;
+    mediaInfo.contentType = 'audio/mpeg';
 
-    // Use GenericMediaMetadata for universal compatibility with Default Media Receiver CC1AD845
-    const metadata = new chrome.cast.media.GenericMediaMetadata();
-    metadata.metadataType = chrome.cast.media.MetadataType.GENERIC;
-    metadata.title = track.title || ('Track ' + (index + 1));
     const albumTitle = (albumMeta && albumMeta.title) || "Sanity's Edge";
     const artist = (albumMeta && albumMeta.artist) || 'The Shady River Bard';
-    metadata.subtitle = `${albumTitle} • ${artist}`;
+    const trackTitle = track.title || ('Track ' + (index + 1));
+    const trackNum = track.track_number || (index + 1);
 
     // Track-specific artwork or fallback album cover
     const coverPath = track.art_square || track.art || track.image || track.cover ||
       (albumMeta && (albumMeta.master_cover_art || albumMeta.cover_art || albumMeta.cover)) ||
       'assets/art/sanitys-edge-cover.jpg';
+    const coverUrl = toAbsoluteUrl(coverPath);
 
-    if (coverPath) {
-      const coverUrl = toAbsoluteUrl(coverPath);
+    let metadata;
+    if (forceGeneric) {
+      metadata = new chrome.cast.media.GenericMediaMetadata();
+      metadata.metadataType = chrome.cast.media.MetadataType.GENERIC;
+      metadata.title = trackTitle;
+      metadata.subtitle = `${albumTitle} • ${artist}`;
+    } else {
+      metadata = new chrome.cast.media.MusicTrackMediaMetadata();
+      metadata.metadataType = chrome.cast.media.MetadataType.MUSIC_TRACK; // 3
+      metadata.title = trackTitle;
+      metadata.songName = trackTitle;
+      metadata.artist = artist;
+      metadata.albumArtist = artist;
+      metadata.albumName = albumTitle;
+      metadata.trackNumber = trackNum;
+    }
+
+    if (coverUrl) {
       const castImg = new chrome.cast.Image(coverUrl);
       castImg.width = 720;
       castImg.height = 720;
@@ -209,13 +231,17 @@
               currentSession = castContext.getCurrentSession();
               isConnected = true;
               onConnectedChanged();
-              // If a track was queued before or during session handshake, play it now
-              if (pendingTrackIndex !== null && pendingTrackIndex >= 0) {
-                const idx = pendingTrackIndex;
-                pendingTrackIndex = null;
-                console.log(`[CastManager] Session established, firing queued track ${idx + 1}`);
-                loadTrackOnReceiver(idx);
-              }
+              // Determine target track: pending track, or current selected track, or track 0
+              const targetIdx = (pendingTrackIndex !== null && pendingTrackIndex >= 0)
+                ? pendingTrackIndex
+                : ((typeof window.currentTrackIndex === 'number' && window.currentTrackIndex >= 0) ? window.currentTrackIndex : 0);
+              pendingTrackIndex = null;
+              console.log(`[CastManager] Session established with ${deviceName || 'Google TV'}, initiating Track ${targetIdx + 1}`);
+              showToast(`Connected to ${deviceName || 'Google TV'}. Loading track...`, 'info', 3500);
+              // Safe 300ms delay to ensure remote receiver WebSocket channel is ready for media load
+              setTimeout(() => {
+                loadTrackOnReceiver(targetIdx);
+              }, 300);
               break;
             case cast.framework.SessionState.SESSION_START_FAILED:
               console.warn('[CastManager] Session start failed');
@@ -340,44 +366,45 @@
   /**
    * Load and stream an individual track directly onto Google TV
    */
-  function loadTrackOnReceiver(trackIndex) {
+  function loadTrackOnReceiver(trackIndex, seekTime = 0, isRetry = false) {
     const castContext = cast.framework.CastContext.getInstance();
     currentSession = castContext.getCurrentSession();
 
     if (!currentSession) {
       console.warn('[CastManager] No active Cast session yet. Storing as pendingTrackIndex:', trackIndex);
       pendingTrackIndex = trackIndex;
-      showToast('Connecting to Cast session...', 'info', 4000);
+      showToast('Connecting to Cast device...', 'info', 4000);
       return;
     }
 
     activeTracks = (activeTracks && activeTracks.length) ? activeTracks : ((window.ALBUM_DATA && window.ALBUM_DATA.tracks) || []);
     activeAlbumMeta = activeAlbumMeta || window.ALBUM_DATA || null;
 
-    if (!activeTracks[trackIndex]) {
+    if (!activeTracks || !activeTracks[trackIndex]) {
       console.warn('[CastManager] Invalid track index to load:', trackIndex);
       return;
     }
 
     activeTrackIndex = trackIndex;
+    window.currentTrackIndex = trackIndex;
     pauseLocalAudio();
 
     const track = activeTracks[trackIndex];
-    const mediaInfo = buildMediaInfo(track, activeAlbumMeta, trackIndex);
+    const mediaInfo = buildMediaInfo(track, activeAlbumMeta, trackIndex, isRetry);
 
     const loadRequest = new chrome.cast.media.LoadRequest(mediaInfo);
     loadRequest.autoplay = true;
-    loadRequest.currentTime = 0;
+    loadRequest.currentTime = seekTime || 0;
 
     const dev = deviceName || 'Google TV';
-    console.log(`[CastManager] Streaming to ${dev}: "${track.title}" (${mediaInfo.contentId})...`);
+    console.log(`[CastManager] Streaming to ${dev}: "${track.title}" (${mediaInfo.contentUrl})...`);
     showToast(`Streaming "${track.title}" to ${dev}...`, 'info', 4000);
 
     currentSession.loadMedia(loadRequest).then((res) => {
       console.log('[CastManager] loadMedia completed. Result:', res);
-      if (res && typeof res === 'string') {
+      if (res && typeof res === 'string' && res !== 'cancel') {
         console.warn('[CastManager] Receiver returned loadMedia response:', res);
-        showToast(`Cast response: ${res}`, 'warn', 4000);
+        showToast(`Cast notice: ${res}`, 'warn', 4000);
       } else {
         console.log(`[CastManager] Successfully playing Track ${trackIndex + 1} on ${dev}`);
         showToast(`✓ Playing "${track.title}" on ${dev}`, 'success', 4000);
@@ -387,6 +414,11 @@
       notifyState();
     }).catch(err => {
       console.error('[CastManager] loadMedia failed:', err);
+      if (!isRetry) {
+        console.log('[CastManager] Primary load failed, retrying with universal generic metadata...');
+        loadTrackOnReceiver(trackIndex, seekTime, true);
+        return;
+      }
       const errMsg = (err && (err.description || err.message)) || (typeof err === 'string' ? err : 'Media load error');
       showToast(`Cast failed: ${errMsg}`, 'error', 6000);
     });
@@ -412,11 +444,11 @@
         currentSession = castContext.getCurrentSession();
         isConnected = true;
         onConnectedChanged();
-        if (pendingTrackIndex !== null) {
-          const idx = pendingTrackIndex;
-          pendingTrackIndex = null;
+        const idx = (pendingTrackIndex !== null && pendingTrackIndex >= 0) ? pendingTrackIndex : trackIndex;
+        pendingTrackIndex = null;
+        setTimeout(() => {
           loadTrackOnReceiver(idx);
-        }
+        }, 300);
       }).catch(err => {
         pendingTrackIndex = null;
         if (err !== 'cancel') {
@@ -428,11 +460,22 @@
   }
 
   /**
-   * Play / Pause toggle on remote receiver
+   * Play / Pause toggle on remote receiver (loads current track if idle)
    */
   function playOrPause() {
-    if (remotePlayerController && isConnected) {
-      remotePlayerController.playOrPause();
+    if (isConnected) {
+      if (remotePlayer && (remotePlayer.playerState === cast.framework.PlayerState.PLAYING || remotePlayer.playerState === cast.framework.PlayerState.PAUSED)) {
+        if (remotePlayerController) {
+          remotePlayerController.playOrPause();
+        }
+      } else {
+        // If receiver is connected but idle or has no media loaded, load current track immediately
+        const curIdx = (typeof activeTrackIndex === 'number' && activeTrackIndex >= 0)
+          ? activeTrackIndex
+          : ((typeof window.currentTrackIndex === 'number' && window.currentTrackIndex >= 0) ? window.currentTrackIndex : 0);
+        console.log(`[CastManager] playOrPause invoked while idle. Loading track ${curIdx + 1}`);
+        loadTrackOnReceiver(curIdx);
+      }
     }
   }
 
@@ -451,9 +494,11 @@
    */
   function nextTrack() {
     if (!isConnected) return;
-    if (activeTrackIndex + 1 < activeTracks.length) {
-      loadTrackOnReceiver(activeTrackIndex + 1);
-    }
+    activeTracks = (activeTracks && activeTracks.length) ? activeTracks : ((window.ALBUM_DATA && window.ALBUM_DATA.tracks) || []);
+    if (!activeTracks || activeTracks.length === 0) return;
+    let nextIdx = (activeTrackIndex >= 0 ? activeTrackIndex : 0) + 1;
+    if (nextIdx >= activeTracks.length) nextIdx = 0;
+    loadTrackOnReceiver(nextIdx);
   }
 
   /**
@@ -461,13 +506,15 @@
    */
   function prevTrack() {
     if (!isConnected) return;
+    activeTracks = (activeTracks && activeTracks.length) ? activeTracks : ((window.ALBUM_DATA && window.ALBUM_DATA.tracks) || []);
+    if (!activeTracks || activeTracks.length === 0) return;
     if (remotePlayer && remotePlayer.currentTime > 4) {
       seek(0);
       return;
     }
-    if (activeTrackIndex - 1 >= 0) {
-      loadTrackOnReceiver(activeTrackIndex - 1);
-    }
+    let prevIdx = (activeTrackIndex >= 0 ? activeTrackIndex : 0) - 1;
+    if (prevIdx < 0) prevIdx = activeTracks.length - 1;
+    loadTrackOnReceiver(prevIdx);
   }
 
   /**

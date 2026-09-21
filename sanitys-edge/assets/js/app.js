@@ -21,7 +21,7 @@
   audio.preload = 'metadata';
 
   // DOM Elements
-  let playerBar, playBtn, playIcon, prevBtn, nextBtn, trackTitleEl, trackActEl, trackTimeEl, trackDurationEl, progressBar, volumeBar, muteBtn;
+  let playerBar, playBtn, playIcon, prevBtn, nextBtn, trackTitleEl, trackActEl, trackTimeEl, trackDurationEl, progressBar, volumeBar, muteBtn, playerArtEl;
   let tracksContainer, searchInput, actPillButtons;
   let archetypeButtons, archetypeDetailsEl;
   let matrixBody, matrixSearchInput;
@@ -29,6 +29,7 @@
 
   // Initialize Application
   function initApp() {
+    window.currentTrackIndex = 0;
     cacheDom();
     setupAudioListeners();
     setupKeyboardShortcuts();
@@ -38,6 +39,7 @@
     initCharts();
     initA11yToolbar();
     loadVolumePreference();
+    updatePlayerUI();
   }
 
   if (document.readyState === 'loading') {
@@ -48,6 +50,7 @@
 
   function cacheDom() {
     playerBar = document.getElementById('jukebox-bar');
+    playerArtEl = document.getElementById('player-track-art');
     playBtn = document.getElementById('player-play-btn');
     playIcon = document.getElementById('player-play-icon');
     prevBtn = document.getElementById('player-prev-btn');
@@ -238,6 +241,11 @@
 
     // Route through Google Cast if connected
     if (window.CastManager && window.CastManager.isConnected()) {
+      currentTrackIndex = index;
+      window.currentTrackIndex = index;
+      isPlaying = true;
+      updatePlayerUI();
+      highlightActiveCard();
       window.CastManager.castTrack(index, tracks, window.ALBUM_DATA);
       return;
     }
@@ -307,6 +315,12 @@
     if (trackTitleEl) trackTitleEl.textContent = `${track.track_number}. ${track.title}`;
     if (trackActEl) trackActEl.textContent = `Act ${track.act_number}: ${track.act_title} • ${track.key} • ${track.tempo}`;
     if (trackDurationEl) trackDurationEl.textContent = track.duration;
+
+    if (!playerArtEl) playerArtEl = document.getElementById('player-track-art');
+    if (playerArtEl) {
+      playerArtEl.src = track.art_square || track.art || 'assets/art/sanitys-edge-cover.jpg';
+      playerArtEl.alt = `${track.title} artwork`;
+    }
 
     if (playIcon) {
       if (isPlaying) {
@@ -442,11 +456,11 @@
                 alt="${escapeHtml(t.title)} artwork" 
                 class="track-art-img w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 style="width: 100%; height: 100%; object-fit: cover; display: block;"
-                loading="lazy"
+                onerror="this.src='assets/art/sanitys-edge-cover.jpg'"
                 width="104"
                 height="104"
               >
-              <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors pointer-events-none"></div>
             </div>
 
             <!-- Track Info & Controls -->
