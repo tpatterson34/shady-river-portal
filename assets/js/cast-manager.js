@@ -5,8 +5,10 @@
  * Implements native Google Cast Web Sender SDK integration for the portal:
  * - Default Media Receiver (CC1AD845) with rich track metadata & artwork
  * - ORIGIN_SCOPED auto-join policy for seamless persistence across pages
- * - Full Album QueueLoadRequest with automatic hands-free track advance
- * - Bidirectional remote playback & timeline scrubbing synchronization
+ * - Full Album Queue via CAF loadMedia(LoadRequest) with queueData
+ * - Robust URL resolution supporting all path permutations & directory roots
+ * - Correct audio/mpeg MIME formatting for universal Chromecast compatibility
+ * - Bidirectional remote playback, track navigation, & timeline sync
  */
 
 (function () {
@@ -33,11 +35,22 @@
 
   /**
    * Resolve relative file path to absolute URL for Google Cast receiver
+   * Handles paths with or without trailing slash, index.html, hashes, and query params.
    */
   function toAbsoluteUrl(path) {
     if (!path) return '';
+    if (/^https?:\/\//i.test(path)) return path;
+    if (path.startsWith('//')) return window.location.protocol + path;
+
     try {
-      return new URL(path, window.location.href).href;
+      let base = window.location.origin + window.location.pathname;
+      // Strip trailing filename if present (e.g. index.html)
+      if (/\/[^/]+\.[^/]+$/.test(base)) {
+        base = base.substring(0, base.lastIndexOf('/') + 1);
+      } else if (!base.endsWith('/')) {
+        base = base + '/';
+      }
+      return new URL(path, base).href;
     } catch (e) {
       console.warn('[CastManager] Could not resolve absolute URL for:', path, e);
       return path;
@@ -45,11 +58,14 @@
   }
 
   /**
-   * Build MediaInfo for Google Cast with rich metadata
+   * Build MediaInfo for Google Cast with rich metadata and track-specific artwork
    */
   function buildMediaInfo(track, albumMeta, index) {
-    const audioUrl = toAbsoluteUrl(track.audio_file || track.src || track.streamUrl);
-    const mediaInfo = new chrome.cast.media.MediaInfo(audioUrl, 'audio/mp3');
+    const rawAudio = track.audio_file || track.src || track.streamUrl;
+    const audioUrl = toAbsoluteUrl(rawAudio);
+
+    // Google Cast Default Media Receiver requires standard audio/mpeg for MP3 files
+    const mediaInfo = new chrome.cast.media.MediaInfo(audioUrl, 'audio/mpeg');
     mediaInfo.streamType = chrome.cast.media.StreamType.BUFFERED;
 
     const metadata = new chrome.cast.media.MusicTrackMediaMetadata();
@@ -59,17 +75,25 @@
     metadata.albumName = (albumMeta && albumMeta.title) || "Sanity's Edge";
     metadata.trackNumber = track.track_number || (index + 1);
 
-    const coverPath = (albumMeta && (albumMeta.master_cover_art || albumMeta.cover_art || albumMeta.cover)) || 'assets/images/album-art.webp';
+    // Track-specific artwork or fallback album cover
+    const coverPath = track.art_square || track.art || track.image || track.cover ||
+      (albumMeta && (albumMeta.master_cover_art || albumMeta.cover_art || albumMeta.cover)) ||
+      'assets/art/sanitys-edge-cover.jpg';
+
     if (coverPath) {
       const coverUrl = toAbsoluteUrl(coverPath);
-      metadata.images = [new chrome.cast.Image(coverUrl)];
+      const castImg = new chrome.cast.Image(coverUrl);
+      castImg.width = 720;
+      castImg.height = 720;
+      metadata.images = [castImg];
     }
 
     mediaInfo.metadata = metadata;
     mediaInfo.customData = {
       trackIndex: index,
       trackNumber: track.track_number || (index + 1),
-      title: track.title
+      title: track.title,
+      audioUrl: audioUrl
     };
 
     return mediaInfo;
@@ -84,60 +108,84 @@
       return;
     }
 
-    const castContext = cast.framework.CastContext.getInstance();
-    castContext.setOptions({
-      receiverApplicationId: chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID,
-      autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED
-    });
+    try {
+      const castContext = cast.framework.CastContext.getInstance();
+      castContext.setOptions({
+        receiverApplicationId: chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID,
+        autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED
+      });
 
-    remotePlayer = new cast.framework.RemotePlayer();
-    remotePlayerController = new cast.framework.RemotePlayerController(remotePlayer);
+      remotePlayer = new cast.framework.RemotePlayer();
+      remotePlayerController = new cast.framework.RemotePlayerController(remotePlayer);
 
-    // Listen for connection state changes
-    remotePlayerController.addEventListener(
-      cast.framework.RemotePlayerEventType.IS_CONNECTED_CHANGED,
-      onConnectedChanged
-    );
+      // Listen for connection state changes via RemotePlayer
+      remotePlayerController.addEventListener(
+        cast.framework.RemotePlayerEventType.IS_CONNECTED_CHANGED,
+        onConnectedChanged
+      );
 
-    // Listen for playback state changes (PLAYING, PAUSED, IDLE, BUFFERING)
-    remotePlayerController.addEventListener(
-      cast.framework.RemotePlayerEventType.PLAYER_STATE_CHANGED,
-      onPlayerStateChanged
-    );
+      // Listen for playback state changes (PLAYING, PAUSED, IDLE, BUFFERING)
+      remotePlayerController.addEventListener(
+        cast.framework.RemotePlayerEventType.PLAYER_STATE_CHANGED,
+        onPlayerStateChanged
+      );
 
-    // Listen for media info changes (track advance in queue)
-    remotePlayerController.addEventListener(
-      cast.framework.RemotePlayerEventType.MEDIA_INFO_CHANGED,
-      onMediaInfoChanged
-    );
+      // Listen for media info changes (track advance in queue)
+      remotePlayerController.addEventListener(
+        cast.framework.RemotePlayerEventType.MEDIA_INFO_CHANGED,
+        onMediaInfoChanged
+      );
 
-    // Listen for time updates from remote player
-    remotePlayerController.addEventListener(
-      cast.framework.RemotePlayerEventType.CURRENT_TIME_CHANGED,
-      onCurrentTimeChanged
-    );
+      // Listen for time updates from remote player
+      remotePlayerController.addEventListener(
+        cast.framework.RemotePlayerEventType.CURRENT_TIME_CHANGED,
+        onCurrentTimeChanged
+      );
 
-    // Check if session already exists (e.g. from origin-scoped auto-join)
-    currentSession = castContext.getCurrentSession();
-    if (currentSession && remotePlayer.isConnected) {
-      onConnectedChanged();
+      // Listen for CastContext session state transitions
+      castContext.addEventListener(
+        cast.framework.CastContextEventType.SESSION_STATE_CHANGED,
+        (event) => {
+          switch (event.sessionState) {
+            case cast.framework.SessionState.SESSION_STARTED:
+            case cast.framework.SessionState.SESSION_RESUMED:
+              currentSession = castContext.getCurrentSession();
+              isConnected = true;
+              onConnectedChanged();
+              break;
+            case cast.framework.SessionState.SESSION_ENDED:
+              currentSession = null;
+              isConnected = false;
+              onConnectedChanged();
+              break;
+          }
+        }
+      );
+
+      // Check if session already exists
+      currentSession = castContext.getCurrentSession();
+      if (currentSession && remotePlayer.isConnected) {
+        onConnectedChanged();
+      }
+
+      isApiAvailable = true;
+      console.log('[CastManager] Google Cast framework initialized successfully');
+    } catch (e) {
+      console.error('[CastManager] Initialization failed:', e);
     }
-
-    isApiAvailable = true;
-    console.log('[CastManager] Google Cast framework initialized successfully');
   }
 
   function onConnectedChanged() {
     const castContext = cast.framework.CastContext.getInstance();
     currentSession = castContext.getCurrentSession();
-    isConnected = remotePlayer ? remotePlayer.isConnected : false;
+    isConnected = remotePlayer ? remotePlayer.isConnected : !!currentSession;
 
     if (isConnected && currentSession) {
       const castDevice = currentSession.getCastDevice();
       deviceName = castDevice ? castDevice.friendlyName : 'Google TV';
       console.log(`[CastManager] Connected to ${deviceName}`);
 
-      // Pause local audio in page if any is playing
+      // Pause local audio in page
       pauseLocalAudio();
 
       emit('connected', { deviceName });
@@ -159,10 +207,14 @@
     const state = remotePlayer.playerState;
     console.log(`[CastManager] Remote player state: ${state}`);
 
-    // Handle end of queue or finished item
+    // Hands-free auto-advance fallback if queue does not advance automatically
     if (state === cast.framework.PlayerState.IDLE) {
       if (remotePlayer.idleReason === 'FINISHED') {
         console.log('[CastManager] Track finished playing on remote receiver');
+        if (activeTrackIndex >= 0 && activeTrackIndex < activeTracks.length - 1) {
+          console.log(`[CastManager] Auto-advancing from track ${activeTrackIndex + 1} to track ${activeTrackIndex + 2}`);
+          loadQueueFromIndex(activeTrackIndex + 1, activeTracks, activeAlbumMeta);
+        }
       }
     }
 
@@ -180,7 +232,6 @@
     if (mediaInfo.customData && typeof mediaInfo.customData.trackIndex === 'number') {
       detectedIndex = mediaInfo.customData.trackIndex;
     } else if (activeTracks.length > 0) {
-      // Find matching track by audio URL or title
       const contentId = mediaInfo.contentId || '';
       const title = (mediaInfo.metadata && mediaInfo.metadata.title) || '';
       detectedIndex = activeTracks.findIndex(t => {
@@ -191,7 +242,7 @@
 
     if (detectedIndex !== -1 && detectedIndex !== activeTrackIndex) {
       activeTrackIndex = detectedIndex;
-      console.log(`[CastManager] Now active: Track ${activeTrackIndex + 1} (${activeTracks[activeTrackIndex]?.title || ''})`);
+      console.log(`[CastManager] Now active on Google TV: Track ${activeTrackIndex + 1} (${activeTracks[activeTrackIndex]?.title || ''})`);
       emit('trackChange', activeTrackIndex);
       updateAllCastUI();
     }
@@ -207,7 +258,6 @@
   }
 
   function pauseLocalAudio() {
-    // Look for any standard audio element on the page and pause it
     const audios = document.querySelectorAll('audio');
     audios.forEach(a => {
       if (!a.paused) {
@@ -217,7 +267,7 @@
   }
 
   /**
-   * Load entire album as a remote queue on Google TV starting from targetIndex
+   * Load album queue on Google TV starting from targetIndex using standard CAF loadMedia
    */
   function loadQueueFromIndex(targetIndex, tracks, albumMeta) {
     const castContext = cast.framework.CastContext.getInstance();
@@ -228,11 +278,16 @@
       return;
     }
 
-    activeTracks = tracks || [];
-    activeAlbumMeta = albumMeta || null;
+    activeTracks = (tracks && tracks.length) ? tracks : activeTracks;
+    activeAlbumMeta = albumMeta || activeAlbumMeta;
     activeTrackIndex = targetIndex;
 
     pauseLocalAudio();
+
+    if (!activeTracks[targetIndex]) {
+      console.warn('[CastManager] Invalid track index to load:', targetIndex);
+      return;
+    }
 
     // Build queue items from targetIndex to the end of the album
     const remainingTracks = activeTracks.slice(targetIndex);
@@ -241,52 +296,69 @@
       const media = buildMediaInfo(t, activeAlbumMeta, realIdx);
       const queueItem = new chrome.cast.media.QueueItem(media);
       queueItem.autoplay = true;
-      queueItem.preloadTime = 8; // Pre-buffer next track 8s before current ends for seamless gapless transition
+      queueItem.preloadTime = 8; // Pre-buffer next track 8s before current ends
       return queueItem;
     });
 
-    const queueRequest = new chrome.cast.media.QueueLoadRequest(queueItems);
-    queueRequest.startIndex = 0;
-    queueRequest.repeatMode = chrome.cast.media.RepeatMode.OFF;
+    const firstMedia = queueItems[0].media;
+    const loadRequest = new chrome.cast.media.LoadRequest(firstMedia);
+    loadRequest.autoplay = true;
 
-    console.log(`[CastManager] Queueing ${queueItems.length} tracks starting at index ${targetIndex} (${activeTracks[targetIndex]?.title})...`);
+    // Attach CAF QueueData if supported
+    if (window.chrome && chrome.cast && chrome.cast.media && chrome.cast.media.QueueData) {
+      try {
+        const queueData = new chrome.cast.media.QueueData();
+        queueData.items = queueItems;
+        queueData.startIndex = 0;
+        queueData.repeatMode = chrome.cast.media.RepeatMode.OFF;
+        loadRequest.queueData = queueData;
+      } catch (qdErr) {
+        console.warn('[CastManager] QueueData creation error:', qdErr);
+      }
+    }
 
-    currentSession.queueLoad(queueRequest).then(() => {
-      console.log('[CastManager] Queue loaded onto Google TV receiver successfully');
+    console.log(`[CastManager] Loading ${queueItems.length} tracks onto Google TV starting at index ${targetIndex} ("${activeTracks[targetIndex]?.title}")...`);
+
+    // Standard CAF loadMedia call on CastSession
+    currentSession.loadMedia(loadRequest).then(() => {
+      console.log('[CastManager] Media loaded successfully onto Google TV');
       emit('trackChange', activeTrackIndex);
       updateAllCastUI();
       notifyState();
     }).catch(err => {
-      console.warn('[CastManager] Queue load failed, attempting fallback loadMedia:', err);
-      // Fallback: standard loadMedia for single track
+      console.warn('[CastManager] loadMedia with queueData failed, trying single-track loadMedia fallback:', err);
+      // Fallback: load single track without queueData
       const singleMedia = buildMediaInfo(activeTracks[targetIndex], activeAlbumMeta, targetIndex);
-      const loadRequest = new chrome.cast.media.LoadRequest(singleMedia);
-      loadRequest.autoplay = true;
-      currentSession.loadMedia(loadRequest).then(() => {
+      const singleRequest = new chrome.cast.media.LoadRequest(singleMedia);
+      singleRequest.autoplay = true;
+      currentSession.loadMedia(singleRequest).then(() => {
+        console.log('[CastManager] Single track loaded successfully onto Google TV fallback');
         emit('trackChange', activeTrackIndex);
         updateAllCastUI();
         notifyState();
-      }).catch(loadErr => {
-        console.error('[CastManager] Fallback loadMedia also failed:', loadErr);
+      }).catch(fallbackErr => {
+        console.error('[CastManager] Both queue and single loadMedia failed:', fallbackErr);
       });
     });
   }
 
   /**
-   * Request Cast and start playing from trackIndex
+   * Request Cast session and start playing from trackIndex
    */
   function castTrack(trackIndex, tracks, albumMeta) {
-    activeTracks = tracks || activeTracks;
+    activeTracks = (tracks && tracks.length) ? tracks : activeTracks;
     activeAlbumMeta = albumMeta || activeAlbumMeta;
 
     const castContext = cast.framework.CastContext.getInstance();
+    currentSession = castContext.getCurrentSession();
+    isConnected = remotePlayer ? remotePlayer.isConnected : !!currentSession;
 
     if (isConnected && currentSession) {
-      // Already connected: immediately jump to and queue selected track
       loadQueueFromIndex(trackIndex, activeTracks, activeAlbumMeta);
     } else {
-      // Not connected: prompt user to pick Cast receiver
       castContext.requestSession().then(() => {
+        currentSession = castContext.getCurrentSession();
+        isConnected = true;
         onConnectedChanged();
         loadQueueFromIndex(trackIndex, activeTracks, activeAlbumMeta);
       }).catch(err => {
@@ -317,34 +389,49 @@
   }
 
   /**
-   * Skip to next track in queue
+   * Skip to next track in queue or manual advance
    */
   function nextTrack() {
-    if (!isConnected || !currentSession) return;
-    currentSession.queueNext().catch(err => {
-      console.warn('[CastManager] queueNext failed, falling back to manual advance:', err);
-      if (activeTrackIndex + 1 < activeTracks.length) {
-        loadQueueFromIndex(activeTrackIndex + 1, activeTracks, activeAlbumMeta);
-      }
-    });
+    if (!isConnected) return;
+    const mediaSession = currentSession ? currentSession.getMediaSession() : null;
+    if (mediaSession && typeof mediaSession.queueNext === 'function') {
+      mediaSession.queueNext(null, () => {}, () => {
+        fallbackNext();
+      });
+    } else {
+      fallbackNext();
+    }
+  }
+
+  function fallbackNext() {
+    if (activeTrackIndex + 1 < activeTracks.length) {
+      loadQueueFromIndex(activeTrackIndex + 1, activeTracks, activeAlbumMeta);
+    }
   }
 
   /**
-   * Return to previous track in queue
+   * Return to previous track in queue or restart
    */
   function prevTrack() {
-    if (!isConnected || !currentSession) return;
+    if (!isConnected) return;
     if (remotePlayer && remotePlayer.currentTime > 4) {
-      // If played more than 4 seconds, restart track
       seek(0);
       return;
     }
-    currentSession.queuePrev().catch(err => {
-      console.warn('[CastManager] queuePrev failed, falling back to manual advance:', err);
-      if (activeTrackIndex - 1 >= 0) {
-        loadQueueFromIndex(activeTrackIndex - 1, activeTracks, activeAlbumMeta);
-      }
-    });
+    const mediaSession = currentSession ? currentSession.getMediaSession() : null;
+    if (mediaSession && typeof mediaSession.queuePrev === 'function') {
+      mediaSession.queuePrev(null, () => {}, () => {
+        fallbackPrev();
+      });
+    } else {
+      fallbackPrev();
+    }
+  }
+
+  function fallbackPrev() {
+    if (activeTrackIndex - 1 >= 0) {
+      loadQueueFromIndex(activeTrackIndex - 1, activeTracks, activeAlbumMeta);
+    }
   }
 
   /**
@@ -420,7 +507,7 @@
       }
     });
 
-    // 2. Update jukebox / dock cast button
+    // 2. Update jukebox dock cast button
     const jukeboxCastBtn = document.getElementById('jukebox-cast-btn');
     if (jukeboxCastBtn) {
       const label = document.getElementById('jukebox-cast-device');
@@ -486,7 +573,6 @@
         CastManager.disconnect();
       }
     } else {
-      // Cast starting at current playing track or Track 1
       const curIdx = typeof window.currentTrackIndex === 'number' && window.currentTrackIndex >= 0 ? window.currentTrackIndex : 0;
       window.castTrack(curIdx);
     }
