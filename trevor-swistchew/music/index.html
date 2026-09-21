@@ -634,7 +634,7 @@
           >
             <i class="fa-solid fa-clover text-[11px] text-green-400"></i>
             <span>Celtic</span>
-            <span class="px-1.5 py-0.5 rounded text-[10px] bg-stone-950 text-stone-400">6</span>
+            <span class="px-1.5 py-0.5 rounded text-[10px] bg-stone-950 text-stone-400">7</span>
           </button>
 
           <button 
@@ -13287,6 +13287,20 @@ What the hell are LEADERS for
       const filterModeContainer = document.getElementById('filter-mode-container');
       const filterModeAnyBtn = document.getElementById('filter-mode-any-btn');
       const filterModeAllBtn = document.getElementById('filter-mode-all-btn');
+
+      // Dynamically calculate and sync badge counts with exact filter matching
+      filterButtons.forEach(btn => {
+        const filter = btn.getAttribute('data-filter');
+        const badge = btn.querySelector('span:last-child');
+        if (!badge) return;
+        if (filter === 'all') {
+          badge.textContent = totalCount;
+        } else {
+          const matchingCount = Array.from(cards).filter(c => testCardFilter(c, filter)).length;
+          badge.textContent = matchingCount;
+        }
+      });
+
 
       let searchQuery = '';
 
