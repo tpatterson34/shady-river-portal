@@ -35,6 +35,14 @@
   let toastTimeout = null;
   const debugLogs = [];
 
+  // Safe PlayerState enum (Google Cast Web SDK CAF sender does not expose PlayerState on cast.framework)
+  const CastPlayerState = {
+    IDLE: 'IDLE',
+    PLAYING: 'PLAYING',
+    PAUSED: 'PAUSED',
+    BUFFERING: 'BUFFERING'
+  };
+
   const eventListeners = {
     stateChange: [],
     trackChange: [],
@@ -55,37 +63,36 @@
   function updateDebugPill(latestMsg) {
     let pill = document.getElementById('cast-debug-pill');
     if (!pill) {
+      if (!document.body) return; // Guard: script executed in <head> before <body>
       pill = document.createElement('div');
       pill.id = 'cast-debug-pill';
-      pill.style.position = 'fixed';
-      pill.style.bottom = '84px';
-      pill.style.left = '20px';
-      pill.style.zIndex = '999990';
-      pill.style.backgroundColor = 'rgba(15, 23, 42, 0.92)';
-      pill.style.border = '1px solid rgba(56, 189, 248, 0.35)';
-      pill.style.borderRadius = '20px';
-      pill.style.padding = '5px 14px';
-      pill.style.fontFamily = 'monospace';
-      pill.style.fontSize = '11px';
-      pill.style.color = '#38bdf8';
-      pill.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.7)';
-      pill.style.display = 'flex';
-      pill.style.alignItems = 'center';
-      pill.style.gap = '8px';
-      pill.style.cursor = 'pointer';
-      pill.style.backdropFilter = 'blur(8px)';
-      pill.style.webkitBackdropFilter = 'blur(8px)';
+      pill.className = 'fixed bottom-24 left-6 z-50 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-sky-400/40 text-sky-400 font-mono text-[11px] shadow-2xl backdrop-blur-md cursor-pointer flex items-center gap-2 hover:border-sky-400 transition-colors';
       pill.title = 'Click to view Cast diagnostics';
       pill.onclick = showDebugModal;
       document.body.appendChild(pill);
     }
 
-    const icon = isConnected ? '<span style="color:#10b981;">●</span>' : '<span style="color:#64748b;">○</span>';
+    const iconSpan = document.getElementById('cast-debug-pill-icon');
+    const devSpan = document.getElementById('cast-debug-pill-dev');
+    const msgSpan = document.getElementById('cast-debug-pill-msg');
+
+    const iconColor = isConnected ? '#10b981' : '#64748b';
+    const iconSymbol = isConnected ? '●' : '○';
     const dev = deviceName || (isConnected ? 'Connected' : 'Cast Standby');
-    pill.innerHTML = `${icon} <span style="color:#f1f5f9;font-weight:600;">Cast:</span> <span style="color:#38bdf8;">${dev}</span> <span style="color:#64748b;">|</span> <span style="color:#94a3b8;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${latestMsg || 'Ready'}</span>`;
+    const msg = latestMsg || 'Ready';
+
+    if (iconSpan && devSpan && msgSpan) {
+      iconSpan.style.color = iconColor;
+      iconSpan.textContent = iconSymbol;
+      devSpan.textContent = dev;
+      msgSpan.textContent = msg;
+    } else {
+      pill.innerHTML = `<span style="color:${iconColor};">${iconSymbol}</span> <span style="color:#f1f5f9;font-weight:600;">Cast:</span> <span style="color:#38bdf8;">${dev}</span> <span style="color:#64748b;">|</span> <span style="color:#94a3b8;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${msg}</span>`;
+    }
   }
 
   function showDebugModal() {
+    if (!document.body) return;
     let modal = document.getElementById('cast-debug-modal');
     if (!modal) {
       modal = document.createElement('div');
@@ -98,7 +105,7 @@
       modal.style.alignItems = 'center';
       modal.style.justifyContent = 'center';
       modal.style.padding = '16px';
-      modal.onclick = () => { modal.style.display = 'none'; };
+      modal.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
 
       const content = document.createElement('div');
       content.id = 'cast-debug-content';
@@ -151,6 +158,7 @@
    */
   function showToast(message, type = 'info', durationMs = 5000) {
     logDebug(`Toast (${type}): ${message}`);
+    if (!document.body) return;
     let toast = document.getElementById('cast-toast');
     if (!toast) {
       toast = document.createElement('div');
@@ -239,6 +247,10 @@
         const sessionState = castContext.getSessionState ? castContext.getSessionState() : null;
         if (sessionState !== cast.framework.SessionState.SESSION_ENDING &&
             sessionState !== cast.framework.SessionState.SESSION_ENDED) {
+          if (!deviceName && session.getCastDevice && session.getCastDevice()) {
+            const castDev = session.getCastDevice();
+            if (castDev && castDev.friendlyName) deviceName = castDev.friendlyName;
+          }
           return true;
         }
       }
@@ -269,6 +281,7 @@
     mediaInfo.contentId = audioUrl;
     mediaInfo.contentType = 'audio/mpeg';
     mediaInfo.streamType = (window.chrome && chrome.cast && chrome.cast.media && chrome.cast.media.StreamType && chrome.cast.media.StreamType.BUFFERED) || 'BUFFERED';
+    mediaInfo.customData = { trackIndex: index };
 
     const albumTitle = (albumMeta && albumMeta.title) || "Sanity's Edge";
     const artist = (albumMeta && albumMeta.artist) || 'The Shady River Bard';
@@ -485,7 +498,7 @@
     const idleReason = remotePlayer.idleReason;
     logDebug(`PlayerState: ${state} (${idleReason || 'active'})`);
 
-    if (state === cast.framework.PlayerState.IDLE) {
+    if (state === CastPlayerState.IDLE) {
       isMediaLoading = false;
       if (idleReason === 'FINISHED') {
         logDebug('Track finished playing on TV receiver');
@@ -592,7 +605,11 @@
     const dev = deviceName || 'Google TV';
     logDebug(`[Seq ${currentSeq}] Streaming to ${dev}: "${track.title}" -> ${mediaInfo.contentUrl}`);
     showToast(`Streaming "${track.title}" to ${dev}...`, 'info', 4000);
-    updateAllCastUI();
+    try {
+      updateAllCastUI();
+    } catch (uiErr) {
+      console.warn('[CastManager] Non-fatal UI update error before loadMedia:', uiErr);
+    }
 
     currentSession.loadMedia(loadRequest).then((res) => {
       isMediaLoading = false;
@@ -685,7 +702,7 @@
   function playOrPause() {
     isConnected = checkIsConnected();
     if (isConnected) {
-      if (remotePlayer && (remotePlayer.playerState === cast.framework.PlayerState.PLAYING || remotePlayer.playerState === cast.framework.PlayerState.PAUSED)) {
+      if (remotePlayer && (remotePlayer.playerState === CastPlayerState.PLAYING || remotePlayer.playerState === CastPlayerState.PAUSED)) {
         if (remotePlayerController) {
           remotePlayerController.playOrPause();
         }
@@ -761,7 +778,7 @@
   }
 
   function notifyState() {
-    const isPlaying = remotePlayer ? (remotePlayer.playerState === cast.framework.PlayerState.PLAYING) : false;
+    const isPlaying = remotePlayer ? (remotePlayer.playerState === CastPlayerState.PLAYING) : false;
     emit('stateChange', {
       isConnected: checkIsConnected(),
       isPlaying,
@@ -809,9 +826,9 @@
         if (label) {
           const pState = remotePlayer ? remotePlayer.playerState : '';
           let stateTag = '';
-          if (pState === cast.framework.PlayerState.PLAYING) stateTag = ' • Playing';
-          else if (pState === cast.framework.PlayerState.PAUSED) stateTag = ' • Paused';
-          else if (pState === cast.framework.PlayerState.BUFFERING) stateTag = ' • Buffering';
+          if (pState === CastPlayerState.PLAYING) stateTag = ' • Playing';
+          else if (pState === CastPlayerState.PAUSED) stateTag = ' • Paused';
+          else if (pState === CastPlayerState.BUFFERING) stateTag = ' • Buffering';
 
           label.textContent = `${deviceName || 'Google TV'}${stateTag}`;
           label.classList.remove('hidden');
@@ -827,7 +844,7 @@
       }
     }
 
-    updateDebugPill(isConnected ? `Connected: ${deviceName}` : 'Standby');
+    updateDebugPill(isConnected ? `Connected: ${deviceName || 'Google TV'}` : 'Standby');
   }
 
   // Hook Google Cast framework bootstrap - MUST be defined globally
@@ -841,6 +858,17 @@
   // If already available on script arrival, init immediately
   if (window.cast && window.cast.framework) {
     initCast();
+  }
+
+  // Synchronize UI elements once DOM is fully parsed
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      updateAllCastUI();
+      updateDebugPill(isConnected ? `Connected: ${deviceName || 'Google TV'}` : 'Standby');
+    });
+  } else {
+    updateAllCastUI();
+    updateDebugPill(isConnected ? `Connected: ${deviceName || 'Google TV'}` : 'Standby');
   }
 
   function getDiagnostics() {
