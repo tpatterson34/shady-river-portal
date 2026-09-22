@@ -33,6 +33,7 @@
   let activeTracks = [];
   let activeAlbumMeta = null;
   let toastTimeout = null;
+  let mediaLoadTimeout = null;
   let lastKnownTime = 0;
   let lastKnownDuration = 0;
   const debugLogs = [];
@@ -513,8 +514,21 @@
     const duration = remotePlayer.duration || 0;
     logDebug(`PlayerState: ${state} (idleReason: ${idleReason || 'none'}, time: ${curTime.toFixed(1)}s / ${duration.toFixed(1)}s, lastKnown: ${lastKnownTime.toFixed(1)}s / ${lastKnownDuration.toFixed(1)}s)`);
 
+    // Any active playback or buffering means media load has succeeded
+    if (state === CastPlayerState.PLAYING || state === CastPlayerState.BUFFERING) {
+      isMediaLoading = false;
+      if (mediaLoadTimeout) {
+        clearTimeout(mediaLoadTimeout);
+        mediaLoadTimeout = null;
+      }
+    }
+
     if (state === CastPlayerState.IDLE) {
       isMediaLoading = false;
+      if (mediaLoadTimeout) {
+        clearTimeout(mediaLoadTimeout);
+        mediaLoadTimeout = null;
+      }
       const isFinished = (idleReason === 'FINISHED') ||
                          (lastKnownDuration > 10 && lastKnownTime >= (lastKnownDuration - 5)) ||
                          (duration > 0 && curTime >= (duration - 3));
@@ -600,9 +614,16 @@
     }
 
     if (isMediaLoading && !isRetry) {
-      logDebug(`loadTrackOnReceiver: Load in flight. Queuing track ${trackIndex + 1}`);
-      pendingTrackIndex = trackIndex;
-      return;
+      if (trackIndex === activeTrackIndex) {
+        logDebug(`loadTrackOnReceiver: Track ${trackIndex + 1} already loading`);
+        return;
+      }
+      logDebug(`loadTrackOnReceiver: Preempting in-flight load for new Track ${trackIndex + 1}`);
+      isMediaLoading = false;
+      if (mediaLoadTimeout) {
+        clearTimeout(mediaLoadTimeout);
+        mediaLoadTimeout = null;
+      }
     }
 
     activeTracks = (activeTracks && activeTracks.length) ? activeTracks : ((window.ALBUM_DATA && window.ALBUM_DATA.tracks) || []);
@@ -621,33 +642,26 @@
     lastKnownDuration = 0;
     pauseLocalAudio();
 
+    // 4-second safety watchdog: ensures isMediaLoading never stays permanently locked
+    if (mediaLoadTimeout) clearTimeout(mediaLoadTimeout);
+    mediaLoadTimeout = setTimeout(() => {
+      if (isMediaLoading && currentSeq === loadSequence) {
+        logDebug(`[Seq ${currentSeq}] Watchdog: loadMedia promise timed out after 4s - releasing lock`);
+        isMediaLoading = false;
+        if (pendingTrackIndex !== null && pendingTrackIndex !== activeTrackIndex) {
+          const nextIdx = pendingTrackIndex;
+          pendingTrackIndex = null;
+          loadTrackOnReceiver(nextIdx);
+        }
+      }
+    }, 4000);
+
     const track = activeTracks[trackIndex];
     const mediaInfo = buildMediaInfo(track, activeAlbumMeta, trackIndex, isRetry);
 
     const loadRequest = new chrome.cast.media.LoadRequest(mediaInfo);
     loadRequest.autoplay = true;
     loadRequest.currentTime = seekTime || 0;
-
-    // Attach native QueueData with all tracks for Default Media Receiver continuous album playback
-    if (!isRetry && window.chrome && chrome.cast && chrome.cast.media && chrome.cast.media.QueueData && chrome.cast.media.QueueItem && activeTracks.length > 0) {
-      try {
-        const queueData = new chrome.cast.media.QueueData();
-        queueData.name = (activeAlbumMeta && activeAlbumMeta.title) || "Sanity's Edge";
-        queueData.description = (activeAlbumMeta && activeAlbumMeta.subtitle) || "";
-        queueData.startIndex = trackIndex;
-        queueData.repeatMode = (chrome.cast.media.RepeatMode && chrome.cast.media.RepeatMode.OFF) || 'REPEAT_OFF';
-        queueData.items = activeTracks.map((t, idx) => {
-          const mInfo = buildMediaInfo(t, activeAlbumMeta, idx, false);
-          const qItem = new chrome.cast.media.QueueItem(mInfo);
-          qItem.autoplay = true;
-          qItem.preloadTime = 15;
-          return qItem;
-        });
-        loadRequest.queueData = queueData;
-      } catch (qErr) {
-        console.warn('[CastManager] Non-fatal queueData construction error:', qErr);
-      }
-    }
 
     const dev = deviceName || 'Google TV';
     logDebug(`[Seq ${currentSeq}] Streaming to ${dev}: "${track.title}" -> ${mediaInfo.contentUrl}`);
@@ -659,6 +673,10 @@
     }
 
     currentSession.loadMedia(loadRequest).then((res) => {
+      if (mediaLoadTimeout) {
+        clearTimeout(mediaLoadTimeout);
+        mediaLoadTimeout = null;
+      }
       isMediaLoading = false;
       if (currentSeq !== loadSequence) {
         logDebug(`[Seq ${currentSeq}] Stale load response ignored`);
@@ -687,6 +705,10 @@
         setTimeout(() => loadTrackOnReceiver(nextIdx), 250);
       }
     }).catch(err => {
+      if (mediaLoadTimeout) {
+        clearTimeout(mediaLoadTimeout);
+        mediaLoadTimeout = null;
+      }
       isMediaLoading = false;
       if (currentSeq !== loadSequence) return;
 
