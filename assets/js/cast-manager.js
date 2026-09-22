@@ -288,10 +288,16 @@
     const trackTitle = track.title || ('Track ' + (index + 1));
     const trackNum = track.track_number || (index + 1);
 
-    const coverPath = track.art_square || track.art || track.image || track.cover ||
+    // 1. Bespoke Track Artwork (720x720) - displayed in primary/large view
+    const trackCoverPath = track.art_square || track.art || track.image || track.cover ||
       (albumMeta && (albumMeta.master_cover_art || albumMeta.cover_art || albumMeta.cover)) ||
       'assets/art/sanitys-edge-cover.jpg';
-    const coverUrl = toAbsoluteUrl(coverPath);
+    const trackCoverUrl = toAbsoluteUrl(trackCoverPath);
+
+    // 2. Master Album Cover Artwork - displayed in top-right thumbnail
+    const albumCoverPath = (albumMeta && (albumMeta.master_cover_art || albumMeta.cover_art || albumMeta.cover)) ||
+      'assets/art/sanitys-edge-cover.jpg';
+    const albumCoverUrl = toAbsoluteUrl(albumCoverPath);
 
     let metadata;
     if (forceGeneric) {
@@ -310,11 +316,20 @@
       metadata.trackNumber = trackNum;
     }
 
-    if (coverUrl) {
-      const castImg = new chrome.cast.Image(coverUrl);
-      castImg.width = 720;
-      castImg.height = 720;
-      metadata.images = [castImg];
+    if (trackCoverUrl) {
+      const trackImg = new chrome.cast.Image(trackCoverUrl);
+      trackImg.width = 720;
+      trackImg.height = 720;
+
+      const albumImg = new chrome.cast.Image(albumCoverUrl);
+      albumImg.width = 720;
+      albumImg.height = 720;
+
+      // Primary images array: track artwork first, album artwork second
+      metadata.images = [trackImg, albumImg];
+
+      // Default Media Receiver secondaryImage: specifically renders in the top-right corner thumbnail!
+      metadata.secondaryImage = albumImg;
     }
 
     mediaInfo.metadata = metadata;
@@ -495,13 +510,20 @@
     if (!remotePlayer) return;
 
     const state = remotePlayer.playerState;
-    const idleReason = remotePlayer.idleReason;
-    logDebug(`PlayerState: ${state} (${idleReason || 'active'})`);
+    const mediaSession = (currentSession && currentSession.getMediaSession) ? currentSession.getMediaSession() : null;
+    const idleReason = (mediaSession && mediaSession.idleReason) || remotePlayer.idleReason || '';
+    const curTime = remotePlayer.currentTime || 0;
+    const duration = remotePlayer.duration || 0;
+    logDebug(`PlayerState: ${state} (idleReason: ${idleReason || 'none'}, time: ${curTime.toFixed(1)}s / ${duration.toFixed(1)}s)`);
 
     if (state === CastPlayerState.IDLE) {
       isMediaLoading = false;
-      if (idleReason === 'FINISHED') {
+      const isFinished = (idleReason === 'FINISHED') ||
+                         (duration > 0 && curTime >= (duration - 3));
+
+      if (isFinished) {
         logDebug('Track finished playing on TV receiver');
+        activeTracks = (activeTracks && activeTracks.length) ? activeTracks : ((window.ALBUM_DATA && window.ALBUM_DATA.tracks) || []);
         if (activeTrackIndex >= 0 && activeTrackIndex < activeTracks.length - 1) {
           const nextIdx = activeTrackIndex + 1;
           logDebug(`Auto-advancing to Track ${nextIdx + 1}`);
@@ -601,6 +623,27 @@
     const loadRequest = new chrome.cast.media.LoadRequest(mediaInfo);
     loadRequest.autoplay = true;
     loadRequest.currentTime = seekTime || 0;
+
+    // Attach native QueueData with all tracks for Default Media Receiver continuous album playback
+    if (!isRetry && window.chrome && chrome.cast && chrome.cast.media && chrome.cast.media.QueueData && chrome.cast.media.QueueItem && activeTracks.length > 0) {
+      try {
+        const queueData = new chrome.cast.media.QueueData();
+        queueData.name = (activeAlbumMeta && activeAlbumMeta.title) || "Sanity's Edge";
+        queueData.description = (activeAlbumMeta && activeAlbumMeta.subtitle) || "";
+        queueData.startIndex = trackIndex;
+        queueData.repeatMode = (chrome.cast.media.RepeatMode && chrome.cast.media.RepeatMode.OFF) || 'REPEAT_OFF';
+        queueData.items = activeTracks.map((t, idx) => {
+          const mInfo = buildMediaInfo(t, activeAlbumMeta, idx, false);
+          const qItem = new chrome.cast.media.QueueItem(mInfo);
+          qItem.autoplay = true;
+          qItem.preloadTime = 15;
+          return qItem;
+        });
+        loadRequest.queueData = queueData;
+      } catch (qErr) {
+        console.warn('[CastManager] Non-fatal queueData construction error:', qErr);
+      }
+    }
 
     const dev = deviceName || 'Google TV';
     logDebug(`[Seq ${currentSeq}] Streaming to ${dev}: "${track.title}" -> ${mediaInfo.contentUrl}`);
