@@ -277,6 +277,7 @@
   function getActiveAlbumData() {
     if (activeAlbumMeta) return activeAlbumMeta;
     return window.ALBUM_DATA ||
+           window.FORGOTTEN_CROWN_DATA ||
            window.HEAVY_LOAD_DATA ||
            window.PLEONEXIA_DATA ||
            window.RED_WHITE_ROBBED_DATA ||

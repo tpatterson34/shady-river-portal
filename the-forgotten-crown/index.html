@@ -1,1550 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Forgotten Crown - Interactive Document</title>
-    <!-- Tailwind CSS for rapid, responsive styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts for a cinematic and historical feel -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <!-- FontAwesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Tailwind Configuration for custom colors and fonts -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'scottish-dark': '#1a1c20',
-                        'scottish-muted': '#2c2f36',
-                        'parchment': '#f4ebd8',
-                        'parchment-dark': '#e0d6c0',
-                        'gold-accent': '#c9b07a',
-                        'blood-red': '#8b1c1c'
-                    },
-                    fontFamily: {
-                        'serif': ['Lora', 'serif'],
-                        'display': ['Cinzel', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        /* Custom scrollbar for a polished look */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #1a1c20;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #4a4d54;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #c9b07a;
-        }
-        /* Smooth scrolling for anchor links */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Styling for the lyrical text blocks to look like code/poetry */
-        .lyrics-block {
-            background-color: rgba(0,0,0,0.3);
-            border-left: 3px solid #c9b07a;
-            padding: 1rem;
-            font-family: monospace;
-            white-space: pre-wrap;
-            color: #d1d5db; /* Tailwind gray-300 */
-        }
-        /* Accordion transition styles */
-        .accordion-content {
-            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-        }
-        .accordion-content.open {
-            max-height: 2000px; /* Arbitrary large number to allow content to expand fully */
-            opacity: 1;
-        }
-    </style>
-    <!-- Unified Accessibility Stylesheet -->
-    <link rel="stylesheet" href="../assets/css/a11y.css">
-  <!-- Official Favicon & Icons -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Forgotten Crown (A Sovereign's Songbook) | The Shady River Bard</title>
+  
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="Album XIX by The Shady River Bard. A 15-track Scottish Constitutional and Celtic Folk-Rock concept album exploring the 1689 Claim of Right, corporate feudalism, Salvo Jure Cujuslibet, and the reclamation of unalienable popular sovereignty.">
+  <meta name="keywords" content="The Shady River Bard, The Forgotten Crown, Scottish Folk, Claim of Right 1689, Salvo Jure Cujuslibet, Stirling Directive, Celtic Rock, Bothy Ballads, Concept Album">
+  <meta property="og:title" content="The Forgotten Crown | The Shady River Bard">
+  <meta property="og:description" content="A 15-track Scottish Constitutional & Celtic Folk-Rock concept album exploring the suppressed Claim of Right, corporate Freeports, and popular sovereignty.">
+  <meta property="og:image" content="assets/art/og-the-forgotten-crown.jpg">
+  <meta property="og:type" content="music.album">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Forgotten Crown | The Shady River Bard">
+  <meta name="twitter:description" content="Explore the interactive 15-track streaming jukebox, lyrics studio, visual exhibits, and constitutional matrix.">
+  <meta name="twitter:image" content="assets/art/og-the-forgotten-crown.jpg">
+
+  <!-- Official Favicon -->
   <link rel="icon" type="image/x-icon" href="../favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/app.css?v=20260922B">
   <link rel="stylesheet" href="../assets/css/bard-notes.css?v=20260920b">
+
+  <!-- Google Cast Manager & Album Data (__onGCastApiAvailable MUST be defined before cast_sender.js) -->
+  <script src="data/album-data.js?v=20260922B"></script>
+  <script src="../assets/js/cast-manager.js?v=20260922B"></script>
+  <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
 </head>
-    <!-- EXPANDABLE ACCESSIBILITY TOOLBAR (WCAG 2.1 AA) -->
-    <div id="a11y-toolbar" class="hidden bg-scottish-muted border-b border-gold-accent/40 py-3 px-6 text-xs transition-all shadow-2xl relative z-40" role="region" aria-label="Accessibility Display Preferences">
-        <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-4">
-            <div class="flex items-center gap-2.5">
-                <i class="fa-solid fa-universal-access text-gold-accent text-sm" aria-hidden="true"></i>
-                <div>
-                    <span class="font-display font-bold text-parchment block">Accessibility Preferences</span>
-                    <span class="text-gray-400 text-[11px]">Custom display controls for readability & vision assistance</span>
-                </div>
-            </div>
-            <div class="flex flex-wrap items-center gap-2 sm:gap-3 font-mono text-xs">
-                <button id="btn-contrast" onclick="toggleA11yOption('contrast')" class="px-3 py-1.5 rounded bg-scottish-dark hover:bg-gray-800 text-gray-200 border border-gray-700 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-accent">
-                    High Contrast: <span id="val-contrast" class="text-gray-400">Off</span>
-                </button>
-                <button id="btn-textsize" onclick="cycleTextSize()" class="px-3 py-1.5 rounded bg-scottish-dark hover:bg-gray-800 text-gray-200 border border-gray-700 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-accent">
-                    Text Size: <span id="val-textsize" class="text-gray-400">Normal</span>
-                </button>
-                <button id="btn-underline" onclick="toggleA11yOption('underline')" class="px-3 py-1.5 rounded bg-scottish-dark hover:bg-gray-800 text-gray-200 border border-gray-700 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-accent">
-                    Underline Links: <span id="val-underline" class="text-gray-400">Off</span>
-                </button>
-                <button id="btn-motion" onclick="toggleA11yOption('motion')" class="px-3 py-1.5 rounded bg-scottish-dark hover:bg-gray-800 text-gray-200 border border-gray-700 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-accent">
-                    Reduced Motion: <span id="val-motion" class="text-gray-400">System</span>
-                </button>
-                <button onclick="resetA11yOptions()" class="px-2 py-1 text-gray-400 hover:text-white underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-white">
-                    Reset
-                </button>
-            </div>
+<body>
+
+  <!-- WCAG 2.1 AA Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Accessibility Toolbar -->
+  <aside class="a11y-toolbar" aria-label="Accessibility Settings">
+    <div class="container a11y-inner">
+      <div class="a11y-label">
+        <i class="fas fa-universal-access"></i> Accessibility Preferences:
+      </div>
+      <div class="a11y-buttons">
+        <button id="btnHighContrast" class="a11y-btn" title="Toggle High Contrast"><i class="fas fa-adjust"></i> High Contrast</button>
+        <button id="btnFontUp" class="a11y-btn" title="Increase Font Size">A+</button>
+        <button id="btnFontDown" class="a11y-btn" title="Decrease Font Size">A-</button>
+        <button id="btnDyslexic" class="a11y-btn" title="Toggle OpenDyslexic Font"><i class="fas fa-book-reader"></i> Dyslexic</button>
+        <button id="btnUnderline" class="a11y-btn" title="Underline Links"><i class="fas fa-underline"></i> Underline</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="../vault/" class="brand-wrap" aria-label="Return to Discography Vault">
+        <img src="assets/art/album-cover.webp" alt="The Forgotten Crown Cover Art Thumbnail" class="brand-icon">
+        <div class="brand-titles">
+          <h1>THE SHADY RIVER BARD</h1>
+          <div class="brand-tag">Album XIX Incubator • Sovereign's Songbook</div>
         </div>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#exhibits">Exhibits</a></li>
+          <li><a href="#jukebox">Jukebox</a></li>
+          <li><a href="#matrix">Constitutional Matrix</a></li>
+          <li><a href="#lore">Historical Lore</a></li>
+          <li><a href="../vault/" class="btn-vault-back"><i class="fas fa-archive"></i> Vault Catalog</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-<body class="bg-scottish-dark text-gray-300 font-serif antialiased selection:bg-gold-accent selection:text-scottish-dark">
-    <!-- Skip Navigation Link (WCAG 2.4.1 Bypass Blocks) -->
-    <a href="#main-content" class="a11y-skip-link">Skip to main content</a>
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="overview" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-art-wrapper">
+          <img id="heroCoverImg" src="assets/art/album-cover.webp" alt="The Forgotten Crown Master Album Cover Art" title="Click to inspect master resolution art">
+          <button class="art-zoom-btn" id="art-zoom-btn" aria-label="Inspect Full-Resolution Artwork">
+            <i class="fas fa-search-plus"></i>
+            <span>Inspect Master Art</span>
+          </button>
+        </div>
 
+        <div class="hero-content">
+          <div class="hero-eyebrow">The Shady River Bard Presents • Album XIX</div>
+          <h2 class="hero-title">The Forgotten Crown</h2>
+          <div class="hero-subtitle">A Sovereign's Songbook & Constitutional Odyssey</div>
 
-    <div class="flex flex-col md:flex-row min-h-screen">
-        
-        <!-- Sidebar Navigation (Sticky on Desktop) -->
-        <nav class="md:w-64 md:flex-shrink-0 bg-scottish-muted border-r border-gray-700 md:sticky md:top-0 md:h-screen overflow-y-auto p-6 z-10">
-            <div class="mb-6 flex justify-center md:justify-start">
-                <div class="w-14 h-14 rounded-xl bg-scottish-dark border border-gold-accent/40 shadow-lg flex items-center justify-center p-1.5 flex-shrink-0">
-                    <img src="../assets/images/logo-mark.webp" alt="The Shady River Bard official logo" class="w-full h-full object-contain">
-                </div>
+          <p class="hero-desc">
+            A 15-track cinematic exploration of historical subjugation, the orchestrated division of the working class, and the awakening of a populace to their unalienable sovereignty. Grounded in the 1689 Scottish Claim of Right and the ancient safeguard of <em>Salvo Jure Cujuslibet</em> (&ldquo;saving the right of anyone&rdquo;), the album demonstrates that popular sovereignty rests with the people, not parliaments or crowns.
+          </p>
+
+          <div class="metric-badges">
+            <div class="metric-pill"><i class="fas fa-compact-disc"></i> <span><strong>15</strong> Concept Tracks</span></div>
+            <div class="metric-pill"><i class="fas fa-scroll"></i> <span><strong>4</strong> Narrative Acts</span></div>
+            <div class="metric-pill"><i class="fas fa-clock"></i> <span><strong>65:11</strong> Total Runtime</span></div>
+            <div class="metric-pill"><i class="fas fa-balance-scale"></i> <span><strong>5</strong> Constitutional Pillars</span></div>
+            <div class="metric-pill"><i class="fas fa-guitar"></i> <span><strong>Celtic Folk-Rock</strong> / Bothy Ballads</span></div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#jukebox" class="btn btn-primary">
+              <i class="fas fa-play"></i>
+              <span>Stream Album</span>
+            </a>
+            <a href="#matrix" class="btn btn-secondary">
+              <i class="fas fa-table"></i>
+              <span>Constitutional Matrix</span>
+            </a>
+            <a href="#exhibits" class="btn btn-secondary">
+              <i class="fas fa-image"></i>
+              <span>Visual Exhibits</span>
+            </a>
+            <a href="../vault/" class="btn btn-secondary">
+              <i class="fas fa-arrow-left"></i>
+              <span>Return to Vault</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curated Visual Exhibits -->
+    <section id="exhibits" class="app-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <i class="fas fa-images" style="color: var(--gold-primary);"></i>
+            <span>Curated Visual Exhibits</span>
+          </h2>
+          <p class="section-subtitle">
+            Widescreen visual representations tracing the memory of the soil, the corporate enclosures of Freeports, the archivist's midnight discovery, and the unified sovereign assembly.
+          </p>
+        </div>
+
+        <div class="exhibits-container">
+          <div class="exhibit-view">
+            <img src="assets/art/exhibit-1-dust-of-estates.webp" alt="Visual Exhibit Main View" id="exhibit-main-img">
+            <button class="exhibit-nav-btn exhibit-prev" id="prev-exhibit-btn" aria-label="Previous Exhibit">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="exhibit-nav-btn exhibit-next" id="next-exhibit-btn" aria-label="Next Exhibit">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="exhibit-overlay">
+              <div class="exhibit-subtitle" id="exhibit-subtitle">Exhibit I: The Memory of the Soil</div>
+              <h3 class="exhibit-title" id="exhibit-title">The Dust of Estates</h3>
+              <p class="exhibit-caption" id="exhibit-caption">
+                Ancient standing stones and ruined croft walls rise through the morning mist of the Scottish Highlands. The soil remembers the theft and the ancient laws of the common good.
+              </p>
             </div>
-            <div class="mb-8 text-center md:text-left">
-                <h2 class="font-display text-2xl text-parchment font-bold tracking-wider mb-2">The Forgotten Crown</h2>
-                <p class="text-sm text-gray-400 italic">By The Shady River Bard</p>
+          </div>
+          <div class="exhibit-thumbs" id="exhibit-thumbs">
+            <!-- Rendered via JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Streaming Jukebox & Lyrics Studio -->
+    <section id="jukebox" class="app-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <i class="fas fa-broadcast-tower" style="color: var(--gold-primary);"></i>
+            <span>Interactive Streaming Jukebox & Lyrics Studio</span>
+          </h2>
+          <p class="section-subtitle">
+            Explore all 15 songs organized across 4 narrative acts. Access full literary poetry, narrative context, musical direction, and drop a note directly to the Bard.
+          </p>
+        </div>
+
+        <!-- Filter and Search Bar -->
+        <div class="filter-bar">
+          <div class="act-filters" role="tablist" aria-label="Filter tracks by Act">
+            <button class="filter-btn active" data-act="all" role="tab" aria-selected="true">All Tracks (15)</button>
+            <button class="filter-btn" data-act="1" role="tab" aria-selected="false">Act I: Imposed Division (4)</button>
+            <button class="filter-btn" data-act="2" role="tab" aria-selected="false">Act II: Descent into Archives (4)</button>
+            <button class="filter-btn" data-act="3" role="tab" aria-selected="false">Act III: Constitutional Awakening (4)</button>
+            <button class="filter-btn" data-act="4" role="tab" aria-selected="false">Act IV: International Appeal (3)</button>
+          </div>
+          <div class="search-wrapper">
+            <i class="fas fa-search search-icon" aria-hidden="true"></i>
+            <input type="text" id="track-search" class="search-input" placeholder="Search title, lyrics, themes..." aria-label="Search tracks">
+          </div>
+        </div>
+
+        <!-- Split Grid -->
+        <div class="jukebox-grid">
+          <!-- Tracklist Column -->
+          <div class="tracklist-card">
+            <div class="tracklist-header">
+              <span># &nbsp; TRACK & MUSICAL STYLE</span>
+              <span>TIME &nbsp; PLAY</span>
             </div>
-            
-            <div class="mb-6 pb-6 border-b border-gray-700 flex flex-col gap-2 font-mono text-xs">
-                <a href="../vault/" class="text-gold-accent hover:text-parchment transition-colors flex items-center gap-1.5 font-bold">
-                    <i class="fa-solid fa-arrow-left text-[10px]" aria-hidden="true"></i>
-                    <span>Return to Vault</span>
-                </a>
-                <button id="a11y-toggle-btn" onclick="toggleA11yToolbar()" aria-expanded="false" aria-controls="a11y-toolbar" class="w-full py-1.5 px-2.5 rounded bg-scottish-dark hover:bg-gray-800 text-gray-300 border border-gray-700 text-left transition-colors flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-accent">
-                    <i class="fa-solid fa-universal-access text-gold-accent" aria-hidden="true"></i>
-                    <span>Accessibility Controls</span>
-                </button>
+            <div class="tracklist-scroll" id="tracklist-scroll" role="list">
+              <!-- Rendered via JavaScript -->
             </div>
-            
-            <ul class="space-y-4 text-sm font-display tracking-wide">
-                <li><a href="#intro" class="hover:text-gold-accent transition-colors"><i aria-hidden="true" class="fa-solid fa-scroll mr-2"></i>I. Introduction</a></li>
-                <li><a href="#thematic" class="hover:text-gold-accent transition-colors"><i aria-hidden="true" class="fa-solid fa-scale-balanced mr-2"></i>II. Thematic Analysis</a></li>
-                <li><a href="#roadmap" class="hover:text-gold-accent transition-colors"><i aria-hidden="true" class="fa-solid fa-map mr-2"></i>III. Song Roadmap</a></li>
-                <li><a href="#conclusion" class="hover:text-gold-accent transition-colors"><i aria-hidden="true" class="fa-solid fa-feather mr-2"></i>IV. Conclusion</a></li>
-                <li><a href="#guidelines" class="hover:text-gold-accent transition-colors"><i aria-hidden="true" class="fa-solid fa-music mr-2"></i>V. Song Guidelines</a></li>
-                <li><a href="#tracks" class="hover:text-gold-accent transition-colors"><i aria-hidden="true" class="fa-solid fa-compact-disc mr-2"></i>VI. Detailed Tracks</a></li>
-            </ul>
-        </nav>
+          </div>
 
-        <!-- Main Content Area -->
-        <main id="main-content" tabindex="-1" class="flex-1 p-6 md:p-12 max-w-5xl mx-auto focus:outline-none">
-            
-            <!-- Header section imitating a document title page -->
-            <header class="text-center mb-16 border-b border-gray-700 pb-12">
-                <div class="inline-block p-4 border border-gold-accent/50 rounded-sm mb-6 bg-scottish-dark shadow-2xl">
-                    <img src="Gemini_Generated_Image_g9t7d0g9t7d0g9t7.jpg" onerror="this.onerror=null; this.src='https://placehold.co/800x800/1a1c20/c9b07a?text=The+Forgotten+Crown+Album+Art';" alt="The Forgotten Crown Concept Art" class="max-w-full h-auto rounded opacity-80 hover:opacity-100 transition-opacity">
-                </div>
-                <h1 class="font-display text-4xl md:text-5xl text-parchment font-bold uppercase tracking-widest mb-4 drop-shadow-lg">The Forgotten Crown</h1>
-                <p class="text-xl text-gold-accent font-serif italic">Concept Document and Thematic Analysis</p>
-            </header>
-
-            <section id="intro" class="mb-16 scroll-mt-24">
-                <h2 class="font-display text-3xl text-gold-accent border-b border-gray-700 pb-2 mb-6"><i aria-hidden="true" class="fa-solid fa-bookmark mr-3 text-sm opacity-50"></i>I. Introduction</h2>
-                <div class="space-y-4 text-lg leading-relaxed text-gray-300">
-                    <p class="first-letter:text-5xl first-letter:font-display first-letter:text-parchment first-letter:float-left first-letter:mr-2 first-letter:-mt-1">
-                        The following concept document outlines a comprehensive, expert-level blueprint for a full-length concept album to be performed and recorded by the artist known as The Shady River Bard. The album is titled <em class="text-parchment font-bold">The Forgotten Crown</em> (with earlier working titles including <em class="text-parchment">Salvo Jure Cujuslibet</em>, <em class="text-parchment">The Stirling Directive</em>, and <em class="text-parchment">The Sovereign's Right</em>). The album is designed as a deep, narrative-driven exploration of historical subjugation, the orchestrated division of the working class, and the eventual awakening of a populace to their inherent, unalienable sovereignty.
-                    </p>
-                    <p>
-                        The core concept revolves around the historical and contemporary political landscape of Scotland, specifically addressing the suppression of the Scottish constitution and the 1689 Claim of Right. The narrative arc follows a single protagonist—an archivist or ordinary citizen—who observes the decay of their community through poverty and corporate acquisition of public lands. Crucially, they recognize the societal divisions among the people are artificially orchestrated by those in power.
-                    </p>
-                    <p>
-                        As the protagonist embarks on a journey of historical discovery, they unearth the suppressed truths of the 1707 Treaty of Union (an effective annexation) and the principle of <strong class="text-parchment">salvo jure cujuslibet</strong> (saving the right of anyone). The journey culminates in a mobilization of the spirit, mirroring modern efforts to seek international recognition for decolonization through the UN.
-                    </p>
-                    <div class="bg-scottish-muted p-6 border-l-4 border-gold-accent rounded-r-md mt-6 shadow-md">
-                        <h4 class="font-display text-gold-accent mb-2">Musical Direction</h4>
-                        <p class="text-sm">Deeply rooted in Traditional and Contemporary Scottish Folk, Bothy Ballads, and Political Folk-Rock. Key instrumentation includes DADGAD acoustic guitar, rhythmic cello, Scottish low whistle, and border pipes. Inspired by legends like Dick Gaughan and Alasdair Fraser.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="thematic" class="mb-16 scroll-mt-24">
-                <h2 class="font-display text-3xl text-gold-accent border-b border-gray-700 pb-2 mb-6"><i aria-hidden="true" class="fa-solid fa-scale-balanced mr-3 text-sm opacity-50"></i>II. Thematic Analysis</h2>
-                <p class="mb-6">The thematic foundation relies on a rigorous examination of historical law, constitutional suppression, and modern socio-economic exploitation.</p>
-
-                <!-- Accordion Container -->
-                <div class="space-y-4">
-                    
-                    <!-- Accordion Item A -->
-                    <div class="border border-gray-700 rounded bg-scottish-muted overflow-hidden shadow-sm">
-                        <button class="accordion-header w-full text-left px-6 py-4 font-display text-lg text-parchment hover:bg-gray-800 transition-colors focus:outline-none flex justify-between items-center" onclick="toggleAccordion(this)">
-                            <span>A. The Illusion of Voluntary Union and the Claim of Right (1689)</span>
-                            <i aria-hidden="true" class="fa-solid fa-chevron-down text-gold-accent transition-transform duration-300"></i>
-                        </button>
-                        <div class="accordion-content px-6 bg-scottish-dark">
-                            <div class="py-4 space-y-3">
-                                <p><strong class="text-gold-accent">Core Causes & Manifestations:</strong> The 1707 Treaty of Union is conventionally framed as a voluntary partnership. However, it was preceded by the 1689 Claim of Right, establishing sovereignty rests with the Scottish people. The Treaty effectively operated as an involuntary annexation, enforcing Westminster's parliamentary sovereignty.</p>
-                                <p><strong class="text-gold-accent">Dramatic Outcomes:</strong> The nation has been administered as a colony, denying self-determination. The working class is subject to policies determined by a parliament dominated by the English partner, leaving locals powerless to prevent asset stripping, resulting in poverty and orchestrated division.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Accordion Item B -->
-                    <div class="border border-gray-700 rounded bg-scottish-muted overflow-hidden shadow-sm">
-                        <button class="accordion-header w-full text-left px-6 py-4 font-display text-lg text-parchment hover:bg-gray-800 transition-colors focus:outline-none flex justify-between items-center" onclick="toggleAccordion(this)">
-                            <span>B. Corporate Feudalism and the Plunder of the Common Good</span>
-                            <i aria-hidden="true" class="fa-solid fa-chevron-down text-gold-accent transition-transform duration-300"></i>
-                        </button>
-                        <div class="accordion-content px-6 bg-scottish-dark">
-                            <div class="py-4 space-y-3">
-                                <p><strong class="text-gold-accent">Core Causes & Manifestations:</strong> The "Common Good" (land held collectively) is systematically transferred to private interests via neoliberal policies, manifested aggressively in "Freeports" and Special Economic Zones (SEZs).</p>
-                                <p><strong class="text-gold-accent">Dramatic Outcomes:</strong> Severe asset stripping and the transformation of public domains into deregulated corporate fiefdoms. This alienates struggling people from their land's wealth, stripping workers' rights and entrenching poverty to prevent a unified defense of constitutional heritage.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                     <!-- Accordion Item C -->
-                     <div class="border border-gray-700 rounded bg-scottish-muted overflow-hidden shadow-sm">
-                        <button class="accordion-header w-full text-left px-6 py-4 font-display text-lg text-parchment hover:bg-gray-800 transition-colors focus:outline-none flex justify-between items-center" onclick="toggleAccordion(this)">
-                            <span>C. The Principle of Salvo Jure Cujuslibet</span>
-                            <i aria-hidden="true" class="fa-solid fa-chevron-down text-gold-accent transition-transform duration-300"></i>
-                        </button>
-                        <div class="accordion-content px-6 bg-scottish-dark">
-                            <div class="py-4 space-y-3">
-                                <p><strong class="text-gold-accent">Core Causes & Manifestations:</strong> Translating to "saving the right of anyone," this historical procedure protected private individuals from prejudiced legislation. It acknowledged legislative flaw and prevented lawful rights from being extinguished by oversight or bribery.</p>
-                                <p><strong class="text-gold-accent">Dramatic Outcomes:</strong> Establishes an irrefutable legal foundation for decolonization, proving Scottish legal tradition prioritized the populace over state overreach. It empowers modern citizens against Westminster's claimed absolute authority.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Accordion Item D -->
-                    <div class="border border-gray-700 rounded bg-scottish-muted overflow-hidden shadow-sm">
-                        <button class="accordion-header w-full text-left px-6 py-4 font-display text-lg text-parchment hover:bg-gray-800 transition-colors focus:outline-none flex justify-between items-center" onclick="toggleAccordion(this)">
-                            <span>D. The Edinburgh Proclamation and the Stirling Directive</span>
-                            <i aria-hidden="true" class="fa-solid fa-chevron-down text-gold-accent transition-transform duration-300"></i>
-                        </button>
-                        <div class="accordion-content px-6 bg-scottish-dark">
-                            <div class="py-4 space-y-3">
-                                <p><strong class="text-gold-accent">Core Causes & Manifestations:</strong> Driven by domestic political failure, civic documents like the Stirling Directive (asserting sovereignty, declaring Westminster null) and the Edinburgh Proclamation (demanding a National Congress) have emerged.</p>
-                                <p><strong class="text-gold-accent">Dramatic Outcomes:</strong> Reawakens national consciousness, bypassing rigged party politics. By directly instructing the government, the people invert the power structure, proving they can organize independently of the established political class.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Accordion Item E -->
-                    <div class="border border-gray-700 rounded bg-scottish-muted overflow-hidden shadow-sm">
-                        <button class="accordion-header w-full text-left px-6 py-4 font-display text-lg text-parchment hover:bg-gray-800 transition-colors focus:outline-none flex justify-between items-center" onclick="toggleAccordion(this)">
-                            <span>E. The Shift to International Decolonisation (UN C-24)</span>
-                            <i aria-hidden="true" class="fa-solid fa-chevron-down text-gold-accent transition-transform duration-300"></i>
-                        </button>
-                        <div class="accordion-content px-6 bg-scottish-dark">
-                            <div class="py-4 space-y-3">
-                                <p><strong class="text-gold-accent">Core Causes & Manifestations:</strong> With domestic legal remedies exhausted, organizations petition the UN Special Committee on Decolonization (C-24), citing General Assembly Resolutions demanding an end to political subjugation.</p>
-                                <p><strong class="text-gold-accent">Dramatic Outcomes:</strong> Re-contextualizes independence from a domestic dispute to an international human rights issue. It forces the UK to answer globally, bypassing orchestrated domestic divisions.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <section id="roadmap" class="mb-16 scroll-mt-24">
-                <h2 class="font-display text-3xl text-gold-accent border-b border-gray-700 pb-2 mb-6"><i aria-hidden="true" class="fa-solid fa-map-location-dot mr-3 text-sm opacity-50"></i>III. The Song Roadmap</h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-                    <div class="bg-gray-800/50 p-4 border border-gray-700 rounded-lg text-center">
-                        <span class="block text-gold-accent font-display text-xl mb-1">Act I</span>
-                        <span class="text-sm font-bold text-parchment">The Imposed Division</span>
-                        <p class="text-xs text-gray-400 mt-2">Tracks 1-4</p>
-                    </div>
-                    <div class="bg-gray-800/50 p-4 border border-gray-700 rounded-lg text-center">
-                        <span class="block text-gold-accent font-display text-xl mb-1">Act II</span>
-                        <span class="text-sm font-bold text-parchment">Descent into Archives</span>
-                        <p class="text-xs text-gray-400 mt-2">Tracks 5-8</p>
-                    </div>
-                    <div class="bg-gray-800/50 p-4 border border-gray-700 rounded-lg text-center">
-                        <span class="block text-gold-accent font-display text-xl mb-1">Act III</span>
-                        <span class="text-sm font-bold text-parchment">Constitutional Awakening</span>
-                        <p class="text-xs text-gray-400 mt-2">Tracks 9-12</p>
-                    </div>
-                    <div class="bg-gray-800/50 p-4 border border-gray-700 rounded-lg text-center">
-                        <span class="block text-gold-accent font-display text-xl mb-1">Act IV</span>
-                        <span class="text-sm font-bold text-parchment">International Appeal</span>
-                        <p class="text-xs text-gray-400 mt-2">Tracks 13-15</p>
-                    </div>
-                </div>
-
-                <div class="overflow-x-auto rounded-lg shadow-lg border border-gray-700">
-                    <table class="w-full text-sm text-left text-gray-300">
-                        <thead class="text-xs text-parchment uppercase bg-scottish-muted font-display border-b border-gold-accent/50">
-                            <tr>
-                                <th scope="col" class="px-4 py-3 w-12 text-center">#</th>
-                                <th scope="col" class="px-6 py-3 w-48">Working Title</th>
-                                <th scope="col" class="px-6 py-3">Core Theme / Narrative</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-700 bg-scottish-dark/50">
-                            <!-- Act 1 -->
-                            <tr class="hover:bg-gray-800/50 transition-colors">
-                                <td class="px-4 py-3 text-center text-gold-accent font-bold">1</td>
-                                <td class="px-6 py-3 font-semibold text-parchment-dark">Prologue: The Dust of Estates</td>
-                                <td class="px-6 py-3 text-xs">The weight of forgotten history. Cinematic tone setting, establishing the land remembers suppressed rights.</td>
-                            </tr>
-                            <tr class="hover:bg-gray-800/50 transition-colors">
-                                <td class="px-4 py-3 text-center text-gold-accent font-bold">2</td>
-                                <td class="px-6 py-3 font-semibold text-parchment-dark">The Orchestrated Divide</td>
-                                <td class="px-6 py-3 text-xs">Poverty and artificial division of the working class. Gritty Bothy Ballad.</td>
-                            </tr>
-                             <tr class="hover:bg-gray-800/50 transition-colors">
-                                <td class="px-4 py-3 text-center text-gold-accent font-bold">3</td>
-                                <td class="px-6 py-3 font-semibold text-parchment-dark">The Common Good</td>
-                                <td class="px-6 py-3 text-xs">Ancient community land rights vs. modern privatization. Melancholic folk.</td>
-                            </tr>
-                             <tr class="hover:bg-gray-800/50 transition-colors">
-                                <td class="px-4 py-3 text-center text-gold-accent font-bold">4</td>
-                                <td class="px-6 py-3 font-semibold text-parchment-dark">Shadows on Holyrood</td>
-                                <td class="px-6 py-3 text-xs">Illusion of domestic power. Frustrated folk-rock urging a look beyond hollow politics.</td>
-                            </tr>
-                            <!-- Act 2 -->
-                             <tr class="hover:bg-gray-800/50 transition-colors bg-black/20">
-                                <td class="px-4 py-3 text-center text-gold-accent font-bold">5</td>
-                                <td class="px-6 py-3 font-semibold text-parchment-dark">1707 (The Annexation)</td>
-                                <td class="px-6 py-3 text-xs">Discovering the truth of the Treaty of Union. Dark archival folk-rock.</td>
-                            </tr>
-                             <tr class="hover:bg-gray-800/50 transition-colors bg-black/20">
-                                <td class="px-4 py-3 text-center text-gold-accent font-bold">6</td>
-                                <td class="px-6 py-3 font-semibold text-parchment-dark">Freeport Lullaby</td>
-                                <td class="px-6 py-3 text-xs">Corporate feudalism via SEZs. Heavy, grinding blues.</td>
-                            </tr>
-                            <tr class="hover:bg-gray-800/50 transition-colors bg-black/20">
-                                <td class="px-4 py-3 text-center text-gold-accent font-bold">7</td>
-                                <td class="px-6 py-3 font-semibold text-parchment-dark">Chimera</td>
-                                <td class="px-6 py-3 text-xs">The legal suppression of the Claim of Right. Defeated, descending cello melody.</td>
-                            </tr>
-                            <tr class="hover:bg-gray-800/50 transition-colors bg-black/20">
-                                <td class="px-4 py-3 text-center text-gold-accent font-bold">8</td>
-                                <td class="px-6 py-3 font-semibold text-parchment-dark">The Archivist's Midnight</td>
-                                <td class="px-6 py-3 text-xs">Sleepless desperate search for a loophole. Intimate, sparse acoustic ballad.</td>
-                            </tr>
-                             <!-- Act 3 -->
-                             <tr class="hover:bg-gray-800/50 transition-colors">
-                                <td class="px-4 py-3 text-center text-gold-accent font-bold">9</td>
-                                <td class="px-6 py-3 font-semibold text-parchment-dark">Salvo Jure Cujuslibet</td>
-                                <td class="px-6 py-3 text-xs">Discovery of the legal defense. Triumphant Strathspey rhythm.</td>
-                            </tr>
-                            <tr class="hover:bg-gray-800/50 transition-colors">
-                                <td class="px-4 py-3 text-center text-gold-accent font-bold">10</td>
-                                <td class="px-6 py-3 font-semibold text-parchment-dark">Healing the Divide</td>
-                                <td class="px-6 py-3 text-xs">A plea to end orchestrated infighting. Uplifting, communal Celtic folk.</td>
-                            </tr>
-                             <tr class="hover:bg-gray-800/50 transition-colors">
-                                <td class="px-4 py-3 text-center text-gold-accent font-bold">11</td>
-                                <td class="px-6 py-3 font-semibold text-parchment-dark">The Stirling Directive</td>
-                                <td class="px-6 py-3 text-xs">Directing the government, nullifying Westminster. Energetic Celtic-rock duet.</td>
-                            </tr>
-                             <tr class="hover:bg-gray-800/50 transition-colors">
-                                <td class="px-4 py-3 text-center text-gold-accent font-bold">12</td>
-                                <td class="px-6 py-3 font-semibold text-parchment-dark">Echoes of Arbroath</td>
-                                <td class="px-6 py-3 text-xs">The unbroken chain of sovereignty. Reflective, dignified somber ballad.</td>
-                            </tr>
-                            <!-- Act 4 -->
-                             <tr class="hover:bg-gray-800/50 transition-colors bg-black/20">
-                                <td class="px-4 py-3 text-center text-gold-accent font-bold">13</td>
-                                <td class="px-6 py-3 font-semibold text-parchment-dark">The Edinburgh Proclamation</td>
-                                <td class="px-6 py-3 text-xs">Mobilization to recall the Convention of Estates. Heavy folk march.</td>
-                            </tr>
-                             <tr class="hover:bg-gray-800/50 transition-colors bg-black/20">
-                                <td class="px-4 py-3 text-center text-gold-accent font-bold">14</td>
-                                <td class="px-6 py-3 font-semibold text-parchment-dark">C-24 (The World is Watching)</td>
-                                <td class="px-6 py-3 text-xs">Appeal to the UN for decolonization. Expansive industrial Celtic rock.</td>
-                            </tr>
-                             <tr class="hover:bg-gray-800/50 transition-colors bg-black/20">
-                                <td class="px-4 py-3 text-center text-gold-accent font-bold">15</td>
-                                <td class="px-6 py-3 font-semibold text-parchment-dark">The Sovereign People</td>
-                                <td class="px-6 py-3 text-xs">Message of unity and unalienable rights. Resolute, stripped-down folk finale.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-                <section id="conclusion" class="scroll-mt-24">
-                    <h2 class="font-display text-2xl text-gold-accent border-b border-gray-700 pb-2 mb-4">IV. Conclusion</h2>
-                    <div class="bg-scottish-muted p-6 rounded border border-gray-700 h-full">
-                        <p class="mb-4 text-sm leading-relaxed text-gray-300">
-                            By tracing the historical suppression of the 1689 Claim of Right through to the contemporary economic exploitations of corporate Freeports, the album illuminates the precise mechanisms by which a nation's sovereignty is dismantled. Crucially, it maps these betrayals directly onto the everyday suffering of the working class.
-                        </p>
-                        <p class="text-sm leading-relaxed text-gray-300">
-                            The protagonist's journey serves as a powerful allegory for societal awakening. The album demonstrates that history is a living weapon wielded by the oppressed. The ultimate message: orchestrated divisions can only be healed by reclaiming absolute, unalienable sovereignty.
-                        </p>
-                    </div>
-                </section>
-
-                <section id="guidelines" class="scroll-mt-24">
-                    <h2 class="font-display text-2xl text-gold-accent border-b border-gray-700 pb-2 mb-4">V. Song Guidelines</h2>
-                    <div class="bg-scottish-muted p-6 rounded border border-gray-700 h-full">
-                        <ul class="space-y-3 text-sm text-gray-300">
-                            <li><i aria-hidden="true" class="fa-solid fa-guitar text-gold-accent w-5 text-center mr-2"></i><strong>Genre & Style:</strong> Traditional/Contemporary Scottish Folk, Bothy Ballads, Celtic Folk-Rock. 4/4 Strathspey rhythms utilized.</li>
-                            <li><i aria-hidden="true" class="fa-solid fa-music text-gold-accent w-5 text-center mr-2"></i><strong>Instrumentation:</strong> DADGAD acoustic guitar, Scottish trad cello (melodic/bass), Low Whistle (intimate), Border Pipes (climax).</li>
-                            <li><i aria-hidden="true" class="fa-solid fa-microphone-lines text-gold-accent w-5 text-center mr-2"></i><strong>Vocal Delivery:</strong> Raw, weathered, working-class persona (e.g., Dick Gaughan). Authentic enunciation, emotional gravity.</li>
-                            <li><i aria-hidden="true" class="fa-solid fa-cloud-moon text-gold-accent w-5 text-center mr-2"></i><strong>Mood:</strong> Trajectory from melancholic observation to urgent frustration, to intellectual discovery, ending in hopeful resolve.</li>
-                        </ul>
-                    </div>
-                </section>
+          <!-- Active Track Deck Column -->
+          <div class="deck-card" id="deck-card">
+            <div class="deck-header">
+              <span class="deck-act-badge" id="deck-act-badge">Act I: The Imposed Division</span>
+              <h3 class="deck-title" id="deck-title">1. Prologue: The Dust of Estates</h3>
+              <div class="deck-styles" id="deck-styles">
+                <span class="deck-style-tag">Cinematic Spoken Word</span>
+                <span class="deck-style-tag">Sul Tasto Cello</span>
+              </div>
             </div>
 
-            <section id="tracks" class="mb-16 scroll-mt-24">
-                <h2 class="font-display text-3xl text-gold-accent border-b border-gray-700 pb-2 mb-8"><i aria-hidden="true" class="fa-solid fa-compact-disc mr-3 text-sm opacity-50"></i>VI. Detailed Tracks Preview</h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    
-                    <!-- Track 1 Card -->
-                    <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
-                        <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 01</span>
-                                <button 
-                                  type="button"
-                                  onclick="openBardNoteModal('Prologue: The Dust of Estates', 'The Forgotten Crown', 1)"
-                                  class="bard-note-btn"
-                                  aria-label="Drop a note to the bard about Prologue: The Dust of Estates"
-                                  title="Drop a note to the bard"
-                                >
-                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
-                                </button>
-                              </div>
-                            <h3 class="font-display text-2xl text-parchment mt-1">Prologue: The Dust of Estates</h3>
-                            <div class="flex flex-wrap gap-2 mt-3">
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Cinematic Spoken Word</span>
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Sul Tasto Cello</span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-sm text-gray-400 mb-4 italic">The earth does not forget the rights of its people. We are walking on the dust of estates, but the memory remains.</p>
-                            <div class="lyrics-block text-xs">
-[Verse 1]
-The earth does not forget.
-Beneath the concrete, beneath the iron and the endless noise,
-The soil holds the memory of the common good.
-They told us the union was a voluntary pact, a shared crown.
-But the stones of this land remember the theft.
-They remember the annexation of our voice.
-
-[Verse 2]
-We walk upon the dust of estates.
-A sovereign people, reduced to tenants in our own home.
-The parliaments speak in distant halls, claiming an absolute right,
-While the ancient laws sleep in the shadows of the archives.
-They engineered this division, kept us fighting for scraps,
-So we would not look down, and see the strength beneath our feet.
-
-[Outro]
-Listen to the wind. It whispers a forgotten truth.
-The right of anyone. The right of everyone.
-The sovereignty of the people cannot be extinguished by the pen of a king.
-It is time to remember.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Track 2 Card -->
-                    <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
-                        <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 02</span>
-                                <button 
-                                  type="button"
-                                  onclick="openBardNoteModal('The Orchestrated Divide', 'The Forgotten Crown', 2)"
-                                  class="bard-note-btn"
-                                  aria-label="Drop a note to the bard about The Orchestrated Divide"
-                                  title="Drop a note to the bard"
-                                >
-                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
-                                </button>
-                              </div>
-                            <h3 class="font-display text-2xl text-parchment mt-1">The Orchestrated Divide</h3>
-                            <div class="flex flex-wrap gap-2 mt-3">
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Gritty Scottish Bothy Ballad</span>
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Heavy Folk</span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-sm text-gray-400 mb-4 italic">Social issues, poverty, and the artificial division of the working class.</p>
-                            <div class="lyrics-block text-xs">
-[Verse 1]
-They built the fences high, but they built the anger higher,
-Set neighbour against neighbour round a fabricated fire.
-The factories are empty, the ships are sold for scrap,
-While we fight over the pennies that fall right off their lap.
-You do not know the puppeteer when you are staring at the strings,
-You only see the fist that the other puppet brings.
-
-[Chorus]
-It’s an orchestrated divide!
-Keep the weary working class looking side to side!
-If we never look up, we will never see the crown,
-Just another generation, beaten out and broken down.
-Yes, they keep us broken down.
-
-[Verse 2]
-I watched old Jimmy lose the farm his father cleared by hand,
-Now it is leased to a corporation from a foreign land.
-And the boys down at the pub, they blame the men across the street,
-While the politicians laugh from a very comfortable seat.
-They slice the bread so thin, and they make us beg for crumbs,
-Drowning out the truth with the beating of their drums.
-
-[Chorus]
-It’s an orchestrated divide!
-Keep the weary working class looking side to side!
-If we never look up, we will never see the crown,
-Just another generation, beaten out and broken down.
-Yes, they keep us broken down.
-
-[Bridge]
-They need us blind! They need us weak!
-They need us too afraid to even speak!
-But the earth remembers what the law forgot,
-And we are the only ones who can untie the knot!
-
-[Chorus]
-It’s an orchestrated divide!
-Keep the weary working class looking side to side!
-If we never look up, we will never see the crown,
-Just another generation, beaten out and broken down.
-But we will not stay down.
-
-[Outro]
-We will not stay down.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Track 3 Card -->
-                    <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
-                        <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 03</span>
-                                <button 
-                                  type="button"
-                                  onclick="openBardNoteModal('The Common Good', 'The Forgotten Crown', 3)"
-                                  class="bard-note-btn"
-                                  aria-label="Drop a note to the bard about The Common Good"
-                                  title="Drop a note to the bard"
-                                >
-                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
-                                </button>
-                              </div>
-                            <h3 class="font-display text-2xl text-parchment mt-1">The Common Good</h3>
-                            <div class="flex flex-wrap gap-2 mt-3">
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Melancholic Scottish Folk</span>
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Somber</span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-sm text-gray-400 mb-4 italic">The contrast between ancient community land rights and modern deprivation.</p>
-                            <div class="lyrics-block text-xs">
-[Verse 1]
-The grass was green and the river was free,
-A grant to the burgh from the ancient decree.
-We walked on the soil that belonged to us all,
-Before they built up the iron and the stone wall.
-Now the ledger is heavy, the pockets are lined,
-Leaving the folk and the working class blind.
-
-[Chorus]
-Where is the common good? Where did it go?
-Traded away for the corporate show.
-They fenced off the heather, they metered the wood,
-And sold off the soul of the common good.
-
-[Verse 2]
-The aldermen smile and they sign on the line,
-Trading our birthright for a private design.
-I pluck on these strings and I beat on the skin,
-Watching the thieves and the barons roll in.
-We’re strangers now on the land of our birth,
-Priced right out of the ancient earth.
-
-[Chorus]
-Where is the common good? Where did it go?
-Traded away for the corporate show.
-They fenced off the heather, they metered the wood,
-And sold off the soul of the common good.
-
-[Bridge]
-They cannot buy the wind! They cannot own the rain!
-They cannot wash the blood from the stolen domain!
-The earth will remember the sovereign's claim!
-
-[Outro]
-The common good. They sold the common good.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Track 4 Card -->
-                    <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
-                        <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 04</span>
-                                <button 
-                                  type="button"
-                                  onclick="openBardNoteModal('Shadows on Holyrood', 'The Forgotten Crown', 4)"
-                                  class="bard-note-btn"
-                                  aria-label="Drop a note to the bard about Shadows on Holyrood"
-                                  title="Drop a note to the bard"
-                                >
-                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
-                                </button>
-                              </div>
-                            <h3 class="font-display text-2xl text-parchment mt-1">Shadows on Holyrood</h3>
-                            <div class="flex flex-wrap gap-2 mt-3">
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Urgent Scottish Folk-Rock</span>
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Driving Bothy Ballad</span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-sm text-gray-400 mb-4 italic">The illusion of domestic political power and devolved parliaments.</p>
-                            <div class="lyrics-block text-xs">
-[Verse 1]
-I walked to the parliament, shiny and braw,
-Looking for men who could stand for the law.
-But the suits in the chamber, they argue and preen,
-Playing their parts on a power-less screen.
-They promise us rain, but they cannot make clouds,
-They whisper of freedom to pacify crowds.
-
-[Chorus]
-It’s naught but a shadow on Holyrood stone!
-A ghost of a sovereign, bound up in a chain!
-They hold up the gavel, but they do not hold sway,
-While the masters in Westminster dictate the play!
-Yes, the masters in Westminster dictate the play.
-
-[Verse 2]
-The aldermen bicker over pennies and dust,
-While the steel of our industry crumbles to rust.
-They sit in their seats, and they rubber-stamp pain,
-Content with an umbrella under the rain.
-A parliament built with a lock on the door,
-To keep out the wind and the cries of the poor.
-
-[Chorus]
-It’s naught but a shadow on Holyrood stone!
-A ghost of a sovereign, bound up in a chain!
-They hold up the gavel, but they do not hold sway,
-While the masters in Westminster dictate the play!
-Yes, the masters in Westminster dictate the play.
-
-[Bridge]
-Electing a shadow will not bring in the sun!
-The illusion is fading, the damage is done!
-We are asking for bread from a painted-on wall,
-Waiting for echoes to answer the call!
-
-[Chorus]
-It’s naught but a shadow on Holyrood stone!
-A ghost of a sovereign, bound up in a chain!
-They hold up the gavel, but they do not hold sway,
-While the masters in Westminster dictate the play!
-Yes, the masters in Westminster dictate the play.
-
-[Outro]
-Look past the shadow. Look past the stone.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Track 5 Card -->
-                    <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
-                        <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 05</span>
-                                <button 
-                                  type="button"
-                                  onclick="openBardNoteModal('1707', 'The Forgotten Crown', 5)"
-                                  class="bard-note-btn"
-                                  aria-label="Drop a note to the bard about 1707"
-                                  title="Drop a note to the bard"
-                                >
-                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
-                                </button>
-                              </div>
-                            <h3 class="font-display text-2xl text-parchment mt-1">1707 (The Annexation)</h3>
-                            <div class="flex flex-wrap gap-2 mt-3">
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Archival Celtic Folk-Rock</span>
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Dark Bothy Ballad</span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-sm text-gray-400 mb-4 italic">The Treaty of Union and the historical betrayal of the nation.</p>
-                            <div class="lyrics-block text-xs">
-[Verse 1]
-The dust is thick on the archive floor,
-A hidden lock on a heavy door.
-I read the lines they tried to hide,
-The ink that swallowed a nation's pride.
-They passed the gold to the chosen few,
-And sold the land that the people knew.
-
-[Chorus]
-Seventeen oh seven, the grand deceit!
-An annexation wrapped in a winding sheet!
-They dressed it up as a partner's vow,
-But the master's hand is heavy now!
-Yes, a voluntary lie to bind the free,
-To drown the truth in the dark, cold sea!
-
-[Verse 2]
-The Claim of Right was pushed aside,
-While the traitors cheered and the people cried.
-They traded sovereignty for a velvet chair,
-And left us gasping for our own air.
-A parliament bought with a heavy purse,
-Delivering a three-hundred-year-old curse.
-
-[Chorus]
-Seventeen oh seven, the grand deceit!
-An annexation wrapped in a winding sheet!
-They dressed it up as a partner's vow,
-But the master's hand is heavy now!
-Yes, a voluntary lie to bind the free,
-To drown the truth in the dark, cold sea!
-
-[Bridge]
-They stitched the flags and they forged the chain!
-They took the power but they left the pain!
-It was never a union, it was just a cage!
-Written in blood on a stolen page!
-
-[Chorus]
-Seventeen oh seven, the grand deceit!
-An annexation wrapped in a winding sheet!
-They dressed it up as a partner's vow,
-But the master's hand is heavy now!
-Yes, a voluntary lie to bind the free,
-To drown the truth in the dark, cold sea!
-
-[Outro]
-Just a voluntary lie.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Track 6 Card -->
-                    <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
-                        <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 06</span>
-                                <button 
-                                  type="button"
-                                  onclick="openBardNoteModal('Freeport Lullaby', 'The Forgotten Crown', 6)"
-                                  class="bard-note-btn"
-                                  aria-label="Drop a note to the bard about Freeport Lullaby"
-                                  title="Drop a note to the bard"
-                                >
-                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
-                                </button>
-                              </div>
-                            <h3 class="font-display text-2xl text-parchment mt-1">Freeport Lullaby</h3>
-                            <div class="flex flex-wrap gap-2 mt-3">
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Slow Scottish Blues</span>
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Dark Folk</span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-sm text-gray-400 mb-4 italic">Corporate feudalism and the modern theft of territorial sovereignty.</p>
-                            <div class="lyrics-block text-xs">
-[Verse 1]
-They drew a line around the coast in the dead of the night,
-A boundary for the corporate ghost, blocking out the light.
-No law of the land down here, no tax to pay,
-Just the profit drawn from the marrow of the day.
-
-[Chorus]
-Hush now, child, in the Freeport night.
-They have traded the dawn for a neon light.
-The soil is sold, the gates are locked,
-Our sovereignty is just a stock.
-A lullaby for a nation chained.
-
-[Verse 2]
-Steel fences rise up high where the barley grew,
-And the common good is a stolen dream for few.
-The workers march real slow to the engine's hum,
-Waiting on a train of justice that will never come.
-
-[Chorus]
-Hush now, child, in the Freeport night.
-They have traded the dawn for a neon light.
-The soil is sold, the gates are locked,
-Our sovereignty is just a stock.
-A lullaby for a nation chained.
-
-[Bridge]
-Hush now, child, in the Freeport night!
-They have traded the dawn for a neon light!
-The soil is sold, the gates are locked,
-Our sovereignty is just a stock.
-A lullaby for a nation chained.
-
-[Outro]
-Where only the corporate hand has reigned.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Track 7 Card -->
-                    <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
-                        <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 07</span>
-                                <button 
-                                  type="button"
-                                  onclick="openBardNoteModal('Chimera', 'The Forgotten Crown', 7)"
-                                  class="bard-note-btn"
-                                  aria-label="Drop a note to the bard about Chimera"
-                                  title="Drop a note to the bard"
-                                >
-                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
-                                </button>
-                              </div>
-                            <h3 class="font-display text-2xl text-parchment mt-1">Chimera</h3>
-                            <div class="flex flex-wrap gap-2 mt-3">
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Dark Celtic Legal-Folk</span>
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Defeated</span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-sm text-gray-400 mb-4 italic">The suppression of the Claim of Right by the domestic legal system.</p>
-                            <div class="lyrics-block text-xs">
-[Verse 1]
-I pulled the parchment from the dust and the stone,
-The Claim of Right that said this earth was our own.
-It swore the sovereign voice belonged to you and me,
-A promise that the folk were unbound, forever free.
-But ink on a hidden page is just a withered skin...
-When the lords in the high court will not let the justice in.
-
-[Chorus]
-It’s a legal chimera!
-A phantom walking the hall!
-A shadow painted on a bricked-up wall.
-They hold the gavel, they rig the heavy game,
-Locking away the constitution, leaving us only the name.
-Yes, they smile and call us sovereign...
-While they wrap us in the chain.
-
-[Verse 2]
-I carried the words to the keepers of the gate.
-They stared with hollow eyes, sealing the nation's fate.
-"Non-justiciable," they whispered, a relic of the past.
-Just an illusion, son, it was never meant to last.
-A maze of foreign law to keep the people blind.
-
-[Chorus]
-It’s a legal chimera!
-A phantom walking the hall!
-A shadow painted on a bricked-up wall.
-They hold the gavel, they rig the heavy game,
-Locking away the constitution, leaving us only the name.
-Yes, they smile and call us sovereign...
-While they wrap us in the chain.
-
-[Bridge]
-You cannot seek for justice in the house that stole the deed!
-You cannot ask the parasite to cure the host it bleeds!
-The system isn't broken... it's working as designed!
-To leave the sovereign people forever left behind!
-
-[Chorus]
-Just a legal chimera.
-A phantom in the hall.
-A shadow painted on a bricked-up wall.
-They hold the gavel, they rig the heavy game,
-Locking away the constitution, leaving us only the name.
-
-[Outro]
-Just a chimera in the dark.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Track 8 Card -->
-                    <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
-                        <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 08</span>
-                                <button 
-                                  type="button"
-                                  onclick="openBardNoteModal('The Archivist\'s Midnight', 'The Forgotten Crown', 8)"
-                                  class="bard-note-btn"
-                                  aria-label="Drop a note to the bard about The Archivist\'s Midnight"
-                                  title="Drop a note to the bard"
-                                >
-                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
-                                </button>
-                              </div>
-                            <h3 class="font-display text-2xl text-parchment mt-1">The Archivist's Midnight</h3>
-                            <div class="flex flex-wrap gap-2 mt-3">
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Intimate Scottish Folk Ballad</span>
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Sparse Acoustic</span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-sm text-gray-400 mb-4 italic">The turning point in the archives; the darkest hour before dawn.</p>
-                            <div class="lyrics-block text-xs">
-[Verse 1]
-The candle burns low, the shadows stretch tall
-Dancing like ghosts on the archive wall.
-A mountain of parchment, a river of dust...
-Searching for something a man could trust.
-I pull at the threads of a broken decree.
-
-[Chorus]
-Oh, the archivist's midnight is bitter and cold,
-Reading the lies that the centuries told.
-They buried the truth beneath a mountain of stone,
-Leaving the folk to carry the pain.
-Yes, we carry the pain.
-
-[Verse 2]
-The words blur together, the ink starts to fade
-Trapped in the dark of a deal that was made.
-I’m looking for loopholes, a crack in the wall,
-Just a whisper of justice to answer the call.
-But the ledgers are sealed, the pages are numb.
-
-[Chorus]
-Oh, the archivist's midnight is bitter and cold,
-Reading the lies that the centuries told.
-They buried the truth beneath a mountain of stone,
-Leaving the folk to carry the pain.
-Yes, we carry the pain.
-
-[Bridge]
-There must be a spark in the ashes of old!
-A story of freedom that has not been sold!
-I will not surrender the ghost to the night,
-I'll keep digging deep till I uncover the right!
-
-[Outro]
-Keep digging deep.
-Till we uncover the right.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Track 9 Card -->
-                    <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
-                        <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 09</span>
-                                <button 
-                                  type="button"
-                                  onclick="openBardNoteModal('Salvo Jure Cujuslibet', 'The Forgotten Crown', 9)"
-                                  class="bard-note-btn"
-                                  aria-label="Drop a note to the bard about Salvo Jure Cujuslibet"
-                                  title="Drop a note to the bard"
-                                >
-                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
-                                </button>
-                              </div>
-                            <h3 class="font-display text-2xl text-parchment mt-1">Salvo Jure Cujuslibet</h3>
-                            <div class="flex flex-wrap gap-2 mt-3">
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Triumphant Folk</span>
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Strathspey Rhythm</span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-sm text-gray-400 mb-4 italic">The emotional turning point. The protagonist translates the ancient Latin principle, discovering the legal defense of the people.</p>
-                            <div class="lyrics-block text-xs">
-[Verse 1]
-I ran my finger cross the faded ink,
-A heavy truth upon the ruin's brink.
-A final clause before the session closed,
-A shield against the power they imposed.
-Salvo jure cujuslibet, the ancient letters read,
-A lifeline pulling backward from the dead.
-
-[Pre-Chorus]
-It means they cannot steal what isn't theirs to take.
-It means the sovereign bond is one they cannot break.
-
-[Chorus]
-Saving the right of anyone!
-Before the gavel falls and the day is done!
-No parliament can wash the sovereign claim away,
-The people hold the crown above the law!
-Yes, the people hold the crown above the law!
-
-[Verse 2]
-For centuries they kept the safety net unseen,
-Behind a painted curtain and a velvet screen.
-They passed their acts and signed the land away,
-But left the rightful owners in the grey.
-The act of salvo stands to catch the ones they left behind,
-To break the heavy chains that keep us blind.
-
-[Pre-Chorus]
-It means they cannot steal what isn't theirs to take.
-It means the sovereign bond is one they cannot break.
-
-[Chorus]
-Saving the right of anyone!
-Before the gavel falls and the day is done!
-No parliament can wash the sovereign claim away,
-The people hold the crown above the law!
-Yes, the people hold the crown above the law!
-
-[Bridge]
-[Chorus]
-Saving the right of anyone!
-Before the gavel falls and the day is done!
-No parliament can wash the sovereign claim away,
-The people hold the crown above the law!
-Yes, the people hold the crown above the law!
-
-[Outro]
-Salvo jure cujuslibet.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Track 10 Card -->
-                    <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
-                        <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 10</span>
-                                <button 
-                                  type="button"
-                                  onclick="openBardNoteModal('Healing the Divide', 'The Forgotten Crown', 10)"
-                                  class="bard-note-btn"
-                                  aria-label="Drop a note to the bard about Healing the Divide"
-                                  title="Drop a note to the bard"
-                                >
-                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
-                                </button>
-                              </div>
-                            <h3 class="font-display text-2xl text-parchment mt-1">Healing the Divide</h3>
-                            <div class="flex flex-wrap gap-2 mt-3">
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Uplifting Celtic Folk</span>
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Driving Rhythm</span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-sm text-gray-400 mb-4 italic">Overcoming orchestrated division to unite under a common cause.</p>
-                            <div class="lyrics-block text-xs">
-[Verse 1]
-I walked back out into the clearing light,
-Leaving the dust and the ghosts of the night.
-I looked at the faces, worn down by the grind,
-Fighting each other, intentionally blind.
-They taught us to bicker over scraps on the floor,
-While they stole the whole house and padlocked the door.
-
-[Pre-Chorus]
-But the parchment is clear and the ancient law stands!
-The power was never removed from our hands!
-
-[Chorus]
-So let go of the anger that keeps us apart!
-We share the same struggle, we beat the same heart!
-If we stand all together, the shadows will break,
-For the sake of the sovereign, it's time to awake!
-Yes, it's time to awake!
-
-[Verse 2]
-The left and the right, it's a fabricated game,
-A trick of the crown to keep everything the same.
-While we argue the borders they drew in the sand,
-They strip-mine the spirit and sell off the land.
-But the truth is a weapon they cannot withstand,
-When it's held by a unified, sovereign band.
-
-[Pre-Chorus]
-But the parchment is clear and the ancient law stands!
-The power was never removed from our hands!
-
-[Chorus]
-So let go of the anger that keeps us apart!
-We share the same struggle, we beat the same heart!
-If we stand all together, the shadows will break,
-For the sake of the sovereign, it's time to awake!
-Yes, it's time to awake!
-
-[Bridge]
-[Chorus]
-So let go of the anger that keeps us apart!
-We share the same struggle, we beat the same heart!
-If we stand all together, the shadows will break,
-For the sake of the sovereign, it's time to awake!
-Yes, it's time to awake!
-
-[Outro]
-Time to awake.
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Track 11 Card -->
-                    <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
-                        <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 11</span>
-                                <button 
-                                  type="button"
-                                  onclick="openBardNoteModal('The Stirling Directive', 'The Forgotten Crown', 11)"
-                                  class="bard-note-btn"
-                                  aria-label="Drop a note to the bard about The Stirling Directive"
-                                  title="Drop a note to the bard"
-                                >
-                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
-                                </button>
-                              </div>
-                            <h3 class="font-display text-2xl text-parchment mt-1">The Stirling Directive</h3>
-                            <div class="flex flex-wrap gap-2 mt-3">
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Celtic-Rock</span>
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Commanding Duet</span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-sm text-gray-400 mb-4 italic">Unstoppable democratic momentum. The people are no longer asking; they are instructing their parliament.</p>
-                            <div class="lyrics-block text-xs">
-[Verse 1]
-We did not come to beg outside the heavy gate,
-We came to take the ledger and rewrite the fate.
-The time for asking questions in the dark is done,
-We are standing all together in the rising sun.
-You thought the sovereign spirit was a broken thing,
-But listen to the chorus that the people sing!
-
-[Pre-Chorus]
-The Claim of Right is breathing in the modern air!
-We are ending the illusion, and we are stripping it bare!
-
-[Chorus]
-Deliver the directive! Lay the parchment down!
-We are taking back the power from the foreign crown!
-The parliament is serving at the people's will,
-We are echoing the thunder on the Stirling hill!
-Yes, the sovereignty is ours, and we hold it still!
-
-[Verse 2]
-Send word into the chambers where the shadows play,
-Tell Westminster their edicts hold no heavy sway.
-The union was an annexation, bought and sold,
-But we refuse to suffer in the bitter cold.
-We are breaking up the system that was built to bind,
-Leaving the division and the fear behind.
-
-[Pre-Chorus]
-The Claim of Right is breathing in the modern air!
-We are ending the illusion, and we are stripping it bare!
-
-[Chorus]
-Deliver the directive! Lay the parchment down!
-We are taking back the power from the foreign crown!
-The parliament is serving at the people's will,
-We are echoing the thunder on the Stirling hill!
-Yes, the sovereignty is ours, and we hold it still!
-
-[Bridge]
-[Chorus]
-Deliver the directive! Lay the parchment down!
-We are taking back the power from the foreign crown!
-The parliament is serving at the people's will,
-We are echoing the thunder on the Stirling hill!
-Yes, the sovereignty is ours, and we hold it still!
-
-[Outro]
-We hold it still.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Track 12 Card -->
-                    <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
-                        <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 12</span>
-                                <button 
-                                  type="button"
-                                  onclick="openBardNoteModal('Echoes of Arbroath', 'The Forgotten Crown', 12)"
-                                  class="bard-note-btn"
-                                  aria-label="Drop a note to the bard about Echoes of Arbroath"
-                                  title="Drop a note to the bard"
-                                >
-                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
-                                </button>
-                              </div>
-                            <h3 class="font-display text-2xl text-parchment mt-1">Echoes of Arbroath</h3>
-                            <div class="flex flex-wrap gap-2 mt-3">
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Somber Scottish Folk Ballad</span>
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Reflective</span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-sm text-gray-400 mb-4 italic">The unbroken chain of sovereignty throughout history.</p>
-                            <div class="lyrics-block text-xs">
-[Verse 1]
-Seven hundred years have scattered on the breeze,
-Since the abbots and the barons made their pleas.
-In the quiet halls of Arbroath, they set the parchment down,
-To swear the sovereign people are themselves the rightful crown.
-A king is but an equal, who serves the people's cry,
-And the spirit of that letter will never truly die.
-
-[Chorus]
-As long as but a hundred of us remain alive,
-The ancient flame of liberty will manage to survive.
-We will never bow the knee to any foreign hand,
-For the unbroken chain of sovereignty is rooted in the land.
-Yes, the unbroken chain is rooted in the land.
-
-[Verse 2]
-They try to tell us now that history is a ghost,
-A forgotten little shadow on a subjugated coast.
-But the earth remembers thirteen twenty in the marrow of the stone,
-The declaration echoes that we stand and fall alone.
-When monarchs break the sacred oath, they're stripped of all their pride,
-For the soul of independence has never really died.
-
-[Chorus]
-As long as but a hundred of us remain alive,
-The ancient flame of liberty will manage to survive.
-We will never bow the knee to any foreign hand,
-For the unbroken chain of sovereignty is rooted in the land.
-Yes, the unbroken chain is rooted in the land.
-
-[Bridge]
-The kings have turned to ashes, the empires fall to rust,
-But the will of everyday folk is a sacred, heavy trust.
-Through the highland rain and the howling winter wind,
-We carry forth the fire that our ancestors pinned.
-
-[Chorus]
-As long as but a hundred of us remain alive,
-The ancient flame of liberty will manage to survive.
-We will never bow the knee to any foreign hand,
-For the unbroken chain of sovereignty is rooted in the land.
-Yes, the unbroken chain is rooted in the land.
-
-[Outro]
-Rooted in the land.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Track 13 Card -->
-                    <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
-                        <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 13</span>
-                                <button 
-                                  type="button"
-                                  onclick="openBardNoteModal('The Edinburgh Proclamation', 'The Forgotten Crown', 13)"
-                                  class="bard-note-btn"
-                                  aria-label="Drop a note to the bard about The Edinburgh Proclamation"
-                                  title="Drop a note to the bard"
-                                >
-                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
-                                </button>
-                              </div>
-                            <h3 class="font-display text-2xl text-parchment mt-1">The Edinburgh Proclamation</h3>
-                            <div class="flex flex-wrap gap-2 mt-3">
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Triumphant Celtic-Rock</span>
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Heavy Folk March</span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-sm text-gray-400 mb-4 italic">The mobilization of the peaceful liberation movement.</p>
-                            <div class="lyrics-block text-xs">
-[Verse 1]
-The fog is lifting off the cobbled street,
-A steady thunder from a thousand feet.
-We carry paper, but it weighs like stone,
-To take the power from an empty throne.
-We did not come to ask for charity,
-Today we write our own decree.
-
-[Pre-Chorus]
-The time for the shadow and the silence is done.
-We stand in the light of the Edinburgh sun!
-
-[Chorus]
-Read it loud in the Edinburgh light!
-We are reclaiming the ancient right!
-The crown is the people, the people are the land,
-Taking the gavel from a foreign hand.
-The parliament serves, or the parliament falls!
-Hear the proclamation echo on the walls!
-
-[Verse 2]
-They built the union on a fractured frame,
-And tried to hide the true and sovereign claim.
-But every worker from the dock and the plow,
-Is standing in the center of the city now.
-The old agreements are officially dead,
-We are laying the true law down instead.
-
-[Pre-Chorus]
-The time for the shadow and the silence is done.
-We stand in the light of the Edinburgh sun!
-
-[Chorus]
-Read it loud in the Edinburgh light!
-We are reclaiming the ancient right!
-The crown is the people, the people are the land,
-Taking the gavel from a foreign hand.
-The parliament serves, or the parliament falls!
-Hear the proclamation echo on the walls!
-
-[Bridge]
-[Chorus]
-Read it loud in the Edinburgh light!
-We are reclaiming the ancient right!
-The crown is the people, the people are the land,
-Taking the gavel from a foreign hand.
-The parliament serves, or the parliament falls!
-Hear the proclamation echo on the walls!
-
-[Outro]
-The parliament serves.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Track 14 Card -->
-                    <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
-                        <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 14</span>
-                                <button 
-                                  type="button"
-                                  onclick="openBardNoteModal('C-24', 'The Forgotten Crown', 14)"
-                                  class="bard-note-btn"
-                                  aria-label="Drop a note to the bard about C-24"
-                                  title="Drop a note to the bard"
-                                >
-                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
-                                </button>
-                              </div>
-                            <h3 class="font-display text-2xl text-parchment mt-1">C-24 (The World is Watching)</h3>
-                            <div class="flex flex-wrap gap-2 mt-3">
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Expansive Celtic Rock</span>
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Heavy Industrial Folk</span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-sm text-gray-400 mb-4 italic">The appeal to the United Nations for decolonization.</p>
-                            <div class="lyrics-block text-xs">
-[Verse 1]
-We packed the ledger in a heavy case,
-And crossed the water to the global stage.
-They thought the borders would contain the spark,
-Keep the proclamation hidden in the dark.
-But the truth is traveling on a wider sea,
-To the halls where the nations all agree.
-
-[Pre-Chorus]
-The ink is dry, the signatures are clear,
-The sovereign voice has finally traveled here!
-
-[Chorus]
-C-twenty-four! The world is watching now!
-We bring the right that history won't allow!
-No longer hidden in a foreign court,
-We bring the ledger and the full report!
-The people's crown is stepping in the light!
-The world is watching as we claim the right!
-
-[Verse 2]
-The empires crumble when you shine the sun,
-On all the backroom deals they left undone.
-The delegates are sitting in the room,
-While Westminster is staring at the tomb.
-Because a union built on stolen land,
-Will shatter when the rightful owners stand.
-
-[Pre-Chorus]
-The ink is dry, the signatures are clear,
-The sovereign voice has finally traveled here!
-
-[Chorus]
-C-twenty-four! The world is watching now!
-We bring the right that history won't allow!
-No longer hidden in a foreign court,
-We bring the ledger and the full report!
-The people's crown is stepping in the light!
-The world is watching as we claim the right!
-
-[Chorus]
-C-twenty-four! The world is watching now!
-We bring the right that history won't allow!
-No longer hidden in a foreign court,
-We bring the ledger and the full report!
-The people's crown is stepping in the light!
-The world is watching as we claim the right!
-
-[Outro]
-The world is watching.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Track 15 Card -->
-                    <div class="bg-scottish-muted border border-gray-700 rounded-lg overflow-hidden shadow-lg hover:border-gold-accent/50 transition-colors">
-                        <div class="p-6 border-b border-gray-700 bg-gray-800/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-gold-accent font-bold text-sm tracking-widest uppercase">Track 15</span>
-                                <button 
-                                  type="button"
-                                  onclick="openBardNoteModal('The Sovereign People', 'The Forgotten Crown', 15)"
-                                  class="bard-note-btn"
-                                  aria-label="Drop a note to the bard about The Sovereign People"
-                                  title="Drop a note to the bard"
-                                >
-                                  <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                                  <span class="bard-note-tooltip">Drop a note to the bard</span>
-                                </button>
-                              </div>
-                            <h3 class="font-display text-2xl text-parchment mt-1">The Sovereign People</h3>
-                            <div class="flex flex-wrap gap-2 mt-3">
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Stripped-Down Folk</span>
-                                <span class="px-2 py-1 bg-black/40 text-xs rounded text-gray-400 border border-gray-600">Peaceful Resolve</span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-sm text-gray-400 mb-4 italic">The resolute finale. Emphasizes that inherent sovereignty cannot be extinguished except by the destruction of the people.</p>
-                            <div class="lyrics-block text-xs">
-[Verse 1]
-The fire has settled, the embers are bright,
-We carried the ledger straight out of the night.
-We walked through the shadows of power and greed,
-To plant a new forest from an ancient seed.
-No longer the tenants who beg at the door,
-We stand as the crown on a sovereign shore.
-
-[Chorus]
-For the unfettered right to the land of our birth,
-Is written in stone and bound to the earth.
-It cannot be silenced, it cannot be sold,
-A truth that is stronger than parliament's gold.
-As long as the people still stand on the hill,
-The sovereign spirit is breathing here still.
-
-[Verse 2]
-They thought they could sever the root from the tree,
-And cast the old laws down into the sea.
-But you cannot extinguish the rights we all hold,
-Unless you destroy every soul in the fold.
-The union was paper, the power was a ghost,
-But the people remain on this subjugated coast.
-
-[Chorus]
-For the unfettered right to the land of our birth,
-Is written in stone and bound to the earth.
-It cannot be silenced, it cannot be sold,
-A truth that is stronger than parliament's gold.
-As long as the people still stand on the hill,
-The sovereign spirit is breathing here still.
-
-[Bridge]
-We laid down the anger, we put down the sword,
-And found our true strength in a unified word!
-The archivist's midnight has broken to dawn,
-The phantom has vanished, the shadow is gone!
-
-[Chorus]
-For the unfettered right to the land of our birth,
-Is written in stone and bound to the earth.
-It cannot be silenced, it cannot be sold,
-A truth that is stronger than parliament's gold.
-As long as the people still stand on the hill,
-The sovereign spirit is breathing here still.
-
-[Outro]
-The people remain.
-The people are the crown.
-                            </div>
-                        </div>
-                    </div>
-
+            <!-- Narrative Context -->
+            <div class="deck-context">
+              <h4>The Citizen's Journey & Narrative Context</h4>
+              <p id="deck-summary">
+                The earth does not forget the rights of its people. We are walking on the dust of estates, but the memory remains.
+              </p>
+            </div>
+
+            <!-- Lyrics Container -->
+            <div class="lyrics-box">
+              <div class="lyrics-header">
+                <h4><i class="fas fa-feather-alt"></i> Literary Lyrics & Poetry</h4>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <button type="button" class="bard-note-btn" id="deck-bard-note-btn" aria-label="Drop a note to the bard about this song" title="Drop a note to the bard">
+                    <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <span class="bard-note-tooltip">Drop a note to the bard</span>
+                  </button>
+                  <button class="copy-btn" id="copy-lyrics-btn" aria-label="Copy lyrics to clipboard">
+                    <i class="fas fa-copy"></i>
+                    <span>Copy Poetry</span>
+                  </button>
                 </div>
-            </section>
+              </div>
+              <div class="lyrics-content" id="deck-lyrics">
+                <!-- Clean Literary Poetry Rendered Here -->
+              </div>
+            </div>
 
-            <!-- Footer -->
-            <footer class="text-center text-xs text-gray-500 pt-8 border-t border-gray-800 mt-12 mb-8">
-                <p>&copy; 2026 The Shady River Bard. All rights reserved.</p>
-                <p class="mt-2">Concept Document rendered as Interactive Summary.</p>
-            </footer>
+            <!-- Pull Quotes -->
+            <div class="deck-quotes">
+              <h4><i class="fas fa-quote-left"></i> Epistemic Pull Quotes</h4>
+              <div id="deck-quotes"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                    <footer class="mt-16 pt-8 border-t border-gray-700 flex flex-wrap items-center justify-between gap-4 text-xs text-gray-400 font-mono">
-                <div>The Forgotten Crown &bull; The Shady River Bard</div>
-                <div class="flex items-center gap-4">
-                    <button onclick="openA11yModal()" class="text-gray-400 hover:text-gold-accent underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-gold-accent">
-                        Accessibility Statement (WCAG 2.1 AA)
-                    </button>
-                    <span>&bull;</span>
-                    <button onclick="toggleA11yToolbar()" class="text-gray-400 hover:text-gold-accent underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-gold-accent">
-                        Display Preferences
-                    </button>
-                </div>
-            </footer>
-        </main>
+    <!-- Constitutional Matrix & Legal Ledger -->
+    <section id="matrix" class="app-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <i class="fas fa-balance-scale" style="color: var(--gold-primary);"></i>
+            <span>Constitutional Matrix & Legal Ledger</span>
+          </h2>
+          <p class="section-subtitle">
+            A rigorous systemic examination comparing ancient Scottish constitutional safeguards with modern corporate feudalism and popular sovereignty.
+          </p>
+        </div>
+
+        <div class="matrix-card">
+          <table class="matrix-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Constitutional Pillar</th>
+                <th style="width: 25%;">Historical & Legal Foundation</th>
+                <th style="width: 25%;">Contemporary Suppression</th>
+                <th style="width: 25%;">Popular Awakening & Remedy</th>
+              </tr>
+            </thead>
+            <tbody id="matrix-tbody">
+              <!-- Rendered via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Historical Lore & Blueprint Essays -->
+    <section id="lore" class="app-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <i class="fas fa-scroll" style="color: var(--gold-primary);"></i>
+            <span>Historical Lore & Blueprint Essays</span>
+          </h2>
+          <p class="section-subtitle">
+            Preserved historical analyses and artistic guidelines informing the creation of The Forgotten Crown.
+          </p>
+        </div>
+
+        <div class="essay-grid">
+          <div class="essay-card">
+            <h3><i class="fas fa-landmark"></i> The Claim of Right (1689) & The Annexation (1707)</h3>
+            <p>
+              The 1707 Treaty of Union is conventionally framed as a voluntary partnership. However, it was preceded by the 1689 Claim of Right, which established that sovereignty rests inherently with the Scottish people. The Treaty operated as an involuntary annexation, enforcing Westminster's parliamentary sovereignty upon a nation whose constitutional law forbids parliamentary absolutism.
+            </p>
+            <p>
+              Under Scots law, the monarch and parliament are subjects of the people's authority. The working class is subject to policies determined by a distant parliament dominated by external interests, leaving local communities powerless to prevent asset stripping and resource expropriation.
+            </p>
+          </div>
+
+          <div class="essay-card">
+            <h3><i class="fas fa-industry"></i> Corporate Feudalism & Plunder of the Common Good</h3>
+            <p>
+              The Scottish legal doctrine of the "Common Good"—land and municipal wealth held collectively in perpetuity—is systematically dismantled by neoliberal policies, manifested aggressively in modern "Freeports" and Special Economic Zones (SEZs).
+            </p>
+            <p>
+              These zones create deregulated corporate fiefdoms on ancient common ground, stripping labor rights, environmental oversight, and local revenue. By entrenching poverty and manufacturing artificial competition for survival, the powerful ensure the working class is kept too exhausted to unite in defense of their heritage.
+            </p>
+          </div>
+
+          <div class="essay-card">
+            <h3><i class="fas fa-shield-alt"></i> The Principle of Salvo Jure Cujuslibet</h3>
+            <p>
+              Translating to <em>"saving the right of anyone,"</em> this historical parliamentary procedure was enacted at the close of Scottish legislative sessions to ensure that no individual's lawful rights could be extinguished by unnotified acts or statutory corruption.
+            </p>
+            <p>
+              This principle establishes an irrefutable legal foundation: Scottish constitutional tradition prioritizes the citizen's rights over state overreach. The people never surrendered their constitutional prerogatives, proving that Westminster's claimed absolute sovereignty is legally null under Scots law.
+            </p>
+          </div>
+
+          <div class="essay-card">
+            <h3><i class="fas fa-bullhorn"></i> The Stirling Directive & United Nations C-24</h3>
+            <p>
+              Driven by domestic political deadlock, civic documents like the <em>Stirling Directive</em> assert direct citizen sovereignty, instructing elected officials rather than subserviently petitioning them. The <em>Edinburgh Proclamation</em> demands the recall of the Scottish Convention of Estates to restore popular governance.
+            </p>
+            <p>
+              With domestic British legal avenues exhausted by Supreme Court rulings upholding parliamentary supremacy, the campaign elevates the dispute to the United Nations Special Committee on Decolonization (C-24), reframing independence from an internal domestic disagreement into an international human rights imperative.
+            </p>
+          </div>
+        </div>
+
+        <!-- Musical Guidelines Card -->
+        <div class="essay-card">
+          <h3><i class="fas fa-music"></i> Musical Direction & Performance Guidelines</h3>
+          <ul class="guidelines-list">
+            <li>
+              <i class="fas fa-guitar"></i>
+              <div><strong>Genre & Style:</strong> Traditional and Contemporary Scottish Folk, Bothy Ballads, Celtic Folk-Rock. Driving 4/4 Strathspey rhythms and contemplative modal arrangements.</div>
+            </li>
+            <li>
+              <i class="fas fa-drum"></i>
+              <div><strong>Instrumentation:</strong> DADGAD acoustic guitar, Scottish traditional cello (sul tasto and rhythmic bass), Scottish Low Whistle (intimate melodic phrasing), Border Pipes and Highland Pipes (climactic anthems).</div>
+            </li>
+            <li>
+              <i class="fas fa-microphone-alt"></i>
+              <div><strong>Vocal Delivery:</strong> Raw, weathered, working-class baritone (inspired by Dick Gaughan). Authentic enunciation, moral urgency, and profound emotional gravity.</div>
+            </li>
+            <li>
+              <i class="fas fa-compass"></i>
+              <div><strong>Narrative Trajectory:</strong> From melancholic observation of community decay, to urgent frustration with party politics, to archival discovery of legal defenses, ending in triumphant collective resolve.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky Bottom Audio Player Bar -->
+  <aside class="sticky-player" aria-label="Audio Playback Bar">
+    <div class="container player-grid">
+      <!-- Track Meta -->
+      <div class="player-track-info">
+        <div class="player-thumb">
+          <img id="player-thumb" src="assets/art/album-cover.webp" alt="Currently playing track artwork">
+        </div>
+        <div class="player-details">
+          <div class="player-title" id="player-title">1. Prologue: The Dust of Estates</div>
+          <div class="player-sub" id="player-sub">Act I: The Imposed Division • 03:15</div>
+        </div>
+      </div>
+
+      <!-- Controls & Scrubber -->
+      <div class="player-controls">
+        <div class="player-buttons">
+          <button class="p-btn" id="prev-btn" aria-label="Previous Track" title="Previous Track (Shift+P)">
+            <i class="fas fa-step-backward"></i>
+          </button>
+          <button class="p-btn p-btn-main" id="play-btn" aria-label="Play Track" title="Play / Pause (Space)">
+            <i class="fas fa-play"></i>
+          </button>
+          <button class="p-btn" id="next-btn" aria-label="Next Track" title="Next Track (Shift+N)">
+            <i class="fas fa-step-forward"></i>
+          </button>
+        </div>
+        <div class="player-progress-row">
+          <span class="p-time curr" id="curr-time">00:00</span>
+          <div class="p-scrubber" id="scrubber" role="progressbar" aria-label="Audio seek bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div class="p-scrubber-fill" id="scrubber-fill"></div>
+          </div>
+          <span class="p-time" id="total-time">03:15</span>
+        </div>
+      </div>
+
+      <!-- Volume & Cast Actions -->
+      <div class="player-volume">
+        <!-- Google Cast Button -->
+        <button id="jukebox-cast-btn" onclick="window.toggleJukeboxCast ? window.toggleJukeboxCast() : null" style="background:rgba(21,24,31,0.7);border:1px solid rgba(201,176,122,0.3);color:#f4ebd8;padding:5px 12px;border-radius:6px;cursor:pointer;display:flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11px;transition:all 0.2s ease;" aria-label="Cast to Google TV" title="Cast to Google TV">
+          <svg style="width:15px;height:15px;flex-shrink:0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6"/>
+            <line x1="2" y1="20" x2="2.01" y2="20"/>
+          </svg>
+          <span id="jukebox-cast-label">Cast</span>
+          <span id="jukebox-cast-device" style="display:none;padding:2px 6px;border-radius:4px;background:rgba(201,176,122,0.25);color:#dfc488;font-size:10px;font-weight:bold;"></span>
+        </button>
+
+        <button class="p-btn" id="mute-btn" aria-label="Mute Audio" title="Mute (M)">
+          <i class="fas fa-volume-up"></i>
+        </button>
+        <input type="range" class="vol-slider" id="vol-slider" min="0" max="1" step="0.02" value="0.85" aria-label="Volume Slider">
+      </div>
     </div>
+  </aside>
 
-    <script>
-        function toggleAccordion(button) {
-            const content = button.nextElementSibling;
-            const icon = button.querySelector('i');
-            
-            // Toggle the open class
-            content.classList.toggle('open');
-            
-            // Rotate icon
-            if (content.classList.contains('open')) {
-                icon.style.transform = 'rotate(180deg)';
-                button.classList.add('text-gold-accent');
-                button.classList.remove('text-parchment');
-            } else {
-                icon.style.transform = 'rotate(0deg)';
-                button.classList.remove('text-gold-accent');
-                button.classList.add('text-parchment');
-            }
-        }
-    </script>
-    <!-- Unified Accessibility Controller -->
-    <script src="../assets/js/a11y.js"></script>
+  <!-- Lightbox Modal -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-label="Image Zoom Inspector">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Close Lightbox">
+        <i class="fas fa-times"></i>
+      </button>
+      <img src="" alt="Fullscreen Artwork Inspection" id="modal-img">
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-msg" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- CAST DIAGNOSTIC BADGE (BOTTOM-LEFT) -->
+  <div id="cast-debug-pill" onclick="window.CastManager && window.CastManager.showDebugModal ? window.CastManager.showDebugModal() : null" style="position:fixed;bottom:96px;left:24px;z-index:999;padding:6px 14px;border-radius:9999px;background:rgba(18,20,24,0.92);border:1px solid rgba(201,176,122,0.4);color:#dfc488;font-family:var(--font-mono);font-size:11px;box-shadow:0 10px 25px rgba(0,0,0,0.5);backdrop-filter:blur(8px);cursor:pointer;display:flex;align-items:center;gap:8px;" title="Click to view Cast diagnostics">
+    <span id="cast-debug-pill-icon" style="color:#8c8577;">●</span> <span style="color:#f4ebd8;font-weight:600;">Cast:</span> <span id="cast-debug-pill-dev" style="color:#dfc488;">Cast Standby</span> <span style="color:#8c8577;">|</span> <span id="cast-debug-pill-msg" style="color:#c8beab;">Ready</span>
+  </div>
+
+  <!-- CAST STATUS TOAST -->
+  <div id="cast-toast" style="position:fixed;bottom:96px;right:24px;z-index:999;transform:translateY(32px);transition:all 0.3s cubic-bezier(0.16,1,0.3,1);opacity:0;pointer-events:none;display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.5);font-family:var(--font-mono);font-size:12px;border:1px solid rgba(201,176,122,0.25);background:rgba(18,20,24,0.95);backdrop-filter:blur(12px);" role="status" aria-live="polite">
+    <div id="cast-toast-icon" style="width:20px;height:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"></div>
+    <div id="cast-toast-message" style="font-size:12px;font-family:var(--font-mono);font-weight:500;"></div>
+  </div>
+
+  <!-- Bard Notes Integration -->
   <script src="../assets/js/bard-notes.js?v=20260920b"></script>
+  <!-- Application Logic -->
+  <script src="assets/js/app.js?v=20260922B"></script>
 </body>
 </html>
