@@ -320,16 +320,7 @@
       const trackImg = new chrome.cast.Image(trackCoverUrl);
       trackImg.width = 720;
       trackImg.height = 720;
-
-      const albumImg = new chrome.cast.Image(albumCoverUrl);
-      albumImg.width = 720;
-      albumImg.height = 720;
-
-      // Primary images array: track artwork first, album artwork second
-      metadata.images = [trackImg, albumImg];
-
-      // Default Media Receiver secondaryImage: specifically renders in the top-right corner thumbnail!
-      metadata.secondaryImage = albumImg;
+      metadata.images = [trackImg];
     }
 
     mediaInfo.metadata = metadata;
