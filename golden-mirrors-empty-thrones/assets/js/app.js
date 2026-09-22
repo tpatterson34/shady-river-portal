@@ -34,6 +34,7 @@
       .then(data => {
         state.album = data;
         state.tracks = data.tracks;
+        window.currentTrackIndex = state.currentTrackIndex;
         setupAudioEngine();
         bindEvents();
         renderTrackList();
@@ -454,10 +455,6 @@
     if (nextIdx >= state.tracks.length) nextIdx = 0;
     setTrack(nextIdx, true);
   }
-
-  window.toggleJukeboxCast = function() {
-    if (window.CastManager) window.CastManager.toggleSession();
-  };
 
   function updatePlayButtonUI() {
     if (state.isPlaying) {

@@ -401,10 +401,6 @@
       }
     });
 
-  window.toggleJukeboxCast = function() {
-    if (window.CastManager) window.CastManager.toggleSession();
-  };
-
     if (copyLyricsBtn) {
       copyLyricsBtn.addEventListener('click', function () {
         const track = tracks[currentTrackIndex];

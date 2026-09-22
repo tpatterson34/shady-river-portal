@@ -34,6 +34,8 @@
   let activeAlbumMeta = null;
   let toastTimeout = null;
   let mediaLoadTimeout = null;
+  let isUserInitiatedRequest = false;
+  let lastToggleTime = 0;
   let lastKnownTime = 0;
   let lastKnownDuration = 0;
   const debugLogs = [];
@@ -313,7 +315,7 @@
 
     const activeData = albumMeta || getActiveAlbumData() || {};
     const metaAlbum = activeData.album || activeData;
-    const albumTitle = (metaAlbum && metaAlbum.title) || (document.title ? document.title.split('|')[0].trim() : "Sanity's Edge");
+    const albumTitle = (metaAlbum && (metaAlbum.title || metaAlbum.albumTitle || metaAlbum.workingTitle)) || (document.title ? document.title.split('|')[0].trim() : "Sanity's Edge");
     const artist = (metaAlbum && metaAlbum.artist) || 'The Shady River Bard';
     const trackTitle = track.title || track.name || ('Track ' + (index + 1));
     const trackNum = track.track_number || track.number || (index + 1);
@@ -457,6 +459,7 @@
           switch (event.sessionState) {
             case cast.framework.SessionState.SESSION_STARTED:
             case cast.framework.SessionState.SESSION_RESUMED:
+              isUserInitiatedRequest = false;
               const targetIdx = (pendingTrackIndex !== null && pendingTrackIndex >= 0)
                 ? pendingTrackIndex
                 : ((typeof window.currentTrackIndex === 'number' && window.currentTrackIndex >= 0) ? window.currentTrackIndex : 0);
@@ -466,7 +469,10 @@
 
             case cast.framework.SessionState.SESSION_START_FAILED:
               logDebug('SESSION_START_FAILED');
-              showToast('Cast connection failed. Please try again.', 'error');
+              if (isUserInitiatedRequest) {
+                showToast('Cast connection failed. Please check device and try again.', 'error', 4500);
+              }
+              isUserInitiatedRequest = false;
               pendingTrackIndex = null;
               isMediaLoading = false;
               sessionLoadedMediaId = null;
@@ -765,6 +771,12 @@
    * Request Cast session and start playing from trackIndex.
    */
   function castTrack(trackIndex, tracks, albumMeta) {
+    if (!window.cast || !window.cast.framework) {
+      logDebug('castTrack called but Google Cast framework is not yet available');
+      showToast('Google Cast is initializing, please try again in a moment...', 'info', 3000);
+      return;
+    }
+
     activeTracks = (tracks && tracks.length) ? tracks : activeTracks;
     activeAlbumMeta = albumMeta || activeAlbumMeta;
 
@@ -778,19 +790,33 @@
       updateAllCastUI();
     } else {
       pendingTrackIndex = trackIndex;
+      isUserInitiatedRequest = true;
+
+      const sessionState = castContext.getSessionState ? castContext.getSessionState() : null;
+      if (sessionState === cast.framework.SessionState.SESSION_STARTING) {
+        logDebug('Session is currently starting; waiting for connection to complete');
+        showToast('Connecting to Google TV...', 'info', 4000);
+        return;
+      }
+
       showToast('Select your Google TV or Chromecast...', 'info', 5000);
 
       castContext.requestSession().then(() => {
         logDebug('requestSession picker resolved');
+        isUserInitiatedRequest = false;
         const target = (pendingTrackIndex !== null && pendingTrackIndex >= 0) ? pendingTrackIndex : trackIndex;
         pendingTrackIndex = null;
         initiateSessionPlayback(target, 'REQUEST_SESSION_THEN');
       }).catch(err => {
+        isUserInitiatedRequest = false;
         pendingTrackIndex = null;
         isMediaLoading = false;
-        if (err !== 'cancel') {
+        const isCancel = err === 'cancel' || err === 'cancel_session_request' || (err && (err.code === 'cancel' || err.message === 'cancel'));
+        if (!isCancel) {
           logDebug(`Cast session request rejected/cancelled: ${JSON.stringify(err)}`);
-          showToast('Cast cancelled or unavailable', 'warn', 3000);
+          showToast('Cast request cancelled or unavailable', 'warn', 3000);
+        } else {
+          logDebug('Cast session picker dismissed by user');
         }
       });
     }
@@ -915,6 +941,13 @@
     // 2. Update jukebox dock cast button and status badge
     const jukeboxCastBtn = document.getElementById('jukebox-cast-btn');
     if (jukeboxCastBtn) {
+      if (!jukeboxCastBtn._hasCastListener) {
+        jukeboxCastBtn._hasCastListener = true;
+        jukeboxCastBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.toggleJukeboxCast();
+        });
+      }
       const label = document.getElementById('jukebox-cast-device');
       const castWord = document.getElementById('jukebox-cast-label');
 
@@ -1001,6 +1034,9 @@
     nextTrack,
     prevTrack,
     disconnect,
+    toggleSession: function () { window.toggleJukeboxCast(); },
+    requestSession: function () { window.toggleJukeboxCast(); },
+    toggleCast: function () { window.toggleJukeboxCast(); },
     updateAllCastUI,
     showToast,
     showDebugModal,
@@ -1020,6 +1056,10 @@
   };
 
   window.toggleJukeboxCast = function () {
+    const now = Date.now();
+    if (now - lastToggleTime < 500) return; // Debounce rapid click triggers
+    lastToggleTime = now;
+
     if (CastManager.isConnected()) {
       if (confirm(`Disconnect from ${CastManager.getDeviceName()}?`)) {
         CastManager.disconnect();
