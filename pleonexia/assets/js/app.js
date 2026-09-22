@@ -183,6 +183,7 @@
 
     if (index < 0 || index >= tracks.length) return;
     currentTrackIndex = index;
+    window.currentTrackIndex = index;
     const track = tracks[currentTrackIndex];
 
     audio.src = track.audioFile;
@@ -203,6 +204,16 @@
 
     if (history.replaceState) {
       history.replaceState(null, '', '#track-' + track.number);
+    }
+
+    // Route through Google Cast if connected
+    if (window.CastManager && window.CastManager.isConnected()) {
+      if (!audio.paused) audio.pause();
+      isPlaying = true;
+      updatePlayButtonUI();
+      renderTrackList();
+      window.CastManager.castTrack(index, tracks, data);
+      return;
     }
 
     if (autoPlay) {
@@ -228,6 +239,10 @@
   }
 
   function pauseAudio() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.playOrPause();
+      return;
+    }
     audio.pause();
     isPlaying = false;
     updatePlayButtonUI();
@@ -235,6 +250,10 @@
   }
 
   function togglePlay() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.playOrPause();
+      return;
+    }
     if (isPlaying) {
       pauseAudio();
     } else {
@@ -295,6 +314,13 @@
 
     if (progressSlider) {
       progressSlider.addEventListener('input', function (e) {
+        if (window.CastManager && window.CastManager.isConnected()) {
+          const t = tracks[currentTrackIndex];
+          const parts = (t && t.duration) ? t.duration.split(':') : ['5', '00'];
+          const totalSec = parts.length === 2 ? parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10) : 300;
+          window.CastManager.seek((e.target.value / 100) * totalSec);
+          return;
+        }
         if (audio.duration) {
           audio.currentTime = (e.target.value / 100) * audio.duration;
         }
@@ -303,7 +329,43 @@
 
     if (volumeSlider) {
       volumeSlider.addEventListener('input', function (e) {
-        audio.volume = e.target.value / 100;
+        const val = e.target.value / 100;
+        if (window.CastManager && window.CastManager.isConnected()) {
+          window.CastManager.setVolume(val);
+        }
+        audio.volume = val;
+      });
+    }
+
+    // Hook Google Cast Synchronization
+    if (window.CastManager) {
+      window.CastManager.on('trackChange', function (newIndex) {
+        if (typeof newIndex === 'number' && newIndex >= 0 && newIndex !== currentTrackIndex) {
+          selectTrack(newIndex, false);
+        }
+      });
+
+      window.CastManager.on('stateChange', function (state) {
+        isPlaying = state.isPlaying;
+        updatePlayButtonUI();
+      });
+
+      window.CastManager.on('timeUpdate', function (info) {
+        if (!window.CastManager.isConnected()) return;
+        if (currentTimeEl) currentTimeEl.textContent = formatTime(info.currentTime);
+        if (totalTimeEl && info.duration > 0) totalTimeEl.textContent = formatTime(info.duration);
+        if (progressSlider && info.duration > 0) progressSlider.value = (info.currentTime / info.duration) * 100;
+      });
+
+      window.CastManager.on('connected', function () {
+        if (!audio.paused) audio.pause();
+        isPlaying = true;
+        updatePlayButtonUI();
+      });
+
+      window.CastManager.on('disconnected', function () {
+        isPlaying = !audio.paused;
+        updatePlayButtonUI();
       });
     }
   }
@@ -311,6 +373,10 @@
   function bindUIEvents() {
     if (playBtn) playBtn.addEventListener('click', togglePlay);
     if (prevBtn) prevBtn.addEventListener('click', function () {
+      if (window.CastManager && window.CastManager.isConnected()) {
+        window.CastManager.prevTrack();
+        return;
+      }
       if (audio.currentTime > 3) {
         audio.currentTime = 0;
       } else if (currentTrackIndex > 0) {
@@ -318,6 +384,10 @@
       }
     });
     if (nextBtn) nextBtn.addEventListener('click', function () {
+      if (window.CastManager && window.CastManager.isConnected()) {
+        window.CastManager.nextTrack();
+        return;
+      }
       if (currentTrackIndex < tracks.length - 1) {
         selectTrack(currentTrackIndex + 1, true);
       }

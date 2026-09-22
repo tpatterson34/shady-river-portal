@@ -270,13 +270,38 @@
   }
 
   /**
+   * Universal resolution for current album data and tracks across any incubator album.
+   */
+  function getActiveAlbumData() {
+    if (activeAlbumMeta) return activeAlbumMeta;
+    return window.ALBUM_DATA ||
+           window.HEAVY_LOAD_DATA ||
+           window.PLEONEXIA_DATA ||
+           window.RED_WHITE_ROBBED_DATA ||
+           window.NEW_GODS_DATA ||
+           window.SONGS_FROM_SMOKE_DATA ||
+           window.GOLDEN_MIRRORS_DATA ||
+           null;
+  }
+
+  function getActiveTracks() {
+    if (activeTracks && activeTracks.length) return activeTracks;
+    const data = getActiveAlbumData();
+    if (data) {
+      if (Array.isArray(data.tracks)) return data.tracks;
+      if (data.album && Array.isArray(data.album.tracks)) return data.album.tracks;
+    }
+    return [];
+  }
+
+  /**
    * Build MediaInfo for Google Cast Default Media Receiver.
    * - Uses audio/mpeg MIME type matching server Content-Type and Google Cast spec
    * - Sets StreamType.BUFFERED (required for Default Media Receiver audio player)
    * - Supports MusicTrackMediaMetadata with GenericMediaMetadata fallback
    */
   function buildMediaInfo(track, albumMeta, index, forceGeneric = false) {
-    const rawAudio = track.audio_file || track.src || track.streamUrl;
+    const rawAudio = track.audio_file || track.audioFile || track.audio_url || track.src || track.streamUrl || track.file || track.audio || track.url || '';
     const audioUrl = toAbsoluteUrl(rawAudio);
 
     const mediaInfo = new chrome.cast.media.MediaInfo(audioUrl, 'audio/mpeg');
@@ -286,20 +311,22 @@
     mediaInfo.streamType = (window.chrome && chrome.cast && chrome.cast.media && chrome.cast.media.StreamType && chrome.cast.media.StreamType.BUFFERED) || 'BUFFERED';
     mediaInfo.customData = { trackIndex: index };
 
-    const albumTitle = (albumMeta && albumMeta.title) || "Sanity's Edge";
-    const artist = (albumMeta && albumMeta.artist) || 'The Shady River Bard';
-    const trackTitle = track.title || ('Track ' + (index + 1));
-    const trackNum = track.track_number || (index + 1);
+    const activeData = albumMeta || getActiveAlbumData() || {};
+    const metaAlbum = activeData.album || activeData;
+    const albumTitle = (metaAlbum && metaAlbum.title) || (document.title ? document.title.split('|')[0].trim() : "Sanity's Edge");
+    const artist = (metaAlbum && metaAlbum.artist) || 'The Shady River Bard';
+    const trackTitle = track.title || track.name || ('Track ' + (index + 1));
+    const trackNum = track.track_number || track.number || (index + 1);
 
     // 1. Bespoke Track Artwork (720x720) - displayed in primary/large view
-    const trackCoverPath = track.art_square || track.art || track.image || track.cover ||
-      (albumMeta && (albumMeta.master_cover_art || albumMeta.cover_art || albumMeta.cover)) ||
-      'assets/art/sanitys-edge-cover.jpg';
+    const trackCoverPath = track.art_square || track.art_file || track.artFile || track.art || track.image || track.cover ||
+      (metaAlbum && (metaAlbum.master_cover_art || metaAlbum.cover_art || metaAlbum.coverImage || metaAlbum.cover)) ||
+      'assets/art/album-cover.jpg';
     const trackCoverUrl = toAbsoluteUrl(trackCoverPath);
 
     // 2. Master Album Cover Artwork - displayed in top-right thumbnail
-    const albumCoverPath = (albumMeta && (albumMeta.master_cover_art || albumMeta.cover_art || albumMeta.cover)) ||
-      'assets/art/sanitys-edge-cover.jpg';
+    const albumCoverPath = (metaAlbum && (metaAlbum.master_cover_art || metaAlbum.cover_art || metaAlbum.coverImage || metaAlbum.cover)) ||
+      trackCoverPath;
     const albumCoverUrl = toAbsoluteUrl(albumCoverPath);
 
     let metadata;
@@ -314,7 +341,7 @@
       metadata.title = trackTitle;
       metadata.songName = trackTitle;
       // Google TV DMR card renders Line 1: title, Line 2: artist.
-      // Incorporating albumTitle into artist ensures "Sanity's Edge" appears directly on the 1/6 card!
+      // Incorporating albumTitle into artist ensures Album Name appears directly on the 1/6 card!
       metadata.artist = `${albumTitle} • ${artist}`;
       metadata.albumArtist = artist;
       metadata.albumName = albumTitle;
@@ -537,7 +564,7 @@
         logDebug('Track finished playing on TV receiver');
         lastKnownTime = 0;
         lastKnownDuration = 0;
-        activeTracks = (activeTracks && activeTracks.length) ? activeTracks : ((window.ALBUM_DATA && window.ALBUM_DATA.tracks) || []);
+        activeTracks = getActiveTracks();
         if (activeTrackIndex >= 0 && activeTrackIndex < activeTracks.length - 1) {
           const nextIdx = activeTrackIndex + 1;
           logDebug(`Auto-advancing to Track ${nextIdx + 1}`);
@@ -561,13 +588,17 @@
     let detectedIndex = -1;
     if (mediaInfo.customData && typeof mediaInfo.customData.trackIndex === 'number') {
       detectedIndex = mediaInfo.customData.trackIndex;
-    } else if (activeTracks.length > 0) {
-      const contentId = mediaInfo.contentId || '';
-      const title = (mediaInfo.metadata && mediaInfo.metadata.title) || '';
-      detectedIndex = activeTracks.findIndex(t => {
-        const fullUrl = toAbsoluteUrl(t.audio_file || t.src || t.streamUrl);
-        return fullUrl === contentId || (t.title && t.title === title);
-      });
+    } else {
+      const tracks = getActiveTracks();
+      if (tracks.length > 0) {
+        const contentId = mediaInfo.contentId || '';
+        const title = (mediaInfo.metadata && mediaInfo.metadata.title) || '';
+        detectedIndex = tracks.findIndex(t => {
+          const rawA = t.audio_file || t.audioFile || t.audio_url || t.src || t.streamUrl || t.file || t.audio || t.url || '';
+          const fullUrl = toAbsoluteUrl(rawA);
+          return (fullUrl && fullUrl === contentId) || (t.title && t.title === title);
+        });
+      }
     }
 
     if (detectedIndex !== -1 && detectedIndex !== activeTrackIndex) {
@@ -626,8 +657,8 @@
       }
     }
 
-    activeTracks = (activeTracks && activeTracks.length) ? activeTracks : ((window.ALBUM_DATA && window.ALBUM_DATA.tracks) || []);
-    activeAlbumMeta = activeAlbumMeta || window.ALBUM_DATA || null;
+    activeTracks = (activeTracks && activeTracks.length) ? activeTracks : getActiveTracks();
+    activeAlbumMeta = activeAlbumMeta || getActiveAlbumData();
 
     if (!activeTracks || !activeTracks[trackIndex]) {
       logDebug(`loadTrackOnReceiver: Invalid track index ${trackIndex}`);
@@ -794,7 +825,7 @@
 
   function nextTrack() {
     if (!checkIsConnected()) return;
-    activeTracks = (activeTracks && activeTracks.length) ? activeTracks : ((window.ALBUM_DATA && window.ALBUM_DATA.tracks) || []);
+    activeTracks = getActiveTracks();
     if (!activeTracks || activeTracks.length === 0) return;
     let nextIdx = (activeTrackIndex >= 0 ? activeTrackIndex : 0) + 1;
     if (nextIdx >= activeTracks.length) nextIdx = 0;
@@ -803,7 +834,7 @@
 
   function prevTrack() {
     if (!checkIsConnected()) return;
-    activeTracks = (activeTracks && activeTracks.length) ? activeTracks : ((window.ALBUM_DATA && window.ALBUM_DATA.tracks) || []);
+    activeTracks = getActiveTracks();
     if (!activeTracks || activeTracks.length === 0) return;
     if (remotePlayer && remotePlayer.currentTime > 4) {
       seek(0);
@@ -983,8 +1014,8 @@
 
   // Helper shortcut for onclick handlers
   window.castTrack = function (index) {
-    const tracks = (window.ALBUM_DATA && window.ALBUM_DATA.tracks) || [];
-    const meta = window.ALBUM_DATA || {};
+    const tracks = getActiveTracks();
+    const meta = getActiveAlbumData() || {};
     CastManager.castTrack(index, tracks, meta);
   };
 

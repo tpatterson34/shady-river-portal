@@ -34,6 +34,11 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="assets/css/app.css">
   <link rel="stylesheet" href="../assets/css/bard-notes.css?v=20260920b">
+
+  <!-- Google Cast Manager & Album Data (__onGCastApiAvailable MUST be defined before cast_sender.js) -->
+  <script src="data/album-data.js?v=20260921S"></script>
+  <script src="../assets/js/cast-manager.js?v=20260921S"></script>
+  <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-red-600/30 selection:text-red-200">
 
@@ -519,11 +524,21 @@
         </div>
       </div>
 
-      <!-- Volume & Keyboard Hint -->
-      <div class="hidden md:flex items-center justify-end gap-3 w-1/3">
-        <i class="fa-solid fa-volume-low text-xs text-stone-500"></i>
-        <input type="range" id="volume-slider" min="0" max="100" value="100" class="w-20 h-1.5 bg-stone-800 rounded-lg cursor-pointer" aria-label="Volume slider">
-        <span class="text-[10px] font-mono text-stone-500 ml-2 border border-stone-800 px-1.5 py-0.5 rounded">Space = Play</span>
+      <!-- Volume & Cast Controls -->
+      <div class="flex items-center justify-end gap-3 w-full md:w-1/3">
+        <!-- Google Cast Button -->
+        <button id="jukebox-cast-btn" onclick="toggleJukeboxCast()" class="px-2.5 py-1.5 rounded-lg border border-white/10 hover:border-red-400/50 bg-stone-900/60 hover:bg-red-950/40 text-stone-400 hover:text-red-300 text-xs font-mono transition-all flex items-center gap-1.5 focus:outline-none focus:ring-1 focus:ring-red-400" aria-label="Cast to Google TV" title="Cast to Google TV">
+          <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6"/>
+            <line x1="2" y1="20" x2="2.01" y2="20"/>
+          </svg>
+          <span id="jukebox-cast-label" class="hidden sm:inline">Cast</span>
+          <span id="jukebox-cast-device" class="hidden px-1.5 py-0.5 rounded bg-red-900/60 text-red-300 text-[10px] font-bold"></span>
+        </button>
+
+        <i class="fa-solid fa-volume-low text-xs text-stone-500 hidden md:inline"></i>
+        <input type="range" id="volume-slider" min="0" max="100" value="100" class="w-20 h-1.5 bg-stone-800 rounded-lg cursor-pointer hidden md:inline-block" aria-label="Volume slider">
+        <span class="text-[10px] font-mono text-stone-500 ml-2 border border-stone-800 px-1.5 py-0.5 rounded hidden xl:inline">Space = Play</span>
       </div>
 
     </div>
@@ -613,9 +628,19 @@
     </div>
   </footer>
 
+  <!-- CAST DIAGNOSTIC BADGE (BOTTOM-LEFT) -->
+  <div id="cast-debug-pill" onclick="window.CastManager && window.CastManager.showDebugModal ? window.CastManager.showDebugModal() : null" class="fixed bottom-24 left-6 z-50 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-red-400/40 text-red-400 font-mono text-[11px] shadow-2xl backdrop-blur-md cursor-pointer flex items-center gap-2 hover:border-red-400 transition-colors" title="Click to view Cast diagnostics">
+    <span id="cast-debug-pill-icon" style="color:#64748b;">●</span> <span style="color:#f1f5f9;font-weight:600;">Cast:</span> <span id="cast-debug-pill-dev" style="color:#f87171;">Cast Standby</span> <span style="color:#64748b;">|</span> <span id="cast-debug-pill-msg" style="color:#94a3b8;">Ready</span>
+  </div>
+
+  <!-- CAST DIAGNOSTIC & STATUS TOAST -->
+  <div id="cast-toast" class="fixed bottom-24 right-6 z-50 transform transition-all duration-300 translate-y-8 opacity-0 pointer-events-none flex items-center gap-3 px-4 py-3 rounded-xl shadow-2xl font-mono text-xs border backdrop-blur-md" role="status" aria-live="polite">
+    <div id="cast-toast-icon" class="w-5 h-5 flex items-center justify-center shrink-0"></div>
+    <div id="cast-toast-message" class="text-xs font-mono font-medium"></div>
+  </div>
+
   <!-- Structured Data & Application Engine -->
-  <script src="data/album-data.js"></script>
-  <script src="assets/js/app.js"></script>
+  <script src="assets/js/app.js?v=20260921S"></script>
   <script src="../assets/js/bard-notes.js?v=20260920b"></script>
 </body>
 </html>

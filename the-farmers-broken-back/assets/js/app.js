@@ -201,6 +201,7 @@
 
     if (index < 0 || index >= tracks.length) return;
     currentTrackIndex = index;
+    window.currentTrackIndex = index;
     const t = tracks[currentTrackIndex];
 
     // Update active track deck
@@ -218,6 +219,19 @@
     if (playerBarTitle) playerBarTitle.textContent = t.number + '. ' + t.title;
     if (playerBarAct) playerBarAct.textContent = 'Act ' + t.act_number + ': ' + t.act_title;
     if (playerBarArt) playerBarArt.src = 'assets/images/tracks/' + t.art_file;
+
+    // Route through Google Cast if connected
+    if (window.CastManager && window.CastManager.isConnected()) {
+      if (!audio.paused) audio.pause();
+      if (currentTimeEl) currentTimeEl.textContent = '0:00';
+      if (totalTimeEl) totalTimeEl.textContent = t.duration;
+      if (progressSlider) progressSlider.value = 0;
+      isPlaying = true;
+      updatePlayIcons();
+      renderTrackList();
+      window.CastManager.castTrack(index, tracks, data);
+      return;
+    }
 
     // Load audio
     audio.src = t.audio_file;
@@ -244,6 +258,11 @@
 
   // --- AUDIO CONTROLS ---
   function togglePlay() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.playOrPause();
+      return;
+    }
+
     if (audio.paused) {
       audio.play().then(function () {
         isPlaying = true;
@@ -261,12 +280,20 @@
   }
 
   function prevTrack() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.prevTrack();
+      return;
+    }
     let nextIdx = currentTrackIndex - 1;
     if (nextIdx < 0) nextIdx = tracks.length - 1;
     selectTrack(nextIdx, true);
   }
 
   function nextTrack() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.nextTrack();
+      return;
+    }
     let nextIdx = currentTrackIndex + 1;
     if (nextIdx >= tracks.length) nextIdx = 0;
     selectTrack(nextIdx, true);
@@ -329,6 +356,13 @@
 
     if (progressSlider) {
       progressSlider.addEventListener('input', function (e) {
+        if (window.CastManager && window.CastManager.isConnected()) {
+          const t = tracks[currentTrackIndex];
+          const parts = (t && t.duration) ? t.duration.split(':') : ['5', '00'];
+          const totalSec = parts.length === 2 ? parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10) : 300;
+          window.CastManager.seek((e.target.value / 100) * totalSec);
+          return;
+        }
         if (!isNaN(audio.duration) && audio.duration > 0) {
           audio.currentTime = (e.target.value / 100) * audio.duration;
         }
@@ -338,6 +372,9 @@
     if (volumeSlider) {
       volumeSlider.addEventListener('input', function (e) {
         const val = parseFloat(e.target.value) / 100;
+        if (window.CastManager && window.CastManager.isConnected()) {
+          window.CastManager.setVolume(val);
+        }
         audio.volume = val;
         audio.muted = (val === 0);
         updateVolumeIcon(val);
@@ -358,6 +395,38 @@
           if (volumeSlider) volumeSlider.value = activeVol * 100;
           updateVolumeIcon(activeVol);
         }
+      });
+    }
+
+    // Hook Google Cast Synchronization
+    if (window.CastManager) {
+      window.CastManager.on('trackChange', function (newIndex) {
+        if (typeof newIndex === 'number' && newIndex >= 0 && newIndex !== currentTrackIndex) {
+          selectTrack(newIndex, false);
+        }
+      });
+
+      window.CastManager.on('stateChange', function (state) {
+        isPlaying = state.isPlaying;
+        updatePlayIcons();
+      });
+
+      window.CastManager.on('timeUpdate', function (info) {
+        if (!window.CastManager.isConnected()) return;
+        if (currentTimeEl) currentTimeEl.textContent = formatTime(info.currentTime);
+        if (totalTimeEl && info.duration > 0) totalTimeEl.textContent = formatTime(info.duration);
+        if (progressSlider && info.duration > 0) progressSlider.value = (info.currentTime / info.duration) * 100;
+      });
+
+      window.CastManager.on('connected', function () {
+        if (!audio.paused) audio.pause();
+        isPlaying = true;
+        updatePlayIcons();
+      });
+
+      window.CastManager.on('disconnected', function () {
+        isPlaying = !audio.paused;
+        updatePlayIcons();
       });
     }
   }

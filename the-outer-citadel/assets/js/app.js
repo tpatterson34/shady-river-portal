@@ -151,11 +151,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function loadTrack(index, autoPlay = false) {
     if (index < 0 || index >= album.tracks.length) return;
     currentTrackIndex = index;
+    window.currentTrackIndex = index;
     const track = album.tracks[index];
-
-    // Set Audio Source
-    audio.src = track.audio_file;
-    audio.load();
 
     // Update Deck
     deckActBadge.textContent = track.act_title;
@@ -192,6 +189,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderTracklist();
 
+    // Route through Google Cast if connected
+    if (window.CastManager && window.CastManager.isConnected()) {
+      if (!audio.paused) audio.pause();
+      isPlaying = true;
+      updatePlayButtonUI();
+      renderTracklist();
+      window.CastManager.castTrack(index, album.tracks, album);
+      return;
+    }
+
+    // Set Audio Source
+    audio.src = track.audio_file;
+    audio.load();
+
     if (autoPlay) {
       playAudio();
     }
@@ -199,6 +210,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Audio Controls
   function playAudio() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.playOrPause();
+      return;
+    }
     audio.play().then(() => {
       isPlaying = true;
       updatePlayButtonUI();
@@ -211,6 +226,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function pauseAudio() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.playOrPause();
+      return;
+    }
     audio.pause();
     isPlaying = false;
     updatePlayButtonUI();
@@ -218,6 +237,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function togglePlay() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.playOrPause();
+      return;
+    }
     if (audio.paused) {
       playAudio();
     } else {
@@ -237,11 +260,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function nextTrack() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.nextTrack();
+      return;
+    }
     let nextIdx = (currentTrackIndex + 1) % album.tracks.length;
     loadTrack(nextIdx, true);
   }
 
   function prevTrack() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.prevTrack();
+      return;
+    }
     if (audio.currentTime > 3) {
       audio.currentTime = 0;
     } else {
@@ -265,18 +296,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Scrubber click / seek
   scrubber.addEventListener('click', (e) => {
-    if (!audio.duration) return;
     const rect = scrubber.getBoundingClientRect();
     const pos = (e.clientX - rect.left) / rect.width;
+    if (window.CastManager && window.CastManager.isConnected()) {
+      const t = album.tracks[currentTrackIndex];
+      const parts = (t && t.duration) ? t.duration.split(':') : ['3', '40'];
+      const totalSec = parts.length === 2 ? parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10) : 220;
+      window.CastManager.seek(pos * totalSec);
+      return;
+    }
+    if (!audio.duration) return;
     audio.currentTime = pos * audio.duration;
   });
 
   // Volume & Mute
   volSlider.addEventListener('input', (e) => {
-    audio.volume = parseFloat(e.target.value);
+    const val = parseFloat(e.target.value);
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.setVolume(val);
+    }
+    audio.volume = val;
     audio.muted = false;
     updateMuteIcon();
   });
+
+  // Hook Google Cast Synchronization
+  if (window.CastManager) {
+    window.CastManager.on('trackChange', (newIndex) => {
+      if (typeof newIndex === 'number' && newIndex >= 0 && newIndex !== currentTrackIndex) {
+        loadTrack(newIndex, false);
+      }
+    });
+
+    window.CastManager.on('stateChange', (st) => {
+      isPlaying = st.isPlaying;
+      updatePlayButtonUI();
+    });
+
+    window.CastManager.on('timeUpdate', (info) => {
+      if (!window.CastManager.isConnected()) return;
+      if (currTimeEl) currTimeEl.textContent = formatSeconds(info.currentTime);
+      if (totalTimeEl && info.duration > 0) totalTimeEl.textContent = formatSeconds(info.duration);
+      if (scrubberFill && info.duration > 0) scrubberFill.style.width = `${(info.currentTime / info.duration) * 100}%`;
+    });
+
+    window.CastManager.on('connected', () => {
+      if (!audio.paused) audio.pause();
+      isPlaying = true;
+      updatePlayButtonUI();
+    });
+
+    window.CastManager.on('disconnected', () => {
+      isPlaying = !audio.paused;
+      updatePlayButtonUI();
+    });
+  }
 
   muteBtn.addEventListener('click', () => {
     audio.muted = !audio.muted;

@@ -283,10 +283,8 @@
     if (index < 0 || index >= state.albumData.tracks.length) return;
 
     state.currentTrackIndex = index;
+    window.currentTrackIndex = index;
     const track = state.albumData.tracks[index];
-
-    audio.src = track.audio_url;
-    audio.load();
 
     // Update Active Track Stage
     if (elements.stageTrackNum) elements.stageTrackNum.textContent = `TRACK ${track.number < 10 ? '0' + track.number : track.number} OF ${state.albumData.track_count}`;
@@ -331,6 +329,18 @@
 
     announce(`Loaded Track ${track.number}: ${track.title}`);
 
+    // Route through Google Cast if connected
+    if (window.CastManager && window.CastManager.isConnected()) {
+      if (!audio.paused) audio.pause();
+      state.isPlaying = true;
+      updatePlayIcons(true);
+      window.CastManager.castTrack(index, state.albumData.tracks, state.albumData);
+      return;
+    }
+
+    audio.src = track.audio_url;
+    audio.load();
+
     if (autoPlay) {
       playAudio();
     } else {
@@ -340,6 +350,10 @@
 
   // Audio Playback Controls
   function playAudio() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.playOrPause();
+      return;
+    }
     audio.play().then(() => {
       state.isPlaying = true;
       updatePlayIcons(true);
@@ -352,6 +366,10 @@
   }
 
   function pauseAudio() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.playOrPause();
+      return;
+    }
     audio.pause();
     state.isPlaying = false;
     updatePlayIcons(false);
@@ -359,6 +377,10 @@
   }
 
   function togglePlay() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.playOrPause();
+      return;
+    }
     if (state.isPlaying) {
       pauseAudio();
     } else {
@@ -367,6 +389,10 @@
   }
 
   function nextTrack() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.nextTrack();
+      return;
+    }
     if (state.currentTrackIndex < state.albumData.tracks.length - 1) {
       loadTrack(state.currentTrackIndex + 1, true);
     } else {
@@ -376,6 +402,10 @@
   }
 
   function prevTrack() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.prevTrack();
+      return;
+    }
     if (audio.currentTime > 3) {
       audio.currentTime = 0;
     } else if (state.currentTrackIndex > 0) {
@@ -572,6 +602,13 @@
     // Seek Slider
     if (elements.stickyProgress) {
       elements.stickyProgress.addEventListener('input', (e) => {
+        if (window.CastManager && window.CastManager.isConnected()) {
+          const t = state.albumData.tracks[state.currentTrackIndex];
+          const parts = (t && t.duration) ? t.duration.split(':') : ['2', '52'];
+          const totalSec = parts.length === 2 ? parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10) : 172;
+          window.CastManager.seek((e.target.value / 100) * totalSec);
+          return;
+        }
         if (!audio.duration) return;
         const seekTo = (e.target.value / 100) * audio.duration;
         audio.currentTime = seekTo;
@@ -582,11 +619,46 @@
     if (elements.stickyVolume) {
       elements.stickyVolume.addEventListener('input', (e) => {
         const val = parseFloat(e.target.value);
+        if (window.CastManager && window.CastManager.isConnected()) {
+          window.CastManager.setVolume(val);
+        }
         audio.volume = val;
         state.volume = val;
         state.isMuted = (val === 0);
         updateMuteIcon();
         try { localStorage.setItem('jesters_volume', val); } catch(e) {}
+      });
+    }
+
+    // Hook Google Cast Synchronization
+    if (window.CastManager) {
+      window.CastManager.on('trackChange', (newIndex) => {
+        if (typeof newIndex === 'number' && newIndex >= 0 && newIndex !== state.currentTrackIndex) {
+          loadTrack(newIndex, false);
+        }
+      });
+
+      window.CastManager.on('stateChange', (st) => {
+        state.isPlaying = st.isPlaying;
+        updatePlayIcons(st.isPlaying);
+      });
+
+      window.CastManager.on('timeUpdate', (info) => {
+        if (!window.CastManager.isConnected()) return;
+        if (elements.stickyCurrentTime) elements.stickyCurrentTime.textContent = formatTime(info.currentTime);
+        if (elements.stickyTotalTime && info.duration > 0) elements.stickyTotalTime.textContent = formatTime(info.duration);
+        if (elements.stickyProgress && info.duration > 0) elements.stickyProgress.value = (info.currentTime / info.duration) * 100;
+      });
+
+      window.CastManager.on('connected', () => {
+        if (!audio.paused) audio.pause();
+        state.isPlaying = true;
+        updatePlayIcons(true);
+      });
+
+      window.CastManager.on('disconnected', () => {
+        state.isPlaying = !audio.paused;
+        updatePlayIcons(state.isPlaying);
       });
     }
 

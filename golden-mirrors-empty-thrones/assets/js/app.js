@@ -156,7 +156,11 @@
     });
 
     DOM.volumeSlider.addEventListener('input', (e) => {
-      state.audio.volume = parseFloat(e.target.value);
+      const val = parseFloat(e.target.value);
+      if (window.CastManager && window.CastManager.isConnected()) {
+        window.CastManager.setVolume(val);
+      }
+      state.audio.volume = val;
       state.audio.muted = false;
       DOM.btnMute.innerHTML = '<i class="fas fa-volume-up"></i>';
     });
@@ -165,11 +169,54 @@
       const rect = DOM.progressBar.getBoundingClientRect();
       const clickX = e.clientX - rect.left;
       const width = rect.width;
-      const targetTime = (clickX / width) * state.audio.duration;
+      const pos = clickX / width;
+
+      if (window.CastManager && window.CastManager.isConnected()) {
+        const dur = (state.audio && state.audio.duration) ? state.audio.duration : 220;
+        window.CastManager.seek(pos * dur);
+        return;
+      }
+
+      const targetTime = pos * state.audio.duration;
       if (!isNaN(targetTime)) {
         state.audio.currentTime = targetTime;
       }
     });
+
+    // Hook Google Cast Synchronization
+    if (window.CastManager) {
+      window.CastManager.on('trackChange', (newIndex) => {
+        if (typeof newIndex === 'number' && newIndex >= 0 && newIndex !== state.currentTrackIndex) {
+          setTrack(newIndex, false);
+        }
+      });
+
+      window.CastManager.on('stateChange', (st) => {
+        state.isPlaying = st.isPlaying;
+        updatePlayButtonUI();
+        updateTrackListActiveState();
+      });
+
+      window.CastManager.on('timeUpdate', (info) => {
+        if (!window.CastManager.isConnected()) return;
+        if (DOM.currentTimeLabel) DOM.currentTimeLabel.textContent = formatTime(info.currentTime);
+        if (DOM.totalDurationLabel && info.duration > 0) DOM.totalDurationLabel.textContent = formatTime(info.duration);
+        if (DOM.progressFill && info.duration > 0) DOM.progressFill.style.width = `${(info.currentTime / info.duration) * 100}%`;
+      });
+
+      window.CastManager.on('connected', () => {
+        if (!state.audio.paused) state.audio.pause();
+        state.isPlaying = true;
+        updatePlayButtonUI();
+        updateTrackListActiveState();
+      });
+
+      window.CastManager.on('disconnected', () => {
+        state.isPlaying = !state.audio.paused;
+        updatePlayButtonUI();
+        updateTrackListActiveState();
+      });
+    }
 
     // Act Filter Pills
     DOM.actPills.forEach(pill => {
@@ -317,13 +364,22 @@
   function setTrack(index, autoplay = false) {
     if (index < 0 || index >= state.tracks.length) return;
     state.currentTrackIndex = index;
+    window.currentTrackIndex = index;
     const track = state.tracks[index];
-
-    state.audio.src = track.audioFile;
-    state.audio.load();
 
     renderCurrentTrack();
     updateTrackListActiveState();
+
+    if (window.CastManager && window.CastManager.isConnected()) {
+      if (!state.audio.paused) state.audio.pause();
+      state.isPlaying = true;
+      updatePlayButtonUI();
+      window.CastManager.castTrack(index, state.tracks, state.album);
+      return;
+    }
+
+    state.audio.src = track.audioFile;
+    state.audio.load();
 
     if (autoplay) {
       state.audio.play().catch(e => console.log('Autoplay deferred:', e));
@@ -364,6 +420,10 @@
   }
 
   function togglePlay() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.playOrPause();
+      return;
+    }
     if (!state.audio.src) {
       setTrack(state.currentTrackIndex, true);
       return;
@@ -376,16 +436,28 @@
   }
 
   function playPrevTrack() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.prevTrack();
+      return;
+    }
     let nextIdx = state.currentTrackIndex - 1;
     if (nextIdx < 0) nextIdx = state.tracks.length - 1;
     setTrack(nextIdx, true);
   }
 
   function playNextTrack() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.nextTrack();
+      return;
+    }
     let nextIdx = state.currentTrackIndex + 1;
     if (nextIdx >= state.tracks.length) nextIdx = 0;
     setTrack(nextIdx, true);
   }
+
+  window.toggleJukeboxCast = function() {
+    if (window.CastManager) window.CastManager.toggleSession();
+  };
 
   function updatePlayButtonUI() {
     if (state.isPlaying) {
