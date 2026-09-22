@@ -18,6 +18,18 @@
 (function () {
   'use strict';
 
+  // Registry of all Audio instances created on the page to guarantee silence during Cast
+  const activeAudioInstances = new Set();
+  const OrigAudio = window.Audio;
+  if (OrigAudio) {
+    window.Audio = function (...args) {
+      const inst = new OrigAudio(...args);
+      activeAudioInstances.add(inst);
+      return inst;
+    };
+    window.Audio.prototype = OrigAudio.prototype;
+  }
+
   // Internal state
   let isApiAvailable = false;
   let isConnected = false;
@@ -629,12 +641,36 @@
   }
 
   function pauseLocalAudio() {
+    // 1. DOM audio elements
     const audios = document.querySelectorAll('audio');
     audios.forEach(a => {
-      if (!a.paused) {
-        a.pause();
-      }
+      try {
+        if (!a.paused) {
+          a.pause();
+        }
+      } catch (e) {}
     });
+
+    // 2. Tracked JS Audio instances
+    activeAudioInstances.forEach(a => {
+      try {
+        if (a && !a.paused) {
+          a.pause();
+        }
+      } catch (e) {}
+    });
+
+    // 3. Known global audio instances
+    if (window.audio && typeof window.audio.pause === 'function') {
+      try {
+        if (!window.audio.paused) window.audio.pause();
+      } catch (e) {}
+    }
+    if (window._appAudio && typeof window._appAudio.pause === 'function') {
+      try {
+        if (!window._appAudio.paused) window._appAudio.pause();
+      } catch (e) {}
+    }
   }
 
   /**
@@ -882,13 +918,25 @@
 
   function disconnect() {
     if (!checkIsConnected()) return;
+    const targetDev = deviceName || 'TV';
     try {
       const castContext = cast.framework.CastContext.getInstance();
       castContext.endCurrentSession(true);
-      showToast('Disconnected from ' + (deviceName || 'TV'), 'info', 3000);
+      showToast('Disconnected from ' + targetDev, 'info', 3000);
     } catch (e) {
       console.warn('[CastManager] Error during disconnect:', e);
     }
+    // Force immediate local disconnect state so UI resets without waiting for framework callbacks
+    isConnected = false;
+    currentSession = null;
+    deviceName = '';
+    activeTrackIndex = -1;
+    isMediaLoading = false;
+    sessionLoadedMediaId = null;
+    pendingTrackIndex = null;
+    emit('disconnected', {});
+    updateAllCastUI();
+    notifyState();
   }
 
   function on(eventName, callback) {
@@ -945,8 +993,10 @@
     if (jukeboxCastBtn) {
       if (!jukeboxCastBtn._hasCastListener) {
         jukeboxCastBtn._hasCastListener = true;
+        jukeboxCastBtn.removeAttribute('onclick');
         jukeboxCastBtn.addEventListener('click', (e) => {
           e.preventDefault();
+          e.stopPropagation();
           window.toggleJukeboxCast();
         });
       }
@@ -967,6 +1017,7 @@
 
           label.textContent = `${deviceName || 'Google TV'}${stateTag}`;
           label.classList.remove('hidden');
+          label.style.display = 'inline-block';
         }
       } else {
         jukeboxCastBtn.classList.remove('text-amber-400', 'border-amber-500/50', 'bg-amber-950/40');
@@ -975,6 +1026,7 @@
         if (castWord) castWord.textContent = 'Cast';
         if (label) {
           label.classList.add('hidden');
+          label.style.display = 'none';
         }
       }
     }
@@ -1063,9 +1115,7 @@
     lastToggleTime = now;
 
     if (CastManager.isConnected()) {
-      if (confirm(`Disconnect from ${CastManager.getDeviceName()}?`)) {
-        CastManager.disconnect();
-      }
+      CastManager.disconnect();
     } else {
       const curIdx = typeof window.currentTrackIndex === 'number' && window.currentTrackIndex >= 0 ? window.currentTrackIndex : 0;
       window.castTrack(curIdx);

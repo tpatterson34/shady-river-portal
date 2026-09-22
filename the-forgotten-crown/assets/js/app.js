@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Native Audio Element
   const audio = new Audio();
   audio.preload = 'metadata';
+  window.audio = audio;
+  window._appAudio = audio;
 
   // DOM Elements - Navigation & A11y
   const btnHighContrast = document.getElementById('btnHighContrast');
@@ -139,6 +141,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function playAudio() {
     if (window.CastManager && window.CastManager.isConnected()) {
+      if (!audio.paused) {
+        audio.pause();
+      }
       window.CastManager.playOrPause();
       return;
     }
@@ -155,12 +160,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function pauseAudio() {
+    // Always pause the local PC audio element
+    if (!audio.paused) {
+      audio.pause();
+    }
+
     if (window.CastManager && window.CastManager.isConnected()) {
       window.CastManager.playOrPause();
       return;
     }
 
-    audio.pause();
     isPlaying = false;
     updatePlayBtnState();
     renderTracklist();
@@ -678,7 +687,32 @@ document.addEventListener('DOMContentLoaded', () => {
   // GOOGLE CAST EVENT HOOKS
   // ==========================================================================
   if (window.CastManager) {
+    window.CastManager.on('connected', (data) => {
+      // Instantly pause local PC audio when Cast connects
+      if (!audio.paused) {
+        audio.pause();
+      }
+      isPlaying = true;
+      updatePlayBtnState();
+      renderTracklist();
+    });
+
+    window.CastManager.on('disconnected', () => {
+      // Ensure audio is stopped on disconnect
+      if (!audio.paused) {
+        audio.pause();
+      }
+      isPlaying = false;
+      updatePlayBtnState();
+      renderTracklist();
+    });
+
     window.CastManager.on('stateChange', (data) => {
+      if (window.CastManager.isConnected()) {
+        if (!audio.paused) {
+          audio.pause();
+        }
+      }
       isPlaying = data.isPlaying;
       updatePlayBtnState();
       renderTracklist();
