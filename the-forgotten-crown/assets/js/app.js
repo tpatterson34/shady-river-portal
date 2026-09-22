@@ -1,6 +1,6 @@
 /* ==========================================================================
    THE FORGOTTEN CROWN - APPLICATION ENGINE
-   Reactive Jukebox, Lyrics Studio, Acoustic Audio Engine & Google Cast Sync
+   Reactive Jukebox, Lyrics Studio, Native Audio Engine & Google Cast Controller
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,16 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentActFilter = 'all';
   let searchQuery = '';
   let currentExhibitIndex = 0;
-  let audioTimer = null;
-  let syntheticPlaybackActive = false;
-  let syntheticCurrentTime = 0;
 
-  // Web Audio Synthesizer Context (for Celtic Acoustic DADGAD Drone Reflection)
-  let audioCtx = null;
-  let synthGain = null;
-  let synthOscs = [];
-
-  // Audio Element
+  // Native Audio Element
   const audio = new Audio();
   audio.preload = 'metadata';
 
@@ -35,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnFontDown = document.getElementById('btnFontDown');
   const btnDyslexic = document.getElementById('btnDyslexic');
   const btnUnderline = document.getElementById('btnUnderline');
-  const btnMotion = document.getElementById('btnMotion');
 
   // DOM Elements - Jukebox
   const tracklistScroll = document.getElementById('tracklist-scroll');
@@ -76,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const muteBtn = document.getElementById('mute-btn');
   const playerTitle = document.getElementById('player-title');
   const playerSub = document.getElementById('player-sub');
-  const playerThumb = document.getElementById('player-thumb');
 
   // DOM Elements - Modals & Toast
   const toastEl = document.getElementById('toast');
@@ -104,54 +94,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // ACOUSTIC DRONE & PLAYBACK CONTROLLER
+  // PLAYBACK & DECK CONTROLLER
   // ==========================================================================
-  function initAcousticSynth() {
-    if (audioCtx) return;
-    try {
-      const AudioContext = window.AudioContext || window.webkitAudioContext;
-      audioCtx = new AudioContext();
-      synthGain = audioCtx.createGain();
-      synthGain.gain.setValueAtTime(0, audioCtx.currentTime);
-      synthGain.connect(audioCtx.destination);
-
-      // Frequencies for Scottish DADGAD Folk Drone: D2 (73.42Hz), A2 (110Hz), D3 (146.83Hz), A3 (220Hz)
-      const freqs = [73.42, 110.00, 146.83, 220.00];
-      freqs.forEach(f => {
-        const osc = audioCtx.createOscillator();
-        osc.type = 'triangle';
-        osc.frequency.setValueAtTime(f, audioCtx.currentTime);
-        const oscGain = audioCtx.createGain();
-        oscGain.gain.setValueAtTime(0.04, audioCtx.currentTime);
-        osc.connect(oscGain);
-        oscGain.connect(synthGain);
-        osc.start();
-        synthOscs.push(osc);
-      });
-    } catch (e) {
-      console.warn('[AudioEngine] Web Audio not initialized:', e);
-    }
-  }
-
-  function startAcousticSynth() {
-    initAcousticSynth();
-    if (!audioCtx || !synthGain) return;
-    if (audioCtx.state === 'suspended') {
-      audioCtx.resume();
-    }
-    const currentVol = volSlider ? parseFloat(volSlider.value) : 0.8;
-    synthGain.gain.cancelScheduledValues(audioCtx.currentTime);
-    synthGain.gain.linearRampToValueAtTime(currentVol * 0.12, audioCtx.currentTime + 0.6);
-  }
-
-  function stopAcousticSynth() {
-    if (!audioCtx || !synthGain) return;
-    synthGain.gain.cancelScheduledValues(audioCtx.currentTime);
-    synthGain.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 0.4);
-  }
-
-  // Load and play track
-  function loadTrack(index, playImmediate = false) {
+  function loadTrack(index, autoPlay = false) {
     if (index < 0 || index >= album.tracks.length) return;
     currentTrackIndex = index;
     window.currentTrackIndex = index;
@@ -165,68 +110,67 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currTimeEl) currTimeEl.textContent = '00:00';
     if (scrubberFill) scrubberFill.style.width = '0%';
 
-    // Update Active Deck
+    // Update Active Deck UI
     renderActiveDeck(track);
 
     // Update Tracklist UI
     renderTracklist();
 
-    // Configure Audio Source
+    // Route through Google Cast if actively connected
+    if (window.CastManager && window.CastManager.isConnected()) {
+      if (!audio.paused) audio.pause();
+      isPlaying = true;
+      updatePlayBtnState();
+      renderTracklist();
+      window.CastManager.castTrack(index, album.tracks, album);
+      return;
+    }
+
+    // Set Native Audio Source
     audio.src = track.audio_file;
-    syntheticCurrentTime = 0;
+    audio.load();
 
-    if (playImmediate) {
-      playTrack();
+    if (autoPlay) {
+      playAudio();
     } else {
-      pauseTrack();
-    }
-
-    // Inform CastManager if connected
-    if (window.CastManager && window.CastManager.isConnected && window.CastManager.isConnected()) {
-      if (window.CastManager.getActiveTrackIndex() !== index) {
-        window.castTrack(index);
-      }
+      pauseAudio();
     }
   }
 
-  function playTrack() {
-    const track = album.tracks[currentTrackIndex];
-    isPlaying = true;
-    updatePlayBtnState();
-
-    // Check if real audio source can play
-    const playPromise = audio.play();
-    if (playPromise !== undefined) {
-      playPromise
-        .then(() => {
-          syntheticPlaybackActive = false;
-        })
-        .catch(() => {
-          // Fallback to acoustic drone reflection timer
-          syntheticPlaybackActive = true;
-          startAcousticSynth();
-          startSyntheticTimeline(track.duration_seconds || 240);
-        });
+  function playAudio() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.playOrPause();
+      return;
     }
+
+    audio.play()
+      .then(() => {
+        isPlaying = true;
+        updatePlayBtnState();
+        renderTracklist();
+      })
+      .catch((err) => {
+        console.warn('[Playback] Autoplay or playback prevented:', err);
+      });
   }
 
-  function pauseTrack() {
+  function pauseAudio() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.playOrPause();
+      return;
+    }
+
+    audio.pause();
     isPlaying = false;
     updatePlayBtnState();
-    audio.pause();
-    syntheticPlaybackActive = false;
-    stopAcousticSynth();
-    if (audioTimer) {
-      clearInterval(audioTimer);
-      audioTimer = null;
-    }
+    renderTracklist();
   }
 
   function togglePlayPause() {
     if (isPlaying) {
-      pauseTrack();
+      pauseAudio();
     } else {
-      playTrack();
+      playAudio();
     }
   }
 
@@ -244,38 +188,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function startSyntheticTimeline(durationSec) {
-    if (audioTimer) clearInterval(audioTimer);
-    audioTimer = setInterval(() => {
-      if (!isPlaying || !syntheticPlaybackActive) {
-        clearInterval(audioTimer);
-        return;
-      }
-      syntheticCurrentTime += 1;
-      if (syntheticCurrentTime >= durationSec) {
-        syntheticCurrentTime = 0;
-        nextTrack();
-        return;
-      }
-      const pct = (syntheticCurrentTime / durationSec) * 100;
-      if (scrubberFill) scrubberFill.style.width = `${pct}%`;
-      if (currTimeEl) currTimeEl.textContent = formatSeconds(syntheticCurrentTime);
-      if (scrubber) scrubber.setAttribute('aria-valuenow', Math.round(pct));
-    }, 1000);
-  }
-
   function nextTrack() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.nextTrack();
+      return;
+    }
+
     let nextIdx = currentTrackIndex + 1;
     if (nextIdx >= album.tracks.length) nextIdx = 0;
     loadTrack(nextIdx, isPlaying);
   }
 
   function prevTrack() {
-    if (audio.currentTime > 3 || syntheticCurrentTime > 3) {
-      if (audio.currentTime > 0) audio.currentTime = 0;
-      syntheticCurrentTime = 0;
-      if (currTimeEl) currTimeEl.textContent = '00:00';
-      if (scrubberFill) scrubberFill.style.width = '0%';
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.prevTrack();
+      return;
+    }
+
+    if (audio.currentTime > 3) {
+      audio.currentTime = 0;
       return;
     }
     let prevIdx = currentTrackIndex - 1;
@@ -285,7 +216,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Native Audio Event Listeners
   audio.addEventListener('timeupdate', () => {
-    if (syntheticPlaybackActive) return;
     const cur = audio.currentTime || 0;
     const dur = audio.duration || album.tracks[currentTrackIndex]?.duration_seconds || 240;
     if (currTimeEl) currTimeEl.textContent = formatSeconds(cur);
@@ -310,13 +240,12 @@ document.addEventListener('DOMContentLoaded', () => {
         : (album.tracks[currentTrackIndex]?.duration_seconds || 240);
       const targetTime = pos * targetDuration;
 
-      if (syntheticPlaybackActive) {
-        syntheticCurrentTime = targetTime;
-        if (currTimeEl) currTimeEl.textContent = formatSeconds(syntheticCurrentTime);
-        if (scrubberFill) scrubberFill.style.width = `${pos * 100}%`;
-      } else {
-        audio.currentTime = targetTime;
+      if (window.CastManager && window.CastManager.isConnected()) {
+        window.CastManager.seek(targetTime);
+        return;
       }
+
+      audio.currentTime = targetTime;
     });
   }
 
@@ -325,9 +254,6 @@ document.addEventListener('DOMContentLoaded', () => {
     volSlider.addEventListener('input', () => {
       const val = parseFloat(volSlider.value);
       audio.volume = val;
-      if (synthGain && audioCtx) {
-        synthGain.gain.setValueAtTime(val * 0.12, audioCtx.currentTime);
-      }
       if (muteBtn) {
         const icon = muteBtn.querySelector('i');
         if (val === 0) {
@@ -351,12 +277,10 @@ document.addEventListener('DOMContentLoaded', () => {
         lastVolume = audio.volume;
         audio.volume = 0;
         if (volSlider) volSlider.value = 0;
-        if (synthGain && audioCtx) synthGain.gain.setValueAtTime(0, audioCtx.currentTime);
         muteBtn.querySelector('i').className = 'fas fa-volume-mute';
       } else {
         audio.volume = lastVolume;
         if (volSlider) volSlider.value = lastVolume;
-        if (synthGain && audioCtx) synthGain.gain.setValueAtTime(lastVolume * 0.12, audioCtx.currentTime);
         muteBtn.querySelector('i').className = 'fas fa-volume-up';
       }
     });
@@ -364,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Keyboard Shortcuts
   document.addEventListener('keydown', (e) => {
-    // Ignore when user typing in search input
+    // Ignore when typing in search input
     if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
 
     if (e.code === 'Space') {
@@ -556,7 +480,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!matrixTbody || !Array.isArray(album.constitutional_matrix)) return;
     matrixTbody.innerHTML = '';
 
-    album.constitutional_matrix.forEach((item, idx) => {
+    album.constitutional_matrix.forEach((item) => {
       const tr = document.createElement('tr');
       tr.innerHTML = `
         <td style="width: 25%;">
@@ -572,7 +496,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ${item.manifestation}
         </td>
         <td style="width: 25%;">
-          <strong style="color: var(--text-main); display: block; margin-bottom: 4px; font-size: 0.75rem; text-transform: uppercase;">Societal Awakening:</strong>
+          <strong style="color: var(--text-main); display: block; margin-bottom: 4px; font-size: 0.75rem; text-transform: uppercase;">Popular Awakening:</strong>
           ${item.societal_outcome}
         </td>
       `;
@@ -754,28 +678,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // GOOGLE CAST EVENT HOOKS
   // ==========================================================================
   if (window.CastManager) {
-    window.CastManager.on('stateChange', (state) => {
-      if (state.isConnected) {
-        if (isPlaying && !state.isPlaying) {
-          // Sync pause
-          pauseTrack();
-        } else if (!isPlaying && state.isPlaying) {
-          // Sync play
-          isPlaying = true;
-          updatePlayBtnState();
-        }
-      }
+    window.CastManager.on('stateChange', (data) => {
+      isPlaying = data.isPlaying;
+      updatePlayBtnState();
+      renderTracklist();
     });
 
     window.CastManager.on('trackChange', (trackIdx) => {
       if (trackIdx >= 0 && trackIdx < album.tracks.length && trackIdx !== currentTrackIndex) {
         currentTrackIndex = trackIdx;
         window.currentTrackIndex = trackIdx;
-        const track = album.tracks[trackIdx];
-        renderActiveDeck(track);
-        renderTracklist();
-        if (playerTitle) playerTitle.textContent = `${track.number}. ${track.title}`;
-        if (playerSub) playerSub.textContent = `${track.act_title} • ${track.duration}`;
+        loadTrack(trackIdx, false);
       }
     });
 

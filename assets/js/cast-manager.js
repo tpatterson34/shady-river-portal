@@ -353,8 +353,9 @@
 
     // Support display preference: show master album cover if window.CAST_SHOW_ALBUM_ART is true
     const chosenArtUrl = (window.CAST_SHOW_ALBUM_ART === true) ? albumCoverUrl : (trackCoverUrl || albumCoverUrl);
-    if (chosenArtUrl) {
-      const castImg = new chrome.cast.Image(chosenArtUrl);
+    const safeCastArtUrl = chosenArtUrl ? chosenArtUrl.replace(/\.webp($|\?)/i, '.jpg$1') : '';
+    if (safeCastArtUrl) {
+      const castImg = new chrome.cast.Image(safeCastArtUrl);
       castImg.width = 720;
       castImg.height = 720;
       metadata.images = [castImg];
