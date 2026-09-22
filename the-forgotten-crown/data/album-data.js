@@ -1,11 +1,11 @@
-// The Forgotten Crown (Album XIX) - Core Application Data Engine
+// The Forgotten Crown (Album XIX) Canonical Dataset - Auto-synced with master audio
 window.FORGOTTEN_CROWN_DATA = {
   "id": "the-forgotten-crown",
   "title": "The Forgotten Crown",
   "subtitle": "A Sovereign's Songbook & Thematic Analysis",
   "artist": "The Shady River Bard",
   "release_date": "2026",
-  "runtime": "65:11",
+  "runtime": "57:24",
   "track_count": 15,
   "acts_count": 4,
   "genre": "Traditional & Contemporary Scottish Folk / Bothy Ballads / Celtic Folk-Rock",
@@ -170,8 +170,8 @@ window.FORGOTTEN_CROWN_DATA = {
       "title": "Prologue: The Dust of Estates",
       "act_number": 1,
       "act_title": "Act I: The Imposed Division",
-      "duration": "03:15",
-      "duration_seconds": 195,
+      "duration": "01:50",
+      "duration_seconds": 110,
       "style_tags": [
         "Cinematic Spoken Word",
         "Sul Tasto Cello"
@@ -191,8 +191,8 @@ window.FORGOTTEN_CROWN_DATA = {
       "title": "The Orchestrated Divide",
       "act_number": 1,
       "act_title": "Act I: The Imposed Division",
-      "duration": "04:22",
-      "duration_seconds": 262,
+      "duration": "03:21",
+      "duration_seconds": 201,
       "style_tags": [
         "Gritty Scottish Bothy Ballad",
         "Heavy Folk"
@@ -212,8 +212,8 @@ window.FORGOTTEN_CROWN_DATA = {
       "title": "The Common Good",
       "act_number": 1,
       "act_title": "Act I: The Imposed Division",
-      "duration": "04:05",
-      "duration_seconds": 245,
+      "duration": "03:37",
+      "duration_seconds": 217,
       "style_tags": [
         "Melancholic Scottish Folk",
         "Somber"
@@ -233,8 +233,8 @@ window.FORGOTTEN_CROWN_DATA = {
       "title": "Shadows on Holyrood",
       "act_number": 1,
       "act_title": "Act I: The Imposed Division",
-      "duration": "03:54",
-      "duration_seconds": 234,
+      "duration": "03:26",
+      "duration_seconds": 206,
       "style_tags": [
         "Urgent Scottish Folk-Rock",
         "Driving Bothy Ballad"
@@ -254,8 +254,8 @@ window.FORGOTTEN_CROWN_DATA = {
       "title": "1707 (The Annexation)",
       "act_number": 2,
       "act_title": "Act II: Descent into the Archives",
-      "duration": "04:48",
-      "duration_seconds": 288,
+      "duration": "03:45",
+      "duration_seconds": 225,
       "style_tags": [
         "Archival Celtic Folk-Rock",
         "Dark Bothy Ballad"
@@ -275,8 +275,8 @@ window.FORGOTTEN_CROWN_DATA = {
       "title": "Freeport Lullaby",
       "act_number": 2,
       "act_title": "Act II: Descent into the Archives",
-      "duration": "04:36",
-      "duration_seconds": 276,
+      "duration": "03:25",
+      "duration_seconds": 205,
       "style_tags": [
         "Slow Scottish Blues",
         "Dark Folk"
@@ -296,8 +296,8 @@ window.FORGOTTEN_CROWN_DATA = {
       "title": "Chimera",
       "act_number": 2,
       "act_title": "Act II: Descent into the Archives",
-      "duration": "03:58",
-      "duration_seconds": 238,
+      "duration": "04:49",
+      "duration_seconds": 289,
       "style_tags": [
         "Dark Celtic Legal-Folk",
         "Defeated"
@@ -317,8 +317,8 @@ window.FORGOTTEN_CROWN_DATA = {
       "title": "The Archivist's Midnight",
       "act_number": 2,
       "act_title": "Act II: Descent into the Archives",
-      "duration": "04:12",
-      "duration_seconds": 252,
+      "duration": "03:40",
+      "duration_seconds": 220,
       "style_tags": [
         "Intimate Scottish Folk Ballad",
         "Sparse Acoustic"
@@ -338,8 +338,8 @@ window.FORGOTTEN_CROWN_DATA = {
       "title": "Salvo Jure Cujuslibet",
       "act_number": 3,
       "act_title": "Act III: Constitutional Awakening",
-      "duration": "04:25",
-      "duration_seconds": 265,
+      "duration": "03:14",
+      "duration_seconds": 194,
       "style_tags": [
         "Triumphant Folk",
         "Strathspey Rhythm"
@@ -359,8 +359,8 @@ window.FORGOTTEN_CROWN_DATA = {
       "title": "Healing the Divide",
       "act_number": 3,
       "act_title": "Act III: Constitutional Awakening",
-      "duration": "04:10",
-      "duration_seconds": 250,
+      "duration": "03:53",
+      "duration_seconds": 233,
       "style_tags": [
         "Uplifting Celtic Folk",
         "Driving Rhythm"
@@ -380,8 +380,8 @@ window.FORGOTTEN_CROWN_DATA = {
       "title": "The Stirling Directive",
       "act_number": 3,
       "act_title": "Act III: Constitutional Awakening",
-      "duration": "04:32",
-      "duration_seconds": 272,
+      "duration": "04:08",
+      "duration_seconds": 248,
       "style_tags": [
         "Celtic-Rock",
         "Commanding Duet"
@@ -401,8 +401,8 @@ window.FORGOTTEN_CROWN_DATA = {
       "title": "Echoes of Arbroath",
       "act_number": 3,
       "act_title": "Act III: Constitutional Awakening",
-      "duration": "04:40",
-      "duration_seconds": 280,
+      "duration": "05:04",
+      "duration_seconds": 304,
       "style_tags": [
         "Somber Scottish Folk Ballad",
         "Reflective"
@@ -422,8 +422,8 @@ window.FORGOTTEN_CROWN_DATA = {
       "title": "The Edinburgh Proclamation",
       "act_number": 4,
       "act_title": "Act IV: International Appeal & Popular Sovereignty",
-      "duration": "04:18",
-      "duration_seconds": 258,
+      "duration": "04:25",
+      "duration_seconds": 265,
       "style_tags": [
         "Triumphant Celtic-Rock",
         "Heavy Folk March"
@@ -443,8 +443,8 @@ window.FORGOTTEN_CROWN_DATA = {
       "title": "C-24 (The World is Watching)",
       "act_number": 4,
       "act_title": "Act IV: International Appeal & Popular Sovereignty",
-      "duration": "05:04",
-      "duration_seconds": 304,
+      "duration": "04:32",
+      "duration_seconds": 272,
       "style_tags": [
         "Expansive Celtic Rock",
         "Heavy Industrial Folk"
@@ -464,8 +464,8 @@ window.FORGOTTEN_CROWN_DATA = {
       "title": "The Sovereign People",
       "act_number": 4,
       "act_title": "Act IV: International Appeal & Popular Sovereignty",
-      "duration": "04:52",
-      "duration_seconds": 292,
+      "duration": "04:15",
+      "duration_seconds": 255,
       "style_tags": [
         "Stripped-Down Folk",
         "Peaceful Resolve"
@@ -482,5 +482,5 @@ window.FORGOTTEN_CROWN_DATA = {
   ]
 };
 
-// Universal alias for CastManager & benchmark player compatibility
+// Alias for generic album portal components
 window.ALBUM_DATA = window.FORGOTTEN_CROWN_DATA;
