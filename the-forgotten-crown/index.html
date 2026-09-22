@@ -36,7 +36,7 @@
 
   <!-- Google Cast Manager & Album Data (__onGCastApiAvailable MUST be defined before cast_sender.js) -->
   <script src="data/album-data.js?v=20260922E"></script>
-  <script src="../assets/js/cast-manager.js?v=20260922E"></script>
+  <script src="../assets/js/cast-manager.js?v=20260922F"></script>
   <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
 </head>
 <body>
@@ -442,8 +442,8 @@
   <!-- Toast Notification -->
   <div class="toast-msg" id="toast" role="status" aria-live="polite"></div>
 
-  <!-- CAST DIAGNOSTIC BADGE (BOTTOM-LEFT) -->
-  <div id="cast-debug-pill" onclick="window.CastManager && window.CastManager.showDebugModal ? window.CastManager.showDebugModal() : null" style="position:fixed;bottom:96px;left:24px;z-index:999;padding:6px 14px;border-radius:9999px;background:rgba(18,20,24,0.92);border:1px solid rgba(201,176,122,0.4);color:#dfc488;font-family:var(--font-mono);font-size:11px;box-shadow:0 10px 25px rgba(0,0,0,0.5);backdrop-filter:blur(8px);cursor:pointer;display:flex;align-items:center;gap:8px;" title="Click to view Cast diagnostics">
+  <!-- CAST DIAGNOSTIC BADGE (BOTTOM-LEFT - HIDDEN BY DEFAULT) -->
+  <div id="cast-debug-pill" onclick="window.CastManager && window.CastManager.showDebugModal ? window.CastManager.showDebugModal() : null" style="display:none;position:fixed;bottom:96px;left:24px;z-index:999;padding:6px 14px;border-radius:9999px;background:rgba(18,20,24,0.92);border:1px solid rgba(201,176,122,0.4);color:#dfc488;font-family:var(--font-mono);font-size:11px;box-shadow:0 10px 25px rgba(0,0,0,0.5);backdrop-filter:blur(8px);cursor:pointer;align-items:center;gap:8px;" title="Click to view Cast diagnostics">
     <span id="cast-debug-pill-icon" style="color:#8c8577;">●</span> <span style="color:#f4ebd8;font-weight:600;">Cast:</span> <span id="cast-debug-pill-dev" style="color:#dfc488;">Cast Standby</span> <span style="color:#8c8577;">|</span> <span id="cast-debug-pill-msg" style="color:#c8beab;">Ready</span>
   </div>
 
@@ -456,6 +456,6 @@
   <!-- Bard Notes Integration -->
   <script src="../assets/js/bard-notes.js?v=20260920b"></script>
   <!-- Application Logic -->
-  <script src="assets/js/app.js?v=20260922E"></script>
+  <script src="assets/js/app.js?v=20260922F"></script>
 </body>
 </html>

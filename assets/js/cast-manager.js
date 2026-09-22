@@ -68,6 +68,48 @@
     disconnected: []
   };
 
+  function isDebugEnabled() {
+    try {
+      if (window.CAST_DEBUG === true) return true;
+      if (typeof window.location !== 'undefined' && window.location.search) {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('debug') === 'cast' || params.get('cast_debug') === 'true') return true;
+      }
+      if (typeof localStorage !== 'undefined' && localStorage.getItem('SRB_CAST_DEBUG') === 'true') {
+        return true;
+      }
+    } catch (e) {}
+    return false;
+  }
+
+  function applyDebugVisibility() {
+    const isEnabled = isDebugEnabled();
+    let style = document.getElementById('srb-cast-debug-hide');
+    if (!isEnabled) {
+      if (!style) {
+        style = document.createElement('style');
+        style.id = 'srb-cast-debug-hide';
+        style.textContent = '#cast-debug-pill { display: none !important; }';
+        (document.head || document.documentElement).appendChild(style);
+      }
+      const pill = document.getElementById('cast-debug-pill');
+      if (pill) {
+        pill.style.display = 'none';
+      }
+    } else {
+      if (style) {
+        style.remove();
+      }
+      const pill = document.getElementById('cast-debug-pill');
+      if (pill) {
+        pill.style.display = 'flex';
+      }
+    }
+  }
+
+  // Ensure diagnostics pill is hidden by default immediately on arrival
+  applyDebugVisibility();
+
   function logDebug(msg) {
     const time = new Date().toLocaleTimeString();
     const formatted = `[${time}] ${msg}`;
@@ -78,6 +120,9 @@
   }
 
   function updateDebugPill(latestMsg) {
+    applyDebugVisibility();
+    if (!isDebugEnabled()) return;
+
     let pill = document.getElementById('cast-debug-pill');
     if (!pill) {
       if (!document.body) return; // Guard: script executed in <head> before <body>
@@ -88,6 +133,8 @@
       pill.onclick = showDebugModal;
       document.body.appendChild(pill);
     }
+
+    pill.style.display = 'flex';
 
     const iconSpan = document.getElementById('cast-debug-pill-icon');
     const devSpan = document.getElementById('cast-debug-pill-dev');
@@ -1099,8 +1146,41 @@
     isConnected: function () { return checkIsConnected(); },
     getDeviceName: function () { return deviceName || 'Google TV'; },
     getActiveTrackIndex: function () { return activeTrackIndex; },
-    isAvailable: function () { return isApiAvailable; }
+    isAvailable: function () { return isApiAvailable; },
+    toggleDebug: function (enable) {
+      const current = isDebugEnabled();
+      const target = typeof enable === 'boolean' ? enable : !current;
+      try {
+        if (target) {
+          localStorage.setItem('SRB_CAST_DEBUG', 'true');
+        } else {
+          localStorage.removeItem('SRB_CAST_DEBUG');
+        }
+      } catch (e) {}
+      window.CAST_DEBUG = target;
+      applyDebugVisibility();
+      if (target) {
+        updateDebugPill('Debug enabled');
+        showToast('Cast diagnostics enabled', 'info', 2500);
+      } else {
+        showToast('Cast diagnostics hidden', 'info', 2500);
+      }
+      return target;
+    },
+    showDebugPill: function () { return window.CastManager.toggleDebug(true); },
+    hideDebugPill: function () { return window.CastManager.toggleDebug(false); },
+    isDebugEnabled: isDebugEnabled
   };
+
+  // Secret keyboard shortcut: Ctrl + Alt + D to toggle Cast diagnostics badge
+  window.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.altKey && (e.key === 'd' || e.key === 'D')) {
+      e.preventDefault();
+      if (window.CastManager && window.CastManager.toggleDebug) {
+        window.CastManager.toggleDebug();
+      }
+    }
+  });
 
   // Helper shortcut for onclick handlers
   window.castTrack = function (index) {
