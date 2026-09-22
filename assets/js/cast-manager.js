@@ -33,6 +33,8 @@
   let activeTracks = [];
   let activeAlbumMeta = null;
   let toastTimeout = null;
+  let lastKnownTime = 0;
+  let lastKnownDuration = 0;
   const debugLogs = [];
 
   // Safe PlayerState enum (Google Cast Web SDK CAF sender does not expose PlayerState on cast.framework)
@@ -310,17 +312,21 @@
       metadata.metadataType = chrome.cast.media.MetadataType.MUSIC_TRACK; // 3
       metadata.title = trackTitle;
       metadata.songName = trackTitle;
-      metadata.artist = artist;
+      // Google TV DMR card renders Line 1: title, Line 2: artist.
+      // Incorporating albumTitle into artist ensures "Sanity's Edge" appears directly on the 1/6 card!
+      metadata.artist = `${albumTitle} • ${artist}`;
       metadata.albumArtist = artist;
       metadata.albumName = albumTitle;
       metadata.trackNumber = trackNum;
     }
 
-    if (trackCoverUrl) {
-      const trackImg = new chrome.cast.Image(trackCoverUrl);
-      trackImg.width = 720;
-      trackImg.height = 720;
-      metadata.images = [trackImg];
+    // Support display preference: show master album cover if window.CAST_SHOW_ALBUM_ART is true
+    const chosenArtUrl = (window.CAST_SHOW_ALBUM_ART === true) ? albumCoverUrl : (trackCoverUrl || albumCoverUrl);
+    if (chosenArtUrl) {
+      const castImg = new chrome.cast.Image(chosenArtUrl);
+      castImg.width = 720;
+      castImg.height = 720;
+      metadata.images = [castImg];
     }
 
     mediaInfo.metadata = metadata;
@@ -505,15 +511,18 @@
     const idleReason = (mediaSession && mediaSession.idleReason) || remotePlayer.idleReason || '';
     const curTime = remotePlayer.currentTime || 0;
     const duration = remotePlayer.duration || 0;
-    logDebug(`PlayerState: ${state} (idleReason: ${idleReason || 'none'}, time: ${curTime.toFixed(1)}s / ${duration.toFixed(1)}s)`);
+    logDebug(`PlayerState: ${state} (idleReason: ${idleReason || 'none'}, time: ${curTime.toFixed(1)}s / ${duration.toFixed(1)}s, lastKnown: ${lastKnownTime.toFixed(1)}s / ${lastKnownDuration.toFixed(1)}s)`);
 
     if (state === CastPlayerState.IDLE) {
       isMediaLoading = false;
       const isFinished = (idleReason === 'FINISHED') ||
+                         (lastKnownDuration > 10 && lastKnownTime >= (lastKnownDuration - 5)) ||
                          (duration > 0 && curTime >= (duration - 3));
 
       if (isFinished) {
         logDebug('Track finished playing on TV receiver');
+        lastKnownTime = 0;
+        lastKnownDuration = 0;
         activeTracks = (activeTracks && activeTracks.length) ? activeTracks : ((window.ALBUM_DATA && window.ALBUM_DATA.tracks) || []);
         if (activeTrackIndex >= 0 && activeTrackIndex < activeTracks.length - 1) {
           const nextIdx = activeTrackIndex + 1;
@@ -561,6 +570,8 @@
     if (!remotePlayer) return;
     const curTime = remotePlayer.currentTime || 0;
     const duration = remotePlayer.duration || 0;
+    if (curTime > 0) lastKnownTime = curTime;
+    if (duration > 0) lastKnownDuration = duration;
     emit('timeUpdate', { currentTime: curTime, duration });
   }
 
@@ -606,6 +617,8 @@
     const currentSeq = ++loadSequence;
     activeTrackIndex = trackIndex;
     window.currentTrackIndex = trackIndex;
+    lastKnownTime = 0;
+    lastKnownDuration = 0;
     pauseLocalAudio();
 
     const track = activeTracks[trackIndex];
