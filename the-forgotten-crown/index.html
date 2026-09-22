@@ -14,7 +14,7 @@
   <meta property="og:type" content="music.album">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="The Forgotten Crown | The Shady River Bard">
-  <meta name="twitter:description" content="Explore the interactive 15-track streaming jukebox, lyrics studio, visual exhibits, and constitutional matrix.">
+  <meta name="twitter:description" content="Explore the interactive 15-track streaming jukebox, lyrics studio, 4-act storyline roadmap, and constitutional matrix.">
   <meta name="twitter:image" content="assets/art/og-the-forgotten-crown.jpg">
 
   <!-- Official Favicon -->
@@ -31,11 +31,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/app.css?v=20260922D">
+  <link rel="stylesheet" href="assets/css/app.css?v=20260922G">
   <link rel="stylesheet" href="../assets/css/bard-notes.css?v=20260920b">
 
   <!-- Google Cast Manager & Album Data (__onGCastApiAvailable MUST be defined before cast_sender.js) -->
-  <script src="data/album-data.js?v=20260922E"></script>
+  <script src="data/album-data.js?v=20260922G"></script>
   <script src="../assets/js/cast-manager.js?v=20260922F"></script>
   <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
 </head>
@@ -73,7 +73,7 @@
       <nav aria-label="Main Navigation">
         <ul class="nav-links">
           <li><a href="#overview">Overview</a></li>
-          <li><a href="#exhibits">Exhibits</a></li>
+          <li><a href="#roadmap">Storyline Roadmap</a></li>
           <li><a href="#jukebox">Jukebox</a></li>
           <li><a href="#matrix">Constitutional Matrix</a></li>
           <li><a href="#lore">Historical Lore</a></li>
@@ -121,9 +121,9 @@
               <i class="fas fa-table"></i>
               <span>Constitutional Matrix</span>
             </a>
-            <a href="#exhibits" class="btn btn-secondary">
-              <i class="fas fa-image"></i>
-              <span>Visual Exhibits</span>
+            <a href="#roadmap" class="btn btn-secondary">
+              <i class="fas fa-route"></i>
+              <span>4-Act Roadmap</span>
             </a>
             <a href="../vault/" class="btn btn-secondary">
               <i class="fas fa-arrow-left"></i>
@@ -134,40 +134,59 @@
       </div>
     </section>
 
-    <!-- Curated Visual Exhibits -->
-    <section id="exhibits" class="app-section">
+    <!-- 4-Act Storyline & Constitutional Roadmap -->
+    <section id="roadmap" class="app-section roadmap-section">
       <div class="container">
         <div class="section-header">
+          <div class="roadmap-badge-wrap">
+            <span class="roadmap-badge"><i class="fas fa-route"></i> The Narrative Arc &bull; 15 Movements</span>
+          </div>
           <h2 class="section-title">
-            <i class="fas fa-images" style="color: var(--gold-primary);"></i>
-            <span>Curated Visual Exhibits</span>
+            <i class="fas fa-scroll" style="color: var(--gold-primary);"></i>
+            <span>4-Act Storyline &amp; Constitutional Roadmap</span>
           </h2>
           <p class="section-subtitle">
-            Widescreen visual representations tracing the memory of the soil, the corporate enclosures of Freeports, the archivist's midnight discovery, and the unified sovereign assembly.
+            Follow Scotland's journey from social division and corporate enclosures to constitutional awakening and international sovereignty. Select an Act or click any track to listen immediately.
           </p>
         </div>
 
-        <div class="exhibits-container">
-          <div class="exhibit-view">
-            <img src="assets/art/exhibit-1-dust-of-estates.webp" alt="Visual Exhibit Main View" id="exhibit-main-img">
-            <button class="exhibit-nav-btn exhibit-prev" id="prev-exhibit-btn" aria-label="Previous Exhibit">
-              <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="exhibit-nav-btn exhibit-next" id="next-exhibit-btn" aria-label="Next Exhibit">
-              <i class="fas fa-chevron-right"></i>
-            </button>
-            <div class="exhibit-overlay">
-              <div class="exhibit-subtitle" id="exhibit-subtitle">Exhibit I: The Memory of the Soil</div>
-              <h3 class="exhibit-title" id="exhibit-title">The Dust of Estates</h3>
-              <p class="exhibit-caption" id="exhibit-caption">
-                Ancient standing stones and ruined croft walls rise through the morning mist of the Scottish Highlands. The soil remembers the theft and the ancient laws of the common good.
-              </p>
-            </div>
-          </div>
-          <div class="exhibit-thumbs" id="exhibit-thumbs">
-            <!-- Rendered via JavaScript -->
-          </div>
+        <!-- Act Stepper Tabs -->
+        <div class="roadmap-stepper" role="tablist" aria-label="Acts Navigation">
+          <button class="stepper-tab active" data-act="1" role="tab" aria-selected="true" id="tab-act-1">
+            <span class="stepper-num">I</span>
+            <span class="stepper-info">
+              <strong class="stepper-title">The Imposed Division</strong>
+              <small class="stepper-meta">Tracks 01–04 &bull; 12:28</small>
+            </span>
+          </button>
+          <button class="stepper-tab" data-act="2" role="tab" aria-selected="false" id="tab-act-2">
+            <span class="stepper-num">II</span>
+            <span class="stepper-info">
+              <strong class="stepper-title">Descent into Archives</strong>
+              <small class="stepper-meta">Tracks 05–08 &bull; 16:34</small>
+            </span>
+          </button>
+          <button class="stepper-tab" data-act="3" role="tab" aria-selected="false" id="tab-act-3">
+            <span class="stepper-num">III</span>
+            <span class="stepper-info">
+              <strong class="stepper-title">Constitutional Awakening</strong>
+              <small class="stepper-meta">Tracks 09–12 &bull; 14:08</small>
+            </span>
+          </button>
+          <button class="stepper-tab" data-act="4" role="tab" aria-selected="false" id="tab-act-4">
+            <span class="stepper-num">IV</span>
+            <span class="stepper-info">
+              <strong class="stepper-title">Popular Sovereignty</strong>
+              <small class="stepper-meta">Tracks 13–15 &bull; 14:14</small>
+            </span>
+          </button>
         </div>
+
+        <!-- Active Act Spotlight Card -->
+        <div class="roadmap-spotlight" id="roadmap-spotlight" role="tabpanel" aria-labelledby="tab-act-1">
+          <!-- Rendered dynamically via JavaScript -->
+        </div>
+
       </div>
     </section>
 
@@ -456,6 +475,6 @@
   <!-- Bard Notes Integration -->
   <script src="../assets/js/bard-notes.js?v=20260920b"></script>
   <!-- Application Logic -->
-  <script src="assets/js/app.js?v=20260922F"></script>
+  <script src="assets/js/app.js?v=20260922G"></script>
 </body>
 </html>

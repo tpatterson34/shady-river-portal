@@ -15,8 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let isPlaying = false;
   let currentActFilter = 'all';
   let searchQuery = '';
-  let currentExhibitIndex = 0;
-
   // Native Audio Element
   const audio = new Audio();
   audio.preload = 'metadata';
@@ -44,15 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const deckQuotes = document.getElementById('deck-quotes');
   const copyLyricsBtn = document.getElementById('copy-lyrics-btn');
   const deckBardNoteBtn = document.getElementById('deck-bard-note-btn');
-
-  // DOM Elements - Visual Exhibits
-  const exhibitMainImg = document.getElementById('exhibit-main-img');
-  const exhibitTitle = document.getElementById('exhibit-title');
-  const exhibitSubtitle = document.getElementById('exhibit-subtitle');
-  const exhibitCaption = document.getElementById('exhibit-caption');
-  const exhibitThumbs = document.getElementById('exhibit-thumbs');
-  const prevExhibitBtn = document.getElementById('prev-exhibit-btn');
-  const nextExhibitBtn = document.getElementById('next-exhibit-btn');
 
   // DOM Elements - Constitutional Matrix
   const matrixTbody = document.getElementById('matrix-tbody');
@@ -194,6 +183,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (icon) icon.className = 'fas fa-play';
       playBtn.setAttribute('aria-label', 'Play Track (Space)');
       playBtn.setAttribute('title', 'Play Track (Space)');
+    }
+    if (typeof updateRoadmapActiveTrack === 'function') {
+      updateRoadmapActiveTrack();
     }
   }
 
@@ -514,70 +506,221 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // VISUAL EXHIBITS SHOWCASE
+  // 4-ACT STORYLINE & CONSTITUTIONAL ROADMAP
   // ==========================================================================
-  function renderExhibit(index) {
-    if (!album.exhibits || index < 0 || index >= album.exhibits.length) return;
-    currentExhibitIndex = index;
-    const ex = album.exhibits[index];
+  let currentRoadmapAct = 1;
 
-    if (exhibitMainImg) {
-      exhibitMainImg.src = ex.image_webp || ex.image_jpg;
-      exhibitMainImg.alt = ex.title;
+  function renderRoadmapAct(actNum) {
+    if (!album.acts) return;
+    const act = album.acts.find(a => a.act_number === actNum) || album.acts[0];
+    if (!act) return;
+    currentRoadmapAct = act.act_number;
+
+    // Update stepper tabs
+    document.querySelectorAll('.stepper-tab').forEach(tab => {
+      const a = parseInt(tab.dataset.act, 10);
+      const isActive = (a === act.act_number);
+      tab.classList.toggle('active', isActive);
+      tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+
+    const spotlight = document.getElementById('roadmap-spotlight');
+    if (!spotlight) return;
+
+    // Find all tracks belonging to this act
+    const actTracks = album.tracks.filter(t => t.act_number === act.act_number);
+
+    // Calculate act total duration
+    const totalSec = actTracks.reduce((acc, t) => acc + (t.duration_seconds || 0), 0);
+    const actDurationFormatted = formatSeconds(totalSec);
+
+    // Roman numeral
+    const romanNumerals = ['', 'I', 'II', 'III', 'IV'];
+    const roman = romanNumerals[act.act_number] || act.act_number;
+
+    const tracksHtml = actTracks.map(t => {
+      const trackIdx = t.number - 1;
+      const isThisPlaying = (isPlaying && trackIdx === currentTrackIndex);
+      const quote = (t.pull_quotes && t.pull_quotes[0]) || t.summary || '';
+      const tags = (t.style_tags || []).map(tag => `<span class="track-card-tag">${tag}</span>`).join('');
+
+      return `
+        <div class="roadmap-track-card ${isThisPlaying ? 'playing' : ''}" id="roadmap-track-${trackIdx}" data-track-index="${trackIdx}">
+          <div class="track-card-top">
+            <button class="track-play-circle-btn" data-track-index="${trackIdx}" aria-label="${isThisPlaying ? 'Pause' : 'Play'} Track ${t.number}: ${t.title}" title="${isThisPlaying ? 'Pause' : 'Play'} Track ${t.number}">
+              <i class="fas ${isThisPlaying ? 'fa-pause' : 'fa-play'}"></i>
+            </button>
+            <div class="track-card-meta">
+              <div class="track-card-number">
+                TRACK ${t.number < 10 ? '0' : ''}${t.number} &bull; ${t.duration}
+                <span class="roadmap-soundwave" aria-hidden="true">
+                  <span class="soundwave-bar"></span>
+                  <span class="soundwave-bar"></span>
+                  <span class="soundwave-bar"></span>
+                </span>
+              </div>
+              <h4 class="track-card-title">${t.title}</h4>
+            </div>
+          </div>
+          ${quote ? `<p class="track-card-quote">&ldquo;${quote}&rdquo;</p>` : ''}
+          <div class="track-card-footer">
+            <div class="track-card-style-tags">${tags}</div>
+            <button class="track-jump-lyrics-btn" data-track-index="${trackIdx}" title="View poetry & narrative in Jukebox Studio">
+              <i class="fas fa-feather-alt"></i> <span>Poetry</span>
+            </button>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    spotlight.innerHTML = `
+      <div class="spotlight-header">
+        <div class="spotlight-header-info">
+          <div class="spotlight-meta-top">
+            <span class="spotlight-act-num">Movement ${roman} of IV &bull; ${actDurationFormatted}</span>
+            <span class="spotlight-theme-badge">${act.theme}</span>
+          </div>
+          <h3 class="spotlight-title">${act.title}</h3>
+          <div class="spotlight-sonic-pill">
+            <i class="fas fa-music"></i>
+            <span>${act.musical_direction || 'Scottish Dark Folk'}</span>
+          </div>
+        </div>
+        <div class="spotlight-actions">
+          <button class="btn btn-primary btn-sm act-play-all-btn" data-first-track="${actTracks[0]?.number - 1 || 0}">
+            <i class="fas fa-play"></i>
+            <span>Play Movement (${actTracks[0]?.number < 10 ? '0' : ''}${actTracks[0]?.number}&ndash;${actTracks[actTracks.length - 1]?.number < 10 ? '0' : ''}${actTracks[actTracks.length - 1]?.number})</span>
+          </button>
+          <button class="btn btn-secondary btn-sm act-jump-lyrics-btn" data-act="${act.act_number}">
+            <i class="fas fa-feather-alt"></i>
+            <span>Lyrics Studio</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="roadmap-narrative-grid">
+        <div class="narrative-box">
+          <div class="narrative-box-title">
+            <i class="fas fa-compass"></i>
+            <span>The Storyline &amp; Citizen's Journey</span>
+          </div>
+          <p class="narrative-box-body">${act.description}</p>
+        </div>
+
+        <div class="legal-lore-box">
+          <div class="legal-lore-title">
+            <i class="fas fa-balance-scale"></i>
+            <span>Constitutional Legal Doctrine</span>
+          </div>
+          <div class="legal-lore-headline">${act.legal_lore || 'Popular Sovereignty'}</div>
+          <p class="legal-lore-body">${act.legal_doctrine || ''}</p>
+        </div>
+      </div>
+
+      <div class="roadmap-tracks-wrap">
+        <div class="roadmap-tracks-header">
+          <div class="roadmap-tracks-title">
+            <i class="fas fa-list-ol"></i>
+            <span>Movement Songs &bull; Click to Play Immediately</span>
+          </div>
+        </div>
+        <div class="roadmap-track-grid">
+          ${tracksHtml}
+        </div>
+      </div>
+    `;
+
+    attachRoadmapEventListeners();
+  }
+
+  function attachRoadmapEventListeners() {
+    const spotlight = document.getElementById('roadmap-spotlight');
+    if (!spotlight) return;
+
+    // Play all button
+    const playAllBtn = spotlight.querySelector('.act-play-all-btn');
+    if (playAllBtn) {
+      playAllBtn.addEventListener('click', () => {
+        const firstIdx = parseInt(playAllBtn.dataset.firstTrack, 10) || 0;
+        loadTrack(firstIdx, true);
+        showToast(`Playing ${album.tracks[firstIdx]?.act_title}`);
+      });
     }
-    if (exhibitTitle) exhibitTitle.textContent = ex.title;
-    if (exhibitSubtitle) exhibitSubtitle.textContent = ex.subtitle;
-    if (exhibitCaption) exhibitCaption.textContent = ex.caption;
 
-    // Update Thumbs
-    if (exhibitThumbs) {
-      const thumbEls = exhibitThumbs.querySelectorAll('.exhibit-thumb');
-      thumbEls.forEach((th, idx) => {
-        if (idx === index) {
-          th.classList.add('active');
+    // Jump to lyrics studio button
+    const jumpLyricsBtn = spotlight.querySelector('.act-jump-lyrics-btn');
+    if (jumpLyricsBtn) {
+      jumpLyricsBtn.addEventListener('click', () => {
+        const actNum = jumpLyricsBtn.dataset.act;
+        const filterBtn = document.querySelector(`.filter-btn[data-act="${actNum}"]`);
+        if (filterBtn) filterBtn.click();
+        const jukeboxEl = document.getElementById('jukebox');
+        if (jukeboxEl) {
+          jukeboxEl.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+
+    // Individual track play buttons
+    spotlight.querySelectorAll('.track-play-circle-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const idx = parseInt(btn.dataset.trackIndex, 10);
+        if (idx === currentTrackIndex && isPlaying) {
+          pauseAudio();
+        } else if (idx === currentTrackIndex && !isPlaying) {
+          playAudio();
         } else {
-          th.classList.remove('active');
+          loadTrack(idx, true);
         }
       });
-    }
-  }
+    });
 
-  function initExhibitThumbs() {
-    if (!exhibitThumbs || !Array.isArray(album.exhibits)) return;
-    exhibitThumbs.innerHTML = '';
-
-    album.exhibits.forEach((ex, idx) => {
-      const thumb = document.createElement('div');
-      thumb.className = `exhibit-thumb ${idx === 0 ? 'active' : ''}`;
-      thumb.setAttribute('role', 'button');
-      thumb.setAttribute('tabindex', '0');
-      thumb.setAttribute('aria-label', `View ${ex.title}`);
-      thumb.innerHTML = `<img src="${ex.image_webp || ex.image_jpg}" alt="${ex.title} Thumbnail" />`;
-
-      thumb.addEventListener('click', () => renderExhibit(idx));
-      thumb.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          renderExhibit(idx);
+    // Individual track jump to lyrics buttons
+    spotlight.querySelectorAll('.track-jump-lyrics-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const idx = parseInt(btn.dataset.trackIndex, 10);
+        loadTrack(idx, false);
+        const jukeboxEl = document.getElementById('jukebox');
+        if (jukeboxEl) {
+          jukeboxEl.scrollIntoView({ behavior: 'smooth' });
         }
       });
-      exhibitThumbs.appendChild(thumb);
+    });
+
+    // Clicking anywhere on track card (except buttons) plays the track
+    spotlight.querySelectorAll('.roadmap-track-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('button')) return;
+        const idx = parseInt(card.dataset.trackIndex, 10);
+        loadTrack(idx, true);
+      });
     });
   }
 
-  if (prevExhibitBtn) {
-    prevExhibitBtn.addEventListener('click', () => {
-      let idx = currentExhibitIndex - 1;
-      if (idx < 0) idx = album.exhibits.length - 1;
-      renderExhibit(idx);
+  function initRoadmap() {
+    const stepperTabs = document.querySelectorAll('.stepper-tab');
+    stepperTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const actNum = parseInt(tab.dataset.act, 10);
+        renderRoadmapAct(actNum);
+      });
     });
+
+    renderRoadmapAct(1);
   }
 
-  if (nextExhibitBtn) {
-    nextExhibitBtn.addEventListener('click', () => {
-      let idx = currentExhibitIndex + 1;
-      if (idx >= album.exhibits.length) idx = 0;
-      renderExhibit(idx);
+  function updateRoadmapActiveTrack() {
+    document.querySelectorAll('.roadmap-track-card').forEach(card => {
+      const idx = parseInt(card.dataset.trackIndex, 10);
+      const isThisPlaying = (isPlaying && idx === currentTrackIndex);
+      card.classList.toggle('playing', isThisPlaying);
+
+      const playIcon = card.querySelector('.track-play-circle-btn i');
+      if (playIcon) {
+        playIcon.className = `fas ${isThisPlaying ? 'fa-pause' : 'fa-play'}`;
+      }
     });
   }
 
@@ -740,8 +883,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initial Boot
   initA11y();
-  initExhibitThumbs();
-  renderExhibit(0);
+  initRoadmap();
   renderMatrix();
   loadTrack(0, false);
 });
