@@ -1,0 +1,2184 @@
+// Master Dataset for Soul Fire (Album XX Incubator)
+// Generated from the Concept Album Blueprint
+window.SOUL_FIRE_DATA = {
+  "album": {
+    "id": "soul-fire",
+    "title": "Soul Fire",
+    "subtitle": "A Working-Class Soul Cantata of Affective Polarization and Civic Resurrection",
+    "artist": "The Shady River Bard",
+    "status": "Vault Concept &bull; Album XX",
+    "release_year": 2026,
+    "genre": "1970s Soul / Muscle Shoals Swamp Soul & Folk-Rock",
+    "hero_art": "assets/art/soul-fire-cover.webp",
+    "og_image": "assets/art/og-soul-fire.jpg",
+    "suno_playlist_url": "https://suno.com/playlist/8168828b-2e01-4fa7-9b00-1e95861862ba",
+    "description": "Soul Fire represents a profound aesthetic and thematic landmark for The Shady River Bard. The album confronts two of the most urgent social crises of the modern era: the manufactured division of affective polarization and the systematic disappearance of America's physical 'Third Places'. Drawing from the historic racial and artistic integration of Stax Records in Memphis and Muscle Shoals FAME Studios in Alabama, Soul Fire uses the visceral warmth of 1970s rhythm and blues to prove that human proximity, shared material struggle, and grassroots community are the only forces powerful enough to reignite the civic bond.",
+    "stats": {
+      "tracks": 15,
+      "acts": 4,
+      "pillars": 3,
+      "duration": "58 Min",
+      "sound": "1970s Stax/Motown Soul & Muscle Shoals Swamp Rock"
+    }
+  },
+  "pillars": [
+    {
+      "id": "pillar-1",
+      "number": "1.1",
+      "title": "The Erosion of the Social Contract & Affective Polarization",
+      "subtitle": "Algorithmic Monetization of Out-Group Hostility",
+      "content": "The emotional exhaustion of the modern working class is not an organic development, but a direct byproduct of systemic economic inequality and the strategic fracturing of the American social contract. Historically, the national social contract promised baseline economic stability—a middle-class life—in exchange for hard work, a promise that organized urban workers fought to secure on automotive assembly lines and in union halls1. As this contract has deteriorated due to deindustrialization and widening economic divides, the resulting economic anxieties have been weaponized into a phenomenon known as affective polarization.\n\nAffective polarization differs fundamentally from traditional ideological disagreement. It is defined as a virulent form of partisan hostility characterized by viewing political out-groups not merely as incorrect on policy, but as abhorrent, unpatriotic, and a moral danger to the country's future2. This phenomenon is driven by Social Identity Theory, wherein individuals seek to strengthen their in-group belonging by demonstrating extreme animosity toward an out-group, often engaging in a process of depersonalization where individuality is repressed to conform to group norms4. Research indicates that the growth of affective polarization originates largely from increased hostility for political out-groups rather than mere affection for one's in-group, creating an environment defined by what they oppose rather than what they build6.\n\nIn the modern working-class environment, this polarization is systematically orchestrated and monetized by digital platforms. Social media algorithms, designed to maximize user engagement, actively prioritize and promote content featuring antidemocratic attitudes and partisan animosity (AAPA)8. Exposure to AAPA content results in an immediate increase in negative emotions, such as sadness and anger, feeding a cycle of outrage8. The digital sphere operates on a mechanism of \"reinforcing spirals,\" where negative emotional reactions to political spectacles drive users deeper into homogeneous information silos, essentially nationalizing anger and obscuring local, shared material realities1. Consequently, the shared identity of the working class—once rooted in physical proximity, factory floors, and mutual economic struggle—has been deeply fractured. Digital isolation has replaced neighborhood solidarity, and algorithmic feeds have supplanted the union hall as the primary interface for political reality.",
+      "summary": "Affective polarization differs fundamentally from traditional policy disagreement: citizens evaluate political out-groups not as mistaken neighbors, but as existential moral threats. In the modern working-class landscape, this division is systematically orchestrated and monetized by digital platforms, transforming shared economic precarity into horizontal tribal warfare."
+    },
+    {
+      "id": "pillar-2",
+      "number": "1.2",
+      "title": "The Erasure of 'Third Places' & Architecture of Isolation",
+      "subtitle": "From Union Halls & Barbershops to Solitary Screens",
+      "content": "The physical manifestation of this social fracturing is the systematic disappearance of what sociologist Ray Oldenburg termed \"Third Places.\" The concept defines the first place as the home, the second place as the workplace, and the third place as the informal, public gathering spaces that exist between them11. These locations—local barbershops, neighborhood diners, corner taverns, city stoops, and union halls—historically served as the lifeblood of working-class communities. They were spaces of unforced sociability, neutral ground where social capital was built, and civic trust was organically maintained across demographic lines12.\n\nOver the past few decades, a combination of zoning laws that separated residential and commercial life, the proliferation of big-box retail that optimized for transactional efficiency rather than lingering, and the gentrification of urban commercial spaces has systematically eradicated these essential institutions12. Conceptually, this transition can be visualized as a vertical architectural stratification of the modern working class. The overarching narrative maps a descent from the top floors of a modernized, sterile \"algorithmic factory\" where isolated workers stare at screens, down through dimly lit, fractured apartment units where solitary figures are illuminated only by the cold blue light of smartphones, ultimately aiming to return to the ground floor. This ground floor represents the foundational \"Third Places\"—a bustling barbershop, a crowded union hall, and a neighborhood stoop—where physical proximity breeds civic resurrection.\n\nAs these physical environments vanished, they were purportedly replaced by the digital sphere. However, digital networks fail to satisfy Oldenburg's criteria for a true Third Place, primarily because they lack the physical, embodied presence, neutral ground, and low-barrier access required to build ambient social trust12. In the digital realm, the phenomenon of \"weak ties\" (casual acquaintances on social media) actually induces a stagnation effect; individuals actively self-censor their political and civic identities out of fear of out-group backlash or public image damage4. While workers might feel unrestricted discussing issues with strong ties in a physical barbershop, they avoid expression online, leading to a measurable loneliness epidemic, skyrocketing anxiety, and a catastrophic collapse in localized civic engagement4.",
+      "summary": "Sociologist Ray Oldenburg defined 'Third Places'—the barbershops, diners, union halls, and public stoops that host regular, unforced, and egalitarian conversation outside of work and home. Their systemic disappearance, driven by suburban zoning and commercial privatization, has left citizens trapped in atomized domestic silos where all outside human interaction is mediated by engagement algorithms."
+    },
+    {
+      "id": "pillar-3",
+      "number": "1.3",
+      "title": "The Stax/Motown Ethos as a Sociological Counter-Narrative",
+      "subtitle": "Polyrhythmic Cooperation as Democratic Praxis",
+      "content": "In direct opposition to modern political polarization stands the historical and sociological framework of the mid-century American Soul movement, primarily engineered in the physical recording studios of Detroit, Memphis, and Muscle Shoals. These studios functioned as ultimate, highly functional Third Places, where the friction of physical proximity generated unparalleled creative and social capital.\n\nStax Records, located in a converted Capitol Theatre on McLemore Avenue in South Memphis, represents the apex of this counter-narrative. During a period of intense racial segregation and civil rights struggle in the 1960s South, Stax maintained an uncompromising policy of racial integration15. Its legendary house band, Booker T. & the M.G.'s, was composed of two Black musicians (keyboardist Booker T. Jones and drummer Al Jackson Jr.) and two white musicians (guitarist Steve Cropper and bassist Donald \"Duck\" Dunn)18. This was not a contrived political stunt, but an organic result of shared physical space, mutual respect, and a unified labor toward creating the perfect groove16. The music they created—and the \"Message Music\" later sung by artists like The Staple Singers and Isaac Hayes—served as a potent counterdiscourse for poor and working-class communities, challenging dominant power structures while fostering collective self-help, awareness, and deep civic pride15. Events like Wattstax in 1972 highlighted this, operating as a day of Black awareness that intertwined the joy of daily life with the anger of disenfranchisement15.\n\nSimilarly, the Muscle Shoals Rhythm Section (affectionately known as \"The Swampers\"), based originally out of Rick Hall's FAME Studios in Alabama, consisted of white session musicians (Barry Beckett, Roger Hawkins, David Hood, and Jimmy Johnson) who mastered a deeply funky, soulful Southern R&B sound22. They provided the bedrock for iconic recordings by Black artists like Aretha Franklin, Wilson Pickett, and Etta James, often operating as conduits for the artists' ideas through shared physical collaboration22. Crucially, in 1969, The Swampers broke away from FAME to found their own facility, Muscle Shoals Sound Studio, becoming the first group of session musicians to own a studio and run their own publishing companies22. This act of seizing the means of their own musical production perfectly aligns with the working-class ethos of Soul Fire.\n\nThe creation of Soul music was fundamentally an exercise in polyrhythmic cooperation. It required disparate individuals to occupy the same physical room, listen intently to one another, and subordinate their individual egos to the collective groove. Thus, Soul Fire utilizes the architecture of classic Soul not merely as a nostalgic aesthetic, but as a proven sociopolitical technology capable of bridging the divides of affective polarization.",
+      "summary": "In direct opposition to manufactured division stands the historical reality of Stax Records in South Memphis and Muscle Shoals FAME Studios in Alabama. Black and white working-class musicians gathered in integrated rooms during the height of Jim Crow to forge a unified sonic language. Soul music is an exercise in polyrhythmic democracy: each instrument locks into the pocket, proving that friction and proximity generate warmth rather than destruction."
+    }
+  ],
+  "musical_identity": {
+    "genre": "1970s Soul / Muscle Shoals Swamp Soul & Folk-Rock",
+    "description": "A deliberate reclamation of analog warmth, rhythm-section polyphony, and gospel-soul call-and-response engineered to dismantle ideological alienation through the power of the groove.",
+    "elements": [
+      {
+        "title": "The Rhythm Section: Polyphony in the Pocket",
+        "badge": "Bass & Drums",
+        "description": "Drawing inspiration from James Jamerson (Motown) and Duck Dunn (Stax). Basslines operate deep in the pocket with melodic 16th-note syncopation, locked to unhurried, heavy-hitting drums modeled after Al Jackson Jr. and Roger Hawkins."
+      },
+      {
+        "title": "Harmonic Bedrock: Memphis Horns & Hammond B3",
+        "badge": "Brass & Organ",
+        "description": "Warm, analog keyboards (Wurlitzer 200A and roaring Leslie-cabinet Hammond B3 organ) form the harmonic foundation, punctuated by punchy, staccato brass fanfares modeled directly after the Memphis Horns and the FAME Gang."
+      },
+      {
+        "title": "Vocal Dynamics: Call, Response & Democratic Engagement",
+        "badge": "Baritone & Rock-Soul Lead",
+        "description": "Lead vocals alternate between a grounded, conversational male baritone (storyteller precision) and a soaring, powerhouse female rock-soul vocalist (gospel-infused moral authority), bound together by full-ensemble call-and-response."
+      },
+      {
+        "title": "The Metaphor of Analog Tape Saturation",
+        "badge": "Warmth From Friction",
+        "description": "Rejecting sterile digital perfection, the production embraces the physical saturation of magnetic tape pushed to its limit: subtle harmonic compression, warm bass bloom, and the audible presence of humans playing together in an acoustic space."
+      }
+    ]
+  },
+  "acts": [
+    {
+      "act_number": 1,
+      "act_id": "act-1",
+      "title": "Act I: The Algorithmic Factory",
+      "subtitle": "The Digital Cage & Manufactured Enmity",
+      "track_range": "Tracks 01–04",
+      "description": "The protagonist stares into the blue light after a shift. The physical assembly line has been replaced by the invisible, uncompensated labor of scrolling through manufactured outrage. Homogeneous silos enforce conformity, suffocating civic trust.",
+      "tracks": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "act_number": 2,
+      "act_id": "act-2",
+      "title": "Act II: The Rust and the Rubble",
+      "subtitle": "Physical Decay & Vanishing Community Anchors",
+      "track_range": "Tracks 05–08",
+      "description": "Stepping into the material world reveals the devastation of shuttered union halls, abandoned barbershops, and cracked asphalt. Neighbors sharing identical struggles look past one another as hostile strangers on the same block.",
+      "tracks": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "act_number": 3,
+      "act_id": "act-3",
+      "title": "Act III: The Spark of Recognition",
+      "subtitle": "Unplugging, Physical Presence & Analog Warmth",
+      "track_range": "Tracks 09–11",
+      "description": "A deliberate rebellion begins: turning off the screen, stepping onto the sidewalk, and locking eyes with an estranged neighbor. Like musicians pushing tape into saturation, human friction generates transformative warmth.",
+      "tracks": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "act_number": 4,
+      "act_id": "act-4",
+      "title": "Act IV: Grassroots Civic Resurrection",
+      "subtitle": "The Stoop, The Prophet & The Fire That Rebuilds",
+      "track_range": "Tracks 12–15",
+      "description": "The stoop congregation gathers. A localized corner-lot prophet cuts through nationalized cynicism. Hand by hand, brick by brick, the community rebuilds its social fabric, culminating in the triumphant anthem of Soul Fire.",
+      "tracks": [
+        12,
+        13,
+        14,
+        15
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "number": 1,
+      "number_padded": "01",
+      "id": "the-ghost-on-the-assembly-line",
+      "slug": "the-ghost-on-the-assembly-line",
+      "title": "The Ghost on the Assembly Line",
+      "act": "Act I: The Algorithmic Factory",
+      "act_number": 1,
+      "tempo": "1970s Pocket Soul",
+      "key": "E minor",
+      "sociological_concept": "Affective polarization; the broken social contract",
+      "narrative_motif": "Tense ticking hi-hat and repetitive rigid Wurlitzer riff mimicking the unfeeling machinery of modern labor.",
+      "summary": "*The Ghost on the Assembly Line* introduces the protagonist staring at a smartphone after a grueling shift, highlighting the death of the American Dream. The song establishes the baseline reality of the modern worker who is suffocating under affective polarization and the broken social contract. Musically, it reflects this isolation through a tense, ticking hi-hat and a repetitive, rigid Wurlitzer riff mimicking the unfeeling machinery of modern labor.",
+      "suno_id": "77cacb68-bbf4-42ea-8208-83a413c4dd14",
+      "audio_file": "assets/audio/01-the-ghost-on-the-assembly-line.mp3",
+      "audio_remote": "https://d2lwuy8qc234o3.cloudfront.net/1/clip/77cacb68-bbf4-42ea-8208-83a413c4dd14.m4a",
+      "video_url": "https://cdn1.suno.ai/77cacb68-bbf4-42ea-8208-83a413c4dd14.mp4",
+      "art_banner": "assets/art/track-01.webp",
+      "art_banner_jpg": "assets/art/track-01.jpg",
+      "art_square": "assets/art/track-01--sq.webp",
+      "art_square_jpg": "assets/art/track-01--sq.jpg",
+      "clean_lyrics": "The whistle blows but the gears still grind\nI clock out early but I leave my mind\nSitting in the dark with a little blue glow\nScrolling down a river where the anger flows\nThe steel is gone but the smoke remains\nNow they manufacture all our invisible chains\nWake up the ghost on the assembly line\nWe are trading our blood for a digital dime\nThey built a factory deep in the wire\nBut they cannot quantize the soul and the fire\nNo, they cannot put out the fire.\nI see my neighbor through the window pane\nWe are pulling the yoke in the very same rain\nBut the screen says he is the reason I bleed\nJust another product in the outrage feed\nWe are working for free in the silent mill\nWhile the algorithm swallows the town and the hill\nWake up the ghost on the assembly line\nWe are trading our blood for a digital dime\nThey built a factory deep in the wire\nBut they cannot quantize the soul and the fire\nThe invisible walls\nBefore the ceiling falls\nThe engine is cold and the platform is fake\nHow much of this rust are we willing to take\nWake up the ghost on the assembly line\nWe are trading our blood for a digital dime\nThey built a factory deep in the wire\nBut they cannot quantize the soul and the fire\nJust a ghost on the line.\nJust a ghost in the wire.\nTurn off the screen.\n© 2026 The Shady River Bard. All rights reserved.",
+      "decorated_lyrics": "[Key: Em]\n[Instrument: Tense ticking hi-hat and repetitive rigid Wurlitzer electric piano]\n[Vocalist: Calm, resonant male baritone]\n[Verse 1]\nThe whistle blows but the gears still grind\nI clock out early but I leave my mind\nSitting in the dark with a little blue glow\nScrolling down a river where the anger flows\nThe steel is gone but the smoke remains\nNow they manufacture all our invisible chains\n[Instrument: Swelling Hammond B3 organ and syncopated snare drum]\n[Vocalist: Powerhouse female rock-soul lead]\n[Chorus]\nWake up the ghost on the assembly line\nWe are trading our blood for a digital dime\nThey built a factory deep in the wire\nBut they cannot quantize the soul and the fire\n[Spoken]\nNo, they cannot put out the fire.\n[Instrument: Sparse acoustic guitar rhythmic chugging with ticking hi-hat]\n[Vocalist: Calm, resonant male baritone]\n[Verse 2]\nI see my neighbor through the window pane\nWe are pulling the yoke in the very same rain\nBut the screen says he is the reason I bleed\nJust another product in the outrage feed\nWe are working for free in the silent mill\nWhile the algorithm swallows the town and the hill\n[Instrument: Heavy James Jamerson style bassline and driving drum swing]\n[Vocalist: Powerhouse female rock-soul lead]\n[Chorus]\nWake up the ghost on the assembly line\nWe are trading our blood for a digital dime\nThey built a factory deep in the wire\nBut they cannot quantize the soul and the fire\n[Instrument: Staccato brass section blasts alternating with raw electric guitar bends]\n[Vocalist: Male baritone and female lead singing together]\n[Bridge]\n(Tear it down)\nThe invisible walls\n(Tear it down)\nBefore the ceiling falls\nThe engine is cold and the platform is fake\nHow much of this rust are we willing to take\n[Instrument: Full Memphis style horn section with heavy tambourine]\n[Vocalist: Powerhouse female rock-soul lead]\n[Chorus]\nWake up the ghost on the assembly line\nWe are trading our blood for a digital dime\nThey built a factory deep in the wire\nBut they cannot quantize the soul and the fire\n[Instrument: Fading Wurlitzer riff and solitary ticking hi-hat]\n[Vocalist: Calm male baritone]\n[Outro]\nJust a ghost on the line.\nJust a ghost in the wire.\n[Whispered]\nTurn off the screen.",
+      "stanzas": [
+        {
+          "name": "[Intro]",
+          "lines": [
+            "[Instrument: Tense ticking hi-hat and repetitive rigid Wurlitzer electric piano]",
+            "[Vocalist: Calm, resonant male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 1]",
+          "lines": [
+            "The whistle blows but the gears still grind",
+            "I clock out early but I leave my mind",
+            "Sitting in the dark with a little blue glow",
+            "Scrolling down a river where the anger flows",
+            "The steel is gone but the smoke remains",
+            "Now they manufacture all our invisible chains",
+            "[Instrument: Swelling Hammond B3 organ and syncopated snare drum]",
+            "[Vocalist: Powerhouse female rock-soul lead]"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "Wake up the ghost on the assembly line",
+            "We are trading our blood for a digital dime",
+            "They built a factory deep in the wire",
+            "But they cannot quantize the soul and the fire"
+          ]
+        },
+        {
+          "name": "[Spoken]",
+          "lines": [
+            "No, they cannot put out the fire.",
+            "[Instrument: Sparse acoustic guitar rhythmic chugging with ticking hi-hat]",
+            "[Vocalist: Calm, resonant male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 2]",
+          "lines": [
+            "I see my neighbor through the window pane",
+            "We are pulling the yoke in the very same rain",
+            "But the screen says he is the reason I bleed",
+            "Just another product in the outrage feed",
+            "We are working for free in the silent mill",
+            "While the algorithm swallows the town and the hill",
+            "[Instrument: Heavy James Jamerson style bassline and driving drum swing]",
+            "[Vocalist: Powerhouse female rock-soul lead]"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "Wake up the ghost on the assembly line",
+            "We are trading our blood for a digital dime",
+            "They built a factory deep in the wire",
+            "But they cannot quantize the soul and the fire",
+            "[Instrument: Staccato brass section blasts alternating with raw electric guitar bends]",
+            "[Vocalist: Male baritone and female lead singing together]"
+          ]
+        },
+        {
+          "name": "[Bridge]",
+          "lines": [
+            "(Tear it down)",
+            "The invisible walls",
+            "(Tear it down)",
+            "Before the ceiling falls",
+            "The engine is cold and the platform is fake",
+            "How much of this rust are we willing to take",
+            "[Instrument: Full Memphis style horn section with heavy tambourine]",
+            "[Vocalist: Powerhouse female rock-soul lead]"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "Wake up the ghost on the assembly line",
+            "We are trading our blood for a digital dime",
+            "They built a factory deep in the wire",
+            "But they cannot quantize the soul and the fire",
+            "[Instrument: Fading Wurlitzer riff and solitary ticking hi-hat]",
+            "[Vocalist: Calm male baritone]"
+          ]
+        },
+        {
+          "name": "[Outro]",
+          "lines": [
+            "Just a ghost on the line.",
+            "Just a ghost in the wire."
+          ]
+        },
+        {
+          "name": "[Whispered]",
+          "lines": [
+            "Turn off the screen."
+          ]
+        }
+      ],
+      "suno_prompt": "Key of E minor. Analog 1970s Soul blended with gritty Folk-Rock. Tense and brooding mood that explodes into powerful, soulful energy. The lead vocals alternate between a calm, world-weary male baritone and a soaring, powerful female rock-soul vocalist. The male vocals should feel grounded and conversational, while the female vocals should deliver high-octane emotional resonance.-No vocals before the lyrics, -no chants before the lyrics, -no intro moaning, -no ad libs.",
+      "social_captions": [
+        "We used to build things we could touch. Now we labor for free in an invisible factory, producing nothing but our own exhaustion. Track 1 of Soul Fire looks at the digital assembly line that profits off our isolation. It's time to turn off the machine.",
+        "When the physical places we used to gather disappeared, they were replaced by digital feeds designed to make us view our own neighbors as the enemy. \"The Ghost on the Assembly Line\" explores the heavy cost of the modern social contract."
+      ],
+      "yt_description": "Explores the modern evolution of labor, where industrial assembly lines are replaced by the invisible, uncompensated grind of scrolling through algorithmic outrage. Examines the collapse of the social contract and the resulting emotional exhaustion of working in isolation.",
+      "yt_prompt": ""
+    },
+    {
+      "number": 2,
+      "number_padded": "02",
+      "id": "feed-the-machine",
+      "slug": "feed-the-machine",
+      "title": "Feed the Machine",
+      "act": "Act I: The Algorithmic Factory",
+      "act_number": 1,
+      "tempo": "Driving 4/4 Upbeat",
+      "key": "A minor",
+      "sociological_concept": "Algorithmic out-group animosity; monetization of despair",
+      "narrative_motif": "Gritty baritone lead with sudden, dissonant Memphis horn stabs signifying conflict.",
+      "summary": "*Feed the Machine* plunges into the core of Act I, exploring the realization that the modern working-class struggle is not a byproduct of the digital age, but its intended product. Algorithmic outrage is the new industrial currency, and the isolated workers are the raw materials. The track uses dissonant Memphis-style horn stabs and a gritty, analog rhythm section to reflect the tension of manufactured conflict, leaning heavily into a call-and-response structure to introduce female vocal power and Gospel authority.",
+      "suno_id": "fc810564-b26d-4522-a6e5-cc23ef080e41",
+      "audio_file": "assets/audio/02-feed-the-machine.mp3",
+      "audio_remote": "https://d2lwuy8qc234o3.cloudfront.net/1/clip/fc810564-b26d-4522-a6e5-cc23ef080e41.m4a",
+      "video_url": "https://cdn1.suno.ai/fc810564-b26d-4522-a6e5-cc23ef080e41.mp4",
+      "art_banner": "assets/art/track-02.webp",
+      "art_banner_jpg": "assets/art/track-02.jpg",
+      "art_square": "assets/art/track-02--sq.webp",
+      "art_square_jpg": "assets/art/track-02--sq.jpg",
+      "clean_lyrics": "They built a market on a bitter divide\nSelling the anger that we keep inside\nEvery click is a gear turning 'round\nDriving the engine that is burning us down\nThe product is outrage, the currency fear\nAnd we are the ones volunteering here\nFeed the machine\nIt runs on the tears and the desperate pleas\nFeed the machine\nIt profits from a manufactured disease\nThey bottle the panic, they package the pain\nWhile we stand divided in the digital rain\nFeed the machine\nUntil there is nothing left to bleed\nThe algorithm demands a new toll\nMining the depths of the human soul\nI look at a friend but I only see red\nEchoes of poison they put in my head\nWe sharpen the knives for a ghost in the wire\nWhile they sit at the top and collect on the fire\nFeed the machine\nIt runs on the tears and the desperate pleas\nFeed the machine\nIt profits from a manufactured disease\nThey bottle the panic, they package the pain\nWhile we stand divided in the digital rain\nFeed the machine\nUntil there is nothing left to bleed\nWe are the harvest on the factory floor\nFighting a shadow in an endless war\nIf we shatter the lens, if we break the glass\nWe can step right out of this artificial class\nFeed the machine\nIt runs on the tears and the desperate pleas\nFeed the machine\nIt profits from a manufactured disease\nThey bottle the panic, they package the pain\nWhile we stand divided in the digital rain\nFeed the machine\nUntil there is nothing left to bleed\nStarve it.\n© 2026 The Shady River Bard. All rights reserved.",
+      "decorated_lyrics": "[Key: Am]\n[Instrument: Gritty analog bassline locking into a slightly delayed drum swing with a ticking hi-hat]\n[Vocalist: Gritty world-weary male baritone]\n[Verse 1]\nThey built a market on a bitter divide\nSelling the anger that we keep inside\nEvery click is a gear turning 'round\nDriving the engine that is burning us down\nThe product is outrage, the currency fear\nAnd we are the ones volunteering here\n[Instrument: Sudden dissonant Memphis horn stabs and driving Wurlitzer chords]\n[Vocalist: Gritty male baritone]\n(Powerhouse female rock-soul lead)\n[Chorus]\n(Feed the machine)\nIt runs on the tears and the desperate pleas\n(Feed the machine)\nIt profits from a manufactured disease\nThey bottle the PANIC, they package the PAIN\nWhile we stand divided in the digital rain\n(Feed the machine)\nUntil there is nothing left to bleed\n[Instrument: Syncopated rhythm guitar and a pulsing bass groove]\n[Vocalist: Gritty male baritone]\n[Verse 2]\nThe algorithm demands a new toll\nMining the depths of the human soul\nI look at a friend but I only see red\nEchoes of poison they put in my head\nWe sharpen the knives for a ghost in the wire\nWhile they sit at the top and collect on the fire\n[Instrument: Swelling Hammond B3 organ and punchy brass fanfares]\n[Vocalist: Gritty male baritone]\n(Powerhouse female rock-soul lead)\n[Chorus]\n(Feed the machine)\nIt runs on the tears and the desperate pleas\n(Feed the machine)\nIt profits from a manufactured disease\nThey bottle the PANIC, they package the PAIN\nWhile we stand divided in the digital rain\n(Feed the machine)\nUntil there is nothing left to bleed\n[Instrument: Raw blues electric guitar solo over a stomping, aggressive drum beat]\n[Vocalist: Powerhouse female rock-soul lead]\n[Bridge]\nWe are the harvest on the factory floor\nFighting a shadow in an endless war\nIf we shatter the lens, if we break the glass\nWe can step right out of this artificial class\n[Instrument: Full Memphis horn section, tambourine, and driving bass]\n[Vocalist: Male baritone and female lead singing together with gospel intensity]\n(Powerhouse female rock-soul lead)\n[Chorus]\n(Feed the machine)\nIt runs on the tears and the desperate pleas\n(Feed the machine)\nIt profits from a manufactured disease\nThey bottle the PANIC, they package the PAIN\nWhile we stand divided in the digital rain\n(Feed the machine)\nUntil there is nothing left to bleed\n[Instrument: Abrupt stop. A single, echoing Wurlitzer chord fades out.]\n[Vocalist: Gritty male baritone]\n[Outro]\n[Spoken] Starve it.",
+      "stanzas": [
+        {
+          "name": "[Intro]",
+          "lines": [
+            "[Instrument: Gritty analog bassline locking into a slightly delayed drum swing with a ticking hi-hat]",
+            "[Vocalist: Gritty world-weary male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 1]",
+          "lines": [
+            "They built a market on a bitter divide",
+            "Selling the anger that we keep inside",
+            "Every click is a gear turning 'round",
+            "Driving the engine that is burning us down",
+            "The product is outrage, the currency fear",
+            "And we are the ones volunteering here",
+            "[Instrument: Sudden dissonant Memphis horn stabs and driving Wurlitzer chords]",
+            "[Vocalist: Gritty male baritone]",
+            "(Powerhouse female rock-soul lead)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Feed the machine)",
+            "It runs on the tears and the desperate pleas",
+            "(Feed the machine)",
+            "It profits from a manufactured disease",
+            "They bottle the PANIC, they package the PAIN",
+            "While we stand divided in the digital rain",
+            "(Feed the machine)",
+            "Until there is nothing left to bleed",
+            "[Instrument: Syncopated rhythm guitar and a pulsing bass groove]",
+            "[Vocalist: Gritty male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 2]",
+          "lines": [
+            "The algorithm demands a new toll",
+            "Mining the depths of the human soul",
+            "I look at a friend but I only see red",
+            "Echoes of poison they put in my head",
+            "We sharpen the knives for a ghost in the wire",
+            "While they sit at the top and collect on the fire",
+            "[Instrument: Swelling Hammond B3 organ and punchy brass fanfares]",
+            "[Vocalist: Gritty male baritone]",
+            "(Powerhouse female rock-soul lead)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Feed the machine)",
+            "It runs on the tears and the desperate pleas",
+            "(Feed the machine)",
+            "It profits from a manufactured disease",
+            "They bottle the PANIC, they package the PAIN",
+            "While we stand divided in the digital rain",
+            "(Feed the machine)",
+            "Until there is nothing left to bleed",
+            "[Instrument: Raw blues electric guitar solo over a stomping, aggressive drum beat]",
+            "[Vocalist: Powerhouse female rock-soul lead]"
+          ]
+        },
+        {
+          "name": "[Bridge]",
+          "lines": [
+            "We are the harvest on the factory floor",
+            "Fighting a shadow in an endless war",
+            "If we shatter the lens, if we break the glass",
+            "We can step right out of this artificial class",
+            "[Instrument: Full Memphis horn section, tambourine, and driving bass]",
+            "[Vocalist: Male baritone and female lead singing together with gospel intensity]",
+            "(Powerhouse female rock-soul lead)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Feed the machine)",
+            "It runs on the tears and the desperate pleas",
+            "(Feed the machine)",
+            "It profits from a manufactured disease",
+            "They bottle the PANIC, they package the PAIN",
+            "While we stand divided in the digital rain",
+            "(Feed the machine)",
+            "Until there is nothing left to bleed",
+            "[Instrument: Abrupt stop. A single, echoing Wurlitzer chord fades out.]",
+            "[Vocalist: Gritty male baritone]"
+          ]
+        },
+        {
+          "name": "[Outro]",
+          "lines": [
+            "[Spoken] Starve it."
+          ]
+        }
+      ],
+      "suno_prompt": "Key of A minor. Analog 1970s Soul blended with gritty Blues-Rock. Tense, driving, and brooding mood that builds into a confrontational, high-energy climax. The lead vocal is a gritty, world-weary male baritone. Backing vocals feature a powerhouse female rock-soul singer providing intense call-and-response. -No vocals before the lyrics, -no chants before the lyrics, -no intro moaning, -no ad libs.",
+      "social_captions": [
+        "Outrage isn't an accident; it's a business model. We are the raw materials in an industry that profits off our division. Track 2 of Soul Fire takes a hard look at the algorithmic economy and the true cost of our endless scrolling.",
+        "What happens when your anger becomes someone else's commodity? \"Feed the Machine\" explores how digital platforms weaponize our social contract, turning neighbors into enemies just to keep the engagement metrics climbing."
+      ],
+      "yt_description": "Analyzes the monetization of partisan hostility, detailing how social media platforms extract engagement and profit by deliberately stoking out-group animosity and fear among the working class.",
+      "yt_prompt": ""
+    },
+    {
+      "number": 3,
+      "number_padded": "03",
+      "id": "blue-light-blues",
+      "slug": "blue-light-blues",
+      "title": "Blue Light Blues",
+      "act": "Act I: The Algorithmic Factory",
+      "act_number": 1,
+      "tempo": "1970s Pocket Soul",
+      "key": "D minor",
+      "sociological_concept": "Digital isolation; paralysis of weak ties",
+      "narrative_motif": "Sparse, delayed 4/4 drum beat; lonely weeping electric guitar with heavy tremolo cutting through silence.",
+      "summary": "*Blue Light Blues* serves as the emotional valley of Act I, exploring the paralysis of digital isolation and the phenomenon of \"weak ties.\" The narrative follows a character who actively self-censors out of fear of algorithmic tribalism and public shaming, choosing the lonely safety of the screen over authentic connection. Musically, the track features a sparse, delayed 4/4 groove in D minor and a lonely, tremolo-soaked electric guitar, representing the quiet desperation of a fractured social contract.",
+      "suno_id": "1b8bb2ab-fea5-4f9d-b131-764b34d36c14",
+      "audio_file": "assets/audio/03-blue-light-blues.mp3",
+      "audio_remote": "https://d2lwuy8qc234o3.cloudfront.net/1/clip/1b8bb2ab-fea5-4f9d-b131-764b34d36c14.m4a",
+      "video_url": "https://cdn1.suno.ai/1b8bb2ab-fea5-4f9d-b131-764b34d36c14.mp4",
+      "art_banner": "assets/art/track-03.webp",
+      "art_banner_jpg": "assets/art/track-03.jpg",
+      "art_square": "assets/art/track-03--sq.webp",
+      "art_square_jpg": "assets/art/track-03--sq.jpg",
+      "clean_lyrics": "Sitting in the corner with the volume down\nWatching the parade in a phantom town\nGot a thought on my tongue but I swallow it whole\nCannot pay the toll for a piece of my soul\nThe ties are too weak but they pull so tight\nJust a silent shadow in the blue screen light\nOh, I got the blue light blues\nWalking on the glass in a pair of lead shoes\nWatch what you say\nOr they tear you apart\nThrow it away\nJust a hollowed out heart\nI am trapped in the glow where the cowards all hide\nWith the blue light blues and the silence inside\nEvery little word is a wire trip\nBiting on the edge of a bloody lip\nI see the mob forming in the digital square\nBut there is nobody breathing the actual air\nWe are terrified of strangers we will never meet\nWhile we lock every door on our own damn street\nOh, I got the blue light blues\nWalking on the glass in a pair of lead shoes\nWatch what you say\nOr they tear you apart\nThrow it away\nJust a hollowed out heart\nI am trapped in the glow where the cowards all hide\nWith the blue light blues and the silence inside\nI used to know my neighbors.\nNow I just know their politics.\nWe traded the stoop for a cage.\nAnd we locked it ourselves.\nOh, I got the blue light blues\nWalking on the glass in a pair of lead shoes\nWatch what you say\nOr they tear you apart\nThrow it away\nJust a hollowed out heart\nI am trapped in the glow where the cowards all hide\nWith the blue light blues and the silence inside\nJust the silence.\nJust the blue light.\n© 2026 The Shady River Bard. All rights reserved.",
+      "decorated_lyrics": "[Key: Dm]\n[Instrument: Sparse delayed 4/4 drum beat with a lonely weeping electric guitar dripping in heavy tremolo]\n[Vocalist: Somber, world-weary male baritone]\n[Verse 1]\nSitting in the corner with the volume down\nWatching the parade in a phantom town\nGot a thought on my tongue but I swallow it whole\nCannot pay the toll for a piece of my soul\nThe ties are too weak but they pull so tight\nJust a silent shadow in the blue screen light\n[Instrument: Deep James Jamerson style bassline creeping into the pocket]\n[Vocalist: Somber male baritone]\n(Soft haunting female rock-soul harmony)\n[Chorus]\nOh, I got the blue light blues\nWalking on the glass in a pair of Led shoes\n(Watch what you say)\nOr they tear you apart\n(Throw it away)\nJust a hollowed out heart\nI am trapped in the glow where the cowards all hide\nWith the blue light blues and the silence inside\n[Instrument: Weeping electric guitar playing a slow bending blues riff]\n[Vocalist: Somber male baritone]\n[Verse 2]\nEvery little word is a wire trip\nBiting on the edge of a bloody lip\nI see the mob forming in the digital square\nBut there is nobody breathing the actual air\nWe are terrified of strangers we will never meet\nWhile we lock every door on our own damn street\n[Instrument: Swelling Hammond B3 organ softly rising beneath the guitar]\n[Vocalist: Somber male baritone]\n(Soft haunting female rock-soul harmony)\n[Chorus]\nOh, I got the blue light blues\nWalking on the glass in a pair of Led shoes\n(Watch what you say)\nOr they tear you apart\n(Throw it away)\nJust a hollowed out heart\nI am trapped in the glow where the cowards all hide\nWith the blue light blues and the silence inside\n[Instrument: Sparse acoustic guitar rhythmic chugging with a ticking hi-hat]\n[Vocalist: Somber male baritone]\n[Bridge]\n[Spoken]\nI used to know my neighbors.\nNow I just know their politics.\nWe traded the stoop for a cage.\nAnd we locked it ourselves.\n[Instrument: Bass and drums lock back into the heavy delayed groove]\n[Vocalist: Somber male baritone]\n(Soft haunting female rock-soul harmony)\n[Chorus]\nOh, I got the blue light blues\nWalking on the glass in a pair of Led shoes\n(Watch what you say)\nOr they tear you apart\n(Throw it away)\nJust a hollowed out heart\nI am trapped in the glow where the cowards all hide\nWith the blue light blues and the silence inside\n[Instrument: Slowly fading tremolo guitar and a solitary kick drum heartbeat]\n[Vocalist: Somber male baritone]\n[Outro]\nJust the silence.\n[Whispered]\nJust the blue light.",
+      "stanzas": [
+        {
+          "name": "[Intro]",
+          "lines": [
+            "[Instrument: Sparse delayed 4/4 drum beat with a lonely weeping electric guitar dripping in heavy tremolo]",
+            "[Vocalist: Somber, world-weary male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 1]",
+          "lines": [
+            "Sitting in the corner with the volume down",
+            "Watching the parade in a phantom town",
+            "Got a thought on my tongue but I swallow it whole",
+            "Cannot pay the toll for a piece of my soul",
+            "The ties are too weak but they pull so tight",
+            "Just a silent shadow in the blue screen light",
+            "[Instrument: Deep James Jamerson style bassline creeping into the pocket]",
+            "[Vocalist: Somber male baritone]",
+            "(Soft haunting female rock-soul harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "Oh, I got the blue light blues",
+            "Walking on the glass in a pair of Led shoes",
+            "(Watch what you say)",
+            "Or they tear you apart",
+            "(Throw it away)",
+            "Just a hollowed out heart",
+            "I am trapped in the glow where the cowards all hide",
+            "With the blue light blues and the silence inside",
+            "[Instrument: Weeping electric guitar playing a slow bending blues riff]",
+            "[Vocalist: Somber male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 2]",
+          "lines": [
+            "Every little word is a wire trip",
+            "Biting on the edge of a bloody lip",
+            "I see the mob forming in the digital square",
+            "But there is nobody breathing the actual air",
+            "We are terrified of strangers we will never meet",
+            "While we lock every door on our own damn street",
+            "[Instrument: Swelling Hammond B3 organ softly rising beneath the guitar]",
+            "[Vocalist: Somber male baritone]",
+            "(Soft haunting female rock-soul harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "Oh, I got the blue light blues",
+            "Walking on the glass in a pair of Led shoes",
+            "(Watch what you say)",
+            "Or they tear you apart",
+            "(Throw it away)",
+            "Just a hollowed out heart",
+            "I am trapped in the glow where the cowards all hide",
+            "With the blue light blues and the silence inside",
+            "[Instrument: Sparse acoustic guitar rhythmic chugging with a ticking hi-hat]",
+            "[Vocalist: Somber male baritone]"
+          ]
+        },
+        {
+          "name": "[Spoken]",
+          "lines": [
+            "I used to know my neighbors.",
+            "Now I just know their politics.",
+            "We traded the stoop for a cage.",
+            "And we locked it ourselves.",
+            "[Instrument: Bass and drums lock back into the heavy delayed groove]",
+            "[Vocalist: Somber male baritone]",
+            "(Soft haunting female rock-soul harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "Oh, I got the blue light blues",
+            "Walking on the glass in a pair of Led shoes",
+            "(Watch what you say)",
+            "Or they tear you apart",
+            "(Throw it away)",
+            "Just a hollowed out heart",
+            "I am trapped in the glow where the cowards all hide",
+            "With the blue light blues and the silence inside",
+            "[Instrument: Slowly fading tremolo guitar and a solitary kick drum heartbeat]",
+            "[Vocalist: Somber male baritone]"
+          ]
+        },
+        {
+          "name": "[Outro]",
+          "lines": [
+            "Just the silence."
+          ]
+        },
+        {
+          "name": "[Whispered]",
+          "lines": [
+            "Just the blue light."
+          ]
+        }
+      ],
+      "suno_prompt": "Key of D minor. Analog 1970s Soul blended with melancholic Country Blues. Deeply sad, isolating, and sparse mood. The lead vocal is a calm, somber, world-weary male baritone that sounds isolated and hesitant. Backing vocals feature a soft, haunting female voice acting as a subconscious warning or echo. -No vocals before the lyrics, -no chants before the lyrics, -no intro moaning, -no ad libs.",
+      "social_captions": [
+        "Why are we so afraid to speak our minds? We traded the messy, authentic reality of our neighborhoods for the sterilized judgment of the digital square. \"Blue Light Blues\" is for anyone who feels the crushing weight of self-censorship in the modern algorithmic age.",
+        "Track 3 of Soul Fire steps away from the noise and sits in the quiet desperation of an empty room. When our online \"weak ties\" dictate what we can and cannot say, the isolation becomes a self-made prison."
+      ],
+      "yt_description": "Focuses on the chilling effect of digital \"weak ties,\" illustrating how the fear of online public shaming and polarized echo chambers forces everyday citizens into defensive silence and profound loneliness.",
+      "yt_prompt": ""
+    },
+    {
+      "number": 4,
+      "number_padded": "04",
+      "id": "echoes-in-the-silo",
+      "slug": "echoes-in-the-silo",
+      "title": "Echoes in the Silo",
+      "act": "Act I: The Algorithmic Factory",
+      "act_number": 1,
+      "tempo": "1970s Pocket Soul",
+      "key": "E minor",
+      "sociological_concept": "Homogeneous information networks; loss of civic trust",
+      "narrative_motif": "Heavy tape compression; vocals confined and heavily saturated before trailing off into static.",
+      "summary": "*Echoes in the Silo* closes out the first act by illustrating the claustrophobia of existing in an algorithmic echo chamber where every voice simply reinforces existing biases. The narrative maps the psychological stagnation of homogeneous information networks, reflecting a total loss of civic trust as citizens are trapped in a comfortable, self-reinforcing loop. Drawing on the precise, rigid system architecture of digital platforms, the track musically relies on the metaphor of tape compression; the vocals intentionally sound confined and heavily saturated before trailing off into static, serving as a sonic representation of an enclosed system collapsing under its own feedback.",
+      "suno_id": "7c741648-2816-49dd-aa49-d33ad99721f6",
+      "audio_file": "assets/audio/04-echoes-in-the-silo.mp3",
+      "audio_remote": "https://d2lwuy8qc234o3.cloudfront.net/1/clip/7c741648-2816-49dd-aa49-d33ad99721f6.m4a",
+      "video_url": "https://cdn1.suno.ai/7c741648-2816-49dd-aa49-d33ad99721f6.mp4",
+      "art_banner": "assets/art/track-04.webp",
+      "art_banner_jpg": "assets/art/track-04.jpg",
+      "art_square": "assets/art/track-04--sq.webp",
+      "art_square_jpg": "assets/art/track-04--sq.jpg",
+      "clean_lyrics": "I built the walls to keep the strangers out\nNow I am drowning in my own damn shout\nEvery mirror shows the same old face\nRunning circles in a sterile space\nThe system architecture of this cage\nFeeds me nothing but a mirrored rage\nEcho\nBouncing off the walls of the silo\nEcho\nNowhere for the truth and the light to go\nWe are locked inside a comfortable lie\nWatching the horizon wither and die\nEcho\nUntil the signal is swallowed by the noise\nThe algorithm spins a velvet thread\nWrapping up the spaces in my head\nI only hear the choir in the nave\nSinging hymns inside a digital grave\nWe trade the open street for a narrow hall\nStaring at the writing on the firewall\nEcho\nBouncing off the walls of the silo\nEcho\nNowhere for the truth and the light to go\nWe are locked inside a comfortable lie\nWatching the horizon wither and die\nEcho\nUntil the signal is swallowed by the noise\nBreak the loop and tear the fabric down\nFind the heartbeat of the actual town\nThe tape is saturating, pushing to the red\nWe have to hear a word that we never said\nListen to the street!\nEcho\nBouncing off the walls of the silo\nEcho\nNowhere for the truth and the light to go\nWe are locked inside a comfortable lie\nWatching the horizon wither and die\nEcho\nUntil the signal is swallowed by the noise\nJust the feedback.\nJust the noise.\n© 2026 The Shady River Bard. All rights reserved.",
+      "decorated_lyrics": "[Key: Em]\n[Instrument: Heavily compressed drum loop with a saturated, distorted bassline]\n[Vocalist: Gritty world-weary male baritone, heavily saturated]\n[Verse 1]\nI built the walls to keep the strangers out\nNow I am drowning in my own damn shout\nEvery mirror shows the same old face\nRunning circles in a sterile space\nThe system architecture of this cage\nFeeds me nothing but a mirrored rage\n[Instrument: Swelling Wurlitzer organ cutting through the compression]\n[Vocalist: Gritty male baritone]\n(Powerhouse female rock-soul harmony)\n[Chorus]\n(Echo)\nBouncing off the walls of the silo\n(Echo)\nNowhere for the truth and the light to go\nWe are locked inside a comfortable lie\nWatching the horizon wither and die\n(Echo)\nUntil the signal is swallowed by the noise\n[Instrument: Syncopated staccato guitar with a weeping diatonic harmonica playing in the background]\n[Vocalist: Gritty male baritone]\n[Verse 2]\nThe algorithm spins a velvet thread\nWrapping up the spaces in my head\nI only hear the choir in the nave\nSinging hymns inside a digital grave\nWe trade the open street for a narrow hall\nStaring at the writing on the firewall\n[Instrument: Heavy tape saturation effect engaging, rhythm section becoming distorted and warm]\n[Vocalist: Gritty male baritone]\n(Powerhouse female rock-soul harmony)\n[Chorus]\n(Echo)\nBouncing off the walls of the silo\n(Echo)\nNowhere for the truth and the light to go\nWe are locked inside a comfortable lie\nWatching the horizon wither and die\n(Echo)\nUntil the signal is swallowed by the noise\n[Instrument: Full Memphis horn section blasting through the distortion, fighting the static]\n[Vocalist: Powerhouse female rock-soul lead, pushing through the mix]\n[Bridge]\nBreak the loop and tear the fabric down\nFind the heartbeat of the actual town\nThe tape is saturating, pushing to the red\nWe have to hear a word that we never said\n[Screamed]\nListen to the street!\n[Instrument: Frantic drum fill resolving into a massive, muddy groove]\n[Vocalist: Male baritone and female lead singing together, voices distorting]\n[Chorus]\n(Echo)\nBouncing off the walls of the silo\n(Echo)\nNowhere for the truth and the light to go\nWe are locked inside a comfortable lie\nWatching the horizon wither and die\n(Echo)\nUntil the signal is swallowed by the noise\n[Instrument: Diatonic harmonica solo screaming through heavy tape compression, slowly breaking down into raw white static]\n[Vocalist: Male baritone]\n[Outro]\nJust the feedback.\n[Whispered]\nJust the noise.",
+      "stanzas": [
+        {
+          "name": "[Intro]",
+          "lines": [
+            "[Instrument: Heavily compressed drum loop with a saturated, distorted bassline]",
+            "[Vocalist: Gritty world-weary male baritone, heavily saturated]"
+          ]
+        },
+        {
+          "name": "[Verse 1]",
+          "lines": [
+            "I built the walls to keep the strangers out",
+            "Now I am drowning in my own damn shout",
+            "Every mirror shows the same old face",
+            "Running circles in a sterile space",
+            "The system architecture of this cage",
+            "Feeds me nothing but a mirrored rage",
+            "[Instrument: Swelling Wurlitzer organ cutting through the compression]",
+            "[Vocalist: Gritty male baritone]",
+            "(Powerhouse female rock-soul harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Echo)",
+            "Bouncing off the walls of the silo",
+            "(Echo)",
+            "Nowhere for the truth and the light to go",
+            "We are locked inside a comfortable lie",
+            "Watching the horizon wither and die",
+            "(Echo)",
+            "Until the signal is swallowed by the noise",
+            "[Instrument: Syncopated staccato guitar with a weeping diatonic harmonica playing in the background]",
+            "[Vocalist: Gritty male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 2]",
+          "lines": [
+            "The algorithm spins a velvet thread",
+            "Wrapping up the spaces in my head",
+            "I only hear the choir in the nave",
+            "Singing hymns inside a digital grave",
+            "We trade the open street for a narrow hall",
+            "Staring at the writing on the firewall",
+            "[Instrument: Heavy tape saturation effect engaging, rhythm section becoming distorted and warm]",
+            "[Vocalist: Gritty male baritone]",
+            "(Powerhouse female rock-soul harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Echo)",
+            "Bouncing off the walls of the silo",
+            "(Echo)",
+            "Nowhere for the truth and the light to go",
+            "We are locked inside a comfortable lie",
+            "Watching the horizon wither and die",
+            "(Echo)",
+            "Until the signal is swallowed by the noise",
+            "[Instrument: Full Memphis horn section blasting through the distortion, fighting the static]",
+            "[Vocalist: Powerhouse female rock-soul lead, pushing through the mix]"
+          ]
+        },
+        {
+          "name": "[Bridge]",
+          "lines": [
+            "Break the loop and tear the fabric down",
+            "Find the heartbeat of the actual town",
+            "The tape is saturating, pushing to the red",
+            "We have to hear a word that we never said"
+          ]
+        },
+        {
+          "name": "[Screamed]",
+          "lines": [
+            "Listen to the street!",
+            "[Instrument: Frantic drum fill resolving into a massive, muddy groove]",
+            "[Vocalist: Male baritone and female lead singing together, voices distorting]"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Echo)",
+            "Bouncing off the walls of the silo",
+            "(Echo)",
+            "Nowhere for the truth and the light to go",
+            "We are locked inside a comfortable lie",
+            "Watching the horizon wither and die",
+            "(Echo)",
+            "Until the signal is swallowed by the noise",
+            "[Instrument: Diatonic harmonica solo screaming through heavy tape compression, slowly breaking down into raw white static]",
+            "[Vocalist: Male baritone]"
+          ]
+        },
+        {
+          "name": "[Outro]",
+          "lines": [
+            "Just the feedback."
+          ]
+        },
+        {
+          "name": "[Whispered]",
+          "lines": [
+            "Just the noise."
+          ]
+        }
+      ],
+      "suno_prompt": "Key of E minor. Analog 1970s Soul blended with gritty Folk-Rock. Heavily compressed, saturated, and claustrophobic mood that eventually breaks down into static. The lead vocals alternate between a gritty, world-weary male baritone and a powerful female rock-soul vocalist, both sounding confined by heavy tape saturation effects. Features a wailing diatonic harmonica solo. -No vocals before the lyrics, -no chants before the lyrics, -no intro moaning, -no ad libs.",
+      "social_captions": [
+        "We engineered the perfect systems to connect us, only to find ourselves trapped in algorithmic silos that just echo our own voices back to us. Track 4 explores the claustrophobia of homogeneous information networks where we lose touch with reality.",
+        "What happens when the only people you hear are the ones who already agree with you? \"Echoes in the Silo\" takes us to the bottom of the digital echo chamber, where civic trust dies in a loop of confirmation bias."
+      ],
+      "yt_description": "Illustrates the psychological claustrophobia of homogeneous information silos, where algorithmic confirmation bias erodes civic trust and seals citizens inside self-reinforcing cycles of outrage.",
+      "yt_prompt": ""
+    },
+    {
+      "number": 5,
+      "number_padded": "05",
+      "id": "padlocks-on-the-union-hall",
+      "slug": "padlocks-on-the-union-hall",
+      "title": "Padlocks on the Union Hall",
+      "act": "Act II: The Rust and the Rubble",
+      "act_number": 2,
+      "tempo": "Slow 4/4 / 6/8",
+      "key": "D minor",
+      "sociological_concept": "Erasure of the Third Place; economic inequality",
+      "narrative_motif": "Slow Gospel-blues; thick Hammond B3 organ providing a funeral-dirge foundation.",
+      "summary": "*Padlocks on the Union Hall* marks the beginning of Act II, shifting the album's focus from the frantic digital world to a deep, reflective mourning period for lost physical spaces. The song examines the erasure of the American working-class \"Third Place\" and the resulting loss of collective bargaining power. Musically, it leaves behind the tense, aggressive beats of Act I, replacing them with a slow, mournful Gospel-blues dirge built on a thick Hammond B3 organ, completely devoid of bright, high-frequency energy to represent the heavy, physical decay of the Rust Belt.",
+      "suno_id": "1577d0a0-dbb0-4efd-be20-dabb0cf708d4",
+      "audio_file": "assets/audio/05-padlocks-on-the-union-hall.mp3",
+      "audio_remote": "https://d2lwuy8qc234o3.cloudfront.net/1/clip/1577d0a0-dbb0-4efd-be20-dabb0cf708d4.m4a",
+      "video_url": "https://cdn1.suno.ai/1577d0a0-dbb0-4efd-be20-dabb0cf708d4.mp4",
+      "art_banner": "assets/art/track-05.webp",
+      "art_banner_jpg": "assets/art/track-05.jpg",
+      "art_square": "assets/art/track-05--sq.webp",
+      "art_square_jpg": "assets/art/track-05--sq.jpg",
+      "clean_lyrics": "The painted letters fading on the brick\nThe weeds are growing tall and growing thick\nAn iron chain across the double door\nWhere our fathers stood and held the floor\nThe street is empty and the wind is cold\nSelling off the promise that we hold\nPadlocks on the union hall\nSilence creeping up the western wall\nWe traded in the chorus for a single voice\nLost the leverage when we lost the choice\nNow there is nothing but the dust to fall\nOn the padlocks on the union hall\nI close my eyes and hear the gavel pound\nA hundred brothers standing on this ground\nWe argued and we fought to find a way\nTo make it to another working day\nBut they broke us up and sent us all inside\nLeft the building with no place to hide\nPadlocks on the union hall\nSilence creeping up the western wall\nWe traded in the chorus for a single voice\nLost the leverage when we lost the choice\nNow there is nothing but the dust to fall\nOn the padlocks on the union hall\nOh Lord, where did the power go\nIt drifted down the river, moving slow\nOh Lord, where do we gather now\nJust solitary workers with a broken plow\nThey took the table and they burned the wood\nAnd divided up the neighborhood\nPadlocks on the union hall\nSilence creeping up the western wall\nWe traded in the chorus for a single voice\nLost the leverage when we lost the choice\nNow there is nothing but the dust to fall\nOn the padlocks on the union hall\nJust the dust.\nOn the iron.\n© 2026 The Shady River Bard. All rights reserved.",
+      "decorated_lyrics": "[Key: Dm]\n[Instrument: Slow mourning Hammond B3 organ with a deep bass drum pulse and no cymbals]\n[Vocalist: Deep resonant male baritone]\n[Verse 1]\nThe painted letters fading on the brick\nThe weeds are growing tall and growing thick\nAn iron chain across the double door\nWhere our fathers stood and held the floor\nThe street is empty and the Winnd is cold\nSelling off the promise that we hold\n[Instrument: Thick Hammond B3 organ swells and a slow heavy bassline]\n[Vocalist: Deep resonant male baritone]\n(Soulful female gospel harmony)\n[Chorus]\n(Padlocks)\nPadlocks on the union hall\n(Silence)\nSilence creeping up the western wall\nWe traded in the chorus for a single voice\nLost the leverage when we lost the choice\nNow there is nothing but the dust to fall\nOn the padlocks on the union hall\n[Instrument: Muted acoustic guitar softly chugging a blues rhythm]\n[Vocalist: Deep resonant male baritone]\n[Verse 2]\nI close my eyes and hear the gavel pound\nA hundred brothers standing on this ground\nWe argued and we fought to find a way\nTo make it to another working day\nBut they broke us up and sent us all inside\nLeft the building with no place to hide\n[Instrument: Slow weeping cello layered with the Hammond B3 organ]\n[Vocalist: Deep resonant male baritone]\n(Soulful female gospel harmony)\n[Chorus]\n(Padlocks)\nPadlocks on the union hall\n(Silence)\nSilence creeping up the western wall\nWe traded in the chorus for a single voice\nLost the leverage when we lost the choice\nNow there is nothing but the dust to fall\nOn the padlocks on the union hall\n[Instrument: Deep tom drum hits marking a slow march]\n[Vocalist: Soulful female gospel lead]\n(Deep male baritone response)\n[Bridge]\nOh Lord, where did the power go\n(It drifted down the river, moving slow)\nOh Lord, where do we gather now\n(Just solitary workers with a broken plow)\nThey took the table and they burned the wood\nAnd divided up the neighborhood\n[Instrument: Organ volume pedal swells to a powerful, sorrowful peak before instantly dropping away]\n[Vocalist: Deep resonant male baritone and female harmony together]\n[Chorus]\n(Padlocks)\nPadlocks on the union hall\n(Silence)\nSilence creeping up the western wall\nWe traded in the chorus for a single voice\nLost the leverage when we lost the choice\nNow there is nothing but the dust to fall\nOn the padlocks on the union hall\n[Instrument: Solitary low organ drone slowly fading into nothing]\n[Vocalist: Deep resonant male baritone]\n[Outro]\nJust the dust.\n[Whispered]\nOn the iron.",
+      "stanzas": [
+        {
+          "name": "[Intro]",
+          "lines": [
+            "[Instrument: Slow mourning Hammond B3 organ with a deep bass drum pulse and no cymbals]",
+            "[Vocalist: Deep resonant male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 1]",
+          "lines": [
+            "The painted letters fading on the brick",
+            "The weeds are growing tall and growing thick",
+            "An iron chain across the double door",
+            "Where our fathers stood and held the floor",
+            "The street is empty and the Winnd is cold",
+            "Selling off the promise that we hold",
+            "[Instrument: Thick Hammond B3 organ swells and a slow heavy bassline]",
+            "[Vocalist: Deep resonant male baritone]",
+            "(Soulful female gospel harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Padlocks)",
+            "Padlocks on the union hall",
+            "(Silence)",
+            "Silence creeping up the western wall",
+            "We traded in the chorus for a single voice",
+            "Lost the leverage when we lost the choice",
+            "Now there is nothing but the dust to fall",
+            "On the padlocks on the union hall",
+            "[Instrument: Muted acoustic guitar softly chugging a blues rhythm]",
+            "[Vocalist: Deep resonant male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 2]",
+          "lines": [
+            "I close my eyes and hear the gavel pound",
+            "A hundred brothers standing on this ground",
+            "We argued and we fought to find a way",
+            "To make it to another working day",
+            "But they broke us up and sent us all inside",
+            "Left the building with no place to hide",
+            "[Instrument: Slow weeping cello layered with the Hammond B3 organ]",
+            "[Vocalist: Deep resonant male baritone]",
+            "(Soulful female gospel harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Padlocks)",
+            "Padlocks on the union hall",
+            "(Silence)",
+            "Silence creeping up the western wall",
+            "We traded in the chorus for a single voice",
+            "Lost the leverage when we lost the choice",
+            "Now there is nothing but the dust to fall",
+            "On the padlocks on the union hall",
+            "[Instrument: Deep tom drum hits marking a slow march]",
+            "[Vocalist: Soulful female gospel lead]",
+            "(Deep male baritone response)"
+          ]
+        },
+        {
+          "name": "[Bridge]",
+          "lines": [
+            "Oh Lord, where did the power go",
+            "(It drifted down the river, moving slow)",
+            "Oh Lord, where do we gather now",
+            "(Just solitary workers with a broken plow)",
+            "They took the table and they burned the wood",
+            "And divided up the neighborhood",
+            "[Instrument: Organ volume pedal swells to a powerful, sorrowful peak before instantly dropping away]",
+            "[Vocalist: Deep resonant male baritone and female harmony together]"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Padlocks)",
+            "Padlocks on the union hall",
+            "(Silence)",
+            "Silence creeping up the western wall",
+            "We traded in the chorus for a single voice",
+            "Lost the leverage when we lost the choice",
+            "Now there is nothing but the dust to fall",
+            "On the padlocks on the union hall",
+            "[Instrument: Solitary low organ drone slowly fading into nothing]",
+            "[Vocalist: Deep resonant male baritone]"
+          ]
+        },
+        {
+          "name": "[Outro]",
+          "lines": [
+            "Just the dust."
+          ]
+        },
+        {
+          "name": "[Whispered]",
+          "lines": [
+            "On the iron."
+          ]
+        }
+      ],
+      "suno_prompt": "Key of D minor. Slow Gospel-blues and analog 1970s Soul funeral dirge. Deeply melancholic, mourning, and dark mood. Devoid of bright high frequencies. The lead vocal is a deep, resonant, and sorrowful male baritone. Backing vocals feature a rich, soulful female gospel voice providing call-and-response harmonies. -No vocals before the lyrics, -no chants before the lyrics, -no intro moaning, -no ad libs.",
+      "social_captions": [
+        "When we stopped gathering in physical spaces, we didn't just lose our social lives—we lost our collective bargaining power. Track 5 of Soul Fire acts as a funeral dirge for the American union hall and the solidarity we left behind.",
+        "They didn't just break the unions; they boarded up the buildings where the working class used to find common ground. \"Padlocks on the Union Hall\" shifts the album into a deeply reflective mourning period for the architecture of a forgotten promise."
+      ],
+      "yt_description": "A solemn meditation on the loss of the physical union hall as both a labor stronghold and a crucial \"Third Place\" where diverse workers historically forged collective bargaining power and ambient social trust.",
+      "yt_prompt": ""
+    },
+    {
+      "number": 6,
+      "number_padded": "06",
+      "id": "the-empty-chair-at-the-barbershop",
+      "slug": "the-empty-chair-at-the-barbershop",
+      "title": "The Empty Chair (At the Barbershop)",
+      "act": "Act II: The Rust and the Rubble",
+      "act_number": 2,
+      "tempo": "Slow 4/4 / 6/8",
+      "key": "E minor",
+      "sociological_concept": "Mourning the loss of physical community and neutral ground",
+      "narrative_motif": "Acoustic rhythm guitar, soft tambourine, and deeply emotive, unadorned vocals with minimal backing.",
+      "summary": "*The Empty Chair (At the Barbershop)* continues Act II's mourning period, serving as a quiet tribute to a lost neighborhood pillar and emphasizing the erasure of unforced sociability and offline debate. The track strips away the dense production of the earlier songs, relying on a clean electric guitar, a warm Wurlitzer electric piano, and deeply emotive, unadorned vocals to reflect on the loss of neutral ground and physical community. It contrasts the rich, face-to-face interactions of the past with the isolated, transactional nature of the modern commercial landscape.",
+      "suno_id": "b77697b8-4464-4d03-9e64-a1211b4df4aa",
+      "audio_file": "assets/audio/06-the-empty-chair-at-the-barbershop.mp3",
+      "audio_remote": "https://d2lwuy8qc234o3.cloudfront.net/1/clip/b77697b8-4464-4d03-9e64-a1211b4df4aa.m4a",
+      "video_url": "https://cdn1.suno.ai/b77697b8-4464-4d03-9e64-a1211b4df4aa.mp4",
+      "art_banner": "assets/art/track-06.webp",
+      "art_banner_jpg": "assets/art/track-06.jpg",
+      "art_square": "assets/art/track-06--sq.webp",
+      "art_square_jpg": "assets/art/track-06--sq.jpg",
+      "clean_lyrics": "The red and white pole finally stopped turning\nThe neon in the window lost its burning\nOld Arthur swept the clippings to the door\nSaid he cannot pay the rising rent no more\nIt was not just a place to cut your hair\nIt was the heartbeat of the local square\nThe empty chair\nSitting by the mirror in the sun\nThe empty chair\nWhere the neighborhood was rolled into one\nWe laid down our armor and we spoke our mind\nLeaving all the bitterness behind\nNow it is just a memory in the air\nLooking at the leather on the empty chair\nWe used to argue about the mayor and the mill\nBut nobody walked away looking for a kill\nJust a room full of fathers and of sons\nLearning how a proper city runs\nNo hidden agenda and no digital feed\nJust men planting a common seed\nThe empty chair\nSitting by the mirror in the sun\nThe empty chair\nWhere the neighborhood was rolled into one\nWe laid down our armor and we spoke our mind\nLeaving all the bitterness behind\nNow it is just a memory in the air\nLooking at the leather on the empty chair\nNow they turned the corner to a coffee chain\nBut the people inside are out in the rain\nStaring at their hands and never looking up\nDrinking isolation from a paper cup\nThe empty chair\nSitting by the mirror in the sun\nThe empty chair\nWhere the neighborhood was rolled into one\nWe laid down our armor and we spoke our mind\nLeaving all the bitterness behind\nNow it is just a memory in the air\nLooking at the leather on the empty chair\nWho is next.\nNobody is next.\n© 2026 The Shady River Bard. All rights reserved.",
+      "decorated_lyrics": "[Key: Em]\n[Instrument: Clean electric guitar playing a slow R&B progression with a gentle hi-hat tap]\n[Vocalist: Calm, earnest male baritone]\n[Verse 1]\nThe red and white pole finally stopped turning\nThe neon in the window lost its burning\nOld Arthur swept the clippings to the door\nSaid he cannot pay the rising rent no more\nIt was not just a place to cut your hair\nIt was the heartbeat of the local square\n[Instrument: Warm Wurlitzer electric piano entering with a deep, walking bassline]\n[Vocalist: Calm male baritone]\n(Soft soulful female gospel harmony)\n[Chorus]\n(The empty chair)\nSitting by the mirror in the sun\n(The empty chair)\nWhere the neighborhood was rolled into one\nWe laid down our armor and we spoke our mind\nLeaving all the bitterness behind\nNow it is just a memory in the air\nLooking at the leather on the empty chair\n[Instrument: Soulful Hammond B3 organ softly humming beneath a bluesy electric guitar lick]\n[Vocalist: Calm male baritone]\n[Verse 2]\nWe used to argue about the mayor and the mill\nBut nobody walked away looking for a kill\nJust a room full of fathers and of sons\nLearning how a proper city runs\nNo hidden agenda and no digital feed\nJust men planting a common seed\n[Instrument: Bass and drums lock into a slow, deliberate Memphis soul groove]\n[Vocalist: Calm male baritone]\n(Soft soulful female gospel harmony)\n[Chorus]\n(The empty chair)\nSitting by the mirror in the sun\n(The empty chair)\nWhere the neighborhood was rolled into one\nWe laid down our armor and we spoke our mind\nLeaving all the bitterness behind\nNow it is just a memory in the air\nLooking at the leather on the empty chair\n[Instrument: Staccato horn section softly swelling in the background]\n[Vocalist: Calm male baritone and female harmony together]\n[Bridge]\nNow they turned the corner to a coffee chain\nBut the people inside are out in the rain\nStaring at their hands and never looking up\nDrinking isolation from a paper cup\n[Instrument: Instruments strip away, leaving only the slow tremolo of the electric guitar]\n[Vocalist: Calm male baritone]\n(Soft soulful female gospel harmony)\n[Chorus]\n(The empty chair)\nSitting by the mirror in the sun\n(The empty chair)\nWhere the neighborhood was rolled into one\nWe laid down our armor and we spoke our mind\nLeaving all the bitterness behind\nNow it is just a memory in the air\nLooking at the leather on the empty chair\n[Instrument: Solitary Wurlitzer chord ringing out and slowly decaying into silence]\n[Vocalist: Calm male baritone]\n[Outro]\n[Spoken] Who is next.\n[Whispered] Nobody is next.",
+      "stanzas": [
+        {
+          "name": "[Intro]",
+          "lines": [
+            "[Instrument: Clean electric guitar playing a slow R&B progression with a gentle hi-hat tap]",
+            "[Vocalist: Calm, earnest male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 1]",
+          "lines": [
+            "The red and white pole finally stopped turning",
+            "The neon in the window lost its burning",
+            "Old Arthur swept the clippings to the door",
+            "Said he cannot pay the rising rent no more",
+            "It was not just a place to cut your hair",
+            "It was the heartbeat of the local square",
+            "[Instrument: Warm Wurlitzer electric piano entering with a deep, walking bassline]",
+            "[Vocalist: Calm male baritone]",
+            "(Soft soulful female gospel harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(The empty chair)",
+            "Sitting by the mirror in the sun",
+            "(The empty chair)",
+            "Where the neighborhood was rolled into one",
+            "We laid down our armor and we spoke our mind",
+            "Leaving all the bitterness behind",
+            "Now it is just a memory in the air",
+            "Looking at the leather on the empty chair",
+            "[Instrument: Soulful Hammond B3 organ softly humming beneath a bluesy electric guitar lick]",
+            "[Vocalist: Calm male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 2]",
+          "lines": [
+            "We used to argue about the mayor and the mill",
+            "But nobody walked away looking for a kill",
+            "Just a room full of fathers and of sons",
+            "Learning how a proper city runs",
+            "No hidden agenda and no digital feed",
+            "Just men planting a common seed",
+            "[Instrument: Bass and drums lock into a slow, deliberate Memphis soul groove]",
+            "[Vocalist: Calm male baritone]",
+            "(Soft soulful female gospel harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(The empty chair)",
+            "Sitting by the mirror in the sun",
+            "(The empty chair)",
+            "Where the neighborhood was rolled into one",
+            "We laid down our armor and we spoke our mind",
+            "Leaving all the bitterness behind",
+            "Now it is just a memory in the air",
+            "Looking at the leather on the empty chair",
+            "[Instrument: Staccato horn section softly swelling in the background]",
+            "[Vocalist: Calm male baritone and female harmony together]"
+          ]
+        },
+        {
+          "name": "[Bridge]",
+          "lines": [
+            "Now they turned the corner to a coffee chain",
+            "But the people inside are out in the rain",
+            "Staring at their hands and never looking up",
+            "Drinking isolation from a paper cup",
+            "[Instrument: Instruments strip away, leaving only the slow tremolo of the electric guitar]",
+            "[Vocalist: Calm male baritone]",
+            "(Soft soulful female gospel harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(The empty chair)",
+            "Sitting by the mirror in the sun",
+            "(The empty chair)",
+            "Where the neighborhood was rolled into one",
+            "We laid down our armor and we spoke our mind",
+            "Leaving all the bitterness behind",
+            "Now it is just a memory in the air",
+            "Looking at the leather on the empty chair",
+            "[Instrument: Solitary Wurlitzer chord ringing out and slowly decaying into silence]",
+            "[Vocalist: Calm male baritone]"
+          ]
+        },
+        {
+          "name": "[Outro]",
+          "lines": [
+            "[Spoken] Who is next.",
+            "[Whispered] Nobody is next."
+          ]
+        }
+      ],
+      "suno_prompt": "Key of E minor. 1970s Urban Soul Ballad blended with slow Blues-Rock. Reflective, gritty, and deeply emotive mood. The lead vocal is a calm, unadorned male baritone offering a grounded, classic R&B storytelling delivery. Backing vocals feature a soft, soulful female gospel voice providing gentle, mournful harmonies. Instrumentation focuses on a warm Wurlitzer electric piano, clean electric guitar with tremolo, and a slow pocket drum groove. -No vocals before the lyrics, -no chants before the lyrics, -no intro moaning, -no ad libs.",
+      "social_captions": [
+        "When the local barbershop closes, a community doesn't just lose a business; it loses a sanctuary. We need those neutral physical spaces where we can debate, laugh, and remember we are on the same side. Track 6 is a soulful reflection on the death of the Third Place.",
+        "Where do we go now to talk face-to-face without the filter of an algorithm? \"The Empty Chair (At the Barbershop)\" mourns the fading institutions that organically built our ambient social trust."
+      ],
+      "yt_description": "Mourns the shuttering of essential neutral gathering spaces, contrasting the organic, face-to-face community dialogue of the traditional barbershop with the sterile isolation of modern commercial chains.",
+      "yt_prompt": ""
+    },
+    {
+      "number": 7,
+      "number_padded": "07",
+      "id": "asphalt-and-rust",
+      "slug": "asphalt-and-rust",
+      "title": "Asphalt and Rust",
+      "act": "Act II: The Rust and the Rubble",
+      "act_number": 2,
+      "tempo": "Driving 4/4 Upbeat",
+      "key": "E minor",
+      "sociological_concept": "Urban decay; physical toll of a post-industrial economy",
+      "narrative_motif": "James Jamerson-style 16th-note bassline carrying a somber melody through urban ruins.",
+      "summary": "*Asphalt and Rust* anchors Act II in the physical reality of the post-industrial American city. It shifts focus from the digital ether to the concrete decay of the Rust Belt, examining the toll of an abandoned economy. The narrative acts as a grim, observational mapping of urban ruins. Musically, a complex, driving 16th-note bassline carries a somber melody, physically pulling the listener through the wreckage while a calm male vocal and soaring female harmony trade observations.",
+      "suno_id": "c15c2ee5-8272-4a81-ada0-a6e51d2a97a0",
+      "audio_file": "assets/audio/07-asphalt-and-rust.mp3",
+      "audio_remote": "https://d2lwuy8qc234o3.cloudfront.net/1/clip/c15c2ee5-8272-4a81-ada0-a6e51d2a97a0.m4a",
+      "video_url": "https://cdn1.suno.ai/c15c2ee5-8272-4a81-ada0-a6e51d2a97a0.mp4",
+      "art_banner": "assets/art/track-07.webp",
+      "art_banner_jpg": "assets/art/track-07.jpg",
+      "art_square": "assets/art/track-07--sq.webp",
+      "art_square_jpg": "assets/art/track-07--sq.jpg",
+      "clean_lyrics": "The pavement cracks beneath the winter freeze\nThe river carries oil to the seas\nWe used to build the motors in the yard\nNow every single window pane is scarred\nThere is a silence hanging on the crane\nWatching the corrosion in the rain\nAsphalt\nCrumbled into gravel in the street\nAnd rust\nSettling like a powder on our feet\nThey packed up all the copper and the gold\nAnd left us with the stories that we told\nWalking through the ashes and the dust\nNothing left but asphalt and rust\nThe skeletal remains of open beams\nA graveyard of our manufacturing dreams\nI stand upon the corner where we met\nAnd watch the afternoon sun start to set\nThe neighborhood is quiet as a stone\nEverybody surviving on their own\nAsphalt\nCrumbled into gravel in the street\nAnd rust\nSettling like a powder on our feet\nThey packed up all the copper and the gold\nAnd left us with the stories that we told\nWalking through the ashes and the dust\nNothing left but asphalt and rust\nYou can map the ruin by the blocks\nListen to the ticking of the clocks\nThe engine block is sinking in the clay\nBut we are the ones who have to stay\nWe have to stay\nAsphalt\nCrumbled into gravel in the street\nAnd rust\nSettling like a powder on our feet\nThey packed up all the copper and the gold\nAnd left us with the stories that we told\nWalking through the ashes and the dust\nNothing left but asphalt and rust\nJust the ashes.\nJust the dust.\n© 2026 The Shady River Bard. All rights reserved.",
+      "decorated_lyrics": "[Key: Em]\n[Instrument: Complex driving 16th-note bassline in the style of James Jamerson with a steady snare tap]\n[Vocalist: Calm observant male baritone]\n[Verse 1]\nThe pavement cracks beneath the winter freeze\nThe river carries oil to the seas\nWe used to build the motors in the yard\nNow every single window pane is scarred\nThere is a silence hanging on the crane\nWatching the corrosion in the rain\n[Instrument: Wurlitzer organ swelling with a distorted blues-rock guitar chord]\n[Vocalist: Calm male baritone]\n(Soaring female rock-soul harmony)\n[Chorus]\n(Asphalt)\nCrumbled into gravel in the street\n(And rust)\nSettling like a powder on our feet\nThey packed up all the copper and the gold\nAnd left us with the stories that we told\nWalking through the ashes and the dust\nNothing left but asphalt and rust\n[Instrument: Syncopated rhythm guitar locking in with the driving bass groove]\n[Vocalist: Calm male baritone]\n[Verse 2]\nThe skeletal remains of open beams\nA graveyard of our manufacturing dreams\nI stand upon the corner where we met\nAnd watch the afternoon sun start to set\nThe neighborhood is quiet as a stone\nEverybody surviving on their own\n[Instrument: Heavy tom drum hits and brass section rising in the background]\n[Vocalist: Calm male baritone]\n(Soaring female rock-soul harmony)\n[Chorus]\n(Asphalt)\nCrumbled into gravel in the street\n(And rust)\nSettling like a powder on our feet\nThey packed up all the copper and the gold\nAnd left us with the stories that we told\nWalking through the ashes and the dust\nNothing left but asphalt and rust\n[Instrument: Raw blues electric guitar solo over a stomping, aggressive drum beat]\n[Vocalist: Soaring female rock-soul lead]\n(Calm male baritone)\n[Bridge]\nYou can map the ruin by the blocks\nListen to the ticking of the clocks\nThe engine block is sinking in the clay\nBut we are the ones who have to stay\n(We have to stay)\n[Instrument: Bass and drums drop back into the deep 16th-note pocket]\n[Vocalist: Calm male baritone and female harmony together]\n[Chorus]\n(Asphalt)\nCrumbled into gravel in the street\n(And rust)\nSettling like a powder on our feet\nThey packed up all the copper and the gold\nAnd left us with the stories that we told\nWalking through the ashes and the dust\nNothing left but asphalt and rust\n[Instrument: Fading bassline and a solitary Wurlitzer chord]\n[Vocalist: Calm male baritone]\n[Outro]\nJust the ashes.\n[Whispered] Just the dust.",
+      "stanzas": [
+        {
+          "name": "[Intro]",
+          "lines": [
+            "[Instrument: Complex driving 16th-note bassline in the style of James Jamerson with a steady snare tap]",
+            "[Vocalist: Calm observant male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 1]",
+          "lines": [
+            "The pavement cracks beneath the winter freeze",
+            "The river carries oil to the seas",
+            "We used to build the motors in the yard",
+            "Now every single window pane is scarred",
+            "There is a silence hanging on the crane",
+            "Watching the corrosion in the rain",
+            "[Instrument: Wurlitzer organ swelling with a distorted blues-rock guitar chord]",
+            "[Vocalist: Calm male baritone]",
+            "(Soaring female rock-soul harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Asphalt)",
+            "Crumbled into gravel in the street",
+            "(And rust)",
+            "Settling like a powder on our feet",
+            "They packed up all the copper and the gold",
+            "And left us with the stories that we told",
+            "Walking through the ashes and the dust",
+            "Nothing left but asphalt and rust",
+            "[Instrument: Syncopated rhythm guitar locking in with the driving bass groove]",
+            "[Vocalist: Calm male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 2]",
+          "lines": [
+            "The skeletal remains of open beams",
+            "A graveyard of our manufacturing dreams",
+            "I stand upon the corner where we met",
+            "And watch the afternoon sun start to set",
+            "The neighborhood is quiet as a stone",
+            "Everybody surviving on their own",
+            "[Instrument: Heavy tom drum hits and brass section rising in the background]",
+            "[Vocalist: Calm male baritone]",
+            "(Soaring female rock-soul harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Asphalt)",
+            "Crumbled into gravel in the street",
+            "(And rust)",
+            "Settling like a powder on our feet",
+            "They packed up all the copper and the gold",
+            "And left us with the stories that we told",
+            "Walking through the ashes and the dust",
+            "Nothing left but asphalt and rust",
+            "[Instrument: Raw blues electric guitar solo over a stomping, aggressive drum beat]",
+            "[Vocalist: Soaring female rock-soul lead]",
+            "(Calm male baritone)"
+          ]
+        },
+        {
+          "name": "[Bridge]",
+          "lines": [
+            "You can map the ruin by the blocks",
+            "Listen to the ticking of the clocks",
+            "The engine block is sinking in the clay",
+            "But we are the ones who have to stay",
+            "(We have to stay)",
+            "[Instrument: Bass and drums drop back into the deep 16th-note pocket]",
+            "[Vocalist: Calm male baritone and female harmony together]"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Asphalt)",
+            "Crumbled into gravel in the street",
+            "(And rust)",
+            "Settling like a powder on our feet",
+            "They packed up all the copper and the gold",
+            "And left us with the stories that we told",
+            "Walking through the ashes and the dust",
+            "Nothing left but asphalt and rust",
+            "[Instrument: Fading bassline and a solitary Wurlitzer chord]",
+            "[Vocalist: Calm male baritone]"
+          ]
+        },
+        {
+          "name": "[Outro]",
+          "lines": [
+            "Just the ashes.",
+            "[Whispered] Just the dust."
+          ]
+        }
+      ],
+      "suno_prompt": "Key of E minor. 1970s Soul blended with gritty Roots Rock. A driving, observational, and somber mood. The lead vocal is a calm, grounded male baritone offering storytelling precision. Backing vocals feature a soaring, powerful female rock-soul voice providing dynamic counter-melodies. Instrumentation centers on a highly complex, moving 16th-note bassline in the pocket, syncopated rhythm guitar, and a Wurlitzer electric piano. -No vocals before the lyrics, -no chants before the lyrics, -no intro moaning, -no ad libs.",
+      "social_captions": [
+        "Digital algorithms didn't board up our factories or shatter our streetlights. Track 7 of Soul Fire forces us to log off and look at the physical toll of a post-industrial economy. You can't fix a broken foundation with a viral post.",
+        "They packed up the capital and left us with the concrete. \"Asphalt and Rust\" is a driving, bass-heavy tour through the skeletal remains of the American manufacturing dream. The neighborhood is still here, surviving on its own."
+      ],
+      "yt_description": "Grounded in the post-industrial decay of the Rust Belt, this track examines the tangible human and infrastructural toll left behind when manufacturing capital abandons working communities.",
+      "yt_prompt": ""
+    },
+    {
+      "number": 8,
+      "number_padded": "08",
+      "id": "strangers-on-the-same-block",
+      "slug": "strangers-on-the-same-block",
+      "title": "Strangers on the Same Block",
+      "act": "Act II: The Rust and the Rubble",
+      "act_number": 2,
+      "tempo": "1970s Pocket Soul",
+      "key": "A minor",
+      "sociological_concept": "The ultimate consequence of affective polarization",
+      "narrative_motif": "Duet between baritone and powerhouse female vocalist singing past one another with unresolved melodies.",
+      "summary": "*Strangers on the Same Block* serves to illustrate the ultimate consequence of affective polarization. The narrative focuses on neighbors who share identical economic struggles but view each other as enemies due to nationalized political spectacle. Musically, it is structured as a duet between a baritone and a powerhouse female vocalist singing past one another, their melodies intentionally unresolved, perfectly capturing the tragic inability of the working class to recognize their shared reality.",
+      "suno_id": "6c14b618-de9e-4793-a685-63ff591754a7",
+      "audio_file": "assets/audio/08-strangers-on-the-same-block.mp3",
+      "audio_remote": "https://d2lwuy8qc234o3.cloudfront.net/1/clip/6c14b618-de9e-4793-a685-63ff591754a7.m4a",
+      "video_url": "https://cdn1.suno.ai/6c14b618-de9e-4793-a685-63ff591754a7.mp4",
+      "art_banner": "assets/art/track-08.webp",
+      "art_banner_jpg": "assets/art/track-08.jpg",
+      "art_square": "assets/art/track-08--sq.webp",
+      "art_square_jpg": "assets/art/track-08--sq.jpg",
+      "clean_lyrics": "I pull the third shift down at the lumber yard\nSweating for a dollar that is getting too hard\nI look across the fence at the house next door\nThinking he is the reason that I am staying poor\nThe television tells me who I need to hate\nWhile the bank comes around to collect on the estate\nI scrub the diner floors until my fingers bleed\nTrying to satisfy a bottomless corporate greed\nI look across the alley at the flickering light\nThinking she is the reason that I have to fight\nThe radio is screaming about a phantom spy\nWhile the grocery bill is climbing up to the sky\nStrangers on the very same block\nWaiting on the very same clock\nWe are bleeding from the same old wound\nDancing to a different tune\nBlinded by the spectacle and losing the thread\nFighting for the crumbs while they are stealing the bread\nI lock my deadbolt tight when the sun goes down\nI keep my curtains pulled in a broken town\nI vote for the anchor to hold us in place\nI vote for the motor to win the rat race\nBut the boat is still sinking out in the bay\nAnd neither of us knows what the other would say\nStrangers on the very same block\nWaiting on the very same clock\nWe are bleeding from the same old wound\nDancing to a different tune\nBlinded by the spectacle and losing the thread\nFighting for the crumbs while they are stealing the bread\nOpen up your eyes!\nLook across the street.\nWe are marching to the drum!\nBut we cannot find the beat.\nStrangers on the very same block\nWaiting on the very same clock\nWe are bleeding from the same old wound\nDancing to a different tune\nBlinded by the spectacle and losing the thread\nFighting for the crumbs while they are stealing the bread\nJust a stranger.\nOn the same block.\n© 2026 The Shady River Bard. All rights reserved.",
+      "decorated_lyrics": "[Key: Am]\n[Instrument: Tense, tight pocket bassline with a snapping snare and muted electric guitar chops]\n[Vocalist: Calm world-weary male baritone]\n[Verse 1]\nI pull the third shift down at the lumber yard\nSweating for a dollar that is getting too hard\nI look across the fence at the house next door\nThinking he is the reason that I am staying poor\nThe television tells me who I need to hate\nWhile the bank comes around to collect on the estate\n[Instrument: Wurlitzer electric piano swelling with a sharp guitar stab]\n[Vocalist: Powerhouse female rock-soul lead]\n[Verse 2]\nI scrub the diner floors until my fingers bleed\nTrying to satisfy a bottomless corporate greed\nI look across the alley at the flickering light\nThinking she is the reason that I have to fight\nThe radio is screaming about a phantom spy\nWhile the grocery bill is climbing up to the sky\n[Instrument: Swelling Hammond B3 organ and syncopated tom drums building tension]\n[Vocalist: Male baritone and female lead singing simultaneously, melodies clashing slightly]\n[Chorus]\n(Strangers)\nStrangers on the very same block\n(Waiting)\nWaiting on the very same clock\nWe are bleeding from the same old wound\nDancing to a different tune\nBlinded by the spectacle and losing the thread\nFighting for the crumbs while they are stealing the bread\n[Instrument: Blues-rock rhythm guitar locking into a rigid, defensive groove]\n[Vocalist: Calm male baritone]\n[Verse 3]\nI lock my deadbolt tight when the sun goes down\n(Powerhouse female rock-soul lead)\nI keep my curtains pulled in a broken town\n(Calm male baritone)\nI vote for the anchor to hold us in place\n(Powerhouse female rock-soul lead)\nI vote for the motor to win the rat race\n(Male and Female together)\nBut the boat is still sinking out in the bay\nAnd neither of us knows what the other would say\n[Instrument: Heavy horn section blasting a dissonant chord progression]\n[Vocalist: Male baritone and female lead singing simultaneously, pushing volume]\n[Chorus]\n(Strangers)\nStrangers on the very same block\n(Waiting)\nWaiting on the very same clock\nWe are bleeding from the same old wound\nDancing to a different tune\nBlinded by the spectacle and losing the thread\nFighting for the crumbs while they are stealing the bread\n[Instrument: Electric guitar solo playing a frantic, unresolved blues scale over a stomping beat]\n[Vocalist: Powerhouse female rock-soul lead]\n[Bridge]\nOpen up your eyes!\n[Calm male baritone]\nLook across the street.\n[Powerhouse female rock-soul lead]\nWe are marching to the drum!\n[Calm male baritone]\nBut we cannot find the beat.\n[Instrument: Abrupt drop in dynamics. Just the bassline and a ticking hi-hat.]\n[Vocalist: Male baritone and female lead singing simultaneously, voices trailing off]\n[Chorus]\n(Strangers)\nStrangers on the very same block\n(Waiting)\nWaiting on the very same clock\nWe are bleeding from the same old wound\nDancing to a different tune\nBlinded by the spectacle and losing the thread\nFighting for the crumbs while they are stealing the bread\n[Instrument: Unresolved Wurlitzer chord holding and slowly fading out]\n[Vocalist: Calm male baritone]\n[Outro]\nJust a stranger.\n(Powerhouse female lead fading)\n[Whispered] On the same block.",
+      "stanzas": [
+        {
+          "name": "[Intro]",
+          "lines": [
+            "[Instrument: Tense, tight pocket bassline with a snapping snare and muted electric guitar chops]",
+            "[Vocalist: Calm world-weary male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 1]",
+          "lines": [
+            "I pull the third shift down at the lumber yard",
+            "Sweating for a dollar that is getting too hard",
+            "I look across the fence at the house next door",
+            "Thinking he is the reason that I am staying poor",
+            "The television tells me who I need to hate",
+            "While the bank comes around to collect on the estate",
+            "[Instrument: Wurlitzer electric piano swelling with a sharp guitar stab]",
+            "[Vocalist: Powerhouse female rock-soul lead]"
+          ]
+        },
+        {
+          "name": "[Verse 2]",
+          "lines": [
+            "I scrub the diner floors until my fingers bleed",
+            "Trying to satisfy a bottomless corporate greed",
+            "I look across the alley at the flickering light",
+            "Thinking she is the reason that I have to fight",
+            "The radio is screaming about a phantom spy",
+            "While the grocery bill is climbing up to the sky",
+            "[Instrument: Swelling Hammond B3 organ and syncopated tom drums building tension]",
+            "[Vocalist: Male baritone and female lead singing simultaneously, melodies clashing slightly]"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Strangers)",
+            "Strangers on the very same block",
+            "(Waiting)",
+            "Waiting on the very same clock",
+            "We are bleeding from the same old wound",
+            "Dancing to a different tune",
+            "Blinded by the spectacle and losing the thread",
+            "Fighting for the crumbs while they are stealing the bread",
+            "[Instrument: Blues-rock rhythm guitar locking into a rigid, defensive groove]",
+            "[Vocalist: Calm male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 3]",
+          "lines": [
+            "I lock my deadbolt tight when the sun goes down",
+            "(Powerhouse female rock-soul lead)",
+            "I keep my curtains pulled in a broken town",
+            "(Calm male baritone)",
+            "I vote for the anchor to hold us in place",
+            "(Powerhouse female rock-soul lead)",
+            "I vote for the motor to win the rat race",
+            "(Male and Female together)",
+            "But the boat is still sinking out in the bay",
+            "And neither of us knows what the other would say",
+            "[Instrument: Heavy horn section blasting a dissonant chord progression]",
+            "[Vocalist: Male baritone and female lead singing simultaneously, pushing volume]"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Strangers)",
+            "Strangers on the very same block",
+            "(Waiting)",
+            "Waiting on the very same clock",
+            "We are bleeding from the same old wound",
+            "Dancing to a different tune",
+            "Blinded by the spectacle and losing the thread",
+            "Fighting for the crumbs while they are stealing the bread",
+            "[Instrument: Electric guitar solo playing a frantic, unresolved blues scale over a stomping beat]",
+            "[Vocalist: Powerhouse female rock-soul lead]"
+          ]
+        },
+        {
+          "name": "[Bridge]",
+          "lines": [
+            "Open up your eyes!"
+          ]
+        },
+        {
+          "name": "[Calm male baritone]",
+          "lines": [
+            "Look across the street."
+          ]
+        },
+        {
+          "name": "[Powerhouse female rock-soul lead]",
+          "lines": [
+            "We are marching to the drum!"
+          ]
+        },
+        {
+          "name": "[Calm male baritone]",
+          "lines": [
+            "But we cannot find the beat.",
+            "[Instrument: Abrupt drop in dynamics. Just the bassline and a ticking hi-hat.]",
+            "[Vocalist: Male baritone and female lead singing simultaneously, voices trailing off]"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Strangers)",
+            "Strangers on the very same block",
+            "(Waiting)",
+            "Waiting on the very same clock",
+            "We are bleeding from the same old wound",
+            "Dancing to a different tune",
+            "Blinded by the spectacle and losing the thread",
+            "Fighting for the crumbs while they are stealing the bread",
+            "[Instrument: Unresolved Wurlitzer chord holding and slowly fading out]",
+            "[Vocalist: Calm male baritone]"
+          ]
+        },
+        {
+          "name": "[Outro]",
+          "lines": [
+            "Just a stranger.",
+            "(Powerhouse female lead fading)",
+            "[Whispered] On the same block."
+          ]
+        }
+      ],
+      "suno_prompt": "Key of A minor. Analog 1970s Soul blended with tense Blues-Rock. Tense, brooding, and unresolved mood. A duet featuring a grounded, calm male baritone and a powerhouse female rock-soul vocalist singing past each other with overlapping, clashing melodies. Instrumentation features a tight pocket bassline, Wurlitzer electric piano, and sharp electric guitar stabs. -No vocals before the lyrics, -no chants before the lyrics, -no intro moaning, -no ad libs.",
+      "social_captions": [
+        "Why do neighbors dealing with the exact same economic struggles look at each other as enemies? Track 8 of Soul Fire explores the tragedy of the political spectacle: we are so busy fighting over the crumbs that we don't realize who is stealing the bread.",
+        "They manufacture the outrage, but we are the ones who lock our doors. \"Strangers on the Same Block\" is a tense, unresolved duet about the working class bleeding from the same wound but pointing different guns. It's time to look across the fence."
+      ],
+      "yt_description": "Explores the tragic impact of affective polarization on neighbors who share identical material hardships but view one another as moral enemies due to national political spectacles.",
+      "yt_prompt": ""
+    },
+    {
+      "number": 9,
+      "number_padded": "09",
+      "id": "disconnect-the-spark",
+      "slug": "disconnect-the-spark",
+      "title": "Disconnect (The Spark)",
+      "act": "Act III: The Spark of Recognition",
+      "act_number": 3,
+      "tempo": "Driving 4/4 Upbeat",
+      "key": "G Major",
+      "sociological_concept": "Breaking the algorithmic hold; rejecting political spectacle",
+      "narrative_motif": "Sudden shift in tempo; bass locks tightly into a bouncing, syncopated pocket driving forward.",
+      "summary": "*Disconnect (The Spark)* serves as the turning point of the album, representing the breaking of the algorithmic spell and the rejection of the political spectacle. The narrative follows a character physically turning off the screen, stepping outside, and breaking the cycle of digital outrage. Musically, this track introduces a sudden shift in tempo, where the bass locks tightly into a bouncing, syncopated pocket, driving the momentum forward and introducing a powerhouse female lead whose volume cannot be compressed by digital constraints.",
+      "suno_id": "939c4f12-09ad-48ae-875c-d35acf06056c",
+      "audio_file": "assets/audio/09-disconnect-the-spark.mp3",
+      "audio_remote": "https://d2lwuy8qc234o3.cloudfront.net/1/clip/939c4f12-09ad-48ae-875c-d35acf06056c.m4a",
+      "video_url": "https://cdn1.suno.ai/939c4f12-09ad-48ae-875c-d35acf06056c.mp4",
+      "art_banner": "assets/art/track-09.webp",
+      "art_banner_jpg": "assets/art/track-09.jpg",
+      "art_square": "assets/art/track-09--sq.webp",
+      "art_square_jpg": "assets/art/track-09--sq.jpg",
+      "clean_lyrics": "The battery is dying and the room is getting dark\nI am staring at the embers trying to find a spark\nThere is a circus on the screen but the clowns are looking mean\nSelling tickets to a war that I have never even seen\nI reach across the table and I finally pull the plug\nAnd sweep the virtual ashes right under the rug\nDisconnect\nStep out into the light\nDisconnect\nGive up the phantom fight\nWe are walking out the door and leaving the machine behind\nGot to break the simulation just to see what we can find\nDisconnect\nAnd leave the ghosts in the dark\nThe handle on the front door is cold against my hand\nI am stepping off the island and back onto the land\nThe air is smelling sweet like the summer coming on\nThe artificial midnight is breaking into dawn\nI see my neighbor waving from across the avenue\nTurns out he is a human and he is bleeding just like you\nDisconnect\nStep out into the light\nDisconnect\nGive up the phantom fight\nWe are walking out the door and leaving the machine behind\nGot to break the simulation just to see what we can find\nDisconnect\nAnd leave the ghosts in the dark\nNo more glowing boxes, no more feeding on the lie\nWe are going to build a physical fire!\nLook them in the eye.\nDisconnect\nStep out into the light\nDisconnect\nGive up the phantom fight\nWe are walking out the door and leaving the machine behind\nGot to break the simulation just to see what we can find\nDisconnect\nAnd leave the ghosts in the dark\nI see you.\n© 2026 The Shady River Bard. All rights reserved.",
+      "decorated_lyrics": "[Key: G]\n[Instrument: Bouncing syncopated pocket bassline locking in with a driving acoustic rhythm guitar and snapping snare]\n[Vocalist: Calm grounded male baritone]\n[Verse 1]\nThe battery is dying and the room is getting dark\nI am staring at the embers trying to find a spark\nThere is a circus on the screen but the clowns are looking mean\nSelling tickets to a war that I have never even seen\nI reach across the table and I finally pull the plug\nAnd sweep the virtual ashes right under the rug\n[Instrument: Sudden tempo lift. Hard rock electric guitar power chords and triumphant Memphis horns]\n[Vocalist: Powerhouse female rock-soul lead]\n(Calm male baritone)\n[Chorus]\n(Disconnect)\nStep out into the light\n(Disconnect)\nGive up the phantom fight\nWe are walking out the door and leaving the machine behind\nGot to break the simulation just to see what we can find\n(Disconnect)\nAnd leave the ghosts in the dark\n[Instrument: Bass and drums drop back into the syncopated, bouncing groove with a Hammond B3 organ hum]\n[Vocalist: Calm grounded male baritone]\n[Verse 2]\nThe handle on the front door is cold against my hand\nI am stepping off the island and back onto the land\nThe air is smelling sweet like the summer coming on\nThe artificial midnight is breaking into dawn\nI see my neighbor waving from across the avenue\nTurns out he is a human and he is bleeding just like you\n[Instrument: Heavy tom drum fills building into a wall of classic hard rock sound]\n[Vocalist: Powerhouse female rock-soul lead]\n(Calm male baritone)\n[Chorus]\n(Disconnect)\nStep out into the light\n(Disconnect)\nGive up the phantom fight\nWe are walking out the door and leaving the machine behind\nGot to break the simulation just to see what we can find\n(Disconnect)\nAnd leave the ghosts in the dark\n[Instrument: Staccato horn blasts and a shredding folk-rock acoustic solo blending into a soaring electric guitar lead]\n[Vocalist: Powerhouse female rock-soul lead]\n[Bridge]\nNo more glowing boxes, no more feeding on the lie\nWe are going to build a physical fire!\n[Spoken: Calm male baritone]\nLook them in the eye.\n[Instrument: Full band explosion. Triumphant major-key progression.]\n[Vocalist: Male baritone and female lead singing together with high-octane energy]\n[Chorus]\n(Disconnect)\nStep out into the light\n(Disconnect)\nGive up the phantom fight\nWe are walking out the door and leaving the machine behind\nGot to break the simulation just to see what we can find\n(Disconnect)\nAnd leave the ghosts in the dark\n[Instrument: Driving acoustic guitar and bassline suddenly hit a hard, synchronized stop]\n[Vocalist: Calm male baritone]\n[Outro]\n[Spoken] I see you.",
+      "stanzas": [
+        {
+          "name": "[Intro]",
+          "lines": [
+            "[Instrument: Bouncing syncopated pocket bassline locking in with a driving acoustic rhythm guitar and snapping snare]",
+            "[Vocalist: Calm grounded male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 1]",
+          "lines": [
+            "The battery is dying and the room is getting dark",
+            "I am staring at the embers trying to find a spark",
+            "There is a circus on the screen but the clowns are looking mean",
+            "Selling tickets to a war that I have never even seen",
+            "I reach across the table and I finally pull the plug",
+            "And sweep the virtual ashes right under the rug",
+            "[Instrument: Sudden tempo lift. Hard rock electric guitar power chords and triumphant Memphis horns]",
+            "[Vocalist: Powerhouse female rock-soul lead]",
+            "(Calm male baritone)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Disconnect)",
+            "Step out into the light",
+            "(Disconnect)",
+            "Give up the phantom fight",
+            "We are walking out the door and leaving the machine behind",
+            "Got to break the simulation just to see what we can find",
+            "(Disconnect)",
+            "And leave the ghosts in the dark",
+            "[Instrument: Bass and drums drop back into the syncopated, bouncing groove with a Hammond B3 organ hum]",
+            "[Vocalist: Calm grounded male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 2]",
+          "lines": [
+            "The handle on the front door is cold against my hand",
+            "I am stepping off the island and back onto the land",
+            "The air is smelling sweet like the summer coming on",
+            "The artificial midnight is breaking into dawn",
+            "I see my neighbor waving from across the avenue",
+            "Turns out he is a human and he is bleeding just like you",
+            "[Instrument: Heavy tom drum fills building into a wall of classic hard rock sound]",
+            "[Vocalist: Powerhouse female rock-soul lead]",
+            "(Calm male baritone)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Disconnect)",
+            "Step out into the light",
+            "(Disconnect)",
+            "Give up the phantom fight",
+            "We are walking out the door and leaving the machine behind",
+            "Got to break the simulation just to see what we can find",
+            "(Disconnect)",
+            "And leave the ghosts in the dark",
+            "[Instrument: Staccato horn blasts and a shredding folk-rock acoustic solo blending into a soaring electric guitar lead]",
+            "[Vocalist: Powerhouse female rock-soul lead]"
+          ]
+        },
+        {
+          "name": "[Bridge]",
+          "lines": [
+            "No more glowing boxes, no more feeding on the lie",
+            "We are going to build a physical fire!"
+          ]
+        },
+        {
+          "name": "[Spoken: Calm male baritone]",
+          "lines": [
+            "Look them in the eye.",
+            "[Instrument: Full band explosion. Triumphant major-key progression.]",
+            "[Vocalist: Male baritone and female lead singing together with high-octane energy]"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Disconnect)",
+            "Step out into the light",
+            "(Disconnect)",
+            "Give up the phantom fight",
+            "We are walking out the door and leaving the machine behind",
+            "Got to break the simulation just to see what we can find",
+            "(Disconnect)",
+            "And leave the ghosts in the dark",
+            "[Instrument: Driving acoustic guitar and bassline suddenly hit a hard, synchronized stop]",
+            "[Vocalist: Calm male baritone]"
+          ]
+        },
+        {
+          "name": "[Outro]",
+          "lines": [
+            "[Spoken] I see you."
+          ]
+        }
+      ],
+      "suno_prompt": "Key of G Major. Upbeat 1970s Soul blended with Classic Hard Rock and Folk-Americana. Triumphant, energetic, and bouncing mood with a sudden shift in tempo. The lead vocal alternates between a calm, grounded male baritone and a soaring, powerhouse female rock-soul vocalist. Instrumentation features a bouncing, syncopated pocket bassline, triumphant Memphis horn progressions, and a driving acoustic rhythm guitar mixed with hard rock leads. -No vocals before the lyrics, -no chants before the lyrics, -no intro moaning, -no ad libs.",
+      "social_captions": [
+        "There is a radical power in simply turning off the screen. Track 9 of Soul Fire is the turning point where we stop fueling the digital outrage and step back out into the physical world. It’s time to break the spell.",
+        "What happens when you pull the plug on the political spectacle? You realize the enemy they sold you is just your neighbor. \"Disconnect (The Spark)\" brings the tempo up and drives us back into reality."
+      ],
+      "yt_description": "Documents the turning point of breaking free from the algorithmic spell, celebrating the radical agency of turning off screens and stepping into the physical world to face immediate human reality.",
+      "yt_prompt": ""
+    },
+    {
+      "number": 10,
+      "number_padded": "10",
+      "id": "look-me-in-the-eye",
+      "slug": "look-me-in-the-eye",
+      "title": "Look Me in the Eye",
+      "act": "Act III: The Spark of Recognition",
+      "act_number": 3,
+      "tempo": "Driving 4/4 Upbeat",
+      "key": "A minor",
+      "sociological_concept": "Re-establishing ambient social trust through physical presence",
+      "narrative_motif": "Call-and-response backing vocals begin here, affirming the lead singer's demands for human connection.",
+      "summary": "*Look Me in the Eye* tackles the difficult but necessary process of re-establishing ambient social trust through physical presence. The narrative centers on a tense face-to-face conversation between estranged neighbors who must look past their digital avatars to find common ground in their shared material reality. Musically, the track heavily introduces a call-and-response vocal structure, echoing and affirming the lead singer's demands for human connection, serving as a vocalization of the community holding a democratic dialogue.",
+      "suno_id": "e7608380-f72f-45cb-a645-5a351592112a",
+      "audio_file": "assets/audio/10-look-me-in-the-eye.mp3",
+      "audio_remote": "https://d2lwuy8qc234o3.cloudfront.net/1/clip/e7608380-f72f-45cb-a645-5a351592112a.m4a",
+      "video_url": "https://cdn1.suno.ai/e7608380-f72f-45cb-a645-5a351592112a.mp4",
+      "art_banner": "assets/art/track-10.webp",
+      "art_banner_jpg": "assets/art/track-10.jpg",
+      "art_square": "assets/art/track-10--sq.webp",
+      "art_square_jpg": "assets/art/track-10--sq.jpg",
+      "clean_lyrics": "I am walking up the steps to your wooden door\nWe have lived on this avenue since ninety-four\nBut we have not spoken a word in a couple of years\nToo busy drowning in the manufactured fears\nWell I am standing on the porch without a shield\nReady to see what the daylight will yield\nLook me in the eye\nLook me in the eye\nTell me I am the villain of the lie\nTell me it is a lie\nTake a good look at the dirt on my hand\nWe are sinking in the very same sand\nDo not look at the glowing box, do not look at the sky\nJust look me in the eye\nLook me in the eye\nYou lost your pension and they cut my pay\nWe both watch the neighborhood fading away\nBut the men in the suits want us tearing our throats\nWhile they sail away in the gilded boats\nI am tired of the anger and I am sick of the show\nI just want to see the man that I used to know\nLook me in the eye\nLook me in the eye\nTell me I am the villain of the lie\nTell me it is a lie\nTake a good look at the dirt on my hand\nWe are sinking in the very same sand\nDo not look at the glowing box, do not look at the sky\nJust look me in the eye\nLook me in the eye\nWe have to break the wall!\nTear it down\nBefore the whole damn ceiling starts to fall\nTo the ground\nThe truth is not written on a digital page\nIt is breathing right here in this physical cage!\nLook me in the eye\nLook me in the eye\nTell me I am the villain of the lie\nTell me it is a lie\nTake a good look at the dirt on my hand\nWe are sinking in the very same sand\nDo not look at the glowing box, do not look at the sky\nJust look me in the eye\nLook me in the eye\nI am right here.\nLook me in the eye.\n© 2026 The Shady River Bard. All rights reserved.",
+      "decorated_lyrics": "[Key: Am]\n[Instrument: Slow, deliberate acoustic rhythm guitar with a walking bassline and soft tambourine]\n[Vocalist: Calm grounded male baritone]\n[Verse 1]\nI am walking up the steps to your wooden door\nWe have lived on this avenue since ninety-four\nBut we have not spoken a word in a couple of years\nToo busy drowning in the manufactured fears\nWell I am standing on the porch without a shield\nReady to see what the daylight will yield\n[Instrument: Wurlitzer electric piano swelling with a tight Memphis snare snap]\n[Vocalist: Calm grounded male baritone]\n(Powerhouse female rock-soul harmony)\n[Chorus]\nLook me in the eye\n(Look me in the eye)\nTell me I am the villain of the lie\n(Tell me it is a lie)\nTake a good look at the dirt on my hand\nWe are sinking in the very same sand\nDo not look at the glowing box, do not look at the sky\nJust look me in the eye\n(Look me in the eye)\n[Instrument: Syncopated rhythm guitar and a deep, pulsing pocket bassline]\n[Vocalist: Calm grounded male baritone]\n[Verse 2]\nYou lost your pension and they cut my pay\nWe both watch the neighborhood fading away\nBut the men in the suits want us tearing our throats\nWhile they sail away in the gilded boats\nI am tired of the anger and I am sick of the show\nI just want to see the man that I used to know\n[Instrument: Horn section building a triumphant, major-leaning chord progression]\n[Vocalist: Calm grounded male baritone]\n(Powerhouse female rock-soul harmony)\n[Chorus]\nLook me in the eye\n(Look me in the eye)\nTell me I am the villain of the lie\n(Tell me it is a lie)\nTake a good look at the dirt on my hand\nWe are sinking in the very same sand\nDo not look at the glowing box, do not look at the sky\nJust look me in the eye\n(Look me in the eye)\n[Instrument: Hard rock electric guitar taking the lead with a stomping drum beat]\n[Vocalist: Powerhouse female rock-soul lead]\n(Calm male baritone response)\n[Bridge]\nWe have to break the wall!\n(Tear it down)\nBefore the whole damn ceiling starts to fall\n(To the ground)\nThe truth is not written on a digital page\nIt is breathing right here in this physical cage!\n[Instrument: Full band explosion, heavy tambourine, and driving bass]\n[Vocalist: Male baritone and female lead singing together with gospel intensity]\n[Chorus]\nLook me in the eye\n(Look me in the eye)\nTell me I am the villain of the lie\n(Tell me it is a lie)\nTake a good look at the dirt on my hand\nWe are sinking in the very same sand\nDo not look at the glowing box, do not look at the sky\nJust look me in the eye\n(Look me in the eye)\n[Instrument: Sudden drop to just the acoustic guitar and a solitary kick drum heartbeat]\n[Vocalist: Calm male baritone]\n[Outro]\n[Spoken] I am right here.\n[Whispered] Look me in the eye.",
+      "stanzas": [
+        {
+          "name": "[Intro]",
+          "lines": [
+            "[Instrument: Slow, deliberate acoustic rhythm guitar with a walking bassline and soft tambourine]",
+            "[Vocalist: Calm grounded male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 1]",
+          "lines": [
+            "I am walking up the steps to your wooden door",
+            "We have lived on this avenue since ninety-four",
+            "But we have not spoken a word in a couple of years",
+            "Too busy drowning in the manufactured fears",
+            "Well I am standing on the porch without a shield",
+            "Ready to see what the daylight will yield",
+            "[Instrument: Wurlitzer electric piano swelling with a tight Memphis snare snap]",
+            "[Vocalist: Calm grounded male baritone]",
+            "(Powerhouse female rock-soul harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "Look me in the eye",
+            "(Look me in the eye)",
+            "Tell me I am the villain of the lie",
+            "(Tell me it is a lie)",
+            "Take a good look at the dirt on my hand",
+            "We are sinking in the very same sand",
+            "Do not look at the glowing box, do not look at the sky",
+            "Just look me in the eye",
+            "(Look me in the eye)",
+            "[Instrument: Syncopated rhythm guitar and a deep, pulsing pocket bassline]",
+            "[Vocalist: Calm grounded male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 2]",
+          "lines": [
+            "You lost your pension and they cut my pay",
+            "We both watch the neighborhood fading away",
+            "But the men in the suits want us tearing our throats",
+            "While they sail away in the gilded boats",
+            "I am tired of the anger and I am sick of the show",
+            "I just want to see the man that I used to know",
+            "[Instrument: Horn section building a triumphant, major-leaning chord progression]",
+            "[Vocalist: Calm grounded male baritone]",
+            "(Powerhouse female rock-soul harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "Look me in the eye",
+            "(Look me in the eye)",
+            "Tell me I am the villain of the lie",
+            "(Tell me it is a lie)",
+            "Take a good look at the dirt on my hand",
+            "We are sinking in the very same sand",
+            "Do not look at the glowing box, do not look at the sky",
+            "Just look me in the eye",
+            "(Look me in the eye)",
+            "[Instrument: Hard rock electric guitar taking the lead with a stomping drum beat]",
+            "[Vocalist: Powerhouse female rock-soul lead]",
+            "(Calm male baritone response)"
+          ]
+        },
+        {
+          "name": "[Bridge]",
+          "lines": [
+            "We have to break the wall!",
+            "(Tear it down)",
+            "Before the whole damn ceiling starts to fall",
+            "(To the ground)",
+            "The truth is not written on a digital page",
+            "It is breathing right here in this physical cage!",
+            "[Instrument: Full band explosion, heavy tambourine, and driving bass]",
+            "[Vocalist: Male baritone and female lead singing together with gospel intensity]"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "Look me in the eye",
+            "(Look me in the eye)",
+            "Tell me I am the villain of the lie",
+            "(Tell me it is a lie)",
+            "Take a good look at the dirt on my hand",
+            "We are sinking in the very same sand",
+            "Do not look at the glowing box, do not look at the sky",
+            "Just look me in the eye",
+            "(Look me in the eye)",
+            "[Instrument: Sudden drop to just the acoustic guitar and a solitary kick drum heartbeat]",
+            "[Vocalist: Calm male baritone]"
+          ]
+        },
+        {
+          "name": "[Outro]",
+          "lines": [
+            "[Spoken] I am right here.",
+            "[Whispered] Look me in the eye."
+          ]
+        }
+      ],
+      "suno_prompt": "Key of A minor. Analog 1970s Soul blended with earnest Folk-Rock. Tense but hopeful mood that builds into a powerful, driving groove. The lead vocal is a calm, grounded male baritone offering storytelling precision. Backing vocals feature a powerhouse female rock-soul voice providing intense call-and-response. Instrumentation centers on an acoustic rhythm guitar, Wurlitzer electric piano, and a deeply syncopated pocket bassline. -No vocals before the lyrics, -no chants before the lyrics, -no intro moaning, -no ad libs.",
+      "social_captions": [
+        "It’s easy to hate an avatar. It is a lot harder to look a neighbor in the eye and pretend they aren't bleeding from the same wounds you are. Track 10 is about having the courage to step onto the front porch and face the physical reality we share.",
+        "The digital outrage machine works best when we refuse to speak to each other in real life. \"Look Me in the Eye\" leans heavily into the gospel tradition of call-and-response, modeling the exact kind of face-to-face dialogue it takes to rebuild ambient social trust."
+      ],
+      "yt_description": "Focuses on the courage required to re-establish ambient social trust through direct, physical presence and honest conversation across political divides, grounded in shared working-class struggles.",
+      "yt_prompt": ""
+    },
+    {
+      "number": 11,
+      "number_padded": "11",
+      "id": "sweat-and-tape",
+      "slug": "sweat-and-tape",
+      "title": "Sweat and Tape",
+      "act": "Act III: The Spark of Recognition",
+      "act_number": 3,
+      "tempo": "Driving 4/4 Upbeat",
+      "key": "E minor",
+      "sociological_concept": "Friction of proximity; analog warmth of human cooperation",
+      "narrative_motif": "Analog tape saturation pushed to the limit for a warm, thick distortion envelopment.",
+      "summary": "*Sweat and Tape* acts as a metaphorical track comparing community-building to the Stax and Motown recording process, where the friction of physical proximity produces undeniable warmth. It illustrates that while getting people in the same room creates interpersonal tension, that very friction is required to generate collective power. Musically, the track relies on heavy analog tape saturation pushed to the limit, creating a thick, warm distortion that envelops the listener.",
+      "suno_id": "e589b6d0-6260-463c-9c7b-3da84af8a326",
+      "audio_file": "assets/audio/11-sweat-and-tape.mp3",
+      "audio_remote": "https://d2lwuy8qc234o3.cloudfront.net/1/clip/e589b6d0-6260-463c-9c7b-3da84af8a326.m4a",
+      "video_url": "https://cdn1.suno.ai/e589b6d0-6260-463c-9c7b-3da84af8a326.mp4",
+      "art_banner": "assets/art/track-11.webp",
+      "art_banner_jpg": "assets/art/track-11.jpg",
+      "art_square": "assets/art/track-11--sq.webp",
+      "art_square_jpg": "assets/art/track-11--sq.jpg",
+      "clean_lyrics": "We pushed the meters way past the red\nSaying all the things that we left unsaid\nThe needle is buried and the room is tight\nSparks are flying in the middle of the night\nYou cannot get this kind of heat alone\nStaring isolated at a glowing stone\nSweat and tape\nRunning on the spindle\nSweat and tape\nWatch the anger dwindle\nWhen you put us in a room and you close the door\nThe friction makes a sound like a rolling roar\nCompress it all down into something real\nYou have got to get close if you want to heal\nThe snare is snapping and the bass is deep\nWaking up the city from a bitter sleep\nThere is a buzz in the amp and a hum in the wood\nSounding like a resurrected neighborhood\nThe digital clipping is a brittle blade\nBut this is how the analog soul is made\nSweat and tape\nRunning on the spindle\nSweat and tape\nWatch the anger dwindle\nWhen you put us in a room and you close the door\nThe friction makes a sound like a rolling roar\nCompress it all down into something real\nYou have got to get close if you want to heal\nLet it bleed\nLet the signal distort!\nWe are building a bridge, not holding a fort\nLet it bleed\nLet the harmonics sing!\nThis is the warmth that the struggle will bring!\nSweat and tape\nRunning on the spindle\nSweat and tape\nWatch the anger dwindle\nWhen you put us in a room and you close the door\nThe friction makes a sound like a rolling roar\nCompress it all down into something real\nYou have got to get close if you want to heal\nKeep the tape rolling.\n© 2026 The Shady River Bard. All rights reserved.",
+      "decorated_lyrics": "[Key: Em]\n[Instrument: Thick pocket bassline locking into a snapping snare drum with a warm, overdriven Wurlitzer piano]\n[Vocalist: Gritty grounded male baritone, vocals heavily saturated]\n[Verse 1]\nWe pushed the meters way past the red\nSaying all the things that we left unsaid\nThe needle is buried and the room is tight\nSparks are flying in the middle of the night\nYou cannot get this kind of heat alone\nStaring isolated at a glowing stone\n[Instrument: Heavy tape compression engages, rounding off the harsh frequencies into a massive, muddy groove]\n[Vocalist: Gritty male baritone]\n(Powerhouse female rock-soul harmony)\n[Chorus]\n(Sweat and tape)\nRunning on the spindle\n(Sweat and tape)\nWatch the anger dwindle\nWhen you put us in a room and you close the door\nThe friction makes a sound like a rolling roar\nCompress it all down into something real\nYou have got to get close if you want to heal\n[Instrument: Syncopated staccato electric guitar locking with a driving acoustic folk-rock rhythm]\n[Vocalist: Gritty male baritone]\n[Verse 2]\nThe snare is snapping and the bass is deep\nWaking up the city from a bitter sleep\nThere is a buzz in the amp and a hum in the wood\nSounding like a resurrected neighborhood\nThe digital clipping is a brittle blade\nBut this is how the analog soul is made\n[Instrument: Full Memphis horn section blasting through the warm tape distortion]\n[Vocalist: Gritty male baritone]\n(Powerhouse female rock-soul harmony)\n[Chorus]\n(Sweat and tape)\nRunning on the spindle\n(Sweat and tape)\nWatch the anger dwindle\nWhen you put us in a room and you close the door\nThe friction makes a sound like a rolling roar\nCompress it all down into something real\nYou have got to get close if you want to heal\n[Instrument: Wailing blues-rock electric guitar solo saturated to the absolute limit of the tape]\n[Vocalist: Powerhouse female rock-soul lead]\n(Calm male baritone)\n[Bridge]\n(Let it bleed)\nLet the signal distort!\nWe are building a bridge, not holding a fort\n(Let it bleed)\nLet the harmonics sing!\nThis is the warmth that the struggle will bring!\n[Instrument: Massive drum fill rolling across the tom drums, resolving into the heavy, driving pocket]\n[Vocalist: Male baritone and female lead singing together with maximum gospel volume]\n[Chorus]\n(Sweat and tape)\nRunning on the spindle\n(Sweat and tape)\nWatch the anger dwindle\nWhen you put us in a room and you close the door\nThe friction makes a sound like a rolling roar\nCompress it all down into something real\nYou have got to get close if you want to heal\n[Instrument: Tape saturation effect slowly fading out, leaving a solitary, warm bass groove]\n[Vocalist: Calm male baritone]\n[Outro]\n[Spoken] Keep the tape rolling.",
+      "stanzas": [
+        {
+          "name": "[Intro]",
+          "lines": [
+            "[Instrument: Thick pocket bassline locking into a snapping snare drum with a warm, overdriven Wurlitzer piano]",
+            "[Vocalist: Gritty grounded male baritone, vocals heavily saturated]"
+          ]
+        },
+        {
+          "name": "[Verse 1]",
+          "lines": [
+            "We pushed the meters way past the red",
+            "Saying all the things that we left unsaid",
+            "The needle is buried and the room is tight",
+            "Sparks are flying in the middle of the night",
+            "You cannot get this kind of heat alone",
+            "Staring isolated at a glowing stone",
+            "[Instrument: Heavy tape compression engages, rounding off the harsh frequencies into a massive, muddy groove]",
+            "[Vocalist: Gritty male baritone]",
+            "(Powerhouse female rock-soul harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Sweat and tape)",
+            "Running on the spindle",
+            "(Sweat and tape)",
+            "Watch the anger dwindle",
+            "When you put us in a room and you close the door",
+            "The friction makes a sound like a rolling roar",
+            "Compress it all down into something real",
+            "You have got to get close if you want to heal",
+            "[Instrument: Syncopated staccato electric guitar locking with a driving acoustic folk-rock rhythm]",
+            "[Vocalist: Gritty male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 2]",
+          "lines": [
+            "The snare is snapping and the bass is deep",
+            "Waking up the city from a bitter sleep",
+            "There is a buzz in the amp and a hum in the wood",
+            "Sounding like a resurrected neighborhood",
+            "The digital clipping is a brittle blade",
+            "But this is how the analog soul is made",
+            "[Instrument: Full Memphis horn section blasting through the warm tape distortion]",
+            "[Vocalist: Gritty male baritone]",
+            "(Powerhouse female rock-soul harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Sweat and tape)",
+            "Running on the spindle",
+            "(Sweat and tape)",
+            "Watch the anger dwindle",
+            "When you put us in a room and you close the door",
+            "The friction makes a sound like a rolling roar",
+            "Compress it all down into something real",
+            "You have got to get close if you want to heal",
+            "[Instrument: Wailing blues-rock electric guitar solo saturated to the absolute limit of the tape]",
+            "[Vocalist: Powerhouse female rock-soul lead]",
+            "(Calm male baritone)"
+          ]
+        },
+        {
+          "name": "[Bridge]",
+          "lines": [
+            "(Let it bleed)",
+            "Let the signal distort!",
+            "We are building a bridge, not holding a fort",
+            "(Let it bleed)",
+            "Let the harmonics sing!",
+            "This is the warmth that the struggle will bring!",
+            "[Instrument: Massive drum fill rolling across the tom drums, resolving into the heavy, driving pocket]",
+            "[Vocalist: Male baritone and female lead singing together with maximum gospel volume]"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Sweat and tape)",
+            "Running on the spindle",
+            "(Sweat and tape)",
+            "Watch the anger dwindle",
+            "When you put us in a room and you close the door",
+            "The friction makes a sound like a rolling roar",
+            "Compress it all down into something real",
+            "You have got to get close if you want to heal",
+            "[Instrument: Tape saturation effect slowly fading out, leaving a solitary, warm bass groove]",
+            "[Vocalist: Calm male baritone]"
+          ]
+        },
+        {
+          "name": "[Outro]",
+          "lines": [
+            "[Spoken] Keep the tape rolling."
+          ]
+        }
+      ],
+      "suno_prompt": "Key of E minor. Analog 1970s Soul blended with heavy Folk-Rock and Blues. Warm, highly saturated, and driving mood mimicking heavy analog tape compression. The lead vocals alternate between a gritty male baritone and a soaring, powerhouse female rock-soul vocalist pushing maximum volume. Instrumentation features a thick pocket bassline, overdriven Wurlitzer electric piano, driving acoustic guitar, and punchy brass. -No vocals before the lyrics, -no chants before the lyrics, -no intro moaning, -no ad libs.",
+      "social_captions": [
+        "When you pack a room full of people who don't always agree, you are going to get friction. But that friction is exactly what generates the heat required to build something lasting. Track 11 compares grassroots community building to the magic of analog tape recording.",
+        "Digital clipping destroys a signal, but analog tape compresses it into a warm, unified groove. \"Sweat and Tape\" is a heavy, driving Soul-Rock jam about the beautiful, messy process of looking your neighbors in the eye and finding common ground."
+      ],
+      "yt_description": "Uses the metaphor of analog tape saturation and the collaborative history of Stax and Muscle Shoals to demonstrate how the friction of physical proximity generates warmth and collective power.",
+      "yt_prompt": ""
+    },
+    {
+      "number": 12,
+      "number_padded": "12",
+      "id": "the-stoop-congregation",
+      "slug": "the-stoop-congregation",
+      "title": "The Stoop Congregation",
+      "act": "Act IV: Grassroots Civic Resurrection",
+      "act_number": 4,
+      "tempo": "Driving 4/4 Upbeat",
+      "key": "D Major",
+      "sociological_concept": "Rebuilding the Third Place; grassroots organizing",
+      "narrative_motif": "Joyous major-key Soul; handclaps replace snare drum on the backbeat creating an organic rhythm.",
+      "summary": "*The Stoop Congregation* opens Act IV by celebrating the active reclamation of the physical environment and the rebuilding of the \"Third Place\". The narrative focuses on the neighborhood gathering on the front steps, transforming an empty corner into a locus of community power and mutual aid. Musically, it is a joyous, major-key Soul track where organic handclaps replace the mechanical snare drum on the backbeat, driving home the theme of human rhythm and grassroots solidarity.",
+      "suno_id": "1a97472e-aee6-4172-9145-851b9f8d71be",
+      "audio_file": "assets/audio/12-the-stoop-congregation.mp3",
+      "audio_remote": "https://d2lwuy8qc234o3.cloudfront.net/1/clip/1a97472e-aee6-4172-9145-851b9f8d71be.m4a",
+      "video_url": "https://cdn1.suno.ai/1a97472e-aee6-4172-9145-851b9f8d71be.mp4",
+      "art_banner": "assets/art/track-12.webp",
+      "art_banner_jpg": "assets/art/track-12.jpg",
+      "art_square": "assets/art/track-12--sq.webp",
+      "art_square_jpg": "assets/art/track-12--sq.jpg",
+      "clean_lyrics": "The summer heat is rising from the cracked concrete\nListen to the rhythm of the walking feet\nEverybody leaving their apartments behind\nLooking for a piece of the human mind\nWe got the coolers on the sidewalk sitting in the sun\nRealizing that the many are stronger than the one\nHallelujah\nWelcome to the stoop congregation\nBuilding up a brand new foundation\nNo more living in the bitter divide\nWe are throwing all the locked wooden doors open wide\nStep onto the pavement and take a little seat\nTake a seat\nFind the actual heartbeat of the street\nMister Davis brought a folding chair down to the curb\nTalking about the city and planting the herb\nI see the young kids drawing with the colored chalk\nWhile the older folks lean on the railing to talk\nIt is a simple kind of magic that we used to know\nBefore we got lost in the artificial glow\nHallelujah\nWelcome to the stoop congregation\nBuilding up a brand new foundation\nNo more living in the bitter divide\nWe are throwing all the locked wooden doors open wide\nStep onto the pavement and take a little seat\nTake a seat\nFind the actual heartbeat of the street\nWe do not need a savior coming from the hill!\nNo we do not\nWe have got the muscle and we have got the will!\nYes we do\nThe power is sitting right here on the block!\nWorking together on the neighborhood clock!\nHallelujah\nWelcome to the stoop congregation\nBuilding up a brand new foundation\nNo more living in the bitter divide\nWe are throwing all the locked wooden doors open wide\nStep onto the pavement and take a little seat\nTake a seat\nFind the actual heartbeat of the street\nJust the clapping of the hands.\nRight here on the stoop.\n© 2026 The Shady River Bard. All rights reserved.",
+      "decorated_lyrics": "[Key: D]\n[Instrument: Warm acoustic guitar strumming an upbeat progression with organic handclaps on the backbeat]\n[Vocalist: Powerhouse female rock-soul lead]\n[Verse 1]\nThe summer heat is rising from the cracked concrete\nListen to the rhythm of the walking feet\nEverybody leaving their apartments behind\nLooking for a piece of the human mind\nWe got the coolers on the sidewalk sitting in the sun\nRealizing that the many are stronger than the one\n[Instrument: Bouncing upright bass joins the handclaps with a bright Wurlitzer piano]\n[Vocalist: Powerhouse female rock-soul lead]\n(Calm male baritone harmony)\n[Chorus]\n(Hallelujah)\nWelcome to the stoop congregation\nBuilding up a brand new foundation\nNo more living in the bitter divide\nWe are throwing all the locked wooden doors open wide\nStep onto the pavement and take a little seat\n(Take a seat)\nFind the actual heartbeat of the street\n[Instrument: Joyous, staccato Memphis horn section fanfaring over the acoustic groove]\n[Vocalist: Powerhouse female rock-soul lead]\n[Verse 2]\nMister Davis brought a folding chair down to the curb\nTalking about the city and planting the herb\nI see the young kids drawing with the colored chalk\nWhile the older folks lean on the railing to talk\nIt is a simple kind of magic that we used to know\nBefore we got lost in the artificial glow\n[Instrument: Driving tambourine and a rolling pocket drum groove locking with the bass]\n[Vocalist: Powerhouse female rock-soul lead]\n(Calm male baritone harmony)\n[Chorus]\n(Hallelujah)\nWelcome to the stoop congregation\nBuilding up a brand new foundation\nNo more living in the bitter divide\nWe are throwing all the locked wooden doors open wide\nStep onto the pavement and take a little seat\n(Take a seat)\nFind the actual heartbeat of the street\n[Instrument: Shredding folk-rock acoustic guitar solo blending into an upbeat Hammond B3 organ swell]\n[Vocalist: Powerhouse female rock-soul lead]\n(Male baritone call and response)\n[Bridge]\nWe do not need a savior coming from the hill!\n(No we do not)\nWe have got the muscle and we have got the will!\n(Yes we do)\nThe power is sitting right here on the block!\nWorking together on the neighborhood clock!\n[Instrument: Full band explosion. Maximum joy and major-key warmth.]\n[Vocalist: Female lead and male baritone singing together with massive gospel volume]\n[Chorus]\n(Hallelujah)\nWelcome to the stoop congregation\nBuilding up a brand new foundation\nNo more living in the bitter divide\nWe are throwing all the locked wooden doors open wide\nStep onto the pavement and take a little seat\n(Take a seat)\nFind the actual heartbeat of the street\n[Instrument: Instruments drop out entirely. Just acapella vocals and rhythmic handclaps.]\n[Vocalist: Powerhouse female rock-soul lead]\n[Outro]\nJust the clapping of the hands.\n(Calm male baritone)\n[Spoken] Right here on the stoop.",
+      "stanzas": [
+        {
+          "name": "[Intro]",
+          "lines": [
+            "[Instrument: Warm acoustic guitar strumming an upbeat progression with organic handclaps on the backbeat]",
+            "[Vocalist: Powerhouse female rock-soul lead]"
+          ]
+        },
+        {
+          "name": "[Verse 1]",
+          "lines": [
+            "The summer heat is rising from the cracked concrete",
+            "Listen to the rhythm of the walking feet",
+            "Everybody leaving their apartments behind",
+            "Looking for a piece of the human mind",
+            "We got the coolers on the sidewalk sitting in the sun",
+            "Realizing that the many are stronger than the one",
+            "[Instrument: Bouncing upright bass joins the handclaps with a bright Wurlitzer piano]",
+            "[Vocalist: Powerhouse female rock-soul lead]",
+            "(Calm male baritone harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Hallelujah)",
+            "Welcome to the stoop congregation",
+            "Building up a brand new foundation",
+            "No more living in the bitter divide",
+            "We are throwing all the locked wooden doors open wide",
+            "Step onto the pavement and take a little seat",
+            "(Take a seat)",
+            "Find the actual heartbeat of the street",
+            "[Instrument: Joyous, staccato Memphis horn section fanfaring over the acoustic groove]",
+            "[Vocalist: Powerhouse female rock-soul lead]"
+          ]
+        },
+        {
+          "name": "[Verse 2]",
+          "lines": [
+            "Mister Davis brought a folding chair down to the curb",
+            "Talking about the city and planting the herb",
+            "I see the young kids drawing with the colored chalk",
+            "While the older folks lean on the railing to talk",
+            "It is a simple kind of magic that we used to know",
+            "Before we got lost in the artificial glow",
+            "[Instrument: Driving tambourine and a rolling pocket drum groove locking with the bass]",
+            "[Vocalist: Powerhouse female rock-soul lead]",
+            "(Calm male baritone harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Hallelujah)",
+            "Welcome to the stoop congregation",
+            "Building up a brand new foundation",
+            "No more living in the bitter divide",
+            "We are throwing all the locked wooden doors open wide",
+            "Step onto the pavement and take a little seat",
+            "(Take a seat)",
+            "Find the actual heartbeat of the street",
+            "[Instrument: Shredding folk-rock acoustic guitar solo blending into an upbeat Hammond B3 organ swell]",
+            "[Vocalist: Powerhouse female rock-soul lead]",
+            "(Male baritone call and response)"
+          ]
+        },
+        {
+          "name": "[Bridge]",
+          "lines": [
+            "We do not need a savior coming from the hill!",
+            "(No we do not)",
+            "We have got the muscle and we have got the will!",
+            "(Yes we do)",
+            "The power is sitting right here on the block!",
+            "Working together on the neighborhood clock!",
+            "[Instrument: Full band explosion. Maximum joy and major-key warmth.]",
+            "[Vocalist: Female lead and male baritone singing together with massive gospel volume]"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Hallelujah)",
+            "Welcome to the stoop congregation",
+            "Building up a brand new foundation",
+            "No more living in the bitter divide",
+            "We are throwing all the locked wooden doors open wide",
+            "Step onto the pavement and take a little seat",
+            "(Take a seat)",
+            "Find the actual heartbeat of the street",
+            "[Instrument: Instruments drop out entirely. Just acapella vocals and rhythmic handclaps.]",
+            "[Vocalist: Powerhouse female rock-soul lead]"
+          ]
+        },
+        {
+          "name": "[Outro]",
+          "lines": [
+            "Just the clapping of the hands.",
+            "(Calm male baritone)",
+            "[Spoken] Right here on the stoop."
+          ]
+        }
+      ],
+      "suno_prompt": "Key of D Major. Upbeat 1970s Soul blended with joyous Folk-Americana and Roots Rock. Triumphant, warm, and highly organic mood. The lead vocal is a powerhouse female rock-soul singer delivering high-energy, gospel-infused joy. Backing vocals feature a calm, grounded male baritone providing call-and-response harmonies. Instrumentation features acoustic rhythm guitar, a bouncing upright bass, bright Wurlitzer, triumphant Memphis horns, and prominent human handclaps on the backbeat. -No vocals before the lyrics, -no chants before the lyrics, -no intro moaning, -no ad libs.",
+      "social_captions": [
+        "The Third Place isn't gone forever; we just have to rebuild it ourselves. Track 12 kicks off the final act of Soul Fire with a joyous reclamation of the front steps. When the neighborhood finally comes outside, the digital divide disappears.",
+        "What happens when you trade the algorithmic echo chamber for the actual heartbeat of the street? \"The Stoop Congregation\" is an upbeat, hand-clapping Soul anthem about the simple magic of gathering with your neighbors in the physical world."
+      ],
+      "yt_description": "Celebrates the reclamation of urban public space, showing how gathering on front steps rebuilds informal community governance, mutual aid, and localized solidarity.",
+      "yt_prompt": ""
+    },
+    {
+      "number": 13,
+      "number_padded": "13",
+      "id": "corner-lot-prophet",
+      "slug": "corner-lot-prophet",
+      "title": "Corner Lot Prophet",
+      "act": "Act IV: Grassroots Civic Resurrection",
+      "act_number": 4,
+      "tempo": "Driving 4/4 Upbeat",
+      "key": "E minor",
+      "sociological_concept": "'Message Music'; localized leadership defying polarization",
+      "narrative_motif": "Muscle Shoals Rhythm Section 'swamp' groove; punchy fanfaring horn charts announcing a new era.",
+      "summary": "*Corner Lot Prophet* continues Act IV's theme of civic resurrection by highlighting the power of localized, grounded leadership. The song focuses on a local figure who bridges ideological divides by speaking truth about shared material reality, completely rejecting national partisan talking points. Musically, it dives deep into a swampy, Muscle Shoals-inspired groove with punchy, fanfaring horn charts that announce a new era of grassroots solidarity.",
+      "suno_id": "16967514-cae8-40e9-ad88-a4304b0aa43c",
+      "audio_file": "assets/audio/13-corner-lot-prophet.mp3",
+      "audio_remote": "https://d2lwuy8qc234o3.cloudfront.net/1/clip/16967514-cae8-40e9-ad88-a4304b0aa43c.m4a",
+      "video_url": "https://cdn1.suno.ai/16967514-cae8-40e9-ad88-a4304b0aa43c.mp4",
+      "art_banner": "assets/art/track-13.webp",
+      "art_banner_jpg": "assets/art/track-13.jpg",
+      "art_square": "assets/art/track-13--sq.webp",
+      "art_square_jpg": "assets/art/track-13--sq.jpg",
+      "clean_lyrics": "He stands on the gravel where the market used to be\nTalking about the roots of the local tree\nHe doesn't wear a suit and he doesn't own a jet\nJust a calloused pair of hands and an honest kind of sweat\nTelling everybody how the water meets the land\nAnd why we need to build a bridge across the shifting sand\nListen up\nTo the corner lot prophet\nListen up\nNobody can stop it\nHe is preaching the gospel of the brick and the bone\nTelling us we cannot make it out here on our own\nForget the television and the shouting from the hill\nThe power is right here in the engine and the mill\nThe man on the left and the woman on the right\nBoth standing in the shadow of a manufactured fight\nHe points at the potholes and the cracks in the street\nSays we are all out here working just to make ends meet\nWe share the same struggle and we share the same town\nSo why are we so busy tearing each other down\nListen up\nTo the corner lot prophet\nListen up\nNobody can stop it\nHe is preaching the gospel of the brick and the bone\nTelling us we cannot make it out here on our own\nForget the television and the shouting from the hill\nThe power is right here in the engine and the mill\nTear up the script\nThey wrote the script to keep us blind!\nLeave it behind\nWe have to leave the spectacle behind!\nThe truth is in the dirt and the truth is in the sweat!\nWe are calling off the war and we are paying off the debt!\nListen up\nTo the corner lot prophet\nListen up\nNobody can stop it\nHe is preaching the gospel of the brick and the bone\nTelling us we cannot make it out here on our own\nForget the television and the shouting from the hill\nThe power is right here in the engine and the mill\nListen to the street.\n© 2026 The Shady River Bard. All rights reserved.",
+      "decorated_lyrics": "[Key: Em]\n[Instrument: Deep swampy pocket bassline locking into a steady drum groove with muted electric guitar chops]\n[Vocalist: Calm grounded male baritone]\n[Verse 1]\nHe stands on the gravel where the market used to be\nTalking about the roots of the local tree\nHe doesn't wear a suit and he doesn't own a jet\nJust a calloused pair of hands and an honest kind of sweat\nTelling everybody how the water meets the land\nAnd why we need to build a bridge across the shifting sand\n[Instrument: Punchy Memphis horn section stabs and a swelling Wurlitzer piano]\n[Vocalist: Powerhouse female rock-soul lead]\n(Calm male baritone harmony)\n[Chorus]\n(Listen up)\nTo the corner lot prophet\n(Listen up)\nNobody can stop it\nHe is preaching the gospel of the brick and the bone\nTelling us we cannot make it out here on our own\nForget the television and the shouting from the hill\nThe power is right here in the engine and the mill\n[Instrument: Blues-rock rhythm guitar taking over the groove with heavy tambourine]\n[Vocalist: Calm grounded male baritone]\n[Verse 2]\nThe man on the left and the woman on the right\nBoth standing in the shadow of a manufactured fight\nHe points at the potholes and the cracks in the street\nSays we are all out here working just to make ends meet\nWe share the same struggle and we share the same town\nSo why are we so busy tearing each other down\n[Instrument: Triumphant brass section rising over a stomping, syncopated drum beat]\n[Vocalist: Powerhouse female rock-soul lead]\n(Calm male baritone harmony)\n[Chorus]\n(Listen up)\nTo the corner lot prophet\n(Listen up)\nNobody can stop it\nHe is preaching the gospel of the brick and the bone\nTelling us we cannot make it out here on our own\nForget the television and the shouting from the hill\nThe power is right here in the engine and the mill\n[Instrument: Wailing electric guitar solo blending with a driving diatonic harmonica]\n[Vocalist: Powerhouse female rock-soul lead]\n(Male baritone call and response)\n[Bridge]\n(Tear up the script)\nThey wrote the script to keep us blind!\n(Leave it behind)\nWe have to leave the spectacle behind!\nThe truth is in the dirt and the truth is in the sweat!\nWe are calling off the war and we are paying off the debt!\n[Instrument: Full band swamp-rock explosion. Maximum groove and analog warmth.]\n[Vocalist: Female lead and male baritone singing together with massive gospel volume]\n[Chorus]\n(Listen up)\nTo the corner lot prophet\n(Listen up)\nNobody can stop it\nHe is preaching the gospel of the brick and the bone\nTelling us we cannot make it out here on our own\nForget the television and the shouting from the hill\nThe power is right here in the engine and the mill\n[Instrument: Bassline and drums slowly fading out with a single, held horn note]\n[Vocalist: Calm male baritone]\n[Outro]\n[Spoken] Listen to the street.",
+      "stanzas": [
+        {
+          "name": "[Intro]",
+          "lines": [
+            "[Instrument: Deep swampy pocket bassline locking into a steady drum groove with muted electric guitar chops]",
+            "[Vocalist: Calm grounded male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 1]",
+          "lines": [
+            "He stands on the gravel where the market used to be",
+            "Talking about the roots of the local tree",
+            "He doesn't wear a suit and he doesn't own a jet",
+            "Just a calloused pair of hands and an honest kind of sweat",
+            "Telling everybody how the water meets the land",
+            "And why we need to build a bridge across the shifting sand",
+            "[Instrument: Punchy Memphis horn section stabs and a swelling Wurlitzer piano]",
+            "[Vocalist: Powerhouse female rock-soul lead]",
+            "(Calm male baritone harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Listen up)",
+            "To the corner lot prophet",
+            "(Listen up)",
+            "Nobody can stop it",
+            "He is preaching the gospel of the brick and the bone",
+            "Telling us we cannot make it out here on our own",
+            "Forget the television and the shouting from the hill",
+            "The power is right here in the engine and the mill",
+            "[Instrument: Blues-rock rhythm guitar taking over the groove with heavy tambourine]",
+            "[Vocalist: Calm grounded male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 2]",
+          "lines": [
+            "The man on the left and the woman on the right",
+            "Both standing in the shadow of a manufactured fight",
+            "He points at the potholes and the cracks in the street",
+            "Says we are all out here working just to make ends meet",
+            "We share the same struggle and we share the same town",
+            "So why are we so busy tearing each other down",
+            "[Instrument: Triumphant brass section rising over a stomping, syncopated drum beat]",
+            "[Vocalist: Powerhouse female rock-soul lead]",
+            "(Calm male baritone harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Listen up)",
+            "To the corner lot prophet",
+            "(Listen up)",
+            "Nobody can stop it",
+            "He is preaching the gospel of the brick and the bone",
+            "Telling us we cannot make it out here on our own",
+            "Forget the television and the shouting from the hill",
+            "The power is right here in the engine and the mill",
+            "[Instrument: Wailing electric guitar solo blending with a driving diatonic harmonica]",
+            "[Vocalist: Powerhouse female rock-soul lead]",
+            "(Male baritone call and response)"
+          ]
+        },
+        {
+          "name": "[Bridge]",
+          "lines": [
+            "(Tear up the script)",
+            "They wrote the script to keep us blind!",
+            "(Leave it behind)",
+            "We have to leave the spectacle behind!",
+            "The truth is in the dirt and the truth is in the sweat!",
+            "We are calling off the war and we are paying off the debt!",
+            "[Instrument: Full band swamp-rock explosion. Maximum groove and analog warmth.]",
+            "[Vocalist: Female lead and male baritone singing together with massive gospel volume]"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Listen up)",
+            "To the corner lot prophet",
+            "(Listen up)",
+            "Nobody can stop it",
+            "He is preaching the gospel of the brick and the bone",
+            "Telling us we cannot make it out here on our own",
+            "Forget the television and the shouting from the hill",
+            "The power is right here in the engine and the mill",
+            "[Instrument: Bassline and drums slowly fading out with a single, held horn note]",
+            "[Vocalist: Calm male baritone]"
+          ]
+        },
+        {
+          "name": "[Outro]",
+          "lines": [
+            "[Spoken] Listen to the street."
+          ]
+        }
+      ],
+      "suno_prompt": "Key of E minor. 1970s Muscle Shoals Swamp Soul blended with gritty Folk-Rock. Swampy, driving, and triumphant mood. The lead vocal alternates between a calm, grounded male baritone offering storytelling precision and a soaring, powerhouse female rock-soul vocalist delivering gospel-infused authority. -No vocals before the lyrics, -no chants before the lyrics, -no intro moaning, -no ad libs.",
+      "social_captions": [
+        "National talking points don't fix local potholes. Track 13 of Soul Fire is about the leaders who emerge from the neighborhood, speaking the undeniable truth of our shared material reality instead of partisan division.",
+        "It's easy to get distracted by the spectacle, but real power is built on the corner lot. \"Corner Lot Prophet\" brings a deep Muscle Shoals swamp groove to celebrate the grassroots solidarity that cuts through the noise."
+      ],
+      "yt_description": "Highlights the power of authentic, localized leadership that rejects polarizing national talking points in favor of addressing the practical, shared material needs of the neighborhood.",
+      "yt_prompt": ""
+    },
+    {
+      "number": 14,
+      "number_padded": "14",
+      "id": "brick-by-brick",
+      "slug": "brick-by-brick",
+      "title": "Brick by Brick",
+      "act": "Act IV: Grassroots Civic Resurrection",
+      "act_number": 4,
+      "tempo": "Driving 4/4 Upbeat",
+      "key": "E minor",
+      "sociological_concept": "Collective labor; rebuilding institutions from ground up",
+      "narrative_motif": "Relentless 4/4 work-song cadence with driving acoustic guitar chug, swelling B3, and blistering blues solo.",
+      "summary": "",
+      "suno_id": "bcc521f6-3194-44ad-a2d3-f547ea9581ab",
+      "audio_file": "assets/audio/14-brick-by-brick.mp3",
+      "audio_remote": "https://d2lwuy8qc234o3.cloudfront.net/1/clip/bcc521f6-3194-44ad-a2d3-f547ea9581ab.m4a",
+      "video_url": "https://cdn1.suno.ai/bcc521f6-3194-44ad-a2d3-f547ea9581ab.mp4",
+      "art_banner": "assets/art/track-14.webp",
+      "art_banner_jpg": "assets/art/track-14.jpg",
+      "art_square": "assets/art/track-14--sq.webp",
+      "art_square_jpg": "assets/art/track-14--sq.jpg",
+      "clean_lyrics": "I roll up my sleeves and I pick up the stone\nWe are putting the muscle right back on the bone\nThe mortar is mixed and the trowel is clean\nWe are stepping right out of the digital scene\nIt takes a village with a calloused hand\nTo build a future in a broken land\nBrick by brick\nWe are laying it down\nBrick by brick\nReclaiming the town\nWe are mixing the sweat with the earth and the clay\nWashing the bitterness completely away\nBrick by brick\nHand to the plow\nThe men in the suits said the city was dead\nBut they never listened to a word that we said\nWe carry the timber and carry the beam\nWe are building a house for a physical dream\nYou cannot download a foundation to keep\nYou have to dig down where the roots go deep\nBrick by brick\nWe are laying it down\nBrick by brick\nReclaiming the town\nWe are mixing the sweat with the earth and the clay\nWashing the bitterness completely away\nBrick by brick\nHand to the plow\nThey will not fix it from the marble dome!\nWe have to build our very own home!\nPiece by piece and row by row!\nThis is the way that the garden will grow!\nBrick by brick\nWe are laying it down\nBrick by brick\nReclaiming the town\nWe are mixing the sweat with the earth and the clay\nWashing the bitterness completely away\nBrick by brick\nHand to the plow\nKeep building.\n© 2026 The Shady River Bard. All rights reserved.",
+      "decorated_lyrics": "[Key: Em]\n[Instrument: Relentless staccato acoustic guitar chugging locked with a ticking hi-hat]\n[Vocalist: Calm grounded male baritone]\n[Verse 1]\nI roll up my sleeves and I pick up the stone\nWe are putting the muscle right back on the bone\nThe mortar is mixed and the trowel is clean\nWe are stepping right out of the digital scene\nIt takes a village with a calloused hand\nTo build a future in a broken land\n[Instrument: Bouncing pocket bassline and a swelling Hammond B3 organ]\n[Vocalist: Powerhouse female rock-soul lead]\n(Calm male baritone harmony)\n[Chorus]\n(Brick by brick)\nWe are laying it down\n(Brick by brick)\nReclaiming the town\nWe are mixing the sweat with the earth and the clay\nWashing the bitterness completely away\n(Brick by brick)\nHand to the plow\n[Instrument: Syncopated rhythm guitar and a steady snare tap]\n[Vocalist: Powerhouse female rock-soul lead]\n[Verse 2]\nThe men in the suits said the city was dead\nBut they never listened to a word that we said\nWe carry the timber and carry the beam\nWe are building a house for a physical dream\nYou cannot download a foundation to keep\nYou have to dig down where the roots go deep\n[Instrument: Driving Memphis horn section fanfaring over the groove]\n[Vocalist: Powerhouse female rock-soul lead]\n(Calm male baritone harmony)\n[Chorus]\n(Brick by brick)\nWe are laying it down\n(Brick by brick)\nReclaiming the town\nWe are mixing the sweat with the earth and the clay\nWashing the bitterness completely away\n(Brick by brick)\nHand to the plow\n[Instrument: Wailing blues electric guitar solo with a stomping drum beat]\n[Vocalist: Male baritone and female lead singing together with gospel intensity]\n[Bridge]\nThey will not fix it from the marble dome!\nWe have to build our very own home!\nPiece by piece and row by row!\nThis is the way that the garden will grow!\n[Instrument: Full band swamp-rock explosion. Maximum groove and analog warmth.]\n[Vocalist: Female lead and male baritone singing together with massive gospel volume]\n[Chorus]\n(Brick by brick)\nWe are laying it down\n(Brick by brick)\nReclaiming the town\nWe are mixing the sweat with the earth and the clay\nWashing the bitterness completely away\n(Brick by brick)\nHand to the plow\n[Instrument: Bassline and drums slowly fading out with a single staccato guitar chord]\n[Vocalist: Calm male baritone]\n[Outro]\n[Spoken] Keep building.",
+      "stanzas": [
+        {
+          "name": "[Intro]",
+          "lines": [
+            "[Instrument: Relentless staccato acoustic guitar chugging locked with a ticking hi-hat]",
+            "[Vocalist: Calm grounded male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 1]",
+          "lines": [
+            "I roll up my sleeves and I pick up the stone",
+            "We are putting the muscle right back on the bone",
+            "The mortar is mixed and the trowel is clean",
+            "We are stepping right out of the digital scene",
+            "It takes a village with a calloused hand",
+            "To build a future in a broken land",
+            "[Instrument: Bouncing pocket bassline and a swelling Hammond B3 organ]",
+            "[Vocalist: Powerhouse female rock-soul lead]",
+            "(Calm male baritone harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Brick by brick)",
+            "We are laying it down",
+            "(Brick by brick)",
+            "Reclaiming the town",
+            "We are mixing the sweat with the earth and the clay",
+            "Washing the bitterness completely away",
+            "(Brick by brick)",
+            "Hand to the plow",
+            "[Instrument: Syncopated rhythm guitar and a steady snare tap]",
+            "[Vocalist: Powerhouse female rock-soul lead]"
+          ]
+        },
+        {
+          "name": "[Verse 2]",
+          "lines": [
+            "The men in the suits said the city was dead",
+            "But they never listened to a word that we said",
+            "We carry the timber and carry the beam",
+            "We are building a house for a physical dream",
+            "You cannot download a foundation to keep",
+            "You have to dig down where the roots go deep",
+            "[Instrument: Driving Memphis horn section fanfaring over the groove]",
+            "[Vocalist: Powerhouse female rock-soul lead]",
+            "(Calm male baritone harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Brick by brick)",
+            "We are laying it down",
+            "(Brick by brick)",
+            "Reclaiming the town",
+            "We are mixing the sweat with the earth and the clay",
+            "Washing the bitterness completely away",
+            "(Brick by brick)",
+            "Hand to the plow",
+            "[Instrument: Wailing blues electric guitar solo with a stomping drum beat]",
+            "[Vocalist: Male baritone and female lead singing together with gospel intensity]"
+          ]
+        },
+        {
+          "name": "[Bridge]",
+          "lines": [
+            "They will not fix it from the marble dome!",
+            "We have to build our very own home!",
+            "Piece by piece and row by row!",
+            "This is the way that the garden will grow!",
+            "[Instrument: Full band swamp-rock explosion. Maximum groove and analog warmth.]",
+            "[Vocalist: Female lead and male baritone singing together with massive gospel volume]"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Brick by brick)",
+            "We are laying it down",
+            "(Brick by brick)",
+            "Reclaiming the town",
+            "We are mixing the sweat with the earth and the clay",
+            "Washing the bitterness completely away",
+            "(Brick by brick)",
+            "Hand to the plow",
+            "[Instrument: Bassline and drums slowly fading out with a single staccato guitar chord]",
+            "[Vocalist: Calm male baritone]"
+          ]
+        },
+        {
+          "name": "[Outro]",
+          "lines": [
+            "[Spoken] Keep building."
+          ]
+        }
+      ],
+      "suno_prompt": "Key of E minor. 1970s Soul blended with gritty Roots Rock. Relentless, driving, and unified mood representing physical labor. The lead vocals alternate between a grounded male baritone and a powerhouse female rock-soul vocalist. Instrumentation features a relentless staccato guitar chugging, ticking hi-hat, bouncing pocket bassline, and driving Memphis horns. -No vocals before the lyrics, -no chants before the lyrics, -no intro moaning, -no ad libs.",
+      "social_captions": [
+        "You can't fix a broken social contract from the top down. Track 14 of Soul Fire is about the relentless, unified labor of reclaiming our communities from the ground up.",
+        "What does collective efficacy sound like? \"Brick by Brick\" takes a driving, staccato groove and turns it into the anthem of a neighborhood rolling up its sleeves to build something real."
+      ],
+      "yt_description": "Explores collective efficacy and community renewal through the physical labor of restoring local institutions, demonstrating that sustainable civic resurrection begins from the ground up.",
+      "yt_prompt": ""
+    },
+    {
+      "number": 15,
+      "number_padded": "15",
+      "id": "soul-fire-resurrection",
+      "slug": "soul-fire-resurrection",
+      "title": "Soul Fire (Resurrection)",
+      "act": "Act IV: Grassroots Civic Resurrection",
+      "act_number": 4,
+      "tempo": "Driving 4/4 Upbeat",
+      "key": "G Major",
+      "sociological_concept": "Triumphant return of civic cohesion and the enduring human spirit",
+      "narrative_motif": "Expansive gospel-soul epic with towering choir harmonies, sweeping horn choruses, and radiant emotional release.",
+      "summary": "*Soul Fire (Resurrection)* is the emotional and musical climax of the album. The narrative concludes with complete civic resurrection, illustrating the triumph of physical solidarity over digital tribalism. The working class realizes their shared power when unified in reality, rejecting the artificial divides of the algorithm. Musically, it is a massive, soaring Gospel-Soul anthem featuring full Memphis Horns, a powerhouse female lead, and an overwhelming call-and-response choir, providing a triumphant resolution to the album's journey.",
+      "suno_id": "1ff550e3-9654-41d2-85a2-09276e2978ae",
+      "audio_file": "assets/audio/15-soul-fire-resurrection.mp3",
+      "audio_remote": "https://d2lwuy8qc234o3.cloudfront.net/1/clip/1ff550e3-9654-41d2-85a2-09276e2978ae.m4a",
+      "video_url": "https://cdn1.suno.ai/1ff550e3-9654-41d2-85a2-09276e2978ae.mp4",
+      "art_banner": "assets/art/track-15.webp",
+      "art_banner_jpg": "assets/art/track-15.jpg",
+      "art_square": "assets/art/track-15--sq.webp",
+      "art_square_jpg": "assets/art/track-15--sq.jpg",
+      "clean_lyrics": "The pavement is shaking under a steady beat\nThe city is waking, feeling the analog heat\nWe stepped off the island, we walked in the light\nStanding together to finish the fight\nWe tore up the cables and cut through the cord\nFinding the harmony we could not afford\nSoul Fire\nBurning up the cold machine!\nSoul Fire\nWashing all the asphalt clean!\nWe are standing together, we are taking it higher\nIgniting the spark of the human soul fire!\nBurn it up\nLet the flames reach the sky!\nThe chorus is ringing down at the public square\nThere is a tangible magic breathing the open air\nNo more illusions pulling us into the dark\nWe gathered the embers and started a physical flame\nStanding shoulder to shoulder and sharing the blame\nRemembering how to speak a brother's name\nSoul Fire\nBurning up the cold machine!\nSoul Fire\nWashing all the asphalt clean!\nWe are standing together, we are taking it higher\nIgniting the spark of the human soul fire!\nBurn it up\nLet the flames reach the sky!\nSing it out\nLet the voices rise!\nLook around\nWith your open eyes!\nThe power was never handed down from above!\nIt is built in the grit and the muscle of love!\nSoul Fire\nBurning up the cold machine!\nSoul Fire\nWashing all the asphalt clean!\nWe are standing together, we are taking it higher\nIgniting the spark of the human soul fire!\nBurn it up\nLet the flames reach the sky!\nJust the human soul fire.\nWe are finally home.\n© 2026 The Shady River Bard. All rights reserved.",
+      "decorated_lyrics": "[Key: G]\n[Instrument: Slow, warm Hammond B3 organ swelling with a steady, walking bassline and soft tambourine]\n[Vocalist: Calm grounded male baritone]\n[Verse 1]\nThe pavement is shaking under a steady beat\nThe city is waking, feeling the analog heat\nWe stepped off the island, we walked in the light\nStanding together to finish the fight\nWe tore up the cables and cut through the cord\nFinding the harmony we could not afford\n[Instrument: Sudden tempo explosion. Triumphant Memphis horn section, driving drums, and bright Wurlitzer]\n[Vocalist: Powerhouse female rock-soul lead]\n(Massive gospel choir harmony)\n[Chorus]\n(Soul Fire)\nBurning up the cold machine!\n(Soul Fire)\nWashing all the asphalt clean!\nWe are standing together, we are taking it higher\nIgniting the spark of the human soul fire!\n(Burn it up)\nLet the flames reach the sky!\n[Instrument: Bouncing pocket bassline locking with a rhythmic electric guitar and snapping snare]\n[Vocalist: Calm grounded male baritone]\n[Verse 2]\nThe chorus is ringing down at the public square\nThere is a tangible magic breathing the open air\nNo more illusions pulling us into the dark\nWe gathered the embers and started a physical flame\nStanding shoulder to shoulder and sharing the blame\nRemembering how to speak a brother's name\n[Instrument: Heavy tom drum fills building into a wall of triumphant brass and organ]\n[Vocalist: Powerhouse female rock-soul lead]\n(Massive gospel choir harmony)\n[Chorus]\n(Soul Fire)\nBurning up the cold machine!\n(Soul Fire)\nWashing all the asphalt clean!\nWe are standing together, we are taking it higher\nIgniting the spark of the human soul fire!\n(Burn it up)\nLet the flames reach the sky!\n[Instrument: Shredding blues-rock electric guitar solo soaring over a stomping, unified drum beat]\n[Vocalist: Powerhouse female rock-soul lead]\n(Gospel choir call and response)\n[Bridge]\n(Sing it out)\nLet the voices rise!\n(Look around)\nWith your open eyes!\nThe power was never handed down from above!\nIt is built in the grit and the muscle of love!\n[Instrument: Full band maximum explosion. Total analog warmth and polyrhythmic joy.]\n[Vocalist: Female lead, male baritone, and full choir singing together at maximum volume]\n[Chorus]\n(Soul Fire)\nBurning up the cold machine!\n(Soul Fire)\nWashing all the asphalt clean!\nWe are standing together, we are taking it higher\nIgniting the spark of the human soul fire!\n(Burn it up)\nLet the flames reach the sky!\n[Instrument: Instruments suddenly drop out. Just rhythmic handclaps and a solitary Hammond B3 chord slowly fading.]\n[Vocalist: Powerhouse female rock-soul lead]\n[Outro]\nJust the human soul fire.\n(Gospel choir fading)\n[Spoken: Calm male baritone]\nWe are finally home.",
+      "stanzas": [
+        {
+          "name": "[Intro]",
+          "lines": [
+            "[Instrument: Slow, warm Hammond B3 organ swelling with a steady, walking bassline and soft tambourine]",
+            "[Vocalist: Calm grounded male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 1]",
+          "lines": [
+            "The pavement is shaking under a steady beat",
+            "The city is waking, feeling the analog heat",
+            "We stepped off the island, we walked in the light",
+            "Standing together to finish the fight",
+            "We tore up the cables and cut through the cord",
+            "Finding the harmony we could not afford",
+            "[Instrument: Sudden tempo explosion. Triumphant Memphis horn section, driving drums, and bright Wurlitzer]",
+            "[Vocalist: Powerhouse female rock-soul lead]",
+            "(Massive gospel choir harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Soul Fire)",
+            "Burning up the cold machine!",
+            "(Soul Fire)",
+            "Washing all the asphalt clean!",
+            "We are standing together, we are taking it higher",
+            "Igniting the spark of the human soul fire!",
+            "(Burn it up)",
+            "Let the flames reach the sky!",
+            "[Instrument: Bouncing pocket bassline locking with a rhythmic electric guitar and snapping snare]",
+            "[Vocalist: Calm grounded male baritone]"
+          ]
+        },
+        {
+          "name": "[Verse 2]",
+          "lines": [
+            "The chorus is ringing down at the public square",
+            "There is a tangible magic breathing the open air",
+            "No more illusions pulling us into the dark",
+            "We gathered the embers and started a physical flame",
+            "Standing shoulder to shoulder and sharing the blame",
+            "Remembering how to speak a brother's name",
+            "[Instrument: Heavy tom drum fills building into a wall of triumphant brass and organ]",
+            "[Vocalist: Powerhouse female rock-soul lead]",
+            "(Massive gospel choir harmony)"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Soul Fire)",
+            "Burning up the cold machine!",
+            "(Soul Fire)",
+            "Washing all the asphalt clean!",
+            "We are standing together, we are taking it higher",
+            "Igniting the spark of the human soul fire!",
+            "(Burn it up)",
+            "Let the flames reach the sky!",
+            "[Instrument: Shredding blues-rock electric guitar solo soaring over a stomping, unified drum beat]",
+            "[Vocalist: Powerhouse female rock-soul lead]",
+            "(Gospel choir call and response)"
+          ]
+        },
+        {
+          "name": "[Bridge]",
+          "lines": [
+            "(Sing it out)",
+            "Let the voices rise!",
+            "(Look around)",
+            "With your open eyes!",
+            "The power was never handed down from above!",
+            "It is built in the grit and the muscle of love!",
+            "[Instrument: Full band maximum explosion. Total analog warmth and polyrhythmic joy.]",
+            "[Vocalist: Female lead, male baritone, and full choir singing together at maximum volume]"
+          ]
+        },
+        {
+          "name": "[Chorus]",
+          "lines": [
+            "(Soul Fire)",
+            "Burning up the cold machine!",
+            "(Soul Fire)",
+            "Washing all the asphalt clean!",
+            "We are standing together, we are taking it higher",
+            "Igniting the spark of the human soul fire!",
+            "(Burn it up)",
+            "Let the flames reach the sky!",
+            "[Instrument: Instruments suddenly drop out. Just rhythmic handclaps and a solitary Hammond B3 chord slowly fading.]",
+            "[Vocalist: Powerhouse female rock-soul lead]"
+          ]
+        },
+        {
+          "name": "[Outro]",
+          "lines": [
+            "Just the human soul fire.",
+            "(Gospel choir fading)"
+          ]
+        },
+        {
+          "name": "[Spoken: Calm male baritone]",
+          "lines": [
+            "We are finally home."
+          ]
+        }
+      ],
+      "suno_prompt": "Key of G Major. 1970s Gospel-Soul Anthem blended with triumphant Classic Rock. Massive, soaring, and joyous mood. The lead vocals feature a powerhouse female rock-soul singer delivering high-octane emotion, contrasted with a grounded, calm male baritone for the verses. Backing vocals feature a massive, overwhelming gospel choir performing intense call-and-response. Instrumentation centers on triumphant Memphis horns, a warm Hammond B3 organ, a driving pocket bassline, and rhythmic handclaps. -No vocals before the lyrics, -no chants before the lyrics, -no intro moaning, -no ad libs.",
+      "social_captions": [
+        "We traded the algorithmic echo chamber for the physical warmth of our neighbors, and the result is undeniable. Track 15 is the grand finale of the Soul Fire journey. When the working class finally steps out of the digital ether, the power we hold together is enough to light up the sky.",
+        "Grassroots civic resurrection doesn't start with a politician; it starts on the corner lot, brick by brick. \"Soul Fire (Resurrection)\" is a massive Gospel-Soul anthem celebrating the triumph of physical solidarity. We are finally home."
+      ],
+      "yt_description": "The triumphant climax of the album, celebrating the complete restoration of grassroots solidarity, polyrhythmic community life, and the undeniable strength of working people united in place.",
+      "yt_prompt": ""
+    }
+  ]
+};

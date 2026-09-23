@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soul Fire &mdash; The Shady River Bard | Interactive Concept Experience</title>
+  <meta name="description" content="A Working-Class Soul Cantata of Affective Polarization and Civic Resurrection. 15 tracks, lyrics vault, Stax/Motown sociological exhibits, and master studio recordings.">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Soul Fire &mdash; The Shady River Bard">
+  <meta property="og:description" content="A 15-track working-class soul cantata diagnosing affective polarization, the erasure of Third Places, and the grassroots fire of civic resurrection.">
+  <meta property="og:image" content="assets/art/og-soul-fire.jpg">
+  <meta property="og:type" content="music.album">
+  <meta property="og:url" content="https://theshadyriverbard.com/soul-fire/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Soul Fire &mdash; The Shady River Bard">
+  <meta name="twitter:description" content="15 tracks exploring the Algorithmic Factory, Vanishing Third Places, Muscle Shoals Swamp Soul, and Grassroots Civic Resurrection.">
+  <meta name="twitter:image" content="assets/art/og-soul-fire.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            ember: {
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea580c',
+              700: '#c2410c',
+              800: '#9a3412',
+              900: '#7c2d12',
+            },
+            brass: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+            },
+            obsidian: {
+              950: '#07090d',
+              900: '#0c0f16',
+              850: '#121620',
+              800: '#191f2c',
+            }
+          },
+          fontFamily: {
+            display: ['Cinzel', 'Georgia', 'serif'],
+            serif: ['Merriweather', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom App Stylesheet -->
+  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="../assets/css/bard-notes.css?v=20260920b">
+
+  <!-- Google Cast Manager & Album Data (__onGCastApiAvailable MUST be defined before cast_sender.js) -->
+  <script src="data/album-data.js?v=20260923A"></script>
+  <script src="../assets/js/cast-manager.js?v=20260922A"></script>
+  <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
+</head>
+<body class="bg-[#07090d] text-stone-200 font-sans antialiased selection:bg-[#e05a2b] selection:text-white min-h-screen flex flex-col">
+
+  <!-- Skip Navigation Link -->
+  <a href="#main-content" class="skip-link sr-only focus:not-sr-only">Skip to main content</a>
+
+  <!-- TOP ANNOUNCEMENT & ACCESSIBILITY BAR -->
+  <aside aria-label="Incubator Breadcrumb" class="bg-[#050608] border-b border-stone-800/80 px-4 py-2 text-xs font-mono text-stone-400">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-[#e05a2b] animate-pulse"></span>
+        <span class="text-stone-300 font-bold">The Shady River Bard &bull; Research Vault Incubator</span>
+        <span class="hidden sm:inline text-stone-600">|</span>
+        <span class="hidden sm:inline text-amber-400/90 font-medium">Album XX Concept Experience &bull; Soul Fire</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px]">
+        <a href="../vault/index.html" class="hover:text-amber-400 text-stone-300 transition-colors flex items-center gap-1.5 font-medium">
+          <i class="fa-solid fa-arrow-left text-[10px]" aria-hidden="true"></i>
+          <span>Back to Vault</span>
+        </a>
+        <span class="text-stone-700" aria-hidden="true">|</span>
+        <a href="../index.html" class="hover:text-amber-400 text-stone-300 transition-colors flex items-center gap-1">
+          <i class="fa-solid fa-house text-[10px]" aria-hidden="true"></i>
+          <span>Portal</span>
+        </a>
+        <span class="text-stone-700" aria-hidden="true">|</span>
+        <button id="a11y-toggle-btn" onclick="toggleA11yToolbar()" aria-expanded="false" class="hover:text-amber-400 text-stone-300 transition-colors flex items-center gap-1 focus:outline-none">
+          <i class="fa-solid fa-universal-access text-[#e05a2b]" aria-hidden="true"></i>
+          <span>Accessibility</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ACCESSIBILITY TOOLBAR PANEL -->
+  <div id="a11y-toolbar" class="hidden bg-[#0c0f16] border-b border-[#e05a2b]/30 py-2.5 px-4 text-xs font-mono shadow-2xl relative z-40">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2 text-stone-300">
+        <i class="fa-solid fa-sliders text-[#e05a2b]"></i>
+        <span>Display Preferences:</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-2">
+        <button onclick="toggleContrast()" id="btn-contrast" class="px-2.5 py-1 rounded bg-stone-900 hover:bg-stone-800 text-stone-300 border border-stone-700 transition-colors">
+          Contrast: <span id="contrast-status" class="text-amber-400">Standard</span>
+        </button>
+        <button onclick="toggleLargeText()" id="btn-text-size" class="px-2.5 py-1 rounded bg-stone-900 hover:bg-stone-800 text-stone-300 border border-stone-700 transition-colors">
+          Font Size: <span id="text-size-status" class="text-amber-400">Default</span>
+        </button>
+        <button onclick="toggleUnderlineLinks()" id="btn-underline" class="px-2.5 py-1 rounded bg-stone-900 hover:bg-stone-800 text-stone-300 border border-stone-700 transition-colors">
+          Underline: <span id="underline-status" class="text-amber-400">Off</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY PRIMARY NAVIGATION -->
+  <header class="sticky top-0 z-40 bg-[#07090d]/95 backdrop-blur-md border-b border-stone-800/80 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Brand Logo & Title -->
+        <a href="#top" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#e05a2b] rounded-lg p-1">
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-[#e05a2b] to-amber-700 flex items-center justify-center text-white font-bold shadow-lg shadow-orange-950/40 group-hover:scale-105 transition-transform">
+            <i class="fa-solid fa-fire text-base"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-bold text-white tracking-wider text-base sm:text-lg group-hover:text-amber-300 transition-colors">
+              SOUL FIRE
+            </span>
+            <span class="text-[10px] font-mono text-amber-400/90 uppercase tracking-widest">
+              The Shady River Bard &bull; Album XX
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Jump Links -->
+        <nav class="hidden md:flex items-center gap-6 text-xs font-mono uppercase tracking-wider text-stone-300">
+          <a href="#overview" class="hover:text-amber-400 transition-colors">Overview</a>
+          <a href="#pillars" class="hover:text-amber-400 transition-colors">Sociology</a>
+          <a href="#storyline" class="hover:text-amber-400 transition-colors">4 Acts</a>
+          <a href="#jukebox-section" class="hover:text-amber-400 transition-colors text-amber-400 font-bold flex items-center gap-1.5">
+            <i class="fa-solid fa-play text-[10px]"></i>
+            <span>Jukebox & Lyrics</span>
+          </a>
+          <a href="#musical-identity" class="hover:text-amber-400 transition-colors">Sound</a>
+        </nav>
+
+        <!-- Right Side Actions: Cast Button & Vote CTA -->
+        <div class="flex items-center gap-3">
+          <!-- Google Cast Receiver Button -->
+          <button is="google-cast-button" class="w-9 h-9 rounded-lg bg-[#121620] hover:bg-stone-800 border border-white/10 text-stone-300 flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-[#e05a2b]" title="Cast to Smart TV / Chromecast"></button>
+          
+          <button id="vote-hero-btn" class="px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-amber-600 to-[#e05a2b] hover:from-amber-500 hover:to-orange-500 text-white font-medium text-xs shadow-md shadow-orange-950/30 flex items-center gap-1.5 transition-all">
+            <i class="fa-solid fa-check-to-slot text-[11px]"></i>
+            <span>Vote for Release</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="flex-grow">
+
+    <!-- SECTION I: HERO SHOWCASE -->
+    <section id="overview" class="relative overflow-hidden py-16 sm:py-24 border-b border-stone-800/60 bg-gradient-to-b from-[#0c0f16] to-[#07090d]">
+      <!-- Background Ambient Glow -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-r from-[#e05a2b]/15 via-amber-600/10 to-transparent blur-[120px] pointer-events-none" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Hero Text -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-amber-500/30 text-amber-400 text-xs font-mono">
+              <i class="fa-solid fa-compact-disc animate-spin-slow"></i>
+              <span>Concept Incubator &bull; Album XX &bull; 1970s Working-Class Soul</span>
+            </div>
+
+            <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-tight">
+              SOUL <span class="ember-gradient-text">FIRE</span>
+            </h1>
+
+            <p class="font-display text-lg sm:text-xl text-amber-200/90 font-light tracking-wide max-w-2xl mx-auto lg:mx-0">
+              A Working-Class Soul Cantata of Affective Polarization and Civic Resurrection
+            </p>
+
+            <p class="font-serif text-stone-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              When the physical union halls and corner barbershops were padlocked, they were replaced by digital feeds engineered to turn neighbors into mortal enemies. Drawing from the historic interracial brotherhood of Stax Records and Muscle Shoals, <strong class="text-amber-400 font-semibold">Soul Fire</strong> confronts the algorithmic extraction of human despair&mdash;and proves that the friction of human proximity is the only force capable of reigniting the democratic flame.
+            </p>
+
+            <!-- Stats Ribbon -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 max-w-xl mx-auto lg:mx-0">
+              <div class="p-3 rounded-xl bg-[#121620]/80 border border-white/5 text-center">
+                <div class="font-mono text-lg font-bold text-amber-400">15</div>
+                <div class="text-[10px] font-mono uppercase text-stone-400">Master Tracks</div>
+              </div>
+              <div class="p-3 rounded-xl bg-[#121620]/80 border border-white/5 text-center">
+                <div class="font-mono text-lg font-bold text-[#e05a2b]">4</div>
+                <div class="text-[10px] font-mono uppercase text-stone-400">Dramatic Acts</div>
+              </div>
+              <div class="p-3 rounded-xl bg-[#121620]/80 border border-white/5 text-center">
+                <div class="font-mono text-lg font-bold text-amber-400">3</div>
+                <div class="text-[10px] font-mono uppercase text-stone-400">Core Pillars</div>
+              </div>
+              <div class="p-3 rounded-xl bg-[#121620]/80 border border-white/5 text-center">
+                <div class="font-mono text-lg font-bold text-[#e05a2b]">58 Min</div>
+                <div class="text-[10px] font-mono uppercase text-stone-400">Runtime</div>
+              </div>
+            </div>
+
+            <!-- Hero CTAs -->
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+              <a href="#jukebox-section" onclick="selectTrack(0, true)" class="px-6 py-3 rounded-xl bg-gradient-to-r from-[#e05a2b] to-amber-600 hover:from-orange-600 hover:to-amber-500 text-white font-bold text-sm shadow-xl shadow-orange-950/40 flex items-center gap-2.5 transition-all transform hover:-translate-y-0.5">
+                <i class="fa-solid fa-play"></i>
+                <span>Listen to Track 01</span>
+              </a>
+              <a href="#jukebox-section" class="px-6 py-3 rounded-xl bg-[#121620] hover:bg-stone-800 text-stone-200 border border-white/10 hover:border-amber-500/40 font-medium text-sm transition-all flex items-center gap-2">
+                <i class="fa-solid fa-list-music"></i>
+                <span>Explore Songbook</span>
+              </a>
+              <a href="https://suno.com/playlist/8168828b-2e01-4fa7-9b00-1e95861862ba" target="_blank" rel="noopener noreferrer" class="px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-stone-300 font-mono text-xs border border-white/10 transition-colors flex items-center gap-2">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <span>Suno Playlist</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Vinyl Deck Art Card -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-md aspect-square rounded-2xl overflow-hidden glass-panel ember-border-glow border border-amber-500/30 group shadow-2xl">
+              <img src="assets/art/soul-fire-cover.webp" alt="Soul Fire album cover by The Shady River Bard" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+              
+              <div class="absolute inset-0 bg-gradient-to-t from-[#07090d] via-transparent to-transparent opacity-70"></div>
+
+              <!-- Deck Overlays -->
+              <div class="absolute top-4 left-4 flex items-center gap-2">
+                <span class="px-3 py-1 rounded-md text-[11px] font-mono font-bold bg-[#e05a2b] text-white shadow-lg">
+                  ALBUM XX
+                </span>
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-black/70 text-amber-300 backdrop-blur-md border border-white/10">
+                  STAX / MUSCLE SHOALS
+                </span>
+              </div>
+
+              <div class="absolute bottom-4 left-4 right-4">
+                <div class="p-3.5 rounded-xl bg-black/80 backdrop-blur-md border border-white/10 flex items-center justify-between">
+                  <div>
+                    <div class="text-[10px] font-mono uppercase text-amber-400">Lead Master Anthem</div>
+                    <div class="font-display font-semibold text-white text-sm">Soul Fire (Resurrection)</div>
+                  </div>
+                  <button onclick="selectTrack(14, true)" class="w-10 h-10 rounded-full bg-[#e05a2b] hover:bg-orange-500 text-white flex items-center justify-center transition-colors shadow-lg">
+                    <i class="fa-solid fa-play text-sm"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION II: SOCIOLOGICAL PILLARS -->
+    <section id="pillars" class="py-16 sm:py-24 border-b border-stone-800/60 bg-[#07090d]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mx-auto text-center space-y-3 mb-16">
+          <span class="text-xs font-mono uppercase text-amber-400 tracking-widest">Part I &bull; Conceptual Bedrock</span>
+          <h2 class="font-display font-bold text-2xl sm:text-4xl text-white">
+            The Three Sociological Pillars
+          </h2>
+          <p class="font-serif text-sm sm:text-base text-stone-400">
+            Soul Fire is grounded in empirical sociology, examining how the loss of physical community infrastructure directly accelerates affective political hatred.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Pillar 1 -->
+          <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-white/5">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl font-bold">
+                1.1
+              </div>
+              <h3 class="font-display font-bold text-lg text-white">
+                Erosion of the Social Contract & Affective Polarization
+              </h3>
+              <p class="font-serif text-xs text-stone-300 leading-relaxed">
+                Affective polarization occurs when partisans do not merely disagree on tax policy, but evaluate members of the opposing group as morally bankrupt, untrustworthy, and an existential threat to the nation. This animosity is systematically monetized by engagement algorithms that harvest working-class fatigue into horizontal hostility.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/5 font-mono text-[11px] text-amber-400/90 flex items-center gap-2">
+              <i class="fa-solid fa-arrows-split-up-and-left"></i>
+              <span>Tracks 01–04: The Algorithmic Cage</span>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-white/5">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-[#e05a2b]/10 border border-[#e05a2b]/30 flex items-center justify-center text-[#e05a2b] text-xl font-bold">
+                1.2
+              </div>
+              <h3 class="font-display font-bold text-lg text-white">
+                The Erasure of "Third Places" & Architecture of Isolation
+              </h3>
+              <p class="font-serif text-xs text-stone-300 leading-relaxed">
+                Ray Oldenburg identified "Third Places"&mdash;cafes, diners, union halls, and barbershops&mdash;as essential public anchors where regular, informal, and neutral conversation occurs. When suburban zoning and economic consolidation erased these spaces, citizens were driven into isolated domestic quarters where the only window to the community is an algorithmic screen.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/5 font-mono text-[11px] text-[#e05a2b] flex items-center gap-2">
+              <i class="fa-solid fa-lock"></i>
+              <span>Tracks 05–08: The Shuttered Commons</span>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-white/5">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400 text-xl font-bold">
+                1.3
+              </div>
+              <h3 class="font-display font-bold text-lg text-white">
+                The Stax/Motown Ethos as a Counter-Narrative
+              </h3>
+              <p class="font-serif text-xs text-stone-300 leading-relaxed">
+                During the height of racial segregation, Stax Records in South Memphis and Muscle Shoals in Alabama brought Black and white working-class musicians together in a single room. Soul music is an exercise in polyrhythmic democracy: each musician locks into the pocket, proving that physical friction and creative proximity produce radiant warmth instead of division.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/5 font-mono text-[11px] text-orange-400 flex items-center gap-2">
+              <i class="fa-solid fa-handshake"></i>
+              <span>Tracks 09–15: Civic Resurrection</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION III: 4-ACT STORYLINE MATRIX -->
+    <section id="storyline" class="py-16 sm:py-24 border-b border-stone-800/60 bg-[#0c0f16]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mx-auto text-center space-y-3 mb-16">
+          <span class="text-xs font-mono uppercase text-amber-400 tracking-widest">Part III &bull; Narrative Architecture</span>
+          <h2 class="font-display font-bold text-2xl sm:text-4xl text-white">
+            The 4-Act Storyline Matrix
+          </h2>
+          <p class="font-serif text-sm sm:text-base text-stone-400">
+            From the digital isolation of the smartphone shift to the joyous reclamation of the stoop, follow the 15-track emotional and sociological arc.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Act 1 -->
+          <div class="glass-card rounded-2xl p-5 border border-white/5 flex flex-col justify-between group">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded bg-[#e05a2b]/20 text-[#e05a2b] font-mono text-xs font-bold border border-[#e05a2b]/30">ACT I</span>
+                <span class="text-xs font-mono text-stone-400">Tracks 01–04</span>
+              </div>
+              <h3 class="font-display font-bold text-base text-white group-hover:text-amber-300 transition-colors">
+                The Algorithmic Factory
+              </h3>
+              <p class="font-serif text-xs text-stone-300 leading-relaxed">
+                The uncompensated second shift: staring into the blue glow, trading blood for digital dimes, trapped in echo silos that manufacture hostility.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5">
+              <button onclick="document.querySelector('[data-act-filter=\'1\']').click(); document.getElementById('jukebox-section').scrollIntoView({behavior:'smooth'});" class="text-xs font-mono text-amber-400 hover:text-white flex items-center gap-1 transition-colors">
+                <span>View Tracks 01–04</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Act 2 -->
+          <div class="glass-card rounded-2xl p-5 border border-white/5 flex flex-col justify-between group">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded bg-amber-500/20 text-amber-400 font-mono text-xs font-bold border border-amber-500/30">ACT II</span>
+                <span class="text-xs font-mono text-stone-400">Tracks 05–08</span>
+              </div>
+              <h3 class="font-display font-bold text-base text-white group-hover:text-amber-300 transition-colors">
+                The Rust and the Rubble
+              </h3>
+              <p class="font-serif text-xs text-stone-300 leading-relaxed">
+                Padlocks on the union hall and the empty chair at the barbershop. Neighbors sharing the same economic hardship view each other as hostile strangers.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5">
+              <button onclick="document.querySelector('[data-act-filter=\'2\']').click(); document.getElementById('jukebox-section').scrollIntoView({behavior:'smooth'});" class="text-xs font-mono text-amber-400 hover:text-white flex items-center gap-1 transition-colors">
+                <span>View Tracks 05–08</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Act 3 -->
+          <div class="glass-card rounded-2xl p-5 border border-white/5 flex flex-col justify-between group">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded bg-orange-600/20 text-orange-400 font-mono text-xs font-bold border border-orange-500/30">ACT III</span>
+                <span class="text-xs font-mono text-stone-400">Tracks 09–11</span>
+              </div>
+              <h3 class="font-display font-bold text-base text-white group-hover:text-amber-300 transition-colors">
+                The Spark of Recognition
+              </h3>
+              <p class="font-serif text-xs text-stone-300 leading-relaxed">
+                Turning off the screen and walking outside. Looking a neighbor in the eye. Like analog tape saturation pushed to the red, proximity produces healing warmth.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5">
+              <button onclick="document.querySelector('[data-act-filter=\'3\']').click(); document.getElementById('jukebox-section').scrollIntoView({behavior:'smooth'});" class="text-xs font-mono text-amber-400 hover:text-white flex items-center gap-1 transition-colors">
+                <span>View Tracks 09–11</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Act 4 -->
+          <div class="glass-card rounded-2xl p-5 border border-white/5 flex flex-col justify-between group">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded bg-amber-400/20 text-amber-300 font-mono text-xs font-bold border border-amber-400/30">ACT IV</span>
+                <span class="text-xs font-mono text-stone-400">Tracks 12–15</span>
+              </div>
+              <h3 class="font-display font-bold text-base text-white group-hover:text-amber-300 transition-colors">
+                Grassroots Civic Resurrection
+              </h3>
+              <p class="font-serif text-xs text-stone-300 leading-relaxed">
+                The stoop congregation gathers. A corner lot prophet speaks truth to cynicism. Hand by hand, brick by brick, the Soul Fire is rekindled across the city.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5">
+              <button onclick="document.querySelector('[data-act-filter=\'4\']').click(); document.getElementById('jukebox-section').scrollIntoView({behavior:'smooth'});" class="text-xs font-mono text-amber-400 hover:text-white flex items-center gap-1 transition-colors">
+                <span>View Tracks 12–15</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION IV: INTERACTIVE 15-TRACK JUKEBOX & SONGBOOK -->
+    <section id="jukebox-section" class="py-16 sm:py-24 bg-[#07090d] border-b border-stone-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+          <div>
+            <span class="text-xs font-mono uppercase text-amber-400 tracking-widest">Part IV &bull; The Songbook</span>
+            <h2 class="font-display font-bold text-2xl sm:text-4xl text-white">
+              Interactive Jukebox & Lyrics Vault
+            </h2>
+            <p class="font-serif text-xs sm:text-sm text-stone-400 mt-1">
+              Select any of the 15 master tracks to stream the recording, explore decorated instrumentation notes, and read verified lyrics.
+            </p>
+          </div>
+
+          <!-- Act Filters -->
+          <div class="flex flex-wrap gap-1.5 font-mono text-xs">
+            <button data-act-filter="all" class="px-3 py-1.5 rounded-lg bg-[#e05a2b] text-white border border-[#e05a2b] font-medium transition-colors">All (15)</button>
+            <button data-act-filter="1" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-stone-300 border border-white/10 transition-colors">Act I</button>
+            <button data-act-filter="2" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-stone-300 border border-white/10 transition-colors">Act II</button>
+            <button data-act-filter="3" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-stone-300 border border-white/10 transition-colors">Act III</button>
+            <button data-act-filter="4" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-stone-300 border border-white/10 transition-colors">Act IV</button>
+          </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="mb-6 relative">
+          <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-stone-400 text-sm"></i>
+          <input id="track-search" type="text" placeholder="Search by track title, sociological concept, or lyric line..." class="w-full pl-11 pr-4 py-3 rounded-xl bg-[#0c0f16] border border-white/10 text-stone-200 placeholder-stone-500 font-sans text-sm focus:outline-none focus:border-[#e05a2b] focus:ring-1 focus:ring-[#e05a2b] transition-all">
+        </div>
+
+        <!-- Main Jukebox Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- LEFT: Track List (5 cols) -->
+          <div class="lg:col-span-5 space-y-2.5 max-h-[680px] overflow-y-auto pr-1" id="track-list" role="region" aria-label="Soul Fire Track Selection List">
+            <!-- Dynamically populated by app.js -->
+          </div>
+
+          <!-- RIGHT: Active Track Deck (7 cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <div class="glass-panel rounded-2xl p-6 border border-white/10 space-y-6">
+              
+              <!-- Banner Artwork -->
+              <div class="relative w-full aspect-video rounded-xl overflow-hidden border border-white/10 group shadow-xl">
+                <img id="active-track-art" src="assets/art/track-01.webp" alt="Active track banner art" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                
+                <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-4">
+                  <div>
+                    <span id="active-track-act" class="px-2.5 py-0.5 rounded text-[11px] font-mono bg-black/70 text-amber-400 border border-amber-500/30 backdrop-blur-md">
+                      Act I: The Algorithmic Factory
+                    </span>
+                    <h3 id="active-track-title" class="font-display font-extrabold text-xl sm:text-2xl text-white mt-1">
+                      01. The Ghost on the Assembly Line
+                    </h3>
+                  </div>
+
+                  <button id="deck-play-btn" class="px-4 py-2 rounded-xl bg-[#e05a2b] hover:bg-orange-500 text-white font-bold text-xs shadow-lg flex items-center gap-2 transition-all flex-shrink-0">
+                    <i id="deck-play-icon" class="fa-solid fa-play"></i>
+                    <span id="deck-play-text">Play Track</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Metadata Badges -->
+              <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
+                <div class="px-2.5 py-1 rounded-md bg-white/5 text-amber-300 border border-white/5 flex items-center gap-1.5">
+                  <i class="fa-solid fa-key text-[10px]"></i>
+                  <span id="active-track-key">E minor</span>
+                </div>
+                <div class="px-2.5 py-1 rounded-md bg-white/5 text-stone-300 border border-white/5 flex items-center gap-1.5">
+                  <i class="fa-solid fa-gauge text-[10px]"></i>
+                  <span id="active-track-tempo">Slow-burning 6/8 sway</span>
+                </div>
+                <div class="px-2.5 py-1 rounded-md bg-white/5 text-stone-300 border border-white/5 flex items-center gap-1.5">
+                  <i class="fa-solid fa-brain text-[10px]"></i>
+                  <span id="active-track-concept" class="truncate max-w-[280px]">Affective polarization; the broken social contract</span>
+                </div>
+              </div>
+
+              <!-- Narrative Summary & Musical Motif -->
+              <div class="space-y-3 pt-2 border-t border-white/5">
+                <div>
+                  <h4 class="text-xs font-mono uppercase text-stone-400 font-semibold mb-1">Narrative Summary</h4>
+                  <p id="active-track-summary" class="font-serif text-xs sm:text-sm text-stone-300 leading-relaxed">
+                    The Ghost on the Assembly Line introduces the protagonist staring at a smartphone after a grueling shift, highlighting the death of the American Dream. The song establishes the baseline reality of the modern worker who is suffocating under affective polarization.
+                  </p>
+                </div>
+                <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5">
+                  <h4 class="text-[11px] font-mono uppercase text-amber-400 font-semibold mb-1 flex items-center gap-1.5">
+                    <i class="fa-solid fa-music"></i>
+                    <span>Musical Motif</span>
+                  </h4>
+                  <p id="active-track-motif" class="font-serif text-xs text-stone-300 leading-relaxed">
+                    A tense, ticking hi-hat and a repetitive, rigid Wurlitzer riff mimicking the unfeeling machinery of modern labor.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Lyrics Drawer -->
+              <div class="pt-4 border-t border-white/5">
+                <div class="flex items-center justify-between gap-3 mb-4">
+                  <div class="flex items-center gap-2">
+                    <h4 id="lyrics-track-title" class="font-display font-bold text-sm text-white">Lyrics & Arrangement</h4>
+                    <span id="copy-feedback" class="hidden text-[11px] font-mono text-emerald-400 font-semibold">✓ Copied!</span>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <div class="flex rounded-lg bg-white/5 p-0.5 border border-white/10 text-[11px] font-mono">
+                      <button id="btn-toggle-stanzas" class="px-2.5 py-1 rounded bg-[#e05a2b] text-white">Stanzas</button>
+                      <button id="btn-toggle-clean" class="px-2.5 py-1 rounded text-stone-400 hover:text-white">Clean</button>
+                    </div>
+                    <button id="btn-copy-lyrics" class="p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-stone-300 border border-white/10 transition-colors text-xs" title="Copy Lyrics">
+                      <i class="fa-solid fa-copy"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div id="lyrics-content" class="max-h-[360px] overflow-y-auto pr-2">
+                  <!-- Lyrics populated by app.js -->
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION V: MUSICAL ARCHITECTURE -->
+    <section id="musical-identity" class="py-16 sm:py-24 border-b border-stone-800/60 bg-[#0c0f16]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mx-auto text-center space-y-3 mb-16">
+          <span class="text-xs font-mono uppercase text-amber-400 tracking-widest">Part II &bull; Sonic Architecture</span>
+          <h2 class="font-display font-bold text-2xl sm:text-4xl text-white">
+            The Musical North Star
+          </h2>
+          <p class="font-serif text-sm sm:text-base text-stone-400">
+            A deliberate reclamation of analog warmth, rhythm-section polyphony, and gospel-soul call-and-response engineered to dismantle ideological alienation through the power of the groove.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="glass-card rounded-2xl p-6 border border-white/5 space-y-3">
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/20 text-amber-400 border border-amber-500/30">BASS & DRUMS</span>
+            <h3 class="font-display font-bold text-base text-white">Polyphony in the Pocket</h3>
+            <p class="font-serif text-xs text-stone-300 leading-relaxed">
+              Modeled after James Jamerson (Motown) and Duck Dunn (Stax). Basslines operate deep in the pocket with melodic 16th-note syncopation, locked to unhurried, heavy-hitting drums in the tradition of Al Jackson Jr.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border border-white/5 space-y-3">
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#e05a2b]/20 text-[#e05a2b] border border-[#e05a2b]/30">BRASS & ORGAN</span>
+            <h3 class="font-display font-bold text-base text-white">Memphis Horns & B3</h3>
+            <p class="font-serif text-xs text-stone-300 leading-relaxed">
+              Warm, analog keyboard textures (Wurlitzer 200A and roaring Leslie-cabinet Hammond B3) form the harmonic bedrock, punctuated by punchy, staccato brass fanfares modeled after the FAME Gang and Memphis Horns.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border border-white/5 space-y-3">
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-orange-500/20 text-orange-400 border border-orange-500/30">VOCAL DIALOGUE</span>
+            <h3 class="font-display font-bold text-base text-white">Call, Response & Lead</h3>
+            <p class="font-serif text-xs text-stone-300 leading-relaxed">
+              Lead vocals alternate between a grounded, conversational male baritone (storyteller precision) and a soaring, powerhouse female rock-soul vocalist (gospel-infused moral authority), united in choral democracy.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border border-white/5 space-y-3">
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-300 border border-amber-400/30">WARMTH FROM FRICTION</span>
+            <h3 class="font-display font-bold text-base text-white">Analog Tape Saturation</h3>
+            <p class="font-serif text-xs text-stone-300 leading-relaxed">
+              Rejecting sterile digital perfection, the recording embraces magnetic tape pushed into the red: subtle harmonic distortion and bass bloom mirroring the truth that human friction creates warmth.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BOTTOM FLOATING AUDIO PLAYER BAR -->
+  <aside id="player-bar" class="sticky bottom-0 z-50 bg-[#07090d]/95 backdrop-blur-md border-t border-stone-800/90 shadow-2xl py-3 px-4 sm:px-6" aria-label="Persistent Audio Player Deck">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+      
+      <!-- Track Thumbnail & Title -->
+      <div class="flex items-center gap-3 min-w-[200px] flex-1 sm:flex-initial">
+        <div class="w-11 h-11 rounded-lg overflow-hidden flex-shrink-0 border border-white/10 relative">
+          <img id="player-track-art" src="assets/art/track-01--sq.webp" alt="Player album art" class="w-full h-full object-cover">
+        </div>
+        <div class="min-w-0">
+          <div id="player-track-title" class="font-display text-sm font-semibold text-white truncate">01. The Ghost on the Assembly Line</div>
+          <div id="player-track-act" class="text-[11px] font-mono text-amber-400 truncate">Act I: The Algorithmic Factory &bull; Em</div>
+        </div>
+      </div>
+
+      <!-- Playback Controls & Progress Scrubber -->
+      <div class="flex flex-col items-center gap-1.5 flex-1 max-w-xl w-full order-3 sm:order-2">
+        <div class="flex items-center gap-4">
+          <button id="prev-btn" class="text-stone-400 hover:text-white transition-colors text-sm focus:outline-none" title="Previous Track">
+            <i class="fa-solid fa-backward-step"></i>
+          </button>
+          
+          <button id="play-btn" class="w-9 h-9 rounded-full bg-[#e05a2b] hover:bg-orange-500 text-white flex items-center justify-center transition-all shadow-md focus:outline-none focus:ring-2 focus:ring-[#e05a2b]" title="Play / Pause">
+            <i id="play-icon" class="fa-solid fa-play text-xs"></i>
+          </button>
+
+          <button id="next-btn" class="text-stone-400 hover:text-white transition-colors text-sm focus:outline-none" title="Next Track">
+            <i class="fa-solid fa-forward-step"></i>
+          </button>
+
+          <!-- Tape Reels Graphic -->
+          <div class="hidden md:flex items-center gap-1 ml-3 px-2 py-0.5 rounded bg-white/5 border border-white/5">
+            <i id="tape-reel-left" class="fa-solid fa-compact-disc text-[11px] text-amber-400 animate-tape-spin animate-tape-spin-paused"></i>
+            <span class="text-[10px] font-mono text-stone-400">ANALOG TAPE</span>
+            <i id="tape-reel-right" class="fa-solid fa-compact-disc text-[11px] text-amber-400 animate-tape-spin animate-tape-spin-paused"></i>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2.5 w-full">
+          <span id="current-time" class="font-mono text-[10px] text-stone-400 w-8 text-right">0:00</span>
+          <input id="progress-slider" type="range" min="0" max="100" value="0" class="w-full h-1 bg-stone-800 rounded-lg appearance-none cursor-pointer focus:outline-none" aria-label="Audio progress scrubber">
+          <span id="total-time" class="font-mono text-[10px] text-stone-400 w-8">0:00</span>
+        </div>
+      </div>
+
+      <!-- Right Controls: Volume & Jump -->
+      <div class="hidden sm:flex items-center gap-4 flex-initial order-2 sm:order-3">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-volume-low text-stone-400 text-xs"></i>
+          <input id="volume-slider" type="range" min="0" max="100" value="85" class="w-16 h-1 bg-stone-800 rounded-lg appearance-none cursor-pointer" aria-label="Audio volume slider">
+        </div>
+        <a href="#jukebox-section" class="px-2.5 py-1 rounded bg-white/5 hover:bg-white/10 text-stone-300 font-mono text-[11px] border border-white/5 transition-colors" title="View lyrics in Songbook">
+          Lyrics &uarr;
+        </a>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#050608] border-t border-stone-800/80 py-12 px-4 sm:px-6 lg:px-8 text-stone-400 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      <div class="space-y-1">
+        <div class="font-display font-bold text-sm text-stone-200">The Shady River Bard</div>
+        <p class="font-serif text-[11px] text-stone-500 max-w-md">
+          A narrative-driven concept universe rooted in Western Washington permaculture and the timeless struggle for human dignity.
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-6 font-mono text-[11px]">
+        <a href="../vault/index.html" class="hover:text-amber-400 transition-colors">Discography Vault</a>
+        <a href="../index.html" class="hover:text-amber-400 transition-colors">Homestead Portal</a>
+        <a href="https://theshadyriverbard.substack.com" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-colors">Substack Chronicles</a>
+        <a href="https://www.youtube.com/@TheShadyRiverBard" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-colors">YouTube Channel</a>
+      </div>
+      <div class="text-[11px] font-mono text-stone-500">
+        &copy; 2026 The Shady River Bard. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- RELEASE VOTING MODAL -->
+  <div id="vote-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div id="vote-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm"></div>
+    <div class="relative w-full max-w-md glass-panel rounded-2xl p-6 border border-amber-500/30 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2 text-amber-400 font-mono text-xs font-bold uppercase">
+          <i class="fa-solid fa-check-to-slot"></i>
+          <span>Research Vault Voting</span>
+        </div>
+        <button id="close-vote-btn" class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 text-stone-400 hover:text-white flex items-center justify-center text-xs transition-colors">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="space-y-2">
+        <h3 class="font-display font-bold text-xl text-white">Vote to Release Soul Fire</h3>
+        <p class="font-serif text-xs text-stone-300 leading-relaxed">
+          Support advancing <strong>Soul Fire (Album XX)</strong> from the Concept Incubator into commercial streaming distribution on Apple Music, Spotify, YouTube Music, and vinyl pressing.
+        </p>
+      </div>
+
+      <div class="p-3 rounded-xl bg-white/[0.03] border border-white/5 text-xs font-mono space-y-1 text-stone-400">
+        <div>&bull; 15 Master Tracks composed & arranged</div>
+        <div>&bull; 4-Act Working-Class Soul Cantata</div>
+        <div>&bull; Stax / Muscle Shoals / Motown production</div>
+      </div>
+
+      <div class="flex items-center justify-end gap-3 pt-2">
+        <button onclick="document.getElementById('vote-modal').classList.add('hidden')" class="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-stone-300 font-mono text-xs transition-colors">
+          Cancel
+        </button>
+        <button id="confirm-vote-btn" class="px-5 py-2 rounded-lg bg-[#e05a2b] hover:bg-orange-500 text-white font-bold text-xs shadow-lg transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-check"></i>
+          <span>Confirm Vote</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BARD NOTE MODAL -->
+  <div id="bard-note-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div id="bard-note-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm"></div>
+    <div class="relative w-full max-w-2xl max-h-[85vh] flex flex-col glass-panel rounded-2xl border border-amber-500/30 shadow-2xl overflow-hidden">
+      <div class="flex items-center justify-between p-4 border-b border-white/10 bg-[#0c0f16]">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-feather-pointed text-amber-400 text-sm"></i>
+          <span id="bard-note-title" class="font-display font-bold text-sm text-white">The Bard's Studio Deconstruction</span>
+        </div>
+        <button onclick="document.getElementById('bard-note-modal').classList.add('hidden')" class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 text-stone-400 hover:text-white flex items-center justify-center text-xs transition-colors">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div id="bard-note-body" class="p-6 overflow-y-auto space-y-4 font-serif text-sm text-stone-300 leading-relaxed">
+        <!-- Injected via bard-notes.js or fallback -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Engine -->
+  <script src="assets/js/app.js"></script>
+  <script src="../assets/js/bard-notes.js?v=20260920b"></script>
+</body>
+</html>
