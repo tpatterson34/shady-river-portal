@@ -131,10 +131,9 @@
           <span>"Deconstructed" Liner Notes</span>
         </a>
         <span class="text-stone-600" aria-hidden="true">|</span>
-        <button id="header-cast-btn" onclick="toggleFractureCast()" class="hover:text-emerald-400 text-stone-300 transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded px-2 py-0.5 font-mono text-[11px] border border-transparent hover:border-emerald-500/40" title="Cast YouTube music videos to Smart TV or Chromecast" aria-label="Cast to TV">
-          <i class="fa-brands fa-chromecast text-stone-400" aria-hidden="true"></i>
-          <span id="header-cast-label">Cast</span>
-          <span id="header-cast-device" class="hidden text-[10px] text-emerald-400 font-normal"></span>
+        <button id="header-cast-btn" onclick="openCastGuideModal()" class="hover:text-red-400 text-stone-300 transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400 rounded px-2 py-0.5 font-mono text-[11px] border border-transparent hover:border-red-500/40" title="Cast The Fracture videos to Smart TV or Chromecast" aria-label="Cast to TV">
+          <i class="fa-brands fa-chromecast text-red-400" aria-hidden="true"></i>
+          <span>Cast to TV</span>
         </button>
         <span class="text-stone-600" aria-hidden="true">|</span>
         <button id="a11y-toggle-btn" onclick="toggleA11yToolbar()" aria-expanded="false" aria-controls="a11y-toolbar" class="hover:text-fissure-400 text-stone-300 transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-fissure-400 rounded px-1.5 py-0.5 font-mono text-[11px]" aria-label="Toggle accessibility display preferences">
@@ -557,44 +556,28 @@
     </div>
   </footer>
 
-  <!-- LOAD DATA & GOOGLE CAST (YOUTUBE MODE) -->
-  <script src="data/fracture-data.js?v=20260923B"></script>
-  <script>
-    window.CAST_MODE = 'youtube';
-  </script>
-  <script src="../assets/js/cast-manager.js?v=20260923B"></script>
-  <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
+  <!-- LOAD DATA SCRIPT -->
+  <script src="data/fracture-data.js?v=20260923C"></script>
 
   <!-- APP LOGIC SCRIPT -->
   <script>
-    // Cast Integration Helpers
-    function toggleFractureCast() {
-      if (window.CastManager && window.CastManager.isConnected()) {
-        window.CastManager.disconnect();
-      } else {
-        const curIdx = (typeof window.currentTrackIndex === 'number' && window.currentTrackIndex >= 0) ? window.currentTrackIndex : 0;
-        castFractureTrack(curIdx);
+    // Cast Guide Modal Helpers
+    function openCastGuideModal() {
+      const modal = document.getElementById('cast-guide-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
       }
     }
 
-    function castFractureTrack(trackIndex, videoId, trackTitle) {
-      if (!window.CastManager) return;
-      if (!videoId && window.FRACTURE_DATA && window.FRACTURE_DATA.tracks) {
-        const t = window.FRACTURE_DATA.tracks[trackIndex];
-        videoId = t ? (t.video_id || t.videoId) : '';
-        trackTitle = t ? t.title : `Track ${trackIndex + 1}`;
+    function closeCastGuideModal() {
+      const modal = document.getElementById('cast-guide-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
       }
-      pauseVideoModalIframe();
-      window.CastManager.castYouTubeVideo(videoId, trackIndex, trackTitle);
-    }
-
-    function castCurrentModalVideo() {
-      if (!window.CastManager) return;
-      const vId = window._currentModalVideoId;
-      const title = window._currentModalTitle || 'The Fracture';
-      const tIdx = typeof window.currentTrackIndex === 'number' ? window.currentTrackIndex : 0;
-      pauseVideoModalIframe();
-      window.CastManager.castYouTubeVideo(vId, tIdx, title);
     }
 
     function pauseVideoModalIframe() {
@@ -746,7 +729,19 @@
     }
 
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeVideoModal();
+      if (e.key === 'Escape') {
+        closeVideoModal();
+        closeCastGuideModal();
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const guideModal = document.getElementById('cast-guide-modal');
+      if (guideModal) {
+        guideModal.addEventListener('click', (e) => {
+          if (e.target === guideModal) closeCastGuideModal();
+        });
+      }
     });
 
     // 2. Render Tracklist & Lyrics (Continuous List of all 14 Songs with Act Dividers)
@@ -854,17 +849,17 @@
                   <i aria-hidden="true" class="fa-brands fa-youtube text-base"></i>
                   <span>Watch Video</span>
                 </button>
-                <button 
-                  onclick="castFractureTrack(${t.number - 1}, '${t.video_id || ''}', '${escapeHtml(t.title)}')" 
-                  id="track-cast-btn-${t.number}"
-                  data-track-number="${t.number}"
-                  class="fracture-track-cast-btn px-3 py-2 rounded-xl bg-basalt-900/90 hover:bg-basalt-800 border border-white/20 hover:border-emerald-400 text-stone-200 hover:text-white font-mono text-xs font-bold flex items-center gap-1.5 shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-emerald-400"
-                  title="Cast '${escapeHtml(t.title)}' video to TV"
-                  aria-label="Cast video for ${escapeHtml(t.title)} to TV"
+                <a 
+                  href="https://www.youtube.com/watch?v=${t.video_id || ''}" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="px-3.5 py-2 rounded-xl bg-basalt-900/90 hover:bg-basalt-800 border border-white/20 hover:border-red-500 text-stone-200 hover:text-white font-mono text-xs font-bold flex items-center gap-1.5 shadow-lg transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-400"
+                  title="Cast '${escapeHtml(t.title)}' to TV via YouTube"
+                  aria-label="Cast ${escapeHtml(t.title)} to TV via YouTube"
                 >
-                  <i aria-hidden="true" class="fa-brands fa-chromecast text-sm text-fissure-400"></i>
-                  <span class="track-cast-label">Cast to TV</span>
-                </button>
+                  <i aria-hidden="true" class="fa-brands fa-chromecast text-sm text-red-400"></i>
+                  <span>Cast on YouTube</span>
+                </a>
               </div>
             </div>
 
@@ -1260,27 +1255,18 @@
           <!-- Populated dynamically -->
         </h3>
         <div class="flex items-center gap-2">
-          <button 
-            id="modal-cast-btn" 
-            onclick="castCurrentModalVideo()" 
-            class="px-3 py-1.5 rounded-lg bg-basalt-800 hover:bg-basalt-750 text-stone-300 hover:text-white flex items-center gap-1.5 font-mono text-xs border border-white/10 hover:border-emerald-400 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400"
-            title="Cast this video to TV"
-            aria-label="Cast this video to TV"
-          >
-            <i class="fa-brands fa-chromecast text-fissure-400" aria-hidden="true"></i>
-            <span id="modal-cast-label">Cast to TV</span>
-          </button>
           <a
             id="modal-youtube-link"
             href="#"
             target="_blank"
             rel="noopener noreferrer"
-            class="px-3 py-1.5 rounded-lg bg-red-600/90 hover:bg-red-600 text-white flex items-center gap-1.5 font-mono text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-red-400"
-            title="Watch directly on YouTube (opens new tab)"
-            aria-label="Watch directly on YouTube"
+            class="px-3.5 py-1.5 rounded-lg bg-red-600 hover:bg-red-500 text-white flex items-center gap-2 font-mono text-xs font-bold transition-all shadow-md hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-400"
+            title="Cast to TV on YouTube (opens new tab)"
+            aria-label="Cast to TV on YouTube"
           >
-            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
-            <span>YouTube</span>
+            <i class="fa-brands fa-chromecast text-white" aria-hidden="true"></i>
+            <span>Cast on YouTube</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-80" aria-hidden="true"></i>
           </a>
           <button onclick="closeVideoModal()" aria-label="Close video player" class="w-8 h-8 rounded-lg bg-basalt-800 hover:bg-basalt-750 text-stone-300 hover:text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-fissure-400">
             <i aria-hidden="true" class="fa-solid fa-xmark text-sm"></i>
@@ -1289,6 +1275,66 @@
       </div>
       <div class="aspect-video w-full bg-black">
         <iframe id="video-iframe" class="w-full h-full" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; presentation; web-share" allowfullscreen></iframe>
+      </div>
+      <!-- Modal Footer Guide -->
+      <div class="px-4 py-2.5 bg-basalt-950/90 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-stone-400">
+        <div class="flex items-center gap-2">
+          <i class="fa-brands fa-chromecast text-red-400 text-sm"></i>
+          <span>To Cast to Smart TV: Click <strong>"Cast on YouTube"</strong> above, or right-click video &gt; <strong>Cast</strong>.</span>
+        </div>
+        <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcHGcrGGVmhxgbmjlO4Z7SU2" target="_blank" rel="noopener noreferrer" class="hover:text-red-400 transition-colors flex items-center gap-1 font-semibold text-stone-300">
+          <i class="fa-brands fa-youtube text-red-500"></i>
+          <span>Full Album Playlist</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CAST GUIDE MODAL FOR THE FRACTURE -->
+  <div id="cast-guide-modal" role="dialog" aria-modal="true" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="relative w-full max-w-lg bg-basalt-900 border border-white/10 rounded-2xl overflow-hidden shadow-2xl p-6 space-y-5">
+      <div class="flex items-center justify-between border-b border-white/10 pb-3">
+        <div class="flex items-center gap-2.5">
+          <i class="fa-brands fa-chromecast text-red-500 text-xl"></i>
+          <h3 class="font-display font-bold text-lg text-white">Cast The Fracture to TV</h3>
+        </div>
+        <button onclick="closeCastGuideModal()" class="w-8 h-8 rounded-lg bg-basalt-800 text-stone-400 hover:text-white flex items-center justify-center">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+      <div class="space-y-4 text-xs font-mono text-stone-300 leading-relaxed">
+        <p class="text-stone-300">
+          All 14 songs on <strong class="text-white">The Fracture</strong> are official YouTube Music Videos. Here are the two ways to stream them on your TV:
+        </p>
+        <div class="p-3.5 rounded-xl bg-basalt-950 border border-white/10 space-y-1.5">
+          <div class="text-white font-bold flex items-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-red-600/30 text-red-400 flex items-center justify-center text-[10px]">1</span>
+            <span>Direct YouTube Cast (Recommended)</span>
+          </div>
+          <p class="text-stone-400 text-[11px] pl-7">
+            Click <strong>"Cast on YouTube"</strong> on any song or open the playlist. In YouTube's native player, the official Cast button in the bottom-right control bar beams in full 4K directly to your TV with complete remote controls.
+          </p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-basalt-950 border border-white/10 space-y-1.5">
+          <div class="text-white font-bold flex items-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-emerald-600/30 text-emerald-400 flex items-center justify-center text-[10px]">2</span>
+            <span>Browser Tab / Media Cast</span>
+          </div>
+          <p class="text-stone-400 text-[11px] pl-7">
+            While playing a video inside the on-site player, use Chrome's top menu: <strong>⋮ &gt; Cast... &gt; Select your TV</strong> (e.g. "Music TV") to mirror the stream directly.
+          </p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 pt-2">
+        <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcHGcrGGVmhxgbmjlO4Z7SU2" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-4 rounded-xl bg-red-600 hover:bg-red-500 text-white font-mono text-xs font-bold text-center flex items-center justify-center gap-2 transition-all shadow-lg hover:scale-[1.02]">
+          <i class="fa-brands fa-youtube text-base"></i>
+          <span>Play All 14 Tracks on YouTube</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+        <button onclick="closeCastGuideModal()" class="py-2.5 px-4 rounded-xl bg-basalt-800 hover:bg-basalt-750 text-stone-300 font-mono text-xs transition-colors">
+          Close
+        </button>
       </div>
     </div>
   </div>

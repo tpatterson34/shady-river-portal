@@ -540,13 +540,9 @@
 
     try {
       const castContext = cast.framework.CastContext.getInstance();
-      const currentMode = getCastMode();
-      const isYtMode = (currentMode === 'youtube');
-      const targetAppId = isYtMode
-        ? YOUTUBE_APP_ID
-        : ((window.chrome && chrome.cast && chrome.cast.media && chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID) || DEFAULT_MEDIA_RECEIVER_APP_ID);
+      const targetAppId = (window.chrome && chrome.cast && chrome.cast.media && chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID) || DEFAULT_MEDIA_RECEIVER_APP_ID;
 
-      logDebug(`Initializing CastContext (mode: ${currentMode}, targetAppId: ${targetAppId})`);
+      logDebug(`Initializing CastContext (targetAppId: ${targetAppId})`);
       castContext.setOptions({
         receiverApplicationId: targetAppId,
         autoJoinPolicy: (window.chrome && chrome.cast && chrome.cast.AutoJoinPolicy && chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED) || 'origin_scoped'
@@ -1125,45 +1121,11 @@
    * Direct casting trigger for YouTube videos by ID or track index
    */
   function castYouTubeVideo(videoId, trackIndex = 0, trackTitle = '') {
-    if (!window.cast || !window.cast.framework) {
-      logDebug('castYouTubeVideo: Cast framework not yet ready');
-      showToast('Google Cast is initializing, please try again in a moment...', 'info', 3000);
-      return;
-    }
-
-    activeTracks = getActiveTracks();
-    const castContext = cast.framework.CastContext.getInstance();
-    currentSession = castContext.getCurrentSession();
-    isConnected = checkIsConnected();
-
-    if (isConnected && currentSession) {
-      loadYouTubeVideoOnReceiver(videoId, trackIndex, trackTitle);
-      updateAllCastUI();
+    if (videoId) {
+      window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank', 'noopener,noreferrer');
+      showToast(`Opening "${trackTitle || 'Track'}" on YouTube for TV casting...`, 'info', 3500);
     } else {
-      pendingTrackIndex = trackIndex;
-      window._pendingCastVideoId = videoId;
-      window._pendingCastVideoTitle = trackTitle;
-      isUserInitiatedRequest = true;
-
-      showToast('Select your Smart TV or Chromecast...', 'info', 5000);
-      castContext.requestSession().then(() => {
-        logDebug('castYouTubeVideo: requestSession resolved');
-        isUserInitiatedRequest = false;
-        const targetIdx = (pendingTrackIndex !== null && pendingTrackIndex >= 0) ? pendingTrackIndex : trackIndex;
-        pendingTrackIndex = null;
-        initiateSessionPlayback(targetIdx, 'CAST_YOUTUBE_VIDEO');
-      }).catch(err => {
-        isUserInitiatedRequest = false;
-        pendingTrackIndex = null;
-        window._pendingCastVideoId = null;
-        window._pendingCastVideoTitle = null;
-        isMediaLoading = false;
-        const isCancel = err === 'cancel' || err === 'cancel_session_request';
-        if (!isCancel) {
-          logDebug(`Cast session rejected: ${JSON.stringify(err)}`);
-          showToast('Cast request cancelled or unavailable', 'warn', 3000);
-        }
-      });
+      showToast('No YouTube video ID found for this track', 'warn', 3000);
     }
   }
 
