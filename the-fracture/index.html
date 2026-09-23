@@ -131,6 +131,12 @@
           <span>"Deconstructed" Liner Notes</span>
         </a>
         <span class="text-stone-600" aria-hidden="true">|</span>
+        <button id="header-cast-btn" onclick="toggleFractureCast()" class="hover:text-emerald-400 text-stone-300 transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded px-2 py-0.5 font-mono text-[11px] border border-transparent hover:border-emerald-500/40" title="Cast YouTube music videos to Smart TV or Chromecast" aria-label="Cast to TV">
+          <i class="fa-brands fa-chromecast text-stone-400" aria-hidden="true"></i>
+          <span id="header-cast-label">Cast</span>
+          <span id="header-cast-device" class="hidden text-[10px] text-emerald-400 font-normal"></span>
+        </button>
+        <span class="text-stone-600" aria-hidden="true">|</span>
         <button id="a11y-toggle-btn" onclick="toggleA11yToolbar()" aria-expanded="false" aria-controls="a11y-toolbar" class="hover:text-fissure-400 text-stone-300 transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-fissure-400 rounded px-1.5 py-0.5 font-mono text-[11px]" aria-label="Toggle accessibility display preferences">
           <i class="fa-solid fa-universal-access text-fissure-400" aria-hidden="true"></i>
           <span>Accessibility</span>
@@ -551,11 +557,55 @@
     </div>
   </footer>
 
-  <!-- LOAD DATA SCRIPT -->
-  <script src="data/fracture-data.js?v=20260909_02"></script>
+  <!-- LOAD DATA & GOOGLE CAST (YOUTUBE MODE) -->
+  <script src="data/fracture-data.js?v=20260923A"></script>
+  <script>
+    window.CAST_MODE = 'youtube';
+  </script>
+  <script src="../assets/js/cast-manager.js?v=20260923A"></script>
+  <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
 
   <!-- APP LOGIC SCRIPT -->
   <script>
+    // Cast Integration Helpers
+    function toggleFractureCast() {
+      if (window.CastManager && window.CastManager.isConnected()) {
+        window.CastManager.disconnect();
+      } else {
+        const curIdx = (typeof window.currentTrackIndex === 'number' && window.currentTrackIndex >= 0) ? window.currentTrackIndex : 0;
+        castFractureTrack(curIdx);
+      }
+    }
+
+    function castFractureTrack(trackIndex, videoId, trackTitle) {
+      if (!window.CastManager) return;
+      if (!videoId && window.FRACTURE_DATA && window.FRACTURE_DATA.tracks) {
+        const t = window.FRACTURE_DATA.tracks[trackIndex];
+        videoId = t ? (t.video_id || t.videoId) : '';
+        trackTitle = t ? t.title : `Track ${trackIndex + 1}`;
+      }
+      pauseVideoModalIframe();
+      window.CastManager.castYouTubeVideo(videoId, trackIndex, trackTitle);
+    }
+
+    function castCurrentModalVideo() {
+      if (!window.CastManager) return;
+      const vId = window._currentModalVideoId;
+      const title = window._currentModalTitle || 'The Fracture';
+      const tIdx = typeof window.currentTrackIndex === 'number' ? window.currentTrackIndex : 0;
+      pauseVideoModalIframe();
+      window.CastManager.castYouTubeVideo(vId, tIdx, title);
+    }
+
+    function pauseVideoModalIframe() {
+      const iframe = document.getElementById('video-iframe');
+      if (iframe && iframe.src) {
+        try {
+          iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        } catch (e) {}
+      }
+    }
+
     // 1. Render Societal Pillars
     function renderPillars() {
       const container = document.getElementById('pillars-container');
@@ -655,13 +705,15 @@
     }
 
     function openVideoModal(videoId, title) {
+      window._currentModalVideoId = videoId;
+      window._currentModalTitle = title;
       const modal = document.getElementById('video-modal');
       const iframe = document.getElementById('video-iframe');
       const titleEl = document.getElementById('modal-track-title');
       if (!modal || !iframe) return;
 
       if (videoId) {
-        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1`;
       } else {
         iframe.src = '';
       }
@@ -671,6 +723,10 @@
       modal.classList.remove('hidden');
       modal.classList.add('flex');
       document.body.style.overflow = 'hidden';
+
+      if (window.CastManager && window.CastManager.updateAllCastUI) {
+        window.CastManager.updateAllCastUI();
+      }
     }
 
     function closeVideoModal() {
@@ -783,15 +839,26 @@
                 </span>
               </div>
 
-              <!-- Video Play Button Overlay -->
-              <div class="absolute bottom-4 right-4">
+              <!-- Video Play & Cast Button Overlay -->
+              <div class="absolute bottom-4 right-4 flex items-center gap-2">
                 <button 
                   onclick="openVideoModal('${t.video_id || ''}', '${escapeHtml(t.title)}')" 
-                  class="px-4 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white font-mono text-xs font-bold flex items-center gap-2 shadow-2xl transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
+                  class="px-3.5 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white font-mono text-xs font-bold flex items-center gap-2 shadow-2xl transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
                   aria-label="Play music video for ${escapeHtml(t.title)}"
                 >
                   <i aria-hidden="true" class="fa-brands fa-youtube text-base"></i>
                   <span>Watch Video</span>
+                </button>
+                <button 
+                  onclick="castFractureTrack(${t.number - 1}, '${t.video_id || ''}', '${escapeHtml(t.title)}')" 
+                  id="track-cast-btn-${t.number}"
+                  data-track-number="${t.number}"
+                  class="fracture-track-cast-btn px-3 py-2 rounded-xl bg-basalt-900/90 hover:bg-basalt-800 border border-white/20 hover:border-emerald-400 text-stone-200 hover:text-white font-mono text-xs font-bold flex items-center gap-1.5 shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                  title="Cast '${escapeHtml(t.title)}' video to TV"
+                  aria-label="Cast video for ${escapeHtml(t.title)} to TV"
+                >
+                  <i aria-hidden="true" class="fa-brands fa-chromecast text-sm text-fissure-400"></i>
+                  <span class="track-cast-label">Cast to TV</span>
                 </button>
               </div>
             </div>
@@ -1187,9 +1254,21 @@
         <h3 id="modal-track-title" class="font-display font-bold text-base text-white flex items-center gap-2">
           <!-- Populated dynamically -->
         </h3>
-        <button onclick="closeVideoModal()" aria-label="Close video player" class="w-8 h-8 rounded-lg bg-basalt-800 hover:bg-basalt-750 text-stone-300 hover:text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-fissure-400">
-          <i aria-hidden="true" class="fa-solid fa-xmark text-sm"></i>
-        </button>
+        <div class="flex items-center gap-2">
+          <button 
+            id="modal-cast-btn" 
+            onclick="castCurrentModalVideo()" 
+            class="px-3 py-1.5 rounded-lg bg-basalt-800 hover:bg-basalt-750 text-stone-300 hover:text-white flex items-center gap-1.5 font-mono text-xs border border-white/10 hover:border-emerald-400 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400"
+            title="Cast this video to TV"
+            aria-label="Cast this video to TV"
+          >
+            <i class="fa-brands fa-chromecast text-fissure-400" aria-hidden="true"></i>
+            <span id="modal-cast-label">Cast to TV</span>
+          </button>
+          <button onclick="closeVideoModal()" aria-label="Close video player" class="w-8 h-8 rounded-lg bg-basalt-800 hover:bg-basalt-750 text-stone-300 hover:text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-fissure-400">
+            <i aria-hidden="true" class="fa-solid fa-xmark text-sm"></i>
+          </button>
+        </div>
       </div>
       <div class="aspect-video w-full bg-black">
         <iframe id="video-iframe" class="w-full h-full" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

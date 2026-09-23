@@ -30,6 +30,26 @@
     window.Audio.prototype = OrigAudio.prototype;
   }
 
+  // Cast Constants & Namespaces
+  const YOUTUBE_APP_ID = '233637DE';
+  const YOUTUBE_NAMESPACE = 'urn:x-cast:com.google.youtube.mdx';
+  const DEFAULT_MEDIA_RECEIVER_APP_ID = 'CC1AD845';
+
+  function getCastMode() {
+    if (window.CAST_MODE) return window.CAST_MODE.toLowerCase();
+    if (window.FRACTURE_DATA) return 'youtube';
+    const activeData = getActiveAlbumData();
+    if (activeData) {
+      const tracks = activeData.tracks || (activeData.album && activeData.album.tracks);
+      if (Array.isArray(tracks) && tracks.length > 0) {
+        if ((tracks[0].video_id || tracks[0].videoId) && !tracks[0].audio_file && !tracks[0].audioFile) {
+          return 'youtube';
+        }
+      }
+    }
+    return 'audio';
+  }
+
   // Internal state
   let isApiAvailable = false;
   let isConnected = false;
@@ -335,7 +355,8 @@
    */
   function getActiveAlbumData() {
     if (activeAlbumMeta) return activeAlbumMeta;
-    return window.ALBUM_DATA ||
+    return window.FRACTURE_DATA ||
+           window.ALBUM_DATA ||
            window.FORGOTTEN_CROWN_DATA ||
            window.HEAVY_LOAD_DATA ||
            window.PLEONEXIA_DATA ||
@@ -451,12 +472,31 @@
     logDebug(`Session established with ${deviceName} (via ${triggerSource}). Cueing Track ${trackIdx + 1}`);
 
     pauseLocalAudio();
+    pauseLocalVideo();
     onConnectedChanged();
     showToast(`Connected to ${deviceName}. Loading track...`, 'info', 3500);
 
-    // 500ms buffer gives Google TV receiver DOM & audio player time to mount cleanly
+    const isYt = (getCastMode() === 'youtube');
+    if (isYt) {
+      try {
+        currentSession.addMessageListener(YOUTUBE_NAMESPACE, onYouTubeMessageReceived);
+        logDebug('Listening on YouTube MDX namespace: ' + YOUTUBE_NAMESPACE);
+      } catch (e) {}
+    }
+
+    // 500ms buffer gives TV receiver time to mount cleanly
     setTimeout(() => {
-      loadTrackOnReceiver(trackIdx);
+      if (isYt) {
+        activeTracks = (activeTracks && activeTracks.length) ? activeTracks : getActiveTracks();
+        const t = activeTracks[trackIdx];
+        const vId = (t && (t.video_id || t.videoId)) || window._pendingCastVideoId || '';
+        const title = (t && t.title) || window._pendingCastVideoTitle || `Track ${trackIdx + 1}`;
+        window._pendingCastVideoId = null;
+        window._pendingCastVideoTitle = null;
+        loadYouTubeVideoOnReceiver(vId, trackIdx, title);
+      } else {
+        loadTrackOnReceiver(trackIdx);
+      }
     }, 500);
   }
 
@@ -471,8 +511,15 @@
 
     try {
       const castContext = cast.framework.CastContext.getInstance();
+      const currentMode = getCastMode();
+      const isYtMode = (currentMode === 'youtube');
+      const targetAppId = isYtMode
+        ? YOUTUBE_APP_ID
+        : ((window.chrome && chrome.cast && chrome.cast.media && chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID) || DEFAULT_MEDIA_RECEIVER_APP_ID);
+
+      logDebug(`Initializing CastContext (mode: ${currentMode}, targetAppId: ${targetAppId})`);
       castContext.setOptions({
-        receiverApplicationId: (window.chrome && chrome.cast && chrome.cast.media && chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID) || 'CC1AD845',
+        receiverApplicationId: targetAppId,
         autoJoinPolicy: (window.chrome && chrome.cast && chrome.cast.AutoJoinPolicy && chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED) || 'origin_scoped'
       });
 
@@ -569,6 +616,70 @@
       console.error('[CastManager] Initialization failed:', e);
       logDebug(`Init error: ${e.message}`);
     }
+  }
+
+  function onYouTubeMessageReceived(namespace, message) {
+    logDebug(`[YouTube MDX Message] ${message}`);
+    try {
+      const data = typeof message === 'string' ? JSON.parse(message) : message;
+      if (data && (data.type === 'stateChanged' || data.type === 'nowPlaying')) {
+        updateAllCastUI();
+        notifyState();
+      }
+    } catch (e) {}
+  }
+
+  function loadYouTubeVideoOnReceiver(videoId, trackIndex, trackTitle) {
+    const castContext = cast.framework.CastContext.getInstance();
+    currentSession = castContext.getCurrentSession();
+    if (!currentSession) {
+      logDebug('loadYouTubeVideoOnReceiver: No active session');
+      return;
+    }
+
+    if (!videoId) {
+      logDebug('loadYouTubeVideoOnReceiver: No video ID provided for track ' + (trackIndex + 1));
+      return;
+    }
+
+    isMediaLoading = true;
+    activeTrackIndex = trackIndex;
+    window.currentTrackIndex = trackIndex;
+    lastKnownTime = 0;
+    lastKnownDuration = 0;
+    pauseLocalAudio();
+    pauseLocalVideo();
+
+    const dev = deviceName || 'TV';
+    const title = trackTitle || (activeTracks[trackIndex] ? activeTracks[trackIndex].title : `Track ${trackIndex + 1}`);
+    logDebug(`Flinging YouTube video "${title}" [${videoId}] to ${dev}`);
+    showToast(`Streaming "${title}" to ${dev}...`, 'info', 4000);
+
+    // Register MDX listener if not already attached
+    try {
+      currentSession.addMessageListener(YOUTUBE_NAMESPACE, onYouTubeMessageReceived);
+    } catch (e) {}
+
+    const payload = {
+      type: 'flingVideo',
+      data: {
+        videoId: videoId,
+        currentTime: 0
+      }
+    };
+
+    currentSession.sendMessage(YOUTUBE_NAMESPACE, payload).then(() => {
+      isMediaLoading = false;
+      logDebug(`✓ flingVideo succeeded for "${title}" on ${dev}`);
+      showToast(`✓ Playing "${title}" on ${dev}`, 'success', 5000);
+      emit('trackChange', activeTrackIndex);
+      updateAllCastUI();
+      notifyState();
+    }).catch(err => {
+      isMediaLoading = false;
+      logDebug(`flingVideo failed: ${JSON.stringify(err)}`);
+      showToast(`Cast error: ${err?.message || 'Failed to beam video'}`, 'error', 5000);
+    });
   }
 
   function onConnectedChanged() {
@@ -685,6 +796,30 @@
     if (curTime > 0) lastKnownTime = curTime;
     if (duration > 0) lastKnownDuration = duration;
     emit('timeUpdate', { currentTime: curTime, duration });
+  }
+
+  function pauseLocalVideo() {
+    // 1. Pause HTML5 video elements
+    document.querySelectorAll('video').forEach(v => {
+      try {
+        if (!v.paused) v.pause();
+      } catch (e) {}
+    });
+
+    // 2. Pause YouTube iframe embeds via postMessage API
+    document.querySelectorAll('iframe').forEach(iframe => {
+      try {
+        iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+      } catch (e) {}
+    });
+
+    // 3. Clear/pause active modal iframe if open
+    const videoIframe = document.getElementById('video-iframe');
+    if (videoIframe && videoIframe.src) {
+      try {
+        videoIframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+      } catch (e) {}
+    }
   }
 
   function pauseLocalAudio() {
@@ -869,9 +1004,16 @@
     currentSession = castContext.getCurrentSession();
     isConnected = checkIsConnected();
 
+    const isYt = (getCastMode() === 'youtube');
     if (isConnected && currentSession) {
-      logDebug(`Already connected to ${deviceName || 'Google TV'}. Loading track ${trackIndex + 1}`);
-      loadTrackOnReceiver(trackIndex);
+      logDebug(`Already connected to ${deviceName || 'TV'}. Loading track ${trackIndex + 1}`);
+      if (isYt) {
+        const t = activeTracks[trackIndex];
+        const vId = (t && (t.video_id || t.videoId)) || '';
+        loadYouTubeVideoOnReceiver(vId, trackIndex, t ? t.title : `Track ${trackIndex + 1}`);
+      } else {
+        loadTrackOnReceiver(trackIndex);
+      }
       updateAllCastUI();
     } else {
       pendingTrackIndex = trackIndex;
@@ -908,21 +1050,76 @@
   }
 
   /**
+   * Direct casting trigger for YouTube videos by ID or track index
+   */
+  function castYouTubeVideo(videoId, trackIndex = 0, trackTitle = '') {
+    if (!window.cast || !window.cast.framework) {
+      logDebug('castYouTubeVideo: Cast framework not yet ready');
+      showToast('Google Cast is initializing, please try again in a moment...', 'info', 3000);
+      return;
+    }
+
+    activeTracks = getActiveTracks();
+    const castContext = cast.framework.CastContext.getInstance();
+    currentSession = castContext.getCurrentSession();
+    isConnected = checkIsConnected();
+
+    if (isConnected && currentSession) {
+      loadYouTubeVideoOnReceiver(videoId, trackIndex, trackTitle);
+      updateAllCastUI();
+    } else {
+      pendingTrackIndex = trackIndex;
+      window._pendingCastVideoId = videoId;
+      window._pendingCastVideoTitle = trackTitle;
+      isUserInitiatedRequest = true;
+
+      showToast('Select your Smart TV or Chromecast...', 'info', 5000);
+      castContext.requestSession().then(() => {
+        logDebug('castYouTubeVideo: requestSession resolved');
+        isUserInitiatedRequest = false;
+        const targetIdx = (pendingTrackIndex !== null && pendingTrackIndex >= 0) ? pendingTrackIndex : trackIndex;
+        pendingTrackIndex = null;
+        initiateSessionPlayback(targetIdx, 'CAST_YOUTUBE_VIDEO');
+      }).catch(err => {
+        isUserInitiatedRequest = false;
+        pendingTrackIndex = null;
+        window._pendingCastVideoId = null;
+        window._pendingCastVideoTitle = null;
+        isMediaLoading = false;
+        const isCancel = err === 'cancel' || err === 'cancel_session_request';
+        if (!isCancel) {
+          logDebug(`Cast session rejected: ${JSON.stringify(err)}`);
+          showToast('Cast request cancelled or unavailable', 'warn', 3000);
+        }
+      });
+    }
+  }
+
+  /**
    * Play / Pause toggle on remote receiver
    */
   function playOrPause() {
     isConnected = checkIsConnected();
     if (isConnected) {
-      if (remotePlayer && (remotePlayer.playerState === CastPlayerState.PLAYING || remotePlayer.playerState === CastPlayerState.PAUSED)) {
-        if (remotePlayerController) {
-          remotePlayerController.playOrPause();
+      if (getCastMode() === 'youtube') {
+        if (currentSession) {
+          // In YouTube mode, send play or pause command via MDX
+          const isCurrentlyPlaying = remotePlayer ? (remotePlayer.playerState === CastPlayerState.PLAYING) : true;
+          const nextCmd = isCurrentlyPlaying ? 'pause' : 'play';
+          currentSession.sendMessage(YOUTUBE_NAMESPACE, { type: nextCmd }).catch(() => {});
         }
       } else {
-        const curIdx = (typeof activeTrackIndex === 'number' && activeTrackIndex >= 0)
-          ? activeTrackIndex
-          : ((typeof window.currentTrackIndex === 'number' && window.currentTrackIndex >= 0) ? window.currentTrackIndex : 0);
-        logDebug(`playOrPause invoked while idle. Loading track ${curIdx + 1}`);
-        loadTrackOnReceiver(curIdx);
+        if (remotePlayer && (remotePlayer.playerState === CastPlayerState.PLAYING || remotePlayer.playerState === CastPlayerState.PAUSED)) {
+          if (remotePlayerController) {
+            remotePlayerController.playOrPause();
+          }
+        } else {
+          const curIdx = (typeof activeTrackIndex === 'number' && activeTrackIndex >= 0)
+            ? activeTrackIndex
+            : ((typeof window.currentTrackIndex === 'number' && window.currentTrackIndex >= 0) ? window.currentTrackIndex : 0);
+          logDebug(`playOrPause invoked while idle. Loading track ${curIdx + 1}`);
+          loadTrackOnReceiver(curIdx);
+        }
       }
     }
   }
@@ -940,7 +1137,13 @@
     if (!activeTracks || activeTracks.length === 0) return;
     let nextIdx = (activeTrackIndex >= 0 ? activeTrackIndex : 0) + 1;
     if (nextIdx >= activeTracks.length) nextIdx = 0;
-    loadTrackOnReceiver(nextIdx);
+    if (getCastMode() === 'youtube') {
+      const t = activeTracks[nextIdx];
+      const vId = (t && (t.video_id || t.videoId)) || '';
+      loadYouTubeVideoOnReceiver(vId, nextIdx, t ? t.title : `Track ${nextIdx + 1}`);
+    } else {
+      loadTrackOnReceiver(nextIdx);
+    }
   }
 
   function prevTrack() {
@@ -953,7 +1156,13 @@
     }
     let prevIdx = (activeTrackIndex >= 0 ? activeTrackIndex : 0) - 1;
     if (prevIdx < 0) prevIdx = activeTracks.length - 1;
-    loadTrackOnReceiver(prevIdx);
+    if (getCastMode() === 'youtube') {
+      const t = activeTracks[prevIdx];
+      const vId = (t && (t.video_id || t.videoId)) || '';
+      loadYouTubeVideoOnReceiver(vId, prevIdx, t ? t.title : `Track ${prevIdx + 1}`);
+    } else {
+      loadTrackOnReceiver(prevIdx);
+    }
   }
 
   function setVolume(level) {
@@ -1078,6 +1287,82 @@
       }
     }
 
+    // 3. Update top header cast button (for album layout like The Fracture)
+    const headerCastBtn = document.getElementById('header-cast-btn');
+    if (headerCastBtn) {
+      if (!headerCastBtn._hasCastListener) {
+        headerCastBtn._hasCastListener = true;
+        headerCastBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.toggleJukeboxCast();
+        });
+      }
+      const headerLabel = document.getElementById('header-cast-device');
+      const headerCastWord = document.getElementById('header-cast-label');
+      const headerIcon = headerCastBtn.querySelector('i');
+
+      if (isConnected) {
+        headerCastBtn.classList.add('text-emerald-400', 'border-emerald-500/50', 'bg-emerald-950/40');
+        headerCastBtn.classList.remove('text-stone-300', 'text-stone-400');
+        headerCastBtn.setAttribute('title', `Connected to ${deviceName || 'TV'} (Click to disconnect)`);
+        if (headerIcon) headerIcon.className = 'fa-brands fa-chromecast text-emerald-400 animate-pulse';
+        if (headerCastWord) headerCastWord.textContent = 'Casting:';
+        if (headerLabel) {
+          headerLabel.textContent = deviceName || 'TV';
+          headerLabel.classList.remove('hidden');
+          headerLabel.style.display = 'inline-block';
+        }
+      } else {
+        headerCastBtn.classList.remove('text-emerald-400', 'border-emerald-500/50', 'bg-emerald-950/40');
+        headerCastBtn.classList.add('text-stone-300');
+        headerCastBtn.setAttribute('title', 'Cast to TV');
+        if (headerIcon) headerIcon.className = 'fa-brands fa-chromecast text-stone-400';
+        if (headerCastWord) headerCastWord.textContent = 'Cast';
+        if (headerLabel) {
+          headerLabel.classList.add('hidden');
+          headerLabel.style.display = 'none';
+        }
+      }
+    }
+
+    // 4. Update video modal cast button
+    const modalCastBtn = document.getElementById('modal-cast-btn');
+    if (modalCastBtn) {
+      const modalCastLabel = document.getElementById('modal-cast-label');
+      const modalCastIcon = modalCastBtn.querySelector('i');
+      if (isConnected) {
+        modalCastBtn.classList.add('bg-emerald-950/80', 'text-emerald-300', 'border-emerald-500/60');
+        modalCastBtn.classList.remove('bg-basalt-800', 'text-stone-300', 'border-white/10');
+        if (modalCastIcon) modalCastIcon.className = 'fa-brands fa-chromecast text-emerald-400 animate-pulse';
+        if (modalCastLabel) modalCastLabel.textContent = `Casting (${deviceName || 'TV'})`;
+      } else {
+        modalCastBtn.classList.remove('bg-emerald-950/80', 'text-emerald-300', 'border-emerald-500/60');
+        modalCastBtn.classList.add('bg-basalt-800', 'text-stone-300', 'border-white/10');
+        if (modalCastIcon) modalCastIcon.className = 'fa-brands fa-chromecast text-fissure-400';
+        if (modalCastLabel) modalCastLabel.textContent = 'Cast to TV';
+      }
+    }
+
+    // 5. Update track-level cast buttons
+    document.querySelectorAll('.fracture-track-cast-btn').forEach(btn => {
+      const trackNum = parseInt(btn.dataset.trackNumber, 10);
+      const isThisCasting = isConnected && (activeTrackIndex === (trackNum - 1));
+      const icon = btn.querySelector('i');
+      const label = btn.querySelector('.track-cast-label');
+
+      if (isThisCasting) {
+        btn.classList.add('bg-emerald-950', 'border-emerald-500', 'text-emerald-300');
+        btn.classList.remove('bg-basalt-900/90', 'border-white/20', 'text-stone-200');
+        if (icon) icon.className = 'fa-brands fa-chromecast text-emerald-400 animate-pulse';
+        if (label) label.textContent = `Casting on ${deviceName || 'TV'}`;
+      } else {
+        btn.classList.remove('bg-emerald-950', 'border-emerald-500', 'text-emerald-300');
+        btn.classList.add('bg-basalt-900/90', 'border-white/20', 'text-stone-200');
+        if (icon) icon.className = 'fa-brands fa-chromecast text-fissure-400';
+        if (label) label.textContent = isConnected ? `Cast to ${deviceName || 'TV'}` : 'Cast to TV';
+      }
+    });
+
     updateDebugPill(isConnected ? `Connected: ${deviceName || 'Google TV'}` : 'Standby');
   }
 
@@ -1129,6 +1414,8 @@
   // Public API
   window.CastManager = {
     castTrack,
+    castYouTubeVideo,
+    getCastMode,
     playOrPause,
     seek,
     setVolume,
@@ -1187,6 +1474,10 @@
     const tracks = getActiveTracks();
     const meta = getActiveAlbumData() || {};
     CastManager.castTrack(index, tracks, meta);
+  };
+
+  window.castYouTubeVideo = function (videoId, trackIndex, trackTitle) {
+    CastManager.castYouTubeVideo(videoId, trackIndex, trackTitle);
   };
 
   window.toggleJukeboxCast = function () {
