@@ -87,11 +87,20 @@
 
   function setupApp() {
     renderTrackList();
-    selectTrack(0, false);
+    selectTrack(0, false, false);
     bindAudioEvents();
     bindUIEvents();
     checkVoteStatus();
     checkHash();
+
+    // Ensure the viewport remains at the top on entry unless a specific track hash was provided
+    const initialHash = window.location.hash.replace(/^#/, '').trim();
+    if (!initialHash || initialHash === 'top' || initialHash === 'overview') {
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      window.scrollTo(0, 0);
+    }
   }
 
   function renderTrackList() {
@@ -170,7 +179,8 @@
     });
   }
 
-  function selectTrack(index, autoPlay) {
+  function selectTrack(index, autoPlay, updateUrl) {
+    if (typeof updateUrl === 'undefined') updateUrl = true;
     if (!tracks || tracks.length === 0) return;
     if (index < 0) index = tracks.length - 1;
     if (index >= tracks.length) index = 0;
@@ -235,7 +245,9 @@
     }
 
     renderTrackList();
-    updateHash(t.slug);
+    if (updateUrl) {
+      updateHash(t.slug);
+    }
   }
 
   function renderLyrics(t) {
@@ -419,14 +431,19 @@
 
   function checkHash() {
     const hash = window.location.hash.replace(/^#/, '').trim();
-    if (!hash) return;
+    if (!hash || hash === 'top' || hash === 'overview') return;
     const matchIdx = tracks.findIndex(t => t.slug === hash || t.number_padded === hash || String(t.number) === hash);
     if (matchIdx !== -1) {
-      selectTrack(matchIdx, false);
+      selectTrack(matchIdx, false, false);
       const el = document.getElementById('jukebox-section');
       if (el) el.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  // Expose selectTrack globally for inline hero button triggers
+  window.selectTrack = function (index, autoPlay, updateUrl) {
+    selectTrack(index, autoPlay, updateUrl !== false);
+  };
 
   function openVoteModal() {
     if (!voteModal) return;
