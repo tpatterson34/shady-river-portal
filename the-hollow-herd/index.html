@@ -792,14 +792,29 @@
             <!-- Video Play Button Overlay -->
             <div class="absolute bottom-4 right-4">
               ${t.is_video_public ? `
-              <button 
-                onclick="openVideoModal('${t.youtube_id}', '${escapeHtml(t.title)}', ${t.track_number})" 
-                class="px-4 py-2 rounded-xl bg-red-600/90 hover:bg-red-500 text-white font-mono text-xs font-bold flex items-center gap-2 shadow-2xl transition-all hover:scale-105 focus-ring"
-                aria-label="Play music video for ${escapeHtml(t.title)}"
-              >
-                <i aria-hidden="true" class="fa-brands fa-youtube text-base"></i>
-                <span>Watch Video</span>
-              </button>
+              <div class="flex flex-wrap items-center gap-2 justify-end">
+                <button 
+                  onclick="openVideoModal('${t.youtube_id}', '${escapeHtml(t.title)}', ${t.track_number})" 
+                  class="px-3.5 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white font-mono text-xs font-bold flex items-center gap-2 shadow-2xl transition-all hover:scale-105 focus-ring"
+                  title="Watch on page with lyrics"
+                  aria-label="Watch ${escapeHtml(t.title)} on page"
+                >
+                  <i aria-hidden="true" class="fa-solid fa-play text-xs"></i>
+                  <span>Watch on Page</span>
+                </button>
+                <a 
+                  href="https://www.youtube.com/watch?v=${t.youtube_id}" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="px-3.5 py-2 rounded-xl bg-prairie-900/90 hover:bg-prairie-800 border border-white/20 hover:border-red-500 text-stone-200 hover:text-white font-mono text-xs font-bold flex items-center gap-1.5 shadow-lg transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-400"
+                  title="Watch on YouTube (Cast to TV, Like, and Comment)"
+                  aria-label="Watch ${escapeHtml(t.title)} on YouTube"
+                >
+                  <i aria-hidden="true" class="fa-brands fa-youtube text-sm text-red-400"></i>
+                  <span>Watch on YouTube</span>
+                  <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-75"></i>
+                </a>
+              </div>
               ` : `
               <span class="px-3.5 py-1.5 rounded-xl bg-black/70 border border-white/10 text-stone-400 font-mono text-[11px] backdrop-blur-sm flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-wheat-500"></span>

@@ -840,25 +840,27 @@
               </div>
 
               <!-- Video Play & Cast Button Overlay -->
-              <div class="absolute bottom-4 right-4 flex items-center gap-2">
+              <div class="absolute bottom-4 right-4 flex flex-wrap items-center gap-2 justify-end">
                 <button 
                   onclick="openVideoModal('${t.video_id || ''}', '${escapeHtml(t.title)}')" 
                   class="px-3.5 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white font-mono text-xs font-bold flex items-center gap-2 shadow-2xl transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
-                  aria-label="Play music video for ${escapeHtml(t.title)}"
+                  title="Watch on page with synchronized lyrics"
+                  aria-label="Watch ${escapeHtml(t.title)} on page"
                 >
-                  <i aria-hidden="true" class="fa-brands fa-youtube text-base"></i>
-                  <span>Watch Video</span>
+                  <i aria-hidden="true" class="fa-solid fa-play text-xs"></i>
+                  <span>Watch on Page</span>
                 </button>
                 <a 
                   href="https://www.youtube.com/watch?v=${t.video_id || ''}" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   class="px-3.5 py-2 rounded-xl bg-basalt-900/90 hover:bg-basalt-800 border border-white/20 hover:border-red-500 text-stone-200 hover:text-white font-mono text-xs font-bold flex items-center gap-1.5 shadow-lg transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-400"
-                  title="Cast '${escapeHtml(t.title)}' to TV via YouTube"
-                  aria-label="Cast ${escapeHtml(t.title)} to TV via YouTube"
+                  title="Watch on YouTube (Cast to TV, Like, and Comment)"
+                  aria-label="Watch ${escapeHtml(t.title)} on YouTube"
                 >
-                  <i aria-hidden="true" class="fa-brands fa-chromecast text-sm text-red-400"></i>
-                  <span>Cast on YouTube</span>
+                  <i aria-hidden="true" class="fa-brands fa-youtube text-sm text-red-400"></i>
+                  <span>Watch on YouTube</span>
+                  <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-75"></i>
                 </a>
               </div>
             </div>
@@ -1261,11 +1263,11 @@
             target="_blank"
             rel="noopener noreferrer"
             class="px-3.5 py-1.5 rounded-lg bg-red-600 hover:bg-red-500 text-white flex items-center gap-2 font-mono text-xs font-bold transition-all shadow-md hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-400"
-            title="Cast to TV on YouTube (opens new tab)"
-            aria-label="Cast to TV on YouTube"
+            title="Watch on YouTube (Cast to TV, Like, and Comment)"
+            aria-label="Watch on YouTube"
           >
-            <i class="fa-brands fa-chromecast text-white" aria-hidden="true"></i>
-            <span>Cast on YouTube</span>
+            <i class="fa-brands fa-youtube text-white text-sm" aria-hidden="true"></i>
+            <span>Watch on YouTube</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-80" aria-hidden="true"></i>
           </a>
           <button onclick="closeVideoModal()" aria-label="Close video player" class="w-8 h-8 rounded-lg bg-basalt-800 hover:bg-basalt-750 text-stone-300 hover:text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-fissure-400">
@@ -1280,7 +1282,7 @@
       <div class="px-4 py-2.5 bg-basalt-950/90 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-stone-400">
         <div class="flex items-center gap-2">
           <i class="fa-brands fa-chromecast text-red-400 text-sm"></i>
-          <span>To Cast to Smart TV: Click <strong>"Cast on YouTube"</strong> above, or right-click video &gt; <strong>Cast</strong>.</span>
+          <span>To Cast to Smart TV: Click <strong>"Watch on YouTube"</strong> above, or right-click video &gt; <strong>Cast</strong>.</span>
         </div>
         <a href="https://www.youtube.com/playlist?list=PLO_tWXIGUXcHGcrGGVmhxgbmjlO4Z7SU2" target="_blank" rel="noopener noreferrer" class="hover:text-red-400 transition-colors flex items-center gap-1 font-semibold text-stone-300">
           <i class="fa-brands fa-youtube text-red-500"></i>
@@ -1313,7 +1315,7 @@
             <span>Direct YouTube Cast (Recommended)</span>
           </div>
           <p class="text-stone-400 text-[11px] pl-7">
-            Click <strong>"Cast on YouTube"</strong> on any song or open the playlist. In YouTube's native player, the official Cast button in the bottom-right control bar beams in full 4K directly to your TV with complete remote controls.
+            Click <strong>"Watch on YouTube"</strong> on any song or open the playlist. In YouTube's native player, the official Cast button in the bottom-right control bar beams in full 4K directly to your TV with complete remote controls.
           </p>
         </div>
         <div class="p-3.5 rounded-xl bg-basalt-950 border border-white/10 space-y-1.5">

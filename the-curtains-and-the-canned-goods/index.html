@@ -938,9 +938,24 @@
         <h3 id="modal-track-title" class="font-display font-bold text-base text-white flex items-center gap-2">
           <!-- Populated dynamically -->
         </h3>
-        <button onclick="closeVideoModal()" aria-label="Close video player" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400">
-          <i aria-hidden="true" class="fa-solid fa-xmark text-sm"></i>
-        </button>
+        <div class="flex items-center gap-2">
+          <a
+            id="modal-youtube-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-3.5 py-1.5 rounded-lg bg-red-600 hover:bg-red-500 text-white flex items-center gap-2 font-mono text-xs font-bold transition-all shadow-md hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-400"
+            title="Watch on YouTube (Cast to TV, Like, and Comment)"
+            aria-label="Watch on YouTube"
+          >
+            <i class="fa-brands fa-youtube text-white text-sm" aria-hidden="true"></i>
+            <span>Watch on YouTube</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-80" aria-hidden="true"></i>
+          </a>
+          <button onclick="closeVideoModal()" aria-label="Close video player" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400">
+            <i aria-hidden="true" class="fa-solid fa-xmark text-sm"></i>
+          </button>
+        </div>
       </div>
       <div class="aspect-video w-full bg-black">
         <iframe id="video-iframe" class="w-full h-full" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -1028,15 +1043,30 @@
                 onerror="this.onerror=null; this.src='assets/art/album-23.webp';"
               >
               <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex items-end p-6">
-                <button 
-                  type="button"
-                  onclick="openVideoModal('${t.video_id}', '${escapeHtml(t.title)}')"
-                  class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-red-600/90 hover:bg-red-600 text-white font-mono text-xs font-bold shadow-lg transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-400"
-                  aria-label="Play music video for ${escapeHtml(t.title)}"
-                >
-                  <i aria-hidden="true" class="fa-brands fa-youtube text-base"></i>
-                  <span>Watch Video</span>
-                </button>
+                <div class="flex flex-wrap items-center gap-2">
+                  <button 
+                    type="button"
+                    onclick="openVideoModal('${t.video_id}', '${escapeHtml(t.title)}')"
+                    class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white font-mono text-xs font-bold shadow-lg transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
+                    title="Watch on page with lyrics"
+                    aria-label="Watch ${escapeHtml(t.title)} on page"
+                  >
+                    <i aria-hidden="true" class="fa-solid fa-play text-xs"></i>
+                    <span>Watch on Page</span>
+                  </button>
+                  <a 
+                    href="https://www.youtube.com/watch?v=${t.video_id}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-white/20 hover:border-red-500 text-stone-200 hover:text-white font-mono text-xs font-bold shadow-lg transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-400"
+                    title="Watch on YouTube (Cast to TV, Like, and Comment)"
+                    aria-label="Watch ${escapeHtml(t.title)} on YouTube"
+                  >
+                    <i aria-hidden="true" class="fa-brands fa-youtube text-sm text-red-400"></i>
+                    <span>Watch on YouTube</span>
+                    <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-75"></i>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -1207,6 +1237,11 @@
       if (!modal || !iframe) return;
 
       if (titleEl) titleEl.textContent = title;
+      const ytLink = document.getElementById('modal-youtube-link');
+      if (ytLink) {
+        ytLink.href = videoId ? `https://www.youtube.com/watch?v=${videoId}` : '#';
+        ytLink.setAttribute('aria-label', `Watch ${title} on YouTube`);
+      }
       iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
       modal.classList.remove('hidden');
       modal.classList.add('flex');
