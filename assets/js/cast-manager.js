@@ -484,20 +484,49 @@
       } catch (e) {}
     }
 
-    // 500ms buffer gives TV receiver time to mount cleanly
-    setTimeout(() => {
-      if (isYt) {
-        activeTracks = (activeTracks && activeTracks.length) ? activeTracks : getActiveTracks();
-        const t = activeTracks[trackIdx];
-        const vId = (t && (t.video_id || t.videoId)) || window._pendingCastVideoId || '';
-        const title = (t && t.title) || window._pendingCastVideoTitle || `Track ${trackIdx + 1}`;
-        window._pendingCastVideoId = null;
-        window._pendingCastVideoTitle = null;
-        loadYouTubeVideoOnReceiver(vId, trackIdx, title);
-      } else {
+    // YouTube cold-boot timing: 
+    // Smart TVs take 1.5 - 3.5 seconds to launch the YouTube app. We fire multi-stage commands so
+    // that if the receiver was cold booting during stage 1, stage 2 and stage 3 will trigger
+    // once the receiver is active in "Ready to Cast" mode.
+    if (isYt) {
+      activeTracks = (activeTracks && activeTracks.length) ? activeTracks : getActiveTracks();
+      const t = activeTracks[trackIdx];
+      const vId = (t && (t.video_id || t.videoId)) || window._pendingCastVideoId || '';
+      const title = (t && t.title) || window._pendingCastVideoTitle || `Track ${trackIdx + 1}`;
+      window._pendingCastVideoId = null;
+      window._pendingCastVideoTitle = null;
+
+      // Stage 1: Initial cue at 800ms
+      setTimeout(() => {
+        if (isConnected && currentSession) {
+          loadYouTubeVideoOnReceiver(vId, trackIdx, title);
+        }
+      }, 800);
+
+      // Stage 2: Cold-boot retry at 2200ms (when TV finishes splash and shows "Ready to Cast")
+      setTimeout(() => {
+        if (isConnected && currentSession && activeTrackIndex === trackIdx) {
+          logDebug(`[Stage 2] Re-asserting YouTube video "${title}" on ${deviceName}`);
+          if (typeof dispatchYouTubePlayCommands === 'function') {
+            dispatchYouTubePlayCommands(vId, title);
+          }
+        }
+      }, 2200);
+
+      // Stage 3: Cold-boot safety retry at 3800ms
+      setTimeout(() => {
+        if (isConnected && currentSession && activeTrackIndex === trackIdx) {
+          logDebug(`[Stage 3] Safety re-assert YouTube video "${title}" on ${deviceName}`);
+          if (typeof dispatchYouTubePlayCommands === 'function') {
+            dispatchYouTubePlayCommands(vId, title);
+          }
+        }
+      }, 3800);
+    } else {
+      setTimeout(() => {
         loadTrackOnReceiver(trackIdx);
-      }
-    }, 500);
+      }, 500);
+    }
   }
 
   /**
@@ -618,15 +647,69 @@
     }
   }
 
+  function sendMdxCommand(cmdObj, label = '') {
+    if (!currentSession) return Promise.reject(new Error('No active Cast session'));
+    const jsonStr = (typeof cmdObj === 'string') ? cmdObj : JSON.stringify(cmdObj);
+    logDebug(`[MDX Outbound${label ? ' ' + label : ''}] ${jsonStr}`);
+    return currentSession.sendMessage(YOUTUBE_NAMESPACE, jsonStr);
+  }
+
+  function dispatchYouTubePlayCommands(videoId, title) {
+    if (!currentSession) return;
+    const dev = deviceName || 'TV';
+    logDebug(`Dispatching YouTube commands for "${title}" [${videoId}] to ${dev}`);
+
+    const commands = [
+      { cmd: { type: 'getMdxSessionStatus' }, label: 'handshake' },
+      { cmd: { type: 'LOAD', videoId: videoId, currentTime: 0 }, label: 'LOAD' },
+      { cmd: { type: 'flingVideo', data: { videoId: videoId, currentTime: 0 } }, label: 'flingVideo' },
+      { cmd: { type: 'setPlaylist', videoId: videoId }, label: 'setPlaylist' },
+      { cmd: { type: 'playVideo', videoId: videoId }, label: 'playVideo' },
+      { cmd: { type: 'load', data: { videoId: videoId } }, label: 'load' }
+    ];
+
+    commands.forEach((item, idx) => {
+      setTimeout(() => {
+        if (!currentSession) return;
+        sendMdxCommand(item.cmd, item.label).then(() => {
+          logDebug(`✓ MDX ${item.label} accepted by receiver`);
+        }).catch(err => {
+          logDebug(`MDX ${item.label} notice: ${err && err.message ? err.message : JSON.stringify(err)}`);
+        });
+      }, idx * 120);
+    });
+  }
+
   function onYouTubeMessageReceived(namespace, message) {
-    logDebug(`[YouTube MDX Message] ${message}`);
+    const raw = typeof message === 'object' ? JSON.stringify(message) : String(message);
+    logDebug(`[YouTube MDX Inbound] ${raw}`);
     try {
       const data = typeof message === 'string' ? JSON.parse(message) : message;
-      if (data && (data.type === 'stateChanged' || data.type === 'nowPlaying')) {
-        updateAllCastUI();
-        notifyState();
+      if (data) {
+        const msgType = data.type || (data.data && data.data.type) || 'unknown';
+        logDebug(`[YouTube MDX Type] ${msgType}`);
+
+        // If receiver sends mdxSessionStatus (it just booted into Ready to Cast!), trigger load immediately!
+        if (msgType === 'mdxSessionStatus' || msgType === 'status') {
+          const screenId = data.screenId || (data.data && data.data.screenId);
+          logDebug(`Receiver reported ${msgType}${screenId ? ' (screenId: ' + screenId + ')' : ''}. Firing load commands...`);
+          const tracks = getActiveTracks();
+          const curIdx = (activeTrackIndex >= 0) ? activeTrackIndex : 0;
+          const t = tracks[curIdx];
+          const vId = (t && (t.video_id || t.videoId)) || '';
+          if (vId) {
+            dispatchYouTubePlayCommands(vId, t ? t.title : `Track ${curIdx + 1}`);
+          }
+        }
+
+        if (msgType === 'stateChanged' || msgType === 'nowPlaying') {
+          updateAllCastUI();
+          notifyState();
+        }
       }
-    } catch (e) {}
+    } catch (e) {
+      logDebug(`[YouTube MDX Parse Error] ${e.message}`);
+    }
   }
 
   function loadYouTubeVideoOnReceiver(videoId, trackIndex, trackTitle) {
@@ -660,26 +743,15 @@
       currentSession.addMessageListener(YOUTUBE_NAMESPACE, onYouTubeMessageReceived);
     } catch (e) {}
 
-    const payload = {
-      type: 'flingVideo',
-      data: {
-        videoId: videoId,
-        currentTime: 0
-      }
-    };
+    dispatchYouTubePlayCommands(videoId, title);
 
-    currentSession.sendMessage(YOUTUBE_NAMESPACE, payload).then(() => {
+    setTimeout(() => {
       isMediaLoading = false;
-      logDebug(`✓ flingVideo succeeded for "${title}" on ${dev}`);
-      showToast(`✓ Playing "${title}" on ${dev}`, 'success', 5000);
+      showToast(`✓ Cast cued for "${title}" on ${dev}`, 'success', 4000);
       emit('trackChange', activeTrackIndex);
       updateAllCastUI();
       notifyState();
-    }).catch(err => {
-      isMediaLoading = false;
-      logDebug(`flingVideo failed: ${JSON.stringify(err)}`);
-      showToast(`Cast error: ${err?.message || 'Failed to beam video'}`, 'error', 5000);
-    });
+    }, 700);
   }
 
   function onConnectedChanged() {
@@ -1103,10 +1175,12 @@
     if (isConnected) {
       if (getCastMode() === 'youtube') {
         if (currentSession) {
-          // In YouTube mode, send play or pause command via MDX
+          // In YouTube mode, send play or pause command via MDX (send both lower and uppercase variants)
           const isCurrentlyPlaying = remotePlayer ? (remotePlayer.playerState === CastPlayerState.PLAYING) : true;
           const nextCmd = isCurrentlyPlaying ? 'pause' : 'play';
-          currentSession.sendMessage(YOUTUBE_NAMESPACE, { type: nextCmd }).catch(() => {});
+          const nextCmdUpper = isCurrentlyPlaying ? 'PAUSE' : 'PLAY';
+          sendMdxCommand({ type: nextCmd }, nextCmd).catch(() => {});
+          sendMdxCommand({ type: nextCmdUpper }, nextCmdUpper).catch(() => {});
         }
       } else {
         if (remotePlayer && (remotePlayer.playerState === CastPlayerState.PLAYING || remotePlayer.playerState === CastPlayerState.PAUSED)) {
@@ -1459,15 +1533,21 @@
     isDebugEnabled: isDebugEnabled
   };
 
-  // Secret keyboard shortcut: Ctrl + Alt + D to toggle Cast diagnostics badge
+  // Secret keyboard shortcuts: Ctrl + Alt + D or Ctrl + Shift + D to toggle Cast diagnostics badge
   window.addEventListener('keydown', (e) => {
-    if ((e.ctrlKey || e.metaKey) && e.altKey && (e.key === 'd' || e.key === 'D')) {
+    if ((e.ctrlKey || e.metaKey) && (e.altKey || e.shiftKey) && (e.key === 'd' || e.key === 'D')) {
       e.preventDefault();
       if (window.CastManager && window.CastManager.toggleDebug) {
         window.CastManager.toggleDebug();
       }
     }
   });
+
+  window.toggleCastDebug = function (enable) {
+    if (window.CastManager && window.CastManager.toggleDebug) {
+      return window.CastManager.toggleDebug(enable);
+    }
+  };
 
   // Helper shortcut for onclick handlers
   window.castTrack = function (index) {

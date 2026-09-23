@@ -558,11 +558,11 @@
   </footer>
 
   <!-- LOAD DATA & GOOGLE CAST (YOUTUBE MODE) -->
-  <script src="data/fracture-data.js?v=20260923A"></script>
+  <script src="data/fracture-data.js?v=20260923B"></script>
   <script>
     window.CAST_MODE = 'youtube';
   </script>
-  <script src="../assets/js/cast-manager.js?v=20260923A"></script>
+  <script src="../assets/js/cast-manager.js?v=20260923B"></script>
   <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
 
   <!-- APP LOGIC SCRIPT -->
@@ -719,6 +719,11 @@
       }
       if (titleEl) {
         titleEl.innerHTML = `<i aria-hidden="true" class="fa-brands fa-youtube text-red-500"></i> <span>${escapeHtml(title)}</span>`;
+      }
+      const ytLink = document.getElementById('modal-youtube-link');
+      if (ytLink) {
+        ytLink.href = videoId ? `https://www.youtube.com/watch?v=${videoId}` : '#';
+        ytLink.setAttribute('aria-label', `Watch ${escapeHtml(title)} directly on YouTube`);
       }
       modal.classList.remove('hidden');
       modal.classList.add('flex');
@@ -1265,13 +1270,25 @@
             <i class="fa-brands fa-chromecast text-fissure-400" aria-hidden="true"></i>
             <span id="modal-cast-label">Cast to TV</span>
           </button>
+          <a
+            id="modal-youtube-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-3 py-1.5 rounded-lg bg-red-600/90 hover:bg-red-600 text-white flex items-center gap-1.5 font-mono text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-red-400"
+            title="Watch directly on YouTube (opens new tab)"
+            aria-label="Watch directly on YouTube"
+          >
+            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            <span>YouTube</span>
+          </a>
           <button onclick="closeVideoModal()" aria-label="Close video player" class="w-8 h-8 rounded-lg bg-basalt-800 hover:bg-basalt-750 text-stone-300 hover:text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-fissure-400">
             <i aria-hidden="true" class="fa-solid fa-xmark text-sm"></i>
           </button>
         </div>
       </div>
       <div class="aspect-video w-full bg-black">
-        <iframe id="video-iframe" class="w-full h-full" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe id="video-iframe" class="w-full h-full" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; presentation; web-share" allowfullscreen></iframe>
       </div>
     </div>
   </div>
