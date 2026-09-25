@@ -184,7 +184,7 @@
         <div class="hidden lg:flex items-center space-x-3">
           <div class="px-3.5 py-1.5 rounded-xl bg-prairie-850 border border-rust-500/40 text-[11px] font-mono flex items-center gap-2">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span id="header-videos-badge" class="text-stone-300">10 Videos Public &bull; Rolling Release</span>
+            <span id="header-videos-badge" class="text-stone-300">11 Videos Public &bull; Rolling Release</span>
           </div>
         </div>
 
@@ -279,7 +279,7 @@
                 <span>Rolling Track-by-Track Video Premiere</span>
               </div>
               <p class="text-stone-400 leading-normal font-sans">
-                The full 15-track musical album is available on all streamers today. Official music videos are premiering track-by-track 2&ndash;3 times weekly. <span id="hero-tracks-live-text">10 official music videos are live now below!</span>
+                The full 15-track musical album is available on all streamers today. Official music videos are premiering track-by-track 2&ndash;3 times weekly. <span id="hero-tracks-live-text">Tracks 1&ndash;11 are live now below!</span>
               </p>
             </div>
 
@@ -287,7 +287,7 @@
             <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4">
               <a href="#songs-section" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-rust-600 to-rust-500 hover:from-rust-500 hover:to-rust-400 text-white font-display font-bold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-xl hover:shadow-rust-500/30 flex items-center gap-2.5">
                 <i aria-hidden="true" class="fa-solid fa-play"></i>
-                <span id="hero-watch-btn-text">Watch Released Videos (10 Live)</span>
+                <span id="hero-watch-btn-text">Watch Released Videos (1&ndash;11)</span>
               </a>
               <a href="#streaming" class="px-6 py-3.5 rounded-xl bg-prairie-850 hover:bg-prairie-800 text-stone-200 border border-wheat-500/40 hover:border-wheat-400 font-display font-bold text-xs sm:text-sm tracking-wider uppercase transition-all flex items-center gap-2.5 shadow-lg">
                 <i aria-hidden="true" class="fa-solid fa-music text-wheat-400"></i>
@@ -409,7 +409,7 @@
               The Songs of The Hollow Herd
             </h2>
             <p class="text-sm text-stone-400 max-w-2xl font-body">
-              Explore formatted lyrics, musical cues, and song summaries for all 15 tracks. Watch the 10 released music videos now, or stream any track across all music platforms.
+              Explore formatted lyrics, musical cues, and song summaries for all 15 tracks. Watch the 11 released music videos now, or stream any track across all music platforms.
             </p>
           </div>
 
@@ -426,7 +426,7 @@
             </button>
             <button onclick="filterTracks('videos')" id="btn-filter-videos" class="px-3.5 py-2 rounded-xl bg-prairie-800 text-stone-300 hover:text-white border border-white/10 text-xs font-mono transition-all flex items-center gap-1.5">
               <i aria-hidden="true" class="fa-solid fa-video text-rust-400 text-[10px]"></i>
-              <span id="videos-live-count">Videos Live (10)</span>
+              <span id="videos-live-count">Videos Live (11)</span>
             </button>
             <button onclick="expandAllLyrics()" class="px-3.5 py-2 rounded-xl bg-prairie-800 text-stone-400 hover:text-stone-200 border border-white/10 text-xs font-mono transition-all">
               Expand All
@@ -586,7 +586,7 @@
   </footer>
 
   <!-- LOAD DATA SCRIPT -->
-  <script src="data/hollow-herd-data.js?v=20260925"></script>
+  <script src="data/hollow-herd-data.js?v=20260925B"></script>
 
   <!-- INTERACTIVE APP LOGIC -->
   <script>
@@ -1054,9 +1054,9 @@
         const headerBadge = document.getElementById('header-videos-badge');
         if (headerBadge) headerBadge.innerHTML = `${liveCount} Videos Public &bull; Rolling Release`;
         const heroTracksLive = document.getElementById('hero-tracks-live-text');
-        if (heroTracksLive) heroTracksLive.innerHTML = `${liveCount} official music videos are live now below!`;
+        if (heroTracksLive) heroTracksLive.innerHTML = `Tracks 1&ndash;${liveCount} are live now below!`;
         const heroWatchBtn = document.getElementById('hero-watch-btn-text');
-        if (heroWatchBtn) heroWatchBtn.innerHTML = `Watch Released Videos (${liveCount} Live)`;
+        if (heroWatchBtn) heroWatchBtn.innerHTML = `Watch Released Videos (1&ndash;${liveCount})`;
       }
 
       // Search input listener

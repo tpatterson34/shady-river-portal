@@ -18,7 +18,7 @@ window.HOLLOW_HERD_DATA = {
     "substack_url": "https://theshadyriverbard.substack.com/s/deconstructed",
     "liner_notes_url": "https://theshadyriverbard.substack.com/s/deconstructed",
     "total_tracks": 15,
-    "public_videos_count": 10,
+    "public_videos_count": 11,
     "release_cadence": "Videos premiering track-by-track 2–3 times weekly; full 15-track album streaming now."
   },
   "acts": [
@@ -327,15 +327,16 @@ window.HOLLOW_HERD_DATA = {
       "track_number": 10,
       "title": "Plum Island Blues",
       "cover_image": "assets/art/10-plum-island-blues.webp",
-      "youtube_id": "uFvx3CqVEbw",
-      "is_video_public": false,
+      "youtube_id": "kdK-Bsmthf4",
+      "is_video_public": true,
       "act_number": 3,
       "act_title": "The Distraction (The Fever Dream)",
       "subtitle": "Real Biosecurity vs. Corporate Disease Vectors",
       "concept": "The reality of FMD (Foot and Mouth Disease). Mentioning Plum Island (the lab) and the history of outbreaks (1946 Mexico). Countering the conspiracy with the terrifying reality of biological vulnerability and corporate trade risks.",
       "musical_cue": "Dark, swampy blues. Heavy reverb.",
       "summary": "\"Plum Island Blues\" serves as the dark correction to the satire of the previous track. While \"The Rio Grande Run\" mocked the idea of an immigrant carrying a disease, this track explores the legitimate terror of Foot and Mouth Disease (FMD) and other contagions that enter through global shipping containers or laboratory accidents. The song references Plum Island (the famous animal disease center) and the history of the 1946 outbreak. The tone is heavy, humid, and ominous—a \"Dark Swamp Blues\" that suggests the danger isn't wading across the river, but arriving in a petri dish or a cargo ship approved by the very people claiming to protect the herd.",
-      "lyrics": "[Intro]\n[Verse 1]\nYou are watching the river with a loaded gun\nWaiting for the shadow of the lonely one\nBut the devil don't walk in the muddy boots\nHe travels in the air and the trade route chutes\nHe is microscopic in a sterile vial\nSleeping in the freezer for a long long while\nDown in the sound where the ferry don't go\nSleeping with the secrets that the wind don't blow.\n[Pre-Chorus]\nThey say the danger is a man on the wire.\nBut the truth is burning like a chemical fire.\n[Chorus]\nI got the Plum Island Blues deep in the bone\nFear of the thing that cannot be known\nIt don't come walking in the river mud\nIt comes in a container, it is in the blood\nFrom the heavy steel ship to the lab\nThey gamble with the life and the legacy\nYeah the border is a line drawn in the sand\nBut the fever is a ghost across the land.\nPlum Island Blues.\n[Verse 2]\nNineteen forty six seems a long time passed\nBut a virus moves slow and a virus moves fast\nIt hides in the beef from a foreign zone\nFinds a way to strip the meat from the bone\nWe trust the inspection and we trust the suit\nWhile they trade away the tree and the bitter fruit\nOne little leak from the test tube glass\nAnd the green turns grey on the summer grass.\n[Bridge]\n(Cull them all.)\nDig the trench deep.\n(Burn them all.)\nPut the herd to sleep.\nThe science is a savior until it ain't.\nCover up the rot with a fresh coat of paint.\n[Chorus]\nI got the Plum Island Blues deep in the bone\nFear of the thing that cannot be known\nIt don't come walking in the river mud\nIt comes in a container, it is in the blood\nFrom the heavy steel ship to the lab\nThey gamble with the life and the legacy\nYeah the border is a line drawn in the sand\nBut the fever is a ghost across the land.\nPlum Island Blues.\n[Outro]\nIt is in the wind.\nInvisible."
+      "lyrics": "[Intro]\n[Verse 1]\nYou are watching the river with a loaded gun\nWaiting for the shadow of the lonely one\nBut the devil don't walk in the muddy boots\nHe travels in the air and the trade route chutes\nHe is microscopic in a sterile vial\nSleeping in the freezer for a long long while\nDown in the sound where the ferry don't go\nSleeping with the secrets that the wind don't blow.\n[Pre-Chorus]\nThey say the danger is a man on the wire.\nBut the truth is burning like a chemical fire.\n[Chorus]\nI got the Plum Island Blues deep in the bone\nFear of the thing that cannot be known\nIt don't come walking in the river mud\nIt comes in a container, it is in the blood\nFrom the heavy steel ship to the lab\nThey gamble with the life and the legacy\nYeah the border is a line drawn in the sand\nBut the fever is a ghost across the land.\nPlum Island Blues.\n[Verse 2]\nNineteen forty six seems a long time passed\nBut a virus moves slow and a virus moves fast\nIt hides in the beef from a foreign zone\nFinds a way to strip the meat from the bone\nWe trust the inspection and we trust the suit\nWhile they trade away the tree and the bitter fruit\nOne little leak from the test tube glass\nAnd the green turns grey on the summer grass.\n[Bridge]\n(Cull them all.)\nDig the trench deep.\n(Burn them all.)\nPut the herd to sleep.\nThe science is a savior until it ain't.\nCover up the rot with a fresh coat of paint.\n[Chorus]\nI got the Plum Island Blues deep in the bone\nFear of the thing that cannot be known\nIt don't come walking in the river mud\nIt comes in a container, it is in the blood\nFrom the heavy steel ship to the lab\nThey gamble with the life and the legacy\nYeah the border is a line drawn in the sand\nBut the fever is a ghost across the land.\nPlum Island Blues.\n[Outro]\nIt is in the wind.\nInvisible.",
+      "substack_url": "https://theshadyriverbard.substack.com/p/the-liner-notes-plum-island-blues"
     },
     {
       "track_number": 11,
