@@ -18,7 +18,7 @@ window.HOLLOW_HERD_DATA = {
     "substack_url": "https://theshadyriverbard.substack.com/s/deconstructed",
     "liner_notes_url": "https://theshadyriverbard.substack.com/s/deconstructed",
     "total_tracks": 15,
-    "public_videos_count": 9,
+    "public_videos_count": 10,
     "release_cadence": "Videos premiering track-by-track 2–3 times weekly; full 15-track album streaming now."
   },
   "acts": [
@@ -341,15 +341,16 @@ window.HOLLOW_HERD_DATA = {
       "track_number": 11,
       "title": "Buy and Dry",
       "cover_image": "assets/art/11-buy-and-dry.webp",
-      "youtube_id": "4HX6uSbo2n0",
-      "is_video_public": false,
+      "youtube_id": "q3XmJh_8w1c",
+      "is_video_public": true,
       "act_number": 4,
       "act_title": "The Reckoning (The Resolution)",
       "subtitle": "Ogallala Aquifer Depletion & Colorado River Siphon",
       "concept": "The water crisis. Cities buying water rights from farmers in Colorado. The \"Buy and Dry\" legal term. The Ogallala running empty. The dust returning to the plains.",
       "musical_cue": "Dry, brittle acoustic guitar. Sound of wind blowing over dust. Minimalist.",
       "summary": "\"Buy and Dry\" serves as a eulogy for the land. It addresses the depletion of the Ogallala Aquifer and the Colorado River crisis. The song focuses on the legal practice known as \"Buy and Dry,\" where municipalities purchase the senior water rights from struggling farmers, stripping the water from the soil forever. The narrative describes a rancher watching his neighbors sell out, leaving behind a \"checkerboard\" of green irrigated circles and dead, brown dust bowls. It is a quiet, acoustic track that sounds like the dust returning to the plains.",
-      "lyrics": "[Intro]\n[Verse 1]\nThe lawyer came from Denver in a clean white car\nHe didn't want the cattle and he didn't want the barn\nHe unfolded a map on the kitchen table wood\nPointed to the river where the cottonwood stood\nHe offered up a number with a lot of zeros round\nSaid he only wanted one thing buried underneath the ground\nThe city is getting thirsty and the suburbs need to grow\nAnd the water in the furrow has got nowhere else to go.\n[Pre-Chorus]\nThey call it progress.\nThey call it a sale.\nI call it the coffin and the final rusty nail.\n[Chorus]\nBuy and Dry.\nBuy and Dry.\nWatch the pivot stop turning and the green begin to die\nThe city needs a drink and the farm needs a grave\nSold the river for the water that we could not save\nNow the dust is returning to the circle in the wheat\nWhile they water all the lawns on a concrete street.\nBuy and Dry.\n[Verse 2]\nThe Ogallala is dropping like a stone in a well\nWe pumped it for the corn until the water table fell\nNow the neighbor took the check and he moved to town\nTore up the alfalfa and he shut the pump down\nThe wind picks up the topsoil and blows it to the east\nStarving out the farmer and starving out the beast\nA checkerboard of ruin where the green used to be\nTrading off the future for a temporary fee.\n[Bridge]\nFirst you sell the cattle.\nThen you sell the plow.\nThen you sell the water.\n(What is left now?)\nJust the dust.\nAnd the silence.\n[Chorus]\nBuy and Dry.\nBuy and Dry.\nWatch the pivot stop turning and the green begin to die\nThe city needs a drink and the farm needs a grave\nSold the river for the water that we could not save\nNow the dust is returning to the circle in the wheat\nWhile they water all the lawns on a concrete street.\nBuy and Dry.\n[Outro]\nDry as a bone.\nDry as a bone."
+      "lyrics": "[Intro]\n[Verse 1]\nThe lawyer came from Denver in a clean white car\nHe didn't want the cattle and he didn't want the barn\nHe unfolded a map on the kitchen table wood\nPointed to the river where the cottonwood stood\nHe offered up a number with a lot of zeros round\nSaid he only wanted one thing buried underneath the ground\nThe city is getting thirsty and the suburbs need to grow\nAnd the water in the furrow has got nowhere else to go.\n[Pre-Chorus]\nThey call it progress.\nThey call it a sale.\nI call it the coffin and the final rusty nail.\n[Chorus]\nBuy and Dry.\nBuy and Dry.\nWatch the pivot stop turning and the green begin to die\nThe city needs a drink and the farm needs a grave\nSold the river for the water that we could not save\nNow the dust is returning to the circle in the wheat\nWhile they water all the lawns on a concrete street.\nBuy and Dry.\n[Verse 2]\nThe Ogallala is dropping like a stone in a well\nWe pumped it for the corn until the water table fell\nNow the neighbor took the check and he moved to town\nTore up the alfalfa and he shut the pump down\nThe wind picks up the topsoil and blows it to the east\nStarving out the farmer and starving out the beast\nA checkerboard of ruin where the green used to be\nTrading off the future for a temporary fee.\n[Bridge]\nFirst you sell the cattle.\nThen you sell the plow.\nThen you sell the water.\n(What is left now?)\nJust the dust.\nAnd the silence.\n[Chorus]\nBuy and Dry.\nBuy and Dry.\nWatch the pivot stop turning and the green begin to die\nThe city needs a drink and the farm needs a grave\nSold the river for the water that we could not save\nNow the dust is returning to the circle in the wheat\nWhile they water all the lawns on a concrete street.\nBuy and Dry.\n[Outro]\nDry as a bone.\nDry as a bone.",
+      "substack_url": "https://theshadyriverbard.substack.com/p/the-liner-notes-buy-and-dry"
     },
     {
       "track_number": 12,
