@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From Russia With Expectation. — Trevor Swistchew (2026)</title>
+  <meta name="description" content="A Cold War espionage satire by Trevor Swistchew: Jamie Fond (codename 009½), seventeen unexpected prodigies, and the ultimate diplomatic reckoning at MI6.">
+  <link rel="canonical" href="https://theshadyriverbard.com/trevor-swistchew/essays/from-russia-with-expectation/">
+
+  <!-- Open Graph Meta -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="From Russia With Expectation. — Trevor Swistchew (2026)">
+  <meta property="og:description" content="A Cold War espionage satire by Trevor Swistchew: Jamie Fond (codename 009½), seventeen unexpected prodigies, and the ultimate diplomatic reckoning at MI6.">
+  <meta property="og:image" content="https://theshadyriverbard.com/trevor-swistchew/assets/images/from-russia-with-expectation-banner.jpg">
+  <meta property="og:url" content="https://theshadyriverbard.com/trevor-swistchew/essays/from-russia-with-expectation/">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              950: '#0c0b0a',
+              900: '#121110',
+              850: '#181614',
+              800: '#1f1c19',
+              700: '#2b2723',
+              600: '#3d3731',
+            },
+            parchment: {
+              50: '#fdfbf7',
+              100: '#f7f4ed',
+              200: '#efeae0',
+              300: '#e5ded2',
+              400: '#d8cdbe',
+              500: '#c5b8a5',
+            },
+            brass: {
+              400: '#dfbe75',
+              500: '#c5a059',
+              600: '#a6823c',
+              700: '#846427',
+            },
+            thistle: {
+              600: '#9d2b45',
+              700: '#7e2035',
+            },
+            loch: {
+              400: '#38bdf8',
+              700: '#0369a1',
+              900: '#0c4a6e',
+            }
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Lora', 'Georgia', 'serif'],
+            display: ['"Playfair Display"', 'Cinzel', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Accessibility & Salon Theme Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/a11y.css">
+  <link rel="stylesheet" href="../../assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950 min-h-screen flex flex-col justify-between bg-stone-950 text-stone-200">
+
+  <!-- 1. WCAG Skip Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Story Content</a>
+
+  <!-- 2. Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- 3. Top Sticky Reading Utility & Salon Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      
+      <!-- Salon Brand / Return Link -->
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2.5 text-stone-300 hover:text-amber-400 group transition-colors">
+          <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
+          <div class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:block">
+            Trevor Swistchew <span class="text-stone-500 font-sans font-normal mx-1">|</span> <span class="text-stone-400">Compendium Archive</span>
+          </div>
+        </a>
+        <a href="https://theshadyriverbard.com/" class="hidden md:flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 text-[11px] font-mono transition-colors" title="Visit The Shady River Bard Portal">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Center / Right Utilities: Theme & Font Controls -->
+      <div class="flex items-center gap-2 sm:gap-4">
+        <!-- Tri-State Theme Switcher -->
+        <div class="flex items-center bg-stone-950/80 border border-stone-800 rounded-lg p-0.5 text-xs text-stone-400" role="group" aria-label="Reading Atmosphere Theme">
+          <button type="button" data-set-theme="dark" class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" title="Peat &amp; Loch (Dark)">
+            <i class="fa-solid fa-moon text-[11px]"></i>
+            <span class="sr-only">Dark Theme</span>
+          </button>
+          <button type="button" data-set-theme="sepia" class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" title="Aged Parchment (Sepia)">
+            <i class="fa-solid fa-scroll text-[11px]"></i>
+            <span class="sr-only">Sepia Theme</span>
+          </button>
+          <button type="button" data-set-theme="light" class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" title="Edinburgh Stone (Light)">
+            <i class="fa-solid fa-sun text-[11px]"></i>
+            <span class="sr-only">Light Theme</span>
+          </button>
+        </div>
+
+        <!-- Typography Scaler -->
+        <div class="hidden sm:flex items-center bg-stone-950/80 border border-stone-800 rounded-lg p-0.5 text-xs text-stone-400" role="group" aria-label="Text Size Controls">
+          <button type="button" id="font-size-dec" class="px-2 py-1 hover:text-stone-200 transition-colors" title="Decrease font size" aria-label="Decrease text size">A-</button>
+          <button type="button" id="font-size-reset" class="px-2 py-1 font-bold text-amber-500 hover:text-amber-400 transition-colors" title="Reset font size" aria-label="Reset text size">A</button>
+          <button type="button" id="font-size-inc" class="px-2 py-1 hover:text-stone-200 transition-colors" title="Increase font size" aria-label="Increase text size">A+</button>
+        </div>
+
+        <!-- Return to Compendium Catalog -->
+        <a 
+          href="../../index.html#essays" 
+          class="px-3 py-1.5 rounded-lg border border-stone-700/80 bg-stone-800/90 hover:bg-amber-500 hover:text-stone-950 text-stone-300 text-xs font-mono font-semibold transition-all flex items-center gap-1.5 shadow-sm"
+        >
+          <i class="fa-solid fa-arrow-left text-[10px]"></i>
+          <span>Compendium</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Reading Stage -->
+  <main id="main-content" class="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16 space-y-12 flex-grow w-full min-w-0">
+    
+    <!-- Story Header / Meta Zone -->
+    <article class="space-y-8" id="essay-reading-wrapper">
+      <header class="space-y-6">
+        
+        <!-- Category Badges & Chronology -->
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="px-2.5 py-1 rounded bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-mono font-bold tracking-wide uppercase">
+            Compendium #40
+          </span>
+          <span class="px-2.5 py-1 rounded bg-stone-800/80 border border-stone-700/50 text-stone-300 text-xs font-mono font-semibold">
+            Espionage Satire
+          </span>
+          <span class="px-2.5 py-1 rounded bg-sky-500/15 border border-sky-500/30 text-sky-300 text-xs font-mono font-semibold">
+            Cold War Fiction &bull; Jamie Fond 009½
+          </span>
+          <span class="px-2.5 py-1 rounded bg-stone-900 border border-stone-800 text-stone-400 text-xs font-mono">
+            Trevor Swistchew &bull; 2026
+          </span>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <div class="space-y-3">
+          <h1 class="font-display text-3xl sm:text-5xl font-extrabold text-stone-100 tracking-tight leading-tight">
+            FROM RUSSIA WITH EXPECTATION.
+          </h1>
+          <p class="font-serif text-lg sm:text-xl text-stone-400 italic max-w-2xl leading-relaxed">
+            Jamie Fond (codename 009½), seventeen unexpected prodigies, and the ultimate Cold War diplomatic reckoning at MI6.
+          </p>
+        </div>
+
+        <!-- Author Byline & Meta Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-b border-stone-800/80 text-xs font-mono text-stone-400 py-3">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full border border-amber-500/40 bg-stone-900 flex items-center justify-center text-amber-400 font-cinzel font-bold text-xs shadow">
+              TS
+            </div>
+            <div>
+              <span class="text-stone-200 font-semibold block font-sans">Trevor Swistchew</span>
+              <span class="text-[11px] text-stone-500">Scottish Essayist, Satirist &amp; Cultural Thinker</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 text-[11px]">
+            <span><i class="fa-regular fa-clock text-amber-500 mr-1.5"></i><span id="metric-read-time">3 min read</span></span>
+            <span><i class="fa-solid fa-feather text-amber-500 mr-1.5"></i><span id="metric-word-count">630 words</span></span>
+            <span><i class="fa-solid fa-masks-theater text-amber-500 mr-1.5"></i>Prose Fiction Archive</span>
+          </div>
+        </div>
+
+        <!-- Hero Fine-Art Banner Image -->
+        <figure class="pt-4 space-y-2">
+          <div class="aspect-video w-full rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl relative bg-peat-950">
+            <img 
+              src="../../assets/images/from-russia-with-expectation-banner.jpg" 
+              alt="MI6 briefing room with secret agent Jamie Fond in tuxedo, surrounded by seventeen child spy prodigies in trench coats, Soviet delegate with child support folder, and an exasperated Director Hawthorne" 
+              class="w-full h-full object-cover" 
+              loading="eager"
+            />
+          </div>
+          <figcaption class="text-center text-xs text-stone-400 font-serif italic pt-1">
+            The Paternity Paradox: When glamorous Cold War espionage collides with the International Child Support Recovery Directorate.
+          </figcaption>
+        </figure>
+
+        <!-- Epigraph -->
+        <blockquote class="p-4 sm:p-5 rounded-xl bg-peat-900/80 border-l-4 border-amber-500 text-stone-300 font-serif italic text-sm sm:text-base leading-relaxed">
+          &ldquo;He shouted that Jamie had fathered seventeen children with foreign agents during the Cold War. Jamie said he had been building international relations. Hawthorne replied that he had been building a cr&egrave;che.&rdquo; &mdash; Trevor Swistchew
+        </blockquote>
+
+      </header>
+
+      <!-- INTERACTIVE CONTEXTUAL DOSSIER -->
+      <section class="my-10 p-6 rounded-2xl bg-stone-900/90 border border-amber-500/30 shadow-2xl backdrop-blur-sm" aria-labelledby="dossier-heading-fond" data-dossier-tabs>
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-white/10">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-sm">
+              <i class="fa-solid fa-user-secret"></i>
+            </span>
+            <div>
+              <h3 id="dossier-heading-fond" class="font-cinzel font-bold text-base sm:text-lg text-amber-300">
+                MI6 Case File: Fond, Jamie (009&frac12;)
+              </h3>
+              <span class="text-[11px] font-mono text-stone-400">Espionage Tropes &amp; Geopolitical Maintenance Analysis</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5" role="tablist">
+            <button role="tab" aria-selected="true" aria-controls="panel-fond-paradox" id="tab-fond-paradox" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-amber-500 bg-amber-500/10 text-amber-400 font-bold">
+              <span>The Paternity Paradox</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">007 Inversion</span>
+            </button>
+            <button role="tab" aria-selected="false" aria-controls="panel-fond-summit" id="tab-fond-summit" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+              <span>The Whitehall Summit</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Diplomatic Cr&egrave;che</span>
+            </button>
+          </div>
+        </div>
+        
+        <div class="min-h-[140px]">
+          <div id="panel-fond-paradox" role="tabpanel" aria-labelledby="tab-fond-paradox" class="dossier-tab-panel block space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">Deconstructing the Cold War Lothario</h4>
+            <p class="text-xs text-stone-300 leading-relaxed">
+              Ian Fleming's literary and cinematic mythos established the globetrotting secret agent as an unattached, consequence-free operator whose intimate "cooperative working relationships" with opposing foreign operatives dissolved cleanly at the mission's conclusion. Trevor Swistchew's satire flips the trope on its head by introducing the one adversary MI6 cannot out-manoeuvre: statutory child support enforcement backed by seventeen genetically undeniable prodigies skilled in wire-tapping, lock-picking, and Soviet command.
+            </p>
+          </div>
+          <div id="panel-fond-summit" role="tabpanel" aria-labelledby="tab-fond-summit" class="dossier-tab-panel hidden space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">Multilateral Geopolitical Negotiation</h4>
+            <p class="text-xs text-stone-300 leading-relaxed">
+              The Whitehall summit scene plays upon classic Cold War stereotypes: the uncompromising Soviet delegation with cheekbones sharp enough to slice bread demanding hard currency; East Germany requesting state funding for elite gymnastics, mathematics, and footwear; Bulgaria demanding a tank; and neutral Finland quietly shrugging while accepting payments. The unified chorus of <em>&ldquo;NIET!&rdquo;</em> underscores the universal diplomatic consensus against Jamie Fond's desperate charm.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- STORY BODY TEXT -->
+      <div id="essay-article" class="prose prose-invert prose-stone max-w-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg">
+        
+        <p class="first-letter:font-cinzel first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:text-amber-500 first-letter:leading-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Jamie Fond&mdash;codename 009&frac12;&mdash;was practising his signature smoulder in the mirror when the doorbell rang.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          He opened it to find two officials in grey suits, the sort of men who looked as if they had been carved from filing cabinets.<a href="#ref-1" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[1]</a>
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          They introduced themselves from the International Child Support Recovery Directorate and handed him a folder so thick it could have been used to prop up the Berlin Wall. Inside were seventeen files, each stamped <strong>URGENT</strong>, each containing a photograph of a child who looked unmistakably like him. Same jawline. Same eyebrows. Same faint expression of <em>&ldquo;I could escape this room with a paperclip.&rdquo;</em>
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          The officials explained that during his Cold War service, he had &ldquo;formed cooperative working relationships&rdquo; with agents from Russia, East Germany, Bulgaria, Czechoslovakia, and&mdash;mysteriously&mdash;Finland.<a href="#ref-2" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[2]</a> Jamie protested that he had only been in Finland for twelve minutes during Operation Snow Ferret. The officials replied that it had apparently been a very productive twelve minutes. They informed him that the youngest child, aged two, belonged to Hedda Legova, a top Soviet operative. Jamie remembered her vividly: she had once tried to strangle him with a telephone cord. The officials said she claimed he had &ldquo;extracted information&rdquo; from her. Jamie insisted it had been strictly professional. The officials disagreed.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          MI6 summoned him immediately. Director Hawthorne paced the briefing room like a man who had just discovered his pension was invested in East German sausages. He shouted that Jamie had fathered seventeen children with foreign agents during the Cold War. Jamie said he had been building international relations. Hawthorne replied that he had been building a cr&egrave;che. The screen lit up with photos of the children: one dismantling a radio, one picking a lock on a biscuit tin, one crawling through an air vent. Hawthorne informed him that the mothers were sending the children to MI6 &ldquo;for bonding&rdquo;. He added that this was their joke, not his.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          The children arrived in a convoy of diplomatic cars. The oldest, a 16&#8209;year&#8209;old named Yuri Sterlingov, saluted Hawthorne and immediately hacked the building&rsquo;s security system using a pocket calculator. A 10&#8209;year&#8209;old East German girl demanded blueprints of MI6 &ldquo;for homework&rdquo;. A Bulgarian boy dismantled Jamie&rsquo;s pen, identified the hidden explosive, and asked for two more &ldquo;for school&rdquo;. The two&#8209;year&#8209;old marched up to Jamie, grabbed his tie, and declared <strong>&ldquo;Papa&rdquo;</strong> with the authority of a Soviet general.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          MI6 convened an emergency summit with representatives from the various nations.<a href="#ref-3" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[3]</a> The Soviet delegate, a woman with cheekbones sharp enough to slice bread, said, <em>&ldquo;Comrade Fond was very productive during Cold War. We expect compensation.&rdquo;</em> Hawthorne snapped that Jamie was not a comrade. She replied, <em>&ldquo;He was. Repeatedly.&rdquo;</em> Jamie inhaled his tea. The East German delegate demanded funding for elite gymnastics, elite mathematics, elite espionage, and shoes. The Bulgarian delegate simply said, <em>&ldquo;We want money, maybe a tank.&rdquo;</em> The Finnish delegate shrugged and said they didn&rsquo;t know how it happened either, but they would accept payments. Jamie attempted diplomacy. All delegates shouted <strong>&ldquo;NIET (No)!&rdquo;</strong> in unison. Even the Finnish one.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Realising negotiations were hopeless, Jamie did what any seasoned operative would do: he ran. He sprinted through MI6, dodging toddlers, leaping over prams, pursued by seventeen highly trained children shouting &ldquo;Papa!&rdquo; in six languages. He burst onto the roof where a helicopter waited. He leapt aboard. The pilot turned. It was the two&#8209;year&#8209;old. He handed Jamie a bill for childcare.
+        </p>
+
+        <!-- PUNCHLINE CALLOUT BOX -->
+        <div class="my-10 p-6 sm:p-8 rounded-2xl bg-stone-900/90 border border-amber-500/40 text-center shadow-xl">
+          <p class="font-cinzel text-xl sm:text-2xl font-bold text-amber-300 tracking-wide mb-2">
+            Field Note Discovered on Hawthorne&rsquo;s Desk:
+          </p>
+          <p class="font-serif text-2xl sm:text-3xl text-stone-100 italic font-semibold">
+            &ldquo;Gone undercover. Very deep cover. Possibly forever. If anyone asks, tell them I&rsquo;ve defected to Bermuda. &mdash; 009&frac12;&rdquo;
+          </p>
+        </div>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          The next morning, Hawthorne found the note on his desk. Hawthorne sighed, then opened the latest diplomatic cable.<a href="#ref-4" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[4]</a> It read: <em>&ldquo;We have discovered an eighteenth child.&rdquo;</em> Hawthorne fainted.
+        </p>
+
+        <p class="pt-6 font-mono text-xs text-stone-500 uppercase tracking-widest text-right">
+          &copy; 2026 Trevor Swistchew. All rights reserved.
+        </p>
+
+      </div>
+
+      <!-- FOOTER & ANNOTATIONS -->
+      <footer class="mt-20 pt-10 border-t border-stone-800 text-xs text-stone-400 font-sans" aria-labelledby="notes-heading-fond">
+        <div class="flex items-center gap-2 mb-6 text-stone-300">
+          <i class="fa-solid fa-book-bookmark text-amber-500 text-sm"></i>
+          <h3 id="notes-heading-fond" class="font-cinzel font-bold text-sm tracking-wider uppercase">
+            Literary &amp; Historical Parody Annotations
+          </h3>
+        </div>
+        
+        <ol class="space-y-4 list-none pl-0">
+          <li id="ref-1" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[1]</span>
+            <span><strong>The 007 Trope Inversion:</strong> Ian Fleming&rsquo;s archetypal British superspy James Bond (007) is famously defined by high-stakes cross-border romantic liaisons that evaporate without domestic consequence once the credits roll. Trevor Swistchew subverts this conventions-bound fantasy by introducing bureaucratic reality: the unappealable enforcement machinery of international child maintenance.</span>
+          </li>
+          
+          <li id="ref-2" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[2]</span>
+            <span><strong>Operation Snow Ferret &amp; Finlandization:</strong> The comedic running gag of Jamie Fond&rsquo;s twelve-minute sojourn in Finland parodies Cold War geopolitical neutrality (*the Paasikivi&ndash;Kekkonen doctrine*). Even a resolutely non-aligned Nordic state proves incapable of resisting either Fond&rsquo;s improbable productivity or the universal opportunity to demand foreign currency transfers.</span>
+          </li>
+
+          <li id="ref-3" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[3]</span>
+            <span><strong>The Multilateral Diplomatic Cr&egrave;che:</strong> The Whitehall emergency summit caricatures realpolitik negotiations between the Warsaw Pact and Western intelligence. Ideological posturing melts immediately into municipal transactionalism&mdash;ranging from East Germany&rsquo;s demand for sports equipment and shoes, to Bulgaria&rsquo;s unvarnished request for military hardware, to the Soviet delegate&rsquo;s unassailable logic regarding Comrade Fond&rsquo;s &ldquo;productivity.&rdquo;</span>
+          </li>
+
+          <li id="ref-4" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[4]</span>
+            <span><strong>The Eighteenth Child Coda:</strong> A staple of classic British situational farce (*e.g., Tom Sharpe, P.G. Wodehouse, and Monty Python*). Just as the protagonist manages an audacious rooftop helicopter extraction to an offshore haven, the bureaucratic machine delivers a final fatal postscript that completely overthrows Whitehall&rsquo;s composure.</span>
+          </li>
+        </ol>
+
+        <!-- Creative Fellowship CTA -->
+        <div class="mt-12 p-6 rounded-2xl bg-gradient-to-br from-peat-900 to-peat-950 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="space-y-1 text-center sm:text-left">
+            <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold">Creative Fellowship</span>
+            <h4 class="font-cinzel text-lg font-bold text-white">The Shady River Bard Creative Ecosystem</h4>
+            <p class="text-xs text-stone-300 max-w-xl">
+              Trevor Swistchew's essays, stories, and collected poetry are published in fellowship with The Shady River Bard—exploring Scottish self-determination, constitutional jurisprudence, literary satire, and a 66-track companion song vault.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <a href="../../music/index.html" class="px-4 py-2.5 rounded-xl bg-stone-800 hover:bg-stone-700 text-amber-400 border border-stone-700 font-cinzel font-bold text-xs uppercase tracking-wider transition-colors shadow-md flex items-center gap-1.5">
+              <i class="fa-solid fa-guitar text-[11px]"></i>
+              <span>Music Chamber (66 Tracks)</span>
+            </a>
+            <a href="https://theshadyriverbard.com/" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-peat-950 font-cinzel font-bold text-xs uppercase tracking-wider transition-colors shadow-lg flex items-center gap-1.5">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              <span>The Shady River Bard</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+
+    </article>
+  </main>
+
+  <!-- Reading Experience Controller Script -->
+  <script src="../../assets/js/reading-experience.js"></script>
+</body>
+</html>
