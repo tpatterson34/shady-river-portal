@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deconstructing World Capitalism. — Trevor Swistchew (2026)</title>
+  <meta name="description" content="A political economy treatise by Trevor Swistchew examining the coercive historical origins of capitalism and presenting a cooperative blueprint for democratic economic governance.">
+  <link rel="canonical" href="https://theshadyriverbard.com/trevor-swistchew/essays/deconstructing-world-capitalism/">
+
+  <!-- Open Graph Meta -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Deconstructing World Capitalism. — Trevor Swistchew (2026)">
+  <meta property="og:description" content="A political economy treatise by Trevor Swistchew examining the coercive historical origins of capitalism and presenting a cooperative blueprint for democratic economic governance.">
+  <meta property="og:image" content="https://theshadyriverbard.com/trevor-swistchew/assets/images/deconstructing-world-capitalism-banner.jpg">
+  <meta property="og:url" content="https://theshadyriverbard.com/trevor-swistchew/essays/deconstructing-world-capitalism/">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              950: '#0c0b0a',
+              900: '#121110',
+              850: '#181614',
+              800: '#1f1c19',
+              700: '#2b2723',
+              600: '#3d3731',
+            },
+            parchment: {
+              50: '#fdfbf7',
+              100: '#f7f4ed',
+              200: '#efeae0',
+              300: '#e5ded2',
+              400: '#d8cdbe',
+              500: '#c5b8a5',
+            },
+            brass: {
+              400: '#dfbe75',
+              500: '#c5a059',
+              600: '#a6823c',
+              700: '#846427',
+            },
+            thistle: {
+              600: '#9d2b45',
+              700: '#7e2035',
+            },
+            loch: {
+              400: '#38bdf8',
+              700: '#0369a1',
+              900: '#0c4a6e',
+            }
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Lora', 'Georgia', 'serif'],
+            display: ['"Playfair Display"', 'Cinzel', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Accessibility & Salon Theme Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/a11y.css">
+  <link rel="stylesheet" href="../../assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950 min-h-screen flex flex-col justify-between bg-stone-950 text-stone-200">
+
+  <!-- 1. WCAG Skip Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Essay Content</a>
+
+  <!-- 2. Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- 3. Top Sticky Reading Utility & Salon Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      
+      <!-- Salon Brand / Return Link -->
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2.5 text-stone-300 hover:text-amber-400 group transition-colors">
+          <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
+          <div class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:block">
+            Trevor Swistchew <span class="text-stone-500 font-sans font-normal mx-1">|</span> <span class="text-stone-400">Compendium Archive</span>
+          </div>
+        </a>
+        <a href="https://theshadyriverbard.com/" class="hidden md:flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 text-[11px] font-mono transition-colors" title="Visit The Shady River Bard Portal">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Center / Right Utilities: Theme & Font Controls -->
+      <div class="flex items-center gap-2 sm:gap-4">
+        <!-- Tri-State Theme Switcher -->
+        <div class="flex items-center bg-stone-950/80 border border-stone-800 rounded-lg p-0.5 text-xs text-stone-400" role="group" aria-label="Reading Atmosphere Theme">
+          <button type="button" data-set-theme="dark" class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" title="Peat &amp; Loch (Dark)">
+            <i class="fa-solid fa-moon text-[11px]"></i>
+            <span class="sr-only">Dark Theme</span>
+          </button>
+          <button type="button" data-set-theme="sepia" class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" title="Aged Parchment (Sepia)">
+            <i class="fa-solid fa-scroll text-[11px]"></i>
+            <span class="sr-only">Sepia Theme</span>
+          </button>
+          <button type="button" data-set-theme="light" class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" title="Edinburgh Stone (Light)">
+            <i class="fa-solid fa-sun text-[11px]"></i>
+            <span class="sr-only">Light Theme</span>
+          </button>
+        </div>
+
+        <!-- Typography Scaler -->
+        <div class="hidden sm:flex items-center bg-stone-950/80 border border-stone-800 rounded-lg p-0.5 text-xs text-stone-400" role="group" aria-label="Text Size Controls">
+          <button type="button" id="font-size-dec" class="px-2 py-1 hover:text-stone-200 transition-colors" title="Decrease font size" aria-label="Decrease text size">A-</button>
+          <button type="button" id="font-size-reset" class="px-2 py-1 font-bold text-amber-500 hover:text-amber-400 transition-colors" title="Reset font size" aria-label="Reset text size">A</button>
+          <button type="button" id="font-size-inc" class="px-2 py-1 hover:text-stone-200 transition-colors" title="Increase font size" aria-label="Increase text size">A+</button>
+        </div>
+
+        <!-- Return to Compendium Catalog -->
+        <a 
+          href="../../index.html#essays" 
+          class="px-3 py-1.5 rounded-lg border border-stone-700/80 bg-stone-800/90 hover:bg-amber-500 hover:text-stone-950 text-stone-300 text-xs font-mono font-semibold transition-all flex items-center gap-1.5 shadow-sm"
+        >
+          <i class="fa-solid fa-arrow-left text-[10px]"></i>
+          <span>Compendium</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Reading Stage -->
+  <main id="main-content" class="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16 space-y-12 flex-grow w-full min-w-0">
+    
+    <!-- Essay Header / Meta Zone -->
+    <article class="space-y-8" id="essay-reading-wrapper">
+      <header class="space-y-6">
+        
+        <!-- Category Badges & Chronology -->
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="px-2.5 py-1 rounded bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-mono font-bold tracking-wide uppercase">
+            Compendium #41
+          </span>
+          <span class="px-2.5 py-1 rounded bg-stone-800/80 border border-stone-700/50 text-stone-300 text-xs font-mono font-semibold">
+            Political Economy
+          </span>
+          <span class="px-2.5 py-1 rounded bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-semibold">
+            Democratic Commons &amp; Ecology
+          </span>
+          <span class="px-2.5 py-1 rounded bg-stone-900 border border-stone-800 text-stone-400 text-xs font-mono">
+            Trevor Swistchew &bull; 2026
+          </span>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <div class="space-y-3">
+          <h1 class="font-display text-3xl sm:text-5xl font-extrabold text-stone-100 tracking-tight leading-tight">
+            DECONSTRUCTING WORLD CAPITALISM.
+          </h1>
+          <p class="font-serif text-lg sm:text-xl text-stone-400 italic max-w-2xl leading-relaxed">
+            From historical coercion and imperial accumulation to the architectural blueprint for a democratic, cooperative global commons.
+          </p>
+        </div>
+
+        <!-- Author Byline & Meta Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-b border-stone-800/80 text-xs font-mono text-stone-400 py-3">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full border border-amber-500/40 bg-stone-900 flex items-center justify-center text-amber-400 font-cinzel font-bold text-xs shadow">
+              TS
+            </div>
+            <div>
+              <span class="text-stone-200 font-semibold block font-sans">Trevor Swistchew</span>
+              <span class="text-[11px] text-stone-500">Scottish Essayist, Political Economist &amp; Cultural Thinker</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 text-[11px]">
+            <span><i class="fa-regular fa-clock text-amber-500 mr-1.5"></i><span id="metric-read-time">4 min read</span></span>
+            <span><i class="fa-solid fa-feather text-amber-500 mr-1.5"></i><span id="metric-word-count">780 words</span></span>
+            <span><i class="fa-solid fa-certificate text-amber-500 mr-1.5"></i>12 Primary Sources &amp; Citations</span>
+          </div>
+        </div>
+
+        <!-- Hero Fine-Art Banner Image -->
+        <figure class="pt-4 space-y-2">
+          <div class="aspect-video w-full rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl relative bg-peat-950">
+            <img 
+              src="../../assets/images/deconstructing-world-capitalism-banner.jpg" 
+              alt="Allegorical painting of the transition from industrial extraction and enclosure to a democratic cooperative human commons with regenerative agriculture and planetary boundaries" 
+              class="w-full h-full object-cover" 
+              loading="eager"
+            />
+          </div>
+          <figcaption class="text-center text-xs text-stone-400 font-serif italic pt-1">
+            The Commons Reclaimed: From Victorian enclosure and mechanical extraction to participatory stewardship within ecological boundaries.
+          </figcaption>
+        </figure>
+
+        <!-- Epigraph -->
+        <blockquote class="p-4 sm:p-5 rounded-xl bg-peat-900/80 border-l-4 border-amber-500 text-stone-300 font-serif italic text-sm sm:text-base leading-relaxed">
+          &ldquo;Economic systems are human creations, not natural laws. They can be redesigned. They can be replaced. They can be made to serve the whole rather than the few.&rdquo; &mdash; Trevor Swistchew
+        </blockquote>
+
+      </header>
+
+      <!-- INTERACTIVE CONTEXTUAL DOSSIER -->
+      <section class="my-10 p-6 rounded-2xl bg-stone-900/90 border border-amber-500/30 shadow-2xl backdrop-blur-sm" aria-labelledby="dossier-heading-capitalism" data-dossier-tabs>
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-white/10">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-sm">
+              <i class="fa-solid fa-scale-unbalanced-flip"></i>
+            </span>
+            <div>
+              <h3 id="dossier-heading-capitalism" class="font-cinzel font-bold text-base sm:text-lg text-amber-300">
+                Political Economy Dossier: Accumulation vs. Common Wealth
+              </h3>
+              <span class="text-[11px] font-mono text-stone-400">Structural Critique &amp; The Architecture of Economic Democracy</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5" role="tablist">
+            <button role="tab" aria-selected="true" aria-controls="panel-mechanics" id="tab-mechanics" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-amber-500 bg-amber-500/10 text-amber-400 font-bold">
+              <span>Mechanics of Accumulation</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Enclosure &amp; Force</span>
+            </button>
+            <button role="tab" aria-selected="false" aria-controls="panel-blueprint" id="tab-blueprint" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+              <span>The Cooperative Blueprint</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Commons &amp; Care</span>
+            </button>
+          </div>
+        </div>
+        
+        <div class="min-h-[140px]">
+          <div id="panel-mechanics" role="tabpanel" aria-labelledby="tab-mechanics" class="dossier-tab-panel block space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">Historical Genesis: Coercion Disguised as Natural Law</h4>
+            <p class="text-xs text-stone-300 leading-relaxed">
+              Capitalism did not develop through peaceful barter or voluntary contracts. As documented by Karl Polanyi and Eric Williams, the system required state-enforced violence: the legislative dispossession of common lands in Britain to manufacture wage labour pools, and chattel slavery across the Atlantic to fuel early industrial capital. Modern neoliberal theory conceals this history by asserting that self-interest, endless growth, and structural inequality are inevitable natural axioms.
+            </p>
+          </div>
+          <div id="panel-blueprint" role="tabpanel" aria-labelledby="tab-blueprint" class="dossier-tab-panel hidden space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">Post-Capitalist Governance: The Democratic Commons</h4>
+            <p class="text-xs text-stone-300 leading-relaxed">
+              Drawing on Elinor Ostrom&rsquo;s Nobel-honoured research on commons management, Kate Raworth&rsquo;s ecological boundaries, and the economic democracy tradition of G.D.H. Cole and Carole Pateman, Swistchew outlines an actionable post-growth economic model: replacing extractive shareholder ownership with worker-codetermined production, replacing GDP with ecological well-being metrics, and rebuilding global supply networks around reparative equity and planetary stewardship.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ESSAY BODY TEXT -->
+      <div id="essay-article" class="prose prose-invert prose-stone max-w-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg">
+        
+        <p class="first-letter:font-cinzel first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:text-amber-500 first-letter:leading-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          World capitalism did not emerge as a benign system of exchange: it was forged through centuries of conquest, enclosure, and coercion. From its earliest mercantile origins, the system relied on force to create the very conditions it required. The enclosure of common lands in England&mdash;described by Karl Polanyi in <em>The Great Transformation</em>&mdash;was not an organic evolution but a violent restructuring of society, one that transformed self-sufficient communities into wage-dependent labour pools.<a href="#ref-1" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[1]</a> The transatlantic slave trade, documented by Eric Williams in <em>Capitalism and Slavery</em>, was not an aberration but a foundational engine of capitalist accumulation.<a href="#ref-2" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[2]</a> These are historical facts, recorded by scholars who traced capitalism&rsquo;s ascent through the suffering it imposed.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          As capitalism matured, its theorists attempted to cloak this history in the language of natural law. Adam Smith&rsquo;s <em>The Wealth of Nations</em> famously invoked the &ldquo;invisible hand,&rdquo; suggesting that markets, left to their own devices, would harmonise human affairs.<a href="#ref-3" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[3]</a> Yet Smith himself acknowledged that merchants often conspired against the public interest, a point later expanded by Joseph Stiglitz in <em>The Price of Inequality</em>, where he demonstrates that markets do not progress toward fairness but drift inevitably toward concentration of wealth and power.<a href="#ref-4" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[4]</a> The so-called &ldquo;free market&rdquo; was never free; it was constructed through legislation, policing, and imperial expansion. David Harvey&rsquo;s analysis in <em>A Brief History of Neoliberalism</em> shows how state power has always been deployed to protect capital, not liberate people.<a href="#ref-5" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[5]</a>
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Capitalist economic theory rests on flawed assumptions: that individuals act only in self-interest, that competition produces fairness, that growth can be infinite, that inequality is accidental rather than structural. These assumptions have been challenged repeatedly&mdash;from Amartya Sen&rsquo;s work on human capability to Thomas Piketty&rsquo;s demonstration in <em>Capital in the Twenty-First Century</em> that inequality is not a glitch but a built-in feature of capital accumulation.<a href="#ref-6" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[6]</a><a href="#ref-7" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-0.5">[7]</a> The theory is not accurate. It sanctifies greed, justifies exploitation, and reduces human beings to units of labour whose worth is measured solely by productivity.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          As capitalism globalised, its contradictions intensified. It created wealth by creating poverty. It generated abundance by generating waste. It promised freedom while delivering aggression in markets. It spoke of opportunity while enforcing hierarchy. It claimed to reward merit while entrenching inherited advantage. It insisted on efficiency while producing inequality with mechanical regularity. Naomi Klein&rsquo;s <em>The Shock Doctrine</em> exposes how these are not unfortunate accidents but opportunities for the powerful to deepen their control.<a href="#ref-8" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[8]</a> The system is one-sided because it was designed to be one-sided: it funnels power upward, concentrates ownership, and leaves billions scrambling for survival while a tiny minority accumulates unimaginable influence.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Yet humanity is not condemned to this order. A humane global economic system does not require revolution, war, or the fantasy of tearing society down. It requires clarity, courage, and the willingness to teach that capitalism&rsquo;s dominance is not destiny. Economic systems are human creations, not natural laws. They can be redesigned. They can be replaced. They can be made to serve the whole rather than the few.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          A cooperative global economy begins by rejecting the competitive architecture that has defined the last five centuries. It discards the myth that nations must struggle against one another for advantage, that corporations must devour one another to survive, that individuals must fight for wages, status, and security. Cooperation becomes the principle of material life. Production is driven by collective purpose rather than profit. Workplaces become democratic engines of creativity, echoing the arguments of Elinor Ostrom, whose Nobel-winning research demonstrated that communities can govern shared resources more effectively than markets or states.<a href="#ref-9" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[9]</a> Ownership is dispersed, not concentrated. The worker becomes a co-author of the enterprise.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Global supply chains, currently led by exploitation, are rebuilt around shared governance, transparency, and ecological responsibility. Vandana Shiva&rsquo;s work on global agriculture shows how cooperative stewardship can replace models that devastate people and planet.<a href="#ref-10" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[10]</a> The global South becomes an equal architect of the world&rsquo;s future, not a reservoir of cheap labour and plundered minerals.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          A humane system abandons the idea of infinite growth. It replaces GDP with measures of human well-being, environmental stability, and social cohesion&mdash;an approach advocated by Kate Raworth in <em>Doughnut Economics</em>.<a href="#ref-11" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[11]</a> It rewards care, creativity, and sustainability rather than extraction, destruction, and short-term gain. It recognises that the planet is finite and that any economic model ignoring this fact is doomed to collapse.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Democratic economic governance becomes the organising principle of global life. Those who labour also decide. Workplaces cease to be private kingdoms ruled by owners; they become democratic institutions where decisions are made collectively. This echoes the tradition of economic democracy in the works of G.D.H. Cole and later expanded by scholars such as Carole Pateman.<a href="#ref-12" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[12]</a> Power flows upward from the people rather than downward from elites. The economy becomes a continuous conversation in which every voice has weight.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Inequality is addressed directly. Wealth concentration is dismantled through shared ownership, public trusts, cooperative investment, and transparent redistribution. Reparative justice becomes a core principle, acknowledging centuries of extraction and correcting them through shared governance rather than charity.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          International relations shift from competition to coordination. Nations collaborate on climate, technology, migration, and resource management through binding democratic institutions rather than coercive mechanisms of debt, sanctions, and military pressure.
+        </p>
+
+        <!-- CENTRAL PHILOSOPHICAL CALLOUT -->
+        <div class="my-10 p-6 sm:p-8 rounded-2xl bg-stone-900/90 border border-amber-500/40 text-center shadow-xl">
+          <p class="font-cinzel text-xl sm:text-2xl font-bold text-amber-300 tracking-wide mb-2">
+            The Fundamental Human Condition:
+          </p>
+          <p class="font-serif text-2xl sm:text-3xl text-stone-100 italic font-semibold max-w-2xl mx-auto leading-snug">
+            &ldquo;Prosperity is collective, not individual; dignity cannot be traded on an exchange. It replaces the mythology of the isolated self with the reality of shared existence.&rdquo;
+          </p>
+          <p class="text-xs font-mono text-stone-400 mt-3 uppercase tracking-widest">
+            &mdash; Trevor Swistchew &bull; 2026
+          </p>
+        </div>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Most importantly, a humane global system restores the moral centre capitalism hollowed out. It recognises interdependence as the fundamental human condition. It teaches that prosperity is collective, not individual; that dignity cannot be traded on an exchange. It replaces the mythology of the isolated self with the reality of shared existence.
+        </p>
+
+        <p class="pt-6 font-mono text-xs text-stone-500 uppercase tracking-widest text-right">
+          &copy; 2026 Trevor Swistchew. All rights reserved.
+        </p>
+
+      </div>
+
+      <!-- FOOTER & CITATIONS -->
+      <footer class="mt-20 pt-10 border-t border-stone-800 text-xs text-stone-400 font-sans" aria-labelledby="notes-heading-capitalism">
+        <div class="flex items-center gap-2 mb-6 text-stone-300">
+          <i class="fa-solid fa-book-bookmark text-amber-500 text-sm"></i>
+          <h3 id="notes-heading-capitalism" class="font-cinzel font-bold text-sm tracking-wider uppercase">
+            Scholarly Annotations &amp; Primary Sources
+          </h3>
+        </div>
+        
+        <ol class="space-y-4 list-none pl-0">
+          <li id="ref-1" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[1]</span>
+            <span>Karl Polanyi, <em>The Great Transformation: The Political and Economic Origins of Our Time</em> (Farrar &amp; Rinehart, 1944). Examines the enclosure movements and the state-directed creation of the market economy through social dislocation.</span>
+          </li>
+          
+          <li id="ref-2" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[2]</span>
+            <span>Eric Williams, <em>Capitalism and Slavery</em> (University of North Carolina Press, 1944). Seminal work documenting the role of the transatlantic slave trade in providing triangular-trade capital for the British Industrial Revolution.</span>
+          </li>
+
+          <li id="ref-3" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[3]</span>
+            <span>Adam Smith, <em>An Inquiry into the Nature and Causes of the Wealth of Nations</em> (1776; Book IV, Ch. II &amp; Book I, Ch. X). Demonstrates that Smith acknowledged merchant cartels routinely conspiring against the public to raise prices.</span>
+          </li>
+
+          <li id="ref-4" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[4]</span>
+            <span>Joseph E. Stiglitz, <em>The Price of Inequality: How Today's Divided Society Endangers Our Future</em> (W.W. Norton &amp; Company, 2012). Documents rent-seeking, market manipulation, and the structural concentration of economic returns.</span>
+          </li>
+
+          <li id="ref-5" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[5]</span>
+            <span>David Harvey, <em>A Brief History of Neoliberalism</em> (Oxford University Press, 2005). Traces how the state apparatus has been systematically leveraged to restore elite class power and protect private accumulation.</span>
+          </li>
+
+          <li id="ref-6" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[6]</span>
+            <span>Amartya Sen, <em>Development as Freedom</em> (Oxford University Press, 1999) and <em>Commodities and Capabilities</em> (1985). Establishes human capability and substantive freedoms as the proper index of development rather than raw commodity metrics.</span>
+          </li>
+
+          <li id="ref-7" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[7]</span>
+            <span>Thomas Piketty, <em>Capital in the Twenty-First Century</em> (Harvard University Press, 2014). Demonstrates empirically that whenever the rate of return on capital (r) outpaces economic growth (g), wealth concentration increases inexorably.</span>
+          </li>
+
+          <li id="ref-8" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[8]</span>
+            <span>Naomi Klein, <em>The Shock Doctrine: The Rise of Disaster Capitalism</em> (Metropolitan Books, 2007). Explores the deliberate exploitation of natural and economic shocks to impose deregulation, privatisation, and social cutbacks.</span>
+          </li>
+
+          <li id="ref-9" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[9]</span>
+            <span>Elinor Ostrom, <em>Governing the Commons: The Evolution of Institutions for Collective Action</em> (Cambridge University Press, 1990). Nobel Memorial Prize in Economic Sciences research proving polycentric self-governance of common-pool resources.</span>
+          </li>
+
+          <li id="ref-10" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[10]</span>
+            <span>Vandana Shiva, <em>Earth Democracy: Justice, Sustainability, and Peace</em> (South End Press, 2005) &amp; <em>Stolen Harvest</em> (2000). Articulates agroecological food sovereignty, seed protection, and resistance to corporate monoculture in the Global South.</span>
+          </li>
+
+          <li id="ref-11" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[11]</span>
+            <span>Kate Raworth, <em>Doughnut Economics: Seven Ways to Think Like a 21st-Century Economist</em> (Chelsea Green Publishing, 2017). Replaces endless growth ideology with a framework balancing essential human social foundations against planetary boundaries.</span>
+          </li>
+
+          <li id="ref-12" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[12]</span>
+            <span>G.D.H. Cole, <em>Guild Socialism Restated</em> (Leonard Parsons, 1920) and Carole Pateman, <em>Participation and Democratic Theory</em> (Cambridge University Press, 1970). Foundational texts on extending democratic rights directly into economic production and the workplace.</span>
+          </li>
+        </ol>
+
+        <!-- Creative Fellowship CTA -->
+        <div class="mt-12 p-6 rounded-2xl bg-gradient-to-br from-peat-900 to-peat-950 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="space-y-1 text-center sm:text-left">
+            <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold">Creative Fellowship</span>
+            <h4 class="font-cinzel text-lg font-bold text-white">The Shady River Bard Creative Ecosystem</h4>
+            <p class="text-xs text-stone-300 max-w-xl">
+              Trevor Swistchew's essays, political economy treatises, and collected poetry are published in fellowship with The Shady River Bard—exploring Scottish self-determination, constitutional jurisprudence, working permaculture, and a 66-track companion song vault.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <a href="../../music/index.html" class="px-4 py-2.5 rounded-xl bg-stone-800 hover:bg-stone-700 text-amber-400 border border-stone-700 font-cinzel font-bold text-xs uppercase tracking-wider transition-colors shadow-md flex items-center gap-1.5">
+              <i class="fa-solid fa-guitar text-[11px]"></i>
+              <span>Music Chamber (66 Tracks)</span>
+            </a>
+            <a href="https://theshadyriverbard.com/" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-peat-950 font-cinzel font-bold text-xs uppercase tracking-wider transition-colors shadow-lg flex items-center gap-1.5">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              <span>The Shady River Bard</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+
+    </article>
+  </main>
+
+  <!-- Reading Experience Controller Script -->
+  <script src="../../assets/js/reading-experience.js"></script>
+</body>
+</html>
