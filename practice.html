@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Mode — Web Audio Multi-Stem Studio & Synchronized Tablature | The Shady River Bard</title>
+  <meta name="description" content="Interactive multi-stem practice mode for The Shady River Bard songs. Isolate or mute vocals, drums, bass, and guitar stems using the Web Audio API with synchronized chord and lyric scrolling, optimized for Google TV casting.">
+  <link rel="canonical" href="https://theshadyriverbard.com/practice.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="music.song">
+  <meta property="og:title" content="Practice Mode — Multi-Stem Studio | The Shady River Bard">
+  <meta property="og:description" content="Practice songs with isolated vocal, drum, bass, and instrument stems and real-time synchronized chords and lyrics. Cast directly to your Google TV.">
+  <meta property="og:image" content="https://theshadyriverbard.com/mamas-boy/assets/art/mamas-boy-cover.webp">
+  <meta property="og:url" content="https://theshadyriverbard.com/practice.html">
+
+  <!-- Google Fonts: Cinzel, Lora, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            amber: {
+              450: '#f59e0b',
+              550: '#d97706',
+              950: '#451a03',
+            },
+            stone: {
+              850: '#171412',
+              925: '#0f0c0b',
+              950: '#0a0807',
+            }
+          },
+          fontFamily: {
+            display: ['Cinzel', 'Georgia', 'serif'],
+            serif: ['Lora', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom Practice Stylesheet -->
+  <link rel="stylesheet" href="assets/css/practice.css?v=20260926A">
+</head>
+<body class="bg-stone-950 text-stone-200 min-h-screen flex flex-col antialiased selection:bg-amber-500 selection:text-stone-950">
+
+  <!-- Header / Navigation -->
+  <header class="portal-header sticky top-0 z-40 w-full backdrop-blur-md bg-[#0a0807]/90 border-b border-stone-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Brand & Crumb -->
+      <div class="flex items-center gap-3 min-w-0">
+        <a href="./" class="group flex items-center gap-2 text-stone-300 hover:text-white transition-colors" title="Back to Gateway">
+          <i class="fa-solid fa-arrow-left text-xs text-amber-500 group-hover:-translate-x-0.5 transition-transform"></i>
+          <span class="font-display font-bold text-sm tracking-wide hidden sm:inline">The Shady River Bard</span>
+        </a>
+        <span class="text-stone-700 hidden sm:inline">/</span>
+        <a href="vault/" class="text-xs font-mono uppercase tracking-widest text-stone-400 hover:text-amber-400 transition-colors hidden md:inline">
+          Vault
+        </a>
+        <span class="text-stone-700 hidden md:inline">/</span>
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-amber-950/50 border border-amber-500/40 text-amber-400 text-xs font-mono font-semibold truncate">
+          <i class="fa-solid fa-sliders text-[11px]"></i>
+          <span>Practice Mode</span>
+        </div>
+      </div>
+
+      <!-- Action Toolbar (Package Picker, Key/Transpose, TV Mode, Help) -->
+      <div class="flex items-center gap-2.5 shrink-0">
+        
+        <!-- Package Selector Dropdown -->
+        <div class="relative hidden sm:block">
+          <select id="package-selector" class="pl-2.5 pr-8 py-1.5 rounded-lg bg-stone-900 border border-stone-800 text-stone-200 text-xs font-mono focus:outline-none focus:border-amber-500 transition-colors appearance-none cursor-pointer" aria-label="Select Practice Song">
+            <option value="a-different-kind-of-love">A Different Kind of Love</option>
+          </select>
+          <i class="fa-solid fa-chevron-down absolute right-2.5 top-1/2 -translate-y-1/2 text-stone-500 text-[10px] pointer-events-none"></i>
+        </div>
+
+        <!-- Load Local Folder Button -->
+        <button id="btn-open-folder" class="px-2.5 py-1.5 rounded-lg bg-stone-900 border border-stone-800 hover:border-amber-500/60 text-stone-300 hover:text-amber-300 text-xs font-mono transition-colors flex items-center gap-1.5" title="Import a local practice package folder from your computer">
+          <i class="fa-solid fa-folder-open text-amber-400 text-[11px]"></i>
+          <span class="hidden lg:inline">Load Folder</span>
+        </button>
+        <input type="file" id="folder-input" webkitdirectory directory multiple class="hidden" aria-hidden="true">
+
+        <!-- Key & Transpose -->
+        <div class="flex items-center gap-1 bg-stone-900 border border-stone-800 rounded-lg px-2 py-1 text-xs font-mono">
+          <span class="text-stone-400 mr-0.5">Key:</span>
+          <span id="val-key" class="text-amber-400 font-bold w-4 text-center">A</span>
+          <button id="btn-transpose-down" class="w-5 h-5 rounded hover:bg-stone-800 text-stone-400 hover:text-white flex items-center justify-center transition-colors" title="Transpose down (-1 semitone)" aria-label="Transpose down">♭</button>
+          <span id="val-transpose" class="text-stone-500 text-[10px] w-4 text-center">0</span>
+          <button id="btn-transpose-up" class="w-5 h-5 rounded hover:bg-stone-800 text-stone-400 hover:text-white flex items-center justify-center transition-colors" title="Transpose up (+1 semitone)" aria-label="Transpose up">♯</button>
+        </div>
+
+        <!-- Chord Diagrams Button -->
+        <button id="btn-show-chords" class="px-2.5 py-1.5 rounded-lg bg-stone-900 border border-stone-800 hover:border-amber-500/60 text-stone-300 hover:text-white text-xs font-mono transition-colors flex items-center gap-1.5" title="View guitar chord fingerings">
+          <i class="fa-solid fa-guitar text-amber-400 text-xs"></i>
+          <span class="hidden md:inline">Chords</span>
+        </button>
+
+        <!-- TV Display Mode Button (Cast Tab optimization) -->
+        <button id="btn-tv-mode" class="px-2.5 py-1.5 rounded-lg bg-stone-900 border border-stone-800 hover:border-amber-500/60 text-stone-300 hover:text-white text-xs font-mono transition-colors flex items-center gap-1.5" title="Toggle TV Mode (Enlarged teleprompter chords for Google TV Cast Tab)">
+          <i class="fa-solid fa-tv text-amber-400 text-xs"></i>
+          <span class="hidden md:inline">TV Mode</span>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Practice Stage -->
+  <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+
+    <!-- Top Track Info & Quick Presets -->
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 rounded-2xl bg-[#14110e] border border-stone-800/80 shadow-xl">
+      <div class="flex items-center gap-4 min-w-0">
+        <div class="w-14 h-14 rounded-xl overflow-hidden shrink-0 border border-stone-800 bg-stone-900 shadow-md">
+          <img id="song-art" src="mamas-boy/assets/art/mamas-boy-cover.webp" alt="Song Artwork" class="w-full h-full object-cover">
+        </div>
+        <div class="min-w-0">
+          <div class="flex items-center gap-2">
+            <h1 id="song-title" class="font-display text-xl sm:text-2xl font-bold text-white tracking-tight truncate">
+              A Different Kind of Love
+            </h1>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/10 text-amber-400 border border-amber-500/30">
+              4 Stems
+            </span>
+          </div>
+          <div class="flex items-center gap-2 text-xs font-mono text-stone-400 mt-0.5">
+            <span id="song-album" class="text-amber-400/90 truncate">Mama's Boy (Album 13)</span>
+            <span>&bull;</span>
+            <span class="text-stone-500">Guitar & Vocal Practice</span>
+            <span>&bull;</span>
+            <span class="text-sky-400 text-[11px]"><i class="fa-brands fa-chromecast mr-1"></i>Ready to Cast</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Practice Presets Toolbar -->
+      <div class="flex flex-wrap items-center gap-1.5 font-mono text-xs">
+        <span class="text-stone-500 text-[11px] mr-1 uppercase tracking-wider hidden sm:inline">Mix Presets:</span>
+        <button data-preset="all" class="px-2.5 py-1 rounded bg-stone-900 hover:bg-amber-950/60 border border-stone-800 hover:border-amber-500/50 text-stone-300 hover:text-white transition-colors" title="All stems at full volume">
+          Full Band
+        </button>
+        <button data-preset="guitar" class="px-2.5 py-1 rounded bg-stone-900 hover:bg-emerald-950/60 border border-stone-800 hover:border-emerald-500/50 text-emerald-300 hover:text-emerald-200 transition-colors" title="Mute other/guitar stem so you can play along">
+          Guitar Practice
+        </button>
+        <button data-preset="karaoke" class="px-2.5 py-1 rounded bg-stone-900 hover:bg-amber-950/60 border border-stone-800 hover:border-amber-500/50 text-amber-300 hover:text-amber-200 transition-colors" title="Mute vocals stem for singing practice">
+          Karaoke Mode
+        </button>
+        <button data-preset="rhythm" class="px-2.5 py-1 rounded bg-stone-900 hover:bg-purple-950/60 border border-stone-800 hover:border-purple-500/50 text-purple-300 hover:text-purple-200 transition-colors" title="Drums and Bass only">
+          Rhythm Only
+        </button>
+        <button data-preset="acapella" class="px-2.5 py-1 rounded bg-stone-900 hover:bg-sky-950/60 border border-stone-800 hover:border-sky-500/50 text-sky-300 hover:text-sky-200 transition-colors" title="Isolated vocals only">
+          Acapella
+        </button>
+      </div>
+    </div>
+
+    <!-- 4-Channel Stem Mixer Rack -->
+    <div class="mixer-container p-4 sm:p-5 rounded-2xl bg-[#14110e] border border-stone-800/80 shadow-xl space-y-4">
+      <div class="flex items-center justify-between border-b border-stone-800/70 pb-3">
+        <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-amber-400 font-bold">
+          <i class="fa-solid fa-sliders text-xs"></i>
+          <span>Multi-Stem Studio Console</span>
+        </div>
+        <div class="text-[11px] font-mono text-stone-500">
+          Web Audio API &bull; 4 Synchronous Channels &bull; Zero Phase Drift
+        </div>
+      </div>
+
+      <!-- Mixer Channels Grid -->
+      <div class="mixer-grid grid grid-cols-2 md:grid-cols-5 gap-3 sm:gap-4">
+        
+        <!-- Stem 1: Vocals -->
+        <div class="p-3 sm:p-3.5 rounded-xl bg-[#1c1814] border border-amber-500/20 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-amber-400 shadow-sm shadow-amber-400"></span>
+              <span class="font-mono text-xs font-bold text-amber-300">Vocals</span>
+            </div>
+            <span id="val-vocals" class="font-mono text-[11px] text-stone-400">100%</span>
+          </div>
+          <!-- VU Level Meter -->
+          <div class="vu-meter-bg h-2 w-full">
+            <div id="vu-vocals" class="vu-meter-fill"></div>
+          </div>
+          <!-- Volume Slider -->
+          <input type="range" id="slider-vocals" min="0" max="100" value="100" class="stem-slider vocal-slider w-full" aria-label="Vocals Volume">
+          <!-- Mute / Solo -->
+          <div class="grid grid-cols-2 gap-1.5 font-mono text-xs">
+            <button id="mute-vocals" class="btn-mute py-1 rounded bg-stone-900 hover:bg-stone-800 border border-stone-800 text-stone-400 font-bold transition-all text-center" title="Mute Vocals (Key: M)">M</button>
+            <button id="solo-vocals" class="btn-solo py-1 rounded bg-stone-900 hover:bg-stone-800 border border-stone-800 text-stone-400 font-bold transition-all text-center" title="Solo Vocals (Key: 1)">S</button>
+          </div>
+        </div>
+
+        <!-- Stem 2: Drums -->
+        <div class="p-3 sm:p-3.5 rounded-xl bg-[#1c1814] border border-red-500/20 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-red-400 shadow-sm shadow-red-400"></span>
+              <span class="font-mono text-xs font-bold text-red-300">Drums</span>
+            </div>
+            <span id="val-drums" class="font-mono text-[11px] text-stone-400">100%</span>
+          </div>
+          <!-- VU Level Meter -->
+          <div class="vu-meter-bg h-2 w-full">
+            <div id="vu-drums" class="vu-meter-fill"></div>
+          </div>
+          <!-- Volume Slider -->
+          <input type="range" id="slider-drums" min="0" max="100" value="100" class="stem-slider drums-slider w-full" aria-label="Drums Volume">
+          <!-- Mute / Solo -->
+          <div class="grid grid-cols-2 gap-1.5 font-mono text-xs">
+            <button id="mute-drums" class="btn-mute py-1 rounded bg-stone-900 hover:bg-stone-800 border border-stone-800 text-stone-400 font-bold transition-all text-center" title="Mute Drums">M</button>
+            <button id="solo-drums" class="btn-solo py-1 rounded bg-stone-900 hover:bg-stone-800 border border-stone-800 text-stone-400 font-bold transition-all text-center" title="Solo Drums (Key: 2)">S</button>
+          </div>
+        </div>
+
+        <!-- Stem 3: Bass -->
+        <div class="p-3 sm:p-3.5 rounded-xl bg-[#1c1814] border border-purple-500/20 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-purple-400 shadow-sm shadow-purple-400"></span>
+              <span class="font-mono text-xs font-bold text-purple-300">Bass</span>
+            </div>
+            <span id="val-bass" class="font-mono text-[11px] text-stone-400">100%</span>
+          </div>
+          <!-- VU Level Meter -->
+          <div class="vu-meter-bg h-2 w-full">
+            <div id="vu-bass" class="vu-meter-fill"></div>
+          </div>
+          <!-- Volume Slider -->
+          <input type="range" id="slider-bass" min="0" max="100" value="100" class="stem-slider bass-slider w-full" aria-label="Bass Volume">
+          <!-- Mute / Solo -->
+          <div class="grid grid-cols-2 gap-1.5 font-mono text-xs">
+            <button id="mute-bass" class="btn-mute py-1 rounded bg-stone-900 hover:bg-stone-800 border border-stone-800 text-stone-400 font-bold transition-all text-center" title="Mute Bass">M</button>
+            <button id="solo-bass" class="btn-solo py-1 rounded bg-stone-900 hover:bg-stone-800 border border-stone-800 text-stone-400 font-bold transition-all text-center" title="Solo Bass (Key: 3)">S</button>
+          </div>
+        </div>
+
+        <!-- Stem 4: Other / Guitars -->
+        <div class="p-3 sm:p-3.5 rounded-xl bg-[#1c1814] border border-emerald-500/20 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 shadow-sm shadow-emerald-400"></span>
+              <span class="font-mono text-xs font-bold text-emerald-300">Guitar / Other</span>
+            </div>
+            <span id="val-other" class="font-mono text-[11px] text-stone-400">100%</span>
+          </div>
+          <!-- VU Level Meter -->
+          <div class="vu-meter-bg h-2 w-full">
+            <div id="vu-other" class="vu-meter-fill"></div>
+          </div>
+          <!-- Volume Slider -->
+          <input type="range" id="slider-other" min="0" max="100" value="100" class="stem-slider other-slider w-full" aria-label="Guitar / Other Volume">
+          <!-- Mute / Solo -->
+          <div class="grid grid-cols-2 gap-1.5 font-mono text-xs">
+            <button id="mute-other" class="btn-mute py-1 rounded bg-stone-900 hover:bg-stone-800 border border-stone-800 text-stone-400 font-bold transition-all text-center" title="Mute Guitars">M</button>
+            <button id="solo-other" class="btn-solo py-1 rounded bg-stone-900 hover:bg-stone-800 border border-stone-800 text-stone-400 font-bold transition-all text-center" title="Solo Guitars (Key: 4)">S</button>
+          </div>
+        </div>
+
+        <!-- Channel 5: Master Output -->
+        <div class="col-span-2 md:col-span-1 p-3 sm:p-3.5 rounded-xl bg-[#1c1814] border border-stone-700/60 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-amber-500 shadow-sm shadow-amber-500"></span>
+              <span class="font-mono text-xs font-bold text-stone-200">Master</span>
+            </div>
+            <span id="val-master" class="font-mono text-[11px] text-stone-400">100%</span>
+          </div>
+          <!-- VU Level Meter -->
+          <div class="vu-meter-bg h-2 w-full">
+            <div id="master-vu" class="vu-meter-fill"></div>
+          </div>
+          <!-- Volume Slider -->
+          <input type="range" id="master-volume" min="0" max="100" value="100" class="stem-slider master-slider w-full" aria-label="Master Volume">
+          <!-- Master Mute Button -->
+          <button id="master-mute" class="w-full py-1 rounded bg-stone-900 hover:bg-stone-800 border border-stone-800 text-stone-300 font-mono text-xs flex items-center justify-center gap-1 transition-colors" title="Master Mute (Key: M)">
+            <i class="fa-solid fa-volume-high"></i>
+            <span>Mute All</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Master Transport & Progress Bar -->
+    <div class="p-4 sm:p-5 rounded-2xl bg-[#14110e] border border-stone-800/80 shadow-xl space-y-3">
+      
+      <!-- Progress Seek Bar -->
+      <div class="space-y-1.5">
+        <div class="relative seekbar-container h-3 w-full bg-stone-900 rounded-lg cursor-pointer overflow-hidden border border-stone-800" id="seek-container">
+          <!-- Filled progress bar -->
+          <div id="seek-progress" class="absolute top-0 bottom-0 left-0 bg-gradient-to-r from-amber-600 to-amber-400 rounded-lg transition-all" style="width: 0%;"></div>
+          <!-- Loop region highlight -->
+          <div id="loop-region" class="loop-region hidden"></div>
+          <!-- Loop Markers -->
+          <div id="loop-marker-a" class="loop-marker hidden"></div>
+          <div id="loop-marker-b" class="loop-marker hidden"></div>
+          <!-- Invisible full-width slider for input -->
+          <input type="range" id="seek-bar" min="0" max="100" value="0" step="0.1" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full" aria-label="Seek track position">
+        </div>
+        <div class="flex items-center justify-between text-xs font-mono text-stone-400">
+          <span id="time-current">0:00</span>
+          <span id="loop-display" class="hidden text-sky-400 font-semibold text-[11px] bg-sky-950/40 border border-sky-500/30 px-2 py-0.5 rounded-full">Loop: 0:00 – 0:00</span>
+          <span id="time-total">3:25</span>
+        </div>
+      </div>
+
+      <!-- Primary Controls Row -->
+      <div class="flex flex-wrap items-center justify-between gap-4 pt-1">
+        
+        <!-- Left: Play/Pause/Rewind/Skip -->
+        <div class="flex items-center gap-3">
+          <button id="btn-stop" class="w-9 h-9 rounded-lg bg-stone-900 hover:bg-stone-800 text-stone-400 hover:text-white flex items-center justify-center transition-colors text-xs border border-stone-800" title="Stop and rewind to start">
+            <i class="fa-solid fa-stop"></i>
+          </button>
+          <button id="btn-rewind" class="w-9 h-9 rounded-lg bg-stone-900 hover:bg-stone-800 text-stone-400 hover:text-white flex items-center justify-center transition-colors text-xs border border-stone-800" title="Skip backward 5s (Left Arrow)">
+            <i class="fa-solid fa-backward-step"></i>
+          </button>
+          <button id="btn-play" class="w-12 h-12 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 flex items-center justify-center text-lg font-bold shadow-lg shadow-amber-950/50 transition-all active:scale-95" title="Play / Pause (Spacebar)" aria-label="Play or pause audio">
+            <i id="play-icon" class="fa-solid fa-play ml-0.5"></i>
+          </button>
+          <button id="btn-forward" class="w-9 h-9 rounded-lg bg-stone-900 hover:bg-stone-800 text-stone-400 hover:text-white flex items-center justify-center transition-colors text-xs border border-stone-800" title="Skip forward 5s (Right Arrow)">
+            <i class="fa-solid fa-forward-step"></i>
+          </button>
+        </div>
+
+        <!-- Center: Speed Selector -->
+        <div class="relative">
+          <button id="btn-speed" class="px-3 py-1.5 rounded-lg bg-stone-900 border border-stone-800 hover:border-amber-500/50 text-stone-300 font-mono text-xs flex items-center gap-1.5 transition-colors" title="Playback Speed">
+            <span>1.0x</span>
+            <i class="fa-solid fa-caret-down text-[10px] text-stone-500"></i>
+          </button>
+          <div id="speed-menu" class="hidden absolute bottom-full mb-1 left-0 w-24 bg-stone-900 border border-stone-800 rounded-xl p-1 shadow-2xl z-20 font-mono text-xs">
+            <button data-speed="0.75" class="w-full text-left px-2.5 py-1 rounded hover:bg-stone-800 hover:text-amber-400 transition-colors">0.75x</button>
+            <button data-speed="0.85" class="w-full text-left px-2.5 py-1 rounded hover:bg-stone-800 hover:text-amber-400 transition-colors">0.85x</button>
+            <button data-speed="0.9" class="w-full text-left px-2.5 py-1 rounded hover:bg-stone-800 hover:text-amber-400 transition-colors">0.9x</button>
+            <button data-speed="1.0" class="w-full text-left px-2.5 py-1 rounded hover:bg-stone-800 hover:text-amber-400 transition-colors font-bold text-amber-400">1.0x</button>
+            <button data-speed="1.1" class="w-full text-left px-2.5 py-1 rounded hover:bg-stone-800 hover:text-amber-400 transition-colors">1.1x</button>
+            <button data-speed="1.25" class="w-full text-left px-2.5 py-1 rounded hover:bg-stone-800 hover:text-amber-400 transition-colors">1.25x</button>
+          </div>
+        </div>
+
+        <!-- Right: A-B Looper Section -->
+        <div class="flex items-center gap-1.5 font-mono text-xs">
+          <span class="text-stone-500 text-[11px] mr-1 hidden sm:inline">Looper:</span>
+          <button id="btn-loop-in" class="px-2.5 py-1.5 rounded-lg bg-stone-900 border border-stone-800 hover:border-sky-500/50 text-stone-300 hover:text-sky-300 transition-colors" title="Set Loop Start [A] (Key: [)">
+            [A] In
+          </button>
+          <button id="btn-loop-out" class="px-2.5 py-1.5 rounded-lg bg-stone-900 border border-stone-800 hover:border-sky-500/50 text-stone-300 hover:text-sky-300 transition-colors" title="Set Loop End [B] (Key: ])">
+            [B] Out
+          </button>
+          <button id="btn-loop-toggle" class="px-2.5 py-1.5 rounded-lg bg-stone-900 border border-stone-800 hover:border-sky-500/50 text-stone-300 hover:text-white transition-colors" title="Toggle Looper On/Off (Key: L)">
+            <i class="fa-solid fa-repeat text-xs"></i>
+          </button>
+          <button id="btn-clear-loop" class="px-2 py-1.5 rounded-lg bg-stone-900 border border-stone-800 hover:bg-stone-800 text-stone-500 hover:text-stone-300 transition-colors" title="Clear A-B Loop">
+            <i class="fa-solid fa-xmark text-xs"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Synchronized Tablature & Lyrics Stage -->
+    <div class="relative rounded-2xl bg-[#14110e] border border-stone-800/80 shadow-2xl overflow-hidden flex flex-col">
+      
+      <!-- Teleprompter HUD (Sticky at top of Tab Stage) -->
+      <div class="hud-card sticky top-0 z-20 border-b border-stone-800/80 p-4 sm:p-5 flex flex-wrap items-center justify-between gap-4">
+        
+        <!-- Large Current Chord & Next Chord Display -->
+        <div class="flex items-center gap-5 min-w-0">
+          <div>
+            <div class="text-[10px] font-mono uppercase text-amber-500/80 tracking-wider">Current Chord</div>
+            <div id="hud-current-chord" class="hud-current-chord font-display text-3xl sm:text-4xl font-black text-amber-400 drop-shadow-[0_0_12px_rgba(245,158,11,0.5)]">
+              A
+            </div>
+          </div>
+          <div class="h-10 w-px bg-stone-800"></div>
+          <div>
+            <div class="text-[10px] font-mono uppercase text-stone-400 tracking-wider">Next Chord</div>
+            <div id="hud-next-chord" class="hud-next-chord font-display text-xl sm:text-2xl font-bold text-stone-300">
+              —
+            </div>
+          </div>
+          <div class="h-10 w-px bg-stone-800 hidden md:block"></div>
+          <!-- Live Lyric Preview Line -->
+          <div class="hidden md:block min-w-0">
+            <div class="text-[10px] font-mono uppercase text-stone-400 tracking-wider">Singing Line</div>
+            <div id="hud-lyric" class="hud-lyric-preview font-serif text-sm sm:text-base text-stone-200 truncate italic">
+              Loading tablature...
+            </div>
+          </div>
+        </div>
+
+        <!-- Auto-Scroll Controls -->
+        <div class="flex items-center gap-2 font-mono text-xs">
+          <button id="btn-resume-scroll" class="hidden px-2.5 py-1 rounded bg-amber-500 text-stone-950 font-bold shadow-md animate-bounce transition-all">
+            <i class="fa-solid fa-arrow-down mr-1"></i>Resume Auto-Scroll
+          </button>
+          <button id="btn-autoscroll-toggle" class="px-2.5 py-1 rounded bg-stone-900 border border-stone-800 text-amber-400 hover:text-white transition-colors flex items-center gap-1.5" title="Toggle real-time auto-scrolling">
+            <i class="fa-solid fa-arrows-up-down text-[11px]"></i>
+            <span class="hidden sm:inline">Auto-Scroll</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Scrolling Tablature Sheet Container -->
+      <div id="tab-container" class="p-6 sm:p-8 max-h-[620px] overflow-y-auto custom-scrollbar space-y-1 selection:bg-amber-900/40 select-text">
+        <!-- Tab rows dynamically injected here -->
+        <div class="py-12 text-center text-stone-400 font-mono text-xs">
+          Loading synchronized tablature and chord timing...
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Guitar Chord Reference Modal -->
+  <div id="chord-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+    <div class="relative bg-[#14110e] border border-amber-500/30 rounded-2xl max-w-2xl w-full p-6 space-y-4 shadow-2xl">
+      <div class="flex items-center justify-between border-b border-stone-800 pb-3">
+        <div class="flex items-center gap-2 text-amber-400 font-mono text-xs uppercase tracking-wider font-bold">
+          <i class="fa-solid fa-guitar"></i>
+          <span>Guitar Chord Fingerings & Fretboards</span>
+        </div>
+        <button id="chord-modal-close" class="text-stone-400 hover:text-white p-1" aria-label="Close modal">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+
+      <p class="font-serif text-xs text-stone-400">
+        Standard tuning (E A D G B e). Numbers correspond to fretting fingers (1: Index, 2: Middle, 3: Ring, 4: Pinky).
+      </p>
+
+      <!-- Chord Grid -->
+      <div id="chord-diagram-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-h-[380px] overflow-y-auto custom-scrollbar p-1">
+        <!-- Dynamically injected -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading Overlay -->
+  <div id="loading-overlay" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md hidden">
+    <div class="max-w-md w-full p-6 rounded-2xl bg-[#14110e] border border-amber-500/40 text-center space-y-4 shadow-2xl">
+      <div class="w-12 h-12 rounded-full border-2 border-amber-500 border-t-transparent animate-spin mx-auto"></div>
+      <div class="space-y-1">
+        <h3 class="font-display font-bold text-lg text-white">Loading Practice Stems</h3>
+        <p id="loading-text" class="font-mono text-xs text-stone-400">Decoding Web Audio buffers...</p>
+      </div>
+      <div class="w-full bg-stone-900 rounded-full h-2 overflow-hidden border border-stone-800">
+        <div id="loading-bar" class="bg-amber-500 h-full rounded-full transition-all duration-200" style="width: 10%;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-section border-t border-stone-800/80 bg-[#0a0807] py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-stone-400">
+      <div class="flex items-center gap-2">
+        <span class="font-display font-bold text-white uppercase tracking-wider">The Shady River Bard</span>
+        <span>&bull;</span>
+        <span>Practice Studio Engine</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="./" class="hover:text-amber-400 transition-colors">Gateway</a>
+        <a href="vault/" class="hover:text-amber-400 transition-colors">Vault</a>
+        <a href="mamas-boy/" class="hover:text-amber-400 transition-colors">Mama's Boy</a>
+        <span class="text-stone-600">|</span>
+        <span class="text-amber-400/80">Chrome &rarr; Cast Tab &rarr; Google TV</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/practice.js?v=20260926A"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+/* ==========================================================================
+   Practice Mode — Web Audio Multi-Stem & Synced Tablature Engine
+   The Shady River Bard Portal
+   ========================================================================== */
+
+:root {
+  --bg-dark: #0a0807;
+  --bg-panel: #14110e;
+  --bg-card: #1c1814;
+  --bg-card-hover: #26211c;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-amber: rgba(245, 158, 11, 0.4);
+  
+  --stem-vocal: #f59e0b;
+  --stem-drums: #ef4444;
+  --stem-bass: #a855f7;
+  --stem-other: #10b981;
+}
+
+/* Custom Scrollbars */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(12, 10, 9, 0.6);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #292524;
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #44403c;
+}
+
+/* Slider Track Customization */
+input[type="range"].stem-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+input[type="range"].stem-slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: #26211c;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+input[type="range"].stem-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  margin-top: -5px;
+  border: 2px solid #0c0a09;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+input[type="range"].stem-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Stem Thumb Colors */
+input[type="range"].vocal-slider::-webkit-slider-thumb {
+  background: var(--stem-vocal);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+}
+input[type="range"].drums-slider::-webkit-slider-thumb {
+  background: var(--stem-drums);
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
+input[type="range"].bass-slider::-webkit-slider-thumb {
+  background: var(--stem-bass);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+input[type="range"].other-slider::-webkit-slider-thumb {
+  background: var(--stem-other);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+input[type="range"].master-slider::-webkit-slider-thumb {
+  background: #f59e0b;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.6);
+}
+
+/* Real-Time VU Meter Bars */
+.vu-meter-bg {
+  position: relative;
+  background: #171412;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.vu-meter-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0%;
+  border-radius: 3px;
+  transition: width 0.05s ease-out;
+  background: linear-gradient(90deg, #10b981 0%, #10b981 60%, #f59e0b 80%, #ef4444 95%);
+}
+
+/* Tablature & Chords Typography */
+.tab-monospace {
+  font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace;
+  font-variant-ligatures: none;
+}
+
+/* Interactive Chord Tokens */
+.chord-token {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.1rem 0.25rem;
+  border-radius: 4px;
+  font-weight: 700;
+  transition: all 0.15s ease-in-out;
+  user-select: none;
+}
+.chord-token:hover {
+  background: rgba(245, 158, 11, 0.25);
+  color: #fef08a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.chord-token.chord-active {
+  background: #f59e0b !important;
+  color: #0c0a09 !important;
+  font-weight: 800;
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.8), 0 0 2px #fff;
+  transform: scale(1.08);
+  animation: chordPulse 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes chordPulse {
+  0% { transform: scale(1.05); box-shadow: 0 0 10px rgba(245, 158, 11, 0.7); }
+  100% { transform: scale(1.12); box-shadow: 0 0 18px rgba(245, 158, 11, 1); }
+}
+
+/* Tab Row Highlight */
+.tab-row {
+  border-left: 3px solid transparent;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  padding-left: 0.75rem;
+}
+.tab-row:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+.tab-row.row-active {
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.15) 0%, rgba(245, 158, 11, 0.03) 80%, transparent 100%);
+  border-left-color: #f59e0b;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 0 20px -5px rgba(245, 158, 11, 0.2);
+}
+.tab-row.row-active .tab-lyric {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* Section Header Badges */
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(120, 53, 15, 0.3);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #fbbf24;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+/* Mute / Solo Button Toggle States */
+.btn-mute.active {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+}
+.btn-solo.active {
+  background: #d97706 !important;
+  color: #0c0a09 !important;
+  border-color: #f59e0b !important;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+  font-weight: 800;
+}
+
+/* Teleprompter HUD */
+.hud-card {
+  background: rgba(20, 17, 14, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* TV MODE OVERRIDES (Cast to Google TV) */
+body.tv-mode {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+body.tv-mode .portal-header,
+body.tv-mode .footer-section {
+  display: none !important;
+}
+body.tv-mode .mixer-container {
+  padding: 0.75rem 1rem !important;
+}
+body.tv-mode .mixer-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+body.tv-mode .mixer-grid > div {
+  padding: 0.5rem 0.75rem !important;
+}
+body.tv-mode #tab-container {
+  max-height: 58vh !important;
+}
+body.tv-mode .tab-monospace {
+  font-size: 1.45rem !important;
+  line-height: 2.2 !important;
+}
+body.tv-mode .chord-token {
+  font-size: 1.55rem !important;
+  padding: 0.15rem 0.4rem;
+}
+body.tv-mode .tab-lyric {
+  font-size: 1.6rem !important;
+  line-height: 2 !important;
+  color: #ffffff !important;
+}
+body.tv-mode .tab-row.row-active {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-left-width: 6px;
+}
+body.tv-mode .hud-current-chord {
+  font-size: 3.5rem !important;
+}
+body.tv-mode .hud-next-chord {
+  font-size: 2rem !important;
+}
+body.tv-mode .hud-lyric-preview {
+  font-size: 1.75rem !important;
+}
+
+/* Floating Looper Loop In / Out Markers on Seekbar */
+.seekbar-container {
+  position: relative;
+}
+.loop-marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #38bdf8;
+  pointer-events: none;
+  z-index: 10;
+}
+.loop-marker::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #38bdf8;
+}
+.loop-region {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: rgba(56, 189, 248, 0.15);
+  pointer-events: none;
+  z-index: 5;
+}
