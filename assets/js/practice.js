@@ -27,10 +27,6 @@
     autoScroll: true,
     userScrolled: false,
     tvMode: false,
-    castConnected: false,
-    castDeviceName: '',
-    remotePlayer: null,
-    remotePlayerController: null,
     transposition: 0, // Semitones (-6 to +6)
     originalKey: 'A',
     currentKey: 'A',
@@ -123,25 +119,8 @@
     els.chordDiagramGrid = document.getElementById('chord-diagram-grid');
     els.btnShowChords = document.getElementById('btn-show-chords');
 
-    // Cast Elements
-    els.btnCast = document.getElementById('btn-cast');
-    els.btnCastBanner = document.getElementById('btn-cast-banner');
-    els.btnCastTransport = document.getElementById('btn-cast-transport');
-    els.btnCastTv = document.getElementById('btn-cast-tv');
+    // TV Mode Controls
     els.btnExitTv = document.getElementById('btn-exit-tv');
-    els.castStatusDot = document.getElementById('cast-status-dot');
-
-    els.castModal = document.getElementById('cast-modal');
-    els.castModalClose = document.getElementById('cast-modal-close');
-    els.btnModalTriggerCast = document.getElementById('btn-modal-trigger-cast');
-    els.btnModalToggleTv = document.getElementById('btn-modal-toggle-tv');
-    els.modalTvLabel = document.getElementById('modal-tv-label');
-
-    // Cast Active Banner
-    els.castConnectedBanner = document.getElementById('cast-connected-banner');
-    els.castBannerDeviceName = document.getElementById('cast-banner-device-name');
-    els.btnBannerDisconnectCast = document.getElementById('btn-banner-disconnect-cast');
-    els.btnBannerToggleTv = document.getElementById('btn-banner-toggle-tv');
   }
 
   // --- AUDIO CONTEXT INITIALIZATION ---
@@ -1149,61 +1128,12 @@
       els.chordModalClose.addEventListener('click', () => els.chordModal.classList.add('hidden'));
     }
 
-    // Google Cast Buttons
-    const castButtons = [els.btnCast, els.btnCastBanner, els.btnCastTransport, els.btnCastTv];
-    castButtons.forEach(btn => {
-      if (btn) {
-        btn.addEventListener('click', e => {
-          if (e.target && e.target.tagName && e.target.tagName.toLowerCase() === 'google-cast-launcher') {
-            return; // Native element handles click directly
-          }
-          e.preventDefault();
-          handleCastClick(e);
-        });
-      }
-    });
-
-    // Cast Modal "Launch Cast Picker" button: close modal first so browser focus is clear
-    if (els.btnModalTriggerCast) {
-      els.btnModalTriggerCast.addEventListener('click', e => {
-        e.preventDefault();
-        closeCastModal();
-        setTimeout(() => {
-          handleCastClick();
-        }, 60);
-      });
+    // TV Mode Buttons
+    if (els.tvModeBtn) {
+      els.tvModeBtn.addEventListener('click', toggleTvMode);
     }
-
-    // Exit TV Mode Button
     if (els.btnExitTv) {
       els.btnExitTv.addEventListener('click', toggleTvMode);
-    }
-
-    // Modal Toggle TV Button
-    if (els.btnModalToggleTv) {
-      els.btnModalToggleTv.addEventListener('click', () => {
-        toggleTvMode();
-      });
-    }
-
-    // Active Cast Banner Buttons
-    if (els.btnBannerDisconnectCast) {
-      els.btnBannerDisconnectCast.addEventListener('click', () => {
-        disconnectCast();
-      });
-    }
-    if (els.btnBannerToggleTv) {
-      els.btnBannerToggleTv.addEventListener('click', toggleTvMode);
-    }
-
-    // Cast Modal Close
-    if (els.castModalClose && els.castModal) {
-      els.castModalClose.addEventListener('click', closeCastModal);
-    }
-    if (els.castModal) {
-      els.castModal.addEventListener('click', e => {
-        if (e.target === els.castModal) closeCastModal();
-      });
     }
 
     // Keyboard Shortcuts
@@ -1232,12 +1162,8 @@
           e.preventDefault();
           toggleTvMode();
           break;
-        case 'KeyC':
-          e.preventDefault();
-          handleCastClick();
-          break;
         case 'Escape':
-          closeCastModal();
+          if (state.tvMode) toggleTvMode();
           if (els.chordModal) els.chordModal.classList.add('hidden');
           break;
         case 'BracketLeft':
@@ -1275,204 +1201,10 @@
       els.tvModeBtn.classList.toggle('bg-amber-500', state.tvMode);
       els.tvModeBtn.classList.toggle('text-stone-950', state.tvMode);
     }
-    updateModalTvLabel();
-    showToast(state.tvMode ? 'TV Mode Active (Cast Tab Ready)' : 'Standard Display Mode');
-  }
-
-  function updateModalTvLabel() {
-    if (els.modalTvLabel) {
-      els.modalTvLabel.textContent = state.tvMode ? 'Exit TV Mode' : 'Turn on TV Mode';
-    }
-  }
-
-  // --- GOOGLE CAST & TAB STREAMING ---
-  const DEFAULT_MEDIA_RECEIVER_APP_ID = 'CC1AD845';
-
-  function initCastFramework() {
-    if (!window.cast || !window.cast.framework) return;
-    try {
-      const castContext = cast.framework.CastContext.getInstance();
-      const targetAppId = (window.chrome && chrome.cast && chrome.cast.media && chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID) || DEFAULT_MEDIA_RECEIVER_APP_ID;
-      const targetAutoJoin = (window.chrome && chrome.cast && chrome.cast.AutoJoinPolicy && chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED) || 'origin_scoped';
-
-      castContext.setOptions({
-        receiverApplicationId: targetAppId,
-        autoJoinPolicy: targetAutoJoin
-      });
-
-      // Maintain RemotePlayer & Controller for complete CAF framework lifecycle
-      state.remotePlayer = new cast.framework.RemotePlayer();
-      state.remotePlayerController = new cast.framework.RemotePlayerController(state.remotePlayer);
-
-      state.remotePlayerController.addEventListener(
-        cast.framework.RemotePlayerEventType.IS_CONNECTED_CHANGED,
-        function () {
-          const isConn = !!(state.remotePlayer && state.remotePlayer.isConnected);
-          const session = castContext.getCurrentSession();
-          const devName = (session && session.getCastDevice && session.getCastDevice())
-            ? session.getCastDevice().friendlyName
-            : 'Google TV';
-          setCastConnected(isConn, devName);
-        }
-      );
-
-      castContext.addEventListener(
-        cast.framework.CastContextEventType.SESSION_STATE_CHANGED,
-        function (event) {
-          const sessionState = event.sessionState;
-          if (sessionState === cast.framework.SessionState.SESSION_STARTED ||
-              sessionState === cast.framework.SessionState.SESSION_RESUMED) {
-            const currentSession = castContext.getCurrentSession();
-            const devName = (currentSession && currentSession.getCastDevice && currentSession.getCastDevice())
-              ? currentSession.getCastDevice().friendlyName
-              : 'Google TV';
-            setCastConnected(true, devName);
-          } else if (sessionState === cast.framework.SessionState.SESSION_ENDED) {
-            setCastConnected(false);
-          }
-        }
-      );
-
-      // Check current session on arrival
-      const currentSession = castContext.getCurrentSession();
-      if (currentSession) {
-        const devName = (currentSession.getCastDevice && currentSession.getCastDevice())
-          ? currentSession.getCastDevice().friendlyName
-          : 'Google TV';
-        setCastConnected(true, devName);
-      }
-
-      document.body.classList.add('cast-ready');
-      console.log('Google Cast framework ready for Practice Mode');
-    } catch (err) {
-      console.warn('Google Cast init warning:', err);
-    }
-  }
-
-  function setCastConnected(connected, devName) {
-    state.castConnected = connected;
-    state.castDeviceName = devName || '';
-
-    const castButtons = [els.btnCast, els.btnCastBanner, els.btnCastTransport, els.btnCastTv];
-    castButtons.forEach(btn => {
-      if (btn) {
-        btn.classList.toggle('btn-cast-connected', connected);
-      }
-    });
-
-    if (els.castStatusDot) {
-      els.castStatusDot.className = connected
-        ? 'w-1.5 h-1.5 rounded-full bg-sky-400 shadow-sm shadow-sky-400 transition-colors'
-        : 'w-1.5 h-1.5 rounded-full bg-stone-600 transition-colors';
-    }
-
-    if (els.castConnectedBanner) {
-      els.castConnectedBanner.classList.toggle('hidden', !connected);
-      if (els.castBannerDeviceName) {
-        els.castBannerDeviceName.textContent = devName || 'Google TV';
-      }
-    }
-
-    if (connected) {
-      showToast(`Connected to ${devName || 'Google TV'}! Note: In Cast menu, select Sources > "Cast tab" to mirror chords.`);
-      if (!state.tvMode) {
-        toggleTvMode();
-      }
+    if (state.tvMode) {
+      showToast('TV Mode active! Right-click anywhere and select "Cast..." to mirror this tab directly to your Google TV.', 'info', 6000);
     } else {
-      showToast('Cast session ended');
-    }
-  }
-
-  function disconnectCast() {
-    try {
-      if (window.cast && window.cast.framework) {
-        cast.framework.CastContext.getInstance().endCurrentSession(true);
-      }
-    } catch (err) {}
-    setCastConnected(false);
-  }
-
-  function handleCastClick(e) {
-    // If the click directly hit a native <google-cast-launcher>, let Chrome handle it
-    if (e && e.target && e.target.tagName && e.target.tagName.toLowerCase() === 'google-cast-launcher') {
-      return;
-    }
-
-    // If already connected, clicking Cast toggles/ends session cleanly
-    if (state.castConnected) {
-      disconnectCast();
-      return;
-    }
-
-    // 1. Try finding and clicking the native <google-cast-launcher> element
-    let launcher = null;
-    if (e && e.currentTarget) {
-      launcher = e.currentTarget.querySelector('google-cast-launcher');
-    }
-    if (!launcher) {
-      launcher = document.querySelector('google-cast-launcher');
-    }
-    if (launcher && launcher.style.display !== 'none' && typeof launcher.click === 'function') {
-      try {
-        launcher.click();
-      } catch (err) {}
-    }
-
-    // 2. Programmatic CAF requestSession() - standard Google Cast Web SDK
-    if (window.cast && window.cast.framework) {
-      try {
-        const castContext = cast.framework.CastContext.getInstance();
-        showToast('Select your TV, then choose Sources > "Cast tab" to mirror chords & audio!', 'info', 5000);
-        castContext.requestSession().then(session => {
-          const devName = (session && session.getCastDevice && session.getCastDevice())
-            ? session.getCastDevice().friendlyName
-            : 'Google TV';
-          setCastConnected(true, devName);
-        }).catch(err => {
-          const isCancel = err === 'cancel' || err === 'cancel_session_request' || (err && (err.code === 'cancel' || err.message === 'cancel'));
-          if (!isCancel && err !== 'session_error') {
-            console.log('Cast request dismissed:', err);
-          }
-        });
-        return;
-      } catch (err) {
-        console.warn('cast.requestSession failed:', err);
-      }
-    }
-
-    // 3. Fallback: chrome.cast base API
-    if (window.chrome && chrome.cast && chrome.cast.requestSession) {
-      try {
-        chrome.cast.requestSession(session => {
-          setCastConnected(true);
-        }, err => {});
-        return;
-      } catch (err) {}
-    }
-
-    // 4. Fallback: Presentation API
-    if (window.PresentationRequest) {
-      try {
-        const request = new PresentationRequest([window.location.href]);
-        request.start().catch(() => {});
-        return;
-      } catch (e) {}
-    }
-
-    // 5. If completely unsupported browser, show informative modal
-    openCastModal();
-  }
-
-  function openCastModal() {
-    if (els.castModal) {
-      updateModalTvLabel();
-      els.castModal.classList.remove('hidden');
-    }
-  }
-
-  function closeCastModal() {
-    if (els.castModal) {
-      els.castModal.classList.add('hidden');
+      showToast('Standard Display Mode');
     }
   }
 
@@ -1576,14 +1308,6 @@
     if (initialPkg) {
       loadPracticePackage(initialPkg);
     }
-
-    // Initialize Google Cast framework hook
-    window.onCastAvailableHook = function (isAvailable) {
-      if (isAvailable) initCastFramework();
-    };
-    if (window._gcastIsAvailable || (window.cast && window.cast.framework)) {
-      initCastFramework();
-    }
   }
 
   // Self execute
@@ -1605,11 +1329,7 @@
     toggleStemSolo,
     applyPreset,
     transpose,
-    toggleTvMode,
-    openCast: handleCastClick,
-    disconnectCast,
-    openCastModal,
-    closeCastModal
+    toggleTvMode
   };
 
 })();
