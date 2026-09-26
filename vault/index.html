@@ -742,7 +742,21 @@
       'a-line-in-the-dirt': { slug: 'a-line-in-the-dirt', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'A Line in the Dirt' },
       'seven-acres-in-the-middle': { slug: 'seven-acres-in-the-middle', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Seven Acres in the Middle' },
       'pass-the-hat': { slug: 'pass-the-hat', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Pass the Hat' },
-      'nourish-the-roots': { slug: 'nourish-the-roots', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Nourish the Roots' }
+      'nourish-the-roots': { slug: 'nourish-the-roots', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Nourish the Roots' },
+
+      // Album 01: Quiet Harvest
+      'the-blues-under-my-nails': { slug: 'the-blues-under-my-nails', albumId: 'quiet-harvest', albumNumber: 1, trackTitle: 'The Blues Under My Nails' },
+      'blues-for-john': { slug: 'blues-for-john', albumId: 'quiet-harvest', albumNumber: 1, trackTitle: 'Blues for John' },
+      'the-daily-grind-redeemed': { slug: 'the-daily-grind-redeemed', albumId: 'quiet-harvest', albumNumber: 1, trackTitle: 'The Daily Grind, Redeemed' },
+      'the-self-made-mans-repose': { slug: 'the-self-made-mans-repose', albumId: 'quiet-harvest', albumNumber: 1, trackTitle: "The Self-Made Man's Repose" },
+      'dust-on-the-old-bible': { slug: 'dust-on-the-old-bible', albumId: 'quiet-harvest', albumNumber: 1, trackTitle: 'Dust on the Old Bible' },
+      'footprints-in-the-dust': { slug: 'footprints-in-the-dust', albumId: 'quiet-harvest', albumNumber: 1, trackTitle: 'Footprints in the Dust' },
+      'the-four-legged-philosophers': { slug: 'the-four-legged-philosophers', albumId: 'quiet-harvest', albumNumber: 1, trackTitle: 'The Four Legged Philosophers' },
+      'the-quiet-spaces': { slug: 'the-quiet-spaces', albumId: 'quiet-harvest', albumNumber: 1, trackTitle: 'The Quiet Spaces' },
+      'mending-the-ground': { slug: 'mending-the-ground', albumId: 'quiet-harvest', albumNumber: 1, trackTitle: 'Mending the Ground' },
+      'the-unseen-horizon': { slug: 'the-unseen-horizon', albumId: 'quiet-harvest', albumNumber: 1, trackTitle: 'The Unseen Horizon' },
+      'growing-a-legacy': { slug: 'growing-a-legacy', albumId: 'quiet-harvest', albumNumber: 1, trackTitle: 'Growing a Legacy' },
+      'the-unwritten-creed': { slug: 'the-unwritten-creed', albumId: 'quiet-harvest', albumNumber: 1, trackTitle: 'The Unwritten Creed' }
     };
 
     function normalizePracticeTitle(t) {
@@ -778,6 +792,9 @@
       if (!albumItem) return null;
       if (albumItem.id === 'the-curtains-and-the-canned-goods' || albumItem.number === 23) {
         return '../practice.html?song=the-curtains-and-the-canned-goods';
+      }
+      if (albumItem.id === 'quiet-harvest' || albumItem.number === 1) {
+        return '../practice.html?song=the-blues-under-my-nails';
       }
       const firstPkg = Object.values(PRACTICE_PACKAGES_BY_SLUG).find(pkg => 
         pkg.albumId === albumItem.id || pkg.albumNumber === albumItem.number || normalizePracticeTitle(pkg.albumId) === normalizePracticeTitle(albumItem.id)
