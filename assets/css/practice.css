@@ -221,6 +221,30 @@ body.tv-mode #tv-mode-controls {
   background: #38bdf8 !important;
   box-shadow: 0 0 6px #38bdf8 !important;
 }
+/* Google Cast Web Component & Launcher Styling */
+google-cast-launcher {
+  display: inline-block !important;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+  cursor: pointer;
+  --connected-color: #38bdf8;
+  --disconnected-color: #38bdf8;
+}
+#btn-cast-banner google-cast-launcher {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+#btn-cast-tv google-cast-launcher {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+body.cast-ready .cast-fallback-icon {
+  display: none !important;
+}
+body:not(.cast-ready) google-cast-launcher {
+  display: none !important;
+}
 body.tv-mode .mixer-container {
   padding: 0.75rem 1rem !important;
 }

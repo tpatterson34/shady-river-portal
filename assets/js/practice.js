@@ -29,6 +29,8 @@
     tvMode: false,
     castConnected: false,
     castDeviceName: '',
+    remotePlayer: null,
+    remotePlayerController: null,
     transposition: 0, // Semitones (-6 to +6)
     originalKey: 'A',
     currentKey: 'A',
@@ -1142,15 +1144,29 @@
     }
 
     // Google Cast Buttons
-    const castButtons = [els.btnCast, els.btnCastBanner, els.btnCastTransport, els.btnCastTv, els.btnModalTriggerCast];
+    const castButtons = [els.btnCast, els.btnCastBanner, els.btnCastTransport, els.btnCastTv];
     castButtons.forEach(btn => {
       if (btn) {
         btn.addEventListener('click', e => {
+          if (e.target && e.target.tagName && e.target.tagName.toLowerCase() === 'google-cast-launcher') {
+            return; // Native element handles click directly
+          }
           e.preventDefault();
-          handleCastClick();
+          handleCastClick(e);
         });
       }
     });
+
+    // Cast Modal "Launch Cast Picker" button: close modal first so browser focus is clear
+    if (els.btnModalTriggerCast) {
+      els.btnModalTriggerCast.addEventListener('click', e => {
+        e.preventDefault();
+        closeCastModal();
+        setTimeout(() => {
+          handleCastClick();
+        }, 60);
+      });
+    }
 
     // Exit TV Mode Button
     if (els.btnExitTv) {
@@ -1254,14 +1270,35 @@
   }
 
   // --- GOOGLE CAST & TAB STREAMING ---
+  const DEFAULT_MEDIA_RECEIVER_APP_ID = 'CC1AD845';
+
   function initCastFramework() {
     if (!window.cast || !window.cast.framework) return;
     try {
       const castContext = cast.framework.CastContext.getInstance();
+      const targetAppId = (window.chrome && chrome.cast && chrome.cast.media && chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID) || DEFAULT_MEDIA_RECEIVER_APP_ID;
+      const targetAutoJoin = (window.chrome && chrome.cast && chrome.cast.AutoJoinPolicy && chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED) || 'origin_scoped';
+
       castContext.setOptions({
-        receiverApplicationId: chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID,
-        autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED
+        receiverApplicationId: targetAppId,
+        autoJoinPolicy: targetAutoJoin
       });
+
+      // Maintain RemotePlayer & Controller for complete CAF framework lifecycle
+      state.remotePlayer = new cast.framework.RemotePlayer();
+      state.remotePlayerController = new cast.framework.RemotePlayerController(state.remotePlayer);
+
+      state.remotePlayerController.addEventListener(
+        cast.framework.RemotePlayerEventType.IS_CONNECTED_CHANGED,
+        function () {
+          const isConn = !!(state.remotePlayer && state.remotePlayer.isConnected);
+          const session = castContext.getCurrentSession();
+          const devName = (session && session.getCastDevice && session.getCastDevice())
+            ? session.getCastDevice().friendlyName
+            : 'Google TV';
+          setCastConnected(isConn, devName);
+        }
+      );
 
       castContext.addEventListener(
         cast.framework.CastContextEventType.SESSION_STATE_CHANGED,
@@ -1270,7 +1307,7 @@
           if (sessionState === cast.framework.SessionState.SESSION_STARTED ||
               sessionState === cast.framework.SessionState.SESSION_RESUMED) {
             const currentSession = castContext.getCurrentSession();
-            const devName = (currentSession && currentSession.getCastDevice)
+            const devName = (currentSession && currentSession.getCastDevice && currentSession.getCastDevice())
               ? currentSession.getCastDevice().friendlyName
               : 'Google TV';
             setCastConnected(true, devName);
@@ -1279,6 +1316,17 @@
           }
         }
       );
+
+      // Check current session on arrival
+      const currentSession = castContext.getCurrentSession();
+      if (currentSession) {
+        const devName = (currentSession.getCastDevice && currentSession.getCastDevice())
+          ? currentSession.getCastDevice().friendlyName
+          : 'Google TV';
+        setCastConnected(true, devName);
+      }
+
+      document.body.classList.add('cast-ready');
       console.log('Google Cast framework ready for Practice Mode');
     } catch (err) {
       console.warn('Google Cast init warning:', err);
@@ -1303,35 +1351,88 @@
     }
 
     if (connected) {
-      showToast(`Connected to ${devName || 'Google TV'}! Turn on TV Mode for teleprompter.`);
+      showToast(`Connected to ${devName || 'Google TV'}! Chords & audio streaming.`);
+      if (!state.tvMode) {
+        toggleTvMode();
+      }
     } else {
       showToast('Cast session ended');
     }
   }
 
-  async function handleCastClick() {
-    // 1. If Google Cast SDK is available, request session directly
+  function handleCastClick(e) {
+    // If the click directly hit a native <google-cast-launcher>, let Chrome handle it
+    if (e && e.target && e.target.tagName && e.target.tagName.toLowerCase() === 'google-cast-launcher') {
+      return;
+    }
+
+    // If already connected, clicking Cast toggles/ends session cleanly
+    if (state.castConnected) {
+      try {
+        if (window.cast && window.cast.framework) {
+          cast.framework.CastContext.getInstance().endCurrentSession(true);
+        }
+      } catch (err) {}
+      setCastConnected(false);
+      return;
+    }
+
+    // 1. Try finding and clicking the native <google-cast-launcher> element
+    let launcher = null;
+    if (e && e.currentTarget) {
+      launcher = e.currentTarget.querySelector('google-cast-launcher');
+    }
+    if (!launcher) {
+      launcher = document.querySelector('google-cast-launcher');
+    }
+    if (launcher && launcher.style.display !== 'none' && typeof launcher.click === 'function') {
+      try {
+        launcher.click();
+      } catch (err) {}
+    }
+
+    // 2. Programmatic CAF requestSession() - standard Google Cast Web SDK
     if (window.cast && window.cast.framework) {
       try {
         const castContext = cast.framework.CastContext.getInstance();
-        castContext.requestSession().then(() => {
-          showToast('Cast connected! Set source to "Cast tab" to mirror chords & audio.');
+        showToast('Select your Google TV or Chromecast to Cast...', 'info', 4000);
+        castContext.requestSession().then(session => {
+          const devName = (session && session.getCastDevice && session.getCastDevice())
+            ? session.getCastDevice().friendlyName
+            : 'Google TV';
+          setCastConnected(true, devName);
         }).catch(err => {
-          if (err !== 'cancel' && err !== 'cancel_picker') {
+          const isCancel = err === 'cancel' || err === 'cancel_session_request' || (err && (err.code === 'cancel' || err.message === 'cancel'));
+          if (!isCancel && err !== 'session_error') {
             console.log('Cast request dismissed:', err);
           }
         });
+        return;
       } catch (err) {
         console.warn('cast.requestSession failed:', err);
       }
-    } else if (window.PresentationRequest) {
+    }
+
+    // 3. Fallback: chrome.cast base API
+    if (window.chrome && chrome.cast && chrome.cast.requestSession) {
+      try {
+        chrome.cast.requestSession(session => {
+          setCastConnected(true);
+        }, err => {});
+        return;
+      } catch (err) {}
+    }
+
+    // 4. Fallback: Presentation API
+    if (window.PresentationRequest) {
       try {
         const request = new PresentationRequest([window.location.href]);
-        await request.start();
+        request.start().catch(() => {});
+        return;
       } catch (e) {}
     }
 
-    // 2. Open informative modal with step-by-step guidance & TV mode toggle
+    // 5. If completely unsupported browser, show informative modal
     openCastModal();
   }
 

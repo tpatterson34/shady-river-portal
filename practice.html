@@ -53,15 +53,14 @@
   </script>
 
   <!-- Custom Practice Stylesheet -->
-  <link rel="stylesheet" href="assets/css/practice.css?v=20260926B">
+  <link rel="stylesheet" href="assets/css/practice.css?v=20260926C">
 
   <!-- Google Cast Framework Callback Hook & Sender SDK -->
   <script>
     window.__onGCastApiAvailable = function (isAvailable) {
-      if (window.onCastAvailableHook) {
+      window._gcastIsAvailable = isAvailable;
+      if (typeof window.onCastAvailableHook === 'function') {
         window.onCastAvailableHook(isAvailable);
-      } else {
-        window._gcastIsAvailable = isAvailable;
       }
     };
   </script>
@@ -131,7 +130,8 @@
 
         <!-- Google Cast to TV Button -->
         <button id="btn-cast" class="px-2.5 py-1.5 rounded-lg bg-sky-950/60 border border-sky-500/40 hover:border-sky-400 hover:bg-sky-900/60 text-sky-300 hover:text-white text-xs font-mono transition-all flex items-center gap-1.5 cursor-pointer shadow-sm group" title="Cast practice session to Google TV / Chromecast" aria-label="Cast to Google TV">
-          <i class="fa-brands fa-chromecast text-sky-400 text-xs group-hover:scale-110 transition-transform"></i>
+          <google-cast-launcher class="cast-launcher-elem"></google-cast-launcher>
+          <i class="fa-brands fa-chromecast cast-fallback-icon text-sky-400 text-xs group-hover:scale-110 transition-transform"></i>
           <span class="font-semibold hidden sm:inline">Cast</span>
           <span class="font-semibold sm:hidden">Cast</span>
           <span id="cast-status-dot" class="w-1.5 h-1.5 rounded-full bg-stone-600 transition-colors"></span>
@@ -164,7 +164,8 @@
             <span>&bull;</span>
             <span class="text-stone-500">Guitar & Vocal Practice</span>
             <button id="btn-cast-banner" class="px-2.5 py-0.5 rounded-full bg-sky-950/60 hover:bg-sky-900 border border-sky-500/40 hover:border-sky-400 text-sky-300 hover:text-white text-[11px] font-mono transition-all flex items-center gap-1.5 cursor-pointer shadow-sm group" title="Click to Cast to Google TV" aria-label="Cast Tab to TV">
-              <i class="fa-brands fa-chromecast text-sky-400 text-[11px] group-hover:scale-110 transition-transform"></i>
+              <google-cast-launcher class="cast-launcher-elem"></google-cast-launcher>
+              <i class="fa-brands fa-chromecast cast-fallback-icon text-sky-400 text-[11px] group-hover:scale-110 transition-transform"></i>
               <span class="font-semibold">Cast to TV</span>
             </button>
           </div>
@@ -395,7 +396,8 @@
           </button>
           <span class="text-stone-700 mx-0.5 hidden sm:inline">|</span>
           <button id="btn-cast-transport" class="px-2.5 py-1.5 rounded-lg bg-sky-950/50 hover:bg-sky-900 border border-sky-500/40 hover:border-sky-400 text-sky-300 hover:text-white transition-all flex items-center gap-1.5 cursor-pointer" title="Cast to Google TV / Chromecast" aria-label="Cast to Google TV">
-            <i class="fa-brands fa-chromecast text-sky-400 text-xs"></i>
+            <google-cast-launcher class="cast-launcher-elem"></google-cast-launcher>
+            <i class="fa-brands fa-chromecast cast-fallback-icon text-sky-400 text-xs"></i>
             <span class="hidden md:inline font-semibold text-xs">Cast</span>
           </button>
         </div>
@@ -462,7 +464,8 @@
   <!-- Floating TV Mode Controls (Visible only when in TV Mode) -->
   <div id="tv-mode-controls" class="fixed top-5 right-5 z-50 hidden items-center gap-2">
     <button id="btn-cast-tv" class="px-3.5 py-2 rounded-full bg-sky-950/90 hover:bg-sky-900 border border-sky-500/60 hover:border-sky-400 text-sky-300 hover:text-white font-mono text-xs flex items-center gap-2 shadow-2xl transition-all cursor-pointer" title="Cast practice tab to Google TV">
-      <i class="fa-brands fa-chromecast text-sky-400 text-sm"></i>
+      <google-cast-launcher class="cast-launcher-elem"></google-cast-launcher>
+      <i class="fa-brands fa-chromecast cast-fallback-icon text-sky-400 text-sm"></i>
       <span class="font-semibold">Cast Tab</span>
     </button>
     <button id="btn-exit-tv" class="px-3.5 py-2 rounded-full bg-stone-900/90 hover:bg-stone-800 border border-stone-700 hover:border-amber-500 text-stone-300 hover:text-white font-mono text-xs flex items-center gap-2 shadow-2xl transition-all cursor-pointer" title="Exit TV Mode">
@@ -584,12 +587,15 @@
         <a href="vault/" class="hover:text-amber-400 transition-colors">Vault</a>
         <a href="mamas-boy/" class="hover:text-amber-400 transition-colors">Mama's Boy</a>
         <span class="text-stone-600">|</span>
-        <span class="text-amber-400/80">Chrome &rarr; Cast Tab &rarr; Google TV</span>
+        <button onclick="PracticeApp.openCastModal()" class="text-sky-400/90 hover:text-sky-300 transition-colors flex items-center gap-1 cursor-pointer" title="View step-by-step Cast Tab guide">
+          <i class="fa-brands fa-chromecast text-[10px]"></i>
+          <span>Cast Guide</span>
+        </button>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/practice.js?v=20260926A"></script>
+  <script src="assets/js/practice.js?v=20260926C"></script>
 </body>
 </html>
