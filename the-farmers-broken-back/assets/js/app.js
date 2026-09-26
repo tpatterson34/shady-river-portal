@@ -47,6 +47,8 @@
   const actFilterBtns = document.querySelectorAll('[data-act-filter]');
   const copyLyricsBtn = document.getElementById('btn-copy-lyrics');
   const copyFeedback = document.getElementById('copy-feedback');
+  const deckShareBtn = document.getElementById('deck-share-btn');
+  const playerShareBtn = document.getElementById('player-share-btn');
 
   const voteHeroBtn = document.getElementById('vote-hero-btn');
   const voteModal = document.getElementById('vote-modal');
@@ -92,11 +94,15 @@
 
   function setupApp() {
     renderTrackList();
-    selectTrack(0, false);
+    selectTrack(0, false, false);
     bindAudioEvents();
     bindUIEvents();
     initA11yToolbar();
     loadPreferences();
+    checkHash(true);
+    window.addEventListener('hashchange', function () {
+      checkHash(false);
+    });
   }
 
   // --- TRACK LIST RENDERING ---
@@ -123,9 +129,13 @@
       const idx = tracks.findIndex(function (x) { return x.number === t.number; });
       const isCurrent = (idx === currentTrackIndex);
       const row = document.createElement('div');
+      row.id = 'track-' + t.number;
       row.className = 'track-row flex items-center justify-between p-3 sm:p-3.5 rounded-xl border transition-all cursor-pointer ' +
         (isCurrent ? 'active bg-amber-950/40 border-amber-500/60 text-white shadow-lg shadow-amber-950/20' : 'bg-[#12140e] border-stone-800 hover:bg-[#181b13] hover:border-stone-700 text-stone-300');
       row.setAttribute('data-track-index', idx);
+      row.setAttribute('data-track', t.number);
+      row.setAttribute('data-slug', t.id || '');
+      row.setAttribute('data-act', t.act_number);
       row.setAttribute('role', 'button');
       row.setAttribute('tabindex', '0');
 
@@ -152,29 +162,39 @@
             '</div>' +
           '</div>' +
         '</div>' +
-        '<div class="flex items-center gap-3 shrink-0">' +
+        '<div class="flex items-center gap-2 shrink-0">' +
           '<span class="font-mono text-xs text-stone-400 hidden xs:inline">' + t.duration + '</span>' +
+          '<button class="row-share-btn w-8 h-8 rounded-full bg-stone-900/80 hover:bg-amber-950/60 border border-stone-800 hover:border-amber-500/60 text-stone-400 hover:text-amber-400 flex items-center justify-center text-xs transition-colors" aria-label="Share link to ' + t.title + '" title="Share link to ' + t.title + '">' +
+            '<i class="fa-solid fa-share-nodes text-[11px]"></i>' +
+          '</button>' +
           '<button class="row-play-btn w-8 h-8 rounded-full ' + (isCurrent ? 'bg-amber-500 text-stone-950' : 'bg-stone-900 text-stone-300 hover:text-white') + ' flex items-center justify-center text-xs transition-colors" aria-label="Play ' + t.title + '">' +
             '<i class="fa-solid ' + btnIcon + '"></i>' +
           '</button>' +
         '</div>';
 
       row.addEventListener('click', function (e) {
+        if (e.target.closest('.row-share-btn')) {
+          e.stopPropagation();
+          e.preventDefault();
+          shareTrack(idx);
+          return;
+        }
         if (e.target.closest('.row-play-btn')) {
           if (idx === currentTrackIndex) {
             togglePlay();
           } else {
-            selectTrack(idx, true);
+            selectTrack(idx, true, true);
           }
         } else {
-          selectTrack(idx, true);
+          selectTrack(idx, true, true);
         }
       });
 
       row.addEventListener('keydown', function (e) {
+        if (e.target.closest('.row-share-btn') || e.target.closest('.row-play-btn')) return;
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          selectTrack(idx, true);
+          selectTrack(idx, true, true);
         }
       });
 
@@ -183,26 +203,38 @@
   }
 
   // --- TRACK SELECTION & DISPLAY ---
-  function selectTrack(index, autoplay) {
-    const noteBtn = document.getElementById('deck-bard-note-btn');
-    if (noteBtn) {
-      noteBtn.onclick = () => {
-        const activeTrack = (typeof tracks !== 'undefined' && tracks[index]) ? tracks[index] : (typeof t !== 'undefined' ? t : null);
-        const sTitle = activeTrack ? (activeTrack.title || 'Track ' + (index+1)) : 'Track ' + (index+1);
-        const sNum = activeTrack ? (activeTrack.number || index+1) : (index+1);
-        if (typeof window.openBardNoteModal === 'function') {
-          window.openBardNoteModal(sTitle, "The Farmer's Broken Back", sNum);
-        }
-      };
-      if (typeof tracks !== 'undefined' && tracks[index]) {
-        noteBtn.setAttribute('aria-label', `Drop a note to the bard about ${tracks[index].title}`);
-      }
-    }
-
+  function selectTrack(index, autoplay, updateUrl) {
+    if (typeof updateUrl === 'undefined') updateUrl = true;
     if (index < 0 || index >= tracks.length) return;
     currentTrackIndex = index;
     window.currentTrackIndex = index;
     const t = tracks[currentTrackIndex];
+
+    const noteBtn = document.getElementById('deck-bard-note-btn');
+    if (noteBtn) {
+      noteBtn.onclick = function () {
+        if (typeof window.openBardNoteModal === 'function') {
+          window.openBardNoteModal(t.title, "The Farmer's Broken Back", t.number);
+        }
+      };
+      noteBtn.setAttribute('aria-label', 'Drop a note to the bard about ' + t.title);
+    }
+
+    if (deckShareBtn) {
+      deckShareBtn.onclick = function () {
+        shareTrack(currentTrackIndex);
+      };
+      deckShareBtn.setAttribute('aria-label', 'Share link for ' + t.title);
+      deckShareBtn.setAttribute('title', 'Share link for ' + t.title);
+    }
+
+    if (playerShareBtn) {
+      playerShareBtn.onclick = function () {
+        shareTrack(currentTrackIndex);
+      };
+      playerShareBtn.setAttribute('aria-label', 'Share link for ' + t.title);
+      playerShareBtn.setAttribute('title', 'Share link for ' + t.title);
+    }
 
     // Update active track deck
     if (trackTitleEl) trackTitleEl.textContent = t.number + '. ' + t.title;
@@ -219,6 +251,11 @@
     if (playerBarTitle) playerBarTitle.textContent = t.number + '. ' + t.title;
     if (playerBarAct) playerBarAct.textContent = 'Act ' + t.act_number + ': ' + t.act_title;
     if (playerBarArt) playerBarArt.src = 'assets/images/tracks/' + t.art_file;
+
+    // Update browser URL hash without jump if enabled
+    if (updateUrl && window.history && window.history.replaceState) {
+      window.history.replaceState(null, '', '#track-' + t.number);
+    }
 
     // Route through Google Cast if connected
     if (window.CastManager && window.CastManager.isConnected()) {
@@ -614,6 +651,187 @@
       }
     }
   }
+
+  // --- SHARING & DEEP LINK RESOLVER ---
+  function shareTrack(index) {
+    if (index < 0 || index >= tracks.length) return;
+    const t = tracks[index];
+    const albumTitle = "The Farmer's Broken Back";
+    const songTitle = t.title;
+    const trackNum = t.number;
+    const anchor = 'track-' + trackNum;
+
+    const baseUrl = window.location.origin + window.location.pathname.replace(/\/+$/, '') + '/';
+    const shareUrl = baseUrl + '#' + anchor;
+
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, '', '#' + anchor);
+    }
+
+    const shareData = {
+      title: songTitle + ' — ' + albumTitle + ' | The Shady River Bard',
+      text: 'Listen to "' + songTitle + '" from The Shady River Bard\'s concept album "' + albumTitle + '"',
+      url: shareUrl
+    };
+
+    if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+      navigator.share(shareData).catch(function (err) {
+        if (err.name !== 'AbortError') {
+          copyToClipboardWithFeedback(shareUrl, songTitle);
+        }
+      });
+    } else {
+      copyToClipboardWithFeedback(shareUrl, songTitle);
+    }
+
+    const rowEl = document.getElementById('track-' + trackNum);
+    if (rowEl) {
+      rowEl.classList.remove('track-card-highlighted');
+      void rowEl.offsetWidth;
+      rowEl.classList.add('track-card-highlighted');
+    }
+  }
+
+  function copyToClipboardWithFeedback(url, songTitle) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(function () {
+        showShareToast('Link to "' + songTitle + '" copied to clipboard!');
+      }).catch(function () {
+        fallbackCopy(url, songTitle);
+      });
+    } else {
+      fallbackCopy(url, songTitle);
+    }
+  }
+
+  function fallbackCopy(text, songTitle) {
+    try {
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-9999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      showShareToast('Link to "' + songTitle + '" copied to clipboard!');
+    } catch (err) {
+      prompt('Copy this link:', text);
+    }
+  }
+
+  function showShareToast(message) {
+    let toast = document.getElementById('track-share-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'track-share-toast';
+      toast.className = 'track-share-toast';
+      toast.setAttribute('role', 'status');
+      toast.setAttribute('aria-live', 'polite');
+      document.body.appendChild(toast);
+    }
+    toast.innerHTML = '<span class="track-share-toast-icon"><i class="fa-solid fa-check text-amber-400"></i></span><span>' + message + '</span>';
+    toast.classList.add('show');
+
+    if (window._fbbShareToastTimer) {
+      clearTimeout(window._fbbShareToastTimer);
+    }
+    window._fbbShareToastTimer = setTimeout(function () {
+      toast.classList.remove('show');
+    }, 3000);
+  }
+
+  function checkHash(isInitialLoad) {
+    let target = '';
+    const hash = window.location.hash ? window.location.hash.replace(/^#/, '').trim() : '';
+    const urlParams = new URLSearchParams(window.location.search);
+    const queryTrack = urlParams.get('track');
+
+    if (queryTrack) {
+      target = queryTrack.trim();
+    } else if (hash && hash !== 'top' && hash !== 'overview' && hash !== 'main-content' && hash !== 'jukebox' && hash !== 'exhibits' && hash !== 'matrix') {
+      target = hash;
+    }
+
+    if (!target) {
+      if (isInitialLoad) {
+        if ('scrollRestoration' in history) {
+          history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+      }
+      return;
+    }
+
+    let matchIdx = -1;
+
+    // 1. Direct number check (e.g. "track-5", "track-05", "song-5", "5", "05")
+    const numMatch = target.match(/(?:track[-_]?|song[-_]?)?(\d+)/i);
+    if (numMatch) {
+      const num = parseInt(numMatch[1], 10);
+      matchIdx = tracks.findIndex(function (t) { return t.number === num; });
+    }
+
+    // 2. Slug check (e.g. "fencerow-to-fencerow", "the-crash-of-80")
+    if (matchIdx === -1) {
+      const cleanSlug = target.toLowerCase().replace(/^track[-_]/, '');
+      matchIdx = tracks.findIndex(function (t) {
+        return (t.id && t.id.toLowerCase() === cleanSlug) ||
+               (t.id && t.id.toLowerCase() === target.toLowerCase());
+      });
+    }
+
+    // 3. Title fuzzy/slug check
+    if (matchIdx === -1) {
+      const slugified = target.toLowerCase();
+      matchIdx = tracks.findIndex(function (t) {
+        const s = t.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+        return s === slugified || s.indexOf(slugified) !== -1;
+      });
+    }
+
+    if (matchIdx !== -1) {
+      const selectedTrack = tracks[matchIdx];
+
+      // Unhide act if selected track is filtered out
+      if (activeAct !== 'all' && selectedTrack.act_number !== parseInt(activeAct, 10)) {
+        activeAct = 'all';
+        actFilterBtns.forEach(function (btn) {
+          if (btn.getAttribute('data-act-filter') === 'all') {
+            btn.className = 'px-3.5 py-1.5 rounded-lg bg-amber-500 text-stone-950 font-bold transition-colors';
+          } else {
+            btn.className = 'px-3.5 py-1.5 rounded-lg bg-stone-900 text-stone-300 hover:text-white transition-colors';
+          }
+        });
+        renderTrackList();
+      }
+
+      // Select track without starting playback or altering hash again
+      selectTrack(matchIdx, false, false);
+
+      // Smooth scroll to track or jukebox
+      setTimeout(function () {
+        const trackRowEl = document.getElementById('track-' + selectedTrack.number);
+        const jukeboxEl = document.getElementById('jukebox');
+
+        if (trackRowEl) {
+          trackRowEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          trackRowEl.classList.remove('track-card-highlighted');
+          void trackRowEl.offsetWidth;
+          trackRowEl.classList.add('track-card-highlighted');
+        } else if (jukeboxEl) {
+          jukeboxEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 150);
+    }
+  }
+
+  // Global exports for accessibility and external callers
+  window.shareTrack = shareTrack;
+  window.selectTrack = function (index, autoPlay, updateUrl) {
+    selectTrack(index, autoPlay, updateUrl !== false);
+  };
 
   // Self execute
   if (document.readyState === 'loading') {
