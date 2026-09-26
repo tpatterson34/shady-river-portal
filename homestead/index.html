@@ -117,6 +117,17 @@
           <span class="bard-note-tooltip">Drop a note to the bard</span>
         </button>
       </nav>
+
+      <!-- Mobile Quick Action Vault & Note -->
+      <div class="flex md:hidden items-center gap-2">
+        <a href="../vault/" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-500/15 hover:bg-amber-500/25 border border-amber-500/40 text-amber-300 font-mono text-xs font-bold tracking-wider uppercase transition-colors shrink-0">
+          <i class="fa-solid fa-compact-disc text-amber-400 text-xs" aria-hidden="true"></i>
+          <span>Vault</span>
+        </a>
+        <button type="button" onclick="openBardNoteModal('', 'The Living Homestead Catalog')" class="bard-note-btn p-1.5" aria-label="Drop a note to the bard" title="Drop a note to the bard">
+          <svg class="bard-note-icon w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 

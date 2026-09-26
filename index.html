@@ -114,6 +114,78 @@
           <span class="sr-only">Accessibility Controls</span>
         </button>
       </nav>
+
+      <!-- Mobile Nav Action & Hamburger -->
+      <div class="flex md:hidden items-center gap-2.5">
+        <a href="vault/" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono text-xs font-bold tracking-wider uppercase transition-all shadow-md shadow-amber-950/40 active:scale-95">
+          <i class="fa-solid fa-compact-disc text-stone-950 text-xs" aria-hidden="true"></i>
+          <span>The Vault</span>
+        </a>
+        <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav-drawer" class="p-2 rounded-lg text-stone-300 hover:text-amber-400 hover:bg-stone-900 border border-stone-800 transition-colors">
+          <i id="mobile-menu-icon" class="fa-solid fa-bars text-sm" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobile-nav-drawer" class="hidden md:hidden border-t border-stone-800/80 bg-stone-950/98 backdrop-blur-xl px-4 py-4 space-y-2 shadow-2xl transition-all">
+      <a href="vault/" onclick="closeMobileMenu()" class="flex items-center justify-between p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 font-semibold group hover:bg-amber-500/20 transition-all">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-amber-500 text-stone-950 flex items-center justify-center font-bold">
+            <i class="fa-solid fa-database text-xs" aria-hidden="true"></i>
+          </div>
+          <div class="flex flex-col text-left">
+            <span class="text-stone-100 font-display font-bold text-sm">26-Album Discography Vault</span>
+            <span class="text-[11px] font-mono text-stone-400">Complete lyrics, themes &amp; tracks</span>
+          </div>
+        </div>
+        <span class="text-xs font-mono px-2 py-0.5 rounded-md bg-amber-500/20 text-amber-300 font-bold uppercase tracking-wider shrink-0">Enter &rarr;</span>
+      </a>
+
+      <a href="homestead/" onclick="closeMobileMenu()" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-stone-900 text-stone-200 transition-colors">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center">
+            <i class="fa-solid fa-leaf text-xs" aria-hidden="true"></i>
+          </div>
+          <div class="flex flex-col text-left">
+            <span class="text-stone-200 text-sm font-medium">Homestead Living Catalog</span>
+            <span class="text-[10px] font-mono text-stone-400">110 Cultivars &amp; Food Forest</span>
+          </div>
+        </div>
+        <i class="fa-solid fa-chevron-right text-stone-500 text-xs" aria-hidden="true"></i>
+      </a>
+
+      <a href="friends-of-the-bard/" onclick="closeMobileMenu()" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-stone-900 text-stone-200 transition-colors">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-violet-500/10 border border-violet-500/30 text-violet-400 flex items-center justify-center">
+            <i class="fa-solid fa-user-group text-xs" aria-hidden="true"></i>
+          </div>
+          <div class="flex flex-col text-left">
+            <span class="text-stone-200 text-sm font-medium">Friends of the Bard</span>
+            <span class="text-[10px] font-mono text-stone-400">Trevor's Scottish Salon &amp; Fellowship</span>
+          </div>
+        </div>
+        <i class="fa-solid fa-chevron-right text-stone-500 text-xs" aria-hidden="true"></i>
+      </a>
+
+      <a href="practice.html" onclick="closeMobileMenu()" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-stone-900 text-stone-200 transition-colors">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center">
+            <i class="fa-solid fa-sliders text-xs" aria-hidden="true"></i>
+          </div>
+          <div class="flex flex-col text-left">
+            <span class="text-stone-200 text-sm font-medium">Practice Mode</span>
+            <span class="text-[10px] font-mono text-stone-400">Web Audio Multi-Stem Studio</span>
+          </div>
+        </div>
+        <i class="fa-solid fa-chevron-right text-stone-500 text-xs" aria-hidden="true"></i>
+      </a>
+
+      <div class="pt-2 border-t border-stone-800 flex items-center justify-between text-xs font-mono text-stone-400 px-1">
+        <a href="#gateway" onclick="closeMobileMenu()" class="hover:text-amber-400">Gateway</a>
+        <a href="#doors" onclick="closeMobileMenu()" class="hover:text-amber-400">Four Pillars</a>
+        <button type="button" onclick="closeMobileMenu(); toggleA11yModal();" class="text-stone-400 hover:text-amber-400">Accessibility</button>
+      </div>
     </div>
   </header>
 
@@ -137,44 +209,65 @@
         </h1>
 
         <!-- Curated Subheadline -->
-        <p class="text-lg sm:text-xl md:text-2xl font-serif text-stone-300/95 leading-relaxed max-w-3xl mx-auto mb-10 font-normal">
+        <p class="text-lg sm:text-xl md:text-2xl font-serif text-stone-300/95 leading-relaxed max-w-3xl mx-auto mb-8 font-normal">
           A unified creative ecosystem: a 26-album concept discography chronicling the human spirit, a working permaculture homestead in Western Washington, deep reflective essays, and the Friends of the Bard creative fellowship.
         </p>
 
+        <!-- Prominent Mobile/Universal Vault Callout Pill -->
+        <div class="mb-6 flex justify-center">
+          <a href="vault/" class="group inline-flex items-center gap-2 sm:gap-3 px-4 py-2 rounded-full bg-stone-900/90 hover:bg-stone-850 border border-amber-500/40 hover:border-amber-400 text-xs sm:text-sm font-mono text-stone-200 shadow-lg shadow-amber-950/40 transition-all hover:scale-[1.02] active:scale-95">
+            <span class="flex h-2 w-2 relative">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+            </span>
+            <span class="text-stone-300">Discography Vault: <strong class="text-amber-400 font-semibold">26 Concept Albums</strong></span>
+            <span class="inline-flex items-center text-amber-400 group-hover:translate-x-0.5 transition-transform font-bold">
+              Enter Vault &rarr;
+            </span>
+          </a>
+        </div>
+
         <!-- CTA & 1-Click Sensory Soundbite Row -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-          <a href="#gateway" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold text-stone-950 bg-amber-500 hover:bg-amber-400 shadow-xl shadow-amber-950/60 transition-all hover:-translate-y-0.5 active:translate-y-0">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+          <!-- Primary CTA: Direct to Vault -->
+          <a href="vault/" class="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 rounded-xl text-base font-bold text-stone-950 bg-amber-500 hover:bg-amber-400 shadow-xl shadow-amber-950/60 transition-all hover:-translate-y-0.5 active:translate-y-0">
+            <i class="fa-solid fa-compact-disc mr-2.5 text-base" aria-hidden="true"></i>
+            <span>Explore 26-Album Vault</span>
+          </a>
+
+          <!-- Secondary CTA: Start the Journey -->
+          <a href="#gateway" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-base font-semibold text-stone-200 bg-stone-900/90 hover:bg-stone-850 border border-stone-700/80 hover:border-amber-500/60 transition-all hover:-translate-y-0.5 active:translate-y-0">
             <span>Start the Journey</span>
-            <i class="fa-solid fa-arrow-down ml-2.5 text-sm" aria-hidden="true"></i>
+            <i class="fa-solid fa-arrow-down ml-2.5 text-xs text-stone-400" aria-hidden="true"></i>
           </a>
 
           <!-- Instant 1-Click Soundbite Button (Playing "How I Disintegrated") -->
-          <button id="hero-soundbite-btn" type="button" aria-pressed="false" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 rounded-xl text-base font-medium text-stone-200 bg-stone-900/90 hover:bg-stone-850 border border-stone-700/80 hover:border-amber-500/60 transition-all group">
-            <span class="w-8 h-8 rounded-full bg-amber-500/10 flex items-center justify-center mr-3 group-hover:bg-amber-500/20 transition-colors">
-              <i id="hero-soundbite-icon" class="fa-solid fa-play text-amber-400 text-xs ml-0.5" aria-hidden="true"></i>
+          <button id="hero-soundbite-btn" type="button" aria-pressed="false" class="w-full sm:w-auto inline-flex items-center justify-center px-5 py-3.5 rounded-xl text-sm font-medium text-stone-300 bg-stone-900/70 hover:bg-stone-850 border border-stone-800 hover:border-stone-700 transition-all group">
+            <span class="w-6 h-6 rounded-full bg-amber-500/10 flex items-center justify-center mr-2.5 group-hover:bg-amber-500/20 transition-colors">
+              <i id="hero-soundbite-icon" class="fa-solid fa-play text-amber-400 text-[10px] ml-0.5" aria-hidden="true"></i>
             </span>
-            <span id="hero-soundbite-text" class="text-sm font-medium">Hear the Acoustic Signature (1-Click)</span>
+            <span id="hero-soundbite-text" class="text-xs sm:text-sm font-medium">Hear Acoustic Signature</span>
           </button>
         </div>
 
-        <!-- Ambient Metadata Indicators -->
-        <div class="mt-14 grid grid-cols-4 gap-4 pt-8 border-t border-stone-800/60 max-w-2xl mx-auto text-center">
-          <div>
-            <div class="font-display font-bold text-xl sm:text-2xl text-stone-100">26</div>
-            <div class="font-mono text-[11px] text-stone-400 uppercase tracking-wider">Concept Albums</div>
-          </div>
-          <div>
-            <div class="font-display font-bold text-xl sm:text-2xl text-amber-400">7 Acres</div>
-            <div class="font-mono text-[11px] text-stone-400 uppercase tracking-wider">Homestead Soil</div>
-          </div>
-          <div>
-            <div class="font-display font-bold text-xl sm:text-2xl text-stone-100">4</div>
-            <div class="font-mono text-[11px] text-stone-400 uppercase tracking-wider">Novellas on Substack</div>
-          </div>
-          <div>
-            <div class="font-display font-bold text-xl sm:text-2xl text-amber-400">Fellowship</div>
-            <div class="font-mono text-[11px] text-stone-400 uppercase tracking-wider">Trevor's Salon</div>
-          </div>
+        <!-- Ambient Metadata Indicators (All 4 are Clickable Gateways) -->
+        <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-8 border-t border-stone-800/60 max-w-2xl mx-auto text-center">
+          <a href="vault/" class="p-3 rounded-xl bg-stone-900/40 hover:bg-stone-900/90 border border-transparent hover:border-amber-500/40 transition-all group block">
+            <div class="font-display font-bold text-xl sm:text-2xl text-stone-100 group-hover:text-amber-400 transition-colors">26</div>
+            <div class="font-mono text-[11px] text-stone-400 group-hover:text-stone-200 uppercase tracking-wider">Concept Albums &rarr;</div>
+          </a>
+          <a href="homestead/" class="p-3 rounded-xl bg-stone-900/40 hover:bg-stone-900/90 border border-transparent hover:border-emerald-500/40 transition-all group block">
+            <div class="font-display font-bold text-xl sm:text-2xl text-amber-400 group-hover:text-emerald-400 transition-colors">7 Acres</div>
+            <div class="font-mono text-[11px] text-stone-400 group-hover:text-stone-200 uppercase tracking-wider">Homestead Soil &rarr;</div>
+          </a>
+          <a href="https://theshadyriverbard.substack.com" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-stone-900/40 hover:bg-stone-900/90 border border-transparent hover:border-cyan-500/40 transition-all group block">
+            <div class="font-display font-bold text-xl sm:text-2xl text-stone-100 group-hover:text-cyan-400 transition-colors">4</div>
+            <div class="font-mono text-[11px] text-stone-400 group-hover:text-stone-200 uppercase tracking-wider">Novellas ↗</div>
+          </a>
+          <a href="friends-of-the-bard/" class="p-3 rounded-xl bg-stone-900/40 hover:bg-stone-900/90 border border-transparent hover:border-violet-500/40 transition-all group block">
+            <div class="font-display font-bold text-xl sm:text-2xl text-amber-400 group-hover:text-violet-400 transition-colors">Fellowship</div>
+            <div class="font-mono text-[11px] text-stone-400 group-hover:text-stone-200 uppercase tracking-wider">Trevor's Salon &rarr;</div>
+          </a>
         </div>
 
       </div>
@@ -230,11 +323,17 @@
           </div>
 
           <div class="pt-6 border-t border-stone-800/80 mt-6 flex flex-wrap items-center justify-between gap-3">
-            <button onclick="GlobalAudio.playTrackByIdx(0)" class="inline-flex items-center px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 font-semibold text-xs tracking-wide uppercase transition-all shadow-md">
-              <i class="fa-solid fa-circle-play mr-2 text-sm" aria-hidden="true"></i>
-              Play Preview
-            </button>
-            <a href="#doors" onclick="toggleDoor('music')" class="inline-flex items-center text-xs font-mono text-amber-400 hover:text-amber-300 underline underline-offset-4">
+            <div class="flex items-center gap-2.5">
+              <button onclick="GlobalAudio.playTrackByIdx(0)" class="inline-flex items-center px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-stone-950 font-semibold text-xs tracking-wide uppercase transition-all shadow-md">
+                <i class="fa-solid fa-circle-play mr-2 text-sm" aria-hidden="true"></i>
+                Play Preview
+              </button>
+              <a href="vault/" class="inline-flex items-center px-3.5 py-2.5 rounded-xl bg-stone-800 hover:bg-stone-700 border border-stone-700 text-amber-400 font-mono text-xs font-semibold transition-all">
+                <i class="fa-solid fa-compact-disc mr-1.5 text-xs"></i>
+                <span>Open Vault</span>
+              </a>
+            </div>
+            <a href="#doors" onclick="toggleDoor('music')" class="inline-flex items-center text-xs font-mono text-stone-400 hover:text-amber-400 underline underline-offset-4">
               Explore All 6 Featured Tracks &rarr;
             </a>
           </div>
@@ -305,9 +404,15 @@
               <i class="fa-solid fa-compact-disc text-xl" aria-hidden="true"></i>
             </div>
             <h3 class="text-xl font-display font-bold text-stone-100 mb-2">The Discography</h3>
-            <p class="font-serif text-stone-300 text-sm leading-relaxed mb-6">
+            <p class="font-serif text-stone-300 text-sm leading-relaxed mb-3">
               26 full-length concept albums spanning folk, acoustic blues, americana, and political folk-rock.
             </p>
+            <div class="mb-5">
+              <a href="vault/" class="inline-flex items-center text-xs font-mono text-amber-400 hover:text-amber-300 underline underline-offset-4 font-semibold">
+                <i class="fa-solid fa-compact-disc mr-1.5 text-[11px]"></i>
+                Explore 26-Album Vault &rarr;
+              </a>
+            </div>
           </div>
           <button id="door-btn-music" onclick="toggleDoor('music')" aria-expanded="false" aria-controls="door-drawer-music" class="w-full py-3 px-4 rounded-xl bg-stone-800 hover:bg-stone-750 text-stone-200 text-xs font-mono font-semibold flex items-center justify-between border border-stone-700 transition-colors">
             <span id="door-label-music">Explore Depth</span>
@@ -777,7 +882,7 @@
         <span class="font-display text-sm font-semibold text-stone-400">The Shady River Bard &copy; 2026. All Rights Reserved.</span>
       </div>
 
-      <div class="flex items-center space-x-6 text-xs font-mono text-stone-400">
+      <div class="flex flex-wrap items-center justify-center md:justify-end gap-x-6 gap-y-3 text-xs font-mono text-stone-400">
         <a href="#main-content" class="hover:text-amber-400 transition-colors">Top</a>
         <a href="#gateway" class="hover:text-amber-400 transition-colors">Gateway</a>
         <a href="#doors" class="hover:text-amber-400 transition-colors">Four Pillars</a>
@@ -794,10 +899,10 @@
   <!-- 6. Persistent Bottom-Docked Global Audio Player                    -->
   <!-- ================================================================= -->
   <div id="persistent-player" class="fixed bottom-0 left-0 right-0 z-50 bg-stone-950/95 backdrop-blur-xl border-t border-stone-800 shadow-2xl transition-all" role="region" aria-label="Persistent Audio Player">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-3 sm:gap-4">
       
       <!-- Track Meta (Left) -->
-      <div class="flex items-center space-x-3 w-1/3 min-w-[180px] max-w-xs">
+      <div class="flex items-center space-x-3 w-1/3 min-w-[140px] sm:min-w-[180px] max-w-xs">
         <div class="relative w-12 h-12 rounded-lg overflow-hidden border border-stone-700/80 flex-shrink-0 bg-stone-900">
           <img id="player-track-cover" src="assets/images/how-i-disintegrated-cover.webp" alt="Currently playing track artwork" class="w-full h-full object-cover">
         </div>

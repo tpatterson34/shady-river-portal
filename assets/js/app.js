@@ -1,4 +1,4 @@
-﻿// Progressive Disclosure & Interactive App Controller
+// Progressive Disclosure & Interactive App Controller
 
 (function() {
   'use strict';
@@ -68,6 +68,44 @@
     });
   };
 
+  // Mobile Navigation Drawer Toggle
+  window.toggleMobileMenu = function() {
+    const menu = document.getElementById('mobile-nav-drawer');
+    const btn = document.getElementById('mobile-menu-btn');
+    const icon = document.getElementById('mobile-menu-icon');
+    if (!menu) return;
+    const isHidden = menu.classList.contains('hidden');
+    if (isHidden) {
+      menu.classList.remove('hidden');
+      if (btn) btn.setAttribute('aria-expanded', 'true');
+      if (icon) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+      }
+    } else {
+      menu.classList.add('hidden');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+      if (icon) {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+    }
+  };
+
+  window.closeMobileMenu = function() {
+    const menu = document.getElementById('mobile-nav-drawer');
+    const btn = document.getElementById('mobile-menu-btn');
+    const icon = document.getElementById('mobile-menu-icon');
+    if (menu && !menu.classList.contains('hidden')) {
+      menu.classList.add('hidden');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+      if (icon) {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+    }
+  };
+
   // Accessibility Modal
   window.toggleA11yModal = function() {
     const m = document.getElementById('a11y-modal');
@@ -78,10 +116,11 @@
     if (m) m.classList.add('hidden');
   };
 
-  // Close modals on Escape
+  // Close modals & drawers on Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeA11yModal();
+      closeMobileMenu();
     }
   });
 
