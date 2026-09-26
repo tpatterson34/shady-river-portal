@@ -53,7 +53,19 @@
   </script>
 
   <!-- Custom Practice Stylesheet -->
-  <link rel="stylesheet" href="assets/css/practice.css?v=20260926A">
+  <link rel="stylesheet" href="assets/css/practice.css?v=20260926B">
+
+  <!-- Google Cast Framework Callback Hook & Sender SDK -->
+  <script>
+    window.__onGCastApiAvailable = function (isAvailable) {
+      if (window.onCastAvailableHook) {
+        window.onCastAvailableHook(isAvailable);
+      } else {
+        window._gcastIsAvailable = isAvailable;
+      }
+    };
+  </script>
+  <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
 </head>
 <body class="bg-stone-950 text-stone-200 min-h-screen flex flex-col antialiased selection:bg-amber-500 selection:text-stone-950">
 
@@ -117,6 +129,14 @@
           <span class="hidden md:inline">TV Mode</span>
         </button>
 
+        <!-- Google Cast to TV Button -->
+        <button id="btn-cast" class="px-2.5 py-1.5 rounded-lg bg-sky-950/60 border border-sky-500/40 hover:border-sky-400 hover:bg-sky-900/60 text-sky-300 hover:text-white text-xs font-mono transition-all flex items-center gap-1.5 cursor-pointer shadow-sm group" title="Cast practice session to Google TV / Chromecast" aria-label="Cast to Google TV">
+          <i class="fa-brands fa-chromecast text-sky-400 text-xs group-hover:scale-110 transition-transform"></i>
+          <span class="font-semibold hidden sm:inline">Cast</span>
+          <span class="font-semibold sm:hidden">Cast</span>
+          <span id="cast-status-dot" class="w-1.5 h-1.5 rounded-full bg-stone-600 transition-colors"></span>
+        </button>
+
       </div>
     </div>
   </header>
@@ -143,8 +163,10 @@
             <span id="song-album" class="text-amber-400/90 truncate">Mama's Boy (Album 13)</span>
             <span>&bull;</span>
             <span class="text-stone-500">Guitar & Vocal Practice</span>
-            <span>&bull;</span>
-            <span class="text-sky-400 text-[11px]"><i class="fa-brands fa-chromecast mr-1"></i>Ready to Cast</span>
+            <button id="btn-cast-banner" class="px-2.5 py-0.5 rounded-full bg-sky-950/60 hover:bg-sky-900 border border-sky-500/40 hover:border-sky-400 text-sky-300 hover:text-white text-[11px] font-mono transition-all flex items-center gap-1.5 cursor-pointer shadow-sm group" title="Click to Cast to Google TV" aria-label="Cast Tab to TV">
+              <i class="fa-brands fa-chromecast text-sky-400 text-[11px] group-hover:scale-110 transition-transform"></i>
+              <span class="font-semibold">Cast to TV</span>
+            </button>
           </div>
         </div>
       </div>
@@ -371,6 +393,11 @@
           <button id="btn-clear-loop" class="px-2 py-1.5 rounded-lg bg-stone-900 border border-stone-800 hover:bg-stone-800 text-stone-500 hover:text-stone-300 transition-colors" title="Clear A-B Loop">
             <i class="fa-solid fa-xmark text-xs"></i>
           </button>
+          <span class="text-stone-700 mx-0.5 hidden sm:inline">|</span>
+          <button id="btn-cast-transport" class="px-2.5 py-1.5 rounded-lg bg-sky-950/50 hover:bg-sky-900 border border-sky-500/40 hover:border-sky-400 text-sky-300 hover:text-white transition-all flex items-center gap-1.5 cursor-pointer" title="Cast to Google TV / Chromecast" aria-label="Cast to Google TV">
+            <i class="fa-brands fa-chromecast text-sky-400 text-xs"></i>
+            <span class="hidden md:inline font-semibold text-xs">Cast</span>
+          </button>
         </div>
 
       </div>
@@ -431,6 +458,80 @@
     </div>
 
   </main>
+
+  <!-- Floating TV Mode Controls (Visible only when in TV Mode) -->
+  <div id="tv-mode-controls" class="fixed top-5 right-5 z-50 hidden items-center gap-2">
+    <button id="btn-cast-tv" class="px-3.5 py-2 rounded-full bg-sky-950/90 hover:bg-sky-900 border border-sky-500/60 hover:border-sky-400 text-sky-300 hover:text-white font-mono text-xs flex items-center gap-2 shadow-2xl transition-all cursor-pointer" title="Cast practice tab to Google TV">
+      <i class="fa-brands fa-chromecast text-sky-400 text-sm"></i>
+      <span class="font-semibold">Cast Tab</span>
+    </button>
+    <button id="btn-exit-tv" class="px-3.5 py-2 rounded-full bg-stone-900/90 hover:bg-stone-800 border border-stone-700 hover:border-amber-500 text-stone-300 hover:text-white font-mono text-xs flex items-center gap-2 shadow-2xl transition-all cursor-pointer" title="Exit TV Mode">
+      <i class="fa-solid fa-compress text-amber-400 text-sm"></i>
+      <span>Exit TV</span>
+    </button>
+  </div>
+
+  <!-- Cast to Google TV Modal -->
+  <div id="cast-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden" role="dialog" aria-modal="true" aria-labelledby="cast-modal-title">
+    <div class="relative bg-[#14110e] border border-sky-500/40 rounded-2xl max-w-lg w-full p-6 space-y-5 shadow-2xl">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between border-b border-stone-800 pb-3">
+        <div class="flex items-center gap-2.5 text-sky-400 font-mono text-xs uppercase tracking-wider font-bold">
+          <i class="fa-brands fa-chromecast text-base"></i>
+          <span id="cast-modal-title">Cast Tab to Google TV</span>
+        </div>
+        <button id="cast-modal-close" class="text-stone-400 hover:text-white p-1 transition-colors" aria-label="Close cast modal">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+
+      <!-- Overview -->
+      <div class="space-y-2">
+        <p class="font-serif text-sm text-stone-200 leading-relaxed">
+          Cast this entire interactive rehearsal experience—including all 4 multi-track audio stems, live chord synchronization, and teleprompter scrolling—directly to your Google TV or Chromecast screen.
+        </p>
+      </div>
+
+      <!-- Quick 3-Step Guide -->
+      <div class="space-y-3 bg-[#0c0a08] border border-stone-800/80 rounded-xl p-4 text-xs font-mono">
+        <div class="flex items-start gap-2.5">
+          <span class="w-5 h-5 rounded-full bg-sky-950 border border-sky-500/50 text-sky-400 flex items-center justify-center shrink-0 font-bold text-[11px]">1</span>
+          <div class="text-stone-300">
+            <span class="text-white font-semibold">Open Chrome Cast:</span> Click <span class="text-sky-300">"Launch Cast Picker"</span> below, or open Chrome's menu (<span class="text-amber-400">⋮</span>) &rarr; <span class="text-amber-400">Save and share</span> &rarr; <span class="text-amber-400">Cast...</span> (or <kbd class="px-1.5 py-0.5 rounded bg-stone-800 text-stone-300 border border-stone-700">Alt+F</kbd> &rarr; <span class="text-amber-400">Cast</span>).
+          </div>
+        </div>
+
+        <div class="flex items-start gap-2.5">
+          <span class="w-5 h-5 rounded-full bg-sky-950 border border-sky-500/50 text-sky-400 flex items-center justify-center shrink-0 font-bold text-[11px]">2</span>
+          <div class="text-stone-300">
+            <span class="text-white font-semibold">Select "Cast tab":</span> Under <span class="text-stone-400">Sources</span> in the prompt, ensure <span class="text-sky-300">"Cast tab"</span> is selected so the live chords, lyrics, and 4 audio stems mirror together.
+          </div>
+        </div>
+
+        <div class="flex items-start gap-2.5">
+          <span class="w-5 h-5 rounded-full bg-sky-950 border border-sky-500/50 text-sky-400 flex items-center justify-center shrink-0 font-bold text-[11px]">3</span>
+          <div class="text-stone-300">
+            <span class="text-white font-semibold">Enable TV Mode:</span> Click <span class="text-amber-400">"Turn on TV Mode"</span> for enlarged teleprompter chords designed for viewing from 10 feet away.
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center gap-3 pt-1">
+        <button id="btn-modal-trigger-cast" class="w-full sm:w-auto flex-1 px-4 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-mono text-xs font-bold transition-all shadow-lg shadow-sky-950/50 flex items-center justify-center gap-2 cursor-pointer">
+          <i class="fa-brands fa-chromecast"></i>
+          <span>Launch Cast Picker</span>
+        </button>
+
+        <button id="btn-modal-toggle-tv" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 border border-amber-500/40 hover:border-amber-400 text-amber-300 hover:text-amber-200 font-mono text-xs font-semibold transition-all flex items-center justify-center gap-2 cursor-pointer">
+          <i class="fa-solid fa-tv text-amber-400"></i>
+          <span id="modal-tv-label">Turn on TV Mode</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
 
   <!-- Guitar Chord Reference Modal -->
   <div id="chord-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">

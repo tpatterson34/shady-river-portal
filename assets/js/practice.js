@@ -27,6 +27,8 @@
     autoScroll: true,
     userScrolled: false,
     tvMode: false,
+    castConnected: false,
+    castDeviceName: '',
     transposition: 0, // Semitones (-6 to +6)
     originalKey: 'A',
     currentKey: 'A',
@@ -118,6 +120,20 @@
     els.chordModalClose = document.getElementById('chord-modal-close');
     els.chordDiagramGrid = document.getElementById('chord-diagram-grid');
     els.btnShowChords = document.getElementById('btn-show-chords');
+
+    // Cast Elements
+    els.btnCast = document.getElementById('btn-cast');
+    els.btnCastBanner = document.getElementById('btn-cast-banner');
+    els.btnCastTransport = document.getElementById('btn-cast-transport');
+    els.btnCastTv = document.getElementById('btn-cast-tv');
+    els.btnExitTv = document.getElementById('btn-exit-tv');
+    els.castStatusDot = document.getElementById('cast-status-dot');
+
+    els.castModal = document.getElementById('cast-modal');
+    els.castModalClose = document.getElementById('cast-modal-close');
+    els.btnModalTriggerCast = document.getElementById('btn-modal-trigger-cast');
+    els.btnModalToggleTv = document.getElementById('btn-modal-toggle-tv');
+    els.modalTvLabel = document.getElementById('modal-tv-label');
   }
 
   // --- AUDIO CONTEXT INITIALIZATION ---
@@ -1125,6 +1141,39 @@
       els.chordModalClose.addEventListener('click', () => els.chordModal.classList.add('hidden'));
     }
 
+    // Google Cast Buttons
+    const castButtons = [els.btnCast, els.btnCastBanner, els.btnCastTransport, els.btnCastTv, els.btnModalTriggerCast];
+    castButtons.forEach(btn => {
+      if (btn) {
+        btn.addEventListener('click', e => {
+          e.preventDefault();
+          handleCastClick();
+        });
+      }
+    });
+
+    // Exit TV Mode Button
+    if (els.btnExitTv) {
+      els.btnExitTv.addEventListener('click', toggleTvMode);
+    }
+
+    // Modal Toggle TV Button
+    if (els.btnModalToggleTv) {
+      els.btnModalToggleTv.addEventListener('click', () => {
+        toggleTvMode();
+      });
+    }
+
+    // Cast Modal Close
+    if (els.castModalClose && els.castModal) {
+      els.castModalClose.addEventListener('click', closeCastModal);
+    }
+    if (els.castModal) {
+      els.castModal.addEventListener('click', e => {
+        if (e.target === els.castModal) closeCastModal();
+      });
+    }
+
     // Keyboard Shortcuts
     document.addEventListener('keydown', e => {
       const tag = document.activeElement ? document.activeElement.tagName.toLowerCase() : '';
@@ -1150,6 +1199,14 @@
         case 'KeyT':
           e.preventDefault();
           toggleTvMode();
+          break;
+        case 'KeyC':
+          e.preventDefault();
+          handleCastClick();
+          break;
+        case 'Escape':
+          closeCastModal();
+          if (els.chordModal) els.chordModal.classList.add('hidden');
           break;
         case 'BracketLeft':
           e.preventDefault();
@@ -1186,7 +1243,109 @@
       els.tvModeBtn.classList.toggle('bg-amber-500', state.tvMode);
       els.tvModeBtn.classList.toggle('text-stone-950', state.tvMode);
     }
+    updateModalTvLabel();
     showToast(state.tvMode ? 'TV Mode Active (Cast Tab Ready)' : 'Standard Display Mode');
+  }
+
+  function updateModalTvLabel() {
+    if (els.modalTvLabel) {
+      els.modalTvLabel.textContent = state.tvMode ? 'Exit TV Mode' : 'Turn on TV Mode';
+    }
+  }
+
+  // --- GOOGLE CAST & TAB STREAMING ---
+  function initCastFramework() {
+    if (!window.cast || !window.cast.framework) return;
+    try {
+      const castContext = cast.framework.CastContext.getInstance();
+      castContext.setOptions({
+        receiverApplicationId: chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID,
+        autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED
+      });
+
+      castContext.addEventListener(
+        cast.framework.CastContextEventType.SESSION_STATE_CHANGED,
+        function (event) {
+          const sessionState = event.sessionState;
+          if (sessionState === cast.framework.SessionState.SESSION_STARTED ||
+              sessionState === cast.framework.SessionState.SESSION_RESUMED) {
+            const currentSession = castContext.getCurrentSession();
+            const devName = (currentSession && currentSession.getCastDevice)
+              ? currentSession.getCastDevice().friendlyName
+              : 'Google TV';
+            setCastConnected(true, devName);
+          } else if (sessionState === cast.framework.SessionState.SESSION_ENDED) {
+            setCastConnected(false);
+          }
+        }
+      );
+      console.log('Google Cast framework ready for Practice Mode');
+    } catch (err) {
+      console.warn('Google Cast init warning:', err);
+    }
+  }
+
+  function setCastConnected(connected, devName) {
+    state.castConnected = connected;
+    state.castDeviceName = devName || '';
+
+    const castButtons = [els.btnCast, els.btnCastBanner, els.btnCastTransport, els.btnCastTv];
+    castButtons.forEach(btn => {
+      if (btn) {
+        btn.classList.toggle('btn-cast-connected', connected);
+      }
+    });
+
+    if (els.castStatusDot) {
+      els.castStatusDot.className = connected
+        ? 'w-1.5 h-1.5 rounded-full bg-sky-400 shadow-sm shadow-sky-400 transition-colors'
+        : 'w-1.5 h-1.5 rounded-full bg-stone-600 transition-colors';
+    }
+
+    if (connected) {
+      showToast(`Connected to ${devName || 'Google TV'}! Turn on TV Mode for teleprompter.`);
+    } else {
+      showToast('Cast session ended');
+    }
+  }
+
+  async function handleCastClick() {
+    // 1. If Google Cast SDK is available, request session directly
+    if (window.cast && window.cast.framework) {
+      try {
+        const castContext = cast.framework.CastContext.getInstance();
+        castContext.requestSession().then(() => {
+          showToast('Cast connected! Set source to "Cast tab" to mirror chords & audio.');
+        }).catch(err => {
+          if (err !== 'cancel' && err !== 'cancel_picker') {
+            console.log('Cast request dismissed:', err);
+          }
+        });
+      } catch (err) {
+        console.warn('cast.requestSession failed:', err);
+      }
+    } else if (window.PresentationRequest) {
+      try {
+        const request = new PresentationRequest([window.location.href]);
+        await request.start();
+      } catch (e) {}
+    }
+
+    // 2. Open informative modal with step-by-step guidance & TV mode toggle
+    openCastModal();
+  }
+
+  function openCastModal() {
+    if (els.castModal) {
+      updateModalTvLabel();
+      els.castModal.classList.remove('hidden');
+    }
+  }
+
+  function closeCastModal() {
+    if (els.castModal) {
+      els.castModal.classList.add('hidden');
+    }
   }
 
   // --- HELPERS ---
@@ -1289,6 +1448,14 @@
     if (initialPkg) {
       loadPracticePackage(initialPkg);
     }
+
+    // Initialize Google Cast framework hook
+    window.onCastAvailableHook = function (isAvailable) {
+      if (isAvailable) initCastFramework();
+    };
+    if (window._gcastIsAvailable || (window.cast && window.cast.framework)) {
+      initCastFramework();
+    }
   }
 
   // Self execute
@@ -1310,7 +1477,10 @@
     toggleStemSolo,
     applyPreset,
     transpose,
-    toggleTvMode
+    toggleTvMode,
+    openCast: handleCastClick,
+    openCastModal,
+    closeCastModal
   };
 
 })();

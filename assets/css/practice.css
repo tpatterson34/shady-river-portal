@@ -208,6 +208,19 @@ body.tv-mode .portal-header,
 body.tv-mode .footer-section {
   display: none !important;
 }
+body.tv-mode #tv-mode-controls {
+  display: flex !important;
+}
+.btn-cast-connected {
+  background: rgba(14, 165, 233, 0.25) !important;
+  border-color: #38bdf8 !important;
+  color: #38bdf8 !important;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.45) !important;
+}
+.btn-cast-connected #cast-status-dot {
+  background: #38bdf8 !important;
+  box-shadow: 0 0 6px #38bdf8 !important;
+}
 body.tv-mode .mixer-container {
   padding: 0.75rem 1rem !important;
 }
