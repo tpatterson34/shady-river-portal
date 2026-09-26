@@ -48,21 +48,37 @@
     'A':   { frets: 'x02220', fingers: '- 1 2 3 -', root: 'A' },
     'Am':  { frets: 'x02210', fingers: '- 2 3 1 -', root: 'A' },
     'A7':  { frets: 'x02020', fingers: '- 2 - 3 -', root: 'A' },
+    'A#':  { frets: 'x13331', fingers: '- 1 3 3 3 1', root: 'A#' },
+    'Bb':  { frets: 'x13331', fingers: '- 1 3 3 3 1', root: 'Bb' },
+    'A#m': { frets: 'x13321', fingers: '- 1 3 4 2 1', root: 'A#' },
+    'Bbm': { frets: 'x13321', fingers: '- 1 3 4 2 1', root: 'Bb' },
     'B':   { frets: 'x24442', fingers: '1 1 3 3 3 1', root: 'B' },
     'Bm':  { frets: 'x24432', fingers: '1 1 3 4 2 1', root: 'B' },
     'C':   { frets: 'x32010', fingers: '- 3 2 - 1 -', root: 'C' },
+    'C#':  { frets: 'x46664', fingers: '- 1 3 3 3 1', root: 'C#' },
+    'Db':  { frets: 'x46664', fingers: '- 1 3 3 3 1', root: 'Db' },
+    'Cm':  { frets: 'x35543', fingers: '- 1 3 4 2 1', root: 'C' },
     'C#m': { frets: 'x46654', fingers: '1 1 3 4 2 1', root: 'C#' },
     'D':   { frets: 'xx0232', fingers: '- - - 1 3 2', root: 'D' },
     'Dm':  { frets: 'xx0231', fingers: '- - - 2 3 1', root: 'D' },
     'D7':  { frets: 'xx0212', fingers: '- - - 2 1 3', root: 'D' },
+    'D#':  { frets: 'x68886', fingers: '- 1 3 3 3 1', root: 'D#' },
+    'Eb':  { frets: 'x68886', fingers: '- 1 3 3 3 1', root: 'Eb' },
+    'D#m': { frets: 'x68876', fingers: '- 1 3 4 2 1', root: 'D#' },
+    'Ebm': { frets: 'x68876', fingers: '- 1 3 4 2 1', root: 'Eb' },
     'E':   { frets: '022100', fingers: '- 2 3 1 - -', root: 'E' },
     'Em':  { frets: '022000', fingers: '- 2 3 - - -', root: 'E' },
     'E7':  { frets: '020100', fingers: '- 2 - 1 - -', root: 'E' },
     'F':   { frets: '133211', fingers: '1 3 4 2 1 1', root: 'F' },
+    'Fm':  { frets: '133111', fingers: '1 3 4 1 1 1', root: 'F' },
     'F#':  { frets: '244322', fingers: '1 3 4 2 1 1', root: 'F#' },
     'F#m': { frets: '244222', fingers: '1 3 4 1 1 1', root: 'F#' },
     'G':   { frets: '320003', fingers: '2 1 - - - 3', root: 'G' },
-    'Gm':  { frets: '355333', fingers: '1 3 4 1 1 1', root: 'G' }
+    'Gm':  { frets: '355333', fingers: '1 3 4 1 1 1', root: 'G' },
+    'G#':  { frets: '466544', fingers: '1 3 4 2 1 1', root: 'G#' },
+    'Ab':  { frets: '466544', fingers: '1 3 4 2 1 1', root: 'Ab' },
+    'G#m': { frets: '466444', fingers: '1 3 4 1 1 1', root: 'G#' },
+    'Abm': { frets: '466444', fingers: '1 3 4 1 1 1', root: 'Ab' }
   };
 
   // --- DOM ELEMENTS CACHE ---
@@ -246,6 +262,15 @@
       document.getElementById('song-album').textContent = pkg.album || 'Practice Package';
       if (pkg.cover_art && document.getElementById('song-art')) {
         document.getElementById('song-art').src = pkg.cover_art;
+      }
+      document.title = `${pkg.title} — Practice Mode | The Shady River Bard`;
+      if (els.packageSelector && pkg.id) {
+        els.packageSelector.value = pkg.id;
+      }
+      if (window.history && window.history.replaceState && pkg.id) {
+        const url = new URL(window.location);
+        url.searchParams.set('song', pkg.id);
+        window.history.replaceState({}, '', url);
       }
       state.originalKey = pkg.key || 'A';
       state.currentKey = state.originalKey;
@@ -1306,6 +1331,7 @@
     const initialPkg = (querySong ? state.allPackages.find(p => p.id === querySong) : null) || state.allPackages[0];
 
     if (initialPkg) {
+      if (els.packageSelector) els.packageSelector.value = initialPkg.id;
       loadPracticePackage(initialPkg);
     }
   }

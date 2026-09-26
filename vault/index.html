@@ -405,6 +405,11 @@
           <h3 id="modal-title" class="text-base sm:text-2xl font-serif font-bold text-stone-100 truncate min-w-0">Album Title</h3>
         </div>
         <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+          <a id="modal-practice-album-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="Open Practice Mode stems and chords for this album" title="Practice Mode: Audio Stems & Interactive Chords" class="hidden px-2.5 sm:px-3 py-1.5 rounded-lg bg-emerald-950/80 hover:bg-emerald-900/90 text-emerald-400 hover:text-emerald-300 border border-emerald-700/50 text-xs font-mono font-medium transition-all flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 shrink-0 shadow-sm">
+            <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+            <span class="hidden xs:inline sm:inline">Practice Stems</span>
+            <span class="xs:hidden sm:hidden">Practice</span>
+          </a>
           <button id="modal-share-btn" onclick="shareCurrentAlbum()" aria-label="Share direct link to this album" title="Copy direct link to this album" class="px-2.5 sm:px-3 py-1.5 rounded-lg bg-soil-700/80 hover:bg-soil-600 text-stone-200 hover:text-white border border-white/10 text-xs font-mono font-medium transition-all flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 shrink-0">
             <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
             <span id="modal-share-text" class="hidden xs:inline sm:inline">Share</span>
@@ -531,6 +536,22 @@
                 </div>
                 <a id="modal-deconstructed-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Read Deconstructed liner notes on Substack (opens in new tab)" class="px-3 py-1.5 rounded-lg bg-orange-600 hover:bg-orange-500 text-white text-xs font-medium transition-colors shrink-0 flex items-center justify-center gap-1.5 shadow-sm focus-visible:ring-2 focus-visible:ring-brand-500 text-center">
                   <span>Read on Substack ↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Practice Mode Multi-Stem Studio Callout -->
+            <div id="modal-practice-box" class="p-3.5 sm:p-4 rounded-xl bg-emerald-950/40 border border-emerald-800/40 hidden">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-3">
+                <div class="min-w-0">
+                  <div class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+                    <span class="text-[11px] sm:text-xs font-mono text-emerald-400 uppercase tracking-wider font-bold">Practice Mode Studio</span>
+                  </div>
+                  <div class="text-stone-200 font-serif text-xs sm:text-sm font-semibold mt-0.5 break-words">Audio Stems (Vocals, Drums, Bass, Other) &amp; Interactive Chords</div>
+                </div>
+                <a id="modal-practice-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Open Practice Mode multi-stem studio for this album (opens in new tab)" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-medium transition-colors shrink-0 flex items-center justify-center gap-1.5 shadow-sm focus-visible:ring-2 focus-visible:ring-emerald-400 text-center">
+                  <span>Open Practice Studio ↗</span>
                 </a>
               </div>
             </div>
@@ -704,6 +725,66 @@
     let activeGenre = 'all';
     let activeTag = 'all';
 
+    // --- PRACTICE MODE MAPPINGS & HELPERS ---
+    const PRACTICE_PACKAGES_BY_SLUG = {
+      'a-different-kind-of-love': { slug: 'a-different-kind-of-love', albumId: 'mamas-boy', albumNumber: 13, trackTitle: 'A Different Kind of Love' },
+      'the-insufficient-funds-error': { slug: 'the-insufficient-funds-error', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Insufficient Funds Error' },
+      'the-curtains-and-the-canned-goods': { slug: 'the-curtains-and-the-canned-goods', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'The Curtains and the Canned Goods' },
+      'seven-skies-burning': { slug: 'seven-skies-burning', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Seven Skies Burning' },
+      'disposable-hardware': { slug: 'disposable-hardware', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Disposable Hardware' },
+      'thirty-eight-trillion': { slug: 'thirty-eight-trillion', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Thirty-Eight Trillion' },
+      'eighty-five-days': { slug: 'eighty-five-days', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Eighty-Five Days' },
+      'twelve-million-the-empty-tray': { slug: 'twelve-million-the-empty-tray', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Twelve Million (The Empty Tray)' },
+      'canned-goods-in-the-rain': { slug: 'canned-goods-in-the-rain', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Canned Goods in the Rain' },
+      'stock-ticker-lullaby': { slug: 'stock-ticker-lullaby', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Stock Ticker Lullaby' },
+      'the-unapproved-war': { slug: 'the-unapproved-war', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'The Unapproved War' },
+      'the-culture-war-distraction': { slug: 'the-culture-war-distraction', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'The Culture War Distraction' },
+      'a-line-in-the-dirt': { slug: 'a-line-in-the-dirt', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'A Line in the Dirt' },
+      'seven-acres-in-the-middle': { slug: 'seven-acres-in-the-middle', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Seven Acres in the Middle' },
+      'pass-the-hat': { slug: 'pass-the-hat', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Pass the Hat' },
+      'nourish-the-roots': { slug: 'nourish-the-roots', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Nourish the Roots' }
+    };
+
+    function normalizePracticeTitle(t) {
+      return (t || '').toLowerCase().replace(/^(the|a|an)\s+/i, '').replace(/[^a-z0-9]/g, '');
+    }
+
+    function getPracticeSlugForTrack(albumItem, trackTitle) {
+      if (!trackTitle) return null;
+      const normTrack = normalizePracticeTitle(trackTitle);
+      for (const key in PRACTICE_PACKAGES_BY_SLUG) {
+        const pkg = PRACTICE_PACKAGES_BY_SLUG[key];
+        if (normalizePracticeTitle(pkg.trackTitle) === normTrack || normalizePracticeTitle(pkg.slug) === normTrack) {
+          if (albumItem) {
+            if (pkg.albumId === albumItem.id || pkg.albumNumber === albumItem.number || normalizePracticeTitle(pkg.albumId) === normalizePracticeTitle(albumItem.id)) {
+              return pkg.slug;
+            }
+          } else {
+            return pkg.slug;
+          }
+        }
+      }
+      return null;
+    }
+
+    function albumHasPractice(albumItem) {
+      if (!albumItem) return false;
+      return Object.values(PRACTICE_PACKAGES_BY_SLUG).some(pkg => 
+        pkg.albumId === albumItem.id || pkg.albumNumber === albumItem.number || normalizePracticeTitle(pkg.albumId) === normalizePracticeTitle(albumItem.id)
+      );
+    }
+
+    function getAlbumPracticeUrl(albumItem) {
+      if (!albumItem) return null;
+      if (albumItem.id === 'the-curtains-and-the-canned-goods' || albumItem.number === 23) {
+        return '../practice.html?song=the-curtains-and-the-canned-goods';
+      }
+      const firstPkg = Object.values(PRACTICE_PACKAGES_BY_SLUG).find(pkg => 
+        pkg.albumId === albumItem.id || pkg.albumNumber === albumItem.number || normalizePracticeTitle(pkg.albumId) === normalizePracticeTitle(albumItem.id)
+      );
+      return firstPkg ? `../practice.html?song=${firstPkg.slug}` : null;
+    }
+
     async function init() {
       try {
         if (window.CATALOG || window.BARD_CATALOG || window.DISCOGRAPHY_DATA) {
@@ -711,6 +792,24 @@
         } else {
           const res = await fetch('data/albums.json?v=20260914_02');
           catalog = await res.json();
+        }
+
+        // Dynamically load any extra practice packages if available
+        try {
+          const pRes = await fetch('../data/practice-packages.json');
+          if (pRes.ok) {
+            const pData = await pRes.json();
+            pData.forEach(p => {
+              PRACTICE_PACKAGES_BY_SLUG[p.id] = {
+                slug: p.id,
+                albumId: p.album_id || '',
+                albumNumber: p.album_number || (p.album && p.album.match(/Album\s+(\d+)/i) ? parseInt(p.album.match(/Album\s+(\d+)/i)[1], 10) : null),
+                trackTitle: p.title
+              };
+            });
+          }
+        } catch (pErr) {
+          // Pre-bundled package map remains fully functional
         }
         
         // Update live stats
@@ -956,6 +1055,11 @@
                     <span>Experience &rarr;</span>
                   </a>
                 ` : ''}
+                ${albumHasPractice(item) ? `
+                  <a href="${getAlbumPracticeUrl(item)}" onclick="event.stopPropagation();" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 rounded-md text-[10px] font-mono font-semibold bg-emerald-950/90 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-900 hover:text-white transition-colors backdrop-blur-sm flex items-center gap-1" title="Practice Mode: Audio Stems & Interactive Chords">
+                    <span>🎛️ PRACTICE</span>
+                  </a>
+                ` : ''}
               </div>
 
               <div class="absolute bottom-3 right-3 text-xs font-mono px-2 py-1 rounded bg-black/60 backdrop-blur-sm text-stone-200">
@@ -1121,6 +1225,30 @@
         }
       }
 
+      // Practice Album Button in Header & Practice Studio Callout Box
+      const practiceAlbumBtn = document.getElementById('modal-practice-album-btn');
+      const practiceBox = document.getElementById('modal-practice-box');
+      const practiceLink = document.getElementById('modal-practice-link');
+      const practiceUrl = getAlbumPracticeUrl(item);
+
+      if (practiceAlbumBtn) {
+        if (practiceUrl) {
+          practiceAlbumBtn.href = practiceUrl;
+          practiceAlbumBtn.classList.remove('hidden');
+        } else {
+          practiceAlbumBtn.classList.add('hidden');
+        }
+      }
+
+      if (practiceBox) {
+        if (practiceUrl) {
+          if (practiceLink) practiceLink.href = practiceUrl;
+          practiceBox.classList.remove('hidden');
+        } else {
+          practiceBox.classList.add('hidden');
+        }
+      }
+
       // Novella box
       const novBox = document.getElementById('modal-novella-box');
       if (item.companion_novella) {
@@ -1170,6 +1298,7 @@
             }
           }
           const deconstructUrl = (item.track_deconstructions && item.track_deconstructions[idx]) ? item.track_deconstructions[idx] : null;
+          const practiceSlug = getPracticeSlugForTrack(item, tr);
 
           return `
           <li class="flex flex-col sm:flex-row sm:items-center justify-between p-2 sm:p-2.5 rounded-lg bg-soil-900/60 hover:bg-soil-800 transition-colors border border-white/5 gap-2 min-w-0">
@@ -1188,6 +1317,12 @@
                 <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                 <span class="bard-note-tooltip">Drop a note to the bard</span>
               </button>
+              ${practiceSlug ? `
+                <a href="../practice.html?song=${practiceSlug}" target="_blank" rel="noopener noreferrer" aria-label="Practice ${tr.replace(/"/g, '&quot;')} with audio stems & chords (opens in new tab)" class="text-[11px] font-mono text-emerald-400 hover:text-emerald-300 bg-emerald-950/80 hover:bg-emerald-900/90 border border-emerald-700/50 flex items-center gap-1.5 rounded-md px-2 py-1 transition-colors shadow-sm focus-visible:ring-1 focus-visible:ring-emerald-400 shrink-0" title="Practice Mode: Audio Stems & Interactive Chords">
+                  <svg class="w-3 h-3 fill-none stroke-current shrink-0" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+                  <span>Practice ↗</span>
+                </a>
+              ` : ''}
               ${deconstructUrl ? `
                 <a href="${deconstructUrl}" target="_blank" rel="noopener noreferrer" aria-label="Read Deconstruction notes for ${tr.replace(/"/g, '&quot;')} on Substack (opens in new tab)" class="text-[11px] font-mono text-orange-400 hover:text-orange-300 bg-orange-950/70 hover:bg-orange-900/90 border border-orange-700/50 flex items-center gap-1.5 rounded-md px-2 py-1 transition-colors shadow-sm focus-visible:ring-1 focus-visible:ring-brand-500 shrink-0" title="Read Deconstruction notes on Substack">
                   <svg class="w-3 h-3 fill-current text-orange-400 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
