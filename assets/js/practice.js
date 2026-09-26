@@ -136,6 +136,12 @@
     els.btnModalTriggerCast = document.getElementById('btn-modal-trigger-cast');
     els.btnModalToggleTv = document.getElementById('btn-modal-toggle-tv');
     els.modalTvLabel = document.getElementById('modal-tv-label');
+
+    // Cast Active Banner
+    els.castConnectedBanner = document.getElementById('cast-connected-banner');
+    els.castBannerDeviceName = document.getElementById('cast-banner-device-name');
+    els.btnBannerDisconnectCast = document.getElementById('btn-banner-disconnect-cast');
+    els.btnBannerToggleTv = document.getElementById('btn-banner-toggle-tv');
   }
 
   // --- AUDIO CONTEXT INITIALIZATION ---
@@ -1180,6 +1186,16 @@
       });
     }
 
+    // Active Cast Banner Buttons
+    if (els.btnBannerDisconnectCast) {
+      els.btnBannerDisconnectCast.addEventListener('click', () => {
+        disconnectCast();
+      });
+    }
+    if (els.btnBannerToggleTv) {
+      els.btnBannerToggleTv.addEventListener('click', toggleTvMode);
+    }
+
     // Cast Modal Close
     if (els.castModalClose && els.castModal) {
       els.castModalClose.addEventListener('click', closeCastModal);
@@ -1350,14 +1366,30 @@
         : 'w-1.5 h-1.5 rounded-full bg-stone-600 transition-colors';
     }
 
+    if (els.castConnectedBanner) {
+      els.castConnectedBanner.classList.toggle('hidden', !connected);
+      if (els.castBannerDeviceName) {
+        els.castBannerDeviceName.textContent = devName || 'Google TV';
+      }
+    }
+
     if (connected) {
-      showToast(`Connected to ${devName || 'Google TV'}! Chords & audio streaming.`);
+      showToast(`Connected to ${devName || 'Google TV'}! Note: In Cast menu, select Sources > "Cast tab" to mirror chords.`);
       if (!state.tvMode) {
         toggleTvMode();
       }
     } else {
       showToast('Cast session ended');
     }
+  }
+
+  function disconnectCast() {
+    try {
+      if (window.cast && window.cast.framework) {
+        cast.framework.CastContext.getInstance().endCurrentSession(true);
+      }
+    } catch (err) {}
+    setCastConnected(false);
   }
 
   function handleCastClick(e) {
@@ -1368,12 +1400,7 @@
 
     // If already connected, clicking Cast toggles/ends session cleanly
     if (state.castConnected) {
-      try {
-        if (window.cast && window.cast.framework) {
-          cast.framework.CastContext.getInstance().endCurrentSession(true);
-        }
-      } catch (err) {}
-      setCastConnected(false);
+      disconnectCast();
       return;
     }
 
@@ -1395,7 +1422,7 @@
     if (window.cast && window.cast.framework) {
       try {
         const castContext = cast.framework.CastContext.getInstance();
-        showToast('Select your Google TV or Chromecast to Cast...', 'info', 4000);
+        showToast('Select your TV, then choose Sources > "Cast tab" to mirror chords & audio!', 'info', 5000);
         castContext.requestSession().then(session => {
           const devName = (session && session.getCastDevice && session.getCastDevice())
             ? session.getCastDevice().friendlyName
@@ -1580,6 +1607,7 @@
     transpose,
     toggleTvMode,
     openCast: handleCastClick,
+    disconnectCast,
     openCastModal,
     closeCastModal
   };

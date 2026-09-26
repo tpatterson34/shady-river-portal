@@ -53,7 +53,7 @@
   </script>
 
   <!-- Custom Practice Stylesheet -->
-  <link rel="stylesheet" href="assets/css/practice.css?v=20260926C">
+  <link rel="stylesheet" href="assets/css/practice.css?v=20260926D">
 
   <!-- Google Cast Framework Callback Hook & Sender SDK -->
   <script>
@@ -143,6 +143,33 @@
 
   <!-- Main Practice Stage -->
   <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+
+    <!-- Active Cast Tab Guidance Banner (Visible when receiver is connected) -->
+    <div id="cast-connected-banner" class="hidden p-4 rounded-2xl bg-sky-950/80 border border-sky-400/60 shadow-2xl text-xs font-mono flex flex-col md:flex-row md:items-center justify-between gap-3">
+      <div class="flex items-start md:items-center gap-3 text-sky-200">
+        <div class="w-8 h-8 rounded-xl bg-sky-900/90 border border-sky-400/40 flex items-center justify-center shrink-0">
+          <i class="fa-brands fa-chromecast text-sky-400 text-sm animate-pulse"></i>
+        </div>
+        <div>
+          <div class="font-bold text-white flex items-center gap-2">
+            <span>Connected to <span id="cast-banner-device-name">Google TV</span></span>
+            <span class="px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 text-[10px]">App Connected</span>
+          </div>
+          <p class="text-stone-300 text-[11px] font-sans mt-0.5">
+            Seeing only a blue Cast logo on your TV? That's the receiver standby screen. In Chrome's Cast prompt, click <strong class="text-white">"Sources"</strong> at the bottom &rarr; select <strong class="text-amber-400">"Cast tab"</strong> so your TV mirrors the live chords, lyrics, and 4 audio stems!
+          </p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 shrink-0 self-end md:self-center">
+        <button id="btn-banner-disconnect-cast" class="px-3 py-1.5 rounded-lg bg-stone-900 hover:bg-stone-800 border border-stone-700 hover:border-white/20 text-stone-300 hover:text-white transition-colors text-xs cursor-pointer">
+          Disconnect Standby
+        </button>
+        <button id="btn-banner-toggle-tv" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold transition-colors text-xs flex items-center gap-1.5 cursor-pointer shadow-md shadow-amber-950/50">
+          <i class="fa-solid fa-tv"></i>
+          <span>TV Mode</span>
+        </button>
+      </div>
+    </div>
 
     <!-- Top Track Info & Quick Presets -->
     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 rounded-2xl bg-[#14110e] border border-stone-800/80 shadow-xl">
@@ -596,6 +623,6 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/practice.js?v=20260926C"></script>
+  <script src="assets/js/practice.js?v=20260926D"></script>
 </body>
 </html>
