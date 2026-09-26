@@ -183,6 +183,28 @@
     state.currentPackage = pkg;
     showLoading(true, 'Initializing practice package...');
 
+    // Immediately update header info & URL state for snappy responsive UI
+    const titleEl = document.getElementById('song-title');
+    if (titleEl) titleEl.textContent = pkg.title;
+    const albumEl = document.getElementById('song-album');
+    if (albumEl) albumEl.textContent = pkg.album || 'Practice Package';
+    const artEl = document.getElementById('song-art');
+    if (pkg.cover_art && artEl) artEl.src = pkg.cover_art;
+    document.title = `${pkg.title} — Practice Mode | The Shady River Bard`;
+    if (els.packageSelector && pkg.id) {
+      els.packageSelector.value = pkg.id;
+    }
+    if (window.history && window.history.replaceState && pkg.id) {
+      const url = new URL(window.location);
+      url.searchParams.set('song', pkg.id);
+      window.history.replaceState({}, '', url);
+    }
+    state.originalKey = pkg.key || 'A';
+    state.currentKey = state.originalKey;
+    if (els.keyVal) els.keyVal.textContent = state.currentKey;
+    state.transposition = 0;
+    if (els.transposeVal) els.transposeVal.textContent = '0';
+
     try {
       // 1. Fetch sync.json & tabs.txt
       let syncJson = null;
@@ -256,27 +278,6 @@
       });
       state.duration = maxDuration || 205; // Fallback ~3:25
       if (els.timeTotal) els.timeTotal.textContent = formatTime(state.duration);
-
-      // Update package info
-      document.getElementById('song-title').textContent = pkg.title;
-      document.getElementById('song-album').textContent = pkg.album || 'Practice Package';
-      if (pkg.cover_art && document.getElementById('song-art')) {
-        document.getElementById('song-art').src = pkg.cover_art;
-      }
-      document.title = `${pkg.title} — Practice Mode | The Shady River Bard`;
-      if (els.packageSelector && pkg.id) {
-        els.packageSelector.value = pkg.id;
-      }
-      if (window.history && window.history.replaceState && pkg.id) {
-        const url = new URL(window.location);
-        url.searchParams.set('song', pkg.id);
-        window.history.replaceState({}, '', url);
-      }
-      state.originalKey = pkg.key || 'A';
-      state.currentKey = state.originalKey;
-      if (els.keyVal) els.keyVal.textContent = state.currentKey;
-      state.transposition = 0;
-      if (els.transposeVal) els.transposeVal.textContent = '0';
 
       // Reset playback state
       pause();
