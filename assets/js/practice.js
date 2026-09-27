@@ -1304,10 +1304,10 @@
         album: "Mama's Boy (Album 13)",
         key: 'A',
         stems: {
-          vocals: 'assets/practice/a-different-kind-of-love/vocals.mp3',
-          drums: 'assets/practice/a-different-kind-of-love/drums.mp3',
-          bass: 'assets/practice/a-different-kind-of-love/bass.mp3',
-          other: 'assets/practice/a-different-kind-of-love/other.mp3'
+          vocals: 'https://stems.theshadyriverbard.com/a-different-kind-of-love/vocals.mp3',
+          drums: 'https://stems.theshadyriverbard.com/a-different-kind-of-love/drums.mp3',
+          bass: 'https://stems.theshadyriverbard.com/a-different-kind-of-love/bass.mp3',
+          other: 'https://stems.theshadyriverbard.com/a-different-kind-of-love/other.mp3'
         },
         sync: 'assets/practice/a-different-kind-of-love/sync.json',
         tabs: 'assets/practice/a-different-kind-of-love/tabs.txt'
