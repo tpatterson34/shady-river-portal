@@ -766,6 +766,9 @@
     function getPracticeSlugForTrack(albumItem, trackTitle) {
       if (!trackTitle) return null;
       const normTrack = normalizePracticeTitle(trackTitle);
+      if (normTrack === 'algorithms' || normTrack === 'algorithmscoldeye') {
+        return 'the-algorithms-cold-eye';
+      }
       for (const key in PRACTICE_PACKAGES_BY_SLUG) {
         const pkg = PRACTICE_PACKAGES_BY_SLUG[key];
         if (normalizePracticeTitle(pkg.trackTitle) === normTrack || normalizePracticeTitle(pkg.slug) === normTrack) {
@@ -795,6 +798,9 @@
       }
       if (albumItem.id === 'quiet-harvest' || albumItem.number === 1) {
         return '../practice.html?song=the-blues-under-my-nails';
+      }
+      if (albumItem.id === 'beyond-the-number' || albumItem.number === 2) {
+        return '../practice.html?song=the-invisible-mans-lament';
       }
       const firstPkg = Object.values(PRACTICE_PACKAGES_BY_SLUG).find(pkg => 
         pkg.albumId === albumItem.id || pkg.albumNumber === albumItem.number || normalizePracticeTitle(pkg.albumId) === normalizePracticeTitle(albumItem.id)
