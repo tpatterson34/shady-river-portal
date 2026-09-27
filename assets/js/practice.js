@@ -178,6 +178,88 @@
     return state.audioCtx;
   }
 
+  // --- CACHESTORAGE & STREAMING STEM LOADER ---
+  const STEM_CACHE_NAME = 'shady-river-practice-stems-v1';
+
+  async function fetchStemBuffer(key, pkg, onProgress) {
+    if (pkg.files) {
+      const stemFile = pkg.files.find(f => f.name.toLowerCase().startsWith(key));
+      if (!stemFile) throw new Error(`Missing stem: ${key}.mp3 in selected folder`);
+      const buf = await stemFile.arrayBuffer();
+      return { buffer: buf, fromCache: false };
+    }
+
+    const stemUrl = pkg.stems[key];
+    if (!stemUrl) throw new Error(`No URL for ${key} stem`);
+
+    let cache = null;
+    if ('caches' in window) {
+      try {
+        cache = await caches.open(STEM_CACHE_NAME);
+        const cachedRes = await cache.match(stemUrl);
+        if (cachedRes) {
+          const buf = await cachedRes.arrayBuffer();
+          return { buffer: buf, fromCache: true };
+        }
+      } catch (e) {
+        console.warn('CacheStorage read error:', e);
+      }
+    }
+
+    const res = await fetch(stemUrl);
+    if (!res.ok) throw new Error(`HTTP ${res.status} loading ${key} stem`);
+
+    const contentLength = parseInt(res.headers.get('content-length') || '0', 10);
+    if (!res.body || !contentLength) {
+      const buf = await res.arrayBuffer();
+      if (cache) {
+        try {
+          cache.put(stemUrl, new Response(buf.slice(0), {
+            headers: { 'Content-Type': 'audio/mpeg', 'Content-Length': buf.byteLength.toString() }
+          }));
+        } catch (e) {}
+      }
+      return { buffer: buf, fromCache: false };
+    }
+
+    const reader = res.body.getReader();
+    const chunks = [];
+    let receivedBytes = 0;
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      chunks.push(value);
+      receivedBytes += value.length;
+      if (onProgress) {
+        onProgress(key, receivedBytes, contentLength);
+      }
+    }
+
+    const fullBuffer = new Uint8Array(receivedBytes);
+    let offset = 0;
+    for (const chunk of chunks) {
+      fullBuffer.set(chunk, offset);
+      offset += chunk.length;
+    }
+
+    if (cache) {
+      try {
+        const respToCache = new Response(fullBuffer.buffer.slice(0), {
+          headers: {
+            'Content-Type': 'audio/mpeg',
+            'Content-Length': receivedBytes.toString()
+          }
+        });
+        cache.put(stemUrl, respToCache);
+      } catch (e) {
+        console.warn('CacheStorage write error:', e);
+      }
+    }
+
+    return { buffer: fullBuffer.buffer, fromCache: false };
+  }
+
   // --- LOAD PACKAGE (FROM REMOTE URLS OR LOCAL FOLDER) ---
   async function loadPracticePackage(pkg) {
     state.currentPackage = pkg;
@@ -232,39 +314,61 @@
       parseTablature(tabsTxt, syncJson);
       renderTablature();
 
-      // 3. Load 4 Audio Stems
+      // 3. Load 4 Audio Stems with CacheStorage & Real-time Progress Tracking
       const stemKeys = ['vocals', 'drums', 'bass', 'other'];
       let loadedCount = 0;
+      let cachedCount = 0;
+
+      const progressState = {
+        vocals: { rec: 0, tot: 0 },
+        drums:  { rec: 0, tot: 0 },
+        bass:   { rec: 0, tot: 0 },
+        other:  { rec: 0, tot: 0 }
+      };
+
+      const loadStartTime = performance.now();
+
+      function updateNetProgress(stemKey, rec, tot) {
+        progressState[stemKey].rec = rec;
+        progressState[stemKey].tot = tot;
+
+        let totalRec = 0;
+        let totalTot = 0;
+        stemKeys.forEach(k => {
+          totalRec += progressState[k].rec;
+          totalTot += progressState[k].tot;
+        });
+
+        if (totalTot > 0) {
+          const pct = Math.min(90, Math.round((totalRec / totalTot) * 100));
+          const mbDone = (totalRec / (1024 * 1024)).toFixed(1);
+          const mbTotal = (totalTot / (1024 * 1024)).toFixed(1);
+          const elapsedSec = (performance.now() - loadStartTime) / 1000;
+          const kbps = elapsedSec > 0 ? Math.round(totalRec / 1024 / elapsedSec) : 0;
+          updateLoadingProgress(pct, `Downloading stems: ${mbDone} / ${mbTotal} MB (${pct}%) • ${kbps} KB/s`);
+        }
+      }
 
       const stemPromises = stemKeys.map(async function (key) {
         const stem = state.stems[key];
         stem.loaded = false;
         stem.buffer = null;
 
-        let arrayBuffer = null;
-        if (pkg.files) {
-          const stemFile = pkg.files.find(f => f.name.toLowerCase().startsWith(key));
-          if (stemFile) {
-            arrayBuffer = await stemFile.arrayBuffer();
-          } else {
-            throw new Error(`Missing stem: ${key}.mp3 in selected folder`);
-          }
-        } else {
-          const stemUrl = pkg.stems[key];
-          const res = await fetch(stemUrl);
-          if (!res.ok) throw new Error(`HTTP ${res.status} loading ${key} stem`);
-          arrayBuffer = await res.arrayBuffer();
-        }
+        const { buffer, fromCache } = await fetchStemBuffer(key, pkg, updateNetProgress);
+        if (fromCache) cachedCount++;
 
         const ctx = getAudioContext();
-        // Decode audio
-        const decoded = await ctx.decodeAudioData(arrayBuffer);
+        const decoded = await ctx.decodeAudioData(buffer);
         stem.buffer = decoded;
         stem.loaded = true;
 
         loadedCount++;
-        const pct = Math.round((loadedCount / 4) * 100);
-        updateLoadingProgress(pct, `Decoded ${stem.name} (${loadedCount}/4 stems ready)...`);
+        const pct = 90 + Math.round((loadedCount / 4) * 10);
+        if (cachedCount === 4) {
+          updateLoadingProgress(pct, `⚡ Loaded from cache: ${stem.name} (${loadedCount}/4)...`);
+        } else {
+          updateLoadingProgress(pct, `Decoded ${stem.name} (${loadedCount}/4 ready)...`);
+        }
       });
 
       await Promise.all(stemPromises);
