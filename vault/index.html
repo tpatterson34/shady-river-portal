@@ -772,6 +772,9 @@
       if (normTrack === 'echosinthecanyon' || normTrack === 'echoesinthecanyon') {
         return 'echoes-in-the-canyon';
       }
+      if (normTrack.includes('digitaldust') && normTrack.includes('analogbones')) {
+        return 'digital-dust-and-analog-bones';
+      }
       for (const key in PRACTICE_PACKAGES_BY_SLUG) {
         const pkg = PRACTICE_PACKAGES_BY_SLUG[key];
         if (normalizePracticeTitle(pkg.trackTitle) === normTrack || normalizePracticeTitle(pkg.slug) === normTrack) {
