@@ -769,6 +769,9 @@
       if (normTrack === 'algorithms' || normTrack === 'algorithmscoldeye') {
         return 'the-algorithms-cold-eye';
       }
+      if (normTrack === 'echosinthecanyon' || normTrack === 'echoesinthecanyon') {
+        return 'echoes-in-the-canyon';
+      }
       for (const key in PRACTICE_PACKAGES_BY_SLUG) {
         const pkg = PRACTICE_PACKAGES_BY_SLUG[key];
         if (normalizePracticeTitle(pkg.trackTitle) === normTrack || normalizePracticeTitle(pkg.slug) === normTrack) {
@@ -801,6 +804,9 @@
       }
       if (albumItem.id === 'beyond-the-number' || albumItem.number === 2) {
         return '../practice.html?song=the-invisible-mans-lament';
+      }
+      if (albumItem.id === 'the-fracture' || albumItem.number === 3) {
+        return '../practice.html?song=echoes-in-the-canyon';
       }
       const firstPkg = Object.values(PRACTICE_PACKAGES_BY_SLUG).find(pkg => 
         pkg.albumId === albumItem.id || pkg.albumNumber === albumItem.number || normalizePracticeTitle(pkg.albumId) === normalizePracticeTitle(albumItem.id)
