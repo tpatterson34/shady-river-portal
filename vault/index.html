@@ -822,13 +822,13 @@
         if (window.CATALOG || window.BARD_CATALOG || window.DISCOGRAPHY_DATA) {
           catalog = window.CATALOG || window.BARD_CATALOG || window.DISCOGRAPHY_DATA;
         } else {
-          const res = await fetch('data/albums.json?v=20260914_02');
+          const res = await fetch('data/albums.json?v=20260928_01');
           catalog = await res.json();
         }
 
         // Dynamically load any extra practice packages if available
         try {
-          const pRes = await fetch('../data/practice-packages.json');
+          const pRes = await fetch('../data/practice-packages.json?v=20260928_01');
           if (pRes.ok) {
             const pData = await pRes.json();
             pData.forEach(p => {
