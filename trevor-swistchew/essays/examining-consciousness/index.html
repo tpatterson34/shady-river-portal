@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examining Consciousness — Trevor Swistchew (2026)</title>
+  <meta name="description" content="A philosophical inquiry into the nature, origin, and eternity of consciousness by Trevor Swistchew. Examining why consciousness has no starting point, the hard problem of matter, panpsychism, cosmopsychism, and the Ground of Being.">
+  <link rel="canonical" href="https://theshadyriverbard.com/trevor-swistchew/essays/examining-consciousness/">
+
+  <!-- Open Graph Meta -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Examining Consciousness — Trevor Swistchew (2026)">
+  <meta property="og:description" content="A philosophical inquiry into the nature, origin, and eternity of consciousness by Trevor Swistchew. Examining why consciousness has no starting point, the hard problem of matter, panpsychism, cosmopsychism, and the Ground of Being.">
+  <meta property="og:image" content="https://theshadyriverbard.com/trevor-swistchew/assets/images/examining-consciousness-banner.jpg">
+  <meta property="og:url" content="https://theshadyriverbard.com/trevor-swistchew/essays/examining-consciousness/">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            peat: {
+              950: '#0c0b0a',
+              900: '#121110',
+              850: '#181614',
+              800: '#1f1c19',
+              700: '#2b2723',
+              600: '#3d3731',
+            },
+            parchment: {
+              50: '#fdfbf7',
+              100: '#f7f4ed',
+              200: '#efeae0',
+              300: '#e5ded2',
+              400: '#d8cdbe',
+              500: '#c5b8a5',
+            },
+            brass: {
+              400: '#dfbe75',
+              500: '#c5a059',
+              600: '#a6823c',
+              700: '#846427',
+            },
+            thistle: {
+              600: '#9d2b45',
+              700: '#7e2035',
+            },
+            loch: {
+              400: '#38bdf8',
+              700: '#0369a1',
+              900: '#0c4a6e',
+            }
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Lora', 'Georgia', 'serif'],
+            display: ['"Playfair Display"', 'Cinzel', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Accessibility & Salon Theme Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/a11y.css">
+  <link rel="stylesheet" href="../../assets/css/salon-theme.css">
+</head>
+
+<body class="selection:bg-brass-500 selection:text-peat-950 min-h-screen flex flex-col justify-between bg-stone-950 text-stone-200">
+
+  <!-- 1. WCAG Skip Link -->
+  <a href="#main-content" class="a11y-skip-link">Skip to Essay Content</a>
+
+  <!-- 2. Reading Progress Bar -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- 3. Top Sticky Reading Utility & Salon Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-900/90 border-b border-stone-800/80 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      
+      <!-- Salon Brand / Return Link -->
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2.5 text-stone-300 hover:text-amber-400 group transition-colors">
+          <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
+          <div class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:block">
+            Trevor Swistchew <span class="text-stone-500 font-sans font-normal mx-1">|</span> <span class="text-stone-400">Compendium Archive</span>
+          </div>
+        </a>
+        <a href="https://theshadyriverbard.com/" class="hidden md:flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 text-[11px] font-mono transition-colors" title="Visit The Shady River Bard Portal">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Center / Right Utilities: Theme & Font Controls -->
+      <div class="flex items-center gap-2 sm:gap-4">
+        <!-- Tri-State Theme Switcher -->
+        <div class="flex items-center bg-stone-950/80 border border-stone-800 rounded-lg p-0.5 text-xs text-stone-400" role="group" aria-label="Reading Atmosphere Theme">
+          <button type="button" data-set-theme="dark" class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" title="Peat &amp; Loch (Dark)">
+            <i class="fa-solid fa-moon text-[11px]"></i>
+            <span class="sr-only">Dark Theme</span>
+          </button>
+          <button type="button" data-set-theme="sepia" class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" title="Aged Parchment (Sepia)">
+            <i class="fa-solid fa-scroll text-[11px]"></i>
+            <span class="sr-only">Sepia Theme</span>
+          </button>
+          <button type="button" data-set-theme="light" class="px-2 py-1 rounded hover:text-stone-100 transition-colors flex items-center gap-1" title="Edinburgh Stone (Light)">
+            <i class="fa-solid fa-sun text-[11px]"></i>
+            <span class="sr-only">Light Theme</span>
+          </button>
+        </div>
+
+        <!-- Typography Scaler -->
+        <div class="hidden sm:flex items-center bg-stone-950/80 border border-stone-800 rounded-lg p-0.5 text-xs text-stone-400" role="group" aria-label="Text Size Controls">
+          <button type="button" id="font-size-dec" class="px-2 py-1 hover:text-stone-200 transition-colors" title="Decrease font size" aria-label="Decrease text size">A-</button>
+          <button type="button" id="font-size-reset" class="px-2 py-1 font-bold text-amber-500 hover:text-amber-400 transition-colors" title="Reset font size" aria-label="Reset text size">A</button>
+          <button type="button" id="font-size-inc" class="px-2 py-1 hover:text-stone-200 transition-colors" title="Increase font size" aria-label="Increase text size">A+</button>
+        </div>
+
+        <!-- Return to Compendium Catalog -->
+        <a 
+          href="../../index.html#essays" 
+          class="px-3 py-1.5 rounded-lg border border-stone-700/80 bg-stone-800/90 hover:bg-amber-500 hover:text-stone-950 text-stone-300 text-xs font-mono font-semibold transition-all flex items-center gap-1.5 shadow-sm"
+        >
+          <i class="fa-solid fa-arrow-left text-[10px]"></i>
+          <span>Compendium</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Reading Stage -->
+  <main id="main-content" class="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16 space-y-12 flex-grow w-full min-w-0">
+    
+    <!-- Essay Header / Meta Zone -->
+    <article class="space-y-8" id="essay-reading-wrapper">
+      <header class="space-y-6">
+        
+        <!-- Category Badges & Chronology -->
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="px-2.5 py-1 rounded bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-mono font-bold tracking-wide uppercase">
+            Compendium #47
+          </span>
+          <span class="px-2.5 py-1 rounded bg-stone-800/80 border border-stone-700/50 text-stone-300 text-xs font-mono font-semibold">
+            Philosophy of Mind
+          </span>
+          <span class="px-2.5 py-1 rounded bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 text-xs font-mono font-semibold">
+            Metaphysics &amp; Ontology
+          </span>
+          <span class="px-2.5 py-1 rounded bg-stone-900 border border-stone-800 text-stone-400 text-xs font-mono">
+            Trevor Swistchew &bull; 2026
+          </span>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <div class="space-y-3">
+          <h1 class="font-display text-3xl sm:text-5xl font-extrabold text-stone-100 tracking-tight leading-tight">
+            Examining Consciousness.
+          </h1>
+          <p class="font-serif text-lg sm:text-xl text-stone-400 italic max-w-2xl leading-relaxed">
+            An Inquiry into the Nature, Origin, and Eternity of Awareness: The Hard Problem of Matter, Non-Emergent Models, and the Ground of Being.
+          </p>
+        </div>
+
+        <!-- Author Byline & Meta Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-b border-stone-800/80 text-xs font-mono text-stone-400 py-3">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full border border-amber-500/40 bg-stone-900 flex items-center justify-center text-amber-400 font-cinzel font-bold text-xs shadow">
+              TS
+            </div>
+            <div>
+              <span class="text-stone-200 font-semibold block font-sans">Trevor Swistchew</span>
+              <span class="text-[11px] text-stone-500">Scottish Essayist, Cultural Critic &amp; Philosopher</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 text-[11px]">
+            <span><i class="fa-regular fa-clock text-amber-500 mr-1.5"></i><span id="metric-read-time">4 min read</span></span>
+            <span><i class="fa-solid fa-feather text-amber-500 mr-1.5"></i><span id="metric-word-count">730 words</span></span>
+            <span><i class="fa-solid fa-certificate text-amber-500 mr-1.5"></i>6 Metaphysical Traditions</span>
+          </div>
+        </div>
+
+        <!-- Hero Fine-Art Banner Image -->
+        <figure class="pt-4 space-y-2">
+          <div class="aspect-video w-full rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl relative bg-peat-950">
+            <img 
+              src="../../assets/images/examining-consciousness-banner.jpg" 
+              alt="Fine-art chiaroscuro oil painting depicting a philosopher in his study holding a radiant orb of pure consciousness, with stone walls opening into an infinite cosmic ocean of glowing stars, nebulae, and luminous droplets of Being" 
+              class="w-full h-full object-cover" 
+              loading="eager"
+            />
+          </div>
+          <figcaption class="text-center text-xs text-stone-400 font-serif italic pt-1">
+            The Cosmic Ground of Being: The philosopher at his desk, where individual awareness and the infinite celestial ocean converge in timeless unity.
+          </figcaption>
+        </figure>
+
+        <!-- Epigraph -->
+        <blockquote class="p-4 sm:p-5 rounded-xl bg-peat-900/80 border-l-4 border-amber-500 text-stone-300 font-serif italic text-sm sm:text-base leading-relaxed">
+          &ldquo;Consciousness doesn’t come from matter &mdash; matter comes from consciousness... God does not have consciousness &mdash; God is consciousness. Creation is an expression of consciousness.&rdquo; &mdash; Trevor Swistchew
+        </blockquote>
+
+      </header>
+
+      <!-- INTERACTIVE CONTEXTUAL DOSSIER -->
+      <section class="my-10 p-6 rounded-2xl bg-stone-900/90 border border-amber-500/30 shadow-2xl backdrop-blur-sm" aria-labelledby="dossier-heading-consciousness" data-dossier-tabs>
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-white/10">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-sm">
+              <i class="fa-solid fa-infinity"></i>
+            </span>
+            <div>
+              <h3 id="dossier-heading-consciousness" class="font-cinzel font-bold text-base sm:text-lg text-amber-300">
+                Philosophical Dossier: The Origin &amp; Primacy of Consciousness
+              </h3>
+              <span class="text-[11px] font-mono text-stone-400">The Explanatory Gap, Non-Emergent Metaphysics, and the Deduction of the Ground of Being</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5" role="tablist">
+            <button role="tab" aria-selected="true" aria-controls="panel-hard-problem" id="tab-hard-problem" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-amber-500 bg-amber-500/10 text-amber-400 font-bold">
+              <span>The Explanatory Gap</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">Hard Problem</span>
+            </button>
+            <button role="tab" aria-selected="false" aria-controls="panel-divine-source" id="tab-divine-source" class="dossier-tab-btn px-3 py-1.5 rounded-lg border text-xs font-mono transition-all flex items-center gap-1.5 border-transparent text-stone-400 hover:text-stone-200 hover:border-stone-700">
+              <span>The Divine Source</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 border border-white/5">The Ground of Being</span>
+            </button>
+          </div>
+        </div>
+        
+        <div class="min-h-[140px]">
+          <div id="panel-hard-problem" role="tabpanel" aria-labelledby="tab-hard-problem" class="dossier-tab-panel block space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">Why Materialism Cannot Derive Awareness from Matter</h4>
+            <p class="text-xs text-stone-300 leading-relaxed">
+              Swistchew identifies why conventional physicalism stalls at an explanatory impasse: neuroscience tracks neural correlates (NCCs), but cannot bridge the 'Hard Problem' (David Chalmers) of why subjective phenomenal experience exists at all. Emergent theories merely push the mystery back one step. When consciousness is recognized as an uncreated, intrinsic primitive—like mass, charge, or the laws of logic—the search for a temporal starting point dissolves as a category mistake.
+            </p>
+          </div>
+          <div id="panel-divine-source" role="tabpanel" aria-labelledby="tab-divine-source" class="dossier-tab-panel hidden space-y-3">
+            <h4 class="font-cinzel font-bold text-amber-300 text-sm mb-2">The Deductive Logic of the Ultimate Cause</h4>
+            <p class="text-xs text-stone-300 leading-relaxed">
+              The essay presents a rigorous deductive proof: A cause can only produce effects that flow from its own nature. If an ultimate conscious Cause / Deity creates reality, it cannot impart properties it does not possess. Therefore, consciousness is not a late, accidental biological byproduct; it is woven into the very fabric of creation. This is the shared bedrock of Classical Theism (Aquinas), Advaita Vedanta (Brahman as <em>Sat-Chit-Ananda</em>), and Sufism (the Oneness of Being).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ESSAY BODY TEXT -->
+      <div id="essay-article" class="prose prose-invert prose-stone max-w-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg">
+        
+        <p class="first-letter:font-cinzel first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:text-amber-500 first-letter:leading-none text-stone-200 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          No one has ever explained the origin of consciousness. This suggests it is eternal, as there is no starting point known to man.<a href="#ref-1" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[1]</a> The idea that consciousness might be eternal arises because every attempt to pinpoint a definitive &ldquo;starting point&rdquo; runs into conceptual dead ends. It doesn’t mean the question is unanswerable &mdash; it means we’re still missing pieces.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Here’s a clearer way to frame the landscape:
+        </p>
+
+        <!-- SECTION 1: SCIENCE HAS NO STARTING POINT -->
+        <div class="my-8 p-6 sm:p-7 rounded-2xl bg-stone-900/90 border border-amber-500/30 shadow-lg space-y-4">
+          <h2 class="font-cinzel text-lg sm:text-xl font-bold text-amber-300 flex items-center gap-2">
+            <i class="fa-solid fa-atom text-amber-500 text-base"></i>
+            Science has no confirmed starting point for consciousness
+          </h2>
+          <p class="text-stone-300 text-sm sm:text-base leading-relaxed">
+            Neuroscience can describe how conscious states correlate with brain activity, but it cannot yet explain:<a href="#ref-1" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[1]</a>
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-stone-300 text-sm sm:text-base font-sans">
+            <li><strong>Why subjective experience exists at all</strong></li>
+            <li><strong>When consciousness first emerged in evolution</strong></li>
+            <li><strong>Whether consciousness is a product of matter or something more fundamental</strong></li>
+          </ul>
+          <p class="text-stone-400 text-xs sm:text-sm font-sans pt-1">
+            This gap is what fuels the idea that consciousness might not have a beginning in the conventional sense.
+          </p>
+        </div>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Several theories actually allow for an &ldquo;eternal&rdquo; consciousness &mdash; not in a mystical sense, but in a structural, metaphysical, or physical sense:<a href="#ref-2" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[2]</a>
+        </p>
+
+        <!-- THE FOUR NON-EMERGENT MODELS GRID -->
+        <div class="my-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-5 rounded-xl bg-stone-950/80 border border-stone-800 space-y-2 hover:border-amber-500/40 transition-colors">
+            <div class="flex items-center gap-2 text-amber-400 font-mono font-bold text-xs uppercase">
+              <i class="fa-solid fa-brain"></i>
+              <span>1. Panpsychism</span>
+            </div>
+            <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-sans">
+              Suggests consciousness is a fundamental property of the universe, like mass or charge.<a href="#ref-2" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[2]</a> If true, consciousness didn’t &ldquo;start&rdquo; &mdash; it was always part of reality.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-stone-950/80 border border-stone-800 space-y-2 hover:border-amber-500/40 transition-colors">
+            <div class="flex items-center gap-2 text-amber-400 font-mono font-bold text-xs uppercase">
+              <i class="fa-solid fa-eye"></i>
+              <span>2. Idealism</span>
+            </div>
+            <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-sans">
+              Proposes that consciousness is primary and matter emerges from it.<a href="#ref-6" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[6]</a> In this view, consciousness is not created &mdash; it is the ground of existence.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-stone-950/80 border border-stone-800 space-y-2 hover:border-amber-500/40 transition-colors">
+            <div class="flex items-center gap-2 text-amber-400 font-mono font-bold text-xs uppercase">
+              <i class="fa-solid fa-wave-square"></i>
+              <span>3. Quantum-Based Theories</span>
+            </div>
+            <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-sans">
+              Some interpretations of quantum mechanics imply that observation or awareness is woven into the very fabric of physical reality.<a href="#ref-6" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[6]</a>
+            </p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-stone-950/80 border border-stone-800 space-y-2 hover:border-amber-500/40 transition-colors">
+            <div class="flex items-center gap-2 text-amber-400 font-mono font-bold text-xs uppercase">
+              <i class="fa-solid fa-water"></i>
+              <span>4. Cosmopsychism</span>
+            </div>
+            <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-sans">
+              The universe itself is conscious, and individual minds are fragments of a larger whole &mdash; like the ocean is comprised of billions of globules of water. Consciousness is as old as the cosmos.
+            </p>
+          </div>
+        </div>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          Biological theories don’t solve the &ldquo;origin&rdquo; problem either. Even if consciousness emerged from complex brains: When did it first appear? Why did it appear? How does matter produce subjective experience? None of these have definitive answers. So even the scientific &ldquo;emergent&rdquo; view doesn’t give a starting point &mdash; it just pushes the mystery back a step.
+        </p>
+
+        <!-- THE OPEN DOOR CALLOUT -->
+        <div class="my-8 p-6 sm:p-7 rounded-2xl bg-peat-900/80 border-l-4 border-amber-500 space-y-3">
+          <h3 class="font-cinzel text-base sm:text-lg font-bold text-amber-300">
+            The absence of a known starting point doesn’t prove eternity &mdash; but it keeps the door wide open
+          </h3>
+          <p class="text-stone-300 text-sm sm:text-base leading-relaxed">
+            It simply means:
+          </p>
+          <ul class="list-disc pl-6 space-y-1.5 text-stone-300 text-xs sm:text-sm font-sans">
+            <li>We don’t know.</li>
+            <li>We may not yet have the conceptual tools to know.</li>
+            <li>Consciousness might not fit neatly into time-bound categories like &ldquo;beginning&rdquo; and &ldquo;end.&rdquo;</li>
+            <li>It could be a fundamental feature of reality &mdash; a process that emerges repeatedly, or something outside linear time, or something we haven’t conceptualized yet.</li>
+          </ul>
+        </div>
+
+        <!-- CATEGORY CALLOUT: THINGS THAT DO NOT START -->
+        <div class="my-10 p-6 sm:p-8 rounded-2xl bg-stone-900/90 border border-amber-500/40 text-center shadow-xl space-y-2">
+          <p class="font-cinzel text-xs uppercase tracking-widest text-amber-400 font-bold">
+            The Ontological Category
+          </p>
+          <p class="font-serif text-xl sm:text-2xl text-stone-100 italic font-semibold max-w-2xl mx-auto leading-relaxed">
+            &ldquo;The real issue: consciousness might not be the kind of thing that has a beginning. Some phenomena &mdash; like numbers, logic, or the laws of physics &mdash; don’t 'start.' They just are. Consciousness might belong to that category.&rdquo;
+          </p>
+        </div>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          If a Deity created everything, it infers that the Deity incorporated its creation with its own nature &mdash; and that nature is consciousness itself.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          If a deity creates everything, then nothing can exist outside that deity’s nature.<a href="#ref-3" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[3]</a> This is simple logic. A cause can only produce effects that flow from its own nature. If a deity is the ultimate cause, then everything that exists must in some way reflect or participate in that nature &mdash; otherwise the deity would be creating something from properties it does not possess, which is incoherent.
+        </p>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          If the deity is conscious, then consciousness must be woven into creation. This follows naturally: if the source is conscious and created all things, then consciousness is not an accidental byproduct &mdash; it is a fundamental ingredient.
+        </p>
+
+        <!-- THE FIVE METAPHYSICAL TRADITIONS -->
+        <div class="my-8 p-6 sm:p-8 rounded-2xl bg-stone-900/90 border border-amber-500/30 shadow-xl space-y-4">
+          <div class="text-xs font-mono uppercase tracking-widest text-amber-400 font-bold mb-1">
+            The Concordance of Classical Philosophy
+          </div>
+          <p class="font-serif text-base sm:text-lg text-stone-200 leading-relaxed">
+            This is exactly the reasoning behind:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 font-sans text-xs sm:text-sm">
+            <div class="p-3 rounded-lg bg-stone-950/60 border border-stone-800">
+              <strong class="text-amber-400 block font-cinzel">Classical Theism</strong>
+              <span class="text-stone-300">Aquinas and Augustine: God as Pure Actuality and Universal Intellect.<a href="#ref-3" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[3]</a></span>
+            </div>
+            <div class="p-3 rounded-lg bg-stone-950/60 border border-stone-800">
+              <strong class="text-amber-400 block font-cinzel">Vedanta</strong>
+              <span class="text-stone-300">Brahman as <em>Sat-Chit-Ananda</em> &mdash; pure, undivided consciousness.<a href="#ref-4" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[4]</a></span>
+            </div>
+            <div class="p-3 rounded-lg bg-stone-950/60 border border-stone-800">
+              <strong class="text-amber-400 block font-cinzel">Sufi Metaphysics</strong>
+              <span class="text-stone-300">Ibn Arabi: God as the only true, singular Consciousness.<a href="#ref-5" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[5]</a></span>
+            </div>
+            <div class="p-3 rounded-lg bg-stone-950/60 border border-stone-800">
+              <strong class="text-amber-400 block font-cinzel">Panentheism &amp; Idealism</strong>
+              <span class="text-stone-300">The cosmos exists within the Divine Mind; reality is mental at its root.</span>
+            </div>
+          </div>
+          <p class="font-serif italic text-amber-300 text-sm sm:text-base pt-2">
+            In all these systems, consciousness is not something that emerges &mdash; it is something that is.
+          </p>
+        </div>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          This leads to a profound idea: <strong>consciousness is not created &mdash; it is fundamental.</strong> If consciousness is part of the deity’s nature, and the deity is eternal, then:
+        </p>
+
+        <ul class="list-disc pl-6 space-y-2 text-stone-200 text-base sm:text-lg font-serif mb-6">
+          <li><strong>Consciousness has no beginning.</strong></li>
+          <li><strong>Consciousness is not contingent.</strong></li>
+          <li><strong>Consciousness is the ground of being.</strong></li>
+        </ul>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          This is why traditions say:
+        </p>
+
+        <!-- SACRED AXIOMS BLOCKQUOTE -->
+        <div class="my-6 p-5 sm:p-6 rounded-xl bg-peat-900/90 border-l-4 border-amber-500 font-serif text-stone-100 text-lg sm:text-xl space-y-2">
+          <p class="italic text-amber-300 font-semibold">&ldquo;God does not have consciousness &mdash; God is consciousness.&rdquo;</p>
+          <p class="italic text-stone-200">&ldquo;Creation is an expression of consciousness.&rdquo;</p>
+        </div>
+
+        <!-- RESOLVING THE ORIGIN PROBLEM CALLOUT -->
+        <div class="my-10 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-peat-900 via-amber-950/30 to-peat-900 border border-amber-500/50 text-center shadow-2xl space-y-3">
+          <p class="font-cinzel text-xs uppercase tracking-widest text-amber-400 font-bold">
+            The Ontological Reversal
+          </p>
+          <p class="font-serif text-2xl sm:text-3xl text-stone-100 font-bold italic leading-snug">
+            &ldquo;Consciousness doesn’t come from matter &mdash; matter comes from consciousness.&rdquo;
+          </p>
+          <p class="text-xs sm:text-sm text-stone-300 font-sans max-w-xl mx-auto pt-2 leading-relaxed">
+            This view avoids the &ldquo;origin of consciousness&rdquo; problem entirely. Materialist explanations struggle because they try to derive consciousness from non-conscious matter.
+          </p>
+        </div>
+
+        <p class="text-stone-300 font-serif leading-relaxed text-base sm:text-lg mb-6">
+          This aligns with idealism, cosmopsychism, mystical traditions, plus interpretations of quantum theory.<a href="#ref-6" class="footnote-ref text-amber-400 font-mono text-xs hover:underline ml-1">[6]</a>
+        </p>
+
+        <p class="text-stone-100 font-serif leading-relaxed text-xl sm:text-2xl font-bold italic mb-6 text-center text-amber-300">
+          It also explains why no one has found a &ldquo;starting point&rdquo; for consciousness &mdash; because there isn’t one.
+        </p>
+
+        <p class="pt-6 font-mono text-xs text-stone-500 uppercase tracking-widest text-right">
+          &copy; 2026 Trevor Swistchew. All rights reserved.
+        </p>
+
+      </div>
+
+      <!-- FOOTER & CITATIONS -->
+      <footer class="mt-20 pt-10 border-t border-stone-800 text-xs text-stone-400 font-sans" aria-labelledby="notes-heading-consciousness">
+        <div class="flex items-center gap-2 mb-6 text-stone-300">
+          <i class="fa-solid fa-book-bookmark text-amber-500 text-sm"></i>
+          <h3 id="notes-heading-consciousness" class="font-cinzel font-bold text-sm tracking-wider uppercase">
+            Scholarly &amp; Metaphysical Citations
+          </h3>
+        </div>
+        
+        <ol class="space-y-4 list-none pl-0">
+          <li id="ref-1" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[1]</span>
+            <span>David J. Chalmers (1995), <em>Facing Up to the Problem of Consciousness</em>, Journal of Consciousness Studies 2(3): 200–219; and <em>The Conscious Mind: In Search of a Fundamental Theory</em> (Oxford University Press, 1996). Formulating the 'Hard Problem': explaining why physical cognitive processing should be accompanied by subjective phenomenal experience (qualia).</span>
+          </li>
+          
+          <li id="ref-2" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[2]</span>
+            <span>Philip Goff (2019), <em>Galileo's Error: Foundations for a New Science of Consciousness</em> (Pantheon); and Bernardo Kastrup (2019), <em>The Idea of the World: A Multi-Disciplinary Argument for the Mental Nature of Reality</em> (Iff Books). Formulating modern Panpsychism and Analytic Idealism, wherein consciousness is treated as the uncreated, ontological ground of the cosmos rather than an emergent biological novelty.</span>
+          </li>
+
+          <li id="ref-3" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[3]</span>
+            <span>Thomas Aquinas, <em>Summa Theologiae</em>, Prima Pars, Questions 3 &amp; 14. Defining God as <em>Ipsum Esse Subsistens</em> (Subsistent Being Itself) and Pure Actuality. Because God is the first uncaused cause possessing supreme intellect, creation necessarily reflects and participates in divine Being and Mind.</span>
+          </li>
+
+          <li id="ref-4" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[4]</span>
+            <span>Adi Shankara, <em>Brahma Sutra Bhasya</em>; and <em>The Mandukya Upanishad</em>. Advaita Vedanta metaphysics establishing <em>Brahman</em> as <em>Sat-Chit-Ananda</em> (Eternal Existence, Pure Consciousness, Infinite Bliss). Consciousness is uncreated, non-dual, beginningless (<em>anadi</em>), and the substratum upon which all material appearances arise.</span>
+          </li>
+
+          <li id="ref-5" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[5]</span>
+            <span>Ibn Arabi (1165–1240), <em>Fusus al-Hikam</em> (The Bezels of Wisdom) and <em>Al-Futuhat al-Makkiyya</em>. The doctrine of <em>Wahdat al-Wujud</em> (The Oneness of Being): Ultimate Reality is one divine Consciousness, and the multiplicity of creation is the self-disclosure of that singular Divine Reality.</span>
+          </li>
+
+          <li id="ref-6" class="pl-4 border-l-2 border-stone-800 hover:border-amber-500 transition-colors">
+            <span class="font-mono text-amber-500 font-bold mr-1">[6]</span>
+            <span>Max Planck (1931), interview in <em>The Observer</em> (London, 25 January 1931): <em>&ldquo;I regard consciousness as fundamental. I regard matter as derivative from consciousness. We cannot get behind consciousness. Everything that we talk about, everything that we regard as existing, postulates consciousness.&rdquo;</em></span>
+          </li>
+        </ol>
+
+        <!-- Creative Fellowship CTA -->
+        <div class="mt-12 p-6 rounded-2xl bg-gradient-to-br from-peat-900 to-peat-950 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="space-y-1 text-center sm:text-left">
+            <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold">Creative Fellowship</span>
+            <h4 class="font-cinzel text-lg font-bold text-white">The Shady River Bard Creative Ecosystem</h4>
+            <p class="text-xs text-stone-300 max-w-xl">
+              Trevor Swistchew's essays, philosophy of mind, metaphysics, and collected poetry are published in fellowship with The Shady River Bard—exploring the nature of consciousness, constitutional jurisprudence, working permaculture, and a 66-track companion song vault.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <a href="../../music/index.html" class="px-4 py-2.5 rounded-xl bg-stone-800 hover:bg-stone-700 text-amber-400 border border-stone-700 font-cinzel font-bold text-xs uppercase tracking-wider transition-colors shadow-md flex items-center gap-1.5">
+              <i class="fa-solid fa-guitar text-[11px]"></i>
+              <span>Music Chamber (66 Tracks)</span>
+            </a>
+            <a href="https://theshadyriverbard.com/" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-peat-950 font-cinzel font-bold text-xs uppercase tracking-wider transition-colors shadow-lg flex items-center gap-1.5">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              <span>The Shady River Bard</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+
+    </article>
+  </main>
+
+  <!-- Reading Experience Controller Script -->
+  <script src="../../assets/js/reading-experience.js"></script>
+</body>
+</html>
