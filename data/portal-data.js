@@ -620,6 +620,14 @@ window.PORTAL_DATA = {
   },
   "chronicles": [
     {
+      "title": "The Liner Notes: Lexington Lights Out",
+      "date": "September 28, 2026",
+      "category": "Track Notes: The Hollow Herd",
+      "summary": "Track 12 from the album The Hollow Herd — examining meatpacking plant shutdowns, monopoly ghost towns, and the fragile efficiency of corporate supply chains.",
+      "url": "https://theshadyriverbard.substack.com/p/the-liner-notes-lexington-lights",
+      "image": "https://substackcdn.com/image/youtube/w_728,c_limit/yWEMEv2a_KQ"
+    },
+    {
       "title": "The Man Who Could Not Be Wrong",
       "date": "September 12, 2026",
       "category": "Essay & Analysis",

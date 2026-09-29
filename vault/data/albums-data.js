@@ -1723,7 +1723,7 @@ window.CATALOG_DATA = {
         "0mAQISa2OJc",
         "kdK-Bsmthf4",
         "q3XmJh_8w1c",
-        "rStwPSn1liw",
+        "yWEMEv2a_KQ",
         "VEiO1ltNIM0",
         "_xMoO4l_3YA",
         "lKEwMQZT6mU"
@@ -1744,7 +1744,7 @@ window.CATALOG_DATA = {
         "https://theshadyriverbard.substack.com/p/the-liner-notes-the-rio-grande-run",
         "https://theshadyriverbard.substack.com/p/the-liner-notes-plum-island-blues",
         "https://theshadyriverbard.substack.com/p/the-liner-notes-buy-and-dry",
-        null,
+        "https://theshadyriverbard.substack.com/p/the-liner-notes-lexington-lights",
         null,
         null,
         null
