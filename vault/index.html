@@ -811,6 +811,9 @@
       if (albumItem.id === 'the-fracture' || albumItem.number === 3) {
         return '../practice.html?song=echoes-in-the-canyon';
       }
+      if (albumItem.id === 'the-poison-we-trust' || albumItem.number === 5) {
+        return '../practice.html?song=the-oath-they-broke';
+      }
       const firstPkg = Object.values(PRACTICE_PACKAGES_BY_SLUG).find(pkg => 
         pkg.albumId === albumItem.id || pkg.albumNumber === albumItem.number || normalizePracticeTitle(pkg.albumId) === normalizePracticeTitle(albumItem.id)
       );
@@ -822,13 +825,13 @@
         if (window.CATALOG || window.BARD_CATALOG || window.DISCOGRAPHY_DATA) {
           catalog = window.CATALOG || window.BARD_CATALOG || window.DISCOGRAPHY_DATA;
         } else {
-          const res = await fetch('data/albums.json?v=20260928_01');
+          const res = await fetch('data/albums.json?v=20260930_01');
           catalog = await res.json();
         }
 
         // Dynamically load any extra practice packages if available
         try {
-          const pRes = await fetch('../data/practice-packages.json?v=20260928_01');
+          const pRes = await fetch('../data/practice-packages.json?v=20260930_01');
           if (pRes.ok) {
             const pData = await pRes.json();
             pData.forEach(p => {
