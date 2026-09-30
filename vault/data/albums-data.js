@@ -1724,7 +1724,7 @@ window.CATALOG_DATA = {
         "kdK-Bsmthf4",
         "q3XmJh_8w1c",
         "yWEMEv2a_KQ",
-        "VEiO1ltNIM0",
+        "8F2LyVnMsCw",
         "_xMoO4l_3YA",
         "lKEwMQZT6mU"
       ],
@@ -1745,7 +1745,7 @@ window.CATALOG_DATA = {
         "https://theshadyriverbard.substack.com/p/the-liner-notes-plum-island-blues",
         "https://theshadyriverbard.substack.com/p/the-liner-notes-buy-and-dry",
         "https://theshadyriverbard.substack.com/p/the-liner-notes-lexington-lights",
-        null,
+        "https://theshadyriverbard.substack.com/p/the-liner-notes-the-prime-act-butchers",
         null,
         null
       ],

@@ -620,6 +620,14 @@ window.PORTAL_DATA = {
   },
   "chronicles": [
     {
+      "title": "The Liner Notes: The Prime Act (Butcher's Prayer)",
+      "date": "September 30, 2026",
+      "category": "Track Notes: The Hollow Herd",
+      "summary": "Track 13 from the album The Hollow Herd — custom slaughterhouse exemptions, local food sovereignty, and breaking the federal meat inspection bottleneck.",
+      "url": "https://theshadyriverbard.substack.com/p/the-liner-notes-the-prime-act-butchers",
+      "image": "https://substackcdn.com/image/youtube/w_728,c_limit/8F2LyVnMsCw"
+    },
+    {
       "title": "The Liner Notes: Lexington Lights Out",
       "date": "September 28, 2026",
       "category": "Track Notes: The Hollow Herd",
