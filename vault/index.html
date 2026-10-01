@@ -799,28 +799,27 @@
 
     function getAlbumPracticeUrl(albumItem) {
       if (!albumItem) return null;
+      let songSlug = '';
       if (albumItem.id === 'the-curtains-and-the-canned-goods' || albumItem.number === 23) {
-        return '../practice.html?song=the-curtains-and-the-canned-goods';
+        songSlug = 'the-curtains-and-the-canned-goods';
+      } else if (albumItem.id === 'quiet-harvest' || albumItem.number === 1) {
+        songSlug = 'the-blues-under-my-nails';
+      } else if (albumItem.id === 'beyond-the-number' || albumItem.number === 2) {
+        songSlug = 'the-invisible-mans-lament';
+      } else if (albumItem.id === 'the-fracture' || albumItem.number === 3) {
+        songSlug = 'echoes-in-the-canyon';
+      } else if (albumItem.id === 'the-poison-we-trust' || albumItem.number === 5) {
+        songSlug = 'the-oath-they-broke';
+      } else if (albumItem.id === 'a-house-divided' || albumItem.number === 6) {
+        songSlug = 'the-roaring-fire';
+      } else {
+        const firstPkg = Object.values(PRACTICE_PACKAGES_BY_SLUG).find(pkg => 
+          pkg.albumId === albumItem.id || pkg.albumNumber === albumItem.number || normalizePracticeTitle(pkg.albumId) === normalizePracticeTitle(albumItem.id)
+        );
+        songSlug = firstPkg ? firstPkg.slug : '';
       }
-      if (albumItem.id === 'quiet-harvest' || albumItem.number === 1) {
-        return '../practice.html?song=the-blues-under-my-nails';
-      }
-      if (albumItem.id === 'beyond-the-number' || albumItem.number === 2) {
-        return '../practice.html?song=the-invisible-mans-lament';
-      }
-      if (albumItem.id === 'the-fracture' || albumItem.number === 3) {
-        return '../practice.html?song=echoes-in-the-canyon';
-      }
-      if (albumItem.id === 'the-poison-we-trust' || albumItem.number === 5) {
-        return '../practice.html?song=the-oath-they-broke';
-      }
-      if (albumItem.id === 'a-house-divided' || albumItem.number === 6) {
-        return '../practice.html?song=the-roaring-fire';
-      }
-      const firstPkg = Object.values(PRACTICE_PACKAGES_BY_SLUG).find(pkg => 
-        pkg.albumId === albumItem.id || pkg.albumNumber === albumItem.number || normalizePracticeTitle(pkg.albumId) === normalizePracticeTitle(albumItem.id)
-      );
-      return firstPkg ? `../practice.html?song=${firstPkg.slug}` : null;
+      if (!songSlug) return null;
+      return `../practice.html?album=${encodeURIComponent(albumItem.id)}&song=${encodeURIComponent(songSlug)}`;
     }
 
     async function init() {
@@ -828,13 +827,13 @@
         if (window.CATALOG || window.BARD_CATALOG || window.DISCOGRAPHY_DATA) {
           catalog = window.CATALOG || window.BARD_CATALOG || window.DISCOGRAPHY_DATA;
         } else {
-          const res = await fetch('data/albums.json?v=20260930_02');
+          const res = await fetch('data/albums.json?v=20260930_03');
           catalog = await res.json();
         }
 
         // Dynamically load any extra practice packages if available
         try {
-          const pRes = await fetch('../data/practice-packages.json?v=20260930_02');
+          const pRes = await fetch('../data/practice-packages.json?v=20260930_03');
           if (pRes.ok) {
             const pData = await pRes.json();
             pData.forEach(p => {
@@ -1356,7 +1355,7 @@
                 <span class="bard-note-tooltip">Drop a note to the bard</span>
               </button>
               ${practiceSlug ? `
-                <a href="../practice.html?song=${practiceSlug}" target="_blank" rel="noopener noreferrer" aria-label="Practice ${tr.replace(/"/g, '&quot;')} with audio stems & chords (opens in new tab)" class="text-[11px] font-mono text-emerald-400 hover:text-emerald-300 bg-emerald-950/80 hover:bg-emerald-900/90 border border-emerald-700/50 flex items-center gap-1.5 rounded-md px-2 py-1 transition-colors shadow-sm focus-visible:ring-1 focus-visible:ring-emerald-400 shrink-0" title="Practice Mode: Audio Stems & Interactive Chords">
+                <a href="../practice.html?album=${encodeURIComponent(item.id)}&song=${encodeURIComponent(practiceSlug)}" target="_blank" rel="noopener noreferrer" aria-label="Practice ${tr.replace(/"/g, '&quot;')} with audio stems & chords (opens in new tab)" class="text-[11px] font-mono text-emerald-400 hover:text-emerald-300 bg-emerald-950/80 hover:bg-emerald-900/90 border border-emerald-700/50 flex items-center gap-1.5 rounded-md px-2 py-1 transition-colors shadow-sm focus-visible:ring-1 focus-visible:ring-emerald-400 shrink-0" title="Practice Mode: Audio Stems & Interactive Chords">
                   <svg class="w-3 h-3 fill-none stroke-current shrink-0" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
                   <span>Practice ↗</span>
                 </a>

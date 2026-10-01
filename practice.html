@@ -78,15 +78,26 @@
         </div>
       </div>
 
-      <!-- Action Toolbar (Package Picker, Key/Transpose, TV Mode, Help) -->
-      <div class="flex items-center gap-2.5 shrink-0">
+      <!-- Action Toolbar (Album Filter, Song Selector, Key/Transpose, TV Mode, Help) -->
+      <div class="flex items-center gap-2 shrink-0">
         
-        <!-- Package Selector Dropdown -->
-        <div class="relative hidden sm:block">
-          <select id="package-selector" class="pl-2.5 pr-8 py-1.5 rounded-lg bg-stone-900 border border-stone-800 text-stone-200 text-xs font-mono focus:outline-none focus:border-amber-500 transition-colors appearance-none cursor-pointer" aria-label="Select Practice Song">
-            <option value="a-different-kind-of-love">A Different Kind of Love</option>
-          </select>
-          <i class="fa-solid fa-chevron-down absolute right-2.5 top-1/2 -translate-y-1/2 text-stone-500 text-[10px] pointer-events-none"></i>
+        <!-- Desktop/Tablet Album Filter & Song Selector -->
+        <div class="hidden sm:flex items-center gap-1.5">
+          <!-- Album Filter Dropdown -->
+          <div class="relative">
+            <select id="album-filter" class="max-w-[130px] sm:max-w-[170px] md:max-w-[210px] pl-2.5 pr-7 py-1.5 rounded-lg bg-stone-900 border border-stone-800 hover:border-stone-700 text-amber-400 text-xs font-mono font-semibold focus:outline-none focus:border-amber-500 transition-colors appearance-none cursor-pointer truncate shadow-sm" aria-label="Filter Songs by Album" title="Filter songs by album">
+              <option value="all">All Albums</option>
+            </select>
+            <i class="fa-solid fa-chevron-down absolute right-2 top-1/2 -translate-y-1/2 text-stone-500 text-[10px] pointer-events-none"></i>
+          </div>
+
+          <!-- Song Selector Dropdown -->
+          <div class="relative">
+            <select id="package-selector" class="max-w-[150px] sm:max-w-[190px] md:max-w-[250px] pl-2.5 pr-7 py-1.5 rounded-lg bg-stone-900 border border-stone-800 hover:border-stone-700 text-stone-200 text-xs font-mono focus:outline-none focus:border-amber-500 transition-colors appearance-none cursor-pointer truncate shadow-sm" aria-label="Select Practice Song" title="Select song to practice">
+              <option value="a-different-kind-of-love">A Different Kind of Love</option>
+            </select>
+            <i class="fa-solid fa-chevron-down absolute right-2 top-1/2 -translate-y-1/2 text-stone-500 text-[10px] pointer-events-none"></i>
+          </div>
         </div>
 
         <!-- Load Local Folder Button -->
@@ -122,6 +133,28 @@
 
   <!-- Main Practice Stage -->
   <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+
+    <!-- Mobile Album & Song Switcher (< sm only) -->
+    <div class="sm:hidden grid grid-cols-2 gap-2 p-3 rounded-2xl bg-[#14110e] border border-stone-800/80 shadow-md">
+      <div class="space-y-1">
+        <label for="mobile-album-filter" class="text-[10px] font-mono uppercase tracking-wider text-amber-500 font-bold block">Album</label>
+        <div class="relative">
+          <select id="mobile-album-filter" class="w-full pl-2.5 pr-7 py-1.5 rounded-lg bg-stone-900 border border-stone-800 text-amber-400 text-xs font-mono font-semibold appearance-none truncate">
+            <option value="all">All Albums</option>
+          </select>
+          <i class="fa-solid fa-chevron-down absolute right-2 top-1/2 -translate-y-1/2 text-stone-500 text-[10px] pointer-events-none"></i>
+        </div>
+      </div>
+      <div class="space-y-1">
+        <label for="mobile-package-selector" class="text-[10px] font-mono uppercase tracking-wider text-stone-400 font-bold block">Song</label>
+        <div class="relative">
+          <select id="mobile-package-selector" class="w-full pl-2.5 pr-7 py-1.5 rounded-lg bg-stone-900 border border-stone-800 text-stone-200 text-xs font-mono appearance-none truncate">
+            <option value="a-different-kind-of-love">A Different Kind of Love</option>
+          </select>
+          <i class="fa-solid fa-chevron-down absolute right-2 top-1/2 -translate-y-1/2 text-stone-500 text-[10px] pointer-events-none"></i>
+        </div>
+      </div>
+    </div>
 
     <!-- Top Track Info & Quick Presets -->
     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 rounded-2xl bg-[#14110e] border border-stone-800/80 shadow-xl">
@@ -492,6 +525,6 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/practice.js?v=20260930B"></script>
+  <script src="assets/js/practice.js?v=20260930C"></script>
 </body>
 </html>

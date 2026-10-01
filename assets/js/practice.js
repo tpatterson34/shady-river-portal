@@ -30,6 +30,7 @@
     transposition: 0, // Semitones (-6 to +6)
     originalKey: 'A',
     currentKey: 'A',
+    currentAlbumFilter: 'all',
     currentPackage: null,
     allPackages: [],
     tabBlocks: [],
@@ -123,7 +124,10 @@
     els.transposeVal = document.getElementById('val-transpose');
     els.keyVal = document.getElementById('val-key');
 
+    els.albumFilter = document.getElementById('album-filter');
     els.packageSelector = document.getElementById('package-selector');
+    els.mobileAlbumFilter = document.getElementById('mobile-album-filter');
+    els.mobilePackageSelector = document.getElementById('mobile-package-selector');
     els.btnOpenFolder = document.getElementById('btn-open-folder');
     els.folderInput = document.getElementById('folder-input');
     els.loadingOverlay = document.getElementById('loading-overlay');
@@ -276,8 +280,16 @@
     if (els.packageSelector && pkg.id) {
       els.packageSelector.value = pkg.id;
     }
+    if (els.mobilePackageSelector && pkg.id) {
+      els.mobilePackageSelector.value = pkg.id;
+    }
     if (window.history && window.history.replaceState && pkg.id) {
       const url = new URL(window.location);
+      if (state.currentAlbumFilter && state.currentAlbumFilter !== 'all') {
+        url.searchParams.set('album', state.currentAlbumFilter);
+      } else {
+        url.searchParams.delete('album');
+      }
       url.searchParams.set('song', pkg.id);
       window.history.replaceState({}, '', url);
     }
@@ -1391,6 +1403,123 @@
     }, 2800);
   }
 
+  // --- ALBUM & SONG DROPDOWN HELPERS ---
+  function normalizePracticeTitle(t) {
+    return (t || '').toLowerCase().replace(/^(the|a|an)\s+/i, '').replace(/[^a-z0-9]/g, '');
+  }
+
+  function getUniqueAlbums(packages) {
+    const albumsMap = new Map();
+    packages.forEach(p => {
+      const albId = p.album_id || (p.album ? p.album.toLowerCase().replace(/[^a-z0-9]+/g, '-') : 'unknown');
+      const albNum = p.album_number || (p.album && p.album.match(/Album\s+(\d+)/i) ? parseInt(p.album.match(/Album\s+(\d+)/i)[1], 10) : 999);
+      const albTitle = p.album || 'Unknown Album';
+      if (!albumsMap.has(albId)) {
+        albumsMap.set(albId, {
+          albumId: albId,
+          albumNumber: albNum,
+          albumTitle: albTitle,
+          count: 0
+        });
+      }
+      albumsMap.get(albId).count++;
+    });
+    return Array.from(albumsMap.values()).sort((a, b) => a.albumNumber - b.albumNumber);
+  }
+
+  function populateAlbumDropdowns(albums) {
+    const totalCount = state.allPackages.length;
+    const optionsHtml = `<option value="all">All Albums (${totalCount})</option>` + 
+      albums.map(a => `<option value="${a.albumId}">${escapeHtml(a.albumTitle)} (${a.count})</option>`).join('');
+
+    [els.albumFilter, els.mobileAlbumFilter].forEach(sel => {
+      if (sel) {
+        sel.innerHTML = optionsHtml;
+        sel.value = state.currentAlbumFilter;
+      }
+    });
+  }
+
+  function populateSongDropdowns(selectedSongId) {
+    const isFiltered = state.currentAlbumFilter && state.currentAlbumFilter !== 'all';
+    const filteredPkgs = isFiltered
+      ? state.allPackages.filter(p => (
+          p.album_id === state.currentAlbumFilter || 
+          String(p.album_number) === state.currentAlbumFilter || 
+          normalizePracticeTitle(p.album_id) === normalizePracticeTitle(state.currentAlbumFilter)
+        ))
+      : state.allPackages;
+
+    let html = '';
+    if (isFiltered) {
+      html = filteredPkgs.map(p => {
+        const trackNum = p.track_number ? `${String(p.track_number).padStart(2, '0')}. ` : '';
+        return `<option value="${p.id}">${trackNum}${escapeHtml(p.title)}</option>`;
+      }).join('');
+    } else {
+      const albumsMap = new Map();
+      state.allPackages.forEach(p => {
+        const albTitle = p.album || 'Other Songs';
+        if (!albumsMap.has(albTitle)) albumsMap.set(albTitle, []);
+        albumsMap.get(albTitle).push(p);
+      });
+      albumsMap.forEach((songs, albTitle) => {
+        html += `<optgroup label="${escapeHtml(albTitle)}">`;
+        html += songs.map(p => {
+          const trackNum = p.track_number ? `${String(p.track_number).padStart(2, '0')}. ` : '';
+          return `<option value="${p.id}">${trackNum}${escapeHtml(p.title)}</option>`;
+        }).join('');
+        html += `</optgroup>`;
+      });
+    }
+
+    const targetId = selectedSongId || (filteredPkgs.length > 0 ? filteredPkgs[0].id : '');
+
+    [els.packageSelector, els.mobilePackageSelector].forEach(sel => {
+      if (sel) {
+        sel.innerHTML = html;
+        if (targetId) sel.value = targetId;
+      }
+    });
+  }
+
+  function onAlbumFilterChange(newAlbumId) {
+    state.currentAlbumFilter = newAlbumId;
+
+    [els.albumFilter, els.mobileAlbumFilter].forEach(sel => {
+      if (sel) sel.value = newAlbumId;
+    });
+
+    const isFiltered = state.currentAlbumFilter && state.currentAlbumFilter !== 'all';
+    const filteredPkgs = isFiltered
+      ? state.allPackages.filter(p => (
+          p.album_id === state.currentAlbumFilter || 
+          String(p.album_number) === state.currentAlbumFilter || 
+          normalizePracticeTitle(p.album_id) === normalizePracticeTitle(state.currentAlbumFilter)
+        ))
+      : state.allPackages;
+
+    let targetSong = filteredPkgs.find(p => p.id === (state.currentPackage ? state.currentPackage.id : null));
+    if (!targetSong && filteredPkgs.length > 0) {
+      targetSong = filteredPkgs[0];
+    }
+
+    populateSongDropdowns(targetSong ? targetSong.id : null);
+
+    if (targetSong && (!state.currentPackage || state.currentPackage.id !== targetSong.id)) {
+      loadPracticePackage(targetSong);
+    } else if (state.currentPackage) {
+      const url = new URL(window.location);
+      if (isFiltered) {
+        url.searchParams.set('album', state.currentAlbumFilter);
+      } else {
+        url.searchParams.delete('album');
+      }
+      url.searchParams.set('song', state.currentPackage.id);
+      window.history.replaceState({}, '', url);
+    }
+  }
+
   // --- INIT ---
   async function init() {
     cacheDom();
@@ -1398,14 +1527,17 @@
 
     // Load available packages
     try {
-      const res = await fetch('data/practice-packages.json?v=20260930_02');
+      const res = await fetch('data/practice-packages.json?v=20260930_03');
       state.allPackages = await res.json();
     } catch (e) {
       console.warn('Could not load practice-packages.json, using bundled package:', e);
       state.allPackages = [{
         id: 'a-different-kind-of-love',
         title: 'A Different Kind of Love',
+        track_number: 1,
         album: "Mama's Boy (Album 13)",
+        album_id: "mamas-boy",
+        album_number: 13,
         key: 'A',
         stems: {
           vocals: 'https://stems.theshadyriverbard.com/a-different-kind-of-love/vocals.mp3',
@@ -1418,25 +1550,71 @@
       }];
     }
 
-    // Populate dropdown
-    if (els.packageSelector && state.allPackages.length > 0) {
-      els.packageSelector.innerHTML = state.allPackages
-        .map(p => `<option value="${p.id}">${escapeHtml(p.title)} (${escapeHtml(p.album)})</option>`)
-        .join('');
+    const albums = getUniqueAlbums(state.allPackages);
 
-      els.packageSelector.addEventListener('change', () => {
-        const found = state.allPackages.find(p => p.id === els.packageSelector.value);
-        if (found) loadPracticePackage(found);
-      });
+    // Load initial package (check URL query param ?album=... and ?song=...)
+    const urlParams = new URLSearchParams(window.location.search);
+    const queryAlbum = urlParams.get('album');
+    const querySong = urlParams.get('song') || urlParams.get('package');
+
+    let initialPkg = null;
+    let initialAlbum = 'all';
+
+    if (querySong) {
+      initialPkg = state.allPackages.find(p => p.id === querySong);
     }
 
-    // Load initial package (check URL query param ?song=... or default to first)
-    const urlParams = new URLSearchParams(window.location.search);
-    const querySong = urlParams.get('song') || urlParams.get('package');
-    const initialPkg = (querySong ? state.allPackages.find(p => p.id === querySong) : null) || state.allPackages[0];
+    if (queryAlbum) {
+      const matchedAlbum = albums.find(a => 
+        a.albumId === queryAlbum || 
+        String(a.albumNumber) === queryAlbum || 
+        normalizePracticeTitle(a.albumId) === normalizePracticeTitle(queryAlbum)
+      );
+      if (matchedAlbum) {
+        initialAlbum = matchedAlbum.albumId;
+      }
+    } else if (initialPkg && initialPkg.album_id) {
+      initialAlbum = initialPkg.album_id;
+    }
+
+    state.currentAlbumFilter = initialAlbum;
+
+    if (!initialPkg) {
+      const filteredPkgs = (initialAlbum !== 'all')
+        ? state.allPackages.filter(p => (
+            p.album_id === initialAlbum || 
+            String(p.album_number) === initialAlbum || 
+            normalizePracticeTitle(p.album_id) === normalizePracticeTitle(initialAlbum)
+          ))
+        : state.allPackages;
+      initialPkg = filteredPkgs[0] || state.allPackages[0];
+    }
+
+    populateAlbumDropdowns(albums);
+    populateSongDropdowns(initialPkg ? initialPkg.id : null);
+
+    // Event listeners for Album Filter
+    [els.albumFilter, els.mobileAlbumFilter].forEach(sel => {
+      if (sel) {
+        sel.addEventListener('change', (e) => onAlbumFilterChange(e.target.value));
+      }
+    });
+
+    // Event listeners for Song Selector
+    [els.packageSelector, els.mobilePackageSelector].forEach(sel => {
+      if (sel) {
+        sel.addEventListener('change', (e) => {
+          const songId = e.target.value;
+          const found = state.allPackages.find(p => p.id === songId);
+          if (found) {
+            [els.packageSelector, els.mobilePackageSelector].forEach(s => { if (s) s.value = songId; });
+            loadPracticePackage(found);
+          }
+        });
+      }
+    });
 
     if (initialPkg) {
-      if (els.packageSelector) els.packageSelector.value = initialPkg.id;
       loadPracticePackage(initialPkg);
     }
   }
