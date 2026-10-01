@@ -457,6 +457,137 @@
     state.allChordsTimeline = [];
 
     const tabLines = tabsTxt ? tabsTxt.split(/\r?\n/) : [];
+
+    // Check if syncData is Measure-Based (has bar_number or beats)
+    const isMeasureBased = Boolean(syncData && syncData.length > 0 && ('bar_number' in syncData[0] || 'beats' in syncData[0]));
+
+    if (isMeasureBased) {
+      // -------------------------------------------------------------
+      // NEW MEASURE-BASED SCHEMA (Album 07+)
+      // -------------------------------------------------------------
+      let barIdx = 0;
+      let i = 0;
+      const n = tabLines.length;
+
+      // Extract BPM & Time Signature from line 0 if present
+      if (tabLines.length > 0 && /BPM:/i.test(tabLines[0])) {
+        const bpmMatch = tabLines[0].match(/BPM:\s*~?(\d+)/i);
+        if (bpmMatch) {
+          state.estimatedBpm = parseInt(bpmMatch[1], 10);
+          if (els.hudTempoBadge) els.hudTempoBadge.textContent = `~${state.estimatedBpm} BPM`;
+        }
+        const timeSigMatch = tabLines[0].match(/(\d+)\/(\d+)\s*Time/i);
+        if (timeSigMatch) {
+          state.timeSignature = parseInt(timeSigMatch[1], 10);
+        }
+      }
+
+      while (i < n) {
+        const line = tabLines[i];
+        const trimmed = line.trim();
+
+        if (!trimmed) {
+          state.tabBlocks.push({ type: 'spacer' });
+          i++;
+          continue;
+        }
+
+        // Section / Metadata Header
+        if (line.startsWith('Key:') || (line.startsWith('[') && line.endsWith(']')) || /BPM:/i.test(line)) {
+          if (line.startsWith('Key:')) {
+            const kMatch = line.match(/Key:\s*([A-Ga-g][b#]?m?)/i);
+            if (kMatch) {
+              state.originalKey = kMatch[1].charAt(0).toUpperCase() + kMatch[1].slice(1);
+              state.currentKey = state.originalKey;
+              if (els.keyVal) els.keyVal.textContent = state.currentKey;
+              renderCapoMenu();
+            }
+          }
+          state.tabBlocks.push({ type: 'header', text: line });
+          i++;
+          continue;
+        }
+
+        // Measure row (contains '|')
+        if (line.includes('|')) {
+          const rawBars = line.split('|').map(s => s.trim()).filter(Boolean);
+          let rowTime = -1.0;
+          const chordTokens = [];
+
+          rawBars.forEach((barStr) => {
+            const barSync = (barIdx < syncData.length) ? syncData[barIdx] : { time: -1.0, chords: [], beats: [] };
+            barIdx++;
+
+            if (rowTime < 0 && barSync.time >= 0) {
+              rowTime = barSync.time;
+            }
+
+            const barChords = barStr.split(/\s+/).filter(Boolean);
+            const beats = barSync.beats || [];
+            const bTime = (typeof barSync.time === 'number' && barSync.time >= 0) ? barSync.time : -1.0;
+
+            barChords.forEach((chordName, cIdx) => {
+              let cTime = bTime;
+              if (beats.length > 0 && barChords.length > 1) {
+                const beatPos = Math.floor(cIdx * (beats.length / barChords.length));
+                cTime = beats[beatPos] !== undefined ? beats[beatPos] : bTime;
+              }
+
+              const tok = {
+                chord: chordName,
+                originalChord: chordName,
+                time: cTime,
+                barNumber: barSync.bar_number
+              };
+              chordTokens.push(tok);
+              state.allChordsTimeline.push(tok);
+            });
+          });
+
+          // Check if subsequent line is the matching lyrics
+          let lyricText = '';
+          let lyricTime = rowTime;
+          if (i + 1 < n) {
+            const nextLine = tabLines[i + 1].trim();
+            if (nextLine && !nextLine.startsWith('[') && !nextLine.startsWith('Key:') && !nextLine.includes('|')) {
+              lyricText = tabLines[i + 1];
+              i += 2;
+            } else {
+              i += 1;
+            }
+          } else {
+            i += 1;
+          }
+
+          state.tabBlocks.push({
+            type: 'row',
+            chordLine: line,
+            chordTokens: chordTokens,
+            lyricLine: lyricText,
+            time: rowTime,
+            lyricTime: lyricTime
+          });
+        } else {
+          // Plain lyric or narrative row
+          state.tabBlocks.push({
+            type: 'row',
+            chordLine: '',
+            chordTokens: [],
+            lyricLine: line,
+            time: -1.0,
+            lyricTime: -1.0
+          });
+          i++;
+        }
+      }
+
+      state.allChordsTimeline.sort((a, b) => a.time - b.time);
+      return;
+    }
+
+    // -------------------------------------------------------------
+    // LEGACY LINE-BY-LINE SCHEMA (Albums 01-06, 13, 23)
+    // -------------------------------------------------------------
     const n = Math.max(tabLines.length, syncData ? syncData.length : 0);
 
     let i = 0;
@@ -593,16 +724,31 @@
           const isInstrumental = !block.lyricLine || !block.lyricLine.trim();
           chordRowHtml = '<div class="tab-chord-line tab-monospace font-bold text-amber-400 text-sm sm:text-base leading-relaxed whitespace-pre select-none">';
 
-          if (isInstrumental) {
-            // Render clean lead-sheet measures with barlines: | A | D | A | D |
-            chordRowHtml += '<span class="text-stone-600 font-normal">| </span>';
+          if (isInstrumental || (block.chordLine && block.chordLine.includes('|'))) {
+            // Render clean lead-sheet measures with barlines
+            let lastBarNum = null;
             block.chordTokens.forEach((tok, tokIdx) => {
               const rawTransposed = transposeChord(tok.originalChord, state.transposition);
               const chordName = state.easyChords ? simplifyChord(rawTransposed) : rawTransposed;
               tok.chord = chordName;
-              chordRowHtml += `<span class="chord-token px-1.5 py-0.5 rounded hover:bg-stone-800" data-time="${tok.time}" data-chord="${chordName}" data-token-idx="${tokIdx}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span>`;
-              chordRowHtml += '<span class="text-stone-600 font-normal"> | </span>';
+
+              if (tok.barNumber !== undefined) {
+                if (tokIdx === 0 || tok.barNumber !== lastBarNum) {
+                  chordRowHtml += '<span class="text-stone-600 font-normal">| </span>';
+                  lastBarNum = tok.barNumber;
+                } else {
+                  chordRowHtml += ' ';
+                }
+                chordRowHtml += `<span class="chord-token px-1.5 py-0.5 rounded hover:bg-stone-800" data-time="${tok.time}" data-chord="${chordName}" data-token-idx="${tokIdx}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span> `;
+              } else {
+                if (tokIdx === 0) chordRowHtml += '<span class="text-stone-600 font-normal">| </span>';
+                chordRowHtml += `<span class="chord-token px-1.5 py-0.5 rounded hover:bg-stone-800" data-time="${tok.time}" data-chord="${chordName}" data-token-idx="${tokIdx}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span>`;
+                chordRowHtml += '<span class="text-stone-600 font-normal"> | </span>';
+              }
             });
+            if (lastBarNum !== null) {
+              chordRowHtml += '<span class="text-stone-600 font-normal">|</span>';
+            }
           } else {
             let lastCol = 0;
             block.chordTokens.forEach((tok, tokIdx) => {
@@ -1855,7 +2001,7 @@
 
     // Load available packages
     try {
-      const res = await fetch('data/practice-packages.json?v=20260930_03');
+      const res = await fetch('data/practice-packages.json?v=20261001_01');
       state.allPackages = await res.json();
     } catch (e) {
       console.warn('Could not load practice-packages.json, using bundled package:', e);
