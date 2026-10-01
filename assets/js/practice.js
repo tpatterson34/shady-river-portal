@@ -27,10 +27,14 @@
     autoScroll: true,
     userScrolled: false,
     tvMode: false,
-    transposition: 0, // Semitones (-6 to +6)
+    transposition: 0, // Semitones (-11 to +11)
     originalKey: 'A',
     currentKey: 'A',
     currentAlbumFilter: 'all',
+    easyChords: false,
+    capoFret: 0,
+    estimatedBpm: 110,
+    timeSignature: 4,
     currentPackage: null,
     allPackages: [],
     tabBlocks: [],

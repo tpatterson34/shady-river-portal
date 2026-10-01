@@ -100,12 +100,30 @@
           </div>
         </div>
 
-        <!-- Load Local Folder Button -->
-        <button id="btn-open-folder" class="px-2.5 py-1.5 rounded-lg bg-stone-900 border border-stone-800 hover:border-amber-500/60 text-stone-300 hover:text-amber-300 text-xs font-mono transition-colors flex items-center gap-1.5" title="Import a local practice package folder from your computer">
-          <i class="fa-solid fa-folder-open text-amber-400 text-[11px]"></i>
-          <span class="hidden lg:inline">Load Folder</span>
+        <!-- Easy / Beginner Chords Toggle -->
+        <button id="btn-easy-chords" class="px-2.5 py-1.5 rounded-lg bg-stone-900 border border-stone-800 hover:border-emerald-500/60 text-stone-300 hover:text-emerald-400 text-xs font-mono transition-colors flex items-center gap-1.5 shadow-sm" title="Easy Chords Mode: Simplifies extensions, strips complex bar chords, and cleans rapid blips for acoustic guitar">
+          <i class="fa-solid fa-wand-magic-sparkles text-emerald-400 text-xs"></i>
+          <span class="hidden md:inline">Easy Chords</span>
         </button>
-        <input type="file" id="folder-input" webkitdirectory directory multiple class="hidden" aria-hidden="true">
+
+        <!-- Capo / Open Chord Helper -->
+        <div class="relative">
+          <button id="btn-capo" class="px-2.5 py-1.5 rounded-lg bg-stone-900 border border-stone-800 hover:border-amber-500/60 text-stone-300 hover:text-amber-300 text-xs font-mono transition-colors flex items-center gap-1.5 shadow-sm" title="Guitar Capo & Open Chord Helper">
+            <i class="fa-solid fa-paperclip text-amber-400 text-xs rotate-45"></i>
+            <span id="capo-text" class="hidden md:inline">Capo: None</span>
+            <span class="md:hidden">Capo</span>
+            <i class="fa-solid fa-chevron-down text-[10px] text-stone-500"></i>
+          </button>
+          <div id="capo-menu" class="hidden absolute top-full mt-1.5 right-0 w-64 bg-stone-900 border border-stone-800 rounded-xl p-2 shadow-2xl z-30 font-mono text-xs space-y-1">
+            <div class="px-2 py-1 text-[10px] text-stone-400 uppercase tracking-wider font-semibold border-b border-stone-800/80 flex items-center justify-between">
+              <span>Capo Recommendations</span>
+              <span class="text-amber-400 font-bold" id="capo-song-key">Key A</span>
+            </div>
+            <div id="capo-options-list" class="space-y-1 py-1 max-h-56 overflow-y-auto">
+              <!-- Dynamically populated options -->
+            </div>
+          </div>
+        </div>
 
         <!-- Key & Transpose -->
         <div class="flex items-center gap-1 bg-stone-900 border border-stone-800 rounded-lg px-2 py-1 text-xs font-mono">
@@ -115,6 +133,13 @@
           <span id="val-transpose" class="text-stone-500 text-[10px] w-4 text-center">0</span>
           <button id="btn-transpose-up" class="w-5 h-5 rounded hover:bg-stone-800 text-stone-400 hover:text-white flex items-center justify-center transition-colors" title="Transpose up (+1 semitone)" aria-label="Transpose up">♯</button>
         </div>
+
+        <!-- Load Local Folder Button -->
+        <button id="btn-open-folder" class="px-2.5 py-1.5 rounded-lg bg-stone-900 border border-stone-800 hover:border-amber-500/60 text-stone-300 hover:text-amber-300 text-xs font-mono transition-colors flex items-center gap-1.5" title="Import a local practice package folder from your computer">
+          <i class="fa-solid fa-folder-open text-amber-400 text-[11px]"></i>
+          <span class="hidden lg:inline">Load Folder</span>
+        </button>
+        <input type="file" id="folder-input" webkitdirectory directory multiple class="hidden" aria-hidden="true">
 
         <!-- Chord Diagrams Button -->
         <button id="btn-show-chords" class="px-2.5 py-1.5 rounded-lg bg-stone-900 border border-stone-800 hover:border-amber-500/60 text-stone-300 hover:text-white text-xs font-mono transition-colors flex items-center gap-1.5" title="View guitar chord fingerings">
@@ -152,6 +177,18 @@
             <option value="a-different-kind-of-love">A Different Kind of Love</option>
           </select>
           <i class="fa-solid fa-chevron-down absolute right-2 top-1/2 -translate-y-1/2 text-stone-500 text-[10px] pointer-events-none"></i>
+        </div>
+      </div>
+      <!-- Mobile Quick Controls (Easy Chords & Bar/Capo display) -->
+      <div class="col-span-2 flex items-center justify-between pt-2 border-t border-stone-800/80 text-xs">
+        <button id="mobile-btn-easy-chords" class="px-2.5 py-1 rounded-lg bg-stone-900 border border-stone-800 text-stone-300 font-mono text-xs flex items-center gap-1.5">
+          <i class="fa-solid fa-wand-magic-sparkles text-emerald-400 text-xs"></i>
+          <span>Easy Chords</span>
+        </button>
+        <div class="flex items-center gap-2 font-mono text-stone-400 text-xs">
+          <span>Bar: <strong id="mobile-hud-bar" class="text-amber-400 font-bold">1</strong></span>
+          <span class="text-stone-600">•</span>
+          <span id="mobile-capo-display" class="text-stone-300">Capo 0</span>
         </div>
       </div>
     </div>
@@ -427,9 +464,31 @@
               —
             </div>
           </div>
-          <div class="h-10 w-px bg-stone-800 hidden md:block"></div>
+
+          <!-- Measure & Beat Pulse Indicator -->
+          <div class="h-10 w-px bg-stone-800 hidden sm:block"></div>
+          <div class="hidden sm:block">
+            <div class="text-[10px] font-mono uppercase text-amber-500/80 tracking-wider flex items-center gap-1.5">
+              <span>Measure & Beat</span>
+              <button id="hud-tempo-badge" class="text-stone-400 hover:text-amber-400 font-normal transition-colors cursor-pointer" title="Click to cycle tempo">~110 BPM</button>
+            </div>
+            <div class="flex items-center gap-2 mt-1">
+              <div class="px-2 py-0.5 rounded bg-stone-900 border border-stone-800 text-stone-300 font-mono text-xs font-bold shadow-inner">
+                Bar <span id="hud-bar-num" class="text-amber-400 text-sm font-mono">1</span>
+              </div>
+              <!-- 4-Beat Metronome Pulse Dots -->
+              <div class="flex items-center gap-1.5 px-2 py-1 rounded bg-stone-900/90 border border-stone-800" id="hud-beat-dots" title="4-Beat Rhythm Pulse">
+                <span class="beat-dot w-2 h-2 rounded-full bg-amber-400 shadow-[0_0_6px_rgba(245,158,11,0.8)]" data-beat="1"></span>
+                <span class="beat-dot w-2 h-2 rounded-full bg-stone-700" data-beat="2"></span>
+                <span class="beat-dot w-2 h-2 rounded-full bg-stone-700" data-beat="3"></span>
+                <span class="beat-dot w-2 h-2 rounded-full bg-stone-700" data-beat="4"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="h-10 w-px bg-stone-800 hidden lg:block"></div>
           <!-- Live Lyric Preview Line -->
-          <div class="hidden md:block min-w-0">
+          <div class="hidden lg:block min-w-0">
             <div class="text-[10px] font-mono uppercase text-stone-400 tracking-wider">Singing Line</div>
             <div id="hud-lyric" class="hud-lyric-preview font-serif text-sm sm:text-base text-stone-200 truncate italic">
               Loading tablature...
@@ -525,6 +584,6 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/practice.js?v=20260930C"></script>
+  <script src="assets/js/practice.js?v=20261001A"></script>
 </body>
 </html>
