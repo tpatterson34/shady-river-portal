@@ -83,7 +83,15 @@
     'G#':  { frets: '466544', fingers: '1 3 4 2 1 1', root: 'G#' },
     'Ab':  { frets: '466544', fingers: '1 3 4 2 1 1', root: 'Ab' },
     'G#m': { frets: '466444', fingers: '1 3 4 1 1 1', root: 'G#' },
-    'Abm': { frets: '466444', fingers: '1 3 4 1 1 1', root: 'Ab' }
+    'Abm': { frets: '466444', fingers: '1 3 4 1 1 1', root: 'Ab' },
+    'B7':  { frets: 'x21202', fingers: '- 2 1 3 - 4', root: 'B' },
+    'C7':  { frets: 'x32310', fingers: '- 3 2 4 1 -', root: 'C' },
+    'G7':  { frets: '320001', fingers: '3 2 - - - 1', root: 'G' },
+    'Em7': { frets: '022030', fingers: '- 2 3 - 4 -', root: 'E' },
+    'Am7': { frets: 'x02010', fingers: '- 2 - 1 - -', root: 'A' },
+    'Dm7': { frets: 'xx0211', fingers: '- - - 2 1 1', root: 'D' },
+    'Cadd9': { frets: 'x32033', fingers: '- 2 1 - 3 4', root: 'C' },
+    'Dsus4': { frets: 'xx0233', fingers: '- - - 1 2 4', root: 'D' }
   };
 
   // --- DOM ELEMENTS CACHE ---
@@ -142,6 +150,22 @@
     els.chordModalClose = document.getElementById('chord-modal-close');
     els.chordDiagramGrid = document.getElementById('chord-diagram-grid');
     els.btnShowChords = document.getElementById('btn-show-chords');
+
+    // Easy Chords & Capo
+    els.btnEasyChords = document.getElementById('btn-easy-chords');
+    els.mobileBtnEasyChords = document.getElementById('mobile-btn-easy-chords');
+    els.btnCapo = document.getElementById('btn-capo');
+    els.capoMenu = document.getElementById('capo-menu');
+    els.capoOptionsList = document.getElementById('capo-options-list');
+    els.capoText = document.getElementById('capo-text');
+    els.capoSongKey = document.getElementById('capo-song-key');
+    els.mobileCapoDisplay = document.getElementById('mobile-capo-display');
+
+    // Rhythm, Measure & Beat
+    els.hudBarNum = document.getElementById('hud-bar-num');
+    els.mobileHudBar = document.getElementById('mobile-hud-bar');
+    els.hudTempoBadge = document.getElementById('hud-tempo-badge');
+    els.hudBeatDots = document.querySelectorAll('#hud-beat-dots .beat-dot');
 
     // TV Mode Controls
     els.btnExitTv = document.getElementById('btn-exit-tv');
@@ -402,6 +426,19 @@
       // Reset playback state
       pause();
       state.pausedAt = 0;
+
+      // Estimate tempo & reset Capo for new song
+      state.estimatedBpm = estimateSongTempo(state.allChordsTimeline, state.duration);
+      if (els.hudTempoBadge) {
+        els.hudTempoBadge.textContent = `~${state.estimatedBpm} BPM`;
+      }
+      state.capoFret = 0;
+      state.transposition = 0;
+      if (els.transposeVal) els.transposeVal.textContent = '0';
+      if (els.capoText) els.capoText.textContent = 'Capo: None';
+      if (els.mobileCapoDisplay) els.mobileCapoDisplay.textContent = 'Capo 0';
+      renderCapoMenu();
+
       updateSeekBar(0);
       updateTabHighlight(0);
 
@@ -439,10 +476,12 @@
       // Section / Metadata Header
       if (line.startsWith('Key:') || (line.startsWith('[') && line.endsWith(']'))) {
         if (line.startsWith('Key:')) {
-          const kMatch = line.match(/Key:\s*([A-Ga-g][b#]?)/);
+          const kMatch = line.match(/Key:\s*([A-Ga-g][b#]?m?)/i);
           if (kMatch) {
-            state.originalKey = kMatch[1].toUpperCase();
+            state.originalKey = kMatch[1].charAt(0).toUpperCase() + kMatch[1].slice(1);
             state.currentKey = state.originalKey;
+            if (els.keyVal) els.keyVal.textContent = state.currentKey;
+            renderCapoMenu();
           }
         }
         state.tabBlocks.push({ type: 'header', text: line });
@@ -551,15 +590,30 @@
         // Build Chord row HTML
         let chordRowHtml = '';
         if (block.chordTokens && block.chordTokens.length > 0) {
+          const isInstrumental = !block.lyricLine || !block.lyricLine.trim();
           chordRowHtml = '<div class="tab-chord-line tab-monospace font-bold text-amber-400 text-sm sm:text-base leading-relaxed whitespace-pre select-none">';
-          let lastCol = 0;
-          block.chordTokens.forEach((tok, tokIdx) => {
-            const spaces = ' '.repeat(Math.max(0, tok.startCol - lastCol));
-            const chordName = transposeChord(tok.originalChord, state.transposition);
-            tok.chord = chordName;
-            chordRowHtml += spaces + `<span class="chord-token" data-time="${tok.time}" data-chord="${chordName}" data-token-idx="${tokIdx}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span>`;
-            lastCol = tok.startCol + tok.originalChord.length;
-          });
+
+          if (isInstrumental) {
+            // Render clean lead-sheet measures with barlines: | A | D | A | D |
+            chordRowHtml += '<span class="text-stone-600 font-normal">| </span>';
+            block.chordTokens.forEach((tok, tokIdx) => {
+              const rawTransposed = transposeChord(tok.originalChord, state.transposition);
+              const chordName = state.easyChords ? simplifyChord(rawTransposed) : rawTransposed;
+              tok.chord = chordName;
+              chordRowHtml += `<span class="chord-token px-1.5 py-0.5 rounded hover:bg-stone-800" data-time="${tok.time}" data-chord="${chordName}" data-token-idx="${tokIdx}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span>`;
+              chordRowHtml += '<span class="text-stone-600 font-normal"> | </span>';
+            });
+          } else {
+            let lastCol = 0;
+            block.chordTokens.forEach((tok, tokIdx) => {
+              const spaces = ' '.repeat(Math.max(0, tok.startCol - lastCol));
+              const rawTransposed = transposeChord(tok.originalChord, state.transposition);
+              const chordName = state.easyChords ? simplifyChord(rawTransposed) : rawTransposed;
+              tok.chord = chordName;
+              chordRowHtml += spaces + `<span class="chord-token" data-time="${tok.time}" data-chord="${chordName}" data-token-idx="${tokIdx}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span>`;
+              lastCol = tok.startCol + tok.originalChord.length;
+            });
+          }
           chordRowHtml += '</div>';
         }
 
@@ -908,11 +962,13 @@
 
   // --- TRANSPOSITION ENGINE ---
   function transpose(semitones) {
-    state.transposition = Math.max(-6, Math.min(6, state.transposition + semitones));
+    state.transposition = Math.max(-11, Math.min(11, state.transposition + semitones));
     state.currentKey = transposeChord(state.originalKey, state.transposition);
     if (els.transposeVal) els.transposeVal.textContent = (state.transposition > 0 ? '+' : '') + state.transposition;
     if (els.keyVal) els.keyVal.textContent = state.currentKey;
     renderTablature();
+    updateTabHighlight(getCurrentTime());
+    renderChordDiagrams();
   }
 
   function transposeChord(chord, steps) {
@@ -933,6 +989,202 @@
     const useFlats = ['F', 'Bb', 'Eb', 'Ab', 'Db'].includes(state.currentKey);
     const newRoot = useFlats ? CHROMATIC_FLAT[newIdx] : CHROMATIC_SHARP[newIdx];
     return newRoot + modifier;
+  }
+
+  // --- EASY CHORDS & SIMPLIFICATION ---
+  function simplifyChord(chord) {
+    if (!chord) return '';
+    let c = chord.trim();
+    // Drop slash bass note (e.g. D/F# -> D, G/B -> G, C/E -> C, A/C# -> A)
+    if (c.includes('/')) {
+      c = c.split('/')[0];
+    }
+    // Remove brackets if any
+    c = c.replace(/[\[\]]/g, '');
+    // Strip complex jazz/pop extensions
+    c = c.replace(/maj7|maj9|maj|M7/g, '');
+    c = c.replace(/m7b5|dim7|dim|ø/g, 'm');
+    c = c.replace(/m7|m9|m11|m6/g, 'm');
+    c = c.replace(/sus4|sus2|7sus4/g, '');
+    c = c.replace(/add9|add2|add4|6|9|11|13/g, '');
+    if (c.endsWith('5')) {
+      c = c.slice(0, -1);
+    }
+    // Simplify 7ths to plain triads (except B7 which is an open chord standard)
+    if (c.endsWith('7') && c !== 'B7') {
+      c = c.slice(0, -1);
+    }
+    return c;
+  }
+
+  function toggleEasyChords() {
+    state.easyChords = !state.easyChords;
+
+    // Toggle desktop button styling
+    if (els.btnEasyChords) {
+      els.btnEasyChords.classList.toggle('bg-emerald-950/80', state.easyChords);
+      els.btnEasyChords.classList.toggle('border-emerald-500/60', state.easyChords);
+      els.btnEasyChords.classList.toggle('text-emerald-300', state.easyChords);
+      els.btnEasyChords.classList.toggle('shadow-emerald-950/50', state.easyChords);
+    }
+    // Toggle mobile button styling
+    if (els.mobileBtnEasyChords) {
+      els.mobileBtnEasyChords.classList.toggle('bg-emerald-950/80', state.easyChords);
+      els.mobileBtnEasyChords.classList.toggle('border-emerald-500/60', state.easyChords);
+      els.mobileBtnEasyChords.classList.toggle('text-emerald-300', state.easyChords);
+    }
+
+    renderTablature();
+    updateTabHighlight(getCurrentTime());
+    renderChordDiagrams();
+
+    showToast(state.easyChords 
+      ? '🎸 Easy Chords ON: Simplified extensions & bass notes' 
+      : 'Standard Chords: Showing original chord voicings'
+    );
+  }
+
+  // --- CAPO RECOMMENDATION ENGINE ---
+  function getCapoRecommendations(rootKey) {
+    if (!rootKey) return [];
+    const isMinor = rootKey.endsWith('m');
+    const cleanRoot = isMinor ? rootKey.slice(0, -1) : rootKey;
+    
+    let keyIdx = CHROMATIC_SHARP.indexOf(cleanRoot);
+    if (keyIdx === -1) keyIdx = CHROMATIC_FLAT.indexOf(cleanRoot);
+    if (keyIdx === -1) keyIdx = 0;
+
+    const recommendations = [];
+
+    // Always include No Capo
+    recommendations.push({
+      fret: 0,
+      shape: rootKey,
+      label: `No Capo (Original Key: ${rootKey})`,
+      shapesFamily: isMinor ? `${rootKey} standard voicings` : `${rootKey} standard voicings`
+    });
+
+    if (!isMinor) {
+      const openShapes = [
+        { name: 'G', idx: 7, chords: 'Open G, C, D, Em, Am shapes' },
+        { name: 'C', idx: 0, chords: 'Open C, F, G, Am, Dm shapes' },
+        { name: 'D', idx: 2, chords: 'Open D, G, A, Bm, Em shapes' },
+        { name: 'E', idx: 4, chords: 'Open E, A, B7, C#m, F#m shapes' },
+        { name: 'A', idx: 9, chords: 'Open A, D, E, F#m shapes' }
+      ];
+
+      openShapes.forEach(shape => {
+        if (shape.name === cleanRoot) return;
+        const fret = (keyIdx - shape.idx + 12) % 12;
+        if (fret >= 1 && fret <= 7) {
+          recommendations.push({
+            fret: fret,
+            shape: shape.name,
+            label: `Capo ${fret} (Play in ${shape.name})`,
+            shapesFamily: shape.chords
+          });
+        }
+      });
+    } else {
+      const openShapes = [
+        { name: 'Am', idx: 9, chords: 'Open Am, C, Dm, Em, F, G shapes' },
+        { name: 'Em', idx: 4, chords: 'Open Em, G, Am, Bm, C, D shapes' },
+        { name: 'Dm', idx: 2, chords: 'Open Dm, F, Gm, Am, Bb shapes' }
+      ];
+
+      openShapes.forEach(shape => {
+        if (shape.name === rootKey) return;
+        const fret = (keyIdx - shape.idx + 12) % 12;
+        if (fret >= 1 && fret <= 7) {
+          recommendations.push({
+            fret: fret,
+            shape: shape.name,
+            label: `Capo ${fret} (Play in ${shape.name})`,
+            shapesFamily: shape.chords
+          });
+        }
+      });
+    }
+
+    recommendations.sort((a, b) => a.fret - b.fret);
+    return recommendations;
+  }
+
+  function renderCapoMenu() {
+    if (!els.capoOptionsList) return;
+    if (els.capoSongKey) els.capoSongKey.textContent = `Key: ${state.originalKey}`;
+
+    const recs = getCapoRecommendations(state.originalKey);
+    let html = '';
+
+    recs.forEach(rec => {
+      const isCurrent = (state.capoFret === rec.fret);
+      html += `
+        <button type="button" data-capo-fret="${rec.fret}" data-capo-shape="${rec.shape}" class="w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-stone-800 transition-colors flex flex-col ${isCurrent ? 'bg-amber-950/40 border border-amber-500/40 text-amber-300' : 'text-stone-300'}">
+          <div class="flex items-center justify-between font-bold text-xs">
+            <span>${escapeHtml(rec.label)}</span>
+            ${isCurrent ? '<i class="fa-solid fa-check text-amber-400 text-[10px]"></i>' : ''}
+          </div>
+          <div class="text-[10px] text-stone-500 font-sans mt-0.5">${escapeHtml(rec.shapesFamily)}</div>
+        </button>
+      `;
+    });
+
+    els.capoOptionsList.innerHTML = html;
+
+    els.capoOptionsList.querySelectorAll('[data-capo-fret]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const fret = parseInt(btn.getAttribute('data-capo-fret'), 10);
+        const shape = btn.getAttribute('data-capo-shape');
+        applyCapo(fret, shape);
+        if (els.capoMenu) els.capoMenu.classList.add('hidden');
+      });
+    });
+  }
+
+  function applyCapo(fret, shape) {
+    state.capoFret = fret;
+    state.transposition = -fret;
+    state.currentKey = transposeChord(state.originalKey, state.transposition);
+
+    if (els.transposeVal) els.transposeVal.textContent = (state.transposition > 0 ? '+' : '') + state.transposition;
+    if (els.keyVal) els.keyVal.textContent = state.currentKey;
+    if (els.capoText) {
+      els.capoText.textContent = fret === 0 ? 'Capo: None' : `Capo ${fret} (${shape})`;
+    }
+    if (els.mobileCapoDisplay) {
+      els.mobileCapoDisplay.textContent = fret === 0 ? 'Capo 0' : `Capo ${fret} (${shape})`;
+    }
+
+    renderTablature();
+    updateTabHighlight(getCurrentTime());
+    renderCapoMenu();
+    renderChordDiagrams();
+
+    if (fret > 0) {
+      showToast(`🎸 Capo on Fret ${fret}! Play ${shape} shapes along with the music.`);
+    } else {
+      showToast(`Capo removed. Standard ${state.originalKey} shapes.`);
+    }
+  }
+
+  // --- TEMPO ESTIMATION ---
+  function estimateSongTempo(timeline, duration) {
+    if (!timeline || timeline.length < 2) return 110;
+    const intervals = [];
+    for (let i = 1; i < timeline.length; i++) {
+      const dt = timeline[i].time - timeline[i - 1].time;
+      if (dt >= 0.8 && dt <= 8.0) {
+        intervals.push(dt);
+      }
+    }
+    if (intervals.length === 0) return 110;
+    intervals.sort((a, b) => a - b);
+    const medianDt = intervals[Math.floor(intervals.length / 2)];
+    let bpm = Math.round((4 / medianDt) * 60);
+    while (bpm < 70) bpm *= 2;
+    while (bpm > 165) bpm = Math.round(bpm / 2);
+    return Math.max(60, Math.min(180, bpm));
   }
 
   // --- ANIMATION LOOP (VU METERS & SYNC HIGHLIGHT) ---
@@ -1051,12 +1303,14 @@
 
     // 3. Update Teleprompter HUD
     if (els.hudCurrentChord) {
-      els.hudCurrentChord.textContent = activeChord ? activeChord.chord : (state.currentKey || '—');
+      const curChordRaw = activeChord ? activeChord.chord : (state.currentKey || '—');
+      els.hudCurrentChord.textContent = state.easyChords ? simplifyChord(curChordRaw) : curChordRaw;
     }
     if (els.hudNextChord) {
       if (nextChord) {
         const delta = Math.max(0, nextChord.time - curTime).toFixed(1);
-        els.hudNextChord.textContent = `→ ${nextChord.chord} (${delta}s)`;
+        const nextChordRaw = state.easyChords ? simplifyChord(nextChord.chord) : nextChord.chord;
+        els.hudNextChord.textContent = `→ ${nextChordRaw} (${delta}s)`;
       } else {
         els.hudNextChord.textContent = '—';
       }
@@ -1068,6 +1322,32 @@
       } else {
         els.hudLyric.textContent = '';
       }
+    }
+
+    // 4. Update Measure & Beat Metronome Visualizer
+    const bpm = state.estimatedBpm || 110;
+    const beatsPerSec = bpm / 60;
+    const currentBeatTotal = Math.floor(curTime * beatsPerSec);
+    const timeSig = state.timeSignature || 4;
+    const currentBar = Math.floor(currentBeatTotal / timeSig) + 1;
+    const currentBeat = (currentBeatTotal % timeSig) + 1;
+
+    if (els.hudBarNum) els.hudBarNum.textContent = currentBar;
+    if (els.mobileHudBar) els.mobileHudBar.textContent = currentBar;
+
+    if (els.hudBeatDots && els.hudBeatDots.length > 0) {
+      els.hudBeatDots.forEach((dot, idx) => {
+        const dotBeat = idx + 1;
+        if (dotBeat === currentBeat) {
+          if (currentBeat === 1) {
+            dot.className = 'beat-dot w-2.5 h-2.5 rounded-full bg-amber-400 shadow-[0_0_8px_rgba(245,158,11,0.9)] scale-125 transition-all duration-75';
+          } else {
+            dot.className = 'beat-dot w-2 h-2 rounded-full bg-amber-200/90 shadow-[0_0_4px_rgba(245,158,11,0.6)] scale-110 transition-all duration-75';
+          }
+        } else {
+          dot.className = 'beat-dot w-2 h-2 rounded-full bg-stone-700/80 transition-all duration-75';
+        }
+      });
     }
   }
 
@@ -1224,6 +1504,46 @@
       btn.addEventListener('click', () => applyPreset(btn.getAttribute('data-preset')));
     });
 
+    // Easy Chords Toggle
+    if (els.btnEasyChords) {
+      els.btnEasyChords.addEventListener('click', toggleEasyChords);
+    }
+    if (els.mobileBtnEasyChords) {
+      els.mobileBtnEasyChords.addEventListener('click', toggleEasyChords);
+    }
+
+    // Capo Menu Toggle & Outside Click
+    if (els.btnCapo && els.capoMenu) {
+      els.btnCapo.addEventListener('click', (e) => {
+        e.stopPropagation();
+        els.capoMenu.classList.toggle('hidden');
+      });
+      document.addEventListener('click', (e) => {
+        if (!els.capoMenu.contains(e.target) && !els.btnCapo.contains(e.target)) {
+          els.capoMenu.classList.add('hidden');
+        }
+      });
+    }
+
+    // Tempo Badge Quick Cycling (80 -> 95 -> 110 -> 125 -> 140)
+    if (els.hudTempoBadge) {
+      const BPM_CYCLE = [80, 95, 110, 125, 140];
+      els.hudTempoBadge.addEventListener('click', () => {
+        let curIdx = BPM_CYCLE.indexOf(state.estimatedBpm);
+        if (curIdx === -1) {
+          let closestDist = 999;
+          BPM_CYCLE.forEach((b, idx) => {
+            const dist = Math.abs(b - state.estimatedBpm);
+            if (dist < closestDist) { closestDist = dist; curIdx = idx; }
+          });
+        }
+        const nextIdx = (curIdx + 1) % BPM_CYCLE.length;
+        state.estimatedBpm = BPM_CYCLE[nextIdx];
+        els.hudTempoBadge.textContent = `~${state.estimatedBpm} BPM`;
+        showToast(`Tempo adjusted to ${state.estimatedBpm} BPM`);
+      });
+    }
+
     // Transposition
     if (els.btnTransposeDown) els.btnTransposeDown.addEventListener('click', () => transpose(-1));
     if (els.btnTransposeUp) els.btnTransposeUp.addEventListener('click', () => transpose(1));
@@ -1299,6 +1619,10 @@
         case 'ArrowRight':
           e.preventDefault();
           seek(getCurrentTime() + 5);
+          break;
+        case 'KeyE':
+          e.preventDefault();
+          toggleEasyChords();
           break;
         case 'KeyM':
           e.preventDefault();
@@ -1642,7 +1966,11 @@
     toggleStemSolo,
     applyPreset,
     transpose,
-    toggleTvMode
+    toggleTvMode,
+    toggleEasyChords,
+    applyCapo,
+    simplifyChord,
+    loadPracticePackage
   };
 
 })();
