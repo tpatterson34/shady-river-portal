@@ -139,6 +139,91 @@ input[type="range"].master-slider::-webkit-slider-thumb {
   100% { transform: scale(1.12); box-shadow: 0 0 18px rgba(245, 158, 11, 1); }
 }
 
+/* Ultimate Guitar Style Pill Badges */
+.ug-chord-badge {
+  position: absolute;
+  top: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  background: #24201d;
+  border: 1px solid rgba(168, 162, 158, 0.35);
+  color: #fbbf24;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: all 0.12s ease-in-out;
+  cursor: pointer;
+  z-index: 5;
+  white-space: nowrap;
+  user-select: none;
+}
+.ug-chord-badge:hover {
+  background: #3b3530;
+  border-color: #f59e0b;
+  color: #fef08a;
+  transform: translateY(-1px);
+}
+.ug-chord-badge.chord-active {
+  background: #f59e0b !important;
+  color: #0c0a09 !important;
+  font-weight: 800;
+  border-color: #fef08a !important;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.9), 0 0 2px #fff;
+  transform: scale(1.1) translateY(-1px);
+  z-index: 10;
+}
+
+/* UG Mode Row Tracks */
+.ug-row-wrapper {
+  position: relative;
+  width: 100%;
+}
+.ug-chord-track {
+  position: relative;
+  height: 1.65rem;
+  width: 100%;
+}
+.ug-lyric-track {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.925rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Measure Bar Units in Bars View */
+.measure-bar-cell {
+  background: rgba(26, 23, 20, 0.7);
+  border: 1px solid rgba(87, 83, 78, 0.45);
+  border-radius: 8px;
+  padding: 0.55rem 0.75rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+.measure-bar-cell:hover {
+  border-color: rgba(245, 158, 11, 0.5);
+  background: rgba(44, 38, 33, 0.85);
+  transform: translateY(-1px);
+}
+.measure-bar-cell.bar-active {
+  border-color: #f59e0b !important;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.18) 0%, rgba(245, 158, 11, 0.04) 100%) !important;
+  box-shadow: 0 0 16px -2px rgba(245, 158, 11, 0.4);
+}
+.measure-bar-cell.bar-active .bar-number-tag {
+  color: #f59e0b;
+  font-weight: 700;
+}
+.measure-bar-cell.bar-active .bar-lyric-text {
+  color: #ffffff;
+  font-weight: 500;
+}
+
 /* Tab Row Highlight */
 .tab-row {
   border-left: 3px solid transparent;
@@ -237,6 +322,25 @@ body.tv-mode .tab-lyric {
   font-size: 1.6rem !important;
   line-height: 2 !important;
   color: #ffffff !important;
+}
+body.tv-mode .ug-chord-badge {
+  font-size: 1.35rem !important;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+}
+body.tv-mode .ug-chord-track {
+  height: 2.6rem !important;
+}
+body.tv-mode .ug-lyric-track {
+  font-size: 1.65rem !important;
+  line-height: 2.2 !important;
+  color: #ffffff !important;
+}
+body.tv-mode .measure-bar-cell {
+  padding: 0.85rem 1.15rem;
+}
+body.tv-mode .bar-lyric-text {
+  font-size: 1.45rem !important;
 }
 body.tv-mode .tab-row.row-active {
   padding-top: 0.5rem;

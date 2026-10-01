@@ -32,6 +32,9 @@
     currentKey: 'A',
     currentAlbumFilter: 'all',
     easyChords: false,
+    viewMode: (function() {
+      try { return localStorage.getItem('shady_practice_view_mode') || 'bars'; } catch (e) { return 'bars'; }
+    })(),
     capoFret: 0,
     estimatedBpm: 110,
     timeSignature: 4,
@@ -154,6 +157,11 @@
     // Easy Chords & Capo
     els.btnEasyChords = document.getElementById('btn-easy-chords');
     els.mobileBtnEasyChords = document.getElementById('mobile-btn-easy-chords');
+    els.btnViewBars = document.getElementById('btn-view-bars');
+    els.btnViewUg = document.getElementById('btn-view-ug');
+    els.mobileBtnToggleView = document.getElementById('mobile-btn-toggle-view');
+    els.mobileViewIcon = document.getElementById('mobile-view-icon');
+    els.mobileViewText = document.getElementById('mobile-view-text');
     els.btnCapo = document.getElementById('btn-capo');
     els.capoMenu = document.getElementById('capo-menu');
     els.capoOptionsList = document.getElementById('capo-options-list');
@@ -513,6 +521,7 @@
           const rawBars = line.split('|').map(s => s.trim()).filter(Boolean);
           let rowTime = -1.0;
           const chordTokens = [];
+          const barsData = [];
 
           rawBars.forEach((barStr) => {
             const barSync = (barIdx < syncData.length) ? syncData[barIdx] : { time: -1.0, chords: [], beats: [] };
@@ -525,6 +534,7 @@
             const barChords = barStr.split(/\s+/).filter(Boolean);
             const beats = barSync.beats || [];
             const bTime = (typeof barSync.time === 'number' && barSync.time >= 0) ? barSync.time : -1.0;
+            const barTokens = [];
 
             barChords.forEach((chordName, cIdx) => {
               let cTime = bTime;
@@ -540,7 +550,17 @@
                 barNumber: barSync.bar_number
               };
               chordTokens.push(tok);
+              barTokens.push(tok);
               state.allChordsTimeline.push(tok);
+            });
+
+            barsData.push({
+              barNumber: barSync.bar_number,
+              time: bTime,
+              chords: barChords,
+              tokens: barTokens,
+              beats: beats,
+              lyrics: barSync.lyrics || ''
             });
           });
 
@@ -559,10 +579,29 @@
             i += 1;
           }
 
+          // Partition lyrics across barsData if not already provided in sync.json
+          if (lyricText && barsData.length > 0) {
+            const needsPartitioning = barsData.every(b => !b.lyrics || !b.lyrics.trim());
+            if (needsPartitioning) {
+              const words = lyricText.trim().split(/\s+/);
+              if (barsData.length === 1) {
+                barsData[0].lyrics = lyricText.trim();
+              } else if (words.length > 0) {
+                const wordsPerBar = Math.ceil(words.length / barsData.length);
+                barsData.forEach((bar, bIdx) => {
+                  const startW = bIdx * wordsPerBar;
+                  const endW = (bIdx === barsData.length - 1) ? words.length : Math.min(startW + wordsPerBar, words.length);
+                  bar.lyrics = words.slice(startW, endW).join(' ');
+                });
+              }
+            }
+          }
+
           state.tabBlocks.push({
             type: 'row',
             chordLine: line,
             chordTokens: chordTokens,
+            barsData: barsData,
             lyricLine: lyricText,
             time: rowTime,
             lyricTime: lyricTime
@@ -718,67 +757,176 @@
         rowEl.setAttribute('data-row-index', rowIndex);
         rowEl.setAttribute('data-time', block.time);
 
-        // Build Chord row HTML
-        let chordRowHtml = '';
-        if (block.chordTokens && block.chordTokens.length > 0) {
-          const isInstrumental = !block.lyricLine || !block.lyricLine.trim();
-          chordRowHtml = '<div class="tab-chord-line tab-monospace font-bold text-amber-400 text-sm sm:text-base leading-relaxed whitespace-pre select-none">';
+        const isInstrumental = !block.lyricLine || !block.lyricLine.trim();
+        const hasBars = block.barsData && block.barsData.length > 0;
+        let contentHtml = '';
 
-          if (isInstrumental || (block.chordLine && block.chordLine.includes('|'))) {
-            // Render clean lead-sheet measures with barlines
+        if (state.viewMode === 'bars') {
+          // ============================================================
+          // VIEW 1: MEASURE BARS MODE (Lead Sheet / Measure Card Units)
+          // ============================================================
+          if (hasBars && !isInstrumental) {
+            // Measure Bar Cards Grid: Chords and lyrics partitioned within the bars
+            const cols = Math.min(block.barsData.length, 4);
+            let gridHtml = `<div class="measure-bars-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-${cols} gap-2.5 my-1 select-none">`;
+
+            block.barsData.forEach((bar) => {
+              const chordsHtml = (bar.tokens || []).map((tok, tokIdx) => {
+                const rawTransposed = transposeChord(tok.originalChord, state.transposition);
+                const chordName = state.easyChords ? simplifyChord(rawTransposed) : rawTransposed;
+                tok.chord = chordName;
+                return `<span class="chord-token ug-chord-badge !static !inline-flex hover:border-amber-400" data-time="${tok.time}" data-chord="${chordName}" data-token-idx="${tokIdx}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span>`;
+              }).join(' ');
+
+              gridHtml += `
+                <div class="measure-bar-cell flex flex-col justify-between" data-bar-num="${bar.barNumber}" data-time="${bar.time}">
+                  <div class="flex items-center justify-between text-xs font-mono mb-1.5 pb-1 border-b border-stone-800/60">
+                    <span class="bar-number-tag text-stone-500 font-mono text-[10px]">Bar ${bar.barNumber || '—'}</span>
+                    <div class="flex items-center gap-1.5">
+                      ${chordsHtml || '<span class="text-stone-600 font-mono text-[10px]">—</span>'}
+                    </div>
+                  </div>
+                  <div class="bar-lyric-text font-serif text-stone-200 text-sm sm:text-base leading-snug tracking-wide">
+                    ${escapeHtml(bar.lyrics || '—')}
+                  </div>
+                </div>
+              `;
+            });
+
+            gridHtml += '</div>';
+            contentHtml = gridHtml;
+          } else {
+            // Instrumental or Traditional Barline Row
+            let chordRowHtml = '';
+            if (block.chordTokens && block.chordTokens.length > 0) {
+              chordRowHtml = '<div class="tab-chord-line tab-monospace font-bold text-amber-400 text-sm sm:text-base leading-relaxed whitespace-pre select-none">';
+              let lastBarNum = null;
+              block.chordTokens.forEach((tok, tokIdx) => {
+                const rawTransposed = transposeChord(tok.originalChord, state.transposition);
+                const chordName = state.easyChords ? simplifyChord(rawTransposed) : rawTransposed;
+                tok.chord = chordName;
+
+                if (tok.barNumber !== undefined) {
+                  if (tokIdx === 0 || tok.barNumber !== lastBarNum) {
+                    chordRowHtml += '<span class="text-stone-600 font-normal">| </span>';
+                    lastBarNum = tok.barNumber;
+                  } else {
+                    chordRowHtml += ' ';
+                  }
+                  chordRowHtml += `<span class="chord-token px-1.5 py-0.5 rounded hover:bg-stone-800" data-time="${tok.time}" data-chord="${chordName}" data-token-idx="${tokIdx}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span> `;
+                } else {
+                  if (tokIdx === 0) chordRowHtml += '<span class="text-stone-600 font-normal">| </span>';
+                  chordRowHtml += `<span class="chord-token px-1.5 py-0.5 rounded hover:bg-stone-800" data-time="${tok.time}" data-chord="${chordName}" data-token-idx="${tokIdx}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span>`;
+                  chordRowHtml += '<span class="text-stone-600 font-normal"> | </span>';
+                }
+              });
+              if (lastBarNum !== null) {
+                chordRowHtml += '<span class="text-stone-600 font-normal">|</span>';
+              }
+              chordRowHtml += '</div>';
+            }
+
+            let lyricRowHtml = '';
+            if (block.lyricLine) {
+              lyricRowHtml = `<div class="tab-lyric text-stone-300 font-serif text-sm sm:text-base leading-relaxed tracking-wide">${escapeHtml(block.lyricLine)}</div>`;
+            }
+
+            contentHtml = chordRowHtml + lyricRowHtml;
+          }
+        } else {
+          // ============================================================
+          // VIEW 2: ULTIMATE GUITAR MODE (Chords Floating Over Syllables)
+          // ============================================================
+          if (!isInstrumental && (hasBars || (block.chordTokens && block.chordTokens.length > 0))) {
+            let chordBadgesHtml = '';
+            const lineText = block.lyricLine || '';
+
+            if (hasBars) {
+              let searchPos = 0;
+              block.barsData.forEach((bar) => {
+                let barStartCol = 0;
+                if (bar.lyrics && bar.lyrics.trim()) {
+                  const firstWord = bar.lyrics.trim().split(/\s+/)[0];
+                  const foundIdx = lineText.indexOf(firstWord, searchPos);
+                  if (foundIdx !== -1) {
+                    barStartCol = foundIdx;
+                    searchPos = barStartCol + bar.lyrics.trim().length;
+                  }
+                }
+
+                const tokens = bar.tokens || [];
+                const barLyricLen = (bar.lyrics && bar.lyrics.length > 0) ? bar.lyrics.length : 12;
+
+                tokens.forEach((tok, cIdx) => {
+                  let col = barStartCol;
+                  if (tokens.length === 2) {
+                    col = (cIdx === 0) ? barStartCol : barStartCol + Math.max(3, Math.floor(barLyricLen / 2));
+                  } else if (tokens.length > 2) {
+                    col = barStartCol + Math.floor(cIdx * (barLyricLen / tokens.length));
+                  }
+
+                  const rawTransposed = transposeChord(tok.originalChord, state.transposition);
+                  const chordName = state.easyChords ? simplifyChord(rawTransposed) : rawTransposed;
+                  tok.chord = chordName;
+
+                  chordBadgesHtml += `<span class="chord-token ug-chord-badge" style="left: ${col}ch;" data-time="${tok.time}" data-chord="${chordName}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span>`;
+                });
+              });
+            } else {
+              // Legacy UG chords with startCol
+              block.chordTokens.forEach((tok) => {
+                const rawTransposed = transposeChord(tok.originalChord, state.transposition);
+                const chordName = state.easyChords ? simplifyChord(rawTransposed) : rawTransposed;
+                tok.chord = chordName;
+                const col = (typeof tok.startCol === 'number') ? tok.startCol : 0;
+
+                chordBadgesHtml += `<span class="chord-token ug-chord-badge" style="left: ${col}ch;" data-time="${tok.time}" data-chord="${chordName}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span>`;
+              });
+            }
+
+            contentHtml = `
+              <div class="ug-row-wrapper font-mono select-none my-1">
+                <div class="ug-chord-track relative">
+                  ${chordBadgesHtml}
+                </div>
+                <div class="ug-lyric-track text-stone-200">
+                  ${escapeHtml(lineText)}
+                </div>
+              </div>
+            `;
+          } else {
+            // Instrumental row in UG mode (pill badges inline)
+            let chordRowHtml = '<div class="tab-chord-line font-mono text-sm sm:text-base leading-relaxed select-none py-1 flex flex-wrap items-center gap-1.5">';
+            chordRowHtml += '<span class="text-stone-600 font-normal">| </span>';
             let lastBarNum = null;
-            block.chordTokens.forEach((tok, tokIdx) => {
+
+            (block.chordTokens || []).forEach((tok) => {
               const rawTransposed = transposeChord(tok.originalChord, state.transposition);
               const chordName = state.easyChords ? simplifyChord(rawTransposed) : rawTransposed;
               tok.chord = chordName;
 
-              if (tok.barNumber !== undefined) {
-                if (tokIdx === 0 || tok.barNumber !== lastBarNum) {
-                  chordRowHtml += '<span class="text-stone-600 font-normal">| </span>';
-                  lastBarNum = tok.barNumber;
-                } else {
-                  chordRowHtml += ' ';
-                }
-                chordRowHtml += `<span class="chord-token px-1.5 py-0.5 rounded hover:bg-stone-800" data-time="${tok.time}" data-chord="${chordName}" data-token-idx="${tokIdx}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span> `;
-              } else {
-                if (tokIdx === 0) chordRowHtml += '<span class="text-stone-600 font-normal">| </span>';
-                chordRowHtml += `<span class="chord-token px-1.5 py-0.5 rounded hover:bg-stone-800" data-time="${tok.time}" data-chord="${chordName}" data-token-idx="${tokIdx}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span>`;
+              if (tok.barNumber !== undefined && lastBarNum !== null && tok.barNumber !== lastBarNum) {
                 chordRowHtml += '<span class="text-stone-600 font-normal"> | </span>';
               }
-            });
-            if (lastBarNum !== null) {
-              chordRowHtml += '<span class="text-stone-600 font-normal">|</span>';
-            }
-          } else {
-            let lastCol = 0;
-            block.chordTokens.forEach((tok, tokIdx) => {
-              const spaces = ' '.repeat(Math.max(0, tok.startCol - lastCol));
-              const rawTransposed = transposeChord(tok.originalChord, state.transposition);
-              const chordName = state.easyChords ? simplifyChord(rawTransposed) : rawTransposed;
-              tok.chord = chordName;
-              chordRowHtml += spaces + `<span class="chord-token" data-time="${tok.time}" data-chord="${chordName}" data-token-idx="${tokIdx}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span>`;
-              lastCol = tok.startCol + tok.originalChord.length;
-            });
-          }
-          chordRowHtml += '</div>';
-        }
+              lastBarNum = tok.barNumber;
 
-        // Build Lyric row HTML
-        let lyricRowHtml = '';
-        if (block.lyricLine) {
-          lyricRowHtml = `<div class="tab-lyric text-stone-300 font-serif text-sm sm:text-base leading-relaxed tracking-wide">${escapeHtml(block.lyricLine)}</div>`;
+              chordRowHtml += `<span class="chord-token ug-chord-badge !static !inline-flex" data-time="${tok.time}" data-chord="${chordName}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span>`;
+            });
+
+            chordRowHtml += '<span class="text-stone-600 font-normal"> |</span></div>';
+            contentHtml = chordRowHtml;
+          }
         }
 
         // Time indicator tag
         const timeBadge = block.time >= 0
-          ? `<div class="text-[10px] font-mono text-stone-500 opacity-60 hover:opacity-100 select-none">${formatTime(block.time)}</div>`
+          ? `<div class="text-[10px] font-mono text-stone-500 opacity-60 hover:opacity-100 select-none ml-2 shrink-0">${formatTime(block.time)}</div>`
           : '';
 
         rowEl.innerHTML =
-          `<div class="flex items-start justify-between gap-3">` +
+          `<div class="flex items-start justify-between gap-2">` +
             `<div class="flex-grow min-w-0">` +
-              chordRowHtml +
-              lyricRowHtml +
+              contentHtml +
             `</div>` +
             timeBadge +
           `</div>`;
@@ -790,6 +938,14 @@
             const chordTime = parseFloat(chordToken.getAttribute('data-time'));
             if (!isNaN(chordTime) && chordTime >= 0) {
               seek(chordTime);
+              return;
+            }
+          }
+          const barCell = e.target.closest('.measure-bar-cell');
+          if (barCell) {
+            const barTime = parseFloat(barCell.getAttribute('data-time'));
+            if (!isNaN(barTime) && barTime >= 0) {
+              seek(barTime);
               return;
             }
           }
@@ -1451,8 +1607,16 @@
     allTokens.forEach(t => t.classList.remove('chord-active'));
 
     if (activeChord) {
-      const matchToken = document.querySelector(`.chord-token[data-time="${activeChord.time}"]`);
-      if (matchToken) matchToken.classList.add('chord-active');
+      const matchTokens = document.querySelectorAll(`.chord-token[data-time="${activeChord.time}"]`);
+      matchTokens.forEach(t => t.classList.add('chord-active'));
+    }
+
+    // Highlight active measure cell in Bars view
+    const allBarCells = document.querySelectorAll('.measure-bar-cell');
+    allBarCells.forEach(cell => cell.classList.remove('bar-active'));
+    if (activeChord && activeChord.barNumber !== undefined) {
+      const activeBarCell = document.querySelector(`.measure-bar-cell[data-bar-num="${activeChord.barNumber}"]`);
+      if (activeBarCell) activeBarCell.classList.add('bar-active');
     }
 
     // 3. Update Teleprompter HUD
@@ -1471,8 +1635,21 @@
     }
     if (els.hudLyric) {
       if (currentActiveRow) {
-        const lyricEl = currentActiveRow.querySelector('.tab-lyric');
-        els.hudLyric.textContent = lyricEl ? lyricEl.textContent : '';
+        let lyricText = '';
+        if (state.viewMode === 'bars') {
+          const activeBarCell = currentActiveRow.querySelector(`.measure-bar-cell[data-bar-num="${activeChord ? activeChord.barNumber : ''}"]`);
+          if (activeBarCell) {
+            const barLyricEl = activeBarCell.querySelector('.bar-lyric-text');
+            if (barLyricEl && barLyricEl.textContent.trim() !== '—') {
+              lyricText = barLyricEl.textContent.trim();
+            }
+          }
+        }
+        if (!lyricText) {
+          const lyricEl = currentActiveRow.querySelector('.tab-lyric') || currentActiveRow.querySelector('.ug-lyric-track');
+          lyricText = lyricEl ? lyricEl.textContent.trim() : '';
+        }
+        els.hudLyric.textContent = lyricText;
       } else {
         els.hudLyric.textContent = '';
       }
@@ -1707,6 +1884,19 @@
       els.tvModeBtn.addEventListener('click', toggleTvMode);
     }
 
+    // View Mode Toggle (Bars vs UG Lyrics)
+    if (els.btnViewBars) {
+      els.btnViewBars.addEventListener('click', () => setViewMode('bars'));
+    }
+    if (els.btnViewUg) {
+      els.btnViewUg.addEventListener('click', () => setViewMode('ug'));
+    }
+    if (els.mobileBtnToggleView) {
+      els.mobileBtnToggleView.addEventListener('click', () => {
+        setViewMode(state.viewMode === 'bars' ? 'ug' : 'bars');
+      });
+    }
+
     // Auto-Scroll Toggle & Resume
     if (els.autoScrollToggle) {
       els.autoScrollToggle.addEventListener('click', () => {
@@ -1829,6 +2019,39 @@
       showToast('TV Mode active! Right-click anywhere and select "Cast..." to mirror this tab directly to your Google TV.', 'info', 6000);
     } else {
       showToast('Standard Display Mode');
+    }
+  }
+
+  // --- VIEW MODE CONTROLS (Bars vs UG Lyrics) ---
+  function setViewMode(mode) {
+    state.viewMode = mode;
+    try {
+      localStorage.setItem('shady_practice_view_mode', mode);
+    } catch (e) {}
+    updateViewModeButtons();
+    renderTablature();
+    updateTabHighlight(getCurrentTime());
+  }
+
+  function updateViewModeButtons() {
+    const isBars = state.viewMode === 'bars';
+    if (els.btnViewBars && els.btnViewUg) {
+      if (isBars) {
+        els.btnViewBars.className = 'px-2.5 py-1.5 rounded-md text-amber-400 bg-stone-800 font-semibold flex items-center gap-1.5 transition-all shadow-sm';
+        els.btnViewUg.className = 'px-2.5 py-1.5 rounded-md text-stone-400 hover:text-stone-200 flex items-center gap-1.5 transition-all';
+      } else {
+        els.btnViewBars.className = 'px-2.5 py-1.5 rounded-md text-stone-400 hover:text-stone-200 flex items-center gap-1.5 transition-all';
+        els.btnViewUg.className = 'px-2.5 py-1.5 rounded-md text-amber-400 bg-stone-800 font-semibold flex items-center gap-1.5 transition-all shadow-sm';
+      }
+    }
+    if (els.mobileViewIcon && els.mobileViewText) {
+      if (isBars) {
+        els.mobileViewIcon.className = 'fa-solid fa-bars-staggered text-amber-400 text-xs';
+        els.mobileViewText.textContent = 'Bars';
+      } else {
+        els.mobileViewIcon.className = 'fa-solid fa-font text-amber-400 text-xs';
+        els.mobileViewText.textContent = 'UG Lyrics';
+      }
     }
   }
 
@@ -2006,6 +2229,7 @@
   async function init() {
     cacheDom();
     bindEvents();
+    updateViewModeButtons();
 
     // Load available packages
     try {
