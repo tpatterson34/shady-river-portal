@@ -431,9 +431,14 @@
       state.duration = maxDuration || 205; // Fallback ~3:25
       if (els.timeTotal) els.timeTotal.textContent = formatTime(state.duration);
 
-      // Reset playback state
+      // Reset playback state & scrolling
       pause();
       state.pausedAt = 0;
+      state.userScrolled = false;
+      state.activeRowIndex = -1;
+      state.activeChordIndex = -1;
+      if (els.resumeScrollBtn) els.resumeScrollBtn.classList.add('hidden');
+      if (els.tabContainer) els.tabContainer.scrollTop = 0;
 
       // Estimate tempo & reset Capo for new song
       state.estimatedBpm = estimateSongTempo(state.allChordsTimeline, state.duration);
@@ -1010,12 +1015,17 @@
   function stop() {
     pause();
     state.pausedAt = 0;
+    state.userScrolled = false;
+    if (els.resumeScrollBtn) els.resumeScrollBtn.classList.add('hidden');
+    if (els.tabContainer) els.tabContainer.scrollTop = 0;
     updateSeekBar(0);
     updateTabHighlight(0);
   }
 
   function seek(targetSeconds) {
     const clamped = Math.max(0, Math.min(state.duration, targetSeconds));
+    state.userScrolled = false;
+    if (els.resumeScrollBtn) els.resumeScrollBtn.classList.add('hidden');
     if (state.isPlaying) {
       play(clamped);
     } else {
@@ -1547,24 +1557,32 @@
     let currentActiveRow = null;
     let currentActiveIndex = -1;
 
-    for (let i = 0; i < rows.length; i++) {
-      const row = rows[i];
-      const rowTime = parseFloat(row.getAttribute('data-time'));
-      if (isNaN(rowTime) || rowTime < 0) continue;
+    if (rows.length > 0) {
+      for (let i = 0; i < rows.length; i++) {
+        const row = rows[i];
+        const rowTime = parseFloat(row.getAttribute('data-time'));
+        if (isNaN(rowTime) || rowTime < 0) continue;
 
-      let nextTime = state.duration + 1;
-      for (let j = i + 1; j < rows.length; j++) {
-        const nt = parseFloat(rows[j].getAttribute('data-time'));
-        if (!isNaN(nt) && nt >= 0) {
-          nextTime = nt;
+        let nextTime = state.duration + 1;
+        for (let j = i + 1; j < rows.length; j++) {
+          const nt = parseFloat(rows[j].getAttribute('data-time'));
+          if (!isNaN(nt) && nt >= 0) {
+            nextTime = nt;
+            break;
+          }
+        }
+
+        if (rowTime <= curTime && curTime < nextTime) {
+          currentActiveRow = row;
+          currentActiveIndex = i;
           break;
         }
       }
 
-      if (rowTime <= curTime && curTime < nextTime) {
-        currentActiveRow = row;
-        currentActiveIndex = i;
-        break;
+      // If curTime is within intro before the first timed row, activate row 0
+      if (!currentActiveRow && rows.length > 0 && curTime >= 0) {
+        currentActiveRow = rows[0];
+        currentActiveIndex = 0;
       }
     }
 
@@ -1576,10 +1594,15 @@
 
         // Auto-scroll logic
         if (state.autoScroll && !state.userScrolled && els.tabContainer) {
-          const containerTop = els.tabContainer.getBoundingClientRect().top;
-          const rowTop = currentActiveRow.getBoundingClientRect().top;
-          const offset = rowTop - containerTop - (els.tabContainer.clientHeight * 0.35);
-          els.tabContainer.scrollBy({ top: offset, behavior: 'smooth' });
+          if (state.isPlaying || curTime > 0) {
+            const containerTop = els.tabContainer.getBoundingClientRect().top;
+            const rowTop = currentActiveRow.getBoundingClientRect().top;
+            const offset = rowTop - containerTop - (els.tabContainer.clientHeight * 0.35);
+            els.tabContainer.scrollBy({ top: offset, behavior: 'smooth' });
+          } else {
+            // Initial load at time 0: keep pinned to top
+            els.tabContainer.scrollTop = 0;
+          }
         }
       }
     }
@@ -2227,6 +2250,9 @@
 
   // --- INIT ---
   async function init() {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
     cacheDom();
     bindEvents();
     updateViewModeButtons();
