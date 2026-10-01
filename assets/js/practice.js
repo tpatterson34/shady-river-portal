@@ -1394,8 +1394,16 @@
     for (let i = 0; i < rows.length; i++) {
       const row = rows[i];
       const rowTime = parseFloat(row.getAttribute('data-time'));
-      const nextRow = rows[i + 1];
-      const nextTime = nextRow ? parseFloat(nextRow.getAttribute('data-time')) : state.duration + 1;
+      if (isNaN(rowTime) || rowTime < 0) continue;
+
+      let nextTime = state.duration + 1;
+      for (let j = i + 1; j < rows.length; j++) {
+        const nt = parseFloat(rows[j].getAttribute('data-time'));
+        if (!isNaN(nt) && nt >= 0) {
+          nextTime = nt;
+          break;
+        }
+      }
 
       if (rowTime <= curTime && curTime < nextTime) {
         currentActiveRow = row;
