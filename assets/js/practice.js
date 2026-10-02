@@ -850,6 +850,7 @@
 
             if (hasBars) {
               let searchPos = 0;
+              let prevRowCol = -1;
               block.barsData.forEach((bar) => {
                 let barStartCol = searchPos;
                 if (bar.lyrics && bar.lyrics.trim()) {
@@ -881,8 +882,6 @@
                   }
                 }
 
-                let prevBarCol = -1;
-
                 tokens.forEach((tok, cIdx) => {
                   let col = barStartCol;
                   if (Array.isArray(bar.chord_cols) && typeof bar.chord_cols[cIdx] === 'number' && bar.chord_cols[cIdx] >= 0) {
@@ -908,10 +907,10 @@
                     }
                   }
 
-                  if (prevBarCol >= 0 && col < prevBarCol + 4) {
-                    col = prevBarCol + 4;
+                  if (prevRowCol >= 0 && col < prevRowCol + 4) {
+                    col = prevRowCol + 4;
                   }
-                  prevBarCol = col;
+                  prevRowCol = col;
 
                   const rawTransposed = transposeChord(tok.originalChord, state.transposition);
                   const chordName = state.easyChords ? simplifyChord(rawTransposed) : rawTransposed;
