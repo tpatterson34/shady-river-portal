@@ -566,7 +566,8 @@
               chords: barChords,
               tokens: barTokens,
               beats: beats,
-              lyrics: barSync.lyrics || ''
+              lyrics: barSync.lyrics || '',
+              chord_cols: barSync.chord_cols || null
             });
           });
 
@@ -850,7 +851,7 @@
             if (hasBars) {
               let searchPos = 0;
               block.barsData.forEach((bar) => {
-                let barStartCol = 0;
+                let barStartCol = searchPos;
                 if (bar.lyrics && bar.lyrics.trim()) {
                   const firstWord = bar.lyrics.trim().split(/\s+/)[0];
                   const foundIdx = lineText.indexOf(firstWord, searchPos);
@@ -858,6 +859,9 @@
                     barStartCol = foundIdx;
                     searchPos = barStartCol + bar.lyrics.trim().length;
                   }
+                } else {
+                  barStartCol = Math.max(searchPos + 2, lineText.length + 1);
+                  searchPos = barStartCol + 8;
                 }
 
                 const tokens = bar.tokens || [];
@@ -881,7 +885,9 @@
 
                 tokens.forEach((tok, cIdx) => {
                   let col = barStartCol;
-                  if (cIdx === 0) {
+                  if (Array.isArray(bar.chord_cols) && typeof bar.chord_cols[cIdx] === 'number' && bar.chord_cols[cIdx] >= 0) {
+                    col = barStartCol + bar.chord_cols[cIdx];
+                  } else if (cIdx === 0) {
                     col = barStartCol;
                   } else if (tokens.length >= 2) {
                     const nominal = Math.floor(cIdx * (barLyricLen / tokens.length));
@@ -1585,6 +1591,10 @@
   }
 
   function updateTabHighlight(curTime) {
+    // Presentation lead offset: Web Audio hardware DAC buffering & display refresh latency
+    // introduces ~50-80ms perception lag. A slight lead ensures highlight hits on acoustic onset.
+    const visualTime = state.isPlaying ? Math.min(state.duration, curTime + 0.080) : curTime;
+
     // 1. Find active tab-row
     const rows = document.querySelectorAll('.tab-row');
     let currentActiveRow = null;
@@ -1605,15 +1615,15 @@
           }
         }
 
-        if (rowTime <= curTime && curTime < nextTime) {
+        if (rowTime <= visualTime && visualTime < nextTime) {
           currentActiveRow = row;
           currentActiveIndex = i;
           break;
         }
       }
 
-      // If curTime is within intro before the first timed row, activate row 0
-      if (!currentActiveRow && rows.length > 0 && curTime >= 0) {
+      // If visualTime is within intro before the first timed row, activate row 0
+      if (!currentActiveRow && rows.length > 0 && visualTime >= 0) {
         currentActiveRow = rows[0];
         currentActiveIndex = 0;
       }
@@ -1649,11 +1659,11 @@
       const nextTok = state.allChordsTimeline[i + 1];
       const chordEnd = nextTok ? nextTok.time : state.duration;
 
-      if (tok.time <= curTime && curTime < chordEnd) {
+      if (tok.time <= visualTime && visualTime < chordEnd) {
         activeChord = tok;
         nextChord = nextTok;
         break;
-      } else if (tok.time > curTime && !nextChord) {
+      } else if (tok.time > visualTime && !nextChord) {
         nextChord = tok;
       }
     }
