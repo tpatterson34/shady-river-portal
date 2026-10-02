@@ -18,7 +18,7 @@ window.HOLLOW_HERD_DATA = {
     "substack_url": "https://theshadyriverbard.substack.com/s/deconstructed",
     "liner_notes_url": "https://theshadyriverbard.substack.com/s/deconstructed",
     "total_tracks": 15,
-    "public_videos_count": 11,
+    "public_videos_count": 14,
     "release_cadence": "Videos premiering track-by-track 2–3 times weekly; full 15-track album streaming now."
   },
   "acts": [
@@ -387,15 +387,16 @@ window.HOLLOW_HERD_DATA = {
       "track_number": 14,
       "title": "Bust the Trust (Revisited)",
       "cover_image": "assets/art/14-bust-the-trust-revisited.webp",
-      "youtube_id": "_xMoO4l_3YA",
-      "is_video_public": false,
+      "youtube_id": "kGRRgW3CBok",
+      "is_video_public": true,
       "act_number": 4,
       "act_title": "The Reckoning (The Resolution)",
       "subtitle": "Packers & Stockyards Act Antitrust Demand",
       "concept": "A direct call to enforce the Sherman Antitrust Act. Linking back to the previous album’s message. A rallying cry to break the Big Four.",
       "musical_cue": "Anthemic, foot-stomping rock. Electric guitars. Driving rhythm.",
       "summary": "\"Bust the Trust (Revisited)\" is the album's rallying cry. It serves as a spiritual successor to the agrarian anthems of the past, calling specifically for the enforcement of the Sherman Antitrust Act to dismantle the oligopoly of Tyson, Cargill, JBS, and National Beef. The song argues that the laws to save the rancher already exist—they are just \"gathering dust.\" It connects the current cattle crisis to the historical fight against the robber barons, demanding that the government pick up \"Teddy's Big Stick\" once again. It is loud, driving, and defiant.",
-      "lyrics": "[Intro]\n[Verse 1]\nThey drew a line in eighteen ninety\nSaid the market must be free\nTo protect the common worker\nAnd the likes of you and me\nThey wrote it on the parchment and they signed it with a pen\nSaid that no monopoly would ever rule again\nBut the ink has faded yellow and the book is on the shelf\nWhile the packer hoards the billions and the power for himself.\n[Pre-Chorus]\nWe don't need a new law.\nWe don't need a committee.\nWe need a little justice from the country to the city.\n[Chorus]\nTeddy's big stick is gathering dust\nIt is time to stand up and bust the trust\nBreak the chains of the Big Four kings\nCut the puppet master's heavy strings\nYou can't have a market if you don't have a choice\nYou can't have a freedom if you don't have a voice\nIron and steel, ashes to dust\nIt is time to stand up and bust the trust!\n[Verse 2]\nStandard Oil got the hammer back in nineteen eleven\nNow we got a new cartel looking like a hog heaven\nThey fix the price of the heifer and they fix the price of the steak\nTaking every single dollar that the working hands make\nSherman gave us the weapon, Clayton gave us the right\nTo keep the open market from the everlasting night\nSo go and wake the sleeping giant in the DOJ\nTell 'em that the rancher has got something to say.\n[Bridge]\nToo big to fail?\n(No!)\nToo big to jail?\n(No!)\nToo big to care?\n(Yeah!)\nStrip 'em down.\nBreak 'em up.\nLevel the field.\n[Chorus]\nTeddy's big stick is gathering dust\nIt is time to stand up and bust the trust\nBreak the chains of the Big Four kings\nCut the puppet master's heavy strings\nYou can't have a market if you don't have a choice\nYou can't have a freedom if you don't have a voice\nIron and steel, ashes to dust\nIt is time to stand up and bust the trust!\n[Outro]\nBust it up.\n(Bust it up!)\nBreak it down.\n(Break it down!)\nBust the Trust."
+      "lyrics": "[Intro]\n[Verse 1]\nThey drew a line in eighteen ninety\nSaid the market must be free\nTo protect the common worker\nAnd the likes of you and me\nThey wrote it on the parchment and they signed it with a pen\nSaid that no monopoly would ever rule again\nBut the ink has faded yellow and the book is on the shelf\nWhile the packer hoards the billions and the power for himself.\n[Pre-Chorus]\nWe don't need a new law.\nWe don't need a committee.\nWe need a little justice from the country to the city.\n[Chorus]\nTeddy's big stick is gathering dust\nIt is time to stand up and bust the trust\nBreak the chains of the Big Four kings\nCut the puppet master's heavy strings\nYou can't have a market if you don't have a choice\nYou can't have a freedom if you don't have a voice\nIron and steel, ashes to dust\nIt is time to stand up and bust the trust!\n[Verse 2]\nStandard Oil got the hammer back in nineteen eleven\nNow we got a new cartel looking like a hog heaven\nThey fix the price of the heifer and they fix the price of the steak\nTaking every single dollar that the working hands make\nSherman gave us the weapon, Clayton gave us the right\nTo keep the open market from the everlasting night\nSo go and wake the sleeping giant in the DOJ\nTell 'em that the rancher has got something to say.\n[Bridge]\nToo big to fail?\n(No!)\nToo big to jail?\n(No!)\nToo big to care?\n(Yeah!)\nStrip 'em down.\nBreak 'em up.\nLevel the field.\n[Chorus]\nTeddy's big stick is gathering dust\nIt is time to stand up and bust the trust\nBreak the chains of the Big Four kings\nCut the puppet master's heavy strings\nYou can't have a market if you don't have a choice\nYou can't have a freedom if you don't have a voice\nIron and steel, ashes to dust\nIt is time to stand up and bust the trust!\n[Outro]\nBust it up.\n(Bust it up!)\nBreak it down.\n(Break it down!)\nBust the Trust.",
+      "substack_url": "https://theshadyriverbard.substack.com/p/the-liner-notes-bust-the-trust-revisited"
     },
     {
       "track_number": 15,
