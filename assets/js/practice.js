@@ -862,14 +862,50 @@
 
                 const tokens = bar.tokens || [];
                 const barLyricLen = (bar.lyrics && bar.lyrics.length > 0) ? bar.lyrics.length : 12;
+                const barText = (bar.lyrics && bar.lyrics.trim()) ? bar.lyrics.trim() : '';
+
+                // Identify start positions of individual words within the bar lyrics
+                const wordStarts = [];
+                let inWord = false;
+                for (let wIdx = 0; wIdx < barText.length; wIdx++) {
+                  const isSpace = /\s/.test(barText[wIdx]);
+                  if (!isSpace && !inWord) {
+                    wordStarts.push(wIdx);
+                    inWord = true;
+                  } else if (isSpace) {
+                    inWord = false;
+                  }
+                }
+
+                let prevBarCol = -1;
 
                 tokens.forEach((tok, cIdx) => {
                   let col = barStartCol;
-                  if (tokens.length === 2) {
-                    col = (cIdx === 0) ? barStartCol : barStartCol + Math.max(3, Math.floor(barLyricLen / 2));
-                  } else if (tokens.length > 2) {
-                    col = barStartCol + Math.floor(cIdx * (barLyricLen / tokens.length));
+                  if (cIdx === 0) {
+                    col = barStartCol;
+                  } else if (tokens.length >= 2) {
+                    const nominal = Math.floor(cIdx * (barLyricLen / tokens.length));
+                    const candidateStarts = wordStarts.filter(w => w > 0);
+                    if (candidateStarts.length > 0) {
+                      let bestWord = candidateStarts[0];
+                      let bestDiff = Math.abs(bestWord - nominal);
+                      for (let k = 1; k < candidateStarts.length; k++) {
+                        const diff = Math.abs(candidateStarts[k] - nominal);
+                        if (diff < bestDiff) {
+                          bestDiff = diff;
+                          bestWord = candidateStarts[k];
+                        }
+                      }
+                      col = barStartCol + bestWord;
+                    } else {
+                      col = barStartCol + Math.max(3, nominal);
+                    }
                   }
+
+                  if (prevBarCol >= 0 && col < prevBarCol + 4) {
+                    col = prevBarCol + 4;
+                  }
+                  prevBarCol = col;
 
                   const rawTransposed = transposeChord(tok.originalChord, state.transposition);
                   const chordName = state.easyChords ? simplifyChord(rawTransposed) : rawTransposed;
