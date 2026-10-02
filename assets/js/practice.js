@@ -348,10 +348,11 @@
         if (tabsFile) tabsTxt = await tabsFile.text();
       } else {
         // Loaded from remote path
-        const syncRes = await fetch(pkg.sync);
+        const cacheBuster = `?v=${Date.now()}`;
+        const syncRes = await fetch(pkg.sync + cacheBuster, { cache: 'no-cache' });
         syncJson = await syncRes.json();
         try {
-          const tabsRes = await fetch(pkg.tabs);
+          const tabsRes = await fetch(pkg.tabs + cacheBuster, { cache: 'no-cache' });
           tabsTxt = await tabsRes.text();
         } catch (e) {
           console.warn('tabs.txt not found, attempting sync.json embedded text:', e);
