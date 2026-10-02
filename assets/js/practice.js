@@ -576,7 +576,7 @@
           if (i + 1 < n) {
             const nextLine = tabLines[i + 1].trim();
             if (nextLine && !nextLine.startsWith('[') && !nextLine.startsWith('Key:') && !nextLine.includes('|')) {
-              lyricText = tabLines[i + 1];
+              lyricText = nextLine;
               i += 2;
             } else {
               i += 1;
@@ -845,7 +845,7 @@
           // ============================================================
           if (!isInstrumental && (hasBars || (block.chordTokens && block.chordTokens.length > 0))) {
             let chordBadgesHtml = '';
-            const lineText = block.lyricLine || '';
+            const lineText = (block.lyricLine || '').trim();
 
             if (hasBars) {
               let searchPos = 0;
@@ -892,12 +892,8 @@
 
             contentHtml = `
               <div class="ug-row-wrapper font-mono select-none my-1">
-                <div class="ug-chord-track relative">
-                  ${chordBadgesHtml}
-                </div>
-                <div class="ug-lyric-track text-stone-200">
-                  ${escapeHtml(lineText)}
-                </div>
+                <div class="ug-chord-track relative">${chordBadgesHtml}</div>
+                <div class="ug-lyric-track text-stone-200">${escapeHtml(lineText)}</div>
               </div>
             `;
           } else {
