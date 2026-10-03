@@ -188,6 +188,18 @@ input[type="range"].master-slider::-webkit-slider-thumb {
   height: 1.65rem;
   width: 100%;
 }
+.ug-bar-divider {
+  position: absolute;
+  top: 0;
+  color: #78716c; /* text-stone-500 */
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.4;
+  user-select: none;
+  pointer-events: none;
+  z-index: 2;
+}
 .ug-lyric-track {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.925rem;
@@ -332,6 +344,10 @@ body.tv-mode .ug-chord-badge {
 }
 body.tv-mode .ug-chord-track {
   height: 2.6rem !important;
+}
+body.tv-mode .ug-bar-divider {
+  font-size: 1.65rem !important;
+  line-height: 2 !important;
 }
 body.tv-mode .ug-lyric-track {
   font-size: 1.65rem !important;

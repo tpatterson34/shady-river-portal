@@ -770,79 +770,46 @@
 
         if (state.viewMode === 'bars') {
           // ============================================================
-          // VIEW 1: MEASURE BARS MODE (Lead Sheet / Measure Card Units)
+          // VIEW 1: MEASURE BARS MODE (Traditional Lead Sheet with Barlines)
           // ============================================================
-          if (hasBars && !isInstrumental) {
-            // Measure Bar Cards Grid: Chords and lyrics partitioned within the bars
-            const cols = Math.min(block.barsData.length, 4);
-            let gridHtml = `<div class="measure-bars-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-${cols} gap-2.5 my-1 select-none">`;
+          let chordRowHtml = '';
+          if (block.chordTokens && block.chordTokens.length > 0) {
+            chordRowHtml = '<div class="tab-chord-line tab-monospace font-bold text-amber-400 text-sm sm:text-base leading-relaxed whitespace-pre select-none">';
+            let lastBarNum = null;
+            block.chordTokens.forEach((tok, tokIdx) => {
+              const rawTransposed = transposeChord(tok.originalChord, state.transposition);
+              const chordName = state.easyChords ? simplifyChord(rawTransposed) : rawTransposed;
+              tok.chord = chordName;
 
-            block.barsData.forEach((bar) => {
-              const chordsHtml = (bar.tokens || []).map((tok, tokIdx) => {
-                const rawTransposed = transposeChord(tok.originalChord, state.transposition);
-                const chordName = state.easyChords ? simplifyChord(rawTransposed) : rawTransposed;
-                tok.chord = chordName;
-                return `<span class="chord-token ug-chord-badge !static !inline-flex hover:border-amber-400" data-time="${tok.time}" data-chord="${chordName}" data-token-idx="${tokIdx}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span>`;
-              }).join(' ');
-
-              gridHtml += `
-                <div class="measure-bar-cell flex flex-col justify-between" data-bar-num="${bar.barNumber}" data-time="${bar.time}">
-                  <div class="flex items-center justify-between text-xs font-mono mb-1.5 pb-1 border-b border-stone-800/60">
-                    <span class="bar-number-tag text-stone-500 font-mono text-[10px]">Bar ${bar.barNumber || '—'}</span>
-                    <div class="flex items-center gap-1.5">
-                      ${chordsHtml || '<span class="text-stone-600 font-mono text-[10px]">—</span>'}
-                    </div>
-                  </div>
-                  <div class="bar-lyric-text font-serif text-stone-200 text-sm sm:text-base leading-snug tracking-wide">
-                    ${escapeHtml(bar.lyrics || '—')}
-                  </div>
-                </div>
-              `;
-            });
-
-            gridHtml += '</div>';
-            contentHtml = gridHtml;
-          } else {
-            // Instrumental or Traditional Barline Row
-            let chordRowHtml = '';
-            if (block.chordTokens && block.chordTokens.length > 0) {
-              chordRowHtml = '<div class="tab-chord-line tab-monospace font-bold text-amber-400 text-sm sm:text-base leading-relaxed whitespace-pre select-none">';
-              let lastBarNum = null;
-              block.chordTokens.forEach((tok, tokIdx) => {
-                const rawTransposed = transposeChord(tok.originalChord, state.transposition);
-                const chordName = state.easyChords ? simplifyChord(rawTransposed) : rawTransposed;
-                tok.chord = chordName;
-
-                if (tok.barNumber !== undefined) {
-                  if (tokIdx === 0 || tok.barNumber !== lastBarNum) {
-                    chordRowHtml += '<span class="text-stone-600 font-normal">| </span>';
-                    lastBarNum = tok.barNumber;
-                  } else {
-                    chordRowHtml += ' ';
-                  }
-                  chordRowHtml += `<span class="chord-token px-1.5 py-0.5 rounded hover:bg-stone-800" data-time="${tok.time}" data-chord="${chordName}" data-token-idx="${tokIdx}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span> `;
+              if (tok.barNumber !== undefined) {
+                if (tokIdx === 0 || tok.barNumber !== lastBarNum) {
+                  chordRowHtml += '<span class="text-stone-600 font-normal">| </span>';
+                  lastBarNum = tok.barNumber;
                 } else {
-                  if (tokIdx === 0) chordRowHtml += '<span class="text-stone-600 font-normal">| </span>';
-                  chordRowHtml += `<span class="chord-token px-1.5 py-0.5 rounded hover:bg-stone-800" data-time="${tok.time}" data-chord="${chordName}" data-token-idx="${tokIdx}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span>`;
-                  chordRowHtml += '<span class="text-stone-600 font-normal"> | </span>';
+                  chordRowHtml += ' ';
                 }
-              });
-              if (lastBarNum !== null) {
-                chordRowHtml += '<span class="text-stone-600 font-normal">|</span>';
+                chordRowHtml += `<span class="chord-token px-1.5 py-0.5 rounded hover:bg-stone-800 transition-colors" data-time="${tok.time}" data-chord="${chordName}" data-token-idx="${tokIdx}" data-bar-num="${tok.barNumber}" title="Bar ${tok.barNumber || '—'} • Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span> `;
+              } else {
+                if (tokIdx === 0) chordRowHtml += '<span class="text-stone-600 font-normal">| </span>';
+                chordRowHtml += `<span class="chord-token px-1.5 py-0.5 rounded hover:bg-stone-800 transition-colors" data-time="${tok.time}" data-chord="${chordName}" data-token-idx="${tokIdx}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span>`;
+                chordRowHtml += '<span class="text-stone-600 font-normal"> | </span>';
               }
-              chordRowHtml += '</div>';
+            });
+            if (lastBarNum !== null) {
+              chordRowHtml += '<span class="text-stone-600 font-normal">|</span>';
             }
-
-            let lyricRowHtml = '';
-            if (block.lyricLine) {
-              lyricRowHtml = `<div class="tab-lyric text-stone-300 font-serif text-sm sm:text-base leading-relaxed tracking-wide">${escapeHtml(block.lyricLine)}</div>`;
-            }
-
-            contentHtml = chordRowHtml + lyricRowHtml;
+            chordRowHtml += '</div>';
           }
+
+          let lyricRowHtml = '';
+          if (block.lyricLine) {
+            lyricRowHtml = `<div class="tab-lyric text-stone-300 font-serif text-sm sm:text-base leading-relaxed tracking-wide">${escapeHtml(block.lyricLine)}</div>`;
+          }
+
+          contentHtml = chordRowHtml + lyricRowHtml;
         } else {
           // ============================================================
-          // VIEW 2: ULTIMATE GUITAR MODE (Chords Floating Over Syllables)
+          // VIEW 2: ULTIMATE GUITAR MODE (Chords Floating Over Syllables with Measure Barlines)
           // ============================================================
           if (!isInstrumental && (hasBars || (block.chordTokens && block.chordTokens.length > 0))) {
             let chordBadgesHtml = '';
@@ -851,7 +818,7 @@
             if (hasBars) {
               let searchPos = 0;
               let prevRowCol = -1;
-              block.barsData.forEach((bar) => {
+              block.barsData.forEach((bar, barIdx) => {
                 let barStartCol = searchPos;
                 if (bar.lyrics && bar.lyrics.trim()) {
                   const firstWord = bar.lyrics.trim().split(/\s+/)[0];
@@ -863,6 +830,15 @@
                 } else {
                   barStartCol = Math.max(searchPos + 2, lineText.length + 1);
                   searchPos = barStartCol + 8;
+                }
+
+                // Place measure divider barline '|'
+                const dividerCol = Math.max(0, barStartCol);
+                if (barIdx === 0 || dividerCol > prevRowCol) {
+                  chordBadgesHtml += `<span class="ug-bar-divider" style="left: ${dividerCol}ch;" title="Bar ${bar.barNumber || '—'}">|</span>`;
+                  if (prevRowCol < dividerCol) {
+                    prevRowCol = dividerCol;
+                  }
                 }
 
                 const tokens = bar.tokens || [];
@@ -907,6 +883,11 @@
                     }
                   }
 
+                  // Offset chord slightly from divider so badge doesn't cover '|'
+                  if (col <= dividerCol) {
+                    col = dividerCol + 1.5;
+                  }
+
                   if (prevRowCol >= 0 && col < prevRowCol + 4) {
                     col = prevRowCol + 4;
                   }
@@ -916,9 +897,13 @@
                   const chordName = state.easyChords ? simplifyChord(rawTransposed) : rawTransposed;
                   tok.chord = chordName;
 
-                  chordBadgesHtml += `<span class="chord-token ug-chord-badge" style="left: ${col}ch;" data-time="${tok.time}" data-chord="${chordName}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span>`;
+                  chordBadgesHtml += `<span class="chord-token ug-chord-badge" style="left: ${col}ch;" data-time="${tok.time}" data-chord="${chordName}" data-bar-num="${bar.barNumber}" title="Bar ${bar.barNumber || '—'} • Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span>`;
                 });
               });
+
+              // Closing measure divider barline '|'
+              const closingCol = Math.max(searchPos, lineText.length, prevRowCol + 4) + 1;
+              chordBadgesHtml += `<span class="ug-bar-divider" style="left: ${closingCol}ch;">|</span>`;
             } else {
               // Legacy UG chords with startCol
               block.chordTokens.forEach((tok) => {
@@ -953,7 +938,7 @@
               }
               lastBarNum = tok.barNumber;
 
-              chordRowHtml += `<span class="chord-token ug-chord-badge !static !inline-flex" data-time="${tok.time}" data-chord="${chordName}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span>`;
+              chordRowHtml += `<span class="chord-token ug-chord-badge !static !inline-flex" data-time="${tok.time}" data-chord="${chordName}" data-bar-num="${tok.barNumber}" title="Bar ${tok.barNumber || '—'} • Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span>`;
             });
 
             chordRowHtml += '<span class="text-stone-600 font-normal"> |</span></div>';
@@ -1700,21 +1685,8 @@
     }
     if (els.hudLyric) {
       if (currentActiveRow) {
-        let lyricText = '';
-        if (state.viewMode === 'bars') {
-          const activeBarCell = currentActiveRow.querySelector(`.measure-bar-cell[data-bar-num="${activeChord ? activeChord.barNumber : ''}"]`);
-          if (activeBarCell) {
-            const barLyricEl = activeBarCell.querySelector('.bar-lyric-text');
-            if (barLyricEl && barLyricEl.textContent.trim() !== '—') {
-              lyricText = barLyricEl.textContent.trim();
-            }
-          }
-        }
-        if (!lyricText) {
-          const lyricEl = currentActiveRow.querySelector('.tab-lyric') || currentActiveRow.querySelector('.ug-lyric-track');
-          lyricText = lyricEl ? lyricEl.textContent.trim() : '';
-        }
-        els.hudLyric.textContent = lyricText;
+        const lyricEl = currentActiveRow.querySelector('.tab-lyric') || currentActiveRow.querySelector('.ug-lyric-track');
+        els.hudLyric.textContent = lyricEl ? lyricEl.textContent.trim() : '';
       } else {
         els.hudLyric.textContent = '';
       }
