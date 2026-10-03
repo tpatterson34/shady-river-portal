@@ -124,6 +124,10 @@
     }
   </style>
   <link rel="stylesheet" href="../assets/css/bard-notes.css?v=20260920b">
+
+  <!-- Google Cast Manager & Album Data (__onGCastApiAvailable MUST be defined before cast_sender.js) -->
+  <script src="../assets/js/cast-manager.js?v=20261002A"></script>
+  <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
 </head>
 <body class="bg-stone-950 text-stone-100 font-sans antialiased selection:bg-amber-600 selection:text-white min-h-screen flex flex-col">
 
@@ -189,6 +193,13 @@
       </nav>
 
       <div class="flex items-center gap-2">
+        <!-- Header Cast Button -->
+        <button id="header-cast-btn" onclick="toggleJukeboxCast()" class="px-2.5 py-1.5 rounded-lg border border-stone-700 hover:border-amber-400/50 bg-stone-900/60 hover:bg-amber-950/40 text-stone-300 hover:text-amber-300 text-xs font-mono transition-all flex items-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-amber-400" aria-label="Cast to Google TV" title="Cast to Google TV">
+          <i class="fa-brands fa-chromecast text-amber-400" aria-hidden="true"></i>
+          <span id="header-cast-label" class="hidden sm:inline">Cast</span>
+          <span id="header-cast-device" class="hidden px-1.5 py-0.5 rounded bg-amber-900/60 text-amber-300 text-[10px] font-bold"></span>
+        </button>
+
         <button onclick="openVoteModal()" class="px-3.5 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-stone-950 font-mono text-xs font-bold transition-all shadow-md shadow-amber-600/20 flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
           <i class="fa-solid fa-check-to-slot" aria-hidden="true"></i> Vote to Record
         </button>
@@ -5902,8 +5913,18 @@ We are the wheat.</textarea>
           </div>
         </div>
 
-        <!-- Right Controls: Volume, Suno Link, Minimize -->
+        <!-- Right Controls: Volume, Cast, Suno Link, Minimize -->
         <div class="flex items-center justify-end gap-3 md:w-1/3 shrink-0">
+          <!-- Google Cast Button -->
+          <button id="jukebox-cast-btn" onclick="toggleJukeboxCast()" class="px-2.5 py-1.5 rounded-lg border border-white/10 hover:border-amber-400/50 bg-stone-900/60 hover:bg-amber-950/40 text-stone-400 hover:text-amber-300 text-xs font-mono transition-all flex items-center gap-1.5 focus:outline-none focus:ring-1 focus:ring-amber-400" aria-label="Cast to Google TV" title="Cast to Google TV">
+            <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6"/>
+              <line x1="2" y1="20" x2="2.01" y2="20"/>
+            </svg>
+            <span id="jukebox-cast-label" class="hidden sm:inline">Cast</span>
+            <span id="jukebox-cast-device" class="hidden px-1.5 py-0.5 rounded bg-amber-900/60 text-amber-300 text-[10px] font-bold"></span>
+          </button>
+
           <div class="hidden sm:flex items-center gap-2">
             <button type="button" onclick="toggleMute()" id="player-bar-mute-btn" class="text-stone-400 hover:text-white transition-colors text-xs p-1" title="Mute/Unmute" aria-label="Mute or Unmute">
               <i class="fa-solid fa-volume-high text-xs" id="player-bar-volume-icon" aria-hidden="true"></i>
@@ -6407,7 +6428,36 @@ We are the wheat.</textarea>
       }
 ];
 
+    CFTW_TRACKS.forEach((t, i) => {
+      t.number = t.trackNum;
+      t.track_number = t.trackNum;
+      t.audio_file = t.streamUrl;
+      t.art_square = 'assets/art/album-cover.jpg';
+      t.art_file = 'assets/art/album-cover.jpg';
+      t.art = 'assets/art/album-cover.jpg';
+    });
+
+    window.CHAFF_WHEAT_DATA = {
+      album: {
+        id: "chaff-from-the-wheat",
+        title: "Chaff from the Wheat",
+        subtitle: "A 200-Year Historical Chronicle of Labor Displacement and the Retraining Lie",
+        artist: "The Shady River Bard",
+        status: "Vault Concept • Album 04",
+        release_year: 2026,
+        genre: "Historical-Industrial Folk & Progressive Americana",
+        cover_art: "assets/art/album-cover.jpg",
+        master_cover_art: "assets/art/album-cover.jpg",
+        cover: "assets/art/album-cover.jpg"
+      },
+      tracks: CFTW_TRACKS
+    };
+    window.ALBUM_DATA = window.CHAFF_WHEAT_DATA;
+    window.CFTW_TRACKS = CFTW_TRACKS;
+
     let currentTrackIdx = -1;
+    window.currentTrackIndex = -1;
+    window.currentTrackIdx = -1;
     let isSeeking = false;
     let lastVolume = 1.0;
     const globalAudio = document.getElementById('global-cftw-audio');
@@ -6533,15 +6583,23 @@ We are the wheat.</textarea>
       }
 
       currentTrackIdx = idx;
+      window.currentTrackIndex = currentTrackIdx;
+      window.currentTrackIdx = currentTrackIdx;
       const track = CFTW_TRACKS[idx];
-
-      if (!globalAudio.src || !globalAudio.src.includes(track.clipId)) {
-        globalAudio.src = track.streamUrl;
-      }
 
       showBottomPlayer();
       updateGlobalBarUI(track, true);
       updatePlayButtonUI(track.trackNum, true);
+
+      if (window.CastManager && window.CastManager.isConnected()) {
+        if (!globalAudio.paused) globalAudio.pause();
+        window.CastManager.castTrack(idx, CFTW_TRACKS, window.CHAFF_WHEAT_DATA);
+        return;
+      }
+
+      if (!globalAudio.src || !globalAudio.src.includes(track.clipId)) {
+        globalAudio.src = track.streamUrl;
+      }
 
       globalAudio.play().catch(err => {
         console.warn('Playback error or blocked by autoplay policy:', err);
@@ -6553,6 +6611,15 @@ We are the wheat.</textarea>
     function togglePlayPause(trackNum) {
       const idx = getTrackIndexByNumber(trackNum);
       if (idx === -1) return;
+
+      if (window.CastManager && window.CastManager.isConnected()) {
+        if (currentTrackIdx === idx) {
+          window.CastManager.playOrPause();
+        } else {
+          playTrackByIndex(idx);
+        }
+        return;
+      }
 
       if (currentTrackIdx === idx) {
         if (globalAudio.paused) {
@@ -6570,6 +6637,10 @@ We are the wheat.</textarea>
         playTrackByIndex(0);
         return;
       }
+      if (window.CastManager && window.CastManager.isConnected()) {
+        window.CastManager.playOrPause();
+        return;
+      }
       if (globalAudio.paused) {
         globalAudio.play();
       } else {
@@ -6578,6 +6649,10 @@ We are the wheat.</textarea>
     }
 
     function prevTrack() {
+      if (window.CastManager && window.CastManager.isConnected()) {
+        window.CastManager.prevTrack();
+        return;
+      }
       if (currentTrackIdx > 0) {
         playTrackByIndex(currentTrackIdx - 1);
       } else if (CFTW_TRACKS.length > 0) {
@@ -6586,6 +6661,10 @@ We are the wheat.</textarea>
     }
 
     function nextTrack() {
+      if (window.CastManager && window.CastManager.isConnected()) {
+        window.CastManager.nextTrack();
+        return;
+      }
       if (currentTrackIdx !== -1 && currentTrackIdx < CFTW_TRACKS.length - 1) {
         // Automatically plays next item in CFTW_TRACKS array.
         // For track 13 (index 12), next item is track 15 (index 13).
@@ -6605,6 +6684,14 @@ We are the wheat.</textarea>
     }
 
     function onSeekChange(trackNum, val) {
+      if (window.CastManager && window.CastManager.isConnected()) {
+        const dur = window.CastManager.getDuration ? window.CastManager.getDuration() : (globalAudio.duration || 0);
+        if (dur > 0) {
+          window.CastManager.seek((val / 100) * dur);
+        }
+        isSeeking = false;
+        return;
+      }
       if (globalAudio.duration) {
         globalAudio.currentTime = (val / 100) * globalAudio.duration;
       }
@@ -6621,6 +6708,14 @@ We are the wheat.</textarea>
     }
 
     function onGlobalSeekChange(val) {
+      if (window.CastManager && window.CastManager.isConnected()) {
+        const dur = window.CastManager.getDuration ? window.CastManager.getDuration() : (globalAudio.duration || 0);
+        if (dur > 0) {
+          window.CastManager.seek((val / 100) * dur);
+        }
+        isSeeking = false;
+        return;
+      }
       if (globalAudio.duration) {
         globalAudio.currentTime = (val / 100) * globalAudio.duration;
       }
@@ -6630,6 +6725,9 @@ We are the wheat.</textarea>
     function setVolume(val) {
       const vol = parseFloat(val);
       globalAudio.volume = vol;
+      if (window.CastManager && window.CastManager.isConnected()) {
+        window.CastManager.setVolume(vol);
+      }
       const volIcon = document.getElementById('player-bar-volume-icon');
       if (!volIcon) return;
       if (vol === 0) {
@@ -6734,6 +6832,77 @@ We are the wheat.</textarea>
       });
     }
 
+    // Google Cast Synchronization Listeners
+    if (window.CastManager) {
+      window.CastManager.on('trackChange', (newIndex) => {
+        if (typeof newIndex === 'number' && newIndex >= 0 && newIndex !== currentTrackIdx) {
+          const track = getTrackByIndex(newIndex);
+          if (track) {
+            const prev = getTrackByIndex(currentTrackIdx);
+            if (prev) updatePlayButtonUI(prev.trackNum, false);
+            currentTrackIdx = newIndex;
+            window.currentTrackIndex = currentTrackIdx;
+            window.currentTrackIdx = currentTrackIdx;
+            showBottomPlayer();
+            updateGlobalBarUI(track, true);
+            updatePlayButtonUI(track.trackNum, true);
+          }
+        }
+      });
+
+      window.CastManager.on('stateChange', (st) => {
+        const track = getTrackByIndex(currentTrackIdx);
+        if (track) {
+          updatePlayButtonUI(track.trackNum, st.isPlaying);
+          updateGlobalBarUI(track, st.isPlaying);
+        }
+      });
+
+      window.CastManager.on('timeUpdate', (info) => {
+        if (!window.CastManager.isConnected() || isSeeking) return;
+        const current = info.currentTime;
+        const duration = info.duration;
+        const track = getTrackByIndex(currentTrackIdx);
+
+        // Global bar updates
+        const gTimeCurr = document.getElementById('player-bar-time-curr');
+        const gTimeDur = document.getElementById('player-bar-time-dur');
+        const gSlider = document.getElementById('player-bar-seek-slider');
+
+        if (gTimeCurr) gTimeCurr.innerText = formatTime(current);
+        if (gTimeDur && duration) gTimeDur.innerText = formatTime(duration);
+        if (gSlider && duration) gSlider.value = (current / duration) * 100;
+
+        // In-card deck updates
+        if (track) {
+          const cardCurr = document.getElementById(`time-curr-${track.trackNum}`);
+          const cardDur = document.getElementById(`time-dur-${track.trackNum}`);
+          const cardSlider = document.getElementById(`seek-slider-${track.trackNum}`);
+          if (cardCurr) cardCurr.innerText = formatTime(current);
+          if (cardDur && duration) cardDur.innerText = formatTime(duration);
+          if (cardSlider && duration) cardSlider.value = (current / duration) * 100;
+        }
+      });
+
+      window.CastManager.on('connected', () => {
+        if (!globalAudio.paused) globalAudio.pause();
+        const track = getTrackByIndex(currentTrackIdx);
+        if (track) {
+          updatePlayButtonUI(track.trackNum, true);
+          updateGlobalBarUI(track, true);
+        }
+      });
+
+      window.CastManager.on('disconnected', () => {
+        const isPlaying = !globalAudio.paused;
+        const track = getTrackByIndex(currentTrackIdx);
+        if (track) {
+          updatePlayButtonUI(track.trackNum, isPlaying);
+          updateGlobalBarUI(track, isPlaying);
+        }
+      });
+    }
+
     // Keyboard Hotkeys for Audio Playback
     document.addEventListener('keydown', (e) => {
       // Don't intercept when user is typing in forms/inputs
@@ -6752,6 +6921,18 @@ We are the wheat.</textarea>
     });
 
   </script>
+
+  <!-- CAST DIAGNOSTIC BADGE (BOTTOM-LEFT) -->
+  <div id="cast-debug-pill" onclick="window.CastManager && window.CastManager.showDebugModal ? window.CastManager.showDebugModal() : null" class="fixed bottom-24 left-6 z-50 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-amber-400/40 text-amber-400 font-mono text-[11px] shadow-2xl backdrop-blur-md cursor-pointer flex items-center gap-2 hover:border-amber-400 transition-colors" title="Click to view Cast diagnostics">
+    <span id="cast-debug-pill-icon" style="color:#64748b;">?</span> <span style="color:#f1f5f9;font-weight:600;">Cast:</span> <span id="cast-debug-pill-dev" style="color:#fbbf24;">Cast Standby</span> <span style="color:#64748b;">|</span> <span id="cast-debug-pill-msg" style="color:#94a3b8;">Ready</span>
+  </div>
+
+  <!-- CAST DIAGNOSTIC & STATUS TOAST -->
+  <div id="cast-toast" class="fixed bottom-24 right-6 z-50 transform transition-all duration-300 translate-y-8 opacity-0 pointer-events-none flex items-center gap-3 px-4 py-3 rounded-xl shadow-2xl font-mono text-xs border backdrop-blur-md" role="status" aria-live="polite">
+    <div id="cast-toast-icon" class="w-5 h-5 flex items-center justify-center shrink-0"></div>
+    <div id="cast-toast-message" class="text-xs font-mono font-medium"></div>
+  </div>
+
   <script src="../assets/js/a11y.js"></script>
   <script src="../assets/js/bard-notes.js?v=20260920b"></script>
 </body>

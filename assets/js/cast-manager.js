@@ -357,6 +357,9 @@
     if (activeAlbumMeta) return activeAlbumMeta;
     return window.FRACTURE_DATA ||
            window.ALBUM_DATA ||
+           window.CHAFF_WHEAT_DATA ||
+           window.CFTW_DATA ||
+           window.SOUL_FIRE_DATA ||
            window.FORGOTTEN_CROWN_DATA ||
            window.HEAVY_LOAD_DATA ||
            window.PLEONEXIA_DATA ||
@@ -387,10 +390,19 @@
     const rawAudio = track.audio_file || track.audioFile || track.audio_url || track.src || track.streamUrl || track.file || track.audio || track.url || '';
     const audioUrl = toAbsoluteUrl(rawAudio);
 
-    const mediaInfo = new chrome.cast.media.MediaInfo(audioUrl, 'audio/mpeg');
+    let contentType = 'audio/mpeg';
+    if (audioUrl.includes('.mp4')) {
+      contentType = 'video/mp4';
+    } else if (audioUrl.includes('.m4a') || audioUrl.includes('.aac')) {
+      contentType = 'audio/mp4';
+    } else if (audioUrl.includes('.ogg')) {
+      contentType = 'audio/ogg';
+    }
+
+    const mediaInfo = new chrome.cast.media.MediaInfo(audioUrl, contentType);
     mediaInfo.contentUrl = audioUrl;
     mediaInfo.contentId = audioUrl;
-    mediaInfo.contentType = 'audio/mpeg';
+    mediaInfo.contentType = contentType;
     mediaInfo.streamType = (window.chrome && chrome.cast && chrome.cast.media && chrome.cast.media.StreamType && chrome.cast.media.StreamType.BUFFERED) || 'BUFFERED';
     mediaInfo.customData = { trackIndex: index };
 
@@ -399,7 +411,7 @@
     const albumTitle = (metaAlbum && (metaAlbum.title || metaAlbum.albumTitle || metaAlbum.workingTitle)) || (document.title ? document.title.split('|')[0].trim() : "Sanity's Edge");
     const artist = (metaAlbum && metaAlbum.artist) || 'The Shady River Bard';
     const trackTitle = track.title || track.name || ('Track ' + (index + 1));
-    const trackNum = track.track_number || track.number || (index + 1);
+    const trackNum = track.track_number || track.number || track.trackNum || (index + 1);
 
     // 1. Bespoke Track Artwork (720x720) - displayed in primary/large view
     const trackCoverPath = track.art_square || track.art_file || track.artFile || track.art || track.image || track.cover ||
@@ -1530,7 +1542,9 @@
     if (CastManager.isConnected()) {
       CastManager.disconnect();
     } else {
-      const curIdx = typeof window.currentTrackIndex === 'number' && window.currentTrackIndex >= 0 ? window.currentTrackIndex : 0;
+      const curIdx = (typeof window.currentTrackIndex === 'number' && window.currentTrackIndex >= 0)
+        ? window.currentTrackIndex
+        : ((typeof window.currentTrackIdx === 'number' && window.currentTrackIdx >= 0) ? window.currentTrackIdx : 0);
       window.castTrack(curIdx);
     }
   };

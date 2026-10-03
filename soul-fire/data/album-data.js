@@ -2182,3 +2182,4 @@ window.SOUL_FIRE_DATA = {
     }
   ]
 };
+window.ALBUM_DATA = window.SOUL_FIRE_DATA;

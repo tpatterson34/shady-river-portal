@@ -186,6 +186,7 @@
     if (index >= tracks.length) index = 0;
 
     currentTrackIndex = index;
+    window.currentTrackIndex = currentTrackIndex;
     const t = tracks[currentTrackIndex];
 
     // Update active deck UI
@@ -210,6 +211,16 @@
     if (lyricsTitleEl) lyricsTitleEl.innerText = `${t.title} — Lyrics & Deconstruction`;
     renderLyrics(t);
 
+    // If Cast is active, load media on receiver
+    if (window.CastManager && window.CastManager.isConnected()) {
+      if (!audio.paused) audio.pause();
+      setPlayingState(true);
+      window.CastManager.castTrack(index, tracks, window.SOUL_FIRE_DATA || window.ALBUM_DATA);
+      renderTrackList();
+      if (updateUrl) updateHash(t.slug);
+      return;
+    }
+
     // Audio load
     audio.src = t.audio_file;
     audio.onerror = function () {
@@ -219,19 +230,6 @@
         if (autoPlay) audio.play();
       }
     };
-
-    // If Cast is active, load media on receiver
-    if (window.ShadyRiverCast && window.ShadyRiverCast.isCastSessionActive && window.ShadyRiverCast.isCastSessionActive()) {
-      const fullAudioUrl = window.location.origin + '/' + t.audio_file.replace(/^\//, '');
-      const fullArtUrl = window.location.origin + '/' + t.art_square.replace(/^\//, '');
-      window.ShadyRiverCast.loadMedia({
-        audioUrl: fullAudioUrl,
-        title: t.title,
-        album: 'Soul Fire',
-        artist: 'The Shady River Bard',
-        imageUrl: fullArtUrl
-      });
-    }
 
     if (autoPlay) {
       audio.play().then(() => {
@@ -285,6 +283,10 @@
   }
 
   function togglePlay() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      window.CastManager.playOrPause();
+      return;
+    }
     if (audio.paused) {
       audio.play().then(() => {
         setPlayingState(true);
@@ -337,11 +339,28 @@
   function bindUIEvents() {
     if (playBtn) playBtn.addEventListener('click', togglePlay);
     if (deckPlayBtn) deckPlayBtn.addEventListener('click', togglePlay);
-    if (prevBtn) prevBtn.addEventListener('click', () => selectTrack(currentTrackIndex - 1, true));
-    if (nextBtn) nextBtn.addEventListener('click', () => selectTrack(currentTrackIndex + 1, true));
+    if (prevBtn) prevBtn.addEventListener('click', () => {
+      if (window.CastManager && window.CastManager.isConnected()) {
+        window.CastManager.prevTrack();
+      } else {
+        selectTrack(currentTrackIndex - 1, true);
+      }
+    });
+    if (nextBtn) nextBtn.addEventListener('click', () => {
+      if (window.CastManager && window.CastManager.isConnected()) {
+        window.CastManager.nextTrack();
+      } else {
+        selectTrack(currentTrackIndex + 1, true);
+      }
+    });
 
     if (progressSlider) {
       progressSlider.addEventListener('input', () => {
+        if (window.CastManager && window.CastManager.isConnected()) {
+          const dur = window.CastManager.getDuration ? window.CastManager.getDuration() : (audio.duration || 0);
+          if (dur > 0) window.CastManager.seek((progressSlider.value / 100) * dur);
+          return;
+        }
         if (!isNaN(audio.duration) && audio.duration > 0) {
           audio.currentTime = (progressSlider.value / 100) * audio.duration;
         }
@@ -350,7 +369,40 @@
 
     if (volumeSlider) {
       volumeSlider.addEventListener('input', () => {
-        audio.volume = volumeSlider.value / 100;
+        const val = volumeSlider.value / 100;
+        audio.volume = val;
+        if (window.CastManager && window.CastManager.isConnected()) {
+          window.CastManager.setVolume(val);
+        }
+      });
+    }
+
+    // Google Cast Event Listeners
+    if (window.CastManager) {
+      window.CastManager.on('trackChange', (newIdx) => {
+        if (typeof newIdx === 'number' && newIdx >= 0 && newIdx !== currentTrackIndex) {
+          selectTrack(newIdx, false);
+        }
+      });
+
+      window.CastManager.on('stateChange', (st) => {
+        setPlayingState(st.isPlaying);
+      });
+
+      window.CastManager.on('timeUpdate', (info) => {
+        if (!window.CastManager.isConnected()) return;
+        if (currentTimeEl) currentTimeEl.innerText = formatTime(info.currentTime);
+        if (totalTimeEl && info.duration > 0) totalTimeEl.innerText = formatTime(info.duration);
+        if (progressSlider && info.duration > 0) progressSlider.value = (info.currentTime / info.duration) * 100;
+      });
+
+      window.CastManager.on('connected', () => {
+        if (!audio.paused) audio.pause();
+        setPlayingState(true);
+      });
+
+      window.CastManager.on('disconnected', () => {
+        setPlayingState(!audio.paused);
       });
     }
 
