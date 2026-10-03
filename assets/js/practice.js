@@ -2301,7 +2301,7 @@
 
     // Load available packages
     try {
-      const res = await fetch('data/practice-packages.json?v=20261003_04');
+      const res = await fetch('data/practice-packages.json?v=20261003_05');
       state.allPackages = await res.json();
     } catch (e) {
       console.warn('Could not load practice-packages.json, using bundled package:', e);
