@@ -783,20 +783,20 @@
 
               if (tok.barNumber !== undefined) {
                 if (tokIdx === 0 || tok.barNumber !== lastBarNum) {
-                  chordRowHtml += '<span class="text-stone-600 font-normal">| </span>';
+                  chordRowHtml += '<span class="text-stone-400 font-medium">| </span>';
                   lastBarNum = tok.barNumber;
                 } else {
                   chordRowHtml += ' ';
                 }
                 chordRowHtml += `<span class="chord-token px-1.5 py-0.5 rounded hover:bg-stone-800 transition-colors" data-time="${tok.time}" data-chord="${chordName}" data-token-idx="${tokIdx}" data-bar-num="${tok.barNumber}" title="Bar ${tok.barNumber || '—'} • Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span> `;
               } else {
-                if (tokIdx === 0) chordRowHtml += '<span class="text-stone-600 font-normal">| </span>';
+                if (tokIdx === 0) chordRowHtml += '<span class="text-stone-400 font-medium">| </span>';
                 chordRowHtml += `<span class="chord-token px-1.5 py-0.5 rounded hover:bg-stone-800 transition-colors" data-time="${tok.time}" data-chord="${chordName}" data-token-idx="${tokIdx}" title="Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span>`;
-                chordRowHtml += '<span class="text-stone-600 font-normal"> | </span>';
+                chordRowHtml += '<span class="text-stone-400 font-medium"> | </span>';
               }
             });
             if (lastBarNum !== null) {
-              chordRowHtml += '<span class="text-stone-600 font-normal">|</span>';
+              chordRowHtml += '<span class="text-stone-400 font-medium">|</span>';
             }
             chordRowHtml += '</div>';
           }
@@ -925,7 +925,7 @@
           } else {
             // Instrumental row in UG mode (pill badges inline)
             let chordRowHtml = '<div class="tab-chord-line font-mono text-sm sm:text-base leading-relaxed select-none py-1 flex flex-wrap items-center gap-1.5">';
-            chordRowHtml += '<span class="text-stone-600 font-normal">| </span>';
+            chordRowHtml += '<span class="text-stone-400 font-medium">| </span>';
             let lastBarNum = null;
 
             (block.chordTokens || []).forEach((tok) => {
@@ -934,14 +934,14 @@
               tok.chord = chordName;
 
               if (tok.barNumber !== undefined && lastBarNum !== null && tok.barNumber !== lastBarNum) {
-                chordRowHtml += '<span class="text-stone-600 font-normal"> | </span>';
+                chordRowHtml += '<span class="text-stone-400 font-medium"> | </span>';
               }
               lastBarNum = tok.barNumber;
 
               chordRowHtml += `<span class="chord-token ug-chord-badge !static !inline-flex" data-time="${tok.time}" data-chord="${chordName}" data-bar-num="${tok.barNumber}" title="Bar ${tok.barNumber || '—'} • Jump to ${chordName} (${formatTime(tok.time)})">${escapeHtml(chordName)}</span>`;
             });
 
-            chordRowHtml += '<span class="text-stone-600 font-normal"> |</span></div>';
+            chordRowHtml += '<span class="text-stone-400 font-medium"> |</span></div>';
             contentHtml = chordRowHtml;
           }
         }
