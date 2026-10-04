@@ -867,7 +867,7 @@
               chordRowHtml += `<span class="ug-bar-divider !text-stone-400 !font-medium" style="left: ${d}ch;">|</span>`;
             });
             aligned.chords.forEach(c => {
-              chordRowHtml += `<span class="chord-token !absolute px-1 py-0.5 rounded hover:bg-stone-800 transition-colors" style="left: ${c.col}ch;" data-time="${c.time}" data-chord="${c.chordName}" data-bar-num="${c.barNumber}" title="Bar ${c.barNumber || '—'} • Jump to ${c.chordName} (${formatTime(c.time)})">${escapeHtml(c.chordName)}</span>`;
+              chordRowHtml += `<span class="chord-token !absolute px-1 py-0.5 rounded hover:bg-stone-800 transition-colors" style="left: ${c.col}ch; margin-left: -0.25rem;" data-time="${c.time}" data-chord="${c.chordName}" data-bar-num="${c.barNumber}" title="Bar ${c.barNumber || '—'} • Jump to ${c.chordName} (${formatTime(c.time)})">${escapeHtml(c.chordName)}</span>`;
             });
             chordRowHtml += '</div>';
 
@@ -905,7 +905,7 @@
           if (aligned) {
             let chordBadgesHtml = '';
             aligned.dividers.forEach(d => {
-              chordBadgesHtml += `<span class="ug-bar-divider" style="left: ${d}ch;">|</span>`;
+              chordBadgesHtml += `<span class="ug-bar-divider !text-stone-400 !font-medium" style="left: ${d}ch;">|</span>`;
             });
             aligned.chords.forEach(c => {
               chordBadgesHtml += `<span class="chord-token ug-chord-badge" style="left: ${c.col}ch;" data-time="${c.time}" data-chord="${c.chordName}" data-bar-num="${c.barNumber}" title="Bar ${c.barNumber || '—'} • Jump to ${c.chordName} (${formatTime(c.time)})">${escapeHtml(c.chordName)}</span>`;
@@ -913,8 +913,8 @@
 
             contentHtml = `
               <div class="ug-row-wrapper font-mono select-none my-1">
-                <div class="ug-chord-track relative">${chordBadgesHtml}</div>
-                <div class="ug-lyric-track font-mono text-stone-200 text-sm sm:text-base leading-relaxed whitespace-pre select-none">${aligned.formattedLyricHtml}</div>
+                <div class="ug-chord-track font-mono font-bold text-amber-400 text-sm sm:text-base leading-relaxed whitespace-pre select-none relative" style="height: 1.65rem;">${chordBadgesHtml}</div>
+                <div class="ug-lyric-track font-mono text-stone-300 text-sm sm:text-base leading-relaxed whitespace-pre select-none">${aligned.formattedLyricHtml}</div>
               </div>
             `;
           } else if (!isInstrumental && block.chordTokens && block.chordTokens.length > 0) {

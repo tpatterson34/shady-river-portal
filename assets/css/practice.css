@@ -15,6 +15,7 @@
   --stem-drums: #ef4444;
   --stem-bass: #a855f7;
   --stem-other: #10b981;
+  --font-mono: 'JetBrains Mono', 'Consolas', monospace;
 }
 
 /* Custom Scrollbars */
@@ -147,10 +148,11 @@ input[type="range"].master-slider::-webkit-slider-thumb {
   align-items: center;
   justify-content: center;
   font-family: var(--font-mono, monospace);
-  font-size: 0.8rem;
+  font-size: 1em;
   font-weight: 700;
-  line-height: 1;
-  padding: 0.15rem 0.4rem;
+  line-height: 1.2;
+  padding: 0.1rem 0.35rem;
+  margin-left: -0.35rem;
   border-radius: 4px;
   background: #24201d;
   border: 1px solid rgba(168, 162, 158, 0.35);
@@ -174,7 +176,7 @@ input[type="range"].master-slider::-webkit-slider-thumb {
   font-weight: 800;
   border-color: #fef08a !important;
   box-shadow: 0 0 12px rgba(245, 158, 11, 0.9), 0 0 2px #fff;
-  transform: scale(1.1) translateY(-1px);
+  transform: scale(1.08) translateY(-1px);
   z-index: 10;
 }
 
@@ -183,26 +185,28 @@ input[type="range"].master-slider::-webkit-slider-thumb {
   position: relative;
   width: 100%;
 }
-.ug-chord-track {
+.ug-chord-track,
+.tab-chord-line {
   position: relative;
   height: 1.65rem;
   width: 100%;
+  font-family: var(--font-mono, monospace);
 }
 .ug-bar-divider {
   position: absolute;
   top: 0;
   color: #a8a29e; /* high-contrast stone-400 */
-  font-family: 'JetBrains Mono', 'Consolas', monospace;
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: var(--font-mono, monospace);
+  font-size: 1em;
+  font-weight: 500;
   line-height: 1.4;
   user-select: none;
   pointer-events: none;
   z-index: 2;
 }
-.ug-lyric-track {
-  font-family: 'JetBrains Mono', 'Consolas', monospace;
-  font-size: 0.925rem;
+.ug-lyric-track,
+.tab-lyric {
+  font-family: var(--font-mono, monospace);
   line-height: 1.6;
   white-space: pre;
   overflow-x: auto;
@@ -329,30 +333,29 @@ body.tv-mode .tab-monospace {
   line-height: 2.2 !important;
 }
 body.tv-mode .chord-token {
-  font-size: 1.55rem !important;
+  font-size: 1.6rem !important;
   padding: 0.15rem 0.4rem;
 }
-body.tv-mode .tab-lyric {
+body.tv-mode .tab-lyric,
+body.tv-mode .ug-lyric-track {
   font-size: 1.6rem !important;
   line-height: 2 !important;
   color: #ffffff !important;
 }
 body.tv-mode .ug-chord-badge {
-  font-size: 1.35rem !important;
-  padding: 0.25rem 0.6rem;
+  font-size: 1em !important;
+  padding: 0.15rem 0.5rem;
+  margin-left: -0.5rem;
   border-radius: 6px;
 }
-body.tv-mode .ug-chord-track {
+body.tv-mode .ug-chord-track,
+body.tv-mode .tab-chord-line {
   height: 2.6rem !important;
+  font-size: 1.6rem !important;
 }
 body.tv-mode .ug-bar-divider {
-  font-size: 1.65rem !important;
+  font-size: 1em !important;
   line-height: 2 !important;
-}
-body.tv-mode .ug-lyric-track {
-  font-size: 1.65rem !important;
-  line-height: 2.2 !important;
-  color: #ffffff !important;
 }
 body.tv-mode .measure-bar-cell {
   padding: 0.85rem 1.15rem;
