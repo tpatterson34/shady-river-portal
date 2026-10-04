@@ -759,7 +759,17 @@
       const barChordCols = [];
       tokens.forEach((tok, cIdx) => {
         let relCol = 0;
-        if (cIdx === 0) {
+        if (bar.chord_cols && typeof bar.chord_cols[cIdx] === 'number') {
+          relCol = bar.chord_cols[cIdx];
+          if (cIdx > 0) {
+            const prevRel = barChordCols[barChordCols.length - 1];
+            const prevChord = tokens[cIdx - 1].chord || tokens[cIdx - 1].originalChord || '';
+            const minCol = prevRel + Math.max(prevChord.length + 1, 3);
+            if (relCol < minCol) {
+              relCol = minCol;
+            }
+          }
+        } else if (cIdx === 0) {
           relCol = 0;
         } else {
           const frac = cIdx / tokens.length;
