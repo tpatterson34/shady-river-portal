@@ -745,7 +745,9 @@
     let formattedLyricHtml = '';
 
     block.barsData.forEach((bar) => {
-      const text = (bar.lyrics || '').trim();
+      const rawText = bar.lyrics || '';
+      // Trim trailing spaces only, preserve leading indentation for beat-aligned lyrics
+      const text = rawText.replace(/\s+$/, '');
       const words = [];
       let m;
       const re = /\S+/g;
@@ -764,6 +766,8 @@
           if (words.length > 1) {
             const wIdx = Math.min(words.length - 1, Math.round(frac * (words.length - 1)));
             relCol = words[wIdx].start;
+          } else if (words.length === 1 && words[0].start > 0) {
+            relCol = words[0].start;
           } else {
             relCol = Math.round(frac * Math.max(text.length, 8));
           }
