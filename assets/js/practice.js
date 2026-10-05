@@ -360,6 +360,7 @@
       }
 
       // 2. Parse tablature & chords
+      state.currentSync = syncJson;
       parseTablature(tabsTxt, syncJson);
       renderTablature();
 
@@ -442,7 +443,12 @@
       if (els.tabContainer) els.tabContainer.scrollTop = 0;
 
       // Estimate tempo & reset Capo for new song
-      state.estimatedBpm = estimateSongTempo(state.allChordsTimeline, state.duration);
+      if (pkg.tempo) {
+        const pMatch = String(pkg.tempo).match(/(\d+)/);
+        if (pMatch) state.estimatedBpm = parseInt(pMatch[1], 10);
+      } else if (!state.estimatedBpm) {
+        state.estimatedBpm = estimateSongTempo(state.allChordsTimeline, state.duration);
+      }
       if (els.hudTempoBadge) {
         els.hudTempoBadge.textContent = `~${state.estimatedBpm} BPM`;
       }
@@ -1719,12 +1725,29 @@
     }
 
     // 4. Update Measure & Beat Metronome Visualizer
-    const bpm = state.estimatedBpm || 110;
-    const beatsPerSec = bpm / 60;
-    const currentBeatTotal = Math.floor(curTime * beatsPerSec);
-    const timeSig = state.timeSignature || 4;
-    const currentBar = Math.floor(currentBeatTotal / timeSig) + 1;
-    const currentBeat = (currentBeatTotal % timeSig) + 1;
+    let currentBar = 1;
+    let currentBeat = 1;
+
+    if (activeChord && activeChord.barNumber !== undefined) {
+      currentBar = activeChord.barNumber;
+      if (state.currentSync && Array.isArray(state.currentSync)) {
+        const barSync = state.currentSync.find(b => b.bar_number === activeChord.barNumber);
+        if (barSync && Array.isArray(barSync.beats) && barSync.beats.length > 0) {
+          for (let bIdx = 0; bIdx < barSync.beats.length; bIdx++) {
+            if (curTime >= barSync.beats[bIdx]) {
+              currentBeat = bIdx + 1;
+            }
+          }
+        }
+      }
+    } else {
+      const bpm = state.estimatedBpm || 110;
+      const beatsPerSec = bpm / 60;
+      const currentBeatTotal = Math.floor(curTime * beatsPerSec);
+      const timeSig = state.timeSignature || 4;
+      currentBar = Math.floor(currentBeatTotal / timeSig) + 1;
+      currentBeat = (currentBeatTotal % timeSig) + 1;
+    }
 
     if (els.hudBarNum) els.hudBarNum.textContent = currentBar;
     if (els.mobileHudBar) els.mobileHudBar.textContent = currentBar;
