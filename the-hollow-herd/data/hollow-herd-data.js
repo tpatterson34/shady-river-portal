@@ -18,8 +18,8 @@ window.HOLLOW_HERD_DATA = {
     "substack_url": "https://theshadyriverbard.substack.com/s/deconstructed",
     "liner_notes_url": "https://theshadyriverbard.substack.com/s/deconstructed",
     "total_tracks": 15,
-    "public_videos_count": 14,
-    "release_cadence": "Videos premiering track-by-track 2–3 times weekly; full 15-track album streaming now."
+    "public_videos_count": 15,
+    "release_cadence": "All 15 official music videos now released; complete 15-track album streaming worldwide."
   },
   "acts": [
     {
@@ -402,15 +402,16 @@ window.HOLLOW_HERD_DATA = {
       "track_number": 15,
       "title": "The Hollow Herd",
       "cover_image": "assets/art/15-the-hollow-herd.webp",
-      "youtube_id": "lKEwMQZT6mU",
-      "is_video_public": false,
+      "youtube_id": "1Ol_LnLYyOI",
+      "is_video_public": true,
       "act_number": 4,
       "act_title": "The Reckoning (The Resolution)",
       "subtitle": "The Forensic Reckoning & Agrarian Endurance",
       "concept": "The summary. The herd is hollow (numbers down), the promises were hollow (politics), but the people remain. A final question to the consumer: \"Where's the Beef?\" (Meaning: where is the substance/truth?).",
       "musical_cue": "Starts sparse (cello/guitar) and builds to a massive, orchestral/industrial crescendo.",
       "summary": "\"The Hollow Herd\" functions as the sonic autopsy of the industry. It synthesizes the physical \"hollowing out\" of the cattle inventory (lowest since 1951) with the spiritual vacancy of a market driven by fraud and algorithms. The song recontextualizes the phrase \"Where's the Beef?\"—transforming it from a nostalgic commercial slogan into a demand for justice. It argues that the herd isn't just small; it is \"hollow,\" existing as paper assets and phantom collateral rather than living creatures. The track concludes the narrative arc by asserting that while the industry may be hollow, the spirit of the rancher remains the solid core that can rebuild it.",
-      "lyrics": "[Intro]\n[Verse 1]\nI remember the calf in the February clay\nFighting for a breath in the light of the day\nI remember the mud and the blood and the steam\nBefore it was sold for a corporate dream\nNow the pen is empty and the bunk is clean\nSwept away by the invisible machine\nThe gate is swinging in the western wind\nAsking where the beginning ends.\n[Pre-Chorus]\nThey counted the numbers on a digital sheet.\nBut they never looked down at the mud on their feet.\n[Chorus]\nIt is the Hollow Herd.\nIt is the paper ghost.\nFeasting on the land and the weary host\nYou ask \"Where is the Beef?\" from the TV screen\nI ask \"Where is the soul?\" in the gap between\nBetween the producer and the plate you see\nThey hollowed out the heart of the industry\nYeah the bones are standing but the spirit is blurred.\nThe Hollow Herd.\n[Verse 2]\nWe traded the water for a desert of dust\nWe traded the handshake for an antitrust\nWe watched the packer build a castle of bone\nWhile the rancher was fighting the battle alone\nFrom the Argentine ship to the lab on the isle\nThey hid the betrayal behind a smile\nNow the shelf is empty and the price is high\nAnd you are finally starting to wonder why.\n[Bridge]\nWe are the remnant!\nWe are the seed!\nWe are the ones that you actually need!\nYou can print the money!\nYou can fake the trade!\nBut you cannot fake the thing that God has made!\n[Chorus]\nIt is the Hollow Herd!\nIt is the paper ghost!\nFeasting on the land and the weary host\nYou ask \"Where is the Beef?\" from the TV screen\nI ask \"Where is the soul?\" in the gap between\nBetween the producer and the plate you see\nThey hollowed out the heart of the industry\nYeah the bones are standing but the spirit is blurred.\nThe Hollow Herd.\n[Outro]\nWhere is the beef?\nWhere is the beef?\nWhere is the beef?"
+      "lyrics": "[Intro]\n[Verse 1]\nI remember the calf in the February clay\nFighting for a breath in the light of the day\nI remember the mud and the blood and the steam\nBefore it was sold for a corporate dream\nNow the pen is empty and the bunk is clean\nSwept away by the invisible machine\nThe gate is swinging in the western wind\nAsking where the beginning ends.\n[Pre-Chorus]\nThey counted the numbers on a digital sheet.\nBut they never looked down at the mud on their feet.\n[Chorus]\nIt is the Hollow Herd.\nIt is the paper ghost.\nFeasting on the land and the weary host\nYou ask \"Where is the Beef?\" from the TV screen\nI ask \"Where is the soul?\" in the gap between\nBetween the producer and the plate you see\nThey hollowed out the heart of the industry\nYeah the bones are standing but the spirit is blurred.\nThe Hollow Herd.\n[Verse 2]\nWe traded the water for a desert of dust\nWe traded the handshake for an antitrust\nWe watched the packer build a castle of bone\nWhile the rancher was fighting the battle alone\nFrom the Argentine ship to the lab on the isle\nThey hid the betrayal behind a smile\nNow the shelf is empty and the price is high\nAnd you are finally starting to wonder why.\n[Bridge]\nWe are the remnant!\nWe are the seed!\nWe are the ones that you actually need!\nYou can print the money!\nYou can fake the trade!\nBut you cannot fake the thing that God has made!\n[Chorus]\nIt is the Hollow Herd!\nIt is the paper ghost!\nFeasting on the land and the weary host\nYou ask \"Where is the Beef?\" from the TV screen\nI ask \"Where is the soul?\" in the gap between\nBetween the producer and the plate you see\nThey hollowed out the heart of the industry\nYeah the bones are standing but the spirit is blurred.\nThe Hollow Herd.\n[Outro]\nWhere is the beef?\nWhere is the beef?\nWhere is the beef?",
+      "substack_url": "https://theshadyriverbard.substack.com/p/the-liner-notes-the-hollow-herd"
     }
   ]
 };

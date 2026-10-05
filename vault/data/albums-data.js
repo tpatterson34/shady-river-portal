@@ -1726,7 +1726,7 @@ window.CATALOG_DATA = {
         "yWEMEv2a_KQ",
         "8F2LyVnMsCw",
         "kGRRgW3CBok",
-        "lKEwMQZT6mU"
+        "1Ol_LnLYyOI"
       ],
       "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_mpc61Qn3VVVfyhyUHuggJtbD2ZhMYVYtk",
       "video_playlist_url": "https://www.youtube.com/playlist?list=PLZ3uWHmWOPCY",
@@ -1747,7 +1747,7 @@ window.CATALOG_DATA = {
         "https://theshadyriverbard.substack.com/p/the-liner-notes-lexington-lights",
         "https://theshadyriverbard.substack.com/p/the-liner-notes-the-prime-act-butchers",
         "https://theshadyriverbard.substack.com/p/the-liner-notes-bust-the-trust-revisited",
-        null
+        "https://theshadyriverbard.substack.com/p/the-liner-notes-the-hollow-herd"
       ],
       "deconstruction_url": "https://theshadyriverbard.substack.com/s/deconstructed",
       "genre_category": "Blues & Country Blues",

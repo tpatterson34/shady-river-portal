@@ -620,6 +620,22 @@ window.PORTAL_DATA = {
   },
   "chronicles": [
     {
+      "title": "The Liner Notes: The Hollow Herd",
+      "date": "October 5, 2026",
+      "category": "Track Notes: The Hollow Herd",
+      "summary": "Track 15 (Album Title Track & Finale) from The Hollow Herd — the sonic autopsy of the cattle crisis, synthetic commodities, and the enduring resilience of the American rancher.",
+      "url": "https://theshadyriverbard.substack.com/p/the-liner-notes-the-hollow-herd",
+      "image": "https://substackcdn.com/image/youtube/w_728,c_limit/1Ol_LnLYyOI"
+    },
+    {
+      "title": "The Liner Notes: Bust the Trust (Revisited)",
+      "date": "October 2, 2026",
+      "category": "Track Notes: The Hollow Herd",
+      "summary": "Track 14 from the album The Hollow Herd — antitrust enforcement, breaking up the meatpacking cartel, and picking up Teddy's big stick.",
+      "url": "https://theshadyriverbard.substack.com/p/the-liner-notes-bust-the-trust-revisited",
+      "image": "https://substackcdn.com/image/youtube/w_728,c_limit/kGRRgW3CBok"
+    },
+    {
       "title": "The Liner Notes: The Prime Act (Butcher's Prayer)",
       "date": "September 30, 2026",
       "category": "Track Notes: The Hollow Herd",
