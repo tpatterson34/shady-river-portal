@@ -765,8 +765,11 @@
       const barChordCols = [];
       tokens.forEach((tok, cIdx) => {
         let relCol = 0;
-        if (bar.chord_cols && typeof bar.chord_cols[cIdx] === 'number') {
-          relCol = bar.chord_cols[cIdx];
+        const rawCol = (bar.chord_cols && typeof bar.chord_cols[cIdx] === 'number') ? bar.chord_cols[cIdx] : null;
+        const isSqueezed = (cIdx > 0 && rawCol !== null && rawCol <= 14 && text.length > 28);
+
+        if (rawCol !== null && !isSqueezed) {
+          relCol = rawCol;
           if (cIdx > 0) {
             const prevRel = barChordCols[barChordCols.length - 1];
             const prevChord = tokens[cIdx - 1].chord || tokens[cIdx - 1].originalChord || '';
@@ -778,14 +781,33 @@
         } else if (cIdx === 0) {
           relCol = 0;
         } else {
-          const frac = cIdx / tokens.length;
-          if (words.length > 1) {
-            const wIdx = Math.min(words.length - 1, Math.round(frac * (words.length - 1)));
-            relCol = words[wIdx].start;
-          } else if (words.length === 1 && words[0].start > 0) {
-            relCol = words[0].start;
+          let clauseCol = null;
+          if (tokens.length === 2) {
+            const mid = text.length / 2;
+            let bestDist = 999;
+            const pRegex = /[,;—–-]\s+(\S)/g;
+            let pMatch;
+            while ((pMatch = pRegex.exec(text)) !== null) {
+              const charIdx = pMatch.index + pMatch[0].length - 1;
+              const dist = Math.abs(charIdx - mid);
+              if (dist < bestDist) {
+                bestDist = dist;
+                clauseCol = charIdx;
+              }
+            }
+          }
+          if (clauseCol !== null) {
+            relCol = clauseCol;
           } else {
-            relCol = Math.round(frac * Math.max(text.length, 8));
+            const frac = cIdx / tokens.length;
+            if (words.length > 1) {
+              const wIdx = Math.min(words.length - 1, Math.round(frac * (words.length - 1)));
+              relCol = words[wIdx].start;
+            } else if (words.length === 1 && words[0].start > 0) {
+              relCol = words[0].start;
+            } else {
+              relCol = Math.round(frac * Math.max(text.length, 8));
+            }
           }
           const prevRel = barChordCols[barChordCols.length - 1];
           if (relCol < prevRel + 4) {
