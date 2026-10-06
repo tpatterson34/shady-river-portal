@@ -12323,13 +12323,22 @@ Here I am To Say war Is waste.
           <h3 class="font-display text-lg font-bold text-stone-200">No songs match your search</h3>
           <p class="text-stone-400 text-xs">Try clearing your search terms or genre filter to see all 69 compositions.</p>
         </div>
-        <button 
-          type="button" 
-          id="empty-state-reset-btn" 
-          class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono text-xs font-bold transition-all shadow-md"
-        >
-          View All 69 Songs
-        </button>
+        <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+          <button 
+            type="button" 
+            id="empty-state-reset-btn" 
+            class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono text-xs font-bold transition-all shadow-md"
+          >
+            View All 69 Songs
+          </button>
+          <a 
+            href="../#essays" 
+            class="px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-200 border border-stone-700 font-mono text-xs transition-all shadow-md inline-flex items-center gap-2"
+          >
+            <i class="fa-solid fa-book-bookmark text-amber-400"></i>
+            Search Essay Compendium (56 Works)
+          </a>
+        </div>
       </div>
 
     </section>
@@ -14553,10 +14562,18 @@ Here I am To Say war Is waste.
 
           let matchesSearch = true;
           if (query) {
-            const title = card.getAttribute('data-title') || '';
-            const tags = card.getAttribute('data-tags') || '';
-            const lyrics = card.getAttribute('data-lyrics') || '';
-            matchesSearch = title.includes(query) || tags.includes(query) || lyrics.includes(query);
+            const title = (card.getAttribute('data-title') || '').toLowerCase();
+            const tags = (card.getAttribute('data-tags') || '').toLowerCase();
+            const lyrics = (card.getAttribute('data-lyrics') || '').toLowerCase();
+            const normQuery = {
+              'conciousness': 'consciousness',
+              'concious': 'conscious',
+              'soverignty': 'sovereignty',
+              'parliment': 'parliament',
+              'independance': 'independence'
+            }[query] || query;
+            matchesSearch = title.includes(query) || tags.includes(query) || lyrics.includes(query) ||
+                            title.includes(normQuery) || tags.includes(normQuery) || lyrics.includes(normQuery);
           }
 
           if (matchesFilter && matchesSearch) {

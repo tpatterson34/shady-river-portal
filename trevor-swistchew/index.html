@@ -215,6 +215,8 @@
 <span>Reset</span>
 </button>
 </div>
+<!-- Search Feedback Banner (Auto-widen and typo notifications) -->
+<div id="search-feedback-banner" class="hidden text-xs font-mono"></div>
 <!-- Bottom Row: Filter Tabs -->
 <div aria-label="Compendium Category Filters" class="flex flex-wrap items-center gap-2 text-xs font-cinzel" id="compendium-filters" role="tablist">
 <button aria-selected="true" class="filter-btn px-3 py-1.5 rounded-md bg-amber-500 text-stone-950 font-bold border border-amber-500 shadow-md transition-all flex items-center gap-1.5" data-filter="all" type="button">
@@ -570,7 +572,7 @@
         </article>
 
         <!-- COMPENDIUM #47: EXAMINING CONSCIOUSNESS. -->
-        <article class="group rounded-xl border border-stone-800 bg-stone-900/60 hover:border-amber-500/50 transition-all duration-300 flex flex-col overflow-hidden shadow-xl hover:shadow-2xl" data-category="philosophy society">
+        <article class="group rounded-xl border border-stone-800 bg-stone-900/60 hover:border-amber-500/50 transition-all duration-300 flex flex-col overflow-hidden shadow-xl hover:shadow-2xl" data-category="philosophy society" data-number="47" data-keywords="consciousness conciousness awareness mind panpsychism idealism cosmopsychism hard problem david chalmers qualia eternal eternity uncreated ground of being max planck ontology metaphysics 47 compendium 47">
           <div class="aspect-w-16 aspect-h-9 relative overflow-hidden bg-stone-950">
             <img alt="Examining Consciousness Banner" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="assets/images/examining-consciousness-banner.jpg"/>
             <div class="absolute top-3 left-3 flex flex-wrap gap-2">
@@ -2077,10 +2079,16 @@ Read Experience <i class="fa-solid fa-arrow-right text-[10px]"></i>
       No works match your search query and category filters.
     </p>
 </div>
-<button class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-cinzel font-bold text-xs transition-colors shadow-md inline-flex items-center gap-2" id="empty-state-reset-btn" type="button">
-<i class="fa-solid fa-rotate-left text-[10px]"></i>
-<span>Clear Search &amp; Show All Works</span>
-</button>
+<div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+  <button class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-cinzel font-bold text-xs transition-colors shadow-md inline-flex items-center gap-2" id="empty-state-reset-btn" type="button">
+    <i class="fa-solid fa-rotate-left text-[10px]"></i>
+    <span>Clear Search &amp; Show All Works</span>
+  </button>
+  <a href="music/index.html" class="px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-700 border border-stone-700 text-stone-200 font-cinzel text-xs transition-colors shadow-md inline-flex items-center gap-2">
+    <i class="fa-solid fa-music text-amber-400 text-[10px]"></i>
+    <span>Search Musical Chamber (69 Tracks)</span>
+  </a>
+</div>
 </div>
 </section>
 <!-- Musical Chamber Showcase Section -->
@@ -2287,15 +2295,82 @@ Read Experience <i class="fa-solid fa-arrow-right text-[10px]"></i>
       const emptyState = document.getElementById('compendium-empty-state');
       const emptyStateMsg = document.getElementById('empty-state-message');
       const emptyStateResetBtn = document.getElementById('empty-state-reset-btn');
+      const feedbackBanner = document.getElementById('search-feedback-banner');
 
       if (!grid) return;
 
-      const articles = grid.querySelectorAll('article[data-category]');
+      const articles = Array.from(grid.querySelectorAll('article[data-category]'));
       const filterButtons = filterContainer ? filterContainer.querySelectorAll('.filter-btn') : [];
       const totalCount = articles.length;
 
       let activeCategory = 'all';
       let searchQuery = '';
+
+      // Common typo / phonetic normalization dictionary
+      const TYPO_MAP = {
+        'conciousness': 'consciousness',
+        'concious': 'conscious',
+        'soverignty': 'sovereignty',
+        'soverign': 'sovereign',
+        'parliment': 'parliament',
+        'independance': 'independence',
+        'independant': 'independent',
+        'capitolism': 'capitalism',
+        'neoliberalism': 'neoliberal',
+        'neo-liberalism': 'neoliberal',
+        'priveledge': 'privilege',
+        'priviledge': 'privilege',
+        'heirarchy': 'hierarchy',
+        'clearences': 'clearances',
+        'clearence': 'clearance',
+        'existense': 'existence',
+        'monarky': 'monarchy'
+      };
+
+      const ARCHIVE_STOPWORDS = new Set([
+        'trevor', 'swistchew', 'essay', 'essays', 'compendium', 'compendiums', 'work', 'works', 'article', 'articles'
+      ]);
+
+      function normalizeToken(tok) {
+        return TYPO_MAP[tok] || tok;
+      }
+
+      function levenshtein(s1, s2) {
+        if (s1 === s2) return 0;
+        if (!s1.length) return s2.length;
+        if (!s2.length) return s1.length;
+        if (s1.length < s2.length) { const t = s1; s1 = s2; s2 = t; }
+        let prev = [];
+        for (let i = 0; i <= s2.length; i++) prev[i] = i;
+        for (let i = 0; i < s1.length; i++) {
+          const curr = [i + 1];
+          for (let j = 0; j < s2.length; j++) {
+            const cost = (s1[i] === s2[j]) ? 0 : 1;
+            curr[j + 1] = Math.min(curr[j] + 1, prev[j + 1] + 1, prev[j] + cost);
+          }
+          prev = curr;
+        }
+        return prev[s2.length];
+      }
+
+      // Precompute article index for blazing-fast matching
+      const articleData = articles.map(art => {
+        const text = (art.textContent || '').toLowerCase();
+        const keywords = (art.getAttribute('data-keywords') || '').toLowerCase();
+        const fullText = text + ' ' + keywords;
+        const numAttr = art.getAttribute('data-number');
+        const numMatch = numAttr ? ['', numAttr] : (art.textContent || '').match(/Compendium\s*#(\d+)/i);
+        const number = numMatch ? numMatch[1] : null;
+        const words = new Set((fullText.match(/\b[a-z]{3,}\b/g) || []));
+        const categories = (art.getAttribute('data-category') || '').split(/\s+/).filter(Boolean);
+        return {
+          element: art,
+          categories,
+          number,
+          fullText,
+          words
+        };
+      });
 
       function updateActiveFilterButton(selectedCategory) {
         filterButtons.forEach(btn => {
@@ -2323,58 +2398,171 @@ Read Experience <i class="fa-solid fa-arrow-right text-[10px]"></i>
       }
 
       function filterAndRender() {
-        const query = searchQuery.toLowerCase().trim();
-        let visibleCount = 0;
+        const raw = searchQuery.toLowerCase().trim();
+        let correctedQuery = null;
+        let effectiveTokens = [];
+        let targetNumber = null;
 
-        articles.forEach(article => {
-          const cats = (article.getAttribute('data-category') || '').split(' ');
-          const matchesCategory = (activeCategory === 'all') || cats.includes(activeCategory);
+        if (raw) {
+          const numMatch = raw.match(/(?:compendium|essay|#)?\s*(\d+)/i);
+          targetNumber = numMatch ? numMatch[1] : null;
 
-          let matchesSearch = true;
-          if (query) {
-            const text = (article.textContent || '').toLowerCase();
-            matchesSearch = text.includes(query);
-          }
+          const rawTokens = raw.split(/\s+/).filter(Boolean);
+          const normalizedTokens = rawTokens.map(tok => {
+            const norm = normalizeToken(tok);
+            if (norm !== tok && !correctedQuery) {
+              correctedQuery = raw.replace(new RegExp('\\b' + tok + '\\b', 'i'), norm);
+            }
+            return norm;
+          });
 
-          if (matchesCategory && matchesSearch) {
-            article.style.display = '';
-            article.classList.remove('hidden');
-            article.classList.add('filter-item-visible');
-            visibleCount++;
-          } else {
-            article.style.display = 'none';
-            article.classList.add('hidden');
-            article.classList.remove('filter-item-visible');
+          const nonStopwords = normalizedTokens.filter(t => !ARCHIVE_STOPWORDS.has(t));
+          effectiveTokens = nonStopwords.length > 0 ? nonStopwords : normalizedTokens;
+        }
+
+        function testCard(card) {
+          if (!raw) return true;
+          if (targetNumber && card.number === targetNumber) return true;
+
+          return effectiveTokens.every(tok => {
+            // Direct substring
+            if (card.fullText.includes(tok)) return true;
+
+            // Compendium number check
+            if (/^\d+$/.test(tok)) {
+              if (card.number === tok || card.fullText.includes('#' + tok) || card.fullText.includes('compendium #' + tok)) {
+                return true;
+              }
+            }
+
+            // Fuzzy word match for tokens >= 5 chars
+            if (tok.length >= 5) {
+              const maxDist = tok.length <= 6 ? 1 : 2;
+              for (const w of card.words) {
+                if (Math.abs(w.length - tok.length) <= maxDist) {
+                  if (levenshtein(tok, w) <= maxDist) return true;
+                }
+              }
+            }
+
+            return false;
+          });
+        }
+
+        // Test in active category vs global
+        let inCatMatches = [];
+        let globalMatches = [];
+
+        articleData.forEach(card => {
+          const matchesQuery = testCard(card);
+          const matchesCat = (activeCategory === 'all') || card.categories.includes(activeCategory);
+
+          if (matchesQuery) {
+            globalMatches.push(card);
+            if (matchesCat) inCatMatches.push(card);
           }
         });
 
-        // Update results counter
+        // Auto-widen if activeCategory has 0 matches but global has matches
+        let isAutoWidened = false;
+        let finalDisplayList = inCatMatches;
+
+        if (raw && activeCategory !== 'all' && inCatMatches.length === 0 && globalMatches.length > 0) {
+          isAutoWidened = true;
+          finalDisplayList = globalMatches;
+        }
+
+        const visibleElements = new Set(finalDisplayList.map(c => c.element));
+        let visibleCount = finalDisplayList.length;
+
+        // Apply visibility to DOM
+        articles.forEach(art => {
+          if (visibleElements.has(art)) {
+            art.style.display = '';
+            art.classList.remove('hidden');
+            art.classList.add('filter-item-visible');
+          } else {
+            art.style.display = 'none';
+            art.classList.add('hidden');
+            art.classList.remove('filter-item-visible');
+          }
+        });
+
+        // Update counter text
         if (resultsCountText) {
-          if (query || activeCategory !== 'all') {
-            resultsCountText.textContent = `Showing ${visibleCount} of ${totalCount} works`;
+          if (raw || activeCategory !== 'all') {
+            if (isAutoWidened) {
+              resultsCountText.textContent = `Showing ${visibleCount} of ${totalCount} works (All Categories)`;
+            } else {
+              resultsCountText.textContent = `Showing ${visibleCount} of ${totalCount} works`;
+            }
           } else {
             resultsCountText.textContent = `Showing ${totalCount} of ${totalCount} works`;
           }
         }
 
+        // Feedback Banner (Auto-widen and/or Typo notice)
+        if (feedbackBanner) {
+          let bannerHtml = '';
+          const activeBtn = filterContainer ? filterContainer.querySelector(`.filter-btn[data-filter="${activeCategory}"] span`) : null;
+          const activeCategoryLabel = activeBtn ? activeBtn.textContent : activeCategory;
+
+          if (isAutoWidened) {
+            bannerHtml += `
+              <div class="px-3.5 py-2 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 flex flex-wrap items-center justify-between gap-2 shadow-sm my-2">
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-arrows-split-up-and-left text-amber-400"></i>
+                  <span>No matches in <strong>${activeCategoryLabel}</strong>. Auto-expanded to show <strong>${visibleCount} works</strong> across all categories.</span>
+                </div>
+                <button type="button" id="revert-filter-btn" class="px-2.5 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-200 text-[11px] font-mono transition-colors">Re-filter ${activeCategoryLabel}</button>
+              </div>`;
+          }
+
+          if (correctedQuery) {
+            bannerHtml += `
+              <div class="px-3.5 py-2 rounded-xl bg-cyan-950/40 border border-cyan-500/30 text-cyan-300 flex items-center gap-2 shadow-sm my-2">
+                <i class="fa-solid fa-spell-check text-cyan-400"></i>
+                <span>Showing results for <strong>"${correctedQuery}"</strong> (auto-corrected from "${raw}").</span>
+              </div>`;
+          }
+
+          if (bannerHtml) {
+            feedbackBanner.innerHTML = bannerHtml;
+            feedbackBanner.classList.remove('hidden');
+
+            const revertBtn = document.getElementById('revert-filter-btn');
+            if (revertBtn) {
+              revertBtn.addEventListener('click', () => {
+                feedbackBanner.classList.add('hidden');
+                articles.forEach(art => {
+                  const inCat = inCatMatches.some(c => c.element === art);
+                  art.style.display = inCat ? '' : 'none';
+                  art.classList.toggle('hidden', !inCat);
+                  art.classList.toggle('filter-item-visible', inCat);
+                });
+                if (resultsCountText) resultsCountText.textContent = `Showing 0 of ${totalCount} works in ${activeCategoryLabel}`;
+                if (emptyState) {
+                  emptyState.classList.remove('hidden');
+                  if (emptyStateMsg) emptyStateMsg.textContent = `No works match "${raw}" in ${activeCategoryLabel}.`;
+                }
+              });
+            }
+          } else {
+            feedbackBanner.innerHTML = '';
+            feedbackBanner.classList.add('hidden');
+          }
+        }
+
         // Toggle clear search button
         if (clearSearchBtn) {
-          if (query.length > 0) {
-            clearSearchBtn.classList.remove('hidden');
-          } else {
-            clearSearchBtn.classList.add('hidden');
-          }
+          clearSearchBtn.classList.toggle('hidden', raw.length === 0);
         }
 
         // Toggle reset filters button
         if (resetFiltersBtn) {
-          if (query.length > 0 || activeCategory !== 'all') {
-            resetFiltersBtn.classList.remove('hidden');
-            resetFiltersBtn.classList.add('flex');
-          } else {
-            resetFiltersBtn.classList.add('hidden');
-            resetFiltersBtn.classList.remove('flex');
-          }
+          const isFiltered = raw.length > 0 || activeCategory !== 'all';
+          resetFiltersBtn.classList.toggle('hidden', !isFiltered);
+          resetFiltersBtn.classList.toggle('flex', isFiltered);
         }
 
         // Handle empty state
@@ -2382,10 +2570,10 @@ Read Experience <i class="fa-solid fa-arrow-right text-[10px]"></i>
           if (visibleCount === 0) {
             emptyState.classList.remove('hidden');
             if (emptyStateMsg) {
-              if (query && activeCategory !== 'all') {
-                emptyStateMsg.textContent = `No works match "${query}" in the selected category.`;
-              } else if (query) {
-                emptyStateMsg.textContent = `No works match "${query}". Try searching by a title keyword, legal case, or philosophical concept.`;
+              if (raw && activeCategory !== 'all') {
+                emptyStateMsg.textContent = `No works match "${raw}" in ${activeCategory}.`;
+              } else if (raw) {
+                emptyStateMsg.textContent = `No works match "${raw}". Try searching by a title keyword, legal case, or philosophical concept (e.g. "consciousness", "sovereignty", "47").`;
               } else {
                 emptyStateMsg.textContent = `No works currently cataloged in this category.`;
               }
