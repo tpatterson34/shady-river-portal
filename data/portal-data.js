@@ -57,7 +57,12 @@ window.PORTAL_DATA = {
         "Civic Organization"
       ],
       "url": "the-republic-of-nobody/",
-      "video_url": "https://www.youtube.com/@TheShadyRiverBard",
+      "video_url": "https://www.youtube.com/watch?v=es51ehCyEWU",
+      "spotify_url": "https://open.spotify.com/album/3di5OwnxDtvWgEBX6PfjIE",
+      "apple_music_url": "https://music.apple.com/us/album/the-republic-of-nobody/6814022600",
+      "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_liQ6KqrplzZWvv6_7ZGJSjJ9iPL7btd-w",
+      "playlist_url": "https://www.youtube.com/playlist?list=OLAK5uy_liQ6KqrplzZWvv6_7ZGJSjJ9iPL7btd-w",
+      "hyperfollow_url": "https://distrokid.com/hyperfollow/theshadyriverbard/the-republic-of-nobody",
       "description": "An empirical 4-act, 15-track political folk-rock concept album examining how formal ballot equality collides with concentrated capital, dark money, and partisan division—culminating in a call for working-class civic organization."
     },
     {

@@ -1813,13 +1813,13 @@ window.CATALOG_DATA = {
       "number": 27,
       "release_year": 2026,
       "companion_novella": null,
-      "apple_music_url": null,
-      "spotify_url": null,
-      "youtube_music_url": null,
-      "youtube_url": null,
-      "video_playlist_url": null,
+      "apple_music_url": "https://music.apple.com/us/album/the-republic-of-nobody/6814022600",
+      "spotify_url": "https://open.spotify.com/album/3di5OwnxDtvWgEBX6PfjIE",
+      "youtube_music_url": "https://music.youtube.com/playlist?list=OLAK5uy_liQ6KqrplzZWvv6_7ZGJSjJ9iPL7btd-w",
+      "youtube_url": "https://www.youtube.com/playlist?list=OLAK5uy_liQ6KqrplzZWvv6_7ZGJSjJ9iPL7btd-w",
+      "video_playlist_url": "https://www.youtube.com/playlist?list=OLAK5uy_liQ6KqrplzZWvv6_7ZGJSjJ9iPL7btd-w",
       "track_videos": [
-        null,
+        "es51ehCyEWU",
         null,
         null,
         null,
@@ -1834,7 +1834,8 @@ window.CATALOG_DATA = {
         null,
         null,
         null
-      ]
+      ],
+      "hyperfollow_url": "https://distrokid.com/hyperfollow/theshadyriverbard/the-republic-of-nobody"
     }
   ],
   "vault": [
