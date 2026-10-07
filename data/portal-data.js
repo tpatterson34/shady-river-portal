@@ -625,6 +625,14 @@ window.PORTAL_DATA = {
   },
   "chronicles": [
     {
+      "title": "The Liner Notes: The Republic of Nobody",
+      "date": "October 7, 2026",
+      "category": "Track Notes: The Republic of Nobody",
+      "summary": "Track 1 (Album Title Track & Prologue) from The Republic of Nobody — exploring the citizen's solitary realization that formal ballot equality has collided with concentrated capital.",
+      "url": "https://theshadyriverbard.substack.com/p/the-liner-notes-the-republic-of-nobody",
+      "image": "https://substackcdn.com/image/youtube/w_728,c_limit/es51ehCyEWU"
+    },
+    {
       "title": "The Liner Notes: The Hollow Herd",
       "date": "October 5, 2026",
       "category": "Track Notes: The Hollow Herd",

@@ -1790,7 +1790,7 @@ window.CATALOG_DATA = {
       "is_bespoke": true,
       "custom_url": "../the-republic-of-nobody/",
       "track_deconstructions": [
-        null,
+        "https://theshadyriverbard.substack.com/p/the-liner-notes-the-republic-of-nobody",
         null,
         null,
         null,
