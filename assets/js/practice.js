@@ -610,15 +610,51 @@
             }
           }
 
-          state.tabBlocks.push({
-            type: 'row',
-            chordLine: line,
-            chordTokens: chordTokens,
-            barsData: barsData,
-            lyricLine: lyricText,
-            time: rowTime,
-            lyricTime: lyricTime
-          });
+          // Intelligent Auto-Wrap Safeguard:
+          // If a row has 4 measures and the total lyrics/chords width exceeds 85 characters,
+          // automatically split it into two 2-measure rows so that it never horizontally overflows or triggers scrollbars.
+          const totalLyrWidth = barsData.reduce((acc, b) => acc + (b.lyrics ? b.lyrics.length : 0), 0) + (barsData.length * 3);
+          if (barsData.length === 4 && totalLyrWidth > 85) {
+            const half1 = barsData.slice(0, 2);
+            const half2 = barsData.slice(2, 4);
+            const bNum1 = half1.map(b => b.barNumber);
+            const bNum2 = half2.map(b => b.barNumber);
+            const tokens1 = chordTokens.filter(t => bNum1.includes(t.barNumber));
+            const tokens2 = chordTokens.filter(t => bNum2.includes(t.barNumber));
+            const time1 = half1[0].time >= 0 ? half1[0].time : rowTime;
+            const time2 = half2[0].time >= 0 ? half2[0].time : rowTime;
+            const lyr1 = half1.map(b => b.lyrics).filter(Boolean).join(' ');
+            const lyr2 = half2.map(b => b.lyrics).filter(Boolean).join(' ');
+
+            state.tabBlocks.push({
+              type: 'row',
+              chordLine: line,
+              chordTokens: tokens1,
+              barsData: half1,
+              lyricLine: lyr1,
+              time: time1,
+              lyricTime: time1
+            });
+            state.tabBlocks.push({
+              type: 'row',
+              chordLine: line,
+              chordTokens: tokens2,
+              barsData: half2,
+              lyricLine: lyr2,
+              time: time2,
+              lyricTime: time2
+            });
+          } else {
+            state.tabBlocks.push({
+              type: 'row',
+              chordLine: line,
+              chordTokens: chordTokens,
+              barsData: barsData,
+              lyricLine: lyricText,
+              time: rowTime,
+              lyricTime: lyricTime
+            });
+          }
         } else {
           // Plain lyric or narrative row
           state.tabBlocks.push({

@@ -205,13 +205,24 @@ input[type="range"].master-slider::-webkit-slider-thumb {
   z-index: 2;
 }
 .ug-lyric-track,
-.tab-lyric {
+.tab-lyric,
+.tab-chord-line,
+.ug-chord-track {
   font-family: var(--font-mono, monospace);
   line-height: 1.6;
   white-space: pre;
   overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  -webkit-overflow-scrolling: touch;
   margin: 0;
   padding: 0;
+}
+.ug-lyric-track::-webkit-scrollbar,
+.tab-lyric::-webkit-scrollbar,
+.tab-chord-line::-webkit-scrollbar,
+.ug-chord-track::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
 
 /* Measure Bar Units in Bars View */
@@ -302,10 +313,16 @@ input[type="range"].master-slider::-webkit-slider-thumb {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
-/* TV MODE OVERRIDES (Cast to Google TV) */
+/* TV MODE OVERRIDES (Cast to Google TV / 10-Foot UI) */
 body.tv-mode {
   background: #000000 !important;
   color: #ffffff !important;
+}
+body.tv-mode main {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 1rem 2.5rem !important;
+  margin: 0 !important;
 }
 body.tv-mode .portal-header,
 body.tv-mode .footer-section {
@@ -316,7 +333,8 @@ body.tv-mode #tv-mode-controls {
 }
 
 body.tv-mode .mixer-container {
-  padding: 0.75rem 1rem !important;
+  max-width: 100% !important;
+  padding: 0.75rem 1.25rem !important;
 }
 body.tv-mode .mixer-grid {
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -326,42 +344,43 @@ body.tv-mode .mixer-grid > div {
   padding: 0.5rem 0.75rem !important;
 }
 body.tv-mode #tab-container {
-  max-height: 58vh !important;
+  max-height: 65vh !important;
+  padding: 1.25rem 2rem !important;
 }
 body.tv-mode .tab-monospace {
-  font-size: 1.45rem !important;
-  line-height: 2.2 !important;
+  font-size: 1.35rem !important;
+  line-height: 2 !important;
 }
 body.tv-mode .chord-token {
-  font-size: 1.6rem !important;
-  padding: 0.15rem 0.4rem;
+  font-size: 1.45rem !important;
+  padding: 0.12rem 0.35rem;
 }
 body.tv-mode .tab-lyric,
 body.tv-mode .ug-lyric-track {
-  font-size: 1.6rem !important;
-  line-height: 2 !important;
+  font-size: 1.35rem !important;
+  line-height: 1.9 !important;
   color: #ffffff !important;
 }
 body.tv-mode .ug-chord-badge {
   font-size: 1em !important;
-  padding: 0.15rem 0.5rem;
-  margin-left: -0.5rem;
+  padding: 0.12rem 0.45rem;
+  margin-left: -0.45rem;
   border-radius: 6px;
 }
 body.tv-mode .ug-chord-track,
 body.tv-mode .tab-chord-line {
-  height: 2.6rem !important;
-  font-size: 1.6rem !important;
+  height: 2.3rem !important;
+  font-size: 1.45rem !important;
 }
 body.tv-mode .ug-bar-divider {
   font-size: 1em !important;
-  line-height: 2 !important;
+  line-height: 1.9 !important;
 }
 body.tv-mode .measure-bar-cell {
-  padding: 0.85rem 1.15rem;
+  padding: 0.75rem 1rem;
 }
 body.tv-mode .bar-lyric-text {
-  font-size: 1.45rem !important;
+  font-size: 1.35rem !important;
 }
 body.tv-mode .tab-row.row-active {
   padding-top: 0.5rem;
@@ -408,4 +427,48 @@ body.tv-mode .hud-lyric-preview {
   background: rgba(56, 189, 248, 0.15);
   pointer-events: none;
   z-index: 5;
+}
+
+/* ==========================================================================
+   Responsive Mobile & Tablet Optimizations (< 640px)
+   ========================================================================== */
+@media (max-width: 640px) {
+  .portal-header {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .tab-row {
+    padding-left: 0.25rem !important;
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+  .tab-chord-line,
+  .ug-chord-track {
+    height: 1.45rem !important;
+    font-size: 0.82rem !important;
+  }
+  .chord-token {
+    font-size: 0.85rem !important;
+    padding: 0.05rem 0.2rem !important;
+  }
+  .tab-lyric,
+  .ug-lyric-track {
+    font-size: 0.82rem !important;
+    line-height: 1.5 !important;
+  }
+  .ug-bar-divider {
+    font-size: 0.82rem !important;
+  }
+  .measure-bar-cell {
+    padding: 0.4rem 0.5rem !important;
+  }
+  .hud-card {
+    padding: 0.75rem 0.85rem !important;
+  }
+  .hud-current-chord {
+    font-size: 2rem !important;
+  }
+  .hud-next-chord {
+    font-size: 1.25rem !important;
+  }
 }
