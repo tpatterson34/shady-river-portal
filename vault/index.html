@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Shady River Bard | Complete Discography & Vault</title>
-  <meta name="description" content="Explore the complete 26-album discography and upcoming concept vault from The Shady River Bard — where code meets the soil and human heart meets digital muse.">
+  <meta name="description" content="Explore the complete 27-album discography and upcoming concept vault from The Shady River Bard — where code meets the soil and human heart meets digital muse.">
   
   <!-- Open Graph / Substack & Social Embeds -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tpatterson34.github.io/the-shady-river-bard/">
   <meta property="og:title" content="The Shady River Bard — Discography & Incubator Vault">
-  <meta property="og:description" content="Explore 26 released concept albums with full liner notes and 19 unreleased workshop projects. Vote on what we record next.">
+  <meta property="og:description" content="Explore 27 released concept albums with full liner notes and 19 unreleased workshop projects. Vote on what we record next.">
   <meta property="og:image" content="https://tpatterson34.github.io/the-shady-river-bard/assets/covers/album-01.jpg">
   <meta name="twitter:card" content="summary_large_image">
   
@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="data/albums-data.js?v=20261005"></script>
+  <script src="data/albums-data.js?v=20261007"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -164,7 +164,7 @@
       <div class="flex flex-wrap items-center justify-center sm:justify-start gap-1.5 sm:gap-2 mx-auto sm:mx-0">
         <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" aria-hidden="true"></span>
         <span class="text-stone-300">The Shady River Homestead:</span>
-        <span class="text-stone-100 font-medium">One human heart. One digital muse. 26 released records.</span>
+        <span class="text-stone-100 font-medium">One human heart. One digital muse. 27 released records.</span>
       </div>
       <div class="flex flex-wrap items-center justify-center sm:justify-end gap-x-2.5 gap-y-1.5 mx-auto sm:mx-0 text-stone-300">
         <!-- Accessibility Controls Button -->
@@ -267,13 +267,13 @@
           </div>
         </div>
         <p class="text-base sm:text-xl text-stone-300 font-light leading-relaxed mb-6 break-words">
-          Where the soil meets the signal. An interactive, data-driven discography chronicling 26 published concept albums—plus the unreleased laboratory vault.
+          Where the soil meets the signal. An interactive, data-driven discography chronicling 27 published concept albums—plus the unreleased laboratory vault.
         </p>
         
         <!-- Live Quick Stats -->
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-2 text-stone-300">
           <div class="bg-soil-800/60 border border-white/5 rounded-xl p-3 sm:p-3.5">
-            <div class="text-xl sm:text-2xl font-serif font-bold text-brand-400" id="stat-released">26</div>
+            <div class="text-xl sm:text-2xl font-serif font-bold text-brand-400" id="stat-released">27</div>
             <div class="text-[11px] sm:text-xs text-stone-400 uppercase tracking-wider mt-0.5">Released Records</div>
           </div>
           <div class="bg-soil-800/60 border border-white/5 rounded-xl p-3 sm:p-3.5">
@@ -305,7 +305,7 @@
           <button id="tab-released" role="tab" aria-selected="true" aria-controls="albums-grid" tabindex="0" onclick="switchSection('released')" class="flex-1 md:flex-none flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-brand-600 text-white shadow-md focus-visible:ring-2 focus-visible:ring-white">
             <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
             <span>Released Discography</span>
-            <span id="badge-released-count" class="px-1.5 sm:px-2 py-0.5 text-[11px] sm:text-xs rounded-full bg-black/30 font-mono">26</span>
+            <span id="badge-released-count" class="px-1.5 sm:px-2 py-0.5 text-[11px] sm:text-xs rounded-full bg-black/30 font-mono">27</span>
           </button>
           <button id="tab-vault" role="tab" aria-selected="false" aria-controls="albums-grid" tabindex="0" onclick="switchSection('vault')" class="flex-1 md:flex-none flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg text-xs sm:text-sm font-medium text-stone-400 hover:text-stone-200 transition-all focus-visible:ring-2 focus-visible:ring-brand-500">
             <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
@@ -325,7 +325,7 @@
           <div class="shrink-0">
             <label for="sort-select" class="sr-only">Sort catalog records</label>
             <select id="sort-select" aria-label="Sort catalog records" onchange="handleFilterChange()" class="bg-soil-800 border border-white/10 rounded-xl px-2.5 sm:px-3 py-2 sm:py-2.5 text-xs sm:text-sm text-stone-200 focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500 shrink-0 max-w-[130px] sm:max-w-none">
-              <option value="num-asc">Release (01 → 26)</option>
+              <option value="num-asc">Release (01 → 27)</option>
               <option value="num-desc">Latest Releases</option>
               <option value="title-asc">Title (A → Z)</option>
               <option value="tracks-desc">Most Tracks</option>
@@ -375,7 +375,7 @@
         </p>
       </div>
       <div class="text-xs font-mono text-stone-400" id="results-count" aria-live="polite">
-        Showing 26 albums
+        Showing 27 albums
       </div>
     </div>
 
@@ -829,7 +829,7 @@
         if (window.CATALOG || window.BARD_CATALOG || window.DISCOGRAPHY_DATA) {
           catalog = window.CATALOG || window.BARD_CATALOG || window.DISCOGRAPHY_DATA;
         } else {
-          const res = await fetch('data/albums.json?v=20261001_01');
+          const res = await fetch('data/albums.json?v=20261007');
           catalog = await res.json();
         }
 

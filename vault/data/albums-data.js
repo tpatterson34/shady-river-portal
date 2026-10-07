@@ -1,13 +1,13 @@
 // Catalog data for The Shady River Bard Vault & Concept Incubator
 window.CATALOG_DATA = {
   "summary": {
-    "total_released": 26,
-    "total_vault": 20,
+    "total_released": 27,
+    "total_vault": 19,
     "apple_music_artist_url": "https://music.apple.com/us/artist/the-shady-river-bard/1829561760",
     "youtube_channel_url": "https://www.youtube.com/@TheShadyRiverBard",
     "facebook_url": "https://www.facebook.com/profile.php?id=61578707414516",
     "substack_url": "https://theshadyriverbard.substack.com",
-    "released_count": 26
+    "released_count": 27
   },
   "released": [
     {
@@ -135,7 +135,7 @@ window.CATALOG_DATA = {
       "track_count": 14,
       "tracks": [
         "Echos in the Canyon",
-        "Digital Dust \\u0026 Analog Bones",
+        "Digital Dust & Analog Bones",
         "Ghost in the Room (Young Man's Blues)",
         "The Great Divide Road",
         "The Echo Chamber Walls",
@@ -1752,6 +1752,89 @@ window.CATALOG_DATA = {
       "deconstruction_url": "https://theshadyriverbard.substack.com/s/deconstructed",
       "genre_category": "Blues & Country Blues",
       "hook": "A forensic Western blues investigation into predatory land grabs, synthetic commodities, and the fight for family cattle ranches."
+    },
+    {
+      "id": "the-republic-of-nobody",
+      "title": "The Republic of Nobody",
+      "status": "released",
+      "folder_name": "27 - The Republic of Nobody",
+      "track_count": 15,
+      "tracks": [
+        "The Republic of Nobody",
+        "One Man, One Vote",
+        "The Price of the Ballot",
+        "The Men Behind the Curtain",
+        "The Ratchet",
+        "The Buyback Man",
+        "The Other Side of Town",
+        "Every Four Years",
+        "The Empty Chair",
+        "Red, White, and Blue Blood",
+        "Nobody's Listening",
+        "Find the Others",
+        "The People Organize",
+        "Not Red, Not Blue",
+        "Nobody No More"
+      ],
+      "art_files_count": 3,
+      "art_sample": "Crowd_looking_at_flag_4K_202608061540.jpeg",
+      "themes": [
+        "Political Disillusionment",
+        "Forgotten Citizenry",
+        "Civic Renewal"
+      ],
+      "genre": "Epic Political Folk",
+      "pitch": "Alternative title worth retaining in reserve: The People We Were Promised\n\nThe Republic of Nobody is the stronger title. It carries the album's central paradox: America remains a constitutional republic. Elections continue. Citizens vote. Candidates debate. Presidents take office. Yet an increasing number of Americans can look at the machinery of government and reasonably wonder: Where, exactly, is my voice in all of this?\n\nThe album should not argue that the United States ceased being a democracy at a particular date, nor that Republicans and Democrats are indistinguishable. The evidence does not support either simplification. Rather, the album examines a long-running transformation in which political equality has increasingly collided with economic inequality, organized political influence, institutional inertia, partisan polarization, and the enormous resources available to wealthy individuals, corporations, and business-oriented interest groups.\n\nA particularly important body of political-science research examined 1,779 policy issues and found that economic elites and business-oriented interest groups had substantial independent effects on government policy, while average citizens and mass-based interest groups had little or no independent influence in the authors' statistical models. The authors describe the resulting system as resembling biased pluralism rather than a system in which all citizens possess roughly equal political influence.",
+      "cover_image": "assets/covers/album-27.webp",
+      "subtitle": "A 4-Act Political Folk-Rock Concept Album on Oligarchy & Civic Restoration",
+      "description": "Alternative title worth retaining in reserve: The People We Were Promised\n\nThe Republic of Nobody is the stronger title. It carries the album's central paradox: America remains a constitutional republic. Elections continue. Citizens vote. Candidates debate. Presidents take office. Yet an increasing number of Americans can look at the machinery of government and reasonably wonder: Where, exactly, is my voice in all of this?\n\nThe album should not argue that the United States ceased being a democracy at a particular date, nor that Republicans and Democrats are indistinguishable. The evidence does not support either simplification. Rather, the album examines a long-running transformation in which political equality has increasingly collided with economic inequality, organized political influence, institutional inertia, partisan polarization, and the enormous resources available to wealthy individuals, corporations, and business-oriented interest groups.\n\nA particularly important body of political-science research examined 1,779 policy issues and found that economic elites and business-oriented interest groups had substantial independent effects on government policy, while average citizens and mass-based interest groups had little or no independent influence in the authors' statistical models. The authors describe the resulting system as resembling biased pluralism rather than a system in which all citizens possess roughly equal political influence.",
+      "is_bespoke": true,
+      "custom_url": "../the-republic-of-nobody/",
+      "track_deconstructions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "deconstruction_url": "https://theshadyriverbard.substack.com/s/deconstructed",
+      "genre_category": "Protest & Narrative Folk",
+      "hook": "Epic political folk confronting voter disenfranchisement, political apathy, and the rediscovery of grassroots republican self-governance.",
+      "number": 27,
+      "release_year": 2026,
+      "companion_novella": null,
+      "apple_music_url": null,
+      "spotify_url": null,
+      "youtube_music_url": null,
+      "youtube_url": null,
+      "video_playlist_url": null,
+      "track_videos": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
     }
   ],
   "vault": [
@@ -2458,48 +2541,6 @@ window.CATALOG_DATA = {
       "is_bespoke": true,
       "custom_url": "../the-outer-citadel/",
       "duration": "53:40"
-    },
-    {
-      "id": "the-republic-of-nobody",
-      "title": "The Republic of Nobody",
-      "status": "vault",
-      "folder_name": "XX - The Republic of Nobody",
-      "track_count": 15,
-      "tracks": [
-        "The Republic of Nobody",
-        "One Man, One Vote",
-        "The Price of the Ballot",
-        "The Men Behind the Curtain",
-        "The Ratchet",
-        "The Buyback Man",
-        "The Other Side of Town",
-        "Every Four Years",
-        "The Empty Chair",
-        "Red, White, and Blue Blood",
-        "Nobody's Listening",
-        "Find the Others",
-        "The People Organize",
-        "Not Red, Not Blue",
-        "Nobody No More"
-      ],
-      "art_files_count": 3,
-      "art_sample": "Crowd_looking_at_flag_4K_202608061540.jpeg",
-      "themes": [
-        "Political Disillusionment",
-        "Forgotten Citizenry",
-        "Civic Renewal"
-      ],
-      "genre": "Epic Political Folk",
-      "pitch": "Alternative title worth retaining in reserve: The People We Were Promised\n\nThe Republic of Nobody is the stronger title. It carries the album's central paradox: America remains a constitutional republic. Elections continue. Citizens vote. Candidates debate. Presidents take office. Yet an increasing number of Americans can look at the machinery of government and reasonably wonder: Where, exactly, is my voice in all of this?\n\nThe album should not argue that the United States ceased being a democracy at a particular date, nor that Republicans and Democrats are indistinguishable. The evidence does not support either simplification. Rather, the album examines a long-running transformation in which political equality has increasingly collided with economic inequality, organized political influence, institutional inertia, partisan polarization, and the enormous resources available to wealthy individuals, corporations, and business-oriented interest groups.\n\nA particularly important body of political-science research examined 1,779 policy issues and found that economic elites and business-oriented interest groups had substantial independent effects on government policy, while average citizens and mass-based interest groups had little or no independent influence in the authors' statistical models. The authors describe the resulting system as resembling biased pluralism rather than a system in which all citizens possess roughly equal political influence.",
-      "cover_image": "assets/covers/vault/the-republic-of-nobody.webp",
-      "subtitle": "A 4-Act Political Folk-Rock Concept Album on Oligarchy & Civic Restoration",
-      "description": "Alternative title worth retaining in reserve: The People We Were Promised\n\nThe Republic of Nobody is the stronger title. It carries the album's central paradox: America remains a constitutional republic. Elections continue. Citizens vote. Candidates debate. Presidents take office. Yet an increasing number of Americans can look at the machinery of government and reasonably wonder: Where, exactly, is my voice in all of this?\n\nThe album should not argue that the United States ceased being a democracy at a particular date, nor that Republicans and Democrats are indistinguishable. The evidence does not support either simplification. Rather, the album examines a long-running transformation in which political equality has increasingly collided with economic inequality, organized political influence, institutional inertia, partisan polarization, and the enormous resources available to wealthy individuals, corporations, and business-oriented interest groups.\n\nA particularly important body of political-science research examined 1,779 policy issues and found that economic elites and business-oriented interest groups had substantial independent effects on government policy, while average citizens and mass-based interest groups had little or no independent influence in the authors' statistical models. The authors describe the resulting system as resembling biased pluralism rather than a system in which all citizens possess roughly equal political influence.",
-      "is_bespoke": true,
-      "custom_url": "../the-republic-of-nobody/",
-      "track_deconstructions": null,
-      "deconstruction_url": null,
-      "genre_category": "Protest & Narrative Folk",
-      "hook": "Epic political folk confronting voter disenfranchisement, political apathy, and the rediscovery of grassroots republican self-governance."
     },
     {
       "id": "the-unspoken-sermon",

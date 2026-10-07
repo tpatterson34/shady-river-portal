@@ -5,13 +5,13 @@ window.PORTAL_DATA = {
     "creator": "The Shady River Bard",
     "location": "Western Washington State",
     "homestead_entity": "The Shady River Homestead, LLC",
-    "summary": "Rooted in the fertile soil and timber of Western Washington, The Shady River is a unified creative ecosystem: a 26-album concept discography chronicling the human spirit, a working permaculture homestead dedicated to land stewardship, and deep reflective essays on craft and life."
+    "summary": "Rooted in the fertile soil and timber of Western Washington, The Shady River is a unified creative ecosystem: a 27-album concept discography chronicling the human spirit, a working permaculture homestead dedicated to land stewardship, and deep reflective essays on craft and life."
   },
   "gateways": [
     {
       "id": "music",
       "title": "The Shady River Bard",
-      "subtitle": "26-Album Concept Discography & Lyrics Vault",
+      "subtitle": "27-Album Concept Discography & Lyrics Vault",
       "icon": "fa-solid fa-guitar",
       "accent": "amber",
       "description": "An ambitious, narrative-rich folk-rock catalog exploring human longing, societal fractures, and pathways to reconciliation. Featuring full lyrics vaults, musical analyses, and official video playlists.",
@@ -42,11 +42,30 @@ window.PORTAL_DATA = {
   ],
   "featured_albums": [
     {
+      "id": "the-republic-of-nobody",
+      "number": "27",
+      "title": "The Republic of Nobody",
+      "subtitle": "A 4-Act Political Folk-Rock Concept Album on Oligarchy & Civic Restoration",
+      "badge": "Brand New Album Release",
+      "cover": "assets/covers/album-27.webp",
+      "tracks_count": 15,
+      "themes": [
+        "Biased Pluralism",
+        "Campaign Finance",
+        "The Two-Party Trap",
+        "The Long Ratchet",
+        "Civic Organization"
+      ],
+      "url": "the-republic-of-nobody/",
+      "video_url": "https://www.youtube.com/@TheShadyRiverBard",
+      "description": "An empirical 4-act, 15-track political folk-rock concept album examining how formal ballot equality collides with concentrated capital, dark money, and partisan division—culminating in a call for working-class civic organization."
+    },
+    {
       "id": "the-hollow-herd",
       "number": "26",
       "title": "The Hollow Herd",
       "subtitle": "A Forensic Sonic Audit of the American Cattle Crisis",
-      "badge": "Brand New Album Release",
+      "badge": "Cattle Crisis Epic",
       "cover": "the-hollow-herd/assets/art/the-hollow-herd-cover.webp",
       "tracks_count": 15,
       "themes": [
@@ -438,25 +457,6 @@ window.PORTAL_DATA = {
       "url": "doomsday-clock/",
       "video_url": "https://www.youtube.com/playlist?list=PLO_tWXIGUXcFJ4vC-R0d-N2XvsMwph5bj",
       "description": "A 13-movement four-act concept album translating existential risk into visceral narrative art. Tracing humanity's precarious position 89 seconds to midnight from creeping objectless anxiety through catastrophic ruin to the final chilling silence."
-    },
-    {
-      "id": "the-republic-of-nobody",
-      "number": "Vault",
-      "title": "The Republic of Nobody",
-      "subtitle": "A 4-Act Political Folk-Rock Concept Album on Oligarchy & Civic Restoration",
-      "badge": "Political Concept Landmark",
-      "cover": "assets/covers/vault/the-republic-of-nobody.webp",
-      "tracks_count": 15,
-      "themes": [
-        "Biased Pluralism",
-        "Campaign Finance",
-        "The Two-Party Trap",
-        "The Long Ratchet",
-        "Civic Organization"
-      ],
-      "url": "the-republic-of-nobody/",
-      "video_url": "https://www.youtube.com/@TheShadyRiverBard",
-      "description": "An empirical 4-act, 15-track political folk-rock concept album examining how formal ballot equality collides with concentrated capital, dark money, and partisan division—culminating in a call for working-class civic organization."
     },
     {
       "id": "the-inner-citadel",
