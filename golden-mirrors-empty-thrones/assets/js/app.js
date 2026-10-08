@@ -24,6 +24,9 @@
     }
   };
 
+  window.audio = state.audio;
+  window._appAudio = state.audio;
+
   // DOM Cache
   const DOM = {};
 
@@ -193,6 +196,11 @@
       });
 
       window.CastManager.on('stateChange', (st) => {
+        if (window.CastManager.isConnected()) {
+          if (!state.audio.paused) {
+            state.audio.pause();
+          }
+        }
         state.isPlaying = st.isPlaying;
         updatePlayButtonUI();
         updateTrackListActiveState();
@@ -213,7 +221,8 @@
       });
 
       window.CastManager.on('disconnected', () => {
-        state.isPlaying = !state.audio.paused;
+        if (!state.audio.paused) state.audio.pause();
+        state.isPlaying = false;
         updatePlayButtonUI();
         updateTrackListActiveState();
       });
@@ -422,6 +431,9 @@
 
   function togglePlay() {
     if (window.CastManager && window.CastManager.isConnected()) {
+      if (!state.audio.paused) {
+        state.audio.pause();
+      }
       window.CastManager.playOrPause();
       return;
     }

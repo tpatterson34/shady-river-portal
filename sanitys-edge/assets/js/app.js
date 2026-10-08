@@ -19,6 +19,8 @@
   // Audio DOM Elements
   const audio = new Audio();
   audio.preload = 'metadata';
+  window.audio = audio;
+  window._appAudio = audio;
 
   // DOM Elements
   let playerBar, playBtn, playIcon, prevBtn, nextBtn, trackTitleEl, trackActEl, trackTimeEl, trackDurationEl, progressBar, volumeBar, muteBtn, playerArtEl;
@@ -162,6 +164,11 @@
       });
 
       window.CastManager.on('stateChange', (state) => {
+        if (window.CastManager.isConnected()) {
+          if (!audio.paused) {
+            audio.pause();
+          }
+        }
         isPlaying = state.isPlaying;
         if (typeof state.trackIndex === 'number' && state.trackIndex >= 0) {
           currentTrackIndex = state.trackIndex;
@@ -266,6 +273,9 @@
 
   function togglePlay() {
     if (window.CastManager && window.CastManager.isConnected()) {
+      if (!audio.paused) {
+        audio.pause();
+      }
       window.CastManager.playOrPause();
       return;
     }

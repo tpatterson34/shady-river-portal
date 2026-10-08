@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Audio Object
   const audio = new Audio();
   audio.preload = 'metadata';
+  window.audio = audio;
+  window._appAudio = audio;
 
   // DOM Elements
   const tracklistContainer = document.getElementById('tracklist-scroll');
@@ -226,6 +228,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function pauseAudio() {
+    // Always pause the local PC audio element
+    if (!audio.paused) {
+      audio.pause();
+    }
+
     if (window.CastManager && window.CastManager.isConnected()) {
       window.CastManager.playOrPause();
       return;
@@ -238,6 +245,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function togglePlay() {
     if (window.CastManager && window.CastManager.isConnected()) {
+      if (!audio.paused) {
+        audio.pause();
+      }
       window.CastManager.playOrPause();
       return;
     }

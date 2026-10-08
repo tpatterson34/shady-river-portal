@@ -16,6 +16,8 @@
 
   const audio = new Audio();
   audio.preload = 'metadata';
+  window.audio = audio;
+  window._appAudio = audio;
 
   // DOM Elements
   const trackListEl = document.getElementById('track-list');
@@ -284,6 +286,9 @@
 
   function togglePlay() {
     if (window.CastManager && window.CastManager.isConnected()) {
+      if (!audio.paused) {
+        audio.pause();
+      }
       window.CastManager.playOrPause();
       return;
     }
@@ -386,6 +391,11 @@
       });
 
       window.CastManager.on('stateChange', (st) => {
+        if (window.CastManager.isConnected()) {
+          if (!audio.paused) {
+            audio.pause();
+          }
+        }
         setPlayingState(st.isPlaying);
       });
 

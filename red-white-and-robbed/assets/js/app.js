@@ -16,6 +16,8 @@
 
   const audio = new Audio();
   audio.preload = 'metadata';
+  window.audio = audio;
+  window._appAudio = audio;
 
   // DOM Elements
   const trackListEl = document.getElementById('track-list');
@@ -230,6 +232,13 @@
   }
 
   function playAudio() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      if (!audio.paused) {
+        audio.pause();
+      }
+      window.CastManager.playOrPause();
+      return;
+    }
     audio.play().then(function () {
       isPlaying = true;
       updatePlayButtonUI();
@@ -240,6 +249,11 @@
   }
 
   function pauseAudio() {
+    // Always pause the local PC audio element
+    if (!audio.paused) {
+      audio.pause();
+    }
+
     if (window.CastManager && window.CastManager.isConnected()) {
       window.CastManager.playOrPause();
       return;
@@ -252,6 +266,9 @@
 
   function togglePlay() {
     if (window.CastManager && window.CastManager.isConnected()) {
+      if (!audio.paused) {
+        audio.pause();
+      }
       window.CastManager.playOrPause();
       return;
     }
@@ -347,6 +364,11 @@
       });
 
       window.CastManager.on('stateChange', function (state) {
+        if (window.CastManager.isConnected()) {
+          if (!audio.paused) {
+            audio.pause();
+          }
+        }
         isPlaying = state.isPlaying;
         updatePlayButtonUI();
       });
@@ -365,7 +387,10 @@
       });
 
       window.CastManager.on('disconnected', function () {
-        isPlaying = !audio.paused;
+        if (!audio.paused) {
+          audio.pause();
+        }
+        isPlaying = false;
         updatePlayButtonUI();
       });
     }

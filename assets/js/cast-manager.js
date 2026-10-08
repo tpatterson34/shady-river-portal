@@ -350,6 +350,21 @@
     return false;
   }
 
+  // Universal defense-in-depth: silence any local media element if Cast is actively streaming
+  if (typeof window !== 'undefined' && window.HTMLMediaElement && window.HTMLMediaElement.prototype) {
+    const origMediaPlay = window.HTMLMediaElement.prototype.play;
+    window.HTMLMediaElement.prototype.play = function (...args) {
+      if (checkIsConnected()) {
+        try {
+          if (!this.paused) this.pause();
+        } catch (e) {}
+        logDebug('Silenced local audio/video play() attempt while Cast is actively streaming');
+        return Promise.resolve();
+      }
+      return origMediaPlay.apply(this, args);
+    };
+  }
+
   /**
    * Universal resolution for current album data and tracks across any incubator album.
    */
@@ -931,6 +946,11 @@
     if (window._appAudio && typeof window._appAudio.pause === 'function') {
       try {
         if (!window._appAudio.paused) window._appAudio.pause();
+      } catch (e) {}
+    }
+    if (window.state && window.state.audio && typeof window.state.audio.pause === 'function') {
+      try {
+        if (!window.state.audio.paused) window.state.audio.pause();
       } catch (e) {}
     }
   }

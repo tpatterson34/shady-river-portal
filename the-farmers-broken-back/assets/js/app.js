@@ -16,6 +16,8 @@
 
   const audio = new Audio();
   audio.preload = 'metadata';
+  window.audio = audio;
+  window._appAudio = audio;
 
   // Cached DOM Elements
   const trackListEl = document.getElementById('track-list');
@@ -296,6 +298,9 @@
   // --- AUDIO CONTROLS ---
   function togglePlay() {
     if (window.CastManager && window.CastManager.isConnected()) {
+      if (!audio.paused) {
+        audio.pause();
+      }
       window.CastManager.playOrPause();
       return;
     }

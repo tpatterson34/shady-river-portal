@@ -15,6 +15,8 @@
 
   const audio = new Audio();
   audio.preload = 'metadata';
+  window.audio = audio;
+  window._appAudio = audio;
 
   const trackListEl = document.getElementById('track-list');
   const lyricsContainerEl = document.getElementById('lyrics-container');
@@ -222,6 +224,14 @@
   }
 
   function playAudio() {
+    if (window.CastManager && window.CastManager.isConnected()) {
+      if (!audio.paused) {
+        audio.pause();
+      }
+      window.CastManager.playOrPause();
+      return;
+    }
+
     audio.play().then(function () {
       isPlaying = true;
       updatePlayButtonUI();
@@ -232,11 +242,16 @@
   }
 
   function pauseAudio() {
+    // Always pause the local PC audio element
+    if (!audio.paused) {
+      audio.pause();
+    }
+
     if (window.CastManager && window.CastManager.isConnected()) {
       window.CastManager.playOrPause();
       return;
     }
-    audio.pause();
+
     isPlaying = false;
     updatePlayButtonUI();
     renderTrackList();
@@ -244,6 +259,9 @@
 
   function togglePlay() {
     if (window.CastManager && window.CastManager.isConnected()) {
+      if (!audio.paused) {
+        audio.pause();
+      }
       window.CastManager.playOrPause();
       return;
     }
@@ -339,8 +357,14 @@
       });
 
       window.CastManager.on('stateChange', function (state) {
+        if (window.CastManager.isConnected()) {
+          if (!audio.paused) {
+            audio.pause();
+          }
+        }
         isPlaying = state.isPlaying;
         updatePlayButtonUI();
+        renderTrackList();
       });
 
       window.CastManager.on('timeUpdate', function (info) {
@@ -351,14 +375,21 @@
       });
 
       window.CastManager.on('connected', function () {
-        if (!audio.paused) audio.pause();
+        if (!audio.paused) {
+          audio.pause();
+        }
         isPlaying = true;
         updatePlayButtonUI();
+        renderTrackList();
       });
 
       window.CastManager.on('disconnected', function () {
-        isPlaying = !audio.paused;
+        if (!audio.paused) {
+          audio.pause();
+        }
+        isPlaying = false;
         updatePlayButtonUI();
+        renderTrackList();
       });
     }
   }

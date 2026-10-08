@@ -17,6 +17,8 @@
   // Audio element
   const audio = new Audio();
   audio.preload = 'metadata';
+  window.audio = audio;
+  window._appAudio = audio;
 
   // Volume persistence
   const savedVolume = localStorage.getItem('gitm_volume');
@@ -183,6 +185,9 @@
 
   function togglePlay() {
     if (window.CastManager && window.CastManager.isConnected()) {
+      if (!audio.paused) {
+        audio.pause();
+      }
       window.CastManager.playOrPause();
       return;
     }
@@ -556,6 +561,11 @@
       });
 
       window.CastManager.on('stateChange', (state) => {
+        if (window.CastManager.isConnected()) {
+          if (!audio.paused) {
+            audio.pause();
+          }
+        }
         isPlaying = state.isPlaying;
         updatePlayIcons();
       });
