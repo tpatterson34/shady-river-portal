@@ -1791,7 +1791,7 @@ window.CATALOG_DATA = {
       "custom_url": "../the-republic-of-nobody/",
       "track_deconstructions": [
         "https://theshadyriverbard.substack.com/p/the-liner-notes-the-republic-of-nobody",
-        null,
+        "https://theshadyriverbard.substack.com/p/the-liner-notes-one-man-one-vote",
         null,
         null,
         null,
@@ -1819,7 +1819,7 @@ window.CATALOG_DATA = {
       "video_playlist_url": "https://www.youtube.com/playlist?list=OLAK5uy_liQ6KqrplzZWvv6_7ZGJSjJ9iPL7btd-w",
       "track_videos": [
         "es51ehCyEWU",
-        null,
+        "R8Te05_x-Qg",
         null,
         null,
         null,

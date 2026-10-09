@@ -625,6 +625,14 @@ window.PORTAL_DATA = {
   },
   "chronicles": [
     {
+      "title": "The Liner Notes: One Man, One Vote",
+      "date": "October 9, 2026",
+      "category": "Track Notes: The Republic of Nobody",
+      "summary": "Track 2 from The Republic of Nobody — exploring the citizen's earnest belief that the ballot box is the ultimate equalizer, before the quiet inequality of access becomes undeniable.",
+      "url": "https://theshadyriverbard.substack.com/p/the-liner-notes-one-man-one-vote",
+      "image": "https://substackcdn.com/image/youtube/w_728,c_limit/R8Te05_x-Qg"
+    },
+    {
       "title": "The Liner Notes: The Republic of Nobody",
       "date": "October 7, 2026",
       "category": "Track Notes: The Republic of Nobody",
