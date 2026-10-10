@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cost Of War — Trevor Swistchew (2026)</title>
+  <meta name="description" content="A searing economic and moral critique by Trevor Swistchew examining how global militarism devours human futures, costing nearly $3 trillion annually while basic human needs go unmet.">
+  <meta name="author" content="Trevor Swistchew">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="The Cost Of War — Trevor Swistchew (2026)">
+  <meta property="og:description" content="War is the most successful confidence trick ever played upon humanity. Every bomb dropped destroys something twice: first its target, then what society could have achieved.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../../assets/images/the-cost-of-war-banner.jpg">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            stone: { 950: '#0c0a09' },
+            amber: { 450: '#f59e0b', 550: '#d97706' }
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            serif: ['Lora', 'Source Serif 4', 'Georgia', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    /* Theme definitions */
+    body.theme-peat { background-color: #0c0a09; color: #e7e5e4; }
+    body.theme-stone { background-color: #f7f4ed; color: #1c1917; }
+    body.theme-stone .text-stone-100 { color: #1c1917 !important; }
+    body.theme-stone .text-stone-200 { color: #292524 !important; }
+    body.theme-stone .text-stone-300 { color: #44403c !important; }
+    body.theme-stone .text-stone-400 { color: #57534e !important; }
+    body.theme-stone .bg-stone-900 { background-color: #e7e5e4 !important; }
+    body.theme-stone .bg-stone-900\/60 { background-color: rgba(231, 229, 228, 0.7) !important; }
+    body.theme-stone .bg-stone-900\/80 { background-color: rgba(231, 229, 228, 0.9) !important; }
+    body.theme-stone .bg-stone-950 { background-color: #f0ece1 !important; }
+    body.theme-stone .bg-stone-950\/80 { background-color: rgba(240, 236, 225, 0.85) !important; }
+    body.theme-stone .border-stone-800 { border-color: #d6d3d1 !important; }
+    body.theme-stone .border-stone-700 { border-color: #a8a29e !important; }
+
+    body.theme-sepia { background-color: #f4ede4; color: #2d261e; }
+    body.theme-sepia .text-stone-100 { color: #2d261e !important; }
+    body.theme-sepia .text-stone-200 { color: #3e352b !important; }
+    body.theme-sepia .text-stone-300 { color: #55493d !important; }
+    body.theme-sepia .text-stone-400 { color: #6d5e4f !important; }
+    body.theme-sepia .bg-stone-900 { background-color: #e8dccf !important; }
+    body.theme-sepia .bg-stone-900\/60 { background-color: rgba(232, 220, 207, 0.7) !important; }
+    body.theme-sepia .bg-stone-900\/80 { background-color: rgba(232, 220, 207, 0.9) !important; }
+    body.theme-sepia .bg-stone-950 { background-color: #ded0be !important; }
+    body.theme-sepia .bg-stone-950\/80 { background-color: rgba(222, 208, 190, 0.85) !important; }
+    body.theme-sepia .border-stone-800 { border-color: #c7b8a5 !important; }
+    body.theme-sepia .border-stone-700 { border-color: #a89782 !important; }
+
+    /* Reading Progress */
+    #progress-bar { width: 0%; transition: width 0.1s; }
+
+    /* Drop Cap */
+    .drop-cap:first-letter {
+      float: left;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 4.2rem;
+      line-height: 0.82;
+      padding-top: 4px;
+      padding-right: 14px;
+      padding-bottom: 2px;
+      color: #f59e0b;
+      font-weight: 700;
+    }
+
+    /* Prose Styling */
+    .prose-essay p {
+      margin-bottom: 1.35rem;
+      line-height: 1.82;
+    }
+  </style>
+</head>
+<body class="theme-peat font-sans antialiased selection:bg-amber-500 selection:text-stone-950 min-h-screen flex flex-col justify-between">
+
+  <!-- Reading Progress Bar -->
+  <div class="fixed top-0 left-0 right-0 h-1 bg-transparent z-50">
+    <div id="progress-bar" class="h-full bg-gradient-to-r from-amber-600 via-amber-400 to-amber-500 shadow-sm shadow-amber-500/50"></div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-950/80 border-b border-stone-800 transition-colors">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2 group text-stone-300 hover:text-amber-400 transition-colors">
+          <div class="w-7 h-7 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-cinzel font-bold text-xs group-hover:scale-105 transition-transform">TS</div>
+          <span class="font-cinzel text-xs sm:text-sm tracking-wider font-bold">TREVOR SWISTCHEW</span>
+          <span class="text-stone-600 text-xs hidden md:inline">|</span>
+          <span class="font-mono text-[11px] text-stone-400 hidden md:inline">COMPENDIUM ARCHIVE</span>
+        </a>
+        <a href="https://theshadyriverbard.com/" target="_blank" rel="noopener noreferrer" class="hidden lg:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-stone-900 border border-stone-800 text-stone-400 hover:text-amber-300 text-[10px] font-mono transition-colors">
+          <i class="fa-solid fa-water text-[9px] text-amber-400"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Controls: Theme & Text Sizer -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Themes -->
+        <div class="flex items-center bg-stone-900/90 rounded-lg p-0.5 border border-stone-800 text-xs">
+          <button id="theme-peat" title="Peat (Dark)" class="px-2 py-1 rounded text-amber-400 hover:bg-stone-800 transition-colors"><i class="fa-solid fa-moon"></i></button>
+          <button id="theme-sepia" title="Sepia (Parchment)" class="px-2 py-1 rounded text-stone-400 hover:text-stone-100 hover:bg-stone-800 transition-colors"><i class="fa-solid fa-scroll"></i></button>
+          <button id="theme-stone" title="Stone (Light)" class="px-2 py-1 rounded text-stone-400 hover:text-stone-100 hover:bg-stone-800 transition-colors"><i class="fa-solid fa-sun"></i></button>
+        </div>
+
+        <!-- Typography Sizer -->
+        <div class="flex items-center bg-stone-900/90 rounded-lg p-0.5 border border-stone-800 text-xs font-mono">
+          <button id="font-dec" title="Decrease font size" class="px-2 py-1 text-stone-400 hover:text-amber-400 transition-colors">A-</button>
+          <button id="font-reset" title="Default font size" class="px-1.5 py-1 text-amber-400 font-bold transition-colors">A</button>
+          <button id="font-inc" title="Increase font size" class="px-2 py-1 text-stone-400 hover:text-amber-400 transition-colors">A+</button>
+        </div>
+
+        <a href="../../index.html" class="px-2.5 py-1 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 border border-amber-500/30 text-xs font-cinzel font-bold flex items-center gap-1.5 transition-colors">
+          <i class="fa-solid fa-arrow-left text-[10px]"></i>
+          <span>Compendium</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Article Container -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 flex-1">
+    
+    <!-- Meta Badges & Breadcrumbs -->
+    <div class="mb-6 flex flex-wrap items-center gap-2">
+      <span class="px-2.5 py-1 rounded text-xs font-mono font-bold bg-amber-500 text-stone-950">COMPENDIUM #58</span>
+      <span class="px-2.5 py-1 rounded text-xs font-mono bg-stone-900 text-amber-300 border border-amber-500/30">Political Economy &amp; Anti-Militarism</span>
+      <span class="px-2.5 py-1 rounded text-xs font-mono bg-stone-900 text-cyan-300 border border-cyan-500/30">The Opportunity Cost of Conflict</span>
+      <span class="px-2.5 py-1 rounded text-xs font-mono bg-stone-900 text-stone-400 border border-stone-800">Trevor Swistchew &bull; 2026</span>
+    </div>
+
+    <!-- Article Header -->
+    <header class="mb-8 space-y-3">
+      <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-stone-100 tracking-tight leading-tight">
+        The Cost Of War.
+      </h1>
+      <p class="font-serif italic text-lg sm:text-xl text-amber-400/90 leading-relaxed">
+        The Ultimate Confidence Trick: An Examination of Global Military Expenditure, the Hidden Invoice of Human History, and the Devouring of Civilisation's Future.
+      </p>
+
+      <div class="pt-4 border-t border-stone-800 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-stone-400">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/40 flex items-center justify-center font-cinzel text-amber-400 font-bold">TS</div>
+          <div>
+            <span class="text-stone-200 font-semibold block font-sans">Trevor Swistchew</span>
+            <span class="text-stone-400 text-[11px]">Scottish Essayist, Cultural Critic &amp; Metaphysical Thinker</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 text-[11px]">
+          <span><i class="fa-regular fa-clock text-amber-500/80 mr-1"></i> 3 min read</span>
+          <span><i class="fa-solid fa-feather text-amber-500/80 mr-1"></i> 382 words</span>
+          <span><i class="fa-solid fa-chart-line text-amber-500/80 mr-1"></i> SIPRI 2025/2026 Data</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Fine-Art Banner -->
+    <figure class="relative rounded-2xl overflow-hidden border border-stone-800 bg-stone-900 shadow-2xl group mb-8">
+      <div class="aspect-w-16 aspect-h-9 relative overflow-hidden bg-stone-950">
+        <img 
+          src="../../assets/images/the-cost-of-war-banner.jpg" 
+          alt="The Cost Of War Banner Artwork" 
+          class="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-700" 
+          loading="eager"
+        />
+      </div>
+      <figcaption class="p-3 sm:p-4 bg-stone-950/90 border-t border-stone-800 text-center font-serif text-xs text-stone-400 italic">
+        The Ledger of Civilization &amp; The Balance of Ruins: Oil on canvas in the romantic chiaroscuro tradition of J.M.W. Turner and Thomas Cole. Balancing the munitions and burning dreadnoughts of empire against the luminous blueprints and dawn of unbuilt cities, libraries, and hospitals.
+      </figcaption>
+    </figure>
+
+    <!-- Thesis Lead Pullquote -->
+    <div class="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-stone-900/90 via-stone-900/60 to-stone-950 border-l-4 border-amber-500 border-r border-t border-b border-stone-800 shadow-xl mb-10">
+      <blockquote class="font-serif text-base sm:text-lg text-stone-200 italic leading-relaxed">
+        &ldquo;War is the most successful confidence trick ever played upon humanity... Every bomb dropped destroys something twice. First it destroys its target. Then it destroys everything society could have achieved with the money used to build it.&rdquo; &mdash; Trevor Swistchew
+      </blockquote>
+    </div>
+
+    <!-- EMPIRICAL DOSSIER: THE HIDDEN INVOICE OF MILITARISM -->
+    <section class="mb-12 rounded-2xl border border-stone-800 bg-stone-900/70 p-5 sm:p-7 shadow-xl">
+      <div class="flex items-center gap-3 mb-4 pb-3 border-b border-stone-800">
+        <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+          <i class="fa-solid fa-scale-unbalanced-flip text-sm"></i>
+        </div>
+        <div>
+          <h2 class="font-cinzel text-base sm:text-lg font-bold text-amber-400 tracking-wide">
+            EMPIRICAL DOSSIER: THE ECONOMIC LEDGER OF MILITARISM
+          </h2>
+          <p class="font-mono text-[11px] text-stone-400">SIPRI Global Defense Outlays vs. Human Civilization Priorities</p>
+        </div>
+      </div>
+
+      <!-- Dossier Tabs -->
+      <div class="flex flex-wrap gap-2 mb-6 border-b border-stone-800 pb-2">
+        <button id="tab-btn-1" class="dossier-tab px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500 text-stone-950 shadow transition-all" role="tab" onclick="switchTab(1)">
+          1. The 2025 Invoice ($2.887T)
+        </button>
+        <button id="tab-btn-2" class="dossier-tab px-3.5 py-1.5 rounded-lg text-xs font-mono text-stone-400 hover:text-stone-200 bg-stone-950 border border-stone-800 transition-all" role="tab" onclick="switchTab(2)">
+          2. The Double Destruction Principle
+        </button>
+        <button id="tab-btn-3" class="dossier-tab px-3.5 py-1.5 rounded-lg text-xs font-mono text-stone-400 hover:text-stone-200 bg-stone-950 border border-stone-800 transition-all" role="tab" onclick="switchTab(3)">
+          3. What Civilisation Lost
+        </button>
+      </div>
+
+      <!-- Tab 1 Content -->
+      <div id="tab-pane-1" class="dossier-pane space-y-4">
+        <h3 class="font-display text-sm font-bold text-amber-300">Global Military Outlays: SIPRI 2025/2026 Accounting</h3>
+        <p class="font-serif text-xs sm:text-sm text-stone-300 leading-relaxed">
+          In 2025, global military expenditure set an all-time historical record of approximately <strong>$2.887 trillion</strong>. Breaking this staggering figure down illustrates the sheer velocity at which humanity extracts and burns capital for organized violence:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+          <div class="p-3.5 rounded-xl bg-stone-950/70 border border-stone-800/80">
+            <span class="font-mono text-[10px] text-amber-400 uppercase font-bold block mb-1">Per Day Outlay</span>
+            <span class="font-display text-xl font-bold text-stone-100 block">$7.91 Billion</span>
+            <span class="font-sans text-[11px] text-stone-400 leading-tight">Every 24 hours spent globally on standing armies, armaments, missiles, and war fleets.</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-stone-950/70 border border-stone-800/80">
+            <span class="font-mono text-[10px] text-amber-400 uppercase font-bold block mb-1">Per Minute Burn</span>
+            <span class="font-display text-xl font-bold text-stone-100 block">$5.49 Million</span>
+            <span class="font-sans text-[11px] text-stone-400 leading-tight">Consumed every 60 seconds while billions struggle with housing and healthcare.</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-stone-950/70 border border-stone-800/80">
+            <span class="font-mono text-[10px] text-amber-400 uppercase font-bold block mb-1">Every Second</span>
+            <span class="font-display text-xl font-bold text-stone-100 block">$91,540 / sec</span>
+            <span class="font-sans text-[11px] text-stone-400 leading-tight">Continuous, unyielding capital drain into the global machinery of conflict.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2 Content -->
+      <div id="tab-pane-2" class="dossier-pane hidden space-y-4">
+        <h3 class="font-display text-sm font-bold text-amber-300">The Double Destruction Equation: Physical vs. Opportunity Cost</h3>
+        <p class="font-serif text-xs sm:text-sm text-stone-300 leading-relaxed">
+          Trevor Swistchew identifies the primary cognitive illusion of war: society computes only the physical rubble, ignoring the compound economic devastation of capital that was denied to life-affirming endeavors.
+        </p>
+        <div class="space-y-2.5 font-sans text-xs text-stone-300">
+          <div class="p-3 rounded-lg bg-stone-950/60 border border-stone-800 flex items-start gap-3">
+            <span class="px-2 py-0.5 rounded bg-rose-950/80 text-rose-300 border border-rose-800 font-mono text-[10px] font-bold shrink-0">1st Destruction</span>
+            <div>
+              <strong class="text-stone-100 font-semibold">Kinetic &amp; Human Obliteration:</strong> The bomb, shell, or missile instantly destroys physical infrastructure, homes, factories, and irreplaceable human life.
+            </div>
+          </div>
+          <div class="p-3 rounded-lg bg-stone-950/60 border border-stone-800 flex items-start gap-3">
+            <span class="px-2 py-0.5 rounded bg-amber-950/80 text-amber-300 border border-amber-800 font-mono text-[10px] font-bold shrink-0">2nd Destruction</span>
+            <div>
+              <strong class="text-stone-100 font-semibold">The Opportunity Vacuum:</strong> The millions required to engineer, manufacture, transport, and deploy that weapon are permanently erased from scientific research, education, green power, and medicine.
+            </div>
+          </div>
+          <div class="p-3 rounded-lg bg-stone-950/60 border border-stone-800 flex items-start gap-3">
+            <span class="px-2 py-0.5 rounded bg-cyan-950/80 text-cyan-300 border border-cyan-800 font-mono text-[10px] font-bold shrink-0">The Sovereign Debt Multiplier</span>
+            <div>
+              <strong class="text-stone-100 font-semibold">Generational Taxation:</strong> From the Boer War to modern conflicts, defense expenditures are financed via public borrowing, transferring the cost onto unborn generations through austerity.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3 Content -->
+      <div id="tab-pane-3" class="dossier-pane hidden space-y-4">
+        <h3 class="font-display text-sm font-bold text-amber-300">The Unbuilt Civilisation: Comparative Opportunity Analysis</h3>
+        <p class="font-serif text-xs sm:text-sm text-stone-300 leading-relaxed">
+          United Nations and independent economic assessments demonstrate what single fractions of the $2.887T annual military budget could fund across human society:
+        </p>
+        <ul class="list-disc list-inside space-y-1.5 font-sans text-xs text-stone-300 pl-2">
+          <li><strong>Eradicating Global Acute Hunger:</strong> The UN Food and Agriculture Organization (FAO) estimates $40 billion annually would end chronic starvation &mdash; equal to just <strong>5 days</strong> of global military spending.</li>
+          <li><strong>Universal Clean Water &amp; Sanitation:</strong> The World Bank calculates $150 billion annually would provide clean water to all 2.2 billion unserved humans &mdash; equal to <strong>19 days</strong> of military budgets.</li>
+          <li><strong>Universal Primary &amp; Secondary Education:</strong> UNESCO calculates $39 billion annually to close the global education gap for every child on Earth &mdash; less than <strong>2 weeks</strong> of armaments production.</li>
+          <li><strong>Global Renewable Power Grid:</strong> A major reallocation of 20% of defense outlays would provide the public capital foundation for rapid planetary decarbonisation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- COMPANION MUSIC CARD -->
+    <aside class="mb-12 rounded-2xl border border-stone-800 bg-gradient-to-r from-stone-900/90 via-stone-900/70 to-stone-950 p-5 sm:p-6 shadow-xl">
+      <div class="flex flex-col sm:flex-row items-center gap-5">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden border border-stone-800 shrink-0 bg-stone-950 shadow-md">
+          <img src="../../music/../assets/images/banner-placeholder.svg" alt="Musical Chamber" class="w-full h-full object-cover">
+        </div>
+        <div class="flex-1 text-center sm:text-left space-y-2">
+          <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-rose-500/20 text-rose-300 border border-rose-500/30 font-bold uppercase">Thematic Companion Song</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/20 text-amber-300 border border-amber-500/30">Track #11 &bull; Warlords in Wigs</span>
+          </div>
+          <h3 class="font-display text-lg font-bold text-stone-100">
+            &ldquo;Warlords in Wigs&rdquo; &amp; The Anti-Establishment Critique
+          </h3>
+          <p class="font-serif text-xs text-stone-400 leading-relaxed">
+            Fast, biting 1970s British punk rock in E minor. A fierce, sneering musical attack against the state institutions, judicial grandees, and political warmongers who send working people to die while enriching the ruling elite.
+          </p>
+          <div class="pt-2 flex flex-wrap items-center justify-center sm:justify-start gap-3">
+            <a href="../../music/index.html?play=11#track-11" class="px-3.5 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono font-bold text-xs flex items-center gap-1.5 shadow transition-all">
+              <i class="fa-solid fa-play text-[10px]"></i>
+              <span>Play Track #11 in Chamber ↗</span>
+            </a>
+            <a href="../../music/index.html" class="px-3 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 font-mono text-xs border border-stone-700 transition-colors">
+              <span>View All 72 Songs ↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- VERBATIM ESSAY BODY -->
+    <article class="prose-essay font-serif text-stone-200 text-base sm:text-lg leading-relaxed space-y-6">
+
+      <p class="drop-cap">
+        War is the most successful confidence trick ever played upon humanity.
+      </p>
+
+      <p>
+        For thousands of years ordinary men and women have done the work, paid the taxes, buried the dead and rebuilt the ruins while generations of rulers, governments, generals, ideologues and political movements have demanded still more blood and still more money. The names change. The flags change. The uniforms change. The slogans change. The invoice remains.
+      </p>
+
+      <p>
+        Humanity has been conditioned to discuss war in terms of heroism, honour, duty, patriotism, security, national interest and glorious sacrifice. Very few people are ever invited to examine the final bill. Very few people are asked to calculate what centuries of organised violence have actually cost in money. Very few people are encouraged to ask the most dangerous question of all: what could civilisation have become if that wealth had been spent building instead of destroying?
+      </p>
+
+      <p class="text-xl sm:text-2xl font-display font-bold text-amber-400 italic">
+        The answer is staggering.
+      </p>
+
+      <p>
+        According to <em>Trends in World Military Expenditure 2025</em>, global military spending reached approximately US$2.887 trillion in 2025 alone. One year. One year of weapons, armies, missiles, warships, aircraft and military infrastructure. One year in which humanity somehow found nearly three trillion dollars for the machinery of conflict while billions of people continued to struggle with poverty, inadequate housing, poor healthcare and economic insecurity. <a href="https://www.sipri.org/publications/2026/sipri-fact-sheets/trends-world-military-expenditure-2025" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline font-mono text-xs" title="SIPRI Fact Sheet">[sipri.org]</a>, <a href="https://www.sipri.org/databases/milex" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline font-mono text-xs" title="SIPRI Database">[sipri.org]</a>
+      </p>
+
+      <p>
+        Now multiply that mentality across more than a century.
+      </p>
+
+      <p>
+        From the Boer War to the present day, humanity has not merely fought wars. Humanity has poured a mountain of wealth into war so vast that it is difficult to visualise. Hundreds of trillions of pounds have been consumed directly or indirectly through military expenditure, destruction, reconstruction, debt and lost opportunity. The result is not merely a trail of graves stretching across history. It is an economic catastrophe spanning generations.
+      </p>
+
+      <!-- Section Break -->
+      <div class="my-8 text-center flex items-center justify-center gap-4 text-amber-500/40">
+        <span class="h-px bg-stone-800 flex-1"></span>
+        <span class="font-cinzel text-xs tracking-widest text-amber-400/80 font-bold uppercase">&sect; THE DEVOURED FUTURE</span>
+        <span class="h-px bg-stone-800 flex-1"></span>
+      </div>
+
+      <p class="text-lg sm:text-xl font-bold text-stone-100">
+        War does not merely kill people.
+      </p>
+
+      <p class="text-xl sm:text-2xl font-display font-bold text-amber-400">
+        War devours futures.
+      </p>
+
+      <p>
+        It devours houses that were never built. It devours hospitals that were never funded. It devours schools that never opened. It devours scientific breakthroughs that never happened. It devours opportunities that vanished before they were ever born.
+      </p>
+
+      <div class="my-6 p-6 rounded-xl bg-stone-900/80 border-l-4 border-amber-500 border-r border-t border-b border-stone-800 shadow-lg">
+        <p class="text-lg font-serif italic text-stone-100 leading-relaxed mb-0">
+          Every bomb dropped destroys something twice. First it destroys its target. Then it destroys everything society could have achieved with the money used to build it.
+        </p>
+      </div>
+
+      <p>
+        That is the hidden ledger of human conflict.
+      </p>
+
+      <p>
+        That is the story politicians rarely tell.
+      </p>
+
+      <p class="font-display text-xl font-bold text-amber-400">
+        That is the cost of war.
+      </p>
+
+    </article>
+
+    <!-- SCHOLARLY SOURCES & BIBLIOGRAPHY SECTION -->
+    <section class="mt-14 pt-8 border-t border-stone-800">
+      <div class="flex items-center gap-2 mb-4">
+        <i class="fa-solid fa-book-bookmark text-amber-500"></i>
+        <h3 class="font-cinzel text-sm sm:text-base font-bold text-stone-200 uppercase tracking-wider">
+          Empirical Sources &amp; Research Authorities
+        </h3>
+      </div>
+      <ol class="space-y-3 font-mono text-xs text-stone-400 list-decimal list-inside bg-stone-900/40 p-5 rounded-xl border border-stone-800/80">
+        <li>
+          <strong class="text-stone-300">Stockholm International Peace Research Institute (SIPRI):</strong>
+          <em>Trends in World Military Expenditure, 2025</em>. SIPRI Fact Sheet (April 2026).
+          <a href="https://www.sipri.org/publications/2026/sipri-fact-sheets/trends-world-military-expenditure-2025" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline ml-1">sipri.org/publications ↗</a>
+        </li>
+        <li>
+          <strong class="text-stone-300">SIPRI Military Expenditure Database:</strong>
+          Comprehensive global dataset on defense spending from 1949 to 2025.
+          <a href="https://www.sipri.org/databases/milex" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline ml-1">sipri.org/databases/milex ↗</a>
+        </li>
+        <li>
+          <strong class="text-stone-300">Swistchew, Trevor (2026):</strong>
+          &ldquo;The Cost Of War.&rdquo; Compendium #58, Trevor Swistchew Compendium Archive.
+        </li>
+      </ol>
+    </section>
+
+    <!-- Navigation between Compendiums -->
+    <nav class="mt-12 pt-8 border-t border-stone-800 grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="../how-scotland-was-part-of-the-slave-owning-nobility/index.html" class="p-4 rounded-xl bg-stone-900/60 hover:bg-stone-900 border border-stone-800 hover:border-amber-500/50 transition-all flex items-center gap-3 group">
+        <i class="fa-solid fa-arrow-left text-amber-500 group-hover:-translate-x-1 transition-transform"></i>
+        <div class="text-left">
+          <span class="text-[10px] font-mono text-stone-400 block uppercase">Previous Compendium (#57)</span>
+          <span class="font-display font-bold text-sm text-stone-200 group-hover:text-amber-400 transition-colors">How Scotland Was Part Of The Slave Owning Nobility.</span>
+        </div>
+      </a>
+      <a href="../../index.html" class="p-4 rounded-xl bg-stone-900/60 hover:bg-stone-900 border border-stone-800 hover:border-amber-500/50 transition-all flex items-center justify-between group">
+        <div class="text-left">
+          <span class="text-[10px] font-mono text-stone-400 block uppercase">Compendium Hub</span>
+          <span class="font-display font-bold text-sm text-stone-200 group-hover:text-amber-400 transition-colors">Explore All 58 Works</span>
+        </div>
+        <i class="fa-solid fa-arrow-right text-amber-500 group-hover:translate-x-1 transition-transform"></i>
+      </a>
+    </nav>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="mt-16 border-t border-stone-800/80 bg-stone-950 py-8 text-center text-xs font-mono text-stone-400">
+    <div class="max-w-4xl mx-auto px-4 space-y-2">
+      <p>&copy; 2026 Trevor Swistchew. All rights reserved.</p>
+      <p class="text-stone-400 text-[11px]">The Scottish Literary Salon &bull; 58 Compendium Essays &bull; 72 Music Chamber Songs &bull; 29 Collected Poems</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Tab Switcher for Empirical Dossier
+    function switchTab(tabIndex) {
+      document.querySelectorAll('.dossier-pane').forEach((pane, idx) => {
+        if (idx + 1 === tabIndex) {
+          pane.classList.remove('hidden');
+        } else {
+          pane.classList.add('hidden');
+        }
+      });
+      document.querySelectorAll('.dossier-tab').forEach((btn, idx) => {
+        if (idx + 1 === tabIndex) {
+          btn.className = 'dossier-tab px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500 text-stone-950 shadow transition-all';
+        } else {
+          btn.className = 'dossier-tab px-3.5 py-1.5 rounded-lg text-xs font-mono text-stone-400 hover:text-stone-200 bg-stone-950 border border-stone-800 transition-all';
+        }
+      });
+    }
+
+    // Reading Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+
+    // Theme Switcher
+    const body = document.body;
+    const btnPeat = document.getElementById('theme-peat');
+    const btnSepia = document.getElementById('theme-sepia');
+    const btnStone = document.getElementById('theme-stone');
+
+    function setTheme(theme) {
+      body.classList.remove('theme-peat', 'theme-sepia', 'theme-stone');
+      body.classList.add('theme-' + theme);
+      localStorage.setItem('salon_reading_theme', theme);
+      
+      [btnPeat, btnSepia, btnStone].forEach(b => b.classList.remove('text-amber-400', 'bg-stone-800'));
+      if (theme === 'peat') btnPeat.classList.add('text-amber-400', 'bg-stone-800');
+      if (theme === 'sepia') btnSepia.classList.add('text-amber-400', 'bg-stone-800');
+      if (theme === 'stone') btnStone.classList.add('text-amber-400', 'bg-stone-800');
+    }
+
+    btnPeat.addEventListener('click', () => setTheme('peat'));
+    btnSepia.addEventListener('click', () => setTheme('sepia'));
+    btnStone.addEventListener('click', () => setTheme('stone'));
+
+    const savedTheme = localStorage.getItem('salon_reading_theme') || 'peat';
+    setTheme(savedTheme);
+
+    // Font Sizer
+    const article = document.querySelector('article.prose-essay');
+    let currentFontSize = parseInt(localStorage.getItem('salon_font_size') || '18');
+
+    function applyFontSize(size) {
+      article.style.fontSize = size + 'px';
+      article.style.lineHeight = (size * 1.8) + 'px';
+      localStorage.setItem('salon_font_size', size);
+    }
+
+    applyFontSize(currentFontSize);
+
+    document.getElementById('font-dec').addEventListener('click', () => {
+      if (currentFontSize > 15) {
+        currentFontSize -= 1;
+        applyFontSize(currentFontSize);
+      }
+    });
+
+    document.getElementById('font-reset').addEventListener('click', () => {
+      currentFontSize = 18;
+      applyFontSize(currentFontSize);
+    });
+
+    document.getElementById('font-inc').addEventListener('click', () => {
+      if (currentFontSize < 24) {
+        currentFontSize += 1;
+        applyFontSize(currentFontSize);
+      }
+    });
+  </script>
+</body>
+</html>
