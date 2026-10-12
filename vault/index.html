@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tpatterson34.github.io/the-shady-river-bard/">
   <meta property="og:title" content="The Shady River Bard — Discography & Incubator Vault">
-  <meta property="og:description" content="Explore 27 released concept albums with full liner notes and 19 unreleased workshop projects. Vote on what we record next.">
+  <meta property="og:description" content="Explore 27 released concept albums with full liner notes and 20 unreleased workshop projects. Vote on what we record next.">
   <meta property="og:image" content="https://tpatterson34.github.io/the-shady-river-bard/assets/covers/album-01.jpg">
   <meta name="twitter:card" content="summary_large_image">
   
@@ -310,7 +310,7 @@
           <button id="tab-vault" role="tab" aria-selected="false" aria-controls="albums-grid" tabindex="0" onclick="switchSection('vault')" class="flex-1 md:flex-none flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg text-xs sm:text-sm font-medium text-stone-400 hover:text-stone-200 transition-all focus-visible:ring-2 focus-visible:ring-brand-500">
             <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
             <span>The Vault</span>
-            <span id="badge-vault-count" class="px-1.5 sm:px-2 py-0.5 text-[11px] sm:text-xs rounded-full bg-soil-700 font-mono text-amber-300">19</span>
+            <span id="badge-vault-count" class="px-1.5 sm:px-2 py-0.5 text-[11px] sm:text-xs rounded-full bg-soil-700 font-mono text-amber-300">20</span>
           </button>
         </div>
 
@@ -484,6 +484,10 @@
                 <div class="text-amber-400 font-semibold text-xs uppercase tracking-wider font-mono">Unreleased Concept</div>
                 <p class="text-[11px] text-stone-400 mt-1">This album is in active development in the workshop.</p>
               </div>
+              <a id="modal-suno-btn" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-white font-medium text-xs transition-all flex items-center justify-center gap-2 shadow-md hidden">
+                <svg class="w-4 h-4 shrink-0 fill-current" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                <span>Listen to Full Album on Suno ↗</span>
+              </a>
               <button id="modal-vote-btn" onclick="handleModalVoteClick()" class="w-full py-2.5 px-4 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-medium text-xs transition-all flex items-center justify-center gap-2 shadow-md">
                 <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
                 <span id="modal-vote-btn-text" class="truncate">Vote to Release This Album</span>
@@ -1099,6 +1103,12 @@
                     <span>🎛️ PRACTICE</span>
                   </a>
                 ` : ''}
+                ${item.suno_url ? `
+                  <a href="${item.suno_url}" onclick="event.stopPropagation();" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 rounded-md text-[10px] font-mono font-semibold bg-amber-950/90 text-amber-300 border border-amber-500/40 hover:bg-amber-900 hover:text-white transition-colors backdrop-blur-sm flex items-center gap-1" title="Listen on Suno Playlist">
+                    <svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                    <span>SUNO ↗</span>
+                  </a>
+                ` : ''}
               </div>
 
               <div class="absolute bottom-3 right-3 text-xs font-mono px-2 py-1 rounded bg-black/60 backdrop-blur-sm text-stone-200">
@@ -1154,9 +1164,16 @@
                 <button onclick="openModal('${item.id}')" aria-label="Inspect concept details for ${item.title}" class="flex-1 py-2 sm:py-2.5 px-2.5 sm:px-3 rounded-xl bg-soil-800 hover:bg-soil-700 text-stone-200 hover:text-white text-xs font-medium transition-colors border border-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 min-w-0 truncate">
                   <span class="truncate">Inspect Concept &rarr;</span>
                 </button>
-                <button onclick="openVoteModal('${item.id}')" aria-label="Vote to release ${item.title}" class="py-2 sm:py-2.5 px-3 sm:px-3.5 rounded-xl ${voted ? 'bg-emerald-950 text-emerald-400 border border-emerald-800' : 'bg-amber-600 hover:bg-amber-500 text-white'} text-xs font-medium transition-colors flex items-center gap-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-white shrink-0">
-                  <span>${voted ? '&#x2713; Voted' : 'Vote to Release'}</span>
-                </button>
+                ${item.suno_url ? `
+                  <a href="${item.suno_url}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" aria-label="Listen to ${item.title} on Suno (opens in new tab)" class="py-2 sm:py-2.5 px-3 sm:px-3.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-white text-xs font-medium transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-white shrink-0">
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                    <span>Suno &#x2197;</span>
+                  </a>
+                ` : `
+                  <button onclick="openVoteModal('${item.id}')" aria-label="Vote to release ${item.title}" class="py-2 sm:py-2.5 px-3 sm:px-3.5 rounded-xl ${voted ? 'bg-emerald-950 text-emerald-400 border border-emerald-800' : 'bg-amber-600 hover:bg-amber-500 text-white'} text-xs font-medium transition-colors flex items-center gap-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-white shrink-0">
+                    <span>${voted ? '&#x2713; Voted' : 'Vote to Release'}</span>
+                  </button>
+                `}
               </div>
             `}
           </div>
@@ -1260,6 +1277,16 @@
           } else {
             voteBtnText.innerText = "Vote to Release This Album";
             voteBtn.className = "w-full py-2.5 px-4 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-medium text-xs transition-all flex items-center justify-center gap-2 shadow-md focus-visible:ring-2 focus-visible:ring-white";
+          }
+        }
+
+        const sunoBtn = document.getElementById('modal-suno-btn');
+        if (sunoBtn) {
+          if (item.suno_url) {
+            sunoBtn.href = item.suno_url;
+            sunoBtn.classList.remove('hidden');
+          } else {
+            sunoBtn.classList.add('hidden');
           }
         }
       }
