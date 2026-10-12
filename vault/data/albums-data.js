@@ -2462,8 +2462,8 @@ window.CATALOG_DATA = {
       "suno_url": "https://suno.com/playlist/5a33250b-b401-427a-9988-9a6e45e2f8c6",
       "track_deconstructions": null,
       "deconstruction_url": null,
-      "is_bespoke": false,
-      "custom_url": null
+      "is_bespoke": true,
+      "custom_url": "../the-iron-lullaby/"
     },
     {
       "id": "the-jester-s-neck",
