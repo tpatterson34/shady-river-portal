@@ -278,7 +278,7 @@
           </div>
           <div class="bg-soil-800/60 border border-white/5 rounded-xl p-3 sm:p-3.5">
             <div class="text-xl sm:text-2xl font-serif font-bold text-amber-400" id="stat-vault">20</div>
-            <div class="text-[11px] sm:text-xs text-stone-400 uppercase tracking-wider mt-0.5">Vault Concepts</div>
+            <div class="text-[11px] sm:text-xs text-stone-400 uppercase tracking-wider mt-0.5">Incubator Concepts</div>
           </div>
           <div class="bg-soil-800/60 border border-white/5 rounded-xl p-3 sm:p-3.5">
             <div class="text-xl sm:text-2xl font-serif font-bold text-emerald-400" id="stat-tracks">320+</div>
@@ -309,7 +309,8 @@
           </button>
           <button id="tab-vault" role="tab" aria-selected="false" aria-controls="albums-grid" tabindex="0" onclick="switchSection('vault')" class="flex-1 md:flex-none flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg text-xs sm:text-sm font-medium text-stone-400 hover:text-stone-200 transition-all focus-visible:ring-2 focus-visible:ring-brand-500">
             <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-            <span>The Vault</span>
+            <span>The Incubator</span>
+            <span class="hidden lg:inline text-[11px] font-normal text-amber-200/70">(Unreleased)</span>
             <span id="badge-vault-count" class="px-1.5 sm:px-2 py-0.5 text-[11px] sm:text-xs rounded-full bg-soil-700 font-mono text-amber-300">20</span>
           </button>
         </div>
@@ -898,8 +899,8 @@
         tabVlt.setAttribute('aria-selected', 'true');
         tabRel.className = "flex-1 md:flex-none flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium text-stone-300 hover:text-stone-100 transition-all focus-visible:ring-2 focus-visible:ring-brand-500";
         tabRel.setAttribute('aria-selected', 'false');
-        secTitle.innerHTML = "<span class='text-amber-400'>The Incubator & Research Vault</span>";
-        secDesc.innerText = "Unreleased concept documents, narrative outlines, and blueprints from the workshop. Vote on what to record next!";
+        secTitle.innerHTML = "<span class='text-amber-400'>The Concept Incubator: Unreleased Workshop</span>";
+        secDesc.innerText = "20 unreleased concept documents, narrative outlines, and blueprints from the workshop. Cast your vote on what we record next!";
       }
 
       buildGenreFilters();
@@ -1060,7 +1061,7 @@
     function createCardHTML(item) {
       const isReleased = currentSection === 'released';
       const cover = item.cover_image || 'assets/covers/album-01.webp';
-      const numberBadge = isReleased ? `#${String(item.number).padStart(2, '0')}` : 'VAULT';
+      const numberBadge = isReleased ? `#${String(item.number).padStart(2, '0')}` : 'INCUBATOR';
       const hookText = item.hook || (item.description || item.pitch || '').split('.')[0] + '.';
       const trackCount = item.track_count || item.tracks?.length || 0;
       const genreCat = item.genre_category || 'Folk & Acoustic';
@@ -1205,7 +1206,7 @@
       const isReleased = Boolean(item.number);
 
       document.getElementById('modal-title').innerText = item.title;
-      document.getElementById('modal-badge').innerText = item.number ? `#${String(item.number).padStart(2, '0')}` : 'VAULT CONCEPT';
+      document.getElementById('modal-badge').innerText = item.number ? `#${String(item.number).padStart(2, '0')}` : 'INCUBATOR CONCEPT';
       
       const modalArt = document.getElementById('modal-art');
       modalArt.onerror = function() { this.onerror = null; this.src = 'assets/covers/album-01.webp'; };
@@ -1477,6 +1478,15 @@
     function checkUrlHash() {
       const rawHash = window.location.hash ? window.location.hash.replace(/^#/, '').trim() : '';
       if (!rawHash) return;
+
+      if (rawHash === 'unreleased' || rawHash === 'incubator' || rawHash === 'vault') {
+        if (currentSection !== 'vault') switchSection('vault');
+        return;
+      }
+      if (rawHash === 'released' || rawHash === 'discography') {
+        if (currentSection !== 'released') switchSection('released');
+        return;
+      }
 
       const allItems = [...catalog.released, ...catalog.vault];
       const item = allItems.find(x => x.id === rawHash || String(x.number) === rawHash || `album-${x.number}` === rawHash.toLowerCase());
