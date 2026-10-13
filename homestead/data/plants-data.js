@@ -1,5 +1,5 @@
-// The Shady River Homestead — Living Botanical & Cultivar Catalog
-// 110 Planted Cultivars in USDA Zone 8b (Western Washington)
+// The Shady River Homestead • Living Botanical & Cultivar Catalog
+// 111 Planted Cultivars in USDA Zone 8b (Western Washington)
 window.HOMESTEAD_PLANTS = [
   {
     "id": "amere-de-berthcourt-cider-apple-tree",
@@ -2759,6 +2759,37 @@ window.HOMESTEAD_PLANTS = [
     "isPlanted": true
   },
   {
+    "id": "purple-coneflower",
+    "commonName": "Purple Coneflower",
+    "latinName": "Echinacea purpurea",
+    "genus": "Echinacea",
+    "category": "Perennial Vegetables & Roots",
+    "categoryName": "Perennial Herbs & Exotics",
+    "layer": "Pollinator & Medicinal Herbaceous Layer",
+    "description": "An iconic, drought-resilient North American prairie perennial that anchors the pollinator and medicinal guilds of the Shady River Homestead. Reaching 2 to 4 feet in height, Purple Coneflower produces magnificent composite blossoms featuring prominent, spiny, domed central cones—resembling hedgehogs ('echinos' in Greek)—flanked by vibrant, downward-sweeping magenta-purple ray florets. A deep, tenacious taproot and fibrous root matrix break through hardpan clay subsoils, mining vital minerals while thriving through dry Pacific Northwest summers without irrigation once established. Highly resistant to deer, rabbits, and pests, Echinacea blooms continuously from midsummer through the first autumn frosts, feeding legions of native bumblebees and butterflies before transforming into architectural winter seed heads that sustain foraging goldfinches.",
+    "planting": "Prefers full sun (6+ hours of direct sun) and moderately rich, sharply draining loamy or gravelly soil. Intolerant of winter waterlogging. Direct seed in autumn for natural cold-stratification, or cold-stratify seeds damp for 30–60 days before spring planting. Space plants 18–24 inches apart. Established clumps can be divided in early spring every 3 to 4 years to rejuvenate vigor and expand food forest guilds.",
+    "size": "2–4 ft. height, 1.5–2 ft. clumping spread",
+    "hardiness": "USDA Zones 3–9 (Fully Hardy to -30°F; Thrives in PNW Zone 8b)",
+    "blooms": "June through September / First Frost",
+    "harvest": "Gather freshly opened ray petals and young leaves throughout summer for culinary teas and garnishes. Harvest 2- to 3-year-old taproots in late autumn after top-growth dies back, when medicinal alkylamides and polysaccharides are concentrated in root reserves.",
+    "pests": "Exceptionally pest- and disease-resilient. Naturally unpalatable to deer, rabbits, and voles due to coarse foliage and spiny flower cones. Occasional susceptibility to Aster Yellows (leafhopper-vectored) or powdery mildew if planted in damp, stagnantly shaded pockets with poor air circulation.",
+    "edibility": "Sweet, mildly floral ray petals make a stunning, colorful garnish for fresh salads, pastries, and compound herbal butters. Dried petals and leaves brew a mellow, grounding herbal tea with subtle honey-earth notes. Chewing the fresh spiny disc or biting into fresh root releases potent alkylamides that trigger an unmistakable, electric tingling and numbing sensation on the palate—a hallmark of active phytochemical density.",
+    "medicinalUse": "One of the most sacred and foundational healing plants of North American Indigenous peoples (including Lakota, Cheyenne, and Choctaw nations) and 19th-century Eclectic medicine. Renowned as a premiere immune system modulator and lymphatic stimulant. Rich in lipophilic alkylamides (which stimulate macrophage phagocytosis and cellular immune response), caffeic acid derivatives (cichoric acid and echinacoside for profound antioxidant protection), and immunomodulating polysaccharides. Clinically celebrated for reducing the severity and duration of upper respiratory tract infections, colds, and influenza at the earliest sign of symptoms, as well as serving topically as an antiseptic, wound-healing vulnerary for bites, scrapes, and burns.",
+    "recipes": "Shady River Dual-Extract Immune Tincture (fresh autumn root, ray flowers, and seed cones macerated in 100-proof spirit and blended with a hot-water decoction), Cedar Valley Winter Defense Tea (dried coneflower petals, blue elderberries, rosehips, and lemon balm), Coneflower & Raw Homestead Honey Oxymel (infused with raw apple cider vinegar for throat soothing), and Topical Herbal Wound Salve.",
+    "craftAndUtilitarian": "The rigid, spiky dark-brown seed cones persist stubbornly atop stiff winter stalks, standing as vital living bird feeders through snow and freezing rain for American Goldfinches, chickadees, and siskins. Cut stems with mature seed heads are prized for rustic everlasting bouquets, autumn wreaths, and botanical craft arrangements.",
+    "dyeColor": "Whole flowering tops, stems, and leaves yield delicate buttery yellows, antique gold, soft brass, and pale olive-tans with alum mordant, shifting to rich forest moss and earthy greens with iron modifier.",
+    "permacultureRole": "Core herbaceous pollinator anchor for orchard fruit tree guilds (apples, pears, plums); attracts beneficial predatory wasps, syrphid flies, and lacewings that control orchard pests; deep taproots aerate subsoil and cycle minerals; provides critical winter forage for native seed-eating songbirds.",
+    "imageUrl": "assets/images/purple-coneflower.jpg",
+    "tags": [
+      "Medicinal",
+      "Edible",
+      "Natural Dye",
+      "Dynamic Accumulator",
+      "Homestead Planting"
+    ],
+    "isPlanted": true
+  },
+  {
     "id": "rabbiteye-blueberry-florida-rose",
     "commonName": "Rabbiteye Blueberry Florida Rose",
     "latinName": "Vaccinium ashei",
@@ -3260,7 +3291,3 @@ window.HOMESTEAD_PLANTS = [
     "isPlanted": true
   }
 ];
-
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = window.HOMESTEAD_PLANTS;
-}
