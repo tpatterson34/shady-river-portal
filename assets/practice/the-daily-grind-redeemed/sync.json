@@ -1,128 +1,184 @@
 [
   {
-    "time": 0.2,
+    "time": 0.023219954648666885,
     "bar_number": 1,
-    "tempo_bpm": 72,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
-      "Fm",
+      "F",
       "Gm"
     ],
-    "beats": [
-      0.673,
-      1.509,
-      2.345,
-      3.158
-    ],
-    "lyrics": "",
     "chord_cols": [
       0,
-      0
-    ]
+      8
+    ],
+    "beats": [
+      0.023219954648666885,
+      0.8359183673470767,
+      1.6486167800454865,
+      2.4613151927438963
+    ],
+    "lyrics": "",
+    "words": []
   },
   {
-    "time": 4.02,
+    "time": 3.274013605442306,
     "bar_number": 2,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "Gm"
     ],
-    "beats": [
-      4.017,
-      4.83,
-      5.642,
-      6.455
-    ],
-    "lyrics": "",
     "chord_cols": [
       0
-    ]
+    ],
+    "beats": [
+      3.274013605442306,
+      4.086712018140716,
+      4.899410430839126,
+      5.712108843537536
+    ],
+    "lyrics": "",
+    "words": []
   },
   {
-    "time": 7.24,
+    "time": 6.524807256235945,
     "bar_number": 3,
-    "tempo_bpm": 73,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "Gm",
       "F"
     ],
-    "beats": [
-      7.245,
-      8.081,
-      8.893,
-      9.706
-    ],
-    "lyrics": "",
     "chord_cols": [
       0,
-      0
-    ]
+      8
+    ],
+    "beats": [
+      6.524807256235945,
+      7.337505668934355,
+      8.150204081632765,
+      8.962902494331175
+    ],
+    "lyrics": "",
+    "words": []
   },
   {
-    "time": 10.54,
+    "time": 9.775600907029585,
     "bar_number": 4,
-    "tempo_bpm": 72,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "F",
       "Gm"
     ],
-    "beats": [
-      10.542,
-      11.401,
-      12.26,
-      13.096
-    ],
-    "lyrics": "",
     "chord_cols": [
       0,
-      0
-    ]
+      8
+    ],
+    "beats": [
+      9.775600907029585,
+      10.588299319727994,
+      11.400997732426404,
+      12.213696145124814
+    ],
+    "lyrics": "",
+    "words": []
   },
   {
-    "time": 13.89,
+    "time": 13.026394557823224,
     "bar_number": 5,
-    "tempo_bpm": 73,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "Gm"
     ],
-    "beats": [
-      13.886,
-      14.721,
-      15.534,
-      16.347
-    ],
-    "lyrics": "Thirty-five years behind a desk.",
     "chord_cols": [
       0
+    ],
+    "beats": [
+      13.026394557823224,
+      13.839092970521634,
+      14.651791383220043,
+      15.464489795918453
+    ],
+    "lyrics": "          Thirty-five years behind",
+    "words": [
+      {
+        "word": "Thirty-five",
+        "start": 14.46,
+        "end": 15.108,
+        "col": 10
+      },
+      {
+        "word": "years",
+        "start": 15.108,
+        "end": 15.756,
+        "col": 22
+      },
+      {
+        "word": "behind",
+        "start": 15.756,
+        "end": 16.404,
+        "col": 28
+      }
     ]
   },
   {
-    "time": 17.16,
+    "time": 16.277188208616863,
     "bar_number": 6,
-    "tempo_bpm": 73,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "Gm",
       "A#"
     ],
-    "beats": [
-      17.16,
-      17.995,
-      18.808,
-      19.621
-    ],
-    "lyrics": "Watching numbers crawl and fly.",
     "chord_cols": [
       0,
-      17
+      14
+    ],
+    "beats": [
+      16.277188208616863,
+      17.089886621315273,
+      17.902585034013683,
+      18.715283446712093
+    ],
+    "lyrics": "a desk.       Watching numbers crawl",
+    "words": [
+      {
+        "word": "a",
+        "start": 16.404,
+        "end": 17.052,
+        "col": 0
+      },
+      {
+        "word": "desk.",
+        "start": 17.052,
+        "end": 17.699,
+        "col": 2
+      },
+      {
+        "word": "Watching",
+        "start": 17.699,
+        "end": 18.345,
+        "col": 14
+      },
+      {
+        "word": "numbers",
+        "start": 18.345,
+        "end": 18.991,
+        "col": 23
+      },
+      {
+        "word": "crawl",
+        "start": 18.991,
+        "end": 19.637,
+        "col": 31
+      }
     ]
   },
   {
-    "time": 20.46,
+    "time": 19.527981859410502,
     "bar_number": 7,
     "tempo_bpm": 74,
     "time_signature": "4/4",
@@ -130,1246 +186,3205 @@
       "A#",
       "F"
     ],
-    "beats": [
-      20.457,
-      21.269,
-      22.082,
-      22.895
-    ],
-    "lyrics": "Thirty-five years behind a desk.",
     "chord_cols": [
       0,
-      18
+      14
+    ],
+    "beats": [
+      19.527981859410502,
+      20.340680272108912,
+      21.153378684807322,
+      21.966077097505732
+    ],
+    "lyrics": "and fly.      Thirty-five years behind",
+    "words": [
+      {
+        "word": "and",
+        "start": 19.637,
+        "end": 20.283,
+        "col": 0
+      },
+      {
+        "word": "fly.",
+        "start": 20.283,
+        "end": 20.929,
+        "col": 4
+      },
+      {
+        "word": "Thirty-five",
+        "start": 20.929,
+        "end": 21.591,
+        "col": 14
+      },
+      {
+        "word": "years",
+        "start": 21.591,
+        "end": 22.253,
+        "col": 26
+      },
+      {
+        "word": "behind",
+        "start": 22.253,
+        "end": 22.915,
+        "col": 32
+      }
     ]
   },
   {
-    "time": 23.68,
+    "time": 22.77877551020414,
     "bar_number": 8,
-    "tempo_bpm": 73,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "F",
       "Gm"
     ],
-    "beats": [
-      23.684,
-      24.52,
-      25.333,
-      26.146
-    ],
-    "lyrics": "Watching numbers crawl and fly.",
     "chord_cols": [
       0,
-      17
+      14
+    ],
+    "beats": [
+      22.77877551020414,
+      23.59147392290255,
+      24.40417233560096,
+      25.21687074829937
+    ],
+    "lyrics": "a desk.       Watching numbers crawl",
+    "words": [
+      {
+        "word": "a",
+        "start": 22.915,
+        "end": 23.577,
+        "col": 0
+      },
+      {
+        "word": "desk.",
+        "start": 23.577,
+        "end": 24.239,
+        "col": 2
+      },
+      {
+        "word": "Watching",
+        "start": 24.239,
+        "end": 24.865,
+        "col": 14
+      },
+      {
+        "word": "numbers",
+        "start": 24.865,
+        "end": 25.491,
+        "col": 23
+      },
+      {
+        "word": "crawl",
+        "start": 25.491,
+        "end": 26.117,
+        "col": 31
+      }
     ]
   },
   {
-    "time": 26.96,
+    "time": 26.02956916099778,
     "bar_number": 9,
-    "tempo_bpm": 73,
+    "tempo_bpm": 74,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm"
+    ],
+    "chord_cols": [
+      0
+    ],
+    "beats": [
+      26.02956916099778,
+      26.84226757369619,
+      27.6549659863946,
+      28.46766439909301
+    ],
+    "lyrics": "and fly. The world raced by, through",
+    "words": [
+      {
+        "word": "and",
+        "start": 26.117,
+        "end": 26.743,
+        "col": 0
+      },
+      {
+        "word": "fly.",
+        "start": 26.743,
+        "end": 27.369,
+        "col": 4
+      },
+      {
+        "word": "The",
+        "start": 27.369,
+        "end": 27.767,
+        "col": 9
+      },
+      {
+        "word": "world",
+        "start": 27.767,
+        "end": 28.164,
+        "col": 13
+      },
+      {
+        "word": "raced",
+        "start": 28.164,
+        "end": 28.562,
+        "col": 19
+      },
+      {
+        "word": "by,",
+        "start": 28.562,
+        "end": 28.959,
+        "col": 25
+      },
+      {
+        "word": "through",
+        "start": 28.959,
+        "end": 29.486,
+        "col": 29
+      }
+    ]
+  },
+  {
+    "time": 29.28036281179142,
+    "bar_number": 10,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "Gm",
       "A#"
     ],
-    "beats": [
-      26.958,
-      27.794,
-      28.607,
-      29.42
-    ],
-    "lyrics": "The world raced by, through office glass.",
     "chord_cols": [
       0,
-      20
+      23
+    ],
+    "beats": [
+      29.28036281179142,
+      30.09306122448983,
+      30.90575963718824,
+      31.71845804988665
+    ],
+    "lyrics": "office glass. 'Neath   the city painted",
+    "words": [
+      {
+        "word": "office",
+        "start": 29.486,
+        "end": 30.013,
+        "col": 0
+      },
+      {
+        "word": "glass.",
+        "start": 30.013,
+        "end": 30.539,
+        "col": 7
+      },
+      {
+        "word": "'Neath",
+        "start": 30.539,
+        "end": 31.16,
+        "col": 14
+      },
+      {
+        "word": "the",
+        "start": 31.16,
+        "end": 31.48,
+        "col": 23
+      },
+      {
+        "word": "city",
+        "start": 31.48,
+        "end": 32.2,
+        "col": 27
+      },
+      {
+        "word": "painted",
+        "start": 32.2,
+        "end": 33.059,
+        "col": 32
+      }
     ]
   },
   {
-    "time": 30.23,
-    "bar_number": 10,
+    "time": 32.53115646258506,
+    "bar_number": 11,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "A#",
       "F"
     ],
-    "beats": [
-      30.232,
-      31.068,
-      31.881,
-      32.694
-    ],
-    "lyrics": "'Neath the city painted sky.",
     "chord_cols": [
       0,
-      11
+      14
+    ],
+    "beats": [
+      32.53115646258506,
+      33.34385487528347,
+      34.15655328798188,
+      34.96925170068029
+    ],
+    "lyrics": "sky.          Blessed to quit,",
+    "words": [
+      {
+        "word": "sky.",
+        "start": 33.059,
+        "end": 33.919,
+        "col": 0
+      },
+      {
+        "word": "Blessed",
+        "start": 34.18,
+        "end": 34.62,
+        "col": 14
+      },
+      {
+        "word": "to",
+        "start": 34.62,
+        "end": 34.78,
+        "col": 22
+      },
+      {
+        "word": "quit,",
+        "start": 34.78,
+        "end": 35.14,
+        "col": 25
+      }
     ]
   },
   {
-    "time": 33.48,
-    "bar_number": 11,
+    "time": 35.7819501133787,
+    "bar_number": 12,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "F",
       "Gm"
     ],
-    "beats": [
-      33.483,
-      34.319,
-      35.109,
-      35.921
-    ],
-    "lyrics": "Blessed to quit, retiring young.",
     "chord_cols": [
       0,
-      17
+      18
+    ],
+    "beats": [
+      35.7819501133787,
+      36.59464852607711,
+      37.40734693877552,
+      38.22004535147393
+    ],
+    "lyrics": "retiring young.   Living on this honest",
+    "words": [
+      {
+        "word": "retiring",
+        "start": 35.6,
+        "end": 36.06,
+        "col": 0
+      },
+      {
+        "word": "young.",
+        "start": 36.06,
+        "end": 36.72,
+        "col": 9
+      },
+      {
+        "word": "Living",
+        "start": 37.44,
+        "end": 37.74,
+        "col": 18
+      },
+      {
+        "word": "on",
+        "start": 37.74,
+        "end": 38.26,
+        "col": 25
+      },
+      {
+        "word": "this",
+        "start": 38.26,
+        "end": 38.76,
+        "col": 28
+      },
+      {
+        "word": "honest",
+        "start": 38.76,
+        "end": 39.26,
+        "col": 33
+      }
     ]
   },
   {
-    "time": 36.71,
-    "bar_number": 12,
-    "tempo_bpm": 77,
+    "time": 39.03274376417234,
+    "bar_number": 13,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "Gm",
       "A#"
     ],
-    "beats": [
-      36.711,
-      37.5,
-      38.266,
-      39.033
-    ],
-    "lyrics": "Living on this honest green.",
     "chord_cols": [
       0,
-      10
-    ]
-  },
-  {
-    "time": 39.82,
-    "bar_number": 13,
-    "tempo_bpm": 75,
-    "time_signature": "4/4",
-    "chords": [
-      "A#"
+      14
     ],
     "beats": [
-      39.822,
-      40.635,
-      41.448,
-      42.237
+      39.03274376417234,
+      39.82222222222222,
+      40.63492063492063,
+      41.44761904761905
     ],
-    "lyrics": "Now the daily grind's redeemed.",
-    "chord_cols": [
-      0
+    "lyrics": "green.        Now the daily grind's",
+    "words": [
+      {
+        "word": "green.",
+        "start": 39.26,
+        "end": 39.78,
+        "col": 0
+      },
+      {
+        "word": "Now",
+        "start": 40.98,
+        "end": 41.14,
+        "col": 14
+      },
+      {
+        "word": "the",
+        "start": 41.14,
+        "end": 41.3,
+        "col": 18
+      },
+      {
+        "word": "daily",
+        "start": 41.3,
+        "end": 41.8,
+        "col": 22
+      },
+      {
+        "word": "grind's",
+        "start": 41.8,
+        "end": 42.84,
+        "col": 28
+      }
     ]
   },
   {
-    "time": 43.03,
+    "time": 42.237097505668935,
     "bar_number": 14,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "A#",
-      "Gm"
+      "F"
     ],
-    "beats": [
-      43.027,
-      43.862,
-      44.652,
-      45.465
-    ],
-    "lyrics": "In the honest sun and rain.",
     "chord_cols": [
       0,
       14
+    ],
+    "beats": [
+      42.237097505668935,
+      43.02657596371882,
+      43.83927437641724,
+      44.651972789115646
+    ],
+    "lyrics": "redeemed.     In the honest sun",
+    "words": [
+      {
+        "word": "redeemed.",
+        "start": 42.84,
+        "end": 43.879,
+        "col": 0
+      },
+      {
+        "word": "In",
+        "start": 43.879,
+        "end": 44.36,
+        "col": 14
+      },
+      {
+        "word": "the",
+        "start": 44.36,
+        "end": 44.54,
+        "col": 17
+      },
+      {
+        "word": "honest",
+        "start": 44.54,
+        "end": 44.92,
+        "col": 21
+      },
+      {
+        "word": "sun",
+        "start": 44.92,
+        "end": 45.5,
+        "col": 28
+      }
     ]
   },
   {
-    "time": 46.25,
+    "time": 45.464671201814056,
     "bar_number": 15,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
-      "Dm",
-      "D#"
+      "F",
+      "Gm"
     ],
-    "beats": [
-      46.254,
-      47.067,
-      47.88,
-      48.669
-    ],
-    "lyrics": "Every ache good day's work.",
     "chord_cols": [
       0,
-      11
+      14
+    ],
+    "beats": [
+      45.464671201814056,
+      46.25414965986395,
+      47.06684807256236,
+      47.87954648526077
+    ],
+    "lyrics": "and rain.     Every ache good",
+    "words": [
+      {
+        "word": "and",
+        "start": 45.5,
+        "end": 45.86,
+        "col": 0
+      },
+      {
+        "word": "rain.",
+        "start": 45.86,
+        "end": 46.4,
+        "col": 4
+      },
+      {
+        "word": "Every",
+        "start": 47.5,
+        "end": 47.76,
+        "col": 14
+      },
+      {
+        "word": "ache",
+        "start": 47.76,
+        "end": 48.22,
+        "col": 20
+      },
+      {
+        "word": "good",
+        "start": 48.22,
+        "end": 48.64,
+        "col": 25
+      }
     ]
   },
   {
-    "time": 49.48,
+    "time": 48.66902494331066,
     "bar_number": 16,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "A#m"
+      "F",
+      "D#"
     ],
-    "beats": [
-      49.482,
-      50.294,
-      51.107,
-      51.897
-    ],
-    "lyrics": "Washing out the corporate stain.",
     "chord_cols": [
       0,
-      12
+      14
+    ],
+    "beats": [
+      48.66902494331066,
+      49.48172335600907,
+      50.29442176870748,
+      51.1071201814059
+    ],
+    "lyrics": "day's work.   Washing out the corporate",
+    "words": [
+      {
+        "word": "day's",
+        "start": 48.64,
+        "end": 49.18,
+        "col": 0
+      },
+      {
+        "word": "work.",
+        "start": 49.18,
+        "end": 49.64,
+        "col": 6
+      },
+      {
+        "word": "Washing",
+        "start": 50.72,
+        "end": 50.98,
+        "col": 14
+      },
+      {
+        "word": "out",
+        "start": 50.98,
+        "end": 51.28,
+        "col": 22
+      },
+      {
+        "word": "the",
+        "start": 51.28,
+        "end": 51.56,
+        "col": 26
+      },
+      {
+        "word": "corporate",
+        "start": 51.56,
+        "end": 52.12,
+        "col": 30
+      }
     ]
   },
   {
-    "time": 52.71,
+    "time": 51.89659863945578,
     "bar_number": 17,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
-      "A#m",
-      "Dm"
+      "D#",
+      "A#"
     ],
-    "beats": [
-      52.709,
-      53.522,
-      54.335,
-      55.124
-    ],
-    "lyrics": "Feeling dirt beneath my fingernails.",
     "chord_cols": [
       0,
-      13
+      14
+    ],
+    "beats": [
+      51.89659863945578,
+      52.70929705215419,
+      53.52199546485261,
+      54.33469387755102
+    ],
+    "lyrics": "stain.        Feeling dirt beneath",
+    "words": [
+      {
+        "word": "stain.",
+        "start": 52.12,
+        "end": 52.68,
+        "col": 0
+      },
+      {
+        "word": "Feeling",
+        "start": 53.88,
+        "end": 54.12,
+        "col": 14
+      },
+      {
+        "word": "dirt",
+        "start": 54.12,
+        "end": 54.54,
+        "col": 22
+      },
+      {
+        "word": "beneath",
+        "start": 54.54,
+        "end": 55.0,
+        "col": 27
+      }
     ]
   },
   {
-    "time": 55.94,
+    "time": 55.12417233560091,
     "bar_number": 18,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
-      "Dm",
-      "Gm"
+      "A#",
+      "F"
     ],
-    "beats": [
-      55.937,
-      56.75,
-      57.539,
-      58.352
-    ],
-    "lyrics": "Where new purpose starts to bloom.",
     "chord_cols": [
       0,
       18
+    ],
+    "beats": [
+      55.12417233560091,
+      55.93687074829932,
+      56.74956916099773,
+      57.56226757369615
+    ],
+    "lyrics": "my fingernails.   Where new purpose starts",
+    "words": [
+      {
+        "word": "my",
+        "start": 55.16,
+        "end": 55.48,
+        "col": 0
+      },
+      {
+        "word": "fingernails.",
+        "start": 55.48,
+        "end": 56.76,
+        "col": 3
+      },
+      {
+        "word": "Where",
+        "start": 56.819,
+        "end": 57.12,
+        "col": 18
+      },
+      {
+        "word": "new",
+        "start": 57.12,
+        "end": 57.42,
+        "col": 24
+      },
+      {
+        "word": "purpose",
+        "start": 57.42,
+        "end": 57.92,
+        "col": 28
+      },
+      {
+        "word": "starts",
+        "start": 57.969,
+        "end": 58.6,
+        "col": 36
+      }
     ]
   },
   {
-    "time": 59.16,
+    "time": 58.35174603174603,
     "bar_number": 19,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
-      "Dm",
-      "D#m"
+      "F",
+      "Gm"
     ],
-    "beats": [
-      59.164,
-      59.977,
-      60.79,
-      61.579
-    ],
-    "lyrics": "Found my true calling in the soil.",
     "chord_cols": [
       0,
-      14
+      18
+    ],
+    "beats": [
+      58.35174603174603,
+      59.16444444444444,
+      59.97714285714286,
+      60.78984126984127
+    ],
+    "lyrics": "to bloom. Found   my true calling",
+    "words": [
+      {
+        "word": "to",
+        "start": 58.6,
+        "end": 58.82,
+        "col": 0
+      },
+      {
+        "word": "bloom.",
+        "start": 58.82,
+        "end": 59.32,
+        "col": 3
+      },
+      {
+        "word": "Found",
+        "start": 59.66,
+        "end": 60.12,
+        "col": 10
+      },
+      {
+        "word": "my",
+        "start": 60.12,
+        "end": 60.38,
+        "col": 18
+      },
+      {
+        "word": "true",
+        "start": 60.38,
+        "end": 60.64,
+        "col": 21
+      },
+      {
+        "word": "calling",
+        "start": 60.64,
+        "end": 61.1,
+        "col": 26
+      }
     ]
   },
   {
-    "time": 62.39,
+    "time": 61.57931972789115,
     "bar_number": 20,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
-      "D#m",
-      "Gm"
+      "F",
+      "D#"
     ],
-    "beats": [
-      62.392,
-      63.205,
-      63.994,
-      64.807
-    ],
-    "lyrics": "Chasing away the city's gloom.",
     "chord_cols": [
       0,
-      13
+      15
+    ],
+    "beats": [
+      61.57931972789115,
+      62.39201814058957,
+      63.20471655328798,
+      63.994195011337865
+    ],
+    "lyrics": "in the soil.   Chasing away the",
+    "words": [
+      {
+        "word": "in",
+        "start": 61.56,
+        "end": 61.92,
+        "col": 0
+      },
+      {
+        "word": "the",
+        "start": 61.92,
+        "end": 62.04,
+        "col": 3
+      },
+      {
+        "word": "soil.",
+        "start": 62.04,
+        "end": 62.42,
+        "col": 7
+      },
+      {
+        "word": "Chasing",
+        "start": 63.18,
+        "end": 63.44,
+        "col": 15
+      },
+      {
+        "word": "away",
+        "start": 63.44,
+        "end": 63.96,
+        "col": 23
+      },
+      {
+        "word": "the",
+        "start": 63.96,
+        "end": 64.6,
+        "col": 28
+      }
     ]
   },
   {
-    "time": 65.62,
+    "time": 64.80689342403628,
     "bar_number": 21,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
-      "D#m",
+      "D#",
       "Gm"
     ],
-    "beats": [
-      65.62,
-      66.432,
-      67.245,
-      68.058
-    ],
-    "lyrics": "",
     "chord_cols": [
       0,
-      0
+      17
+    ],
+    "beats": [
+      64.80689342403628,
+      65.6195918367347,
+      66.43229024943311,
+      67.24498866213152
+    ],
+    "lyrics": "city's gloom.",
+    "words": [
+      {
+        "word": "city's",
+        "start": 64.6,
+        "end": 65.34,
+        "col": 0
+      },
+      {
+        "word": "gloom.",
+        "start": 65.34,
+        "end": 65.76,
+        "col": 7
+      }
     ]
   },
   {
-    "time": 68.87,
+    "time": 68.05768707482993,
     "bar_number": 22,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "Gm"
     ],
-    "beats": [
-      68.87,
-      69.66,
-      70.473,
-      71.262
-    ],
-    "lyrics": "Hmm-mm.",
     "chord_cols": [
       0
-    ]
-  },
-  {
-    "time": 72.1,
-    "bar_number": 23,
-    "tempo_bpm": 75,
-    "time_signature": "4/4",
-    "chords": [
-      "Gm",
-      "Gm"
     ],
     "beats": [
-      72.098,
-      72.911,
-      73.723,
-      74.49
+      68.05768707482993,
+      68.87038548752834,
+      69.65986394557824,
+      70.47256235827665
     ],
-    "lyrics": "Retired young, life felt wide.",
-    "chord_cols": [
-      0,
-      15
+    "lyrics": "Hmm-mm.",
+    "words": [
+      {
+        "word": "Hmm-mm.",
+        "start": 68.309,
+        "end": 69.28,
+        "col": 0
+      }
     ]
   },
   {
-    "time": 75.3,
+    "time": 71.26204081632653,
+    "bar_number": 23,
+    "tempo_bpm": 74,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm"
+    ],
+    "chord_cols": [
+      0
+    ],
+    "beats": [
+      71.26204081632653,
+      72.09795918367347,
+      72.91065759637188,
+      73.7233560090703
+    ],
+    "lyrics": "Retired young, life felt",
+    "words": [
+      {
+        "word": "Retired",
+        "start": 72.53,
+        "end": 73.2,
+        "col": 0
+      },
+      {
+        "word": "young,",
+        "start": 73.2,
+        "end": 73.7,
+        "col": 8
+      },
+      {
+        "word": "life",
+        "start": 74.06,
+        "end": 74.28,
+        "col": 15
+      },
+      {
+        "word": "felt",
+        "start": 74.28,
+        "end": 74.6,
+        "col": 20
+      }
+    ]
+  },
+  {
+    "time": 74.48961451247166,
     "bar_number": 24,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
-      "Gm"
+      "Gm",
+      "A#"
+    ],
+    "chord_cols": [
+      0,
+      14
     ],
     "beats": [
-      75.302,
-      76.115,
-      76.928,
-      77.717
+      74.48961451247166,
+      75.30231292517007,
+      76.11501133786848,
+      76.92770975056689
     ],
-    "lyrics": "Thought I'd find time on my hands. Retired young, life felt wide.",
-    "chord_cols": [
-      0
+    "lyrics": "wide.         Thought I'd find time",
+    "words": [
+      {
+        "word": "wide.",
+        "start": 74.6,
+        "end": 75.1,
+        "col": 0
+      },
+      {
+        "word": "Thought",
+        "start": 76.04,
+        "end": 76.24,
+        "col": 14
+      },
+      {
+        "word": "I'd",
+        "start": 76.24,
+        "end": 76.58,
+        "col": 22
+      },
+      {
+        "word": "find",
+        "start": 76.58,
+        "end": 76.92,
+        "col": 26
+      },
+      {
+        "word": "time",
+        "start": 76.92,
+        "end": 77.6,
+        "col": 31
+      }
     ]
   },
   {
-    "time": 78.53,
+    "time": 77.71718820861678,
     "bar_number": 25,
-    "tempo_bpm": 75,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
-      "Gm"
+      "A#",
+      "F"
+    ],
+    "chord_cols": [
+      0,
+      23
     ],
     "beats": [
-      78.53,
-      79.343,
-      80.132,
-      80.945
+      77.71718820861678,
+      78.5298866213152,
+      79.34258503401361,
+      80.1320634920635
     ],
-    "lyrics": "",
-    "chord_cols": [
-      0
+    "lyrics": "on my hands. Retired   young, life felt",
+    "words": [
+      {
+        "word": "on",
+        "start": 77.6,
+        "end": 77.82,
+        "col": 0
+      },
+      {
+        "word": "my",
+        "start": 77.82,
+        "end": 78.14,
+        "col": 3
+      },
+      {
+        "word": "hands.",
+        "start": 78.14,
+        "end": 78.72,
+        "col": 6
+      },
+      {
+        "word": "Retired",
+        "start": 79.12,
+        "end": 79.64,
+        "col": 13
+      },
+      {
+        "word": "young,",
+        "start": 79.64,
+        "end": 80.14,
+        "col": 23
+      },
+      {
+        "word": "life",
+        "start": 80.54,
+        "end": 80.68,
+        "col": 30
+      },
+      {
+        "word": "felt",
+        "start": 80.68,
+        "end": 81.02,
+        "col": 35
+      }
     ]
   },
   {
-    "time": 81.73,
+    "time": 80.92154195011338,
     "bar_number": 26,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
-      "Gm",
-      "F"
+      "F",
+      "Gm"
     ],
-    "beats": [
-      81.734,
-      82.547,
-      83.36,
-      84.149
-    ],
-    "lyrics": "Thought I'd find time on my hands.",
     "chord_cols": [
       0,
-      17
+      16
+    ],
+    "beats": [
+      80.92154195011338,
+      81.73424036281179,
+      82.5469387755102,
+      83.35963718820862
+    ],
+    "lyrics": "wide. Thought   I'd find time on",
+    "words": [
+      {
+        "word": "wide.",
+        "start": 81.02,
+        "end": 81.56,
+        "col": 0
+      },
+      {
+        "word": "Thought",
+        "start": 82.38,
+        "end": 82.64,
+        "col": 6
+      },
+      {
+        "word": "I'd",
+        "start": 82.64,
+        "end": 83.0,
+        "col": 16
+      },
+      {
+        "word": "find",
+        "start": 83.0,
+        "end": 83.3,
+        "col": 20
+      },
+      {
+        "word": "time",
+        "start": 83.3,
+        "end": 83.96,
+        "col": 25
+      },
+      {
+        "word": "on",
+        "start": 83.989,
+        "end": 84.24,
+        "col": 30
+      }
     ]
   },
   {
-    "time": 84.99,
+    "time": 84.14911564625851,
     "bar_number": 27,
-    "tempo_bpm": 75,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
-      "F",
       "Gm"
     ],
-    "beats": [
-      84.985,
-      85.775,
-      86.587,
-      87.4
-    ],
-    "lyrics": "But this homestead called my spirit. To green pastures, fertile lands.",
     "chord_cols": [
-      0,
-      56
+      0
+    ],
+    "beats": [
+      84.14911564625851,
+      84.96181405895692,
+      85.77451247165533,
+      86.58721088435374
+    ],
+    "lyrics": "my hands. But this homestead called",
+    "words": [
+      {
+        "word": "my",
+        "start": 84.24,
+        "end": 84.58,
+        "col": 0
+      },
+      {
+        "word": "hands.",
+        "start": 84.58,
+        "end": 85.16,
+        "col": 3
+      },
+      {
+        "word": "But",
+        "start": 85.509,
+        "end": 86.08,
+        "col": 10
+      },
+      {
+        "word": "this",
+        "start": 86.08,
+        "end": 86.32,
+        "col": 14
+      },
+      {
+        "word": "homestead",
+        "start": 86.32,
+        "end": 86.96,
+        "col": 19
+      },
+      {
+        "word": "called",
+        "start": 86.96,
+        "end": 87.4,
+        "col": 29
+      }
     ]
   },
   {
-    "time": 88.19,
+    "time": 87.39990929705215,
     "bar_number": 28,
-    "tempo_bpm": 75,
-    "time_signature": "4/4",
-    "chords": [
-      "F",
-      "Gm"
-    ],
-    "beats": [
-      88.189,
-      88.979,
-      89.768,
-      90.558
-    ],
-    "lyrics": "",
-    "chord_cols": [
-      0,
-      0
-    ]
-  },
-  {
-    "time": 91.37,
-    "bar_number": 29,
-    "tempo_bpm": 75,
-    "time_signature": "4/4",
-    "chords": [
-      "Gm"
-    ],
-    "beats": [
-      91.371,
-      92.16,
-      92.973,
-      93.762
-    ],
-    "lyrics": "Building healthy soil where there was none.",
-    "chord_cols": [
-      0
-    ]
-  },
-  {
-    "time": 94.55,
-    "bar_number": 30,
-    "tempo_bpm": 75,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "Gm",
-      "F"
+      "A#"
     ],
-    "beats": [
-      94.552,
-      95.341,
-      96.131,
-      96.92
-    ],
-    "lyrics": "Answering earth's demands.",
     "chord_cols": [
       0,
-      10
+      16
+    ],
+    "beats": [
+      87.39990929705215,
+      88.18938775510205,
+      88.97886621315193,
+      89.76834467120182
+    ],
+    "lyrics": "my spirit. To   green pastures,",
+    "words": [
+      {
+        "word": "my",
+        "start": 87.4,
+        "end": 87.76,
+        "col": 0
+      },
+      {
+        "word": "spirit.",
+        "start": 87.76,
+        "end": 88.28,
+        "col": 3
+      },
+      {
+        "word": "To",
+        "start": 88.28,
+        "end": 88.84,
+        "col": 11
+      },
+      {
+        "word": "green",
+        "start": 88.84,
+        "end": 89.26,
+        "col": 16
+      },
+      {
+        "word": "pastures,",
+        "start": 89.26,
+        "end": 90.22,
+        "col": 22
+      }
     ]
   },
   {
-    "time": 97.73,
-    "bar_number": 31,
-    "tempo_bpm": 75,
-    "time_signature": "4/4",
-    "chords": [
-      "F",
-      "Gm"
-    ],
-    "beats": [
-      97.733,
-      98.545,
-      99.335,
-      100.148
-    ],
-    "lyrics": "Now the daily grind's redeemed.",
-    "chord_cols": [
-      0,
-      8
-    ]
-  },
-  {
-    "time": 100.94,
-    "bar_number": 32,
-    "tempo_bpm": 75,
+    "time": 90.5578231292517,
+    "bar_number": 29,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "A#",
-      "D#"
+      "F"
+    ],
+    "chord_cols": [
+      0,
+      26
     ],
     "beats": [
-      100.937,
-      101.727,
-      102.539,
-      103.352
+      90.5578231292517,
+      91.37052154195011,
+      92.16,
+      92.9726984126984
     ],
-    "lyrics": "In the honest sun and rain.",
+    "lyrics": "fertile lands. Building   healthy soil",
+    "words": [
+      {
+        "word": "fertile",
+        "start": 90.56,
+        "end": 90.8,
+        "col": 0
+      },
+      {
+        "word": "lands.",
+        "start": 90.8,
+        "end": 91.56,
+        "col": 8
+      },
+      {
+        "word": "Building",
+        "start": 91.769,
+        "end": 92.68,
+        "col": 15
+      },
+      {
+        "word": "healthy",
+        "start": 92.68,
+        "end": 93.16,
+        "col": 26
+      },
+      {
+        "word": "soil",
+        "start": 93.16,
+        "end": 93.7,
+        "col": 34
+      }
+    ]
+  },
+  {
+    "time": 93.7621768707483,
+    "bar_number": 30,
+    "tempo_bpm": 74,
+    "time_signature": "4/4",
+    "chords": [
+      "F",
+      "Gm"
+    ],
+    "chord_cols": [
+      0,
+      24
+    ],
+    "beats": [
+      93.7621768707483,
+      94.55165532879819,
+      95.34113378684808,
+      96.13061224489796
+    ],
+    "lyrics": "where there was none.   Answering",
+    "words": [
+      {
+        "word": "where",
+        "start": 93.7,
+        "end": 94.06,
+        "col": 0
+      },
+      {
+        "word": "there",
+        "start": 94.06,
+        "end": 94.26,
+        "col": 6
+      },
+      {
+        "word": "was",
+        "start": 94.26,
+        "end": 94.44,
+        "col": 12
+      },
+      {
+        "word": "none.",
+        "start": 94.44,
+        "end": 94.7,
+        "col": 16
+      },
+      {
+        "word": "Answering",
+        "start": 95.92,
+        "end": 96.78,
+        "col": 24
+      }
+    ]
+  },
+  {
+    "time": 96.92009070294785,
+    "bar_number": 31,
+    "tempo_bpm": 74,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm",
+      "A#"
+    ],
+    "chord_cols": [
+      0,
+      19
+    ],
+    "beats": [
+      96.92009070294785,
+      97.73278911564626,
+      98.54548752834467,
+      99.33496598639456
+    ],
+    "lyrics": "earth's demands.   Now the daily grind's",
+    "words": [
+      {
+        "word": "earth's",
+        "start": 96.88,
+        "end": 97.32,
+        "col": 0
+      },
+      {
+        "word": "demands.",
+        "start": 97.32,
+        "end": 97.76,
+        "col": 8
+      },
+      {
+        "word": "Now",
+        "start": 98.78,
+        "end": 99.06,
+        "col": 19
+      },
+      {
+        "word": "the",
+        "start": 99.06,
+        "end": 99.2,
+        "col": 23
+      },
+      {
+        "word": "daily",
+        "start": 99.2,
+        "end": 99.7,
+        "col": 27
+      },
+      {
+        "word": "grind's",
+        "start": 99.7,
+        "end": 100.734,
+        "col": 33
+      }
+    ]
+  },
+  {
+    "time": 100.14766439909297,
+    "bar_number": 32,
+    "tempo_bpm": 74,
+    "time_signature": "4/4",
+    "chords": [
+      "A#",
+      "F"
+    ],
     "chord_cols": [
       0,
       14
-    ]
-  },
-  {
-    "time": 104.14,
-    "bar_number": 33,
-    "tempo_bpm": 75,
-    "time_signature": "4/4",
-    "chords": [
-      "D#",
-      "A#"
     ],
     "beats": [
-      104.141,
-      104.954,
-      105.744,
-      106.556
+      100.14766439909297,
+      100.93714285714286,
+      101.72662131519274,
+      102.53931972789115
     ],
-    "lyrics": "Every ache good day's work.",
-    "chord_cols": [
-      0,
-      11
+    "lyrics": "redeemed.     In the honest sun",
+    "words": [
+      {
+        "word": "redeemed.",
+        "start": 100.734,
+        "end": 101.769,
+        "col": 0
+      },
+      {
+        "word": "In",
+        "start": 101.769,
+        "end": 102.26,
+        "col": 14
+      },
+      {
+        "word": "the",
+        "start": 102.26,
+        "end": 102.48,
+        "col": 17
+      },
+      {
+        "word": "honest",
+        "start": 102.48,
+        "end": 102.82,
+        "col": 21
+      },
+      {
+        "word": "sun",
+        "start": 102.82,
+        "end": 103.42,
+        "col": 28
+      }
     ]
   },
   {
-    "time": 107.35,
+    "time": 103.35201814058956,
+    "bar_number": 33,
+    "tempo_bpm": 74,
+    "time_signature": "4/4",
+    "chords": [
+      "F",
+      "Gm"
+    ],
+    "chord_cols": [
+      0,
+      14
+    ],
+    "beats": [
+      103.35201814058956,
+      104.14149659863945,
+      104.93097505668935,
+      105.74367346938776
+    ],
+    "lyrics": "and rain.     Every ache good",
+    "words": [
+      {
+        "word": "and",
+        "start": 103.42,
+        "end": 103.72,
+        "col": 0
+      },
+      {
+        "word": "rain.",
+        "start": 103.72,
+        "end": 104.18,
+        "col": 4
+      },
+      {
+        "word": "Every",
+        "start": 105.38,
+        "end": 105.62,
+        "col": 14
+      },
+      {
+        "word": "ache",
+        "start": 105.62,
+        "end": 106.12,
+        "col": 20
+      },
+      {
+        "word": "good",
+        "start": 106.12,
+        "end": 106.52,
+        "col": 25
+      }
+    ]
+  },
+  {
+    "time": 106.55637188208617,
     "bar_number": 34,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
-      "F"
-    ],
-    "beats": [
-      107.346,
-      108.159,
-      108.948,
-      109.761
-    ],
-    "lyrics": "Washing out the corporate stain.",
-    "chord_cols": [
-      0
-    ]
-  },
-  {
-    "time": 110.57,
-    "bar_number": 35,
-    "tempo_bpm": 75,
-    "time_signature": "4/4",
-    "chords": [
       "F",
-      "Gm"
+      "D#"
     ],
-    "beats": [
-      110.573,
-      111.363,
-      112.176,
-      112.965
-    ],
-    "lyrics": "Feeling dirt beneath my fingernails.",
     "chord_cols": [
       0,
-      13
+      14
+    ],
+    "beats": [
+      106.55637188208617,
+      107.34585034013605,
+      108.15854875283446,
+      108.94802721088435
+    ],
+    "lyrics": "day's work.   Washing out the corporate",
+    "words": [
+      {
+        "word": "day's",
+        "start": 106.52,
+        "end": 107.08,
+        "col": 0
+      },
+      {
+        "word": "work.",
+        "start": 107.08,
+        "end": 108.149,
+        "col": 6
+      },
+      {
+        "word": "Washing",
+        "start": 108.149,
+        "end": 108.8,
+        "col": 14
+      },
+      {
+        "word": "out",
+        "start": 108.8,
+        "end": 109.18,
+        "col": 22
+      },
+      {
+        "word": "the",
+        "start": 109.18,
+        "end": 109.48,
+        "col": 26
+      },
+      {
+        "word": "corporate",
+        "start": 109.48,
+        "end": 109.98,
+        "col": 30
+      }
     ]
   },
   {
-    "time": 113.78,
+    "time": 109.76072562358277,
+    "bar_number": 35,
+    "tempo_bpm": 74,
+    "time_signature": "4/4",
+    "chords": [
+      "D#",
+      "A#"
+    ],
+    "chord_cols": [
+      0,
+      14
+    ],
+    "beats": [
+      109.76072562358277,
+      110.57342403628118,
+      111.36290249433107,
+      112.17560090702948
+    ],
+    "lyrics": "stain.        Feeling dirt beneath",
+    "words": [
+      {
+        "word": "stain.",
+        "start": 109.98,
+        "end": 110.6,
+        "col": 0
+      },
+      {
+        "word": "Feeling",
+        "start": 111.13,
+        "end": 111.96,
+        "col": 14
+      },
+      {
+        "word": "dirt",
+        "start": 111.96,
+        "end": 112.42,
+        "col": 22
+      },
+      {
+        "word": "beneath",
+        "start": 112.42,
+        "end": 112.88,
+        "col": 27
+      }
+    ]
+  },
+  {
+    "time": 112.96507936507936,
     "bar_number": 36,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
-      "A#",
-      "D#m"
+      "F"
+    ],
+    "chord_cols": [
+      0
     ],
     "beats": [
-      113.778,
-      114.59,
-      115.403,
-      116.216
+      112.96507936507936,
+      113.77777777777777,
+      114.5904761904762,
+      115.4031746031746
     ],
-    "lyrics": "Where new purpose starts to bloom.",
-    "chord_cols": [
-      0,
-      18
+    "lyrics": "my fingernails. Where new purpose starts",
+    "words": [
+      {
+        "word": "my",
+        "start": 113.0,
+        "end": 113.32,
+        "col": 0
+      },
+      {
+        "word": "fingernails.",
+        "start": 113.32,
+        "end": 114.6,
+        "col": 3
+      },
+      {
+        "word": "Where",
+        "start": 115.06,
+        "end": 115.11,
+        "col": 16
+      },
+      {
+        "word": "new",
+        "start": 115.11,
+        "end": 115.26,
+        "col": 22
+      },
+      {
+        "word": "purpose",
+        "start": 115.26,
+        "end": 115.76,
+        "col": 26
+      },
+      {
+        "word": "starts",
+        "start": 115.829,
+        "end": 116.3,
+        "col": 34
+      }
     ]
   },
   {
-    "time": 117.01,
+    "time": 116.21587301587302,
     "bar_number": 37,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
-      "D#m",
+      "F",
       "Gm"
     ],
-    "beats": [
-      117.005,
-      117.818,
-      118.631,
-      119.42
+    "chord_cols": [
+      0,
+      18
     ],
-    "lyrics": "Found my true calling in the soil.",
+    "beats": [
+      116.21587301587302,
+      117.02857142857142,
+      117.81804988662131,
+      118.63074829931973
+    ],
+    "lyrics": "to bloom. Found   my true calling in",
+    "words": [
+      {
+        "word": "to",
+        "start": 116.3,
+        "end": 116.68,
+        "col": 0
+      },
+      {
+        "word": "bloom.",
+        "start": 116.68,
+        "end": 117.02,
+        "col": 3
+      },
+      {
+        "word": "Found",
+        "start": 117.52,
+        "end": 117.94,
+        "col": 10
+      },
+      {
+        "word": "my",
+        "start": 117.94,
+        "end": 118.22,
+        "col": 18
+      },
+      {
+        "word": "true",
+        "start": 118.22,
+        "end": 118.48,
+        "col": 21
+      },
+      {
+        "word": "calling",
+        "start": 118.48,
+        "end": 119.0,
+        "col": 26
+      },
+      {
+        "word": "in",
+        "start": 119.129,
+        "end": 119.46,
+        "col": 34
+      }
+    ]
+  },
+  {
+    "time": 119.42022675736962,
+    "bar_number": 38,
+    "tempo_bpm": 74,
+    "time_signature": "4/4",
+    "chords": [
+      "F",
+      "D#"
+    ],
     "chord_cols": [
       0,
       14
-    ]
-  },
-  {
-    "time": 120.23,
-    "bar_number": 38,
-    "tempo_bpm": 75,
-    "time_signature": "4/4",
-    "chords": [
-      "Gm"
     ],
     "beats": [
-      120.233,
-      121.046,
-      121.835,
-      122.648
+      119.42022675736962,
+      120.23292517006803,
+      121.04562358276644,
+      121.83510204081632
     ],
-    "lyrics": "Chasing away the city's gloom.",
-    "chord_cols": [
-      0
+    "lyrics": "the soil.     Chasing away the",
+    "words": [
+      {
+        "word": "the",
+        "start": 119.46,
+        "end": 119.9,
+        "col": 0
+      },
+      {
+        "word": "soil.",
+        "start": 119.9,
+        "end": 120.22,
+        "col": 4
+      },
+      {
+        "word": "Chasing",
+        "start": 121.0,
+        "end": 121.26,
+        "col": 14
+      },
+      {
+        "word": "away",
+        "start": 121.26,
+        "end": 121.8,
+        "col": 22
+      },
+      {
+        "word": "the",
+        "start": 121.8,
+        "end": 122.38,
+        "col": 27
+      }
     ]
   },
   {
-    "time": 123.44,
+    "time": 122.64780045351473,
     "bar_number": 39,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
+      "D#",
       "Gm"
     ],
-    "beats": [
-      123.437,
-      124.25,
-      125.063,
-      125.875
-    ],
-    "lyrics": "",
     "chord_cols": [
-      0
+      0,
+      17
+    ],
+    "beats": [
+      122.64780045351473,
+      123.43727891156463,
+      124.24997732426304,
+      125.06267573696145
+    ],
+    "lyrics": "city's gloom.",
+    "words": [
+      {
+        "word": "city's",
+        "start": 122.38,
+        "end": 123.14,
+        "col": 0
+      },
+      {
+        "word": "gloom.",
+        "start": 123.14,
+        "end": 124.6,
+        "col": 7
+      }
     ]
   },
   {
-    "time": 126.69,
+    "time": 125.87537414965986,
     "bar_number": 40,
-    "tempo_bpm": 75,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "Gm"
     ],
-    "beats": [
-      126.688,
-      127.478,
-      128.267,
-      129.057
-    ],
-    "lyrics": "Picking weeds or rooting plants.",
     "chord_cols": [
       0
+    ],
+    "beats": [
+      125.87537414965986,
+      126.68807256235827,
+      127.47755102040816,
+      128.26702947845806
+    ],
+    "lyrics": "          Picking",
+    "words": [
+      {
+        "word": "Picking",
+        "start": 128.469,
+        "end": 129.542,
+        "col": 10
+      }
     ]
   },
   {
-    "time": 129.87,
+    "time": 129.05650793650793,
     "bar_number": 41,
-    "tempo_bpm": 75,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "Gm"
     ],
-    "beats": [
-      129.869,
-      130.659,
-      131.471,
-      132.284
-    ],
-    "lyrics": "",
     "chord_cols": [
       0
+    ],
+    "beats": [
+      129.05650793650793,
+      129.86920634920634,
+      130.65868480725624,
+      131.47138321995465
+    ],
+    "lyrics": "weeds or rooting",
+    "words": [
+      {
+        "word": "weeds",
+        "start": 129.542,
+        "end": 130.615,
+        "col": 0
+      },
+      {
+        "word": "or",
+        "start": 130.615,
+        "end": 131.688,
+        "col": 6
+      },
+      {
+        "word": "rooting",
+        "start": 131.688,
+        "end": 132.76,
+        "col": 9
+      }
     ]
   },
   {
-    "time": 133.07,
+    "time": 132.26086167800455,
     "bar_number": 42,
-    "tempo_bpm": 75,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "Gm",
       "A#"
     ],
-    "beats": [
-      133.074,
-      133.886,
-      134.676,
-      135.465
-    ],
-    "lyrics": "Throwing balls for loyal dogs.",
     "chord_cols": [
       0,
-      15
-    ]
-  },
-  {
-    "time": 136.28,
-    "bar_number": 43,
-    "tempo_bpm": 75,
-    "time_signature": "4/4",
-    "chords": [
-      "A#"
+      19
     ],
     "beats": [
-      136.278,
-      137.091,
-      137.88,
-      138.67
+      132.26086167800455,
+      133.07356009070295,
+      133.88625850340136,
+      134.67573696145124
     ],
-    "lyrics": "Picking weeds or rooting plants.",
-    "chord_cols": [
-      0
+    "lyrics": "plants. Throwing   balls for loyal",
+    "words": [
+      {
+        "word": "plants.",
+        "start": 132.76,
+        "end": 133.26,
+        "col": 0
+      },
+      {
+        "word": "Throwing",
+        "start": 133.439,
+        "end": 134.3,
+        "col": 8
+      },
+      {
+        "word": "balls",
+        "start": 134.3,
+        "end": 134.86,
+        "col": 19
+      },
+      {
+        "word": "for",
+        "start": 134.86,
+        "end": 135.16,
+        "col": 25
+      },
+      {
+        "word": "loyal",
+        "start": 135.16,
+        "end": 135.66,
+        "col": 29
+      }
     ]
   },
   {
-    "time": 139.48,
-    "bar_number": 44,
-    "tempo_bpm": 75,
+    "time": 135.46521541950113,
+    "bar_number": 43,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "A#",
-      "Gm"
+      "F"
     ],
-    "beats": [
-      139.482,
-      140.272,
-      141.084,
-      141.874
-    ],
-    "lyrics": "Throwing balls for loyal friends.",
     "chord_cols": [
       0,
-      15
+      16
+    ],
+    "beats": [
+      135.46521541950113,
+      136.27791383219954,
+      137.06739229024944,
+      137.88009070294785
+    ],
+    "lyrics": "dogs. Picking   weeds or",
+    "words": [
+      {
+        "word": "dogs.",
+        "start": 135.66,
+        "end": 136.4,
+        "col": 0
+      },
+      {
+        "word": "Picking",
+        "start": 136.66,
+        "end": 137.28,
+        "col": 6
+      },
+      {
+        "word": "weeds",
+        "start": 137.28,
+        "end": 137.9,
+        "col": 16
+      },
+      {
+        "word": "or",
+        "start": 137.9,
+        "end": 138.52,
+        "col": 22
+      }
     ]
   },
   {
-    "time": 142.69,
+    "time": 138.66956916099772,
+    "bar_number": 44,
+    "tempo_bpm": 74,
+    "time_signature": "4/4",
+    "chords": [
+      "F",
+      "Gm"
+    ],
+    "chord_cols": [
+      0,
+      27
+    ],
+    "beats": [
+      138.66956916099772,
+      139.48226757369613,
+      140.27174603174603,
+      141.08444444444444
+    ],
+    "lyrics": "rooting plants. Throwing   balls for loyal",
+    "words": [
+      {
+        "word": "rooting",
+        "start": 138.52,
+        "end": 139.14,
+        "col": 0
+      },
+      {
+        "word": "plants.",
+        "start": 139.14,
+        "end": 139.54,
+        "col": 8
+      },
+      {
+        "word": "Throwing",
+        "start": 139.829,
+        "end": 140.68,
+        "col": 16
+      },
+      {
+        "word": "balls",
+        "start": 140.68,
+        "end": 141.22,
+        "col": 27
+      },
+      {
+        "word": "for",
+        "start": 141.22,
+        "end": 141.54,
+        "col": 33
+      },
+      {
+        "word": "loyal",
+        "start": 141.54,
+        "end": 141.96,
+        "col": 37
+      }
+    ]
+  },
+  {
+    "time": 141.87392290249434,
     "bar_number": 45,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
-      "Gm",
-      "A#m"
-    ],
-    "beats": [
-      142.687,
-      143.499,
-      144.312,
-      145.101
-    ],
-    "lyrics": "My body stronger than before.",
-    "chord_cols": [
-      0,
-      8
-    ]
-  },
-  {
-    "time": 145.91,
-    "bar_number": 46,
-    "tempo_bpm": 75,
-    "time_signature": "4/4",
-    "chords": [
-      "A#m"
-    ],
-    "beats": [
-      145.914,
-      146.704,
-      147.516,
-      148.306
-    ],
-    "lyrics": "On this quiet sacred ground.",
-    "chord_cols": [
-      0
-    ]
-  },
-  {
-    "time": 149.1,
-    "bar_number": 47,
-    "tempo_bpm": 75,
-    "time_signature": "4/4",
-    "chords": [
-      "A#m",
       "Gm"
     ],
-    "beats": [
-      149.095,
-      149.908,
-      150.698,
-      151.487
-    ],
-    "lyrics": "Mind stays sharp with digital frame.",
     "chord_cols": [
-      0,
-      17
+      0
+    ],
+    "beats": [
+      141.87392290249434,
+      142.68662131519275,
+      143.49931972789116,
+      144.31201814058957
+    ],
+    "lyrics": "friends. My body stronger than",
+    "words": [
+      {
+        "word": "friends.",
+        "start": 141.96,
+        "end": 142.7,
+        "col": 0
+      },
+      {
+        "word": "My",
+        "start": 143.3,
+        "end": 143.36,
+        "col": 9
+      },
+      {
+        "word": "body",
+        "start": 143.36,
+        "end": 143.76,
+        "col": 12
+      },
+      {
+        "word": "stronger",
+        "start": 144.04,
+        "end": 144.5,
+        "col": 17
+      },
+      {
+        "word": "than",
+        "start": 144.5,
+        "end": 145.08,
+        "col": 26
+      }
     ]
   },
   {
-    "time": 152.28,
-    "bar_number": 48,
-    "tempo_bpm": 75,
+    "time": 145.10149659863944,
+    "bar_number": 46,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "Gm",
-      "D#m"
-    ],
-    "beats": [
-      152.276,
-      153.089,
-      153.902,
-      154.691
-    ],
-    "lyrics": "And the wisdom all around.",
-    "chord_cols": [
-      0,
-      8
-    ]
-  },
-  {
-    "time": 155.48,
-    "bar_number": 49,
-    "tempo_bpm": 75,
-    "time_signature": "4/4",
-    "chords": [
-      "D#m",
       "A#"
     ],
-    "beats": [
-      155.481,
-      156.294,
-      157.083,
-      157.896
-    ],
-    "lyrics": "Used to chase the bottom line.",
     "chord_cols": [
       0,
       14
+    ],
+    "beats": [
+      145.10149659863944,
+      145.91419501133788,
+      146.70367346938775,
+      147.51637188208616
+    ],
+    "lyrics": "before.       On this quiet sacred",
+    "words": [
+      {
+        "word": "before.",
+        "start": 145.08,
+        "end": 145.88,
+        "col": 0
+      },
+      {
+        "word": "On",
+        "start": 146.74,
+        "end": 146.88,
+        "col": 14
+      },
+      {
+        "word": "this",
+        "start": 146.88,
+        "end": 147.12,
+        "col": 17
+      },
+      {
+        "word": "quiet",
+        "start": 147.12,
+        "end": 147.76,
+        "col": 22
+      },
+      {
+        "word": "sacred",
+        "start": 147.76,
+        "end": 148.5,
+        "col": 28
+      }
     ]
   },
   {
-    "time": 158.69,
-    "bar_number": 50,
+    "time": 148.28263038548752,
+    "bar_number": 47,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "A#",
-      "Fm"
-    ],
-    "beats": [
-      158.685,
-      159.498,
-      160.287,
-      161.1
-    ],
-    "lyrics": "Chasing profits, chasing time.",
-    "chord_cols": [
-      0,
-      17
-    ]
-  },
-  {
-    "time": 161.91,
-    "bar_number": 51,
-    "tempo_bpm": 75,
-    "time_signature": "4/4",
-    "chords": [
-      "Fm",
-      "Gm"
-    ],
-    "beats": [
-      161.913,
-      162.702,
-      163.492,
-      164.281
-    ],
-    "lyrics": "Now I'm chasing pollinators.",
-    "chord_cols": [
-      0,
-      8
-    ]
-  },
-  {
-    "time": 165.09,
-    "bar_number": 52,
-    "tempo_bpm": 75,
-    "time_signature": "4/4",
-    "chords": [
-      "Fm",
-      "D#m"
-    ],
-    "beats": [
-      165.094,
-      165.883,
-      166.696,
-      167.486
-    ],
-    "lyrics": "Living out a different rhyme.",
-    "chord_cols": [
-      0,
-      11
-    ]
-  },
-  {
-    "time": 168.3,
-    "bar_number": 53,
-    "tempo_bpm": 75,
-    "time_signature": "4/4",
-    "chords": [
-      "D#m",
-      "A#m"
-    ],
-    "beats": [
-      168.298,
-      169.111,
-      169.9,
-      170.69
-    ],
-    "lyrics": "Sustainable food forest dreams.",
-    "chord_cols": [
-      0,
-      17
-    ]
-  },
-  {
-    "time": 171.5,
-    "bar_number": 54,
-    "tempo_bpm": 75,
-    "time_signature": "4/4",
-    "chords": [
-      "A#m",
       "F"
     ],
-    "beats": [
-      171.503,
-      172.292,
-      173.082,
-      173.894
-    ],
-    "lyrics": "Building future strong and true.",
     "chord_cols": [
       0,
-      16
+      15
+    ],
+    "beats": [
+      148.28263038548752,
+      149.09532879818593,
+      149.88480725623583,
+      150.69750566893424
+    ],
+    "lyrics": "ground. Mind   stays sharp with digital",
+    "words": [
+      {
+        "word": "ground.",
+        "start": 148.5,
+        "end": 149.14,
+        "col": 0
+      },
+      {
+        "word": "Mind",
+        "start": 149.7,
+        "end": 150.08,
+        "col": 8
+      },
+      {
+        "word": "stays",
+        "start": 150.08,
+        "end": 150.34,
+        "col": 15
+      },
+      {
+        "word": "sharp",
+        "start": 150.48,
+        "end": 150.88,
+        "col": 21
+      },
+      {
+        "word": "with",
+        "start": 150.88,
+        "end": 151.18,
+        "col": 27
+      },
+      {
+        "word": "digital",
+        "start": 151.18,
+        "end": 151.82,
+        "col": 32
+      }
     ]
   },
   {
-    "time": 174.68,
-    "bar_number": 55,
-    "tempo_bpm": 75,
+    "time": 151.48698412698414,
+    "bar_number": 48,
+    "tempo_bpm": 74,
+    "time_signature": "4/4",
+    "chords": [
+      "F",
+      "Gm"
+    ],
+    "chord_cols": [
+      0,
+      14
+    ],
+    "beats": [
+      151.48698412698414,
+      152.276462585034,
+      153.08916099773242,
+      153.90185941043083
+    ],
+    "lyrics": "frame.        And the wisdom all",
+    "words": [
+      {
+        "word": "frame.",
+        "start": 151.82,
+        "end": 153.069,
+        "col": 0
+      },
+      {
+        "word": "And",
+        "start": 153.069,
+        "end": 153.6,
+        "col": 14
+      },
+      {
+        "word": "the",
+        "start": 153.6,
+        "end": 153.82,
+        "col": 18
+      },
+      {
+        "word": "wisdom",
+        "start": 153.82,
+        "end": 154.26,
+        "col": 22
+      },
+      {
+        "word": "all",
+        "start": 154.26,
+        "end": 154.96,
+        "col": 29
+      }
+    ]
+  },
+  {
+    "time": 154.69133786848073,
+    "bar_number": 49,
+    "tempo_bpm": 74,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm",
+      "D#"
+    ],
+    "chord_cols": [
+      0,
+      14
+    ],
+    "beats": [
+      154.69133786848073,
+      155.4808163265306,
+      156.29351473922904,
+      157.0829931972789
+    ],
+    "lyrics": "around.       Used to chase the bottom",
+    "words": [
+      {
+        "word": "around.",
+        "start": 154.96,
+        "end": 156.199,
+        "col": 0
+      },
+      {
+        "word": "Used",
+        "start": 156.199,
+        "end": 156.8,
+        "col": 14
+      },
+      {
+        "word": "to",
+        "start": 156.8,
+        "end": 156.94,
+        "col": 19
+      },
+      {
+        "word": "chase",
+        "start": 156.94,
+        "end": 157.24,
+        "col": 22
+      },
+      {
+        "word": "the",
+        "start": 157.24,
+        "end": 157.56,
+        "col": 28
+      },
+      {
+        "word": "bottom",
+        "start": 157.56,
+        "end": 158.16,
+        "col": 32
+      }
+    ]
+  },
+  {
+    "time": 157.8724716553288,
+    "bar_number": 50,
+    "tempo_bpm": 74,
+    "time_signature": "4/4",
+    "chords": [
+      "D#",
+      "A#"
+    ],
+    "chord_cols": [
+      0,
+      14
+    ],
+    "beats": [
+      157.8724716553288,
+      158.68517006802722,
+      159.49786848072563,
+      160.2873469387755
+    ],
+    "lyrics": "line.         Chasing profits, chasing",
+    "words": [
+      {
+        "word": "line.",
+        "start": 158.16,
+        "end": 158.94,
+        "col": 0
+      },
+      {
+        "word": "Chasing",
+        "start": 159.84,
+        "end": 160.08,
+        "col": 14
+      },
+      {
+        "word": "profits,",
+        "start": 160.08,
+        "end": 160.66,
+        "col": 22
+      },
+      {
+        "word": "chasing",
+        "start": 160.9,
+        "end": 161.26,
+        "col": 31
+      }
+    ]
+  },
+  {
+    "time": 161.1000453514739,
+    "bar_number": 51,
+    "tempo_bpm": 74,
+    "time_signature": "4/4",
+    "chords": [
+      "A#",
+      "F"
+    ],
+    "chord_cols": [
+      0,
+      14
+    ],
+    "beats": [
+      161.1000453514739,
+      161.91274376417235,
+      162.70222222222222,
+      163.49170068027212
+    ],
+    "lyrics": "time. Now     I'm chasing",
+    "words": [
+      {
+        "word": "time.",
+        "start": 161.26,
+        "end": 161.84,
+        "col": 0
+      },
+      {
+        "word": "Now",
+        "start": 162.54,
+        "end": 162.84,
+        "col": 6
+      },
+      {
+        "word": "I'm",
+        "start": 162.84,
+        "end": 163.12,
+        "col": 14
+      },
+      {
+        "word": "chasing",
+        "start": 163.12,
+        "end": 163.66,
+        "col": 18
+      }
+    ]
+  },
+  {
+    "time": 164.281179138322,
+    "bar_number": 52,
+    "tempo_bpm": 74,
+    "time_signature": "4/4",
+    "chords": [
+      "F",
+      "Gm"
+    ],
+    "chord_cols": [
+      0,
+      15
+    ],
+    "beats": [
+      164.281179138322,
+      165.0938775510204,
+      165.8833560090703,
+      166.6960544217687
+    ],
+    "lyrics": "pollinators.   Living out a different",
+    "words": [
+      {
+        "word": "pollinators.",
+        "start": 163.66,
+        "end": 165.95,
+        "col": 0
+      },
+      {
+        "word": "Living",
+        "start": 166.18,
+        "end": 166.5,
+        "col": 15
+      },
+      {
+        "word": "out",
+        "start": 166.5,
+        "end": 167.0,
+        "col": 22
+      },
+      {
+        "word": "a",
+        "start": 167.0,
+        "end": 167.18,
+        "col": 26
+      },
+      {
+        "word": "different",
+        "start": 167.18,
+        "end": 167.7,
+        "col": 28
+      }
+    ]
+  },
+  {
+    "time": 167.4855328798186,
+    "bar_number": 53,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "F",
       "D#"
     ],
-    "beats": [
-      174.684,
-      175.473,
-      176.286,
-      177.099
-    ],
-    "lyrics": "This old life, it feels brand-new.",
     "chord_cols": [
       0,
-      15
+      14
+    ],
+    "beats": [
+      167.4855328798186,
+      168.29823129251702,
+      169.11092970521543,
+      169.9004081632653
+    ],
+    "lyrics": "rhyme.        Sustainable food",
+    "words": [
+      {
+        "word": "rhyme.",
+        "start": 167.7,
+        "end": 168.38,
+        "col": 0
+      },
+      {
+        "word": "Sustainable",
+        "start": 169.42,
+        "end": 170.28,
+        "col": 14
+      },
+      {
+        "word": "food",
+        "start": 170.28,
+        "end": 170.7,
+        "col": 26
+      }
     ]
   },
   {
-    "time": 177.89,
+    "time": 170.6898866213152,
+    "bar_number": 54,
+    "tempo_bpm": 74,
+    "time_signature": "4/4",
+    "chords": [
+      "D#",
+      "A#"
+    ],
+    "chord_cols": [
+      0,
+      17
+    ],
+    "beats": [
+      170.6898866213152,
+      171.5025850340136,
+      172.2920634920635,
+      173.10476190476192
+    ],
+    "lyrics": "forest dreams.   Building future strong",
+    "words": [
+      {
+        "word": "forest",
+        "start": 170.7,
+        "end": 171.02,
+        "col": 0
+      },
+      {
+        "word": "dreams.",
+        "start": 171.02,
+        "end": 171.58,
+        "col": 7
+      },
+      {
+        "word": "Building",
+        "start": 172.66,
+        "end": 172.86,
+        "col": 17
+      },
+      {
+        "word": "future",
+        "start": 172.86,
+        "end": 173.26,
+        "col": 26
+      },
+      {
+        "word": "strong",
+        "start": 173.26,
+        "end": 173.92,
+        "col": 33
+      }
+    ]
+  },
+  {
+    "time": 173.8942403628118,
+    "bar_number": 55,
+    "tempo_bpm": 74,
+    "time_signature": "4/4",
+    "chords": [
+      "A#",
+      "F"
+    ],
+    "chord_cols": [
+      0,
+      14
+    ],
+    "beats": [
+      173.8942403628118,
+      174.68371882086169,
+      175.47319727891156,
+      176.28589569160997
+    ],
+    "lyrics": "and true.     This old life, it feels",
+    "words": [
+      {
+        "word": "and",
+        "start": 173.92,
+        "end": 174.28,
+        "col": 0
+      },
+      {
+        "word": "true.",
+        "start": 174.28,
+        "end": 174.62,
+        "col": 4
+      },
+      {
+        "word": "This",
+        "start": 175.66,
+        "end": 176.02,
+        "col": 14
+      },
+      {
+        "word": "old",
+        "start": 176.02,
+        "end": 176.2,
+        "col": 19
+      },
+      {
+        "word": "life,",
+        "start": 176.2,
+        "end": 176.64,
+        "col": 23
+      },
+      {
+        "word": "it",
+        "start": 176.64,
+        "end": 176.74,
+        "col": 29
+      },
+      {
+        "word": "feels",
+        "start": 176.74,
+        "end": 177.12,
+        "col": 32
+      }
+    ]
+  },
+  {
+    "time": 177.0985941043084,
     "bar_number": 56,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
+      "F",
       "D#"
     ],
-    "beats": [
-      177.888,
-      178.701,
-      179.49,
-      180.303
-    ],
-    "lyrics": "A purpose shining through.",
     "chord_cols": [
-      0
+      0,
+      14
+    ],
+    "beats": [
+      177.0985941043084,
+      177.88807256235827,
+      178.70077097505668,
+      179.49024943310658
+    ],
+    "lyrics": "brand-new.    A purpose shining",
+    "words": [
+      {
+        "word": "brand-new.",
+        "start": 177.12,
+        "end": 178.719,
+        "col": 0
+      },
+      {
+        "word": "A",
+        "start": 179.24,
+        "end": 179.34,
+        "col": 14
+      },
+      {
+        "word": "purpose",
+        "start": 179.34,
+        "end": 179.88,
+        "col": 16
+      },
+      {
+        "word": "shining",
+        "start": 179.88,
+        "end": 180.54,
+        "col": 24
+      }
     ]
   },
   {
-    "time": 181.12,
+    "time": 180.302947845805,
     "bar_number": 57,
-    "tempo_bpm": 75,
-    "time_signature": "4/4",
-    "chords": [
-      "D#"
-    ],
-    "beats": [
-      181.116,
-      181.905,
-      182.718,
-      183.484
-    ],
-    "lyrics": "",
-    "chord_cols": [
-      0
-    ]
-  },
-  {
-    "time": 184.3,
-    "bar_number": 58,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "D#"
     ],
-    "beats": [
-      184.297,
-      185.133,
-      185.945,
-      186.758
-    ],
-    "lyrics": "Now the daily grind's redeemed.",
     "chord_cols": [
       0
+    ],
+    "beats": [
+      180.302947845805,
+      181.1156462585034,
+      181.90512471655327,
+      182.7178231292517
+    ],
+    "lyrics": "through.",
+    "words": [
+      {
+        "word": "through.",
+        "start": 180.54,
+        "end": 181.1,
+        "col": 0
+      }
     ]
   },
   {
-    "time": 187.55,
-    "bar_number": 59,
-    "tempo_bpm": 75,
+    "time": 183.48408163265307,
+    "bar_number": 58,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "D#",
-      "F"
+      "A#"
     ],
-    "beats": [
-      187.548,
-      188.36,
-      189.15,
-      189.939
-    ],
-    "lyrics": "In the honest sun and rain.",
     "chord_cols": [
       0,
-      14
+      12
+    ],
+    "beats": [
+      183.48408163265307,
+      184.29678004535148,
+      185.08625850340135,
+      185.87573696145125
+    ],
+    "lyrics": "            Now the daily grind's",
+    "words": [
+      {
+        "word": "Now",
+        "start": 185.329,
+        "end": 185.62,
+        "col": 12
+      },
+      {
+        "word": "the",
+        "start": 185.62,
+        "end": 185.78,
+        "col": 16
+      },
+      {
+        "word": "daily",
+        "start": 185.78,
+        "end": 186.28,
+        "col": 20
+      },
+      {
+        "word": "grind's",
+        "start": 186.28,
+        "end": 187.1,
+        "col": 26
+      }
     ]
   },
   {
-    "time": 190.73,
+    "time": 186.66521541950112,
+    "bar_number": 59,
+    "tempo_bpm": 74,
+    "time_signature": "4/4",
+    "chords": [
+      "A#",
+      "Gm"
+    ],
+    "chord_cols": [
+      0,
+      14
+    ],
+    "beats": [
+      186.66521541950112,
+      187.47791383219953,
+      188.29061224489797,
+      189.10331065759638
+    ],
+    "lyrics": "redeemed.     In the honest sun",
+    "words": [
+      {
+        "word": "redeemed.",
+        "start": 187.1,
+        "end": 188.369,
+        "col": 0
+      },
+      {
+        "word": "In",
+        "start": 188.369,
+        "end": 188.88,
+        "col": 14
+      },
+      {
+        "word": "the",
+        "start": 188.88,
+        "end": 189.06,
+        "col": 17
+      },
+      {
+        "word": "honest",
+        "start": 189.06,
+        "end": 189.4,
+        "col": 21
+      },
+      {
+        "word": "sun",
+        "start": 189.4,
+        "end": 189.98,
+        "col": 28
+      }
+    ]
+  },
+  {
+    "time": 189.9160090702948,
     "bar_number": 60,
-    "tempo_bpm": 75,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "F",
       "Gm"
     ],
-    "beats": [
-      190.729,
-      191.518,
-      192.308,
-      193.097
-    ],
-    "lyrics": "Every ache good day's work.",
     "chord_cols": [
       0,
-      11
+      14
+    ],
+    "beats": [
+      189.9160090702948,
+      190.7287074829932,
+      191.51818594104307,
+      192.30766439909297
+    ],
+    "lyrics": "and rain.     Every ache good day's",
+    "words": [
+      {
+        "word": "and",
+        "start": 189.98,
+        "end": 190.38,
+        "col": 0
+      },
+      {
+        "word": "rain.",
+        "start": 190.38,
+        "end": 190.9,
+        "col": 4
+      },
+      {
+        "word": "Every",
+        "start": 191.339,
+        "end": 191.959,
+        "col": 14
+      },
+      {
+        "word": "ache",
+        "start": 191.959,
+        "end": 192.58,
+        "col": 20
+      },
+      {
+        "word": "good",
+        "start": 192.58,
+        "end": 192.8,
+        "col": 25
+      },
+      {
+        "word": "day's",
+        "start": 192.8,
+        "end": 193.58,
+        "col": 30
+      }
     ]
   },
   {
-    "time": 193.91,
+    "time": 193.12036281179138,
     "bar_number": 61,
-    "tempo_bpm": 73,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "F",
       "D#"
     ],
-    "beats": [
-      193.91,
-      194.699,
-      195.535,
-      196.371
-    ],
-    "lyrics": "Washing out the corporate stain.",
     "chord_cols": [
       0,
-      12
+      14
+    ],
+    "beats": [
+      193.12036281179138,
+      193.9330612244898,
+      194.7457596371882,
+      195.5584580498866
+    ],
+    "lyrics": "work.         Washing out the corporate",
+    "words": [
+      {
+        "word": "work.",
+        "start": 193.58,
+        "end": 194.779,
+        "col": 0
+      },
+      {
+        "word": "Washing",
+        "start": 194.779,
+        "end": 195.42,
+        "col": 14
+      },
+      {
+        "word": "out",
+        "start": 195.42,
+        "end": 195.82,
+        "col": 22
+      },
+      {
+        "word": "the",
+        "start": 195.82,
+        "end": 196.06,
+        "col": 26
+      },
+      {
+        "word": "corporate",
+        "start": 196.06,
+        "end": 196.56,
+        "col": 30
+      }
     ]
   },
   {
-    "time": 197.21,
+    "time": 196.37115646258502,
     "bar_number": 62,
-    "tempo_bpm": 75,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
-      "F",
-      "D#"
+      "D#",
+      "A#"
     ],
-    "beats": [
-      197.207,
-      198.02,
-      198.809,
-      199.599
-    ],
-    "lyrics": "Feeling dirt beneath my fingernails.",
     "chord_cols": [
       0,
-      13
+      14
+    ],
+    "beats": [
+      196.37115646258502,
+      197.20707482993197,
+      198.01977324263038,
+      198.80925170068028
+    ],
+    "lyrics": "stain.        Feeling dirt beneath",
+    "words": [
+      {
+        "word": "stain.",
+        "start": 196.56,
+        "end": 197.22,
+        "col": 0
+      },
+      {
+        "word": "Feeling",
+        "start": 198.02,
+        "end": 198.64,
+        "col": 14
+      },
+      {
+        "word": "dirt",
+        "start": 198.64,
+        "end": 199.04,
+        "col": 22
+      },
+      {
+        "word": "beneath",
+        "start": 199.04,
+        "end": 199.48,
+        "col": 27
+      }
     ]
   },
   {
-    "time": 200.41,
+    "time": 199.59873015873015,
     "bar_number": 63,
-    "tempo_bpm": 75,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
-      "F",
-      "D#"
+      "A#",
+      "F"
     ],
-    "beats": [
-      200.411,
-      201.224,
-      202.014,
-      202.826
-    ],
-    "lyrics": "Where new purpose starts to bloom.",
     "chord_cols": [
       0,
       18
+    ],
+    "beats": [
+      199.59873015873015,
+      200.41142857142856,
+      201.224126984127,
+      202.01360544217687
+    ],
+    "lyrics": "my fingernails.   Where new purpose starts",
+    "words": [
+      {
+        "word": "my",
+        "start": 199.649,
+        "end": 199.96,
+        "col": 0
+      },
+      {
+        "word": "fingernails.",
+        "start": 199.96,
+        "end": 201.22,
+        "col": 3
+      },
+      {
+        "word": "Where",
+        "start": 201.7,
+        "end": 201.75,
+        "col": 18
+      },
+      {
+        "word": "new",
+        "start": 201.75,
+        "end": 201.88,
+        "col": 24
+      },
+      {
+        "word": "purpose",
+        "start": 201.88,
+        "end": 202.4,
+        "col": 28
+      },
+      {
+        "word": "starts",
+        "start": 202.449,
+        "end": 202.98,
+        "col": 36
+      }
     ]
   },
   {
-    "time": 203.62,
+    "time": 202.80308390022677,
     "bar_number": 64,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "F",
-      "D#"
+      "Gm"
     ],
-    "beats": [
-      203.616,
-      204.428,
-      205.241,
-      206.031
-    ],
-    "lyrics": "Found my true calling in the soil.",
     "chord_cols": [
       0,
       14
-    ]
-  },
-  {
-    "time": 206.84,
-    "bar_number": 65,
-    "tempo_bpm": 75,
-    "time_signature": "4/4",
-    "chords": [
-      "F",
-      "D#"
     ],
     "beats": [
-      206.843,
-      207.633,
-      208.446,
-      209.235
+      202.80308390022677,
+      203.61578231292518,
+      204.4284807256236,
+      205.241179138322
     ],
-    "lyrics": "Chasing away the city's gloom.",
-    "chord_cols": [
-      0,
-      13
+    "lyrics": "to bloom.     Found my true calling in",
+    "words": [
+      {
+        "word": "to",
+        "start": 202.98,
+        "end": 203.3,
+        "col": 0
+      },
+      {
+        "word": "bloom.",
+        "start": 203.3,
+        "end": 204.48,
+        "col": 3
+      },
+      {
+        "word": "Found",
+        "start": 204.48,
+        "end": 204.58,
+        "col": 14
+      },
+      {
+        "word": "my",
+        "start": 204.58,
+        "end": 204.82,
+        "col": 20
+      },
+      {
+        "word": "true",
+        "start": 204.82,
+        "end": 205.08,
+        "col": 23
+      },
+      {
+        "word": "calling",
+        "start": 205.08,
+        "end": 205.66,
+        "col": 28
+      },
+      {
+        "word": "in",
+        "start": 205.729,
+        "end": 206.04,
+        "col": 36
+      }
     ]
   },
   {
-    "time": 210.05,
-    "bar_number": 66,
+    "time": 206.0306575963719,
+    "bar_number": 65,
     "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
       "F",
       "D#"
     ],
-    "beats": [
-      210.048,
-      210.86,
-      211.673,
-      212.463
-    ],
-    "lyrics": "",
     "chord_cols": [
       0,
-      0
+      14
+    ],
+    "beats": [
+      206.0306575963719,
+      206.8433560090703,
+      207.63283446712018,
+      208.4455328798186
+    ],
+    "lyrics": "the soil.     Chasing away the city's",
+    "words": [
+      {
+        "word": "the",
+        "start": 206.04,
+        "end": 206.52,
+        "col": 0
+      },
+      {
+        "word": "soil.",
+        "start": 206.52,
+        "end": 207.16,
+        "col": 4
+      },
+      {
+        "word": "Chasing",
+        "start": 207.82,
+        "end": 207.87,
+        "col": 14
+      },
+      {
+        "word": "away",
+        "start": 207.87,
+        "end": 208.36,
+        "col": 22
+      },
+      {
+        "word": "the",
+        "start": 208.36,
+        "end": 208.88,
+        "col": 27
+      },
+      {
+        "word": "city's",
+        "start": 208.88,
+        "end": 209.82,
+        "col": 31
+      }
     ]
   },
   {
-    "time": 213.28,
-    "bar_number": 67,
-    "tempo_bpm": 77,
+    "time": 209.23501133786849,
+    "bar_number": 66,
+    "tempo_bpm": 74,
     "time_signature": "4/4",
     "chords": [
-      "F",
-      "D#"
+      "D#",
+      "Gm"
+    ],
+    "chord_cols": [
+      0,
+      14
     ],
     "beats": [
-      213.275,
-      214.065,
-      214.854,
-      215.62
+      209.23501133786849,
+      210.0477097505669,
+      210.8604081632653,
+      211.67310657596371
     ],
-    "lyrics": "Chasing city's gloom.",
+    "lyrics": "gloom.",
+    "words": [
+      {
+        "word": "gloom.",
+        "start": 209.82,
+        "end": 210.06,
+        "col": 0
+      }
+    ]
+  },
+  {
+    "time": 212.4625850340136,
+    "bar_number": 67,
+    "tempo_bpm": 74,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm"
+    ],
+    "chord_cols": [
+      0
+    ],
+    "beats": [
+      212.4625850340136,
+      213.27528344671202,
+      214.0647619047619,
+      214.8542403628118
+    ],
+    "lyrics": "          Chasing",
+    "words": [
+      {
+        "word": "Chasing",
+        "start": 215.009,
+        "end": 215.44,
+        "col": 10
+      }
+    ]
+  },
+  {
+    "time": 215.62049886621315,
+    "bar_number": 68,
+    "tempo_bpm": 74,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm"
+    ],
+    "chord_cols": [
+      0
+    ],
+    "beats": [
+      215.62049886621315,
+      216.43319727891156,
+      217.24589569160997,
+      218.05859410430838
+    ],
+    "lyrics": "city's gloom.",
+    "words": [
+      {
+        "word": "city's",
+        "start": 215.44,
+        "end": 216.18,
+        "col": 0
+      },
+      {
+        "word": "gloom.",
+        "start": 216.18,
+        "end": 216.48,
+        "col": 7
+      }
+    ]
+  },
+  {
+    "time": 218.8712925170068,
+    "bar_number": 69,
+    "tempo_bpm": 74,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm",
+      "F"
+    ],
     "chord_cols": [
       0,
       8
-    ]
+    ],
+    "beats": [
+      218.8712925170068,
+      219.6839909297052,
+      220.4966893424036,
+      221.30938775510202
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 222.12208616780043,
+    "bar_number": 70,
+    "tempo_bpm": 74,
+    "time_signature": "4/4",
+    "chords": [
+      "F"
+    ],
+    "chord_cols": [
+      0
+    ],
+    "beats": [
+      222.12208616780043,
+      222.93478458049884,
+      223.74748299319725,
+      224.56018140589566
+    ],
+    "lyrics": "",
+    "words": []
   }
 ]

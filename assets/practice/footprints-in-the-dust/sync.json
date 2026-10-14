@@ -1,109 +1,182 @@
 [
   {
-    "time": 0.2,
+    "time": 0.2786394557823129,
     "bar_number": 1,
-    "tempo_bpm": 78,
-    "time_signature": "4/4",
-    "chords": [
-      "Gm",
-      "C#"
-    ],
-    "beats": [
-      1.068,
-      1.834,
-      2.601,
-      3.367
-    ],
-    "lyrics": "",
-    "chord_cols": [
-      0,
-      0
-    ]
-  },
-  {
-    "time": 4.13,
-    "bar_number": 2,
-    "tempo_bpm": 79,
-    "time_signature": "4/4",
-    "chords": [
-      "Gm"
-    ],
-    "beats": [
-      4.133,
-      4.899,
-      5.642,
-      6.409
-    ],
-    "lyrics": "",
-    "chord_cols": [
-      0
-    ]
-  },
-  {
-    "time": 7.17,
-    "bar_number": 3,
-    "tempo_bpm": 79,
-    "time_signature": "4/4",
-    "chords": [
-      "Gm",
-      "C#"
-    ],
-    "beats": [
-      7.175,
-      7.941,
-      8.661,
-      9.451
-    ],
-    "lyrics": "",
-    "chord_cols": [
-      0,
-      0
-    ]
-  },
-  {
-    "time": 10.22,
-    "bar_number": 4,
-    "tempo_bpm": 79,
-    "time_signature": "4/4",
-    "chords": [
-      "C#",
-      "Gm"
-    ],
-    "beats": [
-      10.217,
-      10.983,
-      11.749,
-      12.516
-    ],
-    "lyrics": "Old dogs sleeping by the fire.",
-    "chord_cols": [
-      0,
-      18
-    ]
-  },
-  {
-    "time": 13.26,
-    "bar_number": 5,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
       "Gm",
       "Fm"
     ],
-    "beats": [
-      13.259,
-      14.048,
-      14.814,
-      15.581
+    "chord_cols": [
+      0,
+      8
     ],
-    "lyrics": "Just a shadow in my mind.",
+    "beats": [
+      0.2786394557823129,
+      1.0681179138321995,
+      1.8343764172335602,
+      2.6006349206349206
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 3.3668934240362813,
+    "bar_number": 2,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm"
+    ],
+    "chord_cols": [
+      0
+    ],
+    "beats": [
+      3.3668934240362813,
+      4.133151927437642,
+      4.899410430839002,
+      5.642448979591837
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 6.408707482993197,
+    "bar_number": 3,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      6.408707482993197,
+      7.174965986394557,
+      7.9412244897959186,
+      8.661043083900227
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 9.427301587301587,
+    "bar_number": 4,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "Gm"
+    ],
     "chord_cols": [
       0,
       14
+    ],
+    "beats": [
+      9.427301587301587,
+      10.193560090702947,
+      10.95981859410431,
+      11.72607709750567
+    ],
+    "lyrics": "Old dogs      sleeping by the",
+    "words": [
+      {
+        "word": "Old",
+        "start": 10.179,
+        "end": 10.702,
+        "col": 0
+      },
+      {
+        "word": "dogs",
+        "start": 10.702,
+        "end": 11.225,
+        "col": 4
+      },
+      {
+        "word": "sleeping",
+        "start": 11.225,
+        "end": 11.748,
+        "col": 14
+      },
+      {
+        "word": "by",
+        "start": 11.748,
+        "end": 12.272,
+        "col": 23
+      },
+      {
+        "word": "the",
+        "start": 12.272,
+        "end": 12.796,
+        "col": 26
+      }
     ]
   },
   {
-    "time": 16.35,
+    "time": 12.49233560090703,
+    "bar_number": 5,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "A#",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      15
+    ],
+    "beats": [
+      12.49233560090703,
+      13.25859410430839,
+      14.048072562358277,
+      14.814331065759637
+    ],
+    "lyrics": "fire. Just a   shadow in my",
+    "words": [
+      {
+        "word": "fire.",
+        "start": 12.796,
+        "end": 13.319,
+        "col": 0
+      },
+      {
+        "word": "Just",
+        "start": 13.319,
+        "end": 13.821,
+        "col": 6
+      },
+      {
+        "word": "a",
+        "start": 13.821,
+        "end": 14.323,
+        "col": 11
+      },
+      {
+        "word": "shadow",
+        "start": 14.323,
+        "end": 14.825,
+        "col": 15
+      },
+      {
+        "word": "in",
+        "start": 14.825,
+        "end": 15.326,
+        "col": 22
+      },
+      {
+        "word": "my",
+        "start": 15.326,
+        "end": 15.828,
+        "col": 25
+      }
+    ]
+  },
+  {
+    "time": 15.580589569160997,
     "bar_number": 6,
     "tempo_bpm": 78,
     "time_signature": "4/4",
@@ -111,20 +184,52 @@
       "Fm",
       "Gm"
     ],
-    "beats": [
-      16.347,
-      17.136,
-      17.879,
-      18.669
-    ],
-    "lyrics": "Old dogs sleeping by the fire.",
     "chord_cols": [
       0,
-      18
+      17
+    ],
+    "beats": [
+      15.580589569160997,
+      16.34684807256236,
+      17.136326530612244,
+      17.87936507936508
+    ],
+    "lyrics": "mind. Old dogs   sleeping by",
+    "words": [
+      {
+        "word": "mind.",
+        "start": 15.828,
+        "end": 16.329,
+        "col": 0
+      },
+      {
+        "word": "Old",
+        "start": 16.329,
+        "end": 16.862,
+        "col": 6
+      },
+      {
+        "word": "dogs",
+        "start": 16.862,
+        "end": 17.395,
+        "col": 10
+      },
+      {
+        "word": "sleeping",
+        "start": 17.395,
+        "end": 17.928,
+        "col": 17
+      },
+      {
+        "word": "by",
+        "start": 17.928,
+        "end": 18.462,
+        "col": 26
+      }
     ]
   },
   {
-    "time": 19.44,
+    "time": 18.668843537414965,
     "bar_number": 7,
     "tempo_bpm": 78,
     "time_signature": "4/4",
@@ -132,20 +237,64 @@
       "Gm",
       "Fm"
     ],
-    "beats": [
-      19.435,
-      20.201,
-      20.968,
-      21.734
-    ],
-    "lyrics": "Just a shadow in my mind.",
     "chord_cols": [
       0,
-      14
+      19
+    ],
+    "beats": [
+      18.668843537414965,
+      19.435102040816325,
+      20.201360544217685,
+      20.96761904761905
+    ],
+    "lyrics": "the fire. Just a   shadow in my",
+    "words": [
+      {
+        "word": "the",
+        "start": 18.462,
+        "end": 18.995,
+        "col": 0
+      },
+      {
+        "word": "fire.",
+        "start": 18.995,
+        "end": 19.529,
+        "col": 4
+      },
+      {
+        "word": "Just",
+        "start": 19.529,
+        "end": 19.991,
+        "col": 10
+      },
+      {
+        "word": "a",
+        "start": 19.991,
+        "end": 20.453,
+        "col": 15
+      },
+      {
+        "word": "shadow",
+        "start": 20.453,
+        "end": 20.915,
+        "col": 19
+      },
+      {
+        "word": "in",
+        "start": 20.915,
+        "end": 21.377,
+        "col": 26
+      },
+      {
+        "word": "my",
+        "start": 21.377,
+        "end": 21.838,
+        "col": 29
+      }
     ]
   },
   {
-    "time": 22.5,
+    "time": 21.73387755102041,
     "bar_number": 8,
     "tempo_bpm": 78,
     "time_signature": "4/4",
@@ -153,264 +302,713 @@
       "Fm",
       "Gm"
     ],
-    "beats": [
-      22.5,
-      23.266,
-      24.033,
-      24.799
-    ],
-    "lyrics": "Walked beside me for so long.",
     "chord_cols": [
       0,
-      17
+      22
+    ],
+    "beats": [
+      21.73387755102041,
+      22.50013605442177,
+      23.289614512471655,
+      24.03265306122449
+    ],
+    "lyrics": "mind. Walked beside   me for so",
+    "words": [
+      {
+        "word": "mind.",
+        "start": 21.838,
+        "end": 22.3,
+        "col": 0
+      },
+      {
+        "word": "Walked",
+        "start": 22.3,
+        "end": 22.795,
+        "col": 6
+      },
+      {
+        "word": "beside",
+        "start": 22.795,
+        "end": 23.29,
+        "col": 13
+      },
+      {
+        "word": "me",
+        "start": 23.29,
+        "end": 23.785,
+        "col": 22
+      },
+      {
+        "word": "for",
+        "start": 23.785,
+        "end": 24.28,
+        "col": 25
+      },
+      {
+        "word": "so",
+        "start": 24.28,
+        "end": 24.774,
+        "col": 29
+      }
     ]
   },
   {
-    "time": 25.57,
+    "time": 24.79891156462585,
     "bar_number": 9,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
-      "Gm",
-      "Gm"
+      "A#",
+      "Fm"
     ],
-    "beats": [
-      25.565,
-      26.331,
-      27.098,
-      27.864
-    ],
-    "lyrics": "The best companions you could find.",
     "chord_cols": [
       0,
-      20
+      17
+    ],
+    "beats": [
+      24.79891156462585,
+      25.56517006802721,
+      26.354648526077096,
+      27.09768707482993
+    ],
+    "lyrics": "long. The best   companions you could",
+    "words": [
+      {
+        "word": "long.",
+        "start": 24.774,
+        "end": 25.269,
+        "col": 0
+      },
+      {
+        "word": "The",
+        "start": 25.269,
+        "end": 25.829,
+        "col": 6
+      },
+      {
+        "word": "best",
+        "start": 25.829,
+        "end": 26.389,
+        "col": 10
+      },
+      {
+        "word": "companions",
+        "start": 26.389,
+        "end": 26.949,
+        "col": 17
+      },
+      {
+        "word": "you",
+        "start": 26.949,
+        "end": 27.446,
+        "col": 28
+      },
+      {
+        "word": "could",
+        "start": 27.446,
+        "end": 27.943,
+        "col": 32
+      }
     ]
   },
   {
-    "time": 28.63,
+    "time": 27.86394557823129,
     "bar_number": 10,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "Gm"
+    ],
+    "chord_cols": [
+      0,
+      19
+    ],
+    "beats": [
+      27.86394557823129,
+      28.63020408163265,
+      29.396462585034012,
+      30.162721088435376
+    ],
+    "lyrics": "find. Left their   paw prints on my soul.",
+    "words": [
+      {
+        "word": "find.",
+        "start": 27.943,
+        "end": 28.439,
+        "col": 0
+      },
+      {
+        "word": "Left",
+        "start": 28.439,
+        "end": 28.881,
+        "col": 6
+      },
+      {
+        "word": "their",
+        "start": 28.881,
+        "end": 29.324,
+        "col": 11
+      },
+      {
+        "word": "paw",
+        "start": 29.324,
+        "end": 29.767,
+        "col": 19
+      },
+      {
+        "word": "prints",
+        "start": 29.767,
+        "end": 30.209,
+        "col": 23
+      },
+      {
+        "word": "on",
+        "start": 30.209,
+        "end": 30.32,
+        "col": 30
+      },
+      {
+        "word": "my",
+        "start": 30.32,
+        "end": 30.68,
+        "col": 33
+      },
+      {
+        "word": "soul.",
+        "start": 30.68,
+        "end": 31.26,
+        "col": 36
+      }
+    ]
+  },
+  {
+    "time": 30.95219954648526,
+    "bar_number": 11,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
       "Gm",
       "Fm"
     ],
-    "beats": [
-      28.63,
-      29.396,
-      30.163,
-      30.929
-    ],
-    "lyrics": "Left their paw prints on my soul.",
-    "chord_cols": [
-      0,
-      22
-    ]
-  },
-  {
-    "time": 31.7,
-    "bar_number": 11,
-    "tempo_bpm": 78,
-    "time_signature": "4/4",
-    "chords": [
-      "Fm",
-      "D#"
-    ],
-    "beats": [
-      31.695,
-      32.485,
-      33.228,
-      34.017
-    ],
-    "lyrics": "Memories they left behind.",
     "chord_cols": [
       0,
       14
+    ],
+    "beats": [
+      30.95219954648526,
+      31.695238095238096,
+      32.48471655328798,
+      33.22775510204082
+    ],
+    "lyrics": "Memories      they left behind.",
+    "words": [
+      {
+        "word": "Memories",
+        "start": 31.6,
+        "end": 32.48,
+        "col": 0
+      },
+      {
+        "word": "they",
+        "start": 32.48,
+        "end": 33.0,
+        "col": 14
+      },
+      {
+        "word": "left",
+        "start": 33.0,
+        "end": 33.38,
+        "col": 19
+      },
+      {
+        "word": "behind.",
+        "start": 33.38,
+        "end": 34.72,
+        "col": 24
+      }
     ]
   },
   {
-    "time": 34.78,
+    "time": 34.0172335600907,
     "bar_number": 12,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
-      "D#",
+      "Fm",
       "Gm"
     ],
-    "beats": [
-      34.783,
-      35.55,
-      36.316,
-      37.105
-    ],
-    "lyrics": "Footprints in the dust,",
     "chord_cols": [
       0,
-      14
+      12
+    ],
+    "beats": [
+      34.0172335600907,
+      34.78349206349206,
+      35.54975056689342,
+      36.31600907029478
+    ],
+    "lyrics": "            Footprints in the dust,",
+    "words": [
+      {
+        "word": "Footprints",
+        "start": 35.34,
+        "end": 36.04,
+        "col": 12
+      },
+      {
+        "word": "in",
+        "start": 36.04,
+        "end": 36.6,
+        "col": 23
+      },
+      {
+        "word": "the",
+        "start": 36.6,
+        "end": 36.78,
+        "col": 26
+      },
+      {
+        "word": "dust,",
+        "start": 36.78,
+        "end": 37.16,
+        "col": 30
+      }
     ]
   },
   {
-    "time": 37.87,
+    "time": 37.10548752834467,
     "bar_number": 13,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
       "D#",
-      "Gm"
+      "Fm"
     ],
-    "beats": [
-      37.872,
-      38.638,
-      39.404,
-      40.171
-    ],
-    "lyrics": "where my old friends used to roam.",
     "chord_cols": [
       0,
-      21
+      14
+    ],
+    "beats": [
+      37.10548752834467,
+      37.871746031746035,
+      38.638004535147395,
+      39.404263038548756
+    ],
+    "lyrics": "where my      old friends used to roam.",
+    "words": [
+      {
+        "word": "where",
+        "start": 37.749,
+        "end": 38.34,
+        "col": 0
+      },
+      {
+        "word": "my",
+        "start": 38.34,
+        "end": 38.56,
+        "col": 6
+      },
+      {
+        "word": "old",
+        "start": 38.56,
+        "end": 38.86,
+        "col": 14
+      },
+      {
+        "word": "friends",
+        "start": 38.86,
+        "end": 39.2,
+        "col": 18
+      },
+      {
+        "word": "used",
+        "start": 39.259,
+        "end": 39.58,
+        "col": 26
+      },
+      {
+        "word": "to",
+        "start": 39.58,
+        "end": 39.92,
+        "col": 31
+      },
+      {
+        "word": "roam.",
+        "start": 39.92,
+        "end": 40.52,
+        "col": 34
+      }
     ]
   },
   {
-    "time": 40.94,
+    "time": 40.170521541950116,
     "bar_number": 14,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
+      "Fm",
       "Gm"
     ],
-    "beats": [
-      40.937,
-      41.726,
-      42.493,
-      43.259
-    ],
-    "lyrics": "Just the quiet of the homestead.",
     "chord_cols": [
-      0
+      0,
+      14
+    ],
+    "beats": [
+      40.170521541950116,
+      40.936780045351476,
+      41.72625850340136,
+      42.49251700680272
+    ],
+    "lyrics": "Just the      quiet of the",
+    "words": [
+      {
+        "word": "Just",
+        "start": 40.98,
+        "end": 41.42,
+        "col": 0
+      },
+      {
+        "word": "the",
+        "start": 41.42,
+        "end": 41.58,
+        "col": 5
+      },
+      {
+        "word": "quiet",
+        "start": 41.58,
+        "end": 42.14,
+        "col": 14
+      },
+      {
+        "word": "of",
+        "start": 42.14,
+        "end": 42.66,
+        "col": 20
+      },
+      {
+        "word": "the",
+        "start": 42.66,
+        "end": 42.96,
+        "col": 23
+      }
     ]
   },
   {
-    "time": 44.03,
+    "time": 43.25877551020408,
     "bar_number": 15,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
-      "Gm",
-      "D#"
+      "Fm",
+      "Gm"
     ],
-    "beats": [
-      44.025,
-      44.815,
-      45.558,
-      46.324
-    ],
-    "lyrics": "A long, long way from home.",
-    "chord_cols": [
-      0,
-      18
-    ]
-  },
-  {
-    "time": 47.09,
-    "bar_number": 16,
-    "tempo_bpm": 77,
-    "time_signature": "4/4",
-    "chords": [
-      "Gm",
-      "D#"
-    ],
-    "beats": [
-      47.09,
-      47.88,
-      48.646,
-      49.412
-    ],
-    "lyrics": "Every sunrise, every sunset.",
     "chord_cols": [
       0,
       15
-    ]
-  },
-  {
-    "time": 50.2,
-    "bar_number": 17,
-    "tempo_bpm": 79,
-    "time_signature": "4/4",
-    "chords": [
-      "A#",
-      "Gm"
     ],
     "beats": [
-      50.202,
-      50.968,
-      51.711,
-      52.5
+      43.25877551020408,
+      44.02503401360544,
+      44.81451247165533,
+      45.55755102040816
     ],
-    "lyrics": "Tells me years are moving fast.",
-    "chord_cols": [
-      0,
-      20
+    "lyrics": "homestead. A   long, long way from home.",
+    "words": [
+      {
+        "word": "homestead.",
+        "start": 42.96,
+        "end": 43.92,
+        "col": 0
+      },
+      {
+        "word": "A",
+        "start": 44.56,
+        "end": 44.66,
+        "col": 11
+      },
+      {
+        "word": "long,",
+        "start": 44.66,
+        "end": 44.98,
+        "col": 15
+      },
+      {
+        "word": "long",
+        "start": 44.98,
+        "end": 45.4,
+        "col": 21
+      },
+      {
+        "word": "way",
+        "start": 45.4,
+        "end": 45.74,
+        "col": 26
+      },
+      {
+        "word": "from",
+        "start": 45.74,
+        "end": 46.02,
+        "col": 30
+      },
+      {
+        "word": "home.",
+        "start": 46.02,
+        "end": 46.62,
+        "col": 35
+      }
     ]
   },
   {
-    "time": 53.24,
+    "time": 46.34702947845805,
+    "bar_number": 16,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm",
+      "D#"
+    ],
+    "chord_cols": [
+      0,
+      17
+    ],
+    "beats": [
+      46.34702947845805,
+      47.09006802721088,
+      47.87954648526077,
+      48.64580498866213
+    ],
+    "lyrics": "Every sunrise,   every sunset.",
+    "words": [
+      {
+        "word": "Every",
+        "start": 47.1,
+        "end": 47.5,
+        "col": 0
+      },
+      {
+        "word": "sunrise,",
+        "start": 47.5,
+        "end": 48.04,
+        "col": 6
+      },
+      {
+        "word": "every",
+        "start": 48.04,
+        "end": 49.06,
+        "col": 17
+      },
+      {
+        "word": "sunset.",
+        "start": 49.06,
+        "end": 49.76,
+        "col": 23
+      }
+    ]
+  },
+  {
+    "time": 49.412063492063496,
+    "bar_number": 17,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm",
+      "D#"
+    ],
+    "chord_cols": [
+      0,
+      14
+    ],
+    "beats": [
+      49.412063492063496,
+      50.20154195011338,
+      50.96780045351474,
+      51.710839002267576
+    ],
+    "lyrics": "Tells me      years are moving fast.",
+    "words": [
+      {
+        "word": "Tells",
+        "start": 50.17,
+        "end": 50.68,
+        "col": 0
+      },
+      {
+        "word": "me",
+        "start": 50.68,
+        "end": 50.84,
+        "col": 6
+      },
+      {
+        "word": "years",
+        "start": 50.84,
+        "end": 51.28,
+        "col": 14
+      },
+      {
+        "word": "are",
+        "start": 51.28,
+        "end": 51.4,
+        "col": 20
+      },
+      {
+        "word": "moving",
+        "start": 51.4,
+        "end": 51.74,
+        "col": 24
+      },
+      {
+        "word": "fast.",
+        "start": 51.74,
+        "end": 52.98,
+        "col": 31
+      }
+    ]
+  },
+  {
+    "time": 52.50031746031746,
     "bar_number": 18,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "Gm"
+    ],
+    "chord_cols": [
+      0,
+      15
+    ],
+    "beats": [
+      52.50031746031746,
+      53.2433560090703,
+      54.03283446712018,
+      54.77587301587302
+    ],
+    "lyrics": "And the love   for loyal creatures",
+    "words": [
+      {
+        "word": "And",
+        "start": 53.219,
+        "end": 53.74,
+        "col": 0
+      },
+      {
+        "word": "the",
+        "start": 53.74,
+        "end": 53.86,
+        "col": 4
+      },
+      {
+        "word": "love",
+        "start": 53.86,
+        "end": 54.22,
+        "col": 8
+      },
+      {
+        "word": "for",
+        "start": 54.22,
+        "end": 54.48,
+        "col": 15
+      },
+      {
+        "word": "loyal",
+        "start": 54.48,
+        "end": 55.22,
+        "col": 19
+      },
+      {
+        "word": "creatures",
+        "start": 55.22,
+        "end": 55.92,
+        "col": 25
+      }
+    ]
+  },
+  {
+    "time": 55.5653514739229,
+    "bar_number": 19,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
       "Gm"
     ],
-    "beats": [
-      53.243,
-      54.01,
-      54.776,
-      55.565
-    ],
-    "lyrics": "And the love for loyal creatures",
     "chord_cols": [
       0
-    ]
-  },
-  {
-    "time": 56.31,
-    "bar_number": 19,
-    "tempo_bpm": 77,
-    "time_signature": "4/4",
-    "chords": [
-      "Gm"
     ],
     "beats": [
-      56.308,
-      57.098,
-      57.841,
-      58.63
+      55.5653514739229,
+      56.30839002267574,
+      57.09786848072562,
+      57.84090702947846
     ],
     "lyrics": "is a bond that's built to last.",
-    "chord_cols": [
-      0
+    "words": [
+      {
+        "word": "is",
+        "start": 56.4,
+        "end": 56.82,
+        "col": 0
+      },
+      {
+        "word": "a",
+        "start": 56.82,
+        "end": 56.98,
+        "col": 3
+      },
+      {
+        "word": "bond",
+        "start": 56.98,
+        "end": 57.3,
+        "col": 5
+      },
+      {
+        "word": "that's",
+        "start": 57.3,
+        "end": 57.74,
+        "col": 10
+      },
+      {
+        "word": "built",
+        "start": 57.74,
+        "end": 58.06,
+        "col": 17
+      },
+      {
+        "word": "to",
+        "start": 58.06,
+        "end": 58.32,
+        "col": 23
+      },
+      {
+        "word": "last.",
+        "start": 58.32,
+        "end": 58.82,
+        "col": 26
+      }
     ]
   },
   {
-    "time": 59.42,
+    "time": 58.63038548752834,
     "bar_number": 20,
-    "tempo_bpm": 79,
+    "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
       "Gm"
     ],
-    "beats": [
-      59.42,
-      60.186,
-      60.929,
-      61.695
-    ],
-    "lyrics": "",
     "chord_cols": [
       0
-    ]
+    ],
+    "beats": [
+      58.63038548752834,
+      59.396643990929704,
+      60.162902494331064,
+      60.929160997732424
+    ],
+    "lyrics": "",
+    "words": []
   },
   {
-    "time": 62.46,
+    "time": 61.695419501133784,
     "bar_number": 21,
     "tempo_bpm": 78,
     "time_signature": "4/4",
@@ -418,430 +1016,1202 @@
       "Gm",
       "A#"
     ],
-    "beats": [
-      62.462,
-      63.251,
-      63.994,
-      64.76
-    ],
-    "lyrics": "Some were cattle dogs, swift and keen.",
     "chord_cols": [
       0,
-      23
+      19
+    ],
+    "beats": [
+      61.695419501133784,
+      62.461678004535145,
+      63.25115646258504,
+      63.994195011337865
+    ],
+    "lyrics": "Some were cattle   dogs, swift and keen.",
+    "words": [
+      {
+        "word": "Some",
+        "start": 62.149,
+        "end": 62.62,
+        "col": 0
+      },
+      {
+        "word": "were",
+        "start": 62.62,
+        "end": 62.98,
+        "col": 5
+      },
+      {
+        "word": "cattle",
+        "start": 62.98,
+        "end": 63.42,
+        "col": 10
+      },
+      {
+        "word": "dogs,",
+        "start": 63.42,
+        "end": 63.84,
+        "col": 19
+      },
+      {
+        "word": "swift",
+        "start": 63.84,
+        "end": 64.14,
+        "col": 25
+      },
+      {
+        "word": "and",
+        "start": 64.14,
+        "end": 64.46,
+        "col": 31
+      },
+      {
+        "word": "keen.",
+        "start": 64.46,
+        "end": 64.78,
+        "col": 35
+      }
     ]
   },
   {
-    "time": 65.53,
+    "time": 64.76045351473923,
     "bar_number": 22,
-    "tempo_bpm": 79,
+    "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
       "A#",
-      "C"
+      "Fm"
     ],
-    "beats": [
-      65.527,
-      66.293,
-      67.036,
-      67.825
-    ],
-    "lyrics": "Some are scruffy, mixed-up kind.",
     "chord_cols": [
       0,
-      18
+      14
+    ],
+    "beats": [
+      64.76045351473923,
+      65.52671201814059,
+      66.29297052154195,
+      67.03600907029478
+    ],
+    "lyrics": "Some are      scruffy, mixed-up",
+    "words": [
+      {
+        "word": "Some",
+        "start": 65.72,
+        "end": 65.98,
+        "col": 0
+      },
+      {
+        "word": "are",
+        "start": 65.98,
+        "end": 66.14,
+        "col": 5
+      },
+      {
+        "word": "scruffy,",
+        "start": 66.14,
+        "end": 66.68,
+        "col": 14
+      },
+      {
+        "word": "mixed-up",
+        "start": 66.68,
+        "end": 67.66,
+        "col": 23
+      }
     ]
   },
   {
-    "time": 68.57,
+    "time": 67.82548752834467,
     "bar_number": 23,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
-      "C",
-      "C#"
-    ],
-    "beats": [
-      68.569,
-      69.335,
-      70.101,
-      70.867
-    ],
-    "lyrics": "Some were cattle dogs, swift and keen.",
-    "chord_cols": [
-      0,
-      23
-    ]
-  },
-  {
-    "time": 71.63,
-    "bar_number": 24,
-    "tempo_bpm": 79,
-    "time_signature": "4/4",
-    "chords": [
-      "C#",
-      "Em"
-    ],
-    "beats": [
-      71.634,
-      72.4,
-      73.143,
-      73.909
-    ],
-    "lyrics": "Some are scruffy, mixed-up kind.",
-    "chord_cols": [
-      0,
-      18
-    ]
-  },
-  {
-    "time": 74.68,
-    "bar_number": 25,
-    "tempo_bpm": 78,
-    "time_signature": "4/4",
-    "chords": [
-      "A#"
-    ],
-    "beats": [
-      74.675,
-      75.442,
-      76.208,
-      76.974
-    ],
-    "lyrics": "Each one left a part of them.",
-    "chord_cols": [
-      0
-    ]
-  },
-  {
-    "time": 77.74,
-    "bar_number": 26,
-    "tempo_bpm": 79,
-    "time_signature": "4/4",
-    "chords": [
-      "A#",
+      "Fm",
       "Gm"
     ],
-    "beats": [
-      77.74,
-      78.507,
-      79.25,
-      80.039
-    ],
-    "lyrics": "A piece of joy I left to find.",
     "chord_cols": [
       0,
-      15
+      25
+    ],
+    "beats": [
+      67.82548752834467,
+      68.5685260770975,
+      69.33478458049886,
+      70.10104308390022
+    ],
+    "lyrics": "kind. Some were cattle   dogs, swift and keen.",
+    "words": [
+      {
+        "word": "kind.",
+        "start": 67.66,
+        "end": 68.28,
+        "col": 0
+      },
+      {
+        "word": "Some",
+        "start": 68.52,
+        "end": 68.68,
+        "col": 6
+      },
+      {
+        "word": "were",
+        "start": 68.68,
+        "end": 69.08,
+        "col": 11
+      },
+      {
+        "word": "cattle",
+        "start": 69.08,
+        "end": 69.48,
+        "col": 16
+      },
+      {
+        "word": "dogs,",
+        "start": 69.48,
+        "end": 69.98,
+        "col": 25
+      },
+      {
+        "word": "swift",
+        "start": 69.98,
+        "end": 70.22,
+        "col": 31
+      },
+      {
+        "word": "and",
+        "start": 70.22,
+        "end": 70.56,
+        "col": 37
+      },
+      {
+        "word": "keen.",
+        "start": 70.56,
+        "end": 70.88,
+        "col": 41
+      }
     ]
   },
   {
-    "time": 80.78,
-    "bar_number": 27,
+    "time": 70.86730158730158,
+    "bar_number": 24,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
       "Gm",
       "Fm"
     ],
-    "beats": [
-      80.782,
-      81.572,
-      82.315,
-      83.081
-    ],
-    "lyrics": "Whispers on the country breeze.",
     "chord_cols": [
       0,
-      16
+      14
+    ],
+    "beats": [
+      70.86730158730158,
+      71.63356009070294,
+      72.3998185941043,
+      73.14285714285714
+    ],
+    "lyrics": "Some are      scruffy, mixed-up kind.",
+    "words": [
+      {
+        "word": "Some",
+        "start": 71.74,
+        "end": 72.08,
+        "col": 0
+      },
+      {
+        "word": "are",
+        "start": 72.08,
+        "end": 72.3,
+        "col": 5
+      },
+      {
+        "word": "scruffy,",
+        "start": 72.3,
+        "end": 72.78,
+        "col": 14
+      },
+      {
+        "word": "mixed-up",
+        "start": 72.78,
+        "end": 73.7,
+        "col": 23
+      },
+      {
+        "word": "kind.",
+        "start": 73.7,
+        "end": 74.18,
+        "col": 32
+      }
     ]
   },
   {
-    "time": 83.85,
-    "bar_number": 28,
+    "time": 73.9091156462585,
+    "bar_number": 25,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
       "Fm",
-      "D#"
+      "Gm"
     ],
-    "beats": [
-      83.847,
-      84.637,
-      85.38,
-      86.146
-    ],
-    "lyrics": "Gentle echoes in my mind.",
     "chord_cols": [
       0,
-      14
+      16
+    ],
+    "beats": [
+      73.9091156462585,
+      74.67537414965986,
+      75.44163265306122,
+      76.20789115646258
+    ],
+    "lyrics": "Each one left   a part of them.",
+    "words": [
+      {
+        "word": "Each",
+        "start": 74.64,
+        "end": 74.96,
+        "col": 0
+      },
+      {
+        "word": "one",
+        "start": 74.96,
+        "end": 75.2,
+        "col": 5
+      },
+      {
+        "word": "left",
+        "start": 75.2,
+        "end": 75.64,
+        "col": 9
+      },
+      {
+        "word": "a",
+        "start": 75.64,
+        "end": 75.88,
+        "col": 16
+      },
+      {
+        "word": "part",
+        "start": 75.88,
+        "end": 76.24,
+        "col": 18
+      },
+      {
+        "word": "of",
+        "start": 76.24,
+        "end": 76.68,
+        "col": 23
+      },
+      {
+        "word": "them.",
+        "start": 76.68,
+        "end": 76.94,
+        "col": 26
+      }
     ]
   },
   {
-    "time": 86.91,
+    "time": 76.97414965986394,
+    "bar_number": 26,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "A#",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      17
+    ],
+    "beats": [
+      76.97414965986394,
+      77.7404081632653,
+      78.50666666666666,
+      79.2497052154195
+    ],
+    "lyrics": "A piece of joy   I left to find.",
+    "words": [
+      {
+        "word": "A",
+        "start": 77.54,
+        "end": 77.6,
+        "col": 0
+      },
+      {
+        "word": "piece",
+        "start": 77.6,
+        "end": 78.0,
+        "col": 2
+      },
+      {
+        "word": "of",
+        "start": 78.0,
+        "end": 78.26,
+        "col": 8
+      },
+      {
+        "word": "joy",
+        "start": 78.26,
+        "end": 78.56,
+        "col": 11
+      },
+      {
+        "word": "I",
+        "start": 78.56,
+        "end": 79.08,
+        "col": 17
+      },
+      {
+        "word": "left",
+        "start": 79.08,
+        "end": 79.42,
+        "col": 19
+      },
+      {
+        "word": "to",
+        "start": 79.42,
+        "end": 79.7,
+        "col": 24
+      },
+      {
+        "word": "find.",
+        "start": 79.7,
+        "end": 80.18,
+        "col": 27
+      }
+    ]
+  },
+  {
+    "time": 80.03918367346938,
+    "bar_number": 27,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "Gm"
+    ],
+    "chord_cols": [
+      0,
+      14
+    ],
+    "beats": [
+      80.03918367346938,
+      80.78222222222222,
+      81.57170068027212,
+      82.31473922902494
+    ],
+    "lyrics": "Whispers on   the country breeze.",
+    "words": [
+      {
+        "word": "Whispers",
+        "start": 80.429,
+        "end": 81.28,
+        "col": 0
+      },
+      {
+        "word": "on",
+        "start": 81.28,
+        "end": 81.8,
+        "col": 9
+      },
+      {
+        "word": "the",
+        "start": 81.8,
+        "end": 82.0,
+        "col": 14
+      },
+      {
+        "word": "country",
+        "start": 82.0,
+        "end": 82.5,
+        "col": 18
+      },
+      {
+        "word": "breeze.",
+        "start": 82.5,
+        "end": 83.56,
+        "col": 26
+      }
+    ]
+  },
+  {
+    "time": 83.0809977324263,
+    "bar_number": 28,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      14
+    ],
+    "beats": [
+      83.0809977324263,
+      83.84725623582766,
+      84.61351473922902,
+      85.37977324263039
+    ],
+    "lyrics": "Gentle        echoes in my",
+    "words": [
+      {
+        "word": "Gentle",
+        "start": 83.819,
+        "end": 84.48,
+        "col": 0
+      },
+      {
+        "word": "echoes",
+        "start": 84.48,
+        "end": 84.96,
+        "col": 14
+      },
+      {
+        "word": "in",
+        "start": 84.96,
+        "end": 85.56,
+        "col": 21
+      },
+      {
+        "word": "my",
+        "start": 85.56,
+        "end": 85.92,
+        "col": 24
+      }
+    ]
+  },
+  {
+    "time": 86.14603174603175,
     "bar_number": 29,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
-      "D#",
+      "Fm",
       "Gm"
     ],
-    "beats": [
-      86.912,
-      87.679,
-      88.445,
-      89.234
-    ],
-    "lyrics": "Footprints in the dust,",
     "chord_cols": [
       0,
       14
+    ],
+    "beats": [
+      86.14603174603175,
+      86.91229024943311,
+      87.67854875283447,
+      88.44480725623583
+    ],
+    "lyrics": "mind.         Footprints in the dust,",
+    "words": [
+      {
+        "word": "mind.",
+        "start": 85.92,
+        "end": 86.9,
+        "col": 0
+      },
+      {
+        "word": "Footprints",
+        "start": 87.68,
+        "end": 88.18,
+        "col": 14
+      },
+      {
+        "word": "in",
+        "start": 88.18,
+        "end": 88.76,
+        "col": 25
+      },
+      {
+        "word": "the",
+        "start": 88.76,
+        "end": 88.92,
+        "col": 28
+      },
+      {
+        "word": "dust,",
+        "start": 88.92,
+        "end": 89.42,
+        "col": 32
+      }
     ]
   },
   {
-    "time": 90.0,
+    "time": 89.23428571428572,
     "bar_number": 30,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
       "D#",
-      "Gm"
+      "Fm"
     ],
-    "beats": [
-      90.001,
-      90.767,
-      91.533,
-      92.299
-    ],
-    "lyrics": "where my old friends used to roam.",
     "chord_cols": [
       0,
-      21
+      14
+    ],
+    "beats": [
+      89.23428571428572,
+      90.00054421768708,
+      90.76680272108844,
+      91.5330612244898
+    ],
+    "lyrics": "where my      old friends used to roam.",
+    "words": [
+      {
+        "word": "where",
+        "start": 90.08,
+        "end": 90.48,
+        "col": 0
+      },
+      {
+        "word": "my",
+        "start": 90.48,
+        "end": 90.72,
+        "col": 6
+      },
+      {
+        "word": "old",
+        "start": 90.72,
+        "end": 90.98,
+        "col": 14
+      },
+      {
+        "word": "friends",
+        "start": 90.98,
+        "end": 91.3,
+        "col": 18
+      },
+      {
+        "word": "used",
+        "start": 91.38,
+        "end": 91.72,
+        "col": 26
+      },
+      {
+        "word": "to",
+        "start": 91.72,
+        "end": 92.04,
+        "col": 31
+      },
+      {
+        "word": "roam.",
+        "start": 92.04,
+        "end": 92.5,
+        "col": 34
+      }
     ]
   },
   {
-    "time": 93.07,
+    "time": 92.29931972789116,
     "bar_number": 31,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "Gm"
+    ],
+    "chord_cols": [
+      0,
+      14
+    ],
+    "beats": [
+      92.29931972789116,
+      93.06557823129252,
+      93.8550566893424,
+      94.62131519274377
+    ],
+    "lyrics": "Just the      quiet of the",
+    "words": [
+      {
+        "word": "Just",
+        "start": 93.32,
+        "end": 93.56,
+        "col": 0
+      },
+      {
+        "word": "the",
+        "start": 93.56,
+        "end": 93.72,
+        "col": 5
+      },
+      {
+        "word": "quiet",
+        "start": 93.72,
+        "end": 94.24,
+        "col": 14
+      },
+      {
+        "word": "of",
+        "start": 94.24,
+        "end": 94.64,
+        "col": 20
+      },
+      {
+        "word": "the",
+        "start": 94.64,
+        "end": 95.08,
+        "col": 23
+      }
+    ]
+  },
+  {
+    "time": 95.38757369614513,
+    "bar_number": 32,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
       "Gm"
     ],
-    "beats": [
-      93.066,
-      93.832,
-      94.621,
-      95.388
-    ],
-    "lyrics": "Just the quiet of the homestead.",
     "chord_cols": [
       0
+    ],
+    "beats": [
+      95.38757369614513,
+      96.15383219954649,
+      96.94331065759637,
+      97.6863492063492
+    ],
+    "lyrics": "homestead. A long, long way from home.",
+    "words": [
+      {
+        "word": "homestead.",
+        "start": 95.08,
+        "end": 96.06,
+        "col": 0
+      },
+      {
+        "word": "A",
+        "start": 96.8,
+        "end": 96.85,
+        "col": 11
+      },
+      {
+        "word": "long,",
+        "start": 96.85,
+        "end": 97.14,
+        "col": 13
+      },
+      {
+        "word": "long",
+        "start": 97.32,
+        "end": 97.52,
+        "col": 19
+      },
+      {
+        "word": "way",
+        "start": 97.52,
+        "end": 97.88,
+        "col": 24
+      },
+      {
+        "word": "from",
+        "start": 97.88,
+        "end": 98.16,
+        "col": 28
+      },
+      {
+        "word": "home.",
+        "start": 98.16,
+        "end": 98.66,
+        "col": 33
+      }
     ]
   },
   {
-    "time": 96.15,
-    "bar_number": 32,
+    "time": 98.45260770975057,
+    "bar_number": 33,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
       "Gm",
       "D#"
     ],
-    "beats": [
-      96.154,
-      96.943,
-      97.686,
-      98.453
-    ],
-    "lyrics": "A long, long way from home.",
     "chord_cols": [
       0,
-      18
+      17
+    ],
+    "beats": [
+      98.45260770975057,
+      99.21886621315193,
+      100.00834467120181,
+      100.77460317460317
+    ],
+    "lyrics": "Every sunrise,   every sunset.",
+    "words": [
+      {
+        "word": "Every",
+        "start": 99.24,
+        "end": 99.64,
+        "col": 0
+      },
+      {
+        "word": "sunrise,",
+        "start": 99.64,
+        "end": 100.18,
+        "col": 6
+      },
+      {
+        "word": "every",
+        "start": 100.84,
+        "end": 101.18,
+        "col": 17
+      },
+      {
+        "word": "sunset.",
+        "start": 101.18,
+        "end": 101.88,
+        "col": 23
+      }
     ]
   },
   {
-    "time": 99.22,
-    "bar_number": 33,
-    "tempo_bpm": 77,
-    "time_signature": "4/4",
-    "chords": [
-      "D#",
-      "F"
-    ],
-    "beats": [
-      99.219,
-      100.008,
-      100.775,
-      101.541
-    ],
-    "lyrics": "Every sunrise, every sunset.",
-    "chord_cols": [
-      0,
-      15
-    ]
-  },
-  {
-    "time": 102.33,
+    "time": 101.56408163265306,
     "bar_number": 34,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
-      "F",
-      "Gm"
+      "D#",
+      "Fm"
     ],
-    "beats": [
-      102.33,
-      103.097,
-      103.84,
-      104.606
-    ],
-    "lyrics": "Tells me years are moving fast.",
     "chord_cols": [
       0,
-      20
-    ]
-  },
-  {
-    "time": 105.4,
-    "bar_number": 35,
-    "tempo_bpm": 79,
-    "time_signature": "4/4",
-    "chords": [
-      "Gm"
+      14
     ],
     "beats": [
-      105.395,
-      106.162,
-      106.905,
-      107.694
+      101.56408163265306,
+      102.33034013605442,
+      103.09659863945578,
+      103.83963718820861
     ],
-    "lyrics": "And the love for loyal creatures",
-    "chord_cols": [
-      0
+    "lyrics": "Tells me      years are moving fast.",
+    "words": [
+      {
+        "word": "Tells",
+        "start": 102.64,
+        "end": 102.88,
+        "col": 0
+      },
+      {
+        "word": "me",
+        "start": 102.88,
+        "end": 102.98,
+        "col": 6
+      },
+      {
+        "word": "years",
+        "start": 102.98,
+        "end": 103.44,
+        "col": 14
+      },
+      {
+        "word": "are",
+        "start": 103.44,
+        "end": 103.56,
+        "col": 20
+      },
+      {
+        "word": "moving",
+        "start": 103.56,
+        "end": 103.86,
+        "col": 24
+      },
+      {
+        "word": "fast.",
+        "start": 103.86,
+        "end": 104.88,
+        "col": 31
+      }
     ]
   },
   {
-    "time": 108.44,
+    "time": 104.60589569160997,
+    "bar_number": 35,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "Gm"
+    ],
+    "chord_cols": [
+      0,
+      14
+    ],
+    "beats": [
+      104.60589569160997,
+      105.39537414965986,
+      106.16163265306122,
+      106.90467120181405
+    ],
+    "lyrics": "And the       love for loyal creatures",
+    "words": [
+      {
+        "word": "And",
+        "start": 105.78,
+        "end": 105.84,
+        "col": 0
+      },
+      {
+        "word": "the",
+        "start": 105.84,
+        "end": 106.02,
+        "col": 4
+      },
+      {
+        "word": "love",
+        "start": 106.02,
+        "end": 106.34,
+        "col": 14
+      },
+      {
+        "word": "for",
+        "start": 106.34,
+        "end": 106.6,
+        "col": 19
+      },
+      {
+        "word": "loyal",
+        "start": 106.6,
+        "end": 107.32,
+        "col": 23
+      },
+      {
+        "word": "creatures",
+        "start": 107.32,
+        "end": 108.06,
+        "col": 29
+      }
+    ]
+  },
+  {
+    "time": 107.69414965986394,
     "bar_number": 36,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
       "Gm"
     ],
-    "beats": [
-      108.437,
-      109.227,
-      109.97,
-      110.759
-    ],
-    "lyrics": "is a bond that's built to last.",
     "chord_cols": [
       0
+    ],
+    "beats": [
+      107.69414965986394,
+      108.43718820861677,
+      109.22666666666667,
+      109.9697052154195
+    ],
+    "lyrics": "is a bond that's built to",
+    "words": [
+      {
+        "word": "is",
+        "start": 108.499,
+        "end": 109.0,
+        "col": 0
+      },
+      {
+        "word": "a",
+        "start": 109.0,
+        "end": 109.1,
+        "col": 3
+      },
+      {
+        "word": "bond",
+        "start": 109.1,
+        "end": 109.42,
+        "col": 5
+      },
+      {
+        "word": "that's",
+        "start": 109.42,
+        "end": 109.88,
+        "col": 10
+      },
+      {
+        "word": "built",
+        "start": 109.88,
+        "end": 110.2,
+        "col": 17
+      },
+      {
+        "word": "to",
+        "start": 110.2,
+        "end": 110.46,
+        "col": 23
+      }
     ]
   },
   {
-    "time": 111.53,
+    "time": 110.7591836734694,
     "bar_number": 37,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
       "Gm"
     ],
-    "beats": [
-      111.525,
-      112.292,
-      113.058,
-      113.847
-    ],
-    "lyrics": "",
     "chord_cols": [
       0
+    ],
+    "beats": [
+      110.7591836734694,
+      111.54866213151928,
+      112.31492063492064,
+      113.05795918367347
+    ],
+    "lyrics": "last.",
+    "words": [
+      {
+        "word": "last.",
+        "start": 110.46,
+        "end": 111.48,
+        "col": 0
+      }
     ]
   },
   {
-    "time": 114.61,
+    "time": 113.84743764172336,
     "bar_number": 38,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm",
+      "A#"
+    ],
+    "chord_cols": [
+      0,
+      16
+    ],
+    "beats": [
+      113.84743764172336,
+      114.61369614512472,
+      115.37995464852608,
+      116.12299319727892
+    ],
+    "lyrics": "Got two young   ones now, full of",
+    "words": [
+      {
+        "word": "Got",
+        "start": 114.369,
+        "end": 114.76,
+        "col": 0
+      },
+      {
+        "word": "two",
+        "start": 114.76,
+        "end": 115.18,
+        "col": 4
+      },
+      {
+        "word": "young",
+        "start": 115.18,
+        "end": 115.54,
+        "col": 8
+      },
+      {
+        "word": "ones",
+        "start": 115.54,
+        "end": 116.0,
+        "col": 16
+      },
+      {
+        "word": "now,",
+        "start": 116.0,
+        "end": 116.3,
+        "col": 21
+      },
+      {
+        "word": "full",
+        "start": 116.319,
+        "end": 116.62,
+        "col": 26
+      },
+      {
+        "word": "of",
+        "start": 116.62,
+        "end": 116.78,
+        "col": 31
+      }
+    ]
+  },
+  {
+    "time": 116.88925170068028,
+    "bar_number": 39,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "A#",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      21
+    ],
+    "beats": [
+      116.88925170068028,
+      117.65551020408164,
+      118.421768707483,
+      119.18802721088436
+    ],
+    "lyrics": "life. Running wild   beneath the sky.",
+    "words": [
+      {
+        "word": "life.",
+        "start": 116.78,
+        "end": 117.2,
+        "col": 0
+      },
+      {
+        "word": "Running",
+        "start": 117.38,
+        "end": 117.88,
+        "col": 6
+      },
+      {
+        "word": "wild",
+        "start": 117.88,
+        "end": 118.54,
+        "col": 14
+      },
+      {
+        "word": "beneath",
+        "start": 118.54,
+        "end": 119.06,
+        "col": 21
+      },
+      {
+        "word": "the",
+        "start": 119.06,
+        "end": 119.62,
+        "col": 29
+      },
+      {
+        "word": "sky.",
+        "start": 119.62,
+        "end": 120.18,
+        "col": 33
+      }
+    ]
+  },
+  {
+    "time": 119.95428571428572,
+    "bar_number": 40,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "Gm"
+    ],
+    "chord_cols": [
+      0,
+      16
+    ],
+    "beats": [
+      119.95428571428572,
+      120.72054421768708,
+      121.48680272108844,
+      122.22984126984127
+    ],
+    "lyrics": "Got two young   ones now, full of",
+    "words": [
+      {
+        "word": "Got",
+        "start": 120.4,
+        "end": 120.84,
+        "col": 0
+      },
+      {
+        "word": "two",
+        "start": 120.84,
+        "end": 121.26,
+        "col": 4
+      },
+      {
+        "word": "young",
+        "start": 121.26,
+        "end": 121.66,
+        "col": 8
+      },
+      {
+        "word": "ones",
+        "start": 121.66,
+        "end": 122.1,
+        "col": 16
+      },
+      {
+        "word": "now,",
+        "start": 122.1,
+        "end": 122.4,
+        "col": 21
+      },
+      {
+        "word": "full",
+        "start": 122.4,
+        "end": 122.7,
+        "col": 26
+      },
+      {
+        "word": "of",
+        "start": 122.7,
+        "end": 122.88,
+        "col": 31
+      }
+    ]
+  },
+  {
+    "time": 122.99609977324263,
+    "bar_number": 41,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
       "Gm",
       "Fm"
     ],
-    "beats": [
-      114.614,
-      115.38,
-      116.123,
-      116.889
-    ],
-    "lyrics": "Got two young ones now, full of life.",
     "chord_cols": [
       0,
-      24
+      21
+    ],
+    "beats": [
+      122.99609977324263,
+      123.762358276644,
+      124.52861678004535,
+      125.29487528344671
+    ],
+    "lyrics": "life. Running wild   beneath the sky.",
+    "words": [
+      {
+        "word": "life.",
+        "start": 122.88,
+        "end": 123.38,
+        "col": 0
+      },
+      {
+        "word": "Running",
+        "start": 123.449,
+        "end": 123.96,
+        "col": 6
+      },
+      {
+        "word": "wild",
+        "start": 123.96,
+        "end": 124.54,
+        "col": 14
+      },
+      {
+        "word": "beneath",
+        "start": 124.54,
+        "end": 125.16,
+        "col": 21
+      },
+      {
+        "word": "the",
+        "start": 125.16,
+        "end": 125.78,
+        "col": 29
+      },
+      {
+        "word": "sky.",
+        "start": 125.78,
+        "end": 126.46,
+        "col": 33
+      }
     ]
   },
   {
-    "time": 117.68,
-    "bar_number": 39,
-    "tempo_bpm": 79,
-    "time_signature": "4/4",
-    "chords": [
-      "Fm",
-      "Gm"
-    ],
-    "beats": [
-      117.679,
-      118.422,
-      119.188,
-      119.954
-    ],
-    "lyrics": "Running wild beneath the sky.",
-    "chord_cols": [
-      0,
-      13
-    ]
-  },
-  {
-    "time": 120.72,
-    "bar_number": 40,
-    "tempo_bpm": 79,
-    "time_signature": "4/4",
-    "chords": [
-      "Gm",
-      "Fm"
-    ],
-    "beats": [
-      120.721,
-      121.487,
-      122.23,
-      122.996
-    ],
-    "lyrics": "Got two young ones now, full of life.",
-    "chord_cols": [
-      0,
-      24
-    ]
-  },
-  {
-    "time": 123.76,
-    "bar_number": 41,
-    "tempo_bpm": 79,
-    "time_signature": "4/4",
-    "chords": [
-      "Fm",
-      "Fm"
-    ],
-    "beats": [
-      123.762,
-      124.529,
-      125.295,
-      126.061
-    ],
-    "lyrics": "Running wild beneath the sky.",
-    "chord_cols": [
-      0,
-      13
-    ]
-  },
-  {
-    "time": 126.8,
+    "time": 126.06113378684807,
     "bar_number": 42,
     "tempo_bpm": 78,
     "time_signature": "4/4",
@@ -849,510 +2219,1399 @@
       "Fm",
       "Gm"
     ],
-    "beats": [
-      126.804,
-      127.57,
-      128.337,
-      129.103
-    ],
-    "lyrics": "Throw a ball, they fetch it back.",
     "chord_cols": [
       0,
-      14
+      16
+    ],
+    "beats": [
+      126.06113378684807,
+      126.80417233560091,
+      127.57043083900227,
+      128.33668934240362
+    ],
+    "lyrics": "Throw a ball,   they fetch it back.",
+    "words": [
+      {
+        "word": "Throw",
+        "start": 126.46,
+        "end": 127.02,
+        "col": 0
+      },
+      {
+        "word": "a",
+        "start": 127.02,
+        "end": 127.3,
+        "col": 6
+      },
+      {
+        "word": "ball,",
+        "start": 127.3,
+        "end": 127.6,
+        "col": 8
+      },
+      {
+        "word": "they",
+        "start": 128.0,
+        "end": 128.12,
+        "col": 16
+      },
+      {
+        "word": "fetch",
+        "start": 128.12,
+        "end": 128.4,
+        "col": 21
+      },
+      {
+        "word": "it",
+        "start": 128.4,
+        "end": 128.76,
+        "col": 27
+      },
+      {
+        "word": "back.",
+        "start": 128.76,
+        "end": 129.36,
+        "col": 30
+      }
     ]
   },
   {
-    "time": 129.87,
+    "time": 129.10294784580498,
     "bar_number": 43,
-    "tempo_bpm": 79,
+    "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
-      "Gm",
-      "D#"
+      "A#",
+      "Fm"
     ],
-    "beats": [
-      129.869,
-      130.635,
-      131.379,
-      132.145
-    ],
-    "lyrics": "A twinkle in each loyal eye.",
     "chord_cols": [
       0,
-      13
+      15
+    ],
+    "beats": [
+      129.10294784580498,
+      129.86920634920634,
+      130.6354648526077,
+      131.37850340136055
+    ],
+    "lyrics": "A twinkle in   each loyal eye.",
+    "words": [
+      {
+        "word": "A",
+        "start": 129.36,
+        "end": 129.76,
+        "col": 0
+      },
+      {
+        "word": "twinkle",
+        "start": 129.76,
+        "end": 130.24,
+        "col": 2
+      },
+      {
+        "word": "in",
+        "start": 130.24,
+        "end": 130.68,
+        "col": 10
+      },
+      {
+        "word": "each",
+        "start": 130.68,
+        "end": 131.26,
+        "col": 15
+      },
+      {
+        "word": "loyal",
+        "start": 131.26,
+        "end": 131.6,
+        "col": 20
+      },
+      {
+        "word": "eye.",
+        "start": 131.6,
+        "end": 132.729,
+        "col": 26
+      }
     ]
   },
   {
-    "time": 132.91,
+    "time": 132.16798185941042,
     "bar_number": 44,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
-      "D#",
+      "Fm",
       "Gm"
     ],
-    "beats": [
-      132.911,
-      133.677,
-      134.444,
-      135.21
-    ],
-    "lyrics": "They don't fill the empty spots,",
-    "chord_cols": [
-      0,
-      16
-    ]
-  },
-  {
-    "time": 135.98,
-    "bar_number": 45,
-    "tempo_bpm": 78,
-    "time_signature": "4/4",
-    "chords": [
-      "D#",
-      "Gm"
-    ],
-    "beats": [
-      135.976,
-      136.742,
-      137.485,
-      138.275
-    ],
-    "lyrics": "but they help this old heart try.",
-    "chord_cols": [
-      0,
-      14
-    ]
-  },
-  {
-    "time": 139.04,
-    "bar_number": 46,
-    "tempo_bpm": 79,
-    "time_signature": "4/4",
-    "chords": [
-      "Dm",
-      "D#"
-    ],
-    "beats": [
-      139.041,
-      139.807,
-      140.55,
-      141.317
-    ],
-    "lyrics": "",
-    "chord_cols": [
-      0,
-      0
-    ]
-  },
-  {
-    "time": 142.08,
-    "bar_number": 47,
-    "tempo_bpm": 78,
-    "time_signature": "4/4",
-    "chords": [
-      "Dm",
-      "D#"
-    ],
-    "beats": [
-      142.083,
-      142.849,
-      143.615,
-      144.382
-    ],
-    "lyrics": "Learned a lot from faithful hounds",
-    "chord_cols": [
-      0,
-      14
-    ]
-  },
-  {
-    "time": 145.15,
-    "bar_number": 48,
-    "tempo_bpm": 78,
-    "time_signature": "4/4",
-    "chords": [
-      "D#",
-      "F"
-    ],
-    "beats": [
-      145.148,
-      145.914,
-      146.68,
-      147.447
-    ],
-    "lyrics": "about living, loving, letting go.",
-    "chord_cols": [
-      0,
-      14
-    ]
-  },
-  {
-    "time": 148.21,
-    "bar_number": 49,
-    "tempo_bpm": 78,
-    "time_signature": "4/4",
-    "chords": [
-      "D#",
-      "F"
-    ],
-    "beats": [
-      148.213,
-      148.979,
-      149.745,
-      150.512
-    ],
-    "lyrics": "Every scratch behind the ears,",
-    "chord_cols": [
-      0,
-      14
-    ]
-  },
-  {
-    "time": 151.28,
-    "bar_number": 50,
-    "tempo_bpm": 78,
-    "time_signature": "4/4",
-    "chords": [
-      "F",
-      "Gm"
-    ],
-    "beats": [
-      151.278,
-      152.044,
-      152.811,
-      153.577
-    ],
-    "lyrics": "a comfort in life's steady flow.",
-    "chord_cols": [
-      0,
-      12
-    ]
-  },
-  {
-    "time": 154.34,
-    "bar_number": 51,
-    "tempo_bpm": 78,
-    "time_signature": "4/4",
-    "chords": [
-      "F",
-      "Gm"
-    ],
-    "beats": [
-      154.343,
-      155.109,
-      155.876,
-      156.642
-    ],
-    "lyrics": "This whole place, it sees the seasons,",
-    "chord_cols": [
-      0,
-      17
-    ]
-  },
-  {
-    "time": 157.41,
-    "bar_number": 52,
-    "tempo_bpm": 79,
-    "time_signature": "4/4",
-    "chords": [
-      "Gm",
-      "D#"
-    ],
-    "beats": [
-      157.408,
-      158.174,
-      158.917,
-      159.684
-    ],
-    "lyrics": "new seeds planted, old ones fall.",
-    "chord_cols": [
-      0,
-      19
-    ]
-  },
-  {
-    "time": 160.45,
-    "bar_number": 53,
-    "tempo_bpm": 78,
-    "time_signature": "4/4",
-    "chords": [
-      "Gm",
-      "D#"
-    ],
-    "beats": [
-      160.45,
-      161.216,
-      161.959,
-      162.749
-    ],
-    "lyrics": "And the quiet understanding that",
-    "chord_cols": [
-      0,
-      14
-    ]
-  },
-  {
-    "time": 163.51,
-    "bar_number": 54,
-    "tempo_bpm": 78,
-    "time_signature": "4/4",
-    "chords": [
-      "Gm",
-      "D#"
-    ],
-    "beats": [
-      163.515,
-      164.281,
-      165.047,
-      165.814
-    ],
-    "lyrics": "we answer nature's call.",
-    "chord_cols": [
-      0,
-      10
-    ]
-  },
-  {
-    "time": 166.58,
-    "bar_number": 55,
-    "tempo_bpm": 79,
-    "time_signature": "4/4",
-    "chords": [
-      "D#",
-      "Gm"
-    ],
-    "beats": [
-      166.58,
-      167.346,
-      168.089,
-      168.879
-    ],
-    "lyrics": "Footprints in the dust,",
-    "chord_cols": [
-      0,
-      14
-    ]
-  },
-  {
-    "time": 169.62,
-    "bar_number": 56,
-    "tempo_bpm": 78,
-    "time_signature": "4/4",
-    "chords": [
-      "D#",
-      "Gm"
-    ],
-    "beats": [
-      169.622,
-      170.411,
-      171.154,
-      171.944
-    ],
-    "lyrics": "where my old friends used to roam.",
-    "chord_cols": [
-      0,
-      21
-    ]
-  },
-  {
-    "time": 172.69,
-    "bar_number": 57,
-    "tempo_bpm": 78,
-    "time_signature": "4/4",
-    "chords": [
-      "Gm"
-    ],
-    "beats": [
-      172.687,
-      173.476,
-      174.243,
-      175.009
-    ],
-    "lyrics": "Just the quiet of the homestead.",
-    "chord_cols": [
-      0
-    ]
-  },
-  {
-    "time": 175.78,
-    "bar_number": 58,
-    "tempo_bpm": 78,
-    "time_signature": "4/4",
-    "chords": [
-      "Gm",
-      "D#"
-    ],
-    "beats": [
-      175.775,
-      176.565,
-      177.308,
-      178.097
-    ],
-    "lyrics": "A long, long way from home.",
     "chord_cols": [
       0,
       18
-    ]
-  },
-  {
-    "time": 178.84,
-    "bar_number": 59,
-    "tempo_bpm": 78,
-    "time_signature": "4/4",
-    "chords": [
-      "D#",
-      "F"
     ],
     "beats": [
-      178.84,
-      179.63,
-      180.396,
-      181.162
+      132.16798185941042,
+      132.91102040816327,
+      133.67727891156463,
+      134.443537414966
     ],
-    "lyrics": "Every sunrise, every sunset.",
-    "chord_cols": [
-      0,
-      15
+    "lyrics": "They don't fill   the empty spots,",
+    "words": [
+      {
+        "word": "They",
+        "start": 132.729,
+        "end": 133.04,
+        "col": 0
+      },
+      {
+        "word": "don't",
+        "start": 133.04,
+        "end": 133.4,
+        "col": 5
+      },
+      {
+        "word": "fill",
+        "start": 133.4,
+        "end": 133.6,
+        "col": 11
+      },
+      {
+        "word": "the",
+        "start": 133.6,
+        "end": 134.2,
+        "col": 18
+      },
+      {
+        "word": "empty",
+        "start": 134.2,
+        "end": 134.6,
+        "col": 22
+      },
+      {
+        "word": "spots,",
+        "start": 134.6,
+        "end": 135.32,
+        "col": 28
+      }
     ]
   },
   {
-    "time": 181.93,
-    "bar_number": 60,
-    "tempo_bpm": 78,
-    "time_signature": "4/4",
-    "chords": [
-      "F",
-      "Gm"
-    ],
-    "beats": [
-      181.928,
-      182.718,
-      183.484,
-      184.25
-    ],
-    "lyrics": "Tells me years are moving fast.",
-    "chord_cols": [
-      0,
-      20
-    ]
-  },
-  {
-    "time": 184.99,
-    "bar_number": 61,
-    "tempo_bpm": 78,
-    "time_signature": "4/4",
-    "chords": [
-      "Gm"
-    ],
-    "beats": [
-      184.993,
-      185.783,
-      186.526,
-      187.292
-    ],
-    "lyrics": "And the love for loyal creatures",
-    "chord_cols": [
-      0
-    ]
-  },
-  {
-    "time": 188.06,
-    "bar_number": 62,
+    "time": 135.20979591836735,
+    "bar_number": 45,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
       "Gm",
       "Fm"
     ],
-    "beats": [
-      188.058,
-      188.848,
-      189.591,
-      190.357
-    ],
-    "lyrics": "is a bond that's built to last.",
     "chord_cols": [
       0,
-      15
+      16
+    ],
+    "beats": [
+      135.20979591836735,
+      135.9760544217687,
+      136.74231292517007,
+      137.4853514739229
+    ],
+    "lyrics": "but they help   this old heart try.",
+    "words": [
+      {
+        "word": "but",
+        "start": 135.6,
+        "end": 136.04,
+        "col": 0
+      },
+      {
+        "word": "they",
+        "start": 136.04,
+        "end": 136.34,
+        "col": 4
+      },
+      {
+        "word": "help",
+        "start": 136.34,
+        "end": 136.76,
+        "col": 9
+      },
+      {
+        "word": "this",
+        "start": 136.76,
+        "end": 137.16,
+        "col": 16
+      },
+      {
+        "word": "old",
+        "start": 137.17,
+        "end": 137.54,
+        "col": 21
+      },
+      {
+        "word": "heart",
+        "start": 137.54,
+        "end": 137.98,
+        "col": 25
+      },
+      {
+        "word": "try.",
+        "start": 137.98,
+        "end": 138.78,
+        "col": 31
+      }
     ]
   },
   {
-    "time": 191.12,
-    "bar_number": 63,
+    "time": 138.2748299319728,
+    "bar_number": 46,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm",
+      "D#"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      138.2748299319728,
+      139.04108843537415,
+      139.8073469387755,
+      140.55038548752833
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 141.33986394557823,
+    "bar_number": 47,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "D#",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      30
+    ],
+    "beats": [
+      141.33986394557823,
+      142.08290249433108,
+      142.84916099773244,
+      143.6154195011338
+    ],
+    "lyrics": "Learned a lot from faithful   hounds about",
+    "words": [
+      {
+        "word": "Learned",
+        "start": 141.129,
+        "end": 142.0,
+        "col": 0
+      },
+      {
+        "word": "a",
+        "start": 142.0,
+        "end": 142.05,
+        "col": 8
+      },
+      {
+        "word": "lot",
+        "start": 142.05,
+        "end": 142.22,
+        "col": 10
+      },
+      {
+        "word": "from",
+        "start": 142.22,
+        "end": 142.52,
+        "col": 14
+      },
+      {
+        "word": "faithful",
+        "start": 142.52,
+        "end": 143.04,
+        "col": 19
+      },
+      {
+        "word": "hounds",
+        "start": 143.189,
+        "end": 143.76,
+        "col": 30
+      },
+      {
+        "word": "about",
+        "start": 143.76,
+        "end": 144.04,
+        "col": 37
+      }
+    ]
+  },
+  {
+    "time": 144.38167800453516,
+    "bar_number": 48,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
       "Fm",
-      "C"
+      "Gm"
     ],
-    "beats": [
-      191.123,
-      191.913,
-      192.656,
-      193.445
-    ],
-    "lyrics": "Bond that's built to last.",
     "chord_cols": [
       0,
-      12
+      18
+    ],
+    "beats": [
+      144.38167800453516,
+      145.14793650793652,
+      145.91419501133788,
+      146.68045351473924
+    ],
+    "lyrics": "living, loving,   letting go.",
+    "words": [
+      {
+        "word": "living,",
+        "start": 144.32,
+        "end": 144.64,
+        "col": 0
+      },
+      {
+        "word": "loving,",
+        "start": 144.64,
+        "end": 145.879,
+        "col": 8
+      },
+      {
+        "word": "letting",
+        "start": 145.879,
+        "end": 146.14,
+        "col": 18
+      },
+      {
+        "word": "go.",
+        "start": 146.14,
+        "end": 146.72,
+        "col": 26
+      }
     ]
   },
   {
-    "time": 194.19,
+    "time": 147.4467120181406,
+    "bar_number": 49,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "Gm"
+    ],
+    "chord_cols": [
+      0,
+      23
+    ],
+    "beats": [
+      147.4467120181406,
+      148.21297052154196,
+      148.97922902494332,
+      149.74548752834468
+    ],
+    "lyrics": "Every scratch behind   the ears, a",
+    "words": [
+      {
+        "word": "Every",
+        "start": 147.28,
+        "end": 148.04,
+        "col": 0
+      },
+      {
+        "word": "scratch",
+        "start": 148.04,
+        "end": 148.36,
+        "col": 6
+      },
+      {
+        "word": "behind",
+        "start": 148.36,
+        "end": 148.92,
+        "col": 14
+      },
+      {
+        "word": "the",
+        "start": 148.92,
+        "end": 149.3,
+        "col": 23
+      },
+      {
+        "word": "ears,",
+        "start": 149.3,
+        "end": 149.8,
+        "col": 27
+      },
+      {
+        "word": "a",
+        "start": 149.99,
+        "end": 150.42,
+        "col": 33
+      }
+    ]
+  },
+  {
+    "time": 150.53496598639455,
+    "bar_number": 50,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm",
+      "D#"
+    ],
+    "chord_cols": [
+      0,
+      27
+    ],
+    "beats": [
+      150.53496598639455,
+      151.2780045351474,
+      152.04426303854876,
+      152.81052154195012
+    ],
+    "lyrics": "comfort in life's steady   flow.",
+    "words": [
+      {
+        "word": "comfort",
+        "start": 150.42,
+        "end": 150.8,
+        "col": 0
+      },
+      {
+        "word": "in",
+        "start": 150.8,
+        "end": 151.28,
+        "col": 8
+      },
+      {
+        "word": "life's",
+        "start": 151.28,
+        "end": 151.64,
+        "col": 11
+      },
+      {
+        "word": "steady",
+        "start": 151.64,
+        "end": 152.22,
+        "col": 18
+      },
+      {
+        "word": "flow.",
+        "start": 152.22,
+        "end": 152.68,
+        "col": 27
+      }
+    ]
+  },
+  {
+    "time": 153.57678004535148,
+    "bar_number": 51,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "D#",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      23
+    ],
+    "beats": [
+      153.57678004535148,
+      154.34303854875284,
+      155.1092970521542,
+      155.87555555555556
+    ],
+    "lyrics": "This whole place, it   sees the seasons,",
+    "words": [
+      {
+        "word": "This",
+        "start": 153.72,
+        "end": 154.1,
+        "col": 0
+      },
+      {
+        "word": "whole",
+        "start": 154.1,
+        "end": 154.22,
+        "col": 5
+      },
+      {
+        "word": "place,",
+        "start": 154.22,
+        "end": 154.52,
+        "col": 11
+      },
+      {
+        "word": "it",
+        "start": 154.59,
+        "end": 154.965,
+        "col": 18
+      },
+      {
+        "word": "sees",
+        "start": 154.965,
+        "end": 155.34,
+        "col": 23
+      },
+      {
+        "word": "the",
+        "start": 155.34,
+        "end": 155.56,
+        "col": 28
+      },
+      {
+        "word": "seasons,",
+        "start": 155.56,
+        "end": 156.54,
+        "col": 32
+      }
+    ]
+  },
+  {
+    "time": 156.64181405895692,
+    "bar_number": 52,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "Gm"
+    ],
+    "chord_cols": [
+      0,
+      25
+    ],
+    "beats": [
+      156.64181405895692,
+      157.40807256235829,
+      158.17433106575965,
+      158.91736961451247
+    ],
+    "lyrics": "new seeds planted, old   ones fall.",
+    "words": [
+      {
+        "word": "new",
+        "start": 156.54,
+        "end": 156.76,
+        "col": 0
+      },
+      {
+        "word": "seeds",
+        "start": 156.76,
+        "end": 157.16,
+        "col": 4
+      },
+      {
+        "word": "planted,",
+        "start": 157.16,
+        "end": 157.6,
+        "col": 10
+      },
+      {
+        "word": "old",
+        "start": 157.69,
+        "end": 158.14,
+        "col": 19
+      },
+      {
+        "word": "ones",
+        "start": 158.14,
+        "end": 158.7,
+        "col": 25
+      },
+      {
+        "word": "fall.",
+        "start": 158.7,
+        "end": 159.28,
+        "col": 30
+      }
+    ]
+  },
+  {
+    "time": 159.68362811791383,
+    "bar_number": 53,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm"
+    ],
+    "chord_cols": [
+      0
+    ],
+    "beats": [
+      159.68362811791383,
+      160.4498866213152,
+      161.21614512471655,
+      161.9591836734694
+    ],
+    "lyrics": "And the quiet understanding that",
+    "words": [
+      {
+        "word": "And",
+        "start": 159.639,
+        "end": 160.16,
+        "col": 0
+      },
+      {
+        "word": "the",
+        "start": 160.16,
+        "end": 160.3,
+        "col": 4
+      },
+      {
+        "word": "quiet",
+        "start": 160.3,
+        "end": 160.78,
+        "col": 8
+      },
+      {
+        "word": "understanding",
+        "start": 160.78,
+        "end": 161.84,
+        "col": 14
+      },
+      {
+        "word": "that",
+        "start": 162.48,
+        "end": 162.92,
+        "col": 28
+      }
+    ]
+  },
+  {
+    "time": 162.74866213151927,
+    "bar_number": 54,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm"
+    ],
+    "chord_cols": [
+      0
+    ],
+    "beats": [
+      162.74866213151927,
+      163.49170068027212,
+      164.23473922902494,
+      165.0009977324263
+    ],
+    "lyrics": "we answer nature's call.",
+    "words": [
+      {
+        "word": "we",
+        "start": 162.949,
+        "end": 163.26,
+        "col": 0
+      },
+      {
+        "word": "answer",
+        "start": 163.26,
+        "end": 163.78,
+        "col": 3
+      },
+      {
+        "word": "nature's",
+        "start": 163.78,
+        "end": 164.96,
+        "col": 10
+      },
+      {
+        "word": "call.",
+        "start": 164.96,
+        "end": 165.24,
+        "col": 19
+      }
+    ]
+  },
+  {
+    "time": 165.76725623582766,
+    "bar_number": 55,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm",
+      "D#"
+    ],
+    "chord_cols": [
+      0,
+      12
+    ],
+    "beats": [
+      165.76725623582766,
+      166.53351473922902,
+      167.29977324263038,
+      168.06603174603174
+    ],
+    "lyrics": "            Footprints in the dust,",
+    "words": [
+      {
+        "word": "Footprints",
+        "start": 167.12,
+        "end": 167.84,
+        "col": 12
+      },
+      {
+        "word": "in",
+        "start": 167.84,
+        "end": 168.34,
+        "col": 23
+      },
+      {
+        "word": "the",
+        "start": 168.34,
+        "end": 168.58,
+        "col": 26
+      },
+      {
+        "word": "dust,",
+        "start": 168.58,
+        "end": 169.14,
+        "col": 30
+      }
+    ]
+  },
+  {
+    "time": 168.87873015873015,
+    "bar_number": 56,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "D#",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      14
+    ],
+    "beats": [
+      168.87873015873015,
+      169.621768707483,
+      170.41124716553287,
+      171.15428571428572
+    ],
+    "lyrics": "where my      old friends used to roam.",
+    "words": [
+      {
+        "word": "where",
+        "start": 169.479,
+        "end": 170.1,
+        "col": 0
+      },
+      {
+        "word": "my",
+        "start": 170.1,
+        "end": 170.32,
+        "col": 6
+      },
+      {
+        "word": "old",
+        "start": 170.32,
+        "end": 170.6,
+        "col": 14
+      },
+      {
+        "word": "friends",
+        "start": 170.6,
+        "end": 170.94,
+        "col": 18
+      },
+      {
+        "word": "used",
+        "start": 171.05,
+        "end": 171.36,
+        "col": 26
+      },
+      {
+        "word": "to",
+        "start": 171.36,
+        "end": 171.7,
+        "col": 31
+      },
+      {
+        "word": "roam.",
+        "start": 171.7,
+        "end": 172.14,
+        "col": 34
+      }
+    ]
+  },
+  {
+    "time": 171.9437641723356,
+    "bar_number": 57,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "Gm"
+    ],
+    "chord_cols": [
+      0,
+      14
+    ],
+    "beats": [
+      171.9437641723356,
+      172.68680272108844,
+      173.4762811791383,
+      174.21931972789116
+    ],
+    "lyrics": "Just the      quiet of the",
+    "words": [
+      {
+        "word": "Just",
+        "start": 172.9,
+        "end": 173.18,
+        "col": 0
+      },
+      {
+        "word": "the",
+        "start": 173.18,
+        "end": 173.34,
+        "col": 5
+      },
+      {
+        "word": "quiet",
+        "start": 173.34,
+        "end": 173.84,
+        "col": 14
+      },
+      {
+        "word": "of",
+        "start": 173.84,
+        "end": 174.28,
+        "col": 20
+      },
+      {
+        "word": "the",
+        "start": 174.28,
+        "end": 174.74,
+        "col": 23
+      }
+    ]
+  },
+  {
+    "time": 175.00879818594103,
+    "bar_number": 58,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm"
+    ],
+    "chord_cols": [
+      0
+    ],
+    "beats": [
+      175.00879818594103,
+      175.7750566893424,
+      176.5645351473923,
+      177.3075736961451
+    ],
+    "lyrics": "homestead. A long, long way from home.",
+    "words": [
+      {
+        "word": "homestead.",
+        "start": 174.74,
+        "end": 175.64,
+        "col": 0
+      },
+      {
+        "word": "A",
+        "start": 176.42,
+        "end": 176.47,
+        "col": 11
+      },
+      {
+        "word": "long,",
+        "start": 176.47,
+        "end": 176.96,
+        "col": 13
+      },
+      {
+        "word": "long",
+        "start": 176.96,
+        "end": 177.16,
+        "col": 19
+      },
+      {
+        "word": "way",
+        "start": 177.16,
+        "end": 177.48,
+        "col": 24
+      },
+      {
+        "word": "from",
+        "start": 177.48,
+        "end": 177.8,
+        "col": 28
+      },
+      {
+        "word": "home.",
+        "start": 177.8,
+        "end": 178.22,
+        "col": 33
+      }
+    ]
+  },
+  {
+    "time": 178.097052154195,
+    "bar_number": 59,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm",
+      "D#"
+    ],
+    "chord_cols": [
+      0,
+      17
+    ],
+    "beats": [
+      178.097052154195,
+      178.84009070294783,
+      179.62956916099773,
+      180.3958276643991
+    ],
+    "lyrics": "Every sunrise,   every sunset.",
+    "words": [
+      {
+        "word": "Every",
+        "start": 178.86,
+        "end": 179.26,
+        "col": 0
+      },
+      {
+        "word": "sunrise,",
+        "start": 179.26,
+        "end": 180.4,
+        "col": 6
+      },
+      {
+        "word": "every",
+        "start": 180.4,
+        "end": 180.72,
+        "col": 17
+      },
+      {
+        "word": "sunset.",
+        "start": 180.72,
+        "end": 182.089,
+        "col": 23
+      }
+    ]
+  },
+  {
+    "time": 181.185306122449,
+    "bar_number": 60,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "D#",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      14
+    ],
+    "beats": [
+      181.185306122449,
+      181.9283446712018,
+      182.7178231292517,
+      183.48408163265307
+    ],
+    "lyrics": "Tells me      years are moving fast.",
+    "words": [
+      {
+        "word": "Tells",
+        "start": 182.3,
+        "end": 182.42,
+        "col": 0
+      },
+      {
+        "word": "me",
+        "start": 182.42,
+        "end": 182.6,
+        "col": 6
+      },
+      {
+        "word": "years",
+        "start": 182.6,
+        "end": 183.06,
+        "col": 14
+      },
+      {
+        "word": "are",
+        "start": 183.06,
+        "end": 183.16,
+        "col": 20
+      },
+      {
+        "word": "moving",
+        "start": 183.16,
+        "end": 183.46,
+        "col": 24
+      },
+      {
+        "word": "fast.",
+        "start": 183.46,
+        "end": 184.52,
+        "col": 31
+      }
+    ]
+  },
+  {
+    "time": 184.25034013605443,
+    "bar_number": 61,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "Gm"
+    ],
+    "chord_cols": [
+      0,
+      14
+    ],
+    "beats": [
+      184.25034013605443,
+      184.99337868480725,
+      185.78285714285715,
+      186.52589569160997
+    ],
+    "lyrics": "And the       love for loyal creatures",
+    "words": [
+      {
+        "word": "And",
+        "start": 185.2,
+        "end": 185.46,
+        "col": 0
+      },
+      {
+        "word": "the",
+        "start": 185.46,
+        "end": 185.62,
+        "col": 4
+      },
+      {
+        "word": "love",
+        "start": 185.62,
+        "end": 185.96,
+        "col": 14
+      },
+      {
+        "word": "for",
+        "start": 185.96,
+        "end": 186.26,
+        "col": 19
+      },
+      {
+        "word": "loyal",
+        "start": 186.26,
+        "end": 186.62,
+        "col": 23
+      },
+      {
+        "word": "creatures",
+        "start": 186.62,
+        "end": 187.66,
+        "col": 29
+      }
+    ]
+  },
+  {
+    "time": 187.31537414965987,
+    "bar_number": 62,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm"
+    ],
+    "chord_cols": [
+      0
+    ],
+    "beats": [
+      187.31537414965987,
+      188.0584126984127,
+      188.8478911564626,
+      189.59092970521542
+    ],
+    "lyrics": "is a bond that's built to last.",
+    "words": [
+      {
+        "word": "is",
+        "start": 188.099,
+        "end": 188.58,
+        "col": 0
+      },
+      {
+        "word": "a",
+        "start": 188.58,
+        "end": 188.84,
+        "col": 3
+      },
+      {
+        "word": "bond",
+        "start": 188.84,
+        "end": 189.06,
+        "col": 5
+      },
+      {
+        "word": "that's",
+        "start": 189.06,
+        "end": 189.48,
+        "col": 10
+      },
+      {
+        "word": "built",
+        "start": 189.48,
+        "end": 189.78,
+        "col": 17
+      },
+      {
+        "word": "to",
+        "start": 189.78,
+        "end": 190.08,
+        "col": 23
+      },
+      {
+        "word": "last.",
+        "start": 190.08,
+        "end": 190.44,
+        "col": 26
+      }
+    ]
+  },
+  {
+    "time": 190.38040816326532,
+    "bar_number": 63,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm"
+    ],
+    "chord_cols": [
+      0
+    ],
+    "beats": [
+      190.38040816326532,
+      191.12344671201814,
+      191.91292517006804,
+      192.65596371882086
+    ],
+    "lyrics": "Bond that's built to",
+    "words": [
+      {
+        "word": "Bond",
+        "start": 191.28,
+        "end": 191.767,
+        "col": 0
+      },
+      {
+        "word": "that's",
+        "start": 191.767,
+        "end": 192.254,
+        "col": 5
+      },
+      {
+        "word": "built",
+        "start": 192.254,
+        "end": 192.74,
+        "col": 12
+      },
+      {
+        "word": "to",
+        "start": 192.74,
+        "end": 193.12,
+        "col": 18
+      }
+    ]
+  },
+  {
+    "time": 193.44544217687076,
     "bar_number": 64,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
-      "C"
+      "Gm",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      15
     ],
     "beats": [
-      194.188,
-      194.978,
-      195.721,
-      196.487
+      193.44544217687076,
+      194.18848072562358,
+      194.97795918367348,
+      195.7209977324263
     ],
-    "lyrics": "Yeah.",
-    "chord_cols": [
-      0
+    "lyrics": "last. Yeah.",
+    "words": [
+      {
+        "word": "last.",
+        "start": 193.12,
+        "end": 194.489,
+        "col": 0
+      },
+      {
+        "word": "Yeah.",
+        "start": 194.489,
+        "end": 195.279,
+        "col": 6
+      }
     ]
   },
   {
-    "time": 197.25,
+    "time": 196.48725623582766,
     "bar_number": 65,
-    "tempo_bpm": 79,
+    "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
-      "C"
+      "Fm",
+      "Gm"
+    ],
+    "chord_cols": [
+      0,
+      14
     ],
     "beats": [
-      197.254,
-      198.02,
-      198.763,
-      199.529
+      196.48725623582766,
+      197.25351473922902,
+      198.01977324263038,
+      198.76281179138323
     ],
-    "lyrics": "Through the years that roll on by.",
-    "chord_cols": [
-      0
+    "lyrics": "Through the   years that roll on",
+    "words": [
+      {
+        "word": "Through",
+        "start": 197.409,
+        "end": 197.74,
+        "col": 0
+      },
+      {
+        "word": "the",
+        "start": 197.74,
+        "end": 197.94,
+        "col": 8
+      },
+      {
+        "word": "years",
+        "start": 197.94,
+        "end": 198.3,
+        "col": 14
+      },
+      {
+        "word": "that",
+        "start": 198.3,
+        "end": 198.58,
+        "col": 20
+      },
+      {
+        "word": "roll",
+        "start": 198.58,
+        "end": 198.82,
+        "col": 25
+      },
+      {
+        "word": "on",
+        "start": 198.82,
+        "end": 199.52,
+        "col": 30
+      }
     ]
   },
   {
-    "time": 200.3,
+    "time": 199.5290702947846,
     "bar_number": 66,
     "tempo_bpm": 78,
     "time_signature": "4/4",
     "chords": [
-      "C"
+      "Gm"
     ],
-    "beats": [
-      200.295,
-      201.062,
-      201.829,
-      202.596
-    ],
-    "lyrics": "Beneath this country sky.",
     "chord_cols": [
       0
+    ],
+    "beats": [
+      199.5290702947846,
+      200.29532879818595,
+      201.0615873015873,
+      201.82784580498867
+    ],
+    "lyrics": "by. Beneath this country sky.",
+    "words": [
+      {
+        "word": "by.",
+        "start": 199.52,
+        "end": 199.92,
+        "col": 0
+      },
+      {
+        "word": "Beneath",
+        "start": 200.309,
+        "end": 201.16,
+        "col": 4
+      },
+      {
+        "word": "this",
+        "start": 201.16,
+        "end": 201.74,
+        "col": 12
+      },
+      {
+        "word": "country",
+        "start": 201.74,
+        "end": 202.3,
+        "col": 17
+      },
+      {
+        "word": "sky.",
+        "start": 202.3,
+        "end": 202.94,
+        "col": 25
+      }
     ]
+  },
+  {
+    "time": 202.59410430839003,
+    "bar_number": 67,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      202.59410430839003,
+      203.3603628117914,
+      204.12662131519275,
+      204.8928798185941
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 205.65913832199547,
+    "bar_number": 68,
+    "tempo_bpm": 78,
+    "time_signature": "4/4",
+    "chords": [
+      "Gm",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      205.65913832199547,
+      206.42539682539683,
+      207.1916553287982,
+      207.95791383219955
+    ],
+    "lyrics": "",
+    "words": []
   }
 ]
