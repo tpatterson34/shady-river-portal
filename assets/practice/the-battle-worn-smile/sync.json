@@ -8,13 +8,18 @@
       "B",
       "Am"
     ],
+    "chord_cols": [
+      0,
+      8
+    ],
     "beats": [
       0.5340589569159384,
       1.2074376417231996,
       1.8808163265304607,
       2.554195011337722
     ],
-    "lyrics": ""
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 3.227573696144983,
@@ -25,13 +30,18 @@
       "Bm",
       "F#m"
     ],
+    "chord_cols": [
+      0,
+      8
+    ],
     "beats": [
       3.227573696144983,
       3.900952380952244,
       4.574331065759505,
       5.2477097505667665
     ],
-    "lyrics": ""
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 5.921088435374028,
@@ -42,13 +52,25 @@
       "B",
       "Am"
     ],
+    "chord_cols": [
+      0,
+      12
+    ],
     "beats": [
       5.921088435374028,
       6.594467120181289,
       7.26784580498855,
       7.941224489795811
     ],
-    "lyrics": "."
+    "lyrics": "            .",
+    "words": [
+      {
+        "word": ".",
+        "start": 7.939,
+        "end": 8.039,
+        "col": 12
+      }
+    ]
   },
   {
     "time": 8.614603174603072,
@@ -58,13 +80,30 @@
     "chords": [
       "Bm"
     ],
+    "chord_cols": [
+      0
+    ],
     "beats": [
       8.614603174603072,
       9.287981859410333,
       9.961360544217595,
       10.634739229024856
     ],
-    "lyrics": "Another interview,"
+    "lyrics": "          Another interview,",
+    "words": [
+      {
+        "word": "Another",
+        "start": 9.789,
+        "end": 10.3,
+        "col": 10
+      },
+      {
+        "word": "interview,",
+        "start": 10.3,
+        "end": 11.0,
+        "col": 18
+      }
+    ]
   },
   {
     "time": 11.308117913832117,
@@ -74,13 +113,54 @@
     "chords": [
       "Bm"
     ],
+    "chord_cols": [
+      0
+    ],
     "beats": [
       11.308117913832117,
       11.981496598639378,
       12.65487528344664,
       13.3282539682539
     ],
-    "lyrics": "polite and cold."
+    "lyrics": "polite and cold. Another promise whispered",
+    "words": [
+      {
+        "word": "polite",
+        "start": 11.5,
+        "end": 11.82,
+        "col": 0
+      },
+      {
+        "word": "and",
+        "start": 11.82,
+        "end": 12.08,
+        "col": 7
+      },
+      {
+        "word": "cold.",
+        "start": 12.08,
+        "end": 12.4,
+        "col": 11
+      },
+      {
+        "word": "Another",
+        "start": 12.78,
+        "end": 12.96,
+        "col": 17
+      },
+      {
+        "word": "promise",
+        "start": 12.96,
+        "end": 13.58,
+        "col": 25
+      },
+      {
+        "word": "whispered",
+        "start": 13.58,
+        "end": 14.84,
+        "col": 33
+      }
+    ]
   },
   {
     "time": 14.001632653061161,
@@ -91,13 +171,37 @@
       "Bm",
       "G"
     ],
+    "chord_cols": [
+      0,
+      14
+    ],
     "beats": [
       14.001632653061161,
       14.675011337868423,
       15.348390022675684,
       16.021768707482945
     ],
-    "lyrics": "Another promise whispered low. Another interview,"
+    "lyrics": "low.          Another interview,",
+    "words": [
+      {
+        "word": "low.",
+        "start": 14.84,
+        "end": 15.08,
+        "col": 0
+      },
+      {
+        "word": "Another",
+        "start": 15.32,
+        "end": 15.68,
+        "col": 14
+      },
+      {
+        "word": "interview,",
+        "start": 15.68,
+        "end": 16.46,
+        "col": 22
+      }
+    ]
   },
   {
     "time": 16.695147392290206,
@@ -108,13 +212,49 @@
       "G",
       "Em"
     ],
+    "chord_cols": [
+      0,
+      19
+    ],
     "beats": [
       16.695147392290206,
       17.368526077097467,
       18.04190476190473,
       18.71528344671199
     ],
-    "lyrics": "polite and cold."
+    "lyrics": "polite and cold.   Another promise",
+    "words": [
+      {
+        "word": "polite",
+        "start": 16.98,
+        "end": 17.24,
+        "col": 0
+      },
+      {
+        "word": "and",
+        "start": 17.24,
+        "end": 17.5,
+        "col": 7
+      },
+      {
+        "word": "cold.",
+        "start": 17.5,
+        "end": 17.84,
+        "col": 11
+      },
+      {
+        "word": "Another",
+        "start": 18.18,
+        "end": 18.34,
+        "col": 19
+      },
+      {
+        "word": "promise",
+        "start": 18.34,
+        "end": 19.0,
+        "col": 27
+      }
+    ]
   },
   {
     "time": 19.38866213151925,
@@ -125,13 +265,49 @@
       "Am",
       "F#m"
     ],
+    "chord_cols": [
+      0,
+      17
+    ],
     "beats": [
       19.38866213151925,
       20.062040816326512,
       20.735419501133773,
       21.408798185941034
     ],
-    "lyrics": "Another promise whispered low."
+    "lyrics": "whispered low.   Try to tell",
+    "words": [
+      {
+        "word": "whispered",
+        "start": 19.0,
+        "end": 20.24,
+        "col": 0
+      },
+      {
+        "word": "low.",
+        "start": 20.24,
+        "end": 20.58,
+        "col": 10
+      },
+      {
+        "word": "Try",
+        "start": 20.86,
+        "end": 21.5,
+        "col": 17
+      },
+      {
+        "word": "to",
+        "start": 21.5,
+        "end": 21.74,
+        "col": 21
+      },
+      {
+        "word": "tell",
+        "start": 21.74,
+        "end": 22.22,
+        "col": 24
+      }
+    ]
   },
   {
     "time": 22.082176870748295,
@@ -142,13 +318,61 @@
       "B",
       "Em"
     ],
+    "chord_cols": [
+      0,
+      17
+    ],
     "beats": [
       22.082176870748295,
       22.755555555555556,
       23.42893424036281,
       24.102312925170068
     ],
-    "lyrics": "Try to tell the story told of"
+    "lyrics": "the story told   of how much wisdom",
+    "words": [
+      {
+        "word": "the",
+        "start": 22.22,
+        "end": 22.4,
+        "col": 0
+      },
+      {
+        "word": "story",
+        "start": 22.4,
+        "end": 22.82,
+        "col": 4
+      },
+      {
+        "word": "told",
+        "start": 22.82,
+        "end": 23.46,
+        "col": 10
+      },
+      {
+        "word": "of",
+        "start": 23.46,
+        "end": 23.88,
+        "col": 17
+      },
+      {
+        "word": "how",
+        "start": 23.88,
+        "end": 24.08,
+        "col": 20
+      },
+      {
+        "word": "much",
+        "start": 24.08,
+        "end": 24.46,
+        "col": 24
+      },
+      {
+        "word": "wisdom",
+        "start": 24.46,
+        "end": 24.86,
+        "col": 29
+      }
+    ]
   },
   {
     "time": 24.79891156462585,
@@ -159,13 +383,55 @@
       "Em",
       "G"
     ],
+    "chord_cols": [
+      0,
+      16
+    ],
     "beats": [
       24.79891156462585,
       25.495510204081633,
       26.16888888888889,
       26.865487528344673
     ],
-    "lyrics": "how much wisdom I still know."
+    "lyrics": "I still know.   Saw the young",
+    "words": [
+      {
+        "word": "I",
+        "start": 24.86,
+        "end": 25.26,
+        "col": 0
+      },
+      {
+        "word": "still",
+        "start": 25.26,
+        "end": 25.6,
+        "col": 2
+      },
+      {
+        "word": "know.",
+        "start": 25.6,
+        "end": 26.479,
+        "col": 8
+      },
+      {
+        "word": "Saw",
+        "start": 26.479,
+        "end": 26.98,
+        "col": 16
+      },
+      {
+        "word": "the",
+        "start": 26.98,
+        "end": 27.28,
+        "col": 20
+      },
+      {
+        "word": "young",
+        "start": 27.28,
+        "end": 27.56,
+        "col": 24
+      }
+    ]
   },
   {
     "time": 27.562086167800455,
@@ -175,13 +441,48 @@
     "chords": [
       "G"
     ],
+    "chord_cols": [
+      0
+    ],
     "beats": [
       27.562086167800455,
       28.258684807256238,
       28.93206349206349,
       29.60544217687075
     ],
-    "lyrics": "Saw the young eyes glazing over,"
+    "lyrics": "eyes glazing over, watched another",
+    "words": [
+      {
+        "word": "eyes",
+        "start": 27.56,
+        "end": 28.04,
+        "col": 0
+      },
+      {
+        "word": "glazing",
+        "start": 28.04,
+        "end": 28.64,
+        "col": 5
+      },
+      {
+        "word": "over,",
+        "start": 28.64,
+        "end": 29.16,
+        "col": 13
+      },
+      {
+        "word": "watched",
+        "start": 29.259,
+        "end": 29.94,
+        "col": 19
+      },
+      {
+        "word": "another",
+        "start": 29.94,
+        "end": 30.2,
+        "col": 27
+      }
+    ]
   },
   {
     "time": 30.278820861678003,
@@ -192,13 +493,49 @@
       "G",
       "F#m"
     ],
+    "chord_cols": [
+      0,
+      18
+    ],
     "beats": [
       30.278820861678003,
       30.975419501133786,
       31.648798185941043,
       32.3221768707483
     ],
-    "lyrics": "watched another chance just go."
+    "lyrics": "chance just go.   Got the",
+    "words": [
+      {
+        "word": "chance",
+        "start": 30.2,
+        "end": 30.78,
+        "col": 0
+      },
+      {
+        "word": "just",
+        "start": 30.78,
+        "end": 31.26,
+        "col": 7
+      },
+      {
+        "word": "go.",
+        "start": 31.26,
+        "end": 32.14,
+        "col": 12
+      },
+      {
+        "word": "Got",
+        "start": 32.14,
+        "end": 32.64,
+        "col": 18
+      },
+      {
+        "word": "the",
+        "start": 32.64,
+        "end": 32.9,
+        "col": 22
+      }
+    ]
   },
   {
     "time": 32.995555555555555,
@@ -209,13 +546,49 @@
       "Em",
       "Bm"
     ],
+    "chord_cols": [
+      0,
+      20
+    ],
     "beats": [
       32.995555555555555,
       33.69215419501134,
       34.38875283446712,
       35.03891156462585
     ],
-    "lyrics": "Got the battle-worn smile now,"
+    "lyrics": "battle-worn smile   now, that quiet",
+    "words": [
+      {
+        "word": "battle-worn",
+        "start": 32.9,
+        "end": 33.88,
+        "col": 0
+      },
+      {
+        "word": "smile",
+        "start": 33.88,
+        "end": 34.5,
+        "col": 12
+      },
+      {
+        "word": "now,",
+        "start": 34.5,
+        "end": 35.1,
+        "col": 20
+      },
+      {
+        "word": "that",
+        "start": 35.18,
+        "end": 35.46,
+        "col": 25
+      },
+      {
+        "word": "quiet",
+        "start": 35.46,
+        "end": 35.9,
+        "col": 30
+      }
+    ]
   },
   {
     "time": 35.735510204081635,
@@ -226,13 +599,49 @@
       "Bm",
       "Am"
     ],
+    "chord_cols": [
+      0,
+      19
+    ],
     "beats": [
       35.735510204081635,
       36.40888888888889,
       37.10548752834467,
       37.755646258503404
     ],
-    "lyrics": "that quiet strength I wear."
+    "lyrics": "strength I wear.   Facing down",
+    "words": [
+      {
+        "word": "strength",
+        "start": 35.9,
+        "end": 36.4,
+        "col": 0
+      },
+      {
+        "word": "I",
+        "start": 36.4,
+        "end": 36.74,
+        "col": 9
+      },
+      {
+        "word": "wear.",
+        "start": 36.74,
+        "end": 37.16,
+        "col": 11
+      },
+      {
+        "word": "Facing",
+        "start": 37.38,
+        "end": 38.04,
+        "col": 19
+      },
+      {
+        "word": "down",
+        "start": 38.04,
+        "end": 38.54,
+        "col": 26
+      }
+    ]
   },
   {
     "time": 38.45224489795918,
@@ -243,13 +652,43 @@
       "Am",
       "Bm"
     ],
+    "chord_cols": [
+      0,
+      22
+    ],
     "beats": [
       38.45224489795918,
       39.12562358276644,
       39.7990022675737,
       40.47238095238095
     ],
-    "lyrics": "Facing down the empty promises,"
+    "lyrics": "the empty promises,   the",
+    "words": [
+      {
+        "word": "the",
+        "start": 38.54,
+        "end": 38.9,
+        "col": 0
+      },
+      {
+        "word": "empty",
+        "start": 38.9,
+        "end": 39.26,
+        "col": 4
+      },
+      {
+        "word": "promises,",
+        "start": 39.26,
+        "end": 40.14,
+        "col": 10
+      },
+      {
+        "word": "the",
+        "start": 40.61,
+        "end": 41.04,
+        "col": 22
+      }
+    ]
   },
   {
     "time": 41.12253968253968,
@@ -260,13 +699,61 @@
       "Bm",
       "E"
     ],
+    "chord_cols": [
+      0,
+      26
+    ],
     "beats": [
       41.12253968253968,
       41.81913832199547,
       42.49251700680272,
       43.1891156462585
     ],
-    "lyrics": "the judgment in their empty stare."
+    "lyrics": "judgment in their empty   stare. Still got",
+    "words": [
+      {
+        "word": "judgment",
+        "start": 41.04,
+        "end": 41.44,
+        "col": 0
+      },
+      {
+        "word": "in",
+        "start": 41.44,
+        "end": 41.84,
+        "col": 9
+      },
+      {
+        "word": "their",
+        "start": 41.84,
+        "end": 42.2,
+        "col": 12
+      },
+      {
+        "word": "empty",
+        "start": 42.2,
+        "end": 42.66,
+        "col": 18
+      },
+      {
+        "word": "stare.",
+        "start": 42.66,
+        "end": 43.1,
+        "col": 26
+      },
+      {
+        "word": "Still",
+        "start": 43.109,
+        "end": 43.44,
+        "col": 33
+      },
+      {
+        "word": "got",
+        "start": 43.44,
+        "end": 43.72,
+        "col": 39
+      }
+    ]
   },
   {
     "time": 43.83927437641724,
@@ -277,13 +764,61 @@
       "E",
       "Bm"
     ],
+    "chord_cols": [
+      0,
+      23
+    ],
     "beats": [
       43.83927437641724,
       44.535873015873015,
       45.20925170068027,
       45.88263038548753
     ],
-    "lyrics": "Still got fire in this spirit."
+    "lyrics": "fire in this spirit.   Still got purpose",
+    "words": [
+      {
+        "word": "fire",
+        "start": 43.72,
+        "end": 44.34,
+        "col": 0
+      },
+      {
+        "word": "in",
+        "start": 44.34,
+        "end": 44.66,
+        "col": 5
+      },
+      {
+        "word": "this",
+        "start": 44.66,
+        "end": 44.78,
+        "col": 8
+      },
+      {
+        "word": "spirit.",
+        "start": 44.78,
+        "end": 45.32,
+        "col": 13
+      },
+      {
+        "word": "Still",
+        "start": 45.49,
+        "end": 45.94,
+        "col": 23
+      },
+      {
+        "word": "got",
+        "start": 45.94,
+        "end": 46.2,
+        "col": 29
+      },
+      {
+        "word": "purpose",
+        "start": 46.2,
+        "end": 46.71,
+        "col": 33
+      }
+    ]
   },
   {
     "time": 46.556009070294785,
@@ -294,13 +829,37 @@
       "Bm",
       "E"
     ],
+    "chord_cols": [
+      0,
+      15
+    ],
     "beats": [
       46.556009070294785,
       47.25260770975056,
       47.925986394557825,
       48.59936507936508
     ],
-    "lyrics": "Still got purpose deep inside."
+    "lyrics": "deep inside.   Yeah,",
+    "words": [
+      {
+        "word": "deep",
+        "start": 46.71,
+        "end": 47.22,
+        "col": 0
+      },
+      {
+        "word": "inside.",
+        "start": 47.22,
+        "end": 47.98,
+        "col": 5
+      },
+      {
+        "word": "Yeah,",
+        "start": 48.24,
+        "end": 49.069,
+        "col": 15
+      }
+    ]
   },
   {
     "time": 49.295963718820865,
@@ -311,13 +870,49 @@
       "E",
       "G"
     ],
+    "chord_cols": [
+      0,
+      24
+    ],
     "beats": [
       49.295963718820865,
       49.96934240362812,
       50.6659410430839,
       51.33931972789116
     ],
-    "lyrics": "Yeah, the battle-worn smile where"
+    "lyrics": "the battle-worn smile   where dignity",
+    "words": [
+      {
+        "word": "the",
+        "start": 49.16,
+        "end": 49.42,
+        "col": 0
+      },
+      {
+        "word": "battle-worn",
+        "start": 49.42,
+        "end": 49.88,
+        "col": 4
+      },
+      {
+        "word": "smile",
+        "start": 49.88,
+        "end": 50.6,
+        "col": 16
+      },
+      {
+        "word": "where",
+        "start": 50.6,
+        "end": 51.78,
+        "col": 24
+      },
+      {
+        "word": "dignity",
+        "start": 51.789,
+        "end": 52.36,
+        "col": 30
+      }
+    ]
   },
   {
     "time": 52.03591836734694,
@@ -328,13 +923,37 @@
       "G",
       "F#m"
     ],
+    "chord_cols": [
+      0,
+      14
+    ],
     "beats": [
       52.03591836734694,
       52.70929705215419,
       53.38267573696145,
       54.05605442176871
     ],
-    "lyrics": "dignity can proudly hide."
+    "lyrics": "can proudly   hide.",
+    "words": [
+      {
+        "word": "can",
+        "start": 52.36,
+        "end": 53.04,
+        "col": 0
+      },
+      {
+        "word": "proudly",
+        "start": 53.04,
+        "end": 54.06,
+        "col": 4
+      },
+      {
+        "word": "hide.",
+        "start": 54.06,
+        "end": 54.82,
+        "col": 14
+      }
+    ]
   },
   {
     "time": 54.75265306122449,
@@ -344,13 +963,17 @@
     "chords": [
       "Bm"
     ],
+    "chord_cols": [
+      0
+    ],
     "beats": [
       54.75265306122449,
       55.42603174603175,
       56.122630385487525,
       56.79600907029479
     ],
-    "lyrics": ""
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 57.46938775510204,
@@ -360,13 +983,36 @@
     "chords": [
       "Bm"
     ],
+    "chord_cols": [
+      0
+    ],
     "beats": [
       57.46938775510204,
       58.142766439909295,
       58.83936507936508,
       59.512743764172335
     ],
-    "lyrics": ""
+    "lyrics": "          Walked through chambers",
+    "words": [
+      {
+        "word": "Walked",
+        "start": 58.82,
+        "end": 59.46,
+        "col": 10
+      },
+      {
+        "word": "through",
+        "start": 59.46,
+        "end": 59.78,
+        "col": 17
+      },
+      {
+        "word": "chambers",
+        "start": 59.78,
+        "end": 60.68,
+        "col": 25
+      }
+    ]
   },
   {
     "time": 60.18612244897959,
@@ -376,13 +1022,60 @@
     "chords": [
       "Bm"
     ],
+    "chord_cols": [
+      0
+    ],
     "beats": [
       60.18612244897959,
       60.85950113378685,
       61.532879818594104,
       62.20625850340136
     ],
-    "lyrics": "Walked through chambers big and grand where the new ideas"
+    "lyrics": "big and grand where the new ideas",
+    "words": [
+      {
+        "word": "big",
+        "start": 60.68,
+        "end": 60.98,
+        "col": 0
+      },
+      {
+        "word": "and",
+        "start": 60.98,
+        "end": 61.22,
+        "col": 4
+      },
+      {
+        "word": "grand",
+        "start": 61.22,
+        "end": 61.58,
+        "col": 8
+      },
+      {
+        "word": "where",
+        "start": 61.88,
+        "end": 61.94,
+        "col": 14
+      },
+      {
+        "word": "the",
+        "start": 61.94,
+        "end": 62.08,
+        "col": 20
+      },
+      {
+        "word": "new",
+        "start": 62.08,
+        "end": 62.36,
+        "col": 24
+      },
+      {
+        "word": "ideas",
+        "start": 62.36,
+        "end": 62.72,
+        "col": 28
+      }
+    ]
   },
   {
     "time": 62.902857142857144,
@@ -393,13 +1086,55 @@
       "Bm",
       "G"
     ],
+    "chord_cols": [
+      0,
+      17
+    ],
     "beats": [
       62.902857142857144,
       63.5762358276644,
       64.22639455782313,
       64.89977324263039
     ],
-    "lyrics": "rush and flow."
+    "lyrics": "rush and flow.   Walked through chambers",
+    "words": [
+      {
+        "word": "rush",
+        "start": 63.15,
+        "end": 63.58,
+        "col": 0
+      },
+      {
+        "word": "and",
+        "start": 63.58,
+        "end": 63.76,
+        "col": 5
+      },
+      {
+        "word": "flow.",
+        "start": 63.76,
+        "end": 64.0,
+        "col": 9
+      },
+      {
+        "word": "Walked",
+        "start": 64.58,
+        "end": 64.8,
+        "col": 17
+      },
+      {
+        "word": "through",
+        "start": 64.8,
+        "end": 65.18,
+        "col": 24
+      },
+      {
+        "word": "chambers",
+        "start": 65.18,
+        "end": 66.04,
+        "col": 32
+      }
+    ]
   },
   {
     "time": 65.57315192743764,
@@ -410,13 +1145,61 @@
       "G",
       "Am"
     ],
+    "chord_cols": [
+      0,
+      16
+    ],
     "beats": [
       65.57315192743764,
       66.2465306122449,
       66.91990929705216,
       67.5932879818594
     ],
-    "lyrics": "Walked through chambers big and grand where the new ideas"
+    "lyrics": "big and grand   where the new ideas",
+    "words": [
+      {
+        "word": "big",
+        "start": 66.04,
+        "end": 66.36,
+        "col": 0
+      },
+      {
+        "word": "and",
+        "start": 66.36,
+        "end": 66.62,
+        "col": 4
+      },
+      {
+        "word": "grand",
+        "start": 66.62,
+        "end": 67.0,
+        "col": 8
+      },
+      {
+        "word": "where",
+        "start": 67.3,
+        "end": 67.35,
+        "col": 16
+      },
+      {
+        "word": "the",
+        "start": 67.35,
+        "end": 67.48,
+        "col": 22
+      },
+      {
+        "word": "new",
+        "start": 67.48,
+        "end": 67.74,
+        "col": 26
+      },
+      {
+        "word": "ideas",
+        "start": 67.74,
+        "end": 68.2,
+        "col": 30
+      }
+    ]
   },
   {
     "time": 68.28988662131519,
@@ -427,13 +1210,55 @@
       "Am",
       "F#m"
     ],
+    "chord_cols": [
+      0,
+      17
+    ],
     "beats": [
       68.28988662131519,
       68.94004535147393,
       69.6366439909297,
       70.31002267573696
     ],
-    "lyrics": "rush and flow."
+    "lyrics": "rush and flow.   Tried to lend",
+    "words": [
+      {
+        "word": "rush",
+        "start": 68.56,
+        "end": 68.98,
+        "col": 0
+      },
+      {
+        "word": "and",
+        "start": 68.98,
+        "end": 69.18,
+        "col": 5
+      },
+      {
+        "word": "flow.",
+        "start": 69.18,
+        "end": 69.52,
+        "col": 9
+      },
+      {
+        "word": "Tried",
+        "start": 70.24,
+        "end": 70.44,
+        "col": 17
+      },
+      {
+        "word": "to",
+        "start": 70.44,
+        "end": 70.7,
+        "col": 23
+      },
+      {
+        "word": "lend",
+        "start": 70.7,
+        "end": 71.22,
+        "col": 26
+      }
+    ]
   },
   {
     "time": 71.00662131519275,
@@ -444,13 +1269,55 @@
       "Bm",
       "E"
     ],
+    "chord_cols": [
+      0,
+      18
+    ],
     "beats": [
       71.00662131519275,
       71.68,
       72.37659863945578,
       73.02675736961451
     ],
-    "lyrics": "Tried to lend a guiding hand,"
+    "lyrics": "a guiding hand,   plant the seeds",
+    "words": [
+      {
+        "word": "a",
+        "start": 71.22,
+        "end": 71.54,
+        "col": 0
+      },
+      {
+        "word": "guiding",
+        "start": 71.54,
+        "end": 71.86,
+        "col": 2
+      },
+      {
+        "word": "hand,",
+        "start": 71.86,
+        "end": 72.28,
+        "col": 10
+      },
+      {
+        "word": "plant",
+        "start": 72.96,
+        "end": 73.16,
+        "col": 18
+      },
+      {
+        "word": "the",
+        "start": 73.16,
+        "end": 73.38,
+        "col": 24
+      },
+      {
+        "word": "seeds",
+        "start": 73.38,
+        "end": 73.86,
+        "col": 28
+      }
+    ]
   },
   {
     "time": 73.7233560090703,
@@ -461,13 +1328,73 @@
       "E",
       "F#m"
     ],
+    "chord_cols": [
+      0,
+      20
+    ],
     "beats": [
       73.7233560090703,
       74.39673469387755,
       75.09333333333333,
       75.7667120181406
     ],
-    "lyrics": "plant the seeds for them to grow. But they want the"
+    "lyrics": "for them to grow.   But they want the quick",
+    "words": [
+      {
+        "word": "for",
+        "start": 73.86,
+        "end": 74.14,
+        "col": 0
+      },
+      {
+        "word": "them",
+        "start": 74.14,
+        "end": 74.4,
+        "col": 4
+      },
+      {
+        "word": "to",
+        "start": 74.4,
+        "end": 74.6,
+        "col": 9
+      },
+      {
+        "word": "grow.",
+        "start": 74.6,
+        "end": 74.88,
+        "col": 12
+      },
+      {
+        "word": "But",
+        "start": 75.38,
+        "end": 75.46,
+        "col": 20
+      },
+      {
+        "word": "they",
+        "start": 75.46,
+        "end": 75.64,
+        "col": 24
+      },
+      {
+        "word": "want",
+        "start": 75.64,
+        "end": 75.9,
+        "col": 29
+      },
+      {
+        "word": "the",
+        "start": 75.9,
+        "end": 76.26,
+        "col": 34
+      },
+      {
+        "word": "quick",
+        "start": 76.26,
+        "end": 76.38,
+        "col": 38
+      }
+    ]
   },
   {
     "time": 76.44009070294784,
@@ -477,13 +1404,48 @@
     "chords": [
       "G"
     ],
+    "chord_cols": [
+      0
+    ],
     "beats": [
       76.44009070294784,
       77.1134693877551,
       77.81006802721089,
       78.46022675736961
     ],
-    "lyrics": "quick and eager,"
+    "lyrics": "and eager, don't want wisdom",
+    "words": [
+      {
+        "word": "and",
+        "start": 76.38,
+        "end": 76.72,
+        "col": 0
+      },
+      {
+        "word": "eager,",
+        "start": 76.72,
+        "end": 77.18,
+        "col": 4
+      },
+      {
+        "word": "don't",
+        "start": 77.699,
+        "end": 78.5,
+        "col": 11
+      },
+      {
+        "word": "want",
+        "start": 78.5,
+        "end": 78.8,
+        "col": 17
+      },
+      {
+        "word": "wisdom",
+        "start": 78.8,
+        "end": 79.28,
+        "col": 22
+      }
+    ]
   },
   {
     "time": 79.1568253968254,
@@ -494,13 +1456,49 @@
       "G",
       "F#m"
     ],
+    "chord_cols": [
+      0,
+      19
+    ],
     "beats": [
       79.1568253968254,
       79.83020408163266,
       80.5035827664399,
       81.17696145124717
     ],
-    "lyrics": "don't want wisdom strong and slow."
+    "lyrics": "strong and slow.   Got the",
+    "words": [
+      {
+        "word": "strong",
+        "start": 79.36,
+        "end": 79.78,
+        "col": 0
+      },
+      {
+        "word": "and",
+        "start": 79.78,
+        "end": 80.08,
+        "col": 7
+      },
+      {
+        "word": "slow.",
+        "start": 80.08,
+        "end": 80.66,
+        "col": 11
+      },
+      {
+        "word": "Got",
+        "start": 80.96,
+        "end": 81.5,
+        "col": 19
+      },
+      {
+        "word": "the",
+        "start": 81.5,
+        "end": 81.72,
+        "col": 23
+      }
+    ]
   },
   {
     "time": 81.85034013605443,
@@ -511,13 +1509,49 @@
       "Em",
       "Bm"
     ],
+    "chord_cols": [
+      0,
+      20
+    ],
     "beats": [
       81.85034013605443,
       82.52371882086167,
       83.22031746031746,
       83.89369614512472
     ],
-    "lyrics": "Got the battle-worn smile now,"
+    "lyrics": "battle-worn smile   now, that quiet",
+    "words": [
+      {
+        "word": "battle-worn",
+        "start": 81.72,
+        "end": 82.84,
+        "col": 0
+      },
+      {
+        "word": "smile",
+        "start": 82.84,
+        "end": 83.34,
+        "col": 12
+      },
+      {
+        "word": "now,",
+        "start": 83.34,
+        "end": 83.9,
+        "col": 20
+      },
+      {
+        "word": "that",
+        "start": 84.26,
+        "end": 84.34,
+        "col": 25
+      },
+      {
+        "word": "quiet",
+        "start": 84.34,
+        "end": 84.72,
+        "col": 30
+      }
+    ]
   },
   {
     "time": 84.56707482993197,
@@ -528,13 +1562,49 @@
       "Bm",
       "Am"
     ],
+    "chord_cols": [
+      0,
+      19
+    ],
     "beats": [
       84.56707482993197,
       85.24045351473923,
       85.91383219954649,
       86.58721088435374
     ],
-    "lyrics": "that quiet strength I wear."
+    "lyrics": "strength I wear.   Facing down",
+    "words": [
+      {
+        "word": "strength",
+        "start": 84.72,
+        "end": 85.22,
+        "col": 0
+      },
+      {
+        "word": "I",
+        "start": 85.22,
+        "end": 85.62,
+        "col": 9
+      },
+      {
+        "word": "wear.",
+        "start": 85.62,
+        "end": 86.359,
+        "col": 11
+      },
+      {
+        "word": "Facing",
+        "start": 86.72,
+        "end": 87.02,
+        "col": 19
+      },
+      {
+        "word": "down",
+        "start": 87.02,
+        "end": 87.36,
+        "col": 26
+      }
+    ]
   },
   {
     "time": 87.260589569161,
@@ -545,13 +1615,43 @@
       "Am",
       "Bm"
     ],
+    "chord_cols": [
+      0,
+      22
+    ],
     "beats": [
       87.260589569161,
       87.93396825396826,
       88.63056689342403,
       89.28072562358277
     ],
-    "lyrics": "Facing down the empty promises,"
+    "lyrics": "the empty promises,   the",
+    "words": [
+      {
+        "word": "the",
+        "start": 87.36,
+        "end": 87.7,
+        "col": 0
+      },
+      {
+        "word": "empty",
+        "start": 87.7,
+        "end": 88.14,
+        "col": 4
+      },
+      {
+        "word": "promises,",
+        "start": 88.14,
+        "end": 88.92,
+        "col": 10
+      },
+      {
+        "word": "the",
+        "start": 89.76,
+        "end": 89.82,
+        "col": 22
+      }
+    ]
   },
   {
     "time": 89.97732426303855,
@@ -562,13 +1662,61 @@
       "Bm",
       "Em"
     ],
+    "chord_cols": [
+      0,
+      26
+    ],
     "beats": [
       89.97732426303855,
       90.6507029478458,
       91.32408163265306,
       91.9742403628118
     ],
-    "lyrics": "the judgment in their empty stare."
+    "lyrics": "judgment in their empty   stare. Still got",
+    "words": [
+      {
+        "word": "judgment",
+        "start": 89.82,
+        "end": 90.26,
+        "col": 0
+      },
+      {
+        "word": "in",
+        "start": 90.26,
+        "end": 90.66,
+        "col": 9
+      },
+      {
+        "word": "their",
+        "start": 90.66,
+        "end": 91.04,
+        "col": 12
+      },
+      {
+        "word": "empty",
+        "start": 91.04,
+        "end": 91.5,
+        "col": 18
+      },
+      {
+        "word": "stare.",
+        "start": 91.5,
+        "end": 92.119,
+        "col": 26
+      },
+      {
+        "word": "Still",
+        "start": 92.119,
+        "end": 92.3,
+        "col": 33
+      },
+      {
+        "word": "got",
+        "start": 92.3,
+        "end": 92.58,
+        "col": 39
+      }
+    ]
   },
   {
     "time": 92.67083900226757,
@@ -579,13 +1727,61 @@
       "Em",
       "Bm"
     ],
+    "chord_cols": [
+      0,
+      23
+    ],
     "beats": [
       92.67083900226757,
       93.34421768707483,
       94.01759637188209,
       94.69097505668934
     ],
-    "lyrics": "Still got fire in this spirit."
+    "lyrics": "fire in this spirit.   Still got purpose",
+    "words": [
+      {
+        "word": "fire",
+        "start": 92.58,
+        "end": 93.14,
+        "col": 0
+      },
+      {
+        "word": "in",
+        "start": 93.14,
+        "end": 93.5,
+        "col": 5
+      },
+      {
+        "word": "this",
+        "start": 93.5,
+        "end": 93.64,
+        "col": 8
+      },
+      {
+        "word": "spirit.",
+        "start": 93.64,
+        "end": 94.1,
+        "col": 13
+      },
+      {
+        "word": "Still",
+        "start": 94.68,
+        "end": 94.78,
+        "col": 23
+      },
+      {
+        "word": "got",
+        "start": 94.78,
+        "end": 95.0,
+        "col": 29
+      },
+      {
+        "word": "purpose",
+        "start": 95.0,
+        "end": 95.5,
+        "col": 33
+      }
+    ]
   },
   {
     "time": 95.3643537414966,
@@ -596,13 +1792,37 @@
       "Bm",
       "Em"
     ],
+    "chord_cols": [
+      0,
+      15
+    ],
     "beats": [
       95.3643537414966,
       96.06095238095239,
       96.73433106575963,
       97.4077097505669
     ],
-    "lyrics": "Still got purpose deep inside."
+    "lyrics": "deep inside.   Yeah,",
+    "words": [
+      {
+        "word": "deep",
+        "start": 95.5,
+        "end": 96.0,
+        "col": 0
+      },
+      {
+        "word": "inside.",
+        "start": 96.0,
+        "end": 96.66,
+        "col": 5
+      },
+      {
+        "word": "Yeah,",
+        "start": 97.36,
+        "end": 97.66,
+        "col": 15
+      }
+    ]
   },
   {
     "time": 98.10430839002268,
@@ -613,13 +1833,49 @@
       "Em",
       "G"
     ],
+    "chord_cols": [
+      0,
+      24
+    ],
     "beats": [
       98.10430839002268,
       98.77768707482993,
       99.47428571428571,
       100.14766439909297
     ],
-    "lyrics": "Yeah, the battle-worn smile where"
+    "lyrics": "the battle-worn smile   where dignity",
+    "words": [
+      {
+        "word": "the",
+        "start": 97.98,
+        "end": 98.3,
+        "col": 0
+      },
+      {
+        "word": "battle-worn",
+        "start": 98.3,
+        "end": 98.64,
+        "col": 4
+      },
+      {
+        "word": "smile",
+        "start": 98.64,
+        "end": 99.38,
+        "col": 16
+      },
+      {
+        "word": "where",
+        "start": 99.38,
+        "end": 100.58,
+        "col": 24
+      },
+      {
+        "word": "dignity",
+        "start": 100.58,
+        "end": 101.16,
+        "col": 30
+      }
+    ]
   },
   {
     "time": 100.82104308390022,
@@ -630,13 +1886,37 @@
       "G",
       "F#m"
     ],
+    "chord_cols": [
+      0,
+      14
+    ],
     "beats": [
       100.82104308390022,
       101.49442176870748,
       102.19102040816327,
       102.86439909297052
     ],
-    "lyrics": "dignity can proudly hide."
+    "lyrics": "can proudly   hide.",
+    "words": [
+      {
+        "word": "can",
+        "start": 101.16,
+        "end": 101.86,
+        "col": 0
+      },
+      {
+        "word": "proudly",
+        "start": 101.86,
+        "end": 102.86,
+        "col": 4
+      },
+      {
+        "word": "hide.",
+        "start": 102.86,
+        "end": 104.0,
+        "col": 14
+      }
+    ]
   },
   {
     "time": 103.53777777777778,
@@ -646,13 +1926,17 @@
     "chords": [
       "Bm"
     ],
+    "chord_cols": [
+      0
+    ],
     "beats": [
       103.53777777777778,
       104.21115646258504,
       104.90775510204081,
       105.55791383219955
     ],
-    "lyrics": ""
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 106.25451247165533,
@@ -662,13 +1946,36 @@
     "chords": [
       "Bm"
     ],
+    "chord_cols": [
+      0
+    ],
     "beats": [
       106.25451247165533,
       106.90467120181405,
       107.60126984126984,
       108.2746485260771
     ],
-    "lyrics": ""
+    "lyrics": "          Used to be",
+    "words": [
+      {
+        "word": "Used",
+        "start": 107.6,
+        "end": 108.48,
+        "col": 10
+      },
+      {
+        "word": "to",
+        "start": 108.48,
+        "end": 108.76,
+        "col": 15
+      },
+      {
+        "word": "be",
+        "start": 108.76,
+        "end": 109.02,
+        "col": 18
+      }
+    ]
   },
   {
     "time": 108.94802721088435,
@@ -678,13 +1985,54 @@
     "chords": [
       "Bm"
     ],
+    "chord_cols": [
+      0
+    ],
     "beats": [
       108.94802721088435,
       109.62140589569161,
       110.3180045351474,
       110.99138321995464
     ],
-    "lyrics": "Used to be the steady anchor"
+    "lyrics": "the steady anchor when the storms",
+    "words": [
+      {
+        "word": "the",
+        "start": 109.02,
+        "end": 109.4,
+        "col": 0
+      },
+      {
+        "word": "steady",
+        "start": 109.4,
+        "end": 109.82,
+        "col": 4
+      },
+      {
+        "word": "anchor",
+        "start": 109.82,
+        "end": 110.36,
+        "col": 11
+      },
+      {
+        "word": "when",
+        "start": 110.98,
+        "end": 111.22,
+        "col": 18
+      },
+      {
+        "word": "the",
+        "start": 111.22,
+        "end": 111.36,
+        "col": 23
+      },
+      {
+        "word": "storms",
+        "start": 111.36,
+        "end": 111.8,
+        "col": 27
+      }
+    ]
   },
   {
     "time": 111.6647619047619,
@@ -695,13 +2043,61 @@
       "Bm",
       "G"
     ],
+    "chord_cols": [
+      0,
+      23
+    ],
     "beats": [
       111.6647619047619,
       112.36136054421769,
       113.03473922902495,
       113.7081179138322
     ],
-    "lyrics": "when the storms would rage and blow."
+    "lyrics": "would rage and blow.   Used to be",
+    "words": [
+      {
+        "word": "would",
+        "start": 111.8,
+        "end": 112.149,
+        "col": 0
+      },
+      {
+        "word": "rage",
+        "start": 112.149,
+        "end": 112.345,
+        "col": 6
+      },
+      {
+        "word": "and",
+        "start": 112.345,
+        "end": 112.54,
+        "col": 11
+      },
+      {
+        "word": "blow.",
+        "start": 112.54,
+        "end": 112.94,
+        "col": 15
+      },
+      {
+        "word": "Used",
+        "start": 113.5,
+        "end": 113.72,
+        "col": 23
+      },
+      {
+        "word": "to",
+        "start": 113.72,
+        "end": 114.2,
+        "col": 28
+      },
+      {
+        "word": "be",
+        "start": 114.2,
+        "end": 114.44,
+        "col": 31
+      }
+    ]
   },
   {
     "time": 114.38149659863946,
@@ -712,13 +2108,55 @@
       "G",
       "Am"
     ],
+    "chord_cols": [
+      0,
+      20
+    ],
     "beats": [
       114.38149659863946,
       115.0548752834467,
       115.75147392290249,
       116.42485260770975
     ],
-    "lyrics": "Used to be the steady anchor"
+    "lyrics": "the steady anchor   when the storms",
+    "words": [
+      {
+        "word": "the",
+        "start": 114.44,
+        "end": 114.82,
+        "col": 0
+      },
+      {
+        "word": "steady",
+        "start": 114.82,
+        "end": 115.2,
+        "col": 4
+      },
+      {
+        "word": "anchor",
+        "start": 115.2,
+        "end": 115.86,
+        "col": 11
+      },
+      {
+        "word": "when",
+        "start": 116.56,
+        "end": 116.66,
+        "col": 20
+      },
+      {
+        "word": "the",
+        "start": 116.66,
+        "end": 116.78,
+        "col": 25
+      },
+      {
+        "word": "storms",
+        "start": 116.78,
+        "end": 117.26,
+        "col": 29
+      }
+    ]
   },
   {
     "time": 117.12145124716554,
@@ -729,13 +2167,61 @@
       "Am",
       "F#m"
     ],
+    "chord_cols": [
+      0,
+      23
+    ],
     "beats": [
       117.12145124716554,
       117.79482993197279,
       118.46820861678005,
       119.14158730158731
     ],
-    "lyrics": "when the storms would rage and blow."
+    "lyrics": "would rage and blow.   Now they think",
+    "words": [
+      {
+        "word": "would",
+        "start": 117.26,
+        "end": 117.609,
+        "col": 0
+      },
+      {
+        "word": "rage",
+        "start": 117.609,
+        "end": 117.794,
+        "col": 6
+      },
+      {
+        "word": "and",
+        "start": 117.794,
+        "end": 117.98,
+        "col": 11
+      },
+      {
+        "word": "blow.",
+        "start": 117.98,
+        "end": 118.44,
+        "col": 15
+      },
+      {
+        "word": "Now",
+        "start": 119.08,
+        "end": 119.24,
+        "col": 23
+      },
+      {
+        "word": "they",
+        "start": 119.24,
+        "end": 119.42,
+        "col": 27
+      },
+      {
+        "word": "think",
+        "start": 119.42,
+        "end": 119.74,
+        "col": 32
+      }
+    ]
   },
   {
     "time": 119.83818594104308,
@@ -746,13 +2232,61 @@
       "Bm",
       "E"
     ],
+    "chord_cols": [
+      0,
+      23
+    ],
     "beats": [
       119.83818594104308,
       120.48834467120182,
       121.16172335600908,
       121.83510204081632
     ],
-    "lyrics": "Now they think my current's weaker,"
+    "lyrics": "my current's weaker,   don't see the depth",
+    "words": [
+      {
+        "word": "my",
+        "start": 119.74,
+        "end": 120.12,
+        "col": 0
+      },
+      {
+        "word": "current's",
+        "start": 120.12,
+        "end": 120.72,
+        "col": 3
+      },
+      {
+        "word": "weaker,",
+        "start": 120.72,
+        "end": 121.16,
+        "col": 13
+      },
+      {
+        "word": "don't",
+        "start": 121.299,
+        "end": 121.64,
+        "col": 23
+      },
+      {
+        "word": "see",
+        "start": 121.64,
+        "end": 121.9,
+        "col": 29
+      },
+      {
+        "word": "the",
+        "start": 121.9,
+        "end": 122.06,
+        "col": 33
+      },
+      {
+        "word": "depth",
+        "start": 122.06,
+        "end": 122.859,
+        "col": 37
+      }
+    ]
   },
   {
     "time": 122.53170068027211,
@@ -763,13 +2297,67 @@
       "E",
       "G"
     ],
+    "chord_cols": [
+      0,
+      18
+    ],
     "beats": [
       122.53170068027211,
       123.18185941043085,
       123.87845804988662,
       124.52861678004535
     ],
-    "lyrics": "don't see the depth of what I know."
+    "lyrics": "of what I know.   But this old heart",
+    "words": [
+      {
+        "word": "of",
+        "start": 122.859,
+        "end": 122.92,
+        "col": 0
+      },
+      {
+        "word": "what",
+        "start": 122.92,
+        "end": 123.16,
+        "col": 3
+      },
+      {
+        "word": "I",
+        "start": 123.16,
+        "end": 123.34,
+        "col": 8
+      },
+      {
+        "word": "know.",
+        "start": 123.34,
+        "end": 123.72,
+        "col": 10
+      },
+      {
+        "word": "But",
+        "start": 123.979,
+        "end": 124.4,
+        "col": 18
+      },
+      {
+        "word": "this",
+        "start": 124.4,
+        "end": 124.64,
+        "col": 22
+      },
+      {
+        "word": "old",
+        "start": 124.64,
+        "end": 124.9,
+        "col": 27
+      },
+      {
+        "word": "heart",
+        "start": 124.9,
+        "end": 125.22,
+        "col": 31
+      }
+    ]
   },
   {
     "time": 125.22521541950114,
@@ -779,13 +2367,54 @@
     "chords": [
       "G"
     ],
+    "chord_cols": [
+      0
+    ],
     "beats": [
       125.22521541950114,
       125.89859410430839,
       126.57197278911565,
       127.24535147392291
     ],
-    "lyrics": "But this old heart keeps beating"
+    "lyrics": "keeps beating strong with a rhythm",
+    "words": [
+      {
+        "word": "keeps",
+        "start": 125.22,
+        "end": 125.68,
+        "col": 0
+      },
+      {
+        "word": "beating",
+        "start": 125.68,
+        "end": 126.08,
+        "col": 6
+      },
+      {
+        "word": "strong",
+        "start": 126.109,
+        "end": 126.54,
+        "col": 14
+      },
+      {
+        "word": "with",
+        "start": 126.54,
+        "end": 127.56,
+        "col": 21
+      },
+      {
+        "word": "a",
+        "start": 127.56,
+        "end": 127.66,
+        "col": 26
+      },
+      {
+        "word": "rhythm",
+        "start": 127.66,
+        "end": 127.96,
+        "col": 28
+      }
+    ]
   },
   {
     "time": 127.91873015873016,
@@ -796,13 +2425,61 @@
       "G",
       "D"
     ],
+    "chord_cols": [
+      0,
+      17
+    ],
     "beats": [
       127.91873015873016,
       128.5921088435374,
       129.26548752834466,
       129.93886621315193
     ],
-    "lyrics": "strong with a rhythm built to grow. They talk of progress,"
+    "lyrics": "built to grow.   They talk of progress,",
+    "words": [
+      {
+        "word": "built",
+        "start": 127.96,
+        "end": 128.42,
+        "col": 0
+      },
+      {
+        "word": "to",
+        "start": 128.42,
+        "end": 128.92,
+        "col": 6
+      },
+      {
+        "word": "grow.",
+        "start": 128.92,
+        "end": 129.36,
+        "col": 9
+      },
+      {
+        "word": "They",
+        "start": 129.36,
+        "end": 129.8,
+        "col": 17
+      },
+      {
+        "word": "talk",
+        "start": 129.8,
+        "end": 130.14,
+        "col": 22
+      },
+      {
+        "word": "of",
+        "start": 130.14,
+        "end": 130.34,
+        "col": 27
+      },
+      {
+        "word": "progress,",
+        "start": 130.34,
+        "end": 130.88,
+        "col": 30
+      }
+    ]
   },
   {
     "time": 130.6122448979592,
@@ -813,13 +2490,55 @@
       "E",
       "Bm"
     ],
+    "chord_cols": [
+      0,
+      17
+    ],
     "beats": [
       130.6122448979592,
       131.28562358276645,
       131.9590022675737,
       132.63238095238094
     ],
-    "lyrics": "talk of speed."
+    "lyrics": "talk of speed.   Chasing every shiny,",
+    "words": [
+      {
+        "word": "talk",
+        "start": 131.28,
+        "end": 131.4,
+        "col": 0
+      },
+      {
+        "word": "of",
+        "start": 131.4,
+        "end": 131.56,
+        "col": 5
+      },
+      {
+        "word": "speed.",
+        "start": 131.56,
+        "end": 132.219,
+        "col": 8
+      },
+      {
+        "word": "Chasing",
+        "start": 132.219,
+        "end": 132.66,
+        "col": 17
+      },
+      {
+        "word": "every",
+        "start": 132.66,
+        "end": 132.86,
+        "col": 25
+      },
+      {
+        "word": "shiny,",
+        "start": 132.86,
+        "end": 133.4,
+        "col": 31
+      }
+    ]
   },
   {
     "time": 133.3057596371882,
@@ -830,13 +2549,55 @@
       "Bm",
       "Am"
     ],
+    "chord_cols": [
+      0,
+      19
+    ],
     "beats": [
       133.3057596371882,
       133.97913832199546,
       134.65251700680273,
       135.32589569161
     ],
-    "lyrics": "Chasing every shiny, brand-new thing."
+    "lyrics": "brand-new thing.   Don't see the harvest,",
+    "words": [
+      {
+        "word": "brand-new",
+        "start": 133.9,
+        "end": 134.28,
+        "col": 0
+      },
+      {
+        "word": "thing.",
+        "start": 134.28,
+        "end": 134.58,
+        "col": 10
+      },
+      {
+        "word": "Don't",
+        "start": 134.68,
+        "end": 135.1,
+        "col": 19
+      },
+      {
+        "word": "see",
+        "start": 135.1,
+        "end": 135.4,
+        "col": 25
+      },
+      {
+        "word": "the",
+        "start": 135.4,
+        "end": 135.76,
+        "col": 29
+      },
+      {
+        "word": "harvest,",
+        "start": 135.76,
+        "end": 136.18,
+        "col": 33
+      }
+    ]
   },
   {
     "time": 136.02249433106576,
@@ -847,13 +2608,55 @@
       "Am",
       "Bm"
     ],
+    "chord_cols": [
+      0,
+      18
+    ],
     "beats": [
       136.02249433106576,
       136.67265306122448,
       137.34603174603174,
       138.019410430839
     ],
-    "lyrics": "Don't see the harvest, plant the seed,"
+    "lyrics": "plant the seed,   only what the",
+    "words": [
+      {
+        "word": "plant",
+        "start": 136.38,
+        "end": 136.8,
+        "col": 0
+      },
+      {
+        "word": "the",
+        "start": 136.8,
+        "end": 137.16,
+        "col": 6
+      },
+      {
+        "word": "seed,",
+        "start": 137.16,
+        "end": 137.4,
+        "col": 10
+      },
+      {
+        "word": "only",
+        "start": 137.55,
+        "end": 137.84,
+        "col": 18
+      },
+      {
+        "word": "what",
+        "start": 137.84,
+        "end": 138.14,
+        "col": 23
+      },
+      {
+        "word": "the",
+        "start": 138.14,
+        "end": 138.52,
+        "col": 28
+      }
+    ]
   },
   {
     "time": 138.69278911564626,
@@ -864,13 +2667,49 @@
       "Bm",
       "Em"
     ],
+    "chord_cols": [
+      0,
+      24
+    ],
     "beats": [
       138.69278911564626,
       139.36616780045352,
       140.03954648526076,
       140.71292517006802
     ],
-    "lyrics": "only what the moment's gonna bring."
+    "lyrics": "moment's gonna bring.   This soul",
+    "words": [
+      {
+        "word": "moment's",
+        "start": 138.52,
+        "end": 139.139,
+        "col": 0
+      },
+      {
+        "word": "gonna",
+        "start": 139.139,
+        "end": 139.32,
+        "col": 9
+      },
+      {
+        "word": "bring.",
+        "start": 139.32,
+        "end": 139.8,
+        "col": 15
+      },
+      {
+        "word": "This",
+        "start": 140.06,
+        "end": 140.66,
+        "col": 24
+      },
+      {
+        "word": "soul",
+        "start": 140.66,
+        "end": 141.26,
+        "col": 29
+      }
+    ]
   },
   {
     "time": 141.38630385487528,
@@ -881,13 +2720,55 @@
       "Em",
       "Bm"
     ],
+    "chord_cols": [
+      0,
+      28
+    ],
     "beats": [
       141.38630385487528,
       142.05968253968254,
       142.7330612244898,
       143.40643990929706
     ],
-    "lyrics": "This soul wisdom, hard-earned slow."
+    "lyrics": "wisdom, hard-earned slow.   Built through years",
+    "words": [
+      {
+        "word": "wisdom,",
+        "start": 141.26,
+        "end": 141.8,
+        "col": 0
+      },
+      {
+        "word": "hard-earned",
+        "start": 141.829,
+        "end": 142.42,
+        "col": 8
+      },
+      {
+        "word": "slow.",
+        "start": 142.42,
+        "end": 142.8,
+        "col": 20
+      },
+      {
+        "word": "Built",
+        "start": 143.039,
+        "end": 143.32,
+        "col": 28
+      },
+      {
+        "word": "through",
+        "start": 143.32,
+        "end": 143.68,
+        "col": 34
+      },
+      {
+        "word": "years",
+        "start": 143.68,
+        "end": 144.18,
+        "col": 42
+      }
+    ]
   },
   {
     "time": 144.0798185941043,
@@ -898,13 +2779,61 @@
       "Bm",
       "Em"
     ],
+    "chord_cols": [
+      0,
+      21
+    ],
     "beats": [
       144.0798185941043,
       144.75319727891156,
       145.42657596371882,
       146.07673469387754
     ],
-    "lyrics": "Built through years of trial and"
+    "lyrics": "of trial and pain.   But it's a",
+    "words": [
+      {
+        "word": "of",
+        "start": 144.18,
+        "end": 144.5,
+        "col": 0
+      },
+      {
+        "word": "trial",
+        "start": 144.5,
+        "end": 144.72,
+        "col": 3
+      },
+      {
+        "word": "and",
+        "start": 144.72,
+        "end": 145.0,
+        "col": 9
+      },
+      {
+        "word": "pain.",
+        "start": 145.0,
+        "end": 145.28,
+        "col": 13
+      },
+      {
+        "word": "But",
+        "start": 145.28,
+        "end": 146.16,
+        "col": 21
+      },
+      {
+        "word": "it's",
+        "start": 146.16,
+        "end": 146.52,
+        "col": 25
+      },
+      {
+        "word": "a",
+        "start": 146.52,
+        "end": 146.58,
+        "col": 30
+      }
+    ]
   },
   {
     "time": 146.77333333333334,
@@ -915,13 +2844,61 @@
       "Em",
       "G"
     ],
+    "chord_cols": [
+      0,
+      23
+    ],
     "beats": [
       146.77333333333334,
       147.4467120181406,
       148.12009070294783,
       148.7934693877551
     ],
-    "lyrics": "pain. But it's a silent, bitter truth when they won't"
+    "lyrics": "silent, bitter truth   when they won't let",
+    "words": [
+      {
+        "word": "silent,",
+        "start": 146.58,
+        "end": 147.12,
+        "col": 0
+      },
+      {
+        "word": "bitter",
+        "start": 147.44,
+        "end": 147.62,
+        "col": 8
+      },
+      {
+        "word": "truth",
+        "start": 147.62,
+        "end": 148.12,
+        "col": 15
+      },
+      {
+        "word": "when",
+        "start": 148.12,
+        "end": 148.54,
+        "col": 23
+      },
+      {
+        "word": "they",
+        "start": 148.54,
+        "end": 148.78,
+        "col": 28
+      },
+      {
+        "word": "won't",
+        "start": 148.78,
+        "end": 149.2,
+        "col": 33
+      },
+      {
+        "word": "let",
+        "start": 149.2,
+        "end": 149.42,
+        "col": 39
+      }
+    ]
   },
   {
     "time": 149.46684807256236,
@@ -932,13 +2909,43 @@
       "G",
       "F#m"
     ],
+    "chord_cols": [
+      0,
+      15
+    ],
     "beats": [
       149.46684807256236,
       150.14022675736962,
       150.8368253968254,
       151.48698412698414
     ],
-    "lyrics": "let you play the game."
+    "lyrics": "you play the   game.",
+    "words": [
+      {
+        "word": "you",
+        "start": 149.42,
+        "end": 149.72,
+        "col": 0
+      },
+      {
+        "word": "play",
+        "start": 149.72,
+        "end": 150.22,
+        "col": 4
+      },
+      {
+        "word": "the",
+        "start": 150.22,
+        "end": 151.48,
+        "col": 9
+      },
+      {
+        "word": "game.",
+        "start": 151.48,
+        "end": 152.2,
+        "col": 15
+      }
+    ]
   },
   {
     "time": 152.1835827664399,
@@ -948,13 +2955,17 @@
     "chords": [
       "Bm"
     ],
+    "chord_cols": [
+      0
+    ],
     "beats": [
       152.1835827664399,
       152.85696145124717,
       153.53034013605443,
       154.20371882086167
     ],
-    "lyrics": ""
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 154.87709750566893,
@@ -965,13 +2976,31 @@
       "Bm",
       "Am"
     ],
+    "chord_cols": [
+      0,
+      12
+    ],
     "beats": [
       154.87709750566893,
       155.5504761904762,
       156.22385487528345,
       156.8972335600907
     ],
-    "lyrics": ""
+    "lyrics": "            Got the",
+    "words": [
+      {
+        "word": "Got",
+        "start": 156.35,
+        "end": 157.2,
+        "col": 12
+      },
+      {
+        "word": "the",
+        "start": 157.2,
+        "end": 157.46,
+        "col": 16
+      }
+    ]
   },
   {
     "time": 157.57061224489797,
@@ -982,13 +3011,43 @@
       "Em",
       "Bm"
     ],
+    "chord_cols": [
+      0,
+      20
+    ],
     "beats": [
       157.57061224489797,
       158.2439909297052,
       158.91736961451247,
       159.59074829931973
     ],
-    "lyrics": "Got the battle-worn smile now,"
+    "lyrics": "battle-worn smile   now, that",
+    "words": [
+      {
+        "word": "battle-worn",
+        "start": 157.46,
+        "end": 158.56,
+        "col": 0
+      },
+      {
+        "word": "smile",
+        "start": 158.56,
+        "end": 159.02,
+        "col": 12
+      },
+      {
+        "word": "now,",
+        "start": 159.02,
+        "end": 159.62,
+        "col": 20
+      },
+      {
+        "word": "that",
+        "start": 159.73,
+        "end": 160.115,
+        "col": 25
+      }
+    ]
   },
   {
     "time": 160.264126984127,
@@ -999,13 +3058,55 @@
       "Bm",
       "Am"
     ],
+    "chord_cols": [
+      0,
+      25
+    ],
     "beats": [
       160.264126984127,
       160.9142857142857,
       161.61088435374148,
       162.26104308390023
     ],
-    "lyrics": "that quiet strength I wear."
+    "lyrics": "quiet strength I wear.   Facing down",
+    "words": [
+      {
+        "word": "quiet",
+        "start": 160.115,
+        "end": 160.5,
+        "col": 0
+      },
+      {
+        "word": "strength",
+        "start": 160.5,
+        "end": 160.9,
+        "col": 6
+      },
+      {
+        "word": "I",
+        "start": 160.9,
+        "end": 161.44,
+        "col": 15
+      },
+      {
+        "word": "wear.",
+        "start": 161.44,
+        "end": 161.58,
+        "col": 17
+      },
+      {
+        "word": "Facing",
+        "start": 161.89,
+        "end": 162.56,
+        "col": 25
+      },
+      {
+        "word": "down",
+        "start": 162.56,
+        "end": 163.06,
+        "col": 32
+      }
+    ]
   },
   {
     "time": 162.957641723356,
@@ -1016,13 +3117,43 @@
       "Am",
       "Bm"
     ],
+    "chord_cols": [
+      0,
+      22
+    ],
     "beats": [
       162.957641723356,
       163.60780045351473,
       164.281179138322,
       164.93133786848074
     ],
-    "lyrics": "Facing down the empty promises,"
+    "lyrics": "the empty promises,   the",
+    "words": [
+      {
+        "word": "the",
+        "start": 163.06,
+        "end": 163.4,
+        "col": 0
+      },
+      {
+        "word": "empty",
+        "start": 163.4,
+        "end": 163.76,
+        "col": 4
+      },
+      {
+        "word": "promises,",
+        "start": 163.76,
+        "end": 164.58,
+        "col": 10
+      },
+      {
+        "word": "the",
+        "start": 165.0,
+        "end": 165.48,
+        "col": 22
+      }
+    ]
   },
   {
     "time": 165.60471655328797,
@@ -1033,13 +3164,61 @@
       "Bm",
       "Em"
     ],
+    "chord_cols": [
+      0,
+      26
+    ],
     "beats": [
       165.60471655328797,
       166.27809523809523,
       166.9514739229025,
       167.62485260770976
     ],
-    "lyrics": "the judgment in their empty stare."
+    "lyrics": "judgment in their empty   stare. Still got",
+    "words": [
+      {
+        "word": "judgment",
+        "start": 165.48,
+        "end": 165.9,
+        "col": 0
+      },
+      {
+        "word": "in",
+        "start": 165.9,
+        "end": 166.32,
+        "col": 9
+      },
+      {
+        "word": "their",
+        "start": 166.32,
+        "end": 166.64,
+        "col": 12
+      },
+      {
+        "word": "empty",
+        "start": 166.65,
+        "end": 167.12,
+        "col": 18
+      },
+      {
+        "word": "stare.",
+        "start": 167.12,
+        "end": 167.729,
+        "col": 26
+      },
+      {
+        "word": "Still",
+        "start": 167.729,
+        "end": 167.94,
+        "col": 33
+      },
+      {
+        "word": "got",
+        "start": 167.94,
+        "end": 168.18,
+        "col": 39
+      }
+    ]
   },
   {
     "time": 168.29823129251702,
@@ -1050,13 +3229,61 @@
       "Bm",
       "Em"
     ],
+    "chord_cols": [
+      0,
+      23
+    ],
     "beats": [
       168.29823129251702,
       168.97160997732425,
       169.6449886621315,
       170.31836734693877
     ],
-    "lyrics": "Still got fire in this spirit."
+    "lyrics": "fire in this spirit.   Still got purpose",
+    "words": [
+      {
+        "word": "fire",
+        "start": 168.18,
+        "end": 168.84,
+        "col": 0
+      },
+      {
+        "word": "in",
+        "start": 168.84,
+        "end": 169.12,
+        "col": 5
+      },
+      {
+        "word": "this",
+        "start": 169.12,
+        "end": 169.24,
+        "col": 8
+      },
+      {
+        "word": "spirit.",
+        "start": 169.24,
+        "end": 169.66,
+        "col": 13
+      },
+      {
+        "word": "Still",
+        "start": 169.91,
+        "end": 170.38,
+        "col": 23
+      },
+      {
+        "word": "got",
+        "start": 170.38,
+        "end": 170.62,
+        "col": 29
+      },
+      {
+        "word": "purpose",
+        "start": 170.62,
+        "end": 171.32,
+        "col": 33
+      }
+    ]
   },
   {
     "time": 170.99174603174603,
@@ -1067,13 +3294,37 @@
       "Bm",
       "Em"
     ],
+    "chord_cols": [
+      0,
+      15
+    ],
     "beats": [
       170.99174603174603,
       171.6651247165533,
       172.36172335600907,
       173.03510204081633
     ],
-    "lyrics": "Still got purpose deep inside. Yeah,"
+    "lyrics": "deep inside.   Yeah,",
+    "words": [
+      {
+        "word": "deep",
+        "start": 171.32,
+        "end": 171.64,
+        "col": 0
+      },
+      {
+        "word": "inside.",
+        "start": 171.64,
+        "end": 172.42,
+        "col": 5
+      },
+      {
+        "word": "Yeah,",
+        "start": 173.2,
+        "end": 173.58,
+        "col": 15
+      }
+    ]
   },
   {
     "time": 173.7084807256236,
@@ -1084,13 +3335,43 @@
       "Em",
       "G"
     ],
+    "chord_cols": [
+      0,
+      24
+    ],
     "beats": [
       173.7084807256236,
       174.38185941043085,
       175.07845804988662,
       175.75183673469388
     ],
-    "lyrics": "the battle-worn smile where"
+    "lyrics": "the battle-worn smile   where",
+    "words": [
+      {
+        "word": "the",
+        "start": 173.58,
+        "end": 173.9,
+        "col": 0
+      },
+      {
+        "word": "battle-worn",
+        "start": 173.9,
+        "end": 174.36,
+        "col": 4
+      },
+      {
+        "word": "smile",
+        "start": 174.36,
+        "end": 175.14,
+        "col": 16
+      },
+      {
+        "word": "where",
+        "start": 175.14,
+        "end": 176.2,
+        "col": 24
+      }
+    ]
   },
   {
     "time": 176.42521541950114,
@@ -1101,13 +3382,43 @@
       "G",
       "F#m"
     ],
+    "chord_cols": [
+      0,
+      14
+    ],
     "beats": [
       176.42521541950114,
       177.0985941043084,
       177.77197278911564,
       178.4453514739229
     ],
-    "lyrics": "dignity can proudly hide."
+    "lyrics": "dignity can   proudly hide.",
+    "words": [
+      {
+        "word": "dignity",
+        "start": 176.209,
+        "end": 176.78,
+        "col": 0
+      },
+      {
+        "word": "can",
+        "start": 176.78,
+        "end": 177.48,
+        "col": 8
+      },
+      {
+        "word": "proudly",
+        "start": 177.48,
+        "end": 178.42,
+        "col": 14
+      },
+      {
+        "word": "hide.",
+        "start": 178.42,
+        "end": 179.18,
+        "col": 22
+      }
+    ]
   },
   {
     "time": 179.11873015873016,
@@ -1117,13 +3428,17 @@
     "chords": [
       "Bm"
     ],
+    "chord_cols": [
+      0
+    ],
     "beats": [
       179.11873015873016,
       179.79210884353742,
       180.46548752834468,
       181.1388662131519
     ],
-    "lyrics": ""
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 181.8354648526077,
@@ -1134,13 +3449,25 @@
       "Bm",
       "Am"
     ],
+    "chord_cols": [
+      0,
+      12
+    ],
     "beats": [
       181.8354648526077,
       182.48562358276644,
       183.1822222222222,
       183.83238095238096
     ],
-    "lyrics": ""
+    "lyrics": "            Proudly",
+    "words": [
+      {
+        "word": "Proudly",
+        "start": 184.02,
+        "end": 185.14,
+        "col": 12
+      }
+    ]
   },
   {
     "time": 184.50575963718822,
@@ -1150,13 +3477,24 @@
     "chords": [
       "G"
     ],
+    "chord_cols": [
+      0
+    ],
     "beats": [
       184.50575963718822,
       185.15591836734694,
       185.8525170068027,
       186.50267573696146
     ],
-    "lyrics": "Proudly hide,"
+    "lyrics": "hide,",
+    "words": [
+      {
+        "word": "hide,",
+        "start": 185.14,
+        "end": 186.94,
+        "col": 0
+      }
+    ]
   },
   {
     "time": 187.1760544217687,
@@ -1167,13 +3505,43 @@
       "G",
       "F#"
     ],
+    "chord_cols": [
+      0,
+      14
+    ],
     "beats": [
       187.1760544217687,
       187.82621315192745,
       188.49959183673468,
       189.17297052154194
     ],
-    "lyrics": "yeah,"
+    "lyrics": "yeah, the     battle-worn smile",
+    "words": [
+      {
+        "word": "yeah,",
+        "start": 186.94,
+        "end": 188.24,
+        "col": 0
+      },
+      {
+        "word": "the",
+        "start": 188.24,
+        "end": 188.6,
+        "col": 6
+      },
+      {
+        "word": "battle-worn",
+        "start": 188.6,
+        "end": 189.14,
+        "col": 14
+      },
+      {
+        "word": "smile",
+        "start": 189.14,
+        "end": 190.16,
+        "col": 26
+      }
+    ]
   },
   {
     "time": 189.8463492063492,
@@ -1183,13 +3551,17 @@
     "chords": [
       "F#"
     ],
+    "chord_cols": [
+      0
+    ],
     "beats": [
       189.8463492063492,
       190.51972789115646,
       191.19310657596372,
       191.866485260771
     ],
-    "lyrics": "the battle-worn smile"
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 192.53986394557822,
@@ -1200,13 +3572,43 @@
       "F#",
       "Bm"
     ],
+    "chord_cols": [
+      0,
+      14
+    ],
     "beats": [
       192.53986394557822,
       193.21324263038548,
       193.90984126984128,
       194.60643990929705
     ],
-    "lyrics": "in this"
+    "lyrics": "in this       world's cold",
+    "words": [
+      {
+        "word": "in",
+        "start": 192.57,
+        "end": 193.32,
+        "col": 0
+      },
+      {
+        "word": "this",
+        "start": 193.32,
+        "end": 193.6,
+        "col": 3
+      },
+      {
+        "word": "world's",
+        "start": 193.6,
+        "end": 194.58,
+        "col": 14
+      },
+      {
+        "word": "cold",
+        "start": 194.58,
+        "end": 195.04,
+        "col": 22
+      }
+    ]
   },
   {
     "time": 195.30303854875282,
@@ -1216,13 +3618,24 @@
     "chords": [
       "Bm"
     ],
+    "chord_cols": [
+      0
+    ],
     "beats": [
       195.30303854875282,
       195.99963718820862,
       196.67301587301588,
       197.34639455782312
     ],
-    "lyrics": "world's cold glare."
+    "lyrics": "glare.",
+    "words": [
+      {
+        "word": "glare.",
+        "start": 195.04,
+        "end": 196.06,
+        "col": 0
+      }
+    ]
   },
   {
     "time": 198.04299319727892,
@@ -1232,13 +3645,17 @@
     "chords": [
       "Bm"
     ],
+    "chord_cols": [
+      0
+    ],
     "beats": [
       198.04299319727892,
       198.71637188208618,
       199.38975056689344,
       200.0631292517007
     ],
-    "lyrics": ""
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 200.73650793650796,
@@ -1248,13 +3665,17 @@
     "chords": [
       "Bm"
     ],
+    "chord_cols": [
+      0
+    ],
     "beats": [
       200.73650793650796,
       201.40988662131522,
       202.08326530612248,
       202.75664399092975
     ],
-    "lyrics": ""
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 203.430022675737,
@@ -1264,12 +3685,16 @@
     "chords": [
       "Bm"
     ],
+    "chord_cols": [
+      0
+    ],
     "beats": [
       203.430022675737,
       204.10340136054427,
       204.77678004535153,
       205.4501587301588
     ],
-    "lyrics": ""
+    "lyrics": "",
+    "words": []
   }
 ]

@@ -575,7 +575,8 @@
               tokens: barTokens,
               beats: beats,
               lyrics: barSync.lyrics || '',
-              chord_cols: barSync.chord_cols || null
+              chord_cols: barSync.chord_cols || null,
+              words: barSync.words || null
             });
           });
 
@@ -804,9 +805,8 @@
       tokens.forEach((tok, cIdx) => {
         let relCol = 0;
         const rawCol = (bar.chord_cols && typeof bar.chord_cols[cIdx] === 'number') ? bar.chord_cols[cIdx] : null;
-        const isSqueezed = (cIdx > 0 && rawCol !== null && rawCol <= 14 && text.length > 28);
 
-        if (rawCol !== null && !isSqueezed) {
+        if (rawCol !== null) {
           relCol = rawCol;
           if (cIdx > 0) {
             const prevRel = barChordCols[barChordCols.length - 1];
@@ -883,11 +883,30 @@
         });
       });
 
-      // Lyric text for this bar
-      formattedLyricHtml += escapeHtml(text);
-      const pad = requiredWidth - text.length;
-      if (pad > 0) formattedLyricHtml += ' '.repeat(pad);
-      formattedLyricHtml += ' ';
+      // Lyric text for this bar (with timed word spans & non-collapsing whitespace if bar.words is present)
+      if (bar.words && Array.isArray(bar.words) && bar.words.length > 0) {
+        let curCol = 0;
+        let barHtml = '';
+        bar.words.forEach((wObj) => {
+          const targetCol = (typeof wObj.col === 'number' && wObj.col >= curCol) ? wObj.col : curCol;
+          if (targetCol > curCol) {
+            barHtml += ' '.repeat(targetCol - curCol);
+            curCol = targetCol;
+          }
+          const wText = String(wObj.word || '');
+          barHtml += `<span class="lyric-word rounded px-0.5 -mx-0.5 transition-colors duration-75" data-start="${wObj.start}" data-end="${wObj.end}">${escapeHtml(wText)}</span>`;
+          curCol += wText.length;
+        });
+        if (requiredWidth > curCol) {
+          barHtml += ' '.repeat(requiredWidth - curCol);
+        }
+        formattedLyricHtml += barHtml + ' ';
+      } else {
+        formattedLyricHtml += escapeHtml(text);
+        const pad = requiredWidth - text.length;
+        if (pad > 0) formattedLyricHtml += ' '.repeat(pad);
+        formattedLyricHtml += ' ';
+      }
 
       globalCol += requiredWidth + 1;
     });
@@ -1756,6 +1775,18 @@
       const activeBarCell = document.querySelector(`.measure-bar-cell[data-bar-num="${activeChord.barNumber}"]`);
       if (activeBarCell) activeBarCell.classList.add('bar-active');
     }
+
+    // Highlight active sung word(s) in real time
+    const allWordSpans = document.querySelectorAll('.lyric-word');
+    allWordSpans.forEach(wEl => {
+      const wStart = parseFloat(wEl.getAttribute('data-start'));
+      const wEnd = parseFloat(wEl.getAttribute('data-end'));
+      if (!isNaN(wStart) && !isNaN(wEnd) && visualTime >= (wStart - 0.05) && visualTime <= (wEnd + 0.12)) {
+        wEl.classList.add('text-amber-300', 'font-bold', 'bg-amber-500/20');
+      } else {
+        wEl.classList.remove('text-amber-300', 'font-bold', 'bg-amber-500/20');
+      }
+    });
 
     // 3. Update Teleprompter HUD
     if (els.hudCurrentChord) {
