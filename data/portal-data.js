@@ -625,6 +625,22 @@ window.PORTAL_DATA = {
   },
   "chronicles": [
     {
+      "title": "The Liner Notes: The Men Behind the Curtain",
+      "date": "October 14, 2026",
+      "category": "Track Notes: The Republic of Nobody",
+      "summary": "Track 4 from The Republic of Nobody — exposing the relentless, year-round machinery of organized lobbying, professional political networks, and unequal access to the halls of power.",
+      "url": "https://theshadyriverbard.substack.com/p/the-liner-notes-the-men-behind-the",
+      "image": "https://substackcdn.com/image/youtube/w_728,c_limit/g6IUWVXYvqk"
+    },
+    {
+      "title": "The Liner Notes: The Price of the Ballot",
+      "date": "October 12, 2026",
+      "category": "Track Notes: The Republic of Nobody",
+      "summary": "Track 3 from The Republic of Nobody — confronting the billion-dollar campaign finance apparatus, dark money ecosystems, and the stadium-sized megaphones that drown out the ordinary voter.",
+      "url": "https://theshadyriverbard.substack.com/p/the-liner-notes-the-price-of-the",
+      "image": "https://substackcdn.com/image/youtube/w_728,c_limit/uz0qJt4us7c"
+    },
+    {
       "title": "The Liner Notes: One Man, One Vote",
       "date": "October 9, 2026",
       "category": "Track Notes: The Republic of Nobody",

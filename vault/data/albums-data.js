@@ -1792,8 +1792,8 @@ window.CATALOG_DATA = {
       "track_deconstructions": [
         "https://theshadyriverbard.substack.com/p/the-liner-notes-the-republic-of-nobody",
         "https://theshadyriverbard.substack.com/p/the-liner-notes-one-man-one-vote",
-        null,
-        null,
+        "https://theshadyriverbard.substack.com/p/the-liner-notes-the-price-of-the",
+        "https://theshadyriverbard.substack.com/p/the-liner-notes-the-men-behind-the",
         null,
         null,
         null,
@@ -1820,8 +1820,8 @@ window.CATALOG_DATA = {
       "track_videos": [
         "es51ehCyEWU",
         "R8Te05_x-Qg",
-        null,
-        null,
+        "uz0qJt4us7c",
+        "g6IUWVXYvqk",
         null,
         null,
         null,
