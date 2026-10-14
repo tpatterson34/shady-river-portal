@@ -348,11 +348,13 @@
         if (tabsFile) tabsTxt = await tabsFile.text();
       } else {
         // Loaded from remote path
-        const cacheBuster = `?v=${Date.now()}`;
-        const syncRes = await fetch(pkg.sync + cacheBuster, { cache: 'no-cache' });
+        const ts = Date.now();
+        const syncUrl = pkg.sync + (pkg.sync.includes('?') ? `&v=${ts}` : `?v=${ts}`);
+        const syncRes = await fetch(syncUrl, { cache: 'no-cache' });
         syncJson = await syncRes.json();
         try {
-          const tabsRes = await fetch(pkg.tabs + cacheBuster, { cache: 'no-cache' });
+          const tabsUrl = pkg.tabs + (pkg.tabs.includes('?') ? `&v=${ts}` : `?v=${ts}`);
+          const tabsRes = await fetch(tabsUrl, { cache: 'no-cache' });
           tabsTxt = await tabsRes.text();
         } catch (e) {
           console.warn('tabs.txt not found, attempting sync.json embedded text:', e);
@@ -2380,7 +2382,7 @@
 
     // Load available packages
     try {
-      const res = await fetch('data/practice-packages.json?v=20261003_05');
+      const res = await fetch('data/practice-packages.json?v=20261014A', { cache: 'no-cache' });
       state.allPackages = await res.json();
     } catch (e) {
       console.warn('Could not load practice-packages.json, using bundled package:', e);
