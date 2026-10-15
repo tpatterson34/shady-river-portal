@@ -2447,7 +2447,20 @@
     let initialAlbum = 'all';
 
     if (querySong) {
-      initialPkg = state.allPackages.find(p => p.id === querySong);
+      if (queryAlbum) {
+        const albumCandidates = state.allPackages.filter(p =>
+          p.album_id === queryAlbum ||
+          String(p.album_number) === queryAlbum ||
+          normalizePracticeTitle(p.album_id) === normalizePracticeTitle(queryAlbum)
+        );
+        initialPkg = albumCandidates.find(p =>
+          p.id === querySong ||
+          normalizePracticeTitle(p.title) === normalizePracticeTitle(querySong)
+        );
+      }
+      if (!initialPkg) {
+        initialPkg = state.allPackages.find(p => p.id === querySong);
+      }
     }
 
     if (queryAlbum) {
