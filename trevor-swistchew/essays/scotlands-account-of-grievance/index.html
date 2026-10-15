@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scotland's Account of Grievance — Trevor Swistchew (Compendium #62)</title>
+  <meta name="description" content="An evidence-based historical and constitutional commentary by Trevor Swistchew on the Massacre of Glencoe, Culloden, the Highland Clearances, and the enduring legacy of UK rule.">
+  <meta name="author" content="Trevor Swistchew">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Scotland's Account of Grievance — Trevor Swistchew (2026)">
+  <meta property="og:description" content="Glencoe, Culloden, the Highland Clearances and the Enduring Legacy of UK Rule. An evidence-based historical audit of military repression, forced migration, and cultural disruption.">
+  <meta property="og:image" content="https://tpatterson34.github.io/trevor-swistchew-portal/assets/images/scotlands-account-of-grievance-banner.jpg">
+  <meta property="og:url" content="https://tpatterson34.github.io/trevor-swistchew-portal/essays/scotlands-account-of-grievance/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Scotland's Account of Grievance — Trevor Swistchew">
+  <meta name="twitter:description" content="An evidence-based commentary on Glencoe, Culloden, the Clearances, and the enduring legacy of UK rule.">
+  <meta name="twitter:image" content="https://tpatterson34.github.io/trevor-swistchew-portal/assets/images/scotlands-account-of-grievance-banner.jpg">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            amber: { 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706' },
+            stone: { 850: '#1c1917', 900: '#1c1917', 950: '#0c0a09' }
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            cinzel: ['Cinzel', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0c0a09; }
+    ::-webkit-scrollbar-thumb { background: #292524; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #d97706; }
+
+    /* Reading Progress Bar */
+    #progress-bar { transition: width 0.1s; }
+
+    /* Drop Cap */
+    .drop-cap:first-letter {
+      float: left;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 4.2rem;
+      line-height: 0.82;
+      padding-top: 4px;
+      padding-right: 14px;
+      padding-bottom: 2px;
+      color: #f59e0b;
+      font-weight: 700;
+    }
+
+    /* Prose Styling */
+    .prose-essay p {
+      margin-bottom: 1.6rem;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    /* Theme Variants */
+    body.theme-peat { background-color: #0c0a09; color: #d6d3d1; }
+    body.theme-sepia { background-color: #171412; color: #e7dfd5; }
+    body.theme-sepia .prose-essay p { color: #f1e9de; }
+    body.theme-stone { background-color: #141416; color: #e2e2e5; }
+    body.theme-stone .prose-essay p { color: #eaeaf0; }
+
+    /* Citation Pills */
+    .citation-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      padding: 1px 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      border-radius: 4px;
+      background-color: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      color: #fbbf24;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      vertical-align: middle;
+      margin: 0 2px;
+    }
+    .citation-link:hover {
+      background-color: rgba(245, 158, 11, 0.22);
+      border-color: #f59e0b;
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body class="theme-peat min-h-screen font-sans selection:bg-amber-500/20 selection:text-amber-300">
+
+  <!-- Reading Progress Bar -->
+  <div class="fixed top-0 left-0 w-full h-1 bg-stone-900 z-50">
+    <div id="progress-bar" class="h-full bg-gradient-to-r from-amber-600 via-amber-400 to-amber-500 w-0"></div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="border-b border-stone-800/80 bg-stone-950/90 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      
+      <!-- Left: Archive Breadcrumb -->
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2 text-stone-300 hover:text-amber-400 transition-colors group">
+          <span class="w-7 h-7 rounded-lg bg-stone-900 border border-stone-700/80 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-500 transition-colors">TS</span>
+          <span class="font-cinzel text-xs tracking-wider uppercase hidden sm:inline font-semibold">Trevor Swistchew</span>
+        </a>
+        <span class="text-stone-400 text-xs">&bull;</span>
+        <span class="text-stone-400 text-xs font-mono">Compendium #62</span>
+        <span class="text-stone-400 text-xs">&bull;</span>
+        <a href="https://theshadyriverbard.com" target="_blank" rel="noopener noreferrer" class="text-[11px] font-mono text-stone-400 hover:text-amber-400 transition-colors flex items-center gap-1 hidden md:flex" title="The Shady River Bard Portal">
+          <i class="fa-solid fa-water text-[10px]"></i>
+          <span>The Shady River Bard ↗</span>
+        </a>
+      </div>
+
+      <!-- Right: Reading Controls & Return Link -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Theme Switcher -->
+        <div class="flex items-center bg-stone-900 border border-stone-800 rounded-lg p-0.5 text-xs">
+          <button id="theme-peat" class="px-2 py-1 rounded text-stone-400 hover:text-amber-400 transition-colors" title="Peat Dark Theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button id="theme-sepia" class="px-2 py-1 rounded text-stone-400 hover:text-amber-400 transition-colors" title="Highland Sepia Theme">
+            <i class="fa-solid fa-scroll"></i>
+          </button>
+          <button id="theme-stone" class="px-2 py-1 rounded text-stone-400 hover:text-amber-400 transition-colors" title="Granite Stone Theme">
+            <i class="fa-solid fa-mountain"></i>
+          </button>
+        </div>
+
+        <!-- Typography Sizer -->
+        <div class="flex items-center bg-stone-900 border border-stone-800 rounded-lg p-0.5 text-xs font-mono">
+          <button id="font-dec" class="px-2 py-1 text-stone-400 hover:text-amber-400 transition-colors" title="Decrease font size">A-</button>
+          <button id="font-reset" class="px-2 py-1 text-amber-500 font-bold" title="Reset font size">A</button>
+          <button id="font-inc" class="px-2 py-1 text-stone-400 hover:text-amber-400 transition-colors" title="Increase font size">A+</button>
+        </div>
+
+        <!-- Return to Compendium Link -->
+        <a href="../../index.html" class="px-3 py-1.5 rounded-lg bg-stone-900 hover:bg-stone-800 text-stone-300 hover:text-amber-400 text-xs font-mono border border-stone-800 transition-colors flex items-center gap-1.5" title="Return to Compendium Catalog">
+          <i class="fa-solid fa-arrow-left text-[10px]"></i>
+          <span class="hidden sm:inline">Compendium</span>
+        </a>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 pt-12 pb-20">
+
+    <!-- Essay Header Badges -->
+    <div class="mb-6 flex flex-wrap items-center gap-2">
+      <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-amber-500 text-stone-950 font-bold uppercase tracking-wider">
+        Compendium #62
+      </span>
+      <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-stone-900 text-amber-300 border border-amber-500/30">
+        Constitutional History &amp; Land Truth
+      </span>
+      <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-stone-900 text-rose-300 border border-rose-500/30">
+        Glencoe &bull; Culloden &bull; Clearances
+      </span>
+      <span class="text-stone-400 text-xs font-mono">
+        Trevor Swistchew &bull; 2026
+      </span>
+    </div>
+
+    <!-- Title & Subtitle -->
+    <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-stone-100 tracking-tight leading-[1.15] mb-4">
+      Scotland's Account of Grievance.
+    </h1>
+    <p class="font-serif italic text-lg sm:text-xl text-amber-400/90 leading-relaxed mb-6 font-normal">
+      Glencoe, Culloden, The Clearances and the Enduring Legacy of UK Rule: An Evidence-Based Commentary on Military Repression, Forced Migration, Cultural Disruption, and Land Ownership.
+    </p>
+
+    <!-- Author & Reading Stats Metadata -->
+    <div class="py-4 border-y border-stone-800/80 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-stone-400 mb-8">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 font-cinzel font-bold text-sm">
+          TS
+        </div>
+        <div>
+          <span class="font-bold text-stone-200 block text-sm">Trevor Swistchew</span>
+          <span class="text-stone-400 text-[11px]">Scottish Essayist, Cultural Critic &amp; Constitutional Thinker</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 text-[11px]">
+        <span class="flex items-center gap-1.5"><i class="fa-regular fa-clock text-amber-500"></i> 7 min read</span>
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-feather-pointed text-amber-500"></i> 1,394 words</span>
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-landmark text-amber-500"></i> 1688&ndash;2026 Audit</span>
+      </div>
+    </div>
+
+    <!-- Fine-Art Hero Banner Artwork -->
+    <div class="mb-10 rounded-2xl overflow-hidden border border-stone-800 bg-stone-950 shadow-2xl relative group">
+      <img 
+        src="../../assets/images/scotlands-account-of-grievance-banner.jpg" 
+        alt="Scotland's Account of Grievance: Glencoe, Culloden, The Clearances and the Enduring Legacy of UK Rule" 
+        class="w-full aspect-[16/9] object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent opacity-60"></div>
+      <div class="p-3 bg-stone-950/90 border-t border-stone-800 text-center">
+        <p class="font-serif italic text-xs text-stone-400">
+          Scotland's Account of Grievance (2026): Stone ruins of a cleared croft township among the heather below the mist-shrouded peaks of Glencoe, with a distant memorial cairn upon the moor and a lone stag watching over the depopulated glen. Romantic chiaroscuro oil painting in the tradition of Horatio McCulloch and J.M.W. Turner.
+        </p>
+      </div>
+    </div>
+
+    <!-- Core Thesis Pullquote -->
+    <div class="my-8 p-6 rounded-2xl border-l-4 border-amber-500 bg-gradient-to-r from-amber-500/10 via-stone-900/60 to-transparent shadow-lg">
+      <blockquote class="font-serif italic text-lg sm:text-xl text-stone-200 leading-relaxed">
+        &ldquo;These events are not controversies buried in forgotten archives. Their consequences can still be seen in Scotland's landscape, population distribution, language decline and continuing debates about land ownership. The story is not merely one of battles won and lost. It is a story of government power, military repression, forced migration, cultural disruption and economic transformation.&rdquo;
+      </blockquote>
+      <div class="mt-2 text-right font-mono text-xs text-amber-400/80">&mdash; Trevor Swistchew, 2026</div>
+    </div>
+
+    <!-- ARCHIVAL & PARLIAMENTARY FRAMEWORK SPOTLIGHT -->
+    <div class="mb-10 rounded-2xl border-2 border-stone-800 bg-gradient-to-br from-stone-900 via-stone-950 to-stone-900 p-5 sm:p-6 shadow-xl relative overflow-hidden group">
+      <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-amber-500/5 rounded-full blur-3xl pointer-events-none group-hover:bg-amber-500/10 transition-colors"></div>
+      
+      <div class="flex items-center gap-3 mb-4 pb-3 border-b border-stone-800">
+        <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">
+          <i class="fa-solid fa-scroll text-sm"></i>
+        </div>
+        <div>
+          <span class="text-[10px] font-mono text-amber-500 uppercase tracking-widest font-bold block">Historical Inquiry &amp; Statutory Record</span>
+          <h2 class="font-cinzel text-base font-bold text-stone-100">
+            Four Centuries of State Action &bull; Parliamentary &amp; Judicial Ledger
+          </h2>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-xs">
+        <div class="p-3 rounded-xl bg-stone-950/80 border border-stone-800">
+          <span class="font-mono text-amber-400 text-[10px] block font-bold">1692 &bull; Glencoe</span>
+          <div class="font-serif font-bold text-stone-200 mt-0.5">Murder Under Trust</div>
+          <p class="text-[11px] text-stone-400 mt-1 leading-relaxed">Official Scottish Parliamentary inquiry found state breach of Highland hospitality laws.</p>
+        </div>
+        <div class="p-3 rounded-xl bg-stone-950/80 border border-stone-800">
+          <span class="font-mono text-rose-400 text-[10px] block font-bold">1746 &bull; Culloden</span>
+          <div class="font-serif font-bold text-stone-200 mt-0.5">Military Pacification</div>
+          <p class="text-[11px] text-stone-400 mt-1 leading-relaxed">Defeat in under an hour; field executions, garrisoning, and Cumberland's ruthless campaign.</p>
+        </div>
+        <div class="p-3 rounded-xl bg-stone-950/80 border border-stone-800">
+          <span class="font-mono text-amber-400 text-[10px] block font-bold">1746 &bull; Proscription</span>
+          <div class="font-serif font-bold text-stone-200 mt-0.5">Statutory Erasure</div>
+          <p class="text-[11px] text-stone-400 mt-1 leading-relaxed">Dress Act, disarmament, and Heritable Jurisdictions Act dismantling clan authority.</p>
+        </div>
+        <div class="p-3 rounded-xl bg-stone-950/80 border border-stone-800">
+          <span class="font-mono text-sky-400 text-[10px] block font-bold">1883&ndash;84 &bull; Napier</span>
+          <div class="font-serif font-bold text-stone-200 mt-0.5">The Crofters Audit</div>
+          <p class="text-[11px] text-stone-400 mt-1 leading-relaxed">Royal Commission documenting mass clearance evictions, rent gouging, and land monopoly.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERACTIVE EMPIRICAL HISTORICAL DOSSIER -->
+    <section class="mb-12 rounded-2xl border border-stone-800 bg-stone-900/70 p-5 sm:p-7 shadow-xl">
+      <div class="flex items-center gap-3 mb-4 pb-3 border-b border-stone-800">
+        <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+          <i class="fa-solid fa-scale-balanced text-sm"></i>
+        </div>
+        <div>
+          <h2 class="font-cinzel text-base font-bold text-stone-100 uppercase tracking-wider">
+            EMPIRICAL DOSSIER: THE HIGHLAND ACCOUNT OF GRIEVANCE
+          </h2>
+          <p class="font-mono text-xs text-stone-400">Evidence of State Power, Eviction, Statutory Reform &amp; Global Dispersal</p>
+        </div>
+      </div>
+
+      <!-- Dossier Tabs -->
+      <div class="flex flex-wrap gap-2 mb-6" role="tablist">
+        <button id="tab-btn-1" class="dossier-tab px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500 text-stone-950 shadow transition-all" role="tab" onclick="switchTab(1)">
+          1. Glencoe 1692 ("Murder Under Trust")
+        </button>
+        <button id="tab-btn-2" class="dossier-tab px-3.5 py-1.5 rounded-lg text-xs font-mono text-stone-400 hover:text-stone-200 bg-stone-950 border border-stone-800 transition-all" role="tab" onclick="switchTab(2)">
+          2. Culloden 1746 &amp; The Disarming Acts
+        </button>
+        <button id="tab-btn-3" class="dossier-tab px-3.5 py-1.5 rounded-lg text-xs font-mono text-stone-400 hover:text-stone-200 bg-stone-950 border border-stone-800 transition-all" role="tab" onclick="switchTab(3)">
+          3. The Clearances &amp; Napier Commission
+        </button>
+      </div>
+
+      <!-- Tab 1: Glencoe -->
+      <div id="tab-content-1" class="dossier-pane space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-4 rounded-xl bg-stone-950/80 border border-stone-800">
+            <span class="text-[10px] font-mono text-rose-400 block uppercase font-bold">12 Days of Hospitality</span>
+            <div class="text-xl font-bold font-serif text-stone-100 mt-1">Breach of Ancient Law</div>
+            <p class="text-xs text-stone-400 mt-1 leading-relaxed">MacDonalds provided shelter and food to government soldiers who had lived among them as guests for nearly two weeks prior to the dawn assault.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-stone-950/80 border border-stone-800">
+            <span class="text-[10px] font-mono text-rose-400 block uppercase font-bold">Casualties &amp; Exposure</span>
+            <div class="text-xl font-bold font-serif text-stone-100 mt-1">38 Murdered + Winter Deaths</div>
+            <p class="text-xs text-stone-400 mt-1 leading-relaxed">38 clan members killed in cold blood; scores more perished in blizzards while fleeing into the high winter crags of Glencoe.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-stone-950/80 border border-stone-800">
+            <span class="text-[10px] font-mono text-amber-400 block uppercase font-bold">Parliamentary Finding</span>
+            <div class="text-xl font-bold font-serif text-stone-100 mt-1">&ldquo;Murder Under Trust&rdquo;</div>
+            <p class="text-xs text-stone-400 mt-1 leading-relaxed">Investigated by the Scottish Parliament, which identified state culpability under Sir John Dalrymple, Master of Stair, operating under King William III.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: Culloden -->
+      <div id="tab-content-2" class="dossier-pane hidden space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-4 rounded-xl bg-stone-950/80 border border-stone-800">
+            <span class="text-[10px] font-mono text-rose-400 block uppercase font-bold">16 April 1746</span>
+            <div class="text-xl font-bold font-serif text-stone-100 mt-1">Culloden Moor</div>
+            <p class="text-xs text-stone-400 mt-1 leading-relaxed">The battle lasted under 60 minutes. 1,500 to 2,000 Jacobites were killed or wounded. Hundreds were captured, executed on site, or transported.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-stone-950/80 border border-stone-800">
+            <span class="text-[10px] font-mono text-rose-400 block uppercase font-bold">Duke of Cumberland</span>
+            <div class="text-xl font-bold font-serif text-stone-100 mt-1">&ldquo;The Butcher&rdquo;</div>
+            <p class="text-xs text-stone-400 mt-1 leading-relaxed">Ruthless search-and-destroy patrols swept Highland glens. Forfeiture of estates, burning of dwellings, and military occupation followed.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-stone-950/80 border border-stone-800">
+            <span class="text-[10px] font-mono text-amber-400 block uppercase font-bold">Statutory Dismantling</span>
+            <div class="text-xl font-bold font-serif text-stone-100 mt-1">Proscription &amp; Jurisdictions</div>
+            <p class="text-xs text-stone-400 mt-1 leading-relaxed">Act of Proscription 1746 &amp; Dress Act outlawed Highland dress and tartans. Heritable Jurisdictions Act 1746 stripped clan chiefs of hereditary legal power.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: The Clearances -->
+      <div id="tab-content-3" class="dossier-pane hidden space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-4 rounded-xl bg-stone-950/80 border border-stone-800">
+            <span class="text-[10px] font-mono text-amber-400 block uppercase font-bold">Mass Displacement</span>
+            <div class="text-xl font-bold font-serif text-stone-100 mt-1">Profits Over People</div>
+            <p class="text-xs text-stone-400 mt-1 leading-relaxed">Landowners converted tenant lands into commercial sheep runs. Approx 15,000 cleared in Sutherland alone under Patrick Sellar, Young, and Gordon.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-stone-950/80 border border-stone-800">
+            <span class="text-[10px] font-mono text-sky-400 block uppercase font-bold">Global Emigration</span>
+            <div class="text-xl font-bold font-serif text-stone-100 mt-1">The Scottish Diaspora</div>
+            <p class="text-xs text-stone-400 mt-1 leading-relaxed">Highland families dispersed to Canada, the USA, Australia, and New Zealand, leaving depopulated glens and an enduring cultural contraction.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-stone-950/80 border border-stone-800">
+            <span class="text-[10px] font-mono text-emerald-400 block uppercase font-bold">Official Record</span>
+            <div class="text-xl font-bold font-serif text-stone-100 mt-1">Napier Commission (1883&ndash;84)</div>
+            <p class="text-xs text-stone-400 mt-1 leading-relaxed">Royal Commission preserved hundreds of eyewitness testimonies from crofters, leading to the landmark Crofters Holdings Act 1886.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Essay Content (100% Verbatim) -->
+    <article class="prose-essay font-serif text-lg text-stone-300 leading-relaxed space-y-6">
+
+      <p class="drop-cap">
+        Few subjects generate stronger emotions in Scotland than the treatment of the Highland people during the centuries following the Revolution of 1688, the Union of 1707, the Jacobite Wars and the Highland Clearances. The reason is simple. These events are not controversies buried in forgotten archives. Their consequences can still be seen in Scotland's landscape, population distribution, language decline and continuing debates about land ownership. The story is not merely one of battles won and lost. It is a story of government power, military repression, forced migration, cultural disruption and economic transformation.
+      </p>
+
+      <p>
+        One of the most notorious events in Scottish history was the Massacre of Glencoe in February 1692. Members of the MacDonald clan were killed by government troops after providing them with hospitality for nearly two weeks. Contemporary estimates place the number murdered at about thirty eight, while additional people died from exposure after escaping into severe winter conditions. The event was later investigated by the Scottish Parliament, which described it as "murder under trust", a phrase that still carries enormous emotional weight in Scotland. Responsibility has long been associated with Sir John Dalrymple, Master of Stair acting under the authority of King William III, while the operation itself involved officers including Captain Robert Campbell of Glenlyon, Major Robert Duncanson and Captain Drummond.
+        <a href="https://www.britannica.com/event/Massacre-of-Glencoe" target="_blank" rel="noopener noreferrer" class="citation-link" title="Encyclopaedia Britannica: Massacre of Glencoe">britannica.com ↗</a>
+        <a href="https://www.glen-coe.com/history/massacre-of-glencoe" target="_blank" rel="noopener noreferrer" class="citation-link" title="Glencoe Heritage: Massacre History">glen-coe.com ↗</a>
+        <a href="https://en.wikipedia.org/wiki/Massacre_of_Glencoe" target="_blank" rel="noopener noreferrer" class="citation-link" title="Wikipedia: Massacre of Glencoe">en.wikipedia.org ↗</a>
+      </p>
+
+      <p>
+        What made Glencoe unique was not the scale of killing alone. Scotland's history contains larger battles and bloodier conflicts. Glencoe became infamous because of the violation of trust. Soldiers accepted food, shelter and protection from the very people they would later attack. Even historians who disagree on wider political interpretations generally acknowledge that the betrayal element is central to understanding why Glencoe occupies such a powerful place in Scottish memory.
+        <a href="https://www.glen-coe.com/history/massacre-of-glencoe" target="_blank" rel="noopener noreferrer" class="citation-link" title="Glencoe Heritage Record">glen-coe.com ↗</a>
+        <a href="https://lovetovisitscotland.com/the-glencoe-massacre-what-really-happened-in-1692/" target="_blank" rel="noopener noreferrer" class="citation-link" title="Love to Visit Scotland: What Really Happened in 1692">lovetovisitscotland.com ↗</a>
+      </p>
+
+      <p>
+        More than half a century later came the event that many regard as the decisive turning point in Highland history. On 16 April 1746 the Jacobite army led by Charles Edward Stuart met government forces commanded by William Augustus, Duke of Cumberland on Culloden Moor near Inverness. The Jacobites suffered a devastating defeat. Historical estimates place their losses at between 1,500 and 2,000 killed and wounded, while hundreds more were captured. The battle lasted less than an hour, yet its consequences transformed Highland Scotland.
+        <a href="https://en.wikipedia.org/wiki/Battle_of_Culloden" target="_blank" rel="noopener noreferrer" class="citation-link" title="Wikipedia: Battle of Culloden">en.wikipedia.org ↗</a>
+      </p>
+
+      <p>
+        The aftermath of Culloden remains one of the most controversial chapters in Scottish history. Accounts from the period describe wounded Jacobites being executed after the battle, prisoners facing harsh treatment and entire districts subjected to military control. Government forces moved through the Highlands searching for rebels and supporters. Estates were forfeited, prisoners transported and local populations brought under tighter state authority. These actions earned Duke of Cumberland the nickname "The Butcher", a title that has followed him ever since.
+        <a href="https://robertson.org/CW_Aftermath_of_Culloden.html" target="_blank" rel="noopener noreferrer" class="citation-link" title="Robertson Clan: Aftermath of Culloden">robertson.org ↗</a>
+        <a href="https://smartstep.blog/duke-of-cumberland-after-battle-of-culloden" target="_blank" rel="noopener noreferrer" class="citation-link" title="Smartstep History: Duke of Cumberland After Battle of Culloden">smartstep.blog ↗</a>
+        <a href="https://www.sundaypost.com/fp/culloden/" target="_blank" rel="noopener noreferrer" class="citation-link" title="Sunday Post: Culloden Aftermath">sundaypost.com ↗</a>
+      </p>
+
+      <p>
+        The government's objective extended beyond military victory. The defeat of the Jacobite army was followed by a programme of political and social restructuring. The British Parliament introduced legislation intended to weaken the clan system and increase direct state control. The Act of Proscription 1746 reinforced disarmament measures and restricted Highland dress. The associated Dress Act made traditional Highland attire illegal in many circumstances. At the same time, the Heritable Jurisdictions (Scotland) Act abolished many hereditary judicial powers previously exercised by clan chiefs and transferred them to institutions operating under Crown authority. These Acts were official government measures enacted in the wake of the Jacobite defeat.
+        <a href="https://en.wikipedia.org/wiki/Act_of_Proscription_1746" target="_blank" rel="noopener noreferrer" class="citation-link" title="Wikipedia: Act of Proscription 1746">en.wikipedia.org ↗</a>
+        <a href="https://en.wikipedia.org/wiki/Dress_Act_1746" target="_blank" rel="noopener noreferrer" class="citation-link" title="Wikipedia: Dress Act 1746">en.wikipedia.org ↗</a>
+        <a href="https://en.wikipedia.org/wiki/Heritable_Jurisdictions_%28Scotland%29_Act_1746" target="_blank" rel="noopener noreferrer" class="citation-link" title="Wikipedia: Heritable Jurisdictions Act 1746">en.wikipedia.org ↗</a>
+        <a href="https://www.legislation.gov.uk/apgb/Geo2/20/43/contents" target="_blank" rel="noopener noreferrer" class="citation-link" title="UK Legislation: Heritable Jurisdictions (Scotland) Act 1746">legislation.gov.uk ↗</a>
+      </p>
+
+      <p>
+        Supporters of these reforms argued that they brought greater legal uniformity, government stability and integration into the wider British state. Critics argued that they deliberately dismantled traditional Highland institutions and accelerated the decline of Gaelic culture. Regardless of interpretation, the significance of the legislation is not disputed. The relationship between Highland communities and government authority changed fundamentally after Culloden.
+        <a href="https://en.wikipedia.org/wiki/Heritable_Jurisdictions_%28Scotland%29_Act_1746" target="_blank" rel="noopener noreferrer" class="citation-link" title="Wikipedia: Heritable Jurisdictions (Scotland) Act 1746">en.wikipedia.org ↗</a>
+        <a href="https://info.scot/library/history/events/heritable-jurisdictions-scotland-act?timeline=historic-documents" target="_blank" rel="noopener noreferrer" class="citation-link" title="Info.scot Archive: Heritable Jurisdictions Act">info.scot ↗</a>
+      </p>
+
+      <p>
+        The destruction of the old clan order created conditions that would contribute to an even larger social upheaval. During the late eighteenth and nineteenth centuries the Highlands experienced the removals now known collectively as the Highland Clearances. These were not a single event but a series of policies across different regions and over many decades. Landowners increasingly concluded that sheep farming and other commercial activities generated greater profits than traditional tenant communities. The result was mass population displacement across large parts of northern Scotland.
+        <a href="https://www.highlifehighland.com/archives/highland-archive-service/learning-and-outreach/resources-for-teachers/clearances-resource-pack" target="_blank" rel="noopener noreferrer" class="citation-link" title="High Life Highland: Clearances Archive Pack">highlifehighland.com ↗</a>
+        <a href="https://www.undiscoveredscotland.co.uk/usbiography/s/patricksellar.html" target="_blank" rel="noopener noreferrer" class="citation-link" title="Undiscovered Scotland: Patrick Sellar Biography">undiscoveredscotland.co.uk ↗</a>
+      </p>
+
+      <p>
+        Families were removed from long-established holdings. Many were relocated to coastal settlements. Others moved to industrial centres. Great numbers emigrated overseas. Communities that had existed for centuries disappeared. Houses were often demolished or burned to prevent reoccupation. Historical accounts describe confusion, grief and hardship as people were forced to abandon homes, land and local connections built over generations.
+        <a href="https://www.highlifehighland.com/archives/highland-archive-service/learning-and-outreach/resources-for-teachers/clearances-resource-pack" target="_blank" rel="noopener noreferrer" class="citation-link" title="High Life Highland Archive Pack">highlifehighland.com ↗</a>
+        <a href="https://www.undiscoveredscotland.co.uk/usbiography/s/patricksellar.html" target="_blank" rel="noopener noreferrer" class="citation-link" title="Undiscovered Scotland Record">undiscoveredscotland.co.uk ↗</a>
+      </p>
+
+      <p>
+        Among the most famous clearance regions was Sutherland. Historical sources indicate that approximately 15,000 people were removed from Sutherland estates during the principal clearance period. The policies became associated with figures including Patrick Sellar, William Young, Elizabeth Gordon, Countess of Sutherland, and George Leveson-Gower. Through their actions and decisions, vast areas of northern Scotland were transformed.
+        <a href="https://www.undiscoveredscotland.co.uk/usbiography/s/patricksellar.html" target="_blank" rel="noopener noreferrer" class="citation-link" title="Undiscovered Scotland: Sellar & Sutherland Estates">undiscoveredscotland.co.uk ↗</a>
+        <a href="https://en.wikipedia.org/wiki/Patrick_Sellar" target="_blank" rel="noopener noreferrer" class="citation-link" title="Wikipedia: Patrick Sellar">en.wikipedia.org ↗</a>
+      </p>
+
+      <p>
+        No individual became more controversial than Patrick Sellar. He was charged with offences including culpable homicide and wilful fire-raising arising from clearance operations in Strathnaver. Although acquitted, he became permanently associated with one of the most disputed episodes in Scottish history. To critics he embodied the human cost of clearance policies. To defenders he represented agricultural and economic modernisation. More than two centuries later, debate surrounding his role remains active.
+        <a href="https://en.wikipedia.org/wiki/Patrick_Sellar" target="_blank" rel="noopener noreferrer" class="citation-link" title="Wikipedia: Patrick Sellar Trial">en.wikipedia.org ↗</a>
+        <a href="https://www.highlifehighland.com/archives/highland-archive-service/learning-and-outreach/resources-for-teachers/clearances-resource-pack" target="_blank" rel="noopener noreferrer" class="citation-link" title="High Life Highland: Strathnaver Clearances">highlifehighland.com ↗</a>
+      </p>
+
+      <p>
+        The impact of the Clearances extended far beyond Sutherland. Similar pressures affected communities in Ross shire, Inverness shire, Caithness, Skye, Mull, Morvern, Lochaber and other Highland districts. Local populations contracted. Entire communities vanished from areas that had once been densely occupied by Highland standards. The consequences can still be seen in modern Scotland, where large tracts of land contain remarkably small resident populations despite evidence of much greater historical settlement.
+        <a href="https://www.highlifehighland.com/archives/highland-archive-service/learning-and-outreach/resources-for-teachers/clearances-resource-pack" target="_blank" rel="noopener noreferrer" class="citation-link" title="High Life Highland Educational Pack">highlifehighland.com ↗</a>
+        <a href="https://theorkneynews.scot/2026/03/27/from-sutherland-to-orkney-stories-of-clearance/" target="_blank" rel="noopener noreferrer" class="citation-link" title="The Orkney News: Stories of Clearance">theorkneynews.scot ↗</a>
+      </p>
+
+      <p>
+        The consequences were immense. Highland emigrants established communities throughout Canada, the United States, Australia and New Zealand. Today millions of people around the world trace ancestry to those migrations. The creation of a global Scottish diaspora stands among the most significant outcomes of the clearance era. Yet from the perspective of the Highlands themselves, that diaspora emerged from population loss on a scale rarely experienced elsewhere in Britain.
+        <a href="https://theorkneynews.scot/2026/03/27/from-sutherland-to-orkney-stories-of-clearance/" target="_blank" rel="noopener noreferrer" class="citation-link" title="The Orkney News: Clearance Diaspora">theorkneynews.scot ↗</a>
+        <a href="https://www.highlifehighland.com/archives/highland-archive-service/learning-and-outreach/resources-for-teachers/clearances-resource-pack" target="_blank" rel="noopener noreferrer" class="citation-link" title="High Life Highland Archives">highlifehighland.com ↗</a>
+      </p>
+
+      <p>
+        The weakening of Gaelic-speaking communities formed another lasting consequence. Population dispersal, economic pressures and social change contributed to language decline across many traditional Gaelic-speaking areas. Although efforts have been made to preserve and revive Gaelic the erosion of population in historic Gaelic heartlands remains a central factor in understanding the language's modern position.
+      </p>
+
+      <p>
+        Official concern regarding Highland conditions eventually led to major investigations. One of the most important was the Napier Commission of 1883-84, formally established to investigate the condition of crofters and cottars in the Highlands and Islands. The commission gathered extensive evidence regarding land use, tenancy conditions and the legacy of previous policies. Its testimony remains one of the most important official records available to historians studying Highland grievances and rural life in nineteenth-century Scotland.
+      </p>
+
+      <p>
+        Questions of responsibility remain fiercely contested. Some of the most controversial figures associated with these events were themselves Scottish. Sir John Dalrymple played a major role in the Glencoe affair. Patrick Sellar became synonymous with clearance operations. Powerful Scottish aristocrats approved or implemented many of the policies that altered Highland society. This reality complicates simplistic explanations based solely on nationality. The story involves governments, aristocrats, military authorities, economic interests and state institutions operating within the broader framework of Britain.
+      </p>
+
+      <p>
+        Nevertheless, for many descendants of those affected, the consequences matter more than the constitutional detail. People were killed at Glencoe. The Jacobite cause was crushed at Culloden. Parliamentary legislation weakened the clan system. Tens of thousands experienced displacement during the Clearances. Communities disappeared. Languages declined. Vast numbers left Scotland altogether. Those facts remain at the centre of modern historical debate.
+        <a href="https://www.britannica.com/event/Massacre-of-Glencoe" target="_blank" rel="noopener noreferrer" class="citation-link" title="Britannica: Glencoe">britannica.com ↗</a>
+        <a href="https://en.wikipedia.org/wiki/Battle_of_Culloden" target="_blank" rel="noopener noreferrer" class="citation-link" title="Wikipedia: Culloden">en.wikipedia.org ↗</a>
+        <a href="https://en.wikipedia.org/wiki/Heritable_Jurisdictions_%28Scotland%29_Act_1746" target="_blank" rel="noopener noreferrer" class="citation-link" title="Wikipedia: Heritable Jurisdictions">en.wikipedia.org ↗</a>
+        <a href="https://www.undiscoveredscotland.co.uk/usbiography/s/patricksellar.html" target="_blank" rel="noopener noreferrer" class="citation-link" title="Undiscovered Scotland: Patrick Sellar">undiscoveredscotland.co.uk ↗</a>
+      </p>
+
+      <p>
+        In 2026 the legacy remains visible. Memorials stand at Glencoe, Culloden and Strathnaver. Debates continue regarding land reform, rural depopulation and concentrated land ownership. Historians continue to dispute motivations, responsibility and interpretation, but the existence of profound change is beyond serious argument. The Highlands that emerged from the nineteenth century were radically different from those that entered the eighteenth.
+      </p>
+
+      <p>
+        Whether viewed as state-building, repression, economic modernisation or national tragedy, these events left an enduring mark upon Scotland. Their story is preserved not only in archives, legislation and inquiries, but in depopulated glens, scattered communities and a global Scottish diaspora whose origins lie in one of the most transformative periods of history.
+      </p>
+
+      <!-- HISTORICAL SOURCES & ARCHIVAL REFERENCES -->
+      <div class="mt-12 p-6 rounded-2xl border border-stone-800 bg-stone-950/80 space-y-4">
+        <div class="flex items-center gap-2.5 pb-3 border-b border-stone-800 text-amber-500 font-cinzel font-bold text-sm tracking-wide">
+          <i class="fa-solid fa-book-bookmark text-xs"></i>
+          <span>Historical Sources &amp; Primary Documentation</span>
+        </div>
+        <ul class="space-y-3 font-sans text-xs text-stone-400">
+          <li class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 pb-2 border-b border-stone-900">
+            <span class="font-serif text-stone-200">Massacre of Glencoe, Encyclopaedia Britannica and parliamentary inquiry findings.</span>
+            <span class="shrink-0 flex flex-wrap gap-1">
+              <a href="https://www.britannica.com/event/Massacre-of-Glencoe" target="_blank" rel="noopener noreferrer" class="citation-link">britannica.com ↗</a>
+              <a href="https://www.glen-coe.com/history/massacre-of-glencoe" target="_blank" rel="noopener noreferrer" class="citation-link">glen-coe.com ↗</a>
+              <a href="https://en.wikipedia.org/wiki/Massacre_of_Glencoe" target="_blank" rel="noopener noreferrer" class="citation-link">en.wikipedia.org ↗</a>
+            </span>
+          </li>
+          <li class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 pb-2 border-b border-stone-900">
+            <span class="font-serif text-stone-200">Battle of Culloden, casualty estimates, commanders and battle details.</span>
+            <span class="shrink-0">
+              <a href="https://en.wikipedia.org/wiki/Battle_of_Culloden" target="_blank" rel="noopener noreferrer" class="citation-link">en.wikipedia.org ↗</a>
+            </span>
+          </li>
+          <li class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 pb-2 border-b border-stone-900">
+            <span class="font-serif text-stone-200">Act of Proscription 1746 &amp; The Dress Act 1746.</span>
+            <span class="shrink-0 flex flex-wrap gap-1">
+              <a href="https://en.wikipedia.org/wiki/Act_of_Proscription_1746" target="_blank" rel="noopener noreferrer" class="citation-link">Act of Proscription ↗</a>
+              <a href="https://en.wikipedia.org/wiki/Dress_Act_1746" target="_blank" rel="noopener noreferrer" class="citation-link">Dress Act ↗</a>
+            </span>
+          </li>
+          <li class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 pb-2 border-b border-stone-900">
+            <span class="font-serif text-stone-200">Heritable Jurisdictions (Scotland) Act 1746, official legislation.</span>
+            <span class="shrink-0 flex flex-wrap gap-1">
+              <a href="https://www.legislation.gov.uk/apgb/Geo2/20/43/contents" target="_blank" rel="noopener noreferrer" class="citation-link">legislation.gov.uk ↗</a>
+              <a href="https://en.wikipedia.org/wiki/Heritable_Jurisdictions_%28Scotland%29_Act_1746" target="_blank" rel="noopener noreferrer" class="citation-link">en.wikipedia.org ↗</a>
+            </span>
+          </li>
+          <li class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 pb-2 border-b border-stone-900">
+            <span class="font-serif text-stone-200">Highland Clearances archive resources and educational records.</span>
+            <span class="shrink-0">
+              <a href="https://www.highlifehighland.com/archives/highland-archive-service/learning-and-outreach/resources-for-teachers/clearances-resource-pack" target="_blank" rel="noopener noreferrer" class="citation-link">highlifehighland.com ↗</a>
+            </span>
+          </li>
+          <li class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 pb-2 border-b border-stone-900">
+            <span class="font-serif text-stone-200">Patrick Sellar and Sutherland estate records.</span>
+            <span class="shrink-0 flex flex-wrap gap-1">
+              <a href="https://en.wikipedia.org/wiki/Patrick_Sellar" target="_blank" rel="noopener noreferrer" class="citation-link">en.wikipedia.org ↗</a>
+              <a href="https://www.undiscoveredscotland.co.uk/usbiography/s/patricksellar.html" target="_blank" rel="noopener noreferrer" class="citation-link">undiscoveredscotland.co.uk ↗</a>
+            </span>
+          </li>
+          <li class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 pb-2 border-b border-stone-900">
+            <span class="font-serif text-stone-200">National Records of Scotland archival material on Jacobite prisoners, estate forfeitures and Highland administration.</span>
+            <span class="shrink-0 font-mono text-[10px] text-stone-400">HM General Register House, Edinburgh</span>
+          </li>
+          <li class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+            <span class="font-serif text-stone-200">Napier Commission Report (1884), evidence regarding crofting and Highland land conditions.</span>
+            <span class="shrink-0 font-mono text-[10px] text-stone-400">Parliamentary Papers / C. 3980</span>
+          </li>
+        </ul>
+      </div>
+
+    </article>
+
+    <!-- Author Colophon & Signature Box -->
+    <div class="mt-14 p-6 sm:p-8 rounded-2xl border border-stone-800 bg-stone-900/60 shadow-xl flex flex-col sm:flex-row items-center sm:items-start gap-6">
+      <div class="w-16 h-16 rounded-full bg-amber-500/10 border-2 border-amber-500/40 flex items-center justify-center text-amber-500 font-cinzel text-xl font-bold shrink-0">
+        TS
+      </div>
+      <div class="space-y-2 text-center sm:text-left">
+        <h3 class="font-display text-lg font-bold text-stone-100">Trevor Swistchew</h3>
+        <p class="font-serif text-xs text-stone-400 leading-relaxed">
+          Scotland-based essayist, composer, and constitutional analyst. His ongoing digital compendium investigates the mechanics of state power, imperial hegemony, institutional injustice, and the human consequences of British governance across Scottish history.
+        </p>
+        <div class="pt-2 flex flex-wrap items-center justify-center sm:justify-start gap-3 text-[11px] font-mono text-amber-400">
+          <span>&bull; Edinburgh, Scotland</span>
+          <span>&bull; Compendium #62</span>
+          <span>&bull; October 2026</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation between Compendiums -->
+    <nav class="mt-12 pt-8 border-t border-stone-800 grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="../the-marketing-of-the-original-being/index.html" class="p-4 rounded-xl bg-stone-900/60 hover:bg-stone-900 border border-stone-800 hover:border-amber-500/50 transition-all flex items-center gap-3 group">
+        <i class="fa-solid fa-arrow-left text-amber-500 group-hover:-translate-x-1 transition-transform"></i>
+        <div class="text-left">
+          <span class="text-[10px] font-mono text-stone-400 block uppercase">Previous Compendium (#61)</span>
+          <span class="font-display font-bold text-sm text-stone-200 group-hover:text-amber-400 transition-colors">The Marketing of the Original Being.</span>
+        </div>
+      </a>
+      <a href="../../index.html" class="p-4 rounded-xl bg-stone-900/60 hover:bg-stone-900 border border-stone-800 hover:border-amber-500/50 transition-all flex items-center justify-between group">
+        <div class="text-left">
+          <span class="text-[10px] font-mono text-stone-400 block uppercase">Compendium Hub</span>
+          <span class="font-display font-bold text-sm text-stone-200 group-hover:text-amber-400 transition-colors">Explore All 62 Works</span>
+        </div>
+        <i class="fa-solid fa-arrow-right text-amber-500 group-hover:translate-x-1 transition-transform"></i>
+      </a>
+    </nav>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="mt-16 border-t border-stone-800/80 bg-stone-950 py-8 text-center text-xs font-mono text-stone-400">
+    <div class="max-w-4xl mx-auto px-4 space-y-2">
+      <p>&copy; 2026 Trevor Swistchew. All rights reserved.</p>
+      <p class="text-stone-400 text-[11px]">The Scottish Literary Salon &bull; 62 Compendium Essays &bull; 76 Music Chamber Songs &bull; 29 Collected Poems</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Tab Switcher for Empirical Dossier
+    function switchTab(tabIndex) {
+      document.querySelectorAll('.dossier-pane').forEach((pane, idx) => {
+        if (idx + 1 === tabIndex) {
+          pane.classList.remove('hidden');
+        } else {
+          pane.classList.add('hidden');
+        }
+      });
+      document.querySelectorAll('.dossier-tab').forEach((btn, idx) => {
+        if (idx + 1 === tabIndex) {
+          btn.className = 'dossier-tab px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold bg-amber-500 text-stone-950 shadow transition-all';
+        } else {
+          btn.className = 'dossier-tab px-3.5 py-1.5 rounded-lg text-xs font-mono text-stone-400 hover:text-stone-200 bg-stone-950 border border-stone-800 transition-all';
+        }
+      });
+    }
+
+    // Reading Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+
+    // Theme Switcher
+    const body = document.body;
+    const btnPeat = document.getElementById('theme-peat');
+    const btnSepia = document.getElementById('theme-sepia');
+    const btnStone = document.getElementById('theme-stone');
+
+    function setTheme(theme) {
+      body.classList.remove('theme-peat', 'theme-sepia', 'theme-stone');
+      body.classList.add('theme-' + theme);
+      localStorage.setItem('salon_reading_theme', theme);
+      
+      [btnPeat, btnSepia, btnStone].forEach(b => b.classList.remove('text-amber-400', 'bg-stone-800'));
+      if (theme === 'peat') btnPeat.classList.add('text-amber-400', 'bg-stone-800');
+      if (theme === 'sepia') btnSepia.classList.add('text-amber-400', 'bg-stone-800');
+      if (theme === 'stone') btnStone.classList.add('text-amber-400', 'bg-stone-800');
+    }
+
+    btnPeat.addEventListener('click', () => setTheme('peat'));
+    btnSepia.addEventListener('click', () => setTheme('sepia'));
+    btnStone.addEventListener('click', () => setTheme('stone'));
+
+    const savedTheme = localStorage.getItem('salon_reading_theme') || 'peat';
+    setTheme(savedTheme);
+
+    // Font Sizer
+    const article = document.querySelector('article.prose-essay');
+    let currentFontSize = parseInt(localStorage.getItem('salon_font_size') || '18');
+
+    function applyFontSize(size) {
+      article.style.fontSize = size + 'px';
+      article.style.lineHeight = (size * 1.8) + 'px';
+      localStorage.setItem('salon_font_size', size);
+    }
+
+    applyFontSize(currentFontSize);
+
+    document.getElementById('font-dec').addEventListener('click', () => {
+      if (currentFontSize > 15) {
+        currentFontSize -= 1;
+        applyFontSize(currentFontSize);
+      }
+    });
+
+    document.getElementById('font-reset').addEventListener('click', () => {
+      currentFontSize = 18;
+      applyFontSize(currentFontSize);
+    });
+
+    document.getElementById('font-inc').addEventListener('click', () => {
+      if (currentFontSize < 24) {
+        currentFontSize += 1;
+        applyFontSize(currentFontSize);
+      }
+    });
+  </script>
+</body>
+</html>
