@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How The Vatican Condoned Slavery &mdash; Trevor Swistchew (Compendium #65)</title>
+  <meta name="description" content="An evidence-based historical inquiry by Trevor Swistchew into papal decrees, Dum Diversas, Romanus Pontifex, Catholic plantation economies, and the Vatican's institutional complicity in transatlantic slavery.">
+  <meta name="author" content="Trevor Swistchew">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How The Vatican Condoned Slavery &mdash; Trevor Swistchew (2026)">
+  <meta property="og:description" content="An investigation into papal bulls, colonial archives, and centuries of institutional complicity in the transatlantic slave trade.">
+  <meta property="og:image" content="https://tpatterson34.github.io/trevor-swistchew-portal/assets/images/how-the-vatican-condoned-slavery-banner.jpg">
+  <meta property="og:url" content="https://tpatterson34.github.io/trevor-swistchew-portal/essays/how-the-vatican-condoned-slavery/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How The Vatican Condoned Slavery &mdash; Trevor Swistchew">
+  <meta name="twitter:description" content="An evidence-based inquiry into papal decrees, mission plantations, and the moral record of the Church during transatlantic slavery.">
+  <meta name="twitter:image" content="https://tpatterson34.github.io/trevor-swistchew-portal/assets/images/how-the-vatican-condoned-slavery-banner.jpg">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            amber: { 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706' },
+            stone: { 850: '#1c1917', 900: '#1c1917', 950: '#0c0a09' }
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            cinzel: ['Cinzel', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0c0a09; }
+    ::-webkit-scrollbar-thumb { background: #292524; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #d97706; }
+
+    /* Reading Themes */
+    body.theme-peat { background-color: #0c0a09; color: #d6d3d1; }
+    body.theme-peat .essay-prose { color: #d6d3d1; }
+    body.theme-peat .bg-card { background-color: rgba(28, 25, 23, 0.7); }
+
+    body.theme-sepia { background-color: #1a1612; color: #e7decb; }
+    body.theme-sepia .essay-prose { color: #ecdcc2; }
+    body.theme-sepia .bg-card { background-color: rgba(38, 30, 22, 0.7); }
+    body.theme-sepia .border-stone-800 { border-color: #3d2f21 !important; }
+
+    body.theme-stone { background-color: #141416; color: #e2e8f0; }
+    body.theme-stone .essay-prose { color: #cbd5e1; }
+    body.theme-stone .bg-card { background-color: rgba(30, 31, 35, 0.7); }
+    body.theme-stone .border-stone-800 { border-color: #27272a !important; }
+
+    /* Drop-cap */
+    .drop-cap::first-letter {
+      float: left;
+      font-family: 'Cinzel', serif;
+      font-size: 3.75rem;
+      line-height: 0.8;
+      padding-top: 4px;
+      padding-right: 12px;
+      padding-bottom: 2px;
+      color: #f59e0b;
+      font-weight: 700;
+    }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+  </style>
+</head>
+<body class="theme-peat min-h-screen font-sans selection:bg-amber-500 selection:text-stone-950 transition-colors duration-300">
+
+  <!-- Reading Progress Bar -->
+  <div class="fixed top-0 left-0 w-full h-1 bg-transparent z-50">
+    <div id="reading-progress" class="h-full bg-gradient-to-r from-amber-600 via-amber-400 to-amber-500 w-0 transition-all duration-150"></div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-950/85 border-b border-stone-800/80 px-4 sm:px-8 py-3.5 transition-colors">
+    <div class="max-w-5xl mx-auto flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2 group">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 font-cinzel font-bold text-sm group-hover:bg-amber-500 group-hover:text-stone-950 transition-all">
+            TS
+          </div>
+          <span class="font-cinzel font-bold text-stone-200 text-sm tracking-wide group-hover:text-amber-400 transition-colors hidden sm:inline">
+            TREVOR SWISTCHEW
+          </span>
+        </a>
+        <span class="text-stone-600 hidden sm:inline">&bull;</span>
+        <span class="text-xs font-mono text-stone-400 hidden md:inline">Compendium #65</span>
+        <span class="text-stone-600 hidden md:inline">&bull;</span>
+        <a href="https://theshadyriverbard.com/" class="text-xs font-mono text-stone-400 hover:text-amber-400 transition-colors hidden lg:flex items-center gap-1">
+          <i class="fa-solid fa-water text-[10px]"></i> The Shady River Bard &#x2197;
+        </a>
+      </div>
+
+      <!-- Reading Controls: Theme & Text Size -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Theme Switcher -->
+        <div class="flex items-center bg-stone-900 border border-stone-800 rounded-lg p-0.5 text-xs">
+          <button id="theme-peat" class="px-2 py-1 rounded text-amber-400 font-mono text-[11px] bg-stone-800" title="Peat (Dark)">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button id="theme-sepia" class="px-2 py-1 rounded text-stone-400 hover:text-stone-200 font-mono text-[11px]" title="Sepia (Warm)">
+            <i class="fa-solid fa-book-open"></i>
+          </button>
+          <button id="theme-stone" class="px-2 py-1 rounded text-stone-400 hover:text-stone-200 font-mono text-[11px]" title="Stone (Slate)">
+            <i class="fa-solid fa-mountain"></i>
+          </button>
+        </div>
+
+        <!-- Typography Sizer -->
+        <div class="flex items-center bg-stone-900 border border-stone-800 rounded-lg p-0.5 text-xs font-mono">
+          <button id="font-dec" class="px-2 py-1 text-stone-400 hover:text-stone-200" title="Decrease font size">A-</button>
+          <button id="font-reset" class="px-2 py-1 text-amber-400 font-bold" title="Reset font size">A</button>
+          <button id="font-inc" class="px-2 py-1 text-stone-400 hover:text-stone-200" title="Increase font size">A+</button>
+        </div>
+
+        <a href="../../index.html" class="px-3 py-1.5 rounded-lg bg-stone-900 hover:bg-stone-800 border border-stone-800 text-stone-300 hover:text-amber-400 font-mono text-xs transition-all flex items-center gap-1.5">
+          <i class="fa-solid fa-arrow-left text-[10px]"></i>
+          <span>Compendium</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Essay Container -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+
+    <!-- Article Header -->
+    <header class="mb-10 text-center sm:text-left">
+      <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-4">
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-amber-500 text-stone-950 uppercase tracking-wide">
+          Compendium #65
+        </span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-900 border border-stone-800 text-amber-400 font-medium">
+          Historical Audit &bull; Church History
+        </span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-900/80 border border-stone-800 text-rose-400">
+          Papal Bulls &bull; Transatlantic Slavery
+        </span>
+      </div>
+
+      <p class="font-mono text-xs uppercase tracking-widest text-stone-400 mb-2">
+        Trevor Swistchew &bull; 2026
+      </p>
+
+      <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-black text-stone-100 tracking-tight leading-tight mb-4">
+        How The Vatican Condoned Slavery.
+      </h1>
+
+      <p class="font-serif italic text-base sm:text-lg text-amber-300/90 leading-relaxed max-w-3xl">
+        An Examination of Papal Decrees, Colonial Plantations, and Centuries of Institutional Sanction in the Transatlantic Slave Trade.
+      </p>
+
+      <!-- Meta Bar -->
+      <div class="mt-6 pt-4 border-t border-stone-800/80 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-stone-400">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/50 flex items-center justify-center text-amber-400 font-cinzel font-bold text-xs">
+            TS
+          </div>
+          <div>
+            <span class="text-stone-200 font-bold block">Trevor Swistchew</span>
+            <span class="text-[11px] text-stone-400">Scottish Essayist, Cultural Critic &amp; Philosophical Inquirer</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <span class="flex items-center gap-1.5"><i class="fa-regular fa-clock text-amber-500"></i> 4 min read</span>
+          <span class="flex items-center gap-1.5"><i class="fa-solid fa-feather text-amber-500"></i> 629 words</span>
+          <span class="flex items-center gap-1.5 text-stone-300"><i class="fa-solid fa-scroll text-amber-500"></i> 1452&ndash;1839 Decrees</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Fine-Art Hero Banner -->
+    <figure class="mb-10 rounded-2xl overflow-hidden border border-stone-800 bg-stone-950 shadow-2xl relative">
+      <img 
+        src="../../assets/images/how-the-vatican-condoned-slavery-banner.jpg" 
+        alt="How The Vatican Condoned Slavery Fine Art Oil Painting" 
+        class="w-full h-auto object-cover max-h-[500px]"
+        loading="eager"
+      />
+      <figcaption class="p-3.5 bg-stone-950/95 border-t border-stone-800/80 text-center text-xs font-serif italic text-stone-400">
+        The Papal Chancery and the Colonial Sea: A dramatic chiaroscuro oil painting portraying a Renaissance prelate drafting papal bulls by candlelight on a velvet-draped table with wax seals and golden keys of St. Peter, framed by stone arches looking out upon galleons sailing into turbulent waters.
+      </figcaption>
+    </figure>
+
+    <!-- Editorial Thesis Pull-Quote -->
+    <blockquote class="my-8 p-6 sm:p-8 rounded-2xl bg-card border-l-4 border-amber-500 shadow-xl relative overflow-hidden">
+      <div class="absolute -right-4 -bottom-6 text-stone-800/20 text-9xl font-serif pointer-events-none select-none">&ldquo;</div>
+      <p class="font-serif italic text-lg sm:text-xl text-stone-200 leading-relaxed mb-3">
+        &ldquo;The truth is clear: the Vatican blessed slavery, participated in it, profited from it, and has never fully reckoned with its actions. This is not an attack on Catholic believers, who had no control over these decisions. It is an examination of an institution that wielded immense power and used it in ways that inflicted profound harm.&rdquo;
+      </p>
+      <cite class="block font-mono text-xs uppercase tracking-widest text-amber-400 not-italic">
+        &mdash; Trevor Swistchew, &lsquo;How The Vatican Condoned Slavery&rsquo; (2026)
+      </cite>
+    </blockquote>
+
+    <!-- Archival Papal Decrees & Statutory Ledger -->
+    <section class="my-10 p-6 sm:p-7 rounded-2xl bg-card border border-stone-800 shadow-lg">
+      <div class="flex items-center gap-2 mb-4 text-xs font-mono uppercase tracking-wider text-amber-400 font-bold">
+        <i class="fa-solid fa-landmark text-amber-500"></i>
+        <span>Archival Statutory Ledger &bull; Papal Decrees &amp; Colonial Orders</span>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+        <div class="p-3.5 rounded-xl bg-stone-950/60 border border-stone-800/80">
+          <span class="font-mono text-[10px] text-amber-400 font-bold block mb-1">1452 &bull; Pope Nicholas V</span>
+          <span class="font-bold text-stone-200 block text-sm mb-1">Dum Diversas</span>
+          <p class="text-stone-400 text-[11px] leading-relaxed">
+            Authorized King Afonso V of Portugal to invade non-Christian lands and consign inhabitants to perpetual servitude (<em>perpetuam servitutem</em>).
+          </p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-stone-950/60 border border-stone-800/80">
+          <span class="font-mono text-[10px] text-amber-400 font-bold block mb-1">1455 &bull; Pope Nicholas V</span>
+          <span class="font-bold text-stone-200 block text-sm mb-1">Romanus Pontifex</span>
+          <p class="text-stone-400 text-[11px] leading-relaxed">
+            Confirmed Portuguese monopoly over West African trade, transforming doctrinal bulls into operational commercial licenses for human cargo.
+          </p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-stone-950/60 border border-stone-800/80">
+          <span class="font-mono text-[10px] text-amber-400 font-bold block mb-1">16th&ndash;18th C. &bull; Religious Orders</span>
+          <span class="font-bold text-stone-200 block text-sm mb-1">Mission Plantations</span>
+          <p class="text-stone-400 text-[11px] leading-relaxed">
+            Jesuits, Dominicans, and Franciscans operated slave-worked plantations in Brazil and the Caribbean, enriching religious houses through forced labor.
+          </p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-stone-950/60 border border-stone-800/80">
+          <span class="font-mono text-[10px] text-amber-400 font-bold block mb-1">1839 &bull; Pope Gregory XVI</span>
+          <span class="font-bold text-stone-200 block text-sm mb-1">In Supremo Apostolatus</span>
+          <p class="text-stone-400 text-[11px] leading-relaxed">
+            Condemned the international trade while pointedly avoiding condemnation of slaveholding, allowing American Catholic enslavers to retain their human property.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Historical Dossier -->
+    <section class="my-10 rounded-2xl bg-card border border-stone-800 overflow-hidden shadow-xl">
+      <div class="p-5 sm:p-6 border-b border-stone-800 bg-stone-950/60 flex items-center justify-between">
+        <div>
+          <h3 class="font-cinzel font-bold text-base sm:text-lg text-stone-100 flex items-center gap-2">
+            <i class="fa-solid fa-scroll text-amber-500"></i>
+            <span>Historical Dossier: Papal Sanction &amp; Structural Complicity</span>
+          </h3>
+          <p class="font-mono text-xs text-stone-400 mt-1">
+            Analyzing operational decrees, plantation economies, and modern institutional reckoning
+          </p>
+        </div>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="flex border-b border-stone-800 bg-stone-900/60 text-xs font-mono overflow-x-auto">
+        <button id="tab-btn-1" class="tab-btn px-4 py-3 text-amber-400 font-bold border-b-2 border-amber-500 bg-stone-900/90 whitespace-nowrap transition-all" onclick="switchTab(1)">
+          1. The Papal Bulls as Operational Licenses
+        </button>
+        <button id="tab-btn-2" class="tab-btn px-4 py-3 text-stone-400 hover:text-stone-200 border-b-2 border-transparent whitespace-nowrap transition-all" onclick="switchTab(2)">
+          2. Catholic Plantation Economies
+        </button>
+        <button id="tab-btn-3" class="tab-btn px-4 py-3 text-stone-400 hover:text-stone-200 border-b-2 border-transparent whitespace-nowrap transition-all" onclick="switchTab(3)">
+          3. Abolition Ambiguity &amp; Silence
+        </button>
+      </div>
+
+      <!-- Tab 1 -->
+      <div id="tab-pane-1" class="tab-content active p-6 text-xs sm:text-sm text-stone-300 space-y-3 leading-relaxed">
+        <div class="flex items-center gap-2 text-amber-400 font-mono font-bold text-xs uppercase">
+          <i class="fa-solid fa-file-signature text-amber-500"></i> Dum Diversas &amp; Romanus Pontifex
+        </div>
+        <p>
+          In the 15th century, the papacy did not merely react to Iberian expansion; it provided the overarching legal architecture. Pope Nicholas V issued <em>Dum Diversas</em> (1452) explicitly granting European monarchs permission to &ldquo;invade, search out, capture, vanquish, and subdue all Saracens and pagans... and other enemies of Christ... and to reduce their persons to perpetual servitude.&rdquo;
+        </p>
+        <p class="text-stone-400">
+          Reaffirmed in <em>Romanus Pontifex</em> (1455), these documents functioned as operational licenses that legitimized the violent capture, commodification, and maritime export of African populations.
+        </p>
+      </div>
+
+      <!-- Tab 2 -->
+      <div id="tab-pane-2" class="tab-content p-6 text-xs sm:text-sm text-stone-300 space-y-3 leading-relaxed">
+        <div class="flex items-center gap-2 text-amber-400 font-mono font-bold text-xs uppercase">
+          <i class="fa-solid fa-wheat-awn text-amber-500"></i> Religious Orders &amp; Enslaved Labor
+        </div>
+        <p>
+          Major Catholic religious orders—including the Society of Jesus (Jesuits), Dominicans, and Franciscans—established vast agricultural enterprises across Brazil, the Caribbean, and North America funded by the forced labor of enslaved Africans.
+        </p>
+        <p class="text-stone-400">
+          The Church established a dual theological economy: baptism was administered to save the soul, while physical emancipation was strictly withheld to preserve corporate revenues. Human beings were inventoried alongside livestock and farm equipment on monastic balance sheets.
+        </p>
+      </div>
+
+      <!-- Tab 3 -->
+      <div id="tab-pane-3" class="tab-content p-6 text-xs sm:text-sm text-stone-300 space-y-3 leading-relaxed">
+        <div class="flex items-center gap-2 text-amber-400 font-mono font-bold text-xs uppercase">
+          <i class="fa-solid fa-hand-holding-heart text-amber-500"></i> In Supremo Apostolatus &amp; Institutional Memory
+        </div>
+        <p>
+          When Pope Gregory XVI issued <em>In Supremo Apostolatus</em> in 1839, the bull condemned the maritime slave trade as uncivilized, but carefully avoided declaring domestic slave ownership a sin. American Catholic bishops—including John England of Charleston—used this exact loophole to defend ongoing plantation ownership among southern Catholics.
+        </p>
+        <p class="text-stone-400">
+          Into the 20th and 21st centuries, Vatican rhetoric shifted toward abstract declarations of universal dignity while avoiding corporate restitution, naming institutional perpetrators, or formally apologizing for the foundational papal bulls.
+        </p>
+      </div>
+    </section>
+
+    <!-- Verbatim Essay Content -->
+    <article id="essay-body" class="essay-prose font-serif text-lg sm:text-xl leading-relaxed text-stone-200 space-y-6 pt-4">
+
+      <p class="drop-cap">
+        The Vatican&rsquo;s involvement in the transatlantic slave trade is not a matter of rumor or exaggeration. It is a matter of record written in papal decrees, preserved in colonial archives, and reflected in the lived experience of millions of Africans whose lives were torn apart under systems the Church helped legitimize. For centuries, the Vatican positioned itself as the moral compass of the Christian world, yet when confronted with the brutality of slavery, it did not stand against it. Instead it shaped it, sanctioned it, and benefited from it.
+      </p>
+
+      <p>
+        In the 15th century, the Church made a decision that would echo across continents. Papal bulls such as Dum Diversas and Romanus Pontifex granted Christian rulers permission to invade foreign lands capture non Christians, and reduce them to perpetual servitude. These documents were not theological abstractions; they were operational licenses. They provided the moral and legal justification European powers needed to begin the systematic enslavement of Africans.
+      </p>
+
+      <p>
+        As European empires expanded, Catholic orders followed. Jesuits, Dominicans, Franciscans, and others established missions and plantations across Brazil, the Caribbean, and parts of Africa. They preached salvation while participating in economies built on forced labor. In Brazil, Jesuit plantations were worked by enslaved Africans whose labor enriched the order. In the Caribbean, Catholic institutions owned, bought, and sold human beings. Baptism was offered, but freedom was not. The Church converted enslaved Africans while denying them the equality it claimed God bestowed on all souls. This contradiction was not incidental &mdash; it was structural.
+      </p>
+
+      <p>
+        Throughout the 17th and 18th centuries, the Vatican remained largely silent as slavery expanded. Catholic clergy continued to own enslaved people, and Church institutions profited from slave&#x2011;based economies. The theology of universal human dignity was bent to accommodate economic reality. Africans were souls to be saved, but bodies to be exploited. The Church&rsquo;s moral authority did not challenge the system; it adapted to it.
+      </p>
+
+      <p>
+        When abolition movements gained momentum in the 19th century, the Vatican responded cautiously. In 1839 Pope Gregory XVI issued In Supremo Apostolatus, condemning the slave trade but pointedly avoiding a condemnation of slave ownership. Catholic slaveholders in the Americas interpreted the document as permission to continue owning enslaved people. The Vatican did not order Catholic institutions to free those they held in bondage. It did not demand reparations. It did not confront the economic structures that had enriched the Church for centuries. The institution protected itself first, its victims last.
+      </p>
+
+      <p>
+        In the 20th century, the Vatican began to speak of human dignity and universal brotherhood, but these statements were abstract and carefully detached from the Church&rsquo;s own history. Official narratives softened the past, minimizing or omitting the Church&rsquo;s direct involvement in slavery. The papal bulls that authorized enslavement were rarely mentioned. The plantations run by Catholic orders were quietly forgotten. The enslaved Africans who lived and died under Catholic control were left unnamed.
+      </p>
+
+      <p>
+        In the 21st century, the Vatican expresses regret for &ldquo;suffering&rdquo; and &ldquo;injustice,&rdquo; but it still avoids acknowledging its institutional role in the slave trade. It does not confront the fact that its decrees helped launch the transatlantic slave system. It does not account for the wealth accumulated through forced labor. It does not name the victims or the perpetrators within its own ranks. Silence remains the strategy a refusal to face the full weight of history.
+      </p>
+
+      <p>
+        The truth is clear: the Vatican blessed slavery, participated in it, profited from it, and has never fully reckoned with its actions. This is not an attack on Catholic believers, who had no control over these decisions. It is an examination of an institution that wielded immense power and used it in ways that inflicted profound harm.
+      </p>
+
+      <p class="font-semibold text-stone-100">
+        History does not disappear because an institution chooses not to speak of it. The record stands. The suffering stands with it.
+      </p>
+
+    </article>
+
+    <!-- Post-Essay Author Note / Colophon -->
+    <div class="mt-12 p-6 sm:p-8 rounded-2xl bg-card border border-stone-800 text-xs text-stone-400 space-y-3 not-prose">
+      <div class="flex items-center gap-2 font-mono text-amber-400 font-bold uppercase tracking-wider">
+        <i class="fa-solid fa-feather-pointed text-amber-500"></i>
+        <span>Archival Colophon &bull; Trevor Swistchew (2026)</span>
+      </div>
+      <p class="font-serif italic text-stone-300 text-sm leading-relaxed mb-0">
+        &ldquo;How The Vatican Condoned Slavery&rdquo; is an evidence-based historical critique by Trevor Swistchew (2026). Tracing the statutory and theological sanctions of the papacy from the 15th-century bulls of Nicholas V through colonial plantation economies to the qualified pronouncements of the 19th and 20th centuries, the essay examines institutional complicity, economic adaptation, and the enduring obligation of historical reckoning.
+      </p>
+      <div class="pt-2 flex flex-wrap items-center gap-3 text-[11px] font-mono text-stone-400">
+        <span>Catalog: Compendium #65</span>
+        <span>&bull;</span>
+        <span>Standalone Historical Masterwork (No Companion Song)</span>
+        <span>&bull;</span>
+        <span>Word Count: 629</span>
+        <span>&bull;</span>
+        <span>Trevor Swistchew Literary Archive</span>
+      </div>
+    </div>
+
+    <!-- Compendium Linear Navigation Footer -->
+    <nav class="mt-12 pt-6 border-t border-stone-800 grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="../the-hypocrisy-in-scientology/index.html" class="p-4 rounded-xl bg-stone-900/60 hover:bg-stone-900 border border-stone-800 hover:border-amber-500/50 transition-all flex items-center gap-3 group">
+        <i class="fa-solid fa-arrow-left text-amber-500 group-hover:-translate-x-1 transition-transform"></i>
+        <div class="text-left">
+          <span class="text-[10px] font-mono text-stone-400 block uppercase">Previous Compendium (#64)</span>
+          <span class="font-display font-bold text-sm text-stone-200 group-hover:text-amber-400 transition-colors">The Hypocrisy In Scientology</span>
+        </div>
+      </a>
+      <a href="../../index.html" class="p-4 rounded-xl bg-stone-900/60 hover:bg-stone-900 border border-stone-800 hover:border-amber-500/50 transition-all flex items-center justify-between group">
+        <div class="text-left">
+          <span class="text-[10px] font-mono text-stone-400 block uppercase">Compendium Hub</span>
+          <span class="font-display font-bold text-sm text-stone-200 group-hover:text-amber-400 transition-colors">Explore All 65 Works</span>
+        </div>
+        <i class="fa-solid fa-arrow-right text-amber-500 group-hover:translate-x-1 transition-transform"></i>
+      </a>
+    </nav>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="mt-16 border-t border-stone-800/80 bg-stone-950 py-8 text-center text-xs font-mono text-stone-400">
+    <div class="max-w-4xl mx-auto px-4 space-y-2">
+      <p>&copy; 2026 Trevor Swistchew. All rights reserved.</p>
+      <p class="text-stone-400 text-[11px]">The Scottish Literary Salon &bull; 65 Compendium Essays &bull; 76 Music Chamber Songs &bull; 29 Collected Poems</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Tab Switching Logic
+    function switchTab(tabIndex) {
+      document.querySelectorAll('.tab-btn').forEach((btn, idx) => {
+        if (idx + 1 === tabIndex) {
+          btn.classList.add('text-amber-400', 'font-bold', 'border-amber-500', 'bg-stone-900/90');
+          btn.classList.remove('text-stone-400', 'border-transparent');
+        } else {
+          btn.classList.remove('text-amber-400', 'font-bold', 'border-amber-500', 'bg-stone-900/90');
+          btn.classList.add('text-stone-400', 'border-transparent');
+        }
+      });
+      document.querySelectorAll('.tab-content').forEach((pane, idx) => {
+        if (idx + 1 === tabIndex) {
+          pane.classList.add('active');
+        } else {
+          pane.classList.remove('active');
+        }
+      });
+    }
+
+    // Reading Progress Indicator
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      const prog = document.getElementById('reading-progress');
+      if (prog) prog.style.width = scrolled + '%';
+    });
+
+    // Theme Switcher Logic
+    const body = document.body;
+    const btnPeat = document.getElementById('theme-peat');
+    const btnSepia = document.getElementById('theme-sepia');
+    const btnStone = document.getElementById('theme-stone');
+
+    function setActiveTheme(theme) {
+      body.classList.remove('theme-peat', 'theme-sepia', 'theme-stone');
+      body.classList.add('theme-' + theme);
+
+      [btnPeat, btnSepia, btnStone].forEach(b => {
+        if (b) {
+          b.classList.remove('bg-stone-800', 'text-amber-400');
+          b.classList.add('text-stone-400');
+        }
+      });
+
+      const current = document.getElementById('theme-' + theme);
+      if (current) {
+        current.classList.add('bg-stone-800', 'text-amber-400');
+        current.classList.remove('text-stone-400');
+      }
+      localStorage.setItem('swistchew_theme', theme);
+    }
+
+    if (btnPeat) btnPeat.addEventListener('click', () => setActiveTheme('peat'));
+    if (btnSepia) btnSepia.addEventListener('click', () => setActiveTheme('sepia'));
+    if (btnStone) btnStone.addEventListener('click', () => setActiveTheme('stone'));
+
+    const savedTheme = localStorage.getItem('swistchew_theme');
+    if (savedTheme) setActiveTheme(savedTheme);
+
+    // Font Sizing Logic
+    const essayBody = document.getElementById('essay-body');
+    const fontSizes = ['text-base sm:text-lg', 'text-lg sm:text-xl', 'text-xl sm:text-2xl'];
+    let currentSizeIndex = 1;
+
+    const fontDec = document.getElementById('font-dec');
+    const fontReset = document.getElementById('font-reset');
+    const fontInc = document.getElementById('font-inc');
+
+    function applyFontSize() {
+      if (!essayBody) return;
+      fontSizes.forEach(cls => {
+        cls.split(' ').forEach(c => essayBody.classList.remove(c));
+      });
+      fontSizes[currentSizeIndex].split(' ').forEach(c => essayBody.classList.add(c));
+    }
+
+    if (fontDec) {
+      fontDec.addEventListener('click', () => {
+        if (currentSizeIndex > 0) {
+          currentSizeIndex--;
+          applyFontSize();
+        }
+      });
+    }
+
+    if (fontReset) {
+      fontReset.addEventListener('click', () => {
+        currentSizeIndex = 1;
+        applyFontSize();
+      });
+    }
+
+    if (fontInc) {
+      fontInc.addEventListener('click', () => {
+        if (currentSizeIndex < fontSizes.length - 1) {
+          currentSizeIndex++;
+          applyFontSize();
+        }
+      });
+    }
+  </script>
+</body>
+</html>
