@@ -97,11 +97,10 @@
       
       <!-- Salon Brand / Return Link -->
       <div class="flex items-center gap-3">
-        <!-- Print Action Button -->
-        <button type="button" onclick="window.print()" class="px-2.5 py-1.5 rounded-lg bg-stone-900 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-300 hover:text-amber-400 font-mono text-xs transition-all flex items-center gap-1.5 shadow-sm" title="Print Essay (Clean Plain Text)" aria-label="Print Essay">
-          <i class="fa-solid fa-print text-[11px]"></i>
-          <span class="hidden sm:inline">Print</span>
-        </button>
+
+
+        
+        
 
         
         <a href="../../index.html" class="flex items-center gap-2.5 text-stone-300 hover:text-amber-400 group transition-colors">
@@ -139,6 +138,11 @@
           </button>
         </div>
 
+      
+        <button type="button" onclick="window.print()" class="px-2.5 py-1.5 rounded-lg bg-stone-900 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-300 hover:text-amber-400 font-mono text-xs transition-all flex items-center gap-1.5 shadow-sm" title="Print Essay (Clean Plain Text)" aria-label="Print Essay">
+          <i class="fa-solid fa-print text-[11px]"></i>
+          <span class="hidden sm:inline">Print</span>
+        </button>
       </div>
     </div>
   </header>
@@ -540,8 +544,20 @@
   <script>
     // Auto-trigger print when requested via query param (?print=1)
     if (new URLSearchParams(window.location.search).get('print') === '1') {
+      // Add printable helper bar at top of screen
+      const printBar = document.createElement('div');
+      printBar.id = 'print-helper-bar';
+      printBar.className = 'fixed top-0 left-0 w-full z-50 bg-amber-500 text-stone-950 px-4 py-2 text-center text-xs font-mono font-bold flex items-center justify-center gap-3 shadow-xl no-print';
+      printBar.innerHTML = '<span><i class="fa-solid fa-print"></i> Print Dialog Active</span> <button onclick="window.print()" class="px-3 py-1 bg-stone-950 text-amber-400 rounded hover:bg-stone-900 transition-colors">Click to Print</button> <button onclick="if(window.opener){window.close();}else{this.parentElement.remove();}" class="text-stone-900 hover:underline ml-3 font-sans">&times; Close</button>';
+      document.body.prepend(printBar);
+
       window.addEventListener('load', () => {
-        setTimeout(() => { window.print(); }, 400);
+        setTimeout(() => { window.print(); }, 350);
+      });
+      window.addEventListener('afterprint', () => {
+        if (window.opener) {
+          setTimeout(() => { window.close(); }, 500);
+        }
       });
     }
   </script>
