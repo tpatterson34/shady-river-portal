@@ -5,10 +5,12 @@
     "tempo_bpm": 70,
     "time_signature": "4/4",
     "chords": [
-      "."
+      "Am",
+      "F"
     ],
     "chord_cols": [
-      0
+      0,
+      8
     ],
     "beats": [
       0.2786394557824998,
@@ -82,19 +84,25 @@
       12.306575963718931,
       13.16571428571439
     ],
-    "lyrics": "            They're puttin'",
+    "lyrics": "            They're puttin' glass",
     "words": [
       {
         "word": "They're",
         "start": 13.28,
-        "end": 13.4,
+        "end": 13.51,
         "col": 12
       },
       {
         "word": "puttin'",
-        "start": 13.4,
-        "end": 13.88,
+        "start": 13.51,
+        "end": 13.74,
         "col": 20
+      },
+      {
+        "word": "glass",
+        "start": 13.74,
+        "end": 14.18,
+        "col": 28
       }
     ]
   },
@@ -115,55 +123,49 @@
       15.743129251700768,
       16.602267573696228
     ],
-    "lyrics": "glass where there was brick, The sound is",
+    "lyrics": "where there was brick,    The sound is",
     "words": [
       {
-        "word": "glass",
-        "start": 13.88,
-        "end": 14.28,
+        "word": "where",
+        "start": 14.18,
+        "end": 14.58,
         "col": 0
       },
       {
-        "word": "where",
-        "start": 14.38,
-        "end": 14.58,
+        "word": "there",
+        "start": 14.58,
+        "end": 14.98,
         "col": 6
       },
       {
-        "word": "there",
-        "start": 14.64,
-        "end": 14.82,
+        "word": "was",
+        "start": 14.98,
+        "end": 15.1,
         "col": 12
       },
       {
-        "word": "was",
-        "start": 14.82,
-        "end": 14.88,
-        "col": 18
-      },
-      {
         "word": "brick,",
-        "start": 14.88,
-        "end": 15.524,
-        "col": 22
+        "start": 15.1,
+        "end": 15.42,
+        "col": 16
       },
       {
         "word": "The",
-        "start": 16.774,
-        "end": 16.927,
-        "col": 29
+        "start": 16.8,
+        "end": 16.85,
+        "col": 26
       },
       {
         "word": "sound",
-        "start": 16.927,
-        "end": 17.08,
-        "col": 33
+        "start": 16.85,
+        "end": 17.16,
+        "col": 30
       },
       {
         "word": "is",
-        "start": 17.08,
-        "end": 17.22,
-        "col": 39
+        "start": 17.16,
+        "end": 17.52,
+        "col": 36
       }
     ]
   },
@@ -184,49 +186,31 @@
       19.179682539682606,
       20.038820861678065
     ],
-    "lyrics": "different, not as thick. Heard a young",
+    "lyrics": "different, not as thick.",
     "words": [
       {
         "word": "different,",
-        "start": 17.22,
-        "end": 17.96,
+        "start": 17.52,
+        "end": 18.02,
         "col": 0
       },
       {
         "word": "not",
-        "start": 17.96,
-        "end": 18.16,
+        "start": 18.34,
+        "end": 18.42,
         "col": 11
       },
       {
         "word": "as",
-        "start": 18.16,
-        "end": 18.36,
+        "start": 18.42,
+        "end": 18.64,
         "col": 15
       },
       {
         "word": "thick.",
-        "start": 18.36,
-        "end": 19.06,
+        "start": 18.64,
+        "end": 19.0,
         "col": 18
-      },
-      {
-        "word": "Heard",
-        "start": 20.392,
-        "end": 20.64,
-        "col": 25
-      },
-      {
-        "word": "a",
-        "start": 20.64,
-        "end": 20.7,
-        "col": 31
-      },
-      {
-        "word": "young",
-        "start": 20.7,
-        "end": 21.0,
-        "col": 33
       }
     ]
   },
@@ -241,7 +225,7 @@
     ],
     "chord_cols": [
       0,
-      17
+      31
     ],
     "beats": [
       20.897959183673525,
@@ -249,37 +233,55 @@
       22.616235827664443,
       23.475374149659903
     ],
-    "lyrics": "man talkin' on   his phone,",
+    "lyrics": "Heard a young man talkin' on   his phone,",
     "words": [
       {
-        "word": "man",
-        "start": 21.22,
-        "end": 21.54,
+        "word": "Heard",
+        "start": 20.242,
+        "end": 20.62,
         "col": 0
       },
       {
+        "word": "a",
+        "start": 20.62,
+        "end": 20.82,
+        "col": 6
+      },
+      {
+        "word": "young",
+        "start": 20.82,
+        "end": 21.1,
+        "col": 8
+      },
+      {
+        "word": "man",
+        "start": 21.1,
+        "end": 21.46,
+        "col": 14
+      },
+      {
         "word": "talkin'",
-        "start": 21.78,
-        "end": 22.18,
-        "col": 4
+        "start": 21.46,
+        "end": 21.98,
+        "col": 18
       },
       {
         "word": "on",
-        "start": 22.18,
-        "end": 22.887,
-        "col": 12
+        "start": 21.98,
+        "end": 22.78,
+        "col": 26
       },
       {
         "word": "his",
-        "start": 22.887,
-        "end": 23.593,
-        "col": 17
+        "start": 22.78,
+        "end": 23.7,
+        "col": 31
       },
       {
         "word": "phone,",
-        "start": 23.593,
-        "end": 24.3,
-        "col": 21
+        "start": 23.7,
+        "end": 24.24,
+        "col": 35
       }
     ]
   },
@@ -300,21 +302,8 @@
       26.05278911564628,
       26.91192743764174
     ],
-    "lyrics": "          'Bout a",
-    "words": [
-      {
-        "word": "'Bout",
-        "start": 27.212,
-        "end": 27.46,
-        "col": 10
-      },
-      {
-        "word": "a",
-        "start": 27.46,
-        "end": 27.68,
-        "col": 16
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 27.7710657596372,
@@ -327,7 +316,7 @@
     ],
     "chord_cols": [
       0,
-      26
+      34
     ],
     "beats": [
       27.7710657596372,
@@ -335,31 +324,43 @@
       29.489342403628118,
       30.37170068027211
     ],
-    "lyrics": "world I've ever known.",
+    "lyrics": "'Bout a world I've ever known.",
     "words": [
       {
-        "word": "world",
-        "start": 27.68,
-        "end": 28.1,
+        "word": "'Bout",
+        "start": 27.062,
+        "end": 27.48,
         "col": 0
       },
       {
-        "word": "I've",
-        "start": 28.1,
-        "end": 28.48,
+        "word": "a",
+        "start": 27.48,
+        "end": 27.64,
         "col": 6
+      },
+      {
+        "word": "world",
+        "start": 27.64,
+        "end": 28.0,
+        "col": 8
+      },
+      {
+        "word": "I've",
+        "start": 28.0,
+        "end": 28.48,
+        "col": 14
       },
       {
         "word": "ever",
         "start": 28.48,
-        "end": 28.86,
-        "col": 11
+        "end": 28.84,
+        "col": 19
       },
       {
         "word": "known.",
-        "start": 28.86,
-        "end": 30.22,
-        "col": 16
+        "start": 28.84,
+        "end": 30.26,
+        "col": 24
       }
     ]
   },
@@ -448,37 +449,37 @@
     "words": [
       {
         "word": "There's",
-        "start": 42.092,
+        "start": 41.942,
         "end": 42.34,
         "col": 0
       },
       {
         "word": "a",
         "start": 42.34,
-        "end": 42.46,
+        "end": 42.42,
         "col": 8
       },
       {
         "word": "coffee",
-        "start": 42.46,
-        "end": 42.84,
+        "start": 42.42,
+        "end": 42.82,
         "col": 10
       },
       {
         "word": "shop",
-        "start": 42.84,
-        "end": 43.38,
+        "start": 42.82,
+        "end": 43.36,
         "col": 17
       },
       {
         "word": "where",
-        "start": 43.38,
-        "end": 43.82,
+        "start": 43.36,
+        "end": 43.8,
         "col": 22
       },
       {
         "word": "the",
-        "start": 43.82,
+        "start": 43.8,
         "end": 44.04,
         "col": 28
       },
@@ -491,7 +492,7 @@
       {
         "word": "stood,",
         "start": 44.5,
-        "end": 45.328,
+        "end": 45.08,
         "col": 38
       }
     ]
@@ -519,19 +520,19 @@
     "words": [
       {
         "word": "They",
-        "start": 45.992,
-        "end": 46.14,
+        "start": 45.842,
+        "end": 46.1,
         "col": 0
       },
       {
         "word": "say",
-        "start": 46.14,
-        "end": 46.38,
+        "start": 46.1,
+        "end": 46.36,
         "col": 5
       },
       {
         "word": "the",
-        "start": 46.38,
+        "start": 46.36,
         "end": 46.56,
         "col": 9
       },
@@ -544,13 +545,13 @@
       {
         "word": "pretty",
         "start": 47.42,
-        "end": 47.76,
+        "end": 47.78,
         "col": 24
       },
       {
         "word": "good.",
-        "start": 47.76,
-        "end": 48.708,
+        "start": 47.78,
+        "end": 48.46,
         "col": 31
       }
     ]
@@ -576,32 +577,32 @@
     "words": [
       {
         "word": "And",
-        "start": 49.64,
-        "end": 49.84,
+        "start": 49.49,
+        "end": 49.86,
         "col": 0
       },
       {
         "word": "they're",
-        "start": 49.84,
-        "end": 50.04,
+        "start": 49.86,
+        "end": 50.23,
         "col": 4
       },
       {
         "word": "paintin'",
-        "start": 50.04,
-        "end": 50.52,
+        "start": 50.23,
+        "end": 50.6,
         "col": 12
       },
       {
         "word": "pictures",
-        "start": 50.52,
+        "start": 50.6,
         "end": 51.22,
         "col": 21
       },
       {
         "word": "on",
         "start": 51.22,
-        "end": 52.62,
+        "end": 52.46,
         "col": 30
       }
     ]
@@ -629,14 +630,14 @@
     "words": [
       {
         "word": "the",
-        "start": 52.62,
-        "end": 53.12,
+        "start": 52.46,
+        "end": 53.1,
         "col": 0
       },
       {
         "word": "walls,",
-        "start": 53.12,
-        "end": 54.24,
+        "start": 53.1,
+        "end": 54.42,
         "col": 4
       }
     ]
@@ -664,32 +665,32 @@
     "words": [
       {
         "word": "Inside",
-        "start": 56.308,
-        "end": 56.64,
+        "start": 56.158,
+        "end": 56.7,
         "col": 0
       },
       {
         "word": "the",
-        "start": 56.64,
+        "start": 56.7,
         "end": 56.96,
         "col": 7
       },
       {
         "word": "old",
         "start": 56.96,
-        "end": 57.4,
+        "end": 57.38,
         "col": 14
       },
       {
         "word": "assembly",
-        "start": 57.4,
-        "end": 57.9,
+        "start": 57.38,
+        "end": 57.92,
         "col": 18
       },
       {
         "word": "halls.",
-        "start": 57.9,
-        "end": 59.356,
+        "start": 57.92,
+        "end": 58.8,
         "col": 27
       }
     ]
@@ -737,19 +738,19 @@
     "words": [
       {
         "word": "It's",
-        "start": 64.296,
-        "end": 64.6,
+        "start": 64.146,
+        "end": 64.58,
         "col": 10
       },
       {
         "word": "an",
-        "start": 64.6,
-        "end": 64.76,
+        "start": 64.58,
+        "end": 64.72,
         "col": 15
       },
       {
         "word": "unlikely",
-        "start": 64.76,
+        "start": 64.72,
         "end": 65.3,
         "col": 18
       }
@@ -774,17 +775,17 @@
       67.38430839002268,
       68.22022675736962
     ],
-    "lyrics": "handshake,    it's a fragile",
+    "lyrics": "handshake,    it's a fragile thing,",
     "words": [
       {
         "word": "handshake,",
         "start": 65.3,
-        "end": 66.74,
+        "end": 66.68,
         "col": 0
       },
       {
         "word": "it's",
-        "start": 67.18,
+        "start": 67.8,
         "end": 67.98,
         "col": 14
       },
@@ -797,8 +798,14 @@
       {
         "word": "fragile",
         "start": 68.06,
-        "end": 68.64,
+        "end": 68.68,
         "col": 21
+      },
+      {
+        "word": "thing,",
+        "start": 68.68,
+        "end": 69.88,
+        "col": 29
       }
     ]
   },
@@ -819,27 +826,8 @@
       70.82086167800453,
       71.68
     ],
-    "lyrics": "thing, It's the",
-    "words": [
-      {
-        "word": "thing,",
-        "start": 68.64,
-        "end": 70.54,
-        "col": 0
-      },
-      {
-        "word": "It's",
-        "start": 72.024,
-        "end": 72.24,
-        "col": 7
-      },
-      {
-        "word": "the",
-        "start": 72.24,
-        "end": 72.38,
-        "col": 12
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 72.53913832199547,
@@ -852,7 +840,7 @@
     ],
     "chord_cols": [
       0,
-      25
+      34
     ],
     "beats": [
       72.53913832199547,
@@ -860,43 +848,55 @@
       74.2574149659864,
       75.11655328798186
     ],
-    "lyrics": "different kind of song   they sing.",
+    "lyrics": "It's the different kind of song   they sing.",
     "words": [
       {
-        "word": "different",
-        "start": 72.38,
-        "end": 72.84,
+        "word": "It's",
+        "start": 71.874,
+        "end": 72.24,
         "col": 0
+      },
+      {
+        "word": "the",
+        "start": 72.24,
+        "end": 72.36,
+        "col": 5
+      },
+      {
+        "word": "different",
+        "start": 72.36,
+        "end": 72.84,
+        "col": 9
       },
       {
         "word": "kind",
         "start": 72.84,
-        "end": 73.66,
-        "col": 10
+        "end": 73.62,
+        "col": 19
       },
       {
         "word": "of",
-        "start": 73.66,
-        "end": 73.88,
-        "col": 15
+        "start": 73.62,
+        "end": 73.9,
+        "col": 24
       },
       {
         "word": "song",
-        "start": 73.88,
-        "end": 74.88,
-        "col": 18
+        "start": 73.9,
+        "end": 74.64,
+        "col": 27
       },
       {
         "word": "they",
-        "start": 74.88,
-        "end": 75.38,
-        "col": 25
+        "start": 74.64,
+        "end": 75.34,
+        "col": 34
       },
       {
         "word": "sing.",
-        "start": 75.38,
-        "end": 76.936,
-        "col": 30
+        "start": 75.34,
+        "end": 77.18,
+        "col": 39
       }
     ]
   },
@@ -921,19 +921,19 @@
     "words": [
       {
         "word": "The",
-        "start": 78.3,
+        "start": 78.15,
         "end": 78.4,
         "col": 10
       },
       {
         "word": "ghosts",
         "start": 78.4,
-        "end": 79.12,
+        "end": 79.2,
         "col": 14
       },
       {
         "word": "are",
-        "start": 79.12,
+        "start": 79.2,
         "end": 79.38,
         "col": 21
       }
@@ -958,17 +958,17 @@
       81.15374149659864,
       81.98965986394558
     ],
-    "lyrics": "watchin' from   the rusted",
+    "lyrics": "watchin' from   the rusted beams,",
     "words": [
       {
         "word": "watchin'",
         "start": 79.38,
-        "end": 79.86,
+        "end": 79.9,
         "col": 0
       },
       {
         "word": "from",
-        "start": 79.86,
+        "start": 79.9,
         "end": 81.64,
         "col": 9
       },
@@ -981,8 +981,14 @@
       {
         "word": "rusted",
         "start": 81.86,
-        "end": 82.36,
+        "end": 82.38,
         "col": 20
+      },
+      {
+        "word": "beams,",
+        "start": 82.38,
+        "end": 83.72,
+        "col": 27
       }
     ]
   },
@@ -997,7 +1003,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      12
     ],
     "beats": [
       82.87201814058957,
@@ -1005,37 +1011,31 @@
       84.5902947845805,
       85.42621315192744
     ],
-    "lyrics": "beams,        As they build a",
+    "lyrics": "            As they build a",
     "words": [
       {
-        "word": "beams,",
-        "start": 82.36,
-        "end": 84.352,
-        "col": 0
-      },
-      {
         "word": "As",
-        "start": 85.14,
+        "start": 84.99,
         "end": 85.32,
-        "col": 14
+        "col": 12
       },
       {
         "word": "they",
         "start": 85.32,
-        "end": 85.56,
-        "col": 17
+        "end": 85.54,
+        "col": 15
       },
       {
         "word": "build",
-        "start": 85.56,
-        "end": 86.0,
-        "col": 22
+        "start": 85.54,
+        "end": 85.96,
+        "col": 20
       },
       {
         "word": "a",
-        "start": 86.0,
+        "start": 85.96,
         "end": 86.16,
-        "col": 28
+        "col": 26
       }
     ]
   },
@@ -1056,31 +1056,37 @@
       88.02684807256236,
       88.88598639455782
     ],
-    "lyrics": "future on our broken",
+    "lyrics": "future on our broken dreams.",
     "words": [
       {
         "word": "future",
         "start": 86.16,
-        "end": 86.72,
+        "end": 86.64,
         "col": 0
       },
       {
         "word": "on",
-        "start": 86.72,
-        "end": 88.34,
+        "start": 86.64,
+        "end": 88.36,
         "col": 7
       },
       {
         "word": "our",
-        "start": 88.34,
-        "end": 88.76,
+        "start": 88.36,
+        "end": 88.74,
         "col": 10
       },
       {
         "word": "broken",
-        "start": 88.76,
+        "start": 88.74,
         "end": 89.18,
         "col": 14
+      },
+      {
+        "word": "dreams.",
+        "start": 89.18,
+        "end": 90.74,
+        "col": 21
       }
     ]
   },
@@ -1101,15 +1107,8 @@
       91.46340136054421,
       92.32253968253968
     ],
-    "lyrics": "dreams.",
-    "words": [
-      {
-        "word": "dreams.",
-        "start": 89.18,
-        "end": 91.296,
-        "col": 0
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 93.18167800453514,
@@ -1134,26 +1133,26 @@
     "words": [
       {
         "word": "My",
-        "start": 95.22,
+        "start": 95.07,
         "end": 95.42,
         "col": 12
       },
       {
         "word": "boy's",
         "start": 95.42,
-        "end": 95.94,
+        "end": 95.8,
         "col": 15
       },
       {
         "word": "learnin'",
-        "start": 95.94,
+        "start": 95.8,
         "end": 96.2,
         "col": 21
       },
       {
         "word": "code",
         "start": 96.2,
-        "end": 96.74,
+        "end": 96.72,
         "col": 30
       }
     ]
@@ -1175,43 +1174,31 @@
       98.35972789115647,
       99.1956462585034
     ],
-    "lyrics": "on a silver screen, The cleanest",
+    "lyrics": "on a silver screen,",
     "words": [
       {
         "word": "on",
-        "start": 96.74,
-        "end": 97.22,
+        "start": 96.72,
+        "end": 97.2,
         "col": 0
       },
       {
         "word": "a",
-        "start": 97.22,
-        "end": 97.42,
+        "start": 97.2,
+        "end": 97.32,
         "col": 3
       },
       {
         "word": "silver",
-        "start": 97.42,
-        "end": 97.88,
+        "start": 97.32,
+        "end": 97.84,
         "col": 5
       },
       {
         "word": "screen,",
-        "start": 97.88,
-        "end": 98.796,
+        "start": 97.84,
+        "end": 98.56,
         "col": 12
-      },
-      {
-        "word": "The",
-        "start": 99.376,
-        "end": 99.48,
-        "col": 20
-      },
-      {
-        "word": "cleanest",
-        "start": 99.48,
-        "end": 100.14,
-        "col": 24
       }
     ]
   },
@@ -1226,7 +1213,7 @@
     ],
     "chord_cols": [
       0,
-      23
+      37
     ],
     "beats": [
       100.07800453514739,
@@ -1234,43 +1221,43 @@
       101.79628117913832,
       102.65541950113379
     ],
-    "lyrics": "work I've ever seen.   No soot",
+    "lyrics": "The cleanest work I've ever seen.",
     "words": [
       {
-        "word": "work",
-        "start": 100.14,
-        "end": 100.54,
+        "word": "The",
+        "start": 99.226,
+        "end": 99.46,
         "col": 0
       },
       {
+        "word": "cleanest",
+        "start": 99.46,
+        "end": 100.14,
+        "col": 4
+      },
+      {
+        "word": "work",
+        "start": 100.14,
+        "end": 100.46,
+        "col": 13
+      },
+      {
         "word": "I've",
-        "start": 100.54,
-        "end": 101.16,
-        "col": 5
+        "start": 100.46,
+        "end": 101.14,
+        "col": 18
       },
       {
         "word": "ever",
-        "start": 101.16,
+        "start": 101.14,
         "end": 101.38,
-        "col": 10
+        "col": 23
       },
       {
         "word": "seen.",
         "start": 101.38,
-        "end": 102.548,
-        "col": 15
-      },
-      {
-        "word": "No",
-        "start": 102.968,
-        "end": 103.22,
-        "col": 23
-      },
-      {
-        "word": "soot",
-        "start": 103.22,
-        "end": 103.96,
-        "col": 26
+        "end": 102.08,
+        "col": 28
       }
     ]
   },
@@ -1285,7 +1272,7 @@
     ],
     "chord_cols": [
       0,
-      16
+      24
     ],
     "beats": [
       103.51455782312925,
@@ -1293,37 +1280,49 @@
       105.23283446712018,
       106.09197278911564
     ],
-    "lyrics": "or sweat upon   his brow,",
+    "lyrics": "No soot or sweat upon   his brow,",
     "words": [
       {
-        "word": "or",
-        "start": 103.96,
-        "end": 104.14,
+        "word": "No",
+        "start": 102.818,
+        "end": 103.249,
         "col": 0
       },
       {
-        "word": "sweat",
-        "start": 104.14,
-        "end": 104.48,
+        "word": "soot",
+        "start": 103.249,
+        "end": 103.68,
         "col": 3
+      },
+      {
+        "word": "or",
+        "start": 103.68,
+        "end": 104.1,
+        "col": 8
+      },
+      {
+        "word": "sweat",
+        "start": 104.1,
+        "end": 104.48,
+        "col": 11
       },
       {
         "word": "upon",
         "start": 104.48,
-        "end": 105.1,
-        "col": 9
+        "end": 105.26,
+        "col": 17
       },
       {
         "word": "his",
-        "start": 105.1,
-        "end": 106.2,
-        "col": 16
+        "start": 105.26,
+        "end": 106.34,
+        "col": 24
       },
       {
         "word": "brow,",
-        "start": 106.2,
-        "end": 107.004,
-        "col": 20
+        "start": 106.34,
+        "end": 106.86,
+        "col": 28
       }
     ]
   },
@@ -1346,31 +1345,37 @@
       108.66938775510204,
       109.52852607709751
     ],
-    "lyrics": "            He's in the river,",
+    "lyrics": "            He's in the river, but",
     "words": [
       {
         "word": "He's",
-        "start": 108.844,
+        "start": 108.694,
         "end": 109.1,
         "col": 12
       },
       {
         "word": "in",
         "start": 109.1,
-        "end": 109.28,
+        "end": 109.26,
         "col": 17
       },
       {
         "word": "the",
-        "start": 109.28,
-        "end": 109.44,
+        "start": 109.26,
+        "end": 109.42,
         "col": 20
       },
       {
         "word": "river,",
-        "start": 109.44,
-        "end": 109.86,
+        "start": 109.42,
+        "end": 109.82,
         "col": 24
+      },
+      {
+        "word": "but",
+        "start": 109.82,
+        "end": 110.72,
+        "col": 31
       }
     ]
   },
@@ -1385,7 +1390,7 @@
     ],
     "chord_cols": [
       0,
-      27
+      23
     ],
     "beats": [
       110.4108843537415,
@@ -1393,31 +1398,25 @@
       112.1059410430839,
       112.96507936507936
     ],
-    "lyrics": "but it's different now.",
+    "lyrics": "it's different now.",
     "words": [
       {
-        "word": "but",
-        "start": 110.36,
-        "end": 110.74,
+        "word": "it's",
+        "start": 110.72,
+        "end": 110.98,
         "col": 0
       },
       {
-        "word": "it's",
-        "start": 110.74,
-        "end": 111.0,
-        "col": 4
-      },
-      {
         "word": "different",
-        "start": 111.0,
-        "end": 111.3,
-        "col": 9
+        "start": 110.98,
+        "end": 111.28,
+        "col": 5
       },
       {
         "word": "now.",
-        "start": 111.3,
-        "end": 112.136,
-        "col": 19
+        "start": 111.28,
+        "end": 112.38,
+        "col": 15
       }
     ]
   },
@@ -1460,11 +1459,11 @@
       119.00226757369614,
       119.8614058956916
     ],
-    "lyrics": "It's an unlikely handshake,",
+    "lyrics": "It's an unlikely handshake, it's",
     "words": [
       {
         "word": "It's",
-        "start": 117.628,
+        "start": 117.478,
         "end": 117.94,
         "col": 0
       },
@@ -1477,14 +1476,20 @@
       {
         "word": "unlikely",
         "start": 118.12,
-        "end": 118.66,
+        "end": 118.72,
         "col": 8
       },
       {
         "word": "handshake,",
-        "start": 118.66,
-        "end": 120.08,
+        "start": 118.72,
+        "end": 120.04,
         "col": 17
+      },
+      {
+        "word": "it's",
+        "start": 120.04,
+        "end": 121.34,
+        "col": 28
       }
     ]
   },
@@ -1505,31 +1510,25 @@
       122.43882086167801,
       123.29795918367347
     ],
-    "lyrics": "it's a fragile thing,",
+    "lyrics": "a fragile thing,",
     "words": [
       {
-        "word": "it's",
-        "start": 120.7,
-        "end": 121.32,
-        "col": 0
-      },
-      {
         "word": "a",
-        "start": 121.32,
+        "start": 121.34,
         "end": 121.42,
-        "col": 5
+        "col": 0
       },
       {
         "word": "fragile",
         "start": 121.42,
-        "end": 122.02,
-        "col": 7
+        "end": 122.04,
+        "col": 2
       },
       {
         "word": "thing,",
-        "start": 122.02,
-        "end": 123.828,
-        "col": 15
+        "start": 122.04,
+        "end": 123.72,
+        "col": 10
       }
     ]
   },
@@ -1552,43 +1551,37 @@
       125.87537414965986,
       126.73451247165534
     ],
-    "lyrics": "It's the      different kind of song",
+    "lyrics": "It's the      different kind of",
     "words": [
       {
         "word": "It's",
-        "start": 125.388,
+        "start": 125.238,
         "end": 125.6,
         "col": 0
       },
       {
         "word": "the",
         "start": 125.6,
-        "end": 125.74,
+        "end": 125.7,
         "col": 5
       },
       {
         "word": "different",
-        "start": 125.74,
-        "end": 126.24,
+        "start": 125.7,
+        "end": 126.22,
         "col": 14
       },
       {
         "word": "kind",
-        "start": 126.24,
-        "end": 126.98,
+        "start": 126.22,
+        "end": 126.94,
         "col": 24
       },
       {
         "word": "of",
-        "start": 126.98,
-        "end": 127.24,
+        "start": 126.94,
+        "end": 127.4,
         "col": 29
-      },
-      {
-        "word": "song",
-        "start": 127.24,
-        "end": 128.06,
-        "col": 32
       }
     ]
   },
@@ -1603,7 +1596,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      19
     ],
     "beats": [
       127.5936507936508,
@@ -1611,19 +1604,25 @@
       129.33514739229025,
       130.1942857142857
     ],
-    "lyrics": "they sing.",
+    "lyrics": "song they sing.",
     "words": [
       {
-        "word": "they",
-        "start": 128.06,
-        "end": 128.74,
+        "word": "song",
+        "start": 127.4,
+        "end": 128.16,
         "col": 0
       },
       {
-        "word": "sing.",
-        "start": 128.74,
-        "end": 130.12,
+        "word": "they",
+        "start": 128.16,
+        "end": 128.72,
         "col": 5
+      },
+      {
+        "word": "sing.",
+        "start": 128.72,
+        "end": 130.06,
+        "col": 10
       }
     ]
   },
@@ -1650,31 +1649,31 @@
     "words": [
       {
         "word": "The",
-        "start": 131.656,
+        "start": 131.506,
         "end": 131.76,
         "col": 0
       },
       {
         "word": "ghosts",
         "start": 131.76,
-        "end": 132.5,
+        "end": 132.4,
         "col": 4
       },
       {
         "word": "are",
-        "start": 132.5,
-        "end": 132.72,
+        "start": 132.4,
+        "end": 132.7,
         "col": 11
       },
       {
         "word": "watchin'",
-        "start": 132.72,
-        "end": 133.2,
+        "start": 132.7,
+        "end": 133.24,
         "col": 17
       },
       {
         "word": "from",
-        "start": 133.2,
+        "start": 133.24,
         "end": 135.0,
         "col": 26
       }
@@ -1702,19 +1701,19 @@
       {
         "word": "the",
         "start": 135.0,
-        "end": 135.24,
+        "end": 135.22,
         "col": 0
       },
       {
         "word": "rusted",
-        "start": 135.24,
-        "end": 135.72,
+        "start": 135.22,
+        "end": 135.74,
         "col": 4
       },
       {
         "word": "beams,",
-        "start": 135.72,
-        "end": 137.728,
+        "start": 135.74,
+        "end": 137.14,
         "col": 11
       }
     ]
@@ -1742,38 +1741,38 @@
     "words": [
       {
         "word": "As",
-        "start": 138.532,
-        "end": 138.7,
+        "start": 138.382,
+        "end": 138.68,
         "col": 0
       },
       {
         "word": "they",
-        "start": 138.7,
-        "end": 138.92,
+        "start": 138.68,
+        "end": 138.9,
         "col": 3
       },
       {
         "word": "build",
-        "start": 138.92,
-        "end": 139.36,
+        "start": 138.9,
+        "end": 139.34,
         "col": 8
       },
       {
         "word": "a",
-        "start": 139.36,
-        "end": 139.54,
+        "start": 139.34,
+        "end": 139.52,
         "col": 14
       },
       {
         "word": "future",
-        "start": 139.54,
-        "end": 140.14,
+        "start": 139.52,
+        "end": 139.98,
         "col": 18
       },
       {
         "word": "on",
-        "start": 140.14,
-        "end": 141.78,
+        "start": 139.98,
+        "end": 141.64,
         "col": 25
       }
     ]
@@ -1799,20 +1798,20 @@
     "words": [
       {
         "word": "our",
-        "start": 141.78,
-        "end": 142.16,
+        "start": 141.64,
+        "end": 142.08,
         "col": 0
       },
       {
         "word": "broken",
-        "start": 142.16,
-        "end": 142.54,
+        "start": 142.08,
+        "end": 142.52,
         "col": 4
       },
       {
         "word": "dreams.",
-        "start": 142.54,
-        "end": 144.072,
+        "start": 142.52,
+        "end": 144.0,
         "col": 11
       }
     ]
@@ -1924,38 +1923,38 @@
     "words": [
       {
         "word": "And",
-        "start": 159.576,
-        "end": 159.8,
+        "start": 159.426,
+        "end": 159.78,
         "col": 0
       },
       {
         "word": "I",
-        "start": 159.8,
+        "start": 159.78,
         "end": 160.04,
         "col": 4
       },
       {
         "word": "sit",
         "start": 160.04,
-        "end": 160.4,
+        "end": 160.32,
         "col": 6
       },
       {
         "word": "here",
-        "start": 160.4,
-        "end": 161.32,
+        "start": 160.32,
+        "end": 161.12,
         "col": 14
       },
       {
         "word": "on",
-        "start": 161.32,
-        "end": 161.76,
+        "start": 161.12,
+        "end": 161.74,
         "col": 19
       },
       {
         "word": "a",
-        "start": 161.76,
-        "end": 161.96,
+        "start": 161.74,
+        "end": 161.88,
         "col": 22
       }
     ]
@@ -1983,20 +1982,20 @@
     "words": [
       {
         "word": "brand",
-        "start": 161.96,
-        "end": 162.44,
+        "start": 161.88,
+        "end": 162.32,
         "col": 0
       },
       {
         "word": "new",
-        "start": 162.44,
-        "end": 163.12,
+        "start": 162.32,
+        "end": 162.98,
         "col": 6
       },
       {
         "word": "bench,",
-        "start": 163.12,
-        "end": 163.956,
+        "start": 162.98,
+        "end": 163.9,
         "col": 10
       }
     ]
@@ -2024,32 +2023,32 @@
     "words": [
       {
         "word": "And",
-        "start": 166.904,
+        "start": 166.754,
         "end": 167.02,
         "col": 0
       },
       {
         "word": "try",
         "start": 167.02,
-        "end": 167.36,
+        "end": 167.42,
         "col": 14
       },
       {
         "word": "to",
-        "start": 167.36,
-        "end": 167.66,
+        "start": 167.42,
+        "end": 167.68,
         "col": 18
       },
       {
         "word": "make",
-        "start": 167.66,
-        "end": 168.34,
+        "start": 167.68,
+        "end": 168.28,
         "col": 21
       },
       {
         "word": "the",
-        "start": 168.34,
-        "end": 168.92,
+        "start": 168.28,
+        "end": 168.54,
         "col": 26
       }
     ]
@@ -2075,13 +2074,13 @@
     "words": [
       {
         "word": "pieces",
-        "start": 168.92,
-        "end": 169.16,
+        "start": 168.54,
+        "end": 170.092,
         "col": 0
       },
       {
         "word": "clench.",
-        "start": 170.14,
+        "start": 170.092,
         "end": 171.644,
         "col": 7
       }
@@ -2110,26 +2109,26 @@
     "words": [
       {
         "word": "The",
-        "start": 173.768,
-        "end": 173.9,
+        "start": 173.618,
+        "end": 173.88,
         "col": 0
       },
       {
         "word": "memory",
-        "start": 173.9,
-        "end": 174.4,
+        "start": 173.88,
+        "end": 174.38,
         "col": 14
       },
       {
         "word": "of",
-        "start": 174.4,
-        "end": 175.54,
+        "start": 174.38,
+        "end": 175.44,
         "col": 21
       },
       {
         "word": "the",
-        "start": 175.54,
-        "end": 175.7,
+        "start": 175.44,
+        "end": 175.76,
         "col": 24
       }
     ]
@@ -2155,14 +2154,14 @@
     "words": [
       {
         "word": "hammer's",
-        "start": 175.7,
-        "end": 176.8,
+        "start": 175.76,
+        "end": 177.1,
         "col": 0
       },
       {
         "word": "fall,",
-        "start": 176.8,
-        "end": 178.624,
+        "start": 177.1,
+        "end": 177.7,
         "col": 9
       }
     ]
@@ -2188,7 +2187,7 @@
     "words": [
       {
         "word": "And",
-        "start": 180.692,
+        "start": 180.542,
         "end": 180.84,
         "col": 0
       },
@@ -2201,13 +2200,13 @@
       {
         "word": "new",
         "start": 181.12,
-        "end": 181.74,
+        "end": 181.68,
         "col": 9
       },
       {
         "word": "world,",
-        "start": 181.74,
-        "end": 183.46,
+        "start": 181.68,
+        "end": 182.82,
         "col": 13
       }
     ]
@@ -2233,14 +2232,14 @@
     "words": [
       {
         "word": "standin'",
-        "start": 183.46,
-        "end": 183.76,
+        "start": 182.82,
+        "end": 183.78,
         "col": 0
       },
       {
         "word": "tall.",
-        "start": 183.76,
-        "end": 185.344,
+        "start": 183.78,
+        "end": 184.48,
         "col": 9
       }
     ]
@@ -2428,31 +2427,37 @@
       215.36507936507937,
       216.22421768707483
     ],
-    "lyrics": "It's an unlikely handshake,",
+    "lyrics": "It's an unlikely handshake, it's",
     "words": [
       {
         "word": "It's",
-        "start": 213.98,
+        "start": 213.83,
         "end": 214.3,
         "col": 0
       },
       {
         "word": "an",
         "start": 214.3,
-        "end": 214.48,
+        "end": 214.46,
         "col": 5
       },
       {
         "word": "unlikely",
-        "start": 214.48,
-        "end": 215.02,
+        "start": 214.46,
+        "end": 215.04,
         "col": 8
       },
       {
         "word": "handshake,",
-        "start": 215.02,
-        "end": 216.42,
+        "start": 215.04,
+        "end": 216.46,
         "col": 17
+      },
+      {
+        "word": "it's",
+        "start": 216.72,
+        "end": 217.7,
+        "col": 28
       }
     ]
   },
@@ -2467,7 +2472,7 @@
     ],
     "chord_cols": [
       0,
-      17
+      20
     ],
     "beats": [
       217.0833560090703,
@@ -2475,31 +2480,25 @@
       218.82485260770974,
       219.6839909297052
     ],
-    "lyrics": "it's a fragile   thing,",
+    "lyrics": "a fragile thing,",
     "words": [
-      {
-        "word": "it's",
-        "start": 217.0,
-        "end": 217.7,
-        "col": 0
-      },
       {
         "word": "a",
         "start": 217.7,
         "end": 217.78,
-        "col": 5
+        "col": 0
       },
       {
         "word": "fragile",
         "start": 217.78,
-        "end": 218.38,
-        "col": 7
+        "end": 218.4,
+        "col": 2
       },
       {
         "word": "thing,",
-        "start": 218.38,
-        "end": 220.304,
-        "col": 17
+        "start": 218.4,
+        "end": 219.48,
+        "col": 10
       }
     ]
   },
@@ -2522,43 +2521,37 @@
       222.2614058956916,
       223.12054421768707
     ],
-    "lyrics": "It's the      different kind of song",
+    "lyrics": "It's the      different kind of",
     "words": [
       {
         "word": "It's",
-        "start": 221.736,
+        "start": 221.586,
         "end": 221.98,
         "col": 0
       },
       {
         "word": "the",
         "start": 221.98,
-        "end": 222.12,
+        "end": 222.1,
         "col": 5
       },
       {
         "word": "different",
-        "start": 222.12,
+        "start": 222.1,
         "end": 222.58,
         "col": 14
       },
       {
         "word": "kind",
         "start": 222.58,
-        "end": 223.32,
+        "end": 223.28,
         "col": 24
       },
       {
         "word": "of",
-        "start": 223.32,
-        "end": 223.6,
+        "start": 223.28,
+        "end": 223.74,
         "col": 29
-      },
-      {
-        "word": "song",
-        "start": 223.6,
-        "end": 224.36,
-        "col": 32
       }
     ]
   },
@@ -2579,19 +2572,25 @@
       225.69795918367348,
       226.55709750566893
     ],
-    "lyrics": "they sing.",
+    "lyrics": "song they sing.",
     "words": [
       {
-        "word": "they",
-        "start": 224.36,
-        "end": 225.1,
+        "word": "song",
+        "start": 223.74,
+        "end": 224.38,
         "col": 0
       },
       {
-        "word": "sing.",
-        "start": 225.1,
-        "end": 226.512,
+        "word": "they",
+        "start": 224.38,
+        "end": 225.06,
         "col": 5
+      },
+      {
+        "word": "sing.",
+        "start": 225.06,
+        "end": 226.44,
+        "col": 10
       }
     ]
   },
@@ -2618,32 +2617,32 @@
     "words": [
       {
         "word": "The",
-        "start": 227.988,
-        "end": 228.14,
+        "start": 227.838,
+        "end": 228.12,
         "col": 0
       },
       {
         "word": "ghosts",
-        "start": 228.14,
-        "end": 228.86,
+        "start": 228.12,
+        "end": 228.82,
         "col": 4
       },
       {
         "word": "are",
-        "start": 228.86,
-        "end": 229.08,
+        "start": 228.82,
+        "end": 229.1,
         "col": 11
       },
       {
         "word": "watchin'",
-        "start": 229.08,
-        "end": 229.58,
+        "start": 229.1,
+        "end": 229.8,
         "col": 17
       },
       {
         "word": "from",
-        "start": 229.58,
-        "end": 231.38,
+        "start": 229.8,
+        "end": 231.36,
         "col": 26
       }
     ]
@@ -2659,7 +2658,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      21
     ],
     "beats": [
       230.85278911564626,
@@ -2667,25 +2666,25 @@
       232.57106575963718,
       233.43020408163267
     ],
-    "lyrics": "the rusted    beams,",
+    "lyrics": "the rusted beams,",
     "words": [
       {
         "word": "the",
-        "start": 231.38,
-        "end": 231.58,
+        "start": 231.36,
+        "end": 231.6,
         "col": 0
       },
       {
         "word": "rusted",
-        "start": 231.58,
-        "end": 232.06,
+        "start": 231.6,
+        "end": 232.1,
         "col": 4
       },
       {
         "word": "beams,",
-        "start": 232.06,
-        "end": 234.096,
-        "col": 14
+        "start": 232.1,
+        "end": 233.56,
+        "col": 11
       }
     ]
   },
@@ -2712,38 +2711,38 @@
     "words": [
       {
         "word": "As",
-        "start": 234.884,
+        "start": 234.734,
         "end": 235.04,
         "col": 0
       },
       {
         "word": "they",
         "start": 235.04,
-        "end": 235.28,
+        "end": 235.26,
         "col": 3
       },
       {
         "word": "build",
-        "start": 235.28,
-        "end": 235.72,
+        "start": 235.26,
+        "end": 235.7,
         "col": 8
       },
       {
         "word": "a",
-        "start": 235.72,
-        "end": 235.86,
+        "start": 235.7,
+        "end": 235.88,
         "col": 14
       },
       {
         "word": "future",
-        "start": 235.86,
-        "end": 236.38,
+        "start": 235.88,
+        "end": 236.36,
         "col": 18
       },
       {
         "word": "on",
-        "start": 236.38,
-        "end": 238.02,
+        "start": 236.36,
+        "end": 238.04,
         "col": 25
       }
     ]
@@ -2769,20 +2768,20 @@
     "words": [
       {
         "word": "our",
-        "start": 238.02,
-        "end": 238.48,
+        "start": 238.04,
+        "end": 238.47,
         "col": 0
       },
       {
         "word": "broken",
-        "start": 238.48,
-        "end": 238.88,
+        "start": 238.47,
+        "end": 238.9,
         "col": 4
       },
       {
         "word": "dreams.",
-        "start": 238.88,
-        "end": 240.32,
+        "start": 238.9,
+        "end": 240.24,
         "col": 11
       }
     ]

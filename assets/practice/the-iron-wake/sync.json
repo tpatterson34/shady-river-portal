@@ -176,7 +176,7 @@
     ],
     "chord_cols": [
       0,
-      12
+      8
     ],
     "beats": [
       30.743219954648527,
@@ -184,15 +184,8 @@
       32.64725623582766,
       33.599274376417235
     ],
-    "lyrics": "            Gather",
-    "words": [
-      {
-        "word": "Gather",
-        "start": 34.15,
-        "end": 34.83,
-        "col": 12
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 34.57451247165533,
@@ -205,7 +198,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      21
     ],
     "beats": [
       34.57451247165533,
@@ -213,31 +206,37 @@
       36.45532879818594,
       37.40734693877551
     ],
-    "lyrics": "'round this   altar of",
+    "lyrics": "Gather 'round this   altar of",
     "words": [
       {
-        "word": "'round",
-        "start": 34.83,
-        "end": 35.87,
+        "word": "Gather",
+        "start": 34.15,
+        "end": 34.82,
         "col": 0
       },
       {
-        "word": "this",
-        "start": 35.87,
-        "end": 36.33,
+        "word": "'round",
+        "start": 34.82,
+        "end": 35.84,
         "col": 7
       },
       {
-        "word": "altar",
-        "start": 36.33,
-        "end": 37.39,
+        "word": "this",
+        "start": 35.84,
+        "end": 36.24,
         "col": 14
       },
       {
+        "word": "altar",
+        "start": 36.24,
+        "end": 37.42,
+        "col": 21
+      },
+      {
         "word": "of",
-        "start": 37.39,
-        "end": 38.11,
-        "col": 20
+        "start": 37.42,
+        "end": 38.12,
+        "col": 27
       }
     ]
   },
@@ -264,8 +263,8 @@
     "words": [
       {
         "word": "rust,",
-        "start": 38.11,
-        "end": 42.246,
+        "start": 38.12,
+        "end": 41.5,
         "col": 0
       }
     ]
@@ -291,26 +290,26 @@
     "words": [
       {
         "word": "In",
-        "start": 42.266,
-        "end": 42.89,
+        "start": 42.14,
+        "end": 42.86,
         "col": 0
       },
       {
         "word": "our",
-        "start": 42.89,
-        "end": 43.35,
+        "start": 42.86,
+        "end": 43.28,
         "col": 3
       },
       {
         "word": "fading,",
-        "start": 43.35,
-        "end": 44.37,
+        "start": 43.28,
+        "end": 44.34,
         "col": 7
       },
       {
         "word": "final",
-        "start": 44.37,
-        "end": 45.37,
+        "start": 44.34,
+        "end": 45.4,
         "col": 15
       }
     ]
@@ -334,19 +333,13 @@
       47.9027664399093,
       48.83156462585034
     ],
-    "lyrics": "trust.        The",
+    "lyrics": "trust.",
     "words": [
       {
         "word": "trust.",
-        "start": 45.37,
-        "end": 48.898,
+        "start": 45.4,
+        "end": 48.0,
         "col": 0
-      },
-      {
-        "word": "The",
-        "start": 48.95,
-        "end": 49.61,
-        "col": 14
       }
     ]
   },
@@ -367,49 +360,55 @@
       51.710839002267576,
       52.66285714285714
     ],
-    "lyrics": "hiss of the torch will be our",
+    "lyrics": "The hiss of the torch will be our",
     "words": [
       {
-        "word": "hiss",
-        "start": 49.61,
-        "end": 50.17,
+        "word": "The",
+        "start": 48.8,
+        "end": 49.52,
         "col": 0
       },
       {
+        "word": "hiss",
+        "start": 49.52,
+        "end": 49.98,
+        "col": 4
+      },
+      {
         "word": "of",
-        "start": 50.17,
-        "end": 51.11,
-        "col": 5
+        "start": 49.98,
+        "end": 50.98,
+        "col": 9
       },
       {
         "word": "the",
-        "start": 51.11,
-        "end": 51.35,
-        "col": 8
-      },
-      {
-        "word": "torch",
-        "start": 51.35,
-        "end": 51.93,
+        "start": 50.98,
+        "end": 51.34,
         "col": 12
       },
       {
+        "word": "torch",
+        "start": 51.34,
+        "end": 51.92,
+        "col": 16
+      },
+      {
         "word": "will",
-        "start": 51.93,
-        "end": 52.45,
-        "col": 18
+        "start": 51.92,
+        "end": 52.32,
+        "col": 22
       },
       {
         "word": "be",
-        "start": 52.45,
-        "end": 52.83,
-        "col": 23
+        "start": 52.32,
+        "end": 52.8,
+        "col": 27
       },
       {
         "word": "our",
-        "start": 52.83,
-        "end": 53.53,
-        "col": 26
+        "start": 52.8,
+        "end": 53.88,
+        "col": 30
       }
     ]
   },
@@ -436,8 +435,8 @@
     "words": [
       {
         "word": "prayer,",
-        "start": 53.53,
-        "end": 58.374,
+        "start": 53.88,
+        "end": 55.12,
         "col": 0
       }
     ]
@@ -461,31 +460,37 @@
       59.32698412698413,
       60.279002267573695
     ],
-    "lyrics": "Breathing in   the iron",
+    "lyrics": "Breathing in   the iron air.",
     "words": [
       {
         "word": "Breathing",
-        "start": 58.394,
-        "end": 59.01,
+        "start": 58.244,
+        "end": 58.96,
         "col": 0
       },
       {
         "word": "in",
-        "start": 59.01,
-        "end": 59.49,
+        "start": 58.96,
+        "end": 59.44,
         "col": 10
       },
       {
         "word": "the",
-        "start": 59.49,
-        "end": 60.09,
+        "start": 59.44,
+        "end": 60.02,
         "col": 15
       },
       {
         "word": "iron",
-        "start": 60.09,
-        "end": 60.81,
+        "start": 60.02,
+        "end": 60.76,
         "col": 19
+      },
+      {
+        "word": "air.",
+        "start": 60.76,
+        "end": 62.28,
+        "col": 24
       }
     ]
   },
@@ -506,27 +511,8 @@
       63.135056689342406,
       64.06385487528345
     ],
-    "lyrics": "air. Cut the",
-    "words": [
-      {
-        "word": "air.",
-        "start": 60.81,
-        "end": 63.686,
-        "col": 0
-      },
-      {
-        "word": "Cut",
-        "start": 63.706,
-        "end": 64.33,
-        "col": 5
-      },
-      {
-        "word": "the",
-        "start": 64.33,
-        "end": 64.71,
-        "col": 9
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 65.01587301587301,
@@ -545,25 +531,37 @@
       66.91990929705216,
       67.87192743764173
     ],
-    "lyrics": "sinew, break the",
+    "lyrics": "Cut the sinew, break the",
     "words": [
       {
-        "word": "sinew,",
-        "start": 64.71,
-        "end": 66.83,
+        "word": "Cut",
+        "start": 63.556,
+        "end": 64.28,
         "col": 0
       },
       {
+        "word": "the",
+        "start": 64.28,
+        "end": 64.68,
+        "col": 4
+      },
+      {
+        "word": "sinew,",
+        "start": 64.68,
+        "end": 66.34,
+        "col": 8
+      },
+      {
         "word": "break",
-        "start": 66.91,
-        "end": 68.09,
-        "col": 7
+        "start": 66.34,
+        "end": 68.04,
+        "col": 15
       },
       {
         "word": "the",
-        "start": 68.09,
-        "end": 68.51,
-        "col": 13
+        "start": 68.04,
+        "end": 68.5,
+        "col": 21
       }
     ]
   },
@@ -584,31 +582,31 @@
       70.72798185941043,
       71.68
     ],
-    "lyrics": "bone, This bitter harvest,",
+    "lyrics": "bone,         This bitter harvest,",
     "words": [
       {
         "word": "bone,",
-        "start": 68.51,
-        "end": 70.546,
+        "start": 68.5,
+        "end": 70.3,
         "col": 0
       },
       {
         "word": "This",
-        "start": 70.63,
-        "end": 71.45,
-        "col": 6
+        "start": 70.48,
+        "end": 71.28,
+        "col": 14
       },
       {
         "word": "bitter",
-        "start": 71.45,
-        "end": 72.03,
-        "col": 11
+        "start": 71.28,
+        "end": 72.08,
+        "col": 19
       },
       {
         "word": "harvest,",
-        "start": 72.03,
-        "end": 73.77,
-        "col": 18
+        "start": 72.08,
+        "end": 73.68,
+        "col": 26
       }
     ]
   },
@@ -635,8 +633,8 @@
     "words": [
       {
         "word": "ours",
-        "start": 75.27,
-        "end": 75.91,
+        "start": 75.5,
+        "end": 75.94,
         "col": 12
       }
     ]
@@ -664,26 +662,26 @@
     "words": [
       {
         "word": "alone.",
-        "start": 75.91,
-        "end": 78.458,
+        "start": 75.94,
+        "end": 78.2,
         "col": 0
       },
       {
         "word": "We",
-        "start": 78.55,
-        "end": 78.97,
+        "start": 78.4,
+        "end": 78.88,
         "col": 14
       },
       {
         "word": "sing",
-        "start": 78.97,
-        "end": 79.57,
+        "start": 78.88,
+        "end": 79.5,
         "col": 17
       },
       {
         "word": "this",
-        "start": 79.57,
-        "end": 80.01,
+        "start": 79.5,
+        "end": 80.04,
         "col": 22
       }
     ]
@@ -707,31 +705,37 @@
       82.15219954648526,
       83.10421768707484
     ],
-    "lyrics": "dirge of      rust and",
+    "lyrics": "dirge of      rust and steel,",
     "words": [
       {
         "word": "dirge",
-        "start": 80.01,
-        "end": 81.25,
+        "start": 80.04,
+        "end": 80.95,
         "col": 0
       },
       {
         "word": "of",
-        "start": 81.25,
-        "end": 82.23,
+        "start": 80.95,
+        "end": 81.86,
         "col": 6
       },
       {
         "word": "rust",
-        "start": 82.23,
-        "end": 83.37,
+        "start": 81.86,
+        "end": 82.77,
         "col": 14
       },
       {
         "word": "and",
-        "start": 83.37,
-        "end": 83.77,
+        "start": 82.77,
+        "end": 83.68,
         "col": 19
+      },
+      {
+        "word": "steel,",
+        "start": 83.68,
+        "end": 84.82,
+        "col": 23
       }
     ]
   },
@@ -746,7 +750,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      8
     ],
     "beats": [
       84.0562358276644,
@@ -754,27 +758,8 @@
       85.98349206349206,
       86.93551020408164
     ],
-    "lyrics": "steel,        It's the",
-    "words": [
-      {
-        "word": "steel,",
-        "start": 83.77,
-        "end": 86.678,
-        "col": 0
-      },
-      {
-        "word": "It's",
-        "start": 86.77,
-        "end": 87.37,
-        "col": 14
-      },
-      {
-        "word": "the",
-        "start": 87.37,
-        "end": 87.73,
-        "col": 19
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 87.8875283446712,
@@ -787,7 +772,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      22
     ],
     "beats": [
       87.8875283446712,
@@ -795,25 +780,37 @@
       89.79156462585034,
       90.74358276643991
     ],
-    "lyrics": "only thing    that's",
+    "lyrics": "It's the only thing   that's",
     "words": [
       {
-        "word": "only",
-        "start": 87.73,
-        "end": 88.85,
+        "word": "It's",
+        "start": 86.62,
+        "end": 87.66,
         "col": 0
       },
       {
-        "word": "thing",
-        "start": 88.85,
-        "end": 90.25,
+        "word": "the",
+        "start": 87.66,
+        "end": 88.24,
         "col": 5
       },
       {
-        "word": "that's",
-        "start": 90.25,
-        "end": 93.27,
+        "word": "only",
+        "start": 88.24,
+        "end": 88.92,
+        "col": 9
+      },
+      {
+        "word": "thing",
+        "start": 88.92,
+        "end": 90.2,
         "col": 14
+      },
+      {
+        "word": "that's",
+        "start": 90.2,
+        "end": 91.58,
+        "col": 22
       }
     ]
   },
@@ -828,7 +825,7 @@
     ],
     "chord_cols": [
       0,
-      12
+      14
     ],
     "beats": [
       91.69560090702947,
@@ -836,13 +833,13 @@
       93.59963718820862,
       94.55165532879819
     ],
-    "lyrics": "            real.",
+    "lyrics": "real.",
     "words": [
       {
         "word": "real.",
-        "start": 93.27,
-        "end": 101.33,
-        "col": 12
+        "start": 91.58,
+        "end": 92.2,
+        "col": 0
       }
     ]
   },
@@ -885,15 +882,8 @@
       101.26222222222222,
       102.19102040816327
     ],
-    "lyrics": "          Swing",
-    "words": [
-      {
-        "word": "Swing",
-        "start": 101.97,
-        "end": 103.37,
-        "col": 10
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 103.09659863945578,
@@ -906,7 +896,7 @@
     ],
     "chord_cols": [
       0,
-      18
+      24
     ],
     "beats": [
       103.09659863945578,
@@ -914,31 +904,43 @@
       105.00063492063492,
       105.9526530612245
     ],
-    "lyrics": "the hammer, not   for",
+    "lyrics": "Swing the hammer, not   for pride,",
     "words": [
       {
-        "word": "the",
-        "start": 103.37,
-        "end": 103.83,
+        "word": "Swing",
+        "start": 102.74,
+        "end": 103.46,
         "col": 0
       },
       {
+        "word": "the",
+        "start": 103.46,
+        "end": 103.74,
+        "col": 6
+      },
+      {
         "word": "hammer,",
-        "start": 103.83,
-        "end": 104.41,
-        "col": 4
+        "start": 103.74,
+        "end": 104.34,
+        "col": 10
       },
       {
         "word": "not",
-        "start": 104.41,
-        "end": 105.29,
-        "col": 12
+        "start": 104.34,
+        "end": 105.52,
+        "col": 18
       },
       {
         "word": "for",
-        "start": 105.29,
-        "end": 106.49,
-        "col": 18
+        "start": 105.52,
+        "end": 106.34,
+        "col": 24
+      },
+      {
+        "word": "pride,",
+        "start": 106.34,
+        "end": 107.82,
+        "col": 28
       }
     ]
   },
@@ -959,15 +961,8 @@
       108.83192743764172,
       109.76072562358277
     ],
-    "lyrics": "pride,",
-    "words": [
-      {
-        "word": "pride,",
-        "start": 106.49,
-        "end": 110.238,
-        "col": 0
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 110.73596371882086,
@@ -986,31 +981,37 @@
       112.64,
       113.59201814058957
     ],
-    "lyrics": "But for the emptiness",
+    "lyrics": "But for the emptiness inside.",
     "words": [
       {
         "word": "But",
-        "start": 110.994,
-        "end": 111.37,
+        "start": 110.844,
+        "end": 111.32,
         "col": 0
       },
       {
         "word": "for",
-        "start": 111.37,
-        "end": 111.99,
+        "start": 111.32,
+        "end": 111.9,
         "col": 4
       },
       {
         "word": "the",
-        "start": 111.99,
-        "end": 112.35,
+        "start": 111.9,
+        "end": 112.4,
         "col": 8
       },
       {
         "word": "emptiness",
-        "start": 112.35,
-        "end": 113.41,
+        "start": 112.4,
+        "end": 113.4,
         "col": 12
+      },
+      {
+        "word": "inside.",
+        "start": 113.4,
+        "end": 115.46,
+        "col": 22
       }
     ]
   },
@@ -1031,21 +1032,8 @@
       116.44807256235828,
       117.40009070294785
     ],
-    "lyrics": "inside. Let",
-    "words": [
-      {
-        "word": "inside.",
-        "start": 113.41,
-        "end": 117.89,
-        "col": 0
-      },
-      {
-        "word": "Let",
-        "start": 117.91,
-        "end": 118.53,
-        "col": 8
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 118.35210884353741,
@@ -1058,7 +1046,7 @@
     ],
     "chord_cols": [
       0,
-      16
+      20
     ],
     "beats": [
       118.35210884353741,
@@ -1066,37 +1054,43 @@
       120.25614512471655,
       121.20816326530613
     ],
-    "lyrics": "the sparks be   our stained",
+    "lyrics": "Let the sparks be   our stained",
     "words": [
       {
-        "word": "the",
-        "start": 118.53,
-        "end": 118.97,
+        "word": "Let",
+        "start": 117.76,
+        "end": 118.5,
         "col": 0
       },
       {
-        "word": "sparks",
-        "start": 118.97,
-        "end": 119.87,
+        "word": "the",
+        "start": 118.5,
+        "end": 118.96,
         "col": 4
       },
       {
+        "word": "sparks",
+        "start": 118.96,
+        "end": 119.8,
+        "col": 8
+      },
+      {
         "word": "be",
-        "start": 119.87,
-        "end": 120.59,
-        "col": 11
+        "start": 119.8,
+        "end": 120.44,
+        "col": 15
       },
       {
         "word": "our",
-        "start": 120.59,
-        "end": 121.17,
-        "col": 16
+        "start": 120.44,
+        "end": 121.16,
+        "col": 20
       },
       {
         "word": "stained",
-        "start": 121.17,
-        "end": 122.07,
-        "col": 20
+        "start": 121.16,
+        "end": 121.98,
+        "col": 24
       }
     ]
   },
@@ -1117,19 +1111,13 @@
       124.06421768707483,
       125.0162358276644
     ],
-    "lyrics": "glass, This,",
+    "lyrics": "glass,",
     "words": [
       {
         "word": "glass,",
-        "start": 122.07,
-        "end": 125.602,
+        "start": 121.98,
+        "end": 123.9,
         "col": 0
-      },
-      {
-        "word": "This,",
-        "start": 125.69,
-        "end": 126.33,
-        "col": 7
       }
     ]
   },
@@ -1144,7 +1132,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      19
     ],
     "beats": [
       125.96825396825396,
@@ -1152,25 +1140,31 @@
       127.8722902494331,
       128.82430839002268
     ],
-    "lyrics": "too, shall    surely",
+    "lyrics": "This, too, shall   surely",
     "words": [
       {
-        "word": "too,",
-        "start": 126.33,
-        "end": 127.33,
+        "word": "This,",
+        "start": 125.54,
+        "end": 126.18,
         "col": 0
       },
       {
+        "word": "too,",
+        "start": 126.18,
+        "end": 127.22,
+        "col": 6
+      },
+      {
         "word": "shall",
-        "start": 127.33,
-        "end": 128.31,
-        "col": 5
+        "start": 127.22,
+        "end": 128.12,
+        "col": 11
       },
       {
         "word": "surely",
-        "start": 128.31,
-        "end": 129.45,
-        "col": 14
+        "start": 128.12,
+        "end": 129.52,
+        "col": 19
       }
     ]
   },
@@ -1191,25 +1185,13 @@
       131.68036281179138,
       132.65560090702948
     ],
-    "lyrics": "pass. Cut the",
+    "lyrics": "pass.",
     "words": [
       {
         "word": "pass.",
-        "start": 129.45,
-        "end": 132.338,
+        "start": 129.52,
+        "end": 131.88,
         "col": 0
-      },
-      {
-        "word": "Cut",
-        "start": 132.43,
-        "end": 132.87,
-        "col": 6
-      },
-      {
-        "word": "the",
-        "start": 132.87,
-        "end": 133.31,
-        "col": 10
       }
     ]
   },
@@ -1230,25 +1212,37 @@
       135.48843537414967,
       136.44045351473923
     ],
-    "lyrics": "sinew, break the",
+    "lyrics": "Cut the sinew, break the",
     "words": [
       {
-        "word": "sinew,",
-        "start": 133.31,
-        "end": 134.51,
+        "word": "Cut",
+        "start": 132.28,
+        "end": 132.84,
         "col": 0
       },
       {
+        "word": "the",
+        "start": 132.84,
+        "end": 133.28,
+        "col": 4
+      },
+      {
+        "word": "sinew,",
+        "start": 133.28,
+        "end": 134.64,
+        "col": 8
+      },
+      {
         "word": "break",
-        "start": 136.21,
-        "end": 136.65,
-        "col": 7
+        "start": 136.16,
+        "end": 136.62,
+        "col": 15
       },
       {
         "word": "the",
-        "start": 136.65,
-        "end": 137.11,
-        "col": 13
+        "start": 136.62,
+        "end": 137.08,
+        "col": 21
       }
     ]
   },
@@ -1271,25 +1265,31 @@
       139.29650793650794,
       140.2485260770975
     ],
-    "lyrics": "bone,         This bitter",
+    "lyrics": "bone,         This bitter harvest,",
     "words": [
       {
         "word": "bone,",
-        "start": 137.11,
-        "end": 139.398,
+        "start": 137.08,
+        "end": 138.46,
         "col": 0
       },
       {
         "word": "This",
-        "start": 139.418,
-        "end": 140.03,
+        "start": 139.52,
+        "end": 140.04,
         "col": 14
       },
       {
         "word": "bitter",
-        "start": 140.03,
-        "end": 140.67,
+        "start": 140.04,
+        "end": 140.5,
         "col": 19
+      },
+      {
+        "word": "harvest,",
+        "start": 140.5,
+        "end": 142.22,
+        "col": 26
       }
     ]
   },
@@ -1310,19 +1310,19 @@
       143.10458049886623,
       144.0798185941043
     ],
-    "lyrics": "harvest, ours",
+    "lyrics": "          ours alone.",
     "words": [
       {
-        "word": "harvest,",
-        "start": 140.67,
-        "end": 142.95,
-        "col": 0
+        "word": "ours",
+        "start": 142.88,
+        "end": 144.36,
+        "col": 10
       },
       {
-        "word": "ours",
-        "start": 143.95,
-        "end": 144.43,
-        "col": 9
+        "word": "alone.",
+        "start": 144.36,
+        "end": 145.48,
+        "col": 15
       }
     ]
   },
@@ -1337,7 +1337,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      12
     ],
     "beats": [
       145.03183673469388,
@@ -1345,31 +1345,25 @@
       146.93587301587303,
       147.86467120181405
     ],
-    "lyrics": "alone.        We sing this",
+    "lyrics": "            We sing this",
     "words": [
       {
-        "word": "alone.",
-        "start": 144.43,
-        "end": 146.806,
-        "col": 0
-      },
-      {
         "word": "We",
-        "start": 147.064,
-        "end": 147.517,
-        "col": 14
+        "start": 146.914,
+        "end": 147.507,
+        "col": 12
       },
       {
         "word": "sing",
-        "start": 147.517,
-        "end": 147.97,
-        "col": 17
+        "start": 147.507,
+        "end": 148.1,
+        "col": 15
       },
       {
         "word": "this",
-        "start": 147.97,
-        "end": 148.59,
-        "col": 22
+        "start": 148.1,
+        "end": 148.6,
+        "col": 20
       }
     ]
   },
@@ -1390,31 +1384,37 @@
       150.7439455782313,
       151.69596371882085
     ],
-    "lyrics": "dirge of rust and",
+    "lyrics": "dirge of rust and steel,",
     "words": [
       {
         "word": "dirge",
-        "start": 148.59,
-        "end": 150.37,
+        "start": 148.6,
+        "end": 149.56,
         "col": 0
       },
       {
         "word": "of",
-        "start": 150.37,
-        "end": 150.41,
+        "start": 149.56,
+        "end": 150.82,
         "col": 6
       },
       {
         "word": "rust",
-        "start": 151.17,
-        "end": 151.95,
+        "start": 150.82,
+        "end": 151.46,
         "col": 9
       },
       {
         "word": "and",
-        "start": 151.95,
-        "end": 152.37,
+        "start": 151.46,
+        "end": 152.1,
         "col": 14
+      },
+      {
+        "word": "steel,",
+        "start": 152.1,
+        "end": 153.18,
+        "col": 18
       }
     ]
   },
@@ -1429,7 +1429,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      8
     ],
     "beats": [
       152.64798185941044,
@@ -1437,27 +1437,8 @@
       154.55201814058958,
       155.50403628117914
     ],
-    "lyrics": "steel,        It's the",
-    "words": [
-      {
-        "word": "steel,",
-        "start": 152.37,
-        "end": 155.278,
-        "col": 0
-      },
-      {
-        "word": "It's",
-        "start": 155.298,
-        "end": 155.91,
-        "col": 14
-      },
-      {
-        "word": "the",
-        "start": 155.91,
-        "end": 156.29,
-        "col": 19
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 156.4560544217687,
@@ -1476,25 +1457,37 @@
       158.36009070294784,
       159.3121088435374
     ],
-    "lyrics": "only thing that's",
+    "lyrics": "It's the only thing that's",
     "words": [
       {
-        "word": "only",
-        "start": 156.29,
-        "end": 157.41,
+        "word": "It's",
+        "start": 155.48,
+        "end": 155.88,
         "col": 0
       },
       {
-        "word": "thing",
-        "start": 157.41,
-        "end": 158.95,
+        "word": "the",
+        "start": 155.88,
+        "end": 156.22,
         "col": 5
       },
       {
+        "word": "only",
+        "start": 156.22,
+        "end": 157.44,
+        "col": 9
+      },
+      {
+        "word": "thing",
+        "start": 157.44,
+        "end": 158.72,
+        "col": 14
+      },
+      {
         "word": "that's",
-        "start": 158.95,
-        "end": 160.09,
-        "col": 11
+        "start": 158.72,
+        "end": 163.995,
+        "col": 20
       }
     ]
   },
@@ -1509,7 +1502,7 @@
     ],
     "chord_cols": [
       0,
-      12
+      8
     ],
     "beats": [
       160.264126984127,
@@ -1517,15 +1510,8 @@
       162.16816326530613,
       163.1201814058957
     ],
-    "lyrics": "            real.",
-    "words": [
-      {
-        "word": "real.",
-        "start": 160.09,
-        "end": 169.27,
-        "col": 12
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 164.07219954648525,
@@ -1544,8 +1530,15 @@
       165.9530158730159,
       166.90503401360544
     ],
-    "lyrics": "",
-    "words": []
+    "lyrics": "real.",
+    "words": [
+      {
+        "word": "real.",
+        "start": 163.995,
+        "end": 169.27,
+        "col": 0
+      }
+    ]
   },
   {
     "time": 167.857052154195,
@@ -1558,7 +1551,7 @@
     ],
     "chord_cols": [
       0,
-      12
+      8
     ],
     "beats": [
       167.857052154195,
@@ -1566,15 +1559,8 @@
       169.76108843537415,
       170.504126984127
     ],
-    "lyrics": "            The",
-    "words": [
-      {
-        "word": "The",
-        "start": 170.03,
-        "end": 171.43,
-        "col": 12
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 171.43292517006802,
@@ -1587,7 +1573,7 @@
     ],
     "chord_cols": [
       0,
-      24
+      28
     ],
     "beats": [
       171.43292517006802,
@@ -1595,43 +1581,49 @@
       173.3601814058957,
       174.5443990929705
     ],
-    "lyrics": "gears that turned for   fifty years,",
+    "lyrics": "The gears that turned for   fifty years,",
     "words": [
       {
-        "word": "gears",
-        "start": 171.43,
-        "end": 172.03,
+        "word": "The",
+        "start": 169.88,
+        "end": 170.94,
         "col": 0
       },
       {
+        "word": "gears",
+        "start": 170.94,
+        "end": 172.0,
+        "col": 4
+      },
+      {
         "word": "that",
-        "start": 172.03,
-        "end": 172.37,
-        "col": 6
+        "start": 172.0,
+        "end": 172.3,
+        "col": 10
       },
       {
         "word": "turned",
-        "start": 172.37,
-        "end": 172.93,
-        "col": 11
+        "start": 172.3,
+        "end": 172.82,
+        "col": 15
       },
       {
         "word": "for",
-        "start": 172.93,
-        "end": 173.29,
-        "col": 18
+        "start": 172.82,
+        "end": 173.22,
+        "col": 22
       },
       {
         "word": "fifty",
-        "start": 173.29,
-        "end": 174.09,
-        "col": 24
+        "start": 173.22,
+        "end": 174.1,
+        "col": 28
       },
       {
         "word": "years,",
-        "start": 174.09,
-        "end": 177.246,
-        "col": 30
+        "start": 174.1,
+        "end": 175.08,
+        "col": 34
       }
     ]
   },
@@ -1656,26 +1648,26 @@
     "words": [
       {
         "word": "Now",
-        "start": 177.33,
-        "end": 178.03,
+        "start": 177.68,
+        "end": 178.04,
         "col": 10
       },
       {
         "word": "sold",
-        "start": 178.03,
-        "end": 178.63,
+        "start": 178.04,
+        "end": 178.46,
         "col": 14
       },
       {
         "word": "for",
-        "start": 178.63,
-        "end": 178.91,
+        "start": 178.46,
+        "end": 178.9,
         "col": 19
       },
       {
         "word": "scrap",
-        "start": 178.91,
-        "end": 179.57,
+        "start": 178.9,
+        "end": 179.46,
         "col": 23
       }
     ]
@@ -1701,20 +1693,20 @@
     "words": [
       {
         "word": "to",
-        "start": 179.57,
-        "end": 180.61,
+        "start": 180.22,
+        "end": 180.72,
         "col": 0
       },
       {
         "word": "pay",
-        "start": 180.61,
-        "end": 181.87,
+        "start": 180.72,
+        "end": 181.66,
         "col": 3
       },
       {
         "word": "for",
-        "start": 181.87,
-        "end": 182.69,
+        "start": 181.66,
+        "end": 182.6,
         "col": 7
       }
     ]
@@ -1736,19 +1728,13 @@
       185.0165986394558,
       185.96861678004535
     ],
-    "lyrics": "tears. We're",
+    "lyrics": "tears.",
     "words": [
       {
         "word": "tears.",
-        "start": 182.69,
+        "start": 182.6,
         "end": 186.178,
         "col": 0
-      },
-      {
-        "word": "We're",
-        "start": 186.23,
-        "end": 186.81,
-        "col": 7
       }
     ]
   },
@@ -1769,37 +1755,49 @@
       188.82467120181406,
       189.7766893424036
     ],
-    "lyrics": "tearing down our own true",
+    "lyrics": "We're tearing down our own true cross,",
     "words": [
       {
-        "word": "tearing",
-        "start": 186.81,
-        "end": 187.39,
+        "word": "We're",
+        "start": 186.178,
+        "end": 186.769,
         "col": 0
       },
       {
+        "word": "tearing",
+        "start": 186.769,
+        "end": 187.36,
+        "col": 6
+      },
+      {
         "word": "down",
-        "start": 187.39,
-        "end": 188.19,
-        "col": 8
+        "start": 187.36,
+        "end": 188.08,
+        "col": 14
       },
       {
         "word": "our",
-        "start": 188.19,
-        "end": 188.77,
-        "col": 13
+        "start": 188.08,
+        "end": 188.74,
+        "col": 19
       },
       {
         "word": "own",
-        "start": 188.77,
-        "end": 189.49,
-        "col": 17
+        "start": 188.74,
+        "end": 189.48,
+        "col": 23
       },
       {
         "word": "true",
-        "start": 189.49,
-        "end": 190.17,
-        "col": 21
+        "start": 189.48,
+        "end": 190.2,
+        "col": 27
+      },
+      {
+        "word": "cross,",
+        "start": 190.2,
+        "end": 191.86,
+        "col": 32
       }
     ]
   },
@@ -1820,21 +1818,8 @@
       192.63274376417235,
       193.5847619047619
     ],
-    "lyrics": "cross, And",
-    "words": [
-      {
-        "word": "cross,",
-        "start": 190.17,
-        "end": 193.646,
-        "col": 0
-      },
-      {
-        "word": "And",
-        "start": 193.666,
-        "end": 194.29,
-        "col": 7
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 194.56,
@@ -1847,7 +1832,7 @@
     ],
     "chord_cols": [
       0,
-      18
+      22
     ],
     "beats": [
       194.56,
@@ -1855,37 +1840,43 @@
       196.4408163265306,
       197.3928344671202
     ],
-    "lyrics": "counting up the   bitter loss.",
+    "lyrics": "And counting up the   bitter loss.",
     "words": [
       {
-        "word": "counting",
-        "start": 194.29,
-        "end": 195.09,
+        "word": "And",
+        "start": 194.06,
+        "end": 194.28,
         "col": 0
       },
       {
+        "word": "counting",
+        "start": 194.28,
+        "end": 194.98,
+        "col": 4
+      },
+      {
         "word": "up",
-        "start": 195.09,
-        "end": 195.65,
-        "col": 9
+        "start": 194.98,
+        "end": 195.56,
+        "col": 13
       },
       {
         "word": "the",
-        "start": 195.65,
-        "end": 196.15,
-        "col": 12
+        "start": 195.56,
+        "end": 196.12,
+        "col": 16
       },
       {
         "word": "bitter",
-        "start": 196.15,
-        "end": 197.41,
-        "col": 18
+        "start": 196.12,
+        "end": 197.4,
+        "col": 22
       },
       {
         "word": "loss.",
-        "start": 197.41,
-        "end": 200.814,
-        "col": 25
+        "start": 197.4,
+        "end": 200.0,
+        "col": 29
       }
     ]
   },
@@ -1906,21 +1897,8 @@
       200.2488888888889,
       201.20090702947846
     ],
-    "lyrics": "          Cut the",
-    "words": [
-      {
-        "word": "Cut",
-        "start": 200.834,
-        "end": 201.45,
-        "col": 10
-      },
-      {
-        "word": "the",
-        "start": 201.45,
-        "end": 201.97,
-        "col": 14
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 202.15292517006802,
@@ -1933,7 +1911,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      23
     ],
     "beats": [
       202.15292517006802,
@@ -1941,25 +1919,37 @@
       204.0105215419501,
       204.96253968253967
     ],
-    "lyrics": "sinew,        break the",
+    "lyrics": "Cut the sinew, break   the",
     "words": [
       {
-        "word": "sinew,",
-        "start": 201.97,
-        "end": 203.07,
+        "word": "Cut",
+        "start": 201.14,
+        "end": 201.34,
         "col": 0
       },
       {
+        "word": "the",
+        "start": 201.68,
+        "end": 201.9,
+        "col": 4
+      },
+      {
+        "word": "sinew,",
+        "start": 201.9,
+        "end": 203.4,
+        "col": 8
+      },
+      {
         "word": "break",
-        "start": 204.47,
-        "end": 205.17,
-        "col": 14
+        "start": 203.4,
+        "end": 205.16,
+        "col": 15
       },
       {
         "word": "the",
-        "start": 205.17,
-        "end": 205.67,
-        "col": 20
+        "start": 205.16,
+        "end": 205.64,
+        "col": 23
       }
     ]
   },
@@ -1980,31 +1970,31 @@
       207.8185941043084,
       208.77061224489796
     ],
-    "lyrics": "bone, This bitter harvest,",
+    "lyrics": "bone,         This bitter harvest,",
     "words": [
       {
         "word": "bone,",
-        "start": 205.67,
-        "end": 207.798,
+        "start": 205.64,
+        "end": 207.48,
         "col": 0
       },
       {
         "word": "This",
-        "start": 207.89,
-        "end": 208.59,
-        "col": 6
+        "start": 207.74,
+        "end": 208.56,
+        "col": 14
       },
       {
         "word": "bitter",
-        "start": 208.59,
-        "end": 209.17,
-        "col": 11
+        "start": 208.56,
+        "end": 209.22,
+        "col": 19
       },
       {
         "word": "harvest,",
-        "start": 209.17,
-        "end": 210.93,
-        "col": 18
+        "start": 209.22,
+        "end": 210.78,
+        "col": 26
       }
     ]
   },
@@ -2027,13 +2017,19 @@
       211.62666666666667,
       212.57868480725622
     ],
-    "lyrics": "            ours",
+    "lyrics": "            ours alone.",
     "words": [
       {
         "word": "ours",
-        "start": 212.07,
-        "end": 213.05,
+        "start": 212.68,
+        "end": 212.94,
         "col": 12
+      },
+      {
+        "word": "alone.",
+        "start": 212.94,
+        "end": 214.22,
+        "col": 17
       }
     ]
   },
@@ -2054,31 +2050,25 @@
       215.43473922902496,
       216.40997732426302
     ],
-    "lyrics": "alone. We sing this",
+    "lyrics": "          We sing this",
     "words": [
       {
-        "word": "alone.",
-        "start": 213.05,
-        "end": 215.302,
-        "col": 0
-      },
-      {
         "word": "We",
-        "start": 215.39,
-        "end": 216.09,
-        "col": 7
-      },
-      {
-        "word": "sing",
-        "start": 216.09,
-        "end": 216.69,
+        "start": 215.76,
+        "end": 216.06,
         "col": 10
       },
       {
+        "word": "sing",
+        "start": 216.06,
+        "end": 216.58,
+        "col": 13
+      },
+      {
         "word": "this",
-        "start": 216.69,
-        "end": 217.15,
-        "col": 15
+        "start": 216.58,
+        "end": 217.16,
+        "col": 18
       }
     ]
   },
@@ -2103,26 +2093,26 @@
     "words": [
       {
         "word": "dirge",
-        "start": 217.15,
-        "end": 218.43,
+        "start": 217.16,
+        "end": 218.14,
         "col": 0
       },
       {
         "word": "of",
-        "start": 218.43,
-        "end": 219.33,
+        "start": 218.14,
+        "end": 219.52,
         "col": 6
       },
       {
         "word": "rust",
-        "start": 219.33,
-        "end": 220.53,
+        "start": 219.52,
+        "end": 220.12,
         "col": 9
       },
       {
         "word": "and",
-        "start": 220.53,
-        "end": 220.97,
+        "start": 220.12,
+        "end": 220.72,
         "col": 14
       }
     ]
@@ -2146,25 +2136,13 @@
       223.12054421768707,
       224.07256235827666
     ],
-    "lyrics": "steel,        It's the",
+    "lyrics": "steel,",
     "words": [
       {
         "word": "steel,",
-        "start": 220.97,
-        "end": 223.818,
+        "start": 220.72,
+        "end": 223.74,
         "col": 0
-      },
-      {
-        "word": "It's",
-        "start": 223.838,
-        "end": 224.45,
-        "col": 14
-      },
-      {
-        "word": "the",
-        "start": 224.45,
-        "end": 224.97,
-        "col": 19
       }
     ]
   },
@@ -2179,7 +2157,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      22
     ],
     "beats": [
       225.02458049886621,
@@ -2187,25 +2165,43 @@
       226.92861678004536,
       227.88063492063492
     ],
-    "lyrics": "only thing    that's",
+    "lyrics": "It's the only thing   that's real.",
     "words": [
       {
-        "word": "only",
-        "start": 224.97,
-        "end": 226.03,
+        "word": "It's",
+        "start": 223.74,
+        "end": 224.48,
         "col": 0
       },
       {
-        "word": "thing",
-        "start": 226.03,
-        "end": 227.19,
+        "word": "the",
+        "start": 224.48,
+        "end": 224.88,
         "col": 5
       },
       {
-        "word": "that's",
-        "start": 227.19,
-        "end": 229.63,
+        "word": "only",
+        "start": 224.88,
+        "end": 226.02,
+        "col": 9
+      },
+      {
+        "word": "thing",
+        "start": 226.02,
+        "end": 227.24,
         "col": 14
+      },
+      {
+        "word": "that's",
+        "start": 227.24,
+        "end": 228.64,
+        "col": 22
+      },
+      {
+        "word": "real.",
+        "start": 228.64,
+        "end": 229.08,
+        "col": 29
       }
     ]
   },
@@ -2220,7 +2216,7 @@
     ],
     "chord_cols": [
       0,
-      12
+      8
     ],
     "beats": [
       228.83265306122448,
@@ -2228,15 +2224,8 @@
       230.73668934240362,
       231.6887074829932
     ],
-    "lyrics": "            real.",
-    "words": [
-      {
-        "word": "real.",
-        "start": 229.63,
-        "end": 237.63,
-        "col": 12
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 232.64072562358277,

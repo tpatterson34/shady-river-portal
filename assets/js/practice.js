@@ -532,7 +532,9 @@
 
         // Measure row (contains '|')
         if (line.includes('|')) {
-          const rawBars = line.split('|').map(s => s.trim()).filter(Boolean);
+          const pipeParts = line.split('|');
+          const innerCells = pipeParts.slice(1, pipeParts.length - 1).map(s => s.trim());
+          const rawBars = innerCells.length > 0 ? innerCells : pipeParts.map(s => s.trim()).filter(Boolean);
           let rowTime = -1.0;
           const chordTokens = [];
           const barsData = [];
@@ -545,7 +547,11 @@
               rowTime = barSync.time;
             }
 
-            const barChords = barStr.split(/\s+/).filter(Boolean);
+            let barChords = barStr.split(/\s+/).filter(Boolean);
+            if (barChords.length === 0) {
+              const syncChords = (barSync.chords || []).filter(c => c && c !== '.');
+              barChords = syncChords.length > 0 ? syncChords : ['N.C.'];
+            }
             const beats = barSync.beats || [];
             const bTime = (typeof barSync.time === 'number' && barSync.time >= 0) ? barSync.time : -1.0;
             const barTokens = [];

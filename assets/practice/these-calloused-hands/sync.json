@@ -5,10 +5,12 @@
     "tempo_bpm": 70,
     "time_signature": "4/4",
     "chords": [
-      "."
+      "Bm",
+      "Em"
     ],
     "chord_cols": [
-      0
+      0,
+      8
     ],
     "beats": [
       0.789478458050553,
@@ -200,15 +202,8 @@
       33.43673469387801,
       34.29587301587347
     ],
-    "lyrics": "          Watch",
-    "words": [
-      {
-        "word": "Watch",
-        "start": 34.724,
-        "end": 35.22,
-        "col": 10
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 35.15501133786893,
@@ -227,25 +222,31 @@
       36.873287981859846,
       37.732426303855306
     ],
-    "lyrics": "the fire, boy,",
+    "lyrics": "Watch the fire, boy,",
     "words": [
       {
-        "word": "the",
-        "start": 35.22,
-        "end": 35.54,
+        "word": "Watch",
+        "start": 34.724,
+        "end": 35.26,
         "col": 0
       },
       {
+        "word": "the",
+        "start": 35.26,
+        "end": 35.52,
+        "col": 6
+      },
+      {
         "word": "fire,",
-        "start": 35.54,
+        "start": 35.52,
         "end": 36.3,
-        "col": 4
+        "col": 10
       },
       {
         "word": "boy,",
         "start": 36.3,
-        "end": 37.1,
-        "col": 10
+        "end": 37.16,
+        "col": 16
       }
     ]
   },
@@ -272,25 +273,25 @@
     "words": [
       {
         "word": "feel",
-        "start": 38.92,
-        "end": 40.32,
+        "start": 38.78,
+        "end": 40.18,
         "col": 0
       },
       {
         "word": "the",
-        "start": 40.32,
-        "end": 41.22,
+        "start": 40.18,
+        "end": 41.12,
         "col": 14
       },
       {
         "word": "heat",
-        "start": 41.22,
-        "end": 41.44,
+        "start": 41.12,
+        "end": 41.46,
         "col": 18
       },
       {
         "word": "upon",
-        "start": 41.44,
+        "start": 41.46,
         "end": 41.94,
         "col": 23
       }
@@ -320,12 +321,12 @@
       {
         "word": "your",
         "start": 41.94,
-        "end": 44.668,
+        "end": 44.0,
         "col": 0
       },
       {
         "word": "face.",
-        "start": 44.668,
+        "start": 44.0,
         "end": 44.718,
         "col": 14
       }
@@ -390,25 +391,25 @@
       54.05605442176903,
       54.91519274376449
     ],
-    "lyrics": "Got to        feel",
+    "lyrics": "Got           to feel",
     "words": [
       {
         "word": "Got",
-        "start": 53.444,
-        "end": 53.8,
+        "start": 53.294,
+        "end": 53.9,
         "col": 0
       },
       {
         "word": "to",
-        "start": 53.8,
-        "end": 54.32,
-        "col": 4
+        "start": 53.9,
+        "end": 54.26,
+        "col": 14
       },
       {
         "word": "feel",
-        "start": 54.32,
-        "end": 54.92,
-        "col": 14
+        "start": 54.26,
+        "end": 55.26,
+        "col": 17
       }
     ]
   },
@@ -433,7 +434,7 @@
     "words": [
       {
         "word": "the",
-        "start": 54.92,
+        "start": 55.26,
         "end": 58.62,
         "col": 0
       },
@@ -467,13 +468,13 @@
       {
         "word": "upon",
         "start": 59.02,
-        "end": 59.62,
+        "end": 59.58,
         "col": 0
       },
       {
         "word": "your",
-        "start": 59.62,
-        "end": 63.756,
+        "start": 59.58,
+        "end": 63.0,
         "col": 5
       }
     ]
@@ -499,8 +500,8 @@
     "words": [
       {
         "word": "face.",
-        "start": 63.756,
-        "end": 63.806,
+        "start": 63.0,
+        "end": 63.36,
         "col": 0
       }
     ]
@@ -546,32 +547,32 @@
     "words": [
       {
         "word": "This",
-        "start": 69.612,
-        "end": 69.94,
+        "start": 69.462,
+        "end": 69.84,
         "col": 0
       },
       {
         "word": "is",
-        "start": 69.94,
-        "end": 70.22,
+        "start": 69.84,
+        "end": 70.16,
         "col": 5
       },
       {
         "word": "where",
-        "start": 70.22,
-        "end": 70.54,
+        "start": 70.16,
+        "end": 70.52,
         "col": 8
       },
       {
         "word": "we",
-        "start": 70.54,
-        "end": 70.88,
+        "start": 70.52,
+        "end": 70.9,
         "col": 14
       },
       {
         "word": "work,",
-        "start": 70.88,
-        "end": 71.44,
+        "start": 70.9,
+        "end": 71.36,
         "col": 17
       }
     ]
@@ -593,31 +594,31 @@
       74.67537414966006,
       75.53451247165552
     ],
-    "lyrics": "this is our sacred",
+    "lyrics": "          this is our sacred",
     "words": [
       {
         "word": "this",
-        "start": 73.72,
-        "end": 75.12,
-        "col": 0
+        "start": 74.48,
+        "end": 75.04,
+        "col": 10
       },
       {
         "word": "is",
-        "start": 75.12,
-        "end": 75.46,
-        "col": 5
+        "start": 75.04,
+        "end": 75.4,
+        "col": 15
       },
       {
         "word": "our",
-        "start": 75.46,
-        "end": 75.74,
-        "col": 8
+        "start": 75.4,
+        "end": 75.72,
+        "col": 18
       },
       {
         "word": "sacred",
-        "start": 75.74,
-        "end": 76.4,
-        "col": 12
+        "start": 75.72,
+        "end": 76.38,
+        "col": 22
       }
     ]
   },
@@ -644,8 +645,8 @@
     "words": [
       {
         "word": "place.",
-        "start": 76.4,
-        "end": 77.9,
+        "start": 76.38,
+        "end": 77.96,
         "col": 0
       }
     ]
@@ -749,15 +750,8 @@
       95.29469387755108,
       96.15383219954654
     ],
-    "lyrics": "          Yes,",
-    "words": [
-      {
-        "word": "Yes,",
-        "start": 96.4,
-        "end": 97.108,
-        "col": 10
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 97.012970521542,
@@ -770,7 +764,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      24
     ],
     "beats": [
       97.012970521542,
@@ -778,31 +772,43 @@
       98.73124716553292,
       99.59038548752838
     ],
-    "lyrics": "it is         our sacred",
+    "lyrics": "Yes, it is our sacred   place.",
     "words": [
       {
-        "word": "it",
-        "start": 97.108,
-        "end": 97.816,
+        "word": "Yes,",
+        "start": 96.25,
+        "end": 96.642,
         "col": 0
       },
       {
+        "word": "it",
+        "start": 96.642,
+        "end": 97.035,
+        "col": 5
+      },
+      {
         "word": "is",
-        "start": 97.816,
-        "end": 98.524,
-        "col": 3
+        "start": 97.035,
+        "end": 97.427,
+        "col": 8
       },
       {
         "word": "our",
-        "start": 98.524,
-        "end": 99.232,
-        "col": 14
+        "start": 97.427,
+        "end": 97.82,
+        "col": 11
       },
       {
         "word": "sacred",
-        "start": 99.232,
-        "end": 99.94,
-        "col": 18
+        "start": 97.82,
+        "end": 99.22,
+        "col": 15
+      },
+      {
+        "word": "place.",
+        "start": 99.22,
+        "end": 100.62,
+        "col": 24
       }
     ]
   },
@@ -823,15 +829,8 @@
       102.16780045351476,
       103.02693877551022
     ],
-    "lyrics": "place.",
-    "words": [
-      {
-        "word": "place.",
-        "start": 99.94,
-        "end": 102.672,
-        "col": 0
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 103.88607709750568,
@@ -956,20 +955,20 @@
     "words": [
       {
         "word": "These",
-        "start": 121.36,
-        "end": 122.56,
+        "start": 121.98,
+        "end": 122.5,
         "col": 0
       },
       {
         "word": "calloused",
-        "start": 122.56,
-        "end": 123.22,
+        "start": 122.5,
+        "end": 123.26,
         "col": 6
       },
       {
         "word": "hands,",
-        "start": 123.22,
-        "end": 124.02,
+        "start": 123.26,
+        "end": 124.28,
         "col": 16
       }
     ]
@@ -995,38 +994,38 @@
     "words": [
       {
         "word": "they",
-        "start": 124.48,
-        "end": 125.08,
+        "start": 124.6,
+        "end": 125.02,
         "col": 0
       },
       {
         "word": "built",
-        "start": 125.08,
-        "end": 125.56,
+        "start": 125.02,
+        "end": 125.54,
         "col": 5
       },
       {
         "word": "this",
-        "start": 125.56,
-        "end": 126.02,
+        "start": 125.54,
+        "end": 125.98,
         "col": 11
       },
       {
         "word": "town,",
-        "start": 126.02,
-        "end": 126.5,
+        "start": 125.98,
+        "end": 126.42,
         "col": 16
       },
       {
         "word": "you",
-        "start": 126.5,
-        "end": 126.7,
+        "start": 126.42,
+        "end": 126.68,
         "col": 22
       },
       {
         "word": "see.",
-        "start": 126.7,
-        "end": 128.9,
+        "start": 126.68,
+        "end": 127.54,
         "col": 26
       }
     ]
@@ -1050,31 +1049,25 @@
       129.61378684807255,
       130.4497052154195
     ],
-    "lyrics": "These         calloused hands, for",
+    "lyrics": "These         calloused hands,",
     "words": [
       {
         "word": "These",
-        "start": 128.92,
-        "end": 129.54,
+        "start": 128.769,
+        "end": 129.553,
         "col": 0
       },
       {
         "word": "calloused",
-        "start": 129.54,
-        "end": 129.98,
+        "start": 129.553,
+        "end": 130.337,
         "col": 14
       },
       {
         "word": "hands,",
-        "start": 129.98,
-        "end": 130.9,
+        "start": 130.337,
+        "end": 131.12,
         "col": 24
-      },
-      {
-        "word": "for",
-        "start": 130.9,
-        "end": 132.04,
-        "col": 31
       }
     ]
   },
@@ -1095,37 +1088,43 @@
       133.0271201814059,
       133.88625850340136
     ],
-    "lyrics": "all the world to see.",
+    "lyrics": "for all the world to see.",
     "words": [
       {
-        "word": "all",
-        "start": 132.04,
-        "end": 132.62,
+        "word": "for",
+        "start": 131.12,
+        "end": 132.08,
         "col": 0
       },
       {
-        "word": "the",
-        "start": 132.62,
-        "end": 132.94,
+        "word": "all",
+        "start": 132.08,
+        "end": 132.66,
         "col": 4
       },
       {
-        "word": "world",
-        "start": 132.94,
-        "end": 133.3,
+        "word": "the",
+        "start": 132.66,
+        "end": 132.92,
         "col": 8
       },
       {
+        "word": "world",
+        "start": 132.92,
+        "end": 133.24,
+        "col": 12
+      },
+      {
         "word": "to",
-        "start": 133.3,
-        "end": 133.52,
-        "col": 14
+        "start": 133.24,
+        "end": 133.5,
+        "col": 18
       },
       {
         "word": "see.",
-        "start": 133.52,
-        "end": 135.604,
-        "col": 17
+        "start": 133.5,
+        "end": 134.7,
+        "col": 21
       }
     ]
   },
@@ -1150,20 +1149,20 @@
     "words": [
       {
         "word": "These",
-        "start": 135.7,
-        "end": 136.38,
+        "start": 135.55,
+        "end": 136.36,
         "col": 0
       },
       {
         "word": "calloused",
-        "start": 136.38,
-        "end": 136.8,
+        "start": 136.36,
+        "end": 136.74,
         "col": 6
       },
       {
         "word": "hands,",
-        "start": 136.8,
-        "end": 137.94,
+        "start": 136.74,
+        "end": 138.1,
         "col": 16
       }
     ]
@@ -1189,26 +1188,26 @@
     "words": [
       {
         "word": "they'll",
-        "start": 137.94,
-        "end": 138.84,
+        "start": 138.1,
+        "end": 138.86,
         "col": 0
       },
       {
         "word": "feed",
-        "start": 138.84,
-        "end": 139.36,
+        "start": 138.86,
+        "end": 139.3,
         "col": 8
       },
       {
         "word": "our",
-        "start": 139.36,
-        "end": 139.76,
+        "start": 139.3,
+        "end": 139.7,
         "col": 13
       },
       {
         "word": "family.",
-        "start": 139.76,
-        "end": 142.376,
+        "start": 139.7,
+        "end": 140.64,
         "col": 17
       }
     ]
@@ -1236,20 +1235,20 @@
     "words": [
       {
         "word": "These",
-        "start": 142.46,
-        "end": 143.24,
+        "start": 142.62,
+        "end": 143.22,
         "col": 0
       },
       {
         "word": "calloused",
-        "start": 143.24,
-        "end": 143.7,
+        "start": 143.22,
+        "end": 143.62,
         "col": 14
       },
       {
         "word": "hands",
-        "start": 143.7,
-        "end": 144.86,
+        "start": 143.62,
+        "end": 144.9,
         "col": 24
       }
     ]
@@ -1275,19 +1274,19 @@
     "words": [
       {
         "word": "are",
-        "start": 144.86,
-        "end": 145.37,
+        "start": 144.9,
+        "end": 145.68,
         "col": 0
       },
       {
         "word": "our",
-        "start": 145.37,
-        "end": 145.88,
+        "start": 145.68,
+        "end": 147.546,
         "col": 4
       },
       {
         "word": "legacy.",
-        "start": 145.88,
+        "start": 147.546,
         "end": 149.412,
         "col": 8
       }
@@ -1334,37 +1333,37 @@
     "words": [
       {
         "word": "Now",
-        "start": 152.672,
+        "start": 152.522,
         "end": 152.94,
         "col": 0
       },
       {
         "word": "you",
         "start": 152.94,
-        "end": 153.3,
+        "end": 153.28,
         "col": 4
       },
       {
         "word": "lift",
-        "start": 153.3,
-        "end": 153.88,
+        "start": 153.28,
+        "end": 153.76,
         "col": 8
       },
       {
         "word": "the",
-        "start": 153.88,
-        "end": 154.3,
+        "start": 153.76,
+        "end": 154.34,
         "col": 13
       },
       {
         "word": "hammer,",
-        "start": 154.3,
-        "end": 154.72,
+        "start": 154.34,
+        "end": 154.76,
         "col": 17
       },
       {
         "word": "son,",
-        "start": 154.72,
+        "start": 155.04,
         "end": 155.28,
         "col": 25
       }
@@ -1391,38 +1390,38 @@
     "words": [
       {
         "word": "you",
-        "start": 155.28,
-        "end": 155.92,
+        "start": 155.72,
+        "end": 155.9,
         "col": 0
       },
       {
         "word": "let",
-        "start": 155.92,
-        "end": 156.36,
+        "start": 155.9,
+        "end": 156.32,
         "col": 4
       },
       {
         "word": "'em",
-        "start": 156.36,
-        "end": 156.8,
+        "start": 156.32,
+        "end": 156.82,
         "col": 8
       },
       {
         "word": "hear",
-        "start": 156.8,
-        "end": 157.3,
+        "start": 156.82,
+        "end": 157.22,
         "col": 12
       },
       {
         "word": "the",
-        "start": 157.3,
-        "end": 157.52,
+        "start": 157.22,
+        "end": 157.62,
         "col": 17
       },
       {
         "word": "ring.",
-        "start": 157.52,
-        "end": 161.688,
+        "start": 157.62,
+        "end": 159.14,
         "col": 21
       }
     ]
@@ -1438,7 +1437,7 @@
     ],
     "chord_cols": [
       0,
-      12
+      8
     ],
     "beats": [
       158.75482993197278,
@@ -1446,15 +1445,8 @@
       160.47310657596373,
       161.30902494331065
     ],
-    "lyrics": "            Let",
-    "words": [
-      {
-        "word": "Let",
-        "start": 161.708,
-        "end": 162.32,
-        "col": 12
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 162.16816326530613,
@@ -1473,37 +1465,43 @@
       163.88643990929705,
       164.7455782312925
     ],
-    "lyrics": "'em hear that hammer ring.",
+    "lyrics": "Let 'em hear that hammer ring.",
     "words": [
       {
-        "word": "'em",
-        "start": 162.32,
-        "end": 162.7,
+        "word": "Let",
+        "start": 161.558,
+        "end": 162.159,
         "col": 0
       },
       {
-        "word": "hear",
-        "start": 162.7,
-        "end": 163.28,
+        "word": "'em",
+        "start": 162.159,
+        "end": 162.76,
         "col": 4
       },
       {
+        "word": "hear",
+        "start": 162.76,
+        "end": 163.18,
+        "col": 8
+      },
+      {
         "word": "that",
-        "start": 163.28,
+        "start": 163.18,
         "end": 163.76,
-        "col": 9
+        "col": 13
       },
       {
         "word": "hammer",
         "start": 163.76,
-        "end": 164.18,
-        "col": 14
+        "end": 164.24,
+        "col": 18
       },
       {
         "word": "ring.",
-        "start": 164.18,
-        "end": 168.788,
-        "col": 21
+        "start": 164.24,
+        "end": 166.32,
+        "col": 25
       }
     ]
   },
@@ -1550,38 +1548,38 @@
     "words": [
       {
         "word": "Learn",
-        "start": 169.176,
-        "end": 169.44,
+        "start": 169.026,
+        "end": 169.4,
         "col": 0
       },
       {
         "word": "the",
-        "start": 169.44,
+        "start": 169.4,
         "end": 169.76,
         "col": 6
       },
       {
         "word": "rhythm",
         "start": 169.76,
-        "end": 170.26,
+        "end": 170.28,
         "col": 10
       },
       {
         "word": "of",
-        "start": 170.26,
-        "end": 171.1,
+        "start": 170.28,
+        "end": 171.0,
         "col": 17
       },
       {
         "word": "the",
-        "start": 171.1,
-        "end": 171.3,
+        "start": 171.0,
+        "end": 171.26,
         "col": 20
       },
       {
         "word": "steel,",
-        "start": 171.3,
-        "end": 171.96,
+        "start": 171.26,
+        "end": 172.08,
         "col": 24
       }
     ]
@@ -1607,38 +1605,38 @@
     "words": [
       {
         "word": "you",
-        "start": 172.46,
+        "start": 172.9,
         "end": 173.02,
         "col": 0
       },
       {
         "word": "learn",
         "start": 173.02,
-        "end": 173.58,
+        "end": 173.56,
         "col": 4
       },
       {
         "word": "the",
-        "start": 173.58,
-        "end": 173.92,
+        "start": 173.56,
+        "end": 173.88,
         "col": 10
       },
       {
         "word": "song",
-        "start": 173.92,
-        "end": 174.46,
+        "start": 173.88,
+        "end": 174.38,
         "col": 14
       },
       {
         "word": "we",
-        "start": 174.46,
-        "end": 174.76,
+        "start": 174.38,
+        "end": 174.74,
         "col": 19
       },
       {
         "word": "sing.",
-        "start": 174.76,
-        "end": 178.952,
+        "start": 174.74,
+        "end": 175.98,
         "col": 22
       }
     ]
@@ -1660,15 +1658,8 @@
       177.60943310657598,
       178.46857142857144
     ],
-    "lyrics": "          It's",
-    "words": [
-      {
-        "word": "It's",
-        "start": 179.04,
-        "end": 179.66,
-        "col": 10
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 179.3277097505669,
@@ -1687,37 +1678,43 @@
       181.04598639455781,
       181.88190476190476
     ],
-    "lyrics": "the only song we sing.",
+    "lyrics": "It's the only song we sing.",
     "words": [
       {
-        "word": "the",
-        "start": 179.66,
-        "end": 179.98,
+        "word": "It's",
+        "start": 178.89,
+        "end": 179.66,
         "col": 0
       },
       {
-        "word": "only",
-        "start": 179.98,
-        "end": 180.64,
-        "col": 4
+        "word": "the",
+        "start": 179.66,
+        "end": 179.92,
+        "col": 5
       },
       {
-        "word": "song",
-        "start": 180.64,
-        "end": 181.32,
+        "word": "only",
+        "start": 179.92,
+        "end": 180.68,
         "col": 9
       },
       {
-        "word": "we",
-        "start": 181.32,
-        "end": 181.64,
+        "word": "song",
+        "start": 180.68,
+        "end": 181.22,
         "col": 14
+      },
+      {
+        "word": "we",
+        "start": 181.22,
+        "end": 181.64,
+        "col": 19
       },
       {
         "word": "sing.",
         "start": 181.64,
-        "end": 183.9,
-        "col": 17
+        "end": 182.72,
+        "col": 22
       }
     ]
   },
@@ -1760,31 +1757,25 @@
       187.895873015873,
       188.75501133786847
     ],
-    "lyrics": "These calloused hands, they",
+    "lyrics": "These calloused hands,",
     "words": [
       {
         "word": "These",
-        "start": 187.392,
-        "end": 187.72,
+        "start": 187.242,
+        "end": 188.115,
         "col": 0
       },
       {
         "word": "calloused",
-        "start": 187.72,
-        "end": 188.38,
+        "start": 188.115,
+        "end": 188.988,
         "col": 6
       },
       {
         "word": "hands,",
-        "start": 188.38,
-        "end": 189.22,
+        "start": 188.988,
+        "end": 189.86,
         "col": 16
-      },
-      {
-        "word": "they",
-        "start": 189.22,
-        "end": 190.2,
-        "col": 23
       }
     ]
   },
@@ -1805,37 +1796,43 @@
       191.33242630385487,
       192.16834467120182
     ],
-    "lyrics": "built this town, you see.",
+    "lyrics": "they built this town, you see.",
     "words": [
       {
-        "word": "built",
-        "start": 190.2,
-        "end": 190.7,
+        "word": "they",
+        "start": 189.86,
+        "end": 190.18,
         "col": 0
+      },
+      {
+        "word": "built",
+        "start": 190.18,
+        "end": 190.7,
+        "col": 5
       },
       {
         "word": "this",
         "start": 190.7,
-        "end": 191.16,
-        "col": 6
-      },
-      {
-        "word": "town,",
-        "start": 191.16,
-        "end": 191.62,
+        "end": 191.12,
         "col": 11
       },
       {
+        "word": "town,",
+        "start": 191.12,
+        "end": 191.56,
+        "col": 16
+      },
+      {
         "word": "you",
-        "start": 191.62,
-        "end": 191.84,
-        "col": 17
+        "start": 191.56,
+        "end": 191.8,
+        "col": 22
       },
       {
         "word": "see.",
-        "start": 191.84,
-        "end": 193.968,
-        "col": 21
+        "start": 191.8,
+        "end": 192.36,
+        "col": 26
       }
     ]
   },
@@ -1860,26 +1857,26 @@
     "words": [
       {
         "word": "These",
-        "start": 194.18,
-        "end": 194.6,
+        "start": 194.03,
+        "end": 194.633,
         "col": 0
       },
       {
         "word": "calloused",
-        "start": 194.6,
-        "end": 195.24,
+        "start": 194.633,
+        "end": 195.237,
         "col": 6
       },
       {
         "word": "hands,",
-        "start": 195.24,
-        "end": 195.86,
+        "start": 195.237,
+        "end": 195.84,
         "col": 16
       },
       {
         "word": "for",
-        "start": 195.86,
-        "end": 197.18,
+        "start": 195.84,
+        "end": 197.22,
         "col": 23
       }
     ]
@@ -1905,32 +1902,32 @@
     "words": [
       {
         "word": "all",
-        "start": 197.18,
+        "start": 197.22,
         "end": 197.68,
         "col": 0
       },
       {
         "word": "the",
         "start": 197.68,
-        "end": 198.04,
+        "end": 198.0,
         "col": 4
       },
       {
         "word": "world",
-        "start": 198.04,
-        "end": 198.46,
+        "start": 198.0,
+        "end": 198.38,
         "col": 8
       },
       {
         "word": "to",
-        "start": 198.46,
-        "end": 198.66,
+        "start": 198.38,
+        "end": 198.64,
         "col": 14
       },
       {
         "word": "see.",
-        "start": 198.66,
-        "end": 200.648,
+        "start": 198.64,
+        "end": 199.36,
         "col": 17
       }
     ]
@@ -1946,7 +1943,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      18
     ],
     "beats": [
       199.90058956916099,
@@ -1954,25 +1951,25 @@
       201.61886621315193,
       202.45478458049885
     ],
-    "lyrics": "These         calloused hands,",
+    "lyrics": "These calloused   hands,",
     "words": [
       {
         "word": "These",
-        "start": 200.74,
-        "end": 201.44,
+        "start": 200.84,
+        "end": 201.36,
         "col": 0
       },
       {
         "word": "calloused",
-        "start": 201.44,
-        "end": 202.1,
-        "col": 14
+        "start": 201.36,
+        "end": 202.06,
+        "col": 6
       },
       {
         "word": "hands,",
-        "start": 202.1,
-        "end": 203.14,
-        "col": 24
+        "start": 202.06,
+        "end": 203.26,
+        "col": 18
       }
     ]
   },
@@ -1997,26 +1994,26 @@
     "words": [
       {
         "word": "they'll",
-        "start": 203.14,
-        "end": 204.0,
+        "start": 203.54,
+        "end": 203.98,
         "col": 0
       },
       {
         "word": "feed",
-        "start": 204.0,
-        "end": 204.48,
+        "start": 203.98,
+        "end": 204.44,
         "col": 8
       },
       {
         "word": "our",
-        "start": 204.48,
-        "end": 204.88,
+        "start": 204.44,
+        "end": 204.82,
         "col": 13
       },
       {
         "word": "family.",
-        "start": 204.88,
-        "end": 207.572,
+        "start": 204.82,
+        "end": 205.82,
         "col": 17
       }
     ]
@@ -2042,20 +2039,20 @@
     "words": [
       {
         "word": "These",
-        "start": 207.66,
-        "end": 208.32,
+        "start": 207.74,
+        "end": 208.22,
         "col": 0
       },
       {
         "word": "calloused",
-        "start": 208.32,
-        "end": 208.96,
+        "start": 208.22,
+        "end": 208.92,
         "col": 6
       },
       {
         "word": "hands",
-        "start": 208.96,
-        "end": 210.02,
+        "start": 208.92,
+        "end": 210.0,
         "col": 16
       }
     ]
@@ -2081,20 +2078,20 @@
     "words": [
       {
         "word": "are",
-        "start": 210.02,
-        "end": 210.56,
+        "start": 210.0,
+        "end": 210.58,
         "col": 0
       },
       {
         "word": "our",
-        "start": 210.56,
-        "end": 211.02,
+        "start": 210.58,
+        "end": 211.8,
         "col": 4
       },
       {
         "word": "legacy.",
-        "start": 211.02,
-        "end": 217.168,
+        "start": 211.8,
+        "end": 212.6,
         "col": 8
       }
     ]
@@ -2140,38 +2137,38 @@
     "words": [
       {
         "word": "My",
-        "start": 217.26,
-        "end": 217.58,
+        "start": 217.11,
+        "end": 217.7,
         "col": 0
       },
       {
         "word": "father's",
-        "start": 217.58,
-        "end": 218.6,
+        "start": 217.7,
+        "end": 218.62,
         "col": 3
       },
       {
         "word": "father",
-        "start": 218.6,
-        "end": 219.16,
+        "start": 218.62,
+        "end": 219.04,
         "col": 12
       },
       {
         "word": "stood",
-        "start": 219.16,
-        "end": 219.66,
+        "start": 219.04,
+        "end": 219.64,
         "col": 19
       },
       {
         "word": "right",
-        "start": 219.66,
-        "end": 220.1,
+        "start": 219.64,
+        "end": 220.06,
         "col": 25
       },
       {
         "word": "here,",
-        "start": 220.1,
-        "end": 220.66,
+        "start": 220.06,
+        "end": 220.52,
         "col": 31
       }
     ]
@@ -2199,19 +2196,19 @@
     "words": [
       {
         "word": "his",
-        "start": 220.86,
-        "end": 221.1,
+        "start": 220.88,
+        "end": 221.12,
         "col": 0
       },
       {
         "word": "knuckles",
-        "start": 221.1,
-        "end": 221.66,
+        "start": 221.12,
+        "end": 221.56,
         "col": 4
       },
       {
         "word": "white",
-        "start": 221.66,
+        "start": 221.56,
         "end": 222.48,
         "col": 13
       },
@@ -2224,7 +2221,7 @@
       {
         "word": "sore.",
         "start": 222.76,
-        "end": 226.884,
+        "end": 223.88,
         "col": 25
       }
     ]
@@ -2246,15 +2243,8 @@
       225.60507936507938,
       226.46421768707484
     ],
-    "lyrics": "          Stood",
-    "words": [
-      {
-        "word": "Stood",
-        "start": 226.98,
-        "end": 227.54,
-        "col": 10
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 227.3233560090703,
@@ -2273,43 +2263,49 @@
       229.0416326530612,
       229.87755102040816
     ],
-    "lyrics": "right here, and asked for nothin'",
+    "lyrics": "Stood right here, and asked for nothin'",
     "words": [
       {
-        "word": "right",
-        "start": 227.54,
-        "end": 228.0,
+        "word": "Stood",
+        "start": 226.83,
+        "end": 227.465,
         "col": 0
       },
       {
-        "word": "here,",
-        "start": 228.0,
-        "end": 229.0,
+        "word": "right",
+        "start": 227.465,
+        "end": 228.1,
         "col": 6
       },
       {
-        "word": "and",
-        "start": 229.0,
-        "end": 229.86,
+        "word": "here,",
+        "start": 228.1,
+        "end": 228.4,
         "col": 12
       },
       {
-        "word": "asked",
-        "start": 229.86,
-        "end": 230.26,
-        "col": 16
+        "word": "and",
+        "start": 228.4,
+        "end": 229.8,
+        "col": 18
       },
       {
-        "word": "for",
-        "start": 230.26,
-        "end": 230.52,
+        "word": "asked",
+        "start": 229.8,
+        "end": 230.24,
         "col": 22
       },
       {
+        "word": "for",
+        "start": 230.24,
+        "end": 230.5,
+        "col": 28
+      },
+      {
         "word": "nothin'",
-        "start": 230.52,
-        "end": 231.02,
-        "col": 26
+        "start": 230.5,
+        "end": 231.06,
+        "col": 32
       }
     ]
   },
@@ -2336,8 +2332,8 @@
     "words": [
       {
         "word": "more.",
-        "start": 231.02,
-        "end": 234.136,
+        "start": 231.06,
+        "end": 231.78,
         "col": 0
       }
     ]
@@ -2363,50 +2359,50 @@
     "words": [
       {
         "word": "He",
-        "start": 234.508,
-        "end": 234.78,
+        "start": 234.42,
+        "end": 234.76,
         "col": 0
       },
       {
         "word": "taught",
-        "start": 234.78,
-        "end": 235.22,
+        "start": 234.76,
+        "end": 235.16,
         "col": 3
       },
       {
         "word": "your",
-        "start": 235.22,
+        "start": 235.16,
         "end": 235.64,
         "col": 10
       },
       {
         "word": "gramps,",
         "start": 235.64,
-        "end": 236.14,
+        "end": 236.22,
         "col": 15
       },
       {
         "word": "who",
-        "start": 236.14,
-        "end": 236.48,
+        "start": 236.22,
+        "end": 236.5,
         "col": 23
       },
       {
         "word": "taught",
-        "start": 236.48,
-        "end": 236.94,
+        "start": 236.5,
+        "end": 236.96,
         "col": 27
       },
       {
         "word": "me",
-        "start": 236.94,
-        "end": 237.38,
+        "start": 236.96,
+        "end": 237.32,
         "col": 34
       },
       {
         "word": "how",
-        "start": 237.38,
-        "end": 237.92,
+        "start": 237.32,
+        "end": 237.84,
         "col": 37
       }
     ]
@@ -2432,31 +2428,31 @@
     "words": [
       {
         "word": "to",
-        "start": 237.92,
-        "end": 238.12,
+        "start": 237.84,
+        "end": 238.18,
         "col": 0
       },
       {
         "word": "settle",
-        "start": 238.12,
-        "end": 238.72,
+        "start": 238.18,
+        "end": 238.7,
         "col": 3
       },
       {
         "word": "up",
-        "start": 238.72,
-        "end": 239.62,
+        "start": 238.7,
+        "end": 239.58,
         "col": 10
       },
       {
         "word": "the",
-        "start": 239.62,
-        "end": 239.86,
+        "start": 239.58,
+        "end": 239.82,
         "col": 13
       },
       {
         "word": "score.",
-        "start": 239.86,
+        "start": 239.82,
         "end": 244.028,
         "col": 17
       }
@@ -2479,15 +2475,8 @@
       242.7414058956916,
       243.6005442176871
     ],
-    "lyrics": "          Taught",
-    "words": [
-      {
-        "word": "Taught",
-        "start": 244.12,
-        "end": 244.66,
-        "col": 10
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 244.45968253968255,
@@ -2500,7 +2489,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      16
     ],
     "beats": [
       244.45968253968255,
@@ -2508,37 +2497,43 @@
       246.17795918367347,
       247.03709750566892
     ],
-    "lyrics": "us how        to settle up",
+    "lyrics": "Taught us how   to settle up",
     "words": [
       {
-        "word": "us",
-        "start": 244.66,
-        "end": 245.14,
+        "word": "Taught",
+        "start": 244.028,
+        "end": 244.62,
         "col": 0
+      },
+      {
+        "word": "us",
+        "start": 244.62,
+        "end": 245.14,
+        "col": 7
       },
       {
         "word": "how",
         "start": 245.14,
-        "end": 246.16,
-        "col": 3
+        "end": 246.0,
+        "col": 10
       },
       {
         "word": "to",
-        "start": 246.16,
+        "start": 246.0,
         "end": 246.66,
-        "col": 14
+        "col": 16
       },
       {
         "word": "settle",
         "start": 246.66,
         "end": 247.3,
-        "col": 17
+        "col": 19
       },
       {
         "word": "up",
         "start": 247.3,
-        "end": 248.12,
-        "col": 24
+        "end": 248.1,
+        "col": 26
       }
     ]
   },
@@ -2563,13 +2558,13 @@
     "words": [
       {
         "word": "the",
-        "start": 248.12,
-        "end": 248.38,
+        "start": 248.1,
+        "end": 248.36,
         "col": 0
       },
       {
         "word": "score.",
-        "start": 248.38,
+        "start": 248.36,
         "end": 252.22,
         "col": 4
       }
@@ -2598,20 +2593,20 @@
     "words": [
       {
         "word": "These",
-        "start": 252.464,
-        "end": 252.9,
+        "start": 252.314,
+        "end": 253.163,
         "col": 0
       },
       {
         "word": "calloused",
-        "start": 252.9,
-        "end": 253.3,
+        "start": 253.163,
+        "end": 254.012,
         "col": 14
       },
       {
         "word": "hands,",
-        "start": 253.3,
-        "end": 254.14,
+        "start": 254.012,
+        "end": 254.86,
         "col": 24
       }
     ]
@@ -2637,38 +2632,38 @@
     "words": [
       {
         "word": "they",
-        "start": 254.8,
-        "end": 255.34,
+        "start": 254.86,
+        "end": 255.32,
         "col": 0
       },
       {
         "word": "built",
-        "start": 255.34,
-        "end": 255.84,
+        "start": 255.32,
+        "end": 255.86,
         "col": 5
       },
       {
         "word": "this",
-        "start": 255.84,
+        "start": 255.86,
         "end": 256.3,
         "col": 11
       },
       {
         "word": "town,",
         "start": 256.3,
-        "end": 256.78,
+        "end": 256.7,
         "col": 16
       },
       {
         "word": "you",
-        "start": 256.78,
+        "start": 256.7,
         "end": 256.96,
         "col": 22
       },
       {
         "word": "see.",
         "start": 256.96,
-        "end": 259.252,
+        "end": 258.18,
         "col": 26
       }
     ]
@@ -2692,25 +2687,31 @@
       259.9009523809524,
       260.73687074829934
     ],
-    "lyrics": "These         calloused hands,",
+    "lyrics": "These         calloused hands, for",
     "words": [
       {
         "word": "These",
-        "start": 259.34,
-        "end": 259.8,
+        "start": 259.189,
+        "end": 259.826,
         "col": 0
       },
       {
         "word": "calloused",
-        "start": 259.8,
-        "end": 260.16,
+        "start": 259.826,
+        "end": 260.463,
         "col": 14
       },
       {
         "word": "hands,",
-        "start": 260.16,
-        "end": 261.44,
+        "start": 260.463,
+        "end": 261.1,
         "col": 24
+      },
+      {
+        "word": "for",
+        "start": 261.1,
+        "end": 262.38,
+        "col": 31
       }
     ]
   },
@@ -2731,43 +2732,37 @@
       263.3142857142857,
       264.1734240362812
     ],
-    "lyrics": "for all the world to see.",
+    "lyrics": "all the world to see.",
     "words": [
-      {
-        "word": "for",
-        "start": 261.82,
-        "end": 262.38,
-        "col": 0
-      },
       {
         "word": "all",
         "start": 262.38,
         "end": 262.8,
-        "col": 4
+        "col": 0
       },
       {
         "word": "the",
         "start": 262.8,
-        "end": 263.02,
-        "col": 8
+        "end": 262.98,
+        "col": 4
       },
       {
         "word": "world",
-        "start": 263.02,
-        "end": 263.48,
-        "col": 12
+        "start": 262.98,
+        "end": 263.46,
+        "col": 8
       },
       {
         "word": "to",
-        "start": 263.48,
-        "end": 263.8,
-        "col": 18
+        "start": 263.46,
+        "end": 263.78,
+        "col": 14
       },
       {
         "word": "see.",
-        "start": 263.8,
-        "end": 266.04,
-        "col": 21
+        "start": 263.78,
+        "end": 265.0,
+        "col": 17
       }
     ]
   },
@@ -2792,20 +2787,20 @@
     "words": [
       {
         "word": "These",
-        "start": 266.12,
-        "end": 266.64,
+        "start": 265.97,
+        "end": 266.96,
         "col": 0
       },
       {
         "word": "calloused",
-        "start": 266.64,
-        "end": 267.02,
+        "start": 266.96,
+        "end": 267.95,
         "col": 6
       },
       {
         "word": "hands,",
-        "start": 267.02,
-        "end": 268.28,
+        "start": 267.95,
+        "end": 268.94,
         "col": 16
       }
     ]
@@ -2831,26 +2826,26 @@
     "words": [
       {
         "word": "they'll",
-        "start": 268.84,
-        "end": 269.14,
+        "start": 268.94,
+        "end": 269.16,
         "col": 0
       },
       {
         "word": "feed",
-        "start": 269.14,
-        "end": 269.66,
+        "start": 269.16,
+        "end": 269.56,
         "col": 8
       },
       {
         "word": "our",
-        "start": 269.66,
-        "end": 270.02,
+        "start": 269.56,
+        "end": 269.96,
         "col": 13
       },
       {
         "word": "family.",
-        "start": 270.02,
-        "end": 271.648,
+        "start": 269.96,
+        "end": 271.1,
         "col": 17
       }
     ]
@@ -2872,37 +2867,31 @@
       273.6007256235828,
       274.4598639455782
     ],
-    "lyrics": "These calloused hands are our",
+    "lyrics": "These calloused hands are",
     "words": [
       {
         "word": "These",
-        "start": 271.668,
-        "end": 272.28,
+        "start": 271.518,
+        "end": 272.519,
         "col": 0
       },
       {
         "word": "calloused",
-        "start": 272.28,
-        "end": 272.32,
+        "start": 272.519,
+        "end": 273.519,
         "col": 6
       },
       {
         "word": "hands",
-        "start": 272.32,
-        "end": 272.36,
+        "start": 273.519,
+        "end": 274.52,
         "col": 16
       },
       {
         "word": "are",
-        "start": 272.36,
-        "end": 272.4,
+        "start": 274.52,
+        "end": 276.08,
         "col": 22
-      },
-      {
-        "word": "our",
-        "start": 273.12,
-        "end": 273.82,
-        "col": 26
       }
     ]
   },
@@ -2923,13 +2912,13 @@
       277.0372789115646,
       277.8964172335601
     ],
-    "lyrics": "legacy.",
+    "lyrics": "          our",
     "words": [
       {
-        "word": "legacy.",
-        "start": 273.82,
-        "end": 286.256,
-        "col": 0
+        "word": "our",
+        "start": 276.08,
+        "end": 281.168,
+        "col": 10
       }
     ]
   },
@@ -2966,7 +2955,7 @@
     ],
     "chord_cols": [
       0,
-      8
+      14
     ],
     "beats": [
       282.1921088435374,
@@ -2974,8 +2963,15 @@
       283.8871655328798,
       284.7463038548753
     ],
-    "lyrics": "",
-    "words": []
+    "lyrics": "legacy.",
+    "words": [
+      {
+        "word": "legacy.",
+        "start": 281.168,
+        "end": 286.256,
+        "col": 0
+      }
+    ]
   },
   {
     "time": 285.6054421768707,
@@ -3058,20 +3054,20 @@
     "words": [
       {
         "word": "That's",
-        "start": 296.92,
+        "start": 296.77,
         "end": 298.12,
         "col": 0
       },
       {
         "word": "it,",
         "start": 298.12,
-        "end": 298.24,
+        "end": 298.22,
         "col": 7
       },
       {
         "word": "son...",
-        "start": 298.24,
-        "end": 298.62,
+        "start": 298.22,
+        "end": 298.6,
         "col": 11
       }
     ]
@@ -3093,25 +3089,25 @@
       301.04671201814057,
       301.8826303854875
     ],
-    "lyrics": "          feel the weight.",
+    "lyrics": "feel the weight.",
     "words": [
       {
         "word": "feel",
-        "start": 301.08,
+        "start": 300.3,
         "end": 301.7,
-        "col": 10
+        "col": 0
       },
       {
         "word": "the",
         "start": 301.7,
-        "end": 301.94,
-        "col": 15
+        "end": 301.92,
+        "col": 5
       },
       {
         "word": "weight.",
-        "start": 301.94,
-        "end": 302.26,
-        "col": 19
+        "start": 301.92,
+        "end": 302.28,
+        "col": 9
       }
     ]
   },
@@ -3132,15 +3128,8 @@
       304.4600453514739,
       305.3191836734694
     ],
-    "lyrics": "          Don't",
-    "words": [
-      {
-        "word": "Don't",
-        "start": 305.56,
-        "end": 306.52,
-        "col": 10
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 306.17832199546484,
@@ -3159,37 +3148,43 @@
       307.89659863945576,
       308.75573696145125
     ],
-    "lyrics": "you ever let it break.",
+    "lyrics": "Don't you ever let it break.",
     "words": [
       {
-        "word": "you",
-        "start": 306.52,
-        "end": 306.78,
+        "word": "Don't",
+        "start": 305.58,
+        "end": 306.46,
         "col": 0
       },
       {
+        "word": "you",
+        "start": 306.46,
+        "end": 306.72,
+        "col": 6
+      },
+      {
         "word": "ever",
-        "start": 306.78,
-        "end": 307.3,
-        "col": 4
+        "start": 306.72,
+        "end": 307.34,
+        "col": 10
       },
       {
         "word": "let",
-        "start": 307.3,
-        "end": 308.1,
-        "col": 9
+        "start": 307.34,
+        "end": 308.06,
+        "col": 15
       },
       {
         "word": "it",
-        "start": 308.1,
-        "end": 308.32,
-        "col": 13
+        "start": 308.06,
+        "end": 308.36,
+        "col": 19
       },
       {
         "word": "break.",
-        "start": 308.32,
-        "end": 313.128,
-        "col": 16
+        "start": 308.36,
+        "end": 308.8,
+        "col": 22
       }
     ]
   },
@@ -3238,7 +3233,7 @@
     "words": [
       {
         "word": "It's",
-        "start": 313.484,
+        "start": 313.334,
         "end": 313.7,
         "col": 0
       },
@@ -3251,12 +3246,12 @@
       {
         "word": "than",
         "start": 313.88,
-        "end": 314.12,
+        "end": 314.08,
         "col": 10
       },
       {
         "word": "steel...",
-        "start": 314.12,
+        "start": 314.08,
         "end": 314.6,
         "col": 15
       }
@@ -3283,38 +3278,38 @@
     "words": [
       {
         "word": "it's",
-        "start": 316.56,
-        "end": 317.04,
+        "start": 316.18,
+        "end": 317.06,
         "col": 0
       },
       {
         "word": "the",
-        "start": 317.04,
-        "end": 317.18,
+        "start": 317.06,
+        "end": 317.16,
         "col": 5
       },
       {
         "word": "bread",
-        "start": 317.18,
-        "end": 317.48,
+        "start": 317.16,
+        "end": 317.46,
         "col": 9
       },
       {
         "word": "upon",
-        "start": 317.48,
-        "end": 317.84,
+        "start": 317.46,
+        "end": 317.9,
         "col": 15
       },
       {
         "word": "the",
-        "start": 317.84,
+        "start": 317.9,
         "end": 318.08,
         "col": 20
       },
       {
         "word": "plate.",
         "start": 318.08,
-        "end": 318.44,
+        "end": 318.42,
         "col": 24
       }
     ]
