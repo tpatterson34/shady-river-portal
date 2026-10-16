@@ -1,0 +1,314 @@
+/* ==========================================================================
+   TREVOR SWISTCHEW DIGITAL COMPENDIUM - ESSAY PRINT STYLESHEET
+   Produces clean, elegant, high-legibility plain text typography for print & PDF.
+   ========================================================================== */
+
+@media print {
+  /* 1. Universal Page & Canvas Setup */
+  @page {
+    margin: 18mm 15mm 18mm 15mm;
+    size: portrait;
+  }
+
+  *, *::before, *::after {
+    background: transparent !important;
+    color: #111111 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #111111 !important;
+    font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif !important;
+    font-size: 11pt !important;
+    line-height: 1.55 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  /* 2. Hide Web UI Chrome, Navigation, Audio, Badges, Tabs, and Heavy Media */
+  header.sticky,
+  header[class*="sticky"],
+  header[class*="backdrop"],
+  nav,
+  footer,
+  aside,
+  .a11y-skip-link,
+  #reading-progress,
+  #reading-progress-bar,
+  .theme-toggle-btn,
+  [data-set-theme],
+  [data-set-font],
+  #font-size-dec,
+  #font-size-reset,
+  #font-size-inc,
+  #font-dec,
+  #font-reset,
+  #font-inc,
+  #theme-peat,
+  #theme-sepia,
+  #theme-stone,
+  button,
+  .no-print,
+  .footnote-tooltip,
+  [role="tooltip"],
+  .tab-btn,
+  [role="tab"],
+  [role="tablist"],
+  [data-dossier-tabs],
+  .tab-content,
+  #audio-companion,
+  .audio-companion,
+  .audio-player,
+  audio,
+  video,
+  iframe,
+  figure,
+  img,
+  picture,
+  svg,
+  i.fa-solid,
+  i.fa-regular,
+  i.fa-brands,
+  .fa,
+  .fa-solid,
+  .fa-regular,
+  .compendium-linear-nav,
+  .linear-nav,
+  /* Hide interactive web widgets, statutory ledger grids, and tabs */
+  main > section,
+  article > section[data-dossier-tabs],
+  section:has(.tab-btn),
+  section:has([role="tab"]),
+  section:has(.fa-landmark),
+  section:has(.fa-scale-balanced),
+  section:has(.grid),
+  div:has(.audio-scrubber),
+  /* Hide decorative giant watermark quote glyphs */
+  blockquote div.absolute,
+  blockquote .text-9xl,
+  .pull-quote::before {
+    display: none !important;
+  }
+
+  /* 3. Container Expansion & Normalization */
+  main,
+  #main-content,
+  #essay-reading-wrapper,
+  #essay-article,
+  #essay-body,
+  article,
+  .prose-essay,
+  .essay-prose,
+  .essay-content {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+  }
+
+  /* 4. Scholarly Print Header (Title, Byline, Date) */
+  main > header,
+  article > header {
+    display: block !important;
+    margin: 0 0 12pt 0 !important;
+    padding: 0 0 8pt 0 !important;
+    border-bottom: 1.5pt solid #222222 !important;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  h1, 
+  h1.font-display,
+  main header h1,
+  article header h1 {
+    font-family: 'Source Serif 4', Georgia, serif !important;
+    font-size: 21pt !important;
+    line-height: 1.25 !important;
+    font-weight: 700 !important;
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+    color: #000000 !important;
+    margin: 0 0 5pt 0 !important;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  /* Byline, Chronology, and Compendium Identification */
+  main header .font-mono,
+  article header .font-mono,
+  main header p.font-mono,
+  article header p.font-mono {
+    font-family: 'Source Serif 4', Georgia, serif !important;
+    font-size: 9.5pt !important;
+    color: #444444 !important;
+    margin: 0 0 3pt 0 !important;
+  }
+
+  main header p.font-serif.italic,
+  article header p.font-serif.italic {
+    font-family: 'Source Serif 4', Georgia, serif !important;
+    font-size: 11pt !important;
+    font-style: italic !important;
+    color: #2b2b2b !important;
+    margin: 3pt 0 6pt 0 !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Hide badge pills and avatars in print header */
+  main header .rounded-full,
+  article header .rounded-full,
+  main header .w-8.h-8,
+  article header .w-8.h-8,
+  main header span.bg-amber-500,
+  article header span.bg-amber-500 {
+    display: none !important;
+  }
+
+  main header span,
+  article header span {
+    background: transparent !important;
+    border: none !important;
+    color: #444444 !important;
+    padding: 0 !important;
+    font-size: 9pt !important;
+  }
+
+  /* 5. Plain Text Essay Paragraphs & Typography */
+  p, 
+  .essay-prose p, 
+  .prose-essay p, 
+  article p {
+    font-family: 'Source Serif 4', Georgia, 'Garamond', 'Palatino', serif !important;
+    font-size: 11pt !important;
+    line-height: 1.55 !important;
+    color: #111111 !important;
+    margin: 0 0 10pt 0 !important;
+    text-align: justify !important;
+    text-justify: inter-word !important;
+    orphans: 3 !important;
+    widows: 3 !important;
+  }
+
+  /* Universal reset for drop caps & Tailwind first-letter utilities */
+  p::first-letter,
+  .drop-cap::first-letter,
+  [class*="first-letter:"]::first-letter {
+    all: unset !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+    float: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: inherit !important;
+  }
+
+  /* Monochrome Callout Borders */
+  [class*="border-amber-"],
+  [class*="border-yellow-"],
+  [class*="border-l-4"],
+  [class*="border-l-2"] {
+    border-color: #222222 !important;
+  }
+  [class*="border-stone-"] {
+    border-color: #cccccc !important;
+  }
+
+  /* Clean Restrained Blockquotes */
+  blockquote,
+  .pull-quote {
+    border-left: 2.5pt solid #333333 !important;
+    padding: 3pt 0 3pt 11pt !important;
+    margin: 10pt 0 10pt 6pt !important;
+    font-family: 'Source Serif 4', Georgia, serif !important;
+    font-style: italic !important;
+    font-size: 10.5pt !important;
+    line-height: 1.45 !important;
+    background: transparent !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  blockquote p,
+  .pull-quote p {
+    font-size: 10.5pt !important;
+    line-height: 1.45 !important;
+    margin-bottom: 4pt !important;
+    text-align: left !important;
+  }
+
+  blockquote cite,
+  .pull-quote cite {
+    font-size: 8.5pt !important;
+    color: #555555 !important;
+    display: block !important;
+  }
+
+  /* Headings inside Essay Body */
+  h2, h3, h4 {
+    font-family: 'Source Serif 4', Georgia, serif !important;
+    color: #000000 !important;
+    font-weight: 700 !important;
+    margin-top: 13pt !important;
+    margin-bottom: 5pt !important;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+  h2 { font-size: 13.5pt !important; }
+  h3 { font-size: 12pt !important; }
+  h4 { font-size: 11pt !important; }
+
+  /* Links & Footnotes */
+  a {
+    text-decoration: none !important;
+    color: #111111 !important;
+  }
+
+  .footnote-ref {
+    font-size: 8pt !important;
+    vertical-align: super !important;
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    color: #333333 !important;
+  }
+
+  /* Archival Colophon / Publication Footnote */
+  .archival-colophon,
+  .not-prose,
+  div[class*="bg-card"]:not(section) {
+    border: none !important;
+    border-top: 1pt solid #888888 !important;
+    background: transparent !important;
+    padding: 6pt 0 0 0 !important;
+    margin-top: 14pt !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .archival-colophon p,
+  .not-prose p,
+  div[class*="bg-card"] p {
+    font-size: 9pt !important;
+    line-height: 1.4 !important;
+    color: #444444 !important;
+    text-align: left !important;
+    margin-bottom: 3pt !important;
+  }
+
+  .not-prose span,
+  div[class*="bg-card"] span {
+    font-size: 8.5pt !important;
+    color: #555555 !important;
+  }
+}

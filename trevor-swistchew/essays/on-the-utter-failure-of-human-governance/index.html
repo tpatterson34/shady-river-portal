@@ -71,6 +71,7 @@
   <!-- Accessibility & Salon Theme Stylesheet -->
   <link rel="stylesheet" href="../../assets/css/a11y.css">
   <link rel="stylesheet" href="../../assets/css/salon-theme.css">
+  <link rel="stylesheet" href="../../assets/css/print.css">
 </head>
 
 <body class="selection:bg-brass-500 selection:text-peat-950 min-h-screen flex flex-col justify-between">
@@ -87,6 +88,13 @@
       
       <!-- Salon Brand / Return Link -->
       <div class="flex items-center gap-3">
+        <!-- Print Action Button -->
+        <button type="button" onclick="window.print()" class="px-2.5 py-1.5 rounded-lg bg-stone-900 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-300 hover:text-amber-400 font-mono text-xs transition-all flex items-center gap-1.5 shadow-sm" title="Print Essay (Clean Plain Text)" aria-label="Print Essay">
+          <i class="fa-solid fa-print text-[11px]"></i>
+          <span class="hidden sm:inline">Print</span>
+        </button>
+
+        
         <a href="../../index.html" class="flex items-center gap-2.5 text-stone-300 hover:text-amber-400 group transition-colors">
           <span class="w-7 h-7 rounded border border-amber-500/40 flex items-center justify-center text-amber-500 text-xs font-cinzel font-bold group-hover:border-amber-400">TS</span>
           <div class="text-xs tracking-wider uppercase font-cinzel font-semibold hidden sm:block">
@@ -668,7 +676,15 @@
 
     </article>
 
-  </main>
+  
+    <!-- Print Action Prompt -->
+    <div class="mt-8 mb-6 flex justify-center no-print">
+      <button type="button" onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 border border-stone-700/80 hover:border-amber-500/50 text-stone-300 hover:text-amber-400 font-mono text-xs transition-all flex items-center gap-2 shadow-lg group">
+        <i class="fa-solid fa-print text-sm text-amber-500 group-hover:scale-110 transition-transform"></i>
+        <span>Print Well-Formatted Plain Text</span>
+      </button>
+    </div>
+</main>
 
   <!-- Global Salon Footer -->
   <footer class="bg-stone-950 border-t border-stone-800/80 py-8 text-center text-xs font-mono text-stone-400">
@@ -764,5 +780,14 @@
     }
   </script>
 
+
+  <script>
+    // Auto-trigger print when requested via query param (?print=1)
+    if (new URLSearchParams(window.location.search).get('print') === '1') {
+      window.addEventListener('load', () => {
+        setTimeout(() => { window.print(); }, 400);
+      });
+    }
+  </script>
 </body>
 </html>

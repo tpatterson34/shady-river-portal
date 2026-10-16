@@ -10,7 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
   initFootnoteSystem();
   initDossierTabs();
   calculateReadingMetrics();
+  initAutoPrint();
 });
+
+/* 0. Print Handler (Auto-trigger if ?print=1) */
+function initAutoPrint() {
+  if (new URLSearchParams(window.location.search).get('print') === '1') {
+    window.addEventListener('load', () => {
+      setTimeout(() => { window.print(); }, 400);
+    });
+  }
+}
 
 /* 1. Theme Manager (Dark / Light / Sepia) */
 function initThemeManager() {
