@@ -1,28 +1,34 @@
 /* ==========================================================================
    TREVOR SWISTCHEW DIGITAL COMPENDIUM - ESSAY PRINT STYLESHEET
-   Produces clean, elegant, high-legibility plain text typography for print & PDF.
+   Produces 100% clean, pure plain text typography for print & PDF.
+   Strictly enforces: Just the original text. No bullets, callouts,
+   info bubbles, quote boxes, or any such decorations. Just plain text.
    ========================================================================== */
 
 @media print {
-  /* 1. Universal Page & Canvas Setup */
+  /* 1. Page & Base Document Canvas Setup */
   @page {
-    margin: 18mm 15mm 18mm 15mm;
+    margin: 18mm 16mm 18mm 16mm;
     size: portrait;
   }
 
   *, *::before, *::after {
     background: transparent !important;
-    color: #111111 !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    color: #000000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
     filter: none !important;
+    border-color: transparent !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
 
   html, body {
     background: #ffffff !important;
-    color: #111111 !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
     font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif !important;
     font-size: 11pt !important;
     line-height: 1.55 !important;
@@ -31,14 +37,15 @@
     width: 100% !important;
   }
 
-  /* 2. Hide Web UI Chrome, Navigation, Audio, Badges, Tabs, and Heavy Media */
+  /* 2. COMPLETELY HIDE ALL WEB UI, AUDIO, CHROME, NAVIGATION, AND HELPER BARS */
   header.sticky,
   header[class*="sticky"],
   header[class*="backdrop"],
+  #site-header,
   nav,
+  .compendium-linear-nav,
+  .linear-nav,
   footer,
-  aside,
-  .a11y-skip-link,
   #reading-progress,
   #reading-progress-bar,
   #print-helper-bar,
@@ -56,53 +63,333 @@
   #theme-stone,
   button,
   .no-print,
-  .footnote-tooltip,
-  [role="tooltip"],
-  .tab-btn,
-  [role="tab"],
-  [role="tablist"],
-  [data-dossier-tabs],
-  .tab-content,
+  .a11y-skip-link,
   #audio-companion,
   .audio-companion,
   .audio-player,
   audio,
   video,
-  iframe,
+  iframe {
+    display: none !important;
+  }
+
+  /* 3. COMPLETELY HIDE ALL ARTWORK, HERO BANNERS, IMAGES, ICONS, AND GLYPHS */
   figure,
   img,
   picture,
   svg,
-  i.fa-solid,
-  i.fa-regular,
-  i.fa-brands,
+  canvas,
+  figcaption,
+  i,
+  i[class*="fa-"],
   .fa,
   .fa-solid,
   .fa-regular,
-  .compendium-linear-nav,
-  .linear-nav,
-  /* Hide interactive web widgets, statutory ledger grids, and tabs */
-  main > section,
-  article > section[data-dossier-tabs],
+  .fa-brands,
+  .avatar,
+  .rounded-full,
+  div:has(> img),
+  div:has(> picture) {
+    display: none !important;
+  }
+
+  /* 4. NO INFO BUBBLES: Hide citation pills, footnote links, external link badges, and tooltips */
+  .citation-link,
+  a.citation-link,
+  .footnote-ref,
+  a.footnote-ref,
+  [class*="citation-link"],
+  [class*="footnote-ref"],
+  span.not-prose,
+  .inline-flex.not-prose,
+  span:has(> a.citation-link),
+  span:has(> [class*="citation-link"]),
+  p a,
+  article p a,
+  .prose-essay p a,
+  .essay-prose p a,
+  #essay-article p a,
+  #essay-reading-content p a,
+  sup,
+  .footnote-tooltip,
+  [role="tooltip"],
+  .tooltip {
+    display: none !important;
+  }
+
+  /* 5. NO QUOTE BOXES: Hide all standalone / editorial pull-quote cards outside or around the essay */
+  main > blockquote,
+  article > blockquote,
+  header ~ blockquote,
+  header + blockquote,
+  figure ~ blockquote,
+  figure + blockquote,
+  div:has(> blockquote),
+  div:has(> .pull-quote),
+  blockquote.my-8,
+  blockquote.my-10,
+  blockquote.my-6,
+  blockquote.rounded-2xl,
+  blockquote.rounded-xl,
+  blockquote.border-l-4,
+  blockquote[class*="border-amber"],
+  blockquote[class*="bg-card"],
+  blockquote[class*="bg-peat"],
+  blockquote[class*="shadow"],
+  .pull-quote,
+  blockquote cite,
+  blockquote div.absolute,
+  blockquote .text-9xl {
+    display: none !important;
+  }
+
+  /* 6. HIDE ALL RESEARCH DOSSIERS, STATUTORY LEDGERS, TAB PANELS, AND GRIDS */
+  [data-dossier-tabs],
+  .dossier-tab,
+  .dossier-pane,
+  .dossier-tab-panel,
+  .tab-btn,
+  .tab-content,
+  [role="tab"],
+  [role="tablist"],
+  [role="tabpanel"],
   section:has(.tab-btn),
   section:has([role="tab"]),
   section:has(.fa-landmark),
   section:has(.fa-scale-balanced),
+  section:has(.fa-scale-unbalanced),
+  section:has(.fa-scale-unbalanced-flip),
+  section:has(.fa-scroll),
+  section:has(.fa-microscope),
+  section:has(.fa-magnifying-glass-chart),
   section:has(.grid),
-  div:has(.audio-scrubber),
-  /* Hide decorative giant watermark quote glyphs */
-  blockquote div.absolute,
-  blockquote .text-9xl,
-  .pull-quote::before {
+  div:has(> .grid),
+  div:has(.fa-landmark),
+  div:has(.fa-scale-balanced),
+  div:has(.fa-scroll),
+  main > section,
+  article > section,
+  aside {
     display: none !important;
   }
 
-  /* 3. Container Expansion & Normalization */
+  /* 7. NO BULLETS & NO SOURCE LISTS / BIBLIOGRAPHIES */
+  /* Remove bullets globally from any lists that do remain */
+  ul, ol {
+    list-style: none !important;
+    list-style-type: none !important;
+    margin: 0 0 10pt 0 !important;
+    padding-left: 0 !important;
+  }
+  li {
+    list-style: none !important;
+    list-style-type: none !important;
+    margin: 0 0 4pt 0 !important;
+    padding: 0 !important;
+  }
+  li::marker {
+    display: none !important;
+    content: "" !important;
+  }
+
+  /* Hide post-essay source and reference bibliography containers */
+  div:has(.fa-book-bookmark),
+  div:has(.fa-book),
+  .citation-list,
+  footer ol,
+  footer ul,
+  footer div,
+  footer {
+    display: none !important;
+  }
+
+  /* 8. HIDE ALL POST-ESSAY DECORATIONS (COLOPHONS, BIO CARDS, FELLOWSHIP BOXES) */
+  .archival-colophon,
+  div.not-prose,
+  section.not-prose,
+  footer.not-prose,
+  div:has(.fa-feather-pointed),
+  div:has(.fa-feather),
+  div:has(.fa-guitar),
+  div:has(a[href*="theshadyriverbard.com"]),
+  div:has(.w-16.h-16),
+  div.mt-12.p-6,
+  div.mt-14.p-6,
+  div.mt-12.rounded-2xl,
+  div.mt-14.rounded-2xl,
+  main > div.mt-12,
+  main > div.mt-14,
+  article > div.mt-12,
+  article > div.mt-14,
+  article > footer,
+  main > footer {
+    display: none !important;
+  }
+
+  /* 9. NO CALLOUTS: Strip all borders, backgrounds, shadows, and cards from callout boxes inside the text */
+  [class*="border-l-4"],
+  [class*="border-l-2"],
+  [class*="border-amber"],
+  [class*="border-stone"],
+  [class*="border-rose"],
+  [class*="border-sky"],
+  [class*="bg-card"],
+  [class*="bg-peat"],
+  [class*="bg-stone-900"],
+  [class*="bg-stone-950"],
+  [class*="rounded-2xl"],
+  [class*="rounded-xl"] {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 0 10pt 0 !important;
+  }
+
+  /* Hide decorative labels, badges, or icons inside callout boxes */
+  [class*="space-y-"] > div.flex:has(i),
+  [class*="space-y-"] > div[class*="font-mono"][class*="uppercase"],
+  div:has(> p.font-cinzel.uppercase.text-xs) {
+    display: none !important;
+  }
+
+  /* Hide decorative duplicate quote cards */
+  div.text-center:has(p.font-serif.text-2xl),
+  div.text-center:has(p.font-serif.text-3xl),
+  div.text-center:has(p.font-serif.text-xl),
+  div.text-center:has(p.font-cinzel) {
+    display: none !important;
+  }
+
+  /* 10. UNINDENTED & UNBOXED BLOCKQUOTES INSIDE TEXT */
+  /* If an in-text blockquote contains Trevor's writing, render it as normal plain text */
+  article blockquote,
+  .essay-prose blockquote,
+  .prose-essay blockquote,
+  #essay-article blockquote,
+  #essay-reading-content blockquote {
+    display: block !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 0 10pt 0 !important;
+    font-family: inherit !important;
+    font-size: 11pt !important;
+    line-height: 1.55 !important;
+    font-style: normal !important;
+    text-align: justify !important;
+  }
+
+  article blockquote p,
+  .essay-prose blockquote p,
+  .prose-essay blockquote p,
+  #essay-article blockquote p,
+  #essay-reading-content blockquote p {
+    font-size: 11pt !important;
+    line-height: 1.55 !important;
+    margin: 0 0 10pt 0 !important;
+    font-style: normal !important;
+    text-align: justify !important;
+  }
+
+  /* 11. CLEAN PRINT HEADER: ONLY Title, Subtitle, and Byline */
+  /* If header already has an explicit byline paragraph, hide the entire category badges row */
+  header:has(p.font-mono) div.flex.flex-wrap,
+  header:has(p.font-mono) .flex.flex-wrap,
+  header div.flex.flex-wrap > span:not(:last-child),
+  header div.flex.flex-wrap > span[class*="bg-amber"],
+  header div.flex.flex-wrap > span[class*="bg-emerald"],
+  header div.flex.flex-wrap > span[class*="bg-rose"],
+  header div.flex.flex-wrap > span[class*="bg-sky"],
+  header div.flex.flex-wrap > span[class*="bg-stone-800"],
+  header div.flex.flex-wrap > span[class*="text-amber"],
+  header div.flex.flex-wrap > span[class*="text-rose"],
+  header div.flex.flex-wrap > span[class*="uppercase"],
+  main > div.flex.flex-wrap > span:not(:last-child),
+  main > div.flex.flex-wrap > span[class*="bg-amber"],
+  main > div.flex.flex-wrap > span[class*="bg-stone-900"]:not(:last-child),
+  main > div.mb-6.flex.flex-wrap > span[class*="rounded"],
+  main > div.mb-6.flex.flex-wrap > span[class*="bg-amber"],
+  main > div.mb-6.flex.flex-wrap > span[class*="bg-stone-900"]:not(:last-child),
+  header div:has(.rounded-full),
+  header .rounded-full,
+  header div.flex.items-center.gap-4,
+  header div.flex.items-center.gap-3,
+  header [class*="border-t"][class*="border-b"],
+  main > div.py-4.border-y {
+    display: none !important;
+  }
+
+  /* Ensure the author byline in the header displays cleanly */
+  header div.flex.flex-wrap > span:last-child,
+  main > div.flex.flex-wrap > span:last-child,
+  main > div.mb-6.flex.flex-wrap > span:last-child,
+  main header p.font-mono,
+  article header p.font-mono,
+  header p.uppercase,
+  header p.font-mono {
+    display: block !important;
+    font-family: 'Source Serif 4', Georgia, serif !important;
+    font-size: 10pt !important;
+    color: #444444 !important;
+    margin: 0 0 6pt 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+  }
+
+  main > header,
+  article > header,
+  #essay-reading-wrapper > header {
+    display: block !important;
+    margin: 0 0 14pt 0 !important;
+    padding: 0 0 10pt 0 !important;
+    border-bottom: 1pt solid #000000 !important;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  h1,
+  h1.font-display,
+  main header h1,
+  article header h1 {
+    font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif !important;
+    font-size: 20pt !important;
+    line-height: 1.25 !important;
+    font-weight: 700 !important;
+    color: #000000 !important;
+    margin: 0 0 6pt 0 !important;
+    padding: 0 !important;
+    letter-spacing: normal !important;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  /* Subtitle if present */
+  main header p.font-serif.italic,
+  article header p.font-serif.italic,
+  main header p.italic,
+  main > p.font-serif.italic {
+    display: block !important;
+    font-family: 'Source Serif 4', Georgia, serif !important;
+    font-size: 11pt !important;
+    font-style: italic !important;
+    color: #222222 !important;
+    margin: 0 0 6pt 0 !important;
+    line-height: 1.4 !important;
+  }
+
+  /* 12. CONTAINER NORMALIZATION */
   main,
   #main-content,
   #essay-reading-wrapper,
   #essay-article,
   #essay-body,
+  #essay-reading-content,
   article,
   .prose-essay,
   .essay-prose,
@@ -116,82 +403,17 @@
     background: transparent !important;
   }
 
-  /* 4. Scholarly Print Header (Title, Byline, Date) */
-  main > header,
-  article > header {
-    display: block !important;
-    margin: 0 0 12pt 0 !important;
-    padding: 0 0 8pt 0 !important;
-    border-bottom: 1.5pt solid #222222 !important;
-    page-break-after: avoid !important;
-    break-after: avoid !important;
-  }
-
-  h1, 
-  h1.font-display,
-  main header h1,
-  article header h1 {
-    font-family: 'Source Serif 4', Georgia, serif !important;
-    font-size: 21pt !important;
-    line-height: 1.25 !important;
-    font-weight: 700 !important;
-    letter-spacing: normal !important;
-    word-spacing: normal !important;
-    color: #000000 !important;
-    margin: 0 0 5pt 0 !important;
-    page-break-after: avoid !important;
-    break-after: avoid !important;
-  }
-
-  /* Byline, Chronology, and Compendium Identification */
-  main header .font-mono,
-  article header .font-mono,
-  main header p.font-mono,
-  article header p.font-mono {
-    font-family: 'Source Serif 4', Georgia, serif !important;
-    font-size: 9.5pt !important;
-    color: #444444 !important;
-    margin: 0 0 3pt 0 !important;
-  }
-
-  main header p.font-serif.italic,
-  article header p.font-serif.italic {
-    font-family: 'Source Serif 4', Georgia, serif !important;
-    font-size: 11pt !important;
-    font-style: italic !important;
-    color: #2b2b2b !important;
-    margin: 3pt 0 6pt 0 !important;
-    line-height: 1.4 !important;
-  }
-
-  /* Hide badge pills and avatars in print header */
-  main header .rounded-full,
-  article header .rounded-full,
-  main header .w-8.h-8,
-  article header .w-8.h-8,
-  main header span.bg-amber-500,
-  article header span.bg-amber-500 {
-    display: none !important;
-  }
-
-  main header span,
-  article header span {
-    background: transparent !important;
-    border: none !important;
-    color: #444444 !important;
-    padding: 0 !important;
-    font-size: 9pt !important;
-  }
-
-  /* 5. Plain Text Essay Paragraphs & Typography */
-  p, 
-  .essay-prose p, 
-  .prose-essay p, 
+  /* 13. PLAIN ESSAY PARAGRAPHS */
+  p,
+  .essay-prose p,
+  .prose-essay p,
+  #essay-article p,
+  #essay-reading-content p,
   article p {
-    font-family: 'Source Serif 4', Georgia, 'Garamond', 'Palatino', serif !important;
+    font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif !important;
     font-size: 11pt !important;
     line-height: 1.55 !important;
-    color: #111111 !important;
+    color: #000000 !important;
     margin: 0 0 10pt 0 !important;
     text-align: justify !important;
     text-justify: inter-word !important;
@@ -214,45 +436,10 @@
     color: inherit !important;
   }
 
-  /* Monochrome Callout Borders */
-  [class*="border-amber-"],
-  [class*="border-yellow-"],
-  [class*="border-l-4"],
-  [class*="border-l-2"] {
-    border-color: #222222 !important;
-  }
-  [class*="border-stone-"] {
-    border-color: #cccccc !important;
-  }
-
-  /* Clean Restrained Blockquotes */
-  blockquote,
-  .pull-quote {
-    border-left: 2.5pt solid #333333 !important;
-    padding: 3pt 0 3pt 11pt !important;
-    margin: 10pt 0 10pt 6pt !important;
-    font-family: 'Source Serif 4', Georgia, serif !important;
-    font-style: italic !important;
-    font-size: 10.5pt !important;
-    line-height: 1.45 !important;
-    background: transparent !important;
-    page-break-inside: avoid !important;
-    break-inside: avoid !important;
-  }
-
-  blockquote p,
-  .pull-quote p {
-    font-size: 10.5pt !important;
-    line-height: 1.45 !important;
-    margin-bottom: 4pt !important;
-    text-align: left !important;
-  }
-
-  blockquote cite,
-  .pull-quote cite {
-    font-size: 8.5pt !important;
-    color: #555555 !important;
-    display: block !important;
+  /* Prevent trailing copyright line from becoming an orphan on a new page */
+  p:last-child {
+    break-before: avoid !important;
+    page-break-before: avoid !important;
   }
 
   /* Headings inside Essay Body */
@@ -260,56 +447,18 @@
     font-family: 'Source Serif 4', Georgia, serif !important;
     color: #000000 !important;
     font-weight: 700 !important;
-    margin-top: 13pt !important;
-    margin-bottom: 5pt !important;
+    margin-top: 14pt !important;
+    margin-bottom: 6pt !important;
     page-break-after: avoid !important;
     break-after: avoid !important;
   }
-  h2 { font-size: 13.5pt !important; }
+  h2 { font-size: 13pt !important; }
   h3 { font-size: 12pt !important; }
   h4 { font-size: 11pt !important; }
 
-  /* Links & Footnotes */
+  /* Links render as plain text */
   a {
     text-decoration: none !important;
-    color: #111111 !important;
-  }
-
-  .footnote-ref {
-    font-size: 8pt !important;
-    vertical-align: super !important;
-    border: none !important;
-    background: transparent !important;
-    padding: 0 !important;
-    color: #333333 !important;
-  }
-
-  /* Archival Colophon / Publication Footnote */
-  .archival-colophon,
-  .not-prose,
-  div[class*="bg-card"]:not(section) {
-    border: none !important;
-    border-top: 1pt solid #888888 !important;
-    background: transparent !important;
-    padding: 6pt 0 0 0 !important;
-    margin-top: 14pt !important;
-    page-break-inside: avoid !important;
-    break-inside: avoid !important;
-  }
-
-  .archival-colophon p,
-  .not-prose p,
-  div[class*="bg-card"] p {
-    font-size: 9pt !important;
-    line-height: 1.4 !important;
-    color: #444444 !important;
-    text-align: left !important;
-    margin-bottom: 3pt !important;
-  }
-
-  .not-prose span,
-  div[class*="bg-card"] span {
-    font-size: 8.5pt !important;
-    color: #555555 !important;
+    color: #000000 !important;
   }
 }
