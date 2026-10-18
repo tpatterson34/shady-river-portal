@@ -2,13 +2,15 @@
   {
     "time": 0.5804988662131519,
     "bar_number": 1,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "Fm"
+      "C#",
+      "Cm"
     ],
     "chord_cols": [
-      0
+      0,
+      8
     ],
     "beats": [
       0.5804988662131519,
@@ -22,60 +24,68 @@
   {
     "time": 5.224489795918367,
     "bar_number": 2,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "Fm"
+      "C#",
+      "Cm"
     ],
     "chord_cols": [
-      0
+      0,
+      12
     ],
     "beats": [
       5.224489795918367,
-      6.3854875283446715,
+      6.408707482993197,
       7.592925170068027,
       8.777142857142858
     ],
-    "lyrics": "          Phone rang at midnight",
+    "lyrics": "            The phone rang at midnight,",
     "words": [
       {
-        "word": "Phone",
-        "start": 8.14,
-        "end": 8.5,
-        "col": 10
+        "word": "The",
+        "start": 8.106,
+        "end": 8.263,
+        "col": 12
       },
       {
-        "word": "rang",
-        "start": 8.5,
-        "end": 9.42,
+        "word": "phone",
+        "start": 8.263,
+        "end": 8.42,
         "col": 16
       },
       {
-        "word": "at",
-        "start": 9.42,
-        "end": 9.66,
-        "col": 21
+        "word": "rang",
+        "start": 8.76,
+        "end": 9.44,
+        "col": 22
       },
       {
-        "word": "midnight",
-        "start": 9.66,
-        "end": 10.42,
-        "col": 24
+        "word": "at",
+        "start": 9.44,
+        "end": 9.56,
+        "col": 27
+      },
+      {
+        "word": "midnight,",
+        "start": 9.56,
+        "end": 10.04,
+        "col": 30
       }
     ]
   },
   {
     "time": 9.93814058956916,
     "bar_number": 3,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "Fm",
-      "D#"
+      "G#",
+      "Fm"
     ],
     "chord_cols": [
       0,
-      12
+      14
     ],
     "beats": [
       9.93814058956916,
@@ -83,42 +93,42 @@
       12.283356009070294,
       13.444353741496599
     ],
-    "lyrics": "            A voice filled with",
+    "lyrics": "a voice       filled with",
     "words": [
       {
-        "word": "A",
-        "start": 12.249,
-        "end": 13.06,
-        "col": 12
+        "word": "a",
+        "start": 10.04,
+        "end": 11.0,
+        "col": 0
       },
       {
         "word": "voice",
-        "start": 13.06,
-        "end": 13.56,
-        "col": 14
+        "start": 11.0,
+        "end": 13.54,
+        "col": 2
       },
       {
         "word": "filled",
-        "start": 13.56,
-        "end": 14.22,
-        "col": 20
+        "start": 13.8,
+        "end": 14.3,
+        "col": 14
       },
       {
         "word": "with",
-        "start": 14.22,
-        "end": 14.52,
-        "col": 27
+        "start": 14.42,
+        "end": 14.6,
+        "col": 21
       }
     ]
   },
   {
     "time": 14.582131519274377,
     "bar_number": 4,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "Cm"
+      "A#m",
+      "G#"
     ],
     "chord_cols": [
       0,
@@ -127,35 +137,23 @@
     "beats": [
       14.582131519274377,
       15.74312925170068,
-      16.904126984126986,
+      16.92734693877551,
       18.088344671201813
     ],
-    "lyrics": "dread         Words no",
+    "lyrics": "dread,",
     "words": [
       {
-        "word": "dread",
-        "start": 14.52,
-        "end": 15.34,
+        "word": "dread,",
+        "start": 14.6,
+        "end": 15.476,
         "col": 0
-      },
-      {
-        "word": "Words",
-        "start": 17.46,
-        "end": 18.7,
-        "col": 14
-      },
-      {
-        "word": "no",
-        "start": 18.7,
-        "end": 19.06,
-        "col": 20
       }
     ]
   },
   {
     "time": 19.272562358276645,
     "bar_number": 5,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
       "A#m",
@@ -163,7 +161,7 @@
     ],
     "chord_cols": [
       0,
-      28
+      38
     ],
     "beats": [
       19.272562358276645,
@@ -171,111 +169,131 @@
       21.66421768707483,
       22.77877551020408
     ],
-    "lyrics": "mother ever wants to hear   about her son instead",
+    "lyrics": "Words no mother ever wants to hear,   about her son instead.",
     "words": [
       {
-        "word": "mother",
-        "start": 19.06,
-        "end": 19.7,
+        "word": "Words",
+        "start": 18.364,
+        "end": 18.72,
         "col": 0
       },
       {
+        "word": "no",
+        "start": 18.86,
+        "end": 19.06,
+        "col": 6
+      },
+      {
+        "word": "mother",
+        "start": 19.06,
+        "end": 19.66,
+        "col": 9
+      },
+      {
         "word": "ever",
-        "start": 19.7,
-        "end": 20.3,
-        "col": 7
+        "start": 19.66,
+        "end": 20.22,
+        "col": 16
       },
       {
         "word": "wants",
-        "start": 20.3,
-        "end": 20.8,
-        "col": 12
-      },
-      {
-        "word": "to",
-        "start": 20.8,
-        "end": 21.0,
-        "col": 18
-      },
-      {
-        "word": "hear",
-        "start": 21.0,
-        "end": 21.44,
+        "start": 20.44,
+        "end": 20.84,
         "col": 21
       },
       {
+        "word": "to",
+        "start": 20.84,
+        "end": 20.89,
+        "col": 27
+      },
+      {
+        "word": "hear,",
+        "start": 20.89,
+        "end": 21.38,
+        "col": 30
+      },
+      {
         "word": "about",
-        "start": 21.44,
-        "end": 22.2,
-        "col": 28
-      },
-      {
-        "word": "her",
-        "start": 22.2,
-        "end": 22.44,
-        "col": 34
-      },
-      {
-        "word": "son",
-        "start": 22.44,
-        "end": 22.68,
+        "start": 21.38,
+        "end": 22.26,
         "col": 38
       },
       {
-        "word": "instead",
-        "start": 22.68,
-        "end": 23.86,
-        "col": 42
+        "word": "her",
+        "start": 22.26,
+        "end": 22.31,
+        "col": 44
+      },
+      {
+        "word": "son",
+        "start": 22.31,
+        "end": 22.36,
+        "col": 48
+      },
+      {
+        "word": "instead.",
+        "start": 22.36,
+        "end": 24.312,
+        "col": 52
       }
     ]
   },
   {
-    "time": 23.91655328798186,
+    "time": 23.939773242630384,
     "bar_number": 6,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
+      "C#",
       "Fm"
     ],
     "chord_cols": [
-      0
+      0,
+      12
     ],
     "beats": [
-      23.91655328798186,
+      23.939773242630384,
       25.10077097505669,
       26.261768707482993,
       27.422766439909296
     ],
-    "lyrics": "          Down at the",
+    "lyrics": "            Down at the station,",
     "words": [
       {
         "word": "Down",
-        "start": 27.28,
-        "end": 27.68,
-        "col": 10
+        "start": 27.172,
+        "end": 27.46,
+        "col": 12
       },
       {
         "word": "at",
-        "start": 27.68,
-        "end": 28.12,
-        "col": 15
+        "start": 27.84,
+        "end": 28.1,
+        "col": 17
       },
       {
         "word": "the",
-        "start": 28.12,
+        "start": 28.1,
         "end": 28.28,
-        "col": 18
+        "col": 20
+      },
+      {
+        "word": "station,",
+        "start": 28.28,
+        "end": 29.2,
+        "col": 24
       }
     ]
   },
   {
     "time": 28.606984126984127,
     "bar_number": 7,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "Fm",
-      "D#"
+      "G#",
+      "Fm"
     ],
     "chord_cols": [
       0,
@@ -287,152 +305,150 @@
       30.95219954648526,
       32.113197278911564
     ],
-    "lyrics": "station       A charge they had",
+    "lyrics": "a             charge they had",
     "words": [
       {
-        "word": "station",
-        "start": 28.28,
-        "end": 29.36,
+        "word": "a",
+        "start": 29.2,
+        "end": 31.3,
         "col": 0
       },
       {
-        "word": "A",
-        "start": 31.149,
-        "end": 31.56,
+        "word": "charge",
+        "start": 31.3,
+        "end": 31.88,
         "col": 14
       },
       {
-        "word": "charge",
-        "start": 31.56,
-        "end": 32.64,
-        "col": 16
-      },
-      {
         "word": "they",
-        "start": 32.64,
-        "end": 32.83,
-        "col": 23
+        "start": 32.88,
+        "end": 33.04,
+        "col": 21
       },
       {
         "word": "had",
-        "start": 32.83,
-        "end": 33.02,
-        "col": 28
+        "start": 33.04,
+        "end": 33.14,
+        "col": 26
       }
     ]
   },
   {
-    "time": 33.274195011337866,
+    "time": 33.29741496598639,
     "bar_number": 8,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
       "D#",
-      "Cm"
+      "Fm"
     ],
     "chord_cols": [
       0,
       14
     ],
     "beats": [
-      33.274195011337866,
+      33.29741496598639,
       34.4584126984127,
       35.66585034013605,
       36.85006802721088
     ],
-    "lyrics": "made          A world",
+    "lyrics": "made,",
     "words": [
       {
-        "word": "made",
-        "start": 33.02,
-        "end": 33.9,
+        "word": "made,",
+        "start": 33.14,
+        "end": 35.272,
         "col": 0
-      },
-      {
-        "word": "A",
-        "start": 37.5,
-        "end": 37.68,
-        "col": 14
-      },
-      {
-        "word": "world",
-        "start": 37.68,
-        "end": 38.28,
-        "col": 16
       }
     ]
   },
   {
-    "time": 38.034285714285716,
+    "time": 38.01106575963719,
     "bar_number": 9,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#m",
-      "Fm"
+      "C#",
+      "G#"
     ],
     "chord_cols": [
       0,
-      21
+      30
     ],
     "beats": [
-      38.034285714285716,
+      38.01106575963719,
       39.21850340136054,
       40.40272108843537,
       41.40117913832199
     ],
-    "lyrics": "turned upside down   A heavy sudden",
+    "lyrics": "A world turned upside down,   a heavy, sudden shade.",
     "words": [
       {
-        "word": "turned",
-        "start": 38.28,
-        "end": 38.78,
+        "word": "A",
+        "start": 37.544,
+        "end": 37.76,
         "col": 0
       },
       {
+        "word": "world",
+        "start": 37.76,
+        "end": 38.32,
+        "col": 2
+      },
+      {
+        "word": "turned",
+        "start": 38.32,
+        "end": 38.94,
+        "col": 8
+      },
+      {
         "word": "upside",
-        "start": 38.78,
-        "end": 39.62,
-        "col": 7
+        "start": 38.94,
+        "end": 39.5,
+        "col": 15
       },
       {
-        "word": "down",
-        "start": 39.62,
-        "end": 40.3,
-        "col": 14
+        "word": "down,",
+        "start": 39.5,
+        "end": 40.28,
+        "col": 22
       },
       {
-        "word": "A",
-        "start": 40.3,
+        "word": "a",
+        "start": 40.5,
         "end": 40.58,
-        "col": 21
+        "col": 30
       },
       {
-        "word": "heavy",
+        "word": "heavy,",
         "start": 40.58,
-        "end": 40.98,
-        "col": 23
+        "end": 41.02,
+        "col": 32
       },
       {
         "word": "sudden",
-        "start": 40.98,
+        "start": 41.42,
         "end": 42.0,
-        "col": 29
+        "col": 39
+      },
+      {
+        "word": "shade.",
+        "start": 42.0,
+        "end": 42.944,
+        "col": 46
       }
     ]
   },
   {
     "time": 42.53895691609977,
     "bar_number": 10,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "Fm",
-      "Cm"
+      "A#m"
     ],
     "chord_cols": [
-      0,
-      14
+      0
     ],
     "beats": [
       42.53895691609977,
@@ -440,42 +456,36 @@
       44.860952380952384,
       46.021950113378686
     ],
-    "lyrics": "shade.        Bail set so",
+    "lyrics": "          Bail set so",
     "words": [
       {
-        "word": "shade.",
-        "start": 42.0,
-        "end": 44.219,
-        "col": 0
-      },
-      {
         "word": "Bail",
-        "start": 45.209,
-        "end": 45.874,
-        "col": 14
+        "start": 45.876,
+        "end": 46.22,
+        "col": 10
       },
       {
         "word": "set",
-        "start": 45.874,
+        "start": 46.22,
         "end": 46.54,
-        "col": 19
+        "col": 15
       },
       {
         "word": "so",
         "start": 46.54,
         "end": 46.98,
-        "col": 23
+        "col": 19
       }
     ]
   },
   {
     "time": 47.18294784580499,
     "bar_number": 11,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
       "Cm",
-      "Fm"
+      "D#"
     ],
     "chord_cols": [
       0,
@@ -487,30 +497,30 @@
       49.52816326530612,
       50.712380952380954
     ],
-    "lyrics": "high          A number that",
+    "lyrics": "high,         a number that",
     "words": [
       {
-        "word": "high",
+        "word": "high,",
         "start": 46.98,
-        "end": 48.18,
+        "end": 47.7,
         "col": 0
       },
       {
-        "word": "A",
-        "start": 50.069,
-        "end": 50.6,
+        "word": "a",
+        "start": 50.42,
+        "end": 50.62,
         "col": 14
       },
       {
         "word": "number",
-        "start": 50.6,
+        "start": 50.62,
         "end": 51.02,
         "col": 16
       },
       {
         "word": "that",
         "start": 51.02,
-        "end": 51.64,
+        "end": 51.66,
         "col": 23
       }
     ]
@@ -518,11 +528,11 @@
   {
     "time": 51.87337868480726,
     "bar_number": 12,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "Fm",
-      "G#"
+      "G#",
+      "Fm"
     ],
     "chord_cols": [
       0,
@@ -532,42 +542,30 @@
       51.87337868480726,
       53.057596371882084,
       54.21859410430839,
-      55.40281179138322
+      55.42603174603175
     ],
-    "lyrics": "stings        Beyond the",
+    "lyrics": "stings,",
     "words": [
       {
-        "word": "stings",
-        "start": 51.64,
-        "end": 53.86,
+        "word": "stings,",
+        "start": 51.66,
+        "end": 53.64,
         "col": 0
-      },
-      {
-        "word": "Beyond",
-        "start": 55.509,
-        "end": 56.12,
-        "col": 14
-      },
-      {
-        "word": "the",
-        "start": 56.12,
-        "end": 56.44,
-        "col": 21
       }
     ]
   },
   {
     "time": 56.540589569161,
     "bar_number": 13,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "G#",
-      "A#"
+      "Cm",
+      "Fm"
     ],
     "chord_cols": [
       0,
-      26
+      38
     ],
     "beats": [
       56.540589569161,
@@ -575,71 +573,83 @@
       58.862585034013605,
       60.02358276643991
     ],
-    "lyrics": "reach of a mama and the   comfort her love",
+    "lyrics": "Beyond the reach of a mama, and the   comfort her love",
     "words": [
       {
-        "word": "reach",
-        "start": 56.44,
-        "end": 56.72,
+        "word": "Beyond",
+        "start": 55.644,
+        "end": 56.18,
         "col": 0
       },
       {
+        "word": "the",
+        "start": 56.18,
+        "end": 56.5,
+        "col": 7
+      },
+      {
+        "word": "reach",
+        "start": 56.5,
+        "end": 56.84,
+        "col": 11
+      },
+      {
         "word": "of",
-        "start": 56.72,
+        "start": 56.84,
         "end": 57.26,
-        "col": 6
+        "col": 17
       },
       {
         "word": "a",
         "start": 57.26,
-        "end": 57.38,
-        "col": 9
+        "end": 57.44,
+        "col": 20
       },
       {
-        "word": "mama",
-        "start": 57.38,
-        "end": 58.04,
-        "col": 11
+        "word": "mama,",
+        "start": 57.44,
+        "end": 58.0,
+        "col": 22
       },
       {
         "word": "and",
-        "start": 58.29,
+        "start": 58.0,
         "end": 58.62,
-        "col": 16
+        "col": 28
       },
       {
         "word": "the",
         "start": 58.62,
-        "end": 58.7,
-        "col": 20
+        "end": 58.78,
+        "col": 32
       },
       {
         "word": "comfort",
-        "start": 58.7,
-        "end": 59.18,
-        "col": 26
+        "start": 58.78,
+        "end": 59.16,
+        "col": 38
       },
       {
         "word": "her",
-        "start": 59.18,
-        "end": 60.02,
-        "col": 34
+        "start": 59.16,
+        "end": 59.98,
+        "col": 46
       },
       {
         "word": "love",
-        "start": 60.02,
-        "end": 62.434,
-        "col": 38
+        "start": 59.98,
+        "end": 61.7,
+        "col": 50
       }
     ]
   },
   {
     "time": 61.18458049886621,
     "bar_number": 14,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#",
+      "C#",
       "Fm"
     ],
     "chord_cols": [
@@ -649,37 +659,31 @@
     "beats": [
       61.18458049886621,
       62.32235827664399,
-      63.46013605442177,
+      63.48335600907029,
       64.62113378684808
     ],
-    "lyrics": "brings        Oh,",
+    "lyrics": "brings.",
     "words": [
       {
-        "word": "brings",
-        "start": 62.434,
-        "end": 64.849,
+        "word": "brings.",
+        "start": 61.7,
+        "end": 65.408,
         "col": 0
-      },
-      {
-        "word": "Oh,",
-        "start": 64.849,
-        "end": 66.699,
-        "col": 14
       }
     ]
   },
   {
     "time": 65.75891156462585,
     "bar_number": 15,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "Fm",
-      "A#"
+      "C#",
+      "A#m"
     ],
     "chord_cols": [
       0,
-      14
+      22
     ],
     "beats": [
       65.75891156462585,
@@ -687,40 +691,58 @@
       68.10412698412698,
       69.26512471655329
     ],
-    "lyrics": "Mama's Bail   Jar",
+    "lyrics": "Oh, the Mama's Bail   Jar, sits",
     "words": [
       {
-        "word": "Mama's",
-        "start": 66.82,
-        "end": 67.5,
+        "word": "Oh,",
+        "start": 66.068,
+        "end": 66.5,
         "col": 0
       },
       {
-        "word": "Bail",
-        "start": 67.5,
-        "end": 68.0,
-        "col": 7
+        "word": "the",
+        "start": 66.62,
+        "end": 66.86,
+        "col": 4
       },
       {
-        "word": "Jar",
-        "start": 68.0,
-        "end": 68.96,
-        "col": 14
+        "word": "Mama's",
+        "start": 66.86,
+        "end": 67.52,
+        "col": 8
+      },
+      {
+        "word": "Bail",
+        "start": 67.52,
+        "end": 68.02,
+        "col": 15
+      },
+      {
+        "word": "Jar,",
+        "start": 68.02,
+        "end": 68.94,
+        "col": 22
+      },
+      {
+        "word": "sits",
+        "start": 68.94,
+        "end": 71.38,
+        "col": 27
       }
     ]
   },
   {
     "time": 70.4261224489796,
     "bar_number": 16,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#",
+      "A#m",
       "Fm"
     ],
     "chord_cols": [
       0,
-      20
+      14
     ],
     "beats": [
       70.4261224489796,
@@ -728,58 +750,44 @@
       72.81777777777778,
       73.97877551020409
     ],
-    "lyrics": "sits empty on the   shelf A",
+    "lyrics": "empty on      the shelf,",
     "words": [
       {
-        "word": "sits",
-        "start": 71.009,
-        "end": 71.554,
+        "word": "empty",
+        "start": 71.38,
+        "end": 72.34,
         "col": 0
       },
       {
-        "word": "empty",
-        "start": 71.554,
-        "end": 72.1,
-        "col": 5
-      },
-      {
         "word": "on",
-        "start": 72.1,
-        "end": 72.58,
-        "col": 11
+        "start": 72.34,
+        "end": 72.9,
+        "col": 6
       },
       {
         "word": "the",
-        "start": 72.58,
-        "end": 73.04,
+        "start": 72.9,
+        "end": 73.08,
         "col": 14
       },
       {
-        "word": "shelf",
-        "start": 73.04,
-        "end": 73.92,
-        "col": 20
-      },
-      {
-        "word": "A",
-        "start": 74.809,
-        "end": 75.4,
-        "col": 26
+        "word": "shelf,",
+        "start": 73.08,
+        "end": 74.08,
+        "col": 18
       }
     ]
   },
   {
     "time": 75.13977324263038,
     "bar_number": 17,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "Fm",
-      "Cm"
+      "A#m"
     ],
     "chord_cols": [
-      0,
-      18
+      0
     ],
     "beats": [
       75.13977324263038,
@@ -787,52 +795,56 @@
       77.46176870748299,
       78.64598639455782
     ],
-    "lyrics": "silent plea for   help from",
+    "lyrics": "A silent plea for help, from",
     "words": [
       {
-        "word": "silent",
-        "start": 75.4,
-        "end": 76.6,
+        "word": "A",
+        "start": 75.624,
+        "end": 75.88,
         "col": 0
       },
       {
+        "word": "silent",
+        "start": 75.88,
+        "end": 76.56,
+        "col": 2
+      },
+      {
         "word": "plea",
-        "start": 76.6,
-        "end": 77.0,
-        "col": 7
+        "start": 76.56,
+        "end": 77.02,
+        "col": 9
       },
       {
         "word": "for",
-        "start": 77.0,
-        "end": 77.46,
-        "col": 12
+        "start": 77.02,
+        "end": 77.42,
+        "col": 14
       },
       {
-        "word": "help",
-        "start": 77.46,
-        "end": 78.64,
+        "word": "help,",
+        "start": 77.42,
+        "end": 78.46,
         "col": 18
       },
       {
         "word": "from",
-        "start": 79.23,
-        "end": 80.01,
-        "col": 23
+        "start": 78.46,
+        "end": 80.28,
+        "col": 24
       }
     ]
   },
   {
     "time": 79.7837641723356,
     "bar_number": 18,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "Cm",
       "Fm"
     ],
     "chord_cols": [
-      0,
-      22
+      0
     ],
     "beats": [
       79.7837641723356,
@@ -840,42 +852,42 @@
       82.10575963718821,
       83.26675736961451
     ],
-    "lyrics": "her weary, lonesome   self",
+    "lyrics": "her weary, lonesome self.",
     "words": [
       {
         "word": "her",
-        "start": 80.01,
-        "end": 80.79,
+        "start": 80.28,
+        "end": 80.62,
         "col": 0
       },
       {
         "word": "weary,",
-        "start": 80.79,
-        "end": 81.569,
+        "start": 80.62,
+        "end": 81.38,
         "col": 4
       },
       {
         "word": "lonesome",
-        "start": 81.88,
-        "end": 82.4,
+        "start": 81.38,
+        "end": 82.44,
         "col": 11
       },
       {
-        "word": "self",
-        "start": 82.4,
-        "end": 83.7,
-        "col": 22
+        "word": "self.",
+        "start": 82.44,
+        "end": 84.04,
+        "col": 20
       }
     ]
   },
   {
     "time": 84.42775510204082,
     "bar_number": 19,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "Fm",
-      "A#"
+      "A#m",
+      "Fm"
     ],
     "chord_cols": [
       0,
@@ -891,20 +903,20 @@
     "words": [
       {
         "word": "Every",
-        "start": 84.78,
-        "end": 85.78,
+        "start": 85.468,
+        "end": 85.76,
         "col": 0
       },
       {
         "word": "spare",
-        "start": 85.78,
-        "end": 86.34,
+        "start": 85.76,
+        "end": 86.1,
         "col": 6
       },
       {
         "word": "dollar,",
-        "start": 86.34,
-        "end": 87.02,
+        "start": 86.1,
+        "end": 87.42,
         "col": 12
       }
     ]
@@ -912,15 +924,15 @@
   {
     "time": 89.07174603174603,
     "bar_number": 20,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#",
+      "D#",
       "Fm"
     ],
     "chord_cols": [
       0,
-      26
+      20
     ],
     "beats": [
       89.07174603174603,
@@ -928,36 +940,36 @@
       91.44018140589569,
       92.601179138322
     ],
-    "lyrics": "every hard-earned dime",
+    "lyrics": "every hard-earned   dime,",
     "words": [
       {
         "word": "every",
-        "start": 88.84,
+        "start": 89.32,
         "end": 89.78,
         "col": 0
       },
       {
         "word": "hard-earned",
-        "start": 89.78,
-        "end": 90.959,
+        "start": 90.46,
+        "end": 91.2,
         "col": 6
       },
       {
-        "word": "dime",
-        "start": 90.959,
-        "end": 92.139,
-        "col": 18
+        "word": "dime,",
+        "start": 91.2,
+        "end": 92.288,
+        "col": 20
       }
     ]
   },
   {
     "time": 93.7621768707483,
     "bar_number": 21,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
       "Fm",
-      "Cm"
+      "C#"
     ],
     "chord_cols": [
       0,
@@ -969,11 +981,11 @@
       96.06095238095239,
       97.19873015873016
     ],
-    "lyrics": "Goin' into that jar",
+    "lyrics": "Going into that jar,   against",
     "words": [
       {
-        "word": "Goin'",
-        "start": 93.88,
+        "word": "Going",
+        "start": 94.232,
         "end": 94.68,
         "col": 0
       },
@@ -986,29 +998,35 @@
       {
         "word": "that",
         "start": 95.34,
-        "end": 95.72,
+        "end": 95.76,
         "col": 11
       },
       {
-        "word": "jar",
-        "start": 95.72,
-        "end": 96.2,
+        "word": "jar,",
+        "start": 95.76,
+        "end": 96.32,
         "col": 16
+      },
+      {
+        "word": "against",
+        "start": 96.32,
+        "end": 99.04,
+        "col": 23
       }
     ]
   },
   {
     "time": 98.38294784580499,
     "bar_number": 22,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "Cm",
+      "A#m",
       "Fm"
     ],
     "chord_cols": [
       0,
-      29
+      15
     ],
     "beats": [
       98.38294784580499,
@@ -1016,50 +1034,46 @@
       100.68172335600907,
       101.8659410430839
     ],
-    "lyrics": "against the hands of time",
+    "lyrics": "the hands of   time.",
     "words": [
       {
-        "word": "against",
-        "start": 98.609,
-        "end": 99.06,
+        "word": "the",
+        "start": 99.04,
+        "end": 99.46,
         "col": 0
       },
       {
-        "word": "the",
-        "start": 99.06,
-        "end": 99.44,
-        "col": 8
-      },
-      {
         "word": "hands",
-        "start": 99.44,
-        "end": 99.96,
-        "col": 12
+        "start": 99.46,
+        "end": 100.02,
+        "col": 4
       },
       {
         "word": "of",
-        "start": 99.96,
+        "start": 100.02,
         "end": 100.32,
-        "col": 18
+        "col": 10
       },
       {
-        "word": "time",
+        "word": "time.",
         "start": 100.32,
-        "end": 100.76,
-        "col": 21
+        "end": 101.972,
+        "col": 15
       }
     ]
   },
   {
     "time": 103.00371882086168,
     "bar_number": 23,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
+      "G#",
       "Fm"
     ],
     "chord_cols": [
-      0
+      0,
+      8
     ],
     "beats": [
       103.00371882086168,
@@ -1073,62 +1087,64 @@
   {
     "time": 107.62448979591836,
     "bar_number": 24,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "Fm"
+      "C#",
+      "G#"
     ],
     "chord_cols": [
-      0
+      0,
+      20
     ],
     "beats": [
       107.62448979591836,
-      108.78548752834467,
+      108.8087074829932,
       109.99292517006803,
       111.15392290249433
     ],
-    "lyrics": "She called up her sisters",
+    "lyrics": "She called up her   sisters,",
     "words": [
       {
         "word": "She",
-        "start": 107.809,
-        "end": 108.26,
+        "start": 108.072,
+        "end": 108.28,
         "col": 0
       },
       {
         "word": "called",
-        "start": 108.26,
-        "end": 108.98,
+        "start": 108.28,
+        "end": 109.12,
         "col": 4
       },
       {
         "word": "up",
-        "start": 108.98,
-        "end": 109.5,
+        "start": 109.12,
+        "end": 109.52,
         "col": 11
       },
       {
         "word": "her",
-        "start": 109.5,
-        "end": 109.66,
+        "start": 109.52,
+        "end": 109.78,
         "col": 14
       },
       {
-        "word": "sisters",
-        "start": 109.66,
-        "end": 110.76,
-        "col": 18
+        "word": "sisters,",
+        "start": 109.78,
+        "end": 110.64,
+        "col": 20
       }
     ]
   },
   {
     "time": 112.31492063492064,
     "bar_number": 25,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
       "Fm",
-      "D#"
+      "A#m"
     ],
     "chord_cols": [
       0,
@@ -1140,30 +1156,30 @@
       114.66013605442177,
       115.8443537414966
     ],
-    "lyrics": "Her cousins and   friends",
+    "lyrics": "her cousins and   friends,",
     "words": [
       {
-        "word": "Her",
-        "start": 112.24,
-        "end": 112.96,
+        "word": "her",
+        "start": 112.34,
+        "end": 113.1,
         "col": 0
       },
       {
         "word": "cousins",
-        "start": 112.96,
-        "end": 113.98,
+        "start": 113.1,
+        "end": 113.94,
         "col": 4
       },
       {
         "word": "and",
-        "start": 113.98,
-        "end": 114.52,
+        "start": 113.94,
+        "end": 114.46,
         "col": 12
       },
       {
-        "word": "friends",
-        "start": 114.52,
-        "end": 115.72,
+        "word": "friends,",
+        "start": 114.46,
+        "end": 116.064,
         "col": 18
       }
     ]
@@ -1171,11 +1187,11 @@
   {
     "time": 117.0053514739229,
     "bar_number": 26,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "A#"
+      "Fm",
+      "G#"
     ],
     "chord_cols": [
       0,
@@ -1187,77 +1203,77 @@
       119.30412698412698,
       120.46512471655329
     ],
-    "lyrics": "Hoping for    kindness where the",
+    "lyrics": "Hoping for    kindness, where the",
     "words": [
       {
         "word": "Hoping",
-        "start": 117.24,
-        "end": 118.64,
+        "start": 118.076,
+        "end": 118.6,
         "col": 0
       },
       {
         "word": "for",
-        "start": 118.64,
-        "end": 118.98,
+        "start": 118.6,
+        "end": 118.96,
         "col": 7
       },
       {
-        "word": "kindness",
-        "start": 118.98,
-        "end": 120.02,
+        "word": "kindness,",
+        "start": 118.96,
+        "end": 120.12,
         "col": 14
       },
       {
         "word": "where",
-        "start": 121.0,
-        "end": 121.32,
-        "col": 23
+        "start": 120.12,
+        "end": 121.06,
+        "col": 24
       },
       {
         "word": "the",
-        "start": 121.32,
-        "end": 121.37,
-        "col": 29
+        "start": 121.06,
+        "end": 121.34,
+        "col": 30
       }
     ]
   },
   {
-    "time": 121.64934240362811,
+    "time": 121.62612244897959,
     "bar_number": 27,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#",
-      "Fm"
+      "Fm",
+      "G#"
     ],
     "chord_cols": [
       0,
-      23
+      24
     ],
     "beats": [
-      121.64934240362811,
+      121.62612244897959,
       122.7871201814059,
       123.92489795918367,
       125.08589569160998
     ],
-    "lyrics": "hardship never ends",
+    "lyrics": "hardship never ends.",
     "words": [
       {
         "word": "hardship",
-        "start": 121.37,
-        "end": 122.719,
+        "start": 121.34,
+        "end": 122.3,
         "col": 0
       },
       {
         "word": "never",
-        "start": 122.719,
-        "end": 123.04,
+        "start": 122.62,
+        "end": 123.02,
         "col": 9
       },
       {
-        "word": "ends",
-        "start": 123.04,
-        "end": 125.0,
+        "word": "ends.",
+        "start": 123.02,
+        "end": 124.712,
         "col": 15
       }
     ]
@@ -1265,7 +1281,48 @@
   {
     "time": 126.24689342403629,
     "bar_number": 28,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "G#"
+    ],
+    "chord_cols": [
+      0,
+      25
+    ],
+    "beats": [
+      126.24689342403629,
+      127.40789115646258,
+      128.5688888888889,
+      129.7298866213152
+    ],
+    "lyrics": "Some offered prayers,",
+    "words": [
+      {
+        "word": "Some",
+        "start": 126.844,
+        "end": 127.52,
+        "col": 0
+      },
+      {
+        "word": "offered",
+        "start": 127.52,
+        "end": 128.28,
+        "col": 5
+      },
+      {
+        "word": "prayers,",
+        "start": 128.28,
+        "end": 129.1,
+        "col": 13
+      }
+    ]
+  },
+  {
+    "time": 130.91410430839002,
+    "bar_number": 29,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
       "Fm"
@@ -1274,88 +1331,47 @@
       0
     ],
     "beats": [
-      126.24689342403629,
-      127.40789115646258,
-      128.5688888888889,
-      129.7298866213152
-    ],
-    "lyrics": "Some offered prayers",
-    "words": [
-      {
-        "word": "Some",
-        "start": 126.68,
-        "end": 127.38,
-        "col": 0
-      },
-      {
-        "word": "offered",
-        "start": 127.38,
-        "end": 128.24,
-        "col": 5
-      },
-      {
-        "word": "prayers",
-        "start": 128.24,
-        "end": 129.06,
-        "col": 13
-      }
-    ]
-  },
-  {
-    "time": 130.91410430839002,
-    "bar_number": 29,
-    "tempo_bpm": 52,
-    "time_signature": "4/4",
-    "chords": [
-      "Fm",
-      "D#"
-    ],
-    "chord_cols": [
-      0,
-      17
-    ],
-    "beats": [
       130.91410430839002,
       132.07510204081632,
       133.23609977324264,
-      134.39709750566894
+      134.3738775510204
     ],
-    "lyrics": "Some offered a   tear",
+    "lyrics": "some offered a tear,",
     "words": [
       {
-        "word": "Some",
-        "start": 131.18,
-        "end": 131.9,
+        "word": "some",
+        "start": 131.14,
+        "end": 131.84,
         "col": 0
       },
       {
         "word": "offered",
-        "start": 131.9,
-        "end": 132.62,
+        "start": 131.84,
+        "end": 132.78,
         "col": 5
       },
       {
         "word": "a",
-        "start": 132.62,
-        "end": 132.96,
+        "start": 132.78,
+        "end": 133.04,
         "col": 13
       },
       {
-        "word": "tear",
-        "start": 132.96,
-        "end": 133.86,
-        "col": 17
+        "word": "tear,",
+        "start": 133.04,
+        "end": 134.404,
+        "col": 15
       }
     ]
   },
   {
     "time": 135.55809523809523,
     "bar_number": 30,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "A#"
+      "G#",
+      "Fm"
     ],
     "chord_cols": [
       0,
@@ -1365,1918 +1381,2543 @@
       135.55809523809523,
       136.69587301587302,
       137.8336507936508,
-      138.94820861678005
+      138.97142857142856
     ],
-    "lyrics": "But the clink   of the coins was what",
+    "lyrics": "But the clink   of the coins, was what",
     "words": [
       {
         "word": "But",
-        "start": 136.66,
-        "end": 137.26,
+        "start": 136.948,
+        "end": 137.32,
         "col": 0
       },
       {
         "word": "the",
-        "start": 137.26,
-        "end": 137.5,
+        "start": 137.32,
+        "end": 137.54,
         "col": 4
       },
       {
         "word": "clink",
-        "start": 137.5,
-        "end": 137.82,
+        "start": 137.54,
+        "end": 137.96,
         "col": 8
       },
       {
         "word": "of",
-        "start": 137.82,
-        "end": 138.14,
+        "start": 137.96,
+        "end": 138.5,
         "col": 16
       },
       {
         "word": "the",
-        "start": 138.14,
-        "end": 138.72,
+        "start": 138.5,
+        "end": 138.68,
         "col": 19
       },
       {
-        "word": "coins",
-        "start": 138.72,
-        "end": 139.42,
+        "word": "coins,",
+        "start": 138.68,
+        "end": 139.44,
         "col": 23
       },
       {
         "word": "was",
-        "start": 139.72,
-        "end": 139.88,
-        "col": 29
+        "start": 139.44,
+        "end": 139.84,
+        "col": 30
       },
       {
         "word": "what",
-        "start": 139.88,
-        "end": 140.24,
-        "col": 33
+        "start": 139.84,
+        "end": 140.3,
+        "col": 34
       }
     ]
   },
   {
     "time": 140.08598639455784,
     "bar_number": 31,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "C#"
     ],
     "chord_cols": [
       0
     ],
     "beats": [
       140.08598639455784,
-      141.24698412698413,
+      141.27020408163264,
       142.40798185941043,
-      143.56897959183672
+      143.5457596371882
     ],
-    "lyrics": "she longed to hear",
+    "lyrics": "she longed to hear.",
     "words": [
       {
         "word": "she",
-        "start": 140.24,
+        "start": 140.3,
         "end": 140.66,
         "col": 0
       },
       {
         "word": "longed",
         "start": 140.66,
-        "end": 141.8,
+        "end": 141.86,
         "col": 4
       },
       {
         "word": "to",
-        "start": 141.8,
-        "end": 143.339,
+        "start": 141.86,
+        "end": 142.0,
         "col": 11
       },
       {
-        "word": "hear",
-        "start": 143.339,
-        "end": 144.879,
+        "word": "hear.",
+        "start": 142.0,
+        "end": 143.036,
         "col": 14
       }
     ]
   },
   {
-    "time": 144.72997732426302,
+    "time": 144.683537414966,
     "bar_number": 32,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "A#m",
+      "Cm"
     ],
     "chord_cols": [
-      0
+      0,
+      15
     ],
     "beats": [
-      144.72997732426302,
-      145.8909750566893,
-      147.0519727891156,
-      148.2129705215419
+      144.683537414966,
+      145.82131519274375,
+      146.98231292517008,
+      148.14331065759637
     ],
-    "lyrics": "Sold off her trinkets",
+    "lyrics": "Sold off her   trinkets, her",
     "words": [
       {
         "word": "Sold",
-        "start": 144.879,
-        "end": 146.054,
+        "start": 145.556,
+        "end": 146.04,
         "col": 0
       },
       {
         "word": "off",
-        "start": 146.054,
-        "end": 147.229,
+        "start": 146.04,
+        "end": 146.48,
         "col": 5
       },
       {
         "word": "her",
-        "start": 147.229,
-        "end": 148.404,
+        "start": 146.48,
+        "end": 146.66,
         "col": 9
       },
       {
-        "word": "trinkets",
-        "start": 148.404,
-        "end": 149.579,
-        "col": 13
-      }
-    ]
-  },
-  {
-    "time": 149.3739682539682,
-    "bar_number": 33,
-    "tempo_bpm": 52,
-    "time_signature": "4/4",
-    "chords": [
-      "A#"
-    ],
-    "chord_cols": [
-      0
-    ],
-    "beats": [
-      149.3739682539682,
-      150.5349659863945,
-      151.6959637188208,
-      152.8569614512471
-    ],
-    "lyrics": "Her guitar and her ring",
-    "words": [
-      {
-        "word": "Her",
-        "start": 149.579,
-        "end": 150.159,
-        "col": 0
-      },
-      {
-        "word": "guitar",
-        "start": 150.159,
-        "end": 150.739,
-        "col": 4
-      },
-      {
-        "word": "and",
-        "start": 150.739,
-        "end": 151.319,
-        "col": 11
-      },
-      {
-        "word": "her",
-        "start": 151.319,
-        "end": 151.899,
+        "word": "trinkets,",
+        "start": 146.66,
+        "end": 148.3,
         "col": 15
       },
       {
-        "word": "ring",
-        "start": 151.899,
-        "end": 152.479,
-        "col": 19
+        "word": "her",
+        "start": 148.3,
+        "end": 149.9,
+        "col": 25
       }
     ]
   },
   {
-    "time": 154.01795918367338,
-    "bar_number": 34,
-    "tempo_bpm": 52,
+    "time": 149.30430839002267,
+    "bar_number": 33,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "G#",
+      "Fm"
     ],
     "chord_cols": [
-      0
+      0,
+      17
     ],
     "beats": [
-      154.01795918367338,
-      155.17895691609968,
-      156.33995464852597,
-      157.50095238095227
+      149.30430839002267,
+      150.44208616780045,
+      151.60308390022675,
+      152.74086167800453
     ],
-    "lyrics": "Anything to lessen the",
+    "lyrics": "guitar and her   ring,",
     "words": [
       {
-        "word": "Anything",
-        "start": 155.3,
-        "end": 156.08,
+        "word": "guitar",
+        "start": 149.9,
+        "end": 150.38,
         "col": 0
       },
       {
-        "word": "to",
-        "start": 156.08,
-        "end": 156.86,
-        "col": 9
+        "word": "and",
+        "start": 150.38,
+        "end": 151.24,
+        "col": 7
       },
       {
-        "word": "lessen",
-        "start": 156.86,
-        "end": 157.64,
-        "col": 12
+        "word": "her",
+        "start": 151.24,
+        "end": 151.56,
+        "col": 11
       },
       {
-        "word": "the",
-        "start": 157.64,
-        "end": 158.419,
-        "col": 19
-      }
-    ]
-  },
-  {
-    "time": 158.66195011337857,
-    "bar_number": 35,
-    "tempo_bpm": 52,
-    "time_signature": "4/4",
-    "chords": [
-      "A#"
-    ],
-    "chord_cols": [
-      0
-    ],
-    "beats": [
-      158.66195011337857,
-      159.82294784580486,
-      160.98394557823116,
-      162.14494331065745
-    ],
-    "lyrics": "pain the absence brings",
-    "words": [
-      {
-        "word": "pain",
-        "start": 158.419,
-        "end": 159.199,
-        "col": 0
-      },
-      {
-        "word": "the",
-        "start": 159.199,
-        "end": 160.609,
-        "col": 5
-      },
-      {
-        "word": "absence",
-        "start": 160.609,
-        "end": 162.019,
-        "col": 9
-      },
-      {
-        "word": "brings",
-        "start": 162.019,
-        "end": 163.429,
+        "word": "ring,",
+        "start": 151.56,
+        "end": 152.64,
         "col": 17
       }
     ]
   },
   {
-    "time": 163.30594104308375,
-    "bar_number": 36,
-    "tempo_bpm": 52,
+    "time": 153.90185941043083,
+    "bar_number": 34,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "G#",
+      "Fm"
     ],
     "chord_cols": [
-      0
+      0,
+      12
     ],
     "beats": [
-      163.30594104308375,
-      164.46693877551004,
-      165.62793650793634,
-      166.78893424036264
+      153.90185941043083,
+      155.03963718820862,
+      156.1774149659864,
+      157.3151927437642
     ],
-    "lyrics": "Oh, the Mama's Bail Jar",
+    "lyrics": "            Anything to lessen, the pain",
     "words": [
       {
-        "word": "Oh,",
-        "start": 163.429,
-        "end": 164.075,
-        "col": 0
+        "word": "Anything",
+        "start": 156.016,
+        "end": 156.4,
+        "col": 12
+      },
+      {
+        "word": "to",
+        "start": 156.4,
+        "end": 157.1,
+        "col": 21
+      },
+      {
+        "word": "lessen,",
+        "start": 157.1,
+        "end": 157.74,
+        "col": 24
       },
       {
         "word": "the",
-        "start": 164.075,
-        "end": 164.721,
-        "col": 4
+        "start": 157.74,
+        "end": 158.14,
+        "col": 32
       },
       {
-        "word": "Mama's",
-        "start": 164.721,
-        "end": 165.367,
-        "col": 8
-      },
-      {
-        "word": "Bail",
-        "start": 165.367,
-        "end": 166.013,
-        "col": 15
-      },
-      {
-        "word": "Jar",
-        "start": 166.013,
-        "end": 166.66,
-        "col": 20
+        "word": "pain",
+        "start": 158.14,
+        "end": 158.88,
+        "col": 36
       }
     ]
   },
   {
-    "time": 167.94993197278893,
-    "bar_number": 37,
-    "tempo_bpm": 52,
+    "time": 158.45297052154194,
+    "bar_number": 35,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "G#",
+      "Fm"
     ],
     "chord_cols": [
-      0
+      0,
+      14
     ],
     "beats": [
-      167.94993197278893,
-      169.11092970521523,
-      170.27192743764152,
-      171.43292517006782
+      158.45297052154194,
+      159.61396825396827,
+      160.77496598639456,
+      161.91274376417235
     ],
-    "lyrics": "sits empty on the shelf",
+    "lyrics": "the absence   brings.",
     "words": [
       {
-        "word": "sits",
-        "start": 168.15,
-        "end": 169.034,
+        "word": "the",
+        "start": 158.88,
+        "end": 159.36,
         "col": 0
       },
       {
-        "word": "empty",
-        "start": 169.034,
-        "end": 169.918,
-        "col": 5
+        "word": "absence",
+        "start": 159.36,
+        "end": 160.02,
+        "col": 4
       },
       {
-        "word": "on",
-        "start": 169.918,
-        "end": 170.802,
-        "col": 11
+        "word": "brings.",
+        "start": 160.02,
+        "end": 163.06,
+        "col": 14
+      }
+    ]
+  },
+  {
+    "time": 163.0273015873016,
+    "bar_number": 36,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "C#",
+      "A#m"
+    ],
+    "chord_cols": [
+      0,
+      22
+    ],
+    "beats": [
+      163.0273015873016,
+      164.16507936507938,
+      165.30285714285714,
+      166.44063492063492
+    ],
+    "lyrics": "Oh, the Mama's Bail   Jar, sits",
+    "words": [
+      {
+        "word": "Oh,",
+        "start": 163.14,
+        "end": 163.84,
+        "col": 0
       },
       {
         "word": "the",
-        "start": 170.802,
-        "end": 171.685,
+        "start": 163.84,
+        "end": 164.08,
+        "col": 4
+      },
+      {
+        "word": "Mama's",
+        "start": 164.08,
+        "end": 164.76,
+        "col": 8
+      },
+      {
+        "word": "Bail",
+        "start": 164.76,
+        "end": 165.3,
+        "col": 15
+      },
+      {
+        "word": "Jar,",
+        "start": 165.3,
+        "end": 166.16,
+        "col": 22
+      },
+      {
+        "word": "sits",
+        "start": 166.16,
+        "end": 168.48,
+        "col": 27
+      }
+    ]
+  },
+  {
+    "time": 167.60163265306122,
+    "bar_number": 37,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "C#",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      14
+    ],
+    "beats": [
+      167.60163265306122,
+      168.739410430839,
+      169.9004081632653,
+      171.06140589569162
+    ],
+    "lyrics": "empty on      the shelf,",
+    "words": [
+      {
+        "word": "empty",
+        "start": 168.48,
+        "end": 169.4,
+        "col": 0
+      },
+      {
+        "word": "on",
+        "start": 169.4,
+        "end": 170.0,
+        "col": 6
+      },
+      {
+        "word": "the",
+        "start": 170.0,
+        "end": 170.24,
         "col": 14
       },
       {
-        "word": "shelf",
-        "start": 171.685,
-        "end": 172.569,
+        "word": "shelf,",
+        "start": 170.24,
+        "end": 171.14,
         "col": 18
       }
     ]
   },
   {
-    "time": 172.5939229024941,
+    "time": 172.22240362811792,
     "bar_number": 38,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "A#m",
+      "Fm"
     ],
     "chord_cols": [
-      0
+      0,
+      20
     ],
     "beats": [
-      172.5939229024941,
-      173.7549206349204,
-      174.9159183673467,
-      176.076916099773
+      172.22240362811792,
+      173.33696145124716,
+      174.49795918367346,
+      175.63573696145124
     ],
-    "lyrics": "A silent plea for help from",
+    "lyrics": "A silent plea for   help, from",
     "words": [
       {
         "word": "A",
-        "start": 172.569,
-        "end": 173.345,
+        "start": 172.648,
+        "end": 172.78,
         "col": 0
       },
       {
         "word": "silent",
-        "start": 173.345,
-        "end": 174.121,
+        "start": 172.78,
+        "end": 173.68,
         "col": 2
       },
       {
         "word": "plea",
-        "start": 174.121,
-        "end": 174.897,
+        "start": 173.68,
+        "end": 174.14,
         "col": 9
       },
       {
         "word": "for",
-        "start": 174.897,
-        "end": 175.673,
+        "start": 174.14,
+        "end": 174.68,
         "col": 14
       },
       {
-        "word": "help",
-        "start": 175.673,
-        "end": 176.449,
-        "col": 18
+        "word": "help,",
+        "start": 174.68,
+        "end": 175.54,
+        "col": 20
       },
       {
         "word": "from",
-        "start": 176.449,
-        "end": 177.159,
-        "col": 23
+        "start": 175.54,
+        "end": 177.3,
+        "col": 26
       }
     ]
   },
   {
-    "time": 177.2379138321993,
+    "time": 176.79673469387754,
     "bar_number": 39,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "G#",
+      "Fm"
     ],
     "chord_cols": [
-      0
+      0,
+      14
     ],
     "beats": [
-      177.2379138321993,
-      178.3989115646256,
-      179.5599092970519,
-      180.72090702947818
+      176.79673469387754,
+      177.9112925170068,
+      179.0722902494331,
+      180.18684807256236
     ],
-    "lyrics": "her weary, lonesome self",
+    "lyrics": "her weary,    lonesome self.",
     "words": [
       {
         "word": "her",
-        "start": 177.159,
-        "end": 177.869,
+        "start": 177.3,
+        "end": 177.58,
         "col": 0
       },
       {
         "word": "weary,",
-        "start": 177.869,
-        "end": 178.579,
+        "start": 177.58,
+        "end": 178.42,
         "col": 4
       },
       {
         "word": "lonesome",
-        "start": 178.579,
-        "end": 180.179,
-        "col": 11
+        "start": 179.28,
+        "end": 179.42,
+        "col": 14
       },
       {
-        "word": "self",
-        "start": 180.179,
-        "end": 181.779,
-        "col": 20
+        "word": "self.",
+        "start": 179.42,
+        "end": 180.964,
+        "col": 23
       }
     ]
   },
   {
-    "time": 181.88190476190448,
+    "time": 181.32462585034014,
     "bar_number": 40,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "D#",
+      "A#m"
     ],
     "chord_cols": [
-      0
+      0,
+      23
     ],
     "beats": [
-      181.88190476190448,
-      183.04290249433078,
-      184.20390022675707,
-      185.36489795918337
+      181.32462585034014,
+      182.46240362811793,
+      183.60018140589568,
+      184.761179138322
     ],
-    "lyrics": "Every spare dollar, every",
+    "lyrics": "Every spare dollar,",
     "words": [
       {
         "word": "Every",
-        "start": 181.779,
-        "end": 183.146,
+        "start": 182.38,
+        "end": 182.7,
         "col": 0
       },
       {
         "word": "spare",
-        "start": 183.146,
-        "end": 184.512,
+        "start": 182.7,
+        "end": 183.02,
         "col": 6
       },
       {
         "word": "dollar,",
-        "start": 184.512,
-        "end": 185.879,
+        "start": 183.02,
+        "end": 184.2,
         "col": 12
-      },
+      }
+    ]
+  },
+  {
+    "time": 185.9221768707483,
+    "bar_number": 41,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "C#",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      20
+    ],
+    "beats": [
+      185.9221768707483,
+      187.03673469387755,
+      188.22095238095238,
+      189.35873015873017
+    ],
+    "lyrics": "every hard-earned   dime,",
+    "words": [
       {
         "word": "every",
-        "start": 185.879,
-        "end": 187.516,
+        "start": 186.18,
+        "end": 186.66,
+        "col": 0
+      },
+      {
+        "word": "hard-earned",
+        "start": 187.28,
+        "end": 188.08,
+        "col": 6
+      },
+      {
+        "word": "dime,",
+        "start": 188.08,
+        "end": 189.536,
         "col": 20
       }
     ]
   },
   {
-    "time": 186.52589569160966,
-    "bar_number": 41,
-    "tempo_bpm": 52,
+    "time": 190.49650793650792,
+    "bar_number": 42,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "C#",
+      "Fm"
     ],
     "chord_cols": [
-      0
+      0,
+      23
     ],
     "beats": [
-      186.52589569160966,
-      187.68689342403596,
-      188.84789115646225,
-      190.00888888888855
+      190.49650793650792,
+      191.6110657596372,
+      192.7720634920635,
+      193.90984126984128
     ],
-    "lyrics": "hard-earned dime Going",
+    "lyrics": "Going into that jar,   against",
     "words": [
-      {
-        "word": "hard-earned",
-        "start": 187.516,
-        "end": 189.152,
-        "col": 0
-      },
-      {
-        "word": "dime",
-        "start": 189.152,
-        "end": 190.789,
-        "col": 12
-      },
       {
         "word": "Going",
-        "start": 190.789,
-        "end": 191.541,
-        "col": 17
-      }
-    ]
-  },
-  {
-    "time": 191.16988662131484,
-    "bar_number": 42,
-    "tempo_bpm": 52,
-    "time_signature": "4/4",
-    "chords": [
-      "A#"
-    ],
-    "chord_cols": [
-      0
-    ],
-    "beats": [
-      191.16988662131484,
-      192.33088435374114,
-      193.49188208616744,
-      194.65287981859373
-    ],
-    "lyrics": "into that jar against",
-    "words": [
+        "start": 190.972,
+        "end": 191.46,
+        "col": 0
+      },
       {
         "word": "into",
-        "start": 191.541,
-        "end": 192.294,
-        "col": 0
+        "start": 191.46,
+        "end": 192.14,
+        "col": 6
       },
       {
         "word": "that",
-        "start": 192.294,
-        "end": 193.047,
-        "col": 5
+        "start": 192.14,
+        "end": 192.46,
+        "col": 11
       },
       {
-        "word": "jar",
-        "start": 193.047,
-        "end": 193.799,
-        "col": 10
+        "word": "jar,",
+        "start": 192.46,
+        "end": 193.08,
+        "col": 16
       },
       {
         "word": "against",
-        "start": 195.29,
-        "end": 195.772,
-        "col": 14
+        "start": 193.08,
+        "end": 195.72,
+        "col": 23
       }
     ]
   },
   {
-    "time": 195.81387755102003,
+    "time": 195.04761904761904,
     "bar_number": 43,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "A#m",
+      "Fm"
     ],
     "chord_cols": [
-      0
+      0,
+      15
     ],
     "beats": [
-      195.81387755102003,
-      196.97487528344632,
-      198.13587301587262,
-      199.29687074829891
+      195.04761904761904,
+      196.18539682539682,
+      197.3231746031746,
+      198.4609523809524
     ],
-    "lyrics": "the hands of time",
+    "lyrics": "the hands of   time.",
     "words": [
       {
         "word": "the",
-        "start": 195.772,
-        "end": 196.254,
+        "start": 195.72,
+        "end": 196.12,
         "col": 0
       },
       {
         "word": "hands",
-        "start": 196.254,
-        "end": 196.736,
+        "start": 196.12,
+        "end": 196.68,
         "col": 4
       },
       {
         "word": "of",
-        "start": 196.736,
-        "end": 197.218,
+        "start": 196.68,
+        "end": 196.88,
         "col": 10
       },
       {
-        "word": "time",
-        "start": 197.218,
-        "end": 197.699,
-        "col": 13
+        "word": "time.",
+        "start": 196.88,
+        "end": 200.552,
+        "col": 15
       }
     ]
   },
   {
-    "time": 200.4578684807252,
+    "time": 199.59873015873015,
     "bar_number": 44,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "C#",
+      "D#"
     ],
     "chord_cols": [
-      0
+      0,
+      8
     ],
     "beats": [
-      200.4578684807252,
-      201.6188662131515,
-      202.7798639455778,
-      203.9408616780041
+      199.59873015873015,
+      200.71328798185942,
+      201.85106575963718,
+      202.98884353741497
     ],
     "lyrics": "",
     "words": []
   },
   {
-    "time": 205.1018594104304,
+    "time": 204.12662131519275,
     "bar_number": 45,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "Fm",
+      "D#"
     ],
     "chord_cols": [
-      0
+      0,
+      8
     ],
     "beats": [
-      205.1018594104304,
-      206.2628571428567,
-      207.42385487528298,
-      208.58485260770928
+      204.12662131519275,
+      205.26439909297054,
+      206.4021768707483,
+      207.51673469387754
     ],
     "lyrics": "",
     "words": []
   },
   {
-    "time": 209.74585034013558,
+    "time": 208.65451247165532,
     "bar_number": 46,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "Cm",
+      "Fm"
     ],
     "chord_cols": [
-      0
+      0,
+      8
     ],
     "beats": [
-      209.74585034013558,
-      210.90684807256187,
-      212.06784580498817,
-      213.22884353741446
+      208.65451247165532,
+      209.76907029478457,
+      210.90684807256235,
+      212.04462585034014
     ],
     "lyrics": "",
     "words": []
   },
   {
-    "time": 214.38984126984076,
+    "time": 213.20562358276644,
     "bar_number": 47,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "D#",
+      "Fm"
     ],
     "chord_cols": [
-      0
+      0,
+      8
     ],
     "beats": [
-      214.38984126984076,
-      215.55083900226705,
-      216.71183673469335,
-      217.87283446711965
+      213.20562358276644,
+      214.32018140589568,
+      215.45795918367347,
+      216.59573696145125
     ],
-    "lyrics": "          The system",
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 217.73351473922904,
+    "bar_number": 48,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Cm",
+      "A#m"
+    ],
+    "chord_cols": [
+      0,
+      25
+    ],
+    "beats": [
+      217.73351473922904,
+      218.8712925170068,
+      220.00907029478458,
+      221.14684807256236
+    ],
+    "lyrics": "The system don't care,   about",
     "words": [
       {
         "word": "The",
-        "start": 217.249,
-        "end": 218.594,
-        "col": 10
-      },
-      {
-        "word": "system",
-        "start": 218.594,
-        "end": 219.939,
-        "col": 14
-      }
-    ]
-  },
-  {
-    "time": 219.03383219954594,
-    "bar_number": 48,
-    "tempo_bpm": 52,
-    "time_signature": "4/4",
-    "chords": [
-      "A#"
-    ],
-    "chord_cols": [
-      0
-    ],
-    "beats": [
-      219.03383219954594,
-      220.19482993197224,
-      221.35582766439853,
-      222.51682539682483
-    ],
-    "lyrics": "don't care About",
-    "words": [
-      {
-        "word": "don't",
-        "start": 219.939,
-        "end": 221.284,
+        "start": 218.62,
+        "end": 218.78,
         "col": 0
       },
       {
-        "word": "care",
-        "start": 221.284,
-        "end": 222.629,
-        "col": 6
+        "word": "system",
+        "start": 218.78,
+        "end": 219.18,
+        "col": 4
       },
       {
-        "word": "About",
-        "start": 222.629,
-        "end": 223.461,
+        "word": "don't",
+        "start": 219.18,
+        "end": 219.72,
         "col": 11
+      },
+      {
+        "word": "care,",
+        "start": 219.72,
+        "end": 220.4,
+        "col": 17
+      },
+      {
+        "word": "about",
+        "start": 220.4,
+        "end": 222.9,
+        "col": 25
       }
     ]
   },
   {
-    "time": 223.67782312925112,
+    "time": 222.28462585034015,
     "bar_number": 49,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "Fm"
     ],
     "chord_cols": [
       0
     ],
     "beats": [
-      223.67782312925112,
-      224.83882086167742,
-      225.99981859410371,
-      227.16081632653
+      222.28462585034015,
+      223.3991836734694,
+      224.58340136054423,
+      225.69795918367348
     ],
-    "lyrics": "the tears that fall Just the",
+    "lyrics": "the tears that fall,",
     "words": [
       {
         "word": "the",
-        "start": 223.461,
-        "end": 224.293,
+        "start": 222.9,
+        "end": 223.22,
         "col": 0
       },
       {
         "word": "tears",
-        "start": 224.293,
-        "end": 225.125,
+        "start": 223.22,
+        "end": 224.02,
         "col": 4
       },
       {
         "word": "that",
-        "start": 225.125,
-        "end": 225.957,
+        "start": 224.02,
+        "end": 224.28,
         "col": 10
       },
       {
-        "word": "fall",
-        "start": 225.957,
-        "end": 226.789,
+        "word": "fall,",
+        "start": 224.28,
+        "end": 226.132,
         "col": 15
-      },
-      {
-        "word": "Just",
-        "start": 226.789,
-        "end": 227.571,
-        "col": 20
-      },
-      {
-        "word": "the",
-        "start": 227.571,
-        "end": 228.353,
-        "col": 25
       }
     ]
   },
   {
-    "time": 228.3218140589563,
+    "time": 226.85895691609977,
     "bar_number": 50,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "D#",
+      "Cm"
     ],
     "chord_cols": [
-      0
+      0,
+      22
     ],
     "beats": [
-      228.3218140589563,
-      229.4828117913826,
-      230.6438095238089,
-      231.8048072562352
+      226.85895691609977,
+      227.97351473922902,
+      229.1112925170068,
+      230.22585034013605
     ],
-    "lyrics": "cold hard money standing against",
+    "lyrics": "Just the cold, hard   money, standin'",
     "words": [
       {
-        "word": "cold",
-        "start": 228.353,
-        "end": 229.135,
+        "word": "Just",
+        "start": 227.28,
+        "end": 227.54,
         "col": 0
+      },
+      {
+        "word": "the",
+        "start": 227.54,
+        "end": 227.82,
+        "col": 5
+      },
+      {
+        "word": "cold,",
+        "start": 227.82,
+        "end": 228.42,
+        "col": 9
       },
       {
         "word": "hard",
-        "start": 229.135,
-        "end": 229.917,
-        "col": 5
+        "start": 228.42,
+        "end": 229.12,
+        "col": 15
       },
       {
-        "word": "money",
-        "start": 229.917,
-        "end": 230.699,
-        "col": 10
+        "word": "money,",
+        "start": 229.12,
+        "end": 229.92,
+        "col": 22
       },
       {
-        "word": "standing",
-        "start": 230.699,
-        "end": 231.697,
-        "col": 16
-      },
-      {
-        "word": "against",
-        "start": 231.697,
-        "end": 232.694,
-        "col": 25
+        "word": "standin'",
+        "start": 229.92,
+        "end": 231.76,
+        "col": 29
       }
     ]
   },
   {
-    "time": 232.9658049886615,
+    "time": 231.38684807256234,
     "bar_number": 51,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "C#",
+      "Fm"
     ],
     "chord_cols": [
-      0
+      0,
+      14
     ],
     "beats": [
-      232.9658049886615,
-      234.12680272108778,
-      235.28780045351408,
-      236.44879818594038
+      231.38684807256234,
+      232.52462585034013,
+      233.68562358276645,
+      234.8234013605442
     ],
-    "lyrics": "the wall But a mama's",
+    "lyrics": "against the   wall.",
     "words": [
       {
-        "word": "the",
-        "start": 232.694,
-        "end": 233.691,
+        "word": "against",
+        "start": 231.76,
+        "end": 232.56,
         "col": 0
       },
       {
-        "word": "wall",
-        "start": 233.691,
-        "end": 234.689,
-        "col": 4
+        "word": "the",
+        "start": 232.56,
+        "end": 232.88,
+        "col": 8
       },
       {
+        "word": "wall.",
+        "start": 232.88,
+        "end": 235.828,
+        "col": 14
+      }
+    ]
+  },
+  {
+    "time": 235.961179138322,
+    "bar_number": 52,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "A#m",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      20
+    ],
+    "beats": [
+      235.961179138322,
+      237.07573696145124,
+      238.21351473922903,
+      239.3512925170068
+    ],
+    "lyrics": "But a mama's love   is fierce,",
+    "words": [
+      {
         "word": "But",
-        "start": 234.689,
-        "end": 235.619,
-        "col": 9
+        "start": 235.848,
+        "end": 236.46,
+        "col": 0
       },
       {
         "word": "a",
-        "start": 235.619,
-        "end": 236.549,
-        "col": 13
-      },
-      {
-        "word": "mama's",
-        "start": 236.549,
-        "end": 237.479,
-        "col": 15
-      }
-    ]
-  },
-  {
-    "time": 237.60979591836667,
-    "bar_number": 52,
-    "tempo_bpm": 52,
-    "time_signature": "4/4",
-    "chords": [
-      "A#"
-    ],
-    "chord_cols": [
-      0
-    ],
-    "beats": [
-      237.60979591836667,
-      238.77079365079297,
-      239.93179138321926,
-      241.09278911564556
-    ],
-    "lyrics": "love is fierce A fire burning",
-    "words": [
-      {
-        "word": "love",
-        "start": 237.479,
-        "end": 238.409,
-        "col": 0
-      },
-      {
-        "word": "is",
-        "start": 238.409,
-        "end": 239.339,
-        "col": 5
-      },
-      {
-        "word": "fierce",
-        "start": 239.339,
-        "end": 240.269,
-        "col": 8
-      },
-      {
-        "word": "A",
-        "start": 240.269,
-        "end": 240.972,
-        "col": 15
-      },
-      {
-        "word": "fire",
-        "start": 240.972,
-        "end": 241.675,
-        "col": 17
-      },
-      {
-        "word": "burning",
-        "start": 241.675,
-        "end": 242.377,
-        "col": 22
-      }
-    ]
-  },
-  {
-    "time": 242.25378684807185,
-    "bar_number": 53,
-    "tempo_bpm": 52,
-    "time_signature": "4/4",
-    "chords": [
-      "A#"
-    ],
-    "chord_cols": [
-      0
-    ],
-    "beats": [
-      242.25378684807185,
-      243.41478458049815,
-      244.57578231292445,
-      245.73678004535074
-    ],
-    "lyrics": "bright She'll move Heaven",
-    "words": [
-      {
-        "word": "bright",
-        "start": 242.377,
-        "end": 243.08,
-        "col": 0
-      },
-      {
-        "word": "She'll",
-        "start": 244.609,
-        "end": 245.343,
-        "col": 7
-      },
-      {
-        "word": "move",
-        "start": 245.343,
-        "end": 246.077,
-        "col": 14
-      },
-      {
-        "word": "Heaven",
-        "start": 246.077,
-        "end": 246.811,
-        "col": 19
-      }
-    ]
-  },
-  {
-    "time": 246.89777777777704,
-    "bar_number": 54,
-    "tempo_bpm": 52,
-    "time_signature": "4/4",
-    "chords": [
-      "A#"
-    ],
-    "chord_cols": [
-      0
-    ],
-    "beats": [
-      246.89777777777704,
-      248.05877551020333,
-      249.21977324262963,
-      250.38077097505592
-    ],
-    "lyrics": "and Earth to bring her child back into the",
-    "words": [
-      {
-        "word": "and",
-        "start": 246.811,
-        "end": 247.545,
-        "col": 0
-      },
-      {
-        "word": "Earth",
-        "start": 247.545,
-        "end": 248.279,
+        "start": 236.46,
+        "end": 236.88,
         "col": 4
       },
       {
-        "word": "to",
-        "start": 248.279,
-        "end": 248.713,
-        "col": 10
-      },
-      {
-        "word": "bring",
-        "start": 248.713,
-        "end": 249.147,
-        "col": 13
-      },
-      {
-        "word": "her",
-        "start": 249.147,
-        "end": 249.581,
-        "col": 19
-      },
-      {
-        "word": "child",
-        "start": 249.581,
-        "end": 250.015,
-        "col": 23
-      },
-      {
-        "word": "back",
-        "start": 250.015,
-        "end": 250.449,
-        "col": 29
-      },
-      {
-        "word": "into",
-        "start": 250.449,
-        "end": 251.226,
-        "col": 34
-      },
-      {
-        "word": "the",
-        "start": 251.226,
-        "end": 252.002,
-        "col": 39
-      }
-    ]
-  },
-  {
-    "time": 251.54176870748222,
-    "bar_number": 55,
-    "tempo_bpm": 52,
-    "time_signature": "4/4",
-    "chords": [
-      "A#"
-    ],
-    "chord_cols": [
-      0
-    ],
-    "beats": [
-      251.54176870748222,
-      252.70276643990852,
-      253.8637641723348,
-      255.0247619047611
-    ],
-    "lyrics": "light Oh, the Mama's",
-    "words": [
-      {
-        "word": "light",
-        "start": 252.002,
-        "end": 252.779,
-        "col": 0
-      },
-      {
-        "word": "Oh,",
-        "start": 254.35,
-        "end": 254.97,
+        "word": "mama's",
+        "start": 236.88,
+        "end": 237.5,
         "col": 6
       },
       {
-        "word": "the",
-        "start": 254.97,
-        "end": 255.8,
-        "col": 10
+        "word": "love",
+        "start": 237.5,
+        "end": 238.06,
+        "col": 13
       },
       {
-        "word": "Mama's",
-        "start": 255.8,
-        "end": 256.63,
-        "col": 14
-      }
-    ]
-  },
-  {
-    "time": 256.1857596371874,
-    "bar_number": 56,
-    "tempo_bpm": 52,
-    "time_signature": "4/4",
-    "chords": [
-      "A#"
-    ],
-    "chord_cols": [
-      0
-    ],
-    "beats": [
-      256.1857596371874,
-      257.3467573696137,
-      258.50775510204005,
-      259.6687528344664
-    ],
-    "lyrics": "Bail Jar slowly starts to",
-    "words": [
-      {
-        "word": "Bail",
-        "start": 256.63,
-        "end": 257.459,
-        "col": 0
+        "word": "is",
+        "start": 238.06,
+        "end": 238.64,
+        "col": 20
       },
       {
-        "word": "Jar",
-        "start": 257.459,
-        "end": 258.289,
-        "col": 5
-      },
-      {
-        "word": "slowly",
-        "start": 258.289,
-        "end": 259.176,
-        "col": 9
-      },
-      {
-        "word": "starts",
-        "start": 259.176,
-        "end": 260.064,
-        "col": 16
-      },
-      {
-        "word": "to",
-        "start": 260.064,
-        "end": 260.952,
+        "word": "fierce,",
+        "start": 238.64,
+        "end": 239.32,
         "col": 23
       }
     ]
   },
   {
-    "time": 260.8297505668927,
-    "bar_number": 57,
-    "tempo_bpm": 52,
+    "time": 240.48907029478457,
+    "bar_number": 53,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "C#",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      26
+    ],
+    "beats": [
+      240.48907029478457,
+      241.62684807256235,
+      242.78784580498865,
+      243.92562358276643
+    ],
+    "lyrics": "a fire burning bright,",
+    "words": [
+      {
+        "word": "a",
+        "start": 240.38,
+        "end": 240.72,
+        "col": 0
+      },
+      {
+        "word": "fire",
+        "start": 240.72,
+        "end": 241.4,
+        "col": 2
+      },
+      {
+        "word": "burning",
+        "start": 241.4,
+        "end": 242.24,
+        "col": 7
+      },
+      {
+        "word": "bright,",
+        "start": 242.24,
+        "end": 243.9,
+        "col": 15
+      }
+    ]
+  },
+  {
+    "time": 245.06340136054422,
+    "bar_number": 54,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "A#m"
     ],
     "chord_cols": [
       0
     ],
     "beats": [
-      260.8297505668927,
-      261.990748299319,
-      263.15174603174535,
-      264.31274376417167
+      245.06340136054422,
+      246.17795918367347,
+      247.31573696145125,
+      248.4302947845805
     ],
-    "lyrics": "fill With the kindness",
+    "lyrics": "She'll move heaven and earth, to bring her child",
     "words": [
       {
-        "word": "fill",
-        "start": 260.952,
-        "end": 261.839,
+        "word": "She'll",
+        "start": 245.212,
+        "end": 245.74,
         "col": 0
       },
       {
-        "word": "With",
-        "start": 263.35,
-        "end": 264.042,
+        "word": "move",
+        "start": 245.74,
+        "end": 246.06,
+        "col": 7
+      },
+      {
+        "word": "heaven",
+        "start": 246.06,
+        "end": 246.66,
+        "col": 12
+      },
+      {
+        "word": "and",
+        "start": 246.66,
+        "end": 247.1,
+        "col": 19
+      },
+      {
+        "word": "earth,",
+        "start": 247.1,
+        "end": 247.56,
+        "col": 23
+      },
+      {
+        "word": "to",
+        "start": 247.56,
+        "end": 248.64,
+        "col": 30
+      },
+      {
+        "word": "bring",
+        "start": 248.64,
+        "end": 248.94,
+        "col": 33
+      },
+      {
+        "word": "her",
+        "start": 248.94,
+        "end": 249.06,
+        "col": 39
+      },
+      {
+        "word": "child",
+        "start": 249.06,
+        "end": 249.62,
+        "col": 43
+      }
+    ]
+  },
+  {
+    "time": 249.56807256235828,
+    "bar_number": 55,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "C#"
+    ],
+    "chord_cols": [
+      0,
+      16
+    ],
+    "beats": [
+      249.56807256235828,
+      250.70585034013607,
+      251.84362811791382,
+      252.9581859410431
+    ],
+    "lyrics": "back into the   light.",
+    "words": [
+      {
+        "word": "back",
+        "start": 249.62,
+        "end": 250.24,
+        "col": 0
+      },
+      {
+        "word": "into",
+        "start": 250.24,
+        "end": 251.08,
         "col": 5
       },
       {
         "word": "the",
-        "start": 264.042,
-        "end": 264.734,
+        "start": 251.08,
+        "end": 251.58,
         "col": 10
       },
       {
-        "word": "kindness",
-        "start": 264.734,
-        "end": 265.426,
+        "word": "light.",
+        "start": 251.58,
+        "end": 254.288,
+        "col": 16
+      }
+    ]
+  },
+  {
+    "time": 254.07274376417234,
+    "bar_number": 56,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "A#m"
+    ],
+    "chord_cols": [
+      0,
+      22
+    ],
+    "beats": [
+      254.07274376417234,
+      255.1873015873016,
+      256.3250793650794,
+      257.4396371882086
+    ],
+    "lyrics": "Oh, the Mama's Bail   Jar, slowly",
+    "words": [
+      {
+        "word": "Oh,",
+        "start": 254.308,
+        "end": 254.92,
+        "col": 0
+      },
+      {
+        "word": "the",
+        "start": 254.92,
+        "end": 255.06,
+        "col": 4
+      },
+      {
+        "word": "Mama's",
+        "start": 255.06,
+        "end": 255.74,
+        "col": 8
+      },
+      {
+        "word": "Bail",
+        "start": 255.74,
+        "end": 256.5,
+        "col": 15
+      },
+      {
+        "word": "Jar,",
+        "start": 256.5,
+        "end": 257.14,
+        "col": 22
+      },
+      {
+        "word": "slowly",
+        "start": 257.14,
+        "end": 259.5,
+        "col": 27
+      }
+    ]
+  },
+  {
+    "time": 258.5774149659864,
+    "bar_number": 57,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "D#",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      14
+    ],
+    "beats": [
+      258.5774149659864,
+      259.69197278911565,
+      260.82975056689344,
+      261.9443083900227
+    ],
+    "lyrics": "starts to     fill,",
+    "words": [
+      {
+        "word": "starts",
+        "start": 259.5,
+        "end": 260.4,
+        "col": 0
+      },
+      {
+        "word": "to",
+        "start": 260.4,
+        "end": 260.84,
+        "col": 7
+      },
+      {
+        "word": "fill,",
+        "start": 260.84,
+        "end": 261.948,
         "col": 14
       }
     ]
   },
   {
-    "time": 265.473741496598,
+    "time": 263.08208616780047,
     "bar_number": 58,
-    "tempo_bpm": 52,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "G#",
+      "D#"
     ],
     "chord_cols": [
-      0
+      0,
+      34
     ],
     "beats": [
-      265.473741496598,
-      266.6347392290243,
-      267.79573696145064,
-      268.95673469387697
+      263.08208616780047,
+      264.1734240362812,
+      265.31120181405896,
+      266.4257596371882
     ],
-    "lyrics": "of strangers and her own unyielding",
+    "lyrics": "With the kindness of strangers,   and her",
     "words": [
       {
-        "word": "of",
-        "start": 265.426,
-        "end": 266.118,
-        "col": 0
-      },
-      {
-        "word": "strangers",
-        "start": 266.118,
-        "end": 266.809,
-        "col": 3
-      },
-      {
-        "word": "and",
-        "start": 266.809,
-        "end": 267.673,
-        "col": 13
-      },
-      {
-        "word": "her",
-        "start": 267.673,
-        "end": 268.537,
-        "col": 17
-      },
-      {
-        "word": "own",
-        "start": 268.537,
-        "end": 269.401,
-        "col": 21
-      },
-      {
-        "word": "unyielding",
-        "start": 269.401,
-        "end": 270.265,
-        "col": 25
-      }
-    ]
-  },
-  {
-    "time": 270.1177324263033,
-    "bar_number": 59,
-    "tempo_bpm": 52,
-    "time_signature": "4/4",
-    "chords": [
-      "A#"
-    ],
-    "chord_cols": [
-      0
-    ],
-    "beats": [
-      270.1177324263033,
-      271.2787301587296,
-      272.43972789115594,
-      273.60072562358226
-    ],
-    "lyrics": "will Every spare dollar,",
-    "words": [
-      {
-        "word": "will",
-        "start": 270.265,
-        "end": 271.129,
-        "col": 0
-      },
-      {
-        "word": "Every",
-        "start": 271.129,
-        "end": 272.466,
-        "col": 5
-      },
-      {
-        "word": "spare",
-        "start": 272.466,
-        "end": 273.803,
-        "col": 11
-      },
-      {
-        "word": "dollar,",
-        "start": 273.803,
-        "end": 275.14,
-        "col": 17
-      }
-    ]
-  },
-  {
-    "time": 274.7617233560086,
-    "bar_number": 60,
-    "tempo_bpm": 52,
-    "time_signature": "4/4",
-    "chords": [
-      "A#"
-    ],
-    "chord_cols": [
-      0
-    ],
-    "beats": [
-      274.7617233560086,
-      275.9227210884349,
-      277.08371882086124,
-      278.24471655328756
-    ],
-    "lyrics": "          every hard-earned",
-    "words": [
-      {
-        "word": "every",
-        "start": 276.809,
-        "end": 278.182,
-        "col": 10
-      },
-      {
-        "word": "hard-earned",
-        "start": 278.182,
-        "end": 279.555,
-        "col": 16
-      }
-    ]
-  },
-  {
-    "time": 279.4057142857139,
-    "bar_number": 61,
-    "tempo_bpm": 52,
-    "time_signature": "4/4",
-    "chords": [
-      "A#"
-    ],
-    "chord_cols": [
-      0
-    ],
-    "beats": [
-      279.4057142857139,
-      280.5667120181402,
-      281.72770975056653,
-      282.88870748299286
-    ],
-    "lyrics": "dime Going into that jar",
-    "words": [
-      {
-        "word": "dime",
-        "start": 279.555,
-        "end": 280.929,
-        "col": 0
-      },
-      {
-        "word": "Going",
-        "start": 280.929,
-        "end": 281.752,
-        "col": 5
-      },
-      {
-        "word": "into",
-        "start": 281.752,
-        "end": 282.575,
-        "col": 11
-      },
-      {
-        "word": "that",
-        "start": 282.575,
-        "end": 283.398,
-        "col": 16
-      },
-      {
-        "word": "jar",
-        "start": 283.398,
-        "end": 284.22,
-        "col": 21
-      }
-    ]
-  },
-  {
-    "time": 284.0497052154192,
-    "bar_number": 62,
-    "tempo_bpm": 52,
-    "time_signature": "4/4",
-    "chords": [
-      "A#"
-    ],
-    "chord_cols": [
-      0
-    ],
-    "beats": [
-      284.0497052154192,
-      285.2107029478455,
-      286.37170068027183,
-      287.53269841269815
-    ],
-    "lyrics": "against the hands of time",
-    "words": [
-      {
-        "word": "against",
-        "start": 285.829,
-        "end": 286.471,
+        "word": "With",
+        "start": 263.488,
+        "end": 263.7,
         "col": 0
       },
       {
         "word": "the",
-        "start": 286.471,
-        "end": 287.113,
-        "col": 8
+        "start": 263.7,
+        "end": 263.86,
+        "col": 5
       },
       {
-        "word": "hands",
-        "start": 287.113,
-        "end": 287.755,
-        "col": 12
+        "word": "kindness",
+        "start": 263.86,
+        "end": 264.58,
+        "col": 9
       },
       {
         "word": "of",
-        "start": 287.755,
-        "end": 288.397,
+        "start": 264.58,
+        "end": 264.96,
         "col": 18
       },
       {
-        "word": "time",
-        "start": 288.397,
-        "end": 289.039,
+        "word": "strangers,",
+        "start": 264.96,
+        "end": 265.7,
         "col": 21
+      },
+      {
+        "word": "and",
+        "start": 265.7,
+        "end": 267.14,
+        "col": 34
+      },
+      {
+        "word": "her",
+        "start": 267.14,
+        "end": 267.38,
+        "col": 38
       }
     ]
   },
   {
-    "time": 288.6936961451245,
-    "bar_number": 63,
-    "tempo_bpm": 52,
+    "time": 267.54031746031745,
+    "bar_number": 59,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "G#",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      17
+    ],
+    "beats": [
+      267.54031746031745,
+      268.6548752834467,
+      269.7926530612245,
+      270.90721088435373
+    ],
+    "lyrics": "own unyielding   will.",
+    "words": [
+      {
+        "word": "own",
+        "start": 267.38,
+        "end": 267.9,
+        "col": 0
+      },
+      {
+        "word": "unyielding",
+        "start": 267.9,
+        "end": 269.68,
+        "col": 4
+      },
+      {
+        "word": "will.",
+        "start": 269.68,
+        "end": 271.232,
+        "col": 17
+      }
+    ]
+  },
+  {
+    "time": 272.0449886621315,
+    "bar_number": 60,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "A#m",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      23
+    ],
+    "beats": [
+      272.0449886621315,
+      273.15954648526076,
+      274.27410430839,
+      275.4118820861678
+    ],
+    "lyrics": "Every spare dollar,",
+    "words": [
+      {
+        "word": "Every",
+        "start": 273.068,
+        "end": 273.36,
+        "col": 0
+      },
+      {
+        "word": "spare",
+        "start": 273.36,
+        "end": 273.74,
+        "col": 6
+      },
+      {
+        "word": "dollar,",
+        "start": 273.74,
+        "end": 275.0,
+        "col": 12
+      }
+    ]
+  },
+  {
+    "time": 276.5496598639456,
+    "bar_number": 61,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "D#",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      20
+    ],
+    "beats": [
+      276.5496598639456,
+      277.6642176870748,
+      278.82521541950115,
+      279.96299319727893
+    ],
+    "lyrics": "every hard-earned   dime,",
+    "words": [
+      {
+        "word": "every",
+        "start": 276.78,
+        "end": 277.26,
+        "col": 0
+      },
+      {
+        "word": "hard-earned",
+        "start": 277.98,
+        "end": 278.68,
+        "col": 6
+      },
+      {
+        "word": "dime,",
+        "start": 278.68,
+        "end": 280.168,
+        "col": 20
+      }
+    ]
+  },
+  {
+    "time": 281.0775510204082,
+    "bar_number": 62,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "C#",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      23
+    ],
+    "beats": [
+      281.0775510204082,
+      282.1921088435374,
+      283.3298866213152,
+      284.44444444444446
+    ],
+    "lyrics": "Going into that jar,   against",
+    "words": [
+      {
+        "word": "Going",
+        "start": 281.5,
+        "end": 281.9,
+        "col": 0
+      },
+      {
+        "word": "into",
+        "start": 281.9,
+        "end": 282.66,
+        "col": 6
+      },
+      {
+        "word": "that",
+        "start": 282.66,
+        "end": 283.02,
+        "col": 11
+      },
+      {
+        "word": "jar,",
+        "start": 283.02,
+        "end": 283.66,
+        "col": 16
+      },
+      {
+        "word": "against",
+        "start": 283.66,
+        "end": 286.2,
+        "col": 23
+      }
+    ]
+  },
+  {
+    "time": 285.58222222222224,
+    "bar_number": 63,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "C#",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      15
+    ],
+    "beats": [
+      285.58222222222224,
+      286.6967800453515,
+      287.8345578231293,
+      288.972335600907
+    ],
+    "lyrics": "the hands of   time.",
+    "words": [
+      {
+        "word": "the",
+        "start": 286.2,
+        "end": 286.6,
+        "col": 0
+      },
+      {
+        "word": "hands",
+        "start": 286.6,
+        "end": 287.14,
+        "col": 4
+      },
+      {
+        "word": "of",
+        "start": 287.14,
+        "end": 287.38,
+        "col": 10
+      },
+      {
+        "word": "time.",
+        "start": 287.38,
+        "end": 288.94,
+        "col": 15
+      }
+    ]
+  },
+  {
+    "time": 290.0868934240363,
+    "bar_number": 64,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "A#m"
     ],
     "chord_cols": [
       0
     ],
     "beats": [
-      288.6936961451245,
-      289.8546938775508,
-      291.0156916099771,
-      292.17668934240345
+      290.0868934240363,
+      291.22467120181403,
+      292.33922902494334,
+      293.47700680272106
     ],
-    "lyrics": "The jar's getting",
+    "lyrics": "The jar's getting heavy, a",
     "words": [
       {
         "word": "The",
-        "start": 290.609,
-        "end": 291.654,
+        "start": 290.976,
+        "end": 291.08,
         "col": 0
       },
       {
         "word": "jar's",
-        "start": 291.654,
-        "end": 292.699,
+        "start": 291.08,
+        "end": 291.5,
         "col": 4
       },
       {
         "word": "getting",
-        "start": 292.699,
-        "end": 293.744,
+        "start": 291.9,
+        "end": 292.16,
         "col": 10
-      }
-    ]
-  },
-  {
-    "time": 293.3376870748298,
-    "bar_number": 64,
-    "tempo_bpm": 52,
-    "time_signature": "4/4",
-    "chords": [
-      "A#"
-    ],
-    "chord_cols": [
-      0
-    ],
-    "beats": [
-      293.3376870748298,
-      294.4986848072561,
-      295.6596825396824,
-      296.82068027210875
-    ],
-    "lyrics": "heavy A hopeful clinking",
-    "words": [
-      {
-        "word": "heavy",
-        "start": 293.744,
-        "end": 294.789,
-        "col": 0
       },
       {
-        "word": "A",
-        "start": 294.789,
-        "end": 295.937,
-        "col": 6
-      },
-      {
-        "word": "hopeful",
-        "start": 295.937,
-        "end": 297.084,
-        "col": 8
-      },
-      {
-        "word": "clinking",
-        "start": 297.084,
-        "end": 298.231,
-        "col": 16
-      }
-    ]
-  },
-  {
-    "time": 297.98167800453507,
-    "bar_number": 65,
-    "tempo_bpm": 52,
-    "time_signature": "4/4",
-    "chords": [
-      "A#"
-    ],
-    "chord_cols": [
-      0
-    ],
-    "beats": [
-      297.98167800453507,
-      299.1426757369614,
-      300.3036734693877,
-      301.46467120181404
-    ],
-    "lyrics": "sound Soon her son will be",
-    "words": [
-      {
-        "word": "sound",
-        "start": 298.231,
-        "end": 299.379,
-        "col": 0
-      },
-      {
-        "word": "Soon",
-        "start": 299.379,
-        "end": 300.039,
-        "col": 6
-      },
-      {
-        "word": "her",
-        "start": 300.039,
-        "end": 300.699,
-        "col": 11
-      },
-      {
-        "word": "son",
-        "start": 300.699,
-        "end": 301.359,
-        "col": 15
-      },
-      {
-        "word": "will",
-        "start": 301.359,
-        "end": 302.019,
-        "col": 19
-      },
-      {
-        "word": "be",
-        "start": 302.019,
-        "end": 302.679,
-        "col": 24
-      }
-    ]
-  },
-  {
-    "time": 302.62566893424037,
-    "bar_number": 66,
-    "tempo_bpm": 52,
-    "time_signature": "4/4",
-    "chords": [
-      "A#"
-    ],
-    "chord_cols": [
-      0
-    ],
-    "beats": [
-      302.62566893424037,
-      303.7866666666667,
-      304.947664399093,
-      306.10866213151934
-    ],
-    "lyrics": "home on familiar solid",
-    "words": [
-      {
-        "word": "home",
-        "start": 302.679,
-        "end": 303.339,
-        "col": 0
-      },
-      {
-        "word": "on",
-        "start": 303.339,
-        "end": 304.531,
-        "col": 5
-      },
-      {
-        "word": "familiar",
-        "start": 304.531,
-        "end": 305.724,
-        "col": 8
-      },
-      {
-        "word": "solid",
-        "start": 305.724,
-        "end": 306.916,
-        "col": 17
-      }
-    ]
-  },
-  {
-    "time": 307.26965986394566,
-    "bar_number": 67,
-    "tempo_bpm": 52,
-    "time_signature": "4/4",
-    "chords": [
-      "A#"
-    ],
-    "chord_cols": [
-      0
-    ],
-    "beats": [
-      307.26965986394566,
-      308.430657596372,
-      309.5916553287983,
-      310.75265306122463
-    ],
-    "lyrics": "ground The Mama's Bail Jar,",
-    "words": [
-      {
-        "word": "ground",
-        "start": 306.916,
-        "end": 308.109,
-        "col": 0
-      },
-      {
-        "word": "The",
-        "start": 308.109,
-        "end": 308.926,
-        "col": 7
-      },
-      {
-        "word": "Mama's",
-        "start": 308.926,
-        "end": 309.744,
-        "col": 11
-      },
-      {
-        "word": "Bail",
-        "start": 309.744,
-        "end": 310.562,
+        "word": "heavy,",
+        "start": 292.16,
+        "end": 292.6,
         "col": 18
       },
       {
+        "word": "a",
+        "start": 292.6,
+        "end": 294.9,
+        "col": 25
+      }
+    ]
+  },
+  {
+    "time": 294.61478458049885,
+    "bar_number": 65,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Cm",
+      "G#"
+    ],
+    "chord_cols": [
+      0,
+      28
+    ],
+    "beats": [
+      294.61478458049885,
+      295.7293424036281,
+      296.8671201814059,
+      298.00489795918367
+    ],
+    "lyrics": "hopeful, clinking sound,",
+    "words": [
+      {
+        "word": "hopeful,",
+        "start": 294.9,
+        "end": 295.4,
+        "col": 0
+      },
+      {
+        "word": "clinking",
+        "start": 295.4,
+        "end": 295.94,
+        "col": 9
+      },
+      {
+        "word": "sound,",
+        "start": 295.94,
+        "end": 297.616,
+        "col": 18
+      }
+    ]
+  },
+  {
+    "time": 299.14267573696145,
+    "bar_number": 66,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm"
+    ],
+    "chord_cols": [
+      0
+    ],
+    "beats": [
+      299.14267573696145,
+      300.28045351473924,
+      301.418231292517,
+      302.5560090702948
+    ],
+    "lyrics": "Soon her son will be home, on",
+    "words": [
+      {
+        "word": "Soon",
+        "start": 299.608,
+        "end": 300.0,
+        "col": 0
+      },
+      {
+        "word": "her",
+        "start": 300.0,
+        "end": 300.22,
+        "col": 5
+      },
+      {
+        "word": "son",
+        "start": 300.22,
+        "end": 300.9,
+        "col": 9
+      },
+      {
+        "word": "will",
+        "start": 300.9,
+        "end": 301.24,
+        "col": 13
+      },
+      {
+        "word": "be",
+        "start": 301.24,
+        "end": 301.46,
+        "col": 18
+      },
+      {
+        "word": "home,",
+        "start": 301.46,
+        "end": 302.2,
+        "col": 21
+      },
+      {
+        "word": "on",
+        "start": 302.2,
+        "end": 304.1,
+        "col": 27
+      }
+    ]
+  },
+  {
+    "time": 303.69378684807253,
+    "bar_number": 67,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "A#m",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      18
+    ],
+    "beats": [
+      303.69378684807253,
+      304.8315646258503,
+      305.94612244897957,
+      307.08390022675735
+    ],
+    "lyrics": "familiar, solid   ground.",
+    "words": [
+      {
+        "word": "familiar,",
+        "start": 304.1,
+        "end": 304.7,
+        "col": 0
+      },
+      {
+        "word": "solid",
+        "start": 304.7,
+        "end": 305.64,
+        "col": 10
+      },
+      {
+        "word": "ground.",
+        "start": 305.64,
+        "end": 308.588,
+        "col": 18
+      }
+    ]
+  },
+  {
+    "time": 308.1984580498866,
+    "bar_number": 68,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "G#",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      23
+    ],
+    "beats": [
+      308.1984580498866,
+      309.3362358276644,
+      310.4972335600907,
+      311.61179138321995
+    ],
+    "lyrics": "The Mama's Bail Jar,   a",
+    "words": [
+      {
+        "word": "The",
+        "start": 309.104,
+        "end": 309.22,
+        "col": 0
+      },
+      {
+        "word": "Mama's",
+        "start": 309.22,
+        "end": 309.72,
+        "col": 4
+      },
+      {
+        "word": "Bail",
+        "start": 309.72,
+        "end": 310.22,
+        "col": 11
+      },
+      {
         "word": "Jar,",
-        "start": 310.562,
-        "end": 311.379,
+        "start": 310.22,
+        "end": 310.86,
+        "col": 16
+      },
+      {
+        "word": "a",
+        "start": 311.94,
+        "end": 313.04,
         "col": 23
       }
     ]
   },
   {
-    "time": 311.91365079365096,
-    "bar_number": 68,
-    "tempo_bpm": 52,
+    "time": 312.74956916099774,
+    "bar_number": 69,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "G#",
+      "Fm"
     ],
     "chord_cols": [
-      0
+      0,
+      15
     ],
     "beats": [
-      311.91365079365096,
-      313.0746485260773,
-      314.2356462585036,
-      315.39664399092993
+      312.74956916099774,
+      313.8873469387755,
+      315.00190476190477,
+      316.13968253968255
     ],
-    "lyrics": "a testament to",
+    "lyrics": "testament to   love,",
     "words": [
       {
-        "word": "a",
-        "start": 312.749,
-        "end": 313.989,
-        "col": 0
-      },
-      {
         "word": "testament",
-        "start": 313.989,
-        "end": 315.229,
-        "col": 2
+        "start": 313.04,
+        "end": 313.44,
+        "col": 0
       },
       {
         "word": "to",
-        "start": 315.229,
-        "end": 316.469,
-        "col": 12
+        "start": 313.44,
+        "end": 314.64,
+        "col": 10
+      },
+      {
+        "word": "love,",
+        "start": 314.64,
+        "end": 316.208,
+        "col": 15
       }
     ]
   },
   {
-    "time": 316.55764172335626,
-    "bar_number": 69,
-    "tempo_bpm": 52,
+    "time": 317.27746031746034,
+    "bar_number": 70,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "C#",
+      "Cm"
     ],
     "chord_cols": [
-      0
+      0,
+      25
     ],
     "beats": [
-      316.55764172335626,
-      317.7186394557826,
-      318.8796371882089,
-      320.0406349206352
+      317.27746031746034,
+      318.4152380952381,
+      319.55301587301585,
+      320.69079365079364
     ],
-    "lyrics": "love A little bit of grace",
+    "lyrics": "A little bit of grace,   sent",
     "words": [
       {
-        "word": "love",
-        "start": 316.469,
-        "end": 317.709,
-        "col": 0
-      },
-      {
         "word": "A",
-        "start": 317.709,
-        "end": 318.397,
-        "col": 5
+        "start": 318.156,
+        "end": 318.32,
+        "col": 0
       },
       {
         "word": "little",
-        "start": 318.397,
-        "end": 319.085,
-        "col": 7
+        "start": 318.32,
+        "end": 318.64,
+        "col": 2
       },
       {
         "word": "bit",
-        "start": 319.085,
-        "end": 319.773,
-        "col": 14
+        "start": 318.64,
+        "end": 318.92,
+        "col": 9
       },
       {
         "word": "of",
-        "start": 319.773,
-        "end": 320.461,
-        "col": 18
+        "start": 318.92,
+        "end": 319.12,
+        "col": 13
       },
       {
-        "word": "grace",
-        "start": 320.461,
-        "end": 321.149,
-        "col": 21
+        "word": "grace,",
+        "start": 319.12,
+        "end": 319.92,
+        "col": 16
+      },
+      {
+        "word": "sent",
+        "start": 319.92,
+        "end": 321.96,
+        "col": 25
       }
     ]
   },
   {
-    "time": 321.20163265306155,
-    "bar_number": 70,
-    "tempo_bpm": 52,
+    "time": 321.85179138321996,
+    "bar_number": 71,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "Fm"
     ],
     "chord_cols": [
       0
     ],
     "beats": [
-      321.20163265306155,
-      322.3626303854879,
-      323.5236281179142,
-      324.6846258503405
+      321.85179138321996,
+      322.98956916099775,
+      324.12734693877553,
+      325.2651247165533
     ],
-    "lyrics": "sent down from",
+    "lyrics": "down from above.",
     "words": [
       {
-        "word": "sent",
-        "start": 321.149,
-        "end": 322.966,
+        "word": "down",
+        "start": 321.96,
+        "end": 322.7,
         "col": 0
       },
       {
-        "word": "down",
-        "start": 322.966,
-        "end": 324.784,
+        "word": "from",
+        "start": 322.7,
+        "end": 323.1,
         "col": 5
       },
       {
-        "word": "from",
-        "start": 324.784,
-        "end": 326.601,
+        "word": "above.",
+        "start": 323.1,
+        "end": 324.236,
         "col": 10
       }
     ]
   },
   {
-    "time": 325.84562358276685,
-    "bar_number": 71,
-    "tempo_bpm": 52,
+    "time": 326.4261224489796,
+    "bar_number": 72,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "C#"
     ],
     "chord_cols": [
       0
     ],
     "beats": [
-      325.84562358276685,
-      327.0066213151932,
-      328.1676190476195,
-      329.3286167800458
+      326.4261224489796,
+      327.56390022675737,
+      328.70167800453515,
+      329.8162358276644
     ],
-    "lyrics": "above",
-    "words": [
-      {
-        "word": "above",
-        "start": 326.601,
-        "end": 328.419,
-        "col": 0
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
-    "time": 330.48961451247214,
-    "bar_number": 72,
-    "tempo_bpm": 52,
+    "time": 330.9540136054422,
+    "bar_number": 73,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "A#m",
+      "D#"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      330.9540136054422,
+      332.09179138321997,
+      333.22956916099776,
+      334.3673469387755
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 335.50512471655327,
+    "bar_number": 74,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "G#"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      335.50512471655327,
+      336.64290249433105,
+      337.78068027210884,
+      338.8952380952381
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 340.0562358276644,
+    "bar_number": 75,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "G#"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      340.0562358276644,
+      341.17079365079366,
+      342.33179138322,
+      343.4695691609977
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 344.6073469387755,
+    "bar_number": 76,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "C#"
+    ],
+    "chord_cols": [
+      0
+    ],
+    "beats": [
+      344.6073469387755,
+      345.7451247165533,
+      346.88290249433106,
+      347.9974603174603
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 349.1352380952381,
+    "bar_number": 77,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "A#m",
+      "D#"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      349.1352380952381,
+      350.24979591836734,
+      351.3875736961451,
+      352.50213151927437
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 353.63990929705216,
+    "bar_number": 78,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "G#"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      353.63990929705216,
+      354.7544671201814,
+      355.8922448979592,
+      357.00680272108843
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 358.16780045351476,
+    "bar_number": 79,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "G#"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      358.16780045351476,
+      359.282358276644,
+      360.4201360544218,
+      361.53469387755104
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 362.6956916099773,
+    "bar_number": 80,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm"
+    ],
+    "chord_cols": [
+      0
+    ],
+    "beats": [
+      362.6956916099773,
+      363.81024943310655,
+      364.92480725623585,
+      366.0625850340136
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 367.20036281179136,
+    "bar_number": 81,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "C#",
+      "Fm"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      367.20036281179136,
+      368.3149206349206,
+      369.47591836734694,
+      370.5904761904762
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 371.72825396825397,
+    "bar_number": 82,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "A#m",
+      "G#"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      371.72825396825397,
+      372.86603174603175,
+      373.980589569161,
+      375.1183673469388
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 376.25614512471657,
+    "bar_number": 83,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "C#"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      376.25614512471657,
+      377.3707029478458,
+      378.5317006802721,
+      379.6462585034014
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 380.7840362811791,
+    "bar_number": 84,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "G#"
+    ],
+    "chord_cols": [
+      0
+    ],
+    "beats": [
+      380.7840362811791,
+      381.8985941043084,
+      383.03637188208614,
+      384.15092970521545
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 385.2887074829932,
+    "bar_number": 85,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "G#"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      385.2887074829932,
+      386.4032653061224,
+      387.4017233560091,
+      388.678820861678
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 389.6772789115646,
+    "bar_number": 86,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "G#"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      389.6772789115646,
+      390.95437641723356,
+      392.09215419501135,
+      393.2067120181406
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 394.3444897959184,
+    "bar_number": 87,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "C#"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      394.3444897959184,
+      395.4590476190476,
+      396.45750566893423,
+      397.71138321995466
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 398.70984126984126,
+    "bar_number": 88,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Cm",
+      "G#"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      398.70984126984126,
+      399.9637188208617,
+      401.10149659863947,
+      402.2160544217687
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 403.3538321995465,
+    "bar_number": 89,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "G#"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      403.3538321995465,
+      404.46839002267575,
+      405.582947845805,
+      406.69750566893424
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 407.6727437641723,
+    "bar_number": 90,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "C#",
+      "G#"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      407.6727437641723,
+      408.92662131519273,
+      410.041179138322,
+      411.17895691609976
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 412.293514739229,
+    "bar_number": 91,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "G#"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      412.293514739229,
+      413.40807256235826,
+      414.5226303854875,
+      415.6371882086168
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 416.75174603174605,
+    "bar_number": 92,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Cm",
+      "G#"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      416.75174603174605,
+      417.8663038548753,
+      418.98086167800454,
+      420.0954195011338
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 421.2331972789116,
+    "bar_number": 93,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Cm"
+    ],
+    "chord_cols": [
+      0
+    ],
+    "beats": [
+      421.2331972789116,
+      422.3477551020408,
+      423.46231292517007,
+      424.5768707482993
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 425.69142857142856,
+    "bar_number": 94,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "G#"
+    ],
+    "chord_cols": [
+      0
+    ],
+    "beats": [
+      425.69142857142856,
+      426.8059863945578,
+      427.92054421768705,
+      429.03510204081635
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 430.1728798185941,
+    "bar_number": 95,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Cm",
+      "G#"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      430.1728798185941,
+      431.28743764172333,
+      432.40199546485263,
+      433.5165532879819
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 434.4685714285714,
+    "bar_number": 96,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm"
+    ],
+    "chord_cols": [
+      0
+    ],
+    "beats": [
+      434.4685714285714,
+      435.58312925170065,
+      436.69768707482996,
+      437.8122448979592
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 438.92680272108845,
+    "bar_number": 97,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "D#"
+    ],
+    "chord_cols": [
+      0
+    ],
+    "beats": [
+      438.92680272108845,
+      440.06458049886623,
+      441.1791383219955,
+      442.43301587301585
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 443.54757369614515,
+    "bar_number": 98,
+    "tempo_bpm": 53,
     "time_signature": "4/4",
     "chords": [
       "A#"
@@ -3285,10 +3926,94 @@
       0
     ],
     "beats": [
-      330.48961451247214,
-      331.65061224489847,
-      332.8116099773248,
-      333.9726077097511
+      443.54757369614515,
+      444.6853514739229,
+      445.7999092970522,
+      446.9144671201814
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 448.05224489795916,
+    "bar_number": 99,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "C#"
+    ],
+    "chord_cols": [
+      0
+    ],
+    "beats": [
+      448.05224489795916,
+      449.16680272108846,
+      450.2813605442177,
+      451.4191383219955
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 452.58013605442176,
+    "bar_number": 100,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "C#"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      452.58013605442176,
+      453.71791383219954,
+      454.8556916099773,
+      455.9934693877551
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 457.1312471655329,
+    "bar_number": 101,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm",
+      "C#"
+    ],
+    "chord_cols": [
+      0,
+      8
+    ],
+    "beats": [
+      457.1312471655329,
+      458.2690249433107,
+      459.40680272108847,
+      460.54458049886625
+    ],
+    "lyrics": "",
+    "words": []
+  },
+  {
+    "time": 461.68235827664404,
+    "bar_number": 102,
+    "tempo_bpm": 53,
+    "time_signature": "4/4",
+    "chords": [
+      "Fm"
+    ],
+    "chord_cols": [
+      0
+    ],
+    "beats": [
+      461.68235827664404,
+      462.8201360544218,
+      463.9579138321996,
+      465.0956916099774
     ],
     "lyrics": "",
     "words": []

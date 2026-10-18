@@ -5,12 +5,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "F",
       "D#"
     ],
     "chord_cols": [
-      0,
-      8
+      0
     ],
     "beats": [
       0.30185941043084963,
@@ -27,7 +25,7 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#"
+      "Cm"
     ],
     "chord_cols": [
       0
@@ -47,12 +45,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "G#"
+      "D#"
     ],
     "chord_cols": [
-      0,
-      8
+      0
     ],
     "beats": [
       5.7817687074829935,
@@ -69,12 +65,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "G#",
-      "D#"
+      "A#"
     ],
     "chord_cols": [
-      0,
-      8
+      0
     ],
     "beats": [
       8.544943310657596,
@@ -91,12 +85,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "G#"
+      "D#"
     ],
     "chord_cols": [
-      0,
-      8
+      0
     ],
     "beats": [
       11.284897959183674,
@@ -113,12 +105,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "G#",
-      "D#"
+      "Fm"
     ],
     "chord_cols": [
-      0,
-      8
+      0
     ],
     "beats": [
       14.02485260770975,
@@ -155,12 +145,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "G#"
+      "A#"
     ],
     "chord_cols": [
-      0,
-      8
+      0
     ],
     "beats": [
       19.504761904761907,
@@ -177,12 +165,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "G#",
-      "D#"
+      "Gm"
     ],
     "chord_cols": [
-      0,
-      8
+      0
     ],
     "beats": [
       22.244716553287983,
@@ -210,8 +196,21 @@
       26.354648526077096,
       27.051247165532878
     ],
-    "lyrics": "",
-    "words": []
+    "lyrics": "Through the",
+    "words": [
+      {
+        "word": "Through",
+        "start": 24.714,
+        "end": 25.19,
+        "col": 0
+      },
+      {
+        "word": "the",
+        "start": 25.35,
+        "end": 28.33,
+        "col": 8
+      }
+    ]
   },
   {
     "time": 27.724625850340136,
@@ -219,7 +218,7 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#"
+      "Gm"
     ],
     "chord_cols": [
       0
@@ -230,37 +229,31 @@
       29.1178231292517,
       29.791201814058958
     ],
-    "lyrics": "Through the long nights and",
+    "lyrics": "long nights, and the",
     "words": [
       {
-        "word": "Through",
-        "start": 27.6,
-        "end": 28.12,
+        "word": "long",
+        "start": 28.33,
+        "end": 28.77,
         "col": 0
       },
       {
-        "word": "the",
-        "start": 28.12,
-        "end": 28.28,
-        "col": 8
-      },
-      {
-        "word": "long",
-        "start": 28.28,
-        "end": 28.76,
-        "col": 12
-      },
-      {
-        "word": "nights",
-        "start": 28.76,
-        "end": 29.52,
-        "col": 17
+        "word": "nights,",
+        "start": 28.77,
+        "end": 29.53,
+        "col": 5
       },
       {
         "word": "and",
-        "start": 29.52,
-        "end": 30.7,
-        "col": 24
+        "start": 29.53,
+        "end": 29.58,
+        "col": 13
+      },
+      {
+        "word": "the",
+        "start": 29.58,
+        "end": 30.535,
+        "col": 17
       }
     ]
   },
@@ -270,10 +263,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#"
+      "A#",
+      "Cm"
     ],
     "chord_cols": [
-      0
+      0,
+      14
     ],
     "beats": [
       30.464580498866212,
@@ -281,37 +276,25 @@
       31.857777777777777,
       32.53115646258503
     ],
-    "lyrics": "the sun's harsh glare. We've",
+    "lyrics": "sun's harsh   glare,",
     "words": [
       {
-        "word": "the",
-        "start": 30.7,
-        "end": 30.8,
+        "word": "sun's",
+        "start": 30.535,
+        "end": 31.41,
         "col": 0
       },
       {
-        "word": "sun's",
-        "start": 30.8,
-        "end": 31.46,
-        "col": 4
-      },
-      {
         "word": "harsh",
-        "start": 31.46,
-        "end": 31.96,
-        "col": 10
+        "start": 31.49,
+        "end": 31.93,
+        "col": 6
       },
       {
-        "word": "glare.",
-        "start": 31.96,
-        "end": 32.34,
-        "col": 16
-      },
-      {
-        "word": "We've",
-        "start": 32.72,
-        "end": 33.12,
-        "col": 23
+        "word": "glare,",
+        "start": 31.93,
+        "end": 32.37,
+        "col": 14
       }
     ]
   },
@@ -321,12 +304,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "G#"
+      "A#"
     ],
     "chord_cols": [
-      0,
-      22
+      0
     ],
     "beats": [
       33.22775510204082,
@@ -334,31 +315,37 @@
       34.59773242630386,
       35.27111111111111
     ],
-    "lyrics": "carried the burden,   a",
+    "lyrics": "We've carried the burden, a",
     "words": [
       {
-        "word": "carried",
-        "start": 33.12,
-        "end": 33.46,
+        "word": "We've",
+        "start": 32.964,
+        "end": 33.167,
         "col": 0
       },
       {
+        "word": "carried",
+        "start": 33.167,
+        "end": 33.37,
+        "col": 6
+      },
+      {
         "word": "the",
-        "start": 33.46,
-        "end": 33.84,
-        "col": 8
+        "start": 33.37,
+        "end": 33.63,
+        "col": 14
       },
       {
         "word": "burden,",
-        "start": 33.84,
-        "end": 34.66,
-        "col": 12
+        "start": 33.63,
+        "end": 34.59,
+        "col": 18
       },
       {
         "word": "a",
-        "start": 35.34,
-        "end": 35.86,
-        "col": 22
+        "start": 34.59,
+        "end": 35.87,
+        "col": 26
       }
     ]
   },
@@ -368,12 +355,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "G#",
-      "D#"
+      "Fm"
     ],
     "chord_cols": [
-      0,
-      23
+      0
     ],
     "beats": [
       35.944489795918365,
@@ -381,37 +366,31 @@
       37.33768707482993,
       38.01106575963719
     ],
-    "lyrics": "weight hard to bear.   Seen",
+    "lyrics": "weight hard to bear.",
     "words": [
       {
         "word": "weight",
-        "start": 35.96,
-        "end": 36.1,
+        "start": 35.87,
+        "end": 36.15,
         "col": 0
       },
       {
         "word": "hard",
-        "start": 36.1,
-        "end": 36.58,
+        "start": 36.15,
+        "end": 36.63,
         "col": 7
       },
       {
         "word": "to",
-        "start": 36.58,
-        "end": 36.92,
+        "start": 36.63,
+        "end": 36.95,
         "col": 12
       },
       {
         "word": "bear.",
-        "start": 36.92,
-        "end": 37.48,
+        "start": 36.95,
+        "end": 37.63,
         "col": 15
-      },
-      {
-        "word": "Seen",
-        "start": 38.11,
-        "end": 39.0,
-        "col": 23
       }
     ]
   },
@@ -421,7 +400,7 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#"
+      "Gm"
     ],
     "chord_cols": [
       0
@@ -432,31 +411,37 @@
       40.07764172335601,
       40.751020408163264
     ],
-    "lyrics": "the scales tip, and",
+    "lyrics": "Seen the scales tipped, and",
     "words": [
       {
-        "word": "the",
-        "start": 39.0,
-        "end": 39.2,
+        "word": "Seen",
+        "start": 38.734,
+        "end": 39.03,
         "col": 0
       },
       {
-        "word": "scales",
-        "start": 39.2,
-        "end": 39.82,
-        "col": 4
+        "word": "the",
+        "start": 39.03,
+        "end": 39.23,
+        "col": 5
       },
       {
-        "word": "tip,",
-        "start": 39.82,
-        "end": 41.149,
-        "col": 11
+        "word": "scales",
+        "start": 39.23,
+        "end": 39.85,
+        "col": 9
+      },
+      {
+        "word": "tipped,",
+        "start": 39.85,
+        "end": 40.31,
+        "col": 16
       },
       {
         "word": "and",
-        "start": 41.149,
-        "end": 41.7,
-        "col": 16
+        "start": 40.31,
+        "end": 41.69,
+        "col": 24
       }
     ]
   },
@@ -466,10 +451,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#"
+      "Cm",
+      "A#"
     ],
     "chord_cols": [
-      0
+      0,
+      19
     ],
     "beats": [
       41.44761904761905,
@@ -477,43 +464,31 @@
       42.81759637188209,
       43.490975056689344
     ],
-    "lyrics": "the truth turned aside, but the",
+    "lyrics": "the truth turned   aside,",
     "words": [
       {
         "word": "the",
-        "start": 41.7,
-        "end": 41.78,
+        "start": 41.69,
+        "end": 41.81,
         "col": 0
       },
       {
         "word": "truth",
-        "start": 41.78,
-        "end": 42.14,
+        "start": 41.81,
+        "end": 42.19,
         "col": 4
       },
       {
         "word": "turned",
-        "start": 42.14,
-        "end": 42.82,
+        "start": 42.19,
+        "end": 42.87,
         "col": 10
       },
       {
         "word": "aside,",
-        "start": 42.82,
-        "end": 43.5,
-        "col": 17
-      },
-      {
-        "word": "but",
-        "start": 43.669,
-        "end": 43.96,
-        "col": 24
-      },
-      {
-        "word": "the",
-        "start": 43.96,
-        "end": 44.04,
-        "col": 28
+        "start": 42.87,
+        "end": 43.622,
+        "col": 19
       }
     ]
   },
@@ -523,12 +498,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "G#"
+      "Cm",
+      "D#"
     ],
     "chord_cols": [
       0,
-      17
+      26
     ],
     "beats": [
       44.18757369614512,
@@ -536,37 +511,49 @@
       45.55755102040816,
       46.25414965986395
     ],
-    "lyrics": "fire within us   has never",
+    "lyrics": "But the fire within us,   has never",
     "words": [
       {
-        "word": "fire",
-        "start": 44.04,
-        "end": 44.48,
+        "word": "But",
+        "start": 43.71,
+        "end": 43.99,
         "col": 0
       },
       {
-        "word": "within",
-        "start": 44.48,
-        "end": 44.98,
-        "col": 5
+        "word": "the",
+        "start": 43.99,
+        "end": 44.09,
+        "col": 4
       },
       {
-        "word": "us",
-        "start": 44.98,
-        "end": 46.16,
-        "col": 12
+        "word": "fire",
+        "start": 44.09,
+        "end": 44.51,
+        "col": 8
+      },
+      {
+        "word": "within",
+        "start": 44.51,
+        "end": 44.95,
+        "col": 13
+      },
+      {
+        "word": "us,",
+        "start": 44.95,
+        "end": 45.99,
+        "col": 20
       },
       {
         "word": "has",
-        "start": 46.2,
-        "end": 46.76,
-        "col": 17
+        "start": 45.99,
+        "end": 46.77,
+        "col": 26
       },
       {
         "word": "never",
-        "start": 46.76,
-        "end": 47.02,
-        "col": 21
+        "start": 46.77,
+        "end": 47.05,
+        "col": 30
       }
     ]
   },
@@ -576,12 +563,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "G#",
-      "D#"
+      "Fm",
+      "Cm"
     ],
     "chord_cols": [
       0,
-      14
+      15
     ],
     "beats": [
       46.9275283446712,
@@ -589,25 +576,19 @@
       48.29750566893424,
       48.99410430839002
     ],
-    "lyrics": "quite died.   With",
+    "lyrics": "quite died.",
     "words": [
       {
         "word": "quite",
-        "start": 47.02,
-        "end": 47.52,
+        "start": 47.05,
+        "end": 47.55,
         "col": 0
       },
       {
         "word": "died.",
-        "start": 47.52,
-        "end": 48.04,
+        "start": 47.55,
+        "end": 48.642,
         "col": 6
-      },
-      {
-        "word": "With",
-        "start": 49.22,
-        "end": 50.24,
-        "col": 14
       }
     ]
   },
@@ -617,12 +598,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "G#"
+      "A#"
     ],
     "chord_cols": [
-      0,
-      14
+      0
     ],
     "beats": [
       49.66748299319728,
@@ -630,25 +609,31 @@
       51.037460317460315,
       51.7340589569161
     ],
-    "lyrics": "eyes          fixed forward",
+    "lyrics": "With eyes fixed forward,",
     "words": [
       {
-        "word": "eyes",
-        "start": 50.24,
-        "end": 50.88,
+        "word": "With",
+        "start": 50.098,
+        "end": 50.29,
         "col": 0
       },
       {
-        "word": "fixed",
-        "start": 50.88,
-        "end": 51.46,
-        "col": 14
+        "word": "eyes",
+        "start": 50.29,
+        "end": 50.91,
+        "col": 5
       },
       {
-        "word": "forward",
-        "start": 51.46,
-        "end": 52.26,
-        "col": 20
+        "word": "fixed",
+        "start": 50.91,
+        "end": 51.47,
+        "col": 10
+      },
+      {
+        "word": "forward,",
+        "start": 51.47,
+        "end": 52.25,
+        "col": 16
       }
     ]
   },
@@ -658,12 +643,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#",
-      "Cm"
+      "Fm",
+      "D#"
     ],
     "chord_cols": [
       0,
-      15
+      16
     ],
     "beats": [
       52.407437641723355,
@@ -671,37 +656,37 @@
       53.777414965986395,
       54.474013605442174
     ],
-    "lyrics": "on a distant   bright shore,",
+    "lyrics": "on a distant,   bright shore,",
     "words": [
       {
         "word": "on",
-        "start": 52.26,
-        "end": 52.86,
+        "start": 52.25,
+        "end": 52.87,
         "col": 0
       },
       {
         "word": "a",
-        "start": 52.86,
-        "end": 53.0,
+        "start": 52.87,
+        "end": 53.05,
         "col": 3
       },
       {
-        "word": "distant",
-        "start": 53.0,
-        "end": 53.6,
+        "word": "distant,",
+        "start": 53.05,
+        "end": 53.59,
         "col": 5
       },
       {
         "word": "bright",
-        "start": 53.6,
-        "end": 54.2,
-        "col": 15
+        "start": 53.59,
+        "end": 54.17,
+        "col": 16
       },
       {
         "word": "shore,",
-        "start": 54.2,
-        "end": 54.68,
-        "col": 22
+        "start": 54.17,
+        "end": 55.07,
+        "col": 23
       }
     ]
   },
@@ -711,7 +696,7 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "G#"
+      "Cm"
     ],
     "chord_cols": [
       0
@@ -722,30 +707,30 @@
       56.540589569161,
       57.213968253968254
     ],
-    "lyrics": "we're standing for justice",
+    "lyrics": "We're standing for justice,",
     "words": [
       {
-        "word": "we're",
-        "start": 55.059,
-        "end": 55.64,
+        "word": "We're",
+        "start": 55.394,
+        "end": 55.71,
         "col": 0
       },
       {
         "word": "standing",
-        "start": 55.64,
-        "end": 56.36,
+        "start": 55.71,
+        "end": 56.33,
         "col": 6
       },
       {
         "word": "for",
-        "start": 56.36,
-        "end": 56.94,
+        "start": 56.33,
+        "end": 56.97,
         "col": 15
       },
       {
-        "word": "justice",
-        "start": 56.94,
-        "end": 57.7,
+        "word": "justice,",
+        "start": 56.97,
+        "end": 57.69,
         "col": 19
       }
     ]
@@ -756,12 +741,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "G#",
-      "A#"
+      "Fm"
     ],
     "chord_cols": [
-      0,
-      16
+      0
     ],
     "beats": [
       57.88734693877551,
@@ -769,13 +752,13 @@
       59.28054421768707,
       59.953922902494334
     ],
-    "lyrics": "forevermore.",
+    "lyrics": "          forevermore.",
     "words": [
       {
         "word": "forevermore.",
-        "start": 57.849,
-        "end": 62.059,
-        "col": 0
+        "start": 57.69,
+        "end": 65.338,
+        "col": 10
       }
     ]
   },
@@ -785,10 +768,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "A#",
+      "D#"
     ],
     "chord_cols": [
-      0
+      0,
+      8
     ],
     "beats": [
       60.65052154195011,
@@ -805,12 +790,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#",
-      "D#"
+      "Fm"
     ],
     "chord_cols": [
-      0,
-      14
+      0
     ],
     "beats": [
       63.39047619047619,
@@ -818,27 +801,8 @@
       64.76045351473923,
       65.45705215419501
     ],
-    "lyrics": "Oh.           Oh, the",
-    "words": [
-      {
-        "word": "Oh.",
-        "start": 64.169,
-        "end": 65.149,
-        "col": 0
-      },
-      {
-        "word": "Oh,",
-        "start": 65.149,
-        "end": 65.665,
-        "col": 14
-      },
-      {
-        "word": "the",
-        "start": 65.665,
-        "end": 66.18,
-        "col": 18
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 66.13043083900227,
@@ -846,12 +810,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "A#"
+      "Fm"
     ],
     "chord_cols": [
-      0,
-      14
+      0
     ],
     "beats": [
       66.13043083900227,
@@ -859,31 +821,43 @@
       67.5004081632653,
       68.19700680272109
     ],
-    "lyrics": "Unwavering    Gaze, it meets",
+    "lyrics": "Oh, the Unwavering Gaze, it meets",
     "words": [
       {
-        "word": "Unwavering",
-        "start": 66.18,
-        "end": 67.7,
+        "word": "Oh,",
+        "start": 65.388,
+        "end": 65.729,
         "col": 0
       },
       {
+        "word": "the",
+        "start": 65.729,
+        "end": 66.07,
+        "col": 4
+      },
+      {
+        "word": "Unwavering",
+        "start": 66.07,
+        "end": 67.67,
+        "col": 8
+      },
+      {
         "word": "Gaze,",
-        "start": 67.7,
-        "end": 68.549,
-        "col": 14
+        "start": 67.67,
+        "end": 68.45,
+        "col": 19
       },
       {
         "word": "it",
-        "start": 68.62,
+        "start": 68.51,
         "end": 68.67,
-        "col": 20
+        "col": 25
       },
       {
         "word": "meets",
         "start": 68.67,
-        "end": 69.0,
-        "col": 23
+        "end": 69.03,
+        "col": 28
       }
     ]
   },
@@ -893,8 +867,8 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#",
-      "Cm"
+      "Gm",
+      "D#"
     ],
     "chord_cols": [
       0,
@@ -910,20 +884,20 @@
     "words": [
       {
         "word": "the",
-        "start": 69.0,
-        "end": 69.38,
+        "start": 69.03,
+        "end": 69.41,
         "col": 0
       },
       {
         "word": "new",
-        "start": 69.38,
-        "end": 70.46,
+        "start": 69.41,
+        "end": 70.49,
         "col": 4
       },
       {
         "word": "day,",
-        "start": 70.46,
-        "end": 71.66,
+        "start": 70.49,
+        "end": 73.486,
         "col": 14
       }
     ]
@@ -934,12 +908,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "Cm",
-      "G#"
+      "Fm"
     ],
     "chord_cols": [
-      0,
-      12
+      0
     ],
     "beats": [
       71.61034013605442,
@@ -947,27 +919,8 @@
       73.00353741496599,
       73.67691609977324
     ],
-    "lyrics": "            with a strength",
-    "words": [
-      {
-        "word": "with",
-        "start": 73.669,
-        "end": 74.0,
-        "col": 12
-      },
-      {
-        "word": "a",
-        "start": 74.0,
-        "end": 74.2,
-        "col": 17
-      },
-      {
-        "word": "strength",
-        "start": 74.2,
-        "end": 74.52,
-        "col": 19
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 74.37351473922902,
@@ -975,12 +928,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "G#",
-      "D#"
+      "D#",
+      "Fm"
     ],
     "chord_cols": [
       0,
-      19
+      36
     ],
     "beats": [
       74.37351473922902,
@@ -988,31 +941,49 @@
       75.74349206349207,
       76.41687074829932
     ],
-    "lyrics": "born of struggle   lighting",
+    "lyrics": "With a strength born of struggle,   lighting",
     "words": [
       {
-        "word": "born",
-        "start": 74.52,
-        "end": 74.9,
+        "word": "With",
+        "start": 73.57,
+        "end": 74.03,
         "col": 0
       },
       {
-        "word": "of",
-        "start": 74.9,
-        "end": 75.12,
+        "word": "a",
+        "start": 74.03,
+        "end": 74.23,
         "col": 5
       },
       {
-        "word": "struggle",
-        "start": 75.12,
-        "end": 75.52,
-        "col": 8
+        "word": "strength",
+        "start": 74.23,
+        "end": 74.55,
+        "col": 7
+      },
+      {
+        "word": "born",
+        "start": 74.55,
+        "end": 74.95,
+        "col": 16
+      },
+      {
+        "word": "of",
+        "start": 74.95,
+        "end": 75.13,
+        "col": 21
+      },
+      {
+        "word": "struggle,",
+        "start": 75.13,
+        "end": 76.07,
+        "col": 24
       },
       {
         "word": "lighting",
-        "start": 76.82,
-        "end": 77.32,
-        "col": 19
+        "start": 76.69,
+        "end": 77.33,
+        "col": 36
       }
     ]
   },
@@ -1022,12 +993,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "A#"
+      "D#"
     ],
     "chord_cols": [
-      0,
-      14
+      0
     ],
     "beats": [
       77.1134693877551,
@@ -1035,25 +1004,19 @@
       78.48344671201814,
       79.1568253968254
     ],
-    "lyrics": "the way.      No",
+    "lyrics": "the way.",
     "words": [
       {
         "word": "the",
-        "start": 77.32,
-        "end": 77.66,
+        "start": 77.33,
+        "end": 77.71,
         "col": 0
       },
       {
         "word": "way.",
-        "start": 77.66,
-        "end": 78.8,
+        "start": 77.71,
+        "end": 78.85,
         "col": 4
-      },
-      {
-        "word": "No",
-        "start": 78.999,
-        "end": 79.66,
-        "col": 14
       }
     ]
   },
@@ -1063,12 +1026,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#",
-      "D#"
+      "Cm"
     ],
     "chord_cols": [
-      0,
-      15
+      0
     ],
     "beats": [
       79.85342403628118,
@@ -1076,31 +1037,31 @@
       81.22340136054422,
       81.92
     ],
-    "lyrics": "longer bowed   down by",
+    "lyrics": "No longer bowed down,",
     "words": [
       {
-        "word": "longer",
-        "start": 79.66,
-        "end": 80.22,
+        "word": "No",
+        "start": 78.87,
+        "end": 79.67,
         "col": 0
       },
       {
+        "word": "longer",
+        "start": 79.67,
+        "end": 80.19,
+        "col": 3
+      },
+      {
         "word": "bowed",
-        "start": 80.22,
-        "end": 81.52,
-        "col": 7
+        "start": 80.19,
+        "end": 81.49,
+        "col": 10
       },
       {
-        "word": "down",
-        "start": 81.52,
-        "end": 82.02,
-        "col": 15
-      },
-      {
-        "word": "by",
-        "start": 82.02,
-        "end": 82.88,
-        "col": 20
+        "word": "down,",
+        "start": 81.49,
+        "end": 81.99,
+        "col": 16
       }
     ]
   },
@@ -1110,12 +1071,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "G#"
+      "Cm",
+      "A#"
     ],
     "chord_cols": [
       0,
-      16
+      19
     ],
     "beats": [
       82.59337868480726,
@@ -1123,43 +1084,43 @@
       83.9633560090703,
       84.65995464852608
     ],
-    "lyrics": "the weight of   the past. Our",
+    "lyrics": "by the weight of   the past,",
     "words": [
       {
-        "word": "the",
-        "start": 82.88,
-        "end": 83.14,
+        "word": "by",
+        "start": 82.45,
+        "end": 82.93,
         "col": 0
       },
       {
+        "word": "the",
+        "start": 82.93,
+        "end": 83.15,
+        "col": 3
+      },
+      {
         "word": "weight",
-        "start": 83.14,
-        "end": 83.48,
-        "col": 4
+        "start": 83.15,
+        "end": 83.63,
+        "col": 7
       },
       {
         "word": "of",
-        "start": 83.48,
-        "end": 84.1,
-        "col": 11
+        "start": 83.63,
+        "end": 84.25,
+        "col": 14
       },
       {
         "word": "the",
-        "start": 84.1,
-        "end": 84.36,
-        "col": 16
+        "start": 84.25,
+        "end": 84.45,
+        "col": 19
       },
       {
-        "word": "past.",
-        "start": 84.36,
-        "end": 85.069,
-        "col": 20
-      },
-      {
-        "word": "Our",
-        "start": 85.069,
-        "end": 85.26,
-        "col": 26
+        "word": "past,",
+        "start": 84.45,
+        "end": 85.078,
+        "col": 23
       }
     ]
   },
@@ -1169,12 +1130,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "Cm"
+      "D#"
     ],
     "chord_cols": [
-      0,
-      20
+      0
     ],
     "beats": [
       85.33333333333333,
@@ -1182,31 +1141,43 @@
       86.70331065759638,
       87.39990929705215
     ],
-    "lyrics": "hope is a beacon",
+    "lyrics": "Our hope is a beacon, built",
     "words": [
       {
-        "word": "hope",
-        "start": 85.26,
-        "end": 85.62,
+        "word": "Our",
+        "start": 85.17,
+        "end": 85.31,
         "col": 0
       },
       {
+        "word": "hope",
+        "start": 85.31,
+        "end": 85.63,
+        "col": 4
+      },
+      {
         "word": "is",
-        "start": 85.62,
-        "end": 85.86,
-        "col": 5
+        "start": 85.63,
+        "end": 85.85,
+        "col": 9
       },
       {
         "word": "a",
-        "start": 85.86,
-        "end": 86.08,
-        "col": 8
+        "start": 85.85,
+        "end": 86.13,
+        "col": 12
       },
       {
-        "word": "beacon",
-        "start": 86.08,
-        "end": 87.46,
-        "col": 10
+        "word": "beacon,",
+        "start": 86.13,
+        "end": 87.09,
+        "col": 14
+      },
+      {
+        "word": "built",
+        "start": 87.09,
+        "end": 88.53,
+        "col": 22
       }
     ]
   },
@@ -1216,12 +1187,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "Cm",
-      "A#"
+      "Gm",
+      "Fm"
     ],
     "chord_cols": [
       0,
-      16
+      8
     ],
     "beats": [
       88.07328798185941,
@@ -1229,33 +1200,8 @@
       89.44326530612246,
       90.13986394557823
     ],
-    "lyrics": "built finally   to last.",
-    "words": [
-      {
-        "word": "built",
-        "start": 88.38,
-        "end": 88.54,
-        "col": 0
-      },
-      {
-        "word": "finally",
-        "start": 88.54,
-        "end": 89.28,
-        "col": 6
-      },
-      {
-        "word": "to",
-        "start": 89.28,
-        "end": 90.3,
-        "col": 16
-      },
-      {
-        "word": "last.",
-        "start": 90.3,
-        "end": 91.32,
-        "col": 19
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 90.81324263038549,
@@ -1274,8 +1220,15 @@
       92.20643990929705,
       92.87981859410431
     ],
-    "lyrics": "",
-    "words": []
+    "lyrics": "finally",
+    "words": [
+      {
+        "word": "finally",
+        "start": 88.53,
+        "end": 97.43,
+        "col": 0
+      }
+    ]
   },
   {
     "time": 93.55319727891157,
@@ -1283,12 +1236,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#",
       "D#"
     ],
     "chord_cols": [
-      0,
-      8
+      0
     ],
     "beats": [
       93.55319727891157,
@@ -1305,12 +1256,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "G#"
+      "Cm",
+      "A#"
     ],
     "chord_cols": [
       0,
-      8
+      14
     ],
     "beats": [
       96.29315192743765,
@@ -1318,8 +1269,21 @@
       97.6863492063492,
       98.35972789115647
     ],
-    "lyrics": "",
-    "words": []
+    "lyrics": "to last.",
+    "words": [
+      {
+        "word": "to",
+        "start": 97.43,
+        "end": 97.48,
+        "col": 0
+      },
+      {
+        "word": "last.",
+        "start": 97.48,
+        "end": 97.53,
+        "col": 3
+      }
+    ]
   },
   {
     "time": 99.03310657596371,
@@ -1327,12 +1291,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "G#"
+      "A#"
     ],
     "chord_cols": [
-      0,
-      8
+      0
     ],
     "beats": [
       99.03310657596371,
@@ -1349,12 +1311,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#",
       "D#"
     ],
     "chord_cols": [
-      0,
-      12
+      0
     ],
     "beats": [
       101.7730612244898,
@@ -1362,15 +1322,8 @@
       103.16625850340137,
       103.83963718820861
     ],
-    "lyrics": "            The",
-    "words": [
-      {
-        "word": "The",
-        "start": 103.74,
-        "end": 104.36,
-        "col": 12
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 104.51301587301587,
@@ -1378,7 +1331,7 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#"
+      "Gm"
     ],
     "chord_cols": [
       0
@@ -1389,37 +1342,43 @@
       105.90621315192743,
       106.57959183673469
     ],
-    "lyrics": "scars that we carry are",
+    "lyrics": "The scars that we carry, are",
     "words": [
       {
-        "word": "scars",
-        "start": 104.36,
-        "end": 104.78,
+        "word": "The",
+        "start": 104.19,
+        "end": 104.27,
         "col": 0
       },
       {
+        "word": "scars",
+        "start": 104.27,
+        "end": 104.81,
+        "col": 4
+      },
+      {
         "word": "that",
-        "start": 104.78,
-        "end": 105.1,
-        "col": 6
+        "start": 104.81,
+        "end": 105.11,
+        "col": 10
       },
       {
         "word": "we",
-        "start": 105.1,
-        "end": 105.3,
-        "col": 11
+        "start": 105.11,
+        "end": 105.31,
+        "col": 15
       },
       {
-        "word": "carry",
-        "start": 105.3,
-        "end": 106.579,
-        "col": 14
+        "word": "carry,",
+        "start": 105.31,
+        "end": 106.03,
+        "col": 18
       },
       {
         "word": "are",
-        "start": 106.579,
-        "end": 107.859,
-        "col": 20
+        "start": 106.03,
+        "end": 107.79,
+        "col": 25
       }
     ]
   },
@@ -1429,12 +1388,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "G#"
+      "Cm"
     ],
     "chord_cols": [
-      0,
-      15
+      0
     ],
     "beats": [
       107.27619047619048,
@@ -1442,37 +1399,25 @@
       108.64616780045351,
       109.31954648526077
     ],
-    "lyrics": "lessons hard   learned from a",
+    "lyrics": "lessons hard learned,",
     "words": [
       {
         "word": "lessons",
-        "start": 107.859,
-        "end": 108.18,
+        "start": 107.79,
+        "end": 108.23,
         "col": 0
       },
       {
         "word": "hard",
-        "start": 108.18,
-        "end": 108.78,
+        "start": 108.23,
+        "end": 108.79,
         "col": 8
       },
       {
-        "word": "learned",
-        "start": 108.78,
-        "end": 109.24,
-        "col": 15
-      },
-      {
-        "word": "from",
-        "start": 109.24,
-        "end": 109.7,
-        "col": 23
-      },
-      {
-        "word": "a",
-        "start": 109.7,
-        "end": 109.86,
-        "col": 28
+        "word": "learned,",
+        "start": 108.79,
+        "end": 109.31,
+        "col": 13
       }
     ]
   },
@@ -1482,12 +1427,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "Cm"
+      "G#",
+      "Fm"
     ],
     "chord_cols": [
       0,
-      23
+      31
     ],
     "beats": [
       110.01614512471656,
@@ -1495,37 +1440,49 @@
       111.38612244897959,
       112.05950113378685
     ],
-    "lyrics": "system that faltered   and trusted",
+    "lyrics": "From a system that faltered,   and trust",
     "words": [
       {
-        "word": "system",
-        "start": 109.86,
-        "end": 110.32,
+        "word": "From",
+        "start": 109.506,
+        "end": 109.71,
         "col": 0
       },
       {
-        "word": "that",
-        "start": 110.32,
-        "end": 110.66,
+        "word": "a",
+        "start": 109.71,
+        "end": 109.91,
+        "col": 5
+      },
+      {
+        "word": "system",
+        "start": 109.91,
+        "end": 110.33,
         "col": 7
       },
       {
-        "word": "faltered",
-        "start": 110.66,
-        "end": 111.56,
-        "col": 12
+        "word": "that",
+        "start": 110.33,
+        "end": 110.69,
+        "col": 14
+      },
+      {
+        "word": "faltered,",
+        "start": 110.69,
+        "end": 111.57,
+        "col": 19
       },
       {
         "word": "and",
-        "start": 111.56,
-        "end": 112.54,
-        "col": 23
+        "start": 111.57,
+        "end": 112.55,
+        "col": 31
       },
       {
-        "word": "trusted",
-        "start": 112.54,
-        "end": 113.02,
-        "col": 27
+        "word": "trust",
+        "start": 112.55,
+        "end": 112.99,
+        "col": 35
       }
     ]
   },
@@ -1535,12 +1492,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "Cm",
-      "A#"
+      "G#",
+      "Fm"
     ],
     "chord_cols": [
       0,
-      14
+      19
     ],
     "beats": [
       112.75609977324262,
@@ -1548,37 +1505,25 @@
       114.12607709750567,
       114.82267573696146
     ],
-    "lyrics": "it had        spurned. But the",
+    "lyrics": "it had spurned.",
     "words": [
       {
         "word": "it",
-        "start": 113.02,
-        "end": 113.606,
+        "start": 112.99,
+        "end": 113.24,
         "col": 0
       },
       {
         "word": "had",
-        "start": 113.606,
-        "end": 114.192,
+        "start": 113.24,
+        "end": 113.49,
         "col": 3
       },
       {
         "word": "spurned.",
-        "start": 114.192,
-        "end": 114.779,
-        "col": 14
-      },
-      {
-        "word": "But",
-        "start": 114.84,
-        "end": 115.2,
-        "col": 23
-      },
-      {
-        "word": "the",
-        "start": 115.2,
-        "end": 115.36,
-        "col": 27
+        "start": 113.49,
+        "end": 114.322,
+        "col": 7
       }
     ]
   },
@@ -1588,12 +1533,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#",
-      "D#"
+      "Gm"
     ],
     "chord_cols": [
-      0,
-      21
+      0
     ],
     "beats": [
       115.4960544217687,
@@ -1601,31 +1544,43 @@
       116.86603174603175,
       117.56263038548752
     ],
-    "lyrics": "voices are rising,   a",
+    "lyrics": "But the voices are rising, a",
     "words": [
       {
-        "word": "voices",
-        "start": 115.36,
-        "end": 115.88,
+        "word": "But",
+        "start": 115.078,
+        "end": 115.21,
         "col": 0
       },
       {
+        "word": "the",
+        "start": 115.21,
+        "end": 115.37,
+        "col": 4
+      },
+      {
+        "word": "voices",
+        "start": 115.37,
+        "end": 115.89,
+        "col": 8
+      },
+      {
         "word": "are",
-        "start": 115.88,
-        "end": 116.2,
-        "col": 7
+        "start": 115.89,
+        "end": 116.33,
+        "col": 15
       },
       {
         "word": "rising,",
-        "start": 116.2,
-        "end": 116.96,
-        "col": 11
+        "start": 116.33,
+        "end": 116.99,
+        "col": 19
       },
       {
         "word": "a",
-        "start": 117.88,
-        "end": 118.08,
-        "col": 21
+        "start": 116.99,
+        "end": 118.09,
+        "col": 27
       }
     ]
   },
@@ -1636,11 +1591,11 @@
     "time_signature": "4/4",
     "chords": [
       "D#",
-      "G#"
+      "Fm"
     ],
     "chord_cols": [
       0,
-      18
+      19
     ],
     "beats": [
       118.23600907029478,
@@ -1648,25 +1603,19 @@
       119.60598639455782,
       120.3025850340136
     ],
-    "lyrics": "powerful sound,   demanding",
+    "lyrics": "powerful sound,",
     "words": [
       {
         "word": "powerful",
-        "start": 118.08,
-        "end": 118.78,
+        "start": 118.09,
+        "end": 118.79,
         "col": 0
       },
       {
         "word": "sound,",
-        "start": 118.78,
-        "end": 119.76,
+        "start": 118.79,
+        "end": 120.086,
         "col": 9
-      },
-      {
-        "word": "demanding",
-        "start": 120.19,
-        "end": 121.12,
-        "col": 18
       }
     ]
   },
@@ -1676,12 +1625,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "A#"
+      "D#"
     ],
     "chord_cols": [
-      0,
-      14
+      0
     ],
     "beats": [
       120.97596371882086,
@@ -1689,31 +1636,37 @@
       122.3459410430839,
       123.04253968253968
     ],
-    "lyrics": "a change      on this",
+    "lyrics": "Demanding a change, on this",
     "words": [
       {
-        "word": "a",
-        "start": 121.12,
-        "end": 121.62,
+        "word": "Demanding",
+        "start": 120.634,
+        "end": 121.33,
         "col": 0
       },
       {
-        "word": "change",
-        "start": 121.62,
-        "end": 122.66,
-        "col": 2
+        "word": "a",
+        "start": 121.33,
+        "end": 121.67,
+        "col": 10
+      },
+      {
+        "word": "change,",
+        "start": 121.67,
+        "end": 122.41,
+        "col": 12
       },
       {
         "word": "on",
-        "start": 122.66,
-        "end": 123.4,
-        "col": 14
+        "start": 122.41,
+        "end": 123.43,
+        "col": 20
       },
       {
         "word": "this",
-        "start": 123.4,
-        "end": 123.78,
-        "col": 17
+        "start": 123.43,
+        "end": 123.75,
+        "col": 23
       }
     ]
   },
@@ -1723,12 +1676,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "Cm",
-      "A#"
+      "Fm",
+      "Cm"
     ],
     "chord_cols": [
       0,
-      19
+      20
     ],
     "beats": [
       123.71591836734694,
@@ -1736,25 +1689,19 @@
       125.1091156462585,
       125.78249433106576
     ],
-    "lyrics": "hallowed ground.   For",
+    "lyrics": "hallowed ground.",
     "words": [
       {
         "word": "hallowed",
-        "start": 123.78,
-        "end": 124.62,
+        "start": 123.75,
+        "end": 124.63,
         "col": 0
       },
       {
         "word": "ground.",
-        "start": 124.62,
-        "end": 125.12,
+        "start": 124.63,
+        "end": 125.602,
         "col": 9
-      },
-      {
-        "word": "For",
-        "start": 126.049,
-        "end": 126.88,
-        "col": 19
       }
     ]
   },
@@ -1764,12 +1711,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#",
-      "G#"
+      "A#"
     ],
     "chord_cols": [
-      0,
-      15
+      0
     ],
     "beats": [
       126.47909297052155,
@@ -1777,37 +1722,49 @@
       127.84907029478458,
       128.52244897959184
     ],
-    "lyrics": "the ones who   came before",
+    "lyrics": "For the ones who came before, and",
     "words": [
       {
-        "word": "the",
-        "start": 126.88,
-        "end": 127.06,
+        "word": "For",
+        "start": 126.758,
+        "end": 126.89,
         "col": 0
       },
       {
-        "word": "ones",
-        "start": 127.06,
-        "end": 127.6,
+        "word": "the",
+        "start": 126.89,
+        "end": 127.07,
         "col": 4
       },
       {
+        "word": "ones",
+        "start": 127.07,
+        "end": 127.59,
+        "col": 8
+      },
+      {
         "word": "who",
-        "start": 127.6,
-        "end": 127.9,
-        "col": 9
+        "start": 127.59,
+        "end": 127.91,
+        "col": 13
       },
       {
         "word": "came",
-        "start": 127.9,
-        "end": 128.2,
-        "col": 15
+        "start": 127.91,
+        "end": 128.23,
+        "col": 17
       },
       {
-        "word": "before",
-        "start": 128.2,
-        "end": 128.86,
-        "col": 20
+        "word": "before,",
+        "start": 128.23,
+        "end": 128.83,
+        "col": 22
+      },
+      {
+        "word": "and",
+        "start": 128.83,
+        "end": 129.67,
+        "col": 30
       }
     ]
   },
@@ -1817,12 +1774,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#",
-      "G#"
+      "D#"
     ],
     "chord_cols": [
-      0,
-      19
+      0
     ],
     "beats": [
       129.21904761904761,
@@ -1830,43 +1785,37 @@
       130.58902494331065,
       131.28562358276645
     ],
-    "lyrics": "and the ones yet   to come,",
+    "lyrics": "the ones yet to come,",
     "words": [
       {
-        "word": "and",
-        "start": 129.189,
-        "end": 129.64,
+        "word": "the",
+        "start": 129.67,
+        "end": 129.83,
         "col": 0
       },
       {
-        "word": "the",
-        "start": 129.64,
-        "end": 129.8,
+        "word": "ones",
+        "start": 129.83,
+        "end": 130.23,
         "col": 4
       },
       {
-        "word": "ones",
-        "start": 129.8,
-        "end": 130.24,
-        "col": 8
-      },
-      {
         "word": "yet",
-        "start": 130.24,
-        "end": 130.54,
-        "col": 13
+        "start": 130.23,
+        "end": 130.57,
+        "col": 9
       },
       {
         "word": "to",
-        "start": 130.54,
-        "end": 130.8,
-        "col": 19
+        "start": 130.57,
+        "end": 130.81,
+        "col": 13
       },
       {
         "word": "come,",
-        "start": 130.8,
-        "end": 131.46,
-        "col": 22
+        "start": 130.81,
+        "end": 131.758,
+        "col": 16
       }
     ]
   },
@@ -1876,7 +1825,7 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "G#"
+      "Cm"
     ],
     "chord_cols": [
       0
@@ -1887,31 +1836,37 @@
       133.32897959183674,
       134.002358276644
     ],
-    "lyrics": "we'll see true justice",
+    "lyrics": "We'll see true justice, finally",
     "words": [
       {
-        "word": "we'll",
-        "start": 131.77,
-        "end": 132.34,
+        "word": "We'll",
+        "start": 132.178,
+        "end": 132.39,
         "col": 0
       },
       {
         "word": "see",
-        "start": 132.34,
-        "end": 132.86,
+        "start": 132.39,
+        "end": 132.87,
         "col": 6
       },
       {
         "word": "true",
-        "start": 132.86,
-        "end": 133.36,
+        "start": 132.87,
+        "end": 133.37,
         "col": 10
       },
       {
-        "word": "justice",
-        "start": 133.36,
-        "end": 134.18,
+        "word": "justice,",
+        "start": 133.37,
+        "end": 134.17,
         "col": 15
+      },
+      {
+        "word": "finally",
+        "start": 134.17,
+        "end": 135.65,
+        "col": 24
       }
     ]
   },
@@ -1921,12 +1876,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "G#",
-      "A#"
+      "Fm"
     ],
     "chord_cols": [
-      0,
-      14
+      0
     ],
     "beats": [
       134.69895691609977,
@@ -1934,19 +1887,13 @@
       136.0689342403628,
       136.7655328798186
     ],
-    "lyrics": "finally       run.",
+    "lyrics": "          run.",
     "words": [
       {
-        "word": "finally",
-        "start": 134.4,
-        "end": 135.74,
-        "col": 0
-      },
-      {
         "word": "run.",
-        "start": 135.74,
-        "end": 137.079,
-        "col": 14
+        "start": 135.65,
+        "end": 142.19,
+        "col": 10
       }
     ]
   },
@@ -1956,10 +1903,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "A#",
+      "D#"
     ],
     "chord_cols": [
-      0
+      0,
+      8
     ],
     "beats": [
       137.43891156462584,
@@ -1976,12 +1925,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#",
-      "D#"
+      "Fm"
     ],
     "chord_cols": [
-      0,
-      12
+      0
     ],
     "beats": [
       140.17886621315193,
@@ -1989,27 +1936,8 @@
       141.57206349206348,
       142.24544217687074
     ],
-    "lyrics": "            Oh. Oh, the",
-    "words": [
-      {
-        "word": "Oh.",
-        "start": 142.389,
-        "end": 142.565,
-        "col": 12
-      },
-      {
-        "word": "Oh,",
-        "start": 142.565,
-        "end": 142.74,
-        "col": 16
-      },
-      {
-        "word": "the",
-        "start": 142.74,
-        "end": 142.84,
-        "col": 20
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 142.918820861678,
@@ -2017,12 +1945,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "A#"
+      "Gm"
     ],
     "chord_cols": [
-      0,
-      14
+      0
     ],
     "beats": [
       142.918820861678,
@@ -2030,31 +1956,37 @@
       144.31201814058957,
       144.98539682539683
     ],
-    "lyrics": "Unwavering    Gaze, it meets",
+    "lyrics": "Oh, the Unwavering Gaze, it",
     "words": [
       {
-        "word": "Unwavering",
-        "start": 142.84,
-        "end": 144.54,
+        "word": "Oh,",
+        "start": 142.27,
+        "end": 142.69,
         "col": 0
       },
       {
+        "word": "the",
+        "start": 142.69,
+        "end": 142.87,
+        "col": 4
+      },
+      {
+        "word": "Unwavering",
+        "start": 142.87,
+        "end": 144.49,
+        "col": 8
+      },
+      {
         "word": "Gaze,",
-        "start": 144.54,
-        "end": 145.12,
-        "col": 14
+        "start": 144.49,
+        "end": 145.25,
+        "col": 19
       },
       {
         "word": "it",
-        "start": 145.219,
-        "end": 145.5,
-        "col": 20
-      },
-      {
-        "word": "meets",
-        "start": 145.5,
-        "end": 145.76,
-        "col": 23
+        "start": 145.35,
+        "end": 145.49,
+        "col": 25
       }
     ]
   },
@@ -2064,12 +1996,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#",
-      "Cm"
+      "D#"
     ],
     "chord_cols": [
-      0,
-      14
+      0
     ],
     "beats": [
       145.6587755102041,
@@ -2077,24 +2007,30 @@
       147.05197278911564,
       147.7253514739229
     ],
-    "lyrics": "the new       day,",
+    "lyrics": "meets the new day,",
     "words": [
       {
-        "word": "the",
-        "start": 145.76,
-        "end": 146.16,
+        "word": "meets",
+        "start": 145.49,
+        "end": 145.85,
         "col": 0
       },
       {
+        "word": "the",
+        "start": 145.85,
+        "end": 146.17,
+        "col": 6
+      },
+      {
         "word": "new",
-        "start": 146.16,
-        "end": 147.38,
-        "col": 4
+        "start": 146.17,
+        "end": 147.53,
+        "col": 10
       },
       {
         "word": "day,",
-        "start": 147.38,
-        "end": 148.54,
+        "start": 147.53,
+        "end": 150.126,
         "col": 14
       }
     ]
@@ -2105,12 +2041,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "Cm",
-      "G#"
+      "Gm"
     ],
     "chord_cols": [
-      0,
-      12
+      0
     ],
     "beats": [
       148.39873015873016,
@@ -2118,27 +2052,8 @@
       149.79192743764173,
       150.465306122449
     ],
-    "lyrics": "            with a strength",
-    "words": [
-      {
-        "word": "with",
-        "start": 150.449,
-        "end": 150.86,
-        "col": 12
-      },
-      {
-        "word": "a",
-        "start": 150.86,
-        "end": 150.96,
-        "col": 17
-      },
-      {
-        "word": "strength",
-        "start": 150.96,
-        "end": 151.32,
-        "col": 19
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 151.16190476190476,
@@ -2146,12 +2061,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "G#",
-      "D#"
+      "D#",
+      "Fm"
     ],
     "chord_cols": [
       0,
-      19
+      36
     ],
     "beats": [
       151.16190476190476,
@@ -2159,31 +2074,49 @@
       152.5318820861678,
       153.20526077097506
     ],
-    "lyrics": "born of struggle   lighting",
+    "lyrics": "With a strength born of struggle,   lighting",
     "words": [
       {
-        "word": "born",
-        "start": 151.32,
-        "end": 151.72,
+        "word": "With",
+        "start": 150.546,
+        "end": 150.89,
         "col": 0
       },
       {
-        "word": "of",
-        "start": 151.72,
-        "end": 151.92,
+        "word": "a",
+        "start": 150.89,
+        "end": 151.01,
         "col": 5
       },
       {
-        "word": "struggle",
-        "start": 151.92,
-        "end": 152.92,
-        "col": 8
+        "word": "strength",
+        "start": 151.01,
+        "end": 151.35,
+        "col": 7
+      },
+      {
+        "word": "born",
+        "start": 151.35,
+        "end": 151.73,
+        "col": 16
+      },
+      {
+        "word": "of",
+        "start": 151.73,
+        "end": 151.93,
+        "col": 21
+      },
+      {
+        "word": "struggle,",
+        "start": 151.93,
+        "end": 152.93,
+        "col": 24
       },
       {
         "word": "lighting",
-        "start": 153.26,
-        "end": 154.24,
-        "col": 19
+        "start": 153.49,
+        "end": 153.97,
+        "col": 36
       }
     ]
   },
@@ -2193,12 +2126,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "A#"
+      "D#"
     ],
     "chord_cols": [
-      0,
-      14
+      0
     ],
     "beats": [
       153.87863945578232,
@@ -2206,25 +2137,19 @@
       155.27183673469386,
       155.96843537414966
     ],
-    "lyrics": "the way.      No",
+    "lyrics": "the way.",
     "words": [
       {
         "word": "the",
-        "start": 154.24,
-        "end": 154.42,
+        "start": 154.27,
+        "end": 154.47,
         "col": 0
       },
       {
         "word": "way.",
-        "start": 154.42,
-        "end": 155.58,
+        "start": 154.47,
+        "end": 156.098,
         "col": 4
-      },
-      {
-        "word": "No",
-        "start": 155.799,
-        "end": 156.42,
-        "col": 14
       }
     ]
   },
@@ -2234,12 +2159,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#",
-      "D#"
+      "A#"
     ],
     "chord_cols": [
-      0,
-      15
+      0
     ],
     "beats": [
       156.64181405895692,
@@ -2247,31 +2170,37 @@
       158.01179138321996,
       158.70839002267573
     ],
-    "lyrics": "longer bowed   down by",
+    "lyrics": "No longer bowed down, by",
     "words": [
       {
-        "word": "longer",
-        "start": 156.42,
-        "end": 157.0,
+        "word": "No",
+        "start": 156.19,
+        "end": 156.45,
         "col": 0
       },
       {
-        "word": "bowed",
-        "start": 157.0,
-        "end": 157.82,
-        "col": 7
+        "word": "longer",
+        "start": 156.45,
+        "end": 156.97,
+        "col": 3
       },
       {
-        "word": "down",
-        "start": 157.82,
-        "end": 158.96,
-        "col": 15
+        "word": "bowed",
+        "start": 156.97,
+        "end": 157.91,
+        "col": 10
+      },
+      {
+        "word": "down,",
+        "start": 157.91,
+        "end": 158.85,
+        "col": 16
       },
       {
         "word": "by",
-        "start": 158.96,
-        "end": 159.72,
-        "col": 20
+        "start": 158.85,
+        "end": 159.71,
+        "col": 22
       }
     ]
   },
@@ -2281,8 +2210,8 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "G#"
+      "Cm",
+      "D#"
     ],
     "chord_cols": [
       0,
@@ -2294,43 +2223,37 @@
       160.75174603174602,
       161.44834467120182
     ],
-    "lyrics": "the weight of   the past. Our",
+    "lyrics": "the weight of   the past,",
     "words": [
       {
         "word": "the",
-        "start": 159.72,
-        "end": 159.96,
+        "start": 159.71,
+        "end": 159.95,
         "col": 0
       },
       {
         "word": "weight",
-        "start": 159.96,
-        "end": 160.36,
+        "start": 159.95,
+        "end": 160.47,
         "col": 4
       },
       {
         "word": "of",
-        "start": 160.36,
-        "end": 160.82,
+        "start": 160.47,
+        "end": 161.05,
         "col": 11
       },
       {
         "word": "the",
-        "start": 160.82,
-        "end": 161.16,
+        "start": 161.05,
+        "end": 161.25,
         "col": 16
       },
       {
-        "word": "past.",
-        "start": 161.16,
-        "end": 161.6,
+        "word": "past,",
+        "start": 161.25,
+        "end": 161.67,
         "col": 20
-      },
-      {
-        "word": "Our",
-        "start": 161.7,
-        "end": 162.04,
-        "col": 26
       }
     ]
   },
@@ -2340,12 +2263,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "Cm"
+      "Cm",
+      "D#"
     ],
     "chord_cols": [
       0,
-      19
+      24
     ],
     "beats": [
       162.12172335600906,
@@ -2353,37 +2276,43 @@
       163.49170068027212,
       164.1882993197279
     ],
-    "lyrics": "hope is a beacon   built",
+    "lyrics": "Our hope is a beacon,   built",
     "words": [
       {
-        "word": "hope",
-        "start": 162.04,
-        "end": 162.36,
+        "word": "Our",
+        "start": 161.866,
+        "end": 162.11,
         "col": 0
       },
       {
+        "word": "hope",
+        "start": 162.11,
+        "end": 162.43,
+        "col": 4
+      },
+      {
         "word": "is",
-        "start": 162.36,
-        "end": 162.66,
-        "col": 5
+        "start": 162.43,
+        "end": 162.65,
+        "col": 9
       },
       {
         "word": "a",
-        "start": 162.66,
-        "end": 162.84,
-        "col": 8
+        "start": 162.65,
+        "end": 162.97,
+        "col": 12
       },
       {
-        "word": "beacon",
-        "start": 162.84,
-        "end": 164.1,
-        "col": 10
+        "word": "beacon,",
+        "start": 162.97,
+        "end": 163.85,
+        "col": 14
       },
       {
         "word": "built",
-        "start": 164.1,
-        "end": 165.459,
-        "col": 19
+        "start": 163.85,
+        "end": 165.35,
+        "col": 24
       }
     ]
   },
@@ -2394,7 +2323,7 @@
     "time_signature": "4/4",
     "chords": [
       "Cm",
-      "A#"
+      "Fm"
     ],
     "chord_cols": [
       0,
@@ -2406,25 +2335,19 @@
       166.25487528344672,
       166.92825396825396
     ],
-    "lyrics": "finally       to last.",
+    "lyrics": "finally       to",
     "words": [
       {
         "word": "finally",
-        "start": 165.459,
-        "end": 166.08,
+        "start": 165.35,
+        "end": 166.13,
         "col": 0
       },
       {
         "word": "to",
-        "start": 166.08,
-        "end": 166.64,
+        "start": 166.13,
+        "end": 166.73,
         "col": 14
-      },
-      {
-        "word": "last.",
-        "start": 166.64,
-        "end": 167.92,
-        "col": 17
       }
     ]
   },
@@ -2445,8 +2368,15 @@
       168.9948299319728,
       169.66820861678005
     ],
-    "lyrics": "",
-    "words": []
+    "lyrics": "last.",
+    "words": [
+      {
+        "word": "last.",
+        "start": 166.73,
+        "end": 174.446,
+        "col": 0
+      }
+    ]
   },
   {
     "time": 170.3415873015873,
@@ -2454,12 +2384,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#",
       "D#"
     ],
     "chord_cols": [
-      0,
-      8
+      0
     ],
     "beats": [
       170.3415873015873,
@@ -2476,12 +2404,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "G#"
+      "A#"
     ],
     "chord_cols": [
-      0,
-      8
+      0
     ],
     "beats": [
       173.10476190476192,
@@ -2498,8 +2424,8 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "G#"
+      "G#",
+      "D#"
     ],
     "chord_cols": [
       0,
@@ -2520,12 +2446,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#",
       "D#"
     ],
     "chord_cols": [
-      0,
-      12
+      0
     ],
     "beats": [
       178.58467120181405,
@@ -2533,15 +2457,8 @@
       179.9546485260771,
       180.65124716553288
     ],
-    "lyrics": "            Break",
-    "words": [
-      {
-        "word": "Break",
-        "start": 180.737,
-        "end": 181.16,
-        "col": 12
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 181.32462585034014,
@@ -2549,10 +2466,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#"
+      "Cm",
+      "A#"
     ],
     "chord_cols": [
-      0
+      0,
+      28
     ],
     "beats": [
       181.32462585034014,
@@ -2560,31 +2479,31 @@
       182.69460317460317,
       183.39120181405895
     ],
-    "lyrics": "down the barriers, the",
+    "lyrics": "Break down the barriers,",
     "words": [
       {
-        "word": "down",
-        "start": 181.16,
-        "end": 181.64,
+        "word": "Break",
+        "start": 180.862,
+        "end": 181.03,
         "col": 0
       },
       {
+        "word": "down",
+        "start": 181.03,
+        "end": 181.65,
+        "col": 6
+      },
+      {
         "word": "the",
-        "start": 181.64,
-        "end": 181.9,
-        "col": 5
+        "start": 181.65,
+        "end": 181.89,
+        "col": 11
       },
       {
         "word": "barriers,",
-        "start": 181.9,
-        "end": 182.7,
-        "col": 9
-      },
-      {
-        "word": "the",
-        "start": 183.7,
-        "end": 184.6,
-        "col": 19
+        "start": 181.89,
+        "end": 182.77,
+        "col": 15
       }
     ]
   },
@@ -2594,12 +2513,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "G#"
+      "Fm",
+      "D#"
     ],
     "chord_cols": [
       0,
-      14
+      18
     ],
     "beats": [
       184.08780045351475,
@@ -2607,43 +2526,37 @@
       185.45777777777778,
       186.15437641723355
     ],
-    "lyrics": "walls built   so high. Let fairness",
+    "lyrics": "the walls built   so high,",
     "words": [
       {
-        "word": "walls",
-        "start": 184.6,
-        "end": 185.02,
+        "word": "the",
+        "start": 184.15,
+        "end": 184.63,
         "col": 0
       },
       {
+        "word": "walls",
+        "start": 184.63,
+        "end": 185.05,
+        "col": 4
+      },
+      {
         "word": "built",
-        "start": 185.02,
-        "end": 185.4,
-        "col": 6
+        "start": 185.05,
+        "end": 185.43,
+        "col": 10
       },
       {
         "word": "so",
-        "start": 185.4,
-        "end": 185.74,
-        "col": 14
+        "start": 185.43,
+        "end": 185.79,
+        "col": 18
       },
       {
-        "word": "high.",
-        "start": 185.74,
-        "end": 186.24,
-        "col": 17
-      },
-      {
-        "word": "Let",
-        "start": 186.5,
-        "end": 186.58,
-        "col": 23
-      },
-      {
-        "word": "fairness",
-        "start": 186.58,
-        "end": 187.24,
-        "col": 27
+        "word": "high,",
+        "start": 185.79,
+        "end": 186.338,
+        "col": 21
       }
     ]
   },
@@ -2653,12 +2566,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "G#",
-      "Cm"
+      "Gm"
     ],
     "chord_cols": [
-      0,
-      14
+      0
     ],
     "beats": [
       186.85097505668935,
@@ -2666,25 +2577,37 @@
       188.2441723356009,
       188.9407709750567
     ],
-    "lyrics": "and mercy     finally",
+    "lyrics": "Let fairness and mercy, finally",
     "words": [
       {
-        "word": "and",
-        "start": 187.24,
-        "end": 187.74,
+        "word": "Let",
+        "start": 186.43,
+        "end": 186.61,
         "col": 0
       },
       {
-        "word": "mercy",
-        "start": 187.74,
-        "end": 188.5,
+        "word": "fairness",
+        "start": 186.61,
+        "end": 187.27,
         "col": 4
       },
       {
+        "word": "and",
+        "start": 187.27,
+        "end": 187.67,
+        "col": 13
+      },
+      {
+        "word": "mercy,",
+        "start": 187.67,
+        "end": 188.47,
+        "col": 17
+      },
+      {
         "word": "finally",
-        "start": 188.95,
-        "end": 190.32,
-        "col": 14
+        "start": 188.47,
+        "end": 190.29,
+        "col": 24
       }
     ]
   },
@@ -2694,8 +2617,8 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "Cm",
-      "D#"
+      "Fm",
+      "Gm"
     ],
     "chord_cols": [
       0,
@@ -2707,19 +2630,13 @@
       190.96090702947845,
       191.6342857142857
     ],
-    "lyrics": "fly.          With",
+    "lyrics": "fly.",
     "words": [
       {
         "word": "fly.",
-        "start": 190.32,
-        "end": 190.9,
+        "start": 190.29,
+        "end": 191.106,
         "col": 0
-      },
-      {
-        "word": "With",
-        "start": 191.439,
-        "end": 192.12,
-        "col": 14
       }
     ]
   },
@@ -2740,43 +2657,49 @@
       193.6544217687075,
       194.35102040816327
     ],
-    "lyrics": "hearts full of courage and spirits",
+    "lyrics": "With hearts full of courage, and spirits",
     "words": [
       {
-        "word": "hearts",
-        "start": 192.12,
-        "end": 192.6,
+        "word": "With",
+        "start": 192.01,
+        "end": 192.17,
         "col": 0
       },
       {
-        "word": "full",
-        "start": 192.6,
-        "end": 192.88,
-        "col": 7
+        "word": "hearts",
+        "start": 192.17,
+        "end": 192.57,
+        "col": 5
       },
       {
-        "word": "of",
-        "start": 192.88,
-        "end": 193.1,
+        "word": "full",
+        "start": 192.57,
+        "end": 192.95,
         "col": 12
       },
       {
-        "word": "courage",
-        "start": 193.1,
-        "end": 193.84,
-        "col": 15
+        "word": "of",
+        "start": 192.95,
+        "end": 193.09,
+        "col": 17
+      },
+      {
+        "word": "courage,",
+        "start": 193.09,
+        "end": 193.83,
+        "col": 20
       },
       {
         "word": "and",
-        "start": 194.7,
+        "start": 193.83,
         "end": 194.75,
-        "col": 23
+        "col": 29
       },
       {
         "word": "spirits",
         "start": 194.75,
-        "end": 195.24,
-        "col": 27
+        "end": 195.15,
+        "col": 33
       }
     ]
   },
@@ -2786,12 +2709,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "G#"
+      "D#"
     ],
     "chord_cols": [
-      0,
-      14
+      0
     ],
     "beats": [
       195.02439909297053,
@@ -2799,25 +2720,19 @@
       196.4175963718821,
       197.09097505668933
     ],
-    "lyrics": "held free,    we'll",
+    "lyrics": "held free,",
     "words": [
       {
         "word": "held",
-        "start": 195.24,
-        "end": 195.86,
+        "start": 195.15,
+        "end": 195.85,
         "col": 0
       },
       {
         "word": "free,",
-        "start": 195.86,
-        "end": 196.44,
+        "start": 195.85,
+        "end": 196.666,
         "col": 5
-      },
-      {
-        "word": "we'll",
-        "start": 197.46,
-        "end": 197.6,
-        "col": 14
       }
     ]
   },
@@ -2827,12 +2742,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "G#",
-      "Cm"
+      "Cm",
+      "Gm"
     ],
     "chord_cols": [
       0,
-      21
+      28
     ],
     "beats": [
       197.7643537414966,
@@ -2840,43 +2755,43 @@
       199.15755102040816,
       199.83092970521542
     ],
-    "lyrics": "build a new future   for you",
+    "lyrics": "We'll build a new future,   for",
     "words": [
       {
-        "word": "build",
-        "start": 197.6,
-        "end": 198.04,
+        "word": "We'll",
+        "start": 197.486,
+        "end": 197.63,
         "col": 0
       },
       {
-        "word": "a",
-        "start": 198.04,
-        "end": 198.2,
+        "word": "build",
+        "start": 197.63,
+        "end": 198.03,
         "col": 6
       },
       {
-        "word": "new",
-        "start": 198.2,
-        "end": 198.4,
-        "col": 8
-      },
-      {
-        "word": "future",
-        "start": 198.4,
-        "end": 199.46,
+        "word": "a",
+        "start": 198.03,
+        "end": 198.25,
         "col": 12
       },
       {
-        "word": "for",
-        "start": 199.78,
-        "end": 200.34,
-        "col": 21
+        "word": "new",
+        "start": 198.25,
+        "end": 198.41,
+        "col": 14
       },
       {
-        "word": "you",
-        "start": 200.34,
-        "end": 200.68,
-        "col": 25
+        "word": "future,",
+        "start": 198.41,
+        "end": 199.45,
+        "col": 18
+      },
+      {
+        "word": "for",
+        "start": 199.45,
+        "end": 200.35,
+        "col": 28
       }
     ]
   },
@@ -2886,12 +2801,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "Cm",
-      "A#"
+      "Fm"
     ],
     "chord_cols": [
-      0,
-      14
+      0
     ],
     "beats": [
       200.5275283446712,
@@ -2899,25 +2812,31 @@
       201.89750566893423,
       202.5708843537415
     ],
-    "lyrics": "and for       me.",
+    "lyrics": "you and for me.",
     "words": [
       {
-        "word": "and",
-        "start": 200.68,
-        "end": 201.32,
+        "word": "you",
+        "start": 200.35,
+        "end": 200.77,
         "col": 0
       },
       {
-        "word": "for",
-        "start": 201.32,
-        "end": 201.6,
+        "word": "and",
+        "start": 200.77,
+        "end": 201.35,
         "col": 4
       },
       {
+        "word": "for",
+        "start": 201.35,
+        "end": 201.65,
+        "col": 8
+      },
+      {
         "word": "me.",
-        "start": 201.6,
-        "end": 203.7,
-        "col": 14
+        "start": 201.65,
+        "end": 207.654,
+        "col": 12
       }
     ]
   },
@@ -2927,10 +2846,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "A#",
+      "D#"
     ],
     "chord_cols": [
-      0
+      0,
+      8
     ],
     "beats": [
       203.2674829931973,
@@ -2947,12 +2868,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#",
-      "D#"
+      "Fm"
     ],
     "chord_cols": [
-      0,
-      14
+      0
     ],
     "beats": [
       206.00743764172336,
@@ -2960,27 +2879,8 @@
       207.3774149659864,
       208.0740136054422
     ],
-    "lyrics": "Oh. Yeah,     the",
-    "words": [
-      {
-        "word": "Oh.",
-        "start": 206.589,
-        "end": 207.034,
-        "col": 0
-      },
-      {
-        "word": "Yeah,",
-        "start": 207.034,
-        "end": 207.48,
-        "col": 4
-      },
-      {
-        "word": "the",
-        "start": 207.48,
-        "end": 208.64,
-        "col": 14
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 208.74739229024942,
@@ -2988,12 +2888,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "A#"
+      "Fm"
     ],
     "chord_cols": [
-      0,
-      14
+      0
     ],
     "beats": [
       208.74739229024942,
@@ -3001,31 +2899,43 @@
       210.11736961451248,
       210.81396825396826
     ],
-    "lyrics": "Unwavering    Gaze, it meets",
+    "lyrics": "Oh, the Unwavering Gaze, it meets",
     "words": [
       {
-        "word": "Unwavering",
-        "start": 208.64,
-        "end": 210.36,
+        "word": "Oh,",
+        "start": 207.704,
+        "end": 208.187,
         "col": 0
       },
       {
+        "word": "the",
+        "start": 208.187,
+        "end": 208.67,
+        "col": 4
+      },
+      {
+        "word": "Unwavering",
+        "start": 208.67,
+        "end": 210.37,
+        "col": 8
+      },
+      {
         "word": "Gaze,",
-        "start": 210.36,
-        "end": 210.94,
-        "col": 14
+        "start": 210.37,
+        "end": 210.97,
+        "col": 19
       },
       {
         "word": "it",
-        "start": 211.019,
-        "end": 211.29,
-        "col": 20
+        "start": 211.11,
+        "end": 211.31,
+        "col": 25
       },
       {
         "word": "meets",
-        "start": 211.29,
-        "end": 211.56,
-        "col": 23
+        "start": 211.31,
+        "end": 211.65,
+        "col": 28
       }
     ]
   },
@@ -3035,8 +2945,8 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#",
-      "Cm"
+      "Gm",
+      "D#"
     ],
     "chord_cols": [
       0,
@@ -3052,20 +2962,20 @@
     "words": [
       {
         "word": "the",
-        "start": 211.56,
-        "end": 212.02,
+        "start": 211.65,
+        "end": 212.05,
         "col": 0
       },
       {
         "word": "new",
-        "start": 212.02,
-        "end": 212.98,
+        "start": 212.05,
+        "end": 212.97,
         "col": 4
       },
       {
         "word": "day,",
-        "start": 212.98,
-        "end": 214.1,
+        "start": 212.97,
+        "end": 216.046,
         "col": 14
       }
     ]
@@ -3076,12 +2986,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "Cm",
-      "G#"
+      "Gm"
     ],
     "chord_cols": [
-      0,
-      12
+      0
     ],
     "beats": [
       214.22730158730158,
@@ -3089,27 +2997,8 @@
       215.59727891156462,
       216.29387755102042
     ],
-    "lyrics": "            with a strength",
-    "words": [
-      {
-        "word": "with",
-        "start": 216.29,
-        "end": 216.535,
-        "col": 12
-      },
-      {
-        "word": "a",
-        "start": 216.535,
-        "end": 216.78,
-        "col": 17
-      },
-      {
-        "word": "strength",
-        "start": 216.78,
-        "end": 217.14,
-        "col": 19
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 216.96725623582768,
@@ -3117,12 +3006,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "G#",
-      "D#"
+      "D#",
+      "Fm"
     ],
     "chord_cols": [
       0,
-      19
+      36
     ],
     "beats": [
       216.96725623582768,
@@ -3130,31 +3019,49 @@
       218.36045351473922,
       219.03383219954648
     ],
-    "lyrics": "born of struggle   lighting",
+    "lyrics": "With a strength born of struggle,   lighting",
     "words": [
       {
-        "word": "born",
-        "start": 217.14,
-        "end": 217.54,
+        "word": "With",
+        "start": 216.386,
+        "end": 216.59,
         "col": 0
       },
       {
-        "word": "of",
-        "start": 217.54,
-        "end": 217.7,
+        "word": "a",
+        "start": 216.59,
+        "end": 216.85,
         "col": 5
       },
       {
-        "word": "struggle",
-        "start": 217.7,
-        "end": 218.74,
-        "col": 8
+        "word": "strength",
+        "start": 216.85,
+        "end": 217.13,
+        "col": 7
+      },
+      {
+        "word": "born",
+        "start": 217.13,
+        "end": 217.55,
+        "col": 16
+      },
+      {
+        "word": "of",
+        "start": 217.55,
+        "end": 217.71,
+        "col": 21
+      },
+      {
+        "word": "struggle,",
+        "start": 217.71,
+        "end": 218.79,
+        "col": 24
       },
       {
         "word": "lighting",
-        "start": 219.079,
-        "end": 220.04,
-        "col": 19
+        "start": 219.21,
+        "end": 219.79,
+        "col": 36
       }
     ]
   },
@@ -3164,12 +3071,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "A#"
+      "D#"
     ],
     "chord_cols": [
-      0,
-      14
+      0
     ],
     "beats": [
       219.70721088435374,
@@ -3177,25 +3082,19 @@
       221.1004081632653,
       221.77378684807258
     ],
-    "lyrics": "the way.      No",
+    "lyrics": "the way.",
     "words": [
       {
         "word": "the",
-        "start": 220.04,
-        "end": 220.22,
+        "start": 220.09,
+        "end": 220.27,
         "col": 0
       },
       {
         "word": "way.",
-        "start": 220.22,
-        "end": 221.14,
+        "start": 220.27,
+        "end": 221.39,
         "col": 4
-      },
-      {
-        "word": "No",
-        "start": 222.04,
-        "end": 222.26,
-        "col": 14
       }
     ]
   },
@@ -3205,12 +3104,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#",
-      "D#"
+      "A#"
     ],
     "chord_cols": [
-      0,
-      15
+      0
     ],
     "beats": [
       222.4471655328798,
@@ -3218,31 +3115,37 @@
       223.84036281179138,
       224.51374149659864
     ],
-    "lyrics": "longer bowed   down by",
+    "lyrics": "No longer bowed down, by",
     "words": [
       {
-        "word": "longer",
-        "start": 222.26,
-        "end": 222.84,
+        "word": "No",
+        "start": 221.41,
+        "end": 222.27,
         "col": 0
       },
       {
-        "word": "bowed",
-        "start": 222.84,
-        "end": 224.12,
-        "col": 7
+        "word": "longer",
+        "start": 222.27,
+        "end": 222.77,
+        "col": 3
       },
       {
-        "word": "down",
-        "start": 224.12,
-        "end": 224.54,
-        "col": 15
+        "word": "bowed",
+        "start": 222.77,
+        "end": 223.61,
+        "col": 10
+      },
+      {
+        "word": "down,",
+        "start": 223.61,
+        "end": 224.55,
+        "col": 16
       },
       {
         "word": "by",
-        "start": 224.54,
-        "end": 225.5,
-        "col": 20
+        "start": 224.55,
+        "end": 225.57,
+        "col": 22
       }
     ]
   },
@@ -3252,12 +3155,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "G#"
+      "Cm"
     ],
     "chord_cols": [
-      0,
-      16
+      0
     ],
     "beats": [
       225.1871201814059,
@@ -3265,61 +3166,37 @@
       226.58031746031747,
       227.2536961451247
     ],
-    "lyrics": "the weight of   the past. Our hope is a",
+    "lyrics": "the weight of the past,",
     "words": [
       {
         "word": "the",
-        "start": 225.5,
-        "end": 225.76,
+        "start": 225.57,
+        "end": 225.81,
         "col": 0
       },
       {
         "word": "weight",
-        "start": 225.76,
-        "end": 226.16,
+        "start": 225.81,
+        "end": 226.33,
         "col": 4
       },
       {
         "word": "of",
-        "start": 226.16,
-        "end": 226.74,
+        "start": 226.33,
+        "end": 226.87,
         "col": 11
       },
       {
         "word": "the",
-        "start": 226.74,
-        "end": 227.0,
-        "col": 16
+        "start": 226.87,
+        "end": 227.03,
+        "col": 14
       },
       {
-        "word": "past.",
-        "start": 227.0,
-        "end": 227.48,
-        "col": 20
-      },
-      {
-        "word": "Our",
-        "start": 227.529,
-        "end": 227.613,
-        "col": 26
-      },
-      {
-        "word": "hope",
-        "start": 227.613,
-        "end": 227.697,
-        "col": 30
-      },
-      {
-        "word": "is",
-        "start": 227.697,
-        "end": 227.78,
-        "col": 35
-      },
-      {
-        "word": "a",
-        "start": 227.78,
-        "end": 227.86,
-        "col": 38
+        "word": "past,",
+        "start": 227.03,
+        "end": 227.798,
+        "col": 18
       }
     ]
   },
@@ -3329,12 +3206,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "Cm"
+      "D#"
     ],
     "chord_cols": [
-      0,
-      14
+      0
     ],
     "beats": [
       227.92707482993197,
@@ -3342,13 +3217,43 @@
       229.32027210884354,
       229.9936507936508
     ],
-    "lyrics": "beacon",
+    "lyrics": "Our hope is a beacon, built",
     "words": [
       {
-        "word": "beacon",
-        "start": 227.86,
-        "end": 230.54,
+        "word": "Our",
+        "start": 227.81,
+        "end": 227.89,
         "col": 0
+      },
+      {
+        "word": "hope",
+        "start": 227.89,
+        "end": 228.27,
+        "col": 4
+      },
+      {
+        "word": "is",
+        "start": 228.27,
+        "end": 228.47,
+        "col": 9
+      },
+      {
+        "word": "a",
+        "start": 228.47,
+        "end": 228.65,
+        "col": 12
+      },
+      {
+        "word": "beacon,",
+        "start": 228.65,
+        "end": 229.83,
+        "col": 14
+      },
+      {
+        "word": "built",
+        "start": 230.33,
+        "end": 231.15,
+        "col": 22
       }
     ]
   },
@@ -3358,12 +3263,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "Cm",
-      "A#"
+      "Gm",
+      "Fm"
     ],
     "chord_cols": [
       0,
-      16
+      14
     ],
     "beats": [
       230.69024943310657,
@@ -3371,31 +3276,19 @@
       232.0602267573696,
       232.73360544217687
     ],
-    "lyrics": "built finally   to last.",
+    "lyrics": "finally       to",
     "words": [
       {
-        "word": "built",
-        "start": 230.54,
-        "end": 231.14,
+        "word": "finally",
+        "start": 231.15,
+        "end": 231.97,
         "col": 0
       },
       {
-        "word": "finally",
-        "start": 231.14,
-        "end": 231.92,
-        "col": 6
-      },
-      {
         "word": "to",
-        "start": 231.92,
-        "end": 232.46,
-        "col": 16
-      },
-      {
-        "word": "last.",
-        "start": 232.46,
-        "end": 234.12,
-        "col": 19
+        "start": 231.97,
+        "end": 232.53,
+        "col": 14
       }
     ]
   },
@@ -3416,8 +3309,15 @@
       234.8001814058957,
       235.49678004535147
     ],
-    "lyrics": "",
-    "words": []
+    "lyrics": "last.",
+    "words": [
+      {
+        "word": "last.",
+        "start": 232.53,
+        "end": 235.986,
+        "col": 0
+      }
+    ]
   },
   {
     "time": 236.17015873015873,
@@ -3425,12 +3325,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#",
-      "D#"
+      "Gm"
     ],
     "chord_cols": [
-      0,
-      26
+      0
     ],
     "beats": [
       236.17015873015873,
@@ -3438,43 +3336,43 @@
       237.54013605442177,
       238.23673469387754
     ],
-    "lyrics": "The gaze is unwavering,   the resolve",
+    "lyrics": "The gaze is unwavering, the resolve",
     "words": [
       {
         "word": "The",
-        "start": 236.12,
-        "end": 236.17,
+        "start": 235.99,
+        "end": 236.07,
         "col": 0
       },
       {
         "word": "gaze",
-        "start": 236.17,
-        "end": 236.44,
+        "start": 236.07,
+        "end": 236.55,
         "col": 4
       },
       {
         "word": "is",
-        "start": 236.44,
-        "end": 236.8,
+        "start": 236.55,
+        "end": 236.79,
         "col": 9
       },
       {
         "word": "unwavering,",
-        "start": 236.8,
-        "end": 238.429,
+        "start": 236.79,
+        "end": 238.17,
         "col": 12
       },
       {
         "word": "the",
-        "start": 238.54,
-        "end": 238.62,
-        "col": 26
+        "start": 238.55,
+        "end": 238.65,
+        "col": 24
       },
       {
         "word": "resolve",
-        "start": 238.62,
-        "end": 239.12,
-        "col": 30
+        "start": 238.65,
+        "end": 239.03,
+        "col": 28
       }
     ]
   },
@@ -3485,7 +3383,7 @@
     "time_signature": "4/4",
     "chords": [
       "D#",
-      "G#"
+      "Fm"
     ],
     "chord_cols": [
       0,
@@ -3497,31 +3395,19 @@
       240.30331065759637,
       240.97668934240363
     ],
-    "lyrics": "is strong,    for a",
+    "lyrics": "is strong,",
     "words": [
       {
         "word": "is",
-        "start": 239.12,
-        "end": 239.6,
+        "start": 239.03,
+        "end": 239.67,
         "col": 0
       },
       {
         "word": "strong,",
-        "start": 239.6,
-        "end": 240.2,
+        "start": 239.67,
+        "end": 240.802,
         "col": 3
-      },
-      {
-        "word": "for",
-        "start": 240.849,
-        "end": 241.38,
-        "col": 14
-      },
-      {
-        "word": "a",
-        "start": 241.38,
-        "end": 241.58,
-        "col": 18
       }
     ]
   },
@@ -3532,11 +3418,11 @@
     "time_signature": "4/4",
     "chords": [
       "D#",
-      "A#"
+      "Fm"
     ],
     "chord_cols": [
       0,
-      23
+      30
     ],
     "beats": [
       241.6500680272109,
@@ -3544,31 +3430,43 @@
       243.02004535147393,
       243.7166439909297
     ],
-    "lyrics": "future where justice   is",
+    "lyrics": "For a future where justice,   is",
     "words": [
       {
-        "word": "future",
-        "start": 241.58,
-        "end": 241.88,
+        "word": "For",
+        "start": 241.222,
+        "end": 241.39,
         "col": 0
       },
       {
-        "word": "where",
-        "start": 241.88,
-        "end": 242.3,
-        "col": 7
+        "word": "a",
+        "start": 241.39,
+        "end": 241.57,
+        "col": 4
       },
       {
-        "word": "justice",
-        "start": 242.3,
-        "end": 243.18,
+        "word": "future",
+        "start": 241.57,
+        "end": 241.91,
+        "col": 6
+      },
+      {
+        "word": "where",
+        "start": 241.91,
+        "end": 242.33,
         "col": 13
       },
       {
+        "word": "justice,",
+        "start": 242.33,
+        "end": 243.19,
+        "col": 19
+      },
+      {
         "word": "is",
-        "start": 243.709,
-        "end": 244.24,
-        "col": 23
+        "start": 243.19,
+        "end": 244.25,
+        "col": 30
       }
     ]
   },
@@ -3578,12 +3476,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#",
-      "G#"
+      "Gm"
     ],
     "chord_cols": [
-      0,
-      19
+      0
     ],
     "beats": [
       244.39002267573696,
@@ -3591,31 +3487,25 @@
       245.78321995464853,
       246.4565986394558
     ],
-    "lyrics": "where we belong.   With",
+    "lyrics": "where we belong.",
     "words": [
       {
         "word": "where",
-        "start": 244.24,
-        "end": 244.58,
+        "start": 244.25,
+        "end": 244.63,
         "col": 0
       },
       {
         "word": "we",
-        "start": 244.58,
-        "end": 245.08,
+        "start": 244.63,
+        "end": 245.09,
         "col": 6
       },
       {
         "word": "belong.",
-        "start": 245.08,
-        "end": 245.76,
+        "start": 245.09,
+        "end": 246.438,
         "col": 9
-      },
-      {
-        "word": "With",
-        "start": 246.54,
-        "end": 247.1,
-        "col": 19
       }
     ]
   },
@@ -3625,12 +3515,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "Cm"
+      "Fm",
+      "Gm"
     ],
     "chord_cols": [
       0,
-      21
+      27
     ],
     "beats": [
       247.12997732426305,
@@ -3638,49 +3528,49 @@
       248.5231746031746,
       249.19655328798186
     ],
-    "lyrics": "heads held up high   and our purpose",
+    "lyrics": "With heads held up high,   and our",
     "words": [
       {
-        "word": "heads",
-        "start": 247.1,
-        "end": 247.28,
+        "word": "With",
+        "start": 246.458,
+        "end": 247.07,
         "col": 0
       },
       {
-        "word": "held",
-        "start": 247.28,
-        "end": 247.64,
-        "col": 6
+        "word": "heads",
+        "start": 247.07,
+        "end": 247.35,
+        "col": 5
       },
       {
-        "word": "up",
-        "start": 247.64,
-        "end": 247.84,
+        "word": "held",
+        "start": 247.35,
+        "end": 247.59,
         "col": 11
       },
       {
-        "word": "high",
-        "start": 247.84,
-        "end": 248.46,
-        "col": 14
+        "word": "up",
+        "start": 247.59,
+        "end": 248.31,
+        "col": 16
+      },
+      {
+        "word": "high,",
+        "start": 248.31,
+        "end": 248.35,
+        "col": 19
       },
       {
         "word": "and",
-        "start": 248.46,
-        "end": 249.46,
-        "col": 21
+        "start": 248.35,
+        "end": 249.49,
+        "col": 27
       },
       {
         "word": "our",
-        "start": 249.46,
-        "end": 249.66,
-        "col": 25
-      },
-      {
-        "word": "purpose",
-        "start": 249.66,
-        "end": 250.14,
-        "col": 29
+        "start": 249.49,
+        "end": 249.81,
+        "col": 31
       }
     ]
   },
@@ -3690,12 +3580,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "Cm",
-      "G#"
+      "D#"
     ],
     "chord_cols": [
-      0,
-      14
+      0
     ],
     "beats": [
       249.86993197278912,
@@ -3703,25 +3591,25 @@
       251.2631292517007,
       251.93650793650792
     ],
-    "lyrics": "held true,    the",
+    "lyrics": "purpose held true,",
     "words": [
       {
-        "word": "held",
-        "start": 250.14,
-        "end": 250.66,
+        "word": "purpose",
+        "start": 249.81,
+        "end": 250.15,
         "col": 0
       },
       {
-        "word": "true,",
-        "start": 250.66,
-        "end": 251.18,
-        "col": 5
+        "word": "held",
+        "start": 250.15,
+        "end": 250.67,
+        "col": 8
       },
       {
-        "word": "the",
-        "start": 251.879,
-        "end": 252.56,
-        "col": 14
+        "word": "true,",
+        "start": 250.67,
+        "end": 251.454,
+        "col": 13
       }
     ]
   },
@@ -3731,12 +3619,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "G#",
-      "A#"
+      "Fm",
+      "Gm"
     ],
     "chord_cols": [
       0,
-      14
+      17
     ],
     "beats": [
       252.60988662131518,
@@ -3744,25 +3632,31 @@
       254.00308390022676,
       254.67646258503402
     ],
-    "lyrics": "Unwavering    Gaze sees",
+    "lyrics": "The Unwavering   Gaze, sees",
     "words": [
       {
-        "word": "Unwavering",
-        "start": 252.56,
-        "end": 254.24,
+        "word": "The",
+        "start": 252.366,
+        "end": 252.57,
         "col": 0
       },
       {
-        "word": "Gaze",
-        "start": 254.24,
-        "end": 254.94,
-        "col": 14
+        "word": "Unwavering",
+        "start": 252.57,
+        "end": 254.21,
+        "col": 4
+      },
+      {
+        "word": "Gaze,",
+        "start": 254.21,
+        "end": 254.99,
+        "col": 17
       },
       {
         "word": "sees",
-        "start": 254.94,
-        "end": 255.48,
-        "col": 19
+        "start": 254.99,
+        "end": 255.49,
+        "col": 23
       }
     ]
   },
@@ -3772,7 +3666,7 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#"
+      "D#"
     ],
     "chord_cols": [
       0
@@ -3787,20 +3681,20 @@
     "words": [
       {
         "word": "the",
-        "start": 255.48,
-        "end": 255.8,
+        "start": 255.49,
+        "end": 255.81,
         "col": 0
       },
       {
         "word": "whole",
-        "start": 255.8,
-        "end": 256.94,
+        "start": 255.81,
+        "end": 256.81,
         "col": 4
       },
       {
         "word": "journey",
-        "start": 256.94,
-        "end": 259.08,
+        "start": 256.81,
+        "end": 259.09,
         "col": 10
       }
     ]
@@ -3811,12 +3705,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "A#",
       "D#"
     ],
     "chord_cols": [
-      0,
-      14
+      0
     ],
     "beats": [
       258.11301587301585,
@@ -3824,13 +3716,13 @@
       259.5062131519274,
       260.20281179138317
     ],
-    "lyrics": "through.",
+    "lyrics": "          through.",
     "words": [
       {
         "word": "through.",
-        "start": 259.08,
-        "end": 260.1,
-        "col": 0
+        "start": 259.09,
+        "end": 265.162,
+        "col": 10
       }
     ]
   },
@@ -3840,10 +3732,12 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "G#"
+      "Cm",
+      "D#"
     ],
     "chord_cols": [
-      0
+      0,
+      8
     ],
     "beats": [
       260.89941043083894,
@@ -3860,12 +3754,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "G#",
-      "D#"
+      "Cm"
     ],
     "chord_cols": [
-      0,
-      8
+      0
     ],
     "beats": [
       263.685804988662,
@@ -3882,12 +3774,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "G#",
       "D#"
     ],
     "chord_cols": [
-      0,
-      8
+      0
     ],
     "beats": [
       266.4721995464851,
@@ -3904,12 +3794,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "F"
+      "Fm"
     ],
     "chord_cols": [
-      0,
-      8
+      0
     ],
     "beats": [
       269.2585941043082,
@@ -3926,12 +3814,10 @@
     "tempo_bpm": 86,
     "time_signature": "4/4",
     "chords": [
-      "D#",
-      "F"
+      "Fm"
     ],
     "chord_cols": [
-      0,
-      8
+      0
     ],
     "beats": [
       272.0449886621313,
