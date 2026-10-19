@@ -314,6 +314,11 @@
                 <i aria-hidden="true" class="fa-solid fa-feather-pointed text-xs"></i>
                 <span>Explore Lyrics Vault &darr;</span>
               </a>
+
+              <a href="../practice?album=mamas-boy&song=third-shift-lullaby" class="px-4 py-2.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 font-mono text-xs font-bold transition-all shadow-lg flex items-center gap-2">
+                <i aria-hidden="true" class="fa-solid fa-guitar text-xs text-amber-400"></i>
+                <span>Practice Studio</span>
+              </a>
             </div>
 
           </div>
@@ -799,6 +804,15 @@
                   <i aria-hidden="true" class="fa-brands fa-youtube text-sm text-red-400"></i>
                   <span>Watch on YouTube</span>
                   <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-75"></i>
+                </a>
+                <a 
+                  href="../practice?song=${t.slug}&album=mamas-boy" 
+                  class="px-3.5 py-2 rounded-xl bg-amber-950/90 hover:bg-amber-900 border border-amber-500/40 hover:border-amber-400 text-amber-300 hover:text-white font-mono text-xs font-bold flex items-center gap-1.5 shadow-lg transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-400"
+                  title="Open ${escapeHtml(t.title)} in Practice Studio (Multi-Track Stems, Chords & Synchronized Lyrics)"
+                  aria-label="Practice ${escapeHtml(t.title)} in Practice Studio"
+                >
+                  <i aria-hidden="true" class="fa-solid fa-guitar text-xs text-amber-400"></i>
+                  <span>Practice</span>
                 </a>
               </div>
               </div>

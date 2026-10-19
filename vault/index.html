@@ -732,6 +732,17 @@
 
     // --- PRACTICE MODE MAPPINGS & HELPERS ---
     const PRACTICE_PACKAGES_BY_SLUG = {
+      // Album 13: Mama's Boy
+      'third-shift-lullaby': { slug: 'third-shift-lullaby', albumId: 'mamas-boy', albumNumber: 13, trackTitle: 'Third Shift Lullaby' },
+      'one-paycheck-from-the-edge': { slug: 'one-paycheck-from-the-edge', albumId: 'mamas-boy', albumNumber: 13, trackTitle: 'One Paycheck from the Edge' },
+      'the-loneliest-brave': { slug: 'the-loneliest-brave', albumId: 'mamas-boy', albumNumber: 13, trackTitle: 'The Loneliest Brave' },
+      'mamas-boy': { slug: 'mamas-boy', albumId: 'mamas-boy', albumNumber: 13, trackTitle: "Mama's Boy" },
+      'a-hero-in-a-worn-out-dress': { slug: 'a-hero-in-a-worn-out-dress', albumId: 'mamas-boy', albumNumber: 13, trackTitle: 'A Hero in a Worn-Out Dress' },
+      'the-ghost-at-our-table': { slug: 'the-ghost-at-our-table', albumId: 'mamas-boy', albumNumber: 13, trackTitle: 'The Ghost at Our Table' },
+      'the-whiskey-on-his-breath': { slug: 'the-whiskey-on-his-breath', albumId: 'mamas-boy', albumNumber: 13, trackTitle: 'The Whiskey on His Breath' },
+      'two-empty-bottles': { slug: 'two-empty-bottles', albumId: 'mamas-boy', albumNumber: 13, trackTitle: 'Two Empty Bottles' },
+      'the-year-she-was-gone-2002': { slug: 'the-year-she-was-gone-2002', albumId: 'mamas-boy', albumNumber: 13, trackTitle: 'The Year She Was Gone (2002)' },
+      'the-man-who-stayed': { slug: 'the-man-who-stayed', albumId: 'mamas-boy', albumNumber: 13, trackTitle: 'The Man Who Stayed' },
       'a-different-kind-of-love': { slug: 'a-different-kind-of-love', albumId: 'mamas-boy', albumNumber: 13, trackTitle: 'A Different Kind of Love' },
       'the-insufficient-funds-error': { slug: 'the-insufficient-funds-error', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Insufficient Funds Error' },
       'the-curtains-and-the-canned-goods': { slug: 'the-curtains-and-the-canned-goods', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'The Curtains and the Canned Goods' },
@@ -819,6 +830,12 @@
         songSlug = 'the-roaring-fire';
       } else if (albumItem.id === 'unequal-justice' || albumItem.number === 7) {
         songSlug = 'the-settlement';
+      } else if (albumItem.id === 'cognitive-inferno' || albumItem.number === 8) {
+        songSlug = 'the-infinite-scroll';
+      } else if (albumItem.id === 'the-hammer-and-the-rust' || albumItem.number === 9) {
+        songSlug = 'anvils-chorus';
+      } else if (albumItem.id === 'mamas-boy' || albumItem.number === 13) {
+        songSlug = 'third-shift-lullaby';
       } else {
         const firstPkg = Object.values(PRACTICE_PACKAGES_BY_SLUG).find(pkg => 
           pkg.albumId === albumItem.id || pkg.albumNumber === albumItem.number || normalizePracticeTitle(pkg.albumId) === normalizePracticeTitle(albumItem.id)
@@ -840,7 +857,7 @@
 
         // Dynamically load any extra practice packages if available
         try {
-          const pRes = await fetch('../data/practice-packages.json?v=20261001_01');
+          const pRes = await fetch('../data/practice-packages.json?v=20261019_13');
           if (pRes.ok) {
             const pData = await pRes.json();
             pData.forEach(p => {
