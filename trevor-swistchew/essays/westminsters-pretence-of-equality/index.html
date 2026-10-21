@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Westminster's Pretence of Equality &mdash; Trevor Swistchew (Compendium #68)</title>
+  <meta name="description" content="An unsparing constitutional inquiry by Trevor Swistchew examining Westminster's rhetoric of equal partnership in a voluntary union versus the reality of permission, the Scotland Act 1998, and the 2022 Supreme Court ruling.">
+  <meta name="author" content="Trevor Swistchew">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Westminster's Pretence of Equality &mdash; Trevor Swistchew (2026)">
+  <meta property="og:description" content="Why Westminster's claim of an equal partnership in a voluntary union collapses under examination: an inquiry into power, consent, and constitutional permission.">
+  <meta property="og:image" content="https://tpatterson34.github.io/trevor-swistchew-portal/assets/images/westminsters-pretence-of-equality-banner.jpg">
+  <meta property="og:url" content="https://tpatterson34.github.io/trevor-swistchew-portal/essays/westminsters-pretence-of-equality/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Westminster's Pretence of Equality &mdash; Trevor Swistchew">
+  <meta name="twitter:description" content="If Scotland is truly an equal nation, why must it seek Westminster's consent before consulting its own people?">
+  <meta name="twitter:image" content="https://tpatterson34.github.io/trevor-swistchew-portal/assets/images/westminsters-pretence-of-equality-banner.jpg">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/print.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            amber: { 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706' },
+            stone: { 850: '#1c1917', 900: '#1c1917', 950: '#0c0a09' }
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            cinzel: ['Cinzel', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0c0a09; }
+    ::-webkit-scrollbar-thumb { background: #292524; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #d97706; }
+
+    /* Reading Themes */
+    body.theme-peat { background-color: #0c0a09; color: #d6d3d1; }
+    body.theme-peat .essay-prose { color: #d6d3d1; }
+    body.theme-peat .bg-card { background-color: rgba(28, 25, 23, 0.7); }
+
+    body.theme-sepia { background-color: #1a1612; color: #e7decb; }
+    body.theme-sepia .essay-prose { color: #ecdcc2; }
+    body.theme-sepia .bg-card { background-color: rgba(38, 30, 22, 0.7); }
+    body.theme-sepia .border-stone-800 { border-color: #3d2f21 !important; }
+
+    body.theme-stone { background-color: #141416; color: #e2e8f0; }
+    body.theme-stone .essay-prose { color: #cbd5e1; }
+    body.theme-stone .bg-card { background-color: rgba(30, 31, 35, 0.7); }
+    body.theme-stone .border-stone-800 { border-color: #27272a !important; }
+
+    /* Drop-cap */
+    .drop-cap::first-letter {
+      float: left;
+      font-family: 'Cinzel', serif;
+      font-size: 3.75rem;
+      line-height: 0.8;
+      padding-top: 4px;
+      padding-right: 12px;
+      padding-bottom: 2px;
+      color: #f59e0b;
+      font-weight: 700;
+    }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+  </style>
+</head>
+<body class="theme-peat min-h-screen font-sans selection:bg-amber-500 selection:text-stone-950 transition-colors duration-300">
+
+  <!-- Reading Progress Bar -->
+  <div class="fixed top-0 left-0 w-full h-1 bg-transparent z-50">
+    <div id="reading-progress" class="h-full bg-gradient-to-r from-amber-600 via-amber-400 to-amber-500 w-0 transition-all duration-150"></div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-stone-950/85 border-b border-stone-800/80 px-4 sm:px-8 py-3.5 transition-colors">
+    <div class="max-w-5xl mx-auto flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2 group">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 font-cinzel font-bold text-sm group-hover:bg-amber-500 group-hover:text-stone-950 transition-all">
+            TS
+          </div>
+          <span class="font-cinzel font-bold text-stone-200 text-sm tracking-wide group-hover:text-amber-400 transition-colors hidden sm:inline">
+            TREVOR SWISTCHEW
+          </span>
+        </a>
+        <span class="text-stone-600 hidden sm:inline">&bull;</span>
+        <span class="text-xs font-mono text-stone-400 hidden md:inline">Compendium #68</span>
+        <span class="text-stone-600 hidden md:inline">&bull;</span>
+        <a href="https://theshadyriverbard.com/" class="text-xs font-mono text-stone-400 hover:text-amber-400 transition-colors hidden lg:flex items-center gap-1">
+          <i class="fa-solid fa-water text-[10px]"></i> The Shady River Bard &#x2197;
+        </a>
+      </div>
+
+      <!-- Reading Controls: Theme & Text Size -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Theme Switcher -->
+        <div class="flex items-center bg-stone-900 border border-stone-800 rounded-lg p-0.5 text-xs">
+          <button id="theme-peat" class="px-2 py-1 rounded text-amber-400 font-mono text-[11px] bg-stone-800" title="Peat (Dark)">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button id="theme-sepia" class="px-2 py-1 rounded text-stone-400 hover:text-stone-200 font-mono text-[11px]" title="Sepia (Warm)">
+            <i class="fa-solid fa-book-open"></i>
+          </button>
+          <button id="theme-stone" class="px-2 py-1 rounded text-stone-400 hover:text-stone-200 font-mono text-[11px]" title="Stone (Slate)">
+            <i class="fa-solid fa-mountain"></i>
+          </button>
+        </div>
+
+        <!-- Typography Sizer -->
+        <div class="flex items-center bg-stone-900 border border-stone-800 rounded-lg p-0.5 text-xs font-mono">
+          <button id="font-dec" class="px-2 py-1 text-stone-400 hover:text-stone-200" title="Decrease font size">A-</button>
+          <button id="font-reset" class="px-2 py-1 text-amber-400 font-bold" title="Reset font size">A</button>
+          <button id="font-inc" class="px-2 py-1 text-stone-400 hover:text-stone-200" title="Increase font size">A+</button>
+        </div>
+
+        <button type="button" onclick="window.print()" class="px-2.5 py-1.5 rounded-lg bg-stone-900 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-300 hover:text-amber-400 font-mono text-xs transition-all flex items-center gap-1.5 shadow-sm" title="Print Essay (Clean Plain Text)" aria-label="Print Essay">
+          <i class="fa-solid fa-print text-[11px]"></i>
+          <span class="hidden sm:inline">Print</span>
+        </button>
+
+        <a href="../../index.html" class="px-3 py-1.5 rounded-lg bg-stone-900 hover:bg-stone-800 border border-stone-800 text-stone-300 hover:text-amber-400 font-mono text-xs transition-all flex items-center gap-1.5">
+          <i class="fa-solid fa-arrow-left text-[10px]"></i>
+          <span>Compendium</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Essay Container -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+
+    <!-- Article Header -->
+    <header class="mb-10 text-center sm:text-left">
+      <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-4">
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-amber-500 text-stone-950 uppercase tracking-wide">
+          Compendium #68
+        </span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-900 border border-stone-800 text-amber-400 font-medium">
+          Constitutional Law &bull; Sovereignty
+        </span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-900/80 border border-stone-800 text-rose-400">
+          Devolution &bull; Democratic Consent
+        </span>
+      </div>
+
+      <p class="font-mono text-xs uppercase tracking-widest text-stone-400 mb-2">
+        Trevor Swistchew &bull; 2026
+      </p>
+
+      <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-black text-stone-100 tracking-tight leading-tight mb-4">
+        Westminster's Pretence of Equality
+      </h1>
+
+      <p class="font-serif italic text-base sm:text-lg text-amber-300/90 leading-relaxed max-w-3xl">
+        Why Westminster&rsquo;s claim of an equal partnership in a voluntary Union collapses under examination: an inquiry into power, consent, and constitutional permission.
+      </p>
+
+      <!-- Meta Bar -->
+      <div class="mt-6 pt-4 border-t border-stone-800/80 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-stone-400">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/50 flex items-center justify-center text-amber-400 font-cinzel font-bold text-xs">
+            TS
+          </div>
+          <div>
+            <span class="text-stone-200 font-bold block">Trevor Swistchew</span>
+            <span class="text-[11px] text-stone-400">Scottish Essayist, Cultural Critic &amp; Philosophical Inquirer</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <span class="flex items-center gap-1.5"><i class="fa-regular fa-clock text-amber-500"></i> 5 min read</span>
+          <span class="flex items-center gap-1.5"><i class="fa-solid fa-feather text-amber-500"></i> 880 words</span>
+          <span class="flex items-center gap-1.5 text-stone-300"><i class="fa-solid fa-scale-balanced text-amber-500"></i> Constitutional Inquest</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Fine-Art Hero Banner -->
+    <figure class="mb-10 rounded-2xl overflow-hidden border border-stone-800 bg-stone-950 shadow-2xl relative">
+      <img 
+        src="../../assets/images/westminsters-pretence-of-equality-banner.jpg" 
+        alt="Westminster's Pretence of Equality Fine Art Oil Painting" 
+        class="w-full h-auto object-cover max-h-[500px]"
+        loading="eager"
+      />
+      <figcaption class="p-3.5 bg-stone-950/95 border-t border-stone-800/80 text-center text-xs font-serif italic text-stone-400">
+        The Palace and the Parchment: A dramatic fine art oil painting of a Gothic parliamentary library with heavy law volumes, an unfurled parchment scroll of the Claim of Right with red wax seals, and an ornate antique brass balance scale resting in delicate tension between two constitutional traditions, overlooking the misty silhouette of the Palace of Westminster and Big Ben in atmospheric chiaroscuro candlelight.
+      </figcaption>
+    </figure>
+
+    <!-- Editorial Thesis Pull-Quote -->
+    <blockquote class="my-8 p-6 sm:p-8 rounded-2xl bg-card border-l-4 border-amber-500 shadow-xl relative overflow-hidden">
+      <div class="absolute -right-4 -bottom-6 text-stone-800/20 text-9xl font-serif pointer-events-none select-none">&ldquo;</div>
+      <p class="font-serif italic text-lg sm:text-xl text-stone-200 leading-relaxed mb-3">
+        &ldquo;An equal partner does not require permission. An equal partner does not have its constitutional future determined by another legislature. An equal partner does not possess rights that ultimately depend upon another parliament's approval.&rdquo;
+      </p>
+      <cite class="block font-mono text-xs uppercase tracking-widest text-amber-400 not-italic">
+        &mdash; Trevor Swistchew, &lsquo;Westminster&rsquo;s Pretence of Equality&rsquo; (2026)
+      </cite>
+    </blockquote>
+
+    <!-- Archival Statutory & Sovereignty Ledger -->
+    <section class="my-10 p-6 sm:p-7 rounded-2xl bg-card border border-stone-800 shadow-lg">
+      <div class="flex items-center gap-2 mb-4 text-xs font-mono uppercase tracking-wider text-amber-400 font-bold">
+        <i class="fa-solid fa-landmark-dome text-amber-500"></i>
+        <span>Archival Statutory Ledger &bull; Constitutional Instruments &amp; Judicial Precedents</span>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+        <div class="p-3.5 rounded-xl bg-stone-950/60 border border-stone-800/80">
+          <span class="font-mono text-[10px] text-amber-400 font-bold block mb-1">Scotland Act 1998</span>
+          <span class="font-bold text-stone-200 block text-sm mb-1">Schedule 5 Reservations</span>
+          <p class="text-stone-400 text-[11px] leading-relaxed">
+            Statutorily reserves the Union of the Kingdoms of Scotland and England and the UK Parliament exclusively to Westminster authority.
+          </p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-stone-950/60 border border-stone-800/80">
+          <span class="font-mono text-[10px] text-amber-400 font-bold block mb-1">UK Supreme Court 2022</span>
+          <span class="font-bold text-stone-200 block text-sm mb-1">[2022] UKSC 38 Ruling</span>
+          <p class="text-stone-400 text-[11px] leading-relaxed">
+            Unanimously concluded that Holyrood lacks legislative competence to hold an advisory independence referendum without Westminster consent.
+          </p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-stone-950/60 border border-stone-800/80">
+          <span class="font-mono text-[10px] text-amber-400 font-bold block mb-1">Claim of Right 1989</span>
+          <span class="font-bold text-stone-200 block text-sm mb-1">Popular Sovereignty</span>
+          <p class="text-stone-400 text-[11px] leading-relaxed">
+            Asserts the inalienable sovereign right of the Scottish people to choose their form of government, directly challenging Westminster supremacy.
+          </p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-stone-950/60 border border-stone-800/80">
+          <span class="font-mono text-[10px] text-amber-400 font-bold block mb-1">Edinburgh Agreement 2012</span>
+          <span class="font-bold text-stone-200 block text-sm mb-1">Section 30 Precedent</span>
+          <p class="text-stone-400 text-[11px] leading-relaxed">
+            Established the mechanism of a temporary transfer of power via Section 30, cementing the reality of constitutional permission.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Historical Dossier -->
+    <section class="my-10 rounded-2xl bg-card border border-stone-800 overflow-hidden shadow-xl">
+      <div class="p-5 sm:p-6 border-b border-stone-800 bg-stone-950/60 flex items-center justify-between">
+        <div>
+          <h3 class="font-cinzel font-bold text-base sm:text-lg text-stone-100 flex items-center gap-2">
+            <i class="fa-solid fa-scroll text-amber-500"></i>
+            <span>Constitutional Dossier: The Architecture of Devolution &amp; Authority</span>
+          </h3>
+          <p class="font-mono text-xs text-stone-400 mt-1">
+            Parliamentary supremacy, statutory competence, and the clash of two distinct constitutional doctrines
+          </p>
+        </div>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="flex border-b border-stone-800 bg-stone-900/60 text-xs font-mono overflow-x-auto">
+        <button id="tab-btn-1" class="tab-btn px-4 py-3 text-amber-400 font-bold border-b-2 border-amber-500 bg-stone-900/90 whitespace-nowrap transition-all" onclick="switchTab(1)">
+          1. The Scotland Act &amp; Schedule 5
+        </button>
+        <button id="tab-btn-2" class="tab-btn px-4 py-3 text-stone-400 hover:text-stone-200 border-b-2 border-transparent whitespace-nowrap transition-all" onclick="switchTab(2)">
+          2. UKSC 2022: Legal Competence vs. Political Effect
+        </button>
+        <button id="tab-btn-3" class="tab-btn px-4 py-3 text-stone-400 hover:text-stone-200 border-b-2 border-transparent whitespace-nowrap transition-all" onclick="switchTab(3)">
+          3. Popular Sovereignty vs. Parliamentary Supremacy
+        </button>
+      </div>
+
+      <!-- Tab 1 -->
+      <div id="tab-pane-1" class="tab-content active p-6 text-xs sm:text-sm text-stone-300 space-y-3 leading-relaxed">
+        <div class="flex items-center gap-2 text-amber-400 font-mono font-bold text-xs uppercase">
+          <i class="fa-solid fa-book-bookmark text-amber-500"></i> Statutory Reservation of the Union
+        </div>
+        <p>
+          Under the Scotland Act 1998, devolution was conceived not as a federal division of shared sovereignty, but as a delegation of statutory authority from Westminster to Holyrood. Schedule 5 Part I explicitly lists constitutional matters as reserved:
+        </p>
+        <p class="text-stone-400 pl-4 border-l-2 border-amber-500/50 italic">
+          &ldquo;The following aspects of the constitution are reserved matters, that is&mdash; (a) the Crown, including succession to the Crown and a regency, (b) the Union of the Kingdoms of Scotland and England, (c) the Parliament of the United Kingdom.&rdquo;
+        </p>
+        <p class="text-stone-400">
+          Because constitutional union is reserved, the Scottish Parliament cannot pass legislation that relates to the Union, legally restricting Holyrood from altering or testing the terms of the Union on its own authority.
+        </p>
+      </div>
+
+      <!-- Tab 2 -->
+      <div id="tab-pane-2" class="tab-content p-6 text-xs sm:text-sm text-stone-300 space-y-3 leading-relaxed">
+        <div class="flex items-center gap-2 text-amber-400 font-mono font-bold text-xs uppercase">
+          <i class="fa-solid fa-gavel text-amber-500"></i> Reference by the Lord Advocate ([2022] UKSC 38)
+        </div>
+        <p>
+          In November 2022, the UK Supreme Court delivered its unanimous ruling on a reference brought by the Scottish Lord Advocate regarding whether a proposed Scottish Independence Referendum Bill was within devolved legislative competence.
+        </p>
+        <p class="text-stone-400">
+          The Supreme Court rejected the argument that an advisory referendum would have no legal effect on the Union. The Court held that legislation &ldquo;relates to&rdquo; a reserved matter if it has more than a loose or consequential connection to it. Because an independence referendum is designed to test the desire of the Scottish people to terminate the Union, it unquestionably relates to the Union and Parliament of the United Kingdom.
+        </p>
+        <p class="text-stone-400">
+          While strictly sound as a matter of statutory interpretation under UK law, the judgment solidified the political perception that Scotland is legally barred from exercising self-determination without Westminster&rsquo;s explicit sanction.
+        </p>
+      </div>
+
+      <!-- Tab 3 -->
+      <div id="tab-pane-3" class="tab-content p-6 text-xs sm:text-sm text-stone-300 space-y-3 leading-relaxed">
+        <div class="flex items-center gap-2 text-amber-400 font-mono font-bold text-xs uppercase">
+          <i class="fa-solid fa-scale-unbalanced text-amber-500"></i> Two Irreconcilable Constitutional Doctrines
+        </div>
+        <p>
+          At the core of the Scottish constitutional debate lies an unresolvable clash between two distinct traditions:
+        </p>
+        <p class="text-stone-400">
+          <strong>The English Tradition:</strong> Crown-in-Parliament sovereignty (formulated by A.V. Dicey), asserting that the UK Parliament is supreme, unbounded by any superior constitutional document, and unable to bind future parliaments.
+        </p>
+        <p class="text-stone-400">
+          <strong>The Scottish Tradition:</strong> Popular sovereignty, tracing from the 1320 Declaration of Arbroath through Lord Cooper&rsquo;s famous obiter dictum in <em>MacCormick v Lord Advocate (1953)</em> and the 1989 <em>Claim of Right for Scotland</em>. This tradition maintains that sovereignty resides in the Scottish people, who merely delegate authority to their representatives.
+        </p>
+        <p class="text-stone-400">
+          When Westminster insists upon its supremacy to forbid a democratic poll, it asserts the English doctrine over the Scottish doctrine, exposing the structural pretence of an equal union.
+        </p>
+      </div>
+    </section>
+
+    <!-- Verbatim Essay Content -->
+    <article id="essay-body" class="essay-prose font-serif text-lg sm:text-xl leading-relaxed text-stone-200 space-y-6 pt-4">
+
+      <p class="drop-cap">
+        Westminster insists that Scotland is an equal partner in a voluntary Union. It is a claim repeated by governments, ministers and defenders of the constitutional status quo. Yet the moment Scotland raises the question of independence, the language of equality suddenly gives way to the language of permission.
+      </p>
+
+      <p>
+        The contradiction is obvious.
+      </p>
+
+      <p>
+        If Scotland is truly an equal nation, why must Scotland seek Westminster's consent before asking its own people whether they wish to remain within the Union? No amount of constitutional jargon can make that question disappear.
+      </p>
+
+      <p>
+        An equal country does not require another parliament's approval to determine its constitutional future. Equality is not measured by fine words, ceremonial gestures or speeches about partnership. Equality is measured by power. It is measured by authority. It is measured by who ultimately decides.
+      </p>
+
+      <p>
+        By that standard, many critics argue that Westminster's claim of equality collapses under examination. For decades Scotland has been described as a valued partner in a family of nations. Yet whenever the constitutional future of the Union is discussed, Westminster asserts that ultimate legal authority rests not with Scotland but with Westminster itself. Scotland can elect governments. Scotland can debate its future. Scotland can express dissatisfaction. But when the question concerns the existence of the Union Westminster maintains the power to determine the legal framework within which that debate may occur.
+      </p>
+
+      <p>
+        That is not what many people understand equality to mean.
+      </p>
+
+      <p>
+        It is, they argue, the pretence of equality.
+      </p>
+
+      <p>
+        The legal foundation for Westminster's position is found in the Scotland Act 1998. Schedule 5 reserves constitutional matters to Westminster, including &ldquo;the Union of the Kingdoms of Scotland and England&rdquo; and &ldquo;the Parliament of the United Kingdom.&rdquo; Under the current constitutional settlement questions concerning the Union are therefore reserved matters rather than devolved matters.
+      </p>
+
+      <p>
+        Westminster's legal argument became even stronger following the 2022 judgment of the UK Supreme Court. The Court unanimously concluded that a Scottish independence referendum bill would relate to reserved matters because it concerned both the Union and the UK Parliament. As a result, the Court held that Holyrood did not possess the legislative competence to hold such a referendum under the existing devolution settlement. The Court emphasised that it was addressing a legal question rather than expressing a view on whether Scotland should become independent 
+        <span class="inline-flex gap-1.5 ml-1 not-prose">
+          <a href="https://supremecourt.uk/uploads/uksc_2022_0098_press_summary_edebaa7091.pdf" target="_blank" rel="noopener noreferrer" class="px-1.5 py-0.5 rounded text-[10px] font-mono bg-stone-900 border border-stone-800 text-amber-400 hover:text-amber-300 hover:border-amber-500/50 transition-colors inline-flex items-center gap-1">UK Supreme Court Press Summary &#x2197;</a>
+          <a href="https://supremecourt.uk/cases/uksc-2022-0098" target="_blank" rel="noopener noreferrer" class="px-1.5 py-0.5 rounded text-[10px] font-mono bg-stone-900 border border-stone-800 text-amber-400 hover:text-amber-300 hover:border-amber-500/50 transition-colors inline-flex items-center gap-1">UKSC-2022-0098 Case File &#x2197;</a>
+        </span>.
+      </p>
+
+      <p>
+        Yet for many Scots, this legal position merely exposes the deeper political contradiction. The central question is not whether Westminster possesses legal authority under the present constitutional rules. The central question is whether those rules reflect the equal partnership Westminster claims exists. Critics argue that Westminster wants Scotland to believe two incompatible things simultaneously. First, that Scotland is an equal nation within a voluntary Union. Second, that Westminster possesses ultimate authority over Scotland's constitutional future.
+      </p>
+
+      <p>
+        Both propositions may be legally compatible within the British constitutional framework, but politically and philosophically they sit in direct tension with one another.
+      </p>
+
+      <p>
+        The contradiction becomes even more apparent when Westminster speaks about democracy and self-determination on the international stage. British governments frequently celebrate the principle that peoples should determine their own future through democratic means. Yet many Scots look at their own constitutional position and conclude that such principles appear conditional when Scotland seeks to apply them to itself.
+      </p>
+
+      <p>
+        The perception that one standard is applied abroad and another at home is a major source of growing frustration.
+      </p>
+
+      <p>
+        Supporters of Scottish constitutional self-determination often point to the Claim of Right for Scotland, signed in 1989 and later endorsed by the Scottish Parliament. The document asserted &ldquo;the sovereign right of the Scottish people to determine the form of Government best suited to their needs.&rdquo; The House of Commons Library notes that the Claim of Right embodies a political assertion of popular sovereignty resting with the people of Scotland 
+        <span class="inline-flex gap-1.5 ml-1 not-prose">
+          <a href="https://commonslibrary.parliament.uk/research-briefings/cdp-2018-0171/" target="_blank" rel="noopener noreferrer" class="px-1.5 py-0.5 rounded text-[10px] font-mono bg-stone-900 border border-stone-800 text-amber-400 hover:text-amber-300 hover:border-amber-500/50 transition-colors inline-flex items-center gap-1">House of Commons Library CDP-2018-0171 &#x2197;</a>
+          <a href="https://researchbriefings.files.parliament.uk/documents/CDP-2016-0158/CDP-2016-0158.pdf" target="_blank" rel="noopener noreferrer" class="px-1.5 py-0.5 rounded text-[10px] font-mono bg-stone-900 border border-stone-800 text-amber-400 hover:text-amber-300 hover:border-amber-500/50 transition-colors inline-flex items-center gap-1">Research Briefing PDF &#x2197;</a>
+        </span>.
+      </p>
+
+      <p>
+        Here lies the heart of the constitutional conflict.
+      </p>
+
+      <p>
+        Westminster rests upon parliamentary sovereignty. The Claim of Right rests upon popular sovereignty. One tradition holds that ultimate authority belongs to the UK Parliament. The other holds that ultimate authority belongs to the Scottish people.
+      </p>
+
+      <p>
+        The struggle exists because neither principle can accommodate the other.
+      </p>
+
+      <p>
+        This tension was bridged through the Edinburgh Agreement of 2012, under which the UK Government and Scottish Government agreed to use a Section 30 Order to facilitate the 2014 independence referendum. The Agreement stated that both governments would work together to ensure that a referendum could take place and that the Scottish Parliament would be enabled to legislate for that referendum.
+      </p>
+
+      <p>
+        For many Scots, the significance of that agreement was obvious. If a referendum required Westminster's permission in 2014, then Westminster possessed the authority to grant or withhold such permission. Critics argue that this fact alone undermines claims that Scotland occupies a position of constitutional equality within the Union.
+      </p>
+
+      <p>
+        An equal partner, they argue, does not require permission.
+      </p>
+
+      <p>
+        An equal partner does not have its constitutional future determined by another legislature.
+      </p>
+
+      <p>
+        An equal partner does not possess rights that ultimately depend upon another parliament's approval.
+      </p>
+
+      <p>
+        Whether one supports independence or supports continued membership of the United Kingdom, these questions remain politically difficult to answer.
+      </p>
+
+      <p>
+        Westminster continues to defend its position through parliamentary sovereignty and existing law. Its critics continue to challenge that position through the principle of popular sovereignty and Scotland's claim to national self-determination.
+      </p>
+
+      <p>
+        The result is a debate that shows no sign of disappearing.
+      </p>
+
+      <p>
+        At its heart lies a simple challenge.
+      </p>
+
+      <p>
+        If Scotland is truly an equal nation within a voluntary Union, many Scots ask where that equality is visible when fundamental constitutional questions arise. If the Union rests upon consent, why should another parliament possess the authority over whether that consent can be tested anew? If Scotland is a partner rather than a subordinate, why does the final constitutional power not rest in Scotland itself?
+      </p>
+
+      <p>
+        Until Westminster provides answers that satisfy these criticisms, accusations of hypocrisy will continue. For a state that repeatedly describes itself as a Union of equals, its greatest weakness may be the growing number of people who no longer believe that equality exists in practice.
+      </p>
+
+    </article>
+
+    <!-- Source Materials & Bibliography -->
+    <section class="mt-12 p-6 sm:p-8 rounded-2xl bg-card border border-stone-800 text-xs text-stone-400 space-y-4">
+      <div class="flex items-center gap-2 font-mono text-amber-400 font-bold uppercase tracking-wider">
+        <i class="fa-solid fa-book-bookmark text-amber-500"></i>
+        <span>Statutory Sources &amp; Official References</span>
+      </div>
+      <p class="text-stone-300">
+        This essay cites official statutory legislation, UK Supreme Court judgments, parliamentary research briefings, and intergovernmental accords:
+      </p>
+      <ul class="space-y-3 font-mono">
+        <li class="p-3 rounded-lg bg-stone-950/60 border border-stone-800/80">
+          <strong class="text-stone-200 block mb-0.5">Scotland Act 1998, Schedule 5, Constitutional Reservations</strong>
+          <span class="text-stone-400 block text-[11px] mb-1.5">Official UK legislation governing the devolution settlement and reserving constitutional matters to the Westminster Parliament.</span>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://www.legislation.gov.uk/ukpga/1998/46/schedule/5/part/I" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:text-amber-300 hover:underline text-[11px]">legislation.gov.uk &bull; Part I General Reservations &#x2197;</a>
+            <span class="text-stone-600">&bull;</span>
+            <a href="https://www.legislation.gov.uk/ukpga/1998/46/schedule/5" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:text-amber-300 hover:underline text-[11px]">legislation.gov.uk &bull; Schedule 5 Complete &#x2197;</a>
+          </div>
+        </li>
+        <li class="p-3 rounded-lg bg-stone-950/60 border border-stone-800/80">
+          <strong class="text-stone-200 block mb-0.5">UK Supreme Court, Reference by the Lord Advocate, Judgment &amp; Press Summary</strong>
+          <span class="text-stone-400 block text-[11px] mb-1.5">Unanimous ruling delivered 23 November 2022 ([2022] UKSC 38) on legislative competence regarding a proposed independence referendum bill.</span>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://supremecourt.uk/uploads/uksc_2022_0098_press_summary_edebaa7091.pdf" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:text-amber-300 hover:underline text-[11px]">supremecourt.uk &bull; Official Press Summary (PDF) &#x2197;</a>
+            <span class="text-stone-600">&bull;</span>
+            <a href="https://supremecourt.uk/cases/uksc-2022-0098" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:text-amber-300 hover:underline text-[11px]">supremecourt.uk &bull; Case UKSC 2022/0098 &#x2197;</a>
+          </div>
+        </li>
+        <li class="p-3 rounded-lg bg-stone-950/60 border border-stone-800/80">
+          <strong class="text-stone-200 block mb-0.5">Claim of Right for Scotland, House of Commons Library</strong>
+          <span class="text-stone-400 block text-[11px] mb-1.5">Parliamentary research briefing examining the historical assertion of popular sovereignty in Scotland.</span>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://commonslibrary.parliament.uk/research-briefings/cdp-2018-0171/" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:text-amber-300 hover:underline text-[11px]">commonslibrary.parliament.uk &bull; Debate Pack CDP-2018-0171 &#x2197;</a>
+            <span class="text-stone-600">&bull;</span>
+            <a href="https://researchbriefings.files.parliament.uk/documents/CDP-2016-0158/CDP-2016-0158.pdf" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:text-amber-300 hover:underline text-[11px]">Parliament Research Briefing PDF &#x2197;</a>
+          </div>
+        </li>
+        <li class="p-3 rounded-lg bg-stone-950/60 border border-stone-800/80">
+          <strong class="text-stone-200 block mb-0.5">Edinburgh Agreement between the UK Government &amp; Scottish Government</strong>
+          <span class="text-stone-400 block text-[11px]">Bilateral agreement signed on 15 October 2012 by Prime Minister David Cameron and First Minister Alex Salmond facilitating the 2014 independence referendum via an order under Section 30 of the Scotland Act 1998.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Archival Colophon -->
+    <div class="mt-8 p-6 sm:p-8 rounded-2xl bg-card border border-stone-800 text-xs text-stone-400 space-y-3 not-prose">
+      <div class="flex items-center gap-2 font-mono text-amber-400 font-bold uppercase tracking-wider">
+        <i class="fa-solid fa-feather-pointed text-amber-500"></i>
+        <span>Archival Colophon &bull; Trevor Swistchew (2026)</span>
+      </div>
+      <p class="font-serif italic text-stone-300 text-sm leading-relaxed mb-0">
+        &ldquo;Westminster&rsquo;s Pretence of Equality&rdquo; is a constitutional inquest by Trevor Swistchew (2026). Examining statutory reservations, the 2022 UK Supreme Court judgment, and the historical divergence between English parliamentary supremacy and Scottish popular sovereignty, the essay challenges the rhetoric of equal partnership in a union governed by statutory permission.
+      </p>
+      <div class="pt-2 flex flex-wrap items-center gap-3 text-[11px] font-mono text-stone-400">
+        <span>Catalog: Compendium #68</span>
+        <span>&bull;</span>
+        <span>Standalone Constitutional Inquiry (No Companion Song)</span>
+        <span>&bull;</span>
+        <span>Word Count: 880</span>
+        <span>&bull;</span>
+        <span>Trevor Swistchew Literary Archive</span>
+      </div>
+    </div>
+
+    <!-- Print Action Prompt -->
+    <div class="mt-8 flex justify-center no-print">
+      <button type="button" onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 border border-stone-700/80 hover:border-amber-500/50 text-stone-300 hover:text-amber-400 font-mono text-xs transition-all flex items-center gap-2 shadow-lg group">
+        <i class="fa-solid fa-print text-sm text-amber-500 group-hover:scale-110 transition-transform"></i>
+        <span>Print Well-Formatted Plain Text</span>
+      </button>
+    </div>
+
+    <!-- Compendium Linear Navigation Footer -->
+    <nav class="mt-12 pt-6 border-t border-stone-800 grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="../the-gers-myth/index.html" class="p-4 rounded-xl bg-stone-900/60 hover:bg-stone-900 border border-stone-800 hover:border-amber-500/50 transition-all flex items-center gap-3 group">
+        <i class="fa-solid fa-arrow-left text-amber-500 group-hover:-translate-x-1 transition-transform"></i>
+        <div class="text-left">
+          <span class="text-[10px] font-mono text-stone-400 block uppercase">Previous Compendium (#67)</span>
+          <span class="font-display font-bold text-sm text-stone-200 group-hover:text-amber-400 transition-colors">The GERS Myth</span>
+        </div>
+      </a>
+      <a href="../../index.html" class="p-4 rounded-xl bg-stone-900/60 hover:bg-stone-900 border border-stone-800 hover:border-amber-500/50 transition-all flex items-center justify-between group">
+        <div class="text-left">
+          <span class="text-[10px] font-mono text-stone-400 block uppercase">Compendium Hub</span>
+          <span class="font-display font-bold text-sm text-stone-200 group-hover:text-amber-400 transition-colors">Explore All 68 Works</span>
+        </div>
+        <i class="fa-solid fa-arrow-right text-amber-500 group-hover:translate-x-1 transition-transform"></i>
+      </a>
+    </nav>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="mt-16 border-t border-stone-800/80 bg-stone-950 py-8 text-center text-xs font-mono text-stone-400">
+    <div class="max-w-4xl mx-auto px-4 space-y-2">
+      <p>&copy; 2026 Trevor Swistchew. All rights reserved.</p>
+      <p class="text-stone-400 text-[11px]">The Scottish Literary Salon &bull; 68 Compendium Essays &bull; 77 Music Chamber Songs &bull; 29 Collected Poems</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Tab Switching Logic
+    function switchTab(tabIndex) {
+      document.querySelectorAll('.tab-btn').forEach((btn, idx) => {
+        if (idx + 1 === tabIndex) {
+          btn.classList.add('text-amber-400', 'font-bold', 'border-amber-500', 'bg-stone-900/90');
+          btn.classList.remove('text-stone-400', 'border-transparent');
+        } else {
+          btn.classList.remove('text-amber-400', 'font-bold', 'border-amber-500', 'bg-stone-900/90');
+          btn.classList.add('text-stone-400', 'border-transparent');
+        }
+      });
+      document.querySelectorAll('.tab-content').forEach((pane, idx) => {
+        if (idx + 1 === tabIndex) {
+          pane.classList.add('active');
+        } else {
+          pane.classList.remove('active');
+        }
+      });
+    }
+
+    // Reading Progress Indicator
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      const prog = document.getElementById('reading-progress');
+      if (prog) prog.style.width = scrolled + '%';
+    });
+
+    // Theme Switcher Logic
+    const body = document.body;
+    const btnPeat = document.getElementById('theme-peat');
+    const btnSepia = document.getElementById('theme-sepia');
+    const btnStone = document.getElementById('theme-stone');
+
+    function setActiveTheme(theme) {
+      body.classList.remove('theme-peat', 'theme-sepia', 'theme-stone');
+      body.classList.add('theme-' + theme);
+
+      [btnPeat, btnSepia, btnStone].forEach(b => {
+        if (b) {
+          b.classList.remove('bg-stone-800', 'text-amber-400');
+          b.classList.add('text-stone-400');
+        }
+      });
+
+      const current = document.getElementById('theme-' + theme);
+      if (current) {
+        current.classList.add('bg-stone-800', 'text-amber-400');
+        current.classList.remove('text-stone-400');
+      }
+      localStorage.setItem('swistchew_theme', theme);
+    }
+
+    if (btnPeat) btnPeat.addEventListener('click', () => setActiveTheme('peat'));
+    if (btnSepia) btnSepia.addEventListener('click', () => setActiveTheme('sepia'));
+    if (btnStone) btnStone.addEventListener('click', () => setActiveTheme('stone'));
+
+    const savedTheme = localStorage.getItem('swistchew_theme');
+    if (savedTheme) setActiveTheme(savedTheme);
+
+    // Font Sizing Logic
+    const essayBody = document.getElementById('essay-body');
+    const fontSizes = ['text-base sm:text-lg', 'text-lg sm:text-xl', 'text-xl sm:text-2xl'];
+    let currentSizeIndex = 1;
+
+    const fontDec = document.getElementById('font-dec');
+    const fontReset = document.getElementById('font-reset');
+    const fontInc = document.getElementById('font-inc');
+
+    function applyFontSize() {
+      if (!essayBody) return;
+      fontSizes.forEach(cls => {
+        cls.split(' ').forEach(c => essayBody.classList.remove(c));
+      });
+      fontSizes[currentSizeIndex].split(' ').forEach(c => essayBody.classList.add(c));
+    }
+
+    if (fontDec) {
+      fontDec.addEventListener('click', () => {
+        if (currentSizeIndex > 0) {
+          currentSizeIndex--;
+          applyFontSize();
+        }
+      });
+    }
+
+    if (fontReset) {
+      fontReset.addEventListener('click', () => {
+        currentSizeIndex = 1;
+        applyFontSize();
+      });
+    }
+
+    if (fontInc) {
+      fontInc.addEventListener('click', () => {
+        if (currentSizeIndex < fontSizes.length - 1) {
+          currentSizeIndex++;
+          applyFontSize();
+        }
+      });
+    }
+
+    // Auto-trigger print when requested via query param (?print=1)
+    if (new URLSearchParams(window.location.search).get('print') === '1') {
+      const printBar = document.createElement('div');
+      printBar.id = 'print-helper-bar';
+      printBar.className = 'fixed top-0 left-0 w-full z-50 bg-amber-500 text-stone-950 px-4 py-2 text-center text-xs font-mono font-bold flex items-center justify-center gap-3 shadow-xl no-print';
+      printBar.innerHTML = '<span><i class="fa-solid fa-print"></i> Print Dialog Active</span> <button onclick="window.print()" class="px-3 py-1 bg-stone-950 text-amber-400 rounded hover:bg-stone-900 transition-colors">Click to Print</button> <button onclick="if(window.opener){window.close();}else{this.parentElement.remove();}" class="text-stone-900 hover:underline ml-3 font-sans">&times; Close</button>';
+      document.body.prepend(printBar);
+
+      window.addEventListener('load', () => {
+        setTimeout(() => { window.print(); }, 350);
+      });
+      window.addEventListener('afterprint', () => {
+        if (window.opener) {
+          setTimeout(() => { window.close(); }, 500);
+        }
+      });
+    }
+  </script>
+</body>
+</html>
