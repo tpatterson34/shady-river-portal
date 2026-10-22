@@ -173,6 +173,10 @@
               <i class="fa-solid fa-music text-sm" aria-hidden="true"></i>
               <span>Explore 15 Tracks</span>
             </a>
+            <a href="../practice.html?album=the-curtains-and-the-canned-goods" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-950/60 hover:bg-amber-900/70 text-amber-300 font-mono text-xs font-bold border border-amber-500/40 transition-all shadow-lg">
+              <i class="fa-solid fa-sliders text-sm" aria-hidden="true"></i>
+              <span>Practice Studio</span>
+            </a>
           </div>
 
           <!-- Quick Stats Grid -->
@@ -1014,6 +1018,9 @@
         }
 
         const numPadded = String(t.number).padStart(2, '0');
+        const practiceSlug = t.number === 1
+          ? 'the-insufficient-funds-error'
+          : t.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
         
         const stanzasHtml = t.stanzas && t.stanzas.length > 0 
           ? t.stanzas.map(s => `
@@ -1065,6 +1072,15 @@
                     <i aria-hidden="true" class="fa-brands fa-youtube text-sm text-red-400"></i>
                     <span>Watch on YouTube</span>
                     <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-75"></i>
+                  </a>
+                  <a 
+                    href="../practice.html?song=${practiceSlug}&album=the-curtains-and-the-canned-goods"
+                    class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-amber-950/90 hover:bg-amber-900 border border-amber-500/40 text-amber-300 hover:text-white font-mono text-xs font-bold shadow-lg transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-400"
+                    title="Open ${escapeHtml(t.title)} in Practice Studio (4-Stem Mixer, Chords & Synced Lyrics)"
+                    aria-label="Practice ${escapeHtml(t.title)} in Practice Studio"
+                  >
+                    <i aria-hidden="true" class="fa-solid fa-sliders text-xs text-amber-400"></i>
+                    <span>Practice</span>
                   </a>
                 </div>
               </div>
