@@ -732,6 +732,21 @@
 
     // --- PRACTICE MODE MAPPINGS & HELPERS ---
     const PRACTICE_PACKAGES_BY_SLUG = {
+      // Album 10: The Unbroken Chain
+      'a-different-kind-of-sun': { slug: 'a-different-kind-of-sun', albumId: 'unbroken-chain', albumNumber: 10, trackTitle: 'A Different Kind of Sun' },
+      'at-the-purchasers-option': { slug: 'at-the-purchasers-option', albumId: 'unbroken-chain', albumNumber: 10, trackTitle: "At the Purchaser's Option" },
+      'the-drinking-gourd': { slug: 'the-drinking-gourd', albumId: 'unbroken-chain', albumNumber: 10, trackTitle: 'The Drinking Gourd' },
+      'except-as-a-punishment-amendment-13': { slug: 'except-as-a-punishment-amendment-13', albumId: 'unbroken-chain', albumNumber: 10, trackTitle: 'Except as a Punishment (Amendment 13)' },
+      'the-black-codes': { slug: 'the-black-codes', albumId: 'unbroken-chain', albumNumber: 10, trackTitle: 'The Black Codes' },
+      'cheaper-than-a-mule-the-convicts-song': { slug: 'cheaper-than-a-mule-the-convicts-song', albumId: 'unbroken-chain', albumNumber: 10, trackTitle: "Cheaper Than a Mule (The Convict's Song)" },
+      'the-prison-industrial-rag': { slug: 'the-prison-industrial-rag', albumId: 'unbroken-chain', albumNumber: 10, trackTitle: 'The Prison-Industrial Rag' },
+      'thirteen-cents-an-hour': { slug: 'thirteen-cents-an-hour', albumId: 'unbroken-chain', albumNumber: 10, trackTitle: 'Thirteen Cents an Hour' },
+      'the-digital-ghost': { slug: 'the-digital-ghost', albumId: 'unbroken-chain', albumNumber: 10, trackTitle: 'The Digital Ghost' },
+      'the-long-shadow': { slug: 'the-long-shadow', albumId: 'unbroken-chain', albumNumber: 10, trackTitle: 'The Long Shadow' },
+      'parchman-farm-the-lomax-sessions': { slug: 'parchman-farm-the-lomax-sessions', albumId: 'unbroken-chain', albumNumber: 10, trackTitle: 'Parchman Farm (The Lomax Sessions)' },
+      'reclaiming-the-banjo': { slug: 'reclaiming-the-banjo', albumId: 'unbroken-chain', albumNumber: 10, trackTitle: 'Reclaiming the Banjo' },
+      'the-unbroken-chain': { slug: 'the-unbroken-chain', albumId: 'unbroken-chain', albumNumber: 10, trackTitle: 'The Unbroken Chain' },
+      'a-different-kind-of-sun-reprise': { slug: 'a-different-kind-of-sun-reprise', albumId: 'unbroken-chain', albumNumber: 10, trackTitle: 'A Different Kind of Sun (Reprise)' },
       // Album 13: Mama's Boy
       'third-shift-lullaby': { slug: 'third-shift-lullaby', albumId: 'mamas-boy', albumNumber: 13, trackTitle: 'Third Shift Lullaby' },
       'one-paycheck-from-the-edge': { slug: 'one-paycheck-from-the-edge', albumId: 'mamas-boy', albumNumber: 13, trackTitle: 'One Paycheck from the Edge' },
@@ -834,6 +849,8 @@
         songSlug = 'the-infinite-scroll';
       } else if (albumItem.id === 'the-hammer-and-the-rust' || albumItem.number === 9) {
         songSlug = 'anvils-chorus';
+      } else if (albumItem.id === 'unbroken-chain' || albumItem.number === 10) {
+        songSlug = 'a-different-kind-of-sun';
       } else if (albumItem.id === 'mamas-boy' || albumItem.number === 13) {
         songSlug = 'third-shift-lullaby';
       } else {
@@ -857,7 +874,7 @@
 
         // Dynamically load any extra practice packages if available
         try {
-          const pRes = await fetch('../data/practice-packages.json?v=20261019_13');
+          const pRes = await fetch('../data/practice-packages.json?v=20261021_10');
           if (pRes.ok) {
             const pData = await pRes.json();
             pData.forEach(p => {
