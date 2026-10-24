@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Logicalm Future &mdash; Trevor Swistchew (Compendium #71)</title>
+  <meta name="description" content="A philosophical narrative and treatise by Trevor Swistchew on Thomas Logicus III, the primal question of existence, the perils of weaponised certainty, and the synthesis of logic and calmness.">
+  <meta name="author" content="Trevor Swistchew">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Logicalm Future &mdash; Trevor Swistchew (2026)">
+  <meta property="og:description" content="Logic without arrogance. Calmness without passivity. A mind sharp enough to cut through noise, steady enough not to turn the blade on others.">
+  <meta property="og:image" content="https://tpatterson34.github.io/trevor-swistchew-portal/assets/images/the-logicalm-future-banner.jpg">
+  <meta property="og:url" content="https://tpatterson34.github.io/trevor-swistchew-portal/essays/the-logicalm-future/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Logicalm Future &mdash; Trevor Swistchew">
+  <meta name="twitter:description" content="Why certainty is an illusion and constant flux is our ultimate freedom. A philosophical inquiry into the Logicalm way.">
+  <meta name="twitter:image" content="https://tpatterson34.github.io/trevor-swistchew-portal/assets/images/the-logicalm-future-banner.jpg">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/print.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            amber: { 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706' },
+            stone: { 850: '#1c1917', 900: '#1c1917', 950: '#0c0a09' }
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            cinzel: ['Cinzel', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0c0a09; }
+    ::-webkit-scrollbar-thumb { background: #292524; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #d97706; }
+
+    /* Reading Themes */
+    body.theme-peat { background-color: #0c0a09; color: #d6d3d1; }
+    body.theme-peat .bg-card { background-color: #171412; border-color: #292524; }
+
+    body.theme-sepia { background-color: #fbf0d9; color: #2d261e; }
+    body.theme-sepia .bg-card { background-color: #f4e4c1; border-color: #dec89e; }
+    body.theme-sepia h1, body.theme-sepia h2, body.theme-sepia h3, body.theme-sepia .text-stone-100, body.theme-sepia .text-stone-200 { color: #1c150c !important; }
+    body.theme-sepia p, body.theme-sepia span { color: #3b3226; }
+    body.theme-sepia .text-stone-400, body.theme-sepia .text-stone-500 { color: #5c4e3c !important; }
+    body.theme-sepia .border-stone-800 { border-color: #d6be94 !important; }
+    body.theme-sepia .bg-stone-950, body.theme-sepia .bg-stone-900 { background-color: #eee1c5 !important; }
+
+    body.theme-stone { background-color: #1c1917; color: #e7e5e4; }
+    body.theme-stone .bg-card { background-color: #292524; border-color: #44403c; }
+
+    /* Drop-cap */
+    .drop-cap:first-letter {
+      float: left;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 4.25rem;
+      line-height: 0.82;
+      padding-top: 4px;
+      padding-right: 12px;
+      padding-bottom: 2px;
+      color: #f59e0b;
+      font-weight: 700;
+    }
+
+    /* Print Viewport Strict Styles */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #111111 !important;
+        font-family: Georgia, 'Times New Roman', serif !important;
+        font-size: 11pt !important;
+        line-height: 1.5 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .no-print, header, nav, footer, #reading-progress-container, figure, .bg-card, section:not(#print-article), button, .theme-controls {
+        display: none !important;
+      }
+      #print-article {
+        display: block !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      #print-article h1 {
+        font-size: 18pt !important;
+        font-weight: bold !important;
+        text-align: center !important;
+        margin-bottom: 4pt !important;
+        color: #000000 !important;
+        text-transform: uppercase !important;
+      }
+      #print-article .print-meta {
+        font-size: 10pt !important;
+        text-align: center !important;
+        margin-bottom: 18pt !important;
+        color: #333333 !important;
+      }
+      #print-article p {
+        margin-bottom: 10pt !important;
+        text-align: justify !important;
+        text-indent: 0 !important;
+        color: #111111 !important;
+      }
+      #print-article .print-colophon {
+        margin-top: 24pt !important;
+        border-top: 1pt solid #444444 !important;
+        padding-top: 8pt !important;
+        font-size: 9pt !important;
+        color: #444444 !important;
+        text-align: center !important;
+      }
+      .drop-cap:first-letter {
+        float: none !important;
+        font-size: inherit !important;
+        line-height: inherit !important;
+        color: inherit !important;
+      }
+    }
+  </style>
+</head>
+<body class="theme-peat transition-colors duration-200 antialiased font-sans selection:bg-amber-500 selection:text-stone-950">
+
+  <!-- Reading Progress Bar -->
+  <div id="reading-progress-container" class="fixed top-0 left-0 w-full h-1 bg-stone-900/80 z-50 no-print">
+    <div id="reading-progress" class="h-full bg-gradient-to-r from-amber-600 via-amber-500 to-amber-300 w-0 transition-all duration-150"></div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="border-b border-stone-800 bg-stone-950/90 backdrop-blur-md sticky top-0 z-40 no-print">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="flex items-center gap-2 group">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-cinzel font-bold text-sm group-hover:bg-amber-500/20 transition-colors">
+            TS
+          </div>
+          <span class="font-cinzel font-bold text-stone-200 text-sm tracking-wide group-hover:text-amber-400 transition-colors hidden sm:inline">
+            TREVOR SWISTCHEW
+          </span>
+        </a>
+        <span class="text-stone-600 hidden sm:inline">&bull;</span>
+        <span class="text-xs font-mono text-stone-400 hidden md:inline">Compendium #71</span>
+        <span class="text-stone-600 hidden md:inline">&bull;</span>
+        <a href="https://theshadyriverbard.com/" class="text-xs font-mono text-stone-400 hover:text-amber-400 transition-colors hidden lg:inline">
+          <i class="fa-solid fa-water text-[10px]"></i> The Shady River Bard &#x2197;
+        </a>
+      </div>
+
+      <!-- Reading Controls: Theme & Text Size -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Theme Switcher -->
+        <div class="flex items-center bg-stone-900 border border-stone-800 rounded-lg p-0.5 text-xs">
+          <button id="theme-peat" class="px-2 py-1 rounded text-amber-400 font-mono text-[11px] bg-stone-800" title="Peat (Dark)">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button id="theme-sepia" class="px-2 py-1 rounded text-stone-400 hover:text-stone-200 font-mono text-[11px]" title="Sepia (Warm)">
+            <i class="fa-solid fa-book-open"></i>
+          </button>
+          <button id="theme-stone" class="px-2 py-1 rounded text-stone-400 hover:text-stone-200 font-mono text-[11px]" title="Stone (Charcoal)">
+            <i class="fa-solid fa-mountain"></i>
+          </button>
+        </div>
+
+        <!-- Typography Sizer -->
+        <div class="flex items-center bg-stone-900 border border-stone-800 rounded-lg p-0.5 text-xs font-mono">
+          <button id="font-dec" class="px-2 py-1 text-stone-400 hover:text-stone-200" title="Decrease font size">A-</button>
+          <button id="font-reset" class="px-2 py-1 text-amber-400 font-bold" title="Reset font size">A</button>
+          <button id="font-inc" class="px-2 py-1 text-stone-400 hover:text-stone-200" title="Increase font size">A+</button>
+        </div>
+
+        <button type="button" onclick="window.print()" class="px-2.5 py-1.5 rounded-lg bg-stone-900 hover:bg-stone-800 border border-stone-800 text-stone-300 hover:text-amber-400 font-mono text-xs flex items-center gap-1.5 transition-colors" title="Print Plain-Text Editorial Edition">
+          <i class="fa-solid fa-print text-[11px]"></i>
+          <span class="hidden sm:inline">Print</span>
+        </button>
+
+        <a href="../../index.html" class="px-3 py-1.5 rounded-lg bg-stone-900 hover:bg-stone-800 border border-stone-800 text-stone-300 hover:text-amber-400 font-mono text-xs flex items-center gap-1.5 transition-colors">
+          <i class="fa-solid fa-arrow-left text-[10px]"></i>
+          <span>Compendium</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Essay Container -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 no-print">
+
+    <!-- Article Header -->
+    <header class="mb-10 text-center sm:text-left">
+      <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-4">
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-amber-500 text-stone-950 uppercase tracking-wider">
+          Compendium #71
+        </span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-900 border border-stone-800 text-amber-400 font-medium">
+          Philosophical Inquiry &bull; Consciousness
+        </span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-900/80 border border-stone-800 text-cyan-400">
+          Process Philosophy &bull; Epistemology
+        </span>
+      </div>
+
+      <p class="font-mono text-xs uppercase tracking-widest text-stone-400 mb-2">
+        Trevor Swistchew &bull; 2026
+      </p>
+
+      <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-black text-stone-100 tracking-tight leading-tight mb-4">
+        The Logicalm Future
+      </h1>
+
+      <p class="font-serif italic text-base sm:text-lg text-amber-300/90 leading-relaxed max-w-3xl">
+        Logic without arrogance. Calmness without passivity. A mind sharp enough to cut through noise, steady enough not to turn the blade on others.
+      </p>
+
+      <!-- Meta Bar -->
+      <div class="mt-6 pt-4 border-t border-stone-800/80 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-stone-400">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/50 flex items-center justify-center text-amber-400 font-cinzel font-bold text-xs">
+            TS
+          </div>
+          <div>
+            <span class="text-stone-200 font-bold block">Trevor Swistchew</span>
+            <span class="text-[11px] text-stone-400">Scottish Essayist, Cultural Critic &amp; Philosophical Inquirer</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <span class="flex items-center gap-1.5"><i class="fa-regular fa-clock text-amber-500"></i> 4 min read</span>
+          <span class="flex items-center gap-1.5"><i class="fa-solid fa-feather text-amber-500"></i> 924 words</span>
+          <span class="flex items-center gap-1.5 text-stone-300"><i class="fa-solid fa-compass text-amber-500"></i> Standalone Treatise</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Fine-Art Hero Banner -->
+    <figure class="mb-10 rounded-2xl overflow-hidden border border-stone-800 bg-stone-950 shadow-2xl relative">
+      <img 
+        src="../../assets/images/the-logicalm-future-banner.jpg" 
+        alt="The Logicalm Future Fine Art Oil Painting" 
+        class="w-full h-auto object-cover max-h-[500px]"
+        loading="eager"
+      />
+      <figcaption class="p-3.5 bg-stone-950/95 border-t border-stone-800/80 text-center text-xs font-serif italic text-stone-400">
+        The Scholar of Flux: An atmospheric chiaroscuro oil painting of a vaulted stone library filled with ancient Mesopotamian and Greek relics, parchment codices, and an antique astrolabe, illuminated by warm candlelight against an arched Gothic window opening onto a tranquil spiral nebula and starry cosmic twilight.
+      </figcaption>
+    </figure>
+
+    <!-- Editorial Thesis Pull-Quote -->
+    <blockquote class="my-8 p-6 sm:p-8 rounded-2xl bg-card border-l-4 border-amber-500 shadow-xl relative overflow-hidden">
+      <div class="absolute -right-4 -bottom-6 text-stone-800/20 text-9xl font-serif pointer-events-none select-none">&ldquo;</div>
+      <p class="font-serif italic text-lg sm:text-xl text-stone-200 leading-relaxed mb-3">
+        &ldquo;The Logicalm Future isn&rsquo;t a world without belief. It&rsquo;s a world where belief isn&rsquo;t weaponised. Nothing stays still. Not the universe. Not humanity. Not truth. Everything is flux and that is our freedom.&rdquo;
+      </p>
+      <cite class="block font-mono text-xs uppercase tracking-widest text-amber-400 not-italic">
+        &mdash; Trevor Swistchew, &lsquo;The Logicalm Future&rsquo; (2026)
+      </cite>
+    </blockquote>
+
+    <!-- Archival Philosophical Ledger -->
+    <section class="my-10 p-6 sm:p-7 rounded-2xl bg-card border border-stone-800 shadow-lg">
+      <div class="flex items-center gap-2 mb-4 text-xs font-mono uppercase tracking-wider text-amber-400 font-bold">
+        <i class="fa-solid fa-brain text-amber-500"></i>
+        <span>Archival Philosophical Ledger &bull; Core Epistemological Axioms</span>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+        <div class="p-3.5 rounded-xl bg-stone-950/60 border border-stone-800/80">
+          <span class="font-mono text-[10px] text-amber-400 font-bold block mb-1">Ontological Primacy</span>
+          <span class="font-bold text-stone-200 block text-sm mb-1">&ldquo;Why Anything?&rdquo;</span>
+          <p class="text-stone-400 text-[11px] leading-relaxed">
+            Moving past inherited dogma to the irreducible primal inquiry: why is there something rather than nothing?
+          </p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-stone-950/60 border border-stone-800/80">
+          <span class="font-mono text-[10px] text-amber-400 font-bold block mb-1">Epistemic Synthesis</span>
+          <span class="font-bold text-stone-200 block text-sm mb-1">Logic + Calmness</span>
+          <p class="text-stone-400 text-[11px] leading-relaxed">
+            Reason without arrogance; peace without apathy. A mind sharp enough to pierce noise without weaponising the blade.
+          </p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-stone-950/60 border border-stone-800/80">
+          <span class="font-mono text-[10px] text-amber-400 font-bold block mb-1">Process Metaphysics</span>
+          <span class="font-bold text-stone-200 block text-sm mb-1">Flux as Freedom</span>
+          <p class="text-stone-400 text-[11px] leading-relaxed">
+            Static certainty is an illusion. The cosmos is a continuous unfolding transition&mdash;movement is truth and liberty.
+          </p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-stone-950/60 border border-stone-800/80">
+          <span class="font-mono text-[10px] text-amber-400 font-bold block mb-1">Dialogic Space</span>
+          <span class="font-bold text-stone-200 block text-sm mb-1">Non-Sectarian Circles</span>
+          <p class="text-stone-400 text-[11px] leading-relaxed">
+            Conversational commons where questions are explored without fear, disagreement without violence, and thought over noise.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Historical Dossier -->
+    <section class="my-10 rounded-2xl bg-card border border-stone-800 overflow-hidden shadow-xl">
+      <div class="p-5 sm:p-6 border-b border-stone-800 bg-stone-950/60 flex items-center justify-between">
+        <div>
+          <h3 class="font-cinzel font-bold text-base sm:text-lg text-stone-100 flex items-center gap-2">
+            <i class="fa-solid fa-scroll text-amber-500"></i>
+            <span>Philosophical Dossier: The Logicalm Architecture</span>
+          </h3>
+          <p class="font-mono text-xs text-stone-400 mt-1">
+            Deconstructing weaponised certainty, origin dogmas, and the regenerative power of tranquil inquiry
+          </p>
+        </div>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="flex border-b border-stone-800 bg-stone-900/60 text-xs font-mono overflow-x-auto">
+        <button id="tab-btn-1" class="tab-btn px-4 py-3 text-amber-400 font-bold border-b-2 border-amber-500 bg-stone-900/90 whitespace-nowrap" onclick="switchTab(1)">
+          1. The Pathology of Weaponised Dogma
+        </button>
+        <button id="tab-btn-2" class="tab-btn px-4 py-3 text-stone-400 hover:text-stone-200 border-b-2 border-transparent whitespace-nowrap" onclick="switchTab(2)">
+          2. The Dialectic of Logic &amp; Calmness
+        </button>
+        <button id="tab-btn-3" class="tab-btn px-4 py-3 text-stone-400 hover:text-stone-200 border-b-2 border-transparent whitespace-nowrap" onclick="switchTab(3)">
+          3. Process Philosophy &amp; Cosmic Flux
+        </button>
+      </div>
+
+      <!-- Tab 1 -->
+      <div id="tab-pane-1" class="tab-content active p-6 text-xs sm:text-sm text-stone-300 space-y-3 leading-relaxed">
+        <div class="flex items-center gap-2 text-amber-400 font-mono font-bold text-xs uppercase">
+          <i class="fa-solid fa-shield-halved text-amber-500"></i> Unearned Certainty as a Cultural Cage
+        </div>
+        <p>
+          Throughout human history, distinct civilizations formulated incompatible origin narratives: Mesopotamian creation epics, Indian cosmic cycles, Greek primordial voids, and modern cosmological quantum fluctuations. While each attempted to answer the mystery of origins, cultural and religious rivalry transformed unprovable explanations into instruments of division and warfare.
+        </p>
+        <p class="text-stone-400">
+          Thomas Logicus III identified the fatal recurring human pattern: fighting over narratives that cannot be empirically proved, and repeatedly failing to learn from the carnage of dogmatic certainty.
+        </p>
+      </div>
+
+      <!-- Tab 2 -->
+      <div id="tab-pane-2" class="tab-content p-6 text-xs sm:text-sm text-stone-300 space-y-3 leading-relaxed">
+        <div class="flex items-center gap-2 text-amber-400 font-mono font-bold text-xs uppercase">
+          <i class="fa-solid fa-scale-balanced text-amber-500"></i> The Synergy of Critical Reason and Tranquil Equanimity
+        </div>
+        <p>
+          Logic alone often decays into aggressive intellectual combat, pedantic sparring, and authoritarian arrogance. Calmness alone frequently slides into passive indifference, fatalism, and intellectual surrender. 
+        </p>
+        <p class="text-stone-400">
+          The fusion of <strong>Logic + Calmness (&ldquo;Logicalm&rdquo;)</strong> establishes an intellectual equilibrium: analytical clarity sharp enough to pierce propaganda and noise, held in serene emotional tranquility so the blade of reason is never turned with malice against fellow searchers.
+        </p>
+      </div>
+
+      <!-- Tab 3 -->
+      <div id="tab-pane-3" class="tab-content p-6 text-xs sm:text-sm text-stone-300 space-y-3 leading-relaxed">
+        <div class="flex items-center gap-2 text-amber-400 font-mono font-bold text-xs uppercase">
+          <i class="fa-solid fa-infinity text-amber-500"></i> The Universe as Process, Not Product
+        </div>
+        <p>
+          The fundamental cosmological shift occurs when reality is recognized not as a static, manufactured artifact, but as a continuous transition: <em>Nothing became something; that something became everything; and everything is still changing.</em>
+        </p>
+        <p class="text-stone-400">
+          Because reality is perpetually unfolding, fixed certainty is an illusion. Accepting constant movement as truth liberates human consciousness from dogmatic rigidity&mdash;transforming perpetual flux into the foundation of intellectual freedom.
+        </p>
+      </div>
+    </section>
+
+    <!-- Verbatim Essay Content -->
+    <article id="essay-body" class="essay-prose font-serif text-lg sm:text-xl leading-relaxed text-stone-200 space-y-6 pt-4">
+
+      <p class="drop-cap">
+        Thomas Logicus III had been born into a world of polished privilege. His family&rsquo;s wealth came from antiques&mdash;real antiques, not decorative replicas. Their estate was a museum of human thought: carved idols from forgotten empires, scrolls inked by hands long turned to dust, fragments of belief systems that once commanded armies and shaped continents. People travelled across the world to buy these relics, hoping to touch something ancient, something meaningful.
+      </p>
+
+      <p>
+        Thomas, however, had never been satisfied with inherited meaning.
+      </p>
+
+      <p>
+        From the moment he could read, he had been consumed by a single, relentless question: Why anything?
+      </p>
+
+      <p>
+        Not &ldquo;why us,&rdquo; not &ldquo;why now,&rdquo; not &ldquo;why this world instead of another.&rdquo; He wanted to know why anything existed at all. Why there was something rather than nothing. Why the universe had bothered to begin.
+      </p>
+
+      <p>
+        His parents encouraged his curiosity, though they didn&rsquo;t understand it. They assumed he would eventually settle into the family business, selling fragments of the past to people desperate for certainty. But Thomas wasn&rsquo;t interested in certainty. He was interested in truth.
+      </p>
+
+      <p>
+        He devoured every origin story he could find. Creation myths from the ancient Near East. Cosmic cycles from India. Primordial chaos from Greece. The universe emerging from nothingness in modern physics. The universe always existing in certain philosophical traditions.
+      </p>
+
+      <p>
+        Different cultures, different symbols, different languages&mdash;yet each claimed to know how everything began. And where these stories collided, conflict followed. Religious one&#8209;upmanship. Cultural rivalry. Wars justified by incompatible explanations of the same mystery.
+      </p>
+
+      <p>
+        Thomas saw the pattern early:
+      </p>
+
+      <p class="text-amber-300 font-semibold pl-4 border-l-2 border-amber-500/50">
+        Humanity fought over stories it could not prove. And it failed again and again to learn from the damage.
+      </p>
+
+      <p>
+        He stripped the question back to its simplest form.
+      </p>
+
+      <p>
+        In the beginning, nothing. Then nothing became something. That something became everything&mdash;the universe.
+      </p>
+
+      <p>
+        But the spark behind that shift? Still unknown. Still unanswered. Still buried beneath belief, theory, and noise.
+      </p>
+
+      <p>
+        Thomas didn&rsquo;t write to soothe himself. He wrote to find answers.
+      </p>
+
+      <p>
+        He wrote because the question demanded it. He wrote because thinking was the only honest path forward.
+      </p>
+
+      <p>
+        He wrote because silence wasn&rsquo;t enough.
+      </p>
+
+      <p>
+        His first attempts were rough but sincere. He filled notebooks with observations, diagrams, and reflections. He wrote about the collision of origin stories, the wars that followed, and humanity&rsquo;s long history of failing to learn from itself. He wrote about the universe as a process, not a product. He wrote about the possibility that the beginning was not a moment but a transition.
+      </p>
+
+      <p>
+        Eventually, he began sharing his thoughts online&mdash;not for attention, but to reach anyone who felt the same hunger for clarity.
+      </p>
+
+      <p>
+        At first, the world barely noticed. Some mocked him. Some dismissed him. But a few paused.
+      </p>
+
+      <p>
+        Those few mattered.
+      </p>
+
+      <p>
+        They weren&rsquo;t followers. They weren&rsquo;t believers. They were thinkers: people who didn&rsquo;t fear questions, people who didn&rsquo;t cling to inherited answers, people who recognised the difference between searching and surrendering.
+      </p>
+
+      <p>
+        Thomas kept writing.
+      </p>
+
+      <p>
+        He wrote about the human tendency to react rather than reflect. He wrote about how belief became dangerous only when it was weaponised. He wrote about how certainty, when unearned, became a cage.
+      </p>
+
+      <p>
+        But he didn&rsquo;t attack belief itself. He attacked reactivity&mdash;the impulse to defend, to fight, to divide.
+      </p>
+
+      <p>
+        He realised something crucial:
+      </p>
+
+      <p class="text-amber-300 font-semibold pl-4 border-l-2 border-amber-500/50">
+        Logic alone wasn&rsquo;t enough. Calmness alone wasn&rsquo;t enough. But together, they could change everything.
+      </p>
+
+      <p>
+        He fused them into a single idea:
+      </p>
+
+      <div class="my-6 p-6 rounded-xl bg-stone-900/80 border border-amber-500/40 text-center not-prose">
+        <span class="font-cinzel text-2xl sm:text-3xl font-black text-amber-400 tracking-widest block mb-1">
+          LOGICALM
+        </span>
+        <span class="font-mono text-xs uppercase tracking-widest text-stone-400">
+          Logic + Calmness
+        </span>
+      </div>
+
+      <p>
+        Logic without arrogance. Calmness without passivity. A mind sharp enough to cut through noise, steady enough not to turn the blade on others.
+      </p>
+
+      <p>
+        He wrote:
+      </p>
+
+      <blockquote class="pl-4 border-l-2 border-amber-400 italic text-stone-300 my-4">
+        &ldquo;The Logicalm Future isn&rsquo;t a world without belief. It&rsquo;s a world where belief isn&rsquo;t weaponised.&rdquo;
+      </blockquote>
+
+      <p>
+        His audience grew. Quietly. Steadily. People shared his words because they felt the clarity. The stillness. The refusal to inflame. The refusal to divide.
+      </p>
+
+      <p>
+        Thomas wrote again about the beginning:
+      </p>
+
+      <blockquote class="pl-4 border-l-2 border-amber-400 italic text-stone-300 my-4">
+        &ldquo;Nothing. Then something. Then everything. And everything is still changing.&rdquo;
+      </blockquote>
+
+      <p>
+        He explained that the universe wasn&rsquo;t fixed. Humanity wasn&rsquo;t fixed. Ideas weren&rsquo;t fixed. Everything was in constant flux&mdash;and that was the point.
+      </p>
+
+      <p class="text-amber-300 font-semibold pl-4 border-l-2 border-amber-500/50">
+        Certainty was the illusion. Movement was the truth.
+      </p>
+
+      <p>
+        His writing spread further. Not viral. Not explosive. Just consistent&mdash;like a quiet pulse moving through the world.
+      </p>
+
+      <p>
+        People began forming Logicalm circles. Not groups. Not sects. Just conversations. Spaces where people could think without fear, question without hostility, and disagree without violence.
+      </p>
+
+      <p>
+        Thomas watched it unfold with a calm he had never felt before.
+      </p>
+
+      <p>
+        He had spent his life searching for answers. Now he understood something deeper:
+      </p>
+
+      <p class="text-amber-300 font-semibold pl-4 border-l-2 border-amber-500/50">
+        The value wasn&rsquo;t in the answer. It was in the clarity of the search.
+      </p>
+
+      <p>
+        His final chapter wrote itself.
+      </p>
+
+      <p>
+        He described the universe as a constant unfolding&mdash;a process, not a product. He described humanity as capable of learning, even if it had failed for millennia. He described belief as something that could coexist with logic, as long as calmness held the centre.
+      </p>
+
+      <p>
+        He ended with the truth he had earned through thought, not faith:
+      </p>
+
+      <blockquote class="pl-4 border-l-2 border-amber-400 italic text-stone-300 my-4">
+        &ldquo;Nothing stays still. Not the universe. Not humanity. Not truth. Everything is flux and that is our freedom.&rdquo;
+      </blockquote>
+
+      <p>
+        When he published THE LOGICALM FUTURE, he didn&rsquo;t expect much. But the world surprised him.
+      </p>
+
+      <p>
+        People connected. People understood. People felt seen, not judged. They didn&rsquo;t need to agree with him to appreciate the clarity he offered.
+      </p>
+
+      <p>
+        For the first time in his life, Thomas Logicus III felt at peace. Not because he had solved the beginning. Not because he had ended conflict. But because he had found the audience he had been searching for since childhood: people who valued thought over noise, calm over chaos, logic over fear.
+      </p>
+
+      <p>
+        And in that connection, he found his own beginning.
+      </p>
+
+    </article>
+
+    <!-- Archival Colophon -->
+    <div class="mt-8 p-6 sm:p-8 rounded-2xl bg-card border border-stone-800 text-xs text-stone-400 space-y-3 not-prose">
+      <div class="flex items-center gap-2 font-mono text-amber-400 font-bold uppercase tracking-wider">
+        <i class="fa-solid fa-feather-pointed text-amber-500"></i>
+        <span>Archival Colophon &bull; Trevor Swistchew (2026)</span>
+      </div>
+      <p class="font-serif italic text-stone-300 text-sm leading-relaxed mb-0">
+        &ldquo;The Logicalm Future&rdquo; is an epistemological and ontological treatise by Scottish thinker Trevor Swistchew. It examines the human condition through the lens of Thomas Logicus III, positing that freedom and peace emerge not from rigid doctrinal certainty, but from the deliberate synthesis of analytical reason and tranquil equanimity in an ever-unfolding universe of flux.
+      </p>
+      <div class="pt-2 flex flex-wrap items-center gap-3 text-[11px] font-mono text-stone-400">
+        <span>Catalog: Compendium #71</span>
+        <span>&bull;</span>
+        <span>Standalone Philosophical Treatise (No Companion Song)</span>
+        <span>&bull;</span>
+        <span>Word Count: 924</span>
+        <span>&bull;</span>
+        <span>Trevor Swistchew Literary Archive</span>
+      </div>
+    </div>
+
+    <!-- Print Action Prompt -->
+    <div class="mt-8 flex justify-center no-print">
+      <button type="button" onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-300 hover:text-amber-400 font-mono text-xs flex items-center gap-2 transition-all shadow-md group">
+        <i class="fa-solid fa-print text-sm text-amber-500 group-hover:scale-110 transition-transform"></i>
+        <span>Print Well-Formatted Plain Text</span>
+      </button>
+    </div>
+
+    <!-- Compendium Linear Navigation Footer -->
+    <nav class="mt-12 pt-6 border-t border-stone-800 grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="../snp-versus-union-union-deceit-exposed/index.html" class="p-4 rounded-xl bg-stone-900/60 hover:bg-stone-900 border border-stone-800 hover:border-amber-500/50 flex items-center gap-3 group transition-all">
+        <i class="fa-solid fa-arrow-left text-amber-500 group-hover:-translate-x-1 transition-transform"></i>
+        <div class="text-left">
+          <span class="text-[10px] font-mono text-stone-400 block uppercase">Previous Compendium (#70)</span>
+          <span class="font-display font-bold text-sm text-stone-200 group-hover:text-amber-400 transition-colors">SNP Versus Union: Union Deceit Exposed</span>
+        </div>
+      </a>
+      <a href="../../index.html" class="p-4 rounded-xl bg-stone-900/60 hover:bg-stone-900 border border-stone-800 hover:border-amber-500/50 flex items-center justify-between group transition-all">
+        <div class="text-left">
+          <span class="text-[10px] font-mono text-stone-400 block uppercase">Compendium Hub</span>
+          <span class="font-display font-bold text-sm text-stone-200 group-hover:text-amber-400 transition-colors">Explore All 71 Compendium Essays</span>
+        </div>
+        <i class="fa-solid fa-arrow-right text-amber-500 group-hover:translate-x-1 transition-transform"></i>
+      </a>
+    </nav>
+
+  </main>
+
+  <!-- STRICT PLAIN-TEXT PRINT ARTICLE (Hidden on screen, exclusively active on print/PDF) -->
+  <section id="print-article" style="display: none;">
+    <h1>THE LOGICALM FUTURE.</h1>
+    <div class="print-meta">
+      Trevor Swistchew 2026
+    </div>
+
+    <p>
+      Thomas Logicus III had been born into a world of polished privilege. His family&rsquo;s wealth came from antiques&mdash;real antiques, not decorative replicas. Their estate was a museum of human thought: carved idols from forgotten empires, scrolls inked by hands long turned to dust, fragments of belief systems that once commanded armies and shaped continents. People travelled across the world to buy these relics, hoping to touch something ancient, something meaningful.
+    </p>
+
+    <p>
+      Thomas, however, had never been satisfied with inherited meaning.
+    </p>
+
+    <p>
+      From the moment he could read, he had been consumed by a single, relentless question: Why anything?
+    </p>
+
+    <p>
+      Not &ldquo;why us,&rdquo; not &ldquo;why now,&rdquo; not &ldquo;why this world instead of another.&rdquo; He wanted to know why anything existed at all. Why there was something rather than nothing. Why the universe had bothered to begin.
+    </p>
+
+    <p>
+      His parents encouraged his curiosity, though they didn&rsquo;t understand it. They assumed he would eventually settle into the family business, selling fragments of the past to people desperate for certainty. But Thomas wasn&rsquo;t interested in certainty. He was interested in truth.
+    </p>
+
+    <p>
+      He devoured every origin story he could find. Creation myths from the ancient Near East. Cosmic cycles from India. Primordial chaos from Greece. The universe emerging from nothingness in modern physics. The universe always existing in certain philosophical traditions.
+    </p>
+
+    <p>
+      Different cultures, different symbols, different languages&mdash;yet each claimed to know how everything began. And where these stories collided, conflict followed. Religious one-upmanship. Cultural rivalry. Wars justified by incompatible explanations of the same mystery.
+    </p>
+
+    <p>
+      Thomas saw the pattern early:
+    </p>
+
+    <p>
+      Humanity fought over stories it could not prove. And it failed again and again to learn from the damage.
+    </p>
+
+    <p>
+      He stripped the question back to its simplest form.
+    </p>
+
+    <p>
+      In the beginning, nothing. Then nothing became something. That something became everything&mdash;the universe.
+    </p>
+
+    <p>
+      But the spark behind that shift? Still unknown. Still unanswered. Still buried beneath belief, theory, and noise.
+    </p>
+
+    <p>
+      Thomas didn&rsquo;t write to soothe himself. He wrote to find answers.
+    </p>
+
+    <p>
+      He wrote because the question demanded it. He wrote because thinking was the only honest path forward.
+    </p>
+
+    <p>
+      He wrote because silence wasn&rsquo;t enough.
+    </p>
+
+    <p>
+      His first attempts were rough but sincere. He filled notebooks with observations, diagrams, and reflections. He wrote about the collision of origin stories, the wars that followed, and humanity&rsquo;s long history of failing to learn from itself. He wrote about the universe as a process, not a product. He wrote about the possibility that the beginning was not a moment but a transition.
+    </p>
+
+    <p>
+      Eventually, he began sharing his thoughts online&mdash;not for attention, but to reach anyone who felt the same hunger for clarity.
+    </p>
+
+    <p>
+      At first, the world barely noticed. Some mocked him. Some dismissed him. But a few paused.
+    </p>
+
+    <p>
+      Those few mattered.
+    </p>
+
+    <p>
+      They weren&rsquo;t followers. They weren&rsquo;t believers. They were thinkers: people who didn&rsquo;t fear questions, people who didn&rsquo;t cling to inherited answers, people who recognised the difference between searching and surrendering.
+    </p>
+
+    <p>
+      Thomas kept writing.
+    </p>
+
+    <p>
+      He wrote about the human tendency to react rather than reflect. He wrote about how belief became dangerous only when it was weaponised. He wrote about how certainty, when unearned, became a cage.
+    </p>
+
+    <p>
+      But he didn&rsquo;t attack belief itself. He attacked reactivity&mdash;the impulse to defend, to fight, to divide.
+    </p>
+
+    <p>
+      He realised something crucial:
+    </p>
+
+    <p>
+      Logic alone wasn&rsquo;t enough. Calmness alone wasn&rsquo;t enough. But together, they could change everything.
+    </p>
+
+    <p>
+      He fused them into a single idea:
+    </p>
+
+    <p>
+      LOGICALM
+    </p>
+
+    <p>
+      Logic + Calmness.
+    </p>
+
+    <p>
+      Logic without arrogance. Calmness without passivity. A mind sharp enough to cut through noise, steady enough not to turn the blade on others.
+    </p>
+
+    <p>
+      He wrote:
+    </p>
+
+    <p>
+      &ldquo;The Logicalm Future isn&rsquo;t a world without belief. It&rsquo;s a world where belief isn&rsquo;t weaponised.&rdquo;
+    </p>
+
+    <p>
+      His audience grew. Quietly. Steadily. People shared his words because they felt the clarity. The stillness. The refusal to inflame. The refusal to divide.
+    </p>
+
+    <p>
+      Thomas wrote again about the beginning:
+    </p>
+
+    <p>
+      &ldquo;Nothing. Then something. Then everything. And everything is still changing.&rdquo;
+    </p>
+
+    <p>
+      He explained that the universe wasn&rsquo;t fixed. Humanity wasn&rsquo;t fixed. Ideas weren&rsquo;t fixed. Everything was in constant flux&mdash;and that was the point.
+    </p>
+
+    <p>
+      Certainty was the illusion. Movement was the truth.
+    </p>
+
+    <p>
+      His writing spread further. Not viral. Not explosive. Just consistent&mdash;like a quiet pulse moving through the world.
+    </p>
+
+    <p>
+      People began forming Logicalm circles. Not groups. Not sects. Just conversations. Spaces where people could think without fear, question without hostility, and disagree without violence.
+    </p>
+
+    <p>
+      Thomas watched it unfold with a calm he had never felt before.
+    </p>
+
+    <p>
+      He had spent his life searching for answers. Now he understood something deeper:
+    </p>
+
+    <p>
+      The value wasn&rsquo;t in the answer. It was in the clarity of the search.
+    </p>
+
+    <p>
+      His final chapter wrote itself.
+    </p>
+
+    <p>
+      He described the universe as a constant unfolding&mdash;a process, not a product. He described humanity as capable of learning, even if it had failed for millennia. He described belief as something that could coexist with logic, as long as calmness held the centre.
+    </p>
+
+    <p>
+      He ended with the truth he had earned through thought, not faith:
+    </p>
+
+    <p>
+      &ldquo;Nothing stays still. Not the universe. Not humanity. Not truth. Everything is flux and that is our freedom.&rdquo;
+    </p>
+
+    <p>
+      When he published THE LOGICALM FUTURE, he didn&rsquo;t expect much. But the world surprised him.
+    </p>
+
+    <p>
+      People connected. People understood. People felt seen, not judged. They didn&rsquo;t need to agree with him to appreciate the clarity he offered.
+    </p>
+
+    <p>
+      For the first time in his life, Thomas Logicus III felt at peace. Not because he had solved the beginning. Not because he had ended conflict. But because he had found the audience he had been searching for since childhood: people who valued thought over noise, calm over chaos, logic over fear.
+    </p>
+
+    <p>
+      And in that connection, he found his own beginning.
+    </p>
+
+    <div class="print-colophon">
+      Copyright &copy; Trevor Swistchew 2026. All rights reserved. &mdash; Published in Compendium of Essays
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="mt-16 border-t border-stone-800/80 bg-stone-950 py-8 text-center text-xs font-mono text-stone-400 no-print">
+    <div class="max-w-4xl mx-auto px-4 space-y-2">
+      <p>&copy; 2026 Trevor Swistchew. All rights reserved.</p>
+      <p class="text-stone-400 text-[11px]">The Scottish Literary Salon &bull; 71 Compendium Essays &bull; 78 Music Chamber Tracks</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Tab Switching Logic
+    function switchTab(tabIndex) {
+      document.querySelectorAll('.tab-btn').forEach((btn, idx) => {
+        if (idx + 1 === tabIndex) {
+          btn.classList.add('text-amber-400', 'font-bold', 'border-amber-500', 'bg-stone-900/90');
+          btn.classList.remove('text-stone-400', 'border-transparent');
+        } else {
+          btn.classList.remove('text-amber-400', 'font-bold', 'border-amber-500', 'bg-stone-900/90');
+          btn.classList.add('text-stone-400', 'border-transparent');
+        }
+      });
+      document.querySelectorAll('.tab-content').forEach((pane, idx) => {
+        if (idx + 1 === tabIndex) {
+          pane.classList.add('active');
+        } else {
+          pane.classList.remove('active');
+        }
+      });
+    }
+
+    // Reading Progress Indicator
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      const prog = document.getElementById('reading-progress');
+      if (prog) prog.style.width = scrolled + '%';
+    });
+
+    // Theme Switcher Logic
+    const body = document.body;
+    const btnPeat = document.getElementById('theme-peat');
+    const btnSepia = document.getElementById('theme-sepia');
+    const btnStone = document.getElementById('theme-stone');
+
+    function setActiveTheme(theme) {
+      body.classList.remove('theme-peat', 'theme-sepia', 'theme-stone');
+      body.classList.add('theme-' + theme);
+
+      [btnPeat, btnSepia, btnStone].forEach(b => {
+        if (b) {
+          b.classList.remove('bg-stone-800', 'text-amber-400');
+          b.classList.add('text-stone-400');
+        }
+      });
+
+      const current = document.getElementById('theme-' + theme);
+      if (current) {
+        current.classList.add('bg-stone-800', 'text-amber-400');
+        current.classList.remove('text-stone-400');
+      }
+      localStorage.setItem('swistchew_theme', theme);
+    }
+
+    if (btnPeat) btnPeat.addEventListener('click', () => setActiveTheme('peat'));
+    if (btnSepia) btnSepia.addEventListener('click', () => setActiveTheme('sepia'));
+    if (btnStone) btnStone.addEventListener('click', () => setActiveTheme('stone'));
+
+    const savedTheme = localStorage.getItem('swistchew_theme');
+    if (savedTheme) setActiveTheme(savedTheme);
+
+    // Font Sizing Logic
+    const essayBody = document.getElementById('essay-body');
+    const fontSizes = ['text-base sm:text-lg', 'text-lg sm:text-xl', 'text-xl sm:text-2xl'];
+    let currentSizeIndex = 1;
+
+    const fontDec = document.getElementById('font-dec');
+    const fontReset = document.getElementById('font-reset');
+    const fontInc = document.getElementById('font-inc');
+
+    function applyFontSize() {
+      if (!essayBody) return;
+      fontSizes.forEach(cls => {
+        cls.split(' ').forEach(c => essayBody.classList.remove(c));
+      });
+      fontSizes[currentSizeIndex].split(' ').forEach(c => essayBody.classList.add(c));
+    }
+
+    if (fontDec) {
+      fontDec.addEventListener('click', () => {
+        if (currentSizeIndex > 0) {
+          currentSizeIndex--;
+          applyFontSize();
+        }
+      });
+    }
+
+    if (fontReset) {
+      fontReset.addEventListener('click', () => {
+        currentSizeIndex = 1;
+        applyFontSize();
+      });
+    }
+
+    if (fontInc) {
+      fontInc.addEventListener('click', () => {
+        if (currentSizeIndex < fontSizes.length - 1) {
+          currentSizeIndex++;
+          applyFontSize();
+        }
+      });
+    }
+
+    // Auto-trigger print when requested via query param (?print=1)
+    if (new URLSearchParams(window.location.search).get('print') === '1') {
+      const printBar = document.createElement('div');
+      printBar.id = 'print-helper-bar';
+      printBar.className = 'fixed top-0 left-0 w-full z-50 bg-amber-500 text-stone-950 px-4 py-2 text-center text-xs font-mono font-bold flex items-center justify-between no-print';
+      printBar.innerHTML = '<span><i class="fa-solid fa-print"></i> Print Dialog Active</span> <button onclick="window.print()" class="px-2 py-1 bg-stone-950 text-white rounded">Open Print Again</button>';
+      document.body.prepend(printBar);
+
+      window.addEventListener('load', () => {
+        setTimeout(() => { window.print(); }, 350);
+      });
+      window.addEventListener('afterprint', () => {
+        if (window.opener) {
+          setTimeout(() => { window.close(); }, 500);
+        }
+      });
+    }
+  </script>
+</body>
+</html>
