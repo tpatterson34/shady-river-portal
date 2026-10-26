@@ -23,7 +23,7 @@ window.SINGLES_DATA = {
     bpm: 74,
     duration: "06:59",
     release_year: 2026,
-    release_status: "Audio Finalised • Music Video in Post-Production",
+    release_status: "Official Audio & Music Video Out Now",
     title: "The Greenock Slate and the Gold Watch",
     subtitle: "A True Family Chronicle of the Clyde, the Great War, and the Arithmetic of the Glens",
     location: "Greenock, Inverclyde • Portree (Isle of Skye) • The Angus Glens • The Somme",
@@ -40,7 +40,7 @@ window.SINGLES_DATA = {
     // As soon as a valid YouTube URL or 11-character Video ID is placed in `youtubeVideoUrl`,
     // the UI automatically activates the red YouTube "Watch Video" trigger & in-page modal.
     media: {
-      youtubeVideoUrl: "",
+      youtubeVideoUrl: "https://youtu.be/9IWrmtCF4nQ",
       spotifyUrl: "[INSERT_SPOTIFY_URL_OR_LEAVE_PENDING]",
       appleMusicUrl: "[INSERT_APPLE_MUSIC_URL_OR_LEAVE_PENDING]",
       amazonMusicUrl: "[INSERT_AMAZON_MUSIC_URL_OR_LEAVE_PENDING]",
