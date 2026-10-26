@@ -223,7 +223,7 @@
       number_padded: "02",
       badge: "STANDALONE SINGLE 02 // CLAN HERITAGE CHRONICLE",
       card_badge: "Single #02",
-      key_tempo_badge: "Celtic Folk-Rock // 1746 Highland Stand",
+      key_tempo_badge: "Celtic Folk-Rock // 1745–1746 Highland Stand",
       key: "D Dorian / Minor",
       bpm: 68,
       duration: "05:28",
@@ -231,22 +231,22 @@
       release_status: "Official Audio & Music Video Out Now",
       title: "The Guns of Loch Fyne",
       title_accent_split: ["The Guns of", "Loch Fyne"],
-      subtitle: "The 1746 Bombardment of Old Castle Lachlan & the Stand of the MacNair Tacksmen on the Cowal Shore",
-      location: "Loch Fyne • Old Castle Lachlan (Strachur, Cowal Peninsula) • Drumossie Moor (Culloden)",
+      subtitle: "The 1745–1746 Loch Fyne Campaign, Old Castle Lachlan & the Stand of the MacNair Tacksmen on the Cowal Shore",
+      location: "Loch Fyne • Old Castle Lachlan (Strachur, Cowal Peninsula) • Otter Ferry • Campbeltown • Drumossie Moor (Culloden)",
       genre: "Cinematic Gaelic & Highland Folk-Rock Ballad",
-      thesis: "They could sail HMS Furnace up the saltwater tide to batter fifteenth-century stone into rubble and outlaw the tartan by royal decree, but as long as the tacksmen held the shallows with musket and lead while the women and children reached the bracken, the bloodline was never broken.",
-      thesis_attribution: "— Historical Thesis • Inspired by Clan MacNair & Clan MacLachlan Lore Shared by Bob McNair",
-      dedication: "Dedicated to subscriber Bob McNair (@bobmcnair9234) and the enduring bloodline of the MacNair tacksmen and Clan MacLachlan on the shores of Loch Fyne.",
+      thesis: "They could sail Royal Navy bomb vessels up the saltwater tide to smash the loch-boats, disguise shore bombardment in the ship's log as a royal birthday salute, and outlaw the tartan by royal decree—but so long as the MacNair tacksmen, Henny MacLachlan, and Duncan Fisher guarded the kin, the keys, and the charter box, the bloodline was never broken.",
+      thesis_attribution: "— Historical Thesis • Reconciling the 1746 Ballad Tradition with the 1745 HMS Terror Logbooks & Family Archive of Bob McNair",
+      dedication: "Dedicated to subscriber Bob McNair (@bobmcnair9234) and the enduring bloodline of his direct Strathlachlan ancestors—tacksmen Archibald MacNair (d. 1706) & Margrat Fisher, John MacNair (b. 1692), his son Archibald MacNair, kinsman Duncan Fisher, and Hellen ('Henny') MacLachlan—who held the line on the shores of Loch Fyne.",
 
       telemetry: [
-        { label: "Historical Year", value: "Spring 1746", color_cls: "text-white" },
-        { label: "Royal Navy Vessel", value: "HMS Furnace", color_cls: "text-retinal-400" },
+        { label: "Campaign Span", value: "Nov 1745 – 1746", color_cls: "text-white" },
+        { label: "Bomb Squadron", value: "Terror & Furnace", color_cls: "text-retinal-400" },
         { label: "Ancestral Keep", value: "Castle Lachlan", color_cls: "text-amber-400" },
-        { label: "Rearguard Line", value: "MacNair Tacksmen", color_cls: "text-emerald-400" }
+        { label: "Direct Ancestors", value: "John & Archibald", color_cls: "text-emerald-400" }
       ],
 
-      hero_art_caption_label: "Highland Resistance • Cowal Peninsula, 1746",
-      hero_art_caption_title: "Old Castle Lachlan Under Bombardment on Loch Fyne",
+      hero_art_caption_label: "Highland Resistance • Cowal Peninsula, 1745–1746",
+      hero_art_caption_title: "Old Castle Lachlan & the Royal Navy Bomb Squadron on Loch Fyne",
 
       media: {
         youtubeVideoUrl: "https://youtu.be/T2WUvcxPLqw",
@@ -257,13 +257,13 @@
 
       art_banner: "assets/art/the-guns-of-loch-fyne-banner.webp",
       art_square: "assets/art/the-guns-of-loch-fyne-cover.webp",
-      art_alt: "Across the churning misty waters of Loch Fyne in 1746, the ancient stone keep of Old Castle Lachlan stands wreathed in cannon smoke while the Royal Navy bomb vessel HMS Furnace fires broadsides from the saltwater loch; in the rocky foreground rest a Highland broadsword, targe shield, and flintlock musket.",
+      art_alt: "Across the churning misty waters of Loch Fyne, the ancient stone keep of Old Castle Lachlan stands wreathed in cannon smoke while a Royal Navy bomb vessel fires from the saltwater loch; in the rocky foreground rest a Highland broadsword, targe shield, and flintlock musket.",
 
       pillar_badges: [
-        "1746 Post-Culloden",
+        "1745–1746 Jacobite Rising",
         "Clan MacLachlan & MacNair",
-        "HMS Furnace Bombardment",
-        "The Act of Proscription"
+        "HMS Terror & HMS Furnace",
+        "19-Gun Logbook Ruse"
       ],
 
       tags: [
@@ -271,19 +271,19 @@
         "CastleLachlan",
         "ClanMacNair",
         "ClanMacLachlan",
-        "JacobiteRising",
-        "Culloden1746",
+        "HMSTerror",
         "HMSFurnace",
-        "CelticFolkRock"
+        "CaptainRobertDuff",
+        "Culloden1746"
       ],
 
       quote: "Oh, the guns of Loch Fyne roared over the tide\nTore stone from the mortar where children would hide\nThey can batter the keep, they can outlaw the plaid\nThey can outlaw the tartan our fathers had had\nStand firm on the shoreline, MacNair hold the line\nThough Castle Lachlan must drown in Loch Fyne",
 
       bards_story: [
-        "This song was sparked by a conversation with my friend and subscriber Bob McNair (@bobmcnair9234), who shared the deep oral and historical bond between his clan—the MacNairs—and Clan MacLachlan along the shores of Loch Fyne in Argyll. During the Jacobite Rising of 1745–1746, the MacLachlans were staunch Jacobites; their 17th Chief, Lachlan MacLachlan, served as aide-de-camp to Prince Charles Edward Stuart and rode north with his broadswords all the way to the frost and red clay of Drumossie Moor (Culloden), where he was killed leading the charge.",
-        "While the Chief and the front-line Jacobite levy marched north, the MacNairs—who served as the trusted tacksmen (stewards, lieutenants, and enforcers of the estate)—were tasked with remaining behind on the Cowal peninsula to manage the lands, tend the cattle, and shield the women, children, and elderly left in the glen.",
-        "Following the slaughter at Culloden in April 1746, Hanoverian retribution moved swiftly down the western sea lochs. Captain John Fergussone—notorious across the Highlands as 'The Black Captain'—sailed the Royal Navy bomb vessel HMS Furnace up the saltwater tides of Loch Fyne. Anchoring off Strachur, HMS Furnace turned its heavy naval artillery onto 15th-century Old Castle Lachlan, battering the ancestral keep into a roofless ruin while redcoat dragoons marched inland with torches under written immunity to pillage Jacobite estates and enforce the Disarming and Dress Acts outlawing the plaid and tartan.",
-        "Yet when landing parties moved toward the beaches beneath the green hill, the MacNair tacksmen met them in the shallows with musket and lead—holding the shoreline long enough for the families of the estate to escape into the bracken by night. As Bob put it, the story called for a slow, deliberate, defiant Gaelic ballad in the spirit of Braveheart, anchored by low D tin whistle, Scottish smallpipes, weeping fiddle, cello, and thunderous bodhrán. (And a candid behind-the-scenes confession from the Bard: when generating the visual scenes for the video, I prompted the AI using the clan names assuming it knew the authentic MacLachlan and MacNair tartan sett—only to realize after uploading that the AI's tartan colors were completely off the mark! Consider it an unintended visual nod to the Dress Act of 1746, when the real tartans were outlawed anyway.)"
+        "This song was sparked by a conversation with my friend and subscriber Bob McNair (@bobmcnair9234), who shared the deep oral, genealogical, and archival bond between his family—the MacNairs (now McNair)—and Clan MacLachlan along the shores of Loch Fyne in Argyll. Speaking Gaelic, Scots, and English, Bob's ancestors served as the trusted tacksmen (stewards, military organizers, and enforcers) for Clan MacLachlan. Though the MacNairs were Presbyterian rather than Catholic or Episcopalian, they were loyal to the MacLachlans to their very core and bound by marriage across generations: Bob's direct ancestor Archibald MacNair (who died in 1706) was a clan tacksman married to Margrat (Margaret) Fisher, and John MacNair (born in 1692) was brought up by the MacLachlan Chief's brother Coll. John fought in the 1715 Jacobite Rising at the Battle of Sheriffmuir, and when the old MacLachlan chief was shot dead by the Campbells a few years later, John stood guard over young Lachlan MacLachlan—the very man who, as 17th Chief and aide-de-camp to Prince Charles Edward Stuart, rode north in 1745–1746 and became the only clan chief killed on the battlefield at Culloden (Drumossie Moor).",
+        "When I first researched and wrote the lyrics for 'The Guns of Loch Fyne,' I anchored the ballad in the enduring post-Culloden tradition of Spring 1746—where Captain John Fergussone ('The Black Captain') and the Royal Navy bomb vessel HMS Furnace came to symbolize Hanoverian naval vengeance across the western sea lochs, battering Old Castle Lachlan into a roofless ruin while the MacNair tacksmen held the shallows so the women and children could escape into the bracken. After the video was released, Bob shared copies of the Royal Navy logbooks and prisoner testimonies that unlocked the rest of the story—revealing that the ballad's folklore and the Admiralty archives actually capture two chapters of the same two-ship bomb-vessel squadron operating in Loch Fyne between November 1745 and the aftermath of Culloden.",
+        "As Bob's archival records show, five months before Culloden—in November 1745—Royal Navy Commander Robert Duff (an Aberdonian who despised Highlanders and was senior commander alongside Fergussone in the West Coast bomb-vessel flotilla) sailed HMS Furnace's sister bomb vessel, HMS Terror (shallow-drafted enough to cross the bar at Otter Ferry), up Loch Fyne. After pausing at a minor Campbell laird's residence just south of the castle (a figure later reviled in Gaelic poetry as 'the evil wicked spider'), Duff moved on Old Castle Lachlan to smash the small boats ferrying recruits across the loch—because in 1745 only muddy tracks existed ashore, making water transport vital. At Castle Lachlan, Captain Malcolm MacGregor of Comar (nephew of Rob Roy MacGregor) had been organizing a major Jacobite muster of 150 MacGregors and over 200 MacLachlans (roughly 400+ men in all), who marched out just hours before HMS Terror's landing party came ashore, leading to a sharp skirmish at the head of the loch. Even more fascinating is Bob's forensic discovery inside HMS Terror's logbook: the Duke of Argyll (directing West Coast naval operations from London) had explicitly forbidden bombarding the local Argyllshire population, and Admiralty rules required every cannonball and gunpowder barrel to be strictly accounted for. Yet HMS Terror's log officially records firing a '19-gun salute' in November 1745 to mark a royal birthday—when no royal birthday or royal visit existed! As Bob deduced, the '19-gun salute' was almost certainly Duff's logbook ruse to avoid a court-martial after firing live ordnance at the departing Jacobites and civilians along the east shore, while also handing a barrel of gunpowder to the pro-Hanoverian Campbell Argyll Militia (and quelling a brief mutiny aboard the Terror). Because modern archaeologists have never found cannonballs embedded in Old Castle Lachlan's walls, the keep was likely abandoned and occupied by the Argyll Militia rather than leveled by ship broadsides—and during that perilous occupation, Bob's kinsman Duncan Fisher secretly recovered the keys to Castle Lachlan along with a box of clan letters and papers for those loyal to the MacLachlans.",
+        "Near the end of the rising, three generations of Bob's direct family stood on the razor's edge in Strathlachlan: 53-year-old John MacNair (b. 1692), his son Archibald MacNair, and his grandson. As the Jacobite army retreated toward Inverness in April 1746, young Archibald hurried north with clansmen to reach Chief Lachlan's side, arriving just a day late for the slaughter at Culloden. With Strathlachlan emptied of able-bodied men—half of whom never returned—and occupied by the Argyll Militia, a Campbell militia officer moved to murder Archibald, only to be stopped by the officer's own wife, Hellen ('Henny') MacLachlan, a clan kinswoman who saved Archibald's life. While some Strathlachlan MacNairs emigrated to North Carolina after the '45 and fought for American Independence, Bob's direct line endured in a now-abandoned settlement on the Loch Fyne shore north of Castle Lachlan—passing from Duncan MacNair (born at Otter Ferry) to Archibald MacNair (the Loch Fyne-born steamboat porter), to Thomas MacNair (who married Elizabeth Smith, daughter of a Campbeltown stonemason at the foot of the peninsula), and directly down to Greenock slaters William Smith ('Great Uncle Wullie') McNair and Nicol John McNair. (And two candid studio confessions from the making of the music video: first, when prompting the AI with the clan names, I assumed it knew the authentic tartan sett—only to realize after uploading that the colors were completely off, though as historians in the comments noted, codified clan tartans weren't formalized until King George IV's visit in 1822 anyway! Second, as Bob's sharp eye caught, the AI rendered the Royal Navy warship flying a post-1801 Red Ensign with St. Patrick's cross rather than the authentic 1745–1746 Red Ensign bearing only the crosses of St. George and St. Andrew in the canton.)"
       ],
 
       musical_direction: {
@@ -293,111 +293,111 @@
 
       pillars_section: {
         badge: "Interactive Framework I // 3-Pillar Historical Matrix",
-        title: "The Crown's Fury & The Tacksmen's Stand (1746)",
-        intro: "After the Jacobite army fell at Drumossie Moor on April 16, 1746, the British Crown launched a systematic campaign of naval bombardment, estate burning, and cultural erasure across the Highlands and Western Isles—met on the shores of Loch Fyne by the rear-guard defiance of the tacksmen."
+        title: "Reconciling the Ballad & The Logbook (1715–1746)",
+        intro: "By pairing the enduring post-Culloden ballad tradition of Spring 1746 with subscriber Bob McNair's family archives and copies of HMS Terror's November 1745 logbook, a richer portrait emerges—spanning two Royal Navy bomb vessels, a 19-gun logbook cover-up, and the named ancestors who kept the clan alive."
       },
 
       pillars: [
         {
           number: "I",
           code: "PILLAR I // THE CLAN COVENANT",
-          title: "Drumossie Moor & The Tacksmen at the Threshold",
-          stat_highlight: "April 16, 1746",
-          stat_sub: "Chief Lachlan MacLachlan falls at Culloden while the MacNair tacksmen guard Cowal",
+          title: "From Sheriffmuir (1715) to the Tacksmen's Threshold (1745–1746)",
+          stat_highlight: "1715 – 1746",
+          stat_sub: "John MacNair (b. 1692) & his son Archibald MacNair, Tacksmen of Strathlachlan",
           icon: "fa-solid fa-people-roof",
-          summary: "In the Highland clan structure, tacksmen held intermediate land leases ('tacks') from the Chief, serving as estate stewards, administrators, and military lieutenants responsible for the defense of the home glens.",
-          analysis: "When Chief Lachlan MacLachlan led roughly 300 clansmen north to join the Atholl Brigade and the united MacLean/MacLachlan regiment at Culloden, the survival of the clan's families, cattle, and winter stores in Strathlachlan rested on the tacksmen left behind. When word arrived that the Chief had been killed by grape-shot on Drumossie Moor, the MacNairs stood as the sole shield between the bereaved glen and approaching government forces.",
+          summary: "Fluent in Gaelic, Scots, and English—and fiercely loyal to Clan MacLachlan despite being Presbyterian—the MacNair tacksmen served as the estate's military organizers, agricultural stewards, and protectors across generations.",
+          analysis: "Raised by the MacLachlan Chief's brother Coll, Bob's ancestor John MacNair (b. 1692) fought at Sheriffmuir in 1715 and guarded young Lachlan MacLachlan after the previous chief was shot dead by Campbells. When Captain Malcolm MacGregor of Comar (Rob Roy's nephew) mustered 400+ Jacobites at Castle Lachlan in November 1745 and Chief Lachlan later fell at Culloden (the only clan chief killed on the field), 53-year-old John remained to shield the glen while his son Archibald hurried north toward Inverness—arriving a day late for Culloden.",
           lyric_echo: "We kept the cattle, we shielded the glen / MacNair at the threshold for fallen men"
         },
         {
           number: "II",
-          code: "PILLAR II // NAVAL TERROR",
-          title: "Captain Fergussone & The Bombardment of HMS Furnace",
-          stat_highlight: "HMS Furnace",
-          stat_sub: "Royal Navy bomb vessel commanded by 'The Black Captain' John Fergussone",
+          code: "PILLAR II // THE TWO-SHIP RECORD",
+          title: "HMS Terror (Nov 1745) vs. HMS Furnace (1746) & The 19-Gun Ruse",
+          stat_highlight: "19-Gun Ruse",
+          stat_sub: "Cmdr. Robert Duff (HMS Terror) & Capt. John Fergussone (HMS Furnace)",
           icon: "fa-solid fa-ship",
-          summary: "Because Loch Fyne is a deep saltwater sea loch opening onto the Firth of Clyde, Royal Navy warships could sail directly into the heart of Argyll to shell Jacobite strongholds from the water.",
-          analysis: "Captain John Fergussone of HMS Furnace became one of the most feared figures of the post-Culloden pacification—raiding Barra, Eigg, Raasay, and Loch Fyne. Anchoring off Garbhallt point,HMS Furnace unleashed its heavy cannon and mortars against Old Castle Lachlan's five-foot-thick medieval walls, tearing stone from mortar where women and children had sheltered.",
+          summary: "While Highland folklore remembers Captain John Fergussone ('The Black Captain') and HMS Furnace from the 1746 post-Culloden sweeps, HMS Terror's ship log reveals Commander Robert Duff's crucial Loch Fyne raid five months earlier in November 1745.",
+          analysis: "Both HMS Terror and HMS Furnace were converted shallow-draft bomb vessels operating in the same West Coast squadron. Crossing the bar at Otter Ferry in November 1745 to smash Jacobite boats on Loch Fyne, Duff arrived hours after the Jacobite levy marched out. Because the Duke of Argyll forbade bombarding local Argyllshire populations and Admiralty rules required accounting for every shot, Duff logged a fictitious '19-gun salute for a royal birthday' (when none existed) to cover up live shore bombardment, while handing a barrel of gunpowder to the Argyll Militia.",
           lyric_echo: "The mast of the Furnace cut white through the foam / The Black Captain Fergusson hunting our home"
         },
         {
           number: "III",
-          code: "PILLAR III // CULTURAL PROSCRIPTION",
-          title: "The Dress Act of 1746 & The Unbroken Bloodline",
-          stat_highlight: "1746–1782",
-          stat_sub: "36 years under the Act of Proscription outlawing Highland dress, tartan & arms",
-          icon: "fa-solid fa-ban",
-          summary: "Alongside military raids, Parliament passed the Act of Proscription (1746), making it a crime punishable by imprisonment or seven years' transportation to the colonies to wear the plaid, philibeg, or tartan.",
-          analysis: "While redcoat dragoons marched inland with torches under royal indemnity to burn crofts and confiscate broadswords, the MacNair tacksmen fought a desperate delaying skirmish in the rocky shallows of Loch Fyne. Though Old Castle Lachlan was battered into a silent stone ruin that still stands on the shore today, the families escaped into the hills—preserving the bloodline that would rebuild New Castle Lachlan generations later.",
+          code: "PILLAR III // SURVIVAL & RELICS",
+          title: "Henny MacLachlan's Mercy, Duncan Fisher's Keys & The Bloodline",
+          stat_highlight: "Keys & Bloodline",
+          stat_sub: "Archaeological truth, secret recovery & the road from Strathlachlan to Greenock",
+          icon: "fa-solid fa-key",
+          summary: "Archaeological surveys of Old Castle Lachlan found no embedded cannonballs—confirming the keep was abandoned and occupied by the pro-Hanoverian Argyll Militia rather than leveled by broadsides.",
+          analysis: "With Strathlachlan emptied of men (half of whom never returned from the '45), survival hung by a thread. When a Campbell officer in the Argyll Militia moved to murder Bob's ancestor Archibald MacNair, the officer's own wife—Hellen ('Henny') MacLachlan, a clan kinswoman—intervened and saved his life. Meanwhile, kinsman Duncan Fisher (linked by marriage to tacksman Archibald MacNair, d. 1706, and Margrat Fisher) secretly recovered the castle keys and a box of clan letters—preserving a bloodline that flowed from north of Castle Lachlan to Otter Ferry, Campbeltown, and Greenock.",
           lyric_echo: "They can batter the keep, they can outlaw the plaid / Stand firm on the shoreline, MacNair hold the line"
         }
       ],
 
       timeline_section: {
         badge: "Interactive Framework II // Clan & Coastal Archive",
-        title: "The Loch Fyne & Castle Lachlan Chronicle (1745–Present)",
-        intro: "Follow the four acts of the Strathlachlan and Cowal peninsula defense—from the muster of 1745 and the smoke of Drumossie Moor to the bombardment on Loch Fyne and the living heritage carried today."
+        title: "The Loch Fyne & Castle Lachlan Chronicle (1692–Present)",
+        intro: "Follow the four acts of the Strathlachlan and Cowal peninsula chronicle—reconciling the 1715–1746 clan covenant, the November 1745 logbook of HMS Terror, the post-Culloden crucible, and the direct lineage carried by Bob McNair today."
       },
 
       timeline: [
         {
-          year: "Autumn 1745",
-          era_badge: "ACT I // THE MUSTER OF STRATHLACHLAN",
-          title: "The Chief Rides North & The Tacksmen's Charge",
-          location: "Old Castle Lachlan, Cowal Peninsula, Argyll",
-          icon: "fa-solid fa-flag",
-          narrative: "Lachlan MacLachlan, 17th Chief of Clan MacLachlan, answers Prince Charles Edward Stuart's call and rides north with his broadswords. Before departing the hearths of the Cowal peninsula, the MacNair tacksmen—longtime stewards and enforcers for the MacLachlans—are entrusted with holding the threshold, tending the cattle, and guarding the families of the estate.",
-          artifact_note: "Clan Covenant: The MacNair tacksmen entrusted with the defense of the Cowal peninsula"
+          year: "1692–1715",
+          era_badge: "ACT I // THE BLOOD COVENANT",
+          title: "John MacNair, Sheriffmuir & Protecting the Young Chief",
+          location: "Strathlachlan, Loch Fyne & Sheriffmuir",
+          icon: "fa-solid fa-shield-halved",
+          narrative: "Following in the footsteps of tacksman Archibald MacNair (d. 1706) and his wife Margrat (Margaret) Fisher, John MacNair (born 1692) is brought up by the MacLachlan Chief's brother Coll. John fights in the 1715 Jacobite Rising at the Battle of Sheriffmuir, and when the MacLachlan chief is shot dead by Campbells a few years later, John personally protects young Lachlan MacLachlan—forging an unbreakable bond before the '45 ever begins.",
+          artifact_note: "Family Lineage: Archibald MacNair (d. 1706) & Margrat Fisher; John MacNair (b. 1692), veteran of Sheriffmuir"
         },
         {
-          year: "April 16, 1746",
-          era_badge: "ACT II // DRUMOSSIE MOOR",
-          title: "Frost and Red Clay at Culloden",
-          location: "Drumossie Moor (Culloden), Near Inverness",
-          icon: "fa-solid fa-skull-crossbones",
-          narrative: "On a sleet-swept moor at Culloden, Chief Lachlan MacLachlan leads the united regiment of MacLachlans and MacLeans into the teeth of Hanoverian canister shot and falls on the field. Word races back through the glens that the Jacobite army is scattered and royal dragoons and warships are moving west with orders of no quarter.",
-          artifact_note: "Historical Record: Chief Lachlan MacLachlan killed in action at Drumossie Moor, April 16, 1746"
+          year: "November 1745",
+          era_badge: "ACT II // THE TERROR LOGBOOK",
+          title: "Rob Roy's Nephew, HMS Terror & The 19-Gun 'Royal Birthday' Ruse",
+          location: "Otter Ferry, Old Castle Lachlan & Head of Loch Fyne",
+          icon: "fa-solid fa-book-journal-whills",
+          narrative: "While Chief Lachlan serves as aide-de-camp to Prince Charlie, Captain Malcolm MacGregor of Comar (nephew of Rob Roy MacGregor) gathers 150 MacGregors and 200+ MacLachlans (~400 men) at Castle Lachlan. Royal Navy Commander Robert Duff sails the bomb vessel HMS Terror over the Otter Ferry bar, pausing at a minor Campbell laird's house ('the wicked spider') before moving to smash the Loch Fyne boats. Arriving hours after the Jacobites march out, Duff logs a fake '19-gun salute for a royal birthday' to mask unauthorized shore bombardment against the Duke of Argyll's orders, hands a barrel of gunpowder to the Argyll Militia, and quells a brief mutiny aboard the Terror.",
+          artifact_note: "Archival Proof: HMS Terror's Nov 1745 logbook recording the fictitious 19-gun 'royal birthday' salute"
         },
         {
-          year: "May–Summer 1746",
-          era_badge: "ACT III // THE GUNS OF LOCH FYNE",
-          title: "HMS Furnace & The Skirmish in the Shallows",
-          location: "Saltwater Shores of Loch Fyne & Old Castle Lachlan",
-          icon: "fa-solid fa-burst",
-          narrative: "Captain John Fergussone ('The Black Captain') steers the Royal Navy bomb vessel HMS Furnace up Loch Fyne. While the ship's guns roar over the tide and batter Old Castle Lachlan's 15th-century stone walls, redcoats move to land and burn the estate. The MacNair tacksmen meet the landing parties in the shallows beneath the green hill with musket and lead while the women and children flee through the bracken by night.",
-          artifact_note: "Coastal Stand: Old Castle Lachlan shelled by HMS Furnace; families shielded into the bracken"
+          year: "April–Summer 1746",
+          era_badge: "ACT III // CULLODEN & THE ARGYLL MILITIA",
+          title: "Drumossie Moor, Henny MacLachlan's Mercy & The Castle Keys",
+          location: "Drumossie Moor (Culloden) & Strathlachlan, Cowal Peninsula",
+          icon: "fa-solid fa-key",
+          narrative: "On April 16, 1746, Chief Lachlan MacLachlan falls at Culloden—the only clan chief killed on the field—while Captain John Fergussone ('The Black Captain') and sister bomb vessel HMS Furnace prowl the West Highland lochs. John MacNair's son Archibald hurries north toward Inverness with reinforcements, arriving a day late for the battle. Back in Strathlachlan, with Old Castle Lachlan abandoned to the Argyll Militia (archaeologists confirm no cannonballs struck its walls), Henny MacLachlan stops her Campbell militia officer husband from murdering Archibald MacNair, while kinsman Duncan Fisher secretly recovers the castle keys and a box of clan letters.",
+          artifact_note: "Clan Survival: Henny MacLachlan saves Archibald MacNair; Duncan Fisher recovers the Castle Lachlan keys & letters"
         },
         {
-          year: "1790–Present",
-          era_badge: "ACT IV // THE RUIN & THE ROOT",
+          year: "1746–Present",
+          era_badge: "ACT IV // OTTER FERRY TO GREENOCK",
           title: "\"The Keep Was Broken, But the Bloodline Stood\"",
-          location: "Strachur, Loch Fyne & Living Clan Memory",
+          location: "North of Castle Lachlan • Otter Ferry • Campbeltown • Greenock",
           icon: "fa-solid fa-chess-rook",
-          narrative: "Old Castle Lachlan was never inhabited again—its weathered stone walls still watch over the water gate of Loch Fyne today, while New Castle Lachlan was raised nearby in 1790 after the repeal of the Dress Act. Nearly three centuries later, subscriber Bob McNair carries the living oral history of the MacNair tacksmen who held the shoreline so the clan could endure.",
-          artifact_note: "Enduring Monument: The 15th-century ruins of Old Castle Lachlan on the shore of Loch Fyne"
+          narrative: "Half of the men who marched from Strathlachlan never returned. While some MacNairs emigrated to Carolina and fought in the American War of Independence, Bob's ancestors survived in an abandoned settlement north of Castle Lachlan. The line passed to Duncan MacNair (born at Otter Ferry), to Archibald MacNair (steamboat porter, born on Loch Fyne), to Thomas MacNair (who married Elizabeth Smith, daughter of a Campbeltown stonemason at the foot of the peninsula), and down to Greenock slaters William Smith ('Great Uncle Wullie') McNair and Nicol John McNair—whose story continues in Single #01, 'The Greenock Slate and the Gold Watch.'",
+          artifact_note: "Living Bloodline: From John & Archibald MacNair on Loch Fyne to Great Uncle Wullie's gold watch in Greenock"
         }
       ],
 
       poeticsCallout: {
-        badge: "EDITORIAL CALLOUT // THE TACKSMEN'S OATH & THEBARD'S TARTAN CONFESSION",
-        title: "Stone vs. Bloodline: Why the Ruin on Loch Fyne Was a Victory",
+        badge: "EDITORIAL CALLOUT // BALLAD LORE, SHIP LOGS & STUDIO CONFESSIONS",
+        title: "Reconciling Ballad & Logbook: Stone, Bloodline, and Studio Confessions",
         chorus_couple: "Stand firm on the shoreline, MacNair hold the line / Though Castle Lachlan must drown in Loch Fyne",
-        intro: "At first glance, the bombardment of Old Castle Lachlan looks like another grim chapter in the post-Culloden clearances. Yet as Bob McNair emphasized when sharing his family's history, the stand on Loch Fyne reveals a deeper Highland truth—along with a humorous modern postscript from the video studio:",
+        intro: "When 'The Guns of Loch Fyne' premiered on YouTube, subscriber Bob McNair—whose family lore inspired the track—shared archival ship logs and four generations of family records in the comments and by email. Together, the song and Bob's research illuminate three fascinating dimensions of history and modern AI craft:",
         pillars: [
           {
             number: "01",
-            title: "A Castle Is Mortar; A Clan Is Blood",
-            body: "Captain Fergussone and HMS Furnace came to Loch Fyne expecting to crush the heart of the estate by battering its medieval stone keep. The MacNair tacksmen understood that fifteenth-century mortar could be sacrificed so long as the women, children, and elders escaped into the bracken. By holding the shallows with musket and lead, they traded a stone shell for a living future."
+            title: "Two Bomb Vessels, One Historical Scar",
+            body: "Why does the song name HMS Furnace and 'The Black Captain' John Fergussone while Bob's logbooks name Commander Robert Duff and HMS Terror? Because both ships were sister bomb vessels in the same Royal Navy West Coast squadron! While Furnace and Fergussone became the enduring post-Culloden folkloric symbol of 1746 naval terror, Duff's HMS Terror executed the November 1745 Loch Fyne raid—logging a fictitious '19-gun royal birthday salute' to mask unauthorized firing against the Duke of Argyll's orders, while Old Castle Lachlan was abandoned to the Argyll Militia without a single cannonball embedded in its walls."
           },
           {
             number: "02",
-            title: "The Unsung Role of the Tacksmen",
-            body: "Popular histories of the '45 focus almost exclusively on princes, chiefs, and generals at Culloden. 'The Guns of Loch Fyne' honors the working spine of the clan—the tacksmen and stewards who stayed behind when the banners rode north, bearing the quiet duty of feeding the glen and standing at the threshold when the butcher men arrived."
+            title: "The Tacksmen, Henny MacLachlan & The Castle Keys",
+            body: "Popular histories of the '45 focus on princes and generals, but clan survival rested on the tacksmen and kin left at the threshold. In Strathlachlan, that meant 53-year-old John MacNair (b. 1692, veteran of Sheriffmuir) and his son Archibald (who marched north arriving a day late for Culloden), kinswoman Hellen ('Henny') MacLachlan (who stopped her Campbell militia officer husband from murdering Archibald), and kinsman Duncan Fisher (who secretly spirited away the Castle Lachlan keys and charter box)."
           },
           {
             number: "03",
-            title: "The Bard's Candid AI Tartan Confession",
-            body: "A true confession from the making of the music video: when prompting the AI video generator with the historical clan names, the Bard assumed the model knew the authentic MacLachlan and MacNair tartan colors—only to discover after uploading that the AI's tartan patterns were completely off the mark! We like to think of it as an accidental tribute to the Dress Act of 1746: when the King outlawed the true tartan, the clans wore whatever defied the Crown."
+            title: "The Bard's Candid Tartan & Red Ensign Confessions",
+            body: "Two candid confessions from the AI video studio! First, when prompting the AI with the clan names, the Bard assumed it knew the authentic MacLachlan and MacNair tartan colors—though as historians in the comments noted, codified clan tartans didn't exist in 1746 anyway (they were formalized for King George IV's 1822 visit)! Second, Bob's sharp marine engineer's eye spotted that the warship in the video flies a post-1801 Red Ensign (with St. Patrick's red cross) rather than the authentic 1745 Red Ensign bearing only St. George's and St. Andrew's crosses in the canton."
           }
         ]
       },
