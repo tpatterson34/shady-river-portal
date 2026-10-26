@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Friends of the Bard | The Shady River Fellowship</title>
-  <meta name="description" content="Collaborative voices, kindred creators, and fellow wayfarers connected with The Shady River Bard. Featuring Trevor Swistchew and upcoming storytelling collaborators.">
+  <title>The Bard’s Fellowship | Trevor Swistchew &amp; Bob McNair | The Shady River Bard</title>
+  <meta name="description" content="The Bard's Fellowship: kindred thinkers, essayists, and heritage chroniclers connected with The Shady River Bard—featuring Trevor Swistchew's Scottish Literary Salon and Bob McNair's Scottish Clan & Working-Class Heritage Chronicles.">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -72,11 +72,11 @@
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Unified Accessibility Stylesheet -->
+  <!-- Unified Accessibility & Bard Notes Stylesheets -->
   <link rel="stylesheet" href="../assets/css/a11y.css">
+  <link rel="stylesheet" href="../assets/css/bard-notes.css?v=20260920b">
 
   <style>
-    /* Custom scrollbar */
     ::-webkit-scrollbar { width: 8px; }
     ::-webkit-scrollbar-track { background: #0b0f14; }
     ::-webkit-scrollbar-thumb { background: #273244; border-radius: 4px; }
@@ -86,62 +86,65 @@
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .fellow-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
       box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.7), 0 0 25px -5px rgba(245, 158, 11, 0.15);
     }
   </style>
-  <link rel="stylesheet" href="../assets/css/bard-notes.css?v=20260920b">
 </head>
 
 <body class="bg-soil-950 text-stone-200 font-sans antialiased selection:bg-amber-600 selection:text-white min-h-screen flex flex-col">
-  
+
   <!-- Skip Link -->
   <a href="#main-content" class="a11y-skip-link">Skip to main content</a>
 
-  <!-- Top Announcement Bar -->
+  <!-- Top Ecosystem Bar -->
   <aside aria-label="Breadcrumb Bar" class="bg-soil-900 border-b border-white/10 px-4 py-2 text-xs text-stone-400">
-    <div class="max-w-7xl mx-auto flex items-center justify-between">
-      <a href="../" class="hover:text-amber-400 transition-colors flex items-center gap-2 font-mono text-[11px]">
-        <i class="fa-solid fa-arrow-left text-amber-500"></i>
-        <span>Return to The Shady River Main Portal</span>
-      </a>
-      <span class="font-mono text-[11px] text-stone-400 hidden sm:inline">Fellowship & Collaborative Voices</span>
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2 font-mono text-[11px]">
+        <a href="../" class="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-stone-200 font-semibold">
+          <i class="fa-solid fa-arrow-left text-amber-500"></i>
+          <span>The Shady River Portal</span>
+        </a>
+        <span class="text-stone-600">/</span>
+        <span class="text-amber-400 font-bold">V. The Bard&rsquo;s Fellowship</span>
+      </div>
+      <div class="flex items-center gap-4 font-mono text-[11px]">
+        <a href="../trevor-swistchew/" class="hover:text-amber-400 transition-colors">Trevor Swistchew Salon</a>
+        <span>&bull;</span>
+        <a href="../singles/" class="hover:text-amber-400 transition-colors">Bob McNair Chronicles</a>
+        <span>&bull;</span>
+        <a href="../vault/" class="hover:text-amber-400 transition-colors">27-Album Vault</a>
+      </div>
     </div>
   </aside>
 
   <!-- Sticky Navigation -->
   <nav class="sticky top-0 z-50 bg-soil-950/90 backdrop-blur-md border-b border-white/10 shadow-2xl">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      
-      <!-- Brand Logo -->
       <a href="../" class="flex items-center gap-3.5 group">
         <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-600/30 via-soil-850 to-river-900/40 border border-amber-500/40 shadow-lg flex items-center justify-center text-amber-400 group-hover:scale-105 group-hover:border-amber-400 transition-all duration-300">
           <img src="../assets/images/logo-mark.webp" alt="Shady River Logo" class="w-8 h-8 object-contain" onerror="this.src='../favicon.ico'">
         </div>
         <div class="flex flex-col">
           <span class="font-display font-bold text-white tracking-widest text-lg group-hover:text-amber-300 transition-colors">THE SHADY RIVER</span>
-          <span class="text-[10px] font-mono text-amber-500 uppercase tracking-widest">Friends of the Bard</span>
+          <span class="text-[10px] font-mono text-amber-500 uppercase tracking-widest">The Bard&rsquo;s Fellowship</span>
         </div>
       </a>
 
-      <!-- Quick Nav Links -->
-      <div class="flex items-center gap-4 text-xs font-mono tracking-wider">
+      <div class="flex items-center gap-3 text-xs font-mono tracking-wider">
+        <a href="../trevor-swistchew/" class="px-3.5 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-soil-950 font-bold transition-all flex items-center gap-1.5 shadow-md">
+          <span>Trevor&rsquo;s Salon</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+        <a href="../singles/" class="px-3.5 py-2 rounded-lg bg-soil-800 hover:bg-soil-700 text-amber-300 border border-amber-500/40 font-bold transition-all hidden sm:flex items-center gap-1.5">
+          <span>Bob McNair Singles</span>
+          <i class="fa-solid fa-record-vinyl text-[10px]"></i>
+        </a>
         <button type="button" onclick="openBardNoteModal('', 'Friends of the Bard Collective')" class="bard-note-btn" aria-label="Drop a note to the bard" title="Drop a note to the bard">
           <svg class="bard-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           <span class="bard-note-tooltip">Drop a note to the bard</span>
         </button>
-        <a href="../vault/" class="px-2.5 py-1.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-400 transition-colors inline-flex items-center gap-1.5 font-mono text-xs font-semibold">
-          <i class="fa-solid fa-compact-disc text-[11px]"></i>
-          <span class="sm:hidden">Vault</span>
-          <span class="hidden sm:inline">26-Album Vault ↗</span>
-        </a>
-        <a href="../the-hollow-herd/" class="text-stone-300 hover:text-amber-400 transition-colors hidden sm:inline">The Hollow Herd ↗</a>
-        <a href="../trevor-swistchew/" class="px-3.5 py-1.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 border border-amber-500/40 font-bold transition-all flex items-center gap-2">
-          <span>Trevor Swistchew Portal</span>
-          <i class="fa-solid fa-arrow-right text-[10px]"></i>
-        </a>
       </div>
-
     </div>
   </nav>
 
@@ -149,951 +152,301 @@
   <main id="main-content" class="flex-grow">
 
     <!-- Hero Header -->
-    <section class="relative py-20 sm:py-28 overflow-hidden border-b border-white/10 bg-gradient-to-b from-soil-900 via-soil-950 to-soil-950">
-      <!-- Ambient Lights -->
-      <div class="absolute top-10 left-1/3 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div class="absolute bottom-10 right-1/4 w-96 h-96 bg-evergreen-600/10 rounded-full blur-3xl pointer-events-none"></div>
-
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
-        
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-soil-900 border border-amber-500/40 text-amber-400 text-xs font-mono uppercase tracking-widest shadow-inner">
+    <section class="relative py-16 sm:py-24 overflow-hidden border-b border-white/10 bg-gradient-to-b from-soil-900 via-soil-950 to-soil-950">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-5">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-soil-900 border border-amber-500/40 text-amber-400 text-xs font-mono uppercase tracking-widest">
           <i class="fa-solid fa-user-group text-[11px]"></i>
-          <span>Creative Fellowship</span>
+          <span>Pillar V // Creative Fellowship &amp; Listener Chronicles</span>
         </div>
 
         <h1 class="font-display text-4xl sm:text-6xl font-bold text-white tracking-tight leading-tight">
-          Friends of the Bard
+          The Bard&rsquo;s <span class="text-amber-400">Fellowship</span>
         </h1>
 
         <p class="font-body text-base sm:text-xl text-stone-300 max-w-3xl mx-auto leading-relaxed italic">
-          "No song is an island, and no truth belongs to one voice alone. Here we gather kindred thinkers, songwriters, and storytellers who explore the deeper currents of the human spirit."
+          &ldquo;No song is an island, and no truth belongs to one voice alone. Here we gather kindred thinkers, essayists, poets, and family historians whose lived memory and inquiries walk alongside the porch.&rdquo;
         </p>
 
-        <div class="pt-2 text-xs font-mono text-stone-400">
-          Independent voices &bull; Deep research &bull; Literary craft &bull; Shared humanity
-        </div>
-
-        <!-- Hero Quick Action Link -->
-        <div class="pt-4 flex flex-wrap items-center justify-center gap-3">
-          <a href="../trevor-swistchew/" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-400 text-soil-950 font-cinzel font-bold text-xs uppercase tracking-wider transition-all shadow-lg hover:shadow-amber-500/20 flex items-center gap-2">
+        <div class="pt-3 flex flex-wrap items-center justify-center gap-3">
+          <a href="../trevor-swistchew/" class="px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-soil-950 font-display font-bold text-xs uppercase tracking-wider transition-all shadow-lg flex items-center gap-2">
             <i class="fa-solid fa-feather-pointed text-xs"></i>
-            <span>Enter Trevor Swistchew Salon Hub &bull; 65 Works &rarr;</span>
+            <span>Enter Trevor Swistchew&rsquo;s Scottish Salon (65 Essays &bull; 76 Songs &bull; 29 Poems) &rarr;</span>
+          </a>
+          <a href="#bob-mcnair-fellowship" class="px-5 py-3 rounded-xl bg-soil-800 hover:bg-soil-750 border border-amber-500/40 text-amber-300 font-display font-bold text-xs uppercase tracking-wider transition-all flex items-center gap-2">
+            <i class="fa-solid fa-clock text-xs"></i>
+            <span>Explore Bob McNair&rsquo;s Scottish Heritage Chronicles &darr;</span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Fellows Directory Grid -->
-    <section class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+    <!-- Primary Fellows Grid (Trevor Swistchew & Bob McNair Side-by-Side) -->
+    <section class="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
-        <!-- FELLOW 1: TREVOR SWISTCHEW (LIVE) -->
-        <article class="fellow-card rounded-2xl bg-soil-850 border border-amber-500/40 overflow-hidden shadow-2xl flex flex-col justify-between">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+
+        <!-- =============================================================== -->
+        <!-- FELLOW 1: TREVOR SWISTCHEW (EDINBURGH, SCOTLAND)                -->
+        <!-- =============================================================== -->
+        <article id="trevor-swistchew-fellowship" class="fellow-card rounded-3xl bg-soil-850 border-2 border-amber-500/45 overflow-hidden shadow-2xl flex flex-col justify-between">
           <div>
-            <!-- Banner Preview -->
-            <div class="relative h-60 w-full overflow-hidden bg-peat-950">
+            <!-- Banner -->
+            <div class="relative h-64 w-full overflow-hidden bg-soil-950">
               <a href="../trevor-swistchew/" class="block w-full h-full group" title="Enter Trevor Swistchew Salon Hub">
-                <img 
-                  src="../trevor-swistchew/assets/images/alan-watts-this-is-it-banner.webp" 
-                  alt="This Is It Artwork" 
+                <img
+                  src="../trevor-swistchew/assets/images/alan-watts-this-is-it-banner.webp"
+                  alt="Trevor Swistchew Scottish Literary Salon"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  onerror="this.src='../trevor-swistchew/assets/images/banner-placeholder.svg'"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-soil-850 via-transparent to-transparent"></div>
+                  onerror="this.src='../assets/images/logo-mark.webp'"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-soil-850 via-soil-950/30 to-transparent"></div>
               </a>
-              
-              <!-- Badges -->
-              <div class="absolute top-3 left-3 flex gap-2">
-                <span class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-amber-500 text-soil-950 shadow">
-                  Featured Friend
+
+              <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                <span class="px-3 py-1 rounded-md text-[11px] font-mono font-bold bg-amber-500 text-soil-950 shadow">
+                  Featured Fellow &bull; Literary Salon
                 </span>
-                <a href="../trevor-swistchew/music/index.html" class="px-2.5 py-1 rounded-md text-[10px] font-mono bg-rose-950/80 text-rose-300 border border-rose-800/80 hover:border-rose-600 backdrop-blur-sm flex items-center gap-1 transition-colors">
-                  <i class="fa-solid fa-guitar text-[9px]"></i> 76 Suno Songs Vault ↗
-                </a>
-              </div>
-
-              <!-- Top-Right Banner Quick Link -->
-              <div class="absolute top-3 right-3">
-                <a href="../trevor-swistchew/" class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-amber-500 hover:bg-amber-400 text-soil-950 shadow-md flex items-center gap-1 transition-all">
-                  <span>Enter Salon Hub &rarr;</span>
-                </a>
-              </div>
-
-              <div class="absolute bottom-3 right-3">
-                <span class="px-2.5 py-1 rounded-md text-[10px] font-mono bg-soil-950/80 text-amber-400 border border-amber-500/30 backdrop-blur-sm">
+                <span class="px-3 py-1 rounded-md text-[11px] font-mono bg-soil-950/85 text-amber-300 border border-amber-500/40">
                   Edinburgh, Scotland
                 </span>
               </div>
             </div>
 
             <!-- Content -->
-            <div class="p-6 sm:p-8 space-y-4">
+            <div class="p-6 sm:p-8 space-y-6">
               <div>
-                <span class="text-xs font-mono uppercase tracking-widest text-amber-500 block mb-1">
-                  Songwriter • Essayist • Cultural Thinker
+                <span class="text-xs font-mono uppercase tracking-widest text-amber-400 font-bold block mb-1">
+                  Essayist &bull; Songwriter &bull; Poet &bull; Cultural Critic
                 </span>
-                <h2 class="font-display text-2xl sm:text-3xl font-bold text-white hover:text-amber-400 transition-colors">
+                <h2 class="font-display text-2xl sm:text-4xl font-bold text-white hover:text-amber-400 transition-colors">
                   <a href="../trevor-swistchew/">Trevor Swistchew</a>
                 </h2>
-                <p class="font-body italic text-sm text-stone-400 mt-1">
-                  The Scottish Literary Salon, Empirical Inquiries &amp; Companion Compositions
+                <p class="font-body italic text-sm sm:text-base text-stone-300 mt-1">
+                  The Scottish Literary Salon: Empirical Inquiries, Constitutional Audits &amp; Companion Compositions
                 </p>
               </div>
 
-              <p class="text-sm text-stone-300 leading-relaxed font-body">
-                Trevor writes deeply considered essays and prose interrogating constitutional covenants, non-duality, and the human condition. His writing inspired the heavy-rock spoken-word composition <em class="text-amber-400">"This Is It"</em> recorded with The Shady River Bard.
+              <p class="text-sm sm:text-base text-stone-200 leading-relaxed font-body">
+                From Edinburgh, Scotland, Trevor Swistchew writes deeply researched essays, satirical allegories, and philosophical prose interrogating constitutional covenants, imperial history, non-duality, and the human condition. His work spans a dedicated three-wing digital salon co-architected with The Shady River Bard.
               </p>
 
-              <!-- Prominent Top Buttons (No scrolling required) -->
-              <div class="pt-1 pb-1 flex flex-col sm:flex-row gap-2">
-                <a href="../trevor-swistchew/" class="flex-1 py-3.5 px-5 rounded-xl bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-400 text-soil-950 font-cinzel font-bold text-sm uppercase tracking-wider text-center transition-all shadow-lg hover:shadow-amber-500/25 flex items-center justify-center gap-2.5 group">
-                  <i class="fa-solid fa-door-open text-xs"></i>
-                  <span>Enter Salon Hub &bull; 65 Works</span>
-                  <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+              <!-- 3 Salon Chambers Direct Access Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <a href="../trevor-swistchew/" class="p-3.5 rounded-xl bg-soil-900 hover:bg-soil-800 border border-amber-500/35 hover:border-amber-400 transition-all group">
+                  <div class="font-display text-2xl font-bold text-amber-400">65</div>
+                  <div class="font-mono text-xs text-white font-semibold mt-0.5">Essay Compendium &rarr;</div>
+                  <div class="font-sans text-[11px] text-stone-400">History, Satire &amp; Philosophy</div>
                 </a>
-                <a href="../trevor-swistchew/music/index.html" class="py-3.5 px-4 rounded-xl bg-rose-950/80 hover:bg-rose-900 text-rose-300 hover:text-white border border-rose-800/60 font-mono text-xs font-bold transition-all flex items-center justify-center gap-2">
-                  <i class="fa-solid fa-guitar text-xs"></i>
-                  <span>Musical Chamber (76) ↗</span>
+                <a href="../trevor-swistchew/music/index.html" class="p-3.5 rounded-xl bg-soil-900 hover:bg-soil-800 border border-rose-500/35 hover:border-rose-400 transition-all group">
+                  <div class="font-display text-2xl font-bold text-rose-400">76</div>
+                  <div class="font-mono text-xs text-white font-semibold mt-0.5">Musical Chamber &rarr;</div>
+                  <div class="font-sans text-[11px] text-stone-400">Original Suno Recordings</div>
+                </a>
+                <a href="../trevor-swistchew/poetry/index.html" class="p-3.5 rounded-xl bg-soil-900 hover:bg-soil-800 border border-sky-500/35 hover:border-sky-400 transition-all group">
+                  <div class="font-display text-2xl font-bold text-sky-400">29</div>
+                  <div class="font-mono text-xs text-white font-semibold mt-0.5">Poetry Chamber &rarr;</div>
+                  <div class="font-sans text-[11px] text-stone-400">Collected Works (1985–2026)</div>
                 </a>
               </div>
 
-              <!-- Featured Essay Link Box -->
-              <div class="space-y-2">                  <div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                    <div class="space-y-0.5">
-                      <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                        <i class="fa-solid fa-scroll text-[9px]"></i> New Historical Audit &bull; Compendium #65
-                      </span>
-                      <a href="../trevor-swistchew/essays/how-the-vatican-condoned-slavery/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                        How The Vatican Condoned Slavery &bull; Papal Decrees &amp; Institutional Sanction &rarr;
-                      </a>
-                    </div>
-                    <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                      629 words
-                    </span>
-                  </div>
-                  <div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                    <div class="space-y-0.5">
-                      <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                        <i class="fa-solid fa-magnifying-glass-chart text-[9px]"></i> New Philosophical Critique &bull; Compendium #64
-                      </span>
-                      <a href="../trevor-swistchew/essays/the-hypocrisy-in-scientology/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                        The Hypocrisy In Scientology &bull; Empirical Audit &amp; The Burden of Proof &rarr;
-                      </a>
-                    </div>
-                    <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                      1,120 words
-                    </span>
-                  </div>
-                  <div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                    <div class="space-y-0.5">
-                      <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                        <i class="fa-solid fa-couch text-[9px]"></i> New Satirical Allegory &bull; Compendium #63
-                      </span>
-                      <a href="../trevor-swistchew/essays/why-identifying-as-a-piece-of-furniture/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                        Why Identifying As A Piece Of Furniture Is Accepted In Todays PC World &rarr;
-                      </a>
-                    </div>
-                    <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                      541 words &bull; Kumfy Seeting
-                    </span>
-                  </div>
-                  <div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                    <div class="space-y-0.5">
-                      <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                        <i class="fa-solid fa-landmark-dome text-[9px]"></i> New Constitutional History &bull; Compendium #62
-                      </span>
-                      <a href="../trevor-swistchew/essays/scotlands-account-of-grievance/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                        Scotland's Account of Grievance &bull; Glencoe, Culloden &amp; The Clearances &rarr;
-                      </a>
-                    </div>
-                    <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                      1,394 words
-                    </span>
-                  </div>
-
-                                                <div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-masks-theater text-[9px]"></i> New Satirical Allegory &bull; Compendium #61
-                    </span>
-                    <a href="../trevor-swistchew/essays/the-marketing-of-the-original-being/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The Marketing of the Original Being ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    1,461 words
-                  </span>
+              <!-- Curated Recent & Landmark Highlights -->
+              <div class="space-y-2.5 pt-2">
+                <div class="text-[11px] font-mono uppercase tracking-wider text-amber-400 font-bold">
+                  Recent &amp; Landmark Salon Highlights:
                 </div>
-                <div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-guitar text-[9px]"></i> New Song &bull; Collaboration with The Shady River Bard
-                    </span>
-                    <a href="../trevor-swistchew/music/index.html?play=76#track-76" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The Lord Is My Cashline (Track #76) &bull; Scottish Presbyterian Hymn &amp; Slow Blues ↗
-                    </a>
+                <a href="../trevor-swistchew/essays/how-the-vatican-condoned-slavery/index.html" class="p-3 rounded-xl bg-soil-900/90 hover:bg-soil-900 border border-white/10 hover:border-amber-400/50 flex items-center justify-between gap-3 transition-all">
+                  <div>
+                    <span class="text-[10px] font-mono text-amber-400 uppercase block">Compendium #65 &bull; Historical Audit</span>
+                    <span class="font-display font-bold text-sm text-white">How The Vatican Condoned Slavery &rarr;</span>
                   </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    5:17
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-scale-balanced text-[9px]"></i> New Constitutional Audit &bull; Compendium #60
-                    </span>
-                    <a href="../trevor-swistchew/essays/after-319-years-the-human-cost-of-unionist-rule/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      After 319 Years: The Human Cost of Unionist Rule ↗
-                    </a>
+                  <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono text-[10px] shrink-0">Essay</span>
+                </a>
+                <a href="../trevor-swistchew/essays/scotlands-account-of-grievance/index.html" class="p-3 rounded-xl bg-soil-900/90 hover:bg-soil-900 border border-white/10 hover:border-amber-400/50 flex items-center justify-between gap-3 transition-all">
+                  <div>
+                    <span class="text-[10px] font-mono text-amber-400 uppercase block">Compendium #62 &bull; Constitutional History</span>
+                    <span class="font-display font-bold text-sm text-white">Scotland&rsquo;s Account of Grievance: Glencoe, Culloden &amp; The Clearances &rarr;</span>
                   </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    1,498 words
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-gavel text-[9px]"></i> New Satirical Masterwork &bull; Compendium #59
-                    </span>
-                    <a href="../trevor-swistchew/essays/the-greedy-man-on-the-take/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The Greedy Man On The Take ↗
-                    </a>
+                  <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono text-[10px] shrink-0">Essay</span>
+                </a>
+                <a href="../trevor-swistchew/music/index.html?play=76#track-76" class="p-3 rounded-xl bg-soil-900/90 hover:bg-soil-900 border border-white/10 hover:border-rose-400/50 flex items-center justify-between gap-3 transition-all">
+                  <div>
+                    <span class="text-[10px] font-mono text-rose-400 uppercase block">Track #76 &bull; Bard Collaboration</span>
+                    <span class="font-display font-bold text-sm text-white">The Lord Is My Cashline (Scottish Presbyterian Hymn &amp; Slow Blues) &rarr;</span>
                   </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    1,114 words
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-coins text-[9px]"></i> New Political Economy &bull; Compendium #54
-                    </span>
-                    <a href="../trevor-swistchew/essays/why-the-age-of-capital-is-written-in-blood/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      Why the Age of Capital Is Written in Blood &bull; Exploitation &amp; Empire ↗
-                    </a>
+                  <span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 font-mono text-[10px] shrink-0">5:17</span>
+                </a>
+                <a href="../trevor-swistchew/essays/alan-watts-this-is-it/index.html" class="p-3 rounded-xl bg-soil-900/90 hover:bg-soil-900 border border-white/10 hover:border-amber-400/50 flex items-center justify-between gap-3 transition-all">
+                  <div>
+                    <span class="text-[10px] font-mono text-amber-400 uppercase block">Flagship Spoken-Word &amp; Essay</span>
+                    <span class="font-display font-bold text-sm text-white">&ldquo;This Is It&rdquo; &bull; Alan Watts &amp; Non-Duality Inquiry &rarr;</span>
                   </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    487 words
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-scale-unbalanced-flip text-[9px]"></i> New Philosophical Inquiry &bull; Compendium #53
-                    </span>
-                    <a href="../trevor-swistchew/essays/the-great-con/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The Great Con &bull; Power, Wealth &amp; Human Self-Deception ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    1,088 words
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-landmark text-[9px]"></i> New Imperial History &bull; Compendium #52
-                    </span>
-                    <a href="../trevor-swistchew/essays/the-worst-atrocities-during-empire/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The Worst Atrocities During Empire &bull; Structural Violence &amp; Official Archives ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    971 words
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-amber-500/15 border-2 border-amber-500/60 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-feather-pointed text-[9px]"></i> New Category • 29 Works (1985–2026)
-                    </span>
-                    <a href="../trevor-swistchew/poetry/index.html" class="font-display font-bold text-sm text-amber-200 hover:text-white transition-colors block">
-                      The Poetry Chamber &bull; Collected Poems (29) ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    29 Poems
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-car-side text-[9px]"></i> New Transport Philosophy &bull; Compendium #51
-                    </span>
-                    <a href="../trevor-swistchew/essays/the-eco-1000-a-car-designed-for-the-future-not-the-past/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The ECO-1000: A Car Designed for the Future, Not the Past &bull; Circular Innovation ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    928 words
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-scale-balanced text-[9px]"></i> New Social Policy &bull; Compendium #50
-                    </span>
-                    <a href="../trevor-swistchew/essays/how-the-uk-rips-off-its-state-pensioners/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      How the UK Rips Off Its State Pensioners &bull; Social Policy &amp; Ethics ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    740 words
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-comment-slash text-[9px]"></i> New Satire &bull; Compendium #49
-                    </span>
-                    <a href="../trevor-swistchew/essays/a-history-of-swearing-and-filthy-talk/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      A History of Swearing and Filthy Talk &bull; Cultural Linguistics &amp; Satire ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    470 words
-                  </span>
-                </div>
-<div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-coins text-[9px]"></i> New Inquiry &bull; Compendium #48
-                    </span>
-                    <a href="../trevor-swistchew/essays/a-fair-pension-is-affordable/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      A Fair Pension Is Affordable in the United Kingdom &bull; Social Policy &amp; Economy ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    905 words
-                  </span>
-                </div>
-<div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-infinity text-[9px]"></i> New Inquiry &bull; Compendium #47
-                    </span>
-                    <a href="../trevor-swistchew/essays/examining-consciousness/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      Examining Consciousness &bull; Philosophy &amp; Metaphysics ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    730 words
-                  </span>
-                </div>
-<div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-sun text-[9px]"></i> New Allegory &bull; Compendium #46
-                    </span>
-                    <a href="../trevor-swistchew/essays/the-return-of-the-teacher/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The Return of the Teacher &bull; Philosophy &amp; Mysticism ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    628 words
-                  </span>
-                </div>
-<div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-brain text-[9px]"></i> New Treatise &bull; Compendium #45
-                    </span>
-                    <a href="../trevor-swistchew/essays/why-ai-will-not-develop-awareness/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      Why AI Will Not Develop Awareness &bull; Philosophy of Mind ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    1,086 words
-                  </span>
-                </div>
-<div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-landmark-dome text-[9px]"></i> New Treatise &bull; Compendium #44
-                    </span>
-                    <a href="../trevor-swistchew/essays/scotland-sovereignty-democratic-road-to-independence/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      Scotland: Sovereignty and the Democratic Road to Independence &bull; Constitutional Jurisprudence ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    686 words
-                  </span>
-                </div>
-<div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-coins text-[9px]"></i> New Treatise &bull; Compendium #43
-                    </span>
-                    <a href="../trevor-swistchew/essays/why-scotland-can-afford-independence/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      Why Scotland Can Afford Independence &bull; Productive Capacity Audit ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    1,646 words
-                  </span>
-                </div>
-<div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-landmark text-[9px]"></i> New Essay &bull; Compendium #42
-                    </span>
-                    <a href="../trevor-swistchew/essays/how-the-perfidious-westminster-greedy-mugged-scotland/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      How the Perfidious Westminster Greedy Mugged Scotland, 1707-2026 &bull; Fiscal Sovereignty ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    1,228 words
-                  </span>
-                </div>
-<div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-scale-balanced text-[9px]"></i> New Treatise &bull; Compendium #41
-                    </span>
-                    <a href="../trevor-swistchew/essays/deconstructing-world-capitalism/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      Deconstructing World Capitalism. &bull; Political Economy &amp; Ecology ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    780 words
-                  </span>
-                </div>
-<div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-masks-theater text-[9px]"></i> New Story &bull; Compendium #40
-                    </span>
-                    <a href="../trevor-swistchew/essays/from-russia-with-expectation/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      From Russia With Expectation. &bull; Cold War Espionage Satire ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    630 words
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-guitar text-[9px]"></i> New Song &bull; Collaboration with The Shady River Bard
-                    </span>
-                    <a href="../trevor-swistchew/music/index.html?play=75#track-75" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      We Can Do Better (Track #75) &bull; Hard Rock &amp; Pub Rock Youth Anthem ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    4:07
-                  </span>
-                </div>
-<div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-guitar text-[9px]"></i> New Song &bull; Collaboration with The Shady River Bard
-                    </span>
-                    <a href="../trevor-swistchew/music/index.html?play=66#track-66" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      One Yoke To The Next (Track #66) &bull; Traditional Dark Folk-Blues ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    3:44
-                  </span>
-                </div>
-<div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-guitar text-[9px]"></i> Companion Song &bull; Compendium #39 Collaboration
-                    </span>
-                    <a href="../trevor-swistchew/music/index.html?play=65#track-65" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      When Exactly Is the Time? (Track #65) &bull; Electric Blues Rock ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    5:48
-                  </span>
-                </div>
-<div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-guitar text-[9px]"></i> New Song &bull; Collaboration with The Shady River Bard
-                    </span>
-                    <a href="../trevor-swistchew/music/index.html?play=64#track-64" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The Scotland Channel (Informing Scotland Honestly) (Track #64) &bull; Patriotic Folk-Rock ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    4:12
-                  </span>
-                </div>
-<div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-guitar text-[9px]"></i> New Song &bull; Collaboration with The Shady River Bard
-                    </span>
-                    <a href="../trevor-swistchew/music/index.html?play=63#track-63" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      Leaders Who Fucked the World (Track #63) &bull; Standalone Blues Rock ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    4:54
-                  </span>
-                </div>
-<div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-guitar text-[9px]"></i> New Song &bull; Collaboration with The Shady River Bard
-                    </span>
-                    <a href="../trevor-swistchew/music/index.html?play=62#track-62" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      Eat As Thou Wilt (Track #62) &bull; Heavy Blues Rock ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    5:13
-                  </span>
-                </div>
-<div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-guitar text-[9px]"></i> New Song &bull; Collaboration with The Shady River Bard
-                    </span>
-                    <a href="../trevor-swistchew/music/index.html?play=61#track-61" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The Shield, The Excuse, and The Betrayal (Track #61) &bull; Heavy Blues Rock ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    6:04
-                  </span>
-                </div>
-<div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-guitar text-[9px]"></i> New Song &bull; Collaboration with The Shady River Bard
-                    </span>
-                    <a href="../trevor-swistchew/music/index.html?play=60#track-60" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The Same Old Smell (Track #60) &bull; Heavy Blues Rock ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    5:29
-                  </span>
-                </div>
-<div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-guitar text-[9px]"></i> New Song &bull; Collaboration with The Shady River Bard
-                    </span>
-                    <a href="../trevor-swistchew/music/index.html?play=59#track-59" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      Fifty Years of Dust (Track #59) &bull; Heavy Blues Rock ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    5:10
-                  </span>
-                </div>
-<div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-guitar text-[9px]"></i> New Song &bull; Collaboration with The Shady River Bard
-                    </span>
-                    <a href="../trevor-swistchew/music/index.html?play=58#track-58" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The Canine State (Track #58) &bull; Punk Rock Satire ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    2:57
-                  </span>
-                </div>
-<div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-guitar text-[9px]"></i> New Song &bull; Collaboration with The Shady River Bard
-                    </span>
-                    <a href="../trevor-swistchew/music/index.html?play=57#track-57" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      An Explanation of the Universe (Track #57) &bull; Industrial Blues Rock ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    4:32
-                  </span>
-                </div>
-<div class="p-3 rounded-xl bg-gradient-to-r from-rose-950/40 via-soil-900 to-soil-900 border-2 border-rose-500/50 hover:border-rose-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-rose-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-guitar text-[9px]"></i> New Song &bull; Collaboration with The Shady River Bard
-                    </span>
-                    <a href="../trevor-swistchew/music/index.html?play=56#track-56" class="font-display font-bold text-sm text-stone-100 hover:text-rose-300 transition-colors block">
-                      The Unfucking (Track #56) &bull; Industrial Blues Rock ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-rose-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    5:03
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-gradient-to-r from-amber-950/40 via-soil-900 to-soil-900 border-2 border-amber-500/50 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-md">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-scale-balanced text-[9px]"></i> New Constitutional Essay &bull; Compendium #39
-                    </span>
-                    <a href="../trevor-swistchew/essays/its-time-unionists-listened/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      It's Time Unionists Listened ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-500 text-stone-950 font-mono font-bold text-[10px] flex-shrink-0">
-                    4 min read
-                  </span>
-                </div>
-<div class="p-3 rounded-xl bg-soil-900 border border-amber-500/40 hover:border-amber-400 transition-colors flex items-center justify-between gap-3 shadow-sm">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block">New Constitutional Audit &bull; Compendium #29</span>
-                    <a href="../trevor-swistchew/essays/what-have-the-tories-ever-done-for-scotland-in-300-years/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      What Have the Tories Ever Done for Scotland in 300 Years? ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-rose-950/80 border border-rose-800/40 text-[10px] font-mono text-rose-300 flex-shrink-0">
-                    5 min read
-                  </span>
-                </div>
-
-                <div class="p-3 rounded-xl bg-soil-900 border border-amber-500/30 flex items-center justify-between gap-3">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-500 font-bold block">Featured Philosophy &amp; Spoken Word</span>
-                    <a href="../trevor-swistchew/essays/alan-watts-this-is-it/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      Alan Watts: This Is It ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800/40 text-[10px] font-mono text-amber-400 flex-shrink-0">
-                    4 min read
-                  </span>
-                </div>
-
-                <div class="p-3 rounded-xl bg-soil-900 border border-stone-700/60 hover:border-amber-500/40 transition-colors flex items-center justify-between gap-3">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-stone-400 font-bold block">Constitutional Archival Audit</span>
-                    <a href="../trevor-swistchew/essays/the-ten-outrages-imposed-on-scotland/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The Ten Outrages Imposed on Scotland ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-stone-800 border border-stone-700 text-[10px] font-mono text-stone-300 flex-shrink-0">
-                    14 min read
-                  </span>
-                </div>
-
-                <div class="p-3 rounded-xl bg-soil-900 border border-stone-700/60 hover:border-amber-500/40 transition-colors flex items-center justify-between gap-3">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-stone-400 font-bold block">Four-Movement Cosmological Treatise</span>
-                    <a href="../trevor-swistchew/essays/the-explanation-of-the-universe/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The Explanation of the Universe ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-stone-800 border border-stone-700 text-[10px] font-mono text-stone-300 flex-shrink-0">
-                    23 min read
-                  </span>
-                </div>
-
-                <div class="p-3 rounded-xl bg-soil-900 border border-stone-700/60 hover:border-amber-500/40 transition-colors flex items-center justify-between gap-3">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-500/90 font-bold block">Political Economy &amp; Systemic Critique</span>
-                    <a href="../trevor-swistchew/essays/the-iron-jawed-annihilation-of-humanity/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The Iron-Jawed Annihilation of Humanity ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-stone-800 border border-stone-700 text-[10px] font-mono text-stone-300 flex-shrink-0">
-                    3 min read
-                  </span>
-                </div>
-
-                <div class="p-3 rounded-xl bg-soil-900 border border-amber-500/40 hover:border-amber-400 transition-colors flex items-center justify-between gap-3">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block flex items-center gap-1">
-                      <i class="fa-solid fa-music text-[9px]"></i> Rabelaisian Satire &amp; Suno Song
-                    </span>
-                    <a href="../trevor-swistchew/essays/the-story-of-shit/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The Story of Shit ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800/40 text-[10px] font-mono text-amber-400 flex-shrink-0">
-                    4 min read
-                  </span>
-                </div>
-
-                <div class="p-3 rounded-xl bg-soil-900 border border-stone-700/60 hover:border-amber-500/40 transition-colors flex items-center justify-between gap-3">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-500/90 font-bold block">Forensic History &amp; Institutional Ethics</span>
-                    <a href="../trevor-swistchew/essays/when-power-wears-a-halo/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      When Power Wears a Halo ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-stone-800 border border-stone-700 text-[10px] font-mono text-stone-300 flex-shrink-0">
-                    5 min read
-                  </span>
-                </div>
-
-                <div class="p-3 rounded-xl bg-soil-900 border border-stone-700/60 hover:border-amber-500/40 transition-colors flex items-center justify-between gap-3">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-500/90 font-bold block">Constitutional Law &amp; Civil Liberties</span>
-                    <a href="../trevor-swistchew/essays/should-there-be-limits-on-free-speech/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      Should There Be Limits on Free Speech? ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-stone-800 border border-stone-700 text-[10px] font-mono text-stone-300 flex-shrink-0">
-                    4 min read
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-soil-900 border border-amber-500/40 hover:border-amber-400 transition-colors flex items-center justify-between gap-3">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block">Theological Satire &amp; Mock Apocrypha</span>
-                    <a href="../trevor-swistchew/essays/the-gospel-according-to-common-sense/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The Gospel According to Common Sense ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800/40 text-[10px] font-mono text-amber-400 flex-shrink-0">
-                    4 min read
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-soil-900 border border-amber-500/40 hover:border-amber-400 transition-colors flex items-center justify-between gap-3">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block">Political Economy &amp; Financial Forensics</span>
-                    <a href="../trevor-swistchew/essays/the-plunder-of-our-exchange/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The Plunder of Our Exchange ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800/40 text-[10px] font-mono text-amber-400 flex-shrink-0">
-                    4 min read
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-soil-900 border border-amber-500/40 hover:border-amber-400 transition-colors flex items-center justify-between gap-3">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block">Constitutional Law &amp; International Jurisprudence</span>
-                    <a href="../trevor-swistchew/essays/international-law-framework-scotland-self-determination/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The International‑Law Framework on Scottish Self‑Determination ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800/40 text-[10px] font-mono text-amber-400 flex-shrink-0">
-                    8 min read
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-soil-900 border border-amber-500/40 hover:border-amber-400 transition-colors flex items-center justify-between gap-3">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block">Human Rights &amp; Institutional Forensics</span>
-                    <a href="../trevor-swistchew/essays/the-truth-child-protection-hides/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The Truth Child Protection Hides ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800/40 text-[10px] font-mono text-amber-400 flex-shrink-0">
-                    6 min read
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-soil-900 border border-amber-500/40 hover:border-amber-400 transition-colors flex items-center justify-between gap-3">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block">Ecological Philosophy &amp; Civilisational Limits</span>
-                    <a href="../trevor-swistchew/essays/a-warning-to-humanity/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      A Warning to Humanity ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800/40 text-[10px] font-mono text-amber-400 flex-shrink-0">
-                    3 min read
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-soil-900 border border-amber-500/40 hover:border-amber-400 transition-colors flex items-center justify-between gap-3">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block">Anthropological Inquiry &amp; Social Hierarchy</span>
-                    <a href="../trevor-swistchew/essays/how-men-gained-world-domination-over-women/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      How Men Gained World Domination Over Women ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800/40 text-[10px] font-mono text-amber-400 flex-shrink-0">
-                    5 min read
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-soil-900 border border-amber-500/40 hover:border-amber-400 transition-colors flex items-center justify-between gap-3">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block">Constitutional Law &amp; Media Audit</span>
-                    <a href="../trevor-swistchew/essays/the-misrepresentation-of-scotland/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The Misrepresentation of Scotland ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800/40 text-[10px] font-mono text-amber-400 flex-shrink-0">
-                    7 min read
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-soil-900 border border-amber-500/40 hover:border-amber-400 transition-colors flex items-center justify-between gap-3">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block">Constitutional Economics • £92.8B Economy</span>
-                    <a href="../trevor-swistchew/essays/why-wales-could-afford-independence/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      Why Wales Could Afford Independence ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800/40 text-[10px] font-mono text-amber-400 flex-shrink-0">
-                    7 min read
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-soil-900 border border-amber-500/40 hover:border-amber-400 transition-colors flex items-center justify-between gap-3">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block">Constitutional Strategy • Tri-National Unity</span>
-                    <a href="../trevor-swistchew/essays/the-celtic-alliance/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The Celtic Alliance: Its Purpose, Power, and Path ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800/40 text-[10px] font-mono text-amber-400 flex-shrink-0">
-                    5 min read
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-soil-900 border border-amber-500/40 hover:border-amber-400 transition-colors flex items-center justify-between gap-3">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block">Constitutional History • Farringdon 1900</span>
-                    <a href="../trevor-swistchew/essays/the-life-and-death-of-the-labour-collective/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The Life and Death of the Labour Collective ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800/40 text-[10px] font-mono text-amber-400 flex-shrink-0">
-                    5 min read
-                  </span>
-                </div>
-                <div class="p-3 rounded-xl bg-soil-900 border border-amber-500/40 hover:border-amber-400 transition-colors flex items-center justify-between gap-3">
-                  <div class="space-y-0.5">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400 font-bold block">Imperial History • The Clyde &amp; Slavery</span>
-                    <a href="../trevor-swistchew/essays/the-scottish-elite-and-the-empire/index.html" class="font-display font-bold text-sm text-stone-100 hover:text-amber-300 transition-colors block">
-                      The Scottish Elite and the Empire: A Focused Exposé ↗
-                    </a>
-                  </div>
-                  <span class="px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800/40 text-[10px] font-mono text-amber-400 flex-shrink-0">
-                    6 min read
-                  </span>
-                </div>
-
-
-
-
-
-              </div>
-
-              <!-- Feature Highlights -->
-              <div class="grid grid-cols-2 gap-2 text-xs font-mono text-stone-300 pt-2 border-t border-white/5">
-                <div class="flex items-center gap-2 p-2 rounded bg-soil-900 border border-white/5">
-                  <i class="fa-solid fa-book-journal-whills text-amber-500"></i>
-                  <span>Tri-State Reading Salon</span>
-                </div>
-                <div class="flex items-center gap-2 p-2 rounded bg-soil-900 border border-white/5">
-                  <i class="fa-solid fa-chart-column text-sky-400"></i>
-                  <span>Empirical Dossiers</span>
-                </div>
-                <div class="flex items-center gap-2 p-2 rounded bg-soil-900 border border-white/5">
-                  <i class="fa-solid fa-video text-rose-400"></i>
-                  <span>Embedded Companion Video</span>
-                </div>
-                <div class="flex items-center gap-2 p-2 rounded bg-soil-900 border border-white/5">
-                  <i class="fa-solid fa-universal-access text-emerald-400"></i>
-                  <span>WCAG 2.1 AA Accessible</span>
-                </div>
+                  <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono text-[10px] shrink-0">Flagship</span>
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- Card Actions -->
           <div class="p-6 sm:p-8 pt-0">
-            <div class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-3">
-              <a href="../trevor-swistchew/essays/alan-watts-this-is-it/index.html" class="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-soil-950 font-mono text-xs font-bold uppercase tracking-wider text-center transition-all shadow-md flex items-center justify-center gap-2">
-                <span>Read "This Is It" Essay</span>
-                <i class="fa-solid fa-arrow-right text-[11px]"></i>
+            <div class="pt-4 border-t border-white/10 flex flex-wrap items-center gap-3">
+              <a href="../trevor-swistchew/" class="flex-1 py-3.5 px-5 rounded-xl bg-amber-500 hover:bg-amber-400 text-soil-950 font-display font-bold text-xs sm:text-sm uppercase tracking-wider text-center transition-all shadow-lg flex items-center justify-center gap-2">
+                <i class="fa-solid fa-door-open"></i>
+                <span>Enter Trevor&rsquo;s Full Salon Hub</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
               </a>
-              <a href="../trevor-swistchew/" class="py-3 px-5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 hover:text-amber-200 border border-amber-500/50 hover:border-amber-400 font-mono text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm">
-                <span>Enter Salon Hub ↗</span>
-              </a>
-              <a href="https://github.com/tpatterson34/trevor-swistchew-portal" target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded-xl bg-soil-900 hover:bg-soil-800 text-stone-300 hover:text-white border border-white/10 font-mono text-xs transition-colors flex items-center gap-2" title="GitHub Repository">
-                <i class="fa-brands fa-github text-sm"></i>
-                <span class="hidden sm:inline">Repo</span>
+              <a href="../trevor-swistchew/music/index.html" class="py-3.5 px-4 rounded-xl bg-soil-900 hover:bg-soil-800 text-rose-300 border border-rose-500/40 font-mono text-xs font-bold transition-all">
+                <span>76 Songs ↗</span>
               </a>
             </div>
           </div>
         </article>
 
-        <!-- FELLOW 2: UPCOMING CHILDREN'S BOOK AUTHOR (COMING SOON) -->
-        <article class="fellow-card rounded-2xl bg-soil-850/70 border border-dashed border-white/20 overflow-hidden shadow-xl flex flex-col justify-between relative group">
+        <!-- =============================================================== -->
+        <!-- FELLOW 2: BOB MCNAIR (GREENOCK & LOCH FYNE HERITAGE CHRONICLES) -->
+        <!-- =============================================================== -->
+        <article id="bob-mcnair-fellowship" class="fellow-card rounded-3xl bg-soil-850 border-2 border-amber-500/45 overflow-hidden shadow-2xl flex flex-col justify-between">
           <div>
-            <!-- Artistic Placeholder Banner -->
-            <div class="relative h-56 w-full overflow-hidden bg-gradient-to-br from-soil-900 via-evergreen-950/40 to-soil-950 flex items-center justify-center">
-              <div class="text-center p-6 space-y-2">
-                <div class="w-14 h-14 rounded-full bg-evergreen-900/50 border border-evergreen-500/40 mx-auto flex items-center justify-center text-evergreen-400 text-2xl shadow-inner group-hover:scale-110 transition-transform duration-300">
-                  <i class="fa-solid fa-wand-magic-sparkles"></i>
-                </div>
-                <span class="font-display font-bold text-lg text-stone-200 block">The Storyteller's Glade</span>
-                <span class="text-xs font-mono text-evergreen-400">Illustrations, Tales &amp; Wonder</span>
-              </div>
+            <!-- Banner -->
+            <div class="relative h-64 w-full overflow-hidden bg-soil-950">
+              <a href="../singles/" class="block w-full h-full group" title="Explore Bob McNair's Heritage Singles in The Singles Vault">
+                <img
+                  src="../singles/assets/art/the-greenock-slate-and-the-gold-watch-banner.webp"
+                  alt="Great Uncle Wullie Smith McNair's Gold Pocket Watch and Greenock Townhall"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-soil-850 via-soil-950/30 to-transparent"></div>
+              </a>
 
-              <!-- Badge -->
-              <div class="absolute top-3 left-3">
-                <span class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-evergreen-600/90 text-white shadow flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
-                  Coming Soon to the Fellowship
+              <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                <span class="px-3 py-1 rounded-md text-[11px] font-mono font-bold bg-amber-500 text-soil-950 shadow">
+                  Featured Fellow &bull; Heritage Chronicler
+                </span>
+                <span class="px-3 py-1 rounded-md text-[11px] font-mono bg-soil-950/85 text-amber-300 border border-amber-500/40">
+                  Greenock &amp; Loch Fyne, Scotland
                 </span>
               </div>
             </div>
 
             <!-- Content -->
-            <div class="p-6 sm:p-8 space-y-4">
+            <div class="p-6 sm:p-8 space-y-6">
               <div>
-                <span class="text-xs font-mono uppercase tracking-widest text-emerald-400 block mb-1">
-                  Author of Children's Books &amp; Illustrated Stories
+                <span class="text-xs font-mono uppercase tracking-widest text-amber-400 font-bold block mb-1">
+                  Family Historian &bull; Clan MacNair &amp; River Clyde Oral Archive
                 </span>
-                <h2 class="font-display text-2xl sm:text-3xl font-bold text-stone-200">
-                  Tales of Wonder &amp; Imagination
+                <h2 class="font-display text-2xl sm:text-4xl font-bold text-white hover:text-amber-400 transition-colors">
+                  <a href="../singles/">Bob McNair</a>
                 </h2>
-                <p class="font-body italic text-sm text-stone-400 mt-1">
-                  Woodland Lore, Musical Nursery Rhymes &amp; Adventures for Young Hearts
+                <p class="font-body italic text-sm sm:text-base text-stone-300 mt-1">
+                  Living Working-Class &amp; Highland History: From 1746 Loch Fyne to the 1907 Greenock Slate
                 </p>
               </div>
 
-              <p class="text-sm text-stone-300 leading-relaxed font-body">
-                We are preparing a dedicated alcove for a wonderful creator and author of children’s books. Here, young readers and families will soon discover illustrated journeys, playful woodland creatures, gentle philosophical morals, and companion lullabies crafted with love and lyrical whimsy.
+              <p class="text-sm sm:text-base text-stone-200 leading-relaxed font-body">
+                Through his family heirlooms and living oral history, friend and subscriber <strong class="text-white">Bob McNair</strong> opened a window into two centuries of Scottish endurance—from his ancestors serving as the MacNair tacksmen defending the Cowal shoreline after Culloden in 1746, to his Great Uncle Wullie Smith McNair and Granddad Nicol John slating the Greenock Townhall roof in 1907 before the Great War. His accounts inspired the first two flagship releases in <strong class="text-amber-400">The Singles Vault</strong>:
               </p>
 
-              <!-- Upcoming Highlights -->
-              <div class="grid grid-cols-2 gap-2 text-xs font-mono text-stone-400 pt-2 border-t border-white/5">
-                <div class="flex items-center gap-2 p-2 rounded bg-soil-900/60 border border-white/5">
-                  <i class="fa-solid fa-paintbrush text-emerald-400"></i>
-                  <span>Illustrated Storybooks</span>
+              <!-- The Two Staged Singles Showcase Cards -->
+              <div class="space-y-4">
+                <!-- Single 1: The Greenock Slate and the Gold Watch -->
+                <div class="p-4 rounded-2xl bg-soil-900 border border-amber-500/40 hover:border-amber-400 transition-all space-y-3 shadow-lg">
+                  <div class="flex items-start gap-4">
+                    <a href="../singles/the-greenock-slate-and-the-gold-watch/" class="w-20 h-20 rounded-xl overflow-hidden border border-amber-500/40 shrink-0 block">
+                      <img src="../singles/assets/art/the-greenock-slate-and-the-gold-watch-cover.webp" alt="The Greenock Slate and the Gold Watch" class="w-full h-full object-cover">
+                    </a>
+                    <div class="space-y-1 flex-grow">
+                      <div class="flex items-center justify-between gap-2">
+                        <span class="text-[10px] font-mono uppercase tracking-wider text-amber-400 font-bold">Single #01 &bull; 1907–Present Chronicle</span>
+                        <span class="text-[11px] font-mono text-stone-400">06:59</span>
+                      </div>
+                      <h3 class="font-display font-bold text-base sm:text-lg text-white">
+                        <a href="../singles/the-greenock-slate-and-the-gold-watch/" class="hover:text-amber-400 transition-colors">
+                          The Greenock Slate and the Gold Watch
+                        </a>
+                      </h3>
+                      <p class="font-body text-xs text-stone-300 leading-relaxed">
+                        Great Uncle Wullie Smith McNair, Granddad Nicol John, the forgotten &ldquo;pieces&rdquo; on Greenock Townhall roof, WWI Pals battalions, climbing the high slate on one good leg, and the retinal gold pocket watch ticking in Bob&rsquo;s hand today.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="pt-2 border-t border-white/10 flex flex-wrap items-center justify-between gap-2">
+                    <a href="../singles/the-greenock-slate-and-the-gold-watch/" class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-amber-400 hover:text-amber-300">
+                      <span>Open Dedicated Song Chronicle</span>
+                      <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                    <a href="https://youtu.be/9IWrmtCF4nQ" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-red-600 hover:bg-red-500 text-white font-mono text-[11px] font-bold transition-colors">
+                      <i class="fa-brands fa-youtube"></i>
+                      <span>Watch Video ↗</span>
+                    </a>
+                  </div>
                 </div>
-                <div class="flex items-center gap-2 p-2 rounded bg-soil-900/60 border border-white/5">
-                  <i class="fa-solid fa-music text-amber-400"></i>
-                  <span>Musical Lullabies</span>
-                </div>
-                <div class="flex items-center gap-2 p-2 rounded bg-soil-900/60 border border-white/5">
-                  <i class="fa-solid fa-seedling text-emerald-400"></i>
-                  <span>Nature Lore</span>
-                </div>
-                <div class="flex items-center gap-2 p-2 rounded bg-soil-900/60 border border-white/5">
-                  <i class="fa-solid fa-sparkles text-sky-400"></i>
-                  <span>Interactive Audio Tales</span>
+
+                <!-- Single 2: The Guns of Loch Fyne -->
+                <div class="p-4 rounded-2xl bg-soil-900 border border-amber-500/40 hover:border-amber-400 transition-all space-y-3 shadow-lg">
+                  <div class="flex items-start gap-4">
+                    <a href="../singles/the-guns-of-loch-fyne/" class="w-20 h-20 rounded-xl overflow-hidden border border-amber-500/40 shrink-0 block">
+                      <img src="../singles/assets/art/the-guns-of-loch-fyne-cover.webp" alt="The Guns of Loch Fyne" class="w-full h-full object-cover">
+                    </a>
+                    <div class="space-y-1 flex-grow">
+                      <div class="flex items-center justify-between gap-2">
+                        <span class="text-[10px] font-mono uppercase tracking-wider text-amber-400 font-bold">Single #02 &bull; 1746 Highland Stand</span>
+                        <span class="text-[11px] font-mono text-stone-400">05:28</span>
+                      </div>
+                      <h3 class="font-display font-bold text-base sm:text-lg text-white">
+                        <a href="../singles/the-guns-of-loch-fyne/" class="hover:text-amber-400 transition-colors">
+                          The Guns of Loch Fyne
+                        </a>
+                      </h3>
+                      <p class="font-body text-xs text-stone-300 leading-relaxed">
+                        After Chief Lachlan MacLachlan fell at Culloden (Drumossie Moor), Captain Fergussone sailed HMS <em>Furnace</em> up Loch Fyne to shell Old Castle Lachlan—while the MacNair tacksmen held the shallows with musket and lead to shield the glen.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="pt-2 border-t border-white/10 flex flex-wrap items-center justify-between gap-2">
+                    <a href="../singles/the-guns-of-loch-fyne/" class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-amber-400 hover:text-amber-300">
+                      <span>Open Dedicated Song Chronicle</span>
+                      <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                    <a href="https://youtu.be/T2WUvcxPLqw" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-red-600 hover:bg-red-500 text-white font-mono text-[11px] font-bold transition-colors">
+                      <i class="fa-brands fa-youtube"></i>
+                      <span>Watch Video ↗</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Card Actions -->
           <div class="p-6 sm:p-8 pt-0">
-            <div class="pt-4 border-t border-white/10 flex items-center justify-between">
-              <span class="font-mono text-xs text-stone-500 italic">
-                Publishing portal currently in preparation...
-              </span>
-              <span class="px-3 py-1.5 rounded-lg bg-soil-900 border border-white/10 font-mono text-xs text-emerald-400">
-                Arriving Soon
-              </span>
+            <div class="pt-4 border-t border-white/10 flex flex-wrap items-center gap-3">
+              <a href="../singles/" class="flex-1 py-3.5 px-5 rounded-xl bg-amber-500 hover:bg-amber-400 text-soil-950 font-display font-bold text-xs sm:text-sm uppercase tracking-wider text-center transition-all shadow-lg flex items-center justify-center gap-2">
+                <i class="fa-solid fa-record-vinyl"></i>
+                <span>Enter The Singles Vault Hub</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
             </div>
           </div>
         </article>
 
       </div>
 
-    </section>
-
-    <!-- The Spirit of Fellowship Quote -->
-    <section class="py-12 border-t border-white/10 bg-soil-900/50">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4">
-        <h3 class="font-display text-xl sm:text-2xl font-bold text-stone-200">The Bard's Open Hearth</h3>
-        <p class="font-body italic text-stone-400 text-sm sm:text-base leading-relaxed">
-          "Whether through historical inquiry and classical prose, folk melody, or the wide-eyed wonder of a child's storybook, art reminds us of who we were, who we are, and what we may yet become together."
-        </p>
-        <span class="text-xs font-mono text-amber-500">— The Shady River Bard</span>
+      <!-- Upcoming Alcove: The Storyteller's Glade -->
+      <div class="rounded-2xl bg-soil-900/70 border border-dashed border-emerald-500/30 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-evergreen-950 border border-evergreen-500/40 flex items-center justify-center text-evergreen-400 text-xl shrink-0">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <div>
+            <span class="font-mono text-[10px] uppercase tracking-widest text-emerald-400 font-bold block">Coming Soon to the Fellowship</span>
+            <h3 class="font-display text-xl font-bold text-white">The Storyteller&rsquo;s Glade &bull; Children&rsquo;s Books &amp; Illustrated Lore</h3>
+            <p class="font-body text-xs sm:text-sm text-stone-300 mt-1 max-w-2xl">
+              An upcoming alcove for an author of illustrated children&rsquo;s storybooks, woodland lore, gentle philosophical morals, and musical lullabies.
+            </p>
+          </div>
+        </div>
+        <span class="px-3.5 py-2 rounded-xl bg-soil-950 border border-emerald-500/30 font-mono text-xs text-emerald-400 shrink-0">
+          In Preparation
+        </span>
       </div>
+
     </section>
 
   </main>
@@ -1103,19 +456,20 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div>
         <span class="font-display font-bold text-white tracking-wider block">THE SHADY RIVER ECOSYSTEM</span>
-        <span class="text-[11px] text-stone-500 font-mono">Friends of the Bard Fellowship &bull; Western Washington</span>
+        <span class="text-[11px] text-stone-500 font-mono">The Bard&rsquo;s Fellowship &bull; Western Washington &amp; Scotland</span>
       </div>
-      <div class="flex items-center gap-4 text-[11px] font-mono">
-        <a href="../" class="hover:text-amber-400 transition-colors">Main Portal</a>
+      <div class="flex flex-wrap items-center gap-4 text-[11px] font-mono">
+        <a href="../" class="hover:text-amber-400 transition-colors">&larr; Main Portal</a>
         <span>&bull;</span>
         <a href="../trevor-swistchew/" class="text-amber-400 hover:underline">Trevor Swistchew</a>
         <span>&bull;</span>
-        <a href="../vault/" class="hover:text-amber-400 transition-colors">Discography Vault</a>
+        <a href="../singles/" class="text-amber-400 hover:underline">Bob McNair Singles</a>
+        <span>&bull;</span>
+        <a href="../vault/" class="hover:text-amber-400 transition-colors">27-Album Vault</a>
       </div>
     </div>
   </footer>
 
-  <!-- Unified Accessibility Script -->
   <script src="../assets/js/a11y.js"></script>
   <script src="../assets/js/bard-notes.js?v=20260920b"></script>
 </body>
