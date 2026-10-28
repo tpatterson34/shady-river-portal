@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Long Way Home — A Thousand Marching Boots, One Quiet Road | The Shady River Bard Incubator</title>
+  <meta name="description" content="Studio Incubator Concept Blueprint (Album XX): A 14-track, 4-act Spartan Folk & Somber Americana epic following the Archetypal Eternal Soldier across two millennia—from Hadrian's Wall and the Scottish Highlands to Verdun, Fallujah, and the healing soil of the homestead.">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="music.album">
+  <meta property="og:title" content="The Long Way Home — The Shady River Bard (Studio Incubator)">
+  <meta property="og:description" content="A Thousand Marching Boots, One Quiet Road. Explore the 4-Act, 14-Track Spartan Folk concept blueprint on Moral Injury, the Platoon Tribe, and Swords into Plowshares.">
+  <meta property="og:image" content="https://theshadyriverbard.com/the-long-way-home/assets/images/og-the-long-way-home.jpg">
+  <meta property="og:url" content="https://theshadyriverbard.com/the-long-way-home/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Long Way Home — The Shady River Bard">
+  <meta name="twitter:description" content="14 planned tracks tracing the Eternal Soldier across 2,000 years of homecoming, moral injury, and agrarian healing.">
+  <meta name="twitter:image" content="https://theshadyriverbard.com/the-long-way-home/assets/images/og-the-long-way-home.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            amber: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            },
+            slate: {
+              950: '#07090c',
+            }
+          },
+          fontFamily: {
+            display: ['Cinzel', 'Georgia', 'serif'],
+            serif: ['Merriweather', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="../assets/css/a11y.css">
+  <link rel="stylesheet" href="../assets/css/bard-notes.css?v=20260920b">
+
+  <style>
+    html, body {
+      overflow-x: hidden;
+      background-color: #090b0e;
+      color: #e7e5e4;
+    }
+    .spartan-card {
+      background: linear-gradient(145deg, rgba(24, 27, 32, 0.92), rgba(14, 17, 21, 0.96));
+      border: 1px solid rgba(168, 162, 158, 0.14);
+    }
+    .spartan-card:hover {
+      border-color: rgba(245, 158, 11, 0.35);
+    }
+    .mud-gradient-text {
+      background: linear-gradient(95deg, #fde68a 0%, #f59e0b 48%, #d97706 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .act-pill[aria-pressed="true"],
+    .facet-tab[aria-selected="true"] {
+      background-color: rgba(245, 158, 11, 0.18);
+      border-color: #f59e0b;
+      color: #fde68a;
+    }
+    .track-row-active {
+      background: linear-gradient(90deg, rgba(245, 158, 11, 0.16), rgba(24, 27, 32, 0.85));
+      border-left: 3px solid #f59e0b;
+    }
+  </style>
+</head>
+<body class="bg-[#090b0e] text-stone-200 font-sans antialiased selection:bg-amber-500 selection:text-stone-950 min-h-screen flex flex-col">
+
+  <!-- Skip Link -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-4 focus:py-2 focus:bg-amber-500 focus:text-stone-950 focus:font-bold focus:rounded-lg">
+    Skip to main content
+  </a>
+
+  <!-- TOP INCUBATOR BREADCRUMB BAR -->
+  <aside aria-label="Studio Incubator Breadcrumb" class="bg-[#050608] border-b border-stone-800/80 px-4 py-2 text-xs font-mono text-stone-400">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+        <span class="text-stone-200 font-bold">The Shady River Bard &bull; Studio Incubator</span>
+        <span class="hidden sm:inline text-stone-600">|</span>
+        <span class="hidden sm:inline text-amber-400 font-medium">Concept Blueprint &bull; XX &ndash; The Long Road Home</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px]">
+        <a href="../vault/index.html#unreleased" class="hover:text-amber-400 text-stone-300 transition-colors flex items-center gap-1.5 font-medium">
+          <i class="fa-solid fa-arrow-left text-[10px]" aria-hidden="true"></i>
+          <span>Back to Incubator Vault</span>
+        </a>
+        <span class="text-stone-700" aria-hidden="true">|</span>
+        <a href="../philosophy/index.html" class="hover:text-amber-400 text-stone-300 transition-colors flex items-center gap-1">
+          <i class="fa-solid fa-compass-drafting text-[10px]" aria-hidden="true"></i>
+          <span>Philosophy</span>
+        </a>
+        <span class="text-stone-700" aria-hidden="true">|</span>
+        <a href="../index.html" class="hover:text-amber-400 text-stone-300 transition-colors flex items-center gap-1">
+          <i class="fa-solid fa-house text-[10px]" aria-hidden="true"></i>
+          <span>Main Portal</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- STICKY PRIMARY NAVIGATION -->
+  <header class="sticky top-0 z-40 bg-[#090b0e]/95 backdrop-blur-md border-b border-stone-800/80 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 gap-3">
+        <!-- Brand Logo & Album Title -->
+        <a href="#overview" class="flex items-center gap-3 group focus:outline-none">
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-600 to-stone-800 border border-amber-500/40 flex items-center justify-center text-amber-300 font-bold shadow-lg group-hover:scale-105 transition-transform">
+            <i class="fa-solid fa-road text-base"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-bold text-white tracking-wider text-sm sm:text-base group-hover:text-amber-300 transition-colors">
+              THE LONG WAY HOME
+            </span>
+            <span class="text-[10px] font-mono text-amber-400/90 uppercase tracking-widest">
+              Incubator Blueprint &bull; 14 Planned Tracks
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Jump Links -->
+        <nav aria-label="Album Blueprint Sections" class="hidden lg:flex items-center gap-6 text-xs font-mono uppercase tracking-wider text-stone-300">
+          <a href="#overview" class="hover:text-amber-400 transition-colors">Overview</a>
+          <a href="#moral-injury" class="hover:text-amber-400 transition-colors">Moral Injury &amp; Tribe</a>
+          <a href="#thematic-matrix" class="hover:text-amber-400 transition-colors">5 Pillars</a>
+          <a href="#song-roadmap" class="text-amber-400 font-bold hover:text-amber-300 transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-Compass text-[10px]"></i>
+            <span>4-Act Roadmap (14)</span>
+          </a>
+          <a href="#spartan-folk" class="hover:text-amber-400 transition-colors">Spartan Folk Sound</a>
+        </nav>
+
+        <!-- Actions: Vote & Feedback -->
+        <div class="flex items-center gap-2.5">
+          <button type="button" id="vote-btn-header" onclick="castIncubatorVote()" class="px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-stone-950 font-mono font-bold text-xs shadow-md flex items-center gap-1.5 transition-all">
+            <i class="fa-solid fa-check-to-slot text-[11px]" id="vote-icon-header"></i>
+            <span id="vote-label-header">Vote to Record Next</span>
+          </button>
+          <button type="button" onclick="window.BardNotes && window.BardNotes.open({ albumTitle: 'The Long Way Home (Incubator Blueprint)', songTitle: 'Full Album Concept Blueprint' })" class="px-3 py-1.5 rounded-lg bg-stone-900 hover:bg-stone-800 border border-stone-700 text-stone-200 hover:text-amber-300 font-mono text-xs transition-colors flex items-center gap-1.5" title="Send feedback on this concept blueprint to the Bard">
+            <i class="fa-regular fa-envelope text-amber-400"></i>
+            <span class="hidden sm:inline">Note to Bard</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="flex-grow">
+
+    <!-- ================================================================= -->
+    <!-- I. HERO CONCEPT SHOWCASE                                          -->
+    <!-- ================================================================= -->
+    <section id="overview" class="relative overflow-hidden py-14 sm:py-20 border-b border-stone-800/80 bg-gradient-to-b from-[#11151c] via-[#0b0e12] to-[#090b0e]">
+      <!-- Subtle Ambient Glow -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[760px] h-[360px] bg-gradient-to-r from-amber-600/10 via-stone-500/10 to-transparent blur-[130px] pointer-events-none" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+          <!-- Left Column: Cover Art -->
+          <div class="lg:col-span-5 flex flex-col items-center">
+            <div class="relative group w-full max-w-md rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl shadow-black/90 bg-stone-950">
+              <img src="assets/images/album-art.webp" alt="The Long Way Home cover art: A lone weary soldier walking down a muddy rural road toward a distant farmhouse at dusk" class="w-full aspect-square object-cover transition-transform duration-700 group-hover:scale-103">
+              <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-stone-950/85 backdrop-blur-md border border-amber-500/40 text-amber-300 font-mono text-[11px] font-bold uppercase tracking-wider flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                <span>Design In Place &bull; Pre-Production</span>
+              </div>
+              <button type="button" onclick="openArtLightbox()" class="absolute bottom-3 right-3 px-3 py-1.5 rounded-lg bg-stone-950/85 hover:bg-stone-900 text-stone-200 hover:text-amber-300 border border-stone-700 font-mono text-xs flex items-center gap-1.5 backdrop-blur-md transition-colors">
+                <i class="fa-solid fa-magnifying-glass-plus text-amber-400"></i>
+                <span>Inspect 4K Cover</span>
+              </button>
+            </div>
+            <p class="mt-3 text-[11px] font-mono text-stone-400 text-center">
+              Working Folder: <code class="text-amber-400/90">XX - The Long Road Home</code> &bull; Cover Title: <strong class="text-stone-200">The Long Way Home</strong>
+            </p>
+          </div>
+
+          <!-- Right Column: Concept Thesis -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono">
+              <i class="fa-solid fa-compass-drafting"></i>
+              <span>Studio Incubator Architectural Blueprint &bull; No Songs Recorded Yet</span>
+            </div>
+
+            <div class="space-y-2">
+              <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-none">
+                THE LONG <span class="mud-gradient-text">WAY HOME</span>
+              </h1>
+              <p class="font-display text-lg sm:text-2xl text-amber-200/90 tracking-wide">
+                A Thousand Marching Boots, One Quiet Road
+              </p>
+            </div>
+
+            <div class="space-y-4 font-serif text-stone-300 text-sm sm:text-base leading-relaxed">
+              <p>
+                Where <a href="../the-balance-sheet-of-outrage/" class="text-amber-400 underline underline-offset-4 hover:text-amber-300"><em>The Balance Sheet of Outrage</em> (Album 12)</a> examined the machinery, profiteering, and industrial architecture of war, <strong class="text-white">The Long Way Home</strong> turns the lens entirely onto the human aftermath: the quiet, agonizing war that begins the moment the shooting stops.
+              </p>
+              <p>
+                Rather than confining this story to a single modern conflict, the album follows an <strong class="text-amber-300">Archetypal Eternal Soldier</strong>—the exact same man, with the same weary eyes and calloused hands, recurring across two millennia of history and multiple nations. He is not a science-fiction time traveler; he is the perennial working-class citizen-soldier whom empires summon in moments of crisis and discard in moments of peace.
+              </p>
+              <p class="text-stone-400 text-xs sm:text-sm italic border-l-2 border-amber-500/50 pl-4">
+                Across fourteen planned tracks, we walk beside him as a Roman legionnaire retiring from Hadrian&rsquo;s Wall (122 AD), a Scottish Highlander returning to a cleared glen (1746/1815), a barefoot farm boy walking down the Appomattox Pike (1865), a French <em>poilu</em> emerging from Verdun into a Paris café (1919), a Scottish Black Watch veteran coming home to Clydeside ration lines and stoic silence (1946), a British jungle fighter returning from Malaya and Korea (1954), an American rifleman frozen under the fluorescent lights of a suburban big-box store after Fallujah (2008), the last flesh-and-blood infantryman walking away from an automated battlefield on Lithium Ridge, and finally, an elder trading the sword for cedar posts and heavy clay along the river&rsquo;s bend.
+              </p>
+            </div>
+
+            <!-- Key Metrics -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
+              <div class="p-3.5 rounded-xl spartan-card text-center">
+                <div class="font-mono text-xl font-bold text-amber-400">14</div>
+                <div class="text-[10px] font-mono uppercase tracking-wider text-stone-400">Planned Tracks</div>
+              </div>
+              <div class="p-3.5 rounded-xl spartan-card text-center">
+                <div class="font-mono text-xl font-bold text-stone-100">4 Acts</div>
+                <div class="text-[10px] font-mono uppercase tracking-wider text-stone-400">Narrative Arc</div>
+              </div>
+              <div class="p-3.5 rounded-xl spartan-card text-center">
+                <div class="font-mono text-xl font-bold text-amber-400">122 AD &ndash; Future</div>
+                <div class="text-[10px] font-mono uppercase tracking-wider text-stone-400">2,000-Year Span</div>
+              </div>
+              <div class="p-3.5 rounded-xl spartan-card text-center">
+                <div class="font-mono text-xl font-bold text-stone-100">Spartan Folk</div>
+                <div class="text-[10px] font-mono uppercase tracking-wider text-stone-400">Sonic Palette</div>
+              </div>
+            </div>
+
+            <!-- Primary CTA Buttons -->
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <a href="#song-roadmap" class="px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono font-bold text-xs uppercase tracking-wider shadow-lg shadow-amber-950/50 flex items-center gap-2 transition-all">
+                <i class="fa-solid fa-route"></i>
+                <span>Explore 14-Track Roadmap</span>
+              </a>
+              <a href="#thematic-matrix" class="px-5 py-3 rounded-xl bg-stone-900 hover:bg-stone-800 text-stone-200 border border-stone-700 hover:border-amber-500/40 font-mono text-xs uppercase tracking-wider flex items-center gap-2 transition-all">
+                <i class="fa-solid fa-table-cells-large text-amber-400"></i>
+                <span>5-Pillar Thematic Matrix</span>
+              </a>
+              <button type="button" id="vote-btn-hero" onclick="castIncubatorVote()" class="px-5 py-3 rounded-xl bg-stone-900/90 hover:bg-stone-800 text-amber-300 border border-amber-500/40 font-mono text-xs uppercase tracking-wider flex items-center gap-2 transition-all">
+                <i class="fa-solid fa-check-to-slot" id="vote-icon-hero"></i>
+                <span id="vote-label-hero">Vote for Production</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- II. EDUCATIONAL & HISTORICAL CONTEXT: MORAL INJURY & TRIBE        -->
+    <!-- ================================================================= -->
+    <section id="moral-injury" class="py-16 sm:py-20 border-b border-stone-800/80 scroll-mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div class="max-w-3xl space-y-2">
+          <span class="font-mono text-xs uppercase tracking-widest text-amber-400 font-bold">
+            Section I // Clinical, Historical &amp; Anthropological Foundation
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-display font-bold text-white">
+            Why the War Begins When the Shooting Stops
+          </h2>
+          <p class="font-serif text-stone-300 text-sm sm:text-base leading-relaxed">
+            To understand the Eternal Soldier&rsquo;s two-thousand-year journey, the album draws upon two landmark clinical and anthropological frameworks—paired with the core civic ethos of <strong>The Shady River Bard</strong>.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <!-- Card 1: Jonathan Shay -->
+          <article class="spartan-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-xs font-mono text-amber-400">
+                <span>01 // CLINICAL PSYCHIATRY</span>
+                <i class="fa-solid fa-scale-unbalanced text-base"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-white">
+                Moral Injury vs. PTSD
+              </h3>
+              <p class="font-mono text-[11px] text-amber-300/90">
+                Dr. Jonathan Shay &bull; <em>Achilles in Vietnam</em> &amp; <em>Odysseus in America</em>
+              </p>
+              <p class="font-serif text-xs sm:text-sm text-stone-300 leading-relaxed">
+                While PTSD is fundamentally a fear-based physiological imprint triggered by mortal danger, <strong class="text-white">Moral Injury</strong> is a wound to the soul caused by the betrayal of <em>what&rsquo;s right</em>—either by someone in legitimate authority in a high-stakes situation, or by one&rsquo;s own actions under orders.
+              </p>
+              <p class="font-serif text-xs sm:text-sm text-stone-300 leading-relaxed">
+                Shay demonstrated that Homer&rsquo;s <em>Odyssey</em> is the oldest surviving clinical map of veteran reintegration: Odysseus loses his men not at the walls of Troy, but on the ten-year voyage home—through the <strong class="text-amber-300">&ldquo;Lotus-Eaters&rdquo;</strong> (numbing addiction), the <strong class="text-amber-300">&ldquo;Sirens&rdquo;</strong> (the intoxicating pull of nostalgic war stories), and the slaughter in his own courtyard (the inability to turn off lethal hypervigilance in civilian spaces).
+              </p>
+            </div>
+            <div class="pt-3 border-t border-stone-800 text-[11px] font-mono text-stone-400">
+              Anchored in Tracks 02, 04, 05, 10 &amp; 11
+            </div>
+          </article>
+
+          <!-- Card 2: Sebastian Junger -->
+          <article class="spartan-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-xs font-mono text-amber-400">
+                <span>02 // ANTHROPOLOGY OF BELONGING</span>
+                <i class="fa-solid fa-people-group text-base"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-white">
+                The Loss of the Platoon Tribe
+              </h3>
+              <p class="font-mono text-[11px] text-amber-300/90">
+                Sebastian Junger &bull; <em>Tribe: On Homecoming and Belonging</em>
+              </p>
+              <p class="font-serif text-xs sm:text-sm text-stone-300 leading-relaxed">
+                Humans evolved to live in small, interdependent bands of 30 to 50 people where every person&rsquo;s survival depends on the person beside them. War accidentally recreates that ancient evolutionary tribe inside the platoon, fireteam, or Roman <em>testudo</em> shield wall.
+              </p>
+              <p class="font-serif text-xs sm:text-sm text-stone-300 leading-relaxed">
+                When the soldier returns to a modern, atomized, consumerist suburb—where neighbors retreat behind automatic garage doors and life is reduced to solitary transactions under buzzing fluorescent lights—the psychological drop from <strong class="text-white">supreme collective purpose</strong> to <strong class="text-amber-300">total social irrelevance</strong> is devastating. The returning veteran is the canary in the coal mine showing that consumer culture has broken the human village.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-stone-800 text-[11px] font-mono text-stone-400">
+              Anchored in Tracks 03, 07, 08 &amp; 10
+            </div>
+          </article>
+
+          <!-- Card 3: The Bard's Core Ethos -->
+          <article class="spartan-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between space-y-4 border-amber-500/30">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-xs font-mono text-amber-400">
+                <span>03 // THE SHADY RIVER BARD THESIS</span>
+                <i class="fa-solid fa-seedling text-base"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-white">
+                Stepping Off the Imperial Highway
+              </h3>
+              <p class="font-mono text-[11px] text-amber-300/90">
+                From the Roman Wedge to Swords into Plowshares
+              </p>
+              <p class="font-serif text-xs sm:text-sm text-stone-300 leading-relaxed">
+                The division between civilian and veteran—like the broader political and economic divisions fracturing modern society—is not an accident. Empires and ruling classes have always known how to forge working people into a unified tribe when they need them to bleed, and have always fractured, isolated, and pacified them with spectacles (&ldquo;bread and circuses&rdquo; in Rome, shopping malls and partisan outrage today) when they come home.
+              </p>
+              <p class="font-serif text-xs sm:text-sm text-stone-300 leading-relaxed">
+                Healing the Moral Injury requires stepping off the imperial highway altogether: breaking the stoic isolation at the family table, rebuilding genuine community, and turning the discipline of the sword into the <strong class="text-amber-300">stewardship of the living earth</strong>.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-stone-800 text-[11px] font-mono text-amber-400">
+              Resolved in Act IV (Tracks 12, 13 &amp; 14)
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- III. THE 5-PILLAR THEMATIC MATRIX (FACETS A–E)                    -->
+    <!-- ================================================================= -->
+    <section id="thematic-matrix" class="py-16 sm:py-20 border-b border-stone-800/80 bg-[#0c0f14] scroll-mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div class="space-y-2 max-w-3xl">
+            <span class="font-mono text-xs uppercase tracking-widest text-amber-400 font-bold">
+              Section II // Five Sociological &amp; Psychological Pillars
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-display font-bold text-white">
+              Interactive Thematic Analysis (Facets A&ndash;E)
+            </h2>
+            <p class="font-serif text-stone-300 text-sm sm:text-base">
+              Select any thematic facet below to inspect its historical causes, manifestations across eras, dramatic outcomes, and philosophical implications.
+            </p>
+          </div>
+        </div>
+
+        <!-- Interactive Facet Selector Tabs -->
+        <div class="flex flex-wrap gap-2" role="tablist" aria-label="Thematic Facets A through E">
+          <button type="button" onclick="selectFacet('A')" id="tab-facet-A" role="tab" aria-selected="true" class="facet-tab px-4 py-2.5 rounded-xl bg-stone-900 border border-stone-700 font-mono text-xs text-stone-200 transition-all">
+            Facet A: Eternal Return &amp; Moral Injury
+          </button>
+          <button type="button" onclick="selectFacet('B')" id="tab-facet-B" role="tab" aria-selected="false" class="facet-tab px-4 py-2.5 rounded-xl bg-stone-900 border border-stone-700 font-mono text-xs text-stone-200 transition-all">
+            Facet B: Platoon Tribe vs. Suburb
+          </button>
+          <button type="button" onclick="selectFacet('C')" id="tab-facet-C" role="tab" aria-selected="false" class="facet-tab px-4 py-2.5 rounded-xl bg-stone-900 border border-stone-700 font-mono text-xs text-stone-200 transition-all">
+            Facet C: Performative Gratitude
+          </button>
+          <button type="button" onclick="selectFacet('D')" id="tab-facet-D" role="tab" aria-selected="false" class="facet-tab px-4 py-2.5 rounded-xl bg-stone-900 border border-stone-700 font-mono text-xs text-stone-200 transition-all">
+            Facet D: Stoic Silence &amp; Ghost
+          </button>
+          <button type="button" onclick="selectFacet('E')" id="tab-facet-E" role="tab" aria-selected="false" class="facet-tab px-4 py-2.5 rounded-xl bg-stone-900 border border-stone-700 font-mono text-xs text-stone-200 transition-all">
+            Facet E: Swords into Plowshares
+          </button>
+        </div>
+
+        <!-- Active Facet Deep-Dive Panel -->
+        <div id="facet-detail-panel" class="spartan-card rounded-2xl p-6 sm:p-8 border border-amber-500/30 shadow-xl">
+          <!-- Populated dynamically via JS -->
+        </div>
+
+        <!-- Complete Summary Matrix Table (Table 1 from Design Doc) -->
+        <div class="overflow-x-auto rounded-2xl border border-stone-800 bg-stone-950/80 shadow-xl">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-stone-800 bg-stone-900/90 font-mono text-[11px] uppercase tracking-wider text-amber-400">
+                <th class="py-3.5 px-4">Thematic Element</th>
+                <th class="py-3.5 px-4">Core Causes</th>
+                <th class="py-3.5 px-4">Key Historical Manifestations</th>
+                <th class="py-3.5 px-4">Dramatic Outcomes &amp; Implications</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-stone-800/70 font-serif text-xs sm:text-sm text-stone-300">
+              <tr class="hover:bg-stone-900/40 cursor-pointer transition-colors" onclick="selectFacet('A')">
+                <td class="py-4 px-4 font-sans font-bold text-white">A. The Eternal Return &amp; Historical Moral Injury</td>
+                <td class="py-4 px-4">Betrayal of the warrior&rsquo;s moral code by imperial/state self-interest; forced violation of conscience under orders.</td>
+                <td class="py-4 px-4">Roman legionnaires returning to decadent spectacle; Highlanders returning to cleared glens; WWI <em>poilus</em> watching profiteers celebrate.</td>
+                <td class="py-4 px-4">Spiritual dislocation; permanent alienation from civilian values; recognition that empires exploit working-class loyalty.</td>
+              </tr>
+              <tr class="hover:bg-stone-900/40 cursor-pointer transition-colors" onclick="selectFacet('B')">
+                <td class="py-4 px-4 font-sans font-bold text-white">B. The Loss of the Platoon Tribe vs. Civilian Isolation</td>
+                <td class="py-4 px-4">Abrupt transition from evolutionary small-unit interdependence in combat to hyper-individualistic consumer society.</td>
+                <td class="py-4 px-4">Aching nostalgia for the brotherhood of the shield wall or fireteam; sensory paralysis in banal suburban shopping malls.</td>
+                <td class="py-4 px-4">Existential loneliness; inability to relate to trivial civilian concerns; withdrawal, numbing, and social exile.</td>
+              </tr>
+              <tr class="hover:bg-stone-900/40 cursor-pointer transition-colors" onclick="selectFacet('C')">
+                <td class="py-4 px-4 font-sans font-bold text-white">C. Performative Gratitude &amp; Bureaucratic Betrayal</td>
+                <td class="py-4 px-4">State desire to celebrate war cheaply in public while minimizing financial and moral accountability in private.</td>
+                <td class="py-4 px-4">Broken Roman <em>praemia militiae</em> land promises; 1932 Bonus March; modern &ldquo;Thank you for your service&rdquo; platitudes paired with VA delays.</td>
+                <td class="py-4 px-4">Silencing of authentic veteran testimony; institutional betrayal; deepening cynicism and despair.</td>
+              </tr>
+              <tr class="hover:bg-stone-900/40 cursor-pointer transition-colors" onclick="selectFacet('D')">
+                <td class="py-4 px-4 font-sans font-bold text-white">D. The Stoic Silence &amp; The Intergenerational Ghost</td>
+                <td class="py-4 px-4">Cultural demand that returning soldiers suppress trauma to preserve peacetime comfort and industrial productivity.</td>
+                <td class="py-4 px-4">Post-WWII Scottish/British and Cold War silence; clenched jaws, night terrors, and unspoken rules against asking about the war.</td>
+                <td class="py-4 px-4">Secondary trauma passed to wives and children; emotional distance at home; multi-generational haunting.</td>
+              </tr>
+              <tr class="hover:bg-stone-900/40 cursor-pointer transition-colors" onclick="selectFacet('E')">
+                <td class="py-4 px-4 font-sans font-bold text-amber-300">E. Swords into Plowshares (Agrarian &amp; Craft Reintegration)</td>
+                <td class="py-4 px-4">Innate human need to redirect martial discipline and mission focus into tangible, life-giving creation and community stewardship.</td>
+                <td class="py-4 px-4">Returning to the soil, planting orchards, woodworking, and sharing honest storytelling outside state systems.</td>
+                <td class="py-4 px-4">Restoration of moral agency; healing of the nervous system; transformation of the warrior into the community steward.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- IV. INTERACTIVE 4-ACT, 14-TRACK SONG ROADMAP                      -->
+    <!-- ================================================================= -->
+    <section id="song-roadmap" class="py-16 sm:py-20 border-b border-stone-800/80 scroll-mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+          <div class="space-y-2 max-w-3xl">
+            <span class="font-mono text-xs uppercase tracking-widest text-amber-400 font-bold">
+              Section III // Complete 4-Act Narrative Architecture
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-display font-bold text-white">
+              The 14-Track Song Roadmap
+            </h2>
+            <p class="font-serif text-stone-300 text-sm sm:text-base">
+              Every song is vocal-driven narrative storytelling (no pure instrumentals) featuring the exact same protagonist across two thousand years. Filter by Act or click any track to inspect its historical setting, instrumentation, vocal profile, and narrative progression.
+            </p>
+          </div>
+
+          <!-- Search Box -->
+          <div class="relative w-full lg:w-72">
+            <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-500 text-xs"></i>
+            <input type="text" id="roadmap-search" oninput="renderRoadmap()" placeholder="Search era, title, instrument..." aria-label="Search planned tracks" class="w-full pl-9 pr-4 py-2 rounded-xl bg-stone-900 border border-stone-700 text-xs font-mono text-stone-200 placeholder-stone-500 focus:outline-none focus:border-amber-500">
+          </div>
+        </div>
+
+        <!-- 4-Act Overview Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <button type="button" onclick="filterByAct('1')" data-act-btn="1" aria-pressed="false" class="act-pill text-left p-4 rounded-2xl spartan-card transition-all">
+            <div class="font-mono text-[10px] uppercase tracking-widest text-amber-400 font-bold">Act I &bull; Tracks 01&ndash;04</div>
+            <div class="font-display font-bold text-base text-white mt-1">The Ancient &amp; Imperial Road</div>
+            <p class="font-serif text-xs text-stone-400 mt-1.5 leading-relaxed">
+              The Birth of the Ghost: Spoken word prologue, Roman Britannia (122 AD), post-Culloden/Napoleonic Scottish Highlands, and the Appomattox Pike (1865).
+            </p>
+          </button>
+          <button type="button" onclick="filterByAct('2')" data-act-btn="2" aria-pressed="false" class="act-pill text-left p-4 rounded-2xl spartan-card transition-all">
+            <div class="font-mono text-[10px] uppercase tracking-widest text-amber-400 font-bold">Act II &bull; Tracks 05&ndash;07</div>
+            <div class="font-display font-bold text-base text-white mt-1">The Industrial Meat Grinder</div>
+            <p class="font-serif text-xs text-stone-400 mt-1.5 leading-relaxed">
+              20th-Century Rupture: Post-Verdun Paris café (1919), post-WWII Clydeside Black Watch stoic silence (1946), and forgotten troops from Malaya &amp; Korea (1954).
+            </p>
+          </button>
+          <button type="button" onclick="filterByAct('3')" data-act-btn="3" aria-pressed="false" class="act-pill text-left p-4 rounded-2xl spartan-card transition-all">
+            <div class="font-mono text-[10px] uppercase tracking-widest text-amber-400 font-bold">Act III &bull; Tracks 08&ndash;11</div>
+            <div class="font-display font-bold text-base text-white mt-1">The Fluorescent Mirage</div>
+            <p class="font-serif text-xs text-stone-400 mt-1.5 leading-relaxed">
+              Suburb &amp; Algorithm: Post-Fallujah supermarket aisle (2008), bumper-sticker absolution, Odysseus&rsquo;s midnight truck, and autonomous war on Lithium Ridge.
+            </p>
+          </button>
+          <button type="button" onclick="filterByAct('4')" data-act-btn="4" aria-pressed="false" class="act-pill text-left p-4 rounded-2xl spartan-card transition-all">
+            <div class="font-mono text-[10px] uppercase tracking-widest text-emerald-400 font-bold">Act IV &bull; Tracks 12&ndash;14</div>
+            <div class="font-display font-bold text-base text-white mt-1">Laying Down the Sword</div>
+            <p class="font-serif text-xs text-stone-400 mt-1.5 leading-relaxed">
+              The Universal Healing: Breaking two millennia of silence at the family table, planting cedar posts in heavy clay, and gathering all ghosts at the river&rsquo;s bend.
+            </p>
+          </button>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <div class="flex flex-wrap items-center gap-2 font-mono text-xs">
+            <button type="button" onclick="filterByAct('all')" data-act-btn="all" aria-pressed="true" class="act-pill px-3.5 py-1.5 rounded-lg bg-stone-900 border border-stone-700 text-stone-200 transition-all">
+              All 14 Planned Tracks
+            </button>
+            <button type="button" onclick="filterByAct('1')" data-act-btn="1" aria-pressed="false" class="act-pill px-3 py-1.5 rounded-lg bg-stone-900 border border-stone-700 text-stone-300 transition-all">
+              Act I (4)
+            </button>
+            <button type="button" onclick="filterByAct('2')" data-act-btn="2" aria-pressed="false" class="act-pill px-3 py-1.5 rounded-lg bg-stone-900 border border-stone-700 text-stone-300 transition-all">
+              Act II (3)
+            </button>
+            <button type="button" onclick="filterByAct('3')" data-act-btn="3" aria-pressed="false" class="act-pill px-3 py-1.5 rounded-lg bg-stone-900 border border-stone-700 text-stone-300 transition-all">
+              Act III (4)
+            </button>
+            <button type="button" onclick="filterByAct('4')" data-act-btn="4" aria-pressed="false" class="act-pill px-3 py-1.5 rounded-lg bg-stone-900 border border-stone-700 text-stone-300 transition-all">
+              Act IV (3)
+            </button>
+          </div>
+          <div class="font-mono text-xs text-stone-400" id="track-filter-count">
+            Showing all 14 tracks in blueprint
+          </div>
+        </div>
+
+        <!-- Master-Detail Interactive Track Blueprint Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          <!-- Left Column: Track List -->
+          <div class="lg:col-span-5 spartan-card rounded-2xl overflow-hidden border border-stone-800">
+            <div class="px-4 py-3 bg-stone-900/90 border-b border-stone-800 flex items-center justify-between font-mono text-[11px] uppercase tracking-wider text-stone-400">
+              <span># &bull; Working Title &amp; Era</span>
+              <span>Facets</span>
+            </div>
+            <div id="tracklist-container" class="divide-y divide-stone-800/70 max-h-[640px] overflow-y-auto" role="listbox" aria-label="Planned album tracks">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- Right Column: Active Track Blueprint Inspector -->
+          <div class="lg:col-span-7 spartan-card rounded-2xl p-6 sm:p-8 border border-amber-500/30 shadow-2xl space-y-6 sticky top-20" id="track-inspector">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- V. SONIC ARCHITECTURE & SONGWRITING GUIDELINES ("SPARTAN FOLK")   -->
+    <!-- ================================================================= -->
+    <section id="spartan-folk" class="py-16 sm:py-20 border-b border-stone-800/80 bg-[#0c0f14] scroll-mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div class="max-w-3xl space-y-2">
+          <span class="font-mono text-xs uppercase tracking-widest text-amber-400 font-bold">
+            Section IV // Musical Genre, Sonic Palette &amp; Vocal Design
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-display font-bold text-white">
+            &ldquo;Spartan Folk&rdquo; &amp; Somber Americana Blueprint
+          </h2>
+          <p class="font-serif text-stone-300 text-sm sm:text-base leading-relaxed">
+            Extremely disciplined, minimalist arrangements that feel &ldquo;buttoned-up&rdquo; on the surface while barely holding back an undercurrent of emotional chaos—gradually giving way in Act IV to the warm resonance of living wood and open vocal harmonies.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Sonic Spine -->
+          <div class="spartan-card rounded-2xl p-6 sm:p-7 space-y-4">
+            <div class="flex items-center gap-2.5 text-amber-400 font-mono text-xs font-bold uppercase tracking-wider">
+              <i class="fa-solid fa-drum"></i>
+              <span>Core Instrumentation &amp; Signature Sounds</span>
+            </div>
+            <ul class="space-y-3 font-serif text-xs sm:text-sm text-stone-300 leading-relaxed">
+              <li>
+                <strong class="text-white">The Spartan Folk Spine:</strong> Military snare drums played softly with wire brushes (a persistent, ghosted cadence echoing marching boots and a racing pulse) paired with close-mic&rsquo;d fingerpicked acoustic guitars.
+              </li>
+              <li>
+                <strong class="text-white">Weeping Harmonica Bugle:</strong> In place of brass bugles, melodies of mourning and recall (such as the fractured French <em>Aux Morts</em> in Track 05) are played on a distorted, weeping diatonic harmonica.
+              </li>
+              <li>
+                <strong class="text-white">Signature Cello / Guitar Duels:</strong> Sparse, dignified interplay between a single fingerpicked acoustic guitar and a solemn, sustained cello acting as the voice of the soldier&rsquo;s unspoken grief.
+              </li>
+              <li>
+                <strong class="text-white">Era-Specific Accents:</strong> Detuned modal banjo (1865 Appomattox Pike), subtle Highland bagpipe/fiddle drone overtones (Scottish Clearances &amp; Clydeside), gritty electric swells (2008 suburban supermarket), and cold industrial pulses (Lithium Ridge).
+              </li>
+            </ul>
+          </div>
+
+          <!-- 5 Vocal Profiles -->
+          <div class="spartan-card rounded-2xl p-6 sm:p-7 space-y-4">
+            <div class="flex items-center gap-2.5 text-amber-400 font-mono text-xs font-bold uppercase tracking-wider">
+              <i class="fa-solid fa-microphone-lines"></i>
+              <span>Five Vocal Profiles Across Two Millennia</span>
+            </div>
+            <div class="space-y-3 font-mono text-xs">
+              <div class="p-3 rounded-xl bg-stone-950/80 border border-stone-800">
+                <div class="text-amber-300 font-bold">1. The Weathered Historian Lead</div>
+                <div class="text-stone-400 text-[11px] mt-0.5">Serious, weathered, heartfelt male baritone singing with the sad wisdom of a historian watching a tragedy repeat itself (Tracks 01, 02, 06, 12, 14).</div>
+              </div>
+              <div class="p-3 rounded-xl bg-stone-950/80 border border-stone-800">
+                <div class="text-amber-300 font-bold">2. The Rich Southern Baritone</div>
+                <div class="text-stone-400 text-[11px] mt-0.5">Deep, resonant Southern male baritone—calm, rich, and commanding for rural American &amp; homestead chapters (Tracks 04, 09, 13).</div>
+              </div>
+              <div class="p-3 rounded-xl bg-stone-950/80 border border-stone-800">
+                <div class="text-amber-300 font-bold">3. The Soaring High-Tenor</div>
+                <div class="text-stone-400 text-[11px] mt-0.5">Clean, soaring high-tenor lead with immense range for moments of breaking-point anguish (Tracks 05, 10, 11).</div>
+              </div>
+              <div class="p-3 rounded-xl bg-stone-950/80 border border-stone-800">
+                <div class="text-amber-300 font-bold">4. The Alt-Rock Delivery</div>
+                <div class="text-stone-400 text-[11px] mt-0.5">Smooth, rhythmic alt-rock male lead, earnest and crisp, for post-Malaya dockside apathy and modern suburban paralysis (Tracks 07, 08).</div>
+              </div>
+              <div class="p-3 rounded-xl bg-stone-950/80 border border-stone-800">
+                <div class="text-amber-300 font-bold">5. Powerhouse / Ethereal Female Duets</div>
+                <div class="text-stone-400 text-[11px] mt-0.5">Giving voice to the wives, mothers, and ghosts waiting on the other side of the threshold (Tracks 03, 06, 11, 12).</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#050608] border-t border-stone-800/80 py-12 px-4 sm:px-6 lg:px-8 text-stone-400 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      <div class="space-y-1">
+        <div class="font-display font-bold text-sm text-stone-200">The Shady River Bard &bull; Studio Incubator</div>
+        <p class="font-serif text-[11px] text-stone-500 max-w-md">
+          Where the hands trained to break the world learn to mend the soil.
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-6 font-mono text-[11px]">
+        <a href="../vault/index.html#unreleased" class="hover:text-amber-400 transition-colors">&larr; Studio Incubator Vault</a>
+        <a href="../philosophy/index.html" class="hover:text-amber-400 transition-colors">Philosophy Treatise</a>
+        <a href="../homestead/index.html" class="hover:text-emerald-400 transition-colors">The Homestead</a>
+        <a href="../index.html" class="hover:text-amber-400 transition-colors">Main Portal</a>
+      </div>
+      <div class="text-[11px] font-mono text-stone-500">
+        &copy; 2026 The Shady River Bard. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL FOR 4K COVER ART -->
+  <div id="art-lightbox" class="hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4" onclick="closeArtLightbox()">
+    <div class="relative max-w-3xl w-full" onclick="event.stopPropagation()">
+      <button type="button" onclick="closeArtLightbox()" class="absolute -top-10 right-0 text-stone-300 hover:text-amber-400 font-mono text-xs flex items-center gap-1.5">
+        <span>Close [ESC]</span>
+        <i class="fa-solid fa-xmark text-base"></i>
+      </button>
+      <img src="assets/images/album-art.webp" alt="The Long Way Home full resolution cover artwork" class="w-full rounded-2xl border border-amber-500/40 shadow-2xl">
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../assets/js/a11y.js"></script>
+  <script src="../assets/js/bard-notes.js?v=20260920b"></script>
+  <script>
+    const FACETS_DATA = {
+      A: {
+        code: "Facet A",
+        title: "The Eternal Return & Historical Moral Injury",
+        tracks: "Tracks 01, 02, 03, 04, 05, 10, 11, 14",
+        causes: "Moral injury begins in the chasm between the sacred code of the warrior and the cynical, transactional reality of the state that deploys him. Across history, states recruit young citizens by appealing to noble ideals—protecting the hearth, defending civilization, honoring the clan—and bind them together through rigorous training that overrides the natural human aversion to killing. Once the geopolitical objective is met or abandoned, the returning soldier confronts what he was ordered to do versus what the society at home actually values: Roman legionnaires returning in 122 AD from 25 winters on Hadrian's Wall to an imperial capital obsessed with gladiatorial spectacle; Scottish Highlanders in 1746 and 1815 returning to find their ancestral glens burned for profitable Cheviot sheep; French poilus in 1919 walking from Verdun into Parisian boulevards where war profiteers toasted with champagne.",
+        outcomes: "When the soldier realizes that the sacrifices of his fallen comrades were spent as cheap currency for land speculators, emperors, or corporate balance sheets, his internal moral compass shatters. Unlike fear-based trauma, which fades when safety is restored, moral injury deepens in peacetime because the civilian world's superficiality acts as a daily insult to the dead.",
+        implication: "Moral injury is not a psychological malfunction within the soldier, but a rational soul's reaction to an immoral dissonance orchestrated by the powerful. The tragedy repeats across centuries because the ruling class intentionally separates the civilian population from the cost of war, ensuring citizen and soldier remain divided rather than uniting to hold the architects of conflict accountable."
+      },
+      B: {
+        code: "Facet B",
+        title: "The Loss of the Platoon Tribe vs. Civilian Isolation",
+        tracks: "Tracks 03, 05, 07, 08, 10, 11, 14",
+        causes: "In combat, survival strips away every superficial social marker—wealth, status, politics, and ego—leaving only radical interdependence. Whether locked in a Roman testudo shield wall, huddled in a flooded trench on the Somme, or clearing rooms in a four-man fireteam in Ramadi, the soldier experiences a primal form of human belonging: the certainty that the people to his left and right would die for him without hesitation. Reintegration forces an overnight amputation of this tribe into a peacetime society structured around hyper-individualism and consumer convenience—standing alone under buzzing fluorescent lights in a suburban big-box store surrounded by fifty varieties of cereal and neighbors who retreat behind automatic garage doors.",
+        outcomes: "Paradoxically, many veterans report 'missing the war'—not because they enjoyed violence or misery, but because they ache for the clarity, brotherhood, and shared humanity inside the platoon. Cut off from the tribe, small talk and consumer obsessions feel like a hallucination, leading to self-imposed exile or reckless adrenaline-seeking.",
+        implication: "The crisis of veteran reintegration is an indictment of how alienated peacetime society has become. The soldier does not struggle to reintegrate merely because war broke him; he struggles because consumer culture has broken the human village. Having tasted true brotherhood in the fire, he is the canary in the coal mine who can no longer pretend that a shopping mall is a community."
+      },
+      C: {
+        code: "Facet C",
+        title: "Performative Gratitude & Bureaucratic Betrayal",
+        tracks: "Tracks 02, 07, 09, 11, 14",
+        causes: "Throughout history, governments have mastered the art of praising the warrior in rhetoric while starving him in administration. In Rome, promised praemia militiae land grants were routinely delayed or fulfilled by dumping aging legionnaires onto barren swamps. In 1932, the WWI 'Bonus Army' was driven out of Washington D.C. with bayonets and tear gas. In the modern era, this betrayal operates as a dual system: cheap performative civic gratitude ('Thank you for your service' recited like a retail slogan, yellow ribbon magnets, stadium flyovers) paired with a labyrinthine bureaucracy of denied claims, automated phone trees, six-month waiting lists, and heavy pharmaceutical sedation.",
+        outcomes: "Performative gratitude functions as a social shield that absolves the civilian public from actually listening to the veteran's story. When 'Thank you for your service' becomes an automatic pleasantry that ends the conversation, it seals the veteran behind a pedestal of polite distance while institutional suspicion deepens despair.",
+        implication: "Performative patriotism is a mechanism of social control that keeps the public comfortably sedated while insulating the war machine from scrutiny. If a society truly listened to what its returning soldiers experienced, it would be far harder to manufacture consent for the next war."
+      },
+      D: {
+        code: "Facet D",
+        title: "The Stoic Silence & The Intergenerational Ghost",
+        tracks: "Tracks 04, 06, 12, 14",
+        causes: "Following World War II, the Korean 'Forgotten War,' and Britain's post-colonial conflicts like the Malayan Emergency, returning soldiers were met with an unspoken cultural command: put your uniform in the wardrobe, get back to the factory or shipyard, and never speak of what you saw. In working-class Scottish, British, and American households, survival depended on a rigid, 'buttoned-up' emotional suppression—locking nightmares behind clenched jaws, heavy tobacco smoke, and a bottle of whisky at the end of the shift.",
+        outcomes: "Trauma that is forbidden to speak does not evaporate; it calcifies and migrates into the next generation. Children grow up walking on eggshells around a father whose eyes go distant at a slamming door; wives become silent caretakers of a ghost they are never allowed to name.",
+        implication: "Emotional suppression turns the family home into an unspoken extension of the front line. When society demands that its protectors remain silent stones so peacetime comfort is not disturbed, it passes the unpaid debt of war onto spouses and children for generations."
+      },
+      E: {
+        code: "Facet E",
+        title: "Swords into Plowshares (Agrarian & Craft Reintegration)",
+        tracks: "Tracks 12, 13, 14",
+        causes: "From Cincinnatus returning to his plow to Odysseus walking inland until his oar is mistaken for a winnowing fan, humanity has intuited that the antidote to destructive conditioning is tangible, life-affirming creation. The soldier's nervous system—trained for physical mission focus, discipline, and environmental awareness—chafes inside sterile offices and fluorescent retail spaces. Yet when placed on the land—building a cedar fence line, pruning fruit trees, tending heavy clay soil, or shaping raw timber—those exact same disciplines are repurposed toward patience, growth, and shelter.",
+        outcomes: "Trading the rifle for the spade and chisel restores agency and moral coherence. A tree planted in heavy soil does not lie, does not issue corrupt orders, and responds directly to honest care. Working alongside family and neighbors around a table dissolves both Moral Injury and tribal isolation.",
+        implication: "The true homecoming of the Eternal Soldier requires abandoning the empire's definition of peace—passive consumption between wars—and reclaiming an active, rooted peace built on stewardship and mutual aid. When hands trained to break the world learn to mend the soil, the two-thousand-year cycle is finally broken."
+      }
+    };
+
+    const TRACKS_DATA = [
+      {
+        num: 1,
+        act: "1",
+        actName: "Act I: The Ancient & Imperial Road",
+        title: "The Same Mud on Different Boots",
+        era: "Mythic Frame / Two Millennia Overview",
+        facets: ["Facet A"],
+        sonic: "Spoken Word Prologue + Sparse Fingerpicked Acoustic Guitar & Lone Cello Drone over shifting footsteps (Roman flagstones to trench mud to suburban concrete).",
+        vocal: "Weathered Historian Baritone",
+        angle: "Over the sound of footsteps shifting across centuries, a weathered historian voice introduces the Eternal Soldier: one face across two thousand years, forever walking home after the flags are folded.",
+        progression: "Sets the mythic rules of the album immediately. Signals to the listener that a cohesive, single-protagonist multi-era story (in the lineage of Outer Citadel) is beginning, anchoring the visual and thematic conceit."
+      },
+      {
+        num: 2,
+        act: "1",
+        actName: "Act I: The Ancient & Imperial Road",
+        title: "Twenty-Five Winters on the Pictish Wall",
+        era: "Roman Britannia to Rome (c. 122 AD)",
+        facets: ["Facet A", "Facet C"],
+        sonic: "Spartan Folk arrangement: wire-brushed military snare cadence, close-mic'd fingerpicked acoustic guitar, and solemn sustained cello.",
+        vocal: "Weathered Historian / Rich Baritone",
+        angle: "A Roman legionnaire receives his honesta missio wooden diploma on Hadrian's Wall after twenty-five winters of frontier service and walks south, only to be given a rocky patch of swamp while senators feast on spectacle.",
+        progression: "Opens Act I by grounding the veteran's struggle in antiquity. Shows that bureaucratic broken promises (praemia militiae) and the chasm between frontier sacrifice and capital decadence began with Rome."
+      },
+      {
+        num: 3,
+        act: "1",
+        actName: "Act I: The Ancient & Imperial Road",
+        title: "Where the Clansmen Used to Stand",
+        era: "Scottish Highlands (1746 / 1815 Post-Napoleonic Clearances)",
+        facets: ["Facet A", "Facet B"],
+        sonic: "Intimate Celtic-tinged Somber Americana with fingerpicked acoustic guitar, mournful cello, subtle Highland drone overtones, and a distant weeping harmonica echoing a pipe lament.",
+        vocal: "Deep Resonant Male Baritone + Ethereal Female Harmony",
+        angle: "A Highland soldier returns from bleeding in foreign wars for crown and empire only to find the Highland Clearances underway—his glen emptied and his ancestral croft burned to make grazing room for profitable landlord sheep.",
+        progression: "Builds on the Roman betrayal by bringing the story to Scotland. Shifts the betrayal from a distant imperial capital to the destruction of the soldier's own ancestral village and clan tribe."
+      },
+      {
+        num: 4,
+        act: "1",
+        actName: "Act I: The Ancient & Imperial Road",
+        title: "Barefoot Down the Appomattox Pike",
+        era: "American Civil War (1865)",
+        facets: ["Facet A", "Facet D"],
+        sonic: "Gritty Country Blues / Spartan Folk featuring a detuned modal banjo, wire-brushed snare, and close-mic'd acoustic guitar.",
+        vocal: "Rich Southern Baritone",
+        angle: "A farm boy walks three hundred miles home in torn trousers down the ash-strewn Appomattox Pike after fighting men who spoke his own tongue, carrying the moral injury of fraternal slaughter.",
+        progression: "Closes Act I by bringing the Eternal Soldier to American soil. Introduces the theme of orchestrated internal division—where working-class farm boys were sent to kill their own brothers while the powerful watched from afar."
+      },
+      {
+        num: 5,
+        act: "2",
+        actName: "Act II: The Industrial Meat Grinder & The Stoic Stone",
+        title: "Champagne Glass on the Rue de la Paix",
+        era: "Paris, France — Post-WWI (1919)",
+        facets: ["Facet A", "Facet B"],
+        sonic: "Sparse acoustic ballad with a haunting cello/guitar duel and a distorted harmonica playing a fractured French bugle call (Aux Morts).",
+        vocal: "Clean, Urgent High-Tenor",
+        angle: "A French poilu fresh from the industrialized mud of Verdun sits paralyzed at a Parisian sidewalk café as war profiteers and civilians dance and clink glasses, hearing artillery in every champagne cork pop.",
+        progression: "Launches Act II by plunging the Eternal Soldier into 20th-century industrial war. Captures the surreal psychological violence of stepping straight from mass mechanized death into roaring consumer celebration."
+      },
+      {
+        num: 6,
+        act: "2",
+        actName: "Act II: The Industrial Meat Grinder & The Stoic Stone",
+        title: "The Shipyard Coat on the Kitchen Door",
+        era: "Clydeside, Scotland — Post-WWII (1946)",
+        facets: ["Facet D"],
+        sonic: "Intimate Folk, stripped-down close-mic'd acoustic guitar and cello duet.",
+        vocal: "Weathered Male Baritone + Powerhouse/Ethereal Female Duet",
+        angle: "Narrated as a duet between a returning Black Watch soldier and his wife. He hangs his wool greatcoat behind the kitchen door, takes up his riveting hammer at the Clydebank shipyard, and locks the war behind a wall of tobacco, whisky, and silence that his children learn never to cross.",
+        progression: "Deepens Act II by moving inside the domestic home. Examines how the post-WWII cultural command to 'stay buttoned-up and never speak of it' turned the soldier's silence into an intergenerational ghost haunting his family."
+      },
+      {
+        num: 7,
+        act: "2",
+        actName: "Act II: The Industrial Meat Grinder & The Stoic Stone",
+        title: "No Parade for the Jungle Rain",
+        era: "Southampton, Britain — Post-Malayan Emergency & Korea (1954)",
+        facets: ["Facet B", "Facet C"],
+        sonic: "Gritty acoustic rock with a persistent, nervous brushed snare cadence and low electric tremor.",
+        vocal: "Smooth, Rhythmic Alt-Rock / British-Inflected Male Lead",
+        angle: "A British national serviceman returns on a troopship to a fog-bound Southampton dock from the 'Forgotten War' in Korea and the Malayan jungle, walking into a neighborhood pub where nobody even knew a war was happening.",
+        progression: "Completes Act II by introducing a new modern cruelty: war fought completely out of public view. Transitions from the total mobilization of WWII to the Cold War era of invisible conflicts and civilian amnesia."
+      },
+      {
+        num: 8,
+        act: "3",
+        actName: "Act III: The Fluorescent Mirage & The Algorithmic Front",
+        title: "Fluorescent Aisle, Sector Four",
+        era: "United States — Post-Iraq / Afghanistan (2008)",
+        facets: ["Facet B"],
+        sonic: "Spartan Folk meets tense Alt-Rock: driven by a tight snare-brush heartbeat and clean/gritty electric-acoustic guitar interplay.",
+        vocal: "Smooth, Rhythmic Alt-Rock Delivery Building to Soaring Intensity",
+        angle: "The soldier stands frozen in a massive suburban supermarket at 2 PM under buzzing fluorescent lights, scanning the rooflines of fifty cereal varieties for IED wires, aching for the four men in his Humvee because nobody here knows what it means to cover a brother's back.",
+        progression: "Opens Act III with the centerpiece image of Junger's Tribe: the devastating contrast between the life-and-death brotherhood of the combat fireteam and the soul-crushing banality of a consumerist shopping mall."
+      },
+      {
+        num: 9,
+        act: "3",
+        actName: "Act III: The Fluorescent Mirage & The Algorithmic Front",
+        title: "Bumper Sticker Absolution",
+        era: "United States — Modern Era",
+        facets: ["Facet C"],
+        sonic: "Biting, mid-tempo Americana / Country Rock with a weeping distorted harmonica and driving acoustic rhythm.",
+        vocal: "Rich Southern Baritone with Soulful Backing Singers",
+        angle: "A stranger in a retail parking lot recites 'Thank you for your service' while rushing past with shopping bags, while the veteran sits with a crumpled folder of denied VA claims, automated phone trees, and a bottle of government-issued pills.",
+        progression: "Directly confronts the hypocrisy of modern civic rituals. Exposes how polite slogans and yellow ribbon magnets buy cheap moral absolution for polite society while the bureaucracy betrays the soldier in the dark."
+      },
+      {
+        num: 10,
+        act: "3",
+        actName: "Act III: The Fluorescent Mirage & The Algorithmic Front",
+        title: "The Sirens in the Rearview Mirror",
+        era: "Psychological Interior — The Odyssey Parallel",
+        facets: ["Facet A", "Facet B"],
+        sonic: "Somber Americana Cello/Guitar duel—minimalist, dignified, and heavy with moral gravity.",
+        vocal: "Soaring High-Tenor, Raw and Vulnerable",
+        angle: "Drawing directly on Jonathan Shay's Odyssey clinical map, the soldier sits in his parked truck at midnight, fighting the seductive pull to either numb himself into oblivion (the Lotus-Eaters) or reenlist and return to the fire (the Sirens) simply because war is the only place he still makes sense.",
+        progression: "Marks the emotional nadir of Act III. Alienated by the shopping mall and betrayed by the bureaucracy, the Eternal Soldier faces the ultimate midnight battle over whether to survive peacetime."
+      },
+      {
+        num: 11,
+        act: "3",
+        actName: "Act III: The Fluorescent Mirage & The Algorithmic Front",
+        title: "Last Flesh on the Lithium Ridge",
+        era: "Near-Future Automated Conflict",
+        facets: ["Facet A", "Facet B", "Facet C"],
+        sonic: "Experimental Dark Americana / Industrial Folk—combining fingerpicked acoustic guitar and distorted harmonica bugle with cold, rhythmic mechanical synth pulses.",
+        vocal: "Soaring High-Tenor + Haunting Ethereal Female Counterpoint",
+        angle: "The Eternal Soldier fights his final war alongside autonomous drone swarms controlled by distant algorithms on Lithium Ridge, returning to a hyper-digital city where citizens never even look up from their glowing screens.",
+        progression: "Pushes the timeline one step into the near future to bring the imperial trajectory to its logical conclusion: war completely detached from human conscience, and a society so atomized by screens that the soldier is a ghost among machines."
+      },
+      {
+        num: 12,
+        act: "4",
+        actName: "Act IV: Laying Down the Sword (The Universal Healing)",
+        title: "Unbuttoning the Wool",
+        era: "The Turning Point — Breaking the Generational Silence",
+        facets: ["Facet D", "Facet E"],
+        sonic: "Intimate Folk: stripped-down single close-mic'd fingerpicked acoustic guitar and occasional long, warm cello notes.",
+        vocal: "Weathered Baritone & Female Vocalist Duet",
+        angle: "The soldier sits at an oak kitchen table with his wife and grown child, finally unbuttoning two thousand years of stoic silence and telling the truth about the mud, the fear, and the ghosts he brought home.",
+        progression: "Opens Act IV by breaking the curse established in Track 06. Before the soldier can heal the outer world, he must end the war inside his own house by choosing honest vulnerability over buttoned-up isolation."
+      },
+      {
+        num: 13,
+        act: "4",
+        actName: "Act IV: Laying Down the Sword (The Universal Healing)",
+        title: "Cedar Posts and Heavy Clay",
+        era: "The Homestead — Agrarian & Craft Reintegration",
+        facets: ["Facet E"],
+        sonic: "Warm, resolute Acoustic Americana with fingerpicked guitar, upright bass, resonant cello, and a clean, bright harmonica.",
+        vocal: "Rich Southern Baritone",
+        angle: "The soldier trades the rifle and the marching snare for a post-hole auger, a shovel, and apple saplings—discovering that the mission focus and discipline of the shield wall can be reborn in building a fence line and feeding a neighbor's table.",
+        progression: "Translates psychological healing into physical action on the land. Demonstrates that the true cure for Moral Injury and suburban banality is tangible stewardship of the living earth—creating life where he was once trained to break it."
+      },
+      {
+        num: 14,
+        act: "4",
+        actName: "Act IV: Laying Down the Sword (The Universal Healing)",
+        title: "The Long Way Home (At the River's Bend)",
+        era: "The Resolution & Universal Gathering",
+        facets: ["Facet A", "Facet B", "Facet C", "Facet D", "Facet E"],
+        sonic: "Full-hearted Americana / Folk anthem beginning with a quiet cello/guitar duet and building to a warm, resonant chorus with upright bass and ensemble harmonies.",
+        vocal: "Weathered Baritone Lead Expanding into Full Ensemble Choir",
+        angle: "All the historical incarnations—the Roman legionnaire, the Scottish Highlander, the Appomattox farm boy, the French poilu, the Clydeside riveter, the modern rifleman—finally lay their packs down by the river's bend, realizing the empire's war is over when working people refuse to be divided and build a common home.",
+        progression: "Brings the album to a cathartic, unifying finale. Fulfills The Shady River Bard's overarching mission: exposing orchestrated division and leaving the listener with a vision of hard-won peace, community, and grace."
+      }
+    ];
+
+    let currentActFilter = 'all';
+    let selectedTrackNum = 1;
+
+    function selectFacet(key) {
+      const f = FACETS_DATA[key];
+      if (!f) return;
+      document.querySelectorAll('.facet-tab').forEach(btn => {
+        btn.setAttribute('aria-selected', btn.id === 'tab-facet-' + key ? 'true' : 'false');
+      });
+      document.getElementById('facet-detail-panel').innerHTML = `
+        <div class="space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-stone-800 pb-3">
+            <div>
+              <span class="font-mono text-xs uppercase tracking-widest text-amber-400 font-bold">${f.code}</span>
+              <h3 class="font-display font-bold text-xl sm:text-2xl text-white mt-0.5">${f.title}</h3>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 font-mono text-xs">
+              ${f.tracks}
+            </span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-serif text-xs sm:text-sm text-stone-300 leading-relaxed">
+            <div class="space-y-1.5">
+              <div class="font-mono text-[11px] uppercase tracking-wider text-amber-400 font-bold">Core Causes &amp; History</div>
+              <p>${f.causes}</p>
+            </div>
+            <div class="space-y-1.5">
+              <div class="font-mono text-[11px] uppercase tracking-wider text-amber-400 font-bold">Dramatic Outcomes</div>
+              <p>${f.outcomes}</p>
+            </div>
+            <div class="space-y-1.5 bg-stone-950/60 p-4 rounded-xl border border-stone-800">
+              <div class="font-mono text-[11px] uppercase tracking-wider text-emerald-400 font-bold">Ground Truth Implication</div>
+              <p>${f.implication}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function filterByAct(act) {
+      currentActFilter = act;
+      document.querySelectorAll('[data-act-btn]').forEach(btn => {
+        btn.setAttribute('aria-pressed', btn.getAttribute('data-act-btn') === act ? 'true' : 'false');
+      });
+      renderRoadmap();
+    }
+
+    function renderRoadmap() {
+      const q = (document.getElementById('roadmap-search').value || '').toLowerCase().trim();
+      const filtered = TRACKS_DATA.filter(t => {
+        const matchesAct = currentActFilter === 'all' || t.act === currentActFilter;
+        const matchesQuery = !q ||
+          t.title.toLowerCase().includes(q) ||
+          t.era.toLowerCase().includes(q) ||
+          t.sonic.toLowerCase().includes(q) ||
+          t.angle.toLowerCase().includes(q) ||
+          t.vocal.toLowerCase().includes(q);
+        return matchesAct && matchesQuery;
+      });
+
+      document.getElementById('track-filter-count').textContent =
+        `Showing ${filtered.length} of 14 planned tracks`;
+
+      const container = document.getElementById('tracklist-container');
+      if (filtered.length === 0) {
+        container.innerHTML = `<div class="p-6 text-center font-mono text-xs text-stone-400">No tracks match your filter.</div>`;
+        return;
+      }
+
+      if (!filtered.some(t => t.num === selectedTrackNum)) {
+        selectedTrackNum = filtered[0].num;
+      }
+
+      container.innerHTML = filtered.map(t => {
+        const isActive = t.num === selectedTrackNum;
+        return `
+          <button type="button" onclick="inspectTrack(${t.num})" class="w-full text-left px-4 py-3.5 transition-all flex items-start justify-between gap-3 hover:bg-stone-900/60 ${isActive ? 'track-row-active' : ''}">
+            <div class="flex items-start gap-3 min-w-0">
+              <span class="font-mono text-xs font-bold ${isActive ? 'text-amber-400' : 'text-stone-500'} mt-0.5">${String(t.num).padStart(2, '0')}</span>
+              <div class="min-w-0">
+                <div class="font-display font-bold text-sm ${isActive ? 'text-amber-300' : 'text-stone-100'} truncate">${t.title}</div>
+                <div class="font-mono text-[11px] text-stone-400 truncate mt-0.5">${t.era}</div>
+              </div>
+            </div>
+            <div class="flex flex-wrap justify-end gap-1 shrink-0">
+              ${t.facets.slice(0, 2).map(f => `<span class="px-1.5 py-0.5 rounded bg-stone-900 border border-stone-700 font-mono text-[10px] text-amber-400">${f.replace('Facet ', '')}</span>`).join('')}
+            </div>
+          </button>
+        `;
+      }).join('');
+
+      renderTrackInspector();
+    }
+
+    function inspectTrack(num) {
+      selectedTrackNum = num;
+      renderRoadmap();
+    }
+
+    function renderTrackInspector() {
+      const t = TRACKS_DATA.find(x => x.num === selectedTrackNum) || TRACKS_DATA[0];
+      const prevNum = t.num > 1 ? t.num - 1 : 14;
+      const nextNum = t.num < 14 ? t.num + 1 : 1;
+
+      document.getElementById('track-inspector').innerHTML = `
+        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-stone-800 pb-4">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-1 rounded-md bg-amber-500/20 border border-amber-500/40 font-mono text-xs font-bold text-amber-300">
+              TRACK ${String(t.num).padStart(2, '0')} OF 14
+            </span>
+            <span class="font-mono text-xs text-stone-400">${t.actName}</span>
+          </div>
+          <div class="flex items-center gap-1.5 font-mono text-xs">
+            <button type="button" onclick="inspectTrack(${prevNum})" class="px-2.5 py-1 rounded bg-stone-900 hover:bg-stone-800 border border-stone-700 text-stone-300" title="Previous Track">&larr; Prev</button>
+            <button type="button" onclick="inspectTrack(${nextNum})" class="px-2.5 py-1 rounded bg-stone-900 hover:bg-stone-800 border border-stone-700 text-stone-300" title="Next Track">Next &rarr;</button>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <h3 class="font-display font-bold text-2xl sm:text-3xl text-white">${t.title}</h3>
+          <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
+            <span class="text-amber-400"><i class="fa-regular fa-clock mr-1"></i>${t.era}</span>
+            <span class="text-stone-600">|</span>
+            ${t.facets.map(f => `<span class="px-2 py-0.5 rounded bg-stone-900 border border-amber-500/30 text-amber-300">${f}</span>`).join('')}
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-4 rounded-xl bg-stone-950/80 border border-stone-800 space-y-1">
+            <div class="font-mono text-[10px] uppercase tracking-wider text-amber-400 font-bold">
+              <i class="fa-solid fa-guitar mr-1"></i> Sonic &amp; Arrangement Blueprint
+            </div>
+            <p class="font-serif text-xs sm:text-sm text-stone-200 leading-relaxed">${t.sonic}</p>
+          </div>
+          <div class="p-4 rounded-xl bg-stone-950/80 border border-stone-800 space-y-1">
+            <div class="font-mono text-[10px] uppercase tracking-wider text-amber-400 font-bold">
+              <i class="fa-solid fa-microphone-lines mr-1"></i> Target Vocal Profile
+            </div>
+            <p class="font-serif text-xs sm:text-sm text-stone-200 leading-relaxed">${t.vocal}</p>
+          </div>
+        </div>
+
+        <div class="space-y-3 font-serif text-sm text-stone-200 leading-relaxed">
+          <div class="p-4 rounded-xl bg-stone-900/60 border border-stone-800/90 space-y-1.5">
+            <div class="font-mono text-[11px] uppercase tracking-wider text-amber-300 font-bold">Core Dramatic Scene &amp; Angle</div>
+            <p>${t.angle}</p>
+          </div>
+          <div class="p-4 rounded-xl bg-stone-900/40 border border-stone-800/70 space-y-1.5">
+            <div class="font-mono text-[11px] uppercase tracking-wider text-emerald-400 font-bold">Narrative Contribution &amp; Arc Progression</div>
+            <p>${t.progression}</p>
+          </div>
+        </div>
+
+        <div class="pt-2 border-t border-stone-800 flex flex-wrap items-center justify-between gap-3">
+          <span class="font-mono text-[11px] text-stone-400">
+            Status: <strong class="text-amber-400">Architectural Design Complete &bull; Ready for Lyric &amp; Studio Production</strong>
+          </span>
+          <button type="button" onclick="window.BardNotes && window.BardNotes.open({ albumTitle: 'The Long Way Home (Incubator)', songTitle: 'Track ${t.num}: ${t.title.replace(/'/g, "\\'")}' })" class="px-3.5 py-2 rounded-lg bg-stone-900 hover:bg-stone-800 border border-amber-500/40 text-amber-300 font-mono text-xs flex items-center gap-1.5 transition-colors">
+            <i class="fa-regular fa-comment-dots"></i>
+            <span>Share Thoughts on Track ${String(t.num).padStart(2, '0')}</span>
+          </button>
+        </div>
+      `;
+    }
+
+    function syncVoteButtons() {
+      const voted = localStorage.getItem('voted_the-long-way-home') === 'true';
+      const pairs = [
+        ['vote-btn-header', 'vote-label-header', 'vote-icon-header', 'Vote to Record Next', 'Voted for Production!'],
+        ['vote-btn-hero', 'vote-label-hero', 'vote-icon-hero', 'Vote for Production', 'Vote Recorded in Vault']
+      ];
+      pairs.forEach(([btnId, lblId, iconId, defaultTxt, votedTxt]) => {
+        const lbl = document.getElementById(lblId);
+        const icon = document.getElementById(iconId);
+        if (lbl) lbl.textContent = voted ? votedTxt : defaultTxt;
+        if (icon) icon.className = voted ? 'fa-solid fa-circle-check text-emerald-300' : 'fa-solid fa-check-to-slot';
+      });
+    }
+
+    function castIncubatorVote() {
+      localStorage.setItem('voted_the-long-way-home', 'true');
+      syncVoteButtons();
+      if (window.BardNotes && typeof window.BardNotes.open === 'function') {
+        window.BardNotes.open({
+          albumTitle: 'The Long Way Home (Incubator Vote)',
+          songTitle: 'Vote to Produce XX - The Long Road Home'
+        });
+      }
+    }
+
+    function openArtLightbox() {
+      document.getElementById('art-lightbox').classList.remove('hidden');
+    }
+
+    function closeArtLightbox() {
+      document.getElementById('art-lightbox').classList.add('hidden');
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeArtLightbox();
+    });
+
+    // Initialize
+    selectFacet('A');
+    renderRoadmap();
+    syncVoteButtons();
+  </script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 window.CATALOG_DATA = {
   "summary": {
     "total_released": 27,
-    "total_vault": 20,
+    "total_vault": 21,
     "apple_music_artist_url": "https://music.apple.com/us/artist/the-shady-river-bard/1829561760",
     "youtube_channel_url": "https://www.youtube.com/@TheShadyRiverBard",
     "facebook_url": "https://www.facebook.com/profile.php?id=61578707414516",
@@ -2663,6 +2663,49 @@ window.CATALOG_DATA = {
       "deconstruction_url": null,
       "genre_category": "Soul & Rhythm & Blues",
       "hook": "A 15-track working-class soul cantata diagnosing affective polarization, vanishing Third Places, and grassroots civic resurrection."
+    },
+    {
+      "id": "the-long-way-home",
+      "number": null,
+      "title": "The Long Way Home",
+      "status": "vault",
+      "folder_name": "XX - The Long Road Home",
+      "track_count": 14,
+      "tracks": [
+        "The Same Mud on Different Boots",
+        "Twenty-Five Winters on the Pictish Wall",
+        "Where the Clansmen Used to Stand",
+        "Barefoot Down the Appomattox Pike",
+        "Champagne Glass on the Rue de la Paix",
+        "The Shipyard Coat on the Kitchen Door",
+        "No Parade for the Jungle Rain",
+        "Fluorescent Aisle, Sector Four",
+        "Bumper Sticker Absolution",
+        "The Sirens in the Rearview Mirror",
+        "Last Flesh on the Lithium Ridge",
+        "Unbuttoning the Wool",
+        "Cedar Posts and Heavy Clay",
+        "The Long Way Home (At the River's Bend)"
+      ],
+      "art_files_count": 1,
+      "art_sample": "Man_walking_on_muddy_road_f83fad9f_4K.jpg",
+      "themes": [
+        "Moral Injury",
+        "Veteran Reintegration",
+        "The Eternal Soldier",
+        "Platoon Brotherhood vs. Consumer Isolation",
+        "Swords into Plowshares"
+      ],
+      "genre": "Spartan Folk / Somber Americana & Celtic Grit",
+      "pitch": "Where 'The Balance Sheet of Outrage' examined the machinery and profiteering of war, 'The Long Way Home' (A Thousand Marching Boots, One Quiet Road) turns the lens onto the quiet, agonizing war that begins the moment the shooting stops. Following an Archetypal Eternal Soldier across two millennia—from a Roman legionnaire retiring off Hadrian's Wall (122 AD), a Scottish Highlander returning to a cleared glen (1746/1815), an Appomattox farm boy (1865), a Verdun poilu in a Paris café (1919), a Clydeside Black Watch riveter locked in stoic silence (1946), and a British soldier returning from Malaya and Korea (1954), to an American rifleman frozen in a fluorescent supermarket aisle after Fallujah (2008) and the last flesh-and-blood infantryman on an automated ridge—this 14-track Spartan Folk blueprint draws on Dr. Jonathan Shay's clinical work on Moral Injury and Sebastian Junger's 'Tribe' to show how empires forge working people into a brotherhood for war and abandon them to consumer isolation in peace, until the warrior steps off the imperial highway to turn the discipline of the sword into the stewardship of the living earth.",
+      "description": "Where 'The Balance Sheet of Outrage' examined the machinery and profiteering of war, 'The Long Way Home' (A Thousand Marching Boots, One Quiet Road) turns the lens onto the quiet, agonizing war that begins the moment the shooting stops. Following an Archetypal Eternal Soldier across two millennia—from a Roman legionnaire retiring off Hadrian's Wall (122 AD), a Scottish Highlander returning to a cleared glen (1746/1815), an Appomattox farm boy (1865), a Verdun poilu in a Paris café (1919), a Clydeside Black Watch riveter locked in stoic silence (1946), and a British soldier returning from Malaya and Korea (1954), to an American rifleman frozen in a fluorescent supermarket aisle after Fallujah (2008) and the last flesh-and-blood infantryman on an automated ridge—this 14-track Spartan Folk blueprint draws on Dr. Jonathan Shay's clinical work on Moral Injury and Sebastian Junger's 'Tribe' to show how empires forge working people into a brotherhood for war and abandon them to consumer isolation in peace, until the warrior steps off the imperial highway to turn the discipline of the sword into the stewardship of the living earth.",
+      "cover_image": "assets/covers/vault/the-long-way-home.webp",
+      "is_bespoke": true,
+      "custom_url": "../the-long-way-home/",
+      "track_deconstructions": null,
+      "deconstruction_url": null,
+      "genre_category": "Protest & Narrative Folk",
+      "hook": "A 14-track Spartan Folk epic following the Archetypal Eternal Soldier across 2,000 years—from Hadrian's Wall and the Scottish Clearances to Fallujah and the healing soil of the homestead."
     }
   ]
 };

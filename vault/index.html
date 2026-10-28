@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tpatterson34.github.io/the-shady-river-bard/">
   <meta property="og:title" content="The Shady River Bard — Discography & Incubator Vault">
-  <meta property="og:description" content="Explore 27 released concept albums with full liner notes and 20 unreleased workshop projects. Vote on what we record next.">
+  <meta property="og:description" content="Explore 27 released concept albums with full liner notes and 21 unreleased workshop projects. Vote on what we record next.">
   <meta property="og:image" content="https://tpatterson34.github.io/the-shady-river-bard/assets/covers/album-01.jpg">
   <meta name="twitter:card" content="summary_large_image">
   
@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="data/albums-data.js?v=20261007"></script>
+  <script src="data/albums-data.js?v=20261028"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -277,7 +277,7 @@
             <div class="text-[11px] sm:text-xs text-stone-400 uppercase tracking-wider mt-0.5">Released Records</div>
           </div>
           <div class="bg-soil-800/60 border border-white/5 rounded-xl p-3 sm:p-3.5">
-            <div class="text-xl sm:text-2xl font-serif font-bold text-amber-400" id="stat-vault">20</div>
+            <div class="text-xl sm:text-2xl font-serif font-bold text-amber-400" id="stat-vault">21</div>
             <div class="text-[11px] sm:text-xs text-stone-400 uppercase tracking-wider mt-0.5">Incubator Concepts</div>
           </div>
           <div class="bg-soil-800/60 border border-white/5 rounded-xl p-3 sm:p-3.5">
@@ -934,7 +934,7 @@
         tabRel.className = "flex-1 md:flex-none flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium text-stone-300 hover:text-stone-100 transition-all focus-visible:ring-2 focus-visible:ring-brand-500";
         tabRel.setAttribute('aria-selected', 'false');
         secTitle.innerHTML = "<span class='text-amber-400'>The Concept Incubator: Unreleased Workshop</span>";
-        secDesc.innerText = "20 unreleased concept documents, narrative outlines, and blueprints from the workshop. Cast your vote on what we record next!";
+        secDesc.innerText = `${catalog.vault.length} unreleased concept documents, narrative outlines, and blueprints from the workshop. Cast your vote on what we record next!`;
       }
 
       buildGenreFilters();
