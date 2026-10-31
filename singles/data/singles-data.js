@@ -414,7 +414,485 @@
       ],
 
       copyright_notice: "© 2026 The Shady River Bard. All rights reserved."
-    }
+    },
+
+    // =========================================================================
+    // SINGLE 03: AND THE PEOPLE CRY OUT
+    // Permalink: https://theshadyriverbard.com/singles/and-the-people-cry-out/
+    // =========================================================================
+    {
+      "id": "and-the-people-cry-out",
+      "slug": "and-the-people-cry-out",
+      "permalink": "https://theshadyriverbard.com/singles/and-the-people-cry-out/",
+      "relative_url": "and-the-people-cry-out/",
+      "number": 3,
+      "number_padded": "03",
+      "badge": "STANDALONE SINGLE 03 // GLOBAL SOLIDARITY CHRONICLE & FACT DOSSIER",
+      "card_badge": "Single #03",
+      "key_tempo_badge": "Key of D Minor // 78 BPM Solidarity Stomp",
+      "key": "D Minor",
+      "bpm": 78,
+      "duration": "05:02",
+      "release_year": 2026,
+      "release_status": "Official Audio & Music Video Out Now",
+      "title": "And the People Cry Out",
+      "title_accent_split": [
+            "And the People",
+            "Cry Out"
+      ],
+      "subtitle": "A Trans-Continental Folk-Rock Dirge & Primary-Source Dossier on the $251 Trillion Squeeze, Corporate Sellers' Inflation, Media Capture, and the Awakening of the Global 99%",
+      "location": "Sorrento Coast (Italy) • Indo-Gangetic Plain (India) • Lisbon • Madrid • Paris • Zvërnec (Albania) • Novi Sad & Belgrade (Serbia) • Sweden • US Heartland",
+      "genre": "Somber Americana Funeral Dirge & Heavy Folk-Rock Solidarity March",
+      "thesis": "When 1.5% of adults command $251 trillion—nearly half of all household wealth on Earth—while multinational conglomerates use every war and supply shock as a one-way ratchet on food, fuel, and shelter, the death of the middle class is not an accident of weather. Division by border and tongue is the oldest parlor trick of the manor, and as Serbian students just proved from the Novi Sad station vigil to parliament, the ledger turns the moment the 99% stand together.",
+      "thesis_attribution": "— Macroeconomic & Civic Thesis • Inspired by Vanessa Wingårdh’s 'The Whole World Is Protesting' & Verified Against UBS, INSEE, and Primary Election Records",
+      "dedication": "Special thanks to Swedish software engineer, researcher, and commentator Vanessa Wingårdh (@VanessaWingardh), whose investigative synthesis 'The Whole World Is Protesting' directly inspired this song and visual chronicle—and dedicated to the farmers, truckers, students, teachers, and working families standing shoulder to shoulder across borders.",
+      "telemetry": [
+            {
+                  "label": "Top 1.5% Wealth",
+                  "value": "$251T (48%)",
+                  "color_cls": "text-retinal-400"
+            },
+            {
+                  "label": "Corporate Reach",
+                  "value": "185 / 195 Nations",
+                  "color_cls": "text-amber-400"
+            },
+            {
+                  "label": "Fronts Audited",
+                  "value": "9 Global Flashpoints",
+                  "color_cls": "text-white"
+            },
+            {
+                  "label": "Ballot Breakthrough",
+                  "value": "53% Serbia Win",
+                  "color_cls": "text-emerald-400"
+            }
+      ],
+      "hero_art_caption_label": "35mm Neo-Realist Witness • International Plaza",
+      "hero_art_caption_title": "The Bard, Elena, Marcus & Rufus Overlooking the Global 99%",
+      "media": {
+            "youtubeVideoUrl": "https://youtu.be/0m2QBXRQli8",
+            "inspirationVideoUrl": "https://youtu.be/8GLahLkHvxg",
+            "inspirationVideoId": "8GLahLkHvxg",
+            "inspirationTitle": "The Whole World Is Protesting",
+            "inspirationCreator": "Vanessa Wingårdh (@VanessaWingardh)",
+            "inspirationChannelUrl": "https://www.youtube.com/@VanessaWingardh",
+            "spotifyUrl": "[INSERT_SPOTIFY_URL_OR_LEAVE_PENDING]",
+            "appleMusicUrl": "[INSERT_APPLE_MUSIC_URL_OR_LEAVE_PENDING]",
+            "amazonMusicUrl": "[INSERT_AMAZON_MUSIC_URL_OR_LEAVE_PENDING]"
+      },
+      "art_banner": "assets/art/and-the-people-cry-out-banner.webp",
+      "art_square": "assets/art/and-the-people-cry-out-cover.webp",
+      "art_alt": "Seen from behind on a wet stone rooftop parapet at twilight, The Shady River Bard holding a dreadnought acoustic guitar and duet vocalist Elena stand beside stationary Australian Shepherds Marcus and Rufus, looking down over a vast rain-slicked international plaza waving US, Scottish, Italian, French, and Indian flags around a 'NO KINGS' banner.",
+      "pillar_badges": [
+            "$251T Wealth Concentration",
+            "Sellers' Inflation Ratchet",
+            "Media Lens & Suppression",
+            "Novi Sad to Parliament"
+      ],
+      "tags": [
+            "WorkingClassSolidarity",
+            "NoKings",
+            "NoFarmersNoFood",
+            "VanessaWingardh",
+            "UBSWealthReport",
+            "SellersInflation",
+            "NoviSadToParliament",
+            "Global99Percent"
+      ],
+      "quote": "And the people cry out from the fields and the factories\nFrom the tents in Madrid to the docks in the rain\n(And the people cry out!)\nYou have traded our blood for your luxury galleries\nAnd left us the rubble, the rust, and the chain\nWe are ninety-nine strong at the gates of the manor\nThe funeral is over, the sleepers awake\n(Hear the people cry out!)\nRaise the ledger of truth like a workingman's banner\nIt is time that you pay for the world that you take",
+      "bards_story": [
+            "This song and 43-scene neo-realist film were directly sparked by Swedish software developer and independent commentator Vanessa Wingårdh (@VanessaWingardh) and her remarkable 11-minute dispatch, 'The Whole World Is Protesting' (https://youtu.be/8GLahLkHvxg). Watching her connect a firsthand message from a friend staring at bare supermarket shelves on Italy's Sorrento coast to farmer blockades, housing tent cities, crumbling European classrooms, billionaire coastal land grabs, and a historic student election triumph in Serbia, it hit me like a bell: we are living through a single, connected global story—yet algorithmic feeds and billionaire-owned broadcast networks work overtime to keep each country convinced its misery is local and isolated.",
+            "Follow the empirical ledger beneath the lyrics and the pattern becomes undeniable. According to the UBS Global Wealth Report, roughly 58 to 60 million adult US-dollar millionaires—just ~1.5% of the adult global population—now control 48% of all household wealth on Earth, approximately $251 trillion. For sixty years after World War II, working families across the West signed onto a simple, honest bargain: work hard, pay your taxes, and there will be a school without rats or falling plaster for your children, an affordable key to a front door, and a pension before your body breaks down. Today, France carries €3.6 trillion in public debt (119% of GDP, per INSEE) and answers with tens of billions in public-service austerity; Portuguese Prime Minister Luís Montenegro declares 55 properties ('55 imóveis' across urban residences and inherited rural plots) while scolding citizens 'not to be selfish' in a country where minimum wage is €920/month and 'affordable' rents hit €2,300; and even in Sweden—which abolished its wealth and inheritance taxes and ranks among the world's top ten nations for net wealth inequality—bank surveys show 1 in 4 citizens have less than 500 kronor (~$50 USD) left at the end of the month.",
+            "Meanwhile, every geopolitical shock—from the 2020 pandemic blueprint to supply-chain crises in Ukraine, the Red Sea, and the Persian Gulf—functions as what UMass Amherst economist Isabella Weber calls 'sellers' inflation': multinational giants like Nestlé (operating in 185+ of 195 recognized countries) use headline emergencies to permanently ratchet up food and household margins, never lowering prices when input shocks fade. When Italian truckers and farmers parked their rigs across Campania in October 2026 because Gulf-war diesel spikes made harvesting a net loss, Berlusconi-controlled legacy television (MFE-MediaForEurope / Mediaset) barely showed northern Italians the bare southern shelves while TikTok slapped Community Guidelines warnings on eyewitness grocery videos. And when 550,000 French workers and students marched for crumbling schools, broadcast lenses zoomed tightly onto cracked glass at Christian Dior—headed by Delphine Arnault inside Bernard Arnault's ~$218 billion LVMH empire—refusing to pan two feet left to show 'TAXEZ LES RICHES' painted in red on the stone.",
+            "Yet 'And the People Cry Out' is not a song of despair; it is a funeral for the illusion that our neighbors are our enemies, and a march for what comes next. On November 1, 2024, at 11:52 AM, a newly renovated concrete canopy at Serbia's Novi Sad railway station collapsed, killing 16 people and exposing systemic state-contracting corruption. University students stood up in the autumn rain, held silent 16-minute roadblocks across the nation, walked from town to town to speak directly with rural farmers beyond state media's reach, and on October 25, 2026, their youth-backed Student List won an absolute parliamentary majority (~53% of the vote on 69% turnout), ending fourteen years of entrenched rule. In our music video—shot in gritty 35mm AI photojournalism (and please pardon any AI-generated quirks on background protest signs!)—my duet partner Elena and I stand strictly with our backs to the camera on wet slate rooftops beside our silent Australian Shepherd witnesses Marcus and Rufus, because this song belongs to the plaza below."
+      ],
+      "musical_direction": {
+            "summary": "Somber Americana Funeral Dirge building into a Heavy Folk-Rock & Country-Blues Solidarity Stomp in D Minor (76–78 BPM, 05:02).",
+            "details": "Opens with a close-mic'd fingerpicked acoustic guitar, mournful solo cello dirge, and slow muffled work-boot and floor-tom heartbeat. Builds across verses with octave mandolin, weeping blues harmonica, and aggressive power-folk banjo before igniting into a full male/female rock harmony chorus (62% duet unison, 29% weathered baritone, 8.9% soaring female lead), a hushed spoken-word Bridge ('Every war is a reason to ratchet the price'), a searing electric-guitar and sawed-cello duel, European accordion (3:58) and brass swells (4:09), and a stripped acoustic D-minor ultimatum: 'Pay your share of the table. Or tend it yourself.'"
+      },
+      "inspirationDispatch": {
+            "badge": "THE SPARK // INVESTIGATIVE INSPIRATION & SOURCE CROSSWALK",
+            "title": "Inspired by Vanessa Wingårdh’s “The Whole World Is Protesting”",
+            "creator": "Vanessa Wingårdh",
+            "handle": "@VanessaWingardh",
+            "videoUrl": "https://youtu.be/8GLahLkHvxg",
+            "videoId": "8GLahLkHvxg",
+            "channelUrl": "https://www.youtube.com/@VanessaWingardh",
+            "duration": "10:56",
+            "summary": "When Swedish software engineer and commentator Vanessa Wingårdh published 'The Whole World Is Protesting,' she connected dots that legacy newsrooms deliberately keep in separate silos: an expat friend's empty supermarket shelves on Italy's Sorrento coast, Berlusconi media consolidation, Portugal's 55-property Prime Minister, Spain's housing encampments, France's €3.6 trillion debt and the LVMH storefront camera trick, Jared Kushner's $1.4B Albanian coastal resort deal, corporate crisis-ratcheting across 185+ countries, Bilderberg secrecy, and Serbia's two-year march from the Novi Sad station tragedy to parliamentary victory. Every stanza of 'And the People Cry Out' was forged as a musical mirror to her report.",
+            "crosswalk": [
+                  {
+                        "vanessa_ts": "00:00 – 01:47",
+                        "vanessa_segment": "Sorrento bare grocery aisles, Iran/Gulf diesel spike, parked Italian trucks/tractors ('No Farmers, No Food'), TikTok Community Guidelines flags & Silvio Berlusconi's €6B media empire.",
+                        "song_section": "Intro & Verse 1 (0:00 – 1:09)",
+                        "lyric_match": "The diesel costs more than the wheat in the furrow / From the plains of the Ganges to the Sorrento coast... While the family who owns all the television screens / Tells the north that the south still has plenty of apples"
+                  },
+                  {
+                        "vanessa_ts": "01:47 – 03:49",
+                        "vanessa_segment": "Portugal's PM declaring 55 properties, hiding transparency records & calling critics 'selfish' against €920 minimum wage vs. €2,300 rents; Madrid & Málaga rent tent cities; Albania's Zvërnec/Sazan luxury resort vs. pink flamingos.",
+                        "song_section": "Verse 2 & Chorus (1:09 – 2:14)",
+                        "lyric_match": "Now the prime minister counts up his fifty-five houses / And calls us all greedy for wanting a key... And the people cry out from the fields and the factories / From the tents in Madrid to the docks in the rain"
+                  },
+                  {
+                        "vanessa_ts": "03:49 – 05:24",
+                        "vanessa_segment": "France's €3.6T debt (119% GDP), austerity cuts, Paris students blockading crumbling rat-infested schools, 550,000 marching for the 60-year social contract, and cameras zooming on Delphine/Bernard Arnault's ($218B) Dior window instead of 'TAX THE RICH' on stone.",
+                        "song_section": "Verse 3 (2:14 – 2:59)",
+                        "lyric_match": "In the streets of old Paris the youth are assembling / Where the plaster falls down on the desks in the cold... So they point every lens at a cracked piece of glass / Refusing to pan where the workingmen pass / And the words on the stone where the paint is still red"
+                  },
+                  {
+                        "vanessa_ts": "05:24 – 09:05",
+                        "vanessa_segment": "Sweden's #7 wealth-inequality paradox (1 in 4 under 500 SEK left), UBS data (1.5% hold 48% / $251T), Bilderberg closed-door corporate governance, and Nestlé (185/195 countries) using COVID & wars to permanently ratchet prices.",
+                        "song_section": "Verse 3 & Spoken Bridge (2:30 – 3:14)",
+                        "lyric_match": "With two hundred-fifty-one trillion in gold... [Spoken] Every war is a reason to ratchet the price. / Every crisis a harvest for the men at the top."
+                  },
+                  {
+                        "vanessa_ts": "09:05 – 10:56",
+                        "vanessa_segment": "Serbia's Novi Sad railway canopy collapse (16 killed), two years of student-led anti-corruption vigils, and the historic parliamentary majority proving the 99% win when they refuse engineered division.",
+                        "song_section": "Bridge Eruption & Outro (3:14 – 5:02)",
+                        "lyric_match": "But remember the station where the canopy fell! / When the students stood up in the autumn alone... And they marched into parliament and took back their own! ... Pay your share of the table. Or tend it yourself."
+                  }
+            ]
+      },
+      "pillars_section": {
+            "badge": "Interactive Framework I // 3-Pillar Macroeconomic & Media Matrix",
+            "title": "The Extraction Architecture & The Awakening",
+            "intro": "Across nine countries and three continents, seemingly separate cost-of-living protests trace back to the same three structural mechanisms: extreme asset concentration eroding the post-war social contract, crisis-driven corporate price ratcheting shielded by billionaire media capture, and a rising civic refusal to let culture-war wedges divide the 99%."
+      },
+      "pillars": [
+            {
+                  "number": "I",
+                  "code": "PILLAR I // THE BROKEN BARGAIN",
+                  "title": "The $251 Trillion Oligarchy & The Evaporating Social Contract",
+                  "stat_highlight": "1.5% Own 48%",
+                  "stat_sub": "~$251 Trillion held by top adult USD millionaires (UBS Global Wealth Report)",
+                  "icon": "fa-solid fa-scale-unbalanced",
+                  "summary": "For sixty years, working families traded decades of labor and honest taxation for public schools, reachable housing, and a dignified pension. Today, untaxed asset compounding has gutted public balance sheets while pricing workers out of shelter.",
+                  "analysis": "UBS global wealth telemetry confirms that roughly 58–60 million adults (~1.5% of the adult world) hold 48% of global household wealth (~$251T). Meanwhile, sovereign states starve public goods to service debt—France's public debt hit €3.6T (119% of GDP, per INSEE), prompting school and service cuts, while Sweden's abolition of wealth and inheritance taxes produced top-tier wealth concentration alongside 1 in 4 citizens ending the month with under 500 SEK (~$50).",
+                  "lyric_echo": "We signed on the line for the honest man's bargain / Sixty years at the wheel for a roof and a bed"
+            },
+            {
+                  "number": "II",
+                  "code": "PILLAR II // THE RATCHET & THE LENS",
+                  "title": "Corporate 'Sellers' Inflation' & Billionaire Media Framing",
+                  "stat_highlight": "185 / 195 Nations",
+                  "stat_sub": "Multinational conglomerate reach (Nestlé) & coordinated crisis margin expansion",
+                  "icon": "fa-solid fa-video-slash",
+                  "summary": "Since 2020, global conglomerates have discovered that wars, bottlenecks, and energy shocks allow synchronized price hikes that never come back down—while billionaire-owned media hides the root cause.",
+                  "analysis": "Documented by economist Isabella Weber as 'sellers' inflation,' firms spanning 185+ nations use geopolitical shocks in Ukraine, the Red Sea, and the Persian Gulf to expand profit margins over essential food and staples. When citizens protest, Berlusconi-built media networks in Italy underplay southern shortages, social algorithms throttle eyewitness clips, and French cameras fixate on cracked glass at Bernard & Delphine Arnault's ($218B) Dior boutique rather than panning to 'TAXEZ LES RICHES' on the wall.",
+                  "lyric_echo": "Every war is a reason to ratchet the price. / Every crisis a harvest for the men at the top."
+            },
+            {
+                  "number": "III",
+                  "code": "PILLAR III // CIVIC SOLIDARITY",
+                  "title": "From Novi Sad to Parliament: Refusing the Engineered Wedge",
+                  "stat_highlight": "53% Majority",
+                  "stat_sub": "Serbia's youth-led Student List wins ~140/250 seats on 69% turnout (Oct 25, 2026)",
+                  "icon": "fa-solid fa-landmark-flag",
+                  "summary": "Whenever working people compare notes, oligarchs deploy division by border, language, and scapegoating. Yet when students, farmers, and workers unite around material accountability, entrenched machines fall.",
+                  "analysis": "After 16 commuters died beneath the collapsed Novi Sad railway station canopy on November 1, 2024, Serbian university students refused partisan co-optation—holding daily 11:52 AM silent vigils and marching on foot to rural villages bypassed by state TV. On October 25, 2026, their Student List won an absolute parliamentary majority (~53%), proving alongside Indian and Italian farmers ('No Farmers, No Food') that solidarity converts grief into democratic power.",
+                  "lyric_echo": "They turned all their grief into a tolling of the bell / And they marched into parliament and took back their own!"
+            }
+      ],
+      "globalFlashpoints": [
+            {
+                  "id": "global-wealth",
+                  "num": "01",
+                  "category": "wealth",
+                  "region": "Global Wealth & Governance",
+                  "title": "The $251 Trillion Apex & Closed-Door Oligarchy",
+                  "metric": "1.5% Hold 48% ($251T)",
+                  "still": "assets/stills/01-wealth-vault.webp",
+                  "still_caption": "Scene S24 • Ornate bronze doors of European financial citadels",
+                  "vanessa_ts": "06:34 – 07:45",
+                  "bard_ts": "02:30 – 02:44",
+                  "lyric": "And the men in the boardrooms of Europe are trembling / With two hundred-fifty-one trillion in gold",
+                  "facts": "According to the UBS Global Wealth Report (2025/2026 editions), global household wealth surpassed $510 trillion, with roughly 58–60 million adult USD millionaires—representing approximately 1.5% to 1.6% of the global adult population—controlling 48% to 48.4% of all net household wealth (~$250.6–$251 trillion). Parallel to this asset pyramid sits transnational elite coordination: at annual Bilderberg Meetings governed by strict Chatham House non-attribution rules, unelected defense, banking, pharma, and Big Tech executives routinely outnumber elected public officials without public minutes or press oversight.",
+                  "sources": [
+                        {
+                              "label": "UBS Global Wealth Report (Official Research Portal)",
+                              "url": "https://www.ubs.com/global/en/wealthmanagement/insights/global-wealth-report.html"
+                        },
+                        {
+                              "label": "Bilderberg Meetings Official Participant & Chatham House Rules Archive",
+                              "url": "https://www.bilderbergmeetings.org/"
+                        }
+                  ]
+            },
+            {
+                  "id": "italy-sorrento",
+                  "num": "02",
+                  "category": "food",
+                  "region": "Southern Italy • Campania & Sorrento Coast",
+                  "title": "The Diesel Strike, Hollowed Grocery Aisles & Mediaset Capture",
+                  "metric": "€150M–€200M Emergency Fuel Decree",
+                  "still": "assets/stills/02-sorrento-blockade.webp",
+                  "still_secondary": "assets/stills/02b-grocery-chapel.webp",
+                  "still_caption": "Scene S02 & S06 • Sorrento cliffside tractor blockade & bare Campanian supermarket aisles",
+                  "vanessa_ts": "00:00 – 01:47",
+                  "bard_ts": "00:09 – 01:09",
+                  "lyric": "The grocery aisles stand like a hollowed-out chapel / While the family who owns all the television screens / Tells the north that the south still has plenty of apples",
+                  "facts": "In mid-to-late October 2026, surging diesel prices driven by Persian Gulf / Strait of Hormuz conflict pushed freight and harvesting costs past farmgate crop returns across southern Italy. Under the banner 'No Agricoltori, No Cibo' ('No Farmers, No Food'), truckers, farmers, and fishermen blockaded ports and highways across Campania (Naples, Salerno, Sorrento), Apulia, Calabria, and Sicily—leaving Sorrento supermarket shelves stripped bare, halting pasta makers (Rummo, La Molisana) and Stellantis plants, and forcing Rome to pass emergency fuel tax-credit decrees. Yet many northern Italians remained unaware because Italy's largest private TV group—MFE-MediaForEurope (formerly Mediaset, built by late three-time PM Silvio Berlusconi and controlled via Fininvest alongside a ~€6B family fortune by Pier Silvio and Marina Berlusconi)—minimized coverage while TikTok flagged citizen grocery footage under 'Community Guidelines.'",
+                  "sources": [
+                        {
+                              "label": "MFE-MediaForEurope / Fininvest Ownership & Italian Broadcast Concentration (RSF Italy Profile)",
+                              "url": "https://rsf.org/en/country/italy"
+                        },
+                        {
+                              "label": "Coldiretti & Italian Agrarian/Haulier Fuel Cost Mobilizations",
+                              "url": "https://www.coldiretti.it/"
+                        }
+                  ]
+            },
+            {
+                  "id": "india-ganges",
+                  "num": "03",
+                  "category": "food",
+                  "region": "India • Indo-Gangetic Plain",
+                  "title": "Plains of the Ganges & The Global Birth of 'No Farmers, No Food'",
+                  "metric": "Millions Mobilized for MSP Parity",
+                  "still": "assets/stills/03-ganges-farmers.webp",
+                  "still_caption": "Scene S03 • Stationary tractor caravan along wheat fields of the Ganges plain ('किसान एकता')",
+                  "vanessa_ts": "00:46 – 01:05",
+                  "bard_ts": "00:19 – 00:39",
+                  "lyric": "The diesel costs more than the wheat in the furrow / From the plains of the Ganges to the Sorrento coast",
+                  "facts": "Across the fertile Indo-Gangetic Plain (Punjab, Haryana, and Uttar Pradesh), farmer unions under the Samyukt Kisan Morcha (2020–2021 historic Delhi siege and renewed 2024–2026 'Dilli Chalo' highway mobilizations) confronted the exact input-price vise squeezing European smallholders: soaring diesel, fertilizer, and seed costs paired with corporate market deregulation and the absence of a legally guaranteed Minimum Support Price (MSP) benchmarked to the Swaminathan C2+50% cost formula. Their rallying cry—'No Farmers, No Food'—became the transnational slogan painted on tractor convoys from Amritsar to Brussels and Sorrento.",
+                  "sources": [
+                        {
+                              "label": "PRS Legislative Research — Swaminathan Commission MSP (C2+50%) & Indian Farm Input Economics",
+                              "url": "https://prsindia.org/"
+                        },
+                        {
+                              "label": "FAO Global Food Price & Agricultural Input Cost Monitoring",
+                              "url": "https://www.fao.org/worldfoodsituation/foodpricesindex/en/"
+                        }
+                  ]
+            },
+            {
+                  "id": "portugal-housing",
+                  "num": "04",
+                  "category": "housing",
+                  "region": "Portugal • Lisbon & Porto",
+                  "title": "The Prime Minister's 55 Properties & Bundles of Keys in the Street",
+                  "metric": "55 Declared Properties vs. €920 Min. Wage",
+                  "still": "assets/stills/04-portugal-housing.webp",
+                  "still_caption": "Scene S11 • Lisbon housing demonstration ('HABITAÇÃO É UM DIREITO') beneath darkened luxury flats",
+                  "vanessa_ts": "01:47 – 02:38",
+                  "bard_ts": "01:26 – 01:44",
+                  "lyric": "Now the prime minister counts up his fifty-five houses / And calls us all greedy for wanting a key",
+                  "facts": "Filings with Portugal's Entidade para a Transparência revealed that Prime Minister Luís Montenegro declared 55 real-estate assets ('55 imóveis'—comprising 6 urban residences/apartments in Espinho, Lisbon, Bragança, and Resende alongside 49 inherited rural plots, 'prédios rústicos') and sought court/registry restrictions shielding property details from public scrutiny, alongside controversy over his family consultancy Spinumviva. While advancing landlord-friendly tax breaks and faster eviction laws, Montenegro urged critics 'não sejam egoístas' ('don't be selfish'). In response, tens of thousands in the 'Casa Para Viver' movement marched through Lisbon and Porto shaking house keys—noting that officials label €2,300/month rents 'moderate' while Portugal's 2026 statutory minimum wage is €920/month.",
+                  "sources": [
+                        {
+                              "label": "Entidade para a Transparência (Constitutional Court of Portugal Asset Declarations)",
+                              "url": "https://entidadetransparencia.tribunalconstitucional.pt/"
+                        },
+                        {
+                              "label": "PORDATA / INE Portugal — Statutory Minimum Wage & Median Urban Rent Statistics",
+                              "url": "https://www.pordata.pt/"
+                        }
+                  ]
+            },
+            {
+                  "id": "spain-madrid",
+                  "num": "05",
+                  "category": "housing",
+                  "region": "Spain • Madrid, Málaga & Barcelona",
+                  "title": "Tent Cities on the Plaza & 'La Vivienda No Es Un Negocio'",
+                  "metric": "Up to 80–100% of Youth Wages Spent on Rent",
+                  "still": "assets/stills/05-madrid-tents.webp",
+                  "still_caption": "Scene S14 • Madrid & Málaga housing tent encampment ('LA VIVIENDA NO ES UN NEGOCIO')",
+                  "vanessa_ts": "02:38 – 03:02",
+                  "bard_ts": "01:44 – 01:55",
+                  "lyric": "And the people cry out from the fields and the factories / From the tents in Madrid to the docks in the rain",
+                  "facts": "Across Madrid, Málaga, Barcelona, and the Canary Islands, tenants' unions (Sindicato de Inquilinas / 'Málaga para vivir') launched mass marches and pitched symbolic protest tent encampments ('acampadas por el derecho a la vivienda') after institutional private-equity landlords ('fondos buitre'), golden-visa speculation, and short-term tourist conversions drove urban rents to consume 60% to 100% of an average young worker's net paycheck. Demonstrators demanded indefinite lease protections, caps on speculative bulk purchases, and the reclamation of empty investment apartments.",
+                  "sources": [
+                        {
+                              "label": "Banco de España & INE Housing Affordability Reports",
+                              "url": "https://www.bde.es/"
+                        },
+                        {
+                              "label": "Sindicato de Inquilinas e Inquilinos de Madrid",
+                              "url": "https://www.inquilinato.org/"
+                        }
+                  ]
+            },
+            {
+                  "id": "france-paris",
+                  "num": "06",
+                  "category": "schools",
+                  "region": "France • Paris & Nationwide",
+                  "title": "€3.6 Trillion Debt, Falling Classroom Plaster & The $218B Dior Lens",
+                  "metric": "€3.6T Debt (119% GDP) • 550,000 Marching",
+                  "still": "assets/stills/06-paris-lvmh-lens.webp",
+                  "still_secondary": "assets/stills/06b-paris-classroom.webp",
+                  "still_caption": "Scene S26 & S22 • 'TAXEZ LES RICHES' beside luxury boutique glass & crumbling Paris classroom plaster",
+                  "vanessa_ts": "03:49 – 05:24",
+                  "bard_ts": "02:14 – 02:59",
+                  "lyric": "So they point every lens at a cracked piece of glass / On a boulevard storefront of velvet and thread / Refusing to pan where the workingmen pass / And the words on the stone where the paint is still red",
+                  "facts": "France's national statistical institute (INSEE) reported public debt climbing to roughly €3.6 trillion (~119% of GDP), triggering multi-billion-euro austerity budgets (mirrored in Belgium and Austria) that hit public education and social services hardest. Students blockaded Paris lycées and universities over unheated rooms, falling ceiling plaster, flooding, and rats, joining ~550,000 union marchers nationwide defending the post-war bargain of taxes for schools and pensions. Yet legacy TV cameras zoomed tightly onto a few dozen black-bloc vandals cracking windows at Christian Dior, Burberry, and Foot Locker—refusing to pan slightly to show 'TAXEZ LES RICHES' painted on the stone wall. Christian Dior CEO Delphine Arnault is the daughter of LVMH Chair Bernard Arnault (~$218 billion family fortune), who personally holds stakes in major French news outlets including Les Échos and Le Parisien.",
+                  "sources": [
+                        {
+                              "label": "INSEE (Institut national de la statistique et des études économiques) — Maastricht Public Debt & GDP",
+                              "url": "https://www.insee.fr/en/accueil"
+                        },
+                        {
+                              "label": "Forbes Real-Time Billionaires Profile — Bernard Arnault & Family (LVMH / Christian Dior)",
+                              "url": "https://www.forbes.com/profile/bernard-arnault/"
+                        }
+                  ]
+            },
+            {
+                  "id": "albania-coast",
+                  "num": "07",
+                  "category": "housing",
+                  "region": "Albania • Zvërnec & Sazan Island (Vjosa-Narta)",
+                  "title": "Carving Up the Protected Coast: The $1.4B 'Flamingo Revolution'",
+                  "metric": "$1.4B Luxury Enclave on Protected Wetland",
+                  "still": "assets/stills/07-albania-coast.webp",
+                  "still_caption": "Scene S31 • Coastal residents & students defending the Adriatic shore ('BREGDETI NUK ËSHTË NË SHITJE')",
+                  "vanessa_ts": "03:02 – 03:49",
+                  "bard_ts": "03:28 – 03:42",
+                  "lyric": "You want us divided by border and tongue / While you carve up the coast for a billionaire's view",
+                  "facts": "Along Albania's southern Adriatic and Ionian coastline, Affinity Partners—the private equity firm founded by Jared Kushner—secured preliminary 'Strategic Investor' approval for a $1.4 billion ultra-luxury resort project spanning Sazan Island and the Zvërnec peninsula inside the Vjosa-Narta Protected Landscape, a vital sanctuary for over 3,000–10,000 greater pink flamingos, Dalmatian pelicans, and endangered Mediterranean monk seals. In February 2024, Prime Minister Edi Rama's parliament amended Law No. 81/2017 on Protected Areas to allow five-star luxury complexes inside protected habitats despite warnings from the Bern Convention and European Parliament, while Zvërnec residents alleged ancestral coastal land seizures through falsified title records—igniting youth and environmental demonstrations dubbed the 'Flamingo Revolution.'",
+                  "sources": [
+                        {
+                              "label": "Council of Europe (Bern Convention) — Vjosa-Narta Protected Area & Airport/Resort Case File",
+                              "url": "https://www.coe.int/en/web/bern-convention"
+                        },
+                        {
+                              "label": "EuroNatur & PPNEA Conservation Dossier on Vjosa-Narta & Albanian Protected Areas Law",
+                              "url": "https://www.euronatur.org/en/"
+                        }
+                  ]
+            },
+            {
+                  "id": "sellers-inflation",
+                  "num": "08",
+                  "category": "wealth",
+                  "region": "Sweden & Transnational Supply Chains",
+                  "title": "Sweden's 500-Kronor Paradox, Nestlé (185 Nations) & 'Sellers' Inflation'",
+                  "metric": "1 in 4 Under 500 SEK • 185/195 Countries",
+                  "still": "assets/stills/08-war-price-ratchet.webp",
+                  "still_caption": "Scene S27 • Diesel, milk, and bread price totem beside Strait tanker crisis broadcast",
+                  "vanessa_ts": "05:24 – 09:05",
+                  "bard_ts": "02:59 – 03:14",
+                  "lyric": "Every war is a reason to ratchet the price. / Every crisis a harvest for the men at the top.",
+                  "facts": "Even in Nordic social democracies, asset deregulation has hollowed household buffers: having abolished wealth, inheritance, gift, and national property taxes, Sweden ranks among the most unequal countries on Earth in net wealth distribution (top-10 globally in billionaire-per-capita and wealth Gini metrics), while Swedish consumer banking surveys report roughly 1 in 4 residents have less than 500 SEK (~$50 USD) left after monthly bills. Globally, UMass Amherst economist Isabella Weber demonstrated how dominant conglomerates—exemplified by Nestlé, selling essentials in 185–188 of 195 countries—use overlapping crises (COVID-19, Ukraine grain/energy shocks, Red Sea shipping, Persian Gulf oil, DRC minerals, Taiwan semiconductors) as implicit coordination signals to hike prices beyond input costs ('sellers' inflation'), locking in permanently higher price floors.",
+                  "sources": [
+                        {
+                              "label": "Isabella Weber & Evan Wasner (UMass Amherst PERI) — 'Sellers’ Inflation, Profits and Conflict'",
+                              "url": "https://peri.umass.edu/"
+                        },
+                        {
+                              "label": "Nestlé Annual Review — Global Geographic Footprint (185+ Countries)",
+                              "url": "https://www.nestle.com/investors/annual-report"
+                        }
+                  ]
+            },
+            {
+                  "id": "serbia-novi-sad",
+                  "num": "09",
+                  "category": "ballot",
+                  "region": "Serbia • Novi Sad to Belgrade Parliament",
+                  "title": "Where the Canopy Fell: Two Years of Grief Turned Into a 53% Majority",
+                  "metric": "16 Lives Mourned → 53% Parliamentary Majority",
+                  "still": "assets/stills/09-novi-sad-serbia.webp",
+                  "still_caption": "Scene S29 • Silent candlelight and white-rose vigil outside Novi Sad railway station",
+                  "vanessa_ts": "09:05 – 10:56",
+                  "bard_ts": "03:14 – 03:28",
+                  "lyric": "But remember the station where the canopy fell! / When the students stood up in the autumn alone / They turned all their grief into a tolling of the bell / And they marched into parliament and took back their own!",
+                  "facts": "At 11:52 AM on November 1, 2024, the newly reconstructed concrete exterior canopy of the Novi Sad main railway station collapsed, killing 16 people (14 at the scene and 2 later in hospital) just months after officials boasted of its state-backed renovation. Refusing to let the deaths be buried by state-aligned tabloids, students occupied more than 60 university faculties across Serbia, observed daily silent 11:52 AM traffic standstills (one minute per victim), marched hundreds of kilometers on foot into rural towns to break the information blockade, and forced Prime Minister Miloš Vučević's resignation. Two years later, in Serbia's October 25, 2026 parliamentary election, the civic 'Student List' ('Studentska lista') won a historic absolute majority—capturing ~53% of the popular vote (~140–141 of 250 seats) on record ~69% turnout and peacefully ending the 14-year dominance of Aleksandar Vučić's SNS coalition.",
+                  "sources": [
+                        {
+                              "label": "CRTA (Center for Research, Transparency and Accountability — Serbia Election & Civic Observation)",
+                              "url": "https://crta.rs/en/"
+                        },
+                        {
+                              "label": "European Parliament Briefing — Novi Sad Canopy Collapse & Rule-of-Law Protests in Serbia",
+                              "url": "https://www.europarl.europa.eu/thinktank/en/home"
+                        }
+                  ]
+            }
+      ],
+      "timeline_section": {
+            "badge": "Interactive Framework III // 4-Act Composition & Film Architecture",
+            "title": "From Funeral Dirge to the Banquet Table (0:00 – 5:02)",
+            "intro": "Trace the four musical and cinematic movements of 'And the People Cry Out' across all 43 35mm neo-realist scenes—evolving from a lone acoustic guitar and weeping cello into an international solidarity stomp."
+      },
+      "timeline": [
+            {
+                  "year": "0:00 – 1:44",
+                  "era_badge": "ACT I // THE HOLLOWED-OUT CHAPEL",
+                  "title": "Sorrento Rigs, Ganges Furrows & The 60-Year Bargain",
+                  "location": "Rooftop Parapet • Sorrento Coast • Ganges Plains • Lisbon",
+                  "icon": "fa-solid fa-tractor",
+                  "narrative": "Opening at ~78 BPM in D Minor with a sparse fingerpicked acoustic guitar, mournful cello dirge, and slow boot-stomp heartbeat, The Shady River Bard and Elena stand with their backs to the lens beside silent Australian Shepherds Marcus and Rufus. Below them unfold parked tractors on the Sorrento cliffs ('NO AGRICOLTORI, NO CIBO'), Indian farmer convoys ('किसान एकता'), bare supermarket chapels, Berlusconi-era television screens, and 55 darkened luxury apartments in Lisbon while Gulf oil shocks send the invoice due.",
+                  "artifact_note": "Acoustic Telemetry: Close-mic'd dreadnought guitar, low cello drone, double bass & weeping blues harmonica"
+            },
+            {
+                  "year": "1:44 – 2:59",
+                  "era_badge": "ACT II // THE MANOR GATES & THE LENS",
+                  "title": "Madrid Tent Cities, Crumbling Paris Desks & The $251T Vault",
+                  "location": "Madrid Plazas • Rain-Soaked Docks • Paris Lycées & Boulevards",
+                  "icon": "fa-solid fa-camera",
+                  "narrative": "Heavy tribal floor toms and distorted bass ignite Chorus 1 as male baritone and soaring female rock harmony unite ('We are ninety-nine strong at the gates of the manor'), followed by an aggressive power-folk banjo and cello duel. Verse 3 moves into freezing Paris classrooms where ceiling plaster falls onto wooden desks while corporate boardrooms guard $251 trillion—exposing broadcast cameras that fixate on cracked luxury boutique glass while refusing to pan two feet left to 'TAXEZ LES RICHES' painted in red on stone.",
+                  "artifact_note": "Acoustic Telemetry: Male/female unison chorus (62% duet profile), industrial-folk banjo lead & snare rimshots"
+            },
+            {
+                  "year": "2:59 – 3:58",
+                  "era_badge": "ACT III // THE RATCHET & THE CANOPY",
+                  "title": "Sellers' Inflation, Novi Sad's Vigil & The March Into Parliament",
+                  "location": "Novi Sad Station • Belgrade Parliament • Zvërnec Coast (Albania)",
+                  "icon": "fa-solid fa-bell",
+                  "narrative": "The arrangement drops to a single pulsing cello note and marching floor tom for the hushed spoken-word indictment: 'Every war is a reason to ratchet the price. Every crisis a harvest for the men at the top.' Crashing cymbals and overdriven electric guitars erupt on 'But remember the station where the canopy fell!'—honoring the 16 victims of Novi Sad, Serbia's two-year student vigil, their October 25, 2026 parliamentary triumph, and Albanian villagers defending their coast ('BREGDETI NUK ËSHTË NË SHITJE'), culminating in a searing electric-guitar and sawed-cello duel.",
+                  "artifact_note": "Acoustic Telemetry: Hushed spoken bridge, high-tenor/female rock eruption & electric guitar vs. sawed cello duel"
+            },
+            {
+                  "year": "3:58 – 5:02",
+                  "era_badge": "ACT IV // THE BANQUET TABLE ULTIMATUM",
+                  "title": "\"Pay Your Share of the Table. Or Tend It Yourself.\"",
+                  "location": "Scottish Highlands • Tuscany • US Heartland • Rain-Soaked Banquet Table",
+                  "icon": "fa-solid fa-wheat-awn",
+                  "narrative": "Backed by a European accordion swell (3:58) and brass surge (4:09), the final chorus brings international flags billowing across the twilight plaza beneath 'PAY YOUR SHARE — NO KINGS.' In the stripped D-minor Outro, heavy drums fall away to leave lone acoustic guitar, solemn cello, and marching boots—closing on a rain-slicked street where farmers, truckers, and students stand with crossed arms beside a long wooden banquet table and an empty gilded chair bearing a single plate marked 'BILL DUE.'",
+                  "artifact_note": "Acoustic Telemetry: Accordion (3:58) & horn swells (4:09) stripping back to lone D-minor guitar & cello fade"
+            }
+      ],
+      "poeticsCallout": {
+            "badge": "EDITORIAL & STUDIO CALLOUT // WITNESS FRAMING, MORAL ARITHMETIC & AI NEO-REALISM",
+            "title": "Backs to the Camera, The Empty Gilded Chair & Candid 35mm Studio Notes",
+            "chorus_couple": "No farmers, no food / No workers, no wealth / Pay your share of the table. / Or tend it yourself.",
+            "intro": "Designing 'And the People Cry Out' required matching the moral gravity of real-world working-class movements without centering ourselves as saviors or smoothing away the gritty texture of documentary street photography. Three deliberate artistic and studio choices define the release:",
+            "pillars": [
+                  {
+                        "number": "01",
+                        "title": "The Rooftop Witness Rule (Why Our Backs Face the Lens)",
+                        "body": "Across all 43 scenes of the official video, whenever The Shady River Bard and duet partner Elena appear on wet slate rooftops alongside Marcus (Black Tri-Color Australian Shepherd) and Rufus (Blue Merle Australian Shepherd), our backs are strictly to the camera—and Marcus and Rufus sit completely still as silent sentinels. Only 5 scenes (11.6%) feature on-camera singing, performed by frontline crowd organizers Mateo and Claire. A solidarity anthem belongs to the plaza, never the performer's ego."
+                  },
+                  {
+                        "number": "02",
+                        "title": "The Moral Arithmetic of 'Or Tend It Yourself'",
+                        "body": "Financialization convinces boardrooms that wealth originates in tickers, derivatives, and Chatham House salons. The Outro strips $251 trillion of paper claims back to physical first principles: diesel, wheat in the furrow, Tuscan olive trees, freight docks, classrooms, and bread. Oligarchs cannot eat a stock buyback or harvest grain with an algorithm. Either capital pays its honest share of the social contract, or it can pick up the wrench and tend the furrow itself."
+                  },
+                  {
+                        "number": "03",
+                        "title": "Candid Studio Note on 35mm AI Street Signs",
+                        "body": "As noted candidly in our YouTube description—'please pardon any AI-generated misspellings on the multilingual protest signs!'—rendering crowds across nine nations in gritty 35mm photojournalistic grain pushed image-to-video synthesis to its edge. While hero banners in Italian ('NO AGRICOLTORI, NO CIBO'), Hindi ('किसान एकता'), Portuguese ('HABITAÇÃO É UM DIREITO'), Spanish ('LA VIVIENDA NO ES UN NEGOCIO'), French ('TAXEZ LES RICHES'), and Albanian ('BREGDETI NUK ËSHTË NË SHITJE') locked cleanly, background placards occasionally carry imperfect AI lettering—left untouched rather than sterilely airbrushed."
+                  }
+            ]
+      },
+      "clean_lyrics_stanzas": [
+            "[Verse 1]\nThe diesel costs more than the wheat in the furrow\nFrom the plains of the Ganges to the Sorrento coast\nThe rigs are all parked on the shoulder til tomorrow\nAnd the middle-class dream is a ledger and a ghost\nThe grocery aisles stand like a hollowed-out chapel\nWhile the family who owns all the television screens\nTells the north that the south still has plenty of apples\nAnd the algorithm buries what the camera really means",
+            "[Verse 2]\nWe signed on the line for the honest man's bargain\nSixty years at the wheel for a roof and a bed\nA school for the kids without rats in the garden\nAnd a pension to keep us when the iron runs red\nNow the prime minister counts up his fifty-five houses\nAnd calls us all greedy for wanting a key\nWhile the war in the gulf sends the oil to the clouds\nAnd the invoice comes due for the land of the free",
+            "[Chorus]\nAnd the people cry out from the fields and the factories\nFrom the tents in Madrid to the docks in the rain\n(And the people cry out!)\nYou have traded our blood for your luxury galleries\nAnd left us the rubble, the rust, and the chain\nWe are ninety-nine strong at the gates of the manor\nThe funeral is over, the sleepers awake\n(Hear the people cry out!)\nRaise the ledger of truth like a workingman's banner\nIt is time that you pay for the world that you take",
+            "[Instrumental Interlude]",
+            "[Verse 3]\nIn the streets of old Paris the youth are assembling\nWhere the plaster falls down on the desks in the cold\nAnd the men in the boardrooms of Europe are trembling\nWith two hundred-fifty-one trillion in gold\nSo they point every lens at a cracked piece of glass\nOn a boulevard storefront of velvet and thread\nRefusing to pan where the workingmen pass\nAnd the words on the stone where the paint is still red",
+            "[Bridge]\nEvery war is a reason to ratchet the price.\nEvery crisis a harvest for the men at the top.\nBut remember the station where the canopy fell!\nWhen the students stood up in the autumn alone\nThey turned all their grief into a tolling of the bell\nAnd they marched into parliament and took back their own!\nYou want us divided by border and tongue\nWhile you carve up the coast for a billionaire's view\n(Stand together as one!)\nFrom the old river valleys to the songs of the young\nThe bill for the century is coming for you!",
+            "[Guitar and Cello Duel]",
+            "[Chorus]\nAnd the people cry out from the fields and the factories\nFrom the tents in Madrid to the docks in the rain\n(And the people cry out!)\nYou have traded our blood for your luxury galleries\nAnd left us the rubble, the rust, and the chain\nWe are ninety-nine strong at the gates of the manor\nThe funeral is over, the sleepers awake\n(Hear the people cry out!)\nRaise the ledger of truth like a workingman's banner\nIt is time that you pay for the world that you take",
+            "[Outro]\nFrom the hills of the Highlands to the Tuscan olive trees\nFrom the heartland of America to the eastern seas\n(And the people cry out)\nNo farmers, no food\nNo workers, no wealth\nPay your share of the table.\nOr tend it yourself."
+      ],
+      "copyright_notice": "© 2026 The Shady River Bard / Shady River Homestead LLC. All rights reserved."
+}
   ];
 
   const bySlug = {};
@@ -425,7 +903,7 @@
   window.SINGLES_DATA = {
     hub: {
       title: "The Singles Vault",
-      subtitle: "Standalone Narrative Singles & Listener Heritage Chronicles",
+      subtitle: "Standalone Narrative Singles, Global Dispatches & Listener Heritage Chronicles",
       artist: "The Shady River Bard",
       canonicalUrl: "https://theshadyriverbard.com/singles/",
       description: "Beyond the 27-album conceptual tapestry, The Singles Vault houses standalone narrative ballads, historical inquiries, and listener heritage chronicles—songs born directly from family heirlooms, clan histories, working-class archives, and lived memory shared on the porch."
