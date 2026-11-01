@@ -774,6 +774,22 @@
       'seven-acres-in-the-middle': { slug: 'seven-acres-in-the-middle', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Seven Acres in the Middle' },
       'pass-the-hat': { slug: 'pass-the-hat', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Pass the Hat' },
       'nourish-the-roots': { slug: 'nourish-the-roots', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Nourish the Roots' },
+      // Album 27: The Republic of Nobody
+      'the-republic-of-nobody': { slug: 'the-republic-of-nobody', albumId: 'the-republic-of-nobody', albumNumber: 27, trackTitle: 'The Republic of Nobody' },
+      'one-man-one-vote': { slug: 'one-man-one-vote', albumId: 'the-republic-of-nobody', albumNumber: 27, trackTitle: 'One Man, One Vote' },
+      'the-price-of-the-ballot': { slug: 'the-price-of-the-ballot', albumId: 'the-republic-of-nobody', albumNumber: 27, trackTitle: 'The Price of the Ballot' },
+      'the-men-behind-the-curtain': { slug: 'the-men-behind-the-curtain', albumId: 'the-republic-of-nobody', albumNumber: 27, trackTitle: 'The Men Behind the Curtain' },
+      'the-ratchet': { slug: 'the-ratchet', albumId: 'the-republic-of-nobody', albumNumber: 27, trackTitle: 'The Ratchet' },
+      'the-buyback-man': { slug: 'the-buyback-man', albumId: 'the-republic-of-nobody', albumNumber: 27, trackTitle: 'The Buyback Man' },
+      'the-other-side-of-town': { slug: 'the-other-side-of-town', albumId: 'the-republic-of-nobody', albumNumber: 27, trackTitle: 'The Other Side of Town' },
+      'every-four-years': { slug: 'every-four-years', albumId: 'the-republic-of-nobody', albumNumber: 27, trackTitle: 'Every Four Years' },
+      'the-empty-chair': { slug: 'the-empty-chair', albumId: 'the-republic-of-nobody', albumNumber: 27, trackTitle: 'The Empty Chair' },
+      'red-white-and-blue-blood': { slug: 'red-white-and-blue-blood', albumId: 'the-republic-of-nobody', albumNumber: 27, trackTitle: 'Red, White, and Blue Blood' },
+      'nobodys-listening': { slug: 'nobodys-listening', albumId: 'the-republic-of-nobody', albumNumber: 27, trackTitle: "Nobody's Listening" },
+      'find-the-others': { slug: 'find-the-others', albumId: 'the-republic-of-nobody', albumNumber: 27, trackTitle: 'Find the Others' },
+      'the-people-organize': { slug: 'the-people-organize', albumId: 'the-republic-of-nobody', albumNumber: 27, trackTitle: 'The People Organize' },
+      'not-red-not-blue': { slug: 'not-red-not-blue', albumId: 'the-republic-of-nobody', albumNumber: 27, trackTitle: 'Not Red, Not Blue' },
+      'nobody-no-more': { slug: 'nobody-no-more', albumId: 'the-republic-of-nobody', albumNumber: 27, trackTitle: 'Nobody No More' },
 
       // Album 01: Quiet Harvest
       'the-blues-under-my-nails': { slug: 'the-blues-under-my-nails', albumId: 'quiet-harvest', albumNumber: 1, trackTitle: 'The Blues Under My Nails' },
@@ -831,7 +847,9 @@
     function getAlbumPracticeUrl(albumItem) {
       if (!albumItem) return null;
       let songSlug = '';
-      if (albumItem.id === 'the-curtains-and-the-canned-goods' || albumItem.number === 23) {
+      if (albumItem.id === 'the-republic-of-nobody' || albumItem.number === 27) {
+        songSlug = 'the-republic-of-nobody';
+      } else if (albumItem.id === 'the-curtains-and-the-canned-goods' || albumItem.number === 23) {
         songSlug = 'the-curtains-and-the-canned-goods';
       } else if (albumItem.id === 'quiet-harvest' || albumItem.number === 1) {
         songSlug = 'the-blues-under-my-nails';
@@ -874,7 +892,7 @@
 
         // Dynamically load any extra practice packages if available
         try {
-          const pRes = await fetch('../data/practice-packages.json?v=20261021_10');
+          const pRes = await fetch('../data/practice-packages.json?v=20261101_27');
           if (pRes.ok) {
             const pData = await pRes.json();
             pData.forEach(p => {
