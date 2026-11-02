@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>The Blood Upon the Heather • Storyboard Preview | The Shady River Bard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-deep: #0c0a09;
+      --bg-card: #1c1917;
+      --bg-elevated: #292524;
+      --border-subtle: #292524;
+      --border-muted: #44403c;
+      --text-main: #f5f5f4;
+      --text-muted: #a8a29e;
+      --text-dim: #78716c;
+      --amber: #f59e0b;
+      --amber-bright: #fbbf24;
+      --emerald: #10b981;
+      --emerald-soft: rgba(16, 185, 129, 0.16);
+      --amber-soft: rgba(245, 158, 11, 0.16);
+      --rose: #f43f5e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0 0 110px 0;
+      background-color: var(--bg-deep);
+      color: var(--text-main);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-display { font-family: 'Cinzel', Georgia, serif; }
+    .font-serif { font-family: 'Merriweather', Georgia, serif; }
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 1.25rem; }
+
+    /* Hero Header */
+    .hero {
+      background: radial-gradient(circle at top right, rgba(245, 158, 11, 0.14), transparent 55%),
+                  linear-gradient(180deg, #1c1917 0%, #0c0a09 100%);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 2rem 0 1.75rem;
+    }
+    .hero-top-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.34rem 0.85rem;
+      border-radius: 999px;
+      background: var(--amber-soft);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: var(--amber-bright);
+      font-size: 0.73rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .client-callout {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.42rem 1rem;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.14);
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      color: #ecfdf5;
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+    .client-callout strong {
+      color: #6ee7b7;
+      font-weight: 800;
+    }
+    .hero-header-card {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-bottom: 0.35rem;
+    }
+    .song-kicker {
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.2rem;
+    }
+    .hero-title {
+      font-size: clamp(1.85rem, 3.8vw, 2.85rem);
+      margin: 0;
+      line-height: 1.15;
+      color: #fafaf9;
+    }
+    .hero-subtitle {
+      margin: 0.35rem 0 0;
+      font-size: 0.95rem;
+      color: #d6d3d1;
+    }
+    .hero-subtitle strong { color: var(--amber-bright); }
+    .meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.95rem;
+    }
+    .pill {
+      background: #171412;
+      border: 1px solid var(--border-muted);
+      color: #d6d3d1;
+      padding: 0.32rem 0.75rem;
+      border-radius: 0.5rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+    }
+    .pill strong { color: var(--amber-bright); }
+    .proposal-box {
+      margin-top: 1.25rem;
+      background: rgba(28, 25, 23, 0.85);
+      border-left: 3px solid var(--amber);
+      border-top: 1px solid var(--border-subtle);
+      border-right: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 1rem 1.25rem;
+      border-radius: 0 0.75rem 0.75rem 0;
+      color: #e7e5e4;
+      font-size: 0.92rem;
+    }
+    .how-to-banner {
+      margin-top: 1.1rem;
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.28);
+      border-radius: 0.75rem;
+      padding: 0.75rem 1rem;
+      font-size: 0.84rem;
+      color: #d1fae5;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    /* Animatic Cinema Section */
+    .animatic-wrap {
+      margin: 1.5rem 0 2rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-muted);
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
+    }
+    .animatic-topbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.85rem 1.25rem;
+      background: #141210;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .btn-play-hero {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #0c0a09;
+      border: none;
+      padding: 0.5rem 1.05rem;
+      border-radius: 0.55rem;
+      font-weight: 800;
+      font-size: 0.84rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      box-shadow: 0 3px 12px rgba(245, 158, 11, 0.3);
+      transition: transform 0.12s, background 0.12s;
+    }
+    .btn-play-hero:hover { background: #fbbf24; transform: translateY(-1px); }
+    .animatic-stage {
+      position: relative;
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      aspect-ratio: 16 / 9;
+      background: #050505;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .animatic-stage img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.18s ease;
+    }
+    .animatic-placeholder {
+      padding: 2rem;
+      text-align: center;
+      max-width: 640px;
+      color: var(--text-muted);
+    }
+    .animatic-hud-top {
+      position: absolute;
+      top: 0.85rem;
+      left: 0.85rem;
+      right: 0.85rem;
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+    }
+    .hud-chip {
+      background: rgba(12, 10, 9, 0.82);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fafaf9;
+      padding: 0.3rem 0.7rem;
+      border-radius: 0.5rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .animatic-lyric-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2.2rem 1.25rem 0.95rem;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.92));
+      text-align: center;
+      pointer-events: none;
+    }
+    .animatic-lyric-text {
+      font-family: 'Merriweather', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(0.95rem, 2vw, 1.3rem);
+      color: #fef3c7;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+    }
+    .animatic-controls {
+      padding: 1rem 1.25rem;
+      background: #141210;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .audio-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.85rem;
+    }
+    .audio-row audio {
+      flex: 1;
+      min-width: 240px;
+      height: 40px;
+    }
+    .scene-scrubber {
+      display: flex;
+      width: 100%;
+      height: 14px;
+      margin-top: 0.85rem;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #292524;
+      gap: 1px;
+      cursor: pointer;
+    }
+    .scrub-seg {
+      height: 100%;
+      background: #44403c;
+      transition: background 0.15s, transform 0.15s;
+    }
+    .scrub-seg:hover { background: #78716c; }
+    .scrub-seg.active { background: var(--amber-bright) !important; }
+    .scrub-seg.approved { background: var(--emerald); }
+    .scrub-seg.tweak { background: #f97316; }
+
+    /* Section Headings & Filter Toolbar */
+    .section-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 2.25rem 0 1rem;
+    }
+    .section-title {
+      font-size: 1.35rem;
+      margin: 0;
+      color: #fafaf9;
+    }
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .filter-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-muted);
+      color: var(--text-muted);
+      padding: 0.42rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .filter-btn:hover { color: var(--text-main); border-color: #78716c; }
+    .filter-btn.active {
+      background: var(--amber);
+      border-color: var(--amber);
+      color: #0c0a09;
+    }
+    .search-input {
+      background: var(--bg-card);
+      border: 1px solid var(--border-muted);
+      color: var(--text-main);
+      padding: 0.45rem 0.85rem;
+      border-radius: 0.5rem;
+      font-size: 0.82rem;
+      min-width: 210px;
+    }
+
+    /* Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.25rem;
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-muted);
+      border-radius: 0.9rem;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.18s, box-shadow 0.18s;
+    }
+    .card.status-approved {
+      border-color: rgba(16, 185, 129, 0.7);
+      box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.25);
+    }
+    .card.status-tweak {
+      border-color: rgba(245, 158, 11, 0.85);
+      box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.3);
+    }
+    .card.playing-now {
+      box-shadow: 0 0 0 2px var(--amber-bright), 0 12px 28px rgba(245, 158, 11, 0.22);
+    }
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.65rem 0.9rem;
+      background: #141210;
+      border-bottom: 1px solid var(--border-subtle);
+      gap: 0.5rem;
+    }
+    .scene-num {
+      font-weight: 800;
+      font-size: 0.82rem;
+      color: var(--amber-bright);
+      letter-spacing: 0.03em;
+    }
+    .scene-time {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+    }
+    .badge {
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 0.18rem 0.5rem;
+      border-radius: 0.35rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .badge-singer { background: rgba(244, 63, 94, 0.18); color: #fda4af; border: 1px solid rgba(244, 63, 94, 0.35); }
+    .badge-broll { background: rgba(56, 189, 248, 0.12); color: #bae6fd; border: 1px solid rgba(56, 189, 248, 0.25); }
+
+    .card-media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #090807;
+      overflow: hidden;
+      cursor: zoom-in;
+    }
+    .card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .slate-fallback {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      text-align: center;
+      background: radial-gradient(circle at center, #292524 0%, #0c0a09 100%);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      cursor: default;
+    }
+    .play-slice-btn {
+      position: absolute;
+      bottom: 0.55rem;
+      right: 0.55rem;
+      background: rgba(12, 10, 9, 0.86);
+      border: 1px solid rgba(251, 191, 36, 0.55);
+      color: var(--amber-bright);
+      padding: 0.28rem 0.62rem;
+      border-radius: 0.45rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .play-slice-btn:hover { background: var(--amber); color: #0c0a09; }
+
+    .card-body {
+      padding: 0.9rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .lyric-quote {
+      font-family: 'Merriweather', Georgia, serif;
+      font-style: italic;
+      font-size: 0.88rem;
+      color: #fef3c7;
+      background: rgba(245, 158, 11, 0.08);
+      border-left: 2px solid var(--amber);
+      padding: 0.45rem 0.65rem;
+      border-radius: 0 0.4rem 0.4rem 0;
+    }
+    .lyric-instrumental {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      font-style: italic;
+    }
+    .action-desc {
+      font-size: 0.83rem;
+      color: #d6d3d1;
+      line-height: 1.48;
+    }
+    details.tech-drawer {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px dashed var(--border-subtle);
+      padding-top: 0.45rem;
+    }
+    details.tech-drawer summary {
+      cursor: pointer;
+      color: var(--text-dim);
+      user-select: none;
+    }
+    details.tech-drawer summary:hover { color: var(--text-muted); }
+    .tech-prompt-box {
+      margin-top: 0.45rem;
+      background: #12100e;
+      padding: 0.55rem;
+      border-radius: 0.4rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.71rem;
+      line-height: 1.45;
+      color: #a8a29e;
+      white-space: pre-wrap;
+    }
+
+    /* Feedback Buttons & Note Box Inside Card */
+    .card-actions {
+      padding: 0.7rem 0.9rem;
+      background: #141210;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .action-btn-row {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .btn-vote {
+      flex: 1;
+      padding: 0.45rem 0.6rem;
+      border-radius: 0.5rem;
+      border: 1px solid var(--border-muted);
+      background: var(--bg-card);
+      color: #d6d3d1;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .btn-vote:hover { border-color: #78716c; color: #fff; }
+    .btn-vote.active-approve {
+      background: var(--emerald-soft);
+      border-color: var(--emerald);
+      color: #6ee7b7;
+    }
+    .btn-vote.active-tweak {
+      background: var(--amber-soft);
+      border-color: var(--amber);
+      color: var(--amber-bright);
+    }
+    .note-box-wrap {
+      margin-top: 0.6rem;
+      display: none;
+    }
+    .note-box-wrap.open { display: block; }
+    .note-textarea {
+      width: 100%;
+      min-height: 68px;
+      background: #0c0a09;
+      border: 1px solid var(--border-muted);
+      border-radius: 0.5rem;
+      color: var(--text-main);
+      padding: 0.55rem 0.7rem;
+      font-family: inherit;
+      font-size: 0.82rem;
+      resize: vertical;
+    }
+    .note-textarea:focus { outline: none; border-color: var(--amber); }
+    .saved-hint {
+      font-size: 0.7rem;
+      color: #6ee7b7;
+      margin-top: 0.25rem;
+      text-align: right;
+    }
+
+    /* Sticky Bottom Dock */
+    .sticky-dock {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 40;
+      background: rgba(20, 18, 16, 0.95);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(245, 158, 11, 0.4);
+      padding: 0.8rem 1.25rem;
+      box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.65);
+    }
+    .dock-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+    .dock-stats {
+      font-size: 0.85rem;
+      color: #e7e5e4;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #0c0a09;
+      border: none;
+      padding: 0.65rem 1.25rem;
+      border-radius: 0.6rem;
+      font-weight: 800;
+      font-size: 0.86rem;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+      transition: transform 0.12s;
+    }
+    .btn-primary:hover { transform: translateY(-1px); background: #fbbf24; }
+    .btn-secondary {
+      background: var(--bg-elevated);
+      color: #e7e5e4;
+      border: 1px solid var(--border-muted);
+      padding: 0.55rem 0.95rem;
+      border-radius: 0.55rem;
+      font-weight: 600;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+    .btn-secondary:hover { border-color: #a8a29e; }
+
+    /* Modal & Lightbox */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      background: rgba(0, 0, 0, 0.82);
+      backdrop-filter: blur(6px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-dialog {
+      background: var(--bg-card);
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      border-radius: 1rem;
+      max-width: 680px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 1.5rem;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75);
+    }
+    .report-preview {
+      width: 100%;
+      height: 210px;
+      background: #0c0a09;
+      border: 1px solid var(--border-muted);
+      border-radius: 0.55rem;
+      color: #d6d3d1;
+      padding: 0.75rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.75rem;
+      white-space: pre-wrap;
+      overflow-y: auto;
+    }
+    .lightbox-img {
+      max-width: 94vw;
+      max-height: 82vh;
+      border-radius: 0.75rem;
+      border: 1px solid var(--border-muted);
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="hero-top-row">
+        <div class="eyebrow">&#127916; The Shady River Bard &bull; Storyboard Preview Studio</div>
+        <div class="client-callout" id="ui-client-callout" style="display:inline-flex;">
+          <span>&#128100; Prepared For:</span>
+          <strong id="ui-client-name">Trevor Swistchew</strong>
+        </div>
+      </div>
+
+      <div class="hero-header-card">
+        <div>
+          <div class="song-kicker">Song &amp; Visual Storyboard Proposal</div>
+          <h1 class="hero-title font-display" id="ui-song-title">The Blood Upon the Heather</h1>
+          <p class="hero-subtitle" id="ui-song-subtitle">Music &amp; Direction by <strong>The Shady River Bard &amp; Trevor Swistchew</strong></p>
+        </div>
+      </div>
+
+      <div class="meta-pills" id="ui-meta-pills"></div>
+      <div class="proposal-box" id="ui-proposal-box" style="display:none;"></div>
+      <div class="how-to-banner">
+        <div>
+          <strong>How to Review:</strong> Click <strong>&#9654; Play Song &amp; Animatic</strong> below to watch the storyboard flip in sync with the music, or scroll through the scenes at your own pace. Mark scenes <strong>&#128077; Looks Good</strong> or <strong>&#9998; Add Note</strong>, then click <strong>Send Your Feedback to The Bard</strong> at the bottom!
+        </div>
+        <span style="font-size:0.76rem; opacity:0.85;">&#10003; Notes auto-save in your browser</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Phase 1 Visual Style Concepts (Optional) -->
+    <section id="section-styles" style="display:none;">
+      <div class="section-header">
+        <h2 class="section-title font-display">1. Visual Style Concept Options</h2>
+      </div>
+      <div class="cards-grid" id="grid-styles"></div>
+    </section>
+
+    <!-- Live Synced Animatic Cinema Player -->
+    <section class="animatic-wrap" id="section-animatic">
+      <div class="animatic-topbar">
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:0.75rem;">
+          <button type="button" class="btn-play-hero" id="btn-play-toggle">&#9654; Play Song &amp; Animatic</button>
+          <span style="color:var(--text-muted); font-size:0.8rem;" id="animatic-status-label">Synced storyboard player &mdash; scenes advance automatically with the music</span>
+        </div>
+        <div style="display:flex; gap:0.5rem; align-items:center;">
+          <button type="button" class="btn-secondary" id="btn-pause-comment">&#9998; Pause &amp; Comment on Active Scene</button>
+          <a id="suno-external-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="text-decoration:none; display:none;">Open on Suno &#8599;</a>
+        </div>
+      </div>
+
+      <div class="animatic-stage" id="animatic-stage" title="Click stage to Play / Pause synced animatic">
+        <img id="animatic-img" src="" alt="Active storyboard frame" style="display:none;" />
+        <div class="animatic-placeholder" id="animatic-placeholder"></div>
+        <div class="animatic-hud-top">
+          <div class="hud-chip" id="animatic-hud-scene">S01</div>
+          <div class="hud-chip" id="animatic-hud-time">0:00.0</div>
+        </div>
+        <div class="animatic-lyric-bar">
+          <div class="animatic-lyric-text" id="animatic-lyric"></div>
+        </div>
+      </div>
+
+      <div class="animatic-controls">
+        <div class="audio-row">
+          <audio id="master-audio" controls preload="metadata" src="audio.mp3"></audio>
+          <div id="no-audio-note" style="display:none; color:var(--text-muted); font-size:0.82rem;">
+            Audio stream not attached yet — review visual storyboard cards below.
+          </div>
+        </div>
+        <div id="animatic-action-caption" style="margin-top:0.6rem; font-size:0.82rem; color:#d6d3d1;"></div>
+        <div class="scene-scrubber" id="scene-scrubber" title="Click any scene segment to jump"></div>
+      </div>
+    </section>
+
+    <!-- Cast & Silent Witness Dogs -->
+    <section id="section-characters" style="display:none;">
+      <div class="section-header">
+        <h2 class="section-title font-display">Cast &amp; Recurring Characters</h2>
+      </div>
+      <div class="cards-grid" id="grid-characters"></div>
+    </section>
+
+    <!-- Scene-by-Scene Storyboard -->
+    <section id="section-scenes">
+      <div class="section-header">
+        <h2 class="section-title font-display">Scene-by-Scene Storyboard</h2>
+        <div class="filter-bar">
+          <button type="button" class="filter-btn active" data-filter="all">All Scenes</button>
+          <button type="button" class="filter-btn" data-filter="tweak">&#9998; Tweaks / Notes</button>
+          <button type="button" class="filter-btn" data-filter="approved">&#128077; Approved</button>
+          <button type="button" class="filter-btn" data-filter="unreviewed">Unreviewed</button>
+          <input type="search" id="scene-search" class="search-input" placeholder="Search lyrics or visuals..." />
+        </div>
+      </div>
+      <div class="cards-grid" id="grid-scenes"></div>
+    </section>
+
+    <!-- YouTube A/B/C Thumbnail Concepts -->
+    <section id="section-thumbs" style="display:none;">
+      <div class="section-header">
+        <h2 class="section-title font-display">YouTube Thumbnail Options (Pick Your Favorite)</h2>
+      </div>
+      <div class="cards-grid" id="grid-thumbs"></div>
+    </section>
+  </main>
+
+  <!-- Sticky Bottom Feedback Summary Dock -->
+  <div class="sticky-dock">
+    <div class="dock-inner">
+      <div class="dock-stats" id="dock-stats"></div>
+      <div style="display:flex; flex-wrap:wrap; gap:0.6rem; align-items:center;">
+        <button type="button" class="btn-secondary" id="btn-approve-rest">&#128077; Mark Unflagged as Approved</button>
+        <button type="button" class="btn-primary" id="btn-open-submit">&#9993; Send Your Feedback to The Bard</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Submit Feedback Modal -->
+  <div class="modal-overlay" id="submit-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.85rem;">
+        <h3 class="font-display" style="margin:0; font-size:1.25rem; color:var(--amber-bright);">&#9993; Send Your Feedback to The Bard</h3>
+        <button type="button" class="btn-secondary" id="btn-close-submit" style="padding:0.3rem 0.65rem;">&#10005;</button>
+      </div>
+
+      <div style="display:grid; gap:0.75rem; margin-bottom:0.9rem;">
+        <div>
+          <label style="display:block; font-size:0.78rem; color:var(--text-muted); margin-bottom:0.25rem;">Your Name</label>
+          <input type="text" id="reviewer-name" class="search-input" style="width:100%;" placeholder="e.g. Trevor" />
+        </div>
+        <div>
+          <label style="display:block; font-size:0.78rem; color:var(--text-muted); margin-bottom:0.25rem;">Overall Thoughts / Big-Picture Ideas (Optional)</label>
+          <textarea id="overall-comment" class="note-textarea" placeholder="Any overall impressions on the mood, characters, pacing, or story arc..."></textarea>
+        </div>
+      </div>
+
+      <div style="margin-bottom:0.4rem; font-size:0.76rem; color:var(--text-muted);">Compiled Review Summary (sent to <strong style="color:#fafaf9;">theshadyriverbard@gmail.com</strong>):</div>
+      <div class="report-preview" id="compiled-report-preview"></div>
+
+      <div id="submit-toast" style="display:none; margin-top:0.75rem; padding:0.6rem 0.85rem; border-radius:0.5rem; background:var(--emerald-soft); border:1px solid var(--emerald); color:#a7f3d0; font-size:0.82rem;"></div>
+
+      <div style="display:flex; flex-wrap:wrap; gap:0.6rem; margin-top:1rem;">
+        <button type="button" class="btn-primary" id="btn-mailto-send">&#9993; Open in Email App</button>
+        <button type="button" class="btn-secondary" id="btn-copy-report">&#128203; Copy Feedback (for Gmail / Chat)</button>
+        <button type="button" class="btn-secondary" id="btn-download-report">&#128190; Download .txt File</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Lightbox Modal -->
+  <div class="modal-overlay" id="lightbox-modal">
+    <div style="text-align:center; max-width:95vw;">
+      <img id="lightbox-img" class="lightbox-img" src="" alt="Enlarged storyboard frame" />
+      <div id="lightbox-caption" style="margin-top:0.6rem; color:#e7e5e4; font-size:0.88rem;"></div>
+      <div style="margin-top:0.6rem;">
+        <button type="button" class="btn-secondary" id="btn-close-lightbox">Close Preview (Esc)</button>
+      </div>
+    </div>
+  </div>
+
+  <script id="storyboard-payload" type="application/json">{"song_slug": "the_blood_upon_the_heather", "secret_slug": "the-blood-upon-the-heather-e73cbf", "song_title": "The Blood Upon the Heather", "artist": "The Shady River Bard & Trevor Swistchew", "client_name": "Trevor Swistchew", "proposal_notes": "Visual Direction for Trevor Swistchew — Option 3: Storm-Lit Highland Romanticism (Living Impasto Oil Painting).\n• Aesthetic: Museum-grade 19th-century Scottish Romantic palette-knife oil canvases (inspired by Horatio McCulloch & J.M.W. Turner) where indigo storm skies break open into molten rose-gold dawn over crimson moorland heather and ultramarine Saltire banners.\n• Songwriter Attribution: Full songwriting & lyric credit to Trevor Swistchew is baked into both the YouTube Video Description and a dedicated Pinned Comment for the video comment section.\n• Pacing & Sync: 41 scenes locked to exact word-level timestamps across the 4:02.08 master recording (123 BPM Celtic-rock acoustic/electric guitars, Highland pipes, and Isla's 2:25–2:40 fiddle solo), watched over by Callum, our stationary black-and-white Border Collie.", "visual_style": "Storm-Lit Highland Romanticism (19th-Century Scottish Impasto Oil Painting)", "bpm": 123.0, "total_scenes": 41, "images_ready_count": 40, "expected_runtime_sec": 242.08, "runtime_formatted": "4:02.1", "suno_url": "", "audio_url": "audio.mp3", "cover_image_url": "", "bard_email": "theshadyriverbard@gmail.com", "generated_at": "2026-11-02 23:10 UTC", "characters": [{"id": "CHAR_01", "name": "Callum", "description": "Black-and-white Scottish Border Collie — the steadfast, stationary silent witness watching over the Highland glens, cairns, and coastal cliffs.", "prompt": "Master 16:9 character reference portrait of Callum (black-and-white Border Collie, white chest blaze, seated still, hindquarters tucked) perched nobly on a mossy granite boulder amid blooming crimson morning heather overlooking a mist-veiled Highland loch. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/char_01_callum.webp"}, {"id": "CHAR_02", "name": "Ewan", "description": "40s Scottish Highland rock-folk bard and lead vocalist in a slate-and-crimson tweed greatcoat, playing acoustic and electric guitar at 123 BPM.", "prompt": "Master 16:9 character reference portrait in three-quarter profile of Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) standing on a windswept Highland ridge holding a weathered sunburst electric guitar against storm-gold dawn clouds. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/char_02_ewan.webp"}, {"id": "CHAR_03", "name": "Isla", "description": "30s Scottish Highland fiddler in a storm-indigo wool arisaid shawl with a silver thistle brooch, performing the soaring mid-song fiddle solo and raising the Saltire.", "prompt": "Master 16:9 character reference portrait in three-quarter view of Isla (30s Scottish fiddler, non-celebrity face, auburn hair, indigo wool shawl, thistle brooch) holding a warm amber wooden fiddle and horsehair bow atop a sunlit Scottish sea cliff. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/char_03_isla.webp"}, {"id": "CHAR_04", "name": "Lachlan", "description": "60s Highland elder and piper in a dark wool cloak and muted slate-green tartan plaid, sounding the Highland pipes beside ancestral cairns.", "prompt": "Master 16:9 character reference portrait in three-quarter profile of Lachlan (60s Highland piper, non-celebrity face, silver beard, dark wool cloak, green tartan) standing beside an ancient Highland stone cairn holding traditional wooden Highland bagpipes at sunrise. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/char_04_lachlan.webp"}], "style_concepts": [], "scenes": [{"scene_number": 1, "scene_id": "S01", "slug": "highland_storm_dawn_intro", "start_sec": 0.0, "end_sec": 6.2, "time_label": "0:00.0 – 0:06.2", "duration_sec": 6.2, "lyrics": "", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Wide sweeping view of storm clouds parting at dawn over a monumental Scottish Highland glen carpeted in crimson heather.", "spatial_anchor": "Glencoe-style Highland valley, dawn break", "base_image_prompt": "Wide establishing panorama of a vast Scottish Highland glen at daybreak as brooding indigo storm clouds split open to pour molten rose-gold sunlight across ridges of blooming crimson-purple heather and a mirror-dark loch. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Slow majestic camera push-in at 123 BPM triumphant folk-rock tempo as painted storm clouds roll across the mountain peaks and golden morning rays sweep over wind-rippled crimson heather. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S01_highland_storm_dawn_intro.webp"}, {"scene_number": 2, "scene_id": "S02", "slug": "lachlan_highland_pipes_tor", "start_sec": 6.2, "end_sec": 12.8, "time_label": "0:06.2 – 0:12.8", "duration_sec": 6.6, "lyrics": "", "is_singer": false, "skip_generation": false, "characters": ["Lachlan"], "subject_action": "Lachlan stands on a craggy granite tor sounding Highland pipes as silver morning mist drifts below.", "spatial_anchor": "Granite tor overlooking misty glen", "base_image_prompt": "Low-angle medium-wide shot in side profile of Lachlan (60s Highland piper, non-celebrity face, silver beard, dark wool cloak, green tartan) standing firmly atop a mossy granite tor playing traditional Highland bagpipes against swirling rose-lit mist and heather slopes. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Slow upward camera tilt at 123 BPM as Lachlan (60s Highland piper, non-celebrity face, silver beard, dark wool cloak, green tartan) fingers the wooden pipe chanter with steady grounded posture while tartan wool and silver glen mist billow in the morning wind. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S02_lachlan_highland_pipes_tor.webp"}, {"scene_number": 3, "scene_id": "S03", "slug": "ewan_acoustic_guitar_heather", "start_sec": 12.8, "end_sec": 18.5, "time_label": "0:12.8 – 0:18.5", "duration_sec": 5.7, "lyrics": "", "is_singer": false, "skip_generation": false, "characters": ["Ewan", "Callum"], "subject_action": "Close-up of Ewan's hands strumming an acoustic guitar beside crimson heather with Callum seated still nearby.", "spatial_anchor": "Moorland heather ridge, morning light", "base_image_prompt": "Tight angled close-up of the weathered hands of Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) strumming a vintage spruce acoustic guitar (no face in frame), with Callum (black-and-white Border Collie, white chest blaze, seated still, hindquarters tucked) in soft background focus on a heather-draped stone. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Subtle camera dolly-in at 123 BPM rhythmic pulse as Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) strums crisp driving chords on the acoustic guitar strings while crimson heather sways gently around Callum (black-and-white Border Collie, white chest blaze, seated still, hindquarters tucked). 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S03_ewan_acoustic_guitar_heather.webp"}, {"scene_number": 4, "scene_id": "S04", "slug": "callum_cairn_sunrise_vigil", "start_sec": 18.5, "end_sec": 24.06, "time_label": "0:18.5 – 0:24.1", "duration_sec": 5.56, "lyrics": "", "is_singer": false, "skip_generation": false, "characters": ["Callum"], "subject_action": "Callum sits completely still beside an ancestral stone cairn watching golden sunrise pierce the Highland horizon.", "spatial_anchor": "Ancestral stone cairn above Highland loch", "base_image_prompt": "Medium three-quarter front shot of Callum (black-and-white Border Collie, white chest blaze, seated still, hindquarters tucked) beside a weathered Highland memorial stone cairn, gazing steadily toward a glowing rose-gold sunrise breaking over distant mountain ridges. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Slow lateral camera pan right at 123 BPM while Callum (black-and-white Border Collie, white chest blaze, seated still, hindquarters tucked) remains completely stationary at noble attention, border-collie fur ruffling softly in the dawn breeze as sunbeams brighten the heather. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S04_callum_cairn_sunrise_vigil.webp"}, {"scene_number": 5, "scene_id": "S05", "slug": "ewan_sings_heather_red_dawn", "start_sec": 24.06, "end_sec": 28.22, "time_label": "0:24.1 – 0:28.2", "duration_sec": 4.16, "lyrics": "The heather is red in the morning sun,", "is_singer": true, "skip_generation": false, "characters": ["Ewan"], "subject_action": "Ewan sings the opening verse line in three-quarter profile amid glowing red morning heather.", "spatial_anchor": "Sunlit crimson heather moorland", "base_image_prompt": "Medium three-quarter profile shot of Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) standing knee-deep in fiery crimson-purple moorland heather as low golden morning sunlight rims his weathered profile. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Slow push-in camera motion at 123 BPM. With zero wind-up delay on frame 1 (0.0s), from 0.00s to 3.78s Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) sings in an earnest Highland rock baritone the exact words: 'The heather is red in the morning sun,'. Immediately at 3.78s, Ewan closes his mouth completely and holds a resolute silent gaze until 4.16s as wind stirs the heather. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S05_ewan_sings_heather_red_dawn.webp"}, {"scene_number": 6, "scene_id": "S06", "slug": "golden_eagle_soaring_peaks", "start_sec": 28.22, "end_sec": 32.41, "time_label": "0:28.2 – 0:32.4", "duration_sec": 4.19, "lyrics": "The eagle flies high and free,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "A majestic Scottish golden eagle glides effortlessly on morning thermals high above jagged sunlit peaks.", "spatial_anchor": "High altitude sky above Highland Munros", "base_image_prompt": "Sweeping low-angle wide shot of a majestic Scottish golden eagle with wings fully spread gliding high above jagged granite Highland peaks and glowing amber cloud banks. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Smooth upward tracking camera pan at 123 BPM as the golden eagle soars effortlessly on rising mountain air currents with wings held wide against swirling rose-gold and indigo clouds. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S06_golden_eagle_soaring_peaks.webp"}, {"scene_number": 7, "scene_id": "S07", "slug": "fallen_brave_cairn_broadsword", "start_sec": 32.41, "end_sec": 36.45, "time_label": "0:32.4 – 0:36.5", "duration_sec": 4.04, "lyrics": "The brave who had fallen are not forgotten,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Close-up of an ancient moss-covered Scottish broadsword hilt resting untouched beside a heather-crowned stone cairn.", "spatial_anchor": "Memorial cairn in Highland pass", "base_image_prompt": "Atmospheric close-up of an antique weathered iron basket-hilted Scottish broadsword half-reclaimed by moss and blooming crimson heather at the base of an ancient stone memorial cairn in golden mist. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Slow reverent dolly-in at 123 BPM as luminous morning mist drifts past the weathered stone cairn and warm sunbeams ignite the red heather blossoms around the still iron hilt. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S07_fallen_brave_cairn_broadsword.webp"}, {"scene_number": 8, "scene_id": "S08", "slug": "ewan_isla_backlit_ridge_silhouette", "start_sec": 36.45, "end_sec": 40.48, "time_label": "0:36.5 – 0:40.5", "duration_sec": 4.03, "lyrics": "They live on in you and me.", "is_singer": false, "skip_generation": false, "characters": ["Ewan", "Isla"], "subject_action": "Backlit silhouette from behind of Ewan with an electric guitar and Isla standing shoulder-to-shoulder facing the sunlit glen.", "spatial_anchor": "High cliff overlook facing sunlit glen", "base_image_prompt": "Wide backlit rear-view shot of Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) with a sunburst electric guitar slung across his back and Isla (30s Scottish fiddler, non-celebrity face, auburn hair, indigo wool shawl, thistle brooch) standing shoulder-to-shoulder facing away from the camera toward a vast sunlit Highland valley. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Slow crane rise at 123 BPM behind the grounded silhouettes of Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) and Isla (30s Scottish fiddler, non-celebrity face, auburn hair, indigo wool shawl, thistle brooch) facing away toward the horizon while wind billows their wool coats and shawls in golden rim light. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S08_ewan_isla_backlit_ridge_silhouette.webp"}, {"scene_number": 9, "scene_id": "S09", "slug": "callum_lachlan_loch_sunbeams", "start_sec": 40.48, "end_sec": 48.04, "time_label": "0:40.5 – 0:48.0", "duration_sec": 7.56, "lyrics": "They live on in you and me.", "is_singer": false, "skip_generation": false, "characters": ["Callum", "Lachlan"], "subject_action": "Callum sits still beside Lachlan's backlit silhouette as sweeping Turner sun-rays cross the Highland loch.", "spatial_anchor": "Highland loch overlook, cathedral sun-rays", "base_image_prompt": "Wide painterly composition of Callum (black-and-white Border Collie, white chest blaze, seated still, hindquarters tucked) in the foreground beside the rear-facing silhouette of Lachlan (60s Highland piper, non-celebrity face, silver beard, dark wool cloak, green tartan) looking out over a silver Highland loch pierced by cathedral shafts of morning light. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Slow sweeping camera pan left at 123 BPM while Callum (black-and-white Border Collie, white chest blaze, seated still, hindquarters tucked) sits completely still on the granite ledge and dramatic golden sun-rays travel across the shimmering loch water below Lachlan (60s Highland piper, non-celebrity face, silver beard, dark wool cloak, green tartan). 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S09_callum_lachlan_loch_sunbeams.webp"}, {"scene_number": 10, "scene_id": "S10", "slug": "ewan_sings_sing_high_chorus", "start_sec": 48.04, "end_sec": 52.18, "time_label": "0:48.0 – 0:52.2", "duration_sec": 4.14, "lyrics": "Sing high! Sing loud! Let the whole world hear,", "is_singer": true, "skip_generation": false, "characters": ["Ewan"], "subject_action": "Ewan belts the triumphant chorus opener from a wind-whipped Highland crag.", "spatial_anchor": "Windswept granite crag, storm-gold sky", "base_image_prompt": "Dynamic low-angle medium three-quarter shot of Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) braced on a windswept granite crag against soaring storm-gold clouds and crimson moorland. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Energetic slow push-in at 123 BPM. With zero wind-up delay on frame 1 (0.0s), from 0.00s to 4.12s Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) sings powerfully the exact words: 'Sing high! Sing loud! Let the whole world hear,'. Immediately at 4.12s, Ewan closes his mouth completely as wind whips his tweed coat. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S10_ewan_sings_sing_high_chorus.webp"}, {"scene_number": 11, "scene_id": "S11", "slug": "highland_waterfall_roar_basalt", "start_sec": 52.18, "end_sec": 56.58, "time_label": "0:52.2 – 0:56.6", "duration_sec": 4.4, "lyrics": "The voice of the Highlands roar,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "A monumental Highland waterfall thunders down dark basalt cliffs into churning silver-and-gold mist.", "spatial_anchor": "Highland gorge waterfall", "base_image_prompt": "Monumental low-angle wide shot of a roaring Scottish Highland waterfall plunging down dark wet basalt cliffs into a boiling cauldron of silver spray framed by purple-red heather. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Dramatic slow zoom-in at 123 BPM high energy as white impasto water cascades down the cliff face and sunlit spray rises into the amber morning air. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S11_highland_waterfall_roar_basalt.webp"}, {"scene_number": 12, "scene_id": "S12", "slug": "standing_stones_heather_dream", "start_sec": 56.58, "end_sec": 60.2, "time_label": "0:56.6 – 1:00.2", "duration_sec": 3.62, "lyrics": "The brave may fall but their dream lives on,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Ancient Neolithic Scottish standing stones rise through glowing rose-gold mist and red heather.", "spatial_anchor": "Ancient standing stone circle at dawn", "base_image_prompt": "Medium-wide impasto shot of ancient weathered Scottish standing stones silhouetted against molten rose-gold dawn mist with vibrant crimson heather blooming around their bases. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Smooth lateral dolly right at 123 BPM as golden morning mist curls around the towering standing stones and wind ripples through the red moorland heather. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S12_standing_stones_heather_dream.webp"}, {"scene_number": 13, "scene_id": "S13", "slug": "open_stone_archway_freedom_sea", "start_sec": 60.2, "end_sec": 64.24, "time_label": "1:00.2 – 1:04.2", "duration_sec": 4.04, "lyrics": "As they open Freedom's door.", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Camera glides toward a towering ancient stone archway already completely wide open with no doors, revealing sunlit sea and sky.", "spatial_anchor": "Doorless stone sea-archway facing horizon", "base_image_prompt": "Symmetrical medium-wide shot looking straight through an ancient weathered Highland fortress stone archway that is ALREADY completely open and empty with no doors attached, framing dazzling sunlit turquoise-and-gold ocean waves beyond. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Steady forward camera dolly-in at 123 BPM toward the static, completely doorless open stone archway as warm golden dawn light pours unobstructed across the mossy threshold stones. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S13_open_stone_archway_freedom_sea.webp"}, {"scene_number": 14, "scene_id": "S14", "slug": "isla_saltire_coastal_headland", "start_sec": 64.24, "end_sec": 68.06, "time_label": "1:04.2 – 1:08.1", "duration_sec": 3.82, "lyrics": "Raise high the Saltire into the sky,", "is_singer": false, "skip_generation": false, "characters": ["Isla"], "subject_action": "Backlit rear-three-quarter view of Isla holding a tall wooden staff as a large Saltire banner billows into the sky.", "spatial_anchor": "Coastal headland beneath towering clouds", "base_image_prompt": "Heroic low-angle rear-three-quarter shot of Isla (30s Scottish fiddler, non-celebrity face, auburn hair, indigo wool shawl, thistle brooch) facing the open sea atop a rocky headland, holding upright a weathered wooden staff flying a large ultramarine-blue and crisp white Scottish Saltire flag against golden clouds. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Upward camera tilt at 123 BPM high energy while Isla (30s Scottish fiddler, non-celebrity face, auburn hair, indigo wool shawl, thistle brooch) stands grounded facing the horizon and the vibrant blue-and-white Saltire banner snaps and billows majestically in the coastal gale. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S14_isla_saltire_coastal_headland.webp"}, {"scene_number": 15, "scene_id": "S15", "slug": "shore_to_shore_aerial_scotland", "start_sec": 68.06, "end_sec": 72.28, "time_label": "1:08.1 – 1:12.3", "duration_sec": 4.22, "lyrics": "Let it fly from shore to shore,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Sweeping aerial impasto panorama from rugged Atlantic sea stacks across emerald glens to sunlit eastern firths.", "spatial_anchor": "Scottish coastal cliffs and sea stacks", "base_image_prompt": "Breathtaking high-altitude aerial impasto oil view sweeping over rugged Scottish sea cliffs, crashing white surf, and crimson-heather coastal hills illuminated by shafts of golden sunlight. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Soaring forward aerial camera glide at 123 BPM as cloud shadows and bright golden sunbeams race across the Scottish coastline and shimmering ocean swells. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S15_shore_to_shore_aerial_scotland.webp"}, {"scene_number": 16, "scene_id": "S16", "slug": "crimson_heather_dewdrops_macro", "start_sec": 72.28, "end_sec": 76.57, "time_label": "1:12.3 – 1:16.6", "duration_sec": 4.29, "lyrics": "For the blood upon the heather cries,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Macro impasto close-up of rain-kissed crimson-purple heather blossoms blazing like embers in low morning sun.", "spatial_anchor": "Moorland foreground macro", "base_image_prompt": "Intimate low-angle close-up of wild Scottish heather blossoms painted in rich arterial crimson and deep violet impasto strokes, glistening with morning dew against dark peat and golden rim light. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Slow rack-focus and push-in at 123 BPM as a gust of Highland wind ripples the fiery red heather sprigs and golden light glints across dewdrops. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S16_crimson_heather_dewdrops_macro.webp"}, {"scene_number": 17, "scene_id": "S17", "slug": "ewan_sings_scotland_forevermore_c1", "start_sec": 76.57, "end_sec": 81.22, "time_label": "1:16.6 – 1:21.2", "duration_sec": 4.65, "lyrics": "\"Scotland forevermore!\"", "is_singer": true, "skip_generation": false, "characters": ["Ewan"], "subject_action": "Ewan sings the sustained 'Scotland forevermore!' climax in heroic three-quarter profile beneath indigo-and-gold skies.", "spatial_anchor": "Sunlit Highland ridge climax", "base_image_prompt": "Heroic medium three-quarter profile shot of Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) on a high heather ridge with golden dawn rays breaking through dark storm clouds behind him. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Slow triumphant dolly-in at 123 BPM. With zero wind-up delay on frame 1 (0.0s), from 0.00s to 4.21s Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) belts with passionate intensity the exact words: 'Scotland forevermore!'. Immediately at 4.21s, Ewan closes his mouth completely and holds a fierce, proud silent expression until 4.65s while his coat billows. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S17_ewan_sings_scotland_forevermore_c1.webp"}, {"scene_number": 18, "scene_id": "S18", "slug": "lachlan_pipes_stone_bridge_callum", "start_sec": 81.22, "end_sec": 88.8, "time_label": "1:21.2 – 1:28.8", "duration_sec": 7.58, "lyrics": "", "is_singer": false, "skip_generation": false, "characters": ["Lachlan", "Callum"], "subject_action": "Lachlan plays Highland pipes on an ancient arched stone bridge while Callum sits completely still beside him.", "spatial_anchor": "Highland stone packhorse bridge", "base_image_prompt": "Wide painterly shot of an old Highland packhorse stone bridge spanning a rushing mountain burn; Lachlan (60s Highland piper, non-celebrity face, silver beard, dark wool cloak, green tartan) stands in side profile playing Highland bagpipes while Callum (black-and-white Border Collie, white chest blaze, seated still, hindquarters tucked) sits motionless at his side. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Slow crane pan right at 123 BPM driving instrumental energy as white water foams beneath the stone arch, Callum (black-and-white Border Collie, white chest blaze, seated still, hindquarters tucked) remains completely still on haunches, and Lachlan (60s Highland piper, non-celebrity face, silver beard, dark wool cloak, green tartan) plays his pipes in golden mist. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S18_lachlan_pipes_stone_bridge_callum.webp"}, {"scene_number": 19, "scene_id": "S19", "slug": "ewan_electric_guitar_riff_hands", "start_sec": 88.8, "end_sec": 96.41, "time_label": "1:28.8 – 1:36.4", "duration_sec": 7.61, "lyrics": "", "is_singer": false, "skip_generation": false, "characters": ["Ewan"], "subject_action": "Tight dramatic close-up of Ewan's hands playing a soaring melodic electric guitar lead against storm-lit heather hills.", "spatial_anchor": "Heather ridge instrumental solo", "base_image_prompt": "Dynamic angled close-up of the hands of Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) fretting and picking a weathered sunburst electric guitar (neck and body only, face out of frame) with crimson moorland hills blurred behind. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Energetic slow push-in at 123 BPM rock rhythm as Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) plays expressive melodic guitar notes on gleaming steel strings while warm sunrise light flares across the guitar finish. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S19_ewan_electric_guitar_riff_hands.webp"}, {"scene_number": 20, "scene_id": "S20", "slug": "highland_wind_heather_waves", "start_sec": 96.41, "end_sec": 100.45, "time_label": "1:36.4 – 1:40.5", "duration_sec": 4.04, "lyrics": "The wind still blows through the Highland hills,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Fierce Highland wind sweeps waves of tall amber grass and purple-red heather across towering mountain slopes.", "spatial_anchor": "Windswept Munro slopes", "base_image_prompt": "Expansive wide shot of steep Scottish Highland Munros covered in amber moor grass and crimson heather under dramatic racing indigo-and-gold clouds. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Sweeping lateral camera pan at 123 BPM as waves of wind roll visibly across the heather and tall Highland grasses while cloud shadows race up the mountain flanks. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S20_highland_wind_heather_waves.webp"}, {"scene_number": 21, "scene_id": "S21", "slug": "highland_river_running_to_sea", "start_sec": 100.45, "end_sec": 103.93, "time_label": "1:40.5 – 1:43.9", "duration_sec": 3.48, "lyrics": "The rivers run to the sea,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "A sparkling silver-and-gold Highland river winds out of a dark mountain glen into an open sunlit coastal firth.", "spatial_anchor": "River mouth meeting sunlit sea loch", "base_image_prompt": "Elevated wide impasto landscape following a winding silver Highland river rushing over mossy boulders out of a shadowy glen into a bright sunlit sea loch. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Smooth forward aerial push at 123 BPM following the shimmering river current toward the golden sea horizon as mist rises off the rapids. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S21_highland_river_running_to_sea.webp"}, {"scene_number": 22, "scene_id": "S22", "slug": "ewan_sings_voices_would_not_bow", "start_sec": 103.93, "end_sec": 107.76, "time_label": "1:43.9 – 1:47.8", "duration_sec": 3.83, "lyrics": "And the voices of those who would not bow", "is_singer": true, "skip_generation": false, "characters": ["Ewan"], "subject_action": "Ewan sings beside a weathered carved standing stone with resolute Highland defiance.", "spatial_anchor": "Pictish standing stone on moorland", "base_image_prompt": "Medium-wide architectural shot in three-quarter profile of Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) standing beside a tall Pictish-carved granite standing stone on a windy heather moor. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Steady dolly-in at 123 BPM. With zero wind-up delay on frame 1 (0.0s), from 0.00s to 3.81s Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) sings with unyielding conviction the exact words: 'And the voices of those who would not bow'. Immediately at 3.81s, Ewan closes his mouth completely. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S22_ewan_sings_voices_would_not_bow.webp"}, {"scene_number": 23, "scene_id": "S23", "slug": "cliff_tableau_liberty_vigil", "start_sec": 107.76, "end_sec": 111.97, "time_label": "1:47.8 – 1:52.0", "duration_sec": 4.21, "lyrics": "Still call for liberty.", "is_singer": false, "skip_generation": false, "characters": ["Lachlan", "Isla", "Callum"], "subject_action": "Grounded backlit cliffside tableau of Lachlan, Isla, and Callum facing out toward the blazing morning sun.", "spatial_anchor": "Sea cliff horizon overlook", "base_image_prompt": "Wide heroic rear-silhouette tableau on a high sea cliff showing Lachlan (60s Highland piper, non-celebrity face, silver beard, dark wool cloak, green tartan) and Isla (30s Scottish fiddler, non-celebrity face, auburn hair, indigo wool shawl, thistle brooch) standing shoulder-to-shoulder facing away toward the rising sun over the ocean, with Callum (black-and-white Border Collie, white chest blaze, seated still, hindquarters tucked) seated completely still beside them. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Slow majestic camera dolly-in at 123 BPM behind the still, grounded figures of Lachlan (60s Highland piper, non-celebrity face, silver beard, dark wool cloak, green tartan), Isla (30s Scottish fiddler, non-celebrity face, auburn hair, indigo wool shawl, thistle brooch), and stationary Callum (black-and-white Border Collie, white chest blaze, seated still, hindquarters tucked) while wool cloaks ripple in golden ocean wind. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S23_cliff_tableau_liberty_vigil.webp"}, {"scene_number": 24, "scene_id": "S24", "slug": "eagle_piercing_storm_sunbeam", "start_sec": 111.97, "end_sec": 116.26, "time_label": "1:52.0 – 1:56.3", "duration_sec": 4.29, "lyrics": "Sing high! Sing loud! Let the whole world hear,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "A golden eagle banks through a blinding shaft of golden sunlight piercing dark storm clouds over a Highland glen.", "spatial_anchor": "Storm-split sky over Highland glen", "base_image_prompt": "Dramatic telephoto impasto shot of a Scottish golden eagle banking gracefully through a brilliant beam of molten amber light breaking through dark indigo thunderclouds. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Dynamic tracking pan at 123 BPM climax energy as the golden eagle glides on outstretched wings through swirling sunlit cloud mist. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S24_eagle_piercing_storm_sunbeam.webp"}, {"scene_number": 25, "scene_id": "S25", "slug": "atlantic_breakers_hebridean_cliffs", "start_sec": 116.26, "end_sec": 120.29, "time_label": "1:56.3 – 2:00.3", "duration_sec": 4.03, "lyrics": "The voice of the Highlands roar,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Towering Atlantic ocean swells crash in explosive white impasto spray against dark Hebridean basalt cliffs.", "spatial_anchor": "Hebridean basalt sea cliffs", "base_image_prompt": "Powerful low-angle wide shot of massive cobalt-and-emerald Atlantic rollers crashing in thick white palette-knife spray against towering black basalt Scottish sea cliffs crowned with red heather. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Slow dramatic push-in at 123 BPM heavy rhythm as ocean spray billows upward into golden morning light against the immovable basalt rock. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S25_atlantic_breakers_hebridean_cliffs.webp"}, {"scene_number": 26, "scene_id": "S26", "slug": "ruined_abbey_open_arch_heather", "start_sec": 120.29, "end_sec": 127.86, "time_label": "2:00.3 – 2:07.9", "duration_sec": 7.57, "lyrics": "The brave may fall but their dream lives on, As they open Freedom's door.", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Camera dollies through the grand empty stone arch of a roofless Highland abbey already wide open to sunlit crimson hills.", "spatial_anchor": "Roofless Scottish stone abbey arch", "base_image_prompt": "Majestic wide architectural shot inside a roofless medieval Scottish stone abbey looking straight out through a soaring Gothic stone archway that is ALREADY completely open and empty with zero doors, framing sunlit crimson heather hills beyond. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Smooth forward camera glide at 123 BPM through the static, doorless stone abbey archway as golden sunbeams stream across mossy flagstones toward the open Highland horizon. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S26_ruined_abbey_open_arch_heather.webp"}, {"scene_number": 27, "scene_id": "S27", "slug": "ewan_sings_raise_high_saltire", "start_sec": 127.86, "end_sec": 132.08, "time_label": "2:07.9 – 2:12.1", "duration_sec": 4.22, "lyrics": "Raise high the Saltire into the sky,", "is_singer": true, "skip_generation": false, "characters": ["Ewan"], "subject_action": "Ewan sings beneath a billowing cobalt-and-white Saltire banner with an exact mid-line musical breath pause.", "spatial_anchor": "Hilltop beacon ridge beneath Saltire", "base_image_prompt": "Medium three-quarter profile shot of Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) standing on a sunlit parapet ridge with a large ultramarine-and-white Scottish Saltire banner streaming in the sky behind him. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Slow upward dolly-in at 123 BPM. With zero wind-up delay on frame 1 (0.0s), from 0.00s to 1.90s Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) sings the exact words: 'Raise high the Saltire'. At 1.90s, Ewan closes his mouth completely for a brief 0.46-second musical pause until 2.36s. At 2.36s, Ewan opens his mouth and from 2.36s to 4.13s sings: 'into the sky,'. Immediately at 4.13s, he closes his mouth. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S27_ewan_sings_raise_high_saltire.webp"}, {"scene_number": 28, "scene_id": "S28", "slug": "saltire_beacon_tower_coastal_gale", "start_sec": 132.08, "end_sec": 135.88, "time_label": "2:12.1 – 2:15.9", "duration_sec": 3.8, "lyrics": "Let it fly from shore to shore,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "A giant painted Scottish Saltire banner flies triumphantly atop an ancient stone coastal watchtower.", "spatial_anchor": "Ancient coastal watchtower", "base_image_prompt": "Heroic low-angle wide shot of a weathered circular Scottish stone watchtower on a sea promontory flying a huge ultramarine-blue and white Saltire flag against radiant rose-gold clouds. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Sweeping orbital camera pan at 123 BPM as the bold blue-and-white Saltire banner ripples powerfully in the sea wind above crashing surf. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S28_saltire_beacon_tower_coastal_gale.webp"}, {"scene_number": 29, "scene_id": "S29", "slug": "callum_crane_rise_heather_panorama", "start_sec": 135.88, "end_sec": 144.5, "time_label": "2:15.9 – 2:24.5", "duration_sec": 8.62, "lyrics": "For the blood upon the heather cries, \"Scotland forevermore!\"", "is_singer": false, "skip_generation": false, "characters": ["Callum"], "subject_action": "Sweeping crane rise from fiery red heather past stationary Callum to reveal an epic sunlit Highland mountain vista.", "spatial_anchor": "Highland summit panorama", "base_image_prompt": "Layered wide impasto composition starting low on blazing crimson heather blossoms with Callum (black-and-white Border Collie, white chest blaze, seated still, hindquarters tucked) perched still on a mossy rock in the mid-ground before a vast sunlit panorama of Highland peaks and lochs. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Majestic upward crane rise at 123 BPM climax energy past stationary Callum (black-and-white Border Collie, white chest blaze, seated still, hindquarters tucked) as golden morning sunlight floods the crimson moorland and distant mountain ranges. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S29_callum_crane_rise_heather_panorama.webp"}, {"scene_number": 30, "scene_id": "S30", "slug": "isla_fiddle_solo_misty_crag", "start_sec": 144.5, "end_sec": 152.5, "time_label": "2:24.5 – 2:32.5", "duration_sec": 8.0, "lyrics": "", "is_singer": false, "skip_generation": false, "characters": ["Isla"], "subject_action": "Isla performs the soaring Highland fiddle solo on a wind-swept crag as golden light catches her bow.", "spatial_anchor": "Moorland crag, fiddle solo spotlight", "base_image_prompt": "Dramatic medium three-quarter shot of Isla (30s Scottish fiddler, non-celebrity face, auburn hair, indigo wool shawl, thistle brooch) braced on a heather-clad crag drawing a horsehair bow across her warm amber Highland fiddle as her storm-indigo wool shawl billows in golden mist. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Dynamic orbital dolly around Isla (30s Scottish fiddler, non-celebrity face, auburn hair, indigo wool shawl, thistle brooch) at 123 BPM driving Celtic-rock solo energy as she draws expressive sweeping bow strokes across her fiddle strings while wind whips her copper hair and shawl. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S30_isla_fiddle_solo_misty_crag.webp"}, {"scene_number": 31, "scene_id": "S31", "slug": "lachlan_isla_pipes_and_fiddle_duet", "start_sec": 152.5, "end_sec": 160.5, "time_label": "2:32.5 – 2:40.5", "duration_sec": 8.0, "lyrics": "", "is_singer": false, "skip_generation": false, "characters": ["Lachlan", "Isla"], "subject_action": "Lachlan on Highland pipes and Isla on fiddle play side-by-side atop a storm-lit heather ridge.", "spatial_anchor": "Granite ridge duet overlook", "base_image_prompt": "Wide heroic two-shot of Lachlan (60s Highland piper, non-celebrity face, silver beard, dark wool cloak, green tartan) playing Highland bagpipes and Isla (30s Scottish fiddler, non-celebrity face, auburn hair, indigo wool shawl, thistle brooch) bowing her fiddle side-by-side on a rugged granite ridge beneath parting indigo-and-gold clouds. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Slow sweeping camera push-in at 123 BPM heavy rhythm as Lachlan (60s Highland piper, non-celebrity face, silver beard, dark wool cloak, green tartan) and Isla (30s Scottish fiddler, non-celebrity face, auburn hair, indigo wool shawl, thistle brooch) perform grounded in unison while golden shafts of sunlight sweep across the heather valley behind them. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S31_lachlan_isla_pipes_and_fiddle_duet.webp"}, {"scene_number": 32, "scene_id": "S32", "slug": "ewan_electric_guitar_solo_strings", "start_sec": 160.5, "end_sec": 169.0, "time_label": "2:40.5 – 2:49.0", "duration_sec": 8.5, "lyrics": "", "is_singer": false, "skip_generation": false, "characters": ["Ewan"], "subject_action": "Low-angle close-up of Ewan's electric guitar neck and hands ripping through the driving bridge solo.", "spatial_anchor": "Sunlit ridge, guitar solo", "base_image_prompt": "Low-angle close-up of the weathered hands of Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) playing high on the fretboard of a sunburst electric guitar (no face shown) silhouetted against blazing crimson heather and golden sky. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Slow dramatic zoom-in at 123 BPM heavy driving rock beat as Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) bends a sustained note on the electric guitar fretboard while wind-blown mist and warm sunlight flare across the wood grain. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S32_ewan_electric_guitar_solo_strings.webp"}, {"scene_number": 33, "scene_id": "S33", "slug": "cairn_ridge_saltires_in_gale", "start_sec": 169.0, "end_sec": 177.5, "time_label": "2:49.0 – 2:57.5", "duration_sec": 8.5, "lyrics": "", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Aerial glide along a high mountain spine where ancestral stone cairns and Saltire banners catch the breaking sun.", "spatial_anchor": "High mountain ridge of cairns", "base_image_prompt": "Epic aerial impasto painting of a jagged Scottish mountain ridge lined with weathered stone cairns and fluttering ultramarine-and-white Saltire banners bathed in fiery rose-gold sunlight. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Soaring forward camera flight along the mountain spine at 123 BPM driving beat as Saltire flags billow in the Highland gale and storm clouds break apart into radiant gold. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S33_cairn_ridge_saltires_in_gale.webp"}, {"scene_number": 34, "scene_id": "S34", "slug": "callum_cliff_storm_break_crescendo", "start_sec": 177.5, "end_sec": 185.51, "time_label": "2:57.5 – 3:05.5", "duration_sec": 8.01, "lyrics": "", "is_singer": false, "skip_generation": false, "characters": ["Callum"], "subject_action": "Callum sits watchfully on the highest sea cliff ledge as dark clouds crack open with blinding dawn gold before the final chorus.", "spatial_anchor": "Sea cliff pinnacle before final chorus", "base_image_prompt": "Dramatic wide chiaroscuro shot of Callum (black-and-white Border Collie, white chest blaze, seated still, hindquarters tucked) on a heather-crowned sea cliff ledge as dark indigo storm clouds split wide open, pouring a cathedral blaze of rose-gold sunlight onto the ocean below. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Slow tension-building push-in at 123 BPM toward stationary Callum (black-and-white Border Collie, white chest blaze, seated still, hindquarters tucked) as brilliant golden sunbeams widen rapidly across the churning sea and crimson cliffside heather. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S34_callum_cliff_storm_break_crescendo.webp"}, {"scene_number": 35, "scene_id": "S35", "slug": "sunlit_highland_glen_full_glory", "start_sec": 185.51, "end_sec": 193.86, "time_label": "3:05.5 – 3:13.9", "duration_sec": 8.35, "lyrics": "Sing high! Sing loud! Let the whole world hear, The voice of the Highlands roar,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Monumental Turner-style Highland vista flooded from mountain summit to ocean surf in triumphant golden light.", "spatial_anchor": "Full Highland valley to sea", "base_image_prompt": "Monumental wide Scottish Romantic oil canvas of a vast Highland valley, cascading river, crimson heather slopes, and coastal cliffs completely illuminated by triumphant golden-amber morning light. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Grand sweeping aerial pan right at 123 BPM climax energy as luminous sunbeams, drifting silver mist, and wind-rippled heather fill the entire Highland landscape with life. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S35_sunlit_highland_glen_full_glory.webp"}, {"scene_number": 36, "scene_id": "S36", "slug": "open_colonnade_lachlan_isla_horizon", "start_sec": 193.86, "end_sec": 201.35, "time_label": "3:13.9 – 3:21.3", "duration_sec": 7.49, "lyrics": "The brave may fall but their dream lives on, As they open Freedom's door.", "is_singer": false, "skip_generation": false, "characters": ["Lachlan", "Isla"], "subject_action": "Camera pushes through an ancient doorless stone colonnade already wide open to the sky, framing Lachlan and Isla in backlit profile.", "spatial_anchor": "Ancient open stone colonnade on cliff", "base_image_prompt": "Wide symmetrical shot gliding past ancient weathered Scottish stone pillars ALREADY completely open to the sky with zero doors, framing backlit rear silhouettes of Lachlan (60s Highland piper, non-celebrity face, silver beard, dark wool cloak, green tartan) and Isla (30s Scottish fiddler, non-celebrity face, auburn hair, indigo wool shawl, thistle brooch) looking out over a sunlit coast. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Smooth forward dolly at 123 BPM past the static open stone pillars toward the grounded silhouettes of Lachlan (60s Highland piper, non-celebrity face, silver beard, dark wool cloak, green tartan) and Isla (30s Scottish fiddler, non-celebrity face, auburn hair, indigo wool shawl, thistle brooch) as golden sea wind stirs their cloaks. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S36_open_colonnade_lachlan_isla_horizon.webp"}, {"scene_number": 37, "scene_id": "S37", "slug": "giant_saltire_crimson_heather_cliffs", "start_sec": 201.35, "end_sec": 209.38, "time_label": "3:21.3 – 3:29.4", "duration_sec": 8.03, "lyrics": "Raise high the Saltire into the sky, Let it fly from shore to shore,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "A monumental St. Andrew's Saltire banner flies high above crimson heather cliffs against pure morning gold.", "spatial_anchor": "Cliffside Saltire monument", "base_image_prompt": "Heroic low-angle wide impasto painting of a towering ultramarine-blue and white Scottish Saltire banner flying proudly above blooming crimson heather cliffs and sunlit Atlantic surf. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Slow upward crane tilt at 123 BPM as the cobalt-and-white Saltire ripples grandly across the golden morning sky and red heather sways along the cliff edge. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S37_giant_saltire_crimson_heather_cliffs.webp"}, {"scene_number": 38, "scene_id": "S38", "slug": "ewan_sings_blood_upon_heather_cries", "start_sec": 209.38, "end_sec": 213.7, "time_label": "3:29.4 – 3:33.7", "duration_sec": 4.32, "lyrics": "For the blood upon the heather cries,", "is_singer": true, "skip_generation": false, "characters": ["Ewan"], "subject_action": "Intense emotional three-quarter profile of Ewan bathed in crimson-and-gold dawn light singing the title line.", "spatial_anchor": "Sunlit heather ridge close-up", "base_image_prompt": "Emotional medium close-up in three-quarter profile of Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) amid glowing crimson heather as warm rose-gold sunlight illuminates the impasto texture of his weathered face and tweed collar. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Slow intense push-in at 123 BPM. With zero wind-up delay on frame 1 (0.0s), from 0.00s to 4.23s Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) sings with raw emotion the exact words: 'For the blood upon the heather cries,'. Immediately at 4.23s, Ewan closes his mouth completely. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S38_ewan_sings_blood_upon_heather_cries.webp"}, {"scene_number": 39, "scene_id": "S39", "slug": "eagle_rising_past_saltire_clouds", "start_sec": 213.7, "end_sec": 223.3, "time_label": "3:33.7 – 3:43.3", "duration_sec": 9.6, "lyrics": "\"Scotland forevermore!\"", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "A Scottish golden eagle rises past a cliff-top Saltire banner into radiant gold-and-cerulean clouds.", "spatial_anchor": "Skyward ascent above cliff-top Saltire", "base_image_prompt": "Sweeping low-angle wide impasto shot of a golden eagle ascending on outstretched wings past a cliff-top ultramarine Saltire banner into radiant golden and cerulean morning clouds above red heather slopes. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Majestic upward tracking tilt at 123 BPM as the golden eagle glides higher into blazing golden light while the Saltire banner billows below. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S39_eagle_rising_past_saltire_clouds.webp"}, {"scene_number": 40, "scene_id": "S40", "slug": "ewan_final_cry_scotland_forevermore", "start_sec": 223.3, "end_sec": 233.08, "time_label": "3:43.3 – 3:53.1", "duration_sec": 9.78, "lyrics": "\"Scotland forevermore!\"", "is_singer": true, "skip_generation": false, "characters": ["Ewan", "Callum"], "subject_action": "Ewan sings the final belted 'Scotland forevermore!' cry beside stationary Callum, then holds a silent triumphant gaze into the dawn.", "spatial_anchor": "Highland summit final sunrise", "base_image_prompt": "Triumphant medium-wide three-quarter profile shot of Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) standing on the sunlit Highland summit beside Callum (black-and-white Border Collie, white chest blaze, seated still, hindquarters tucked) as golden morning light washes over crimson heather and distant sea lochs. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "video_motion_prompt": "Slow heroic pull-back at 123 BPM. With zero wind-up delay on frame 1 (0.0s), from 0.00s to 5.30s Ewan (40s Scottish bard, non-celebrity face, dark silver-templed hair, beard, crimson-slate tweed coat) belts the final triumphant cry: 'Scotland forevermore!'. Immediately at 5.30s, Ewan closes his mouth completely and holds a proud, silent gaze toward the sunlit horizon alongside stationary Callum (black-and-white Border Collie, white chest blaze, seated still, hindquarters tucked) until 9.78s as the final guitar chords ring out. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/S40_ewan_final_cry_scotland_forevermore.webp"}, {"scene_number": 41, "scene_id": "S41", "slug": "final_logo_fade_black_slate", "start_sec": 233.08, "end_sec": 242.08, "time_label": "3:53.1 – 4:02.1", "duration_sec": 9.0, "lyrics": "", "is_singer": false, "skip_generation": true, "characters": [], "subject_action": "SKIP (Black Screen) — Clean 9.00s solid black fade-out slate for The Shady River Bard & Trevor Swistchew end card.", "spatial_anchor": "End-card black slate", "base_image_prompt": "SKIP (Black Screen) — Do not generate image. Solid black end-card slate for logo fade-in.", "video_motion_prompt": "SKIP (Black Screen) — Do not generate video. Solid black end-card slate as final guitar chord fades to silence.", "image": ""}], "thumbnails": [{"id": "THUMB_A", "option": "Option A — Rendered Title Text", "text_overlay": "THE BLOOD UPON THE HEATHER", "strategy": "Bold chiseled ivory-and-gold serif title in the storm-lit upper sky above crimson morning heather, a billowing Saltire, and Callum.", "prompt": "High-impact 16:9 Scottish Romantic impasto oil poster showing a vast ridge of glowing crimson heather under breaking storm-gold dawn clouds, a towering cobalt-and-white Saltire banner flying on a cliff crag, and Callum (black-and-white Border Collie, white chest blaze, seated still, hindquarters tucked) in the foreground. Bold chiseled ivory-and-antique-gold serif text reading 'THE BLOOD UPON THE HEATHER' cleanly rendered in the dark indigo upper-left sky negative space. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/thumb_a.webp"}, {"id": "THUMB_B", "option": "Option B — Provocative Hook Text", "text_overlay": "SCOTLAND FOREVERMORE", "strategy": "3-word emotional anthem cry rendered across storm-split golden clouds above a soaring golden eagle and open Highland archway.", "prompt": "Dramatic 16:9 impasto oil composition of a majestic Scottish golden eagle soaring above an ancient roofless stone archway already wide open to sunlit crimson moorland and a raised Saltire banner. Bold weathered parchment-white serif text reading 'SCOTLAND FOREVERMORE' rendered across the upper sky. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/thumb_b.webp"}, {"id": "THUMB_C", "option": "Option C — Pure Visual Hook (No Text)", "text_overlay": "No Text", "strategy": "Symbolic close-up of an ancient moss-grown basket-hilted broadsword half-buried in fiery red morning heather beside Callum under a dramatic Turner sunbeam.", "prompt": "Hyper-compelling 16:9 impasto oil close-up of an ancient weathered Scottish basket-hilted broadsword resting undisturbed in glowing crimson-purple morning heather on a misty cliff, with Callum (black-and-white Border Collie, white chest blaze, seated still, hindquarters tucked) keeping silent vigil behind it under a piercing golden sunbeam. No text, no letters, no words. 19th-c Scottish Romantic impasto oil, storm-indigo & rose-gold light, crimson heather, no modern items.", "image": "images/thumb_c.webp"}]}</script>
+  <script>
+  (function() {
+    const DATA = JSON.parse(document.getElementById('storyboard-payload').textContent);
+    const STORAGE_KEY = 'srb_storyboard_review_v1_' + DATA.song_slug;
+
+    let reviewState = {
+      reviewerName: DATA.client_name || '',
+      overallComment: '',
+      selectedStyle: '',
+      selectedThumb: '',
+      items: {} // key (e.g. 'S01', 'CHAR_01', 'STYLE_01', 'THUMB_A') -> { status: 'approved'|'tweak'|'', comment: '' }
+    };
+
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        reviewState = Object.assign(reviewState, parsed);
+        reviewState.items = parsed.items || {};
+      }
+    } catch (e) {}
+
+    function saveState() {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(reviewState)); } catch (e) {}
+      updateDockStats();
+      updateScrubberColors();
+    }
+
+    function getItem(id) {
+      if (!reviewState.items[id]) reviewState.items[id] = { status: '', comment: '' };
+      return reviewState.items[id];
+    }
+
+    function escapeHtml(s) {
+      return String(s || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    // 1. Header Initialization
+    document.getElementById('ui-song-title').textContent = DATA.song_title || 'Storyboard Preview';
+    const clientCallout = document.getElementById('ui-client-callout');
+    const clientNameEl = document.getElementById('ui-client-name');
+    if (DATA.client_name) {
+      clientNameEl.textContent = DATA.client_name;
+      clientCallout.style.display = 'inline-flex';
+    } else {
+      clientCallout.style.display = 'none';
+    }
+    if (DATA.artist) {
+      const subParts = [`Music &amp; Direction by <strong>${escapeHtml(DATA.artist)}</strong>`];
+      if (DATA.client_name) {
+        subParts.push(`Prepared for <strong style="color:#6ee7b7;">${escapeHtml(DATA.client_name)}</strong>`);
+      }
+      document.getElementById('ui-song-subtitle').innerHTML = subParts.join(' &bull; ');
+    }
+
+    const pills = [];
+    if (DATA.song_title) pills.push(`<span class="pill">Song: <strong>${escapeHtml(DATA.song_title)}</strong></span>`);
+    if (DATA.client_name) pills.push(`<span class="pill">Client: <strong>${escapeHtml(DATA.client_name)}</strong></span>`);
+    if (DATA.visual_style) pills.push(`<span class="pill">Visual Style: <strong>${escapeHtml(DATA.visual_style)}</strong></span>`);
+    if (DATA.total_scenes) pills.push(`<span class="pill">Scenes: <strong>${DATA.total_scenes}</strong> (${DATA.runtime_formatted})</span>`);
+    if (DATA.bpm) pills.push(`<span class="pill">Tempo: <strong>${DATA.bpm} BPM</strong></span>`);
+    document.getElementById('ui-meta-pills').innerHTML = pills.join('');
+
+    if (DATA.proposal_notes) {
+      const pBox = document.getElementById('ui-proposal-box');
+      pBox.style.display = 'block';
+      pBox.innerHTML = `<strong style="color:var(--amber-bright);">Director's Proposal Notes:</strong><br/>` + escapeHtml(DATA.proposal_notes).replace(/\n/g, '<br/>');
+    }
+
+    // 2. Audio & Synced Animatic Setup
+    const audioEl = document.getElementById('master-audio');
+    const playToggleBtn = document.getElementById('btn-play-toggle');
+    const statusLabel = document.getElementById('animatic-status-label');
+    const sunoLink = document.getElementById('suno-external-link');
+    if (DATA.suno_url) {
+      sunoLink.href = DATA.suno_url;
+      sunoLink.style.display = 'inline-block';
+    }
+    if (DATA.audio_url) {
+      if (audioEl.getAttribute('src') !== DATA.audio_url) {
+        audioEl.src = DATA.audio_url;
+      }
+    } else {
+      audioEl.style.display = 'none';
+      playToggleBtn.style.display = 'none';
+      document.getElementById('no-audio-note').style.display = 'block';
+    }
+
+    function toggleMasterPlayback() {
+      if (!DATA.audio_url) return;
+      sliceStopAt = null;
+      if (audioEl.paused) {
+        audioEl.play().catch((err) => {
+          statusLabel.textContent = 'Click the audio bar below to start playback (' + (err && err.message ? err.message : 'audio ready') + ')';
+        });
+      } else {
+        audioEl.pause();
+      }
+    }
+
+    playToggleBtn.addEventListener('click', toggleMasterPlayback);
+    document.getElementById('animatic-stage').addEventListener('click', toggleMasterPlayback);
+
+    audioEl.addEventListener('play', () => {
+      playToggleBtn.innerHTML = '&#10074;&#10074; Pause Animatic';
+      statusLabel.textContent = 'Playing synced animatic...';
+    });
+    audioEl.addEventListener('pause', () => {
+      playToggleBtn.innerHTML = '&#9654; Play Song &amp; Animatic';
+      statusLabel.textContent = 'Paused — click Play or any scene segment below';
+    });
+    audioEl.addEventListener('error', () => {
+      statusLabel.textContent = 'Audio stream unavailable in this browser — use Open on Suno button to listen alongside.';
+    });
+
+    let activeSceneIndex = 0;
+    let sliceStopAt = null;
+
+    function renderAnimaticFrame(idx) {
+      if (!DATA.scenes || !DATA.scenes.length) return;
+      activeSceneIndex = Math.max(0, Math.min(DATA.scenes.length - 1, idx));
+      const s = DATA.scenes[activeSceneIndex];
+      document.getElementById('animatic-hud-scene').textContent = `${s.scene_id} • ${s.slug.replace(/_/g, ' ')}`;
+      document.getElementById('animatic-hud-time').textContent = s.time_label;
+      document.getElementById('animatic-lyric').textContent = s.lyrics || (s.skip_generation ? '[Logo Outro Slate]' : '♪ Instrumental / Visual Storytelling ♪');
+      document.getElementById('animatic-action-caption').innerHTML = `<strong style="color:var(--amber-bright);">${s.scene_id}:</strong> ${escapeHtml(s.subject_action || s.video_motion_prompt)}`;
+
+      const imgEl = document.getElementById('animatic-img');
+      const phEl = document.getElementById('animatic-placeholder');
+      if (s.image) {
+        imgEl.src = s.image;
+        imgEl.style.display = 'block';
+        phEl.style.display = 'none';
+      } else {
+        imgEl.style.display = 'none';
+        phEl.style.display = 'block';
+        phEl.innerHTML = `<div style="font-weight:700; color:var(--amber-bright); margin-bottom:0.4rem;">${s.scene_id} (${s.time_label})</div><div>${escapeHtml(s.subject_action || s.base_image_prompt || 'Outro Fade Slate')}</div>`;
+      }
+
+      document.querySelectorAll('.scrub-seg').forEach((el, i) => {
+        el.classList.toggle('active', i === activeSceneIndex);
+      });
+      document.querySelectorAll('.scene-card').forEach((el) => {
+        el.classList.toggle('playing-now', Number(el.dataset.idx) === activeSceneIndex);
+      });
+    }
+
+    // Scrubber construction
+    const scrubberEl = document.getElementById('scene-scrubber');
+    const totalDur = Math.max(1, DATA.expected_runtime_sec || 1);
+    if (DATA.scenes && DATA.scenes.length) {
+      scrubberEl.innerHTML = DATA.scenes.map((s, idx) => {
+        const w = Math.max(0.4, (s.duration_sec / totalDur) * 100);
+        return `<div class="scrub-seg" data-idx="${idx}" style="width:${w}%;" title="${s.scene_id} (${s.time_label})"></div>`;
+      }).join('');
+      scrubberEl.addEventListener('click', (e) => {
+        const seg = e.target.closest('.scrub-seg');
+        if (!seg) return;
+        const idx = Number(seg.dataset.idx);
+        const s = DATA.scenes[idx];
+        sliceStopAt = null;
+        renderAnimaticFrame(idx);
+        if (DATA.audio_url) {
+          audioEl.currentTime = s.start_sec;
+          audioEl.play().catch(() => {});
+        }
+      });
+      renderAnimaticFrame(0);
+    } else {
+      document.getElementById('section-animatic').style.display = 'none';
+    }
+
+    function updateScrubberColors() {
+      document.querySelectorAll('.scrub-seg').forEach((seg) => {
+        const idx = Number(seg.dataset.idx);
+        const s = DATA.scenes[idx];
+        if (!s) return;
+        const st = getItem(s.scene_id);
+        seg.classList.toggle('approved', st.status === 'approved' && !st.comment);
+        seg.classList.toggle('tweak', st.status === 'tweak' || Boolean(st.comment));
+      });
+    }
+
+    audioEl.addEventListener('timeupdate', () => {
+      const t = audioEl.currentTime;
+      if (sliceStopAt !== null && t >= sliceStopAt) {
+        audioEl.pause();
+        sliceStopAt = null;
+        return;
+      }
+      if (!DATA.scenes || !DATA.scenes.length) return;
+      const found = DATA.scenes.findIndex(s => t >= s.start_sec && t < s.end_sec);
+      if (found !== -1 && found !== activeSceneIndex) {
+        renderAnimaticFrame(found);
+      }
+    });
+
+    document.getElementById('btn-pause-comment').addEventListener('click', () => {
+      audioEl.pause();
+      if (!DATA.scenes || !DATA.scenes.length) return;
+      const s = DATA.scenes[activeSceneIndex];
+      const card = document.getElementById('card-' + s.scene_id);
+      if (card) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        openNoteForCard(s.scene_id, card, true);
+      }
+    });
+
+    // Helper for card vote + note binding
+    function bindFeedbackControls(container, itemId, isSelectableChoice, choiceGroup) {
+      const st = getItem(itemId);
+      const btnApprove = container.querySelector('[data-action="approve"]');
+      const btnTweak = container.querySelector('[data-action="tweak"]');
+      const noteWrap = container.querySelector('.note-box-wrap');
+      const noteInput = container.querySelector('.note-textarea');
+
+      function syncCardUI() {
+        const cur = getItem(itemId);
+        const hasNote = Boolean((cur.comment || '').trim());
+        container.classList.toggle('status-approved', cur.status === 'approved' && !hasNote);
+        container.classList.toggle('status-tweak', cur.status === 'tweak' || hasNote);
+        if (btnApprove) btnApprove.classList.toggle('active-approve', cur.status === 'approved');
+        if (btnTweak) btnTweak.classList.toggle('active-tweak', cur.status === 'tweak' || hasNote);
+        if (cur.status === 'tweak' || hasNote) noteWrap.classList.add('open');
+      }
+
+      if (noteInput) {
+        noteInput.value = st.comment || '';
+        noteInput.addEventListener('input', () => {
+          const cur = getItem(itemId);
+          cur.comment = noteInput.value;
+          if (cur.comment.trim() && !cur.status) cur.status = 'tweak';
+          saveState();
+          syncCardUI();
+        });
+      }
+
+      if (btnApprove) {
+        btnApprove.addEventListener('click', () => {
+          const cur = getItem(itemId);
+          cur.status = cur.status === 'approved' ? '' : 'approved';
+          if (isSelectableChoice && cur.status === 'approved') {
+            reviewState[choiceGroup] = itemId;
+          }
+          saveState();
+          syncCardUI();
+        });
+      }
+
+      if (btnTweak) {
+        btnTweak.addEventListener('click', () => {
+          const cur = getItem(itemId);
+          if (noteWrap.classList.contains('open') && !cur.comment.trim() && cur.status === 'tweak') {
+            cur.status = '';
+            noteWrap.classList.remove('open');
+          } else {
+            cur.status = 'tweak';
+            noteWrap.classList.add('open');
+            if (noteInput) noteInput.focus();
+          }
+          saveState();
+          syncCardUI();
+        });
+      }
+
+      syncCardUI();
+    }
+
+    function openNoteForCard(itemId, cardEl, markTweak) {
+      const cur = getItem(itemId);
+      if (markTweak) cur.status = 'tweak';
+      const noteWrap = cardEl.querySelector('.note-box-wrap');
+      const noteInput = cardEl.querySelector('.note-textarea');
+      if (noteWrap) noteWrap.classList.add('open');
+      cardEl.classList.add('status-tweak');
+      const btnTweak = cardEl.querySelector('[data-action="tweak"]');
+      if (btnTweak) btnTweak.classList.add('active-tweak');
+      saveState();
+      if (noteInput) noteInput.focus();
+    }
+
+    // 3. Render Optional Style Concept Cards
+    if (DATA.style_concepts && DATA.style_concepts.length) {
+      document.getElementById('section-styles').style.display = 'block';
+      const styleGrid = document.getElementById('grid-styles');
+      styleGrid.innerHTML = DATA.style_concepts.map(st => `
+        <article class="card" id="card-${st.id}">
+          <div class="card-top">
+            <span class="scene-num">${escapeHtml(st.title)}</span>
+            <span class="badge badge-broll">Style Concept</span>
+          </div>
+          <div class="card-media" data-lightbox="${escapeHtml(st.image)}" data-caption="${escapeHtml(st.title)}">
+            ${st.image ? `<img src="${escapeHtml(st.image)}" alt="${escapeHtml(st.title)}" loading="lazy" />` : `<div class="slate-fallback">${escapeHtml(st.palette)}</div>`}
+          </div>
+          <div class="card-body">
+            <div class="action-desc"><strong>Metaphor:</strong> ${escapeHtml(st.metaphor)}</div>
+            <div class="action-desc"><strong>Palette &amp; Motion:</strong> ${escapeHtml(st.palette)} ${escapeHtml(st.motion)}</div>
+          </div>
+          <div class="card-actions">
+            <div class="action-btn-row">
+              <button type="button" class="btn-vote" data-action="approve">&#11088; Vote for This Style</button>
+              <button type="button" class="btn-vote" data-action="tweak">&#9998; Add Note</button>
+            </div>
+            <div class="note-box-wrap">
+              <textarea class="note-textarea" placeholder="Thoughts on ${escapeHtml(st.title)}..."></textarea>
+              <div class="saved-hint">&#10003; Auto-saved</div>
+            </div>
+          </div>
+        </article>
+      `).join('');
+      styleGrid.querySelectorAll('.card').forEach((el, idx) => {
+        bindFeedbackControls(el, DATA.style_concepts[idx].id, true, 'selectedStyle');
+      });
+    }
+
+    // 4. Render Cast & Characters
+    if (DATA.characters && DATA.characters.length) {
+      document.getElementById('section-characters').style.display = 'block';
+      const charGrid = document.getElementById('grid-characters');
+      charGrid.innerHTML = DATA.characters.map(ch => `
+        <article class="card" id="card-${ch.id}">
+          <div class="card-top">
+            <span class="scene-num">${escapeHtml(ch.name)}</span>
+            <span class="badge badge-broll">Cast Reference</span>
+          </div>
+          ${ch.image ? `<div class="card-media" data-lightbox="${escapeHtml(ch.image)}" data-caption="${escapeHtml(ch.name)}"><img src="${escapeHtml(ch.image)}" alt="${escapeHtml(ch.name)}" loading="lazy" /></div>` : ''}
+          <div class="card-body">
+            <div class="action-desc">${escapeHtml(ch.description || ch.prompt)}</div>
+          </div>
+          <div class="card-actions">
+            <div class="action-btn-row">
+              <button type="button" class="btn-vote" data-action="approve">&#128077; Approve Character</button>
+              <button type="button" class="btn-vote" data-action="tweak">&#9998; Suggest Change</button>
+            </div>
+            <div class="note-box-wrap">
+              <textarea class="note-textarea" placeholder="Wardrobe, look, or character feedback for ${escapeHtml(ch.name)}..."></textarea>
+              <div class="saved-hint">&#10003; Auto-saved</div>
+            </div>
+          </div>
+        </article>
+      `).join('');
+      charGrid.querySelectorAll('.card').forEach((el, idx) => {
+        bindFeedbackControls(el, DATA.characters[idx].id, false, '');
+      });
+    }
+
+    // 5. Render Scene Storyboard Cards
+    const sceneGrid = document.getElementById('grid-scenes');
+    if (DATA.scenes && DATA.scenes.length) {
+      sceneGrid.innerHTML = DATA.scenes.map((s, idx) => {
+        const badgeClass = s.is_singer ? 'badge-singer' : 'badge-broll';
+        const badgeText = s.skip_generation ? 'Logo Fade Slate' : (s.is_singer ? '🎤 Singer' : 'Visual Story');
+        const lyricBlock = s.lyrics
+          ? `<div class="lyric-quote">&ldquo;${escapeHtml(s.lyrics)}&rdquo;</div>`
+          : `<div class="lyric-instrumental">${s.skip_generation ? 'Final black fade-out for The Shady River Bard logo' : '♪ Instrumental / Atmospheric Cut ♪'}</div>`;
+        const playBtn = DATA.audio_url
+          ? `<button type="button" class="play-slice-btn" data-play-idx="${idx}" title="Play audio for this scene">&#9654; Play ${s.duration_sec}s</button>`
+          : '';
+        const mediaInner = s.image
+          ? `<img src="${escapeHtml(s.image)}" alt="${s.scene_id}" loading="lazy" />`
+          : `<div class="slate-fallback"><strong style="color:var(--amber-bright); margin-bottom:0.3rem;">${s.skip_generation ? 'Final Outro Logo Slate' : 'Sample Frame Pending'}</strong><span>${escapeHtml((s.subject_action || s.base_image_prompt).slice(0, 140))}</span></div>`;
+
+        return `
+          <article class="card scene-card" id="card-${s.scene_id}" data-idx="${idx}" data-scene-id="${s.scene_id}">
+            <div class="card-top">
+              <div>
+                <span class="scene-num">${s.scene_id}</span>
+                <span class="scene-time">&bull; ${s.time_label}</span>
+              </div>
+              <span class="badge ${badgeClass}">${badgeText}</span>
+            </div>
+            <div class="card-media" ${s.image ? `data-lightbox="${escapeHtml(s.image)}" data-caption="${s.scene_id} (${s.time_label}) — ${escapeHtml(s.lyrics || s.subject_action)}"` : ''}>
+              ${mediaInner}
+              ${playBtn}
+            </div>
+            <div class="card-body">
+              ${lyricBlock}
+              <div class="action-desc">${escapeHtml(s.subject_action || s.video_motion_prompt)}</div>
+              <details class="tech-drawer">
+                <summary>Director Camera &amp; Motion Prompt</summary>
+                <div class="tech-prompt-box"><strong>Image:</strong> ${escapeHtml(s.base_image_prompt)}\n\n<strong>Motion:</strong> ${escapeHtml(s.video_motion_prompt)}</div>
+              </details>
+            </div>
+            <div class="card-actions">
+              <div class="action-btn-row">
+                <button type="button" class="btn-vote" data-action="approve">&#128077; Looks Good</button>
+                <button type="button" class="btn-vote" data-action="tweak">&#9998; Add Note / Tweak</button>
+              </div>
+              <div class="note-box-wrap">
+                <textarea class="note-textarea" placeholder="What would you tweak or add in ${s.scene_id}?"></textarea>
+                <div class="saved-hint">&#10003; Auto-saved in browser</div>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      sceneGrid.querySelectorAll('.scene-card').forEach((el, idx) => {
+        bindFeedbackControls(el, DATA.scenes[idx].scene_id, false, '');
+      });
+
+      sceneGrid.addEventListener('click', (e) => {
+        const playBtn = e.target.closest('[data-play-idx]');
+        if (playBtn) {
+          e.stopPropagation();
+          const idx = Number(playBtn.dataset.playIdx);
+          const s = DATA.scenes[idx];
+          renderAnimaticFrame(idx);
+          if (DATA.audio_url) {
+            sliceStopAt = s.end_sec;
+            audioEl.currentTime = s.start_sec;
+            audioEl.play().catch(() => {});
+          }
+          return;
+        }
+      });
+    }
+
+    // 6. Render Optional Thumbnail Voter
+    if (DATA.thumbnails && DATA.thumbnails.length) {
+      document.getElementById('section-thumbs').style.display = 'block';
+      const thumbGrid = document.getElementById('grid-thumbs');
+      thumbGrid.innerHTML = DATA.thumbnails.map(th => `
+        <article class="card" id="card-${th.id}">
+          <div class="card-top">
+            <span class="scene-num">${escapeHtml(th.option)}</span>
+            <span class="badge badge-broll">${escapeHtml(th.text_overlay || 'Pure Visual')}</span>
+          </div>
+          <div class="card-media" ${th.image ? `data-lightbox="${escapeHtml(th.image)}" data-caption="${escapeHtml(th.option)}"` : ''}>
+            ${th.image ? `<img src="${escapeHtml(th.image)}" alt="${escapeHtml(th.option)}" loading="lazy" />` : `<div class="slate-fallback">${escapeHtml(th.prompt.slice(0, 160))}</div>`}
+          </div>
+          <div class="card-body">
+            <div class="action-desc">${escapeHtml(th.strategy || th.prompt)}</div>
+          </div>
+          <div class="card-actions">
+            <div class="action-btn-row">
+              <button type="button" class="btn-vote" data-action="approve">&#11088; Favorite Thumbnail</button>
+              <button type="button" class="btn-vote" data-action="tweak">&#9998; Add Note</button>
+            </div>
+            <div class="note-box-wrap">
+              <textarea class="note-textarea" placeholder="Thoughts on ${escapeHtml(th.option)}..."></textarea>
+              <div class="saved-hint">&#10003; Auto-saved</div>
+            </div>
+          </div>
+        </article>
+      `).join('');
+      thumbGrid.querySelectorAll('.card').forEach((el, idx) => {
+        bindFeedbackControls(el, DATA.thumbnails[idx].id, true, 'selectedThumb');
+      });
+    }
+
+    // 7. Filtering & Search
+    let currentFilter = 'all';
+    function applyFilters() {
+      const q = (document.getElementById('scene-search').value || '').trim().toLowerCase();
+      document.querySelectorAll('.scene-card').forEach((card) => {
+        const idx = Number(card.dataset.idx);
+        const s = DATA.scenes[idx];
+        const st = getItem(s.scene_id);
+        const hasNote = Boolean((st.comment || '').trim());
+        let passFilter = true;
+        if (currentFilter === 'tweak') passFilter = st.status === 'tweak' || hasNote;
+        else if (currentFilter === 'approved') passFilter = st.status === 'approved' && !hasNote;
+        else if (currentFilter === 'unreviewed') passFilter = !st.status && !hasNote;
+
+        let passSearch = true;
+        if (q) {
+          const hay = `${s.scene_id} ${s.slug} ${s.lyrics} ${s.subject_action} ${st.comment || ''}`.toLowerCase();
+          passSearch = hay.includes(q);
+        }
+        card.style.display = (passFilter && passSearch) ? 'flex' : 'none';
+      });
+    }
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.dataset.filter;
+        applyFilters();
+      });
+    });
+    document.getElementById('scene-search').addEventListener('input', applyFilters);
+
+    // 8. Approve All Unflagged Helper
+    document.getElementById('btn-approve-rest').addEventListener('click', () => {
+      (DATA.scenes || []).forEach(s => {
+        const st = getItem(s.scene_id);
+        if (!st.status && !(st.comment || '').trim()) {
+          st.status = 'approved';
+        }
+      });
+      saveState();
+      document.querySelectorAll('.scene-card').forEach((el, idx) => {
+        const s = DATA.scenes[idx];
+        const st = getItem(s.scene_id);
+        const hasNote = Boolean((st.comment || '').trim());
+        el.classList.toggle('status-approved', st.status === 'approved' && !hasNote);
+        const b = el.querySelector('[data-action="approve"]');
+        if (b) b.classList.toggle('active-approve', st.status === 'approved');
+      });
+    });
+
+    // 9. Dock Counter & Report Compilation
+    function updateDockStats() {
+      let approved = 0, tweaks = 0;
+      (DATA.scenes || []).forEach(s => {
+        const st = getItem(s.scene_id);
+        const hasNote = Boolean((st.comment || '').trim());
+        if (st.status === 'tweak' || hasNote) tweaks++;
+        else if (st.status === 'approved') approved++;
+      });
+      const total = (DATA.scenes || []).length;
+      document.getElementById('dock-stats').innerHTML =
+        `<span><strong>${approved}</strong>/${total} Approved</span>` +
+        `<span>&bull; <strong style="color:var(--amber-bright);">${tweaks}</strong> Scene Notes / Tweaks</span>`;
+    }
+    updateDockStats();
+    updateScrubberColors();
+
+    function buildCompiledReport() {
+      const name = (document.getElementById('reviewer-name').value || reviewState.reviewerName || 'Client Reviewer').trim();
+      const overall = (document.getElementById('overall-comment').value || '').trim();
+      reviewState.reviewerName = name;
+      reviewState.overallComment = overall;
+      saveState();
+
+      const lines = [];
+      lines.push(`STORYBOARD FEEDBACK FOR THE SHADY RIVER BARD`);
+      lines.push(`Song: "${DATA.song_title}" (${DATA.song_slug})`);
+      lines.push(`Reviewer: ${name}`);
+      lines.push(`Review URL: ${window.location.href}`);
+      lines.push(`Date: ${new Date().toLocaleString()}`);
+      lines.push(`──────────────────────────────────────────────────`);
+
+      if (overall) {
+        lines.push(`\nOVERALL THOUGHTS:`);
+        lines.push(overall);
+      }
+
+      // Style & Thumbnail votes
+      const styleNotes = [];
+      (DATA.style_concepts || []).forEach(st => {
+        const item = getItem(st.id);
+        if (item.status || (item.comment || '').trim()) {
+          styleNotes.push(`• ${st.title} [${item.status === 'approved' ? 'SELECTED' : 'NOTE'}]: ${item.comment || 'Preferred style'}`);
+        }
+      });
+      if (styleNotes.length) {
+        lines.push(`\nSTYLE CONCEPT FEEDBACK:`);
+        lines.push(...styleNotes);
+      }
+
+      const charNotes = [];
+      (DATA.characters || []).forEach(ch => {
+        const item = getItem(ch.id);
+        if (item.status === 'tweak' || (item.comment || '').trim()) {
+          charNotes.push(`• ${ch.name}: ${item.comment || '(Flagged for change)'}`);
+        }
+      });
+      if (charNotes.length) {
+        lines.push(`\nCAST & CHARACTER NOTES:`);
+        lines.push(...charNotes);
+      }
+
+      const scenePatches = [];
+      let approvedCount = 0;
+      (DATA.scenes || []).forEach(s => {
+        const item = getItem(s.scene_id);
+        const note = (item.comment || '').trim();
+        if (item.status === 'tweak' || note) {
+          lines.push(`\n[${s.scene_id} | ${s.time_label} | ${s.slug}]`);
+          if (s.lyrics) lines.push(`  Lyric: "${s.lyrics}"`);
+          lines.push(`  Feedback: ${note || '(Flagged for tweak — no text note entered)'}`);
+          scenePatches.push({ scene_number: s.scene_number, scene_id: s.scene_id, slug: s.slug, note: note || 'Flagged for tweak' });
+        } else if (item.status === 'approved') {
+          approvedCount++;
+        }
+      });
+
+      const thumbNotes = [];
+      (DATA.thumbnails || []).forEach(th => {
+        const item = getItem(th.id);
+        if (item.status || (item.comment || '').trim()) {
+          thumbNotes.push(`• ${th.option} [${item.status === 'approved' ? 'FAVORITE' : 'NOTE'}]: ${item.comment || 'Selected favorite'}`);
+        }
+      });
+      if (thumbNotes.length) {
+        lines.push(`\nTHUMBNAIL VOTE:`);
+        lines.push(...thumbNotes);
+      }
+
+      lines.push(`\n──────────────────────────────────────────────────`);
+      lines.push(`Summary: ${approvedCount}/${(DATA.scenes || []).length} scenes approved, ${scenePatches.length} scenes with notes.`);
+      lines.push(`ANTIGRAVITY_PATCH_JSON: ` + JSON.stringify({
+        song_slug: DATA.song_slug,
+        reviewer: name,
+        overall: overall,
+        scene_tweaks: scenePatches
+      }));
+
+      return lines.join('\n');
+    }
+
+    // Modal Events
+    const submitModal = document.getElementById('submit-modal');
+    const toastEl = document.getElementById('submit-toast');
+    function showToast(msg) {
+      toastEl.textContent = msg;
+      toastEl.style.display = 'block';
+    }
+
+    document.getElementById('btn-open-submit').addEventListener('click', () => {
+      document.getElementById('reviewer-name').value = reviewState.reviewerName || DATA.client_name || '';
+      document.getElementById('overall-comment').value = reviewState.overallComment || '';
+      document.getElementById('compiled-report-preview').textContent = buildCompiledReport();
+      toastEl.style.display = 'none';
+      submitModal.classList.add('open');
+    });
+    document.getElementById('reviewer-name').addEventListener('input', () => {
+      document.getElementById('compiled-report-preview').textContent = buildCompiledReport();
+    });
+    document.getElementById('overall-comment').addEventListener('input', () => {
+      document.getElementById('compiled-report-preview').textContent = buildCompiledReport();
+    });
+    document.getElementById('btn-close-submit').addEventListener('click', () => submitModal.classList.remove('open'));
+
+    document.getElementById('btn-copy-report').addEventListener('click', () => {
+      const report = `To: ${DATA.bard_email}\nSubject: Storyboard Feedback - ${DATA.song_title}\n\n` + buildCompiledReport();
+      navigator.clipboard.writeText(report).then(() => {
+        showToast('✓ Copied full feedback report to clipboard! You can now paste it into Gmail, email, or chat to ' + DATA.bard_email + '.');
+      });
+    });
+
+    document.getElementById('btn-download-report').addEventListener('click', () => {
+      const report = buildCompiledReport();
+      const blob = new Blob([report], { type: 'text/plain;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `${DATA.song_slug}_storyboard_feedback.txt`;
+      a.click();
+      showToast('✓ Downloaded feedback file! Attach and send it to ' + DATA.bard_email + '.');
+    });
+
+    document.getElementById('btn-mailto-send').addEventListener('click', () => {
+      const report = buildCompiledReport();
+      const subject = `Storyboard Feedback: "${DATA.song_title}"`;
+      if (report.length > 1750 && navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(report).catch(() => {});
+        const shortBody = `Hi Bard,\n\n[Your full storyboard review was automatically copied to your clipboard because it has detailed notes — just press Ctrl+V / Paste right here!]\n\n` + report.slice(0, 900) + `\n... [Press Paste for full report]`;
+        window.location.href = `mailto:${DATA.bard_email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(shortBody)}`;
+        showToast('✓ Detailed report copied to clipboard & opening your email app (press Paste inside the email if truncated)!');
+      } else {
+        window.location.href = `mailto:${DATA.bard_email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(report)}`;
+        showToast('✓ Opening your email client addressed to ' + DATA.bard_email + '!');
+      }
+    });
+
+    // Lightbox Events
+    const lbModal = document.getElementById('lightbox-modal');
+    document.body.addEventListener('click', (e) => {
+      const media = e.target.closest('[data-lightbox]');
+      if (media && !e.target.closest('button')) {
+        const src = media.getAttribute('data-lightbox');
+        if (!src) return;
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox-caption').textContent = media.getAttribute('data-caption') || '';
+        lbModal.classList.add('open');
+      }
+    });
+    document.getElementById('btn-close-lightbox').addEventListener('click', () => lbModal.classList.remove('open'));
+    lbModal.addEventListener('click', (e) => { if (e.target === lbModal) lbModal.classList.remove('open'); });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        submitModal.classList.remove('open');
+        lbModal.classList.remove('open');
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
