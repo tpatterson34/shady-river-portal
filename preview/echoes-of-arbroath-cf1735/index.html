@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>Echoes of Arbroath • Storyboard Preview | The Shady River Bard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-deep: #0c0a09;
+      --bg-card: #1c1917;
+      --bg-elevated: #292524;
+      --border-subtle: #292524;
+      --border-muted: #44403c;
+      --text-main: #f5f5f4;
+      --text-muted: #a8a29e;
+      --text-dim: #78716c;
+      --amber: #f59e0b;
+      --amber-bright: #fbbf24;
+      --emerald: #10b981;
+      --emerald-soft: rgba(16, 185, 129, 0.16);
+      --amber-soft: rgba(245, 158, 11, 0.16);
+      --rose: #f43f5e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0 0 110px 0;
+      background-color: var(--bg-deep);
+      color: var(--text-main);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-display { font-family: 'Cinzel', Georgia, serif; }
+    .font-serif { font-family: 'Merriweather', Georgia, serif; }
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 1.25rem; }
+
+    /* Hero Header */
+    .hero {
+      background: radial-gradient(circle at top right, rgba(245, 158, 11, 0.12), transparent 55%),
+                  linear-gradient(180deg, #1c1917 0%, #0c0a09 100%);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 2.25rem 0 1.75rem;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      background: var(--amber-soft);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: var(--amber-bright);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .hero-title {
+      font-size: clamp(1.75rem, 3.6vw, 2.75rem);
+      margin: 0.75rem 0 0.4rem;
+      line-height: 1.18;
+      color: #fafaf9;
+    }
+    .meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.9rem;
+    }
+    .pill {
+      background: #171412;
+      border: 1px solid var(--border-muted);
+      color: #d6d3d1;
+      padding: 0.32rem 0.75rem;
+      border-radius: 0.5rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+    }
+    .pill strong { color: var(--amber-bright); }
+    .proposal-box {
+      margin-top: 1.25rem;
+      background: rgba(28, 25, 23, 0.85);
+      border-left: 3px solid var(--amber);
+      border-top: 1px solid var(--border-subtle);
+      border-right: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 1rem 1.25rem;
+      border-radius: 0 0.75rem 0.75rem 0;
+      color: #e7e5e4;
+      font-size: 0.92rem;
+    }
+    .how-to-banner {
+      margin-top: 1.1rem;
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.28);
+      border-radius: 0.75rem;
+      padding: 0.75rem 1rem;
+      font-size: 0.84rem;
+      color: #d1fae5;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    /* Animatic Cinema Section */
+    .animatic-wrap {
+      margin: 1.5rem 0 2rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-muted);
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
+    }
+    .animatic-topbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.85rem 1.25rem;
+      background: #141210;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .animatic-stage {
+      position: relative;
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      aspect-ratio: 16 / 9;
+      background: #050505;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .animatic-stage img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.18s ease;
+    }
+    .animatic-placeholder {
+      padding: 2rem;
+      text-align: center;
+      max-width: 640px;
+      color: var(--text-muted);
+    }
+    .animatic-hud-top {
+      position: absolute;
+      top: 0.85rem;
+      left: 0.85rem;
+      right: 0.85rem;
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+    }
+    .hud-chip {
+      background: rgba(12, 10, 9, 0.82);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fafaf9;
+      padding: 0.3rem 0.7rem;
+      border-radius: 0.5rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .animatic-lyric-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2.2rem 1.25rem 0.95rem;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.92));
+      text-align: center;
+    }
+    .animatic-lyric-text {
+      font-family: 'Merriweather', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(0.95rem, 2vw, 1.3rem);
+      color: #fef3c7;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+    }
+    .animatic-controls {
+      padding: 1rem 1.25rem;
+      background: #141210;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .audio-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.85rem;
+    }
+    .audio-row audio {
+      flex: 1;
+      min-width: 240px;
+      height: 38px;
+    }
+    .scene-scrubber {
+      display: flex;
+      width: 100%;
+      height: 14px;
+      margin-top: 0.85rem;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #292524;
+      gap: 1px;
+      cursor: pointer;
+    }
+    .scrub-seg {
+      height: 100%;
+      background: #44403c;
+      transition: background 0.15s, transform 0.15s;
+    }
+    .scrub-seg:hover { background: #78716c; }
+    .scrub-seg.active { background: var(--amber-bright) !important; }
+    .scrub-seg.approved { background: var(--emerald); }
+    .scrub-seg.tweak { background: #f97316; }
+
+    /* Section Headings & Filter Toolbar */
+    .section-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 2.25rem 0 1rem;
+    }
+    .section-title {
+      font-size: 1.35rem;
+      margin: 0;
+      color: #fafaf9;
+    }
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .filter-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-muted);
+      color: var(--text-muted);
+      padding: 0.42rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .filter-btn:hover { color: var(--text-main); border-color: #78716c; }
+    .filter-btn.active {
+      background: var(--amber);
+      border-color: var(--amber);
+      color: #0c0a09;
+    }
+    .search-input {
+      background: var(--bg-card);
+      border: 1px solid var(--border-muted);
+      color: var(--text-main);
+      padding: 0.45rem 0.85rem;
+      border-radius: 0.5rem;
+      font-size: 0.82rem;
+      min-width: 210px;
+    }
+
+    /* Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.25rem;
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-muted);
+      border-radius: 0.9rem;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.18s, box-shadow 0.18s;
+    }
+    .card.status-approved {
+      border-color: rgba(16, 185, 129, 0.7);
+      box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.25);
+    }
+    .card.status-tweak {
+      border-color: rgba(245, 158, 11, 0.85);
+      box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.3);
+    }
+    .card.playing-now {
+      box-shadow: 0 0 0 2px var(--amber-bright), 0 12px 28px rgba(245, 158, 11, 0.22);
+    }
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.65rem 0.9rem;
+      background: #141210;
+      border-bottom: 1px solid var(--border-subtle);
+      gap: 0.5rem;
+    }
+    .scene-num {
+      font-weight: 800;
+      font-size: 0.82rem;
+      color: var(--amber-bright);
+      letter-spacing: 0.03em;
+    }
+    .scene-time {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+    }
+    .badge {
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 0.18rem 0.5rem;
+      border-radius: 0.35rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .badge-singer { background: rgba(244, 63, 94, 0.18); color: #fda4af; border: 1px solid rgba(244, 63, 94, 0.35); }
+    .badge-broll { background: rgba(56, 189, 248, 0.12); color: #bae6fd; border: 1px solid rgba(56, 189, 248, 0.25); }
+
+    .card-media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #090807;
+      overflow: hidden;
+      cursor: zoom-in;
+    }
+    .card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .slate-fallback {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      text-align: center;
+      background: radial-gradient(circle at center, #292524 0%, #0c0a09 100%);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      cursor: default;
+    }
+    .play-slice-btn {
+      position: absolute;
+      bottom: 0.55rem;
+      right: 0.55rem;
+      background: rgba(12, 10, 9, 0.86);
+      border: 1px solid rgba(251, 191, 36, 0.55);
+      color: var(--amber-bright);
+      padding: 0.28rem 0.62rem;
+      border-radius: 0.45rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .play-slice-btn:hover { background: var(--amber); color: #0c0a09; }
+
+    .card-body {
+      padding: 0.9rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .lyric-quote {
+      font-family: 'Merriweather', Georgia, serif;
+      font-style: italic;
+      font-size: 0.88rem;
+      color: #fef3c7;
+      background: rgba(245, 158, 11, 0.08);
+      border-left: 2px solid var(--amber);
+      padding: 0.45rem 0.65rem;
+      border-radius: 0 0.4rem 0.4rem 0;
+    }
+    .lyric-instrumental {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      font-style: italic;
+    }
+    .action-desc {
+      font-size: 0.83rem;
+      color: #d6d3d1;
+      line-height: 1.48;
+    }
+    details.tech-drawer {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px dashed var(--border-subtle);
+      padding-top: 0.45rem;
+    }
+    details.tech-drawer summary {
+      cursor: pointer;
+      color: var(--text-dim);
+      user-select: none;
+    }
+    details.tech-drawer summary:hover { color: var(--text-muted); }
+    .tech-prompt-box {
+      margin-top: 0.45rem;
+      background: #12100e;
+      padding: 0.55rem;
+      border-radius: 0.4rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.71rem;
+      line-height: 1.45;
+      color: #a8a29e;
+      white-space: pre-wrap;
+    }
+
+    /* Feedback Buttons & Note Box Inside Card */
+    .card-actions {
+      padding: 0.7rem 0.9rem;
+      background: #141210;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .action-btn-row {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .btn-vote {
+      flex: 1;
+      padding: 0.45rem 0.6rem;
+      border-radius: 0.5rem;
+      border: 1px solid var(--border-muted);
+      background: var(--bg-card);
+      color: #d6d3d1;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .btn-vote:hover { border-color: #78716c; color: #fff; }
+    .btn-vote.active-approve {
+      background: var(--emerald-soft);
+      border-color: var(--emerald);
+      color: #6ee7b7;
+    }
+    .btn-vote.active-tweak {
+      background: var(--amber-soft);
+      border-color: var(--amber);
+      color: var(--amber-bright);
+    }
+    .note-box-wrap {
+      margin-top: 0.6rem;
+      display: none;
+    }
+    .note-box-wrap.open { display: block; }
+    .note-textarea {
+      width: 100%;
+      min-height: 68px;
+      background: #0c0a09;
+      border: 1px solid var(--border-muted);
+      border-radius: 0.5rem;
+      color: var(--text-main);
+      padding: 0.55rem 0.7rem;
+      font-family: inherit;
+      font-size: 0.82rem;
+      resize: vertical;
+    }
+    .note-textarea:focus { outline: none; border-color: var(--amber); }
+    .saved-hint {
+      font-size: 0.7rem;
+      color: #6ee7b7;
+      margin-top: 0.25rem;
+      text-align: right;
+    }
+
+    /* Sticky Bottom Dock */
+    .sticky-dock {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 40;
+      background: rgba(20, 18, 16, 0.95);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(245, 158, 11, 0.4);
+      padding: 0.8rem 1.25rem;
+      box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.65);
+    }
+    .dock-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+    .dock-stats {
+      font-size: 0.85rem;
+      color: #e7e5e4;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #0c0a09;
+      border: none;
+      padding: 0.65rem 1.25rem;
+      border-radius: 0.6rem;
+      font-weight: 800;
+      font-size: 0.86rem;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+      transition: transform 0.12s;
+    }
+    .btn-primary:hover { transform: translateY(-1px); background: #fbbf24; }
+    .btn-secondary {
+      background: var(--bg-elevated);
+      color: #e7e5e4;
+      border: 1px solid var(--border-muted);
+      padding: 0.55rem 0.95rem;
+      border-radius: 0.55rem;
+      font-weight: 600;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+    .btn-secondary:hover { border-color: #a8a29e; }
+
+    /* Modal & Lightbox */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      background: rgba(0, 0, 0, 0.82);
+      backdrop-filter: blur(6px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-dialog {
+      background: var(--bg-card);
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      border-radius: 1rem;
+      max-width: 680px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 1.5rem;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75);
+    }
+    .report-preview {
+      width: 100%;
+      height: 210px;
+      background: #0c0a09;
+      border: 1px solid var(--border-muted);
+      border-radius: 0.55rem;
+      color: #d6d3d1;
+      padding: 0.75rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.75rem;
+      white-space: pre-wrap;
+      overflow-y: auto;
+    }
+    .lightbox-img {
+      max-width: 94vw;
+      max-height: 82vh;
+      border-radius: 0.75rem;
+      border: 1px solid var(--border-muted);
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="eyebrow">&#127916; The Shady River Bard &bull; Storyboard Preview Studio</div>
+      <h1 class="hero-title font-display" id="ui-song-title"></h1>
+      <div class="meta-pills" id="ui-meta-pills"></div>
+      <div class="proposal-box" id="ui-proposal-box" style="display:none;"></div>
+      <div class="how-to-banner">
+        <div>
+          <strong>How to Review:</strong> Press <strong>Play</strong> below to watch the synced animatic with the music, or scroll through the scenes at your own pace. Mark scenes <strong>👍 Looks Good</strong> or <strong>✏️ Add Note</strong>, then click <strong>Send Feedback to The Bard</strong> at the bottom!
+        </div>
+        <span style="font-size:0.76rem; opacity:0.85;">&#10003; Notes auto-save in your browser</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Phase 1 Visual Style Concepts (Optional) -->
+    <section id="section-styles" style="display:none;">
+      <div class="section-header">
+        <h2 class="section-title font-display">1. Visual Style Concept Options</h2>
+      </div>
+      <div class="cards-grid" id="grid-styles"></div>
+    </section>
+
+    <!-- Live Synced Animatic Cinema Player -->
+    <section class="animatic-wrap" id="section-animatic">
+      <div class="animatic-topbar">
+        <div>
+          <strong style="color:var(--amber-bright); font-size:0.9rem;">&#9654; Synced Animatic Preview</strong>
+          <span style="color:var(--text-muted); font-size:0.8rem; margin-left:0.5rem;" id="animatic-status-label">Press play on the audio bar to watch scenes flip in real time</span>
+        </div>
+        <div style="display:flex; gap:0.5rem; align-items:center;">
+          <button type="button" class="btn-secondary" id="btn-pause-comment">&#9998; Pause &amp; Comment on Active Scene</button>
+          <a id="suno-external-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="text-decoration:none; display:none;">Open on Suno &#8599;</a>
+        </div>
+      </div>
+
+      <div class="animatic-stage" id="animatic-stage">
+        <img id="animatic-img" src="" alt="Active storyboard frame" style="display:none;" />
+        <div class="animatic-placeholder" id="animatic-placeholder"></div>
+        <div class="animatic-hud-top">
+          <div class="hud-chip" id="animatic-hud-scene">S01</div>
+          <div class="hud-chip" id="animatic-hud-time">0:00.0</div>
+        </div>
+        <div class="animatic-lyric-bar">
+          <div class="animatic-lyric-text" id="animatic-lyric"></div>
+        </div>
+      </div>
+
+      <div class="animatic-controls">
+        <div class="audio-row">
+          <audio id="master-audio" controls preload="metadata"></audio>
+          <div id="no-audio-note" style="display:none; color:var(--text-muted); font-size:0.82rem;">
+            Audio stream not attached yet — review visual storyboard cards below.
+          </div>
+        </div>
+        <div id="animatic-action-caption" style="margin-top:0.6rem; font-size:0.82rem; color:#d6d3d1;"></div>
+        <div class="scene-scrubber" id="scene-scrubber" title="Click any scene segment to jump"></div>
+      </div>
+    </section>
+
+    <!-- Cast & Silent Witness Dogs -->
+    <section id="section-characters" style="display:none;">
+      <div class="section-header">
+        <h2 class="section-title font-display">Cast &amp; Recurring Characters</h2>
+      </div>
+      <div class="cards-grid" id="grid-characters"></div>
+    </section>
+
+    <!-- Scene-by-Scene Storyboard -->
+    <section id="section-scenes">
+      <div class="section-header">
+        <h2 class="section-title font-display">Scene-by-Scene Storyboard</h2>
+        <div class="filter-bar">
+          <button type="button" class="filter-btn active" data-filter="all">All Scenes</button>
+          <button type="button" class="filter-btn" data-filter="tweak">&#9998; Tweaks / Notes</button>
+          <button type="button" class="filter-btn" data-filter="approved">&#128077; Approved</button>
+          <button type="button" class="filter-btn" data-filter="unreviewed">Unreviewed</button>
+          <input type="search" id="scene-search" class="search-input" placeholder="Search lyrics or visuals..." />
+        </div>
+      </div>
+      <div class="cards-grid" id="grid-scenes"></div>
+    </section>
+
+    <!-- YouTube A/B/C Thumbnail Concepts -->
+    <section id="section-thumbs" style="display:none;">
+      <div class="section-header">
+        <h2 class="section-title font-display">YouTube Thumbnail Options (Pick Your Favorite)</h2>
+      </div>
+      <div class="cards-grid" id="grid-thumbs"></div>
+    </section>
+  </main>
+
+  <!-- Sticky Bottom Feedback Summary Dock -->
+  <div class="sticky-dock">
+    <div class="dock-inner">
+      <div class="dock-stats" id="dock-stats"></div>
+      <div style="display:flex; flex-wrap:wrap; gap:0.6rem; align-items:center;">
+        <button type="button" class="btn-secondary" id="btn-approve-rest">&#128077; Mark Unflagged as Approved</button>
+        <button type="button" class="btn-primary" id="btn-open-submit">&#9993; Send Your Feedback to The Bard</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Submit Feedback Modal -->
+  <div class="modal-overlay" id="submit-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.85rem;">
+        <h3 class="font-display" style="margin:0; font-size:1.25rem; color:var(--amber-bright);">&#9993; Send Your Feedback to The Bard</h3>
+        <button type="button" class="btn-secondary" id="btn-close-submit" style="padding:0.3rem 0.65rem;">&#10005;</button>
+      </div>
+
+      <div style="display:grid; gap:0.75rem; margin-bottom:0.9rem;">
+        <div>
+          <label style="display:block; font-size:0.78rem; color:var(--text-muted); margin-bottom:0.25rem;">Your Name</label>
+          <input type="text" id="reviewer-name" class="search-input" style="width:100%;" placeholder="e.g. Trevor" />
+        </div>
+        <div>
+          <label style="display:block; font-size:0.78rem; color:var(--text-muted); margin-bottom:0.25rem;">Overall Thoughts / Big-Picture Ideas (Optional)</label>
+          <textarea id="overall-comment" class="note-textarea" placeholder="Any overall impressions on the mood, characters, pacing, or story arc..."></textarea>
+        </div>
+      </div>
+
+      <div style="margin-bottom:0.4rem; font-size:0.76rem; color:var(--text-muted);">Compiled Review Summary (sent to <strong style="color:#fafaf9;">theshadyriverbard@gmail.com</strong>):</div>
+      <div class="report-preview" id="compiled-report-preview"></div>
+
+      <div id="submit-toast" style="display:none; margin-top:0.75rem; padding:0.6rem 0.85rem; border-radius:0.5rem; background:var(--emerald-soft); border:1px solid var(--emerald); color:#a7f3d0; font-size:0.82rem;"></div>
+
+      <div style="display:flex; flex-wrap:wrap; gap:0.6rem; margin-top:1rem;">
+        <button type="button" class="btn-primary" id="btn-mailto-send">&#9993; Open in Email App</button>
+        <button type="button" class="btn-secondary" id="btn-copy-report">&#128203; Copy Feedback (for Gmail / Chat)</button>
+        <button type="button" class="btn-secondary" id="btn-download-report">&#128190; Download .txt File</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Lightbox Modal -->
+  <div class="modal-overlay" id="lightbox-modal">
+    <div style="text-align:center; max-width:95vw;">
+      <img id="lightbox-img" class="lightbox-img" src="" alt="Enlarged storyboard frame" />
+      <div id="lightbox-caption" style="margin-top:0.6rem; color:#e7e5e4; font-size:0.88rem;"></div>
+      <div style="margin-top:0.6rem;">
+        <button type="button" class="btn-secondary" id="btn-close-lightbox">Close Preview (Esc)</button>
+      </div>
+    </div>
+  </div>
+
+  <script id="storyboard-payload" type="application/json">{"song_slug": "echoes_of_arbroath", "secret_slug": "echoes-of-arbroath-cf1735", "song_title": "Echoes of Arbroath", "artist": "The Shady River Bard", "client_name": "Historical Watercolor Concept Preview", "proposal_notes": "Visual Concept: 14th-Century Illuminated Scottish Watercolor & Sepia Iron-Gall Ink Wash on textured cotton parchment.\n• Historical Grounding: Anchored in April 6, 1320 at red-sandstone Arbroath Abbey — Abbot Bernard's scriptorium, the Latin vellum with 51 crimson & green baronial wax seals, and the timeless assertion that the sovereign people ARE the crown.\n• Silent Witness Dog: Callum (our stationary black-and-white Scottish Border Collie) stands quiet vigil across the centuries.\n• Pacing: 44 cuts synced directly to your reconciled SRT and the 5:03.88 Suno ballad (DADGAD guitar, Scottish Low Whistle, and cello).", "visual_style": "14th-Century Scottish Watercolor & Sepia Iron-Gall Ink Wash", "bpm": 68.0, "total_scenes": 44, "images_ready_count": 43, "expected_runtime_sec": 303.88, "runtime_formatted": "5:03.9", "suno_url": "https://suno.com/song/5d806f04-a79e-4436-b97d-83faf4244bca", "audio_url": "https://d2lwuy8qc234o3.cloudfront.net/1/clip/5d806f04-a79e-4436-b97d-83faf4244bca.m4a", "cover_image_url": "https://cdn2.suno.ai/image_large_5d806f04-a79e-4436-b97d-83faf4244bca.jpeg", "bard_email": "theshadyriverbard@gmail.com", "generated_at": "2026-11-02 19:40 UTC", "characters": [{"id": "CHAR_01", "name": "Callum", "description": "Black-and-white Scottish Border Collie — the silent stationary witness bridging 1320 Arbroath Abbey and the living Scottish land.", "prompt": "Master character portrait of Callum (black-and-white Scottish Border Collie, white chest blaze, seated still with hindquarters tucked) sitting nobly on mossy red Arbroath sandstone overlooking a misty North Sea cliff. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/char_01_callum.webp"}, {"id": "CHAR_02", "name": "Alasdair", "description": "Weathered 14th-century Scottish chronicler and folk bard in dark homespun wool and saffron-slate plaid, playing DADGAD guitar and Low Whistle.", "prompt": "Master character reference portrait in three-quarter profile of Alasdair (40s Scottish bard, non-celebrity face, salt-and-pepper beard, dark wool tunic, saffron-slate plaid) standing in a stone abbey archway holding a wooden Scottish Low Whistle. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/char_02_alasdair.webp"}, {"id": "CHAR_03", "name": "Mairi", "description": "Dignified Scottish vocalist in a storm-indigo woolen arisaid shawl, embodying the soaring harmony of the enduring nation.", "prompt": "Master character reference portrait in three-quarter view of Mairi (30s Scottish singer, non-celebrity face, braided auburn hair, storm-indigo wool shawl) framed by the circular red-sandstone Round O window of Arbroath Abbey. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/char_03_mairi.webp"}, {"id": "CHAR_04", "name": "Abbot Bernard", "description": "Elderly 14th-century Abbot of Arbroath and Chancellor of Scotland, drafting the 1320 Declaration by tallow candlelight.", "prompt": "Master character reference portrait in profile of Abbot Bernard (elderly 1320 abbot, non-celebrity face, silver tonsure, charcoal monastic wool habit) seated at a medieval oak lectern holding a goose-quill pen above Latin vellum. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/char_04_abbot_bernard.webp"}], "style_concepts": [], "scenes": [{"scene_number": 1, "scene_id": "S01", "slug": "arbroath_abbey_cliffs_dawn", "start_sec": 0.0, "end_sec": 7.2, "time_label": "0:00.0 – 0:07.2", "duration_sec": 7.2, "lyrics": "", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Wide coastal watercolor view of 1320 Arbroath Abbey rising above the red sandstone cliffs of Angus at dawn.", "spatial_anchor": "Arbroath Abbey coastal cliffs, 1320 dawn", "base_image_prompt": "Wide establishing aerial shot of medieval 1320 Arbroath Abbey intact with twin stone towers and steep slate roofs perched above rugged red-sandstone sea cliffs and crashing North Sea surf at dawn. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow sweeping camera dolly-in at 68 BPM somber folk energy as translucent watercolor sea mist drifts across the red sandstone cliffs of 1320 Arbroath Abbey and waves foam gently below. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S01_arbroath_abbey_cliffs_dawn.webp"}, {"scene_number": 2, "scene_id": "S02", "slug": "callum_on_abbey_cloister_wall", "start_sec": 7.2, "end_sec": 14.5, "time_label": "0:07.2 – 0:14.5", "duration_sec": 7.3, "lyrics": "", "is_singer": false, "skip_generation": false, "characters": ["Callum"], "subject_action": "Callum sits calmly as a silent witness on the wet red-sandstone cloister parapet overlooking the misty North Sea.", "spatial_anchor": "Arbroath Abbey cloister parapet, 1320", "base_image_prompt": "Medium three-quarter front shot of Callum (black-and-white Scottish Border Collie, white chest blaze, seated still with hindquarters tucked) sitting completely still at attention on a mossy carved 1320 red-sandstone abbey parapet overlooking the misty North Sea coast. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow camera pan right at 68 BPM during fingerpicked acoustic guitar intro while Callum (black-and-white Scottish Border Collie, white chest blaze, seated still with hindquarters tucked) sits completely stationary on the stone parapet, coastal breeze ruffling his white chest fur as watercolor fog rolls past. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S02_callum_on_abbey_cloister_wall.webp"}, {"scene_number": 3, "scene_id": "S03", "slug": "low_whistle_candlelit_scriptorium", "start_sec": 14.5, "end_sec": 21.8, "time_label": "0:14.5 – 0:21.8", "duration_sec": 7.3, "lyrics": "", "is_singer": false, "skip_generation": false, "characters": ["Alasdair"], "subject_action": "Close-up of Alasdair's weathered hands playing a wooden Scottish Low Whistle in the candlelit abbey scriptorium.", "spatial_anchor": "Arbroath Abbey scriptorium interior, 1320", "base_image_prompt": "Tight close-up of the weathered hands of Alasdair (40s Scottish bard, non-celebrity face, salt-and-pepper beard, dark wool tunic, saffron-slate plaid) playing a traditional turned-wood Scottish Low Whistle beside a flickering tallow candle in a 1320 stone scriptorium, face out of frame. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow push-in at 68 BPM mournful energy as the fingers of Alasdair (40s Scottish bard, non-celebrity face, salt-and-pepper beard, dark wool tunic, saffron-slate plaid) gently lift and press the tone holes of the wooden Scottish Low Whistle while warm candlelight flickers across sepia ink wash shadows. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S03_low_whistle_candlelit_scriptorium.webp"}, {"scene_number": 4, "scene_id": "S04", "slug": "cello_and_blank_vellum_scroll", "start_sec": 21.8, "end_sec": 28.96, "time_label": "0:21.8 – 0:29.0", "duration_sec": 7.16, "lyrics": "", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "A bowed wooden cello beside an unrolled blank calfskin parchment scroll and goose-quill inkhorn.", "spatial_anchor": "Scriptorium oak writing desk, 1320", "base_image_prompt": "Medium close-up of a rustic carved wooden cello leaning beside a heavy oak writing desk holding an unrolled blank calfskin vellum parchment, goose-quill pen, and clay inkhorn in a 1320 Scottish abbey chamber. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Gentle rack focus at 68 BPM from the resonant strings of the wooden cello to the blank calfskin parchment and flickering tallow candle flame as dust motes drift through amber light. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S04_cello_and_blank_vellum_scroll.webp"}, {"scene_number": 5, "scene_id": "S05", "slug": "alasdair_sings_seven_hundred_years", "start_sec": 28.96, "end_sec": 35.08, "time_label": "0:29.0 – 0:35.1", "duration_sec": 6.12, "lyrics": "Seven hundred years have scattered on the breeze,", "is_singer": true, "skip_generation": false, "characters": ["Alasdair"], "subject_action": "Alasdair sings the opening lines in reverent profile beside an arched stone lancet window.", "spatial_anchor": "Abbey lancet window alcove, 1320", "base_image_prompt": "Medium three-quarter profile shot of Alasdair (40s Scottish bard, non-celebrity face, salt-and-pepper beard, dark wool tunic, saffron-slate plaid) standing beside a rain-misted 1320 red-sandstone lancet window, dignified reverent expression, soft directional daylight. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow dolly-in at 68 BPM somber folk energy. With zero wind-up delay on frame 1 (0.0s), from 0.0s to 2.56s Alasdair (40s Scottish bard, non-celebrity face, salt-and-pepper beard, dark wool tunic, saffron-slate plaid) sings the exact words: 'Seven hundred years'. At 2.56s he closes his mouth briefly for 0.40s, then from 2.96s to 5.76s sings: 'have scattered on the breeze,'. Immediately at 5.76s he closes his mouth completely. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S05_alasdair_sings_seven_hundred_years.webp"}, {"scene_number": 6, "scene_id": "S06", "slug": "abbot_bernard_and_barons_tableau", "start_sec": 35.08, "end_sec": 41.76, "time_label": "0:35.1 – 0:41.8", "duration_sec": 6.68, "lyrics": "Since the abbots and the barons made their pleas.", "is_singer": false, "skip_generation": false, "characters": ["Abbot Bernard"], "subject_action": "Grounded candlelit tableau of Abbot Bernard at his lectern with Scottish barons standing in solemn silhouette.", "spatial_anchor": "Arbroath Abbey chapter house, April 1320", "base_image_prompt": "Wide shot inside the vaulted 1320 Arbroath Abbey chapter house showing Abbot Bernard (elderly 1320 abbot, non-celebrity face, silver tonsure, charcoal monastic wool habit) seated calmly at an oak lectern in profile while three 14th-century Scottish barons in woolen plaids stand in grounded backlit silhouette, zero open mouths. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow camera pan left at 68 BPM across the still, grounded tableau of Abbot Bernard (elderly 1320 abbot, non-celebrity face, silver tonsure, charcoal monastic wool habit) and the stationary backlit barons as golden sunbeams and incense smoke drift through the vaulted stone hall. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S06_abbot_bernard_and_barons_tableau.webp"}, {"scene_number": 7, "scene_id": "S07", "slug": "setting_parchment_on_oak_table", "start_sec": 41.76, "end_sec": 48.24, "time_label": "0:41.8 – 0:48.2", "duration_sec": 6.48, "lyrics": "In the quiet halls of Arbroath, they set the parchment down,", "is_singer": false, "skip_generation": false, "characters": ["Abbot Bernard"], "subject_action": "Overhead close-up of Abbot Bernard's ink-stained hands smoothing the Latin Declaration parchment on oak.", "spatial_anchor": "Oak scriptorium table close-up, 1320", "base_image_prompt": "High-angle close-up of the aged ink-stained hands of Abbot Bernard (elderly 1320 abbot, non-celebrity face, silver tonsure, charcoal monastic wool habit) smoothing a broad sheet of Latin-inscribed calfskin vellum parchment flat onto a scarred medieval oak table beside brass weights and a goose quill. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow overhead tilt-down at 68 BPM as the hands of Abbot Bernard (elderly 1320 abbot, non-celebrity face, silver tonsure, charcoal monastic wool habit) rest calmly on the edges of the Latin parchment while warm tallow candlelight dances across the wet iron-gall calligraphy. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S07_setting_parchment_on_oak_table.webp"}, {"scene_number": 8, "scene_id": "S08", "slug": "everyday_folk_above_empty_crown", "start_sec": 48.24, "end_sec": 55.08, "time_label": "0:48.2 – 0:55.1", "duration_sec": 6.84, "lyrics": "To swear the sovereign people are themselves the rightful crown.", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Symbolic watercolor composition: ordinary 14th-century Scottish folk silhouetted on a sunlit ridge above an empty iron crown.", "spatial_anchor": "Highland ridge symbolic vista, 1320", "base_image_prompt": "Symbolic split-plane composition with an empty weathered iron crown resting low on mossy stone in the shadowed foreground while three grounded backlit silhouettes of 14th-century Scottish crofters and weavers stand tall on a sunlit Highland ridge above. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow crane-up camera motion at 68 BPM rising past the empty iron crown on the moss toward the sunlit silhouettes of the Scottish people as golden watercolor clouds sweep across the sky. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S08_everyday_folk_above_empty_crown.webp"}, {"scene_number": 9, "scene_id": "S09", "slug": "king_equal_beside_blacksmith", "start_sec": 55.08, "end_sec": 61.36, "time_label": "0:55.1 – 1:01.4", "duration_sec": 6.28, "lyrics": "A king is but an equal, who serves the people's cry,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Backlit silhouette of a medieval king standing on level earthen ground beside a Scottish blacksmith and farmer.", "spatial_anchor": "Highland valley earthen road, 1320", "base_image_prompt": "Wide backlit silhouette shot facing away from camera showing a medieval Scottish king in a simple circlet standing on exact level ground shoulder-to-shoulder beside a leather-aproned blacksmith and a wool-cloaked farmer looking toward misty hills. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow lateral dolly right at 68 BPM as Highland wind billows the woolen cloaks of the backlit silhouettes standing on level ground while bleeding amber light warms the horizon. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S09_king_equal_beside_blacksmith.webp"}, {"scene_number": 10, "scene_id": "S10", "slug": "red_wax_baronial_seal_press", "start_sec": 61.36, "end_sec": 69.84, "time_label": "1:01.4 – 1:09.8", "duration_sec": 8.48, "lyrics": "And the spirit of that letter will never truly die.", "is_singer": false, "skip_generation": false, "characters": ["Abbot Bernard"], "subject_action": "Macro close-up of molten crimson sealing wax stamped onto a braided ribbon hanging from the 1320 parchment.", "spatial_anchor": "Declaration parchment wax seal macro, 1320", "base_image_prompt": "Extreme close-up of molten crimson beeswax impressed with a medieval Scottish heraldic signet stamp attached to a woven linen ribbon beneath the Latin calligraphy of the 1320 Arbroath parchment, hand of Abbot Bernard (elderly 1320 abbot, non-celebrity face, silver tonsure, charcoal monastic wool habit) resting beside it. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow push-in macro shot at 68 BPM as warm golden candlelight glints off the freshly pressed crimson wax seal and a tiny wisp of candle smoke curls upward in delicate watercolor wash. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S10_red_wax_baronial_seal_press.webp"}, {"scene_number": 11, "scene_id": "S11", "slug": "highlanders_on_sea_crag_silhouette", "start_sec": 69.84, "end_sec": 76.56, "time_label": "1:09.8 – 1:16.6", "duration_sec": 6.72, "lyrics": "As long as but a hundred of us remain alive,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Dramatic wide vista of grounded Scottish silhouettes standing steadfast along a sea-cliff crag above crashing waves.", "spatial_anchor": "Angus sea-cliff crag at sunrise, 1320", "base_image_prompt": "Epic wide shot of grounded backlit silhouettes of 14th-century Scots in windswept plaids standing calmly along a towering red-sandstone sea crag facing the sunrise over the North Sea, zero faces visible. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow majestic aerial pull-back at 70 BPM chorus swell as golden dawn light breaks through indigo storm clouds and sea spray rises below the grounded cliffside silhouettes. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S11_highlanders_on_sea_crag_silhouette.webp"}, {"scene_number": 12, "scene_id": "S12", "slug": "coastal_beacon_flame_in_rain", "start_sec": 76.56, "end_sec": 82.96, "time_label": "1:16.6 – 1:23.0", "duration_sec": 6.4, "lyrics": "The ancient flame of liberty will manage to survive.", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "An ironstone coastal beacon brazier burning bright amber flames amidst driving North Sea rain.", "spatial_anchor": "Coastal stone beacon headland, 1320", "base_image_prompt": "Medium close-up of an ancient weathered stone watchtower brazier atop a Scottish headland burning with vivid amber-gold watercolor flames against dark slate-blue rain clouds. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow low-angle push-in at 70 BPM as bright golden flames and glowing embers swirl upward from the stone brazier unbroken by diagonal streaks of Highland rain. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S12_coastal_beacon_flame_in_rain.webp"}, {"scene_number": 13, "scene_id": "S13", "slug": "boots_planted_in_heather_and_granite", "start_sec": 82.96, "end_sec": 89.2, "time_label": "1:23.0 – 1:29.2", "duration_sec": 6.24, "lyrics": "We will never bow the knee to any foreign hand,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Low-angle shot of weathered medieval leather boots planted immovable in wet purple heather and granite.", "spatial_anchor": "Highland granite moorland ground level, 1320", "base_image_prompt": "Low-angle close-up of mud-spattered 14th-century rawhide Highland boots and wool tartan hose planted firmly and immovably on wet granite rock and purple heather in the rain. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Subtle low-angle dolly-in at 70 BPM as heavy raindrops splash off the granite stone and wind bends the purple heather around the immovable planted boots. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S13_boots_planted_in_heather_and_granite.webp"}, {"scene_number": 14, "scene_id": "S14", "slug": "scots_pine_roots_in_red_sandstone", "start_sec": 89.2, "end_sec": 96.08, "time_label": "1:29.2 – 1:36.1", "duration_sec": 6.88, "lyrics": "For the unbroken chain of sovereignty is rooted in the land.", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Visual metaphor: gnarled ancient Scots pine roots woven like an unbroken chain deep into red sandstone bedrock.", "spatial_anchor": "Highland cliffside Scots pine roots", "base_image_prompt": "Artistic cross-section watercolor illustration of ancient gnarled Scots pine tree roots interlocking like heavy chain links deep inside stratified Arbroath red-sandstone cliff rock and rich dark peat. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow vertical tilt-up at 70 BPM following the interlocking chain-like pine roots anchored in the red sandstone up toward the windswept green pine canopy bathed in amber light. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S14_scots_pine_roots_in_red_sandstone.webp"}, {"scene_number": 15, "scene_id": "S15", "slug": "callum_beside_pictish_standing_stone", "start_sec": 96.08, "end_sec": 106.04, "time_label": "1:36.1 – 1:46.0", "duration_sec": 9.96, "lyrics": "Yes, the unbroken chain is rooted in the land.", "is_singer": false, "skip_generation": false, "characters": ["Callum"], "subject_action": "Callum sits steadfast beside a carved ancient Pictish standing stone on the misty moor.", "spatial_anchor": "Pictish standing stone moorland", "base_image_prompt": "Medium-wide front-three-quarter shot of Callum (black-and-white Scottish Border Collie, white chest blaze, seated still with hindquarters tucked) sitting completely still beside a tall moss-covered Pictish carved standing stone on an expansive Scottish heather moor under parting storm clouds. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow sweeping arc camera movement at 68 BPM around the ancient standing stone while Callum (black-and-white Scottish Border Collie, white chest blaze, seated still with hindquarters tucked) remains seated completely stationary, ears perking slightly as a shaft of golden sun illuminates the moor. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S15_callum_beside_pictish_standing_stone.webp"}, {"scene_number": 16, "scene_id": "S16", "slug": "dadgad_guitar_interlude_hands", "start_sec": 106.04, "end_sec": 113.12, "time_label": "1:46.0 – 1:53.1", "duration_sec": 7.08, "lyrics": "", "is_singer": false, "skip_generation": false, "characters": ["Alasdair"], "subject_action": "Instrumental interlude: close-up of Alasdair's hands fingerpicking a rustic wooden acoustic guitar.", "spatial_anchor": "Stone window sill guitar interlude", "base_image_prompt": "Close-up of the weathered hands of Alasdair (40s Scottish bard, non-celebrity face, salt-and-pepper beard, dark wool tunic, saffron-slate plaid) fingerpicking a warm cedar-topped folk acoustic guitar beside a rain-streaked stone window sill, face out of frame. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Gentle dolly-in at 68 BPM synced to slow fingerpicked acoustic guitar arpeggios as rain streaks down the leaded glass window behind the hands of Alasdair (40s Scottish bard, non-celebrity face, salt-and-pepper beard, dark wool tunic, saffron-slate plaid). 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S16_dadgad_guitar_interlude_hands.webp"}, {"scene_number": 17, "scene_id": "S17", "slug": "arbroath_ruins_in_ghostly_mist", "start_sec": 113.12, "end_sec": 119.28, "time_label": "1:53.1 – 1:59.3", "duration_sec": 6.16, "lyrics": "They try to tell us now that history is a ghost,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "The red-sandstone arches of Arbroath Abbey centuries later veiled in spectral morning sea fog.", "spatial_anchor": "Ruined Arbroath Abbey nave in mist", "base_image_prompt": "Wide atmospheric shot of the iconic roofless red-sandstone Gothic arches of Arbroath Abbey half-dissolving into pale ghostly silver-blue watercolor mist at dawn, zero modern buildings visible. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow ethereal drift forward through the ruined red-sandstone arches at 68 BPM as translucent layers of pale sea fog billow and bleed across the parchment sky. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S17_arbroath_ruins_in_ghostly_mist.webp"}, {"scene_number": 18, "scene_id": "S18", "slug": "long_shadows_on_angus_coast", "start_sec": 119.28, "end_sec": 125.28, "time_label": "1:59.3 – 2:05.3", "duration_sec": 6.0, "lyrics": "A forgotten little shadow on a subjugated coast.", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "High coastal view of dark storm shadows sweeping across wet tide pools and red cliffs.", "spatial_anchor": "Angus red-sandstone tide pools", "base_image_prompt": "High-angle bird's-eye coastal shot of long charcoal-ink cloud shadows stretching across glistening tide pools and rugged red-sandstone ledges of the empty Angus shoreline. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow overhead tilt-up at 68 BPM as dark storm cloud shadows glide across the wet red rocks and pale foam curls into the coastal coves. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S18_long_shadows_on_angus_coast.webp"}, {"scene_number": 19, "scene_id": "S19", "slug": "carved_1320_date_in_sandstone", "start_sec": 125.28, "end_sec": 132.32, "time_label": "2:05.3 – 2:12.3", "duration_sec": 7.04, "lyrics": "But the earth remembers thirteen twenty in the marrow of the stone,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Macro shot of 'MCCCXX' (1320) chiselled deep into mossy red Arbroath sandstone, glowing faintly warm.", "spatial_anchor": "Carved stone masonry macro", "base_image_prompt": "Macro close-up of weathered medieval Roman numerals 'MCCCXX' deeply chiselled into wet red-ochre sandstone masonry, green moss in the crevices, glowing subtly with warm inner amber watercolor light. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow macro dolly-in at 68 BPM as water droplets glisten along the chiselled 'MCCCXX' stone inscription and warm golden light intensifies across the red sandstone grain. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S19_carved_1320_date_in_sandstone.webp"}, {"scene_number": 20, "scene_id": "S20", "slug": "declaration_parchment_fifty_wax_seals", "start_sec": 132.32, "end_sec": 138.56, "time_label": "2:12.3 – 2:18.6", "duration_sec": 6.24, "lyrics": "The declaration echoes that we stand and fall alone.", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "The full Declaration of Arbroath suspended with dozens of red and green wax baronial seals fluttering gently.", "spatial_anchor": "Declaration manuscript display", "base_image_prompt": "Heroic close-up of the historic 1320 Declaration of Arbroath vellum manuscript displaying dense Latin script and dozens of hanging red and green beeswax seals on vertical parchment tags in dramatic chiaroscuro light. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow vertical tilt-up at 68 BPM from the dangling rows of red and green wax seals swaying gently in a subtle draft up across the handwritten Latin text of the Declaration. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S20_declaration_parchment_fifty_wax_seals.webp"}, {"scene_number": 21, "scene_id": "S21", "slug": "broken_oath_empty_wooden_throne", "start_sec": 138.56, "end_sec": 145.08, "time_label": "2:18.6 – 2:25.1", "duration_sec": 6.52, "lyrics": "When monarchs break the sacred oath, they're stripped of all their pride,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "An abandoned medieval throne in shadow as faded royal banners fray into swirling watercolor dust.", "spatial_anchor": "Abandoned stone throne hall", "base_image_prompt": "Wide moody shot of an empty, abandoned medieval carved oak throne in a cold stone hall, a tarnished crown lying discarded on the stone steps while autumn leaves scatter across the floor. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow pull-back camera motion at 68 BPM as cold wind blows dried leaves and bleeding sepia ink shadows across the empty throne and discarded crown. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S21_broken_oath_empty_wooden_throne.webp"}, {"scene_number": 22, "scene_id": "S22", "slug": "scottish_thistle_in_castle_stone", "start_sec": 145.08, "end_sec": 153.36, "time_label": "2:25.1 – 2:33.4", "duration_sec": 8.28, "lyrics": "For the soul of independence has never really died.", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "A vibrant purple Scottish thistle blooming out of a fissure in ancient red sandstone bathed in golden light.", "spatial_anchor": "Red sandstone wall with blooming thistle", "base_image_prompt": "Detailed botanical watercolor close-up of a resilient purple-crowned Scottish thistle growing triumphantly out of a crack in ancient weathered red sandstone, illuminated by a crisp shaft of golden sunlight. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow rack focus and gentle push-in at 68 BPM onto the purple Scottish thistle trembling slightly in the coastal breeze as golden watercolor light blooms behind it. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S22_scottish_thistle_in_castle_stone.webp"}, {"scene_number": 23, "scene_id": "S23", "slug": "mairi_sings_harmony_rose_window", "start_sec": 153.36, "end_sec": 160.16, "time_label": "2:33.4 – 2:40.2", "duration_sec": 6.8, "lyrics": "As long as but a hundred of us remain alive,", "is_singer": true, "skip_generation": false, "characters": ["Mairi"], "subject_action": "Mairi sings the soaring harmony line beneath the circular stone Round O window of Arbroath.", "spatial_anchor": "Arbroath Round O window gallery", "base_image_prompt": "Medium three-quarter shot of Mairi (30s Scottish singer, non-celebrity face, braided auburn hair, storm-indigo wool shawl) standing gracefully beneath the circular stone 'Round O' rose window of Arbroath Abbey, warm golden light framing her auburn hair. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow push-in at 70 BPM soaring duet energy. With zero wind-up delay on frame 1 (0.0s), from 0.0s to 2.64s Mairi (30s Scottish singer, non-celebrity face, braided auburn hair, storm-indigo wool shawl) sings with ethereal clarity: 'As long as but a hundred'. From 2.64s to 3.40s she pauses with closed mouth, then from 3.40s to 5.68s sings: 'of us remain alive,', closing her mouth completely at 5.68s. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S23_mairi_sings_harmony_rose_window.webp"}, {"scene_number": 24, "scene_id": "S24", "slug": "two_hands_passing_lantern_across_time", "start_sec": 160.16, "end_sec": 166.56, "time_label": "2:40.2 – 2:46.6", "duration_sec": 6.4, "lyrics": "The ancient flame of liberty will manage to survive.", "is_singer": false, "skip_generation": false, "characters": ["Abbot Bernard", "Mairi"], "subject_action": "Two hands—a 1320 monk's wool sleeve and a timeless woven shawl sleeve—passing a glowing brass lantern.", "spatial_anchor": "Symbolic lantern handoff close-up", "base_image_prompt": "Close-up of exactly two hands—the dark monastic wool sleeve of Abbot Bernard (elderly 1320 abbot, non-celebrity face, silver tonsure, charcoal monastic wool habit) on the left passing a glowing warm brass tallow lantern to the indigo-shawl hand of Mairi (30s Scottish singer, non-celebrity face, braided auburn hair, storm-indigo wool shawl) on the right against deep sepia darkness. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow close-up dolly-in at 70 BPM on the glowing brass lantern held steadily between the two hands as warm amber watercolor light radiates outward. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S24_two_hands_passing_lantern_across_time.webp"}, {"scene_number": 25, "scene_id": "S25", "slug": "storm_waves_against_seaton_cliffs", "start_sec": 166.56, "end_sec": 172.72, "time_label": "2:46.6 – 2:52.7", "duration_sec": 6.16, "lyrics": "We will never bow the knee to any foreign hand,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Towering North Sea waves crashing against immovable red-sandstone sea stacks at Arbroath.", "spatial_anchor": "Seaton red sandstone sea cliffs", "base_image_prompt": "Dramatic wide seascape of white-crested indigo North Sea storm waves crashing against towering immovable red-sandstone sea cliffs and natural arches near Arbroath. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow wide pan right at 70 BPM as white watercolor sea spray bursts upward against the unyielding red sandstone cliffs under dramatic silver-and-ochre clouds. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S25_storm_waves_against_seaton_cliffs.webp"}, {"scene_number": 26, "scene_id": "S26", "slug": "sunlit_highland_glen_and_river", "start_sec": 172.72, "end_sec": 179.68, "time_label": "2:52.7 – 2:59.7", "duration_sec": 6.96, "lyrics": "For the unbroken chain of sovereignty is rooted in the land.", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Sweeping golden sunbeams breaking across a vast Scottish Highland glen and winding silver river.", "spatial_anchor": "Scottish Highland glen panorama", "base_image_prompt": "Expansive panoramic landscape of a majestic Scottish Highland glen with a winding silver river, russet bracken hills, and dramatic crepuscular sunbeams piercing storm clouds, zero modern roads. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow aerial forward glide at 70 BPM over the winding silver Highland river as golden watercolor sunbeams sweep across the emerald and russet valley slopes. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S26_sunlit_highland_glen_and_river.webp"}, {"scene_number": 27, "scene_id": "S27", "slug": "crofter_hands_cradling_peat_and_barley", "start_sec": 179.68, "end_sec": 189.2, "time_label": "2:59.7 – 3:09.2", "duration_sec": 9.52, "lyrics": "Yes, the unbroken chain is rooted in the land.", "is_singer": false, "skip_generation": false, "characters": ["Alasdair"], "subject_action": "Close-up of Alasdair's hands cradling rich dark Scottish soil with a sprouting green barley shoot.", "spatial_anchor": "Highland field close-up on soil", "base_image_prompt": "Close-up of the two weathered hands of Alasdair (40s Scottish bard, non-celebrity face, salt-and-pepper beard, dark wool tunic, saffron-slate plaid) cupped together cradling rich dark Scottish peat earth with a single vibrant green heritage bere-barley sprout rising from the soil, face unseen. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow reverent push-in at 68 BPM onto the green barley shoot in the cupped hands of Alasdair (40s Scottish bard, non-celebrity face, salt-and-pepper beard, dark wool tunic, saffron-slate plaid) as soft golden light and gentle mist drift around them. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S27_crofter_hands_cradling_peat_and_barley.webp"}, {"scene_number": 28, "scene_id": "S28", "slug": "cello_bow_solo_in_abbey_nave", "start_sec": 189.2, "end_sec": 197.0, "time_label": "3:09.2 – 3:17.0", "duration_sec": 7.8, "lyrics": "", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Instrumental solo Part 1: cello bow drawing a resonant note in the sunlit abbey nave.", "spatial_anchor": "Abbey nave cello close-up", "base_image_prompt": "Tight atmospheric close-up of a horsehair bow drawing across the strings of a weathered wooden cello inside a sunlit stone abbey archway, rosin dust sparkling in golden light, player's face out of frame. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow fluid camera glide at 68 BPM following the wooden cello bow drawing smoothly across the strings while golden dust motes and watercolor light beams shimmer. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S28_cello_bow_solo_in_abbey_nave.webp"}, {"scene_number": 29, "scene_id": "S29", "slug": "low_whistle_silhouette_at_round_o", "start_sec": 197.0, "end_sec": 204.8, "time_label": "3:17.0 – 3:24.8", "duration_sec": 7.8, "lyrics": "", "is_singer": false, "skip_generation": false, "characters": ["Alasdair"], "subject_action": "Instrumental solo Part 2: backlit silhouette of Alasdair playing the Low Whistle framed inside the Round O window.", "spatial_anchor": "Arbroath Round O window silhouette", "base_image_prompt": "Striking backlit silhouette of Alasdair (40s Scottish bard, non-celebrity face, salt-and-pepper beard, dark wool tunic, saffron-slate plaid) standing in profile inside the giant circular stone 'Round O' window of Arbroath Abbey playing the Scottish Low Whistle against an amber-and-indigo coastal sky. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow dramatic pull-back at 68 BPM from the backlit silhouette of Alasdair (40s Scottish bard, non-celebrity face, salt-and-pepper beard, dark wool tunic, saffron-slate plaid) playing the Low Whistle inside the circular stone window as coastal clouds drift past. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S29_low_whistle_silhouette_at_round_o.webp"}, {"scene_number": 30, "scene_id": "S30", "slug": "callum_resting_on_abbey_flagstones", "start_sec": 204.8, "end_sec": 212.72, "time_label": "3:24.8 – 3:32.7", "duration_sec": 7.92, "lyrics": "", "is_singer": false, "skip_generation": false, "characters": ["Callum"], "subject_action": "Instrumental solo Part 3: Callum lying peacefully on mossy abbey flagstones beside carved stonework.", "spatial_anchor": "Arbroath Abbey mossy flagstones", "base_image_prompt": "Medium shot of Callum (black-and-white Scottish Border Collie, white chest blaze, seated still with hindquarters tucked) lying calmly in a sphinx pose on mossy red-sandstone abbey flagstones beside a carved medieval pillar, paws resting forward, hindquarters tucked. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow low-angle dolly-in at 68 BPM while Callum (black-and-white Scottish Border Collie, white chest blaze, seated still with hindquarters tucked) lies completely still on the mossy flagstones, turning his head slightly toward the golden light streaming through the stone arch. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S30_callum_resting_on_abbey_flagstones.webp"}, {"scene_number": 31, "scene_id": "S31", "slug": "rusted_sword_and_dissolving_crest", "start_sec": 212.72, "end_sec": 218.8, "time_label": "3:32.7 – 3:38.8", "duration_sec": 6.08, "lyrics": "The kings have turned to ashes, the empires fall to rust,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "A rusted medieval iron hilt and crumbling imperial stone crest dissolving into grey watercolor ash.", "spatial_anchor": "Mossy ruin floor still life", "base_image_prompt": "Still-life close-up of a heavily rusted medieval iron sword pommel half-buried in moss beside a crumbling, eroded imperial stone carving dissolving into bleeding grey watercolor ash and rust pigment. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow tilt-up at 68 BPM as fine grey ash particles and sepia watercolor wash drift away on the wind from the rusted iron hilt and eroded stone. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S31_rusted_sword_and_dissolving_crest.webp"}, {"scene_number": 32, "scene_id": "S32", "slug": "everyday_scots_looking_to_sea_horizon", "start_sec": 218.8, "end_sec": 225.96, "time_label": "3:38.8 – 3:46.0", "duration_sec": 7.16, "lyrics": "But the will of everyday folk is a sacred, heavy trust.", "is_singer": false, "skip_generation": false, "characters": ["Alasdair", "Mairi", "Callum"], "subject_action": "Backlit view from behind of Alasdair, Mairi, and Callum standing calmly on a headland watching the dawn.", "spatial_anchor": "Angus grassy headland overlooking North Sea", "base_image_prompt": "Wide rear-view shot facing away from camera showing Alasdair (40s Scottish bard, non-celebrity face, salt-and-pepper beard, dark wool tunic, saffron-slate plaid) and Mairi (30s Scottish singer, non-celebrity face, braided auburn hair, storm-indigo wool shawl) standing calmly side-by-side with Callum (black-and-white Scottish Border Collie, white chest blaze, seated still with hindquarters tucked) seated completely still beside them on a grassy Angus cliff overlooking the golden sea, zero faces visible. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow majestic push-in from behind at 68 BPM as coastal wind gently stirs the plaid of Alasdair (40s Scottish bard, non-celebrity face, salt-and-pepper beard, dark wool tunic, saffron-slate plaid) and shawl of Mairi (30s Scottish singer, non-celebrity face, braided auburn hair, storm-indigo wool shawl) while Callum (black-and-white Scottish Border Collie, white chest blaze, seated still with hindquarters tucked) sits stationary watching the horizon. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S32_everyday_scots_looking_to_sea_horizon.webp"}, {"scene_number": 33, "scene_id": "S33", "slug": "stone_bothy_hearth_in_winter_rain", "start_sec": 225.96, "end_sec": 231.92, "time_label": "3:46.0 – 3:51.9", "duration_sec": 5.96, "lyrics": "Through the highland rain and the howling winter wind,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "A lone stone Highland croft cottage glowing with warm amber hearthlight through driving winter rain.", "spatial_anchor": "Highland stone croft in winter storm", "base_image_prompt": "Wide moody landscape of a traditional thatched-roof Scottish dry-stone croft cottage nestled in a dark winter glen, warm golden firelight glowing from its small window amidst sweeping diagonal sheets of rain. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow push-in toward the warm glowing croft window at 70 BPM as silver watercolor rain and winter wind sweep across the dark heather slopes. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S33_stone_bothy_hearth_in_winter_rain.webp"}, {"scene_number": 34, "scene_id": "S34", "slug": "quill_words_glowing_like_fire", "start_sec": 231.92, "end_sec": 237.8, "time_label": "3:51.9 – 3:57.8", "duration_sec": 5.88, "lyrics": "We carry forth the fire that our ancestors penned.", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Close-up of the Latin words 'pro libertate sola' on the 1320 parchment glowing like warm golden embers.", "spatial_anchor": "Illuminated vellum script macro", "base_image_prompt": "Macro close-up of medieval iron-gall calligraphy on the 1320 Arbroath calfskin vellum where the Latin letters shimmer with warm golden firelight and bleeding amber watercolor wash. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow macro glide across the illuminated Latin script at 70 BPM as warm golden candlelight flickers across the parchment fibers like living fire. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S34_quill_words_glowing_like_fire.webp"}, {"scene_number": 35, "scene_id": "S35", "slug": "sunburst_over_arbroath_towers", "start_sec": 237.8, "end_sec": 242.0, "time_label": "3:57.8 – 4:02.0", "duration_sec": 4.2, "lyrics": "", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Dramatic pre-chorus swell: golden sunbeams bursting over the red sandstone towers of Arbroath.", "spatial_anchor": "Arbroath Abbey facade sunburst", "base_image_prompt": "Low-angle heroic shot of the soaring red-sandstone gable and Round O window of Arbroath Abbey as brilliant golden sunbeams burst through parting indigo storm clouds. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Dynamic low-angle tilt-up at 72 BPM musical crescendo as golden watercolor rays expand across the red sandstone facade and sea birds glide high in the sky. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S35_sunburst_over_arbroath_towers.webp"}, {"scene_number": 36, "scene_id": "S36", "slug": "alasdair_final_chorus_in_abbey", "start_sec": 242.0, "end_sec": 248.88, "time_label": "4:02.0 – 4:08.9", "duration_sec": 6.88, "lyrics": "As long as but a hundred of us remain alive,", "is_singer": true, "skip_generation": false, "characters": ["Alasdair"], "subject_action": "Alasdair sings the final chorus opening with quiet fierce resolve in the sunlit roofless abbey nave.", "spatial_anchor": "Sunlit Arbroath Abbey nave", "base_image_prompt": "Medium three-quarter shot of Alasdair (40s Scottish bard, non-celebrity face, salt-and-pepper beard, dark wool tunic, saffron-slate plaid) standing in the sunlit red-sandstone nave of Arbroath Abbey, resolute passionate posture, acoustic guitar strapped across his wool cloak. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow dolly-in at 72 BPM climactic folk anthem energy. With zero wind-up delay on frame 1 (0.0s), from 0.0s to 2.80s Alasdair (40s Scottish bard, non-celebrity face, salt-and-pepper beard, dark wool tunic, saffron-slate plaid) sings with weathered conviction: 'As long as but a hundred'. From 2.80s to 3.48s he closes his mouth in a brief breath pause, then from 3.48s to 5.76s sings: 'of us remain alive,', closing his mouth completely at 5.76s. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S36_alasdair_final_chorus_in_abbey.webp"}, {"scene_number": 37, "scene_id": "S37", "slug": "chain_of_hilltop_beacons_at_dusk", "start_sec": 248.88, "end_sec": 255.4, "time_label": "4:08.9 – 4:15.4", "duration_sec": 6.52, "lyrics": "The ancient flame of liberty will manage to survive.", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "A chain of distant Scottish mountain-top signal beacons glowing one after another across twilight ridges.", "spatial_anchor": "Highland mountain ridges at twilight", "base_image_prompt": "Epic panoramic twilight vista of layered indigo Scottish Highland mountain ridges with a glowing line of golden-amber hilltop beacon fires stretching to the horizon. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow sweeping aerial pan right at 72 BPM across the indigo Highland peaks as the warm amber watercolor beacon fires shimmer and send golden sparks into the dusk sky. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S37_chain_of_hilltop_beacons_at_dusk.webp"}, {"scene_number": 38, "scene_id": "S38", "slug": "saltire_clouds_above_red_cliffs", "start_sec": 255.4, "end_sec": 261.52, "time_label": "4:15.4 – 4:21.5", "duration_sec": 6.12, "lyrics": "We will never bow the knee to any foreign hand,", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "High windswept clouds forming a natural white cross in an azure sky above the red cliffs of Angus.", "spatial_anchor": "Angus cliff crest and sky", "base_image_prompt": "Wide upward coastal shot of towering red-sandstone Arbroath cliffs beneath a deep cobalt-blue Scottish sky where natural windswept white cirrus clouds subtly cross in a St. Andrew's X formation. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow upward tilt at 72 BPM from the steadfast red sandstone cliff crest toward the sweeping white cloud streaks drifting across the deep cobalt watercolor sky. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S38_saltire_clouds_above_red_cliffs.webp"}, {"scene_number": 39, "scene_id": "S39", "slug": "parchment_beside_heather_and_oak", "start_sec": 261.52, "end_sec": 268.24, "time_label": "4:21.5 – 4:28.2", "duration_sec": 6.72, "lyrics": "For the unbroken chain of sovereignty is rooted in the land.", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "The sealed 1320 Declaration resting on weathered stone beside fresh purple heather and Scottish oak leaves.", "spatial_anchor": "Granite slab with parchment and heather", "base_image_prompt": "Warm tabletop composition of the wax-sealed 1320 Declaration of Arbroath parchment resting on an ancient carved granite slab beside a sprig of purple heather and bronze oak leaves in golden hour light. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow overhead dolly-in at 70 BPM as warm sunset light bathes the red wax seals of the parchment and gentle wind stirs the purple heather blooms. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S39_parchment_beside_heather_and_oak.webp"}, {"scene_number": 40, "scene_id": "S40", "slug": "celtic_interlace_carved_in_stone", "start_sec": 268.24, "end_sec": 273.52, "time_label": "4:28.2 – 4:33.5", "duration_sec": 5.28, "lyrics": "Yes, the unbroken chain", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Close-up of unbroken Celtic knotwork carved into an ancient Scottish cross-slab catching sunset gold.", "spatial_anchor": "Coastal hillside Celtic cross-slab", "base_image_prompt": "Close-up of intricate unbroken medieval Scottish Celtic interlace knotwork carved into a mossy granite cross-slab on a coastal hillside, raking golden sunset shadows highlighting every line. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow vertical pan up the carved unbroken Celtic stone knotwork at 68 BPM as warm amber sunset light shifts across the mossy granite texture. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S40_celtic_interlace_carved_in_stone.webp"}, {"scene_number": 41, "scene_id": "S41", "slug": "golden_dusk_over_angus_hills", "start_sec": 273.52, "end_sec": 280.6, "time_label": "4:33.5 – 4:40.6", "duration_sec": 7.08, "lyrics": "is rooted in the land.", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Wide golden-hour panorama of rolling green Scottish farmland, ancient stone dykes, and the red coast.", "spatial_anchor": "Angus hills and coastline at sunset", "base_image_prompt": "Breathtaking wide golden-hour watercolor landscape of rolling green Angus hills, dry-stone walls, ancient oaks, and red-sandstone cliffs meeting a calm gilded North Sea, zero modern structures. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow serene aerial pull-back at 68 BPM as golden watercolor washes deepen into warm amber twilight across the Scottish land and sea. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S41_golden_dusk_over_angus_hills.webp"}, {"scene_number": 42, "scene_id": "S42", "slug": "callum_twilight_vigil_at_abbey", "start_sec": 280.6, "end_sec": 288.0, "time_label": "4:40.6 – 4:48.0", "duration_sec": 7.4, "lyrics": "Rooted in the land.", "is_singer": false, "skip_generation": false, "characters": ["Callum"], "subject_action": "Callum sits peacefully in twilight vigil beside Arbroath Abbey as the first evening star glimmers.", "spatial_anchor": "Arbroath Abbey grassy knoll at twilight", "base_image_prompt": "Medium-wide front-three-quarter shot of Callum (black-and-white Scottish Border Collie, white chest blaze, seated still with hindquarters tucked) sitting completely calm and still on the grassy knoll before the twilight silhouette of Arbroath Abbey under an indigo sky with the first silver evening star. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow gentle pull-back at 66 BPM decrescendo while Callum (black-and-white Scottish Border Collie, white chest blaze, seated still with hindquarters tucked) sits stationary in quiet vigil as soft indigo twilight watercolor wash settles over Arbroath Abbey. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S42_callum_twilight_vigil_at_abbey.webp"}, {"scene_number": 43, "scene_id": "S43", "slug": "candle_ember_fading_on_vellum", "start_sec": 288.0, "end_sec": 295.0, "time_label": "4:48.0 – 4:55.0", "duration_sec": 7.0, "lyrics": "", "is_singer": false, "skip_generation": false, "characters": [], "subject_action": "Acoustic guitar fade-out: tallow candle flame dimming beside the sealed Arbroath parchment into darkness.", "spatial_anchor": "Darkening scriptorium table outro", "base_image_prompt": "Intimate dark chiaroscuro close-up of a single low tallow candle glowing faintly beside the crimson wax seal of the 1320 Declaration parchment as deep charcoal-indigo shadows surround the edges. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "video_motion_prompt": "Slow gentle zoom-out at 64 BPM fading acoustic guitar outro as the small golden candle flame softly dims toward tranquil sepia-black shadow. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/S43_candle_ember_fading_on_vellum.webp"}, {"scene_number": 44, "scene_id": "S44", "slug": "final_logo_fade_black_slate", "start_sec": 295.0, "end_sec": 303.88, "time_label": "4:55.0 – 5:03.9", "duration_sec": 8.88, "lyrics": "", "is_singer": false, "skip_generation": true, "characters": [], "subject_action": "Clean solid-black fade screen reserved for The Shady River Bard logo overlay.", "spatial_anchor": "Black slate for logo overlay", "base_image_prompt": "SKIP (Black Screen)", "video_motion_prompt": "SKIP (Black Screen)", "image": ""}], "thumbnails": [{"id": "THUMB_A", "option": "Option A — Rendered Title Text", "text_overlay": "ECHOES OF ARBROATH", "strategy": "Bold medieval serif typography in upper-left misty sky negative space paired with the glowing 1320 wax-sealed parchment and red cliffs.", "prompt": "High-impact 16:9 poster composition of the crimson-wax-sealed 1320 Declaration of Arbroath held aloft before the dramatic red-sandstone ruins of Arbroath Abbey above crashing waves, with Callum (black-and-white Scottish Border Collie, white chest blaze, seated still with hindquarters tucked) seated on the cliffside. With bold, weathered antique gold serif text reading 'ECHOES OF ARBROATH' prominently rendered in the upper-left indigo sky negative space. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/thumb_a.webp"}, {"id": "THUMB_B", "option": "Option B — Provocative Historical Hook", "text_overlay": "THE PEOPLE ARE THE CROWN", "strategy": "2-to-4-word philosophical gut-punch contrasting an abandoned iron crown in mud below sunlit Scottish Highlanders.", "prompt": "Dramatic 16:9 poster showing an empty tarnished crown resting forgotten on wet mossy stone in the lower foreground while golden sunbeams illuminate proud Scottish silhouettes standing high on a cliff ridge above. With stark chiseled parchment-white serif text reading 'THE PEOPLE ARE THE CROWN' rendered cleanly across the top sky. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/thumb_b.webp"}, {"id": "THUMB_C", "option": "Option C — Pure Visual Intrigue (Zero Text)", "text_overlay": "No Text", "strategy": "Symbolic close-up of molten crimson 1320 wax seal glowing like fire beside Callum in watercolor chiaroscuro.", "prompt": "Hyper-compelling 16:9 watercolor chiaroscuro close-up of a glowing crimson 1320 Scottish baronial wax seal on ancient Latin vellum resting on red sandstone, with Callum (black-and-white Scottish Border Collie, white chest blaze, seated still with hindquarters tucked) sitting watchfully in misty golden dawn light behind it. No text, no letters, no words. 1320 Scottish watercolor & sepia ink wash on parchment, indigo/sienna/amber, no modern items.", "image": "images/thumb_c.webp"}]}</script>
+  <script>
+  (function() {
+    const DATA = JSON.parse(document.getElementById('storyboard-payload').textContent);
+    const STORAGE_KEY = 'srb_storyboard_review_v1_' + DATA.song_slug;
+
+    let reviewState = {
+      reviewerName: DATA.client_name || '',
+      overallComment: '',
+      selectedStyle: '',
+      selectedThumb: '',
+      items: {} // key (e.g. 'S01', 'CHAR_01', 'STYLE_01', 'THUMB_A') -> { status: 'approved'|'tweak'|'', comment: '' }
+    };
+
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        reviewState = Object.assign(reviewState, parsed);
+        reviewState.items = parsed.items || {};
+      }
+    } catch (e) {}
+
+    function saveState() {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(reviewState)); } catch (e) {}
+      updateDockStats();
+      updateScrubberColors();
+    }
+
+    function getItem(id) {
+      if (!reviewState.items[id]) reviewState.items[id] = { status: '', comment: '' };
+      return reviewState.items[id];
+    }
+
+    function escapeHtml(s) {
+      return String(s || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    // 1. Header Initialization
+    document.getElementById('ui-song-title').textContent = DATA.song_title || 'Storyboard Preview';
+    const pills = [];
+    if (DATA.artist) pills.push(`<span class="pill">Artist: <strong>${escapeHtml(DATA.artist)}</strong></span>`);
+    if (DATA.client_name) pills.push(`<span class="pill">Prepared For: <strong>${escapeHtml(DATA.client_name)}</strong></span>`);
+    if (DATA.visual_style) pills.push(`<span class="pill">Visual Style: <strong>${escapeHtml(DATA.visual_style)}</strong></span>`);
+    if (DATA.total_scenes) pills.push(`<span class="pill">Scenes: <strong>${DATA.total_scenes}</strong> (${DATA.runtime_formatted})</span>`);
+    if (DATA.bpm) pills.push(`<span class="pill">Tempo: <strong>${DATA.bpm} BPM</strong></span>`);
+    document.getElementById('ui-meta-pills').innerHTML = pills.join('');
+
+    if (DATA.proposal_notes) {
+      const pBox = document.getElementById('ui-proposal-box');
+      pBox.style.display = 'block';
+      pBox.innerHTML = `<strong style="color:var(--amber-bright);">Director's Proposal Notes:</strong><br/>` + escapeHtml(DATA.proposal_notes).replace(/\n/g, '<br/>');
+    }
+
+    // 2. Audio & Synced Animatic Setup
+    const audioEl = document.getElementById('master-audio');
+    const sunoLink = document.getElementById('suno-external-link');
+    if (DATA.suno_url) {
+      sunoLink.href = DATA.suno_url;
+      sunoLink.style.display = 'inline-block';
+    }
+    if (DATA.audio_url) {
+      audioEl.src = DATA.audio_url;
+    } else {
+      audioEl.style.display = 'none';
+      document.getElementById('no-audio-note').style.display = 'block';
+    }
+
+    let activeSceneIndex = 0;
+    let sliceStopAt = null;
+
+    function renderAnimaticFrame(idx) {
+      if (!DATA.scenes || !DATA.scenes.length) return;
+      activeSceneIndex = Math.max(0, Math.min(DATA.scenes.length - 1, idx));
+      const s = DATA.scenes[activeSceneIndex];
+      document.getElementById('animatic-hud-scene').textContent = `${s.scene_id} • ${s.slug.replace(/_/g, ' ')}`;
+      document.getElementById('animatic-hud-time').textContent = s.time_label;
+      document.getElementById('animatic-lyric').textContent = s.lyrics || (s.skip_generation ? '[Logo Outro Slate]' : '♪ Instrumental / Visual Storytelling ♪');
+      document.getElementById('animatic-action-caption').innerHTML = `<strong style="color:var(--amber-bright);">${s.scene_id}:</strong> ${escapeHtml(s.subject_action || s.video_motion_prompt)}`;
+
+      const imgEl = document.getElementById('animatic-img');
+      const phEl = document.getElementById('animatic-placeholder');
+      if (s.image) {
+        imgEl.src = s.image;
+        imgEl.style.display = 'block';
+        phEl.style.display = 'none';
+      } else {
+        imgEl.style.display = 'none';
+        phEl.style.display = 'block';
+        phEl.innerHTML = `<div style="font-weight:700; color:var(--amber-bright); margin-bottom:0.4rem;">${s.scene_id} (${s.time_label})</div><div>${escapeHtml(s.subject_action || s.base_image_prompt || 'Outro Fade Slate')}</div>`;
+      }
+
+      document.querySelectorAll('.scrub-seg').forEach((el, i) => {
+        el.classList.toggle('active', i === activeSceneIndex);
+      });
+      document.querySelectorAll('.scene-card').forEach((el) => {
+        el.classList.toggle('playing-now', Number(el.dataset.idx) === activeSceneIndex);
+      });
+    }
+
+    // Scrubber construction
+    const scrubberEl = document.getElementById('scene-scrubber');
+    const totalDur = Math.max(1, DATA.expected_runtime_sec || 1);
+    if (DATA.scenes && DATA.scenes.length) {
+      scrubberEl.innerHTML = DATA.scenes.map((s, idx) => {
+        const w = Math.max(0.4, (s.duration_sec / totalDur) * 100);
+        return `<div class="scrub-seg" data-idx="${idx}" style="width:${w}%;" title="${s.scene_id} (${s.time_label})"></div>`;
+      }).join('');
+      scrubberEl.addEventListener('click', (e) => {
+        const seg = e.target.closest('.scrub-seg');
+        if (!seg) return;
+        const idx = Number(seg.dataset.idx);
+        const s = DATA.scenes[idx];
+        sliceStopAt = null;
+        renderAnimaticFrame(idx);
+        if (DATA.audio_url) {
+          audioEl.currentTime = s.start_sec;
+          audioEl.play().catch(() => {});
+        }
+      });
+      renderAnimaticFrame(0);
+    } else {
+      document.getElementById('section-animatic').style.display = 'none';
+    }
+
+    function updateScrubberColors() {
+      document.querySelectorAll('.scrub-seg').forEach((seg) => {
+        const idx = Number(seg.dataset.idx);
+        const s = DATA.scenes[idx];
+        if (!s) return;
+        const st = getItem(s.scene_id);
+        seg.classList.toggle('approved', st.status === 'approved' && !st.comment);
+        seg.classList.toggle('tweak', st.status === 'tweak' || Boolean(st.comment));
+      });
+    }
+
+    audioEl.addEventListener('timeupdate', () => {
+      const t = audioEl.currentTime;
+      if (sliceStopAt !== null && t >= sliceStopAt) {
+        audioEl.pause();
+        sliceStopAt = null;
+        return;
+      }
+      if (!DATA.scenes || !DATA.scenes.length) return;
+      const found = DATA.scenes.findIndex(s => t >= s.start_sec && t < s.end_sec);
+      if (found !== -1 && found !== activeSceneIndex) {
+        renderAnimaticFrame(found);
+      }
+    });
+
+    document.getElementById('btn-pause-comment').addEventListener('click', () => {
+      audioEl.pause();
+      if (!DATA.scenes || !DATA.scenes.length) return;
+      const s = DATA.scenes[activeSceneIndex];
+      const card = document.getElementById('card-' + s.scene_id);
+      if (card) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        openNoteForCard(s.scene_id, card, true);
+      }
+    });
+
+    // Helper for card vote + note binding
+    function bindFeedbackControls(container, itemId, isSelectableChoice, choiceGroup) {
+      const st = getItem(itemId);
+      const btnApprove = container.querySelector('[data-action="approve"]');
+      const btnTweak = container.querySelector('[data-action="tweak"]');
+      const noteWrap = container.querySelector('.note-box-wrap');
+      const noteInput = container.querySelector('.note-textarea');
+
+      function syncCardUI() {
+        const cur = getItem(itemId);
+        const hasNote = Boolean((cur.comment || '').trim());
+        container.classList.toggle('status-approved', cur.status === 'approved' && !hasNote);
+        container.classList.toggle('status-tweak', cur.status === 'tweak' || hasNote);
+        if (btnApprove) btnApprove.classList.toggle('active-approve', cur.status === 'approved');
+        if (btnTweak) btnTweak.classList.toggle('active-tweak', cur.status === 'tweak' || hasNote);
+        if (cur.status === 'tweak' || hasNote) noteWrap.classList.add('open');
+      }
+
+      if (noteInput) {
+        noteInput.value = st.comment || '';
+        noteInput.addEventListener('input', () => {
+          const cur = getItem(itemId);
+          cur.comment = noteInput.value;
+          if (cur.comment.trim() && !cur.status) cur.status = 'tweak';
+          saveState();
+          syncCardUI();
+        });
+      }
+
+      if (btnApprove) {
+        btnApprove.addEventListener('click', () => {
+          const cur = getItem(itemId);
+          cur.status = cur.status === 'approved' ? '' : 'approved';
+          if (isSelectableChoice && cur.status === 'approved') {
+            reviewState[choiceGroup] = itemId;
+          }
+          saveState();
+          syncCardUI();
+        });
+      }
+
+      if (btnTweak) {
+        btnTweak.addEventListener('click', () => {
+          const cur = getItem(itemId);
+          if (noteWrap.classList.contains('open') && !cur.comment.trim() && cur.status === 'tweak') {
+            cur.status = '';
+            noteWrap.classList.remove('open');
+          } else {
+            cur.status = 'tweak';
+            noteWrap.classList.add('open');
+            if (noteInput) noteInput.focus();
+          }
+          saveState();
+          syncCardUI();
+        });
+      }
+
+      syncCardUI();
+    }
+
+    function openNoteForCard(itemId, cardEl, markTweak) {
+      const cur = getItem(itemId);
+      if (markTweak) cur.status = 'tweak';
+      const noteWrap = cardEl.querySelector('.note-box-wrap');
+      const noteInput = cardEl.querySelector('.note-textarea');
+      if (noteWrap) noteWrap.classList.add('open');
+      cardEl.classList.add('status-tweak');
+      const btnTweak = cardEl.querySelector('[data-action="tweak"]');
+      if (btnTweak) btnTweak.classList.add('active-tweak');
+      saveState();
+      if (noteInput) noteInput.focus();
+    }
+
+    // 3. Render Optional Style Concept Cards
+    if (DATA.style_concepts && DATA.style_concepts.length) {
+      document.getElementById('section-styles').style.display = 'block';
+      const styleGrid = document.getElementById('grid-styles');
+      styleGrid.innerHTML = DATA.style_concepts.map(st => `
+        <article class="card" id="card-${st.id}">
+          <div class="card-top">
+            <span class="scene-num">${escapeHtml(st.title)}</span>
+            <span class="badge badge-broll">Style Concept</span>
+          </div>
+          <div class="card-media" data-lightbox="${escapeHtml(st.image)}" data-caption="${escapeHtml(st.title)}">
+            ${st.image ? `<img src="${escapeHtml(st.image)}" alt="${escapeHtml(st.title)}" loading="lazy" />` : `<div class="slate-fallback">${escapeHtml(st.palette)}</div>`}
+          </div>
+          <div class="card-body">
+            <div class="action-desc"><strong>Metaphor:</strong> ${escapeHtml(st.metaphor)}</div>
+            <div class="action-desc"><strong>Palette &amp; Motion:</strong> ${escapeHtml(st.palette)} ${escapeHtml(st.motion)}</div>
+          </div>
+          <div class="card-actions">
+            <div class="action-btn-row">
+              <button type="button" class="btn-vote" data-action="approve">&#11088; Vote for This Style</button>
+              <button type="button" class="btn-vote" data-action="tweak">&#9998; Add Note</button>
+            </div>
+            <div class="note-box-wrap">
+              <textarea class="note-textarea" placeholder="Thoughts on ${escapeHtml(st.title)}..."></textarea>
+              <div class="saved-hint">&#10003; Auto-saved</div>
+            </div>
+          </div>
+        </article>
+      `).join('');
+      styleGrid.querySelectorAll('.card').forEach((el, idx) => {
+        bindFeedbackControls(el, DATA.style_concepts[idx].id, true, 'selectedStyle');
+      });
+    }
+
+    // 4. Render Cast & Characters
+    if (DATA.characters && DATA.characters.length) {
+      document.getElementById('section-characters').style.display = 'block';
+      const charGrid = document.getElementById('grid-characters');
+      charGrid.innerHTML = DATA.characters.map(ch => `
+        <article class="card" id="card-${ch.id}">
+          <div class="card-top">
+            <span class="scene-num">${escapeHtml(ch.name)}</span>
+            <span class="badge badge-broll">Cast Reference</span>
+          </div>
+          ${ch.image ? `<div class="card-media" data-lightbox="${escapeHtml(ch.image)}" data-caption="${escapeHtml(ch.name)}"><img src="${escapeHtml(ch.image)}" alt="${escapeHtml(ch.name)}" loading="lazy" /></div>` : ''}
+          <div class="card-body">
+            <div class="action-desc">${escapeHtml(ch.description || ch.prompt)}</div>
+          </div>
+          <div class="card-actions">
+            <div class="action-btn-row">
+              <button type="button" class="btn-vote" data-action="approve">&#128077; Approve Character</button>
+              <button type="button" class="btn-vote" data-action="tweak">&#9998; Suggest Change</button>
+            </div>
+            <div class="note-box-wrap">
+              <textarea class="note-textarea" placeholder="Wardrobe, look, or character feedback for ${escapeHtml(ch.name)}..."></textarea>
+              <div class="saved-hint">&#10003; Auto-saved</div>
+            </div>
+          </div>
+        </article>
+      `).join('');
+      charGrid.querySelectorAll('.card').forEach((el, idx) => {
+        bindFeedbackControls(el, DATA.characters[idx].id, false, '');
+      });
+    }
+
+    // 5. Render Scene Storyboard Cards
+    const sceneGrid = document.getElementById('grid-scenes');
+    if (DATA.scenes && DATA.scenes.length) {
+      sceneGrid.innerHTML = DATA.scenes.map((s, idx) => {
+        const badgeClass = s.is_singer ? 'badge-singer' : 'badge-broll';
+        const badgeText = s.skip_generation ? 'Logo Fade Slate' : (s.is_singer ? '🎤 Singer' : 'Visual Story');
+        const lyricBlock = s.lyrics
+          ? `<div class="lyric-quote">&ldquo;${escapeHtml(s.lyrics)}&rdquo;</div>`
+          : `<div class="lyric-instrumental">${s.skip_generation ? 'Final black fade-out for The Shady River Bard logo' : '♪ Instrumental / Atmospheric Cut ♪'}</div>`;
+        const playBtn = DATA.audio_url
+          ? `<button type="button" class="play-slice-btn" data-play-idx="${idx}" title="Play audio for this scene">&#9654; Play ${s.duration_sec}s</button>`
+          : '';
+        const mediaInner = s.image
+          ? `<img src="${escapeHtml(s.image)}" alt="${s.scene_id}" loading="lazy" />`
+          : `<div class="slate-fallback"><strong style="color:var(--amber-bright); margin-bottom:0.3rem;">${s.skip_generation ? 'Final Outro Logo Slate' : 'Sample Frame Pending'}</strong><span>${escapeHtml((s.subject_action || s.base_image_prompt).slice(0, 140))}</span></div>`;
+
+        return `
+          <article class="card scene-card" id="card-${s.scene_id}" data-idx="${idx}" data-scene-id="${s.scene_id}">
+            <div class="card-top">
+              <div>
+                <span class="scene-num">${s.scene_id}</span>
+                <span class="scene-time">&bull; ${s.time_label}</span>
+              </div>
+              <span class="badge ${badgeClass}">${badgeText}</span>
+            </div>
+            <div class="card-media" ${s.image ? `data-lightbox="${escapeHtml(s.image)}" data-caption="${s.scene_id} (${s.time_label}) — ${escapeHtml(s.lyrics || s.subject_action)}"` : ''}>
+              ${mediaInner}
+              ${playBtn}
+            </div>
+            <div class="card-body">
+              ${lyricBlock}
+              <div class="action-desc">${escapeHtml(s.subject_action || s.video_motion_prompt)}</div>
+              <details class="tech-drawer">
+                <summary>Director Camera &amp; Motion Prompt</summary>
+                <div class="tech-prompt-box"><strong>Image:</strong> ${escapeHtml(s.base_image_prompt)}
+
+<strong>Motion:</strong> ${escapeHtml(s.video_motion_prompt)}</div>
+              </details>
+            </div>
+            <div class="card-actions">
+              <div class="action-btn-row">
+                <button type="button" class="btn-vote" data-action="approve">&#128077; Looks Good</button>
+                <button type="button" class="btn-vote" data-action="tweak">&#9998; Add Note / Tweak</button>
+              </div>
+              <div class="note-box-wrap">
+                <textarea class="note-textarea" placeholder="What would you tweak or add in ${s.scene_id}?"></textarea>
+                <div class="saved-hint">&#10003; Auto-saved in browser</div>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      sceneGrid.querySelectorAll('.scene-card').forEach((el, idx) => {
+        bindFeedbackControls(el, DATA.scenes[idx].scene_id, false, '');
+      });
+
+      sceneGrid.addEventListener('click', (e) => {
+        const playBtn = e.target.closest('[data-play-idx]');
+        if (playBtn) {
+          e.stopPropagation();
+          const idx = Number(playBtn.dataset.playIdx);
+          const s = DATA.scenes[idx];
+          renderAnimaticFrame(idx);
+          if (DATA.audio_url) {
+            sliceStopAt = s.end_sec;
+            audioEl.currentTime = s.start_sec;
+            audioEl.play().catch(() => {});
+          }
+          return;
+        }
+      });
+    }
+
+    // 6. Render Optional Thumbnail Voter
+    if (DATA.thumbnails && DATA.thumbnails.length) {
+      document.getElementById('section-thumbs').style.display = 'block';
+      const thumbGrid = document.getElementById('grid-thumbs');
+      thumbGrid.innerHTML = DATA.thumbnails.map(th => `
+        <article class="card" id="card-${th.id}">
+          <div class="card-top">
+            <span class="scene-num">${escapeHtml(th.option)}</span>
+            <span class="badge badge-broll">${escapeHtml(th.text_overlay || 'Pure Visual')}</span>
+          </div>
+          <div class="card-media" ${th.image ? `data-lightbox="${escapeHtml(th.image)}" data-caption="${escapeHtml(th.option)}"` : ''}>
+            ${th.image ? `<img src="${escapeHtml(th.image)}" alt="${escapeHtml(th.option)}" loading="lazy" />` : `<div class="slate-fallback">${escapeHtml(th.prompt.slice(0, 160))}</div>`}
+          </div>
+          <div class="card-body">
+            <div class="action-desc">${escapeHtml(th.strategy || th.prompt)}</div>
+          </div>
+          <div class="card-actions">
+            <div class="action-btn-row">
+              <button type="button" class="btn-vote" data-action="approve">&#11088; Favorite Thumbnail</button>
+              <button type="button" class="btn-vote" data-action="tweak">&#9998; Add Note</button>
+            </div>
+            <div class="note-box-wrap">
+              <textarea class="note-textarea" placeholder="Thoughts on ${escapeHtml(th.option)}..."></textarea>
+              <div class="saved-hint">&#10003; Auto-saved</div>
+            </div>
+          </div>
+        </article>
+      `).join('');
+      thumbGrid.querySelectorAll('.card').forEach((el, idx) => {
+        bindFeedbackControls(el, DATA.thumbnails[idx].id, true, 'selectedThumb');
+      });
+    }
+
+    // 7. Filtering & Search
+    let currentFilter = 'all';
+    function applyFilters() {
+      const q = (document.getElementById('scene-search').value || '').trim().toLowerCase();
+      document.querySelectorAll('.scene-card').forEach((card) => {
+        const idx = Number(card.dataset.idx);
+        const s = DATA.scenes[idx];
+        const st = getItem(s.scene_id);
+        const hasNote = Boolean((st.comment || '').trim());
+        let passFilter = true;
+        if (currentFilter === 'tweak') passFilter = st.status === 'tweak' || hasNote;
+        else if (currentFilter === 'approved') passFilter = st.status === 'approved' && !hasNote;
+        else if (currentFilter === 'unreviewed') passFilter = !st.status && !hasNote;
+
+        let passSearch = true;
+        if (q) {
+          const hay = `${s.scene_id} ${s.slug} ${s.lyrics} ${s.subject_action} ${st.comment || ''}`.toLowerCase();
+          passSearch = hay.includes(q);
+        }
+        card.style.display = (passFilter && passSearch) ? 'flex' : 'none';
+      });
+    }
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.dataset.filter;
+        applyFilters();
+      });
+    });
+    document.getElementById('scene-search').addEventListener('input', applyFilters);
+
+    // 8. Approve All Unflagged Helper
+    document.getElementById('btn-approve-rest').addEventListener('click', () => {
+      (DATA.scenes || []).forEach(s => {
+        const st = getItem(s.scene_id);
+        if (!st.status && !(st.comment || '').trim()) {
+          st.status = 'approved';
+        }
+      });
+      saveState();
+      document.querySelectorAll('.scene-card').forEach((el, idx) => {
+        const s = DATA.scenes[idx];
+        const st = getItem(s.scene_id);
+        const hasNote = Boolean((st.comment || '').trim());
+        el.classList.toggle('status-approved', st.status === 'approved' && !hasNote);
+        const b = el.querySelector('[data-action="approve"]');
+        if (b) b.classList.toggle('active-approve', st.status === 'approved');
+      });
+    });
+
+    // 9. Dock Counter & Report Compilation
+    function updateDockStats() {
+      let approved = 0, tweaks = 0;
+      (DATA.scenes || []).forEach(s => {
+        const st = getItem(s.scene_id);
+        const hasNote = Boolean((st.comment || '').trim());
+        if (st.status === 'tweak' || hasNote) tweaks++;
+        else if (st.status === 'approved') approved++;
+      });
+      const total = (DATA.scenes || []).length;
+      document.getElementById('dock-stats').innerHTML =
+        `<span><strong>${approved}</strong>/${total} Approved</span>` +
+        `<span>&bull; <strong style="color:var(--amber-bright);">${tweaks}</strong> Scene Notes / Tweaks</span>`;
+    }
+    updateDockStats();
+    updateScrubberColors();
+
+    function buildCompiledReport() {
+      const name = (document.getElementById('reviewer-name').value || reviewState.reviewerName || 'Client Reviewer').trim();
+      const overall = (document.getElementById('overall-comment').value || '').trim();
+      reviewState.reviewerName = name;
+      reviewState.overallComment = overall;
+      saveState();
+
+      const lines = [];
+      lines.push(`STORYBOARD FEEDBACK FOR THE SHADY RIVER BARD`);
+      lines.push(`Song: "${DATA.song_title}" (${DATA.song_slug})`);
+      lines.push(`Reviewer: ${name}`);
+      lines.push(`Review URL: ${window.location.href}`);
+      lines.push(`Date: ${new Date().toLocaleString()}`);
+      lines.push(`──────────────────────────────────────────────────`);
+
+      if (overall) {
+        lines.push(`
+OVERALL THOUGHTS:`);
+        lines.push(overall);
+      }
+
+      // Style & Thumbnail votes
+      const styleNotes = [];
+      (DATA.style_concepts || []).forEach(st => {
+        const item = getItem(st.id);
+        if (item.status || (item.comment || '').trim()) {
+          styleNotes.push(`• ${st.title} [${item.status === 'approved' ? 'SELECTED' : 'NOTE'}]: ${item.comment || 'Preferred style'}`);
+        }
+      });
+      if (styleNotes.length) {
+        lines.push(`
+STYLE CONCEPT FEEDBACK:`);
+        lines.push(...styleNotes);
+      }
+
+      const charNotes = [];
+      (DATA.characters || []).forEach(ch => {
+        const item = getItem(ch.id);
+        if (item.status === 'tweak' || (item.comment || '').trim()) {
+          charNotes.push(`• ${ch.name}: ${item.comment || '(Flagged for change)'}`);
+        }
+      });
+      if (charNotes.length) {
+        lines.push(`
+CAST & CHARACTER NOTES:`);
+        lines.push(...charNotes);
+      }
+
+      const scenePatches = [];
+      let approvedCount = 0;
+      (DATA.scenes || []).forEach(s => {
+        const item = getItem(s.scene_id);
+        const note = (item.comment || '').trim();
+        if (item.status === 'tweak' || note) {
+          lines.push(`
+[${s.scene_id} | ${s.time_label} | ${s.slug}]`);
+          if (s.lyrics) lines.push(`  Lyric: "${s.lyrics}"`);
+          lines.push(`  Feedback: ${note || '(Flagged for tweak — no text note entered)'}`);
+          scenePatches.push({ scene_number: s.scene_number, scene_id: s.scene_id, slug: s.slug, note: note || 'Flagged for tweak' });
+        } else if (item.status === 'approved') {
+          approvedCount++;
+        }
+      });
+
+      const thumbNotes = [];
+      (DATA.thumbnails || []).forEach(th => {
+        const item = getItem(th.id);
+        if (item.status || (item.comment || '').trim()) {
+          thumbNotes.push(`• ${th.option} [${item.status === 'approved' ? 'FAVORITE' : 'NOTE'}]: ${item.comment || 'Selected favorite'}`);
+        }
+      });
+      if (thumbNotes.length) {
+        lines.push(`
+THUMBNAIL VOTE:`);
+        lines.push(...thumbNotes);
+      }
+
+      lines.push(`
+──────────────────────────────────────────────────`);
+      lines.push(`Summary: ${approvedCount}/${(DATA.scenes || []).length} scenes approved, ${scenePatches.length} scenes with notes.`);
+      lines.push(`ANTIGRAVITY_PATCH_JSON: ` + JSON.stringify({
+        song_slug: DATA.song_slug,
+        reviewer: name,
+        overall: overall,
+        scene_tweaks: scenePatches
+      }));
+
+      return lines.join('
+');
+    }
+
+    // Modal Events
+    const submitModal = document.getElementById('submit-modal');
+    const toastEl = document.getElementById('submit-toast');
+    function showToast(msg) {
+      toastEl.textContent = msg;
+      toastEl.style.display = 'block';
+    }
+
+    document.getElementById('btn-open-submit').addEventListener('click', () => {
+      document.getElementById('reviewer-name').value = reviewState.reviewerName || DATA.client_name || '';
+      document.getElementById('overall-comment').value = reviewState.overallComment || '';
+      document.getElementById('compiled-report-preview').textContent = buildCompiledReport();
+      toastEl.style.display = 'none';
+      submitModal.classList.add('open');
+    });
+    document.getElementById('reviewer-name').addEventListener('input', () => {
+      document.getElementById('compiled-report-preview').textContent = buildCompiledReport();
+    });
+    document.getElementById('overall-comment').addEventListener('input', () => {
+      document.getElementById('compiled-report-preview').textContent = buildCompiledReport();
+    });
+    document.getElementById('btn-close-submit').addEventListener('click', () => submitModal.classList.remove('open'));
+
+    document.getElementById('btn-copy-report').addEventListener('click', () => {
+      const report = `To: ${DATA.bard_email}
+Subject: Storyboard Feedback - ${DATA.song_title}
+
+` + buildCompiledReport();
+      navigator.clipboard.writeText(report).then(() => {
+        showToast('✓ Copied full feedback report to clipboard! You can now paste it into Gmail, email, or chat to ' + DATA.bard_email + '.');
+      });
+    });
+
+    document.getElementById('btn-download-report').addEventListener('click', () => {
+      const report = buildCompiledReport();
+      const blob = new Blob([report], { type: 'text/plain;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `${DATA.song_slug}_storyboard_feedback.txt`;
+      a.click();
+      showToast('✓ Downloaded feedback file! Attach and send it to ' + DATA.bard_email + '.');
+    });
+
+    document.getElementById('btn-mailto-send').addEventListener('click', () => {
+      const report = buildCompiledReport();
+      const subject = `Storyboard Feedback: "${DATA.song_title}"`;
+      if (report.length > 1750 && navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(report).catch(() => {});
+        const shortBody = `Hi Bard,
+
+[Your full storyboard review was automatically copied to your clipboard because it has detailed notes — just press Ctrl+V / Paste right here!]
+
+` + report.slice(0, 900) + `
+... [Press Paste for full report]`;
+        window.location.href = `mailto:${DATA.bard_email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(shortBody)}`;
+        showToast('✓ Detailed report copied to clipboard & opening your email app (press Paste inside the email if truncated)!');
+      } else {
+        window.location.href = `mailto:${DATA.bard_email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(report)}`;
+        showToast('✓ Opening your email client addressed to ' + DATA.bard_email + '!');
+      }
+    });
+
+    // Lightbox Events
+    const lbModal = document.getElementById('lightbox-modal');
+    document.body.addEventListener('click', (e) => {
+      const media = e.target.closest('[data-lightbox]');
+      if (media && !e.target.closest('button')) {
+        const src = media.getAttribute('data-lightbox');
+        if (!src) return;
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox-caption').textContent = media.getAttribute('data-caption') || '';
+        lbModal.classList.add('open');
+      }
+    });
+    document.getElementById('btn-close-lightbox').addEventListener('click', () => lbModal.classList.remove('open'));
+    lbModal.addEventListener('click', (e) => { if (e.target === lbModal) lbModal.classList.remove('open'); });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        submitModal.classList.remove('open');
+        lbModal.classList.remove('open');
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
