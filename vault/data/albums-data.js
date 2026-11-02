@@ -1,4 +1,3 @@
-// Catalog data for The Shady River Bard Vault & Concept Incubator
 window.CATALOG_DATA = {
   "summary": {
     "total_released": 27,
@@ -1801,7 +1800,7 @@ window.CATALOG_DATA = {
         "https://theshadyriverbard.substack.com/p/the-liner-notes-the-empty-chair",
         "https://theshadyriverbard.substack.com/p/the-liner-notes-red-white-and-blue",
         null,
-        null,
+        "https://theshadyriverbard.substack.com/p/the-liner-notes-find-the-others",
         null,
         null,
         null
@@ -1829,7 +1828,7 @@ window.CATALOG_DATA = {
         "yrQI6dOcuM0",
         "EgRD05gSaRI",
         null,
-        null,
+        "GeVPbUiYzZo",
         null,
         null,
         null
