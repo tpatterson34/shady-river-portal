@@ -1574,7 +1574,7 @@
     ],
     "chord_cols": [
       0,
-      8
+      16
     ],
     "beats": [
       101.93560090702948,
@@ -1582,8 +1582,21 @@
       103.23591836734694,
       103.88607709750566
     ],
-    "lyrics": "",
-    "words": []
+    "lyrics": "Broken glass",
+    "words": [
+      {
+        "word": "Broken",
+        "start": 101.1,
+        "end": 101.64,
+        "col": 0
+      },
+      {
+        "word": "glass",
+        "start": 101.64,
+        "end": 104.148,
+        "col": 7
+      }
+    ]
   },
   {
     "time": 104.55945578231292,
@@ -3007,8 +3020,21 @@
       191.93614512471655,
       192.5863038548753
     ],
-    "lyrics": "",
-    "words": []
+    "lyrics": "Broken glass",
+    "words": [
+      {
+        "word": "Broken",
+        "start": 189.876,
+        "end": 190.56,
+        "col": 0
+      },
+      {
+        "word": "glass",
+        "start": 190.56,
+        "end": 192.192,
+        "col": 7
+      }
+    ]
   },
   {
     "time": 193.23646258503402,
@@ -3223,7 +3249,7 @@
       {
         "word": "scale",
         "start": 212.7,
-        "end": 216.06,
+        "end": 213.98,
         "col": 16
       }
     ]
@@ -3245,8 +3271,45 @@
       215.41151927437642,
       216.06167800453514
     ],
-    "lyrics": "",
-    "words": []
+    "lyrics": "They are inflating the ship while",
+    "words": [
+      {
+        "word": "They",
+        "start": 214.0,
+        "end": 214.44,
+        "col": 0
+      },
+      {
+        "word": "are",
+        "start": 214.44,
+        "end": 214.62,
+        "col": 5
+      },
+      {
+        "word": "inflating",
+        "start": 214.62,
+        "end": 215.3,
+        "col": 9
+      },
+      {
+        "word": "the",
+        "start": 215.3,
+        "end": 215.8,
+        "col": 19
+      },
+      {
+        "word": "ship",
+        "start": 215.8,
+        "end": 216.06,
+        "col": 23
+      },
+      {
+        "word": "while",
+        "start": 216.06,
+        "end": 216.62,
+        "col": 28
+      }
+    ]
   },
   {
     "time": 216.7118367346939,
@@ -3265,8 +3328,39 @@
       218.01215419501133,
       218.66231292517006
     ],
-    "lyrics": "",
-    "words": []
+    "lyrics": "they are sinking the sail",
+    "words": [
+      {
+        "word": "they",
+        "start": 216.62,
+        "end": 217.06,
+        "col": 0
+      },
+      {
+        "word": "are",
+        "start": 217.06,
+        "end": 217.32,
+        "col": 5
+      },
+      {
+        "word": "sinking",
+        "start": 217.32,
+        "end": 218.0,
+        "col": 9
+      },
+      {
+        "word": "the",
+        "start": 218.0,
+        "end": 218.58,
+        "col": 17
+      },
+      {
+        "word": "sail",
+        "start": 218.58,
+        "end": 219.02,
+        "col": 21
+      }
+    ]
   },
   {
     "time": 219.3124716553288,
@@ -3289,13 +3383,13 @@
     "words": [
       {
         "word": "They",
-        "start": 219.446,
-        "end": 219.793,
+        "start": 219.424,
+        "end": 219.76,
         "col": 0
       },
       {
         "word": "buy",
-        "start": 219.793,
+        "start": 219.76,
         "end": 220.14,
         "col": 5
       },
@@ -4121,13 +4215,31 @@
       264.9861224489796,
       265.63628117913834
     ],
-    "lyrics": "glass",
+    "lyrics": "glass Broken glass, broken",
     "words": [
       {
         "word": "glass",
         "start": 263.66,
-        "end": 264.62,
+        "end": 264.38,
         "col": 0
+      },
+      {
+        "word": "Broken",
+        "start": 264.4,
+        "end": 264.98,
+        "col": 6
+      },
+      {
+        "word": "glass,",
+        "start": 264.98,
+        "end": 265.02,
+        "col": 13
+      },
+      {
+        "word": "broken",
+        "start": 265.02,
+        "end": 266.34,
+        "col": 20
       }
     ]
   },
@@ -4148,8 +4260,15 @@
       267.58675736961453,
       268.2369160997732
     ],
-    "lyrics": "",
-    "words": []
+    "lyrics": "glass",
+    "words": [
+      {
+        "word": "glass",
+        "start": 266.34,
+        "end": 268.408,
+        "col": 0
+      }
+    ]
   },
   {
     "time": 268.887074829932,
