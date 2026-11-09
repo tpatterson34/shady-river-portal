@@ -835,7 +835,7 @@
 
   <!-- SCRIPTS -->
   <script src="../../assets/js/a11y.js"></script>
-  <script src="../data/singles-data.js?v=20261109_02"></script>
+  <script src="../data/singles-data.js?v=20261109_03"></script>
 
   <script>
     (function() {
@@ -932,6 +932,18 @@
               <i class="fa-solid fa-play text-xs" aria-hidden="true"></i>
               <span>Watch Official Video</span>
             </button>
+            <a
+              href="https://www.youtube.com/watch?v=${ytId}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-clydeslate-950/90 hover:bg-stone-900 border border-white/20 hover:border-red-500 text-stone-200 hover:text-white font-mono text-xs font-bold shadow-lg transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-400"
+              title="Watch on YouTube (Cast to TV, Like, and Comment)"
+              aria-label="Watch ${escapeHtml(single.title)} on YouTube"
+            >
+              <i class="fa-brands fa-youtube text-red-400 text-sm" aria-hidden="true"></i>
+              <span>YouTube</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-75" aria-hidden="true"></i>
+            </a>
           `;
         } else {
           html += `

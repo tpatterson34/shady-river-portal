@@ -912,7 +912,7 @@
       "bpm": 103,
       "duration": "06:20",
       "release_year": 2026,
-      "release_status": "Official Historical Dossier Live • YouTube Music Video Uploading Soon",
+      "release_status": "Official Audio & Music Video Out Now",
       "title": "The Seven Men of Glenmoriston",
       "title_accent_split": [
             "The Seven Men of",
@@ -949,8 +949,7 @@
       "hero_art_caption_label": "Cave of Coiraghoth (Coire Dho) • Braes of Glenmoriston, July 1746",
       "hero_art_caption_title": "Hugh Chisholm, the Outlaws of Glenmoriston, the Fugitive & Silent Witness Glen",
       "media": {
-            "youtubeVideoUrl": "[INSERT_YOUTUBE_URL_OR_LEAVE_PENDING]",
-            "youtubePlaceholderNote": "Official Music Video Uploading Soon",
+            "youtubeVideoUrl": "https://youtu.be/v5B4_pDW8Ho",
             "spotifyUrl": "[INSERT_SPOTIFY_URL_OR_LEAVE_PENDING]",
             "appleMusicUrl": "[INSERT_APPLE_MUSIC_URL_OR_LEAVE_PENDING]",
             "amazonMusicUrl": "[INSERT_AMAZON_MUSIC_URL_OR_LEAVE_PENDING]"
