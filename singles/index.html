@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Singles Vault | Standalone Narrative Singles, Global Dispatches &amp; Heritage Chronicles | The Shady River Bard</title>
-  <meta name="description" content="Explore The Singles Vault by The Shady River Bard: standalone narrative ballads, global solidarity dispatches, and listener heritage chronicles including 'The Greenock Slate and the Gold Watch', 'The Guns of Loch Fyne', and 'And the People Cry Out'.">
+  <meta name="description" content="Explore The Singles Vault by The Shady River Bard: standalone narrative ballads, global solidarity dispatches, and listener heritage chronicles including 'The Seven Men of Glenmoriston', 'And the People Cry Out', 'The Guns of Loch Fyne', and 'The Greenock Slate and the Gold Watch'.">
 
   <!-- Cache Control for Instant Updates -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -16,7 +16,7 @@
   <meta property="og:site_name" content="The Shady River Bard">
   <meta property="og:type" content="website">
   <meta property="og:title" content="The Singles Vault | Standalone Narrative Singles | The Shady River Bard">
-  <meta property="og:description" content="Standalone narrative ballads, global solidarity dispatches, and listener heritage chronicles—featuring 'And the People Cry Out', 'The Guns of Loch Fyne', and 'The Greenock Slate and the Gold Watch'.">
+  <meta property="og:description" content="Standalone narrative ballads, global solidarity dispatches, and listener heritage chronicles—featuring 'The Seven Men of Glenmoriston', 'And the People Cry Out', 'The Guns of Loch Fyne', and 'The Greenock Slate and the Gold Watch'.">
   <meta property="og:image" content="https://theshadyriverbard.com/singles/assets/art/and-the-people-cry-out-banner.webp">
   <meta property="og:image:width" content="1376">
   <meta property="og:image:height" content="768">
@@ -232,13 +232,16 @@
         <a href="#and-the-people-cry-out" class="text-clydemist-300 hover:text-retinal-400 transition-colors">
           03. And the People Cry Out
         </a>
+        <a href="#the-seven-men-of-glenmoriston" class="text-retinal-400 hover:text-retinal-300 font-bold transition-colors">
+          04. Seven Men of Glenmoriston
+        </a>
       </nav>
 
       <!-- Right Action Utilities -->
       <div class="flex items-center gap-2">
         <a href="#singles-feed" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-retinal-500 hover:bg-retinal-400 text-clydeslate-950 font-mono text-xs font-bold transition-all shadow-md">
           <i class="fa-solid fa-record-vinyl text-xs" aria-hidden="true"></i>
-          <span>Browse Singles (3)</span>
+          <span>Browse Singles (4)</span>
         </a>
       </div>
     </div>
@@ -260,7 +263,7 @@
               <span>THE SINGLES VAULT // STANDALONE CHRONICLES &amp; GLOBAL DISPATCHES</span>
             </span>
             <span class="px-2.5 py-1 rounded-full bg-clydeslate-800 border border-white/10 text-clydemist-300 font-mono text-[11px]">
-              3 Standalone Releases &bull; Permanent Dedicated Dossiers
+              4 Standalone Releases &bull; Permanent Dedicated Dossiers
             </span>
           </div>
 
@@ -274,7 +277,7 @@
         </div>
 
         <!-- Quick-Access Directory Grid of All Singles (With Permanent URLs & Video Triggers) -->
-        <div id="vault-directory-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div id="vault-directory-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Populated via JavaScript -->
         </div>
 
@@ -286,12 +289,12 @@
             <input
               type="search"
               id="singles-search"
-              placeholder="Search singles by title, lyrics, data, lore, or geography (e.g., Sorrento, Novi Sad, Greenock, Loch Fyne)..."
+              placeholder="Search singles by title, lyrics, data, lore, or geography (e.g., Glenmoriston, Coiraghoth, Sorrento, Greenock, Loch Fyne)..."
               class="w-full pl-9 pr-4 py-2.5 rounded-xl bg-clydeslate-950 border border-white/10 text-xs sm:text-sm font-sans text-white placeholder-clydemist-400 focus:outline-none focus:border-retinal-400"
             >
           </div>
           <div class="flex items-center justify-between sm:justify-end gap-3 font-mono text-xs text-clydemist-300 shrink-0">
-            <span id="singles-count-label">Showing 3 of 3 Singles</span>
+            <span id="singles-count-label">Showing 4 of 4 Singles</span>
             <button
               type="button"
               id="btn-reset-search"
@@ -394,7 +397,7 @@
 
   <!-- SCRIPTS -->
   <script src="../assets/js/a11y.js"></script>
-  <script src="data/singles-data.js?v=20261031_01"></script>
+  <script src="data/singles-data.js?v=20261109_01"></script>
 
   <script>
     (function() {
@@ -899,7 +902,9 @@
               (s.pillar_badges || []).join(' '),
               (s.bards_story || []).join(' '),
               (s.clean_lyrics_stanzas || []).join(' '),
-              (s.globalFlashpoints || []).map(fp => `${fp.region} ${fp.title} ${fp.metric} ${fp.facts}`).join(' ')
+              (s.manuscript_lyrics_stanzas || []).join(' '),
+              (s.globalFlashpoints || []).map(fp => `${fp.region} ${fp.title} ${fp.metric} ${fp.facts}`).join(' '),
+              (s.historicalDeepDive || []).map(dd => `${dd.region} ${dd.title} ${dd.metric} ${dd.lead}`).join(' ')
             ].join(' ').toLowerCase();
             return haystack.includes(q);
           });
