@@ -795,6 +795,19 @@
       'reclaiming-the-banjo': { slug: 'reclaiming-the-banjo', albumId: 'unbroken-chain', albumNumber: 10, trackTitle: 'Reclaiming the Banjo' },
       'the-unbroken-chain': { slug: 'the-unbroken-chain', albumId: 'unbroken-chain', albumNumber: 10, trackTitle: 'The Unbroken Chain' },
       'a-different-kind-of-sun-reprise': { slug: 'a-different-kind-of-sun-reprise', albumId: 'unbroken-chain', albumNumber: 10, trackTitle: 'A Different Kind of Sun (Reprise)' },
+      // Album 11: This Sacred Ground
+      'the-water-beetles-mud': { slug: 'the-water-beetles-mud', albumId: 'this-sacred-ground', albumNumber: 11, trackTitle: 'The Water Beetle\'s Mud' },
+      'kinship-this-sacred-ground': { slug: 'kinship-this-sacred-ground', albumId: 'this-sacred-ground', albumNumber: 11, trackTitle: 'Kinship (This Sacred Ground)' },
+      'the-council-of-clans': { slug: 'the-council-of-clans', albumId: 'this-sacred-ground', albumNumber: 11, trackTitle: 'The Council of Clans' },
+      'the-trail-of-broken-treaties': { slug: 'the-trail-of-broken-treaties', albumId: 'this-sacred-ground', albumNumber: 11, trackTitle: 'The Trail of Broken Treaties' },
+      'the-long-removal': { slug: 'the-long-removal', albumId: 'this-sacred-ground', albumNumber: 11, trackTitle: 'The Long Removal' },
+      'the-un-naming': { slug: 'the-un-naming', albumId: 'this-sacred-ground', albumNumber: 11, trackTitle: 'The Un-naming' },
+      'the-stolen-tongue': { slug: 'the-stolen-tongue', albumId: 'this-sacred-ground', albumNumber: 11, trackTitle: 'The Stolen Tongue' },
+      'the-reservation-line': { slug: 'the-reservation-line', albumId: 'this-sacred-ground', albumNumber: 11, trackTitle: 'The Reservation Line' },
+      'the-foxwoods-deal': { slug: 'the-foxwoods-deal', albumId: 'this-sacred-ground', albumNumber: 11, trackTitle: 'The Foxwoods Deal' },
+      'the-longest-walk': { slug: 'the-longest-walk', albumId: 'this-sacred-ground', albumNumber: 11, trackTitle: 'The Longest Walk' },
+      'the-speakers-heart': { slug: 'the-speakers-heart', albumId: 'this-sacred-ground', albumNumber: 11, trackTitle: 'The Speaker\'s Heart' },
+      'this-sacred-ground-reprise': { slug: 'this-sacred-ground-reprise', albumId: 'this-sacred-ground', albumNumber: 11, trackTitle: 'This Sacred Ground (Reprise)' },
       // Album 13: Mama's Boy
       'third-shift-lullaby': { slug: 'third-shift-lullaby', albumId: 'mamas-boy', albumNumber: 13, trackTitle: 'Third Shift Lullaby' },
       'one-paycheck-from-the-edge': { slug: 'one-paycheck-from-the-edge', albumId: 'mamas-boy', albumNumber: 13, trackTitle: 'One Paycheck from the Edge' },
@@ -917,6 +930,8 @@
         songSlug = 'anvils-chorus';
       } else if (albumItem.id === 'unbroken-chain' || albumItem.number === 10) {
         songSlug = 'a-different-kind-of-sun';
+      } else if (albumItem.id === 'this-sacred-ground' || albumItem.number === 11) {
+        songSlug = 'the-water-beetles-mud';
       } else if (albumItem.id === 'mamas-boy' || albumItem.number === 13) {
         songSlug = 'third-shift-lullaby';
       } else {
@@ -940,7 +955,7 @@
 
         // Dynamically load any extra practice packages if available
         try {
-          const pRes = await fetch('../data/practice-packages.json?v=20261101_27');
+          const pRes = await fetch('../data/practice-packages.json?v=20261109_11');
           if (pRes.ok) {
             const pData = await pRes.json();
             pData.forEach(p => {
