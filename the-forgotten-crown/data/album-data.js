@@ -195,7 +195,7 @@ window.FORGOTTEN_CROWN_DATA = {
         "The earth does not forget.",
         "The parliaments speak in distant halls, claiming an absolute right,"
       ],
-      "audio_file": "assets/audio/01-prologue-the-dust-of-estates.mp3"
+      "audio_file": "https://stems.theshadyriverbard.com/portal-audio/the-forgotten-crown/assets/audio/01-prologue-the-dust-of-estates.mp3"
     },
     {
       "id": "track-02-the-orchestrated-divide",
@@ -216,7 +216,7 @@ window.FORGOTTEN_CROWN_DATA = {
         "They built the fences high, but they built the anger higher,",
         "Drowning out the truth with the beating of their drums."
       ],
-      "audio_file": "assets/audio/02-the-orchestrated-divide.mp3"
+      "audio_file": "https://stems.theshadyriverbard.com/portal-audio/the-forgotten-crown/assets/audio/02-the-orchestrated-divide.mp3"
     },
     {
       "id": "track-03-the-common-good",
@@ -237,7 +237,7 @@ window.FORGOTTEN_CROWN_DATA = {
         "The grass was green and the river was free,",
         "I pluck on these strings and I beat on the skin,"
       ],
-      "audio_file": "assets/audio/03-the-common-good.mp3"
+      "audio_file": "https://stems.theshadyriverbard.com/portal-audio/the-forgotten-crown/assets/audio/03-the-common-good.mp3"
     },
     {
       "id": "track-04-shadows-on-holyrood",
@@ -258,7 +258,7 @@ window.FORGOTTEN_CROWN_DATA = {
         "I walked to the parliament, shiny and braw,",
         "To keep out the wind and the cries of the poor."
       ],
-      "audio_file": "assets/audio/04-shadows-on-holyrood.mp3"
+      "audio_file": "https://stems.theshadyriverbard.com/portal-audio/the-forgotten-crown/assets/audio/04-shadows-on-holyrood.mp3"
     },
     {
       "id": "track-05-1707-the-annexation",
@@ -279,7 +279,7 @@ window.FORGOTTEN_CROWN_DATA = {
         "The dust is thick on the archive floor,",
         "Delivering a three-hundred-year-old curse."
       ],
-      "audio_file": "assets/audio/05-1707-the-annexation.mp3"
+      "audio_file": "https://stems.theshadyriverbard.com/portal-audio/the-forgotten-crown/assets/audio/05-1707-the-annexation.mp3"
     },
     {
       "id": "track-06-freeport-lullaby",
@@ -300,7 +300,7 @@ window.FORGOTTEN_CROWN_DATA = {
         "They drew a line around the coast in the dead of the night,",
         "Waiting on a train of justice that will never come."
       ],
-      "audio_file": "assets/audio/06-freeport-lullaby.mp3"
+      "audio_file": "https://stems.theshadyriverbard.com/portal-audio/the-forgotten-crown/assets/audio/06-freeport-lullaby.mp3"
     },
     {
       "id": "track-07-chimera",
@@ -321,7 +321,7 @@ window.FORGOTTEN_CROWN_DATA = {
         "I pulled the parchment from the dust and the stone,",
         "A maze of foreign law to keep the people blind."
       ],
-      "audio_file": "assets/audio/07-chimera.mp3"
+      "audio_file": "https://stems.theshadyriverbard.com/portal-audio/the-forgotten-crown/assets/audio/07-chimera.mp3"
     },
     {
       "id": "track-08-the-archivist-s-midnight",
@@ -342,7 +342,7 @@ window.FORGOTTEN_CROWN_DATA = {
         "The candle burns low, the shadows stretch tall",
         "Just a whisper of justice to answer the call."
       ],
-      "audio_file": "assets/audio/08-the-archivist-s-midnight.mp3"
+      "audio_file": "https://stems.theshadyriverbard.com/portal-audio/the-forgotten-crown/assets/audio/08-the-archivist-s-midnight.mp3"
     },
     {
       "id": "track-09-salvo-jure-cujuslibet",
@@ -363,7 +363,7 @@ window.FORGOTTEN_CROWN_DATA = {
         "I ran my finger cross the faded ink,",
         "But left the rightful owners in the grey."
       ],
-      "audio_file": "assets/audio/09-salvo-jure-cujuslibet.mp3"
+      "audio_file": "https://stems.theshadyriverbard.com/portal-audio/the-forgotten-crown/assets/audio/09-salvo-jure-cujuslibet.mp3"
     },
     {
       "id": "track-10-healing-the-divide",
@@ -384,7 +384,7 @@ window.FORGOTTEN_CROWN_DATA = {
         "I walked back out into the clearing light,",
         "They strip-mine the spirit and sell off the land."
       ],
-      "audio_file": "assets/audio/10-healing-the-divide.mp3"
+      "audio_file": "https://stems.theshadyriverbard.com/portal-audio/the-forgotten-crown/assets/audio/10-healing-the-divide.mp3"
     },
     {
       "id": "track-11-the-stirling-directive",
@@ -405,7 +405,7 @@ window.FORGOTTEN_CROWN_DATA = {
         "We did not come to beg outside the heavy gate,",
         "But we refuse to suffer in the bitter cold."
       ],
-      "audio_file": "assets/audio/11-the-stirling-directive.mp3"
+      "audio_file": "https://stems.theshadyriverbard.com/portal-audio/the-forgotten-crown/assets/audio/11-the-stirling-directive.mp3"
     },
     {
       "id": "track-12-echoes-of-arbroath",
@@ -426,7 +426,7 @@ window.FORGOTTEN_CROWN_DATA = {
         "Seven hundred years have scattered on the breeze,",
         "For the soul of independence has never really died."
       ],
-      "audio_file": "assets/audio/12-echoes-of-arbroath.mp3"
+      "audio_file": "https://stems.theshadyriverbard.com/portal-audio/the-forgotten-crown/assets/audio/12-echoes-of-arbroath.mp3"
     },
     {
       "id": "track-13-the-edinburgh-proclamation",
@@ -447,7 +447,7 @@ window.FORGOTTEN_CROWN_DATA = {
         "The fog is lifting off the cobbled street,",
         "Is standing in the center of the city now."
       ],
-      "audio_file": "assets/audio/13-the-edinburgh-proclamation.mp3"
+      "audio_file": "https://stems.theshadyriverbard.com/portal-audio/the-forgotten-crown/assets/audio/13-the-edinburgh-proclamation.mp3"
     },
     {
       "id": "track-14-c-24-the-world-is-watching",
@@ -468,7 +468,7 @@ window.FORGOTTEN_CROWN_DATA = {
         "We packed the ledger in a heavy case,",
         "While Westminster is staring at the tomb."
       ],
-      "audio_file": "assets/audio/14-c-24-the-world-is-watching.mp3"
+      "audio_file": "https://stems.theshadyriverbard.com/portal-audio/the-forgotten-crown/assets/audio/14-c-24-the-world-is-watching.mp3"
     },
     {
       "id": "track-15-the-sovereign-people",
@@ -489,7 +489,7 @@ window.FORGOTTEN_CROWN_DATA = {
         "The fire has settled, the embers are bright,",
         "For the unfettered right to the land of our birth,"
       ],
-      "audio_file": "assets/audio/15-the-sovereign-people.mp3"
+      "audio_file": "https://stems.theshadyriverbard.com/portal-audio/the-forgotten-crown/assets/audio/15-the-sovereign-people.mp3"
     }
   ]
 };

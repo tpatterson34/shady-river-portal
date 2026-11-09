@@ -7,42 +7,42 @@
     {
       title: "How I Disintegrated (Preview)",
       subtitle: "Album 20 • Raw Acoustic Folk Blues",
-      src: "assets/audio/how-i-disintegrated-preview.mp3",
+      src: "https://stems.theshadyriverbard.com/portal-audio/assets/audio/how-i-disintegrated-preview.mp3",
       cover: "assets/images/how-i-disintegrated-cover.webp",
       duration: 45
     },
     {
       title: "The Same Boot (Preview)",
       subtitle: "Album 16 • Political Folk-Rock Anthem",
-      src: "assets/audio/the-same-boot-preview.mp3",
+      src: "https://stems.theshadyriverbard.com/portal-audio/assets/audio/the-same-boot-preview.mp3",
       cover: "assets/images/the-same-boot-cover.webp",
       duration: 45
     },
     {
       title: "Nobody's Listening (Preview)",
       subtitle: "The Republic of Nobody • Acoustic Ballad",
-      src: "assets/audio/nobodys-listening-preview.mp3",
+      src: "https://stems.theshadyriverbard.com/portal-audio/assets/audio/nobodys-listening-preview.mp3",
       cover: "assets/images/nobodys-listening-cover.webp",
       duration: 45
     },
     {
       title: "The Curtains and the Canned Goods (Preview)",
       subtitle: "Album 23 • Winter Homestead Ballad",
-      src: "assets/audio/curtains-and-canned-goods-preview.mp3",
+      src: "https://stems.theshadyriverbard.com/portal-audio/assets/audio/curtains-and-canned-goods-preview.mp3",
       cover: "assets/images/curtains-and-canned-goods-cover.webp",
       duration: 45
     },
     {
       title: "My Brother is a Mark (Preview)",
       subtitle: "The Gardener's Rebellion • Agrarian Outcry",
-      src: "assets/audio/my-brother-is-a-mark-preview.mp3",
+      src: "https://stems.theshadyriverbard.com/portal-audio/assets/audio/my-brother-is-a-mark-preview.mp3",
       cover: "assets/images/my-brother-is-a-mark-cover.webp",
       duration: 45
     },
     {
       title: "Strings and Scythes (Preview)",
       subtitle: "The Gardener's Rebellion • Harvest Acoustic",
-      src: "assets/audio/strings-and-scythes-preview.mp3",
+      src: "https://stems.theshadyriverbard.com/portal-audio/assets/audio/strings-and-scythes-preview.mp3",
       cover: "assets/images/strings-and-scythes-cover.webp",
       duration: 45
     }
