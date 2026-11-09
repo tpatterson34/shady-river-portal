@@ -911,7 +911,6 @@
       "key": "D Minor / D Dorian",
       "bpm": 103,
       "duration": "06:20",
-      "duration_exact": "6:19.96 (379.96s)",
       "release_year": 2026,
       "release_status": "Official Historical Dossier Live • YouTube Music Video Uploading Soon",
       "title": "The Seven Men of Glenmoriston",
@@ -921,38 +920,7 @@
       ],
       "subtitle": "July–August 1746 at the Cave of Coiraghoth (Coire Dho): Seven Starving Highland Outlaws, a £30,000 Hanover Crown Bounty, and the Unshakeable Right Hand of Ancient Sanctuary",
       "location": "Cave of Coiraghoth (Coire Dho) • Braes of Glenmoriston • Fort Augustus • Loch Ness • Drummossie Moor (Culloden) • Loch nan Uamh (Arisaig)",
-      "genre": "Modal D-Dorian / D-Minor Celtic Folk-Rock & 1746 Highland Chiaroscuro Ballad",
-      "visual_aesthetic": {
-            "name": "Peat Embers & Wet Basalt — 1746 Highland Chiaroscuro Cinema",
-            "film_stock": "Kodak Vision3 500T 35mm Anamorphic Cinema",
-            "palette": [
-                  {
-                        "name": "Storm-Slate Blue",
-                        "hex": "#2B3A42"
-                  },
-                  {
-                        "name": "Wet Black Basalt",
-                        "hex": "#14181C"
-                  },
-                  {
-                        "name": "Weeping Mountain Mist",
-                        "hex": "#8C9BA5"
-                  },
-                  {
-                        "name": "Bruised Heather / Bracken",
-                        "hex": "#4A3B32"
-                  },
-                  {
-                        "name": "Peat-Ember Amber",
-                        "hex": "#D97724"
-                  },
-                  {
-                        "name": "Tarnished Hanover Gold",
-                        "hex": "#C59B27"
-                  }
-            ],
-            "silent_witness": "Glen — a stationary adult black-and-white Scottish Border Collie seated still on wet basalt stone at the threshold of the Cave of Coiraghoth above Loch Ness."
-      },
+      "genre": "Modal D-Dorian / D-Minor Celtic Folk-Rock & 1746 Highland Ballad",
       "thesis": "In late July 1746, seven outlawed, starving Highlanders hiding in the stream-cut boulder cave of Coiraghoth above Loch Ness held a £30,000 Hanover Crown bounty in the palms of their hands—enough gold to buy an earldom or rebuild every burned steading in Inverness-shire. The man kneeling by their embers was a Roman-born prince whose fatal command at Culloden had cost them their cattle, their roofs, and their brothers. Yet for three weeks they hid, fed, and guided him to safety without touching a single Hanover guinea—not out of courtly worship for a Stuart throne, but because the ancient Highland law of sanctuary (Aos-dàna / guest-right) and a Highlander's sworn word cannot be purchased by any king.",
       "thesis_attribution": "— Historical & Moral Thesis • Cave of Coiraghoth (Coire Dho), Braes of Glenmoriston, July–August 1746",
       "dedication": "Dedicated to the memory of the Seven Men of Glenmoriston—Hugh Chisholm, Patrick Grant ('Black Peter of Craskie'), Alexander MacDonald, Donald MacDonald, John MacDonald, Gregor MacGregor, and Alexander MacMillan—and to all who keep their sworn word when the price of betrayal could buy the world.",
@@ -968,28 +936,28 @@
                   "color_cls": "text-amber-400"
             },
             {
-                  "label": "Acoustic Architecture",
+                  "label": "Musical Pulse",
                   "value": "103 BPM • D Dorian",
                   "color_cls": "text-white"
             },
             {
-                  "label": "Cinema Production",
-                  "value": "65 Scenes • 73 Cues",
+                  "label": "Outlaws Sworn",
+                  "value": "7 Highlanders",
                   "color_cls": "text-emerald-400"
             }
       ],
-      "hero_art_caption_label": "Kodak Vision3 500T • Cave of Coiraghoth (Coire Dho), July 1746",
+      "hero_art_caption_label": "Cave of Coiraghoth (Coire Dho) • Braes of Glenmoriston, July 1746",
       "hero_art_caption_title": "Hugh Chisholm, the Outlaws of Glenmoriston, the Fugitive & Silent Witness Glen",
       "media": {
             "youtubeVideoUrl": "[INSERT_YOUTUBE_URL_OR_LEAVE_PENDING]",
-            "youtubePlaceholderNote": "Official 65-Scene 35mm Music Video Uploading Soon — Placeholder Active",
+            "youtubePlaceholderNote": "Official Music Video Uploading Soon",
             "spotifyUrl": "[INSERT_SPOTIFY_URL_OR_LEAVE_PENDING]",
             "appleMusicUrl": "[INSERT_APPLE_MUSIC_URL_OR_LEAVE_PENDING]",
             "amazonMusicUrl": "[INSERT_AMAZON_MUSIC_URL_OR_LEAVE_PENDING]"
       },
       "art_banner": "assets/art/the-seven-men-of-glenmoriston-banner.webp",
       "art_square": "assets/art/the-seven-men-of-glenmoriston-cover.webp",
-      "art_alt": "Inside the wet black basalt mouth of the Cave of Coiraghoth in 1746, gaunt Highland outlaw Hugh Chisholm with his peat-blackened right hand stands unbowed beside fellow outlaws in amber peat firelight as a mud-caked fugitive kneels by the embers and Glen, a stationary black-and-white Scottish Border Collie, keeps watch at the rain-lashed cave lip.",
+      "art_alt": "Inside the wet black basalt mouth of the Cave of Coiraghoth in 1746, gaunt Highland outlaw Hugh Chisholm with his peat-blackened right hand stands unbowed beside fellow outlaws in amber peat firelight as a mud-caked fugitive kneels by the embers and Glen, a black-and-white Scottish Border Collie, keeps watch at the rain-lashed cave lip.",
       "pillar_badges": [
             "£30,000 Hanover Bounty Refused",
             "Cave of Coiraghoth (July–Aug 1746)",
@@ -1011,11 +979,11 @@
             "In the brutal summer following the Battle of Culloden (April 16, 1746), government Redcoat columns and Campbell militia operating out of Fort Augustus scoured the Great Glen and Inverness-shire under the orders of Prince William Augustus, Duke of Cumberland—burning steadings, driving off cattle, gutting parish kirks, and hunting Jacobite survivors. High in the rocky mountain braes of Glenmoriston, sheltering in the stream-hidden boulder cave of Coiraghoth (Coire Dho), seven outlawed, starving Highlanders banded together to protect their families and survive on wild roots, marrow cracked from bones, coarse barley oatcakes, and brine salt smuggled past night pickets: Hugh Chisholm, Patrick Grant ('Black Peter of Craskie'), Alexander MacDonald, Donald MacDonald, John MacDonald, Gregor MacGregor, and Alexander MacMillan.",
             "In late July 1746, an exhausted, lice-ridden fugitive stumbled through the weeping mountain mist into their basalt sanctuary carrying a £30,000 Hanover Crown bounty on his head—a sum sufficient in 1746 to purchase a Scottish earldom or rebuild every burned roof in Inverness-shire (tens of millions of dollars in modern purchasing power). One whisper down by the loch at Fort Augustus would have ransomed their flocks, bought back their rusted ploughshares, and fed their wives and children digging wild nettles from the sod.",
             "The tragic irony at the heart of the Glenmoriston chronicle is that the seven broken-down outlaws who risked the gallows to shelter Charles Edward Stuart were protecting a Roman-born aristocrat who had never set foot in Scotland until fourteen months earlier, spoke with an Italian-French accent, overrode his best field commander Lord George Murray to force a suicidal stand on Drummossie Moor, and would soon sail back to French velvet and wine aboard the 34-gun Saint-Malo privateer frigate L'Heureux. Yet for three weeks they hid, fed, and guided him safely through the cordon of patrols without touching a penny of Hanover blood coin.",
-            "Why? As the bridge of the song declares: 'For it was not for Charlie we stood in that cave! / It was for the old law that our ancestors gave!' They stood for the ancient Highland covenant of sanctuary, hospitality (Aos-dàna / guest-right), and a sworn word that no German king in London or Butcher's garrison could buy. According to Highland tradition, Hugh Chisholm vowed never again to shake another man's hand with the right hand that had pledged that oath—not for silver, and not for fear. Throughout our 65-scene Kodak Vision3 500T cinema film, our silent witness Glen—a stationary black-and-white Scottish Border Collie seated on wet black basalt at the lip of Coiraghoth cave—watches the rain wash thirty thousand pounds from the palms of seven free men."
+            "Why? As the bridge of the song declares: 'For it was not for Charlie we stood in that cave! / It was for the old law that our ancestors gave!' They stood for the ancient Highland covenant of sanctuary, hospitality (Aos-dàna / guest-right), and a sworn word that no German king in London or Butcher's garrison could buy. According to Highland tradition, Hugh Chisholm vowed never again to shake another man's hand with the right hand that had pledged that oath—not for silver, and not for fear. Throughout the accompanying music video, our silent witness Glen—a black-and-white Scottish Border Collie seated on wet black basalt at the lip of Coiraghoth cave—watches the rain wash thirty thousand pounds from the palms of seven free men."
       ],
       "musical_direction": {
-            "summary": "Modal D-Minor / D-Dorian Celtic Folk-Rock & 1746 Highland Chiaroscuro Ballad at 103 BPM (6:19.96 / 73 Ear-Verified Cues).",
-            "details": "Opens with a stark spoken cold open over rain-lashed acoustic guitar and low bass drone ('Thirty thousand pounds of Hanover gold...'), erupting at 0:27 into a mournful yet defiant Highland fiddle, cello, and European accordion theme. Driven by a solo weathered male baritone (100% male vocal profile, 218.4 Hz median pitch, 196.0 Hz chest register) and a relentless 103 BPM folk-rock heartbeat, the arrangement builds across three narrative verses and roaring D-Dorian choruses—including the unscripted crag-top vocal echo at 3:01 ('Our souls are still free!'), a dramatic 0.62s hospitality-oath pause at 3:51, a soaring historical bridge at 4:36, a searing electric/acoustic guitar and fiddle solo over the upright Highland dirk at 5:05, and a stripped spoken epilogue at 6:05: 'They took the cattle. They took the tartan. They never got the word.'"
+            "summary": "Modal D-Minor / D-Dorian Celtic Folk-Rock & 1746 Highland Ballad at 103 BPM (06:20).",
+            "details": "Opens with a stark spoken cold open over rain-lashed acoustic guitar and low bass drone ('Thirty thousand pounds of Hanover gold...'), erupting at 0:27 into a mournful yet defiant Highland fiddle, cello, and European accordion theme. Driven by a weathered male baritone and a relentless 103 BPM folk-rock heartbeat, the arrangement builds across three narrative verses and roaring D-Dorian choruses—including the crag-top vocal echo at 3:01 ('Our souls are still free!'), a dramatic hospitality-oath pause at 3:51, a soaring historical bridge at 4:36, a searing guitar and fiddle solo over the upright Highland dirk at 5:05, and a stripped spoken epilogue at 6:05: 'They took the cattle. They took the tartan. They never got the word.'"
       },
       "sevenMenDossier": {
             "badge": "PART I // THE CAVE OF COIRAGHOTH (COIRE DHO) & THE LAW OF SANCTUARY",
@@ -1028,21 +996,21 @@
                   {
                         "num": "01",
                         "name": "Hugh Chisholm",
-                        "epithet": "The Unshakeable Right Hand of Coiraghoth (CHAR_01)",
+                        "epithet": "The Unshakeable Right Hand of Coiraghoth",
                         "clan_note": "Strathglass / Glenmoriston Outlaw & Sanctuary Oath-Keeper",
                         "role": "Looked into the sunken eyes of the ragged fugitive without bowing as a courtier bows, clasped his hand in sanctuary with a palm blistered and blackened by peat soot, and vowed never again to shake another man's right hand for silver or fear."
                   },
                   {
                         "num": "02",
                         "name": "Patrick Grant",
-                        "epithet": "\"Black Peter of Craskie\" / Pàdraig Dubh (CHAR_02)",
+                        "epithet": "\"Black Peter of Craskie\" (Pàdraig Dubh)",
                         "clan_note": "Grant of Craskie, Glencannich / Glenmoriston Night Scout",
                         "role": "Crept by night past the scarlet picket lines and Campbell militia campfires a mile from Fort Augustus to smuggle back a coarse barley oatcake and a horn of brine salt to season the cave vault."
                   },
                   {
                         "num": "03",
                         "name": "Donald MacDonald",
-                        "epithet": "Defender of the Hearth Covenant (CHAR_03)",
+                        "epithet": "Defender of the Hearth Covenant",
                         "clan_note": "Glengarry / Glenmoriston Clansman",
                         "role": "Watched the smoke of burned kinsmen's roofs curling through the birches while families dug weeds from the sod, yet swore that the waters of Loch Ness would run backward in shame before they sold out a guest at their fire."
                   },
@@ -1126,7 +1094,7 @@
                   "metric": "Born in Rome • Landed in Scotland July 1745 (Age 24)",
                   "still": "assets/stills/01-roman-courtier-vs-fugitive.webp",
                   "still_secondary": "assets/stills/film-s18-fugitive-embers.webp",
-                  "still_caption": "Dossier Plate 01 & Scene S18 • The Roman Courtier of Palazzo Muti vs. The Lice-Ridden Fugitive of Coire Dho",
+                  "still_caption": "The Roman Courtier of Palazzo Muti vs. The Lice-Ridden Fugitive of Coire Dho",
                   "era_tag": "1688 – July 1745",
                   "bard_ts": "01:34 – 02:24",
                   "lyric": "Then down through the bracken a beggar man crept / In a lice-ridden plaid where the mountain mist wept ... Hugh Chisholm stepped forward and looked in his eyes / No bow to a palace, no courtier's lies",
@@ -1147,12 +1115,12 @@
                   ],
                   "sources": [
                         {
-                              "label": "National Library of Scotland — The Jacobite Risings & Stuart Court in Rome Archive",
-                              "url": "https://digital.nls.uk/jacobites/"
+                              "label": "Charles Edward Stuart ('Bonnie Prince Charlie') — Biographical & Historical Archive",
+                              "url": "https://en.wikipedia.org/wiki/Charles_Edward_Stuart"
                         },
                         {
-                              "label": "National Museums Scotland — Charles Edward Stuart & The '45 Object Dossier",
-                              "url": "https://www.nms.ac.uk/explore-our-collections/stories/scottish-history-and-archaeology/bonnie-prince-charlie-and-the-jacobites/"
+                              "label": "Palazzo Muti (Rome) — Birthplace & Papal Exile Residence of the Stuart Court",
+                              "url": "https://en.wikipedia.org/wiki/Palazzo_Muti"
                         }
                   ]
             },
@@ -1165,7 +1133,7 @@
                   "metric": "1701 Act of Settlement • £30,000 Crown Treason Bounty",
                   "still": "assets/stills/02-hanover-bounty-fort-augustus.webp",
                   "still_secondary": "assets/stills/film-s16-hanover-bounty.webp",
-                  "still_caption": "Dossier Plate 02 & Scene S16 • The £30,000 Hanover Gold Bounty & Redcoat Columns at Fort Augustus",
+                  "still_caption": "The £30,000 Hanover Gold Bounty & Redcoat Columns at Fort Augustus",
                   "era_tag": "1701 – Summer 1746",
                   "bard_ts": "00:06 – 00:27 & 02:24 – 03:06",
                   "lyric": "Keep your thirty thousand pounds of the Butcher's blood coin! / There is no winter cold enough to make a Highlander join! ... Let the Hanover magistrates count out their fee / Our roofs are in ashes, our souls are still free!",
@@ -1186,12 +1154,12 @@
                   ],
                   "sources": [
                         {
-                              "label": "UK Parliamentary Archives — The Act of Settlement (1701) & Hanoverian Succession",
-                              "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentaryauthority/revolution/collections1/collections-glorious-revolution/act-of-settlement/"
+                              "label": "UK Statute Law Database — The Act of Settlement (1701) Original Statutory Text",
+                              "url": "https://www.legislation.gov.uk/aep/Will3/12-13/2/contents"
                         },
                         {
-                              "label": "The National Archives (UK) — Jacobite Rebellion of 1745 & Cumberland's Pacification Orders",
-                              "url": "https://www.nationalarchives.gov.uk/education/resources/jacobite-1745/"
+                              "label": "Prince William Augustus, Duke of Cumberland & The Fort Augustus Pacification Campaign",
+                              "url": "https://en.wikipedia.org/wiki/Prince_William,_Duke_of_Cumberland"
                         }
                   ]
             },
@@ -1204,7 +1172,7 @@
                   "metric": "Glenfinnan to Derby (125 mi from London) • Fatal Stand at Culloden",
                   "still": "assets/stills/03-culloden-drummossie-moor.webp",
                   "still_secondary": "assets/stills/film-s17-culloden-bonnet.webp",
-                  "still_caption": "Dossier Plate 03 & Scene S17 • The Sleet-Lashed Charge on Drummossie Moor & The Burned Croft Aftermath",
+                  "still_caption": "The Sleet-Lashed Charge on Drummossie Moor & The Burned Croft Aftermath",
                   "era_tag": "July 1745 – April 16, 1746",
                   "bard_ts": "00:59 – 01:55",
                   "lyric": "Our cattle were driven, our brothers lay cold / Where the sleet of Culloden turned heather to mold ... He had cost us our sons and the roofs overhead / He had marched us on biscuits to sleep with the dead",
@@ -1225,12 +1193,12 @@
                   ],
                   "sources": [
                         {
-                              "label": "National Trust for Scotland — Culloden Battlefield & Drummossie Moor Historical Dossier",
-                              "url": "https://www.nts.org.uk/visit/places/culloden"
+                              "label": "Battle of Culloden (Drummossie Moor, April 16, 1746) — Campaign & Battlefield Record",
+                              "url": "https://en.wikipedia.org/wiki/Battle_of_Culloden"
                         },
                         {
-                              "label": "Robert Forbes (1708–1775) — 'The Lyon in Mourning' (Primary Eyewitness Testimony of the '45)",
-                              "url": "https://digital.nls.uk/jacobites/the-forty-five/"
+                              "label": "Lord George Murray — Jacobite General & Tactician of the 1745 Rising",
+                              "url": "https://en.wikipedia.org/wiki/Lord_George_Murray"
                         }
                   ]
             },
@@ -1243,7 +1211,7 @@
                   "metric": "5 Months on the Run • 1748 Expulsion from France • Died in Rome (1788)",
                   "still": "assets/stills/film-s48-velvet-and-wine.webp",
                   "still_secondary": "assets/stills/film-s35-fort-augustus.webp",
-                  "still_caption": "Scene S48 & Scene S35 • 'Back to Velvet and Wine That the Glen Never Knew' vs. Fort Augustus Garrison",
+                  "still_caption": "'Back to Velvet and Wine That the Glen Never Knew' vs. Fort Augustus Garrison",
                   "era_tag": "April 1746 – 1748 (d. 1788)",
                   "bard_ts": "04:36 – 04:51",
                   "lyric": "The Prince sailed for France when the autumn wind blew / Back to velvet and wine that the glen never knew / And Hugh Chisholm walked onward through exile and years / Never shaking that right hand for silver or fears",
@@ -1264,8 +1232,12 @@
                   ],
                   "sources": [
                         {
-                              "label": "Encyclopædia Britannica — Treaty of Aix-la-Chapelle (1748) & Expulsion of the Young Pretender",
-                              "url": "https://www.britannica.com/event/Treaty-of-Aix-la-Chapelle"
+                              "label": "Treaty of Aix-la-Chapelle (1748) — Anglo-French Peace & Expulsion of the Stuart Claimant",
+                              "url": "https://en.wikipedia.org/wiki/Treaty_of_Aix-la-Chapelle_(1748)"
+                        },
+                        {
+                              "label": "The Jacobite Rising of 1745 — Post-Culloden Flight & Highland Pacification",
+                              "url": "https://en.wikipedia.org/wiki/Jacobite_rising_of_1745"
                         }
                   ]
             },
@@ -1278,7 +1250,7 @@
                   "metric": "30-to-34-Gun Saint-Malo Privateer Frigate • Sept 20 – Oct 10, 1746",
                   "still": "assets/stills/04-lheureux-frigate-arisaig.webp",
                   "still_secondary": "assets/stills/film-s47-lheureux-frigate.webp",
-                  "still_caption": "Dossier Plate 04 & Scene S47 • The 34-Gun Saint-Malo Privateer Frigate L'Heureux & Consort Le Prince de Conti at Loch nan Uamh",
+                  "still_caption": "The 34-Gun Saint-Malo Privateer Frigate L'Heureux & Consort Le Prince de Conti at Loch nan Uamh",
                   "era_tag": "Sept 20 – Oct 10, 1746",
                   "bard_ts": "04:33 – 04:46",
                   "lyric": "The Prince sailed for France when the autumn wind blew / Back to velvet and wine that the glen never knew",
@@ -1299,8 +1271,12 @@
                   ],
                   "sources": [
                         {
-                              "label": "Historic Environment Scotland — Prince's Cairn & Loch nan Uamh Embarkation Site (Arisaig)",
-                              "url": "https://www.historicenvironment.scot/"
+                              "label": "Loch nan Uamh (Arisaig) — Landing (1745) & Final Embarkation aboard L'Heureux (Sept 20, 1746)",
+                              "url": "https://en.wikipedia.org/wiki/Loch_nan_Uamh"
+                        },
+                        {
+                              "label": "Colonel Richard Warren — Commander of the French Rescue Expedition (L'Heureux & Le Prince de Conti)",
+                              "url": "https://en.wikipedia.org/wiki/Richard_Warren_(Jacobite)"
                         }
                   ]
             },
@@ -1313,11 +1289,11 @@
                   "metric": "Bog-Oak Dirk • Barley Oatcake & Brine Salt • Untouched Gold Guinea",
                   "still": "assets/stills/05-sanctuary-relics-dirk-glen.webp",
                   "still_secondary": "assets/stills/film-s64-glen-and-dirk.webp",
-                  "still_caption": "Dossier Plate 05 & Scene S64 • Upright Bog-Oak Dirk, Oatcake, Brine Salt, Untouched Guinea & Silent Witness Glen",
+                  "still_caption": "Upright Bog-Oak Dirk, Oatcake, Brine Salt, Untouched Guinea & Silent Witness Glen",
                   "era_tag": "August 1746 – Lifelong Oath",
                   "bard_ts": "02:07 – 02:24 & 05:59 – 06:19",
                   "lyric": "And Hugh Chisholm walked onward through exile and years / Never shaking that right hand for silver or fears ... They took the cattle. They took the tartan. They never got the word.",
-                  "lead": "At the threshold of Coiraghoth cave, four physical relics anchor the visual grammar of the film alongside Glen, our stationary black-and-white Scottish Border Collie witness:",
+                  "lead": "At the threshold of Coiraghoth cave, four physical relics anchor the visual story alongside Glen, our black-and-white Scottish Border Collie witness:",
                   "bullets": [
                         {
                               "heading": "The Upright Bog-Oak Highland Dirk",
@@ -1329,13 +1305,17 @@
                         },
                         {
                               "heading": "Hugh Chisholm's Peat-Blackened Right Hand",
-                              "text": "Blistered and blackened with ground-in peat soot, Hugh's right hand steadied the fugitive's wrist in sanctuary (Scene S22) and later clenched in refusal when offered lace-cuffed silver coins (Scene S50)—honoring his lifelong vow never to shake another man's hand with the hand that had sealed that oath."
+                              "text": "Blistered and blackened with ground-in peat soot, Hugh's right hand steadied the fugitive's wrist in sanctuary and later clenched in refusal when offered lace-cuffed silver coins—honoring his lifelong vow never to shake another man's hand with the hand that had sealed that oath."
                         }
                   ],
                   "sources": [
                         {
-                              "label": "Am Baile (Highland History & Culture Archive) — Hugh Chisholm & The Seven Men of Glenmoriston",
-                              "url": "https://www.ambaile.org.uk/"
+                              "label": "Bishop Robert Forbes (1708–1775) — 'The Lyon in Mourning' Vol. I (Digitized Primary Source, Internet Archive)",
+                              "url": "https://archive.org/details/lyoninmourningor01forb"
+                        },
+                        {
+                              "label": "Glenmoriston & The Seven Men of Glenmoriston — Historical Geography & Clan Tradition",
+                              "url": "https://en.wikipedia.org/wiki/Glenmoriston"
                         }
                   ]
             }
@@ -1344,80 +1324,80 @@
             {
                   "time": "0:00",
                   "title": "Thirty Thousand Pounds of Hanover Gold",
-                  "scenes": "S01 – S04",
-                  "note": "Spoken Cold Open over rain-lashed acoustic guitar; Hanover gold guinea beside upright bog-oak dirk and stationary Border Collie Glen."
+                  "scenes": "Chapter I",
+                  "note": "Spoken Cold Open over rain-lashed acoustic guitar; a Hanover gold guinea lies beside an upright bog-oak dirk and watchful Border Collie Glen."
             },
             {
                   "time": "0:27",
                   "title": "Highland Fiddle in the Burned Braes",
-                  "scenes": "S05 – S09",
-                  "note": "Soot-stained Highlander hands draw a horsehair bow across an 18th-century fiddle; steading smoke hangs in wet silver birches above Loch Ness."
+                  "scenes": "Chapter II",
+                  "note": "Soot-stained Highlander hands draw a horsehair bow across an 18th-century fiddle as steading smoke hangs in wet silver birches above Loch Ness."
             },
             {
                   "time": "0:59",
                   "title": "Verse I: Smoke in the Birch & Marrow Bone",
-                  "scenes": "S10 – S14",
-                  "note": "Seven gaunt outlaws in the Cave of Coiraghoth surviving on wild roots and marrow cracked from bone after the sleet of Culloden."
+                  "scenes": "Chapter III",
+                  "note": "Seven gaunt outlaws in the Cave of Coiraghoth survive on wild roots and marrow cracked from bone after the sleet of Culloden."
             },
             {
                   "time": "1:34",
                   "title": "Verse II: A Beggar in the Bracken",
-                  "scenes": "S15 – S19",
+                  "scenes": "Chapter IV",
                   "note": "A lice-ridden fugitive with a £30,000 bounty from the German King's throne creeps through weeping mountain mist and kneels by the cave embers."
             },
             {
                   "time": "2:07",
                   "title": "Hugh Chisholm's Peat-Blackened Hand",
-                  "scenes": "S20 – S22",
+                  "scenes": "Chapter V",
                   "note": "No bow to a palace, no courtier's lies—Hugh Chisholm's blistered, peat-blackened right hand clasps the stranger's wrist in sanctuary."
             },
             {
                   "time": "2:24",
                   "title": "Chorus: Keep the Butcher's Blood Coin",
-                  "scenes": "S23 – S29",
-                  "note": "Full 103 BPM D-Dorian folk-rock eruption at the cave mouth: 'We swore on the dirk in the dark of the glen / That a king cannot purchase the honor of men!'"
+                  "scenes": "Chapter VI",
+                  "note": "Full D-Dorian folk-rock eruption at the cave mouth: 'We swore on the dirk in the dark of the glen / That a king cannot purchase the honor of men!'"
             },
             {
                   "time": "3:01",
                   "title": "Echo on the Crag: Our Souls Are Still Free",
-                  "scenes": "S30",
-                  "note": "Unscripted crag-top baritone echo over storm-swept Loch Ness before the golden eagle glides above Coiraghoth cliffs."
+                  "scenes": "Chapter VII",
+                  "note": "Unscripted crag-top baritone echo over storm-swept Loch Ness before a lone golden eagle glides above the Coiraghoth cliffs."
             },
             {
                   "time": "3:07",
                   "title": "Verse III: Three Weeks Above Fort Augustus",
-                  "scenes": "S31 – S38",
+                  "scenes": "Chapter VIII",
                   "note": "Patrick Grant creeps past Redcoat pickets for an oatcake and brine salt while Highland wives dig weeds from the sod a mile from Fort Augustus."
             },
             {
                   "time": "3:51",
                   "title": "Oath on the Hilt: The Law of Sanctuary",
-                  "scenes": "S39 – S46",
-                  "note": "Hugh lays his cold palm on his dirk hilt with a dramatic 0.62s vocal pause: 'If we sell out a guest, then our fathers have died!' leading into Chorus 2."
+                  "scenes": "Chapter IX",
+                  "note": "Hugh lays his cold palm on his dirk hilt: 'If we sell out a guest, then our fathers have died!' leading into the second chorus."
             },
             {
                   "time": "4:33",
                   "title": "Bridge: Not for Charlie—For the Old Law",
-                  "scenes": "S47 – S52",
-                  "note": "The 34-gun frigate L'Heureux sails for French velvet and wine; Hugh Chisholm refuses silver handshakes for life: 'It was not for Charlie we stood in that cave!'"
+                  "scenes": "Chapter X",
+                  "note": "The 34-gun frigate L'Heureux sails for French velvet and wine while Hugh Chisholm refuses silver handshakes for life: 'It was not for Charlie we stood in that cave!'"
             },
             {
                   "time": "5:11",
                   "title": "Final Chorus: Honor Beyond Purchase",
-                  "scenes": "S53 – S62",
+                  "scenes": "Chapter XI",
                   "note": "After the searing guitar and fiddle solo over Glen and the upright dirk, seven poor outlaws let £30,000 wash from their open palms in the Highland rain."
             },
             {
                   "time": "5:59",
                   "title": "Spoken Epilogue: They Never Got the Word",
-                  "scenes": "S63 – S65",
+                  "scenes": "Chapter XII",
                   "note": "Rainwater fills empty cattle hoofprints as Glen keeps final watch beside the upright dirk: 'They took the cattle. They took the tartan. They never got the word.'"
             }
       ],
       "timeline_section": {
-            "badge": "Interactive Framework III // 4-Act Historical & 65-Scene Cinema Arc",
+            "badge": "Interactive Framework III // 4-Act Historical & Musical Arc",
             "title": "From the Ashes of Culloden to the Cave of Coiraghoth (0:00 – 6:20)",
-            "intro": "Follow the four dramatic acts of 'The Seven Men of Glenmoriston' across all 65 Kodak Vision3 500T 35mm anamorphic scenes and 73 ear-verified lyric cues."
+            "intro": "Follow the four dramatic movements of 'The Seven Men of Glenmoriston' from the smoking steadings of Inverness-shire to the autumn gale at Loch nan Uamh."
       },
       "timeline": [
             {
@@ -1426,8 +1406,8 @@
                   "title": "£30,000 of Hanover Gold & Seven Shadows in Coiraghoth Cave",
                   "location": "Fort Augustus Magistrate Chamber • Burned Braes • Cave of Coiraghoth",
                   "icon": "fa-solid fa-fire-flame-simple",
-                  "narrative": "Opening in cold storm-slate (`#2B3A42`) and wet black basalt (`#14181C`), faceless Hanoverian magistrate hands stack 1746 gold guineas beside brass scales while rain lashes the smoking, roofless stone steadings of Inverness-shire. At the lip of Coiraghoth cave, stationary Border Collie Glen (`CHAR_05`) watches the rain before seven gaunt outlaw silhouettes surviving on wild roots and marrow cracked from bone as Highland fiddle and cello ignite the 103 BPM pulse.",
-                  "artifact_note": "Scenes S01–S14 • Spoken Cold Open, Highland Fiddle Intro & Verse 1 (Ear-Verified Cues 01–13)"
+                  "narrative": "Opening in cold storm-slate and wet black basalt, Hanoverian magistrate hands stack 1746 gold guineas beside brass scales while rain lashes the smoking, roofless stone steadings of Inverness-shire. At the lip of Coiraghoth cave, Scottish Border Collie Glen watches the rain before seven gaunt outlaw silhouettes surviving on wild roots and marrow cracked from bone as Highland fiddle and cello ignite the 103 BPM pulse.",
+                  "artifact_note": "Spoken Cold Open, Highland Fiddle Intro & Verse 1"
             },
             {
                   "year": "1:34 – 3:07",
@@ -1435,8 +1415,8 @@
                   "title": "The Lice-Ridden Fugitive, The Peat-Blackened Hand & Chorus I",
                   "location": "Weeping Mountain Bracken • Coiraghoth Cave Embers • Crags Above Loch Ness",
                   "icon": "fa-solid fa-hand-holding-hand",
-                  "narrative": "Out of the sodden russet bracken creeps a broken 26-year-old fugitive (`CHAR_04`) carrying a £30,000 price from the German King's throne—the very commander who had marched the clans on biscuits to sleep with the dead at Culloden. When he kneels half-blind by the peat embers (`#D97724`), Hugh Chisholm (`CHAR_01`) steps forward without a courtier's bow, steadying the stranger's wrist with his blistered, peat-blackened right hand before belting the defiant Chorus 1 anthem and its crag-top echo at 3:01: 'Our souls are still free!'",
-                  "artifact_note": "Scenes S15–S30 • Verse 2, The Sanctuary Clasp & Chorus 1 + Crag Echo (Cues 14–34)"
+                  "narrative": "Out of the sodden russet bracken creeps a broken 26-year-old fugitive carrying a £30,000 price from the German King's throne—the very commander who had marched the clans on biscuits to sleep with the dead at Culloden. When he kneels half-blind by the peat embers, Hugh Chisholm steps forward without a courtier's bow, steadying the stranger's wrist with his blistered, peat-blackened right hand before belting the defiant Chorus 1 anthem and its crag-top echo at 3:01: 'Our souls are still free!'",
+                  "artifact_note": "Verse 2, The Sanctuary Clasp & Chorus 1 + Crag Echo"
             },
             {
                   "year": "3:07 – 4:33",
@@ -1444,8 +1424,8 @@
                   "title": "Black Peter's Night Salt, Starving Kin & The Oath on the Dirk Hilt",
                   "location": "Campbell Picket Lines • Fort Augustus Bastions • Coiraghoth Vault",
                   "icon": "fa-solid fa-dagger",
-                  "narrative": "For three weeks the outlaws hide him where eagles scarce fly while Campbell militia march below. Patrick Grant ('Black Peter of Craskie', `CHAR_02`) slips past redcoat sentry fires by night for a barley oatcake and brine salt while Highland wives dig wild nettles in the mud. When young adult brother Donald MacDonald (`CHAR_03`) points to the smoke over starving homes, Hugh lays his cold palm on his bog-oak dirk hilt: 'If we sell out a guest, then our fathers have died!'",
-                  "artifact_note": "Scenes S31–S46 • Verse 3, Hospitality Oath (0.62s Pause) & Chorus 2 Climax (Cues 35–54)"
+                  "narrative": "For three weeks the outlaws hide him where eagles scarce fly while Campbell militia march below. Patrick Grant ('Black Peter of Craskie') slips past redcoat sentry fires by night for a barley oatcake and brine salt while Highland wives dig wild nettles in the mud. When Donald MacDonald points to the smoke over starving homes, Hugh lays his cold palm on his bog-oak dirk hilt: 'If we sell out a guest, then our fathers have died!'",
+                  "artifact_note": "Verse 3, The Hospitality Oath & Chorus 2 Climax"
             },
             {
                   "year": "4:33 – 6:20",
@@ -1454,29 +1434,29 @@
                   "location": "Loch nan Uamh (Frigate L'Heureux) • Lonely Highland Ridge • Coiraghoth Threshold",
                   "icon": "fa-solid fa-ship",
                   "narrative": "In September 1746 the 34-gun French privateer frigate L'Heureux carries the Prince back to 'velvet and wine that the glen never knew,' while Hugh Chisholm walks onward through exile and years—refusing lace-cuffed silver coins with his clenched right hand ('For it was not for Charlie we stood in that cave / It was for the old law that our ancestors gave!'). After a searing guitar and fiddle solo over Glen and the upright dirk, Highland rain washes Hugh's empty palm clean as the spoken epilogue seals the chronicle: 'They took the cattle. They took the tartan. They never got the word.'",
-                  "artifact_note": "Scenes S47–S65 • Bridge, Guitar/Fiddle Solo, Final Chorus & Spoken Epilogue (Cues 55–73)"
+                  "artifact_note": "Bridge, Guitar & Fiddle Solo, Final Chorus & Spoken Epilogue"
             }
       ],
       "poeticsCallout": {
-            "badge": "EDITORIAL & STUDIO CALLOUT // CHIAROSCURO CINEMA, SILENT WITNESS GLEN & DUAL LYRIC ARCHIVE",
-            "title": "Peat Embers & Wet Basalt: Silent Witness Glen, Filter-Safe Cinema & The Two Lyric Texts",
+            "badge": "EDITORIAL CALLOUT // HIGHLAND CHIAROSCURO, SILENT WITNESS GLEN & DUAL LYRIC ARCHIVE",
+            "title": "Peat Embers & Wet Basalt: Silent Witness Glen, Sanctuary Relics & The Two Lyric Texts",
             "chorus_couple": "For it was not for Charlie we stood in that cave! / It was for the old law that our ancestors gave!",
-            "intro": "Crafting the 65-scene Kodak Vision3 500T film and historical dossier for 'The Seven Men of Glenmoriston' involved three deliberate artistic, technical, and archival decisions:",
+            "intro": "Bringing the 1746 chronicle of 'The Seven Men of Glenmoriston' to life rests on three deliberate historical, visual, and archival threads:",
             "pillars": [
                   {
                         "number": "01",
                         "title": "Silent Witness Glen & The 4 Sanctuary Relics",
-                        "body": "Throughout the film, CHAR_05—Glen, a stationary black-and-white Scottish Border Collie seated on wet black basalt at the threshold of Coiraghoth cave—serves as our silent historical witness. Never barking, running, or breaking posture, Glen sits beside four recurring physical symbols of Highland honor: the upright bog-oak dirk, Patrick Grant's coarse barley oatcake and pinch of white brine salt, and a single mud-splattered Hanover gold guinea left untouched in the rain."
+                        "body": "Throughout the visual chronicle, Glen—a black-and-white Scottish Border Collie seated on wet black basalt at the threshold of Coiraghoth cave—serves as our silent witness. Keeping watch over the mist-choked glen above Loch Ness, Glen sits beside four recurring physical symbols of Highland honor: the upright bog-oak dirk, Patrick Grant's coarse barley oatcake and pinch of white brine salt, and a single mud-splattered Hanover gold guinea left untouched in the rain."
                   },
                   {
                         "number": "02",
-                        "title": "Tenebrist Chiaroscuro & Filter-Safe CHAR_## Architecture",
-                        "body": "The visual grammar pairs cold storm-slate blues (#2B3A42), wet black basalt (#14181C), and weeping mountain mist (#8C9BA5) against warm, low-key peat-ember amber (#D97724) and tarnished Hanover gold (#C59B27). To prevent AI 'Prominent People' and safety filter blocks across 65 scenes, every historical figure was engineered through archetype character anchors (CHAR_01 Hugh Chisholm, CHAR_02 Patrick Grant, CHAR_03 adult 25yo Donald MacDonald, CHAR_04 the mud-caked fugitive) with zero on-screen text and strict 2-hand interaction caps."
+                        "title": "Peat Embers vs. Storm-Slate Chiaroscuro",
+                        "body": "The visual aesthetic contrasts the cold storm-slate blues, wet black basalt, weeping mountain mist, and bruised autumn bracken of hunted Inverness-shire against the warm, low-key peat-ember firelight inside the cave of Coiraghoth and the tarnished gleam of Hanover gold—mirroring the moral divide between Fort Augustus and the sanctuary fire."
                   },
                   {
                         "number": "03",
-                        "title": "Reconciled 73-Cue Master Audio vs. Extended Ballad Manuscript",
-                        "body": "In the Lyrics Vault below, we preserve both versions of the text: (1) the Ear-Verified 73-Cue Master Audio Lyrics reconciled word-for-word against the 6:19.96 studio master recording, and (2) the Extended Literary Ballad Manuscript from the songwriter's notebook (which includes Donald MacDonald's extended speech: 'Then the water of Ness would run backward in shame!'). Toggle freely between both editions."
+                        "title": "Studio Master Audio Lyrics vs. Extended Ballad Manuscript",
+                        "body": "In the Lyrics Vault below, we preserve both versions of the ballad: (1) the Studio Master Audio Lyrics sung word-for-word on the 6:20 recording, and (2) the Extended Literary Ballad Manuscript from the songwriter's notebook (which includes Donald MacDonald's extended speech: 'Then the water of Ness would run backward in shame!'). Toggle freely between both editions."
                   }
             ]
       },
