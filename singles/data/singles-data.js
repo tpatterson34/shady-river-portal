@@ -1459,6 +1459,97 @@
                   }
             ]
       },
+      "listenerContributions": {
+            "badge": "LISTENER CONTRIBUTIONS & HISTORICAL DISPATCHES // ARCHIVAL FIELD NOTES",
+            "title": "Why So Many Clans Stayed Neutral—Yet Refused the £30,000 Betrayal",
+            "intro": "Frequent listener, researcher, and collaborator Bob McNair (@bobmcnair9234)—whose family archives and Royal Navy logbooks previously illuminated Single #01 ('The Greenock Slate and the Gold Watch') and Single #02 ('The Guns of Loch Fyne')—shared this vital historical dispatch explaining the broken promises on both sides of the 1745 Rising: the British Crown's 1743 betrayal of the Black Watch in London, Charles Edward Stuart's unkept promise to stop at the Scottish border and dissolve the 1707 Act of Union, and the unbreakable code of Highland honor that still shielded the fugitive afterwards.",
+            "items": [
+                  {
+                        "id": "bob-mcnair-dispatch",
+                        "contributor": "Bob McNair",
+                        "handle": "@bobmcnair9234",
+                        "role": "Frequent Listener, Clan Historian & Singles Vault Collaborator",
+                        "heritage_link_label": "Explore Bob's Family Chronicles in Single #01 & Single #02",
+                        "heritage_link_url": "../the-guns-of-loch-fyne/",
+                        "subject": "The 1743 Black Watch Deception, Prince Charlie's 1707 Union Promise & The Code of Highland Honor",
+                        "salutation": "Tony,",
+                        "letter_paragraphs": [
+                              "A crucial factor in all of this was what was probably deception on the part of Prince Charlie—set against an earlier betrayal by the British Crown.",
+                              "First, let me talk about one of the finest Highland regiments: the Black Watch, or 'Am Freiceadan Dubh.' They were formed from the finest of the healthier and wealthier Highlanders (commissioned into a regular regiment in 1739–1740 and marched south in 1742–1743) on the strict understanding that their duty was solely to keep the peace in the Highlands. However, the British Crown wanted these fighting men as crack troops to fight in Europe, so they ordered them down to London under the pretext of a 'Royal Review.' This met with deep derision and suspicion, as the troops had all sworn never to leave Scottish soil. Counter to their misgivings, however, they marched south to London for the Review.",
+                              "There, their worst fears were confirmed. After parading, they learned they were to be shipped abroad—and over a hundred of them seemingly vanished from the streets of London to march back home to Scotland. When the British army finally cornered most of them in the Midlands of England, they suffered mercilessly. Three leaders were executed at the Tower of London, and the rest were sent to the swamps of the West Indies and colonial garrisons to die of tropical disease, or subjected to immediate and severe punishment.",
+                              "So... enter Prince Charlie. Bonnie Prince Charlie (Charles Edward Stuart) promised to dissolve the 1707 Act of Union between Scotland and England if the Jacobites succeeded. He told the Scots he was going to set Scotland free once Edinburgh and Scotland were his. He could have stopped right there at the border.",
+                              "Maybe that is why, before Culloden, so many clans—in fact, the vast majority—were indifferent or reluctant toward his dynastic cause, yet still would not betray him for thirty thousand pounds—except the Campbells, who, as you know, aligned their ambitions with the British Crown while the German Hanoverian King remained deeply unpopular among many nobles in England.",
+                              "Those Highland men were like the Native Americans: they held fast to their code of honour, even when they knew it meant ultimate failure."
+                        ],
+                        "signoff": "Best Wishes, Bob",
+                        "historical_notes": [
+                              {
+                                    "num": "01",
+                                    "tag": "MAY – JULY 1743 // FINCHLEY COMMON, LADY WOOD & THE TOWER OF LONDON",
+                                    "title": "The Black Watch ('Am Freiceadan Dubh') Royal Review Deception & The 1743 Mutiny",
+                                    "summary": "Originally raised from loyal Highland clans (including Grants, Munros, Frasers, and Campbells) as Independent Highland Companies to police the glens and prevent cattle raiding, the regiment (the 43rd, later renumbered the 42nd Royal Highland Regiment) was enlisted under the understanding that they would never serve outside Scotland. In spring 1743, the British Crown ordered them to march to London under the pretext that King George II wished to inspect them.",
+                                    "details": "When they arrived in London, King George II had already sailed for Hanover. Reviewed instead on Finchley Common on May 14, 1743, by General Wade, the Highlanders discovered they had been deceived and were ordered to board ships at Gravesend to fight in Flanders in the War of the Austrian Succession—while Londoners mocked their plaids and rumours spread that they were actually being transported to the disease-ridden West Indies. On the night of May 17–18, 1743, over 100 Highlanders assembled at Finchley and marched north in tactical formation toward Scotland. Surrounded by government cavalry at Lady Wood near Oundle in Northamptonshire (the English Midlands) on May 22, they were marched back to the Tower of London. On July 18, 1743, Corporals Samuel and Malcolm Macpherson and Private Farquhar Shaw were shot by firing squad on Tower Green while their fellow prisoners were forced to watch; the remaining ~100 Highlanders were banished to colonial garrisons in Georgia and the West Indies (Jamaica and the Leeward Islands), where most died of yellow fever and malaria.",
+                                    "sources": [
+                                          {
+                                                "label": "The Black Watch Castle & Museum (Perth) — Official Regimental Archive & History",
+                                                "url": "https://theblackwatch.co.uk/"
+                                          },
+                                          {
+                                                "label": "42nd Regiment of Foot ('Am Freiceadan Dubh') — 1739 Muster, 1743 London Review & Tower Mutiny",
+                                                "url": "https://en.wikipedia.org/wiki/42nd_Regiment_of_Foot"
+                                          },
+                                          {
+                                                "label": "Independent Highland Companies — Origins of the Highland Watch inside Scotland",
+                                                "url": "https://en.wikipedia.org/wiki/Independent_Highland_Companies"
+                                          }
+                                    ]
+                              },
+                              {
+                                    "num": "02",
+                                    "tag": "OCTOBER – NOVEMBER 1745 // HOLYROODHOUSE & THE SCOTTISH BORDER",
+                                    "title": "The Promise to Dissolve the 1707 Act of Union—and the Refusal to Stop at the Border",
+                                    "summary": "When Charles Edward Stuart captured Edinburgh and held court at the Palace of Holyroodhouse in autumn 1745, his greatest political magnet in Scotland was his formal pledge to repeal the unpopular 1707 Act of Union and restore an independent Scottish Parliament.",
+                                    "details": "Many Scottish Jacobites and clan leaders—including Lord George Murray and the Duke of Perth's council—urged Charles to consolidate his victory in Scotland, summon a Scottish Parliament in Edinburgh, abolish the 1707 Union, and defend the Scottish border against King George II's forces. For Charles, however, Scotland was merely a stepping-stone to the British throne in Westminster. Overruling his Scottish commanders with false assurances that English Tories and a French fleet were waiting to rise for him, he crossed the border into England in November 1745 by a single vote—setting in motion the long retreat from Derby to the slaughter on Drummossie Moor.",
+                                    "sources": [
+                                          {
+                                                "label": "UK Statute Law Database — The Union with Scotland Act (1706 / 1707) Original Text",
+                                                "url": "https://www.legislation.gov.uk/aep/Ann/6/11/contents"
+                                          },
+                                          {
+                                                "label": "Acts of Union 1707 — Abolition of the Scottish Parliament & Jacobite Repeal Pledges",
+                                                "url": "https://en.wikipedia.org/wiki/Acts_of_Union_1707"
+                                          },
+                                          {
+                                                "label": "Charles Edward Stuart — The 1745 Holyrood Declarations & Council Debates at the Border",
+                                                "url": "https://en.wikipedia.org/wiki/Charles_Edward_Stuart"
+                                          }
+                                    ]
+                              },
+                              {
+                                    "num": "03",
+                                    "tag": "1745 – 1746 // CLAN REALPOLITIK VS. ANCIENT HIGHLAND HONOUR",
+                                    "title": "Why Most Clans Stayed Neutral Before Culloden—Yet Never Touched the £30,000 Blood Money",
+                                    "summary": "Caught between a British Crown that had betrayed the Black Watch in 1743 and a Roman-born Stuart prince gambling Scotland for London in 1745, the majority of Scottish clans either remained neutral, hedged their bets across family branches, or sided with the government.",
+                                    "details": "Led by Archibald Campbell, 3rd Duke of Argyll (often called 'the Uncrowned King of Scotland' for his mastery of Westminster patronage) and John Campbell, 4th Earl of Loudoun, Clan Campbell raised the pro-government Argyll Militia and 64th Highlanders—calculating that Hanoverian alignment secured Campbell preeminence in Scotland. Yet across the wider Highlands, even clans that had refused to march for Charles before Culloden refused to betray him afterward. Like the Native American nations whose treaties and hospitality codes were repeatedly broken by imperial powers, Highland society treated a sworn word and guest-right (Aos-dàna) as sacred—meaning seven starving outlaws in Glenmoriston would rather face extinction than sell a hunted guest for £30,000.",
+                                    "sources": [
+                                          {
+                                                "label": "The Jacobite Rising of 1745 — Clan Alignments, Neutrality & The Aftermath of Culloden",
+                                                "url": "https://en.wikipedia.org/wiki/Jacobite_rising_of_1745"
+                                          },
+                                          {
+                                                "label": "Archibald Campbell, 3rd Duke of Argyll — Hanoverian Patronage & The Argyll Militia",
+                                                "url": "https://en.wikipedia.org/wiki/Archibald_Campbell,_3rd_Duke_of_Argyll"
+                                          },
+                                          {
+                                                "label": "John Campbell, 4th Earl of Loudoun — Commander of Government Highland Forces in 1745–1746",
+                                                "url": "https://en.wikipedia.org/wiki/John_Campbell,_4th_Earl_of_Loudoun"
+                                          }
+                                    ]
+                              }
+                        ]
+                  }
+            ]
+      },
       "clean_lyrics_stanzas": [
             "[Spoken Cold Open (0:06 – 0:27)]\nThirty thousand pounds of Hanover gold.\nEnough to buy an earldom.\nEnough to rebuild every burned roof in Inverness.\nAnd seven starving men in a hole in the rock,\nwith nothing left to their names but the rain.",
             "[Instrumental Intro — Highland Fiddle, Cello & Accordion (0:27 – 0:59)]",

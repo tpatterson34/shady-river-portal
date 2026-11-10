@@ -261,15 +261,16 @@
       </a>
 
       <!-- In-Page Section Navigation -->
-      <nav class="hidden xl:flex items-center gap-5 text-xs font-mono" aria-label="Single Dossier Sections">
+      <nav class="hidden xl:flex items-center gap-4 text-xs font-mono" aria-label="Single Dossier Sections">
         <a href="#hero-overview" class="text-clydemist-300 hover:text-retinal-400 transition-colors">I. Overview</a>
         <a href="#part-one-coiraghoth" class="text-amber-300 hover:text-retinal-300 font-semibold transition-colors">II. Part I: The Seven Men</a>
         <a href="#ledger-matrix" class="text-clydemist-300 hover:text-retinal-400 transition-colors">III. 3-Pillar Matrix</a>
         <a href="#part-two-deep-dive" class="text-amber-300 hover:text-retinal-300 font-semibold transition-colors">IV. Part II: Deep-Dive</a>
-        <a href="#chronicle-arc" class="text-clydemist-300 hover:text-retinal-400 transition-colors">V. 12 Chapters &amp; Arc</a>
+        <a href="#chronicle-arc" class="text-clydemist-300 hover:text-retinal-400 transition-colors">V. 12 Chapters</a>
         <a href="#poetics-watch" class="text-clydemist-300 hover:text-retinal-400 transition-colors">VI. Glen &amp; Cinema</a>
+        <a href="#listener-contributions" class="text-amber-300 hover:text-retinal-300 font-semibold transition-colors">VII. Listener Contributions</a>
         <a href="#single-vault-card" class="px-3 py-1.5 rounded-lg bg-retinal-500/15 border border-retinal-400/40 text-retinal-300 hover:bg-retinal-500/25 font-bold transition-colors">
-          VII. Song &amp; Lyrics
+          VIII. Song &amp; Lyrics
         </a>
       </nav>
 
@@ -708,6 +709,32 @@
     </section>
 
     <!-- =================================================================== -->
+    <!-- 6B. LISTENER CONTRIBUTIONS & HISTORICAL DISPATCHES                  -->
+    <!-- =================================================================== -->
+    <section id="listener-contributions" class="py-16 sm:py-20 border-b border-white/10 bg-clydeslate-950 scroll-mt-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+        <div class="max-w-3xl space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950/80 border border-amber-400/40 text-amber-300 font-mono text-[11px] font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-envelope-open-text text-amber-400" aria-hidden="true"></i>
+            <span id="listener-badge">LISTENER CONTRIBUTIONS &amp; HISTORICAL DISPATCHES // ARCHIVAL FIELD NOTES</span>
+          </div>
+          <h2 id="listener-title" class="font-display text-2xl sm:text-4xl font-bold text-white leading-tight">
+            Listener Contributions: Why So Many Clans Stayed Neutral&mdash;Yet Refused the &pound;30,000 Betrayal
+          </h2>
+          <p id="listener-intro" class="font-serif text-sm sm:text-base text-clydemist-200 leading-relaxed">
+            <!-- Populated via JavaScript -->
+          </p>
+        </div>
+
+        <div id="listener-contributions-container" class="space-y-8">
+          <!-- Populated via JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
     <!-- 7. CENTERPIECE SINGLE CARD (DOOMSDAY CLOCK BENCHMARK)               -->
     <!-- =================================================================== -->
     <section id="single-vault-card" class="py-16 sm:py-20 bg-clydeslate-950 scroll-mt-16 border-b border-white/10">
@@ -835,7 +862,7 @@
 
   <!-- SCRIPTS -->
   <script src="../../assets/js/a11y.js"></script>
-  <script src="../data/singles-data.js?v=20261109_03"></script>
+  <script src="../data/singles-data.js?v=20261109_04"></script>
 
   <script>
     (function() {
@@ -972,6 +999,13 @@
           >
             <i class="fa-solid fa-book-atlas text-retinal-400 text-xs" aria-hidden="true"></i>
             <span>Part II: 1746 Deep-Dive &darr;</span>
+          </a>
+          <a
+            href="#listener-contributions"
+            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-clydeslate-850 hover:bg-clydeslate-800 text-amber-300 border border-retinal-400/35 font-mono text-xs font-bold transition-all"
+          >
+            <i class="fa-solid fa-envelope-open-text text-retinal-400 text-xs" aria-hidden="true"></i>
+            <span>Listener Contributions &darr;</span>
           </a>
           <a
             href="#single-vault-card"
@@ -1378,6 +1412,136 @@
         }
       }
 
+      function renderListenerContributions() {
+        const lc = single.listenerContributions;
+        if (!lc || !Array.isArray(lc.items)) return;
+
+        const badgeEl = document.getElementById('listener-badge');
+        const titleEl = document.getElementById('listener-title');
+        const introEl = document.getElementById('listener-intro');
+        const container = document.getElementById('listener-contributions-container');
+
+        if (badgeEl && lc.badge) badgeEl.textContent = lc.badge;
+        if (titleEl && lc.title) titleEl.textContent = 'Listener Contributions: ' + lc.title;
+        if (introEl && lc.intro) introEl.textContent = lc.intro;
+        if (!container) return;
+
+        container.innerHTML = lc.items.map(item => {
+          const paragraphsHtml = (item.letter_paragraphs || []).map(p => `
+            <p class="font-serif text-sm sm:text-base text-slate-100 leading-relaxed">
+              ${escapeHtml(p)}
+            </p>
+          `).join('');
+
+          const notesHtml = (item.historical_notes || []).map(note => {
+            const sourcesHtml = (note.sources || []).map(src => `
+              <li>
+                <a
+                  href="${escapeHtml(src.url)}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-start gap-1.5 text-[11px] font-mono text-retinal-300 hover:text-retinal-200 underline underline-offset-2 leading-snug"
+                >
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px] mt-1 shrink-0 text-retinal-400" aria-hidden="true"></i>
+                  <span>${escapeHtml(src.label)}</span>
+                </a>
+              </li>
+            `).join('');
+
+            return `
+              <article class="p-5 sm:p-6 rounded-2xl bg-clydeslate-950/95 border border-white/15 hover:border-retinal-400/50 transition-all flex flex-col justify-between space-y-4 shadow-lg">
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between gap-2">
+                    <span class="px-2.5 py-0.5 rounded bg-retinal-500/20 border border-retinal-400/40 text-retinal-300 font-mono text-[10px] font-bold uppercase">
+                      HISTORICAL NOTE #${escapeHtml(note.num)}
+                    </span>
+                  </div>
+                  <div class="font-mono text-[10px] text-amber-300 uppercase tracking-wider font-semibold">
+                    ${escapeHtml(note.tag)}
+                  </div>
+                  <h4 class="font-display text-lg font-bold text-white leading-snug">
+                    ${escapeHtml(note.title)}
+                  </h4>
+                  <p class="font-serif text-xs sm:text-sm text-slate-200 leading-relaxed">
+                    ${escapeHtml(note.summary)}
+                  </p>
+                  <p class="font-sans text-xs text-clydemist-300 leading-relaxed">
+                    ${escapeHtml(note.details)}
+                  </p>
+                </div>
+
+                <div class="pt-3.5 border-t border-white/10 space-y-1.5">
+                  <span class="text-[10px] font-mono uppercase tracking-wider text-clydemist-400 font-bold block">
+                    <i class="fa-solid fa-building-columns text-retinal-400 mr-1" aria-hidden="true"></i>
+                    Verified Archival &amp; Historical References:
+                  </span>
+                  <ul class="space-y-1">
+                    ${sourcesHtml}
+                  </ul>
+                </div>
+              </article>
+            `;
+          }).join('');
+
+          return `
+            <div class="rounded-3xl p-6 sm:p-8 lg:p-10 bg-clydeslate-900/90 border-2 retinal-border retinal-glow space-y-8">
+              <!-- Contributor Header -->
+              <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-white/10">
+                <div class="flex items-start sm:items-center gap-4">
+                  <div class="w-12 h-12 rounded-2xl bg-retinal-500/20 border border-retinal-400/50 flex items-center justify-center text-retinal-300 font-display font-bold text-lg shrink-0">
+                    BM
+                  </div>
+                  <div>
+                    <div class="flex flex-wrap items-center gap-2">
+                      <h3 class="font-display text-xl sm:text-2xl font-bold text-white">${escapeHtml(item.contributor)}</h3>
+                      <span class="px-2.5 py-0.5 rounded-full bg-clydeslate-950 border border-retinal-400/35 text-retinal-300 font-mono text-[11px]">${escapeHtml(item.handle)}</span>
+                    </div>
+                    <p class="font-mono text-xs text-clydemist-300 mt-0.5">${escapeHtml(item.role)}</p>
+                  </div>
+                </div>
+                ${item.heritage_link_url ? `
+                  <a href="${escapeHtml(item.heritage_link_url)}" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-clydeslate-950 hover:bg-clydeslate-850 border border-retinal-400/40 text-retinal-300 font-mono text-xs font-semibold transition-all self-start md:self-center shrink-0">
+                    <i class="fa-solid fa-anchor text-retinal-400 text-xs" aria-hidden="true"></i>
+                    <span>${escapeHtml(item.heritage_link_label)} &rarr;</span>
+                  </a>
+                ` : ''}
+              </div>
+
+              <!-- Contributor's Personal Dispatch Letter -->
+              <div class="p-6 sm:p-8 rounded-2xl bg-clydeslate-950/90 border-l-4 border-retinal-400 border-t border-r border-b border-white/10 space-y-4 shadow-inner">
+                <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-white/10 font-mono text-xs text-retinal-400">
+                  <span><i class="fa-solid fa-feather-pointed mr-1.5" aria-hidden="true"></i>DISPATCH SUBJECT: ${escapeHtml(item.subject)}</span>
+                  <span class="text-clydemist-400">Personal Correspondence to The Shady River Bard</span>
+                </div>
+                <p class="font-serif text-sm sm:text-base font-semibold text-retinal-300 italic">
+                  ${escapeHtml(item.salutation)}
+                </p>
+                <div class="space-y-3.5">
+                  ${paragraphsHtml}
+                </div>
+                <p class="font-serif text-sm sm:text-base font-semibold text-retinal-300 italic pt-2">
+                  &mdash; ${escapeHtml(item.signoff)}
+                </p>
+              </div>
+
+              <!-- 3-Part Archival Verification & Historical Context -->
+              <div class="space-y-4">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <h4 class="font-mono text-xs uppercase tracking-widest text-retinal-400 font-bold">
+                    <i class="fa-solid fa-book-open-reader mr-1.5" aria-hidden="true"></i>
+                    Historical Verification &amp; Archival Companion Notes (3 Pillars from Bob&rsquo;s Dispatch)
+                  </h4>
+                  <span class="font-mono text-[11px] text-clydemist-400">1707 Act of Union &bull; 1743 Black Watch Mutiny &bull; 1745&ndash;1746 Clan Alignment</span>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                  ${notesHtml}
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
       function getActiveLyricsArray() {
         if (activeLyricEdition === 'manuscript' && Array.isArray(single.manuscript_lyrics_stanzas)) {
           return single.manuscript_lyrics_stanzas;
@@ -1749,6 +1913,7 @@
       renderTimeline();
       renderChaptersGrid();
       renderPoeticsCallout();
+      renderListenerContributions();
       renderSingleCard();
       renderCompanionSingles();
     })();
