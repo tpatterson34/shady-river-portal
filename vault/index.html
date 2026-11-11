@@ -852,6 +852,23 @@
       'not-red-not-blue': { slug: 'not-red-not-blue', albumId: 'the-republic-of-nobody', albumNumber: 27, trackTitle: 'Not Red, Not Blue' },
       'nobody-no-more': { slug: 'nobody-no-more', albumId: 'the-republic-of-nobody', albumNumber: 27, trackTitle: 'Nobody No More' },
 
+      // Album 28: Chaff from the Wheat
+      'the-golden-age': { slug: 'the-golden-age', albumId: 'chafe-from-the-wheat', albumNumber: 28, trackTitle: 'The Golden Age' },
+      'the-water-frame': { slug: 'the-water-frame', albumId: 'chafe-from-the-wheat', albumNumber: 28, trackTitle: 'The Water Frame' },
+      'general-ludds-proclamation': { slug: 'general-ludds-proclamation', albumId: 'chafe-from-the-wheat', albumNumber: 28, trackTitle: 'General Ludd\'s Proclamation' },
+      'the-philosophy-of-mr-ure': { slug: 'the-philosophy-of-mr-ure', albumId: 'chafe-from-the-wheat', albumNumber: 28, trackTitle: 'The Philosophy of Mr. Ure' },
+      'a-giant-sucking-sound': { slug: 'a-giant-sucking-sound', albumId: 'chafe-from-the-wheat', albumNumber: 28, trackTitle: 'A Giant Sucking Sound' },
+      'pink-slip-blues': { slug: 'pink-slip-blues', albumId: 'chafe-from-the-wheat', albumNumber: 28, trackTitle: 'Pink Slip Blues' },
+      'the-taa-shuffle': { slug: 'the-taa-shuffle', albumId: 'chafe-from-the-wheat', albumNumber: 28, trackTitle: 'The TAA Shuffle' },
+      'the-prompt': { slug: 'the-prompt', albumId: 'chafe-from-the-wheat', albumNumber: 28, trackTitle: 'The Prompt' },
+      'devalued': { slug: 'devalued', albumId: 'chafe-from-the-wheat', albumNumber: 28, trackTitle: 'Devalued' },
+      'the-ghost-rig': { slug: 'the-ghost-rig', albumId: 'chafe-from-the-wheat', albumNumber: 28, trackTitle: 'The Ghost Rig' },
+      'the-digital-dustbowl': { slug: 'the-digital-dustbowl', albumId: 'chafe-from-the-wheat', albumNumber: 28, trackTitle: 'The Digital Dustbowl' },
+      'universal-extreme-wealth': { slug: 'universal-extreme-wealth', albumId: 'chafe-from-the-wheat', albumNumber: 28, trackTitle: 'Universal Extreme Wealth' },
+      'your-grandfathers-ghost': { slug: 'your-grandfathers-ghost', albumId: 'chafe-from-the-wheat', albumNumber: 28, trackTitle: 'Your Grandfather\'s Ghost' },
+      'chaff-from-the-wheat': { slug: 'chaff-from-the-wheat', albumId: 'chafe-from-the-wheat', albumNumber: 28, trackTitle: 'Chaff from the Wheat' },
+      'we-are-the-wheat': { slug: 'we-are-the-wheat', albumId: 'chafe-from-the-wheat', albumNumber: 28, trackTitle: 'We Are the Wheat' },
+
       // Album 01: Quiet Harvest
       'the-blues-under-my-nails': { slug: 'the-blues-under-my-nails', albumId: 'quiet-harvest', albumNumber: 1, trackTitle: 'The Blues Under My Nails' },
       'blues-for-john': { slug: 'blues-for-john', albumId: 'quiet-harvest', albumNumber: 1, trackTitle: 'Blues for John' },
@@ -868,7 +885,7 @@
     };
 
     function normalizePracticeTitle(t) {
-      return (t || '').toLowerCase().replace(/^(the|a|an)\s+/i, '').replace(/[^a-z0-9]/g, '');
+      return (t || '').toLowerCase().replace(/\bchafe\b/g, 'chaff').replace(/^(the|a|an)\s+/i, '').replace(/[^a-z0-9]/g, '');
     }
 
     function getPracticeSlugForTrack(albumItem, trackTitle) {
@@ -908,7 +925,9 @@
     function getAlbumPracticeUrl(albumItem) {
       if (!albumItem) return null;
       let songSlug = '';
-      if (albumItem.id === 'the-republic-of-nobody' || albumItem.number === 27) {
+      if (albumItem.id === 'chafe-from-the-wheat' || albumItem.id === 'chaff-from-the-wheat' || albumItem.number === 28) {
+        songSlug = 'the-golden-age';
+      } else if (albumItem.id === 'the-republic-of-nobody' || albumItem.number === 27) {
         songSlug = 'the-republic-of-nobody';
       } else if (albumItem.id === 'the-curtains-and-the-canned-goods' || albumItem.number === 23) {
         songSlug = 'the-curtains-and-the-canned-goods';
@@ -955,7 +974,7 @@
 
         // Dynamically load any extra practice packages if available
         try {
-          const pRes = await fetch('../data/practice-packages.json?v=20261109_11');
+          const pRes = await fetch('../data/practice-packages.json?v=20261111_28');
           if (pRes.ok) {
             const pData = await pRes.json();
             pData.forEach(p => {

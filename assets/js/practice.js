@@ -2293,7 +2293,7 @@
 
   // --- ALBUM & SONG DROPDOWN HELPERS ---
   function normalizePracticeTitle(t) {
-    return (t || '').toLowerCase().replace(/^(the|a|an)\s+/i, '').replace(/[^a-z0-9]/g, '');
+    return (t || '').toLowerCase().replace(/\bchafe\b/g, 'chaff').replace(/^(the|a|an)\s+/i, '').replace(/[^a-z0-9]/g, '');
   }
 
   function getUniqueAlbums(packages) {
@@ -2419,7 +2419,7 @@
 
     // Load available packages
     try {
-      const res = await fetch('data/practice-packages.json?v=20261109_11', { cache: 'no-cache' });
+      const res = await fetch('data/practice-packages.json?v=20261111_28', { cache: 'no-cache' });
       state.allPackages = await res.json();
     } catch (e) {
       console.warn('Could not load practice-packages.json, using bundled package:', e);
