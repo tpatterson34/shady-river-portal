@@ -36,6 +36,7 @@
       try { return localStorage.getItem('shady_practice_view_mode') || 'bars'; } catch (e) { return 'bars'; }
     })(),
     capoFret: 0,
+    baseBpm: 110,
     estimatedBpm: 110,
     timeSignature: 4,
     currentPackage: null,
@@ -445,15 +446,19 @@
       if (els.tabContainer) els.tabContainer.scrollTop = 0;
 
       // Estimate tempo & reset Capo for new song
-      if (pkg.tempo) {
+      let detectedBpm = 0;
+      if (syncJson && Array.isArray(syncJson) && syncJson.length > 0 && syncJson[0].tempo_bpm) {
+        detectedBpm = Math.round(Number(syncJson[0].tempo_bpm));
+      } else if (pkg.tempo) {
         const pMatch = String(pkg.tempo).match(/(\d+)/);
-        if (pMatch) state.estimatedBpm = parseInt(pMatch[1], 10);
-      } else if (!state.estimatedBpm) {
-        state.estimatedBpm = estimateSongTempo(state.allChordsTimeline, state.duration);
+        if (pMatch) detectedBpm = parseInt(pMatch[1], 10);
       }
-      if (els.hudTempoBadge) {
-        els.hudTempoBadge.textContent = `~${state.estimatedBpm} BPM`;
+      if (!detectedBpm) {
+        detectedBpm = state.baseBpm || estimateSongTempo(state.allChordsTimeline, state.duration);
       }
+      state.baseBpm = detectedBpm || 110;
+      state.estimatedBpm = Math.round(state.baseBpm * (state.playbackRate || 1.0));
+      updateSpeedAndTempoUI();
       state.capoFret = 0;
       state.transposition = 0;
       if (els.transposeVal) els.transposeVal.textContent = '0';
@@ -495,8 +500,9 @@
       if (tabLines.length > 0 && /BPM:/i.test(tabLines[0])) {
         const bpmMatch = tabLines[0].match(/BPM:\s*~?(\d+)/i);
         if (bpmMatch) {
-          state.estimatedBpm = parseInt(bpmMatch[1], 10);
-          if (els.hudTempoBadge) els.hudTempoBadge.textContent = `~${state.estimatedBpm} BPM`;
+          state.baseBpm = parseInt(bpmMatch[1], 10);
+          state.estimatedBpm = Math.round(state.baseBpm * (state.playbackRate || 1.0));
+          updateSpeedAndTempoUI();
         }
         const timeSigMatch = tabLines[0].match(/(\d+)\/(\d+)\s*Time/i);
         if (timeSigMatch) {
@@ -1120,6 +1126,7 @@
       if (stem.buffer) {
         stem.source = ctx.createBufferSource();
         stem.source.buffer = stem.buffer;
+        stem.source.playbackRate.value = state.playbackRate;
         stem.source.playbackRate.setValueAtTime(state.playbackRate, ctx.currentTime);
         stem.source.connect(stem.gainNode);
         stem.source.start(0, startOffset);
@@ -1190,13 +1197,61 @@
     return Math.min(state.duration, Math.max(0, elapsed));
   }
 
-  function setPlaybackRate(rate) {
-    state.playbackRate = rate;
-    if (els.btnSpeed) els.btnSpeed.textContent = `${rate}x`;
-    if (state.isPlaying && state.audioCtx) {
-      const cur = getCurrentTime();
-      play(cur);
+  function updateSpeedAndTempoUI() {
+    const rate = state.playbackRate || 1.0;
+    const base = state.baseBpm || 110;
+    state.estimatedBpm = Math.round(base * rate);
+
+    if (els.btnSpeed) {
+      els.btnSpeed.innerHTML = `<span>${rate}x</span><i class="fa-solid fa-caret-down text-[10px] text-stone-500"></i>`;
+      els.btnSpeed.classList.toggle('border-amber-500/60', rate !== 1.0);
+      els.btnSpeed.classList.toggle('text-amber-400', rate !== 1.0);
     }
+
+    document.querySelectorAll('[data-speed]').forEach(btn => {
+      const s = parseFloat(btn.getAttribute('data-speed'));
+      const isSelected = Math.abs(s - rate) < 0.001;
+      btn.classList.toggle('font-bold', isSelected);
+      btn.classList.toggle('text-amber-400', isSelected);
+      btn.classList.toggle('bg-stone-800/80', isSelected);
+    });
+
+    if (els.hudTempoBadge) {
+      els.hudTempoBadge.textContent = `~${state.estimatedBpm} BPM (${rate}x)`;
+      els.hudTempoBadge.classList.toggle('text-amber-400', rate !== 1.0);
+      els.hudTempoBadge.classList.toggle('font-bold', rate !== 1.0);
+    }
+  }
+
+  function setPlaybackRate(rate) {
+    const cleanRate = Math.max(0.5, Math.min(2.0, parseFloat(rate) || 1.0));
+    const cur = getCurrentTime();
+    state.playbackRate = cleanRate;
+
+    if (state.isPlaying && state.audioCtx) {
+      const ctx = state.audioCtx;
+      state.startTime = ctx.currentTime - (cur / cleanRate);
+      let updatedInPlace = false;
+      Object.keys(state.stems).forEach(k => {
+        const stem = state.stems[k];
+        if (stem.source && stem.source.playbackRate) {
+          try {
+            stem.source.playbackRate.cancelScheduledValues(ctx.currentTime);
+            stem.source.playbackRate.value = cleanRate;
+            stem.source.playbackRate.setValueAtTime(cleanRate, ctx.currentTime);
+            updatedInPlace = true;
+          } catch (e) {}
+        }
+      });
+      if (!updatedInPlace) {
+        play(cur);
+      }
+    } else {
+      state.pausedAt = cur;
+    }
+
+    updateSpeedAndTempoUI();
+    showToast(`Playback speed: ${cleanRate}x (~${state.estimatedBpm} BPM)`);
   }
 
   // --- MIXER & VOLUME LOGIC ---
@@ -1977,13 +2032,22 @@
 
     // Speed Controller
     if (els.btnSpeed && els.speedMenu) {
-      els.btnSpeed.addEventListener('click', () => els.speedMenu.classList.toggle('hidden'));
+      els.btnSpeed.addEventListener('click', (e) => {
+        e.stopPropagation();
+        els.speedMenu.classList.toggle('hidden');
+      });
       document.querySelectorAll('[data-speed]').forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
           const s = parseFloat(btn.getAttribute('data-speed'));
           setPlaybackRate(s);
           els.speedMenu.classList.add('hidden');
         });
+      });
+      document.addEventListener('click', (e) => {
+        if (!els.speedMenu.contains(e.target) && !els.btnSpeed.contains(e.target)) {
+          els.speedMenu.classList.add('hidden');
+        }
       });
     }
 
@@ -2039,22 +2103,14 @@
       });
     }
 
-    // Tempo Badge Quick Cycling (80 -> 95 -> 110 -> 125 -> 140)
+    // Tempo Badge Quick Cycling (cycles actual playback speed: 0.75x -> 0.85x -> 0.9x -> 1.0x -> 1.1x -> 1.25x)
     if (els.hudTempoBadge) {
-      const BPM_CYCLE = [80, 95, 110, 125, 140];
+      const SPEED_CYCLE = [0.75, 0.85, 0.9, 1.0, 1.1, 1.25];
       els.hudTempoBadge.addEventListener('click', () => {
-        let curIdx = BPM_CYCLE.indexOf(state.estimatedBpm);
-        if (curIdx === -1) {
-          let closestDist = 999;
-          BPM_CYCLE.forEach((b, idx) => {
-            const dist = Math.abs(b - state.estimatedBpm);
-            if (dist < closestDist) { closestDist = dist; curIdx = idx; }
-          });
-        }
-        const nextIdx = (curIdx + 1) % BPM_CYCLE.length;
-        state.estimatedBpm = BPM_CYCLE[nextIdx];
-        els.hudTempoBadge.textContent = `~${state.estimatedBpm} BPM`;
-        showToast(`Tempo adjusted to ${state.estimatedBpm} BPM`);
+        let curIdx = SPEED_CYCLE.findIndex(s => Math.abs(s - (state.playbackRate || 1.0)) < 0.01);
+        if (curIdx === -1) curIdx = 3; // default 1.0x
+        const nextIdx = (curIdx + 1) % SPEED_CYCLE.length;
+        setPlaybackRate(SPEED_CYCLE[nextIdx]);
       });
     }
 
@@ -2547,6 +2603,7 @@
     toggleEasyChords,
     applyCapo,
     simplifyChord,
+    setPlaybackRate,
     loadPracticePackage
   };
 
