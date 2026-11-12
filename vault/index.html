@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="data/albums-data.js?v=20261111b"></script>
+  <script src="data/albums-data.js?v=20261111c"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -282,7 +282,7 @@
             <div class="text-[11px] sm:text-xs text-stone-400 uppercase tracking-wider mt-0.5">Released Records</div>
           </div>
           <div class="bg-soil-800/60 border border-white/5 rounded-xl p-3 sm:p-3.5">
-            <div class="text-xl sm:text-2xl font-serif font-bold text-amber-400" id="stat-vault">20</div>
+            <div class="text-xl sm:text-2xl font-serif font-bold text-amber-400" id="stat-vault">19</div>
             <div class="text-[11px] sm:text-xs text-stone-400 uppercase tracking-wider mt-0.5">Incubator Concepts</div>
           </div>
           <a href="../singles/" class="bg-soil-800/80 hover:bg-soil-700/90 border border-amber-500/40 hover:border-amber-400 rounded-xl p-3 sm:p-3.5 transition-all group">
@@ -352,7 +352,7 @@
             <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
             <span>The Incubator</span>
             <span class="hidden lg:inline text-[11px] font-normal text-amber-200/70">(Unreleased)</span>
-            <span id="badge-vault-count" class="px-1.5 sm:px-2 py-0.5 text-[11px] sm:text-xs rounded-full bg-soil-700 font-mono text-amber-300">20</span>
+            <span id="badge-vault-count" class="px-1.5 sm:px-2 py-0.5 text-[11px] sm:text-xs rounded-full bg-soil-700 font-mono text-amber-300">19</span>
           </button>
           <a href="../singles/" class="flex-1 md:flex-none flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg text-xs sm:text-sm font-semibold text-amber-300 hover:text-white hover:bg-soil-700/80 transition-all focus-visible:ring-2 focus-visible:ring-amber-400" title="Explore The Singles Vault — Standalone Historical & Solidarity Chronicles">
             <svg class="w-4 h-4 text-amber-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
@@ -968,7 +968,7 @@
         if (window.CATALOG || window.BARD_CATALOG || window.DISCOGRAPHY_DATA) {
           catalog = window.CATALOG || window.BARD_CATALOG || window.DISCOGRAPHY_DATA;
         } else {
-          const res = await fetch('data/albums.json?v=20261102');
+          const res = await fetch('data/albums.json?v=20261111c');
           catalog = await res.json();
         }
 
