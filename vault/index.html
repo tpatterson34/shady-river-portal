@@ -808,6 +808,21 @@
       'the-longest-walk': { slug: 'the-longest-walk', albumId: 'this-sacred-ground', albumNumber: 11, trackTitle: 'The Longest Walk' },
       'the-speakers-heart': { slug: 'the-speakers-heart', albumId: 'this-sacred-ground', albumNumber: 11, trackTitle: 'The Speaker\'s Heart' },
       'this-sacred-ground-reprise': { slug: 'this-sacred-ground-reprise', albumId: 'this-sacred-ground', albumNumber: 11, trackTitle: 'This Sacred Ground (Reprise)' },
+      // Album 12: The Balance Sheet of Outrage
+      'no-bid': { slug: 'no-bid', albumId: 'the-balance-sheet-of-outrage', albumNumber: 12, trackTitle: 'No Bid' },
+      'pacing-threat': { slug: 'pacing-threat', albumId: 'the-balance-sheet-of-outrage', albumNumber: 12, trackTitle: 'Pacing Threat' },
+      'shock-and-awe-acoustic': { slug: 'shock-and-awe-acoustic', albumId: 'the-balance-sheet-of-outrage', albumNumber: 12, trackTitle: 'Shock and Awe (Acoustic)' },
+      'the-balance-sheet-of-outrage': { slug: 'the-balance-sheet-of-outrage', albumId: 'the-balance-sheet-of-outrage', albumNumber: 12, trackTitle: 'The Balance Sheet of Outrage' },
+      'embedded': { slug: 'embedded', albumId: 'the-balance-sheet-of-outrage', albumNumber: 12, trackTitle: 'Embedded' },
+      'a-million-souls-by-any-other-name': { slug: 'a-million-souls-by-any-other-name', albumId: 'the-balance-sheet-of-outrage', albumNumber: 12, trackTitle: 'A Million Souls (By Any Other Name)' },
+      'unexploded': { slug: 'unexploded', albumId: 'the-balance-sheet-of-outrage', albumNumber: 12, trackTitle: 'Unexploded' },
+      'the-long-drive-home-kyles-song': { slug: 'the-long-drive-home-kyles-song', albumId: 'the-balance-sheet-of-outrage', albumNumber: 12, trackTitle: "The Long Drive Home (Kyle's Song)" },
+      'black-rain': { slug: 'black-rain', albumId: 'the-balance-sheet-of-outrage', albumNumber: 12, trackTitle: 'Black Rain' },
+      'the-ghost-in-the-blood': { slug: 'the-ghost-in-the-blood', albumId: 'the-balance-sheet-of-outrage', albumNumber: 12, trackTitle: 'Ghost in the Blood' },
+      'switching-sides': { slug: 'switching-sides', albumId: 'the-balance-sheet-of-outrage', albumNumber: 12, trackTitle: 'Switching Sides' },
+      'war-inc': { slug: 'war-inc', albumId: 'the-balance-sheet-of-outrage', albumNumber: 12, trackTitle: 'War, Inc.' },
+      'shock-and-awe-industrial-reprise': { slug: 'shock-and-awe-industrial-reprise', albumId: 'the-balance-sheet-of-outrage', albumNumber: 12, trackTitle: 'Shock and Awe (Industrial Reprise)' },
+      'silence-a-commodity': { slug: 'silence-a-commodity', albumId: 'the-balance-sheet-of-outrage', albumNumber: 12, trackTitle: 'Silence (A Commodity)' },
       // Album 13: Mama's Boy
       'third-shift-lullaby': { slug: 'third-shift-lullaby', albumId: 'mamas-boy', albumNumber: 13, trackTitle: 'Third Shift Lullaby' },
       'one-paycheck-from-the-edge': { slug: 'one-paycheck-from-the-edge', albumId: 'mamas-boy', albumNumber: 13, trackTitle: 'One Paycheck from the Edge' },
@@ -951,6 +966,8 @@
         songSlug = 'a-different-kind-of-sun';
       } else if (albumItem.id === 'this-sacred-ground' || albumItem.number === 11) {
         songSlug = 'the-water-beetles-mud';
+      } else if (albumItem.id === 'the-balance-sheet-of-outrage' || albumItem.number === 12) {
+        songSlug = 'no-bid';
       } else if (albumItem.id === 'mamas-boy' || albumItem.number === 13) {
         songSlug = 'third-shift-lullaby';
       } else {
@@ -974,7 +991,7 @@
 
         // Dynamically load any extra practice packages if available
         try {
-          const pRes = await fetch('../data/practice-packages.json?v=20261111_28');
+          const pRes = await fetch('../data/practice-packages.json?v=20261111_12');
           if (pRes.ok) {
             const pData = await pRes.json();
             pData.forEach(p => {
