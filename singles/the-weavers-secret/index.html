@@ -294,15 +294,23 @@
     </div>
   </aside>
 
-  <!-- PREMIERE RELEASE COUNTDOWN RIBBON -->
-  <div class="bg-gradient-to-r from-amber-950/95 via-retinal-900/90 to-amber-950/95 border-b border-amber-400/50 px-4 py-2.5 text-center">
+  <!-- OFFICIAL RELEASE RIBBON -->
+  <div class="bg-gradient-to-r from-red-950/90 via-clydeslate-900 to-amber-950/90 border-b border-red-500/40 px-4 py-2.5 text-center">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2 sm:gap-4 font-mono text-xs">
-      <span class="px-2.5 py-0.5 rounded-full bg-amber-400 text-clydeslate-950 font-extrabold uppercase tracking-wider">
-        <i class="fa-solid fa-calendar-day mr-1" aria-hidden="true"></i>Coming 11/14/26
+      <span class="px-2.5 py-0.5 rounded-full bg-red-600 text-white font-extrabold uppercase tracking-wider shadow">
+        <i class="fa-solid fa-circle-play mr-1" aria-hidden="true"></i>Official Video Out Now
       </span>
       <span class="text-amber-100 font-semibold">
-        Official 24fps Cinema Music Video Premieres <strong class="text-white underline decoration-amber-400">November 14, 2026 (11/14/26)</strong> &bull; Explore the Interactive 16-Page History Book Below!
+        Watch the Official 24fps Cinema Music Video &amp; Explore the <strong class="text-white underline decoration-amber-400">16-Page Interactive History Book</strong> Below!
       </span>
+      <button
+        type="button"
+        onclick="openVideoModal('t5lDNZ6OtPw', 'The Weaver\'s Secret (Dyed in the Hodden Grey)')"
+        class="px-3 py-1 rounded-lg bg-red-600 hover:bg-red-500 text-white font-bold transition-colors inline-flex items-center gap-1.5 shadow"
+      >
+        <i class="fa-solid fa-play text-[10px]" aria-hidden="true"></i>
+        <span>Watch Video</span>
+      </button>
       <a href="#history-book" class="px-3 py-1 rounded-lg bg-clydeslate-950/90 hover:bg-clydeslate-900 text-amber-300 border border-amber-400/50 font-bold transition-colors">
         Open History Book &darr;
       </a>
@@ -331,12 +339,20 @@
         <a href="#ledger-matrix" class="text-clydemist-300 hover:text-retinal-400 transition-colors">III. 3-Pillar Matrix</a>
         <a href="#chronicle-arc" class="text-clydemist-300 hover:text-retinal-400 transition-colors">IV. 12 Story Chapters</a>
         <a href="#single-vault-card" class="px-3 py-1.5 rounded-lg bg-retinal-500/15 border border-retinal-400/40 text-retinal-300 hover:bg-retinal-500/25 font-bold transition-colors">
-          V. Lyrics &amp; Video Placeholder
+          V. Video &amp; Complete Lyrics
         </a>
       </nav>
 
       <div class="flex items-center gap-2">
-        <a href="#history-book" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-clydeslate-950 font-mono text-xs font-extrabold transition-all shadow-md">
+        <button
+          type="button"
+          onclick="openVideoModal('t5lDNZ6OtPw', 'The Weaver\'s Secret (Dyed in the Hodden Grey)')"
+          class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-red-600 hover:bg-red-500 text-white font-mono text-xs font-extrabold transition-all shadow-md"
+        >
+          <i class="fa-solid fa-play text-[10px]" aria-hidden="true"></i>
+          <span>Watch Video</span>
+        </button>
+        <a href="#history-book" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-clydeslate-950 font-mono text-xs font-extrabold transition-all shadow-md">
           <i class="fa-solid fa-book-open text-xs" aria-hidden="true"></i>
           <span>Turn Pages</span>
         </a>
@@ -360,8 +376,8 @@
                 <i class="fa-solid fa-scroll text-peat-500" aria-hidden="true"></i>
                 <span>STANDALONE SINGLE 05 // 1746–1782 HIGHLAND PROSCRIPTION &amp; DYER&#x27;S CODEX</span>
               </span>
-              <span class="px-3 py-1 rounded-full bg-amber-500 text-clydeslate-950 font-mono text-[11px] font-extrabold uppercase shadow">
-                <i class="fa-solid fa-clock mr-1" aria-hidden="true"></i>Coming 11/14/26
+              <span class="px-3 py-1 rounded-full bg-red-600 text-white font-mono text-[11px] font-extrabold uppercase shadow">
+                <i class="fa-solid fa-circle-play mr-1" aria-hidden="true"></i>Official Video Out Now
               </span>
               <span class="px-2.5 py-1 rounded-full bg-clydeslate-850 border border-white/10 text-clydemist-300 font-mono text-[11px]">
                 D Minor / Modal &bull; 62 BPM &bull; 05:48
@@ -387,15 +403,27 @@
               </footer>
             </blockquote>
 
-            <!-- Action & Coming Soon Video Placeholder Bar -->
+            <!-- Action & Official Video CTA Bar -->
             <div class="flex flex-wrap items-center gap-3 pt-1">
-              <span
-                aria-disabled="true"
-                class="px-4 py-2.5 rounded-xl bg-amber-950/90 border-2 border-amber-400/70 text-amber-200 font-mono text-xs font-bold inline-flex items-center gap-2 shadow-xl"
+              <button
+                type="button"
+                onclick="openVideoModal('t5lDNZ6OtPw', 'The Weaver\'s Secret (Dyed in the Hodden Grey)')"
+                class="px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-mono text-xs font-extrabold inline-flex items-center gap-2 shadow-xl transition-all hover:scale-105"
               >
-                <i class="fa-solid fa-film text-amber-400 animate-pulse" aria-hidden="true"></i>
-                <span>Coming 11/14/26 • Music Video Premiering Tomorrow</span>
-              </span>
+                <i class="fa-solid fa-play text-xs" aria-hidden="true"></i>
+                <span>Watch Official Video</span>
+              </button>
+
+              <a
+                href="https://www.youtube.com/watch?v=t5lDNZ6OtPw"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-4 py-2.5 rounded-xl bg-clydeslate-850 hover:bg-red-600 text-white border border-red-500/40 font-mono text-xs font-bold inline-flex items-center gap-2 transition-colors shadow"
+                title="Watch on YouTube (Cast to TV, Like, and Comment)"
+              >
+                <i class="fa-brands fa-youtube text-red-400 text-sm" aria-hidden="true"></i>
+                <span>YouTube &#8599;</span>
+              </a>
 
               <a
                 href="#history-book"
@@ -454,10 +482,15 @@
                   fetchpriority="high"
                 >
                 <div class="absolute inset-0 bg-gradient-to-t from-clydeslate-950 via-clydeslate-950/20 to-transparent"></div>
-                <div class="absolute top-3 left-3">
-                  <span class="px-3 py-1 rounded-lg bg-amber-500 text-clydeslate-950 font-mono text-[11px] font-extrabold uppercase shadow-lg">
-                    <i class="fa-solid fa-clock mr-1" aria-hidden="true"></i>Coming 11/14/26
-                  </span>
+                <div class="absolute top-3 left-3 flex items-center gap-2">
+                  <button
+                    type="button"
+                    onclick="openVideoModal('t5lDNZ6OtPw', 'The Weaver\'s Secret (Dyed in the Hodden Grey)')"
+                    class="px-3 py-1 rounded-lg bg-red-600 hover:bg-red-500 text-white font-mono text-[11px] font-extrabold uppercase shadow-lg inline-flex items-center gap-1.5 transition-colors"
+                  >
+                    <i class="fa-solid fa-play text-[10px]" aria-hidden="true"></i>
+                    <span>Watch Video</span>
+                  </button>
                 </div>
                 <div class="absolute bottom-0 inset-x-0 p-5 flex items-end justify-between gap-4">
                   <div>
@@ -719,12 +752,17 @@
               Scene-by-Scene Visual Architecture (05:48)
             </h2>
             <p class="font-serif text-sm sm:text-base text-clydemist-200 leading-relaxed">
-              Preview the twelve narrative chapters from the upcoming 24fps cinema music video (premiering <strong class="text-amber-300">November 14, 2026 (11/14/26)</strong>).
+              Explore the twelve narrative chapters from the official 24fps cinema music video (<strong class="text-amber-300">Out Now</strong>).
             </p>
           </div>
-          <span class="px-3.5 py-2 rounded-xl bg-amber-500/15 border border-amber-400/40 text-amber-300 font-mono text-xs font-bold shrink-0">
-            <i class="fa-solid fa-film mr-1.5" aria-hidden="true"></i>Coming 11/14/26 • Music Video Premiering Tomorrow
-          </span>
+          <button
+            type="button"
+            onclick="openVideoModal('t5lDNZ6OtPw', 'The Weaver\'s Secret (Dyed in the Hodden Grey)')"
+            class="px-4 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white font-mono text-xs font-extrabold inline-flex items-center gap-2 shadow shrink-0 transition-colors"
+          >
+            <i class="fa-solid fa-play text-[10px]" aria-hidden="true"></i>
+            <span>Watch Official Video</span>
+          </button>
         </div>
 
         <div id="story-chapters-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -734,33 +772,50 @@
     </section>
 
     <!-- =================================================================== -->
-    <!-- 5. THE BARD'S STORY, PREMIERE VIDEO PLACEHOLDER & COMPLETE LYRICS    -->
+    <!-- 5. THE BARD'S STORY, OFFICIAL CINEMA VIDEO & COMPLETE LYRICS         -->
     <!-- =================================================================== -->
     <section id="single-vault-card" class="py-16 sm:py-20 bg-clydeslate-950 scroll-mt-16">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
-        <!-- Premiere Video Placeholder Card (Unlisted URL Strictly Hidden Until Release) -->
-        <div class="rounded-3xl overflow-hidden bg-clydeslate-900 border-2 border-amber-400/60 shadow-2xl">
-          <div class="relative aspect-video w-full overflow-hidden bg-clydeslate-950">
+        <!-- Official Cinema Music Video Card -->
+        <div class="rounded-3xl overflow-hidden bg-clydeslate-900 border-2 retinal-border retinal-glow shadow-2xl">
+          <div class="relative aspect-video w-full overflow-hidden bg-clydeslate-950 group cursor-pointer" onclick="openVideoModal('t5lDNZ6OtPw', 'The Weaver\'s Secret (Dyed in the Hodden Grey)')">
             <img
               src="assets/art/the-weavers-secret-banner.webp"
               alt="Inside a pitch-black 1746 Highland stone croft lit by tallow candlelight and peat embers beneath a steaming iron dye cauldron, red-haired Highland dyer Mairi and grizzled croftsman Callum stand beside a coarse ash-grey hodden wool coat whose inner lining gleams with one vivid blood-red madder stitch while silent Border Collie Coll keeps watch."
-              class="w-full h-full object-cover opacity-65"
+              class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
             >
-            <div class="absolute inset-0 bg-gradient-to-t from-clydeslate-950 via-clydeslate-950/60 to-black/50 flex flex-col items-center justify-center p-6 text-center space-y-4">
-              <span class="px-4 py-1.5 rounded-full bg-amber-400 text-clydeslate-950 font-mono text-xs sm:text-sm font-extrabold uppercase tracking-widest shadow-lg">
-                <i class="fa-solid fa-clock mr-1.5" aria-hidden="true"></i>Coming 11/14/26 &bull; Official Cinema Premiere
+            <div class="absolute inset-0 bg-gradient-to-t from-clydeslate-950 via-clydeslate-950/50 to-black/40 flex flex-col items-center justify-center p-6 text-center space-y-4">
+              <span class="px-4 py-1.5 rounded-full bg-red-600 text-white font-mono text-xs sm:text-sm font-extrabold uppercase tracking-widest shadow-lg">
+                <i class="fa-solid fa-circle-play mr-1.5" aria-hidden="true"></i>Official 24fps Cinema Music Video &bull; Out Now
               </span>
               <h3 class="font-display text-2xl sm:text-4xl font-extrabold text-white max-w-2xl">
                 The Weaver&#x27;s Secret (Dyed in the Hodden Grey)
               </h3>
               <p class="font-serif text-xs sm:text-base text-slate-200 max-w-xl">
-                The official 24fps 35mm cinema music video premieres on <strong class="text-amber-300">November 14, 2026 (11/14/26)</strong>. Return to this page on release day to watch in the full-screen cinema player.
+                Directed in 35mm Midnight Kettle Tenebrism (05:48). Click below to watch in the full-screen cinema modal player or open directly on YouTube.
               </p>
-              <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
-                <a href="#history-book" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-clydeslate-950 font-mono text-xs font-extrabold inline-flex items-center gap-2 shadow">
+              <div class="flex flex-wrap items-center justify-center gap-3 pt-2" onclick="event.stopPropagation()">
+                <button
+                  type="button"
+                  onclick="openVideoModal('t5lDNZ6OtPw', 'The Weaver\'s Secret (Dyed in the Hodden Grey)')"
+                  class="px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-mono text-xs font-extrabold inline-flex items-center gap-2 shadow-xl transition-all hover:scale-105"
+                >
+                  <i class="fa-solid fa-play" aria-hidden="true"></i>
+                  <span>Play Official Music Video</span>
+                </button>
+                <a
+                  href="https://www.youtube.com/watch?v=t5lDNZ6OtPw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="px-4 py-2.5 rounded-xl bg-clydeslate-950/90 hover:bg-red-600 text-white border border-red-500/50 font-mono text-xs font-bold inline-flex items-center gap-2 shadow transition-colors"
+                >
+                  <i class="fa-brands fa-youtube text-red-400 text-sm" aria-hidden="true"></i>
+                  <span>Watch on YouTube &#8599;</span>
+                </a>
+                <a href="#history-book" class="px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-clydeslate-950 font-mono text-xs font-extrabold inline-flex items-center gap-2 shadow">
                   <i class="fa-solid fa-book-open" aria-hidden="true"></i>
-                  <span>Read the 16-Page History Book While You Wait</span>
+                  <span>Open 16-Page History Book</span>
                 </a>
               </div>
             </div>
@@ -816,6 +871,58 @@
 
   </main>
 
+  <!-- ACCESSIBLE IN-PAGE VIDEO PLAYER MODAL -->
+  <div
+    id="video-modal"
+    onclick="if(event.target === this) closeVideoModal()"
+    class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-sm flex items-center justify-center p-4"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-video-title"
+  >
+    <div class="relative w-full max-w-4xl rounded-2xl overflow-hidden bg-clydeslate-950 border-2 retinal-border shadow-2xl">
+      <div class="p-4 border-b border-white/10 flex items-center justify-between gap-4">
+        <h3 id="modal-video-title" class="font-display text-sm sm:text-base font-bold text-white truncate">
+          The Weaver&#x27;s Secret (Dyed in the Hodden Grey)
+        </h3>
+        <div class="flex items-center gap-2">
+          <a
+            id="modal-youtube-link"
+            href="https://www.youtube.com/watch?v=t5lDNZ6OtPw"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-3.5 py-1.5 rounded-lg bg-red-600 hover:bg-red-500 text-white flex items-center gap-2 font-mono text-xs font-bold transition-all shadow-md"
+            title="Watch on YouTube (Cast to TV, Like, and Comment)"
+            aria-label="Watch on YouTube"
+          >
+            <i class="fa-brands fa-youtube text-white text-sm" aria-hidden="true"></i>
+            <span>Watch on YouTube</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-80" aria-hidden="true"></i>
+          </a>
+          <button
+            type="button"
+            onclick="closeVideoModal()"
+            class="px-3 py-1.5 rounded-lg bg-clydeslate-850 hover:bg-clydeslate-800 text-white font-mono text-xs font-bold"
+            aria-label="Close video player"
+          >
+            Close [Esc]
+          </button>
+        </div>
+      </div>
+      <div class="relative aspect-video w-full bg-black">
+        <iframe
+          id="modal-video-iframe"
+          class="w-full h-full"
+          src=""
+          title="The Weaver's Secret Official Music Video Player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
   <!-- LIGHTBOX MODAL FOR BOOK PLATES & CINEMA STILLS -->
   <div
     id="plate-lightbox"
@@ -864,7 +971,7 @@
   </footer>
 
   <script src="../../assets/js/a11y.js"></script>
-  <script src="../data/singles-data.js?v=20261113_06"></script>
+  <script src="../data/singles-data.js?v=20261114_05"></script>
   <script>
     (function() {
       const BOOK_SPREADS = [{"spread_num": 1, "pages": "Pages 01 – 02", "tab_label": "I. Prologue (1746–82)", "folio_header": "FOLIO I // FRONTISPIECE & HISTORICAL PROLOGUE", "era_stamp": "August 1, 1747 – July 1, 1782 • The Scottish Highlands", "title": "Why Outlawing Cloth Never Outlaws Memory", "drop_lead": "Empires rarely stop at winning a battle. Once the cannons cool and the dead are buried under sleet, an anxious parliament almost always turns its eyes toward the cottage—toward the cradle song, the spoken tongue, the gathering hall, and the cloth on a working family's shoulders.", "body_paragraphs": ["In the spring of 1746, after Government artillery and bayonets shattered the last Jacobite rising in under an hour on the rain-soaked heath of Culloden Moor, Westminster set out to ensure that Highland society could never rise—or even recognize itself—again. Alongside disarming the glens and abolishing hereditary clan jurisdictions, Parliament took the extraordinary step of criminalizing civilian clothing.", "Stripped of their bright regional setts under pain of six months in irons or seven years' plantation exile, impoverished Highland families fell back upon the drabbest, humblest fabric in rural Scotland: hodden grey—coarse, scratchy homespun wool carded from undyed white and black sheep fleeces, the color of wet peat ash and winter mist. To a riding magistrate or a redcoat patrol glancing through a croft doorway, a parish dressed in hodden grey looked broken, uniform, and pacified.", "\"The Weaver's Secret (Dyed in the Hodden Grey)\" tells the story of what lived beneath that grey coat. For thirty-five winters (1747–1782), right as the first industrial water frames (1769) began devouring hand-spinning across Britain, Highland women—mothers, widows, spinners, and midnight dyers—kept forbidden botanical dye lore alive behind shuttered windows."], "primary_source_box": {"badge": "ARCHIVAL CHRONOLOGY // THREE GEOGRAPHIC ANCHORS (1746–1782)", "quote": "1. Drummossie Moor (Culloden, April 16, 1746) & Westminster's Act of Proscription (19 Geo. 2. c. 39)\n2. Tilbury Fort on the River Thames & The Atlantic Transport Hulks (1746–1749)\n3. The Highland Midnight Dye Cauldron vs. Richard Arkwright's Iron Water Frame (1769–1782)", "citation": "— Primary Historical Horizon of 'The Weaver's Secret (Dyed in the Hodden Grey)'"}, "lyric_echo": "In seventeen and forty-six, the Parliament in London outlawed the very cloth on our backs. Six months in irons if you wore the tartan. Seven years in chains across the sea if you wore it twice.", "plate_primary": "assets/stills/bookplate-01-apothecary.webp", "plate_primary_caption": "Plate I: The Midnight Dyer's Table — Madder Root, Heather Bloom, Bog Myrtle, Crottle Lichen, Counting Stick (Maide-àireimh) & Bone Needle in Hodden Grey", "plate_secondary": "assets/stills/00-midnight-kettle-tableau.webp", "plate_secondary_caption": "35mm Cinema Frame: Mairi & Callum Beside the Midnight Cauldron as Tricorn Patrols Pass in the Sleet", "recto_cards_title": "Dramatis Personae & Silent Witness of the 1746 Croft", "recto_cards": [{"tag": "LEAD FEMALE VOCALIST // THE MIDNIGHT DYER", "heading": "Mairi (26yo Highland Dyer, Spinner & Balladeer)", "text": "With madder-stained fingertips and peat soot on her freckled cheekbones, Mairi gathers crowdie moss by night along rocky burns and stitches one blood-red thread inside the coarse grey coat seam."}, {"tag": "ELDER CROFT MOTHER // KEEPER OF THE LOOM", "heading": "Elspeth (58yo Highland Mother of Two Lost Sons)", "text": "Mourning an eldest son buried under Culloden turf and a youngest son chained in Tilbury hold on the Thames, she spins coarse hodden grey by day while guarding the family's notched pattern stick."}, {"tag": "MALE BARITONE // THE CROFTSMAN & SILENT WITNESS", "heading": "Callum (54yo Highland Croftsman) & Coll (Scottish Border Collie)", "text": "Walking the parish road in ash-grey wool with fire stitched against his ribs, watched over by Coll—our stationary black-and-white Scottish Border Collie sentinel."}]}, {"spread_num": 2, "pages": "Pages 03 – 04", "tab_label": "II. 1746 Dress Act", "folio_header": "FOLIO II // CHAPTER I: SLEET ON CULLODEN & THE ACT OF PROSCRIPTION", "era_stamp": "April 16 – August 1746 (Full Force: August 1, 1747) • 19 Geo. 2. c. 39", "title": "Section 17: When Parliament Criminalized Civilian Cloth", "drop_lead": "On April 16, 1746, on Drummossie Moor near Culloden just east of Inverness, exhausted, half-starving Jacobite regiments charged through driving sleet into the grapeshot and three-rank musket volleys of Prince William, Duke of Cumberland's Government army.", "body_paragraphs": ["Between 1,500 and 2,000 Jacobites were killed or wounded within roughly forty minutes, followed by weeks of ruthless 'pacification' across the Highlands—burning turf cottages, driving off cattle, and hunting fugitives through the heather, earning Cumberland the enduring moniker 'Butcher.'", "Weeks later in Westminster, King George II's Parliament drafted the legal hammer designed to finish what cannonfire had started: the Act of Proscription (19 Geo. 2. c. 39), enacted in August 1746. Section 17—remembered in Scottish memory as the Dress Act—took full force on August 1, 1747."], "primary_source_box": {"badge": "PRIMARY STATUTORY TEXT // ACT OF PROSCRIPTION (19 GEO. 2. C. 39, SECTION 17)", "quote": "\"That from and after the first day of August, one thousand seven hundred and forty-seven, no man or boy within that part of Britain called Scotland, other than such as shall be employed as Officers and Soldiers in His Majesty's Forces, shall, on any pretext whatever, wear or put on the clothes commonly called Highland clothes (that is to say) the Plaid, Philabeg, or little Kilt, Trowse, Shoulder-belts, or any part whatever of what peculiarly belongs to the Highland Garb... and if any such person shall presume after the said first day of August, to wear or put on the aforesaid garments... every such person so offending being convicted thereof... shall suffer imprisonment without bail during the space of six months and no longer, and being convicted of a second offence... shall be liable to be transported to any of His Majesty's plantations beyond the seas, there to remain for the space of seven years.\"", "citation": "— Statutes at Large, 19 George II, Chapter 39, Section XVII (August 1746)"}, "lyric_echo": "The magistrate rode up the hill with soldiers at his side / To search the rafters of the croft where broken memories hide / They dragged the ancestral tartan out and threw it on the flame", "plate_primary": "assets/stills/film-s01-proscription-wax.webp", "plate_primary_caption": "Plate II: The 1746 Act of Proscription Parchment & Royal Wax Seal Read Aloud by Firelight", "plate_secondary": "assets/stills/film-s04-tartan-in-flames.webp", "plate_secondary_caption": "35mm Cinema Frame: Ancestral Highland Tartan Dragged from the Croft Rafters and Cast into the Hearth Flame", "recto_cards_title": "The Ruthless Psychological Architecture of Section 17", "recto_cards": [{"tag": "GENERATIONAL ERASURE // 'NO MAN OR BOY'", "heading": "Severing Father-to-Son Visual Inheritance", "text": "By explicitly including boys alongside adult men ('no man or boy'), Westminster ensured an entire generation born after 1746 would grow to adulthood without ever legally wearing Highland dress in civilian daylight."}, {"tag": "THE IMPERIAL LOOPHOLE // CROWN REGIMENTS ONLY", "heading": "'Other Than Officers and Soldiers in His Majesty's Forces'", "text": "The only legal way for a young Highlander to wear tartan and carry arms was to put on King George's uniform (such as the 42nd Highlanders / Black Watch) and bleed for the British Empire overseas."}, {"tag": "SPIRITUAL TERROR // THE IRON OATH", "heading": "Swearing Upon Superstition-Laden Cold Iron", "text": "Highlanders dragged before magistrates were forced to swear upon iron: 'May I never see my wife and children, father, mother, or relations, may I be killed in battle as a coward and lie without Christian burial... if I keep weapon or Highland garb.'"}]}, {"spread_num": 3, "pages": "Pages 05 – 06", "tab_label": "III. Tilbury Hulks", "folio_header": "FOLIO III // CHAPTER II: 'CHAINED IN TILBURY HOLD' & PLANTATION EXILE", "era_stamp": "Summer 1746 – 1749 • Tilbury Fort (Essex), River Thames & The Caribbean", "title": "Thames Prison Hulks, The 1-in-20 Lottery & The Planter's Lash", "drop_lead": "When Mairi and Elspeth mourn an eldest son buried under Culloden turf and a youngest son 'chained in Tilbury hold, bound for a southern hell,' every geographic detail rests on grim British State Paper prisoner records from 1746–1748.", "body_paragraphs": ["After Culloden, over 3,400 Jacobite men, women, and teenaged boys were swept into northern prisons and crammed into the dark holds of coastal transport vessels—ships like the Pamela, the Margaret & Mary, the Jane of Leith, and the Thane of Fife—sailing south from Inverness toward the River Thames.", "Beginning in the summer of 1746, hundreds of Highland captives were anchored for months in stagnant, airless transport ships and rotting river hulks off Tilbury and Woolwich, while hundreds more were packed into the damp brick gunpowder magazines inside Tilbury Fort in Essex. Filthy river water, maggoty biscuit, chains, and zero sanitation sparked catastrophic outbreaks of typhus ('gaol fever'), dysentery, and scurvy. Dozens of Highland boys and fathers died every week and were tipped into unmarked marsh graves along the Thames estuary before ever seeing a courtroom."], "primary_source_box": {"badge": "STATE PAPERS ARCHIVE // CAPTAIN STRATFORD EYRE & THE 1-IN-20 'LOTTING' LOTTERY", "quote": "Because putting over 3,000 prisoners on individual treason trials would have clogged English courts for years, Crown officials—including Provost Marshal Captain Stratford Eyre at Tilbury—administered a cold bureaucratic lottery called 'lotting.' Prisoners were lined up in groups of twenty while slips were drawn from a hat: ONE man in twenty drew the mark to stand trial for High Treason (hanging, drawing, and quartering), while the remaining NINETEEN were pressured to petition for the King's 'Mercy'—meaning permanent penal transportation across the Atlantic.", "citation": "— Record of the Jacobite Prisoners of the '45 (Tilbury Fort, Woolwich & Southwark, 1746–1748)"}, "lyric_echo": "My eldest boy lies under turf where sleet on Culloden fell / My youngest chained in Tilbury hold, bound for a southern hell / Because he wrapped his shoulders in the cloth I spun by hand", "plate_primary": "assets/stills/film-s14-thames-prison-hulk.webp", "plate_primary_caption": "Plate III: 18th-Century Prison Hulk Moored in Freezing Prussian-Blue Thames Estuary Fog off Tilbury", "plate_secondary": "assets/stills/film-s17-tilbury-hold-chains.webp", "plate_secondary_caption": "35mm Cinema Frame: A Captured Highland Son Chained Inside the Damp Brick Magazine of Tilbury Hold", "recto_cards_title": "From the Thames Estuary to the Plantation Auction Block", "recto_cards": [{"tag": "MERCHANT CONTRACTORS // 936 EXILED CAPTIVES", "heading": "Samuel Smith, Richard Gildart & The Atlantic Transports", "text": "Under Crown contracts awarded to Liverpool and London merchant-contractors Samuel Smith and Richard Gildart, roughly 936 surviving Jacobite prisoners were loaded onto Atlantic transports bound for Barbados, Antigua, Jamaica, the Leeward Islands, Virginia, and Maryland."}, {"tag": "PENAL INDENTURE // 'TASTE THE PLANTER'S LASH'", "heading": "Sold as Bound Estate Labor Under Tropical Heat", "text": "Legally classified as seven-year or lifelong-exile penal transports, Highlanders were auctioned on colonial docks as bound estate labor under brutal tropical heat, yellow fever, malaria, and overseers' whips. Very few ever saw Scotland again."}, {"tag": "MEMORIAL STONE // TILBURY FORT TODAY", "heading": "The Culloden Boulder on the Thames", "text": "Today, a rough boulder brought south from Culloden Moor stands quietly outside Tilbury Fort in Essex in memory of the Highland prisoners who perished in its damp magazines and river holds."}]}, {"spread_num": 4, "pages": "Pages 07 – 08", "tab_label": "IV. Hodden Grey", "folio_header": "FOLIO IV // CHAPTER III: 'COARSE WOOL OF MUD AND ASH' — WHAT HODDEN GREY REALLY WAS", "era_stamp": "1747–1795 • Highland & Lowland Cottages • The Women's Domain", "title": "Hodden Grey, 'Hidden' Cloth & Why Women Held the Line", "drop_lead": "With dyed patterned plaids outlawed for civilian men and boys—and poverty stalking looted Highland parishes—rural families dressed in hodden grey (hoddin grey): coarse, weather-resistant cloth the color of wet peat ash.", "body_paragraphs": ["Long before chemical bleaches, Highland and Lowland crofters sheared coarse, hardy native sheep (Scottish Dunface and later Blackface), bypassing the dye pot altogether by carding natural undyed white wool together with black or dark moorit fleeces—traditionally around one black fleece to twelve white fleeces. Spun on a wooden drop-spindle or spinning wheel and fulled ('waulked') by hand, it produced a thick, ash-and-peat colored homespun.", "Entering Scots records in the late 1500s, 'hodden' had centuries of association with rural peasantry (older Scottish sumptuary statutes had once ordered laborers to wear nothing finer than grey or white homespun). Phonetically and poetically in Scots speech, hodden echoed 'hidden'—the camouflage of hill-walkers, shepherds, and folk trying not to catch a bailiff's eye."], "primary_source_box": {"badge": "CULTURAL TRANSMUTATION // ROBERT BURNS ON 'HODDEN GREY' (1795)", "quote": "\"What though on hamely fare we dine,\nWear hodden grey, and a' that;\nGie fools their silks, and knaves their wine—\nA man's a man for a' that.\"", "citation": "— Robert Burns, 'Is There for Honest Poverty (A Man's a Man for a' That)' (1795)"}, "lyric_echo": "Oh, dye the wool in hodden grey to blind the bailiff's eye! / Spin the coarse and bitter coat beneath a watching sky! / But deep inside the lining seam where magistrates can't see / I weave a single crimson thread of who we used to be!", "plate_primary": "assets/stills/film-s21-elspeth-spinning-grey.webp", "plate_primary_caption": "Plate IV: Elder Croft Mother Elspeth Spinning Coarse Undyed Hodden Grey Wool by Daylight", "plate_secondary": "assets/stills/film-s26-bone-needle-crimson.webp", "plate_secondary_caption": "35mm Cinema Frame: A Carved Bone Needle Drawing One Forbidden Blood-Red Madder Thread Inside the Grey Coat Seam", "recto_cards_title": "Why Mothers & Dyers Became the Keepers of Clan Memory", "recto_cards": [{"tag": "STATUTORY WORDING // WOMEN & THE DYE CAULDRON", "heading": "Why Section 17 Read 'No Man or Boy'", "text": "Women were not explicitly named in the text of the 1746 Dress Act (though Jacobite women wearing tartan gowns were harassed or fined if suspected of sedition). More importantly, in pre-industrial Highland life, dyeing and spinning were overwhelmingly women's sacred domestic domain."}, {"tag": "SECRET THREAD-COUNTS // MAIDE-ÀIREIMH", "heading": "Notched Wooden Pattern Sticks Hidden in the Thatch", "text": "While male weavers threw the shuttle on the cottage box-loom, mothers and daughters preserved the exact thread-counts of a family's favorite sett as notches or yarn wraps on wooden counting sticks (maide-àireimh) tucked high into smoky thatch rafters."}, {"tag": "THE SECRET STITCH // AGAINST THE RIBS", "heading": "Where No Magistrate Ever Thought to Look", "text": "By slipping a single crimson madder or myrtle-green strand inside the inner lining seam of a coarse hodden-grey coat, a Highlander carried ancestral identity pressed warm against his beating heart while bowing to patrolling dragoons on the road."}]}, {"spread_num": 5, "pages": "Pages 09 – 10", "tab_label": "V. Botanical Dyes", "folio_header": "FOLIO V // CHAPTER IV: THE MIDNIGHT APOTHECARY — DECODING EVERY BOTANICAL DYE", "era_stamp": "Pre-1856 Highland Chemistry • Root, Bog, Heather & Rocky Burn", "title": "Madder Root, Heather Bloom, Bog Myrtle & Stream Crottle", "drop_lead": "Before synthetic aniline dyes were invented in 1856, every thread of Highland tartan came straight out of rock, bog, root, and burn. Every botanical ingredient sung by Mairi in 'The Weaver's Secret' is an authentic pillar of 18th-century Highland dyeing.", "body_paragraphs": ["Why do 'Ancient' tartan palettes today—with their warm terracotta-orange reds, slate blues, olive-moss greens, and smoky charcoals—look so different from bright Victorian 'Modern' tartans? Because when you look at an Ancient tartan sett, you are looking at the exact chemical fingerprint of madder root, heather bloom, bog myrtle, woad, and stream crottle lichen simmered over peat embers in an iron cauldron.", "Before Highland crofters could afford imported mineral alum crystals from abroad, women gathered wild fir clubmoss (Huperzia selago) along rocky burns and boiled it with the fleece as a natural aluminum-accumulating mordant—locking crimson and green permanently into the wool so rain and sweat could never wash the color away."], "primary_source_box": {"badge": "BOTANICAL CHEMISTRY // THE SECRET OF 'CROWDIE MOSS' & CUDBEAR (1758)", "quote": "Scraped off wet Highland stream boulders with an iron spoon or mussel shell, rock lichens ('crottle' / 'crotal' — Parmelia saxatilis and Ochrolechia tartarea) dyed wool rich russet-brown or—when steeped in ammonia ('graith')—deep royal magenta-crimson. In 1758, Scottish chemist Cuthbert Gordon patented this exact Highland lichen process commercially as 'Cudbear' (named after his mother, Cuthberta).", "citation": "— 18th-Century Scottish Highland Domestic Dyeing & Mordant Chemistry"}, "lyric_echo": "I gather crowdie moss by night down by the rocky stream / And whisper every outlawed name into the rising steam ... One strand of blood-red madder root, one strand of myrtle green", "plate_primary": "assets/stills/film-s27-madder-and-heather.webp", "plate_primary_caption": "Plate V: Boiling Blood-Red Madder Root & Heather Bloom in the Iron Cauldron After Midnight", "plate_secondary": "assets/stills/film-s31-crowdie-lichen-stream.webp", "plate_secondary_caption": "35mm Cinema Frame: Gathering Crowdie Lichen & Clubmoss Mordants by Moonlight Along a Rocky Highland Burn", "recto_cards_title": "The Four Botanical Pillars of Mairi's Midnight Kettle", "recto_cards": [{"tag": "1. BLOOD-CRIMSON // RUBIA TINCTORUM & GALIUM VERUM", "heading": "Madder Root & Highland Bedstraw (Gaelic 'Rù')", "text": "Imported madder root twists and native sandy-bank lady's bedstraw roots were simmered carefully just below a rolling boil so brown tannins wouldn't dull the alizarin pigment—staining a dyer's fingertips deep crimson for days."}, {"tag": "2. MOORLAND OCHRE & BRONZE // CALLUNA VULGARIS", "heading": "Heather Bloom (Gaelic 'Fraoch')", "text": "Gathered in armfuls from the hillside just before full flowering, young heather shoots and blossoms boiled with alum yielded warm golden-ochres, mossy greens, and muted moorland bronzes."}, {"tag": "3. HIGHLAND FOREST GREEN // MYRICA GALE", "heading": "Bog Myrtle (Gaelic 'Roid')", "text": "A fiercely aromatic, resinous peat-bog shrub whose leaves and twigs yielded bright golden-yellow dye that, when top-dyed with fermented woad or indigo, created rich dark Highland myrtle green."}, {"tag": "4. RUSSET, MAGENTA & ALUM MORDANT // PARMELIA & HUPERZIA", "heading": "Crowdie Moss (Stream Crottle Lichen & Fir Clubmoss)", "text": "Boulders along fast-running burns provided both rock lichens (crottle) for russet/crimson dye and wild fir clubmoss (Huperzia selago), nature's own aluminum mordant."}]}, {"spread_num": 6, "pages": "Pages 11 – 12", "tab_label": "VI. Water Frames (1769)", "folio_header": "FOLIO VI // CHAPTER V: 'BEFORE THE IRON WATER FRAMES CAME CHEWING UP THE LAND'", "era_stamp": "1769 – 1786 • Arkwright's Patent, Penicuik, Rothesay, Deanston & New Lanark", "title": "Two Revolutions Colliding Within One Mother's Lifetime", "drop_lead": "One of the deepest historical layers in 'The Weaver's Secret' is its timeline horizon. Most people picture the post-Culloden tartan ban (1747–1782) and the Industrial Revolution as completely separate centuries. In reality, they overlapped within a single Highland mother's lifetime.", "body_paragraphs": ["In 1769—while the Dress Act was still strictly the law of the land and wearing a kilt on a Scottish road still carried seven years' penal transportation—Richard Arkwright patented the water frame: a massive, water-wheel-driven spinning machine whose iron rollers and flyers could spin dozens of tight, uniform threads simultaneously, running day and night beside dammed rivers.", "By 1778–1786, water-powered spinning mills were springing up across Scotland—first at Penicuik (1778) and Rothesay on the Isle of Bute (1779), soon followed by giant river mills at Deanston (1785), Catrine, Stanley, and New Lanark (1786).", "At the exact same moment in the Highlands, indebted clan chiefs—transformed by post-1746 British law from patriarchal protectors (ceann-cinnidh) into commercial London-facing landlords—realized that Southern Blackface and Cheviot sheep raised strictly to feed Britain's booming industrial wool mills paid far higher rents than human families."], "primary_source_box": {"badge": "THE TWIN ERASURE // IMPERIAL STATUTE MEETS INDUSTRIAL MECHANIZATION (1747–1786)", "quote": "First Westminster outlawed the people's cloth (1747); then commercial sheep walks cleared the people from the glens; and finally river-powered factory gears swallowed displaced rural spinners into twelve-hour mill shifts (1778–1786). Against both imperial law and industrial erasure stood that fragile, stubborn human link: 'A mother's thumb upon the yarn.'", "citation": "— Bridge Connection Between 'The Weaver's Secret' & Album #28 ('Chaff from the Wheat')"}, "lyric_echo": "Before the great gears cage the men and rivers turn the mill / A mother's thumb upon the yarn holds all the country still ... No Parliament in Westminster, no spindle turned by steam / Can tear the human warp and weft out of a mother's dream!", "plate_primary": "assets/stills/bookplate-02-revolutions.webp", "plate_primary_caption": "Plate VI: Diptych of Two Erasures — Tilbury Prison Hulks (1746) & The Coming of the River Water-Frame Mill (1769–1779)", "plate_secondary": "assets/stills/film-s34-great-gears-mill.webp", "plate_secondary_caption": "35mm Cinema Frame: 'Before the Great Gears Cage the Men and Rivers Turn the Mill'", "recto_cards_title": "Timeline of the Overlapping Textile Revolutions", "recto_cards": [{"tag": "AUGUST 1, 1747 // STATUTORY PROSCRIPTION", "heading": "The Dress Act Takes Full Force Across Scotland", "text": "Civilian tartan is outlawed across the Highlands; cottage spinners and handloom weavers are restricted to plain, non-tartan cloth and coarse hodden grey."}, {"tag": "JULY 3, 1769 // ARKWRIGHT'S PATENT NO. 931", "heading": "Richard Arkwright Patents the Water Frame", "text": "Thirteen years before the tartan ban is repealed, water-powered iron spinning rollers begin replacing the human thumb and cottage drop-spindle."}, {"tag": "1778 – 1786 // SCOTTISH RIVER MILLS & CLEARANCES", "heading": "Penicuik (1778), Rothesay (1779), Deanston (1785) & New Lanark (1786)", "text": "As the first Scottish water-frame mills dam the rivers, Highland landlords begin clearing glens for Blackface sheep to feed the industrial looms."}]}, {"spread_num": 7, "pages": "Pages 13 – 14", "tab_label": "VII. 1782 Repeal & Myths", "folio_header": "FOLIO VII // CHAPTER VI: REPEAL (JULY 1, 1782) & HISTORIAN'S MYTH-BUSTER GUIDE", "era_stamp": "July 1, 1782 (22 Geo. 3. c. 63) • Aberdeen to the Hebrides", "title": "What Survived Thirty-Five Years of Ash—And Four Myths Busted", "drop_lead": "For thirty-five years—an entire generation—tartan vanished from legal civilian daylight across the Scottish Highlands. Boys born in 1747 grew into grey-bearded thirty-five-year-old fathers without ever legally wrapping a belted plaid around their shoulders outside the King's army.", "body_paragraphs": ["By 1782, with the Jacobite threat dead and Highland regiments fighting across the globe, the Highland Society of London backed young James Graham, Marquis of Graham (later 3rd Duke of Montrose) in introducing a bill in the House of Commons to strike down Section 17 at last. On July 1, 1782, the Use of Highland Dress Act (22 Geo. 3. c. 63) received Royal Assent.", "What survived—fragments of ancestral cloth hidden in rafters and sea-chests, notched weaver's pattern sticks (maide-àireimh), commercial pattern books preserved by weavers like William Wilson & Sons of Bannockburn, and women's oral recipes for madder, heather, and bog myrtle—became the seedbed for tartan's global rebirth."], "primary_source_box": {"badge": "GAELIC & ENGLISH PROCLAMATION // REPEAL OF THE DRESS ACT (JULY 1, 1782)", "quote": "\"Listen Men! This is bringing before all the Sons of the Gael, the King and Parliament of Britain have forever abolished the act against the Highland Dress; which came down to the Clans from the beginning of the world to the year 1746. This must bring great joy to every Highland Heart. You are no longer bound down to the unmanly dress of the Lowlander!\"", "citation": "— Bilingual Highland Proclamation Upon Royal Assent to 22 Geo. 3. c. 63 (July 1782)"}, "lyric_echo": "Madder root and heather bloom, boiled in the dark of night / You can outlaw every pattern, you can burn the colors bright / But every throw of shuttle wood remembers who was slain / The secret in the hodden grey will rise in us again!", "plate_primary": "assets/stills/film-s61-ridge-solidarity-dawn.webp", "plate_primary_caption": "Plate VII: Dawn Over the Highland Ridge (1782) — 'The Secret in the Hodden Grey Will Rise in Us Again'", "plate_secondary": "assets/stills/film-s44-dirk-heather-red-spool.webp", "plate_secondary_caption": "35mm Cinema Frame: Surviving Highland Relics — Heather Sprig, Crimson Madder Spool & Ancestral Cloth", "recto_cards_title": "Historian's Myth-Buster Guide (100% Primary-Source Verified)", "recto_cards": [{"tag": "MYTH-BUSTER 01 // PRE-1746 TARTANS VS. 1822 REGISTRIES", "heading": "Did Pre-1746 Highlanders Have Strict Registered 'Clan Tartans'?", "text": "Strict 'one-clan-one-registered-tartan' books are largely a post-1782 / 1822 revival. Before 1746, setts were shaped by district weaver traditions, local plant dyes, and family preference. That is why our lyrics sing of 'the ancestral tartan,' 'the cloth I spun by hand,' and the madder/myrtle dye pot—never anachronistic Victorian registries."}, {"tag": "MYTH-BUSTER 02 // THE BAGPIPE MYTH IN 19 GEO. 2. C. 39", "heading": "Did the 1746 Act Explicitly Ban Bagpipes by Name?", "text": "No! Read every word of 19 Geo. 2. c. 39 and bagpipes are never mentioned once (though piper James Reid was executed at York in Nov 1746 after judges ruled a Highland regiment never marched without a piper). Scoring our track around croft fiddle, low whistle, guitar, and bodhrán keeps every historical claim 100% statutory-accurate."}, {"tag": "MYTH-BUSTER 03 // SOLDIERS VS. CIVILIANS", "heading": "Why Could British Soldiers Wear Tartan While Brothers Were Jailed?", "text": "Section 17 explicitly exempted 'Officers and Soldiers in His Majesty's Forces'—destroying clan autonomy at home while recruiting Highlanders into imperial regiments like the Black Watch."}, {"tag": "MYTH-BUSTER 04 // HIDDEN LININGS IN MUSEUM COLLECTIONS", "heading": "Did Women Really Hide Tartan & Colored Threads?", "text": "Yes—surviving 18th-century waistcoats, petticoats, and plaid fragments sewn inside plain outer linings across Scottish collections attest to quiet textile defiance throughout the Proscription decades."}]}, {"spread_num": 8, "pages": "Pages 15 – 16", "tab_label": "VIII. Scots Lexicon", "folio_header": "FOLIO VIII // COMPLETE SCOTS & HISTORICAL LEXICON & SILENT WITNESS COLL", "era_stamp": "10 Primary Terms • Interactive Archival Glossary & Production Notes", "title": "The Language of the Loom, the Cauldron & the Statute Book", "drop_lead": "Every Scots noun and historical reference in 'The Weaver's Secret (Dyed in the Hodden Grey)' carries centuries of lived craft and legal history. Use this final spread of the Codex to explore the ten core terms and our silent canine witness.", "body_paragraphs": ["Directed in 'Midnight Kettle Tenebrism' on simulated 35mm Kodak Vision3 500T film stock, the visual production contrasts cold Prussian-blue Highland sleet and Crown inspections against the single-candle chiaroscuro of a stone turf croft and a steaming midnight dye cauldron.", "Across the 65-scene chronicle, Mairi (our soot-smudged, fiery red-headed dyer and balladeer), Elspeth (an elder croft mother), and Callum (a grizzled Highland croftsman) carry the secret stitch against their ribs—watched over in silence by Coll, a black-and-white Scottish Border Collie seated on dark flagstones by the hearth and on wet crags above the glen."], "primary_source_box": {"badge": "FINAL CODA // THE WEAVER'S SECRET (1747–1782)", "quote": "\"Parliament had burned the plaids, rotted prisoners in Tilbury Fort, and clothed a nation in mud-colored grey for thirty-five years. They never got the thread out from against the heart.\nOne crimson thread against the heart... Woven by hand. Unbroken by law.\"", "citation": "— Spoken Outro & Historical Epilogue"}, "lyric_echo": "One crimson thread against the heart... / Woven by hand. Unbroken by law.", "plate_primary": "assets/stills/01-mairi-bone-needle-collie.webp", "plate_primary_caption": "Plate VIII: Mairi Stitching the Crimson Madder Thread Beside Silent Witness Coll (Scottish Border Collie)", "plate_secondary": "assets/stills/film-s63-coat-needle-collie.webp", "plate_secondary_caption": "35mm Cinema Frame: Coarse Hodden-Grey Coat, Bone Needle with Crimson Thread & Coll's Mud-Flecked Paws", "recto_cards_title": "Complete 10-Term Historical & Scots Glossary", "recto_cards": [{"tag": "STATUTE & PRISON // TERMS 01 – 03", "heading": "King's Proscription • Tilbury Hold • Planter's Lash", "text": "• King's Proscription (1746): 19 Geo. 2. c. 39 banning civilian tartan (1747–1782).\n• Tilbury Hold: Tilbury Fort on the Thames & moored prison hulks where 3,400+ captives suffered typhus.\n• Planter's Lash: 7-year penal transportation to Caribbean & Tidewater plantations (~936 exiled)."}, {"tag": "CLOTH & LOOM // TERMS 04 – 06", "heading": "Hodden Grey • Shuttle Wood • Iron Water Frames", "text": "• Hodden Grey: Coarse undyed homespun wool (~12:1 white-to-black fleece), echoing Scots 'hidden.'\n• Shuttle Wood: Hand-carved hardwood boat (spàl) carrying weft yarn across the cottage loom.\n• Iron Water Frames: Richard Arkwright's 1769 water-wheel spinning machine."}, {"tag": "MIDNIGHT APOTHECARY // TERMS 07 – 10", "heading": "Madder Root • Heather Bloom • Myrtle Green • Crowdie Moss", "text": "• Madder Root (Rubia tinctorum / Rù): Boiled for blood-crimson dye.\n• Heather Bloom (Calluna vulgaris / Fraoch): Boiled for golden-ochre & moss bronze.\n• Myrtle Green (Myrica gale / Roid): Bog myrtle over-dyed for Highland forest green.\n• Crowdie Moss: Stream boulder lichens (crottle) & fir clubmoss natural alum mordant."}]}];
@@ -1163,6 +1270,11 @@
 
       // Keyboard Left/Right Arrow support for turning pages
       document.addEventListener('keydown', function(e) {
+        const videoModal = document.getElementById('video-modal');
+        if (videoModal && !videoModal.classList.contains('hidden')) {
+          if (e.key === 'Escape') closeVideoModal();
+          return;
+        }
         const lightbox = document.getElementById('plate-lightbox');
         if (lightbox && !lightbox.classList.contains('hidden')) {
           if (e.key === 'Escape') closePlateLightbox();
@@ -1172,6 +1284,26 @@
         if (e.key === 'ArrowRight') turnBookSpread(1);
         else if (e.key === 'ArrowLeft') turnBookSpread(-1);
       });
+
+      // Video Modal functions
+      window.openVideoModal = function(ytId, title) {
+        const modal = document.getElementById('video-modal');
+        const iframe = document.getElementById('modal-video-iframe');
+        const titleEl = document.getElementById('modal-video-title');
+        const ytLink = document.getElementById('modal-youtube-link');
+        if (!modal || !iframe) return;
+        if (titleEl && title) titleEl.textContent = title;
+        if (ytLink && ytId) ytLink.href = `https://www.youtube.com/watch?v=${encodeURIComponent(ytId)}`;
+        iframe.src = `https://www.youtube.com/embed/${encodeURIComponent(ytId)}?autoplay=1&rel=0`;
+        modal.classList.remove('hidden');
+      };
+
+      window.closeVideoModal = function() {
+        const modal = document.getElementById('video-modal');
+        const iframe = document.getElementById('modal-video-iframe');
+        if (iframe) iframe.src = '';
+        if (modal) modal.classList.add('hidden');
+      };
 
       // 3. Render 12 Visual Story Chapters
       function renderStoryChapters() {

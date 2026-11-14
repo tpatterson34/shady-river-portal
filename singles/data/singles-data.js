@@ -1575,10 +1575,7 @@
             "[Spoken Outro (6:05 – 6:13)]\n\"They took the cattle. They took the tartan. They never got the word.\""
       ],
       "copyright_notice": "© 2026 The Shady River Bard / Shady River Homestead LLC. All rights reserved."
-}
-,
-
-    ,
+    },
 
     // =========================================================================
     // SINGLE 05: THE WEAVER'S SECRET (DYED IN THE HODDEN GREY)
@@ -1592,14 +1589,14 @@
       "number": 5,
       "number_padded": "05",
       "badge": "STANDALONE SINGLE 05 // 1746–1782 HIGHLAND PROSCRIPTION & DYER'S CODEX",
-      "card_badge": "Single #05 • Coming 11/14/26",
+      "card_badge": "Single #05 • Out Now",
       "key_tempo_badge": "Highland Folk-Rock Duet // 62 BPM • 1746–1782",
       "key": "D Minor / Modal",
       "bpm": 62,
       "duration": "05:48",
       "release_year": 2026,
       "release_date_display": "November 14, 2026 (11/14/26)",
-      "release_status": "Premiering Tomorrow • November 14, 2026",
+      "release_status": "Official Audio & Music Video Out Now",
       "hasHistoryBook": true,
       "historyBookTitle": "The Dyer's Secret Codex (1746–1782)",
       "title": "The Weaver's Secret (Dyed in the Hodden Grey)",
@@ -1638,9 +1635,7 @@
       "hero_art_caption_label": "Midnight Kettle Tenebrism • Scottish Highlands, 1747–1782",
       "hero_art_caption_title": "Mairi, Callum, the Crimson Madder Stitch & Silent Witness Coll",
       "media": {
-            "youtubeVideoUrl": "",
-            "comingSoonBadge": "Coming 11/14/26",
-            "comingSoonLabel": "Coming 11/14/26 • Music Video Premiering Tomorrow",
+            "youtubeVideoUrl": "https://youtu.be/t5lDNZ6OtPw",
             "spotifyUrl": "[INSERT_SPOTIFY_URL_OR_LEAVE_PENDING]",
             "appleMusicUrl": "[INSERT_APPLE_MUSIC_URL_OR_LEAVE_PENDING]",
             "amazonMusicUrl": "[INSERT_AMAZON_MUSIC_URL_OR_LEAVE_PENDING]"
@@ -1649,7 +1644,7 @@
       "art_square": "assets/art/the-weavers-secret-cover.webp",
       "art_alt": "Inside a pitch-black 1746 Highland stone croft lit by tallow candlelight and peat embers beneath a steaming iron dye cauldron, red-haired Highland dyer Mairi and grizzled croftsman Callum stand beside a coarse ash-grey hodden wool coat whose inner lining gleams with one vivid blood-red madder stitch while silent Border Collie Coll keeps watch.",
       "pillar_badges": [
-            "Coming 11/14/26",
+            "Official Video Out Now",
             "1746 Dress Act (19 Geo. 2. c. 39)",
             "Tilbury Hulks & 1-in-20 Lottery",
             "Midnight Botanical Apothecary",
