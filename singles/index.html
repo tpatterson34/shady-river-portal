@@ -222,18 +222,24 @@
       </a>
 
       <!-- Quick Jump Navigation -->
-      <nav class="hidden lg:flex items-center gap-5 text-xs font-mono" aria-label="Singles in the Vault">
+      <nav class="hidden xl:flex items-center gap-4 text-xs font-mono" aria-label="Singles in the Vault">
         <a href="#the-greenock-slate-and-the-gold-watch" class="text-clydemist-300 hover:text-retinal-400 transition-colors">
-          01. Greenock Slate &amp; Gold Watch
+          01. Greenock Slate
         </a>
         <a href="#the-guns-of-loch-fyne" class="text-clydemist-300 hover:text-retinal-400 transition-colors">
-          02. The Guns of Loch Fyne
+          02. Loch Fyne
         </a>
         <a href="#and-the-people-cry-out" class="text-clydemist-300 hover:text-retinal-400 transition-colors">
-          03. And the People Cry Out
+          03. People Cry Out
         </a>
-        <a href="#the-seven-men-of-glenmoriston" class="text-retinal-400 hover:text-retinal-300 font-bold transition-colors">
-          04. Seven Men of Glenmoriston
+        <a href="#the-seven-men-of-glenmoriston" class="text-clydemist-300 hover:text-retinal-400 transition-colors">
+          04. Glenmoriston
+        </a>
+        <a href="#the-weavers-secret" class="text-amber-300 hover:text-retinal-300 font-bold transition-colors">
+          05. Weaver&rsquo;s Secret (11/14)
+        </a>
+        <a href="#the-silver-of-skullyville" class="text-retinal-400 hover:text-retinal-300 font-bold transition-colors">
+          06. Skullyville (11/21)
         </a>
       </nav>
 
@@ -241,7 +247,7 @@
       <div class="flex items-center gap-2">
         <a href="#singles-feed" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-retinal-500 hover:bg-retinal-400 text-clydeslate-950 font-mono text-xs font-bold transition-all shadow-md">
           <i class="fa-solid fa-record-vinyl text-xs" aria-hidden="true"></i>
-          <span>Browse Singles (4)</span>
+          <span>Browse Singles (6)</span>
         </a>
       </div>
     </div>
@@ -263,7 +269,7 @@
               <span>THE SINGLES VAULT // STANDALONE CHRONICLES &amp; GLOBAL DISPATCHES</span>
             </span>
             <span class="px-2.5 py-1 rounded-full bg-clydeslate-800 border border-white/10 text-clydemist-300 font-mono text-[11px]">
-              4 Standalone Releases &bull; Permanent Dedicated Dossiers
+              6 Standalone Releases &bull; Permanent Dedicated Dossiers &amp; Interactive History Books
             </span>
           </div>
 
@@ -272,7 +278,7 @@
           </h1>
 
           <p class="font-serif text-base sm:text-xl text-clydemist-200 leading-relaxed">
-            Beyond the 27-album conceptual tapestry, <strong class="text-white">The Singles Vault</strong> houses standalone narrative ballads, global solidarity dispatches, historical inquiries, and listener heritage chronicles—songs born directly from primary-source reporting, family heirlooms, clan histories, working-class archives, and lived memory shared on the porch. Each single features both its complete card below and a permanent, unchanging dedicated chronicle page.
+            Beyond the 28-album conceptual tapestry, <strong class="text-white">The Singles Vault</strong> houses standalone narrative ballads, global solidarity dispatches, historical inquiries, and listener heritage chronicles—songs born directly from primary-source reporting, family heirlooms, clan histories, working-class archives, and lived memory shared on the porch. Each single features both its complete card below and a permanent, unchanging dedicated chronicle page.
           </p>
         </div>
 
@@ -289,12 +295,12 @@
             <input
               type="search"
               id="singles-search"
-              placeholder="Search singles by title, lyrics, data, lore, or geography (e.g., Glenmoriston, Coiraghoth, Sorrento, Greenock, Loch Fyne)..."
+              placeholder="Search singles by title, lyrics, data, lore, or geography (e.g., Hodden Grey, Skullyville, Choctaw, Glenmoriston, Loch Fyne)..."
               class="w-full pl-9 pr-4 py-2.5 rounded-xl bg-clydeslate-950 border border-white/10 text-xs sm:text-sm font-sans text-white placeholder-clydemist-400 focus:outline-none focus:border-retinal-400"
             >
           </div>
           <div class="flex items-center justify-between sm:justify-end gap-3 font-mono text-xs text-clydemist-300 shrink-0">
-            <span id="singles-count-label">Showing 4 of 4 Singles</span>
+            <span id="singles-count-label">Showing 6 of 6 Singles</span>
             <button
               type="button"
               id="btn-reset-search"
@@ -397,7 +403,7 @@
 
   <!-- SCRIPTS -->
   <script src="../assets/js/a11y.js"></script>
-  <script src="data/singles-data.js?v=20261109_04"></script>
+  <script src="data/singles-data.js?v=20261113_06"></script>
 
   <script>
     (function() {
@@ -460,17 +466,30 @@
 
         grid.innerHTML = allSingles.map(s => {
           const ytId = extractYouTubeId(s.media && s.media.youtubeVideoUrl);
+          const comingBadge = (s.media && s.media.comingSoonBadge) || '';
+          const hasBook = Boolean(s.hasHistoryBook);
           return `
             <article class="p-5 sm:p-6 rounded-2xl glass-slate border retinal-border flex flex-col justify-between gap-5 hover:border-retinal-400/70 transition-all shadow-xl">
               <div class="flex flex-col sm:flex-row items-start gap-4">
-                <a href="${escapeHtml(s.relative_url)}" class="w-full sm:w-28 aspect-video sm:aspect-square rounded-xl overflow-hidden border border-retinal-400/40 shrink-0 group block">
+                <a href="${escapeHtml(s.relative_url)}" class="w-full sm:w-28 aspect-video sm:aspect-square rounded-xl overflow-hidden border border-retinal-400/40 shrink-0 group block relative">
                   <img src="${escapeHtml(s.art_square)}" alt="${escapeHtml(s.title)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  ${!ytId && comingBadge ? `
+                    <span class="absolute bottom-1.5 inset-x-1.5 px-1.5 py-0.5 rounded bg-amber-500/95 text-clydeslate-950 font-mono text-[9px] font-extrabold uppercase text-center shadow">
+                      ${escapeHtml(comingBadge)}
+                    </span>
+                  ` : ''}
                 </a>
                 <div class="space-y-2 flex-grow">
                   <div class="flex flex-wrap items-center gap-2">
                     <span class="px-2.5 py-0.5 rounded bg-retinal-500/20 border border-retinal-400/40 text-retinal-300 font-mono text-[10px] font-bold uppercase">
                       ${escapeHtml(s.card_badge)}
                     </span>
+                    ${hasBook ? `
+                      <span class="px-2 py-0.5 rounded bg-amber-500/20 border border-amber-400/40 text-amber-300 font-mono text-[10px] font-bold uppercase inline-flex items-center gap-1">
+                        <i class="fa-solid fa-book-open text-[9px]" aria-hidden="true"></i>
+                        <span>Interactive History Book</span>
+                      </span>
+                    ` : ''}
                     <span class="font-mono text-[11px] text-clydemist-400">${escapeHtml(s.duration)} &bull; ${escapeHtml(s.key)}</span>
                   </div>
                   <h2 class="font-display text-xl sm:text-2xl font-bold text-white leading-tight">
@@ -493,7 +512,12 @@
                       <i class="fa-solid fa-play text-[10px]" aria-hidden="true"></i>
                       <span>Watch Video</span>
                     </button>
-                  ` : ''}
+                  ` : `
+                    <span class="px-3 py-1.5 rounded-lg bg-amber-500/15 border border-amber-400/40 text-amber-300 font-mono text-xs font-bold inline-flex items-center gap-1.5">
+                      <i class="fa-solid fa-clock text-[10px]" aria-hidden="true"></i>
+                      <span>${escapeHtml(comingBadge || 'Video Coming Soon')}</span>
+                    </span>
+                  `}
                   <a
                     href="#${escapeHtml(s.slug)}"
                     class="px-3 py-1.5 rounded-lg bg-clydeslate-800 hover:bg-clydeslate-700 text-clydemist-200 border border-white/10 font-mono text-xs font-semibold transition-colors"
@@ -502,14 +526,26 @@
                   </a>
                 </div>
 
-                <a
-                  href="${escapeHtml(s.relative_url)}"
-                  class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-retinal-500/15 hover:bg-retinal-500 text-retinal-300 hover:text-clydeslate-950 border border-retinal-400/40 font-mono text-xs font-bold transition-all"
-                  title="Open permanent dedicated chronicle page for ${escapeHtml(s.title)}"
-                >
-                  <span>Dedicated Chronicle</span>
-                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
-                </a>
+                <div class="flex flex-wrap items-center gap-2">
+                  ${hasBook ? `
+                    <a
+                      href="${escapeHtml(s.relative_url)}#history-book"
+                      class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-clydeslate-950 font-mono text-xs font-bold transition-all shadow"
+                      title="Flip through the interactive page-turning History Book for ${escapeHtml(s.title)}"
+                    >
+                      <i class="fa-solid fa-book-open text-[10px]" aria-hidden="true"></i>
+                      <span>Turn Pages in History Book</span>
+                    </a>
+                  ` : ''}
+                  <a
+                    href="${escapeHtml(s.relative_url)}"
+                    class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-retinal-500/15 hover:bg-retinal-500 text-retinal-300 hover:text-clydeslate-950 border border-retinal-400/40 font-mono text-xs font-bold transition-all"
+                    title="Open permanent dedicated chronicle page for ${escapeHtml(s.title)}"
+                  >
+                    <span>Dedicated Chronicle</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                  </a>
+                </div>
               </div>
             </article>
           `;
@@ -581,13 +617,14 @@
               </a>
             `;
           } else {
+            const comingText = media.comingSoonLabel || 'Music Video Premiering Soon';
             videoOverlayCta = `
               <span
                 aria-disabled="true"
-                class="px-4 py-2 rounded-xl bg-clydeslate-950/90 border border-retinal-400/50 text-retinal-300 font-mono text-xs font-bold flex items-center gap-2 shadow-2xl select-none"
+                class="px-4 py-2 rounded-xl bg-amber-950/95 border-2 border-amber-400/70 text-amber-200 font-mono text-xs font-bold flex items-center gap-2 shadow-2xl select-none"
               >
-                <i aria-hidden="true" class="fa-solid fa-clock text-retinal-400 text-xs"></i>
-                <span>Music Video Premiering Soon</span>
+                <i aria-hidden="true" class="fa-solid fa-clock text-amber-400 text-xs animate-pulse"></i>
+                <span>${escapeHtml(comingText)}</span>
               </span>
             `;
           }
@@ -676,6 +713,16 @@
                       <i class="fa-solid fa-link text-retinal-400 text-xs" aria-hidden="true"></i>
                       <span>Copy Song URL</span>
                     </button>
+                    ${single.hasHistoryBook ? `
+                      <a
+                        href="${escapeHtml(single.relative_url)}#history-book"
+                        class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-clydeslate-950 font-mono text-xs font-extrabold transition-all shadow-md"
+                        title="Open the interactive Page-Turning History Book for ${escapeHtml(single.title)}"
+                      >
+                        <i class="fa-solid fa-book-open text-xs" aria-hidden="true"></i>
+                        <span>Interactive History Book</span>
+                      </a>
+                    ` : ''}
                     <a
                       href="${escapeHtml(single.relative_url)}"
                       class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-retinal-500 hover:bg-retinal-400 text-clydeslate-950 font-mono text-xs font-bold transition-all shadow-md"

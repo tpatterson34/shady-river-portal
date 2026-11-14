@@ -1576,6 +1576,314 @@
       ],
       "copyright_notice": "© 2026 The Shady River Bard / Shady River Homestead LLC. All rights reserved."
 }
+,
+
+    ,
+
+    // =========================================================================
+    // SINGLE 05: THE WEAVER'S SECRET (DYED IN THE HODDEN GREY)
+    // Permalink: https://theshadyriverbard.com/singles/the-weavers-secret/
+    // =========================================================================
+    {
+      "id": "the-weavers-secret",
+      "slug": "the-weavers-secret",
+      "permalink": "https://theshadyriverbard.com/singles/the-weavers-secret/",
+      "relative_url": "the-weavers-secret/",
+      "number": 5,
+      "number_padded": "05",
+      "badge": "STANDALONE SINGLE 05 // 1746–1782 HIGHLAND PROSCRIPTION & DYER'S CODEX",
+      "card_badge": "Single #05 • Coming 11/14/26",
+      "key_tempo_badge": "Highland Folk-Rock Duet // 62 BPM • 1746–1782",
+      "key": "D Minor / Modal",
+      "bpm": 62,
+      "duration": "05:48",
+      "release_year": 2026,
+      "release_date_display": "November 14, 2026 (11/14/26)",
+      "release_status": "Premiering Tomorrow • November 14, 2026",
+      "hasHistoryBook": true,
+      "historyBookTitle": "The Dyer's Secret Codex (1746–1782)",
+      "title": "The Weaver's Secret (Dyed in the Hodden Grey)",
+      "title_accent_split": [
+            "The Weaver's Secret",
+            "(Dyed in the Hodden Grey)"
+      ],
+      "subtitle": "August 1, 1747 – July 1, 1782: The Post-Culloden Dress Act, Tilbury Prison Hulks, the Midnight Botanical Dye Cauldron, and the Crimson Thread Against the Heart",
+      "location": "Culloden Moor • Scottish Highlands • Tilbury Fort (River Thames) • Early Scottish Water-Frame Mills (1746–1782)",
+      "genre": "Cinematic Scottish Highland Folk-Rock Duet (Soprano/Alto & Weathered Baritone)",
+      "thesis": "In August 1746, four months after sleet and grapeshot swept Culloden Moor, Westminster passed the Act of Proscription (19 Geo. 2. c. 39)—criminalizing the belted plaid, kilt, and tartan coat for every civilian man and boy in Scotland under pain of six months in irons without bail, or seven years' penal transportation across the Atlantic. Forced into coarse, undyed 'hodden grey' wool the color of wet peat ash, Highland mothers, widows, and midnight dyers answered with thirty-five winters of quiet defiance: boiling wild madder root, heather bloom, bog myrtle, and stream crottle lichen after dark, and stitching a single crimson thread inside the grey coat lining directly over the beating heart—woven by hand, unbroken by law.",
+      "thesis_attribution": "— Historical & Moral Thesis • Act of Proscription (19 Geo. 2. c. 39) to Repeal (22 Geo. 3. c. 63), 1746–1782",
+      "dedication": "Dedicated to the unnamed Highland mothers, widows, spinners, and midnight dyers who carried forbidden botanical lore, notched pattern sticks (maide-àireimh), and ancestral memory across thirty-five winters of ash (1747–1782).",
+      "telemetry": [
+            {
+                  "label": "Proscription Span",
+                  "value": "35 Years (1747–82)",
+                  "color_cls": "text-retinal-400"
+            },
+            {
+                  "label": "Statutory Penalty",
+                  "value": "6 Mo / 7 Yr Exile",
+                  "color_cls": "text-rose-400"
+            },
+            {
+                  "label": "Tilbury Captives",
+                  "value": "3,400+ Held / 936 Exiled",
+                  "color_cls": "text-amber-400"
+            },
+            {
+                  "label": "Secret Relic",
+                  "value": "1 Crimson Stitch",
+                  "color_cls": "text-emerald-400"
+            }
+      ],
+      "hero_art_caption_label": "Midnight Kettle Tenebrism • Scottish Highlands, 1747–1782",
+      "hero_art_caption_title": "Mairi, Callum, the Crimson Madder Stitch & Silent Witness Coll",
+      "media": {
+            "youtubeVideoUrl": "",
+            "comingSoonBadge": "Coming 11/14/26",
+            "comingSoonLabel": "Coming 11/14/26 • Music Video Premiering Tomorrow",
+            "spotifyUrl": "[INSERT_SPOTIFY_URL_OR_LEAVE_PENDING]",
+            "appleMusicUrl": "[INSERT_APPLE_MUSIC_URL_OR_LEAVE_PENDING]",
+            "amazonMusicUrl": "[INSERT_AMAZON_MUSIC_URL_OR_LEAVE_PENDING]"
+      },
+      "art_banner": "assets/art/the-weavers-secret-banner.webp",
+      "art_square": "assets/art/the-weavers-secret-cover.webp",
+      "art_alt": "Inside a pitch-black 1746 Highland stone croft lit by tallow candlelight and peat embers beneath a steaming iron dye cauldron, red-haired Highland dyer Mairi and grizzled croftsman Callum stand beside a coarse ash-grey hodden wool coat whose inner lining gleams with one vivid blood-red madder stitch while silent Border Collie Coll keeps watch.",
+      "pillar_badges": [
+            "Coming 11/14/26",
+            "1746 Dress Act (19 Geo. 2. c. 39)",
+            "Tilbury Hulks & 1-in-20 Lottery",
+            "Midnight Botanical Apothecary",
+            "Interactive History Book"
+      ],
+      "tags": [
+            "TheWeaversSecret",
+            "HoddenGrey",
+            "DressAct1746",
+            "ActOfProscription",
+            "Culloden1746",
+            "TilburyFort",
+            "MadderRoot",
+            "HighlandHistory"
+      ],
+      "quote": "Oh, dye the wool in hodden grey to blind the bailiff's eye!\nSpin the coarse and bitter coat beneath a watching sky!\nBut deep inside the lining seam where magistrates can't see\nI weave a single crimson thread of who we used to be!\nMadder root and heather bloom, boiled in the dark of night\nYou can outlaw every pattern, you can burn the colors bright\nBut every throw of shuttle wood remembers who was slain\nThe secret in the hodden grey will rise in us again!",
+      "bards_story": [
+            "Empires rarely stop at winning a battle. Once the cannons cool and the dead are buried under sleet, an anxious parliament almost always turns its eyes toward the cottage—toward the cradle song, the spoken tongue, the gathering hall, and the cloth on a working family's shoulders. In August 1746, four months after Government artillery shattered the last Jacobite rising on Culloden Moor, Westminster enacted the Act of Proscription (19 Geo. 2. c. 39). Under Section 17—the Dress Act, taking full effect on August 1, 1747—no civilian man or boy anywhere in Scotland could wear the belted plaid, little kilt (feileadh-beag), tartan trews, or tartan greatcoat. A first conviction meant six months in prison without bail; a second meant seven years of forced penal transportation across the Atlantic.",
+            "Behind the lyrics of Verse 2 ('My eldest boy lies under turf where sleet on Culloden fell / My youngest chained in Tilbury hold, bound for a southern hell') lies the documented horror of the Thames prison hulks and Tilbury Fort (1746–1749). Over 3,400 Jacobite men, women, and teenaged boys were crammed into coastal transports like the Pamela, Margaret & Mary, Jane of Leith, and Thane of Fife and anchored off Tilbury and Woolwich or packed into Tilbury Fort's damp brick gunpowder magazines. Amid raging typhus and scurvy, Crown officials administered the infamous 1-in-20 'lotting' lottery—drawing one man in twenty to stand trial for High Treason while contracting the remaining nineteen to merchants like Samuel Smith and Richard Gildart, shipping roughly 936 surviving captives to sugar and tobacco plantations in Barbados, Antigua, Jamaica, Virginia, and Maryland.",
+            "Stripped of regional setts in daylight, impoverished Highland parishes dressed in 'hodden grey'—coarse homespun wool carded from undyed white and black sheep fleeces (~12:1 ratio), the color of wet peat ash and winter mist. Yet notice the wording of Section 17: Parliament wrote 'no man or boy.' In pre-industrial Highland life, dyeing and spinning were women's sacred domestic domain. Behind shuttered windows after midnight, mothers and widows scraped crottle lichen and fir clubmoss (a natural aluminum mordant) along rocky burns, steeped aromatic bog myrtle and heather bloom, and simmered wild madder root (Rubia tinctorum and native Highland bedstraw, Gaelic Rù) until a single skein glowed blood-crimson—stitching one hidden red thread inside the coarse grey coat seam right over the heart.",
+            "Most remarkably, 'The Weaver's Secret' captures the exact thirty-five-year horizon (1747–1782) where two revolutions collided within a single Highland mother's lifetime: in 1769, while the tartan ban was still strictly enforced, Richard Arkwright patented the iron water frame, and by 1778–1786 water-powered spinning mills at Penicuik, Rothesay, Deanston, and New Lanark were rising alongside the Highland sheep clearances. Against both Westminster's proscription and the coming factory gears stood 'a mother's thumb upon the yarn'—until the repeal of July 1, 1782 (22 Geo. 3. c. 63) proved that Parliament could burn the plaids, but never get the thread out from against the heart."
+      ],
+      "musical_direction": {
+            "summary": "Cinematic Scottish Highland Folk-Rock Duet at ~62 BPM (05:48).",
+            "details": "Opens with a stark spoken historical cold open over rain-lashed acoustic guitar and low drone ('In seventeen and forty-six, the Parliament in London outlawed the very cloth on our backs...'), answered at 0:30 by a weeping croft fiddle lament. A weathered Highland male baritone (Callum) and a fiery, soaring Scottish female vocalist (Mairi) trade intimate candlelit verses over fingerpicked guitar, low whistle, cello, and bodhrán before uniting in thunderous folk-rock choruses, an anthemic Tilbury-to-water-frame bridge, a midnight hearth fiddle solo at 4:26, and a breathtaking 3.62-second sustained soprano belt on 'slain' before the whispered coda: 'One crimson thread against the heart... Woven by hand. Unbroken by law.'"
+      },
+      "pillars_section": {
+            "badge": "Interactive Framework I // 3-Pillar Historical Matrix",
+            "title": "The Statute, The Thames Hulks & The Midnight Cauldron (1746–1782)",
+            "intro": "Every line in 'The Weaver's Secret (Dyed in the Hodden Grey)' rests on primary-source 18th-century statutory law, State Paper prisoner transport ledgers, and authentic Highland botanical chemistry."
+      },
+      "pillars": [
+            {
+                  "number": "I",
+                  "code": "PILLAR I // STATUTORY ERASURE",
+                  "title": "The Dress Act of 1746 (19 Geo. 2. c. 39, Section 17)",
+                  "stat_highlight": "6 Mo / 7 Yr Exile",
+                  "stat_sub": "Effective Aug 1, 1747 – July 1, 1782 • Criminalized tartan for every civilian 'man or boy'",
+                  "icon": "fa-solid fa-gavel",
+                  "summary": "To ensure Highland society could never recognize itself again after Culloden, Westminster criminalized civilian Highland dress while exempting only Crown soldiers fighting for the British Empire overseas.",
+                  "analysis": "Under Section 17 of the Act of Proscription, any civilian man or boy caught wearing the plaid, philibeg (little kilt), trews, shoulder-belt, or tartan coat faced six months' imprisonment without bail on a first offense and seven years' transportation to overseas plantations on a second—paired with a terrifying iron oath invoking a coward's death without Christian burial.",
+                  "lyric_echo": "Wear nothing now but hodden grey, coarse wool of mud and ash / Or feel the prison hulk on Thames and taste the planter's lash"
+            },
+            {
+                  "number": "II",
+                  "code": "PILLAR II // IMPERIAL TRANSPORT",
+                  "title": "Tilbury Fort, Thames Hulks & The 1-in-20 'Lotting' Lottery",
+                  "stat_highlight": "3,400+ Captives",
+                  "stat_sub": "1-in-20 drawn for treason trial • ~936 survivors contracted to Caribbean & Tidewater plantations",
+                  "icon": "fa-solid fa-anchor-lock",
+                  "summary": "Packed into coastal transports (Pamela, Margaret & Mary, Jane of Leith, Thane of Fife) and Tilbury Fort's damp gunpowder magazines, Highland prisoners faced typhus, 'lotting,' and plantation indentures.",
+                  "analysis": "Rather than try 3,000+ prisoners individually, Crown officials at Tilbury drew slips from a hat: one man in twenty stood trial for High Treason, while the remaining nineteen were pressured to petition for 'Mercy'—meaning lifelong penal transportation under contractors Samuel Smith and Richard Gildart to sugar and tobacco estates in Barbados, Jamaica, Antigua, Virginia, and Maryland.",
+                  "lyric_echo": "My eldest boy lies under turf where sleet on Culloden fell / My youngest chained in Tilbury hold, bound for a southern hell"
+            },
+            {
+                  "number": "III",
+                  "code": "PILLAR III // BOTANICAL DEFIANCE",
+                  "title": "Hodden Grey, Madder Root & The Collision With Arkwright's Water Frame",
+                  "stat_highlight": "1747 – 1782",
+                  "stat_sub": "Madder (crimson), bog myrtle (green), heather (ochre) & crottle moss vs. 1769 iron water frames",
+                  "icon": "fa-solid fa-mortar-pestle",
+                  "summary": "While men and boys wore undyed ash-colored hodden grey (12:1 white-to-black fleece) in daylight, Highland women boiled native plant dyes after midnight and hid thread-counts on notched sticks (maide-àireimh).",
+                  "analysis": "Because Section 17 specified 'no man or boy,' mothers and dyers became the keepers of memory—simmering Rubia tinctorum (madder root), Myrica gale (bog myrtle), Calluna vulgaris (heather), and stream crottle lichen with fir clubmoss mordants, holding the human line right as Richard Arkwright's 1769 water frames and Highland sheep clearances arrived to industrialize Britain.",
+                  "lyric_echo": "One strand of blood-red madder root, one strand of myrtle green / Sewn tight against the beating heart where redcoats never been"
+            }
+      ],
+      "clean_lyrics_stanzas": [
+            "[Spoken]\nIn seventeen and forty-six,\nthe Parliament in London outlawed the very cloth on our backs.\nSix months in irons if you wore the tartan. Seven years in chains across the sea if you wore it twice.\nThey thought if they burned the colors,\nwe would forget our names.",
+            "[Verse 1]\nThe magistrate rode up the hill with soldiers at his side\nTo search the rafters of the croft where broken memories hide\nThey dragged the ancestral tartan out and threw it on the flame\nAnd read the King's Proscription out to blot our fathers' name\nWear nothing now but hodden grey, coarse wool of mud and ash\nOr feel the prison hulk on Thames and taste the planter's lash",
+            "[Verse 2]\nMy eldest boy lies under turf where sleet on Culloden fell\nMy youngest chained in Tilbury hold, bound for a southern hell\nBecause he wrapped his shoulders in the cloth I spun by hand\nBefore the iron water frames came chewing up the land\nNow soldiers tap my wooden loom and check the shuttle thread\nAnd see an old wife spinning grey to earn her winter bread",
+            "[Pre-Chorus]\nThey watch the spindle turn by day, they inspect every seam\nThey do not know what hides inside the kettle's midnight steam",
+            "[Chorus]\nOh, dye the wool in hodden grey to blind the bailiff's eye!\nSpin the coarse and bitter coat beneath a watching sky!\nBut deep inside the lining seam where magistrates can't see\nI weave a single crimson thread of who we used to be!\n(Who we used to be!)\nMadder root and heather bloom, boiled in the dark of night\nYou can outlaw every pattern, you can burn the colors bright\nBut every throw of shuttle wood remembers who was slain\nThe secret in the hodden grey will rise in us again!",
+            "[Verse 3]\nI gather crowdie moss by night down by the rocky stream\nAnd whisper every outlawed name into the rising steam\nBefore the great gears cage the men and rivers turn the mill\nA mother's thumb upon the yarn holds all the country still\nOne strand of blood-red madder root, one strand of myrtle green\nSewn tight against the beating heart where redcoats never been",
+            "[Pre-Chorus]\nLet grey coats walk the parish road and bow before the law\nThey carry fire against their ribs the trooper never saw",
+            "[Chorus]\nOh, dye the wool in hodden grey to blind the bailiff's eye!\nSpin the coarse and bitter coat beneath a watching sky!\nBut deep inside the lining seam where magistrates can't see\nI weave a single crimson thread of who we used to be!\n(Who we used to be!)\nMadder root and heather bloom, boiled in the dark of night\nYou can outlaw every pattern, you can burn the colors bright\nBut every throw of shuttle wood remembers who was slain\nThe secret in the hodden grey will rise in us again!",
+            "[Bridge]\nA coat of grey for Tilbury dock\n(A crimson thread inside)\nA coat of grey for the debtor's block\n(Where Highland ghosts abide)\nNo Parliament in Westminster, no spindle turned by steam\nCan tear the human warp and weft out of a mother's dream!",
+            "[Chorus]\nOh, dye the wool in hodden grey to blind the bailiff's eye!\nSpin the coarse and bitter coat beneath a watching sky!\nBut deep inside the lining seam where magistrates can't see\nI weave a single crimson thread of who we used to be!\n(Who we used to be!)\nMadder root and heather bloom, boiled in the dark of night\nYou can outlaw every pattern, you can burn the colors bright\nBut every throw of shuttle wood remembers who was slain\nThe secret in the hodden grey will rise in us again!",
+            "[Outro]\nOne crimson thread against the heart...\nWoven by hand. Unbroken by law."
+      ],
+      "copyright_notice": "© 2026 The Shady River Bard / Shady River Homestead LLC. All rights reserved."
+},
+
+    // =========================================================================
+    // SINGLE 06: THE SILVER OF SKULLYVILLE
+    // Permalink: https://theshadyriverbard.com/singles/the-silver-of-skullyville/
+    // =========================================================================
+    {
+      "id": "the-silver-of-skullyville",
+      "slug": "the-silver-of-skullyville",
+      "permalink": "https://theshadyriverbard.com/singles/the-silver-of-skullyville/",
+      "relative_url": "the-silver-of-skullyville/",
+      "number": 6,
+      "number_padded": "06",
+      "badge": "STANDALONE SINGLE 06 // INTERNATIONAL SINGLES VOL. 1 • CHOCTAW & IRISH SOLIDARITY",
+      "card_badge": "Single #06 • Coming 11/21/26",
+      "key_tempo_badge": "Key of E Minor // 68 BPM Transatlantic Duet",
+      "key": "E Minor",
+      "bpm": 68,
+      "duration": "06:58",
+      "release_year": 2026,
+      "release_date_display": "November 21, 2026 (11/21/26)",
+      "release_status": "Premiering November 21, 2026",
+      "hasHistoryBook": true,
+      "historyBookTitle": "The Skullyville & Black '47 Chronicle (1831–2020)",
+      "title": "The Silver of Skullyville",
+      "title_accent_split": [
+            "The Silver of",
+            "Skullyville"
+      ],
+      "subtitle": "March 23, 1847 (Skullyville, Choctaw Nation to County Cork & Doolough Pass, Ireland): Sixteen Winters After the Trail of Tears, $170 in Tarnished Iskuli Silver, and the 173-Year Circle of Grace",
+      "location": "Skullyville, Choctaw Nation (Oklahoma) • Memphis, TN • Midleton & Skibbereen (County Cork) • Doolough Pass (County Mayo) • Navajo & Hopi Nations",
+      "genre": "Transatlantic Celtic-Americana Folk-Rock Ballad Duet (Cedar Wood Flute & Uilleann Pipes)",
+      "thesis": "On March 23, 1847, inside a rain-lashed log council agency at Skullyville in the Choctaw Nation (from the Choctaw word iskuli, meaning 'silver coin'), families who had survived the brutal 1831 Trail of Tears blizzard across the Mississippi just sixteen winters earlier gathered by whale-oil lantern light to hear a famine relief circular from across the Atlantic. In Ireland, Black '47 was turning potato fields black while guarded grain ships sailed out of Irish harbors. Having almost nothing left on earth themselves, the Choctaw people untied knotted linen rags and pooled $170 in tarnished silver—routing it via Memphis and New York to Quaker soup cauldrons in starving Irish parishes. One hundred and seventy years later, nine twenty-foot steel eagle feathers rose in County Cork in the shape of an empty bowl—and when pandemic sickness struck Native nations in 2020, thousands of Irish families sent millions back across the sea in $17 and $170 gifts.",
+      "thesis_attribution": "— Historical & Moral Thesis • Single #01 of International Singles Volume 1 (1831 – March 23, 1847 – May 2020)",
+      "dedication": "Dedicated to the Choctaw Nation elders and families of Skullyville (March 23, 1847), the starving parishioners of County Cork and Doolough Pass (1847–1849), the Society of Friends, and the thousands of Irish citizens who honored a 173-year debt of grace in 2020.",
+      "telemetry": [
+            {
+                  "label": "Skullyville Gift",
+                  "value": "$170 Silver (1847)",
+                  "color_cls": "text-retinal-400"
+            },
+            {
+                  "label": "Precursor Wound",
+                  "value": "16 Yrs Post-Trail",
+                  "color_cls": "text-amber-400"
+            },
+            {
+                  "label": "Doolough Foil",
+                  "value": "600 in Sleet (1849)",
+                  "color_cls": "text-rose-400"
+            },
+            {
+                  "label": "173-Yr Circle",
+                  "value": "2017 Cork & 2020 Aid",
+                  "color_cls": "text-emerald-400"
+            }
+      ],
+      "hero_art_caption_label": "Skullyville Council Agency • Choctaw Nation, March 23, 1847",
+      "hero_art_caption_title": "Tushka, Caleb, the Knotted Linen Rag of Iskuli Silver & Silent Witnesses Marcus and Bram",
+      "media": {
+            "youtubeVideoUrl": "",
+            "comingSoonBadge": "Coming 11/21/26",
+            "comingSoonLabel": "Coming 11/21/26 • Music Video Premiering Nov 21",
+            "spotifyUrl": "[INSERT_SPOTIFY_URL_OR_LEAVE_PENDING]",
+            "appleMusicUrl": "[INSERT_APPLE_MUSIC_URL_OR_LEAVE_PENDING]",
+            "amazonMusicUrl": "[INSERT_AMAZON_MUSIC_URL_OR_LEAVE_PENDING]"
+      },
+      "art_banner": "assets/art/the-silver-of-skullyville-banner.webp",
+      "art_square": "assets/art/the-silver-of-skullyville-cover.webp",
+      "art_alt": "Inside a rough-hewn 1847 Indian Territory log council hall lit by warm amber whale-oil lantern light while freezing March rain streaks the window, weathered Choctaw elder Tushka holds a tarnished silver coin above an open burlap collection bag beside an untied linen rag.",
+      "pillar_badges": [
+            "Coming 11/21/26",
+            "March 23, 1847 ($170 Iskuli Silver)",
+            "16 Winters After Trail of Tears",
+            "Doolough Pass (1849) & Kindred Spirits (2017)",
+            "Interactive History Book"
+      ],
+      "tags": [
+            "TheSilverOfSkullyville",
+            "ChoctawNation",
+            "Black47",
+            "AnGortaMor",
+            "KindredSpiritsCork",
+            "DooloughPass",
+            "Iskuli",
+            "InternationalSinglesVol1"
+      ],
+      "quote": "One hundred seventy in silver!\n(Silver on the wood)\nFrom empty coats of broken-hearted men!\nWhen London locked its granary doors\nAnd drove the starving from the glen!\nFour thousand miles across the sea\n(Four thousand miles away)\nThose on the Trail of Tears still knew the feel!\nWhen empires turn away from pain\nThe wounded share their final meal!",
+      "bards_story": [
+            "History books are filled with treaties signed by kings, loans negotiated by imperial banks, and charity dispensed from marble palaces by empires trying to burnish their image. 'The Silver of Skullyville'—launching International Singles Volume 1—tells the exact opposite of imperial charity. In the early spring of 1847, during the darkest winter of the Irish Great Famine (An Gorta Mór, 'Black '47'), word of starving Irish families dying beside cold turf hearths while guarded ships of oats and beef sailed out of County Cork harbors crossed four thousand miles of ocean and reached a frontier log agency town on the Arkansas River in Indian Territory called Skullyville.",
+            "The people gathered inside that timber hall were Choctaws. Just sixteen winters earlier (1831–1833), following the Treaty of Dancing Rabbit Creek, the United States government had uprooted 15,000 Choctaws from ancestral Mississippi and marched them barefoot into the ferocious December 1831 Memphis blizzard—witnessed firsthand by Alexis de Tocqueville and described by Choctaw Chief Harkins as 'a trail of tears and death.' Between 2,500 and 6,000 Choctaws died along that frozen road. Even the name 'Skullyville' came from the Choctaw word 'iskuli-felah' ('iskuli' meaning silver coin, where meager treaty annuities were paid). Yet on March 23, 1847, when Indian Agent Major William Armstrong read the Memphis Irish Relief circular aloud by whale-oil flame, Choctaw elders, families, traders, and missionaries untied knotted linen rags and pooled $170 in silver (verified in the Arkansas Intelligencer on April 3, 1847: 'Truly, the poor help the poor').",
+            "Routed downriver through Memphis and New York to the Society of Friends (Quakers), that Choctaw iskuli bought sacks of American Indian cornmeal for non-sectarian Quaker soup cauldrons across County Cork and western Ireland—standing in searing moral contrast to the March 30–31, 1849 Doolough Pass tragedy in County Mayo, where two well-fed Poor Law inspectors at Delphi Lodge ordered 600 starving parishioners to walk twelve miles overnight through howling sleet, only to turn them back empty-handed at dawn.",
+            "One hundred and seventy winters later, that sacred bond came full circle: in 1990 and 1992 Choctaw and Irish walkers retraced Doolough Pass and 500 miles of the Trail of Tears; in June 2017 Midleton, County Cork unveiled Alex Pentek's 'Kindred Spirits'—nine twenty-foot stainless-steel eagle feathers forming an empty famine bowl reaching skyward; and in May 2020, when COVID-19 swept the Navajo and Hopi Nations, tens of thousands of Irish families sent over $2.6 million across the ocean in exact $17 and $170 increments, writing: 'From Ireland, 173 years later. The debt of grace is never forgotten.'"
+      ],
+      "musical_direction": {
+            "summary": "Transatlantic Celtic-Americana Folk-Rock Ballad Duet in E Minor at 68 BPM (06:58).",
+            "details": "Pairs a calm, warm, unhurried American storyteller baritone (Caleb) with a clear, haunting Irish-accented female mezzo-soprano (Maeve). Opens with a spoken cold open over fingerpicked acoustic guitar, cello drone, and a call-and-response between Native cedar wood flute and Irish low D whistle across four thousand miles of ocean. Hide frame drum and acoustic guitar carry the Skullyville council gathering before uilleann pipes, bodhrán, bass, and warm classic-rock electric guitar swells ignite the transatlantic duet choruses, the soaring County Cork 'Nine Steel Feathers' bridge, a trading uilleann-pipe/cedar-flute/guitar solo, and the quiet spoken coda: 'The empire had the ships. The Choctaw had the soul.'"
+      },
+      "pillars_section": {
+            "badge": "Interactive Framework I // 3-Pillar Historical Matrix",
+            "title": "The Memphis Blizzard, The $170 in Iskuli Silver & The 173-Year Circle",
+            "intro": "Every verse of 'The Silver of Skullyville' is anchored in primary-source 1831–1849 dispatches, avoiding internet myths to honor the documented bond between the Choctaw Nation and Ireland."
+      },
+      "pillars": [
+            {
+                  "number": "I",
+                  "code": "PILLAR I // SHARED DISPOSSESSION",
+                  "title": "The 1831 Memphis Blizzard & Ireland's Black '47 Export Quays",
+                  "stat_highlight": "1831 & 1847",
+                  "stat_sub": "2,500–6,000 Choctaw dead on the Trail of Tears • 1M+ Irish dead while guarded grain ships sailed",
+                  "icon": "fa-solid fa-snowflake",
+                  "summary": "Why did Choctaw elders in 1847 immediately recognize the ache of Irish starvation? Because sixteen winters earlier they had buried their own kin in the frozen mud between Mississippi and Indian Territory.",
+                  "analysis": "Witnessed by Alexis de Tocqueville at the icy Mississippi River crossing in Memphis in December 1831, the Choctaw Nation was the first Native nation forced down the Trail of Tears. Across the ocean in 1847, British laissez-faire policy under Sir Charles Trevelyan shut down relief depots while armed redcoats guarded ships of oats, wheat, and butter sailing out of Cork, Waterford, and Limerick.",
+                  "lyric_echo": "No elder there had need to ask / How hunger cuts into the bone / They still could feel the Memphis snow / Where half their frozen kin had gone"
+            },
+            {
+                  "number": "II",
+                  "code": "PILLAR II // SKULLYVILLE VS. DELPHI LODGE",
+                  "title": "March 23, 1847 ($170 in Iskuli) vs. Doolough Pass (600 in Sleet)",
+                  "stat_highlight": "$170 vs. 600",
+                  "stat_sub": "Verified April 3, 1847 in the Arkansas Intelligencer • Routed via Memphis & NY to Quaker soup kettles",
+                  "icon": "fa-solid fa-Scale-balanced",
+                  "summary": "At Skullyville (from Choctaw 'iskuli' = silver coin), impoverished Choctaw families pooled $170 for Quaker relief ships—contrasting with Poor Law inspectors at Delphi Lodge turning 600 starving neighbors into sleet.",
+                  "analysis": "Recorded contemporaneously in the Arkansas Intelligencer ('The whole amount subscribed was $170! Truly, the poor help the poor'), the gift bought sacks of Indian meal distributed by non-sectarian Quakers in Cork and Mayo—while on March 30–31, 1849, inspectors Hogrove and Primrose forced 600 starving people to walk 12 miles along Doolough Pass in freezing sleet only to deny them bread.",
+                  "lyric_echo": "While up on dark Doolough's pass / Six hundred walked the freezing sleet / Turned back from Delphi's lighted lodge / Yet strangers sent us bread to eat!"
+            },
+            {
+                  "number": "III",
+                  "code": "PILLAR III // THE UNBROKEN CIRCLE",
+                  "title": "Doolough (1990), 'Kindred Spirits' (2017) & The $2.6M Return Gift (2020)",
+                  "stat_highlight": "173 Winters",
+                  "stat_sub": "Nine 20-ft steel eagle feathers in Midleton, Cork (2017) • Thousands of $17 & $170 Irish gifts in 2020",
+                  "icon": "fa-solid fa-feather-pointed",
+                  "summary": "Empires decay, but a debt of grace between wounded peoples never dies: from the 1990–1992 walks and Midleton's nine steel feathers to Ireland's 2020 pandemic relief to the Navajo and Hopi Nations.",
+                  "analysis": "In June 2017, sculptor Alex Pentek and Choctaw Chief Gary Batton unveiled 'Kindred Spirits' in Bailick Park, Midleton—nine 20-foot stainless-steel eagle feathers forming an empty famine bowl. Three years later in May 2020, ordinary Irish families sent over $2.6M to COVID-stricken Native reservations in $17 and $170 increments: 'From Ireland, 173 years later.'",
+                  "lyric_echo": "Nine steel feathers touch the skies / Like an empty bowl that never dies! / A hundred seventy winters turned ... And Ireland sent the millions home"
+            }
+      ],
+      "clean_lyrics_stanzas": [
+            "[Spoken Intro]\nMarch twenty-third, eighteen forty-seven, at Skullyville in the Choctaw Nation.\nSixteen winters after the Trail of Tears, people with almost nothing left\ncounted out one hundred and seventy dollars in silver for a starving island they would never see.",
+            "[Verse 1]\nThe blight fell down on County Cork\nAnd turned the dark drills cold and dead\nDown on the misty harbour quay\nThe redcoats watched the grain and bread\nThe manor gates were bolted tight\nWhile ships of oats sailed out to sea\nAnd mothers knelt by cold turf ash\nWith nothing left for family",
+            "[Verse 2]\nFour thousand miles across the foam\nMarch rain tapped on a timber hall\nIn Skullyville by whale-oil flame\nAn agent read the famine call\nNo elder there had need to ask\nHow hunger cuts into the bone\nThey still could feel the Memphis snow\nWhere half their frozen kin had gone",
+            "[Pre-Chorus]\nAn old chief walked across the boards\nUntied a knotted linen rag\nAnd laid his tarnished silver down\nInside that rough collection bag!",
+            "[Chorus]\nOne hundred seventy in silver!\n(Silver on the wood)\nFrom empty coats of broken-hearted men!\nWhen London locked its granary doors\nAnd drove the starving from the glen!\nFour thousand miles across the sea\n(Four thousand miles away)\nThose on the Trail of Tears still knew the feel!\nWhen empires turn away from pain\nThe wounded share their final meal!",
+            "[Verse 3]\nFrom Skullyville that iskuli rolled\nTo Quaker ships in New York bay\nAnd bought the sacks of Indian meal\nTo keep the parish graves at bay\nWhile up on dark Doolough's pass\nSix hundred walked the freezing sleet\nTurned back from Delphi's lighted lodge\nYet strangers sent us bread to eat!",
+            "[Chorus]\nOne hundred seventy in silver!\n(Silver on the wood)\nFrom empty coats of broken-hearted men!\nWhen London locked its granary doors\nAnd drove the starving from the glen!\nFour thousand miles across the sea\n(Four thousand miles away)\nThose on the Trail of Tears still knew the feel!\nWhen empires turn away from pain\nThe wounded share their final meal!",
+            "[Bridge]\nNow empires rot and thrones decay\nWhile down in County Cork today\nNine steel feathers touch the skies\nLike an empty bowl that never dies!\nA hundred seventy winters turned\nWhen sickness swept the desert wind\nAnd Ireland sent the millions home\nTo heal the debt of ancient kin!",
+            "[Chorus]\nOne hundred seventy in silver!\n(Silver on the wood)\nFrom empty coats of broken-hearted men!\nWhen London locked its granary doors\nAnd drove the starving from the glen!\nFour thousand miles across the sea\n(Four thousand miles away)\nThose on the Trail of Tears still knew the feel!\nWhen empires turn away from pain\nThe wounded share their final meal!",
+            "[Outro]\nFrom Skullyville to County Cork\nThe tarnished silver never rusts",
+            "[Spoken Outro]\nSixteen winters after the Trail of Tears.\nOne hundred and seventy dollars from pockets lined with dust.\nThe empire had the ships.\nThe Choctaw had the soul."
+      ],
+      "copyright_notice": "© 2026 The Shady River Bard / Shady River Homestead LLC. All rights reserved."
+}
+
   ];
 
   const bySlug = {};
