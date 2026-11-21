@@ -976,6 +976,8 @@
         songSlug = 'no-bid';
       } else if (albumItem.id === 'mamas-boy' || albumItem.number === 13) {
         songSlug = 'third-shift-lullaby';
+      } else if (albumItem.id === 'five-digit-fate' || albumItem.number === 14) {
+        songSlug = 'prologue-a-national-static';
       } else {
         const firstPkg = Object.values(PRACTICE_PACKAGES_BY_SLUG).find(pkg => 
           pkg.albumId === albumItem.id || pkg.albumNumber === albumItem.number || normalizePracticeTitle(pkg.albumId) === normalizePracticeTitle(albumItem.id)
@@ -997,7 +999,7 @@
 
         // Dynamically load any extra practice packages if available
         try {
-          const pRes = await fetch('../data/practice-packages.json?v=20261111_12');
+          const pRes = await fetch('../data/practice-packages.json?v=20261121_14');
           if (pRes.ok) {
             const pData = await pRes.json();
             pData.forEach(p => {
