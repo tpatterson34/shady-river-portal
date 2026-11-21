@@ -294,15 +294,32 @@
     </div>
   </aside>
 
-  <!-- PREMIERE RELEASE COUNTDOWN RIBBON -->
-  <div class="bg-gradient-to-r from-amber-950/95 via-retinal-900/90 to-amber-950/95 border-b border-amber-400/50 px-4 py-2.5 text-center">
+  <!-- OFFICIAL RELEASE RIBBON -->
+  <div class="bg-gradient-to-r from-red-950/90 via-clydeslate-900 to-amber-950/90 border-b border-red-500/40 px-4 py-2.5 text-center">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2 sm:gap-4 font-mono text-xs">
-      <span class="px-2.5 py-0.5 rounded-full bg-amber-400 text-clydeslate-950 font-extrabold uppercase tracking-wider">
-        <i class="fa-solid fa-calendar-day mr-1" aria-hidden="true"></i>Coming 11/21/26
+      <span class="px-2.5 py-0.5 rounded-full bg-red-600 text-white font-extrabold uppercase tracking-wider shadow">
+        <i class="fa-solid fa-circle-play mr-1" aria-hidden="true"></i>Official Video Out Now
       </span>
       <span class="text-amber-100 font-semibold">
-        Official 24fps Cinema Music Video Premieres <strong class="text-white underline decoration-amber-400">November 21, 2026 (11/21/26)</strong> &bull; Explore the Interactive 16-Page History Book Below!
+        Watch the Official 24fps Cinema Music Video, Read the <strong class="text-white underline decoration-amber-400">Substack Liner Notes</strong> &amp; Explore the 16-Page History Book!
       </span>
+      <button
+        type="button"
+        onclick="openVideoModal('RpsSzZZvjRY', 'The Silver of Skullyville')"
+        class="px-3 py-1 rounded-lg bg-red-600 hover:bg-red-500 text-white font-bold transition-colors inline-flex items-center gap-1.5 shadow"
+      >
+        <i class="fa-solid fa-play text-[10px]" aria-hidden="true"></i>
+        <span>Watch Video</span>
+      </button>
+      <a
+        href="https://theshadyriverbard.substack.com/p/the-liner-notes-the-silver-of-skullyville"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="px-3 py-1 rounded-lg bg-orange-950/90 hover:bg-orange-900 text-orange-300 border border-orange-500/50 font-bold transition-colors inline-flex items-center gap-1.5"
+      >
+        <i class="fa-solid fa-bookmark text-[10px]" aria-hidden="true"></i>
+        <span>Liner Notes &#8599;</span>
+      </a>
       <a href="#history-book" class="px-3 py-1 rounded-lg bg-clydeslate-950/90 hover:bg-clydeslate-900 text-amber-300 border border-amber-400/50 font-bold transition-colors">
         Open History Book &darr;
       </a>
@@ -330,14 +347,22 @@
         </a>
         <a href="#ledger-matrix" class="text-clydemist-300 hover:text-retinal-400 transition-colors">III. 3-Pillar Matrix</a>
         <a href="#chronicle-arc" class="text-clydemist-300 hover:text-retinal-400 transition-colors">IV. 12 Story Chapters</a>
-        <a href="#single-vault-card" class="text-clydemist-300 hover:text-retinal-400 transition-colors">V. Story &amp; Video</a>
+        <a href="#single-vault-card" class="text-clydemist-300 hover:text-retinal-400 transition-colors">V. Video &amp; Story</a>
         <a href="#complete-lyrics" class="px-3 py-1.5 rounded-lg bg-retinal-500/15 border border-retinal-400/40 text-retinal-300 hover:bg-retinal-500/25 font-bold transition-colors">
           VI. Complete Lyrics
         </a>
       </nav>
 
       <div class="flex items-center gap-2">
-        <a href="#history-book" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-clydeslate-950 font-mono text-xs font-extrabold transition-all shadow-md">
+        <button
+          type="button"
+          onclick="openVideoModal('RpsSzZZvjRY', 'The Silver of Skullyville')"
+          class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-red-600 hover:bg-red-500 text-white font-mono text-xs font-extrabold transition-all shadow-md"
+        >
+          <i class="fa-solid fa-play text-[10px]" aria-hidden="true"></i>
+          <span>Watch Video</span>
+        </button>
+        <a href="#history-book" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-clydeslate-950 font-mono text-xs font-extrabold transition-all shadow-md">
           <i class="fa-solid fa-book-open text-xs" aria-hidden="true"></i>
           <span>Turn Pages</span>
         </a>
@@ -361,8 +386,8 @@
                 <i class="fa-solid fa-scroll text-peat-500" aria-hidden="true"></i>
                 <span>STANDALONE SINGLE 06 // INTERNATIONAL SINGLES VOL. 1 • CHOCTAW &amp; IRISH SOLIDARITY</span>
               </span>
-              <span class="px-3 py-1 rounded-full bg-amber-500 text-clydeslate-950 font-mono text-[11px] font-extrabold uppercase shadow">
-                <i class="fa-solid fa-clock mr-1" aria-hidden="true"></i>Coming 11/21/26
+              <span class="px-3 py-1 rounded-full bg-red-600 text-white font-mono text-[11px] font-extrabold uppercase shadow">
+                <i class="fa-solid fa-circle-play mr-1" aria-hidden="true"></i>Official Video Out Now
               </span>
               <span class="px-2.5 py-1 rounded-full bg-clydeslate-850 border border-white/10 text-clydemist-300 font-mono text-[11px]">
                 E Minor &bull; 68 BPM &bull; 06:58
@@ -388,15 +413,38 @@
               </footer>
             </blockquote>
 
-            <!-- Action & Coming Soon Video Placeholder Bar -->
+            <!-- Action & Official Video CTA Bar -->
             <div class="flex flex-wrap items-center gap-3 pt-1">
-              <span
-                aria-disabled="true"
-                class="px-4 py-2.5 rounded-xl bg-amber-950/90 border-2 border-amber-400/70 text-amber-200 font-mono text-xs font-bold inline-flex items-center gap-2 shadow-xl"
+              <button
+                type="button"
+                onclick="openVideoModal('RpsSzZZvjRY', 'The Silver of Skullyville')"
+                class="px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-mono text-xs font-extrabold inline-flex items-center gap-2 shadow-xl transition-all hover:scale-105"
               >
-                <i class="fa-solid fa-film text-amber-400 animate-pulse" aria-hidden="true"></i>
-                <span>Coming 11/21/26 • Music Video Premiering Nov 21</span>
-              </span>
+                <i class="fa-solid fa-play text-xs" aria-hidden="true"></i>
+                <span>Watch Official Video</span>
+              </button>
+
+              <a
+                href="https://www.youtube.com/watch?v=RpsSzZZvjRY"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-4 py-2.5 rounded-xl bg-clydeslate-850 hover:bg-red-600 text-white border border-red-500/40 font-mono text-xs font-bold inline-flex items-center gap-2 transition-colors shadow"
+                title="Watch on YouTube (Cast to TV, Like, and Comment)"
+              >
+                <i class="fa-brands fa-youtube text-red-400 text-sm" aria-hidden="true"></i>
+                <span>YouTube &#8599;</span>
+              </a>
+
+              <a
+                href="https://theshadyriverbard.substack.com/p/the-liner-notes-the-silver-of-skullyville"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-4 py-2.5 rounded-xl bg-orange-950/80 hover:bg-orange-900 text-orange-200 border border-orange-500/50 font-mono text-xs font-bold inline-flex items-center gap-2 transition-colors shadow"
+                title="Read Substack Liner Notes &amp; Deconstruction for The Silver of Skullyville"
+              >
+                <i class="fa-solid fa-bookmark text-orange-400 text-xs" aria-hidden="true"></i>
+                <span>Substack Liner Notes &#8599;</span>
+              </a>
 
               <a
                 href="#history-book"
@@ -455,10 +503,15 @@
                   fetchpriority="high"
                 >
                 <div class="absolute inset-0 bg-gradient-to-t from-clydeslate-950 via-clydeslate-950/20 to-transparent"></div>
-                <div class="absolute top-3 left-3">
-                  <span class="px-3 py-1 rounded-lg bg-amber-500 text-clydeslate-950 font-mono text-[11px] font-extrabold uppercase shadow-lg">
-                    <i class="fa-solid fa-clock mr-1" aria-hidden="true"></i>Coming 11/21/26
-                  </span>
+                <div class="absolute top-3 left-3 flex items-center gap-2">
+                  <button
+                    type="button"
+                    onclick="openVideoModal('RpsSzZZvjRY', 'The Silver of Skullyville')"
+                    class="px-3 py-1 rounded-lg bg-red-600 hover:bg-red-500 text-white font-mono text-[11px] font-extrabold uppercase shadow-lg inline-flex items-center gap-1.5 transition-colors"
+                  >
+                    <i class="fa-solid fa-play text-[10px]" aria-hidden="true"></i>
+                    <span>Watch Video</span>
+                  </button>
                 </div>
                 <div class="absolute bottom-0 inset-x-0 p-5 flex items-end justify-between gap-4">
                   <div>
@@ -720,12 +773,28 @@
               Scene-by-Scene Visual Architecture (06:58)
             </h2>
             <p class="font-serif text-sm sm:text-base text-clydemist-200 leading-relaxed">
-              Preview the twelve narrative chapters from the upcoming 24fps cinema music video (premiering <strong class="text-amber-300">November 21, 2026 (11/21/26)</strong>).
+              Explore the twelve narrative chapters from the official 24fps cinema music video (<strong class="text-amber-300">Out Now</strong>).
             </p>
           </div>
-          <span class="px-3.5 py-2 rounded-xl bg-amber-500/15 border border-amber-400/40 text-amber-300 font-mono text-xs font-bold shrink-0">
-            <i class="fa-solid fa-film mr-1.5" aria-hidden="true"></i>Coming 11/21/26 • Music Video Premiering Nov 21
-          </span>
+          <div class="flex flex-wrap items-center gap-2 shrink-0">
+            <button
+              type="button"
+              onclick="openVideoModal('RpsSzZZvjRY', 'The Silver of Skullyville')"
+              class="px-4 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white font-mono text-xs font-extrabold inline-flex items-center gap-2 shadow transition-colors"
+            >
+              <i class="fa-solid fa-play text-[10px]" aria-hidden="true"></i>
+              <span>Watch Official Video</span>
+            </button>
+            <a
+              href="https://theshadyriverbard.substack.com/p/the-liner-notes-the-silver-of-skullyville"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-3.5 py-2 rounded-xl bg-orange-950/80 hover:bg-orange-900 text-orange-200 border border-orange-500/50 font-mono text-xs font-bold inline-flex items-center gap-1.5 shadow transition-colors"
+            >
+              <i class="fa-solid fa-bookmark text-orange-400 text-[10px]" aria-hidden="true"></i>
+              <span>Substack Liner Notes &#8599;</span>
+            </a>
+          </div>
         </div>
 
         <div id="story-chapters-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -735,33 +804,59 @@
     </section>
 
     <!-- =================================================================== -->
-    <!-- 5. THE BARD'S STORY, PREMIERE VIDEO PLACEHOLDER & COMPLETE LYRICS    -->
+    <!-- 5. THE BARD'S STORY, OFFICIAL CINEMA VIDEO & COMPLETE LYRICS         -->
     <!-- =================================================================== -->
     <section id="single-vault-card" class="py-16 sm:py-20 bg-clydeslate-950 scroll-mt-16">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
-        <!-- Premiere Video Placeholder Card (Unlisted URL Strictly Hidden Until Release) -->
-        <div class="rounded-3xl overflow-hidden bg-clydeslate-900 border-2 border-amber-400/60 shadow-2xl">
-          <div class="relative aspect-video w-full overflow-hidden bg-clydeslate-950">
+        <!-- Official Cinema Music Video Card -->
+        <div class="rounded-3xl overflow-hidden bg-clydeslate-900 border-2 retinal-border retinal-glow shadow-2xl">
+          <div class="relative aspect-video w-full overflow-hidden bg-clydeslate-950 group cursor-pointer" onclick="openVideoModal('RpsSzZZvjRY', 'The Silver of Skullyville')">
             <img
               src="assets/art/the-silver-of-skullyville-banner.webp"
               alt="Inside a rough-hewn 1847 Indian Territory log council hall lit by warm amber whale-oil lantern light while freezing March rain streaks the window, weathered Choctaw elder Tushka holds a tarnished silver coin above an open burlap collection bag beside an untied linen rag."
-              class="w-full h-full object-cover opacity-65"
+              class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
             >
-            <div class="absolute inset-0 bg-gradient-to-t from-clydeslate-950 via-clydeslate-950/60 to-black/50 flex flex-col items-center justify-center p-6 text-center space-y-4">
-              <span class="px-4 py-1.5 rounded-full bg-amber-400 text-clydeslate-950 font-mono text-xs sm:text-sm font-extrabold uppercase tracking-widest shadow-lg">
-                <i class="fa-solid fa-clock mr-1.5" aria-hidden="true"></i>Coming 11/21/26 &bull; Official Cinema Premiere
+            <div class="absolute inset-0 bg-gradient-to-t from-clydeslate-950 via-clydeslate-950/50 to-black/40 flex flex-col items-center justify-center p-6 text-center space-y-4">
+              <span class="px-4 py-1.5 rounded-full bg-red-600 text-white font-mono text-xs sm:text-sm font-extrabold uppercase tracking-widest shadow-lg">
+                <i class="fa-solid fa-circle-play mr-1.5" aria-hidden="true"></i>Official 24fps Cinema Music Video &bull; Out Now
               </span>
               <h3 class="font-display text-2xl sm:text-4xl font-extrabold text-white max-w-2xl">
                 The Silver of Skullyville
               </h3>
               <p class="font-serif text-xs sm:text-base text-slate-200 max-w-xl">
-                The official 24fps 35mm cinema music video premieres on <strong class="text-amber-300">November 21, 2026 (11/21/26)</strong>. Return to this page on release day to watch in the full-screen cinema player.
+                Directed in 35mm Whale-Oil &amp; Atlantic Slate Tenebrism (06:58). Click below to watch in the full-screen cinema modal player, open on YouTube, or read the complete Substack Liner Notes.
               </p>
-              <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
-                <a href="#history-book" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-clydeslate-950 font-mono text-xs font-extrabold inline-flex items-center gap-2 shadow">
+              <div class="flex flex-wrap items-center justify-center gap-3 pt-2" onclick="event.stopPropagation()">
+                <button
+                  type="button"
+                  onclick="openVideoModal('RpsSzZZvjRY', 'The Silver of Skullyville')"
+                  class="px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-mono text-xs font-extrabold inline-flex items-center gap-2 shadow-xl transition-all hover:scale-105"
+                >
+                  <i class="fa-solid fa-play" aria-hidden="true"></i>
+                  <span>Play Official Music Video</span>
+                </button>
+                <a
+                  href="https://www.youtube.com/watch?v=RpsSzZZvjRY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="px-4 py-2.5 rounded-xl bg-clydeslate-950/90 hover:bg-red-600 text-white border border-red-500/50 font-mono text-xs font-bold inline-flex items-center gap-2 shadow transition-colors"
+                >
+                  <i class="fa-brands fa-youtube text-red-400 text-sm" aria-hidden="true"></i>
+                  <span>Watch on YouTube &#8599;</span>
+                </a>
+                <a
+                  href="https://theshadyriverbard.substack.com/p/the-liner-notes-the-silver-of-skullyville"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="px-4 py-2.5 rounded-xl bg-orange-950/90 hover:bg-orange-900 text-orange-200 border border-orange-500/50 font-mono text-xs font-bold inline-flex items-center gap-2 shadow transition-colors"
+                >
+                  <i class="fa-solid fa-bookmark text-orange-400 text-xs" aria-hidden="true"></i>
+                  <span>Substack Liner Notes &#8599;</span>
+                </a>
+                <a href="#history-book" class="px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-clydeslate-950 font-mono text-xs font-extrabold inline-flex items-center gap-2 shadow">
                   <i class="fa-solid fa-book-open" aria-hidden="true"></i>
-                  <span>Read the 16-Page History Book While You Wait</span>
+                  <span>Open 16-Page History Book</span>
                 </a>
               </div>
             </div>
@@ -817,6 +912,58 @@
 
   </main>
 
+  <!-- ACCESSIBLE IN-PAGE VIDEO PLAYER MODAL -->
+  <div
+    id="video-modal"
+    onclick="if(event.target === this) closeVideoModal()"
+    class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-sm flex items-center justify-center p-4"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-video-title"
+  >
+    <div class="relative w-full max-w-4xl rounded-2xl overflow-hidden bg-clydeslate-950 border-2 retinal-border shadow-2xl">
+      <div class="p-4 border-b border-white/10 flex items-center justify-between gap-4">
+        <h3 id="modal-video-title" class="font-display text-sm sm:text-base font-bold text-white truncate">
+          The Silver of Skullyville
+        </h3>
+        <div class="flex items-center gap-2">
+          <a
+            id="modal-youtube-link"
+            href="https://www.youtube.com/watch?v=RpsSzZZvjRY"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-3.5 py-1.5 rounded-lg bg-red-600 hover:bg-red-500 text-white flex items-center gap-2 font-mono text-xs font-bold transition-all shadow-md"
+            title="Watch on YouTube (Cast to TV, Like, and Comment)"
+            aria-label="Watch on YouTube"
+          >
+            <i class="fa-brands fa-youtube text-white text-sm" aria-hidden="true"></i>
+            <span>Watch on YouTube</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-80" aria-hidden="true"></i>
+          </a>
+          <button
+            type="button"
+            onclick="closeVideoModal()"
+            class="px-3 py-1.5 rounded-lg bg-clydeslate-850 hover:bg-clydeslate-800 text-white font-mono text-xs font-bold"
+            aria-label="Close video player"
+          >
+            Close [Esc]
+          </button>
+        </div>
+      </div>
+      <div class="relative aspect-video w-full bg-black">
+        <iframe
+          id="modal-video-iframe"
+          class="w-full h-full"
+          src=""
+          title="The Silver of Skullyville Official Music Video Player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
   <!-- LIGHTBOX MODAL FOR BOOK PLATES & CINEMA STILLS -->
   <div
     id="plate-lightbox"
@@ -865,7 +1012,7 @@
   </footer>
 
   <script src="../../assets/js/a11y.js"></script>
-  <script src="../data/singles-data.js?v=20261113_06"></script>
+  <script src="../data/singles-data.js?v=20261121_06"></script>
   <script>
     (function() {
       const BOOK_SPREADS = [{"spread_num": 1, "pages": "Pages 01 – 02", "tab_label": "I. Prologue (1847)", "folio_header": "FOLIO I // FRONTISPIECE & TRANSATLANTIC PROLOGUE", "era_stamp": "March 23, 1847 • Skullyville, Choctaw Nation → County Cork & Mayo, Ireland", "title": "Why This Story Still Brings Grown Men and Women to Tears 179 Years Later", "drop_lead": "History books are filled with treaties signed by kings, loans negotiated by imperial banks, and charity dispensed from marble palaces by empires trying to burnish their image. 'The Silver of Skullyville' is the exact opposite of imperial charity.", "body_paragraphs": ["In the early spring of 1847—the darkest winter of the Irish Great Famine (An Gorta Mór, remembered across Ireland simply as 'Black '47')—word of starving Irish families dying with green grass stains on their mouths crossed four thousand miles of ocean and reached a frontier log agency town on the Arkansas River in Indian Territory (present-day Le Flore County, Oklahoma) called Skullyville.", "The people gathered inside that timber hall were Choctaws. Just sixteen winters earlier (1831–1833), the United States government had seized twenty-three million acres of their ancestral homeland in Mississippi and marched them barefoot through one of the worst blizzards of the nineteenth century—the very march where a Choctaw leader first spoke the phrase 'a trail of tears and death.'", "They had never seen Ireland. They owed nothing to Europe. Every colonial power they had ever met had broken its word to them. Yet on March 23, 1847, Choctaw elders, families, traders, and missionaries reached into threadbare pockets, untied knotted linen rags, and counted out $170 in tarnished silver and small coin—one of the purest recorded acts of human solidarity on earth."], "primary_source_box": {"badge": "PRIMARY-SOURCE VERIFICATION // $170 AT SKULLYVILLE VS. 600 AT DOOLOUGH PASS", "quote": "• $170 (Skullyville, March 23, 1847): Verified contemporaneously in the Arkansas Intelligencer (April 3, 1847) and Niles' National Register (~$6,000–$10,000+ purchasing power today, and infinitely more given frontier poverty).\n• 600 (Doolough Pass, March 30–31, 1849): The 600 starving County Mayo parishioners forced to walk 12 miles in freezing sleet to Delphi Lodge—the exact road Choctaw elders walked beside the Irish in 1990.", "citation": "— Ground-Truth Archival Verification • International Singles Volume 1, Single #01"}, "lyric_echo": "March twenty-third, eighteen forty-seven, at Skullyville in the Choctaw Nation. Sixteen winters after the Trail of Tears, people with almost nothing left counted out one hundred and seventy dollars in silver for a starving island they would never see.", "plate_primary": "assets/stills/bookplate-01-solidarity.webp", "plate_primary_caption": "Plate I: Transatlantic Relics — Tarnished 1847 Iskuli Silver Coins, Cedar Wood Flute & Eagle Feather Beside an Irish Quaker Soup Cauldron & Uilleann Pipes", "plate_secondary": "assets/stills/00-skullyville-council-tableau.webp", "plate_secondary_caption": "35mm Cinema Frame: Choctaw Council Elders Pooling Silver by Whale-Oil Lantern Light at Skullyville (March 23, 1847)", "recto_cards_title": "Dramatis Personae & Silent Witnesses Across Two Oceans", "recto_cards": [{"tag": "CHOCTAW COUNCIL ELDER // SKULLYVILLE (1847)", "heading": "Tushka (58yo Trail of Tears Survivor & Choctaw Elder)", "text": "Wearing a patched homespun wool coat and woven ochre-and-red scarf, Tushka unties a knotted linen rag by whale-oil lamp light to lay his tarnished silver down."}, {"tag": "IRISH FEMALE VOCALIST // COUNTY CORK & MAYO", "heading": "Maeve (30yo County Cork Survivor & Mezzo-Soprano)", "text": "Kneeling by cold grey turf ash as guarded grain ships sail out of Cork Harbor, her voice bridges Black '47, Doolough Pass, and the 2017 steel eagle feathers of Midleton."}, {"tag": "AMERICAN BARITONE & SILENT WITNESS DOGS", "heading": "Caleb (44yo Skullyville Clerk), Marcus (Aussie) & Bram (Border Collie)", "text": "Caleb reads the Memphis famine circular aloud while Marcus (our Black Tri Australian Shepherd in Oklahoma) and Bram (a black-and-white Border Collie on the wet Cork slate) keep silent watch."}]}, {"spread_num": 2, "pages": "Pages 03 – 04", "tab_label": "II. Memphis Snow (1831)", "folio_header": "FOLIO II // CHAPTER I: THE WOUND IN CHOCTAW MEMORY — DANCING RABBIT CREEK & MEMPHIS", "era_stamp": "September 27, 1830 – December 1831 – 1833 • Mississippi to Indian Territory", "title": "Sixteen Winters After the Blizzard on the Mississippi", "drop_lead": "To understand why the room in Skullyville went dead silent on March 23, 1847, you have to rewind sixteen winters to September 27, 1830, when federal commissioners pressured Choctaw leaders into signing the Treaty of Dancing Rabbit Creek under Andrew Jackson's Indian Removal Act.", "body_paragraphs": ["The Choctaw Nation—who had fought alongside Jackson just sixteen years earlier in the War of 1812—became the very first Native nation forced down the Trail of Tears. Between 1831 and 1833, roughly 15,000 Choctaws were uprooted from Mississippi in three winter waves. Federal contractors cut rations to rotting pork and mouldy corn, ran out of wagons and tents, and marched families into December 1831, which brought one of the fiercest ice storms in Lower Mississippi history.", "Little Rock's Arkansas Gazette interviewed Choctaw Chief Thomas Harkins (or George Harkins), who described the road through the sleet and mud as 'a trail of tears and death'—giving history the phrase 'Trail of Tears' years before the Cherokee removal of 1838. Between 2,500 and 6,000 Choctaw men, women, and children died of exposure, starvation, pneumonia, and cholera before ever reaching Indian Territory."], "primary_source_box": {"badge": "EYEWITNESS DISPATCH // ALEXIS DE TOCQUEVILLE AT THE FROZEN MEMPHIS CROSSING (DEC 1831)", "quote": "\"It was then the middle of winter, and the cold was unusually severe; the snow had frozen hard upon the ground, and the river was drifting huge masses of ice. The Indians had their families with them, and they brought in their train the wounded and the sick, with children newly born and old men upon the verge of death. They possessed neither tents nor wagons, but only their arms and some provisions. I saw them embark to pass the mighty river, and never will that solemn spectacle fade from my remembrance. No cry, no sob, was heard amongst the assembled crowd; all were silent.\"", "citation": "— Alexis de Tocqueville, Democracy in America (Eyewitness at Memphis, Tennessee, December 1831)"}, "lyric_echo": "No elder there had need to ask / How hunger cuts into the bone / They still could feel the Memphis snow / Where half their frozen kin had gone", "plate_primary": "assets/stills/film-s03-memphis-sleet-crossing.webp", "plate_primary_caption": "Plate II: December 1831 — Worn Leather Moccasins & Woven Blanket in the Freezing Sleet of the Mississippi Crossing", "plate_secondary": "assets/stills/film-s20-scarred-hands-marcus.webp", "plate_secondary_caption": "35mm Cinema Frame: Scarred Choctaw Hands Resting Beside Silent Witness Marcus Inside the Skullyville Log Hall", "recto_cards_title": "Three Anchors of the 1831 Choctaw Removal", "recto_cards": [{"tag": "SEPT 27, 1830 // TREATY OF DANCING RABBIT CREEK", "heading": "23 Million Acres Seized in Ancestral Mississippi", "text": "The Choctaw Nation surrendered its ancient homelands east of the Mississippi River and marched 500 miles west into unmapped Indian Territory (modern Oklahoma)."}, {"tag": "DECEMBER 1831 // THE MEMPHIS ICE STORM", "heading": "Why Memphis Appears in Both 1831 and 1847", "text": "In a haunting historical irony, the 1847 famine circular read aloud at Skullyville came from the Memphis Irish Relief Committee—operating out of the exact river port where freezing Choctaws had crossed sixteen winters earlier."}, {"tag": "2,500 TO 6,000 DEAD // EVERY FAMILY SCARRED", "heading": "Hunger Remembered in the Ribs", "text": "Virtually every adult standing in the Skullyville council hall on March 23, 1847 had buried a child, parent, or sibling in unmarked frozen ground along that road."}]}, {"spread_num": 3, "pages": "Pages 05 – 06", "tab_label": "III. Black '47 Quay", "folio_header": "FOLIO III // CHAPTER II: 'BLACK '47' IN IRELAND — BLIGHTED DRILLS & GUARDED GRAIN SHIPS", "era_stamp": "1845 – Winter/Spring 1847 • Skibbereen & Midleton (County Cork) to County Mayo", "title": "Bolted Manor Gates & Oats Sailing Out Under Armed Guard", "drop_lead": "Across the Atlantic, rural Ireland's tenant cottiers had been pushed by centuries of British penal laws and absentee landlord subdivision onto tiny half-acre plots where only a single high-yield crop—the Irish Lumper potato—could keep a family alive while every bushel of oats, wheat, barley, and salted beef went to pay rack-rent.", "body_paragraphs": ["When the water-mold blight (Phytophthora infestans) struck partially in 1845 and returned with total devastation in 1846, winter 1846–1847 ('Black '47') turned the western and southern parishes—especially Skibbereen and Midleton in County Cork and Louisburgh and Westport in County Mayo—into a landscape of mass death. Over one million people died of starvation, typhus, dysentery, and exposure, while over one million more fled on overcrowded 'coffin ships.'", "What made the catastrophe unbearable—and what links Irish memory so fiercely to Choctaw memory—was imperial policy: under Whig Treasury Secretary Sir Charles Trevelyan, London shut down the Peel soup depots and public-works rations in 1847 under strict laissez-faire ideology, insisting 'the operation of natural causes' must not interfere with private grain markets."], "primary_source_box": {"badge": "IMPERIAL EXPORT LEDGERS // ARMED ESCORTS AT IRISH PORTS (1846–1847)", "quote": "Throughout Black '47, merchant ships continued sailing out of Cork, Youghal, Waterford, Drogheda, and Limerick harbors laden with Irish oats, wheat, butter, and livestock under armed British military and constabulary escort—sailing directly past starving mothers kneeling beside cold turf ashes.", "citation": "— Contemporary Port & Relief Records of An Gorta Mór (Winter–Spring 1847)"}, "lyric_echo": "The blight fell down on County Cork / And turned the dark drills cold and dead / Down on the misty harbour quay / The redcoats watched the grain and bread / The manor gates were bolted tight / While ships of oats sailed out to sea", "plate_primary": "assets/stills/film-s10-redcoats-guard-grain.webp", "plate_primary_caption": "Plate III: Armed Guards Watching Sacks of Grain & Oats Loaded on a Misty County Cork Quay During Black '47", "plate_secondary": "assets/stills/film-s09-maeve-county-cork.webp", "plate_secondary_caption": "35mm Cinema Frame: Maeve in County Cork ('And Mothers Knelt by Cold Turf Ash / With Nothing Left for Family')", "recto_cards_title": "Anatomy of Black '47 in Munster & Connacht", "recto_cards": [{"tag": "PHYTOPHTHORA INFESTANS // ROTTED POTATO DRILLS", "heading": "When the Sole Subsistence Crop Turned Black overnight", "text": "Because rack-rent took every grain crop a tenant grew, the failure of the potato left millions of rural laborers without food or coin to buy the grain grown by their own hands."}, {"tag": "LAISSEZ-FAIRE DOGMA // TREVELYAN & THE WORKHOUSE", "heading": "The Gregory Clause & Bolted Granaries", "text": "Under the Quarter-Acre ('Gregory') Clause, any starving farmer holding more than a quarter-acre of land was barred from relief unless he surrendered his cottage and land to the landlord."}, {"tag": "POPULATION COLLAPSE // 2 MILLION LOST", "heading": "A Nation Cut in Half", "text": "Between starvation, fever, and emigration aboard coffin ships, Ireland's population fell from over 8 million in 1841 to roughly 4 million by the early 20th century."}]}, {"spread_num": 4, "pages": "Pages 07 – 08", "tab_label": "IV. $170 Iskuli", "folio_header": "FOLIO IV // CHAPTER III: WHY 'SKULLYVILLE'? THE NIGHT OF MARCH 23, 1847", "era_stamp": "March 23, 1847 (Reported April 3, 1847) • Skullyville Choctaw Agency, Indian Territory", "title": "Iskuli-Felah ('Coin-Town') & The Arkansas Intelligencer Dispatch", "drop_lead": "Even the name of the town where the collection happened carries extraordinary poetic truth: in 1832, the U.S. government built the Choctaw Agency fifteen miles west of Fort Smith along the Arkansas River, near Oak Lodge in the Moshulatubbee District (today near Spiro, Le Flore County, Oklahoma).", "body_paragraphs": ["Because tribal treaty annuities were paid out at that log agency in hard silver coin, Choctaw speakers named the settlement 'Iskuli-felah'—from the Choctaw word 'iskuli,' meaning 'coin / silver money.' English settlers corrupted Iskuli-felah into 'Skullyville.' Thus 'The Silver of Skullyville' carries a hidden bilingual double-meaning: 'The Silver of Coin-Town.'", "On March 23, 1847, U.S. Indian Agent Major William Armstrong convened a meeting at the Skullyville Choctaw Agency and read the Memphis Irish Relief circular aloud by whale-oil lantern light to assembled Choctaw chiefs, district councilmen, families, agency interpreters, missionaries, and traders. No persuasion was required."], "primary_source_box": {"badge": "VERBATIM PRIMARY SOURCE // THE ARKANSAS INTELLIGENCER (VAN BUREN, AR — APRIL 3, 1847)", "quote": "\"THE CHOCTAWS GIVING RELIEF TO THE IRISH! — A meeting was held at the Choctaw Agency on the 23d ult., to take into consideration the propriety of contributing something for the relief of the starving poor of Ireland... All subscribed, Agents, Missionaries, Traders and Indians, a considerable portion of which fund was made up by the latter. The whole amount subscribed was $170! Truly, 'the poor help the poor.'\"", "citation": "— The Arkansas Intelligencer, April 3, 1847 (Reprinted in Niles' National Register)"}, "lyric_echo": "An old chief walked across the boards / Untied a knotted linen rag / And laid his tarnished silver down / Inside that rough collection bag! / One hundred seventy in silver! / From empty coats of broken-hearted men!", "plate_primary": "assets/stills/01-tushka-last-silver-coin.webp", "plate_primary_caption": "Plate IV: Choctaw Elder Tushka Holding a Tarnished 1840s Silver Coin Above the Burlap Collection Sack at Skullyville", "plate_secondary": "assets/stills/film-s26-silver-on-oak-wood.webp", "plate_secondary_caption": "35mm Cinema Frame: '$170 in Iskuli Silver Gleaming on Scarred Oak Wood Beside an Untied Linen Rag'", "recto_cards_title": "Historian Fact-Check: Why $170 vs. $710 Online?", "recto_cards": [{"tag": "PRIMARY LEDGER // $170 IN 1847 SILVER", "heading": "Why $170 Is the Official Choctaw & Irish Figure", "text": "$170 is the exact figure printed ten days after the meeting in the April 3, 1847 Arkansas Intelligencer and honored by both the Choctaw Nation and the Irish State (hence the $170,000 raised in 1992 and the $17 / $170 gifts in 2020)."}, {"tag": "MICROFILM TYPO // WHERE '$710' CAME FROM", "heading": "A 20th-Century Digit Transposition ('1-7-0' -> '7-1-0')", "text": "The '$710' figure seen in some secondary articles arose when a 20th-century writer transposed the first two digits of '$170' from blurry 19th-century newspaper microfilm."}, {"tag": "MAJOR WILLIAM ARMSTRONG // HIS FINAL ACT", "heading": "Dead Less Than Three Months Later (June 12, 1847)", "text": "Major William Armstrong—who convened the March 23 meeting and forwarded the $170 downriver to Memphis—died on June 12, 1847, making the Skullyville Irish relief drive one of his final acts on earth."}]}, {"spread_num": 5, "pages": "Pages 09 – 10", "tab_label": "V. Quaker Ships", "folio_header": "FOLIO V // CHAPTER IV: HOW THE SILVER REACHED IRELAND — MEMPHIS TO QUAKER CAULDRONS", "era_stamp": "Spring – Summer 1847 • Arkansas River → Memphis → New York Bay → Cork & Mayo", "title": "From Skullyville That Iskuli Rolled to Quaker Soup Kettles", "drop_lead": "How did silver coins placed in a coarse burlap collection bag on the Oklahoma frontier actually cross four thousand miles of water to feed starving families in rural Ireland?", "body_paragraphs": ["Major William Armstrong forwarded the $170 down the Arkansas and Mississippi rivers to the Memphis Irish Relief Committee. From Memphis, funds merged with relief cargoes coordinated through river and coastal ports—New Orleans, Baltimore, Philadelphia, Boston, and the General Irish Relief Committee of New York.", "Rather than hand relief money to Crown landlords or Poor Law workhouses that demanded starving farmers surrender every last quarter-acre of land or convert religion ('souperism'), American relief committees routed money, barrels of American Indian cornmeal ('yellow meal'), flour, and provisions directly to the Central Relief Committee of the Society of Friends (Quakers) in Dublin, Cork, and western Ireland."], "primary_source_box": {"badge": "RELIEF LOGISTICS // THE SOCIETY OF FRIENDS (QUAKERS) & NON-SECTARIAN SOUP CAULDRONS", "quote": "Throughout 1847, courageous Quakers set up giant cast-iron soup cauldrons in the streets of Cork, Midleton, Skibbereen, Waterford, and Mayo—buying copper and iron boilers and ladling steaming porridge and American Indian meal to Catholic and Protestant families alike with zero strings attached.", "citation": "— Transactions of the Central Relief Committee of the Society of Friends During the Famine in Ireland (1852)"}, "lyric_echo": "From Skullyville that iskuli rolled / To Quaker ships in New York bay / And bought the sacks of Indian meal / To keep the parish graves at bay", "plate_primary": "assets/stills/film-s29-quaker-relief-ship-fog.webp", "plate_primary_caption": "Plate V: An 1847 Three-Masted Wooden Relief Ship Cleaving Through Atlantic Sea Fog Toward the Irish Coast", "plate_secondary": "assets/stills/film-s32-quaker-iron-cauldron.webp", "plate_secondary_caption": "35mm Cinema Frame: Steaming Cast-Iron Quaker Soup Cauldron & Sacks of Indian Meal in a Rain-Slicked County Cork Lane", "recto_cards_title": "The Four-Stage Transatlantic Chain of Grace", "recto_cards": [{"tag": "STAGE 01 // SKULLYVILLE TO MEMPHIS", "heading": "Down the Arkansas & Mississippi Rivers", "text": "Choctaw silver coins traveled from the Skullyville Agency near Fort Smith downriver to the Memphis Irish Relief Committee in Tennessee."}, {"tag": "STAGE 02 // NEW YORK BAY RELIEF PACKETS", "heading": "Converted Into Sacks of 'Indian Meal' (Cornmeal)", "text": "Coordinated with the General Irish Relief Committee of New York, funds purchased barrels of kiln-dried American cornmeal, flour, and beans loaded onto Atlantic packet ships."}, {"tag": "STAGE 03 // QUAKER IRON KETTLES IN CORK & MAYO", "heading": "Zero Religious Conversion, Zero Land Seizure", "text": "Unlike proselytizing 'soupers' or punitive Poor Law unions, the Society of Friends fed every hungry mouth regardless of creed or landholding."}]}, {"spread_num": 6, "pages": "Pages 11 – 12", "tab_label": "VI. Doolough Pass (1849)", "folio_header": "FOLIO VI // CHAPTER V: THE IMPERIAL FOIL — SIX HUNDRED WALKERS ON DOOLOUGH PASS", "era_stamp": "March 30 – 31, 1849 • Louisburgh to Delphi Lodge, County Mayo", "title": "Turned Back From Delphi's Lighted Lodge Into the Freezing Sleet", "drop_lead": "To feel the staggering moral contrast of what the Choctaw Nation did from four thousand miles away, history provides an unforgettable foil in County Mayo two springs later.", "body_paragraphs": ["On Friday, March 30, 1849, up to 600 starving men, women, elders, and children gathered in the rain at Louisburgh, County Mayo, waiting for two Westport Poor Law Union officials—Colonel Hogrove and Captain Primrose—to inspect them so they could keep their meagre three-pound weekly outdoor ration of Indian meal.", "Rather than conduct the inspection in Louisburgh, Hogrove and Primrose traveled ten miles south down a narrow, sheer-walled mountain defile to Delphi Lodge, a wealthy gentleman's fishing retreat, to eat dinner and sleep in warm beds—ordering the starving crowd to walk twelve miles overnight through howling sleet and freezing mountain gales along Doolough Pass to appear before them at 7:00 AM Saturday morning.", "At 7:00 AM, ragged and half-frozen outside Delphi Lodge, the crowd was told by the two well-fed inspectors that no relief or meal would be given, and ordered to walk all twelve miles back through the sleet to Louisburgh. Dozens collapsed and froze or starved to death in the roadside ditches beneath the black slate cliffs of Doolough (Loch Dubh — 'The Black Lake')."], "primary_source_box": {"badge": "MORAL JUXTAPOSITION // DELPHI LODGE (10 MILES AWAY) VS. SKULLYVILLE (4,000 MILES AWAY)", "quote": "• Two imperial officials inside a warm fishing lodge ten miles from home turned 600 starving neighbors back into freezing sleet empty-handed.\n• Dispossessed Choctaw elders four thousand miles away, living under leaky timber roofs sixteen years after the Trail of Tears, emptied their pockets so strangers in Ireland might live.", "citation": "— Verse 3 Historical Counterpoint (Louisburgh & Delphi Lodge, County Mayo, March 30–31, 1849)"}, "lyric_echo": "While up on dark Doolough's pass / Six hundred walked the freezing sleet / Turned back from Delphi's lighted lodge / Yet strangers sent us bread to eat!", "plate_primary": "assets/stills/film-s37-doolough-pass-sleet.webp", "plate_primary_caption": "Plate VI: Starving County Mayo Walkers Bending Against Howling Sleet Beneath the Black Cliffs of Doolough Pass (March 30–31, 1849)", "plate_secondary": "assets/stills/film-s38-delphi-lighted-lodge.webp", "plate_secondary_caption": "35mm Cinema Frame: The Bolted Iron Gate & Warm Amber Windows of Delphi Lodge Turning the Starving Away at Dawn", "recto_cards_title": "Why Doolough Pass & Skullyville Are Forever Linked", "recto_cards": [{"tag": "MARCH 30–31, 1849 // LOCH DUBH ('THE BLACK LAKE')", "heading": "24 Miles Round-Trip in Freezing Gale & Sleet", "text": "Weakened by four years of famine, mothers, elders, and laborers were forced down a wind-sheared mountain pass between Mweelrea and Sheeffry Hills only to be rejected at the lodge door."}, {"tag": "MAY 1990 // CHOCTAW LEADERS WALK DOOLOUGH PASS", "heading": "Healing the Road 141 Years Later", "text": "In May 1990, Irish human-rights group Afri invited Choctaw Nation leaders to County Mayo to lead the annual Doolough Famine Walk along that exact twelve-mile mountain pass."}, {"tag": "1992 // IRISH WALKERS TREK 500 MILES ON THE TRAIL OF TEARS", "heading": "$170,000 Raised ($1,000 for Every 1847 Choctaw Dollar)", "text": "Two years later in 1992, 22 Irish men and women led by Don Mullan walked 500 miles along the Choctaw Trail of Tears from Mississippi to Oklahoma, raising $170,000 for famine relief."}]}, {"spread_num": 7, "pages": "Pages 13 – 14", "tab_label": "VII. 9 Steel Feathers", "folio_header": "FOLIO VII // CHAPTER VI: THE 173-YEAR CIRCLE — 'KINDRED SPIRITS' (2017) & THE 2020 RETURN GIFT", "era_stamp": "1995 – June 18, 2017 – May 2020 • Midleton, County Cork & Navajo/Hopi Nations", "title": "Nine Steel Feathers Touch the Skies Like an Empty Bowl That Never Dies", "drop_lead": "For more than a century, the Skullyville gift survived mainly in parish folklore, dusty Arkansas Intelligencer microfilm, and Choctaw oral memory—until the bond erupted back into living history across four unforgettable modern milestones.", "body_paragraphs": ["In 1995, Irish President Mary Robinson traveled in person to the Choctaw Nation headquarters in Durant, Oklahoma to thank the Choctaw people on behalf of Ireland, where she was honored as an honorary Choctaw Chief.", "On June 18, 2017, in Bailick Park, Midleton, County Cork (just miles from Cork Harbor where famine grain ships sailed out and Quaker relief ships sailed in), Irish sculptor Alex Pentek unveiled 'Kindred Spirits,' commissioned by Midleton Town Council and dedicated jointly with Choctaw Chief Gary Batton and a twenty-member Choctaw delegation. Hand-welded with over 20,000 individual steel welds, nine twenty-foot stainless-steel eagle feathers rise in a circle from the green Irish grass—tilted inward so the nine feathers form an empty famine bowl reaching open toward the sky.", "Three years later, in May 2020, when the COVID-19 pandemic swept brutally across the high desert of the Navajo Nation and Hopi Reservation, tens of thousands of ordinary Irish families flooded a Native relief fund with over $2.6 million (part of an $8M+ surge)—sending thousands of gifts in exact increments of $17 and $170."], "primary_source_box": {"badge": "MAY 2020 DONATION LEDGER // MESSAGE SENT BY THOUSANDS OF IRISH FAMILIES", "quote": "\"From Ireland, 173 years later. The debt of grace is never forgotten.\"", "citation": "— Recurring Note Attached to Thousands of $17 and $170 Irish Donations to the Navajo & Hopi Families COVID-19 Relief Fund (May 2020)"}, "lyric_echo": "Now empires rot and thrones decay / While down in County Cork today / Nine steel feathers touch the skies / Like an empty bowl that never dies! / A hundred seventy winters turned / When sickness swept the desert wind / And Ireland sent the millions home / To heal the debt of ancient kin!", "plate_primary": "assets/stills/bookplate-02-feathers.webp", "plate_primary_caption": "Plate VII: Nine 20-Foot Stainless-Steel Eagle Feathers Rising Like an Open Bowl at Dawn in County Cork ('Kindred Spirits', 2017)", "plate_secondary": "assets/stills/film-s52-navajo-hopi-mesa-wind.webp", "plate_secondary_caption": "35mm Cinema Frame: High Desert Mesa Dusk & The 2020 Transatlantic Return Gift ('To Heal the Debt of Ancient Kin')", "recto_cards_title": "Four Milestones of the Modern Choctaw-Irish Covenant", "recto_cards": [{"tag": "1990 – 1995 // MUTUAL PILGRIMAGES & STATE HONOR", "heading": "Doolough Walk, Trail of Tears Trek & President Mary Robinson", "text": "Choctaw elders walked County Mayo in 1990; Irish walkers trekked 500 miles to Oklahoma in 1992; and Irish President Mary Robinson visited Durant, Oklahoma in 1995."}, {"tag": "JUNE 18, 2017 // 'KINDRED SPIRITS' AT MIDLETON, CORK", "heading": "Alex Pentek's Nine 20-Foot Stainless-Steel Eagle Feathers", "text": "20,000 hand-welds form nine Choctaw ceremonial eagle feathers arranged in the shape of an empty Irish famine bowl filled with solidarity."}, {"tag": "2018 – PRESENT // UCC CHOCTAW-IRELAND SCHOLARSHIP", "heading": "Full Tuition at University College Cork Forever", "text": "Ireland and the Choctaw Nation established the Choctaw-Ireland Scholarship Programme at University College Cork so Choctaw students can study in County Cork in perpetuity."}, {"tag": "MAY 2020 // $2.6M+ IN $17 & $170 GIFTS", "heading": "Ireland Pays Forward the 1847 Gift to Navajo & Hopi Families", "text": "When pandemic sickness struck high-desert Native reservations, ordinary Irish citizens answered within hours, turning a 173-year-old memory into living medical and clean-water aid."}]}, {"spread_num": 8, "pages": "Pages 15 – 16", "tab_label": "VIII. Global Blueprint", "folio_header": "FOLIO VIII // HISTORIAN FACT-CHECKS & INTERNATIONAL SINGLES VOLUME 1 BLUEPRINT", "era_stamp": "14 Global Micro-Histories • Ireland, Ukraine, Norway, Sweden & Mexico", "title": "The Universal Code of Honor Across Borders", "drop_lead": "'The Silver of Skullyville' launches International Singles Volume 1—a 14-song collection of historian-grounded English-language folk-rock ballads celebrating ordinary, starving, or outnumbered people across Ireland, Ukraine, Norway, Sweden, and Mexico who kept a sacred moral code against overwhelming empires.", "body_paragraphs": ["Every culture in this collection has a name for that rural covenant of honor: Highland Aos-dàna (guest-right / sanctuary), Irish Brehon kinship, Choctaw Imahobachi / solidarity, Ukrainian Kozatska Volya (Cossack freedom), Nordic Dugnad & Standfasthet, and Mexican Tierra y Dignidad.", "And just as in 'The Weaver's Secret' and 'The Seven Men of Glenmoriston,' every single in International Singles Volume 1 is built on 100% primary-source documentation—deliberately excluding unverified internet myths (such as the viral story claiming Queen Victoria capped the Ottoman Sultan's 1847 donation or that secret Ottoman blockade-runners slipped into Drogheda, for which port ledgers show zero evidence)."], "primary_source_box": {"badge": "SPOKEN OUTRO & COLLECTION CREDO // INTERNATIONAL SINGLES VOLUME 1", "quote": "\"Sixteen winters after the Trail of Tears.\nOne hundred and seventy dollars from pockets lined with dust.\nThe empire had the ships.\nThe Choctaw had the soul.\"", "citation": "— Spoken Coda of 'The Silver of Skullyville' (Caleb & Maeve)"}, "lyric_echo": "From Skullyville to County Cork / The tarnished silver never rusts ... The empire had the ships. / The Choctaw had the soul.", "plate_primary": "assets/stills/02-silver-pouch-feather-collie.webp", "plate_primary_caption": "Plate VIII: Tarnished Iskuli Silver, Forged Soup Ladle, Dew-Beaded Eagle Feather & Silent Witness Bram on Wet Cork Slate", "plate_secondary": "assets/stills/film-s68-golden-dawn-feather-bowl.webp", "plate_secondary_caption": "35mm Cinema Frame: Golden Dawn Breaking Through the Nine Steel Eagle Feathers of County Cork", "recto_cards_title": "Preview: The 5 Regional Pillars of International Singles Volume 1", "recto_cards": [{"tag": "REGION A // IRELAND & TRANSATLANTIC SOLIDARITY", "heading": "1. The Silver of Skullyville (1847) • 2. Baltimore (1631) • 3. Kilmainham (1916)", "text": "Spans the 1847 Choctaw-Irish famine bond (uilleann pipes + Native cedar wood flute), the 1631 Barbary raid on Baltimore (West Cork), and Grace Gifford's candlelit wedding in Kilmainham Gaol (1916)."}, {"tag": "REGION B // UKRAINE (CULTURAL SURVIVAL & DEFIANCE)", "heading": "4. The Last Chord of Kharkiv (1934 Kobzars) • 5. Dnipro Rapids • 6. Chornobyl Divers (1986)", "text": "Honors the 200–300 blind Ukrainian Kobzar bards murdered with their 60-string banduras in December 1934 for singing true history, the Zaporizhian Sich rapids, and the 3 Chornobyl sluice-valve divers."}, {"tag": "REGION C & D // NORWAY & SWEDEN (NORDic DEFIANCE)", "heading": "7. Hardangervidda (1943) • 8. 1,200 Paper Clips (1942) • 10. White Trumpet of Ådalen (1931)", "text": "Pairs Norwegian Hardanger fiddle and Swedish nyckelharpa with the Telemark heavy-water ski commandos, Norway's 1942 teachers' strike, and trumpeter Tore Andersson blowing 'Cease Fire!' at Ådalen."}, {"tag": "REGION E // MEXICO (CROSS-BORDER BROTHERHOOD & HEROISM)", "heading": "12. Green Flag of San Patricio (1847) • 13. Sixty Seconds at Nacozari (1907) • 14. Gilberto Bosques", "text": "Braids Irish pipes with Mexican requinto guitar & trumpet for John Riley's Batallón de San Patricio (1847), locomotive engineer Jesús García saving Nacozari (1907), and Consul Gilberto Bosques saving 40,000 refugees."}]}];
@@ -1164,6 +1311,11 @@
 
       // Keyboard Left/Right Arrow support for turning pages
       document.addEventListener('keydown', function(e) {
+        const videoModal = document.getElementById('video-modal');
+        if (videoModal && !videoModal.classList.contains('hidden')) {
+          if (e.key === 'Escape') closeVideoModal();
+          return;
+        }
         const lightbox = document.getElementById('plate-lightbox');
         if (lightbox && !lightbox.classList.contains('hidden')) {
           if (e.key === 'Escape') closePlateLightbox();
@@ -1173,6 +1325,26 @@
         if (e.key === 'ArrowRight') turnBookSpread(1);
         else if (e.key === 'ArrowLeft') turnBookSpread(-1);
       });
+
+      // Video Modal functions
+      window.openVideoModal = function(ytId, title) {
+        const modal = document.getElementById('video-modal');
+        const iframe = document.getElementById('modal-video-iframe');
+        const titleEl = document.getElementById('modal-video-title');
+        const ytLink = document.getElementById('modal-youtube-link');
+        if (!modal || !iframe) return;
+        if (titleEl && title) titleEl.textContent = title;
+        if (ytLink && ytId) ytLink.href = `https://www.youtube.com/watch?v=${encodeURIComponent(ytId)}`;
+        iframe.src = `https://www.youtube.com/embed/${encodeURIComponent(ytId)}?autoplay=1&rel=0`;
+        modal.classList.remove('hidden');
+      };
+
+      window.closeVideoModal = function() {
+        const modal = document.getElementById('video-modal');
+        const iframe = document.getElementById('modal-video-iframe');
+        if (iframe) iframe.src = '';
+        if (modal) modal.classList.add('hidden');
+      };
 
       // 3. Render 12 Visual Story Chapters
       function renderStoryChapters() {

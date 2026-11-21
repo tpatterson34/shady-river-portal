@@ -235,11 +235,11 @@
         <a href="#the-seven-men-of-glenmoriston" class="text-clydemist-300 hover:text-retinal-400 transition-colors">
           04. Glenmoriston
         </a>
-        <a href="#the-weavers-secret" class="text-amber-300 hover:text-retinal-300 font-bold transition-colors">
-          05. Weaver&rsquo;s Secret &bull; NEW
+        <a href="#the-weavers-secret" class="text-clydemist-300 hover:text-retinal-400 transition-colors">
+          05. Weaver&rsquo;s Secret
         </a>
-        <a href="#the-silver-of-skullyville" class="text-retinal-400 hover:text-retinal-300 font-bold transition-colors">
-          06. Skullyville (11/21)
+        <a href="#the-silver-of-skullyville" class="text-amber-300 hover:text-retinal-300 font-bold transition-colors">
+          06. Skullyville &bull; NEW
         </a>
       </nav>
 
@@ -403,7 +403,7 @@
 
   <!-- SCRIPTS -->
   <script src="../assets/js/a11y.js"></script>
-  <script src="data/singles-data.js?v=20261114_05"></script>
+  <script src="data/singles-data.js?v=20261121_06"></script>
 
   <script>
     (function() {
@@ -518,6 +518,18 @@
                       <span>${escapeHtml(comingBadge || 'Video Coming Soon')}</span>
                     </span>
                   `}
+                  ${s.media && isConfiguredUrl(s.media.substackUrl) ? `
+                    <a
+                      href="${escapeHtml(s.media.substackUrl)}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="px-3 py-1.5 rounded-lg bg-orange-950/85 hover:bg-orange-900 text-orange-200 border border-orange-500/40 font-mono text-xs font-bold inline-flex items-center gap-1.5 transition-colors"
+                      title="Read Substack Liner Notes &amp; Deconstruction for ${escapeHtml(s.title)}"
+                    >
+                      <i class="fa-solid fa-bookmark text-orange-400 text-[10px]" aria-hidden="true"></i>
+                      <span>Liner Notes &#8599;</span>
+                    </a>
+                  ` : ''}
                   <a
                     href="#${escapeHtml(s.slug)}"
                     class="px-3 py-1.5 rounded-lg bg-clydeslate-800 hover:bg-clydeslate-700 text-clydemist-200 border border-white/10 font-mono text-xs font-semibold transition-colors"
@@ -713,6 +725,18 @@
                       <i class="fa-solid fa-link text-retinal-400 text-xs" aria-hidden="true"></i>
                       <span>Copy Song URL</span>
                     </button>
+                    ${isConfiguredUrl(media.substackUrl) ? `
+                      <a
+                        href="${escapeHtml(media.substackUrl)}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-orange-950/85 hover:bg-orange-900 text-orange-200 border border-orange-500/45 font-mono text-xs font-bold transition-all shadow-md"
+                        title="Read Substack Liner Notes &amp; Deconstruction for ${escapeHtml(single.title)}"
+                      >
+                        <i class="fa-solid fa-bookmark text-orange-400 text-xs" aria-hidden="true"></i>
+                        <span>Substack Liner Notes &#8599;</span>
+                      </a>
+                    ` : ''}
                     ${single.hasHistoryBook ? `
                       <a
                         href="${escapeHtml(single.relative_url)}#history-book"
