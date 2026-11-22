@@ -238,8 +238,11 @@
         <a href="#the-weavers-secret" class="text-clydemist-300 hover:text-retinal-400 transition-colors">
           05. Weaver&rsquo;s Secret
         </a>
-        <a href="#the-silver-of-skullyville" class="text-amber-300 hover:text-retinal-300 font-bold transition-colors">
-          06. Skullyville &bull; NEW
+        <a href="#the-silver-of-skullyville" class="text-clydemist-300 hover:text-retinal-400 transition-colors">
+          06. Skullyville
+        </a>
+        <a href="#james-stewart-of-the-glens" class="text-amber-300 hover:text-retinal-300 font-bold transition-colors">
+          07. James Stewart (11/28)
         </a>
       </nav>
 
@@ -247,7 +250,7 @@
       <div class="flex items-center gap-2">
         <a href="#singles-feed" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-retinal-500 hover:bg-retinal-400 text-clydeslate-950 font-mono text-xs font-bold transition-all shadow-md">
           <i class="fa-solid fa-record-vinyl text-xs" aria-hidden="true"></i>
-          <span>Browse Singles (6)</span>
+          <span>Browse Singles (7)</span>
         </a>
       </div>
     </div>
@@ -269,7 +272,7 @@
               <span>THE SINGLES VAULT // STANDALONE CHRONICLES &amp; GLOBAL DISPATCHES</span>
             </span>
             <span class="px-2.5 py-1 rounded-full bg-clydeslate-800 border border-white/10 text-clydemist-300 font-mono text-[11px]">
-              6 Standalone Releases &bull; Permanent Dedicated Dossiers &amp; Interactive History Books
+              7 Standalone Releases &bull; Permanent Dedicated Dossiers &amp; Interactive History Books
             </span>
           </div>
 
@@ -300,7 +303,7 @@
             >
           </div>
           <div class="flex items-center justify-between sm:justify-end gap-3 font-mono text-xs text-clydemist-300 shrink-0">
-            <span id="singles-count-label">Showing 6 of 6 Singles</span>
+            <span id="singles-count-label">Showing 7 of 7 Singles</span>
             <button
               type="button"
               id="btn-reset-search"
@@ -403,7 +406,7 @@
 
   <!-- SCRIPTS -->
   <script src="../assets/js/a11y.js"></script>
-  <script src="data/singles-data.js?v=20261121_06"></script>
+  <script src="data/singles-data.js?v=20261122_07"></script>
 
   <script>
     (function() {
@@ -414,6 +417,12 @@
       }
 
       const allSingles = rootData.singles;
+
+      function isConfiguredUrl(u) {
+        if (!u || typeof u !== 'string') return false;
+        const t = u.trim();
+        return Boolean(t && !t.startsWith('[INSERT_') && !t.startsWith('TODO'));
+      }
 
       function escapeHtml(str) {
         if (!str) return '';

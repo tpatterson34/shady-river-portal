@@ -1878,6 +1878,156 @@
       "copyright_notice": "© 2026 The Shady River Bard / Shady River Homestead LLC. All rights reserved."
 }
 
+,
+
+    // =========================================================================
+    // SINGLE 07: JAMES STEWART OF THE GLENS (SEUMAS A' GHLINNE)
+    // Permalink: https://theshadyriverbard.com/singles/james-stewart-of-the-glens/
+    // =========================================================================
+    {
+      "id": "james-stewart-of-the-glens",
+      "slug": "james-stewart-of-the-glens",
+      "permalink": "https://theshadyriverbard.com/singles/james-stewart-of-the-glens/",
+      "relative_url": "james-stewart-of-the-glens/",
+      "number": 7,
+      "number_padded": "07",
+      "badge": "STANDALONE SINGLE 07 // 1752 APPIN JUDICIAL MURDER & THE PSALM OF BALLACHULISH",
+      "card_badge": "Single #07 • Coming on 11/28/2026",
+      "key_tempo_badge": "Key of D Minor // 70 BPM Scottish Celtic Folk-Rock Duet",
+      "key": "D Minor",
+      "bpm": 70,
+      "duration": "07:15",
+      "release_year": 2026,
+      "release_date_display": "November 28, 2026 (11/28/2026)",
+      "release_status": "Coming on 11/28/2026",
+      "hasHistoryBook": true,
+      "historyBookTitle": "The Psalm of Ballachulish & The 1752 Appin Judicial Murder Codex",
+      "title": "James Stewart of the Glens (Seumas a' Ghlinne)",
+      "title_accent_split": [
+            "James Stewart of the Glens",
+            "(Seumas a' Ghlinne)"
+      ],
+      "subtitle": "May 14 – November 8, 1752 (Glen Duror & Inveraray to Ballachulish Narrows, Appin): Eleven Jurors of One Clan, Psalm 35 in the Sleet, Wired Bones Above the Tide, and Daft MacPhee's Midnight Mercy",
+      "location": "Lettermore Wood • Acharn (Glen Duror) • Fort William • Inveraray Courthouse • Ballachulish Narrows (Loch Leven) • Keil Churchyard (Appin)",
+      "genre": "Cinematic Scottish Celtic Folk-Rock Duet (18th-Century Reed Harmonium, Celtic Harp, Highland Fiddle & Low D Whistle)",
+      "thesis": "On May 14, 1752, a single musket shot fired from the birch and hazel trees of Lettermore Wood killed the Crown's land factor as he rode toward Appin with Whitsunday eviction writs—and produced the most notorious judicial murder in Scottish history. Though 50-year-old bilingual farmer James Stewart of the Glens (Seumas a' Ghlinne) was miles away working peacefully at his farm in Glen Duror with an ironclad alibi, Hanoverian London demanded a neck for the rope. Held four months incommunicado at Fort William and tried inside Inveraray before Archibald Campbell, 3rd Duke of Argyll, and a fifteen-man jury packed with eleven Campbells, James kept his peace—offering one quiet neck upon the hill so dragoons would not burn every cottage in Appin. Singing Psalm 35 in Gaelic into a freezing November gale, his wired remains hung above the Ballachulish ferry for years until parish outcast 'Daft' MacPhee tore the gibbet into Loch Leven in a midnight tempest and James's wife Margaret laid him to rest at ruined Keil Churchyard.",
+      "thesis_attribution": "— Historical & Moral Thesis • Sequel Companion to 'The Guns of Loch Fyne' • Researched with Bob McNair (@bobmcnair9234)",
+      "dedication": "Dedicated to the memory of James Stewart of the Glens (Seumas a' Ghlinne, d. November 8, 1752), his faithful wife Margaret Cameron Stewart, parish outcast MacPhee, and our Scottish friend and historian Bob McNair (@bobmcnair9234) for shining light into the glens.",
+      "telemetry": [
+            {
+                  "label": "Inveraray Jury",
+                  "value": "11 of 15 One Clan",
+                  "color_cls": "text-rose-400"
+            },
+            {
+                  "label": "Counsel Blockade",
+                  "value": "50-Hr Nonstop Trial",
+                  "color_cls": "text-amber-400"
+            },
+            {
+                  "label": "Scaffold Defiance",
+                  "value": "Psalm 35 in Gaelic",
+                  "color_cls": "text-retinal-400"
+            },
+            {
+                  "label": "Gibbet Vigil",
+                  "value": "18–36 Mos. Wired",
+                  "color_cls": "text-emerald-400"
+            }
+      ],
+      "hero_art_caption_label": "Ballachulish Narrows (Cnap a' Chaolais) • Appin, 1752–1755",
+      "hero_art_caption_title": "Seumas of the Glens, Margaret's White Linen, the Iron Cage & Silent Witness Bram",
+      "media": {
+            "youtubeVideoUrl": "",
+            "comingSoonBadge": "Coming on 11/28/2026",
+            "comingSoonLabel": "Coming on 11/28/2026 • Music Video Premiering Nov 28",
+            "spotifyUrl": "[INSERT_SPOTIFY_URL_OR_LEAVE_PENDING]",
+            "appleMusicUrl": "[INSERT_APPLE_MUSIC_URL_OR_LEAVE_PENDING]",
+            "amazonMusicUrl": "[INSERT_AMAZON_MUSIC_URL_OR_LEAVE_PENDING]"
+      },
+      "art_banner": "assets/art/james-stewart-of-the-glens-banner.webp",
+      "art_square": "assets/art/james-stewart-of-the-glens-cover.webp",
+      "art_alt": "On a rain-lashed black basalt hillock above the misty slate-blue sea narrows of Ballachulish at dusk, a weathered dark oak gallows suspends a rusted wrought-iron cage holding an empty storm-soaked hodden-grey woollen coat in diagonal sleet, while down on the stone ferry slipway beside an amber tallow post-lantern sits stationary Scottish Border Collie Bram watching the hill.",
+      "pillar_badges": [
+            "Coming on 11/28/2026",
+            "1752 Appin Judicial Murder",
+            "11 of 15 Inveraray Jury",
+            "Salm Seumas a' Ghlinne (Psalm 35)",
+            "Interactive History Book"
+      ],
+      "tags": [
+            "JamesStewartOfTheGlens",
+            "SeumasAGhlinne",
+            "AppinMurder1752",
+            "Ballachulish",
+            "BobMcNair",
+            "Psalm35",
+            "DaftMacPhee",
+            "KeilChurchyard"
+      ],
+      "quote": "Let the thirty-fifth Psalm ring out across the narrows in the rain\nFalse witnesses have risen up to bind an innocent in chain\nYou can wire the cold white bones together high above the tide\nWhere the ferry crosses Ballachulish and the grey sea-eagles glide\nThe King's court wrote a lie in ink, the wind will wash it clean\nRemember Seumas of the Glens where the birch and heather lean",
+      "bards_story": [
+            "Six years after the cannon smoke cleared from Culloden Moor and the shores of Loch Fyne, a single musket ball fired from the birch and hazel trees of Lettermore Wood on May 14, 1752 gave Scotland its most notorious judicial murder. When our Scottish friend and contributor Bob McNair (@bobmcnair9234)—whose ancestral family records inspired 'The Guns of Loch Fyne'—suggested the Appin Murder, he pointed out a hidden family thread linking the two stories directly together: Lachlan MacLachlan, 17th Chief of Clan MacLachlan who fell at Culloden, was married to Mary Stewart of Appin. When Castle Lachlan was abandoned on Loch Fyne, it was the Appin Stewarts—the household and kin of James Stewart of the Glens (Seumas a' Ghlinne)—who gave shelter to widowed families of the Rising.",
+            "On May 14, 1752, Crown factor Colin Roy Campbell of Glenure ('The Red Fox') rode toward Appin carrying Whitsunday eviction writs to clear loyal Stewart tenants off forfeited Ardsheal lands. Shot in the back from the hillside trees, he died on the road while the unseen marksman vanished into the mist and James's volatile foster-son, Alan Breck Stewart, slipped away toward France. Hanoverian London demanded swift political terror. Even though 50-year-old farmer James Stewart was miles away working peacefully at his farm in Glen Duror with an ironclad alibi, troops locked him in Fort William incommunicado for four months—barring his lawyers and wife until the eve of trial. Marched to Inveraray, the stronghold of the dead man's clan, James stood before Archibald Campbell, 3rd Duke of Argyll, presiding on the velvet bench as Lord Justice General, facing a fifteen-man jury packed with eleven Campbells. After sitting for fifty continuous hours without sleep, the court convicted James 'in airts and pairts' (as an accessory) so the Crown would have its example.",
+            "Why didn't an educated man fluent in both Gaelic and English tear the prosecution apart or point toward the hot-blooded young conspirators in the parish? Because James of the Glens knew Hanoverian military policy in his bones: if he exposed a clan plot without handing over a fugitive, King George's dragoons would burn every thatched roof in Appin to the ground. He offered one quiet neck upon the hill to save the roofs of all. On November 8, 1752, marched through a howling sleet gale to the rocky knoll (Cnap a' Chaolais) overlooking the Ballachulish ferry narrows, James read his calm written declaration of complete innocence and sang Psalm 35 in Scottish Gaelic ('False witnesses did rise up; they laid to my charge things that I know not')—singing with such unearthly dignity that the Redcoat guards stared down at their boots in shame and grief.",
+            "Even death did not satisfy London's desire to terrorize the Highlands. James's body was hung in iron chains on the hilltop gibbet above the Ballachulish narrows for eighteen months to nearly three years, guarded by soldiers who wired his bleached shoulder and rib bones back together whenever winter storms shook them loose—forcing every mother and child crossing the ferry to look up in silence. Strong Highland men were too terrified of the gallows law to touch that cursed timber. Finally, on a roaring black night of Highland gale, a gentle, simple-minded parish outcast remembered in folklore as 'Daft' MacPhee climbed the hill alone, wrenched the rotted gibbet out of the earth, and hurled it into Loch Leven. Gathering the bones that washed and fell onto the stones in clean white linen, James's faithful wife Margaret laid him quietly beneath the grass at ruined Keil Churchyard by the Appin sea—where the Duke's court is long forgotten dust, and Salm Seumas a' Ghlinne is still sung."
+      ],
+      "musical_direction": {
+            "summary": "Cinematic Scottish Celtic Folk-Rock Duet in D Minor at 70 BPM (07:15).",
+            "details": "Blends Bob McNair's 18th-century Scottish musical clues—a breathing reed harmonium drone, plucked Celtic clàrsach harp, and a brief chamber-string nod to the Duke of Argyll's court—with fingerpicked acoustic guitar, mournful cello, weeping Highland fiddle, low D tin whistle, bodhrán heartbeat, and folk-rock electric guitar swells. A deep, warm Scottish male baritone (James Stewart) and a haunting Scottish female mezzo-soprano (Margaret Cameron Stewart) trade candlelit verses before uniting in soaring two-part harmony across the Ballachulish narrows."
+      },
+      "pillars_section": {
+            "badge": "Interactive Framework I // 3-Pillar Historical Matrix",
+            "title": "The Kinship, The Rigged Inveraray Jury & The Psalm in the Sleet (1752–1755)",
+            "intro": "Every verse of 'James Stewart of the Glens (Seumas a' Ghlinne)' is anchored in the 1752 Inveraray trial record, James's verbatim November 8, 1752 scaffold speech, and Appin parish archives—avoiding sectarianism to indict institutional courtroom corruption."
+      },
+      "pillars": [
+            {
+                  "number": "I",
+                  "code": "PILLAR I // THE KINSHIP & THE TRAP (MAY 1752)",
+                  "title": "From Loch Fyne's Widows to the Shot in Lettermore Wood",
+                  "stat_highlight": "May 14, 1752",
+                  "stat_sub": "Appin Stewarts sheltered Chief Lachlan MacLachlan's household • Whitsunday eviction writs",
+                  "icon": "fa-solid fa-tree",
+                  "summary": "Directly linked to 'The Guns of Loch Fyne'—Chief Lachlan MacLachlan's wife was Mary Stewart of Appin—50-year-old farmer James Stewart cared for war widows and fought tenant evictions peacefully through Edinburgh courts until his legal Bill of Suspension was quashed.",
+                  "analysis": "On May 14, 1752, Crown factor Colin Roy Campbell of Glenure ('The Red Fox') rode south from Ballachulish ferry toward Duror carrying writs to evict five loyal Stewart tenant families on Whitsunday. Struck from behind by two musket balls fired from Lettermore birchwood while Alan Breck Stewart slipped into the mist, Glenure bled to death on the road—handing Hanoverian prosecutors the pretext they wanted.",
+                  "lyric_echo": "I kept a roof in Glen Duror for the widows of the war / For MacLachlan's grieving household when they fled Loch Fyne's dark shore"
+            },
+            {
+                  "number": "II",
+                  "code": "PILLAR II // INSTITUTIONAL CORRUPTION (SEPT 1752)",
+                  "title": "Eleven of Fifteen on the Jury & Fifty Continuous Sleepless Hours",
+                  "stat_highlight": "11 of 15 Jurors",
+                  "stat_sub": "3rd Duke of Argyll on the bench • 4 months incommunicado at Fort William • 50-hr nonstop trial",
+                  "icon": "fa-solid fa-scale-unbalanced",
+                  "summary": "Despite dozens of witnesses proving James never left his farm in Glen Duror on May 14, Crown officials locked him incommunicado in Fort William for four months and moved his trial into Clan Campbell headquarters at Inveraray.",
+                  "analysis": "Presiding on the crimson velvet bench as Lord Justice General was Archibald Campbell, 3rd Duke of Argyll, overlooking a 15-man jury packed with 11 Campbells. Rather than expose the young hotbloods of Appin (including marksman Donald Stewart, whom kinsmen had to physically tie down to stop him from confessing) and trigger a military burning of every roof in the glen, James kept his peace as the 50-hour trial ground to a foregone conviction 'in airts and pairts.'",
+                  "lyric_echo": "Eleven out of fifteen men all bore one chieftain's crest / I knew if I named the hotblood boys, they'd burn out every nest"
+            },
+            {
+                  "number": "III",
+                  "code": "PILLAR III // THE PSALM, THE WIRE & THE OUTCAST (1752–1755)",
+                  "title": "Salm Seumas a' Ghlinne (Psalm 35), Daft MacPhee & Old Keil Churchyard",
+                  "stat_highlight": "Nov 8, 1752 – 1755",
+                  "stat_sub": "Psalm 35 sung in Gaelic in a sleet gale • Wired skeleton felled by 'Daft' MacPhee • Buried at Keil",
+                  "icon": "fa-solid fa-church",
+                  "summary": "Hanged in a howling November sleet storm above the Ballachulish narrows after singing Psalm 35 in Scottish Gaelic, James's remains were kept wired together inside an iron gibbet cage for years as a warning to every passing ferry.",
+                  "analysis": "Whenever winter gales shook the bleached joints loose, garrison soldiers were ordered up ladders to twist wire through shoulder and rib. When strong Highland men were too terrified of the gallows law to touch the timber, a gentle parish outcast called 'Daft' MacPhee climbed the knoll in a midnight tempest, tore the rotted gibbet into Loch Leven, and allowed James's wife Margaret to wrap what fell in clean white linen and bury him at ruined Keil Churchyard.",
+                  "lyric_echo": "Strong Highland men grew terrified to touch that cursed tree / So it took a gentle simple soul the parish called MacPhee"
+            }
+      ],
+      "clean_lyrics_stanzas": [
+            "[Spoken Intro]\nFourteen of May, seventeen fifty-two, in Lettermore Wood.\nOne musket shot from the bracken took the King's factor from his saddle, and nobody saw the marksman run.\nLondon demanded a neck for the rope.\nSo they took a quiet farmer miles away in Glen Duror, and put eleven men of the dead man's clan into a fifteen-man jury box.",
+            "[Verse 1]\nI kept a roof in Glen Duror for the widows of the war\nFor MacLachlan's grieving household when they fled Loch Fyne's dark shore\nI had a pen for both our tongues, a plowshare in the peat\nAnd miles of open heather between me and Glenure's seat\nWhen the Red Fox rode with eviction writs to take our children's bread\nSomeone answered from the hazel wood with a ball of musket lead\nAlan Breck went through the mist before the redcoat dragoons came\nAnd they locked me in the garrison to pay the Crown a name",
+            "[Verse 2]\nThey gave you thirty-six short hours to read the twisted charge\nWhile silk and powdered chamber strings played down the Duke's grand barge\nInside the hall at Inveraray, justice wore a mask\nThe judge upon the velvet bench already knew his task\nEleven out of fifteen men all bore one chieftain's crest\nI knew if I named the hotblood boys, they'd burn out every nest\nSo I kept my peace beneath their eyes and let the gavel fall\nOne quiet neck upon the hill to save the roofs of all",
+            "[Chorus]\nLet the thirty-fifth Psalm ring out across the narrows in the rain\nFalse witnesses have risen up to bind an innocent in chain\nYou can wire the cold white bones together high above the tide\nWhere the ferry crosses Ballachulish and the grey sea-eagles glide\nThe King's court wrote a lie in ink, the wind will wash it clean\nRemember Seumas of the Glens where the birch and heather lean\n(Remember Seumas of the Glens)",
+            "[Verse 3]\nNovember eighth upon the knoll, the gale blew stinging sleet\nThe redcoat drummers beat their skins beside the ferry fleet\nI sang the Gaelic words of David loud enough to hear\nTill even soldiers with their pikes looked downward in their fear\nThen eighteen months of winter gales rolled on toward three long years\nThey wired your shoulder to your rib whenever storms drew near\nSo every mother on the boat and every child ashore\nWould look up at the iron cage and dare not speak no more",
+            "[Bridge]\nStrong Highland men grew terrified to touch that cursed tree\nSo it took a gentle simple soul the parish called MacPhee\nIn the roaring black of a midnight gale, where no wise man would tread\nHe tore the rotted timber down and gave Loch Leven's bed\nThe gallows wood of tyranny, while I knelt on the shore\nAnd wrapped what fell in clean white linen by the broken kirk's stone door!",
+            "[Chorus]\nLet the thirty-fifth Psalm ring out across the narrows in the rain\nFalse witnesses have risen up to bind an innocent in chain\nYou wired the cold white bones together high above the tide\nWhere the ferry crosses Ballachulish and the grey sea-eagles glide\nThe King's court wrote a lie in ink, the wind has washed it clean\nRemember Seumas of the Glens where the birch and heather lean\n(Where the birch and heather lean)",
+            "[Spoken Outro]\nIn the ruined churchyard down at Keil, beside the Appin sea...\nMargaret laid his gathered bones beneath the turf at last.\nTwo hundred and seventy winters gone, the Duke's court is dust... and the Psalm is still sung."
+      ],
+      "copyright_notice": "© 2026 The Shady River Bard / Shady River Homestead LLC. All rights reserved."
+}
   ];
 
   const bySlug = {};
