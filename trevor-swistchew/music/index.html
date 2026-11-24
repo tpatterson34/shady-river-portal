@@ -121,6 +121,8 @@
       overflow-wrap: anywhere;
     }
   </style>
+  <!-- Trevor Notes Dialog Styles -->
+  <link rel="stylesheet" href="../assets/css/trevor-notes.css">
 </head>
 
 <body class="selection:bg-brass-500 selection:text-peat-950 min-h-screen flex flex-col justify-between bg-stone-950 text-stone-100">
@@ -337,6 +339,7 @@
                   <span class="text-[11px] font-mono text-stone-500 truncate block" id="deck-artist-label">
                     Trevor Swistchew &bull; Suno
                   </span>
+                  <button type="button" id="deck-message-btn" onclick="openTrevorNoteModalForCurrentDeckTrack()" class="trevor-note-btn px-2 py-0.5 rounded-lg bg-stone-900/90 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-300 hover:text-amber-400 font-mono text-[10px] flex items-center gap-1.5 transition-all cursor-pointer shrink-0 ml-auto" title="Send a note to Trevor about the currently playing song"><svg class="w-3 h-3 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>Message Trevor</span></button>
                 </div>
                 <h3 id="deck-song-title" class="font-display text-base sm:text-xl font-bold text-stone-100 truncate block max-w-full">
                   Thunder in the Wires
@@ -779,9 +782,17 @@ copyright 2026 trevor swistchew"
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/df2cc4af-b5d8-4004-ab44-ebfba7199d48" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Thunder in the Wires', 'Track #01 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Thunder in the Wires" 
+              aria-label="Send a note to Trevor about Thunder in the Wires"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -951,9 +962,17 @@ pay the rent.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/bce907e8-b065-4327-9dc3-3180b7585b87" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('The Cosmic Landlord (Trevor&#x27;s Blues)', 'Track #02 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about The Cosmic Landlord (Trevor&#x27;s Blues)" 
+              aria-label="Send a note to Trevor about The Cosmic Landlord (Trevor&#x27;s Blues)"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -1105,9 +1124,17 @@ not old at all only just begun."
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/97ed6802-395f-4379-9fed-2c50d3104ede" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('The Old Story Shines', 'Track #03 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about The Old Story Shines" 
+              aria-label="Send a note to Trevor about The Old Story Shines"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -1230,9 +1257,17 @@ not old at all only just begun."
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/a63af39f-70f8-4b98-b51b-9b3c63174f24" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('The Old Story Shines (Classic Rock)', 'Track #04 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about The Old Story Shines (Classic Rock)" 
+              aria-label="Send a note to Trevor about The Old Story Shines (Classic Rock)"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -1355,9 +1390,17 @@ copyright 2026 trevor swistchew.  all rights reserved."
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/5dfac551-d6e4-4293-989f-6622ce3b404a" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('The Cause Is Just', 'Track #05 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about The Cause Is Just" 
+              aria-label="Send a note to Trevor about The Cause Is Just"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -1484,9 +1527,17 @@ copyright 2026 trevor swistchew.  all rights reserved."
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/ed3344b5-d081-4e59-83e6-996c4f7910f7" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Rise and Walk Free', 'Track #06 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Rise and Walk Free" 
+              aria-label="Send a note to Trevor about Rise and Walk Free"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -1617,9 +1668,17 @@ copyright 2026 trevor swistchew.  all rights reserved."
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/ea3caed8-f150-4764-a842-0ce623dd3251" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Rise and Walk Free (Old School Punk)', 'Track #07 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Rise and Walk Free (Old School Punk)" 
+              aria-label="Send a note to Trevor about Rise and Walk Free (Old School Punk)"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -1750,9 +1809,17 @@ copyright 2026 trevor swistchew.  all rights reserved."
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/bd3b6e58-bfd1-4bbe-b9e6-5e265d94412b" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('It Never Was A Union', 'Track #08 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about It Never Was A Union" 
+              aria-label="Send a note to Trevor about It Never Was A Union"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -1883,9 +1950,17 @@ copyright 2026 trevor swistchew.  all rights reserved."
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/db07bc21-7009-43c9-9e1b-3e8f3625cba3" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('No One Owns Scotland', 'Track #09 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about No One Owns Scotland" 
+              aria-label="Send a note to Trevor about No One Owns Scotland"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -2016,9 +2091,17 @@ copyright 2026 trevor swistchew.  all rights reserved."
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/386b3fbb-919f-4fca-aeb9-2ad563d7149d" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('No One Owns Scotland (Post-Punk)', 'Track #10 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about No One Owns Scotland (Post-Punk)" 
+              aria-label="Send a note to Trevor about No One Owns Scotland (Post-Punk)"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -2181,9 +2264,17 @@ let it fade!
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/aaf8c749-600f-4d44-81aa-3630c2587e10" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Warlords in Wigs', 'Track #11 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Warlords in Wigs" 
+              aria-label="Send a note to Trevor about Warlords in Wigs"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -2360,9 +2451,17 @@ forward to justice!
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/5a1deb91-47f2-4cff-86d6-54f1b9e4fa7f" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Power of Scotland', 'Track #12 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Power of Scotland" 
+              aria-label="Send a note to Trevor about Power of Scotland"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -2523,9 +2622,17 @@ unbowed!
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/0670ef16-fdd8-4e5b-91be-e03e9f26b89c" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('ROCK REVOLUTION', 'Track #13 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about ROCK REVOLUTION" 
+              aria-label="Send a note to Trevor about ROCK REVOLUTION"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -2692,9 +2799,17 @@ and the wheel keeps on turnin&#x27; round!
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/f164a6e3-cc8e-43f5-852b-57637466a470" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Rough And Ready', 'Track #14 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Rough And Ready" 
+              aria-label="Send a note to Trevor about Rough And Ready"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -2856,9 +2971,17 @@ never too old!
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/0aa5b667-23f3-42c9-8bd7-24c0c91c6edd" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('YOU NEVER TOO OLD TO ROCK N ROLL', 'Track #15 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about YOU NEVER TOO OLD TO ROCK N ROLL" 
+              aria-label="Send a note to Trevor about YOU NEVER TOO OLD TO ROCK N ROLL"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -3039,9 +3162,17 @@ it always will be.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/aa15d260-1b0a-4fd6-a8cb-b22bad194107" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('This Is It', 'Track #16 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about This Is It" 
+              aria-label="Send a note to Trevor about This Is It"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -3217,9 +3348,17 @@ iron in my heart.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/db93610b-5203-4253-8817-1bdadd2f1055" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('IRON IN MY HEART', 'Track #17 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about IRON IN MY HEART" 
+              aria-label="Send a note to Trevor about IRON IN MY HEART"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -3376,9 +3515,17 @@ the universe of rock.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/ed77e74b-2582-41c9-a6a9-8c7ba52c13b7" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Masters of Rock', 'Track #18 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Masters of Rock" 
+              aria-label="Send a note to Trevor about Masters of Rock"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -3543,9 +3690,17 @@ the universe of rock.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/fc1f3018-bff8-42ce-bf30-a20f60b669ec" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Masters of Rock', 'Track #19 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Masters of Rock" 
+              aria-label="Send a note to Trevor about Masters of Rock"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -3708,9 +3863,17 @@ we are still here.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/bf729dab-66ba-4d63-81e0-f5498266a68b" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('WE ARE STILL HERE', 'Track #20 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about WE ARE STILL HERE" 
+              aria-label="Send a note to Trevor about WE ARE STILL HERE"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -3901,9 +4064,17 @@ the awakening has begun.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/ed357d80-c8d3-413b-9bc0-57507d3ff020" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('The Watcher Awakes', 'Track #21 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about The Watcher Awakes" 
+              aria-label="Send a note to Trevor about The Watcher Awakes"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -4087,9 +4258,17 @@ constitutional abuse.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/4cbdc70c-b555-4a21-ad44-82c4d4e9006a" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Constitutional Abuse', 'Track #22 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Constitutional Abuse" 
+              aria-label="Send a note to Trevor about Constitutional Abuse"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -4242,9 +4421,17 @@ always fails.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/6b14711d-83c2-4ac1-8266-85a5e93a29b5" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Old Men&#x27;s Lies', 'Track #23 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Old Men&#x27;s Lies" 
+              aria-label="Send a note to Trevor about Old Men&#x27;s Lies"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -4418,9 +4605,17 @@ never
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/8b184604-1a08-4a7e-b374-39c0210050ff" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('The Reckoning', 'Track #24 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about The Reckoning" 
+              aria-label="Send a note to Trevor about The Reckoning"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -4598,9 +4793,17 @@ watermans blues
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/2217fa53-74f9-44e0-a888-890b376238ed" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Waterman Blues', 'Track #25 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Waterman Blues" 
+              aria-label="Send a note to Trevor about Waterman Blues"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -4786,9 +4989,17 @@ done!
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/00646ff5-b33a-4e32-b57f-388e583553e0" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('The Machinery', 'Track #26 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about The Machinery" 
+              aria-label="Send a note to Trevor about The Machinery"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -4983,9 +5194,17 @@ pass the incense.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/c49adcad-2e4d-4d69-85ad-0eb635bdc2f8" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Brown Rice N Lentil Rag', 'Track #27 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Brown Rice N Lentil Rag" 
+              aria-label="Send a note to Trevor about Brown Rice N Lentil Rag"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -5161,9 +5380,17 @@ court adjourned.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/13703ee4-bab4-4622-86fe-99c200257fea" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('The People v. Humpty Dumpty', 'Track #28 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about The People v. Humpty Dumpty" 
+              aria-label="Send a note to Trevor about The People v. Humpty Dumpty"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -5317,9 +5544,17 @@ yours for scotland, iai"
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/c7d00340-d9d9-435f-9bab-d738fa05690c" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Yours for Scotland, Iain (Edit)', 'Track #29 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Yours for Scotland, Iain (Edit)" 
+              aria-label="Send a note to Trevor about Yours for Scotland, Iain (Edit)"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -5478,9 +5713,17 @@ the fire remains
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/50d41fa9-4064-4a30-b59c-a95ffd9167c1" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('John Maclean of Scotland', 'Track #30 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about John Maclean of Scotland" 
+              aria-label="Send a note to Trevor about John Maclean of Scotland"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -5664,9 +5907,17 @@ wake up!
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/60cf7b1a-f7a7-46e1-b972-318e9dc62d09" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Sleeping or Awake', 'Track #31 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Sleeping or Awake" 
+              aria-label="Send a note to Trevor about Sleeping or Awake"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -5838,9 +6089,17 @@ a legacy ever to last.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/74e879a8-5421-4e92-b488-4dc0589b387d" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('The Hammer on the Clyde', 'Track #32 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about The Hammer on the Clyde" 
+              aria-label="Send a note to Trevor about The Hammer on the Clyde"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -6002,9 +6261,17 @@ selling out the dream
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/0cc349c3-c581-4169-bdd5-cde81867f356" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Blond Guy In The White House', 'Track #33 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Blond Guy In The White House" 
+              aria-label="Send a note to Trevor about Blond Guy In The White House"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -6152,9 +6419,17 @@ enjoy the show!
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/ea069a67-62d8-4ecc-9bc4-ffd9a6e159d7" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Old Flub Jack&#x27;s Awakening', 'Track #34 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Old Flub Jack&#x27;s Awakening" 
+              aria-label="Send a note to Trevor about Old Flub Jack&#x27;s Awakening"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -6279,9 +6554,17 @@ enjoy the show!
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/1d0622a5-a490-44c8-8cd3-0022ea63d758" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Old Flub Jack&#x27;s Awakening', 'Track #35 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Old Flub Jack&#x27;s Awakening" 
+              aria-label="Send a note to Trevor about Old Flub Jack&#x27;s Awakening"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -6406,9 +6689,17 @@ enjoy the show!
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/9bdcbd92-cfb8-4ade-9864-37f2730c42e5" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Old Flub Jack&#x27;s Con (Enjoy The Show)', 'Track #36 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Old Flub Jack&#x27;s Con (Enjoy The Show)" 
+              aria-label="Send a note to Trevor about Old Flub Jack&#x27;s Con (Enjoy The Show)"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -6561,9 +6852,17 @@ swallow pills!
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/127a4c2a-384f-45f9-be55-6b4a9ac79cfc" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Old Flub Jack&#x27;s Con', 'Track #37 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Old Flub Jack&#x27;s Con" 
+              aria-label="Send a note to Trevor about Old Flub Jack&#x27;s Con"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -6737,9 +7036,17 @@ we are done here.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/739dc303-d327-49bc-8339-6164700b5b0d" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Gather the Wood', 'Track #38 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Gather the Wood" 
+              aria-label="Send a note to Trevor about Gather the Wood"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -6914,9 +7221,17 @@ that&#x27;s your time.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/bbb93882-cfb4-41a3-94aa-73e25b4288bc" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('The Final Take', 'Track #39 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about The Final Take" 
+              aria-label="Send a note to Trevor about The Final Take"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -7111,9 +7426,17 @@ Driving hard rock, post-punk energy, 1980
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/c4c0df18-bfb8-40ab-b6e4-7d708c195c55" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Start Spreading The News', 'Track #40 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Start Spreading The News" 
+              aria-label="Send a note to Trevor about Start Spreading The News"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -7282,9 +7605,17 @@ if it went rogue (pause) it could tear the world apart.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/bcb48685-1393-435e-adad-28157c769c1f" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Unleash the Devil', 'Track #41 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Unleash the Devil" 
+              aria-label="Send a note to Trevor about Unleash the Devil"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -7426,9 +7757,17 @@ ye&#x27;ll no get the hard sell!
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/dc034562-8320-4c6d-8723-b311c9ba41f8" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('J &amp; J&#x27;s Wee Verse', 'Track #42 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about J &amp; J&#x27;s Wee Verse" 
+              aria-label="Send a note to Trevor about J &amp; J&#x27;s Wee Verse"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -7570,9 +7909,17 @@ let&#x27;s all give her a wave.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/8e4e576b-7370-4768-8d2d-b73bca6c8e93" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Smoky Mountain Songbird', 'Track #43 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Smoky Mountain Songbird" 
+              aria-label="Send a note to Trevor about Smoky Mountain Songbird"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -7719,9 +8066,17 @@ a legend whose courage is worth more than gold.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/9d481f6b-3a7d-4506-a988-8bafc95ae4f5" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('A Ballad for Dolly', 'Track #44 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about A Ballad for Dolly" 
+              aria-label="Send a note to Trevor about A Ballad for Dolly"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -7887,9 +8242,17 @@ scotland!
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/5d74f117-2d79-4c0f-b759-125063aa7a2a" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('The Heart of the World (abbr)', 'Track #45 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about The Heart of the World (abbr)" 
+              aria-label="Send a note to Trevor about The Heart of the World (abbr)"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -8048,9 +8411,17 @@ god ain&#x27;t no red hat
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/401f01fc-586a-4253-be46-4a8bacf2a4dd" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('God Ain&#x27;t No Red Hat', 'Track #46 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about God Ain&#x27;t No Red Hat" 
+              aria-label="Send a note to Trevor about God Ain&#x27;t No Red Hat"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -8238,9 +8609,17 @@ the world stands taller when you stand here.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/137a23c0-f997-4504-80f1-8b98efaf779d" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('The Heart of the World', 'Track #47 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about The Heart of the World" 
+              aria-label="Send a note to Trevor about The Heart of the World"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -8441,9 +8820,17 @@ it&#x27;s the voters gonna lose.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/3d07a414-b2bd-4b64-b09d-ce9b5769f414" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('White House Blues', 'Track #48 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about White House Blues" 
+              aria-label="Send a note to Trevor about White House Blues"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -8613,9 +9000,17 @@ held in light... told in song.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/402321bf-5a28-4641-8b47-b9e02701386e" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Held in Light', 'Track #49 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Held in Light" 
+              aria-label="Send a note to Trevor about Held in Light"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -8776,9 +9171,17 @@ where both can grow.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/f92ff3c8-ef3e-4867-9d5f-b9119666442b" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('AI Blues', 'Track #50 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about AI Blues" 
+              aria-label="Send a note to Trevor about AI Blues"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -8922,9 +9325,17 @@ i walked straight into confrontation blues.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/e9a8d0c7-981e-4a4a-b2ef-3fd3e0da9095" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Confrontation Blues', 'Track #51 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Confrontation Blues" 
+              aria-label="Send a note to Trevor about Confrontation Blues"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -9067,9 +9478,17 @@ except to say i told you so.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/7486e7a1-752a-48c3-8321-9ace4443fd2d" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Dust in My Hand Blues', 'Track #52 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Dust in My Hand Blues" 
+              aria-label="Send a note to Trevor about Dust in My Hand Blues"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -9248,9 +9667,17 @@ their sacrifice still speaks in scotland today.
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/140a0174-3917-43c0-9991-a65d66b1ecf7" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Scotland Free Or A Desert', 'Track #53 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Scotland Free Or A Desert" 
+              aria-label="Send a note to Trevor about Scotland Free Or A Desert"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -9423,9 +9850,17 @@ own it!
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/15bae74d-e223-4ffe-868e-51b57a2ba61b" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('The Shit Song (For The Lords Elect)', 'Track #54 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about The Shit Song (For The Lords Elect)" 
+              aria-label="Send a note to Trevor about The Shit Song (For The Lords Elect)"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -9562,9 +9997,17 @@ stole your freedom clean away
               <i class="fa-solid fa-play text-[10px]"></i>
               <span>Play in Chamber</span>
             </button>
-            <a 
-              href="https://suno.com/song/cfea453d-77bc-436a-b34a-5046d91c1f48" 
-              target="_blank" 
+            <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Occupied Land', 'Track #55 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Occupied Land" 
+              aria-label="Send a note to Trevor about Occupied Land"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
               rel="noopener noreferrer" 
               class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
               title="Listen on Suno"
@@ -9759,9 +10202,17 @@ the world can only be unfucked through systems.
                 <i class="fa-solid fa-book-open text-[10px]"></i>
                 <span class="text-[11px]">Essay ↗</span>
               </a>
-              <a 
-                href="https://suno.com/s/ZQ8VVkywkPuw3Ngz" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('The Unfucking', 'Track #56 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about The Unfucking" 
+              aria-label="Send a note to Trevor about The Unfucking"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-rose-950/80 hover:bg-rose-900 text-rose-300 hover:text-white border border-rose-800/80 flex items-center gap-1 transition-colors"
                 title="Listen on Suno"
@@ -9991,9 +10442,17 @@ the only permanent is change.
                 <i class="fa-solid fa-book-open text-[10px]"></i>
                 <span class="text-[11px]">Essay ↗</span>
               </a>
-              <a 
-                href="https://suno.com/s/VqDtbAecxDQBstZb" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('An Explanation of the Universe', 'Track #57 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about An Explanation of the Universe" 
+              aria-label="Send a note to Trevor about An Explanation of the Universe"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors"
                 title="Listen on Suno"
@@ -10196,9 +10655,17 @@ the world is governed with dignity.
                 <i class="fa-solid fa-book-open text-[10px]"></i>
                 <span class="text-[11px]">Essay ↗</span>
               </a>
-              <a 
-                href="https://suno.com/s/YQrwwcj8v7AeQzuj" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('The Canine State', 'Track #58 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about The Canine State" 
+              aria-label="Send a note to Trevor about The Canine State"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors"
                 title="Listen on Suno"
@@ -10392,9 +10859,17 @@ fifty years of lies.
                 <i class="fa-solid fa-book-open text-[10px]"></i>
                 <span class="text-[11px]">Essay ↗</span>
               </a>
-              <a 
-                href="https://suno.com/s/f709FOvB5V2C6i9p" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Fifty Years of Dust', 'Track #59 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Fifty Years of Dust" 
+              aria-label="Send a note to Trevor about Fifty Years of Dust"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors"
                 title="Listen on Suno"
@@ -10601,9 +11076,17 @@ the world is waking up.
                 <i class="fa-solid fa-book-open text-[10px]"></i>
                 <span class="text-[11px]">Essay ↗</span>
               </a>
-              <a 
-                href="https://suno.com/s/Acd9ttIJ6S1iRguC" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('The Same Old Smell', 'Track #60 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about The Same Old Smell" 
+              aria-label="Send a note to Trevor about The Same Old Smell"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors"
                 title="Listen on Suno"
@@ -10823,9 +11306,17 @@ lord, we are done being ignored.
                 <i class="fa-solid fa-book-open text-[10px]"></i>
                 <span class="text-[11px]">Essay ↗</span>
               </a>
-              <a 
-                href="https://suno.com/s/UC43Ey1G9dBsYh0o" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('The Shield, The Excuse, and The Betrayal', 'Track #61 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about The Shield, The Excuse, and The Betrayal" 
+              aria-label="Send a note to Trevor about The Shield, The Excuse, and The Betrayal"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors"
                 title="Listen on Suno"
@@ -11048,9 +11539,17 @@ just ask why
                 <i class="fa-solid fa-book-open text-[10px]"></i>
                 <span class="text-[11px]">Essay ↗</span>
               </a>
-              <a 
-                href="https://suno.com/s/GI8pNS3f5yAyqeio" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Eat As Thou Wilt', 'Track #62 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Eat As Thou Wilt" 
+              aria-label="Send a note to Trevor about Eat As Thou Wilt"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors"
                 title="Listen on Suno"
@@ -11232,9 +11731,17 @@ what the hell are leaders for
               <span>Play in Chamber</span>
             </button>
             <div class="flex items-center gap-1.5">
-              <a 
-                href="https://suno.com/s/mAcIVXGgibpGThEG" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Leaders Who Fucked the World', 'Track #63 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Leaders Who Fucked the World" 
+              aria-label="Send a note to Trevor about Leaders Who Fucked the World"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors"
                 title="Listen on Suno"
@@ -11396,9 +11903,17 @@ informing scotland honestly.
                 <i class="fa-solid fa-book-open text-[10px]"></i>
                 <span class="text-[11px]">Essay ↗</span>
               </a>
-              <a 
-                href="https://suno.com/s/wqvoMlulVbocgCiH" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('The Scotland Channel (Informing Scotland Honestly)', 'Track #64 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about The Scotland Channel (Informing Scotland Honestly)" 
+              aria-label="Send a note to Trevor about The Scotland Channel (Informing Scotland Honestly)"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors"
                 title="Listen on Suno"
@@ -11577,9 +12092,17 @@ when is the time?
                 <i class="fa-solid fa-book-open text-[10px]"></i>
                 <span class="text-[11px]">Essay ↗</span>
               </a>
-              <a 
-                href="https://suno.com/s/CRiYj4VsScIuiyfz" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('When Exactly Is the Time?', 'Track #65 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about When Exactly Is the Time?" 
+              aria-label="Send a note to Trevor about When Exactly Is the Time?"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors"
                 title="Listen on Suno"
@@ -11749,9 +12272,17 @@ from one yoke to the next.
               <span>Play in Chamber</span>
             </button>
             <div class="flex items-center gap-1.5">
-              <a 
-                href="https://suno.com/s/Riv9XxwkpbdWa5ac" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('One Yoke To The Next', 'Track #66 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about One Yoke To The Next" 
+              aria-label="Send a note to Trevor about One Yoke To The Next"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors"
                 title="Listen on Suno"
@@ -11906,9 +12437,17 @@ scotland forevermore!
               <span>Play in Chamber</span>
             </button>
             <div class="flex items-center gap-1.5">
-              <a 
-                href="https://suno.com/s/FLh5wXtF9S9XxuBm" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('The Blood Upon the Heather', 'Track #67 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about The Blood Upon the Heather" 
+              aria-label="Send a note to Trevor about The Blood Upon the Heather"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors"
                 title="Listen on Suno"
@@ -12065,9 +12604,17 @@ ain’t no third-time crown in this democratic show!
               <span>Play in Chamber</span>
             </button>
             <div class="flex items-center gap-1.5">
-              <a 
-                href="https://suno.com/s/1fITUyD1NjVDbj6O" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Free Election Blues', 'Track #68 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Free Election Blues" 
+              aria-label="Send a note to Trevor about Free Election Blues"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors" 
                 title="Listen on Suno"
@@ -12232,9 +12779,17 @@ here i am to say war is waste.
               <span>Play in Chamber</span>
             </button>
             <div class="flex items-center gap-1.5">
-              <a 
-                href="https://suno.com/s/o8fJaMVngbnlVMov" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('No More Waste', 'Track #69 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about No More Waste" 
+              aria-label="Send a note to Trevor about No More Waste"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors" 
                 title="Listen on Suno"
@@ -12397,9 +12952,17 @@ except to say i told you so.
               <span>Play in Chamber</span>
             </button>
             <div class="flex items-center gap-1.5">
-              <a 
-                href="https://suno.com/s/5GHqOObvIJXvNSnz" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Dust in My Hand Blues', 'Track #70 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Dust in My Hand Blues" 
+              aria-label="Send a note to Trevor about Dust in My Hand Blues"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors" 
                 title="Listen on Suno"
@@ -12557,9 +13120,17 @@ and humanity dance to ruin
               <span>Play in Chamber</span>
             </button>
             <div class="flex items-center gap-1.5">
-              <a 
-                href="https://suno.com/s/t81wUGSNMhjAvEYE" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('God\'s Blues', 'Track #71 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about God's Blues" 
+              aria-label="Send a note to Trevor about God's Blues"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors" 
                 title="Listen on Suno"
@@ -12739,9 +13310,17 @@ question everything again.
               <span>Play in Chamber</span>
             </button>
             <div class="flex items-center gap-1.5">
-              <a 
-                href="https://suno.com/s/CP50k2vw0Sx2fXOY" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Question Everything', 'Track #72 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Question Everything" 
+              aria-label="Send a note to Trevor about Question Everything"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors" 
                 title="Listen on Suno"
@@ -12969,9 +13548,17 @@ not too poor
               <span>Play in Chamber</span>
             </button>
             <div class="flex items-center gap-1.5">
-              <a 
-                href="https://suno.com/s/aeIDUA5pc9JhqwPg" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Win The Nation', 'Track #73 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Win The Nation" 
+              aria-label="Send a note to Trevor about Win The Nation"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors" 
                 title="Listen on Suno"
@@ -13184,9 +13771,17 @@ sue the weather!
               >
                 <span class="text-[11px]">Essay #59 &nearr;</span>
               </a>
-              <a 
-                href="https://suno.com/s/iQl2YnKT074WnVUB" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('One Pound Down', 'Track #74 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about One Pound Down" 
+              aria-label="Send a note to Trevor about One Pound Down"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors" 
                 title="Listen on Suno"
@@ -13371,9 +13966,17 @@ are waiting here
               <span>Play in Chamber</span>
             </button>
             <div class="flex items-center gap-1.5">
-              <a 
-                href="https://suno.com/s/vy5OEsKFiGlall2A" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('We Can Do Better', 'Track #75 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about We Can Do Better" 
+              aria-label="Send a note to Trevor about We Can Do Better"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors" 
                 title="Listen on Suno"
@@ -13559,9 +14162,17 @@ disturbing the heavenly peace.
               <span>Play in Chamber</span>
             </button>
             <div class="flex items-center gap-1.5">
-              <a 
-                href="https://suno.com/s/PyQONvCQrtGVcN1J" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('The Lord Is My Cashline', 'Track #76 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about The Lord Is My Cashline" 
+              aria-label="Send a note to Trevor about The Lord Is My Cashline"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors" 
                 title="Listen on Suno"
@@ -13753,9 +14364,17 @@ the people themselves are the ones who decide
                 <i class="fa-solid fa-book-open text-[10px]"></i>
                 <span class="text-[11px]">Essay &nearr;</span>
               </a>
-              <a 
-                href="https://suno.com/s/ExB5XRyZs2X6sYWc" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('They Never Asked Scotland', 'Track #77 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about They Never Asked Scotland" 
+              aria-label="Send a note to Trevor about They Never Asked Scotland"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors" 
                 title="Listen on Suno"
@@ -13967,9 +14586,17 @@ keep on pushin'!
               <span>Play in Chamber</span>
             </button>
             <div class="flex items-center gap-1.5">
-              <a 
-                href="https://suno.com/song/9e2a46d7-6fb5-4bf9-b30d-2745e6e34e56" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Rough And Ready (Revised)', 'Track #78 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Rough And Ready (Revised)" 
+              aria-label="Send a note to Trevor about Rough And Ready (Revised)"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 hover:text-white border border-amber-800/80 flex items-center gap-1 transition-colors" 
                 title="Listen on Suno"
@@ -14181,9 +14808,17 @@ give peace a chance.
               <span>Play in Chamber</span>
             </button>
             <div class="flex items-center gap-1.5">
-              <a 
-                href="https://suno.com/song/8d48fda1-1b3a-438c-8691-0df44ab39746" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Give Peace A Chance Revisited (2026)', 'Track #79 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Give Peace A Chance Revisited (2026)" 
+              aria-label="Send a note to Trevor about Give Peace A Chance Revisited (2026)"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
                 title="Listen on Suno"
@@ -14405,9 +15040,17 @@ it keeps coming back for more
               <span>Play in Chamber</span>
             </button>
             <div class="flex items-center gap-1.5">
-              <a 
-                href="https://suno.com/song/eabb9bb7-add4-459e-9042-ee5400006af0" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Blood on the Balance Sheet', 'Track #80 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Blood on the Balance Sheet" 
+              aria-label="Send a note to Trevor about Blood on the Balance Sheet"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
                 title="Listen on Suno"
@@ -14664,9 +15307,17 @@ in human misery
               <span>Play in Chamber</span>
             </button>
             <div class="flex items-center gap-1.5">
-              <a 
-                href="https://suno.com/song/3112181d-7c07-4958-96e3-b81968a05b9a" 
-                target="_blank" 
+              <button 
+              type="button" 
+              onclick="openTrevorNoteModal('Blood Money', 'Track #81 • Trevor\'s Grooves', 'song')" 
+              class="trevor-note-btn px-2.5 py-1.5 rounded-lg bg-stone-950/60 hover:bg-stone-800 border border-stone-800 hover:border-amber-500/50 text-stone-400 hover:text-amber-400 font-mono text-[11px] transition-all flex items-center gap-1.5 cursor-pointer" 
+              title="Send a note to Trevor about Blood Money" 
+              aria-label="Send a note to Trevor about Blood Money"
+            >
+              <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Message</span>
+            </button>
+            <a  
                 rel="noopener noreferrer" 
                 class="px-2.5 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white border border-stone-700 flex items-center gap-1 transition-colors"
                 title="Listen on Suno"
@@ -14968,6 +15619,7 @@ In human misery
         </button>
 
         <!-- Share Song Link -->
+        <button type="button" id="bottom-message-btn" onclick="openTrevorNoteModalForCurrentDeckTrack()" class="px-2.5 py-1 rounded-lg bg-stone-800/90 hover:bg-stone-700 text-stone-300 hover:text-amber-400 border border-stone-700/80 text-[10px] font-mono flex items-center gap-1.5 transition-colors cursor-pointer" title="Send a note to Trevor about this song"><svg class="w-3 h-3 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>Message</span></button>
         <button type="button" id="bottom-share-song-btn" onclick="shareCurrentPlayingSong()" class="px-2.5 py-1 rounded-lg bg-stone-800/90 hover:bg-stone-700 text-stone-300 hover:text-amber-400 border border-stone-700/80 text-[10px] font-mono flex items-center gap-1.5 transition-colors cursor-pointer" title="Share direct link to play this song immediately in Chamber">
           <i id="bottom-share-btn-icon" class="fa-solid fa-share-nodes text-amber-400 text-[10px]"></i>
           <span id="bottom-share-btn-text">Share</span>
@@ -17448,5 +18100,7 @@ In human misery
 
   <!-- Reading Experience Controller Script -->
   <script src="../assets/js/reading-experience.js"></script>
-  </body>
+    <!-- Trevor Notes Feedback Controller -->
+  <script src="../assets/js/trevor-notes.js"></script>
+</body>
 </html>

@@ -71,6 +71,7 @@
   <link rel="stylesheet" href="../../assets/css/a11y.css">
   <link rel="stylesheet" href="../../assets/css/salon-theme.css">
   <link rel="stylesheet" href="../../assets/css/print.css">
+  <link rel="stylesheet" href="../../assets/css/trevor-notes.css">
 </head>
 
 <body class="selection:bg-brass-500 selection:text-peat-950 min-h-screen flex flex-col justify-between">
@@ -141,6 +142,12 @@
           <i class="fa-solid fa-file-pdf text-amber-500 text-[11px]"></i>
           <span class="hidden sm:inline">PDF</span>
         </a>
+
+        <!-- Message Trevor Button -->
+        <button type="button" onclick="openTrevorNoteModal('How the World Fucked Itself and How a Fucked World Could Be Unfucked', 'Compendium #30', 'essay')" class="px-2.5 py-1.5 rounded-lg bg-stone-900 hover:bg-stone-800 border border-stone-800 text-stone-300 hover:text-amber-400 font-mono text-xs flex items-center gap-1.5 transition-colors cursor-pointer" title="Send a note to Trevor about this essay" aria-label="Send a note to Trevor about this essay">
+          <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <span class="hidden sm:inline">Message</span>
+        </button>
         <a href="../../index.html#essays" class="text-xs font-mono text-stone-400 hover:text-amber-400 transition-colors flex items-center gap-1 pl-2 border-l border-stone-800">
           <i class="fa-solid fa-arrow-left text-[10px]"></i>
           <span>Catalog</span>
@@ -602,6 +609,23 @@
         <span>Print Well-Formatted Plain Text</span>
       </button>
     </div>
+
+    <!-- Reader Reflections / Correspondence Box -->
+    <div class="my-8 p-5 rounded-2xl bg-stone-900/40 border border-stone-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 no-print">
+      <div class="flex items-center gap-3 text-center sm:text-left">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-cinzel font-bold text-sm shrink-0">
+          TS
+        </div>
+        <div>
+          <div class="font-display font-bold text-stone-200 text-sm">Reflections or Correspondence?</div>
+          <div class="text-xs text-stone-400">Share your thoughts, reactions, or questions directly with Trevor Swistchew.</div>
+        </div>
+      </div>
+      <button type="button" onclick="openTrevorNoteModal('How the World Fucked Itself and How a Fucked World Could Be Unfucked', 'Compendium #30', 'essay')" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono text-xs font-bold transition-all shadow-md flex items-center gap-2 cursor-pointer shrink-0">
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <span>Drop a Note to Trevor</span>
+      </button>
+    </div>
 </main>
 
   <!-- Global Salon Footer -->
@@ -710,5 +734,7 @@
       });
     }
   </script>
+  <!-- Trevor Notes Feedback Controller -->
+  <script src="../../assets/js/trevor-notes.js"></script>
 </body>
 </html>
