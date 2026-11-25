@@ -190,6 +190,15 @@
           <span>Videos</span>
         </a>
 
+        <a
+          href="../practice.html?album=sold-cheap&amp;song=lordstown-dont-sell-your-homes"
+          class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-950/80 hover:bg-amber-900 text-amber-300 border border-amber-500/40 font-mono text-xs font-bold transition-colors"
+          title="Open Sold Cheap in 4-Stem Practice Studio"
+        >
+          <i class="fa-solid fa-sliders text-amber-400 text-xs" aria-hidden="true"></i>
+          <span>Practice Studio</span>
+        </a>
+
         <!-- Accessibility Toolbar Trigger -->
         <button 
           id="a11y-toggle-btn" 
@@ -315,6 +324,15 @@
               >
                 <i aria-hidden="true" class="fa-solid fa-compact-disc"></i>
                 <span>Explore 12-Track Vault</span>
+              </a>
+
+              <a 
+                href="../practice.html?album=sold-cheap&amp;song=lordstown-dont-sell-your-homes" 
+                class="px-5 py-2.5 rounded-xl bg-amber-950/90 hover:bg-amber-900 border border-amber-500/40 text-amber-300 hover:text-white font-mono text-xs sm:text-sm font-bold transition-all shadow-lg flex items-center gap-2"
+                title="Open Interactive 4-Stem Practice Studio with Chords, Tabs &amp; Synced Lyrics"
+              >
+                <i aria-hidden="true" class="fa-solid fa-sliders text-amber-400"></i>
+                <span>Practice Studio (12 Stems)</span>
               </a>
 
               <a 
@@ -1003,6 +1021,15 @@
                   <i aria-hidden="true" class="fa-brands fa-youtube text-sm text-red-400"></i>
                   <span>Watch on YouTube</span>
                   <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-75"></i>
+                </a>
+                <a 
+                  href="../practice.html?song=${t.slug}&album=sold-cheap" 
+                  class="px-3.5 py-2 rounded-xl bg-amber-950/90 hover:bg-amber-900 border border-amber-500/40 text-amber-300 hover:text-white font-mono text-xs font-bold flex items-center gap-1.5 shadow-lg transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-400"
+                  title="Open ${escapeHtml(t.title)} in Practice Studio (4-Stem Mixer, Chords & Synced Lyrics)"
+                  aria-label="Practice ${escapeHtml(t.title)} in Practice Studio"
+                >
+                  <i aria-hidden="true" class="fa-solid fa-sliders text-xs text-amber-400"></i>
+                  <span>Practice</span>
                 </a>
               </div>
             </div>

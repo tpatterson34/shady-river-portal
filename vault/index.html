@@ -844,6 +844,19 @@
       'the-year-she-was-gone-2002': { slug: 'the-year-she-was-gone-2002', albumId: 'mamas-boy', albumNumber: 13, trackTitle: 'The Year She Was Gone (2002)' },
       'the-man-who-stayed': { slug: 'the-man-who-stayed', albumId: 'mamas-boy', albumNumber: 13, trackTitle: 'The Man Who Stayed' },
       'a-different-kind-of-love': { slug: 'a-different-kind-of-love', albumId: 'mamas-boy', albumNumber: 13, trackTitle: 'A Different Kind of Love' },
+      // Album 15: Sold Cheap
+      'lordstown-dont-sell-your-homes': { slug: 'lordstown-dont-sell-your-homes', albumId: 'sold-cheap', albumNumber: 15, trackTitle: "Lordstown (Don't Sell Your Homes)" },
+      'a-dollar-for-the-deed': { slug: 'a-dollar-for-the-deed', albumId: 'sold-cheap', albumNumber: 15, trackTitle: 'A Dollar for the Deed' },
+      'newtons-ghost-a-good-job': { slug: 'newtons-ghost-a-good-job', albumId: 'sold-cheap', albumNumber: 15, trackTitle: "Newton's Ghost (A Good Job)" },
+      'the-studebaker-promise': { slug: 'the-studebaker-promise', albumId: 'sold-cheap', albumNumber: 15, trackTitle: 'The Studebaker Promise' },
+      'unwarranted-influence': { slug: 'unwarranted-influence', albumId: 'sold-cheap', albumNumber: 15, trackTitle: 'Unwarranted Influence' },
+      'blackwater-the-business-face-of-war': { slug: 'blackwater-the-business-face-of-war', albumId: 'sold-cheap', albumNumber: 15, trackTitle: 'Blackwater (The Business Face of War)' },
+      'the-sackler-act': { slug: 'the-sackler-act', albumId: 'sold-cheap', albumNumber: 15, trackTitle: 'The SACKLER Act' },
+      'regulatory-capture': { slug: 'regulatory-capture', albumId: 'sold-cheap', albumNumber: 15, trackTitle: 'Regulatory Capture' },
+      'the-balance-sheet-of-a-soul': { slug: 'the-balance-sheet-of-a-soul', albumId: 'sold-cheap', albumNumber: 15, trackTitle: 'The Balance Sheet of a Soul' },
+      'the-stock-act': { slug: 'the-stock-act', albumId: 'sold-cheap', albumNumber: 15, trackTitle: 'The STOCK Act' },
+      'signal-to-noise-ratio': { slug: 'signal-to-noise-ratio', albumId: 'sold-cheap', albumNumber: 15, trackTitle: 'Signal to Noise Ratio' },
+      'sold-cheap': { slug: 'sold-cheap', albumId: 'sold-cheap', albumNumber: 15, trackTitle: 'Sold Cheap' },
       'the-insufficient-funds-error': { slug: 'the-insufficient-funds-error', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Insufficient Funds Error' },
       'the-curtains-and-the-canned-goods': { slug: 'the-curtains-and-the-canned-goods', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'The Curtains and the Canned Goods' },
       'seven-skies-burning': { slug: 'seven-skies-burning', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Seven Skies Burning' },
@@ -981,6 +994,8 @@
         songSlug = 'third-shift-lullaby';
       } else if (albumItem.id === 'five-digit-fate' || albumItem.number === 14) {
         songSlug = 'prologue-a-national-static';
+      } else if (albumItem.id === 'sold-cheap' || albumItem.number === 15) {
+        songSlug = 'lordstown-dont-sell-your-homes';
       } else {
         const firstPkg = Object.values(PRACTICE_PACKAGES_BY_SLUG).find(pkg => 
           pkg.albumId === albumItem.id || pkg.albumNumber === albumItem.number || normalizePracticeTitle(pkg.albumId) === normalizePracticeTitle(albumItem.id)
@@ -1002,7 +1017,7 @@
 
         // Dynamically load any extra practice packages if available
         try {
-          const pRes = await fetch('../data/practice-packages.json?v=20261121_14');
+          const pRes = await fetch('../data/practice-packages.json?v=20261125_15');
           if (pRes.ok) {
             const pData = await pRes.json();
             pData.forEach(p => {
