@@ -857,6 +857,20 @@
       'the-stock-act': { slug: 'the-stock-act', albumId: 'sold-cheap', albumNumber: 15, trackTitle: 'The STOCK Act' },
       'signal-to-noise-ratio': { slug: 'signal-to-noise-ratio', albumId: 'sold-cheap', albumNumber: 15, trackTitle: 'Signal to Noise Ratio' },
       'sold-cheap': { slug: 'sold-cheap', albumId: 'sold-cheap', albumNumber: 15, trackTitle: 'Sold Cheap' },
+      // Album 16: Divide and Conquer
+      'the-unseen-architects': { slug: 'the-unseen-architects', albumId: 'divide-and-conquer', albumNumber: 16, trackTitle: 'The Unseen Architects (Prologue)' },
+      'the-daily-hate': { slug: 'the-daily-hate', albumId: 'divide-and-conquer', albumNumber: 16, trackTitle: 'The Daily Hate' },
+      'red-team-blue-team': { slug: 'red-team-blue-team', albumId: 'divide-and-conquer', albumNumber: 16, trackTitle: 'Red Team, Blue Team' },
+      'the-outrage-merchants': { slug: 'the-outrage-merchants', albumId: 'divide-and-conquer', albumNumber: 16, trackTitle: 'The Outrage Merchants' },
+      'too-many-captains': { slug: 'too-many-captains', albumId: 'divide-and-conquer', albumNumber: 16, trackTitle: 'Too Many Captains (For a Sinking Ship)' },
+      'k-street-waltz': { slug: 'k-street-waltz', albumId: 'divide-and-conquer', albumNumber: 16, trackTitle: 'K Street Waltz' },
+      'bipartisan-handshake': { slug: 'bipartisan-handshake', albumId: 'divide-and-conquer', albumNumber: 16, trackTitle: 'Bipartisan Handshake' },
+      'thanksgiving-2029': { slug: 'thanksgiving-2029', albumId: 'divide-and-conquer', albumNumber: 16, trackTitle: 'Thanksgiving, 2029' },
+      'the-same-boot': { slug: 'the-same-boot', albumId: 'divide-and-conquer', albumNumber: 16, trackTitle: 'The Same Boot' },
+      'the-politicians-waltz': { slug: 'the-politicians-waltz', albumId: 'divide-and-conquer', albumNumber: 16, trackTitle: "The Politician's Waltz" },
+      'the-great-unfriending': { slug: 'the-great-unfriending', albumId: 'divide-and-conquer', albumNumber: 16, trackTitle: 'The Great Unfriending' },
+      'the-bridge-builders': { slug: 'the-bridge-builders', albumId: 'divide-and-conquer', albumNumber: 16, trackTitle: 'The Bridge Builders' },
+      'conquer-the-divide': { slug: 'conquer-the-divide', albumId: 'divide-and-conquer', albumNumber: 16, trackTitle: 'Conquer the Divide' },
       'the-insufficient-funds-error': { slug: 'the-insufficient-funds-error', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Insufficient Funds Error' },
       'the-curtains-and-the-canned-goods': { slug: 'the-curtains-and-the-canned-goods', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'The Curtains and the Canned Goods' },
       'seven-skies-burning': { slug: 'seven-skies-burning', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Seven Skies Burning' },
@@ -996,6 +1010,8 @@
         songSlug = 'prologue-a-national-static';
       } else if (albumItem.id === 'sold-cheap' || albumItem.number === 15) {
         songSlug = 'lordstown-dont-sell-your-homes';
+      } else if (albumItem.id === 'divide-and-conquer' || albumItem.number === 16) {
+        songSlug = 'the-unseen-architects';
       } else {
         const firstPkg = Object.values(PRACTICE_PACKAGES_BY_SLUG).find(pkg => 
           pkg.albumId === albumItem.id || pkg.albumNumber === albumItem.number || normalizePracticeTitle(pkg.albumId) === normalizePracticeTitle(albumItem.id)
@@ -1017,7 +1033,7 @@
 
         // Dynamically load any extra practice packages if available
         try {
-          const pRes = await fetch('../data/practice-packages.json?v=20261125_15');
+          const pRes = await fetch('../data/practice-packages.json?v=20261125_16');
           if (pRes.ok) {
             const pData = await pRes.json();
             pData.forEach(p => {
