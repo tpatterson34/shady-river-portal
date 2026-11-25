@@ -871,6 +871,20 @@
       'the-great-unfriending': { slug: 'the-great-unfriending', albumId: 'divide-and-conquer', albumNumber: 16, trackTitle: 'The Great Unfriending' },
       'the-bridge-builders': { slug: 'the-bridge-builders', albumId: 'divide-and-conquer', albumNumber: 16, trackTitle: 'The Bridge Builders' },
       'conquer-the-divide': { slug: 'conquer-the-divide', albumId: 'divide-and-conquer', albumNumber: 16, trackTitle: 'Conquer the Divide' },
+      // Album 18: American Rubble
+      'prologue-the-static': { slug: 'prologue-the-static', albumId: 'american-rubble', albumNumber: 18, trackTitle: 'Prologue: The Static' },
+      'the-unplowed-field': { slug: 'the-unplowed-field', albumId: 'american-rubble', albumNumber: 18, trackTitle: 'The Unplowed Field' },
+      'the-cold-wire': { slug: 'the-cold-wire', albumId: 'american-rubble', albumNumber: 18, trackTitle: 'The Cold Wire' },
+      'the-last-antibiotic': { slug: 'the-last-antibiotic', albumId: 'american-rubble', albumNumber: 18, trackTitle: 'The Last Antibiotic' },
+      'picket-fence-frontline': { slug: 'picket-fence-frontline', albumId: 'american-rubble', albumNumber: 18, trackTitle: 'Picket Fence Frontline' },
+      'the-gray-zone': { slug: 'the-gray-zone', albumId: 'american-rubble', albumNumber: 18, trackTitle: 'The Gray Zone' },
+      'the-new-exiles': { slug: 'the-new-exiles', albumId: 'american-rubble', albumNumber: 18, trackTitle: 'The New Exiles' },
+      'the-vultures-market': { slug: 'the-vultures-market', albumId: 'american-rubble', albumNumber: 18, trackTitle: "The Vulture's Market" },
+      'king-of-the-graveyard': { slug: 'king-of-the-graveyard', albumId: 'american-rubble', albumNumber: 18, trackTitle: 'King of the Graveyard' },
+      'aleppo-ohio': { slug: 'aleppo-ohio', albumId: 'american-rubble', albumNumber: 18, trackTitle: 'Aleppo, Ohio' },
+      'the-un-forgotten-dead': { slug: 'the-un-forgotten-dead', albumId: 'american-rubble', albumNumber: 18, trackTitle: 'The Un-Forgotten Dead' },
+      'the-poisoned-well': { slug: 'the-poisoned-well', albumId: 'american-rubble', albumNumber: 18, trackTitle: 'The Poisoned Well' },
+      'epilogue-the-silence': { slug: 'epilogue-the-silence', albumId: 'american-rubble', albumNumber: 18, trackTitle: 'Epilogue: The Silence' },
       'the-insufficient-funds-error': { slug: 'the-insufficient-funds-error', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Insufficient Funds Error' },
       'the-curtains-and-the-canned-goods': { slug: 'the-curtains-and-the-canned-goods', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'The Curtains and the Canned Goods' },
       'seven-skies-burning': { slug: 'seven-skies-burning', albumId: 'the-curtains-and-the-canned-goods', albumNumber: 23, trackTitle: 'Seven Skies Burning' },
@@ -1012,6 +1026,8 @@
         songSlug = 'lordstown-dont-sell-your-homes';
       } else if (albumItem.id === 'divide-and-conquer' || albumItem.number === 16) {
         songSlug = 'the-unseen-architects';
+      } else if (albumItem.id === 'american-rubble' || albumItem.number === 18) {
+        songSlug = 'prologue-the-static';
       } else {
         const firstPkg = Object.values(PRACTICE_PACKAGES_BY_SLUG).find(pkg => 
           pkg.albumId === albumItem.id || pkg.albumNumber === albumItem.number || normalizePracticeTitle(pkg.albumId) === normalizePracticeTitle(albumItem.id)
@@ -1033,7 +1049,7 @@
 
         // Dynamically load any extra practice packages if available
         try {
-          const pRes = await fetch('../data/practice-packages.json?v=20261125_16');
+          const pRes = await fetch('../data/practice-packages.json?v=20261125_18');
           if (pRes.ok) {
             const pData = await pRes.json();
             pData.forEach(p => {

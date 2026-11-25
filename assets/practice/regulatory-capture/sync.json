@@ -52,7 +52,7 @@
     ],
     "chord_cols": [
       0,
-      8
+      12
     ],
     "beats": [
       4.620770975056689,
@@ -60,8 +60,15 @@
       5.735328798185941,
       6.315827664399093
     ],
-    "lyrics": "",
-    "words": []
+    "lyrics": "            \"Come",
+    "words": [
+      {
+        "word": "\"Come",
+        "start": 6.24,
+        "end": 6.76,
+        "col": 12
+      }
+    ]
   },
   {
     "time": 7.035646258503402,
@@ -168,25 +175,49 @@
       17.740045351473924,
       18.297324263038547
     ],
-    "lyrics": "\"Come         on in.",
+    "lyrics": "on            in. Let me buy you a",
     "words": [
       {
-        "word": "\"Come",
-        "start": 17.46,
-        "end": 17.777,
+        "word": "on",
+        "start": 17.501,
+        "end": 17.781,
         "col": 0
       },
       {
-        "word": "on",
-        "start": 17.777,
-        "end": 18.093,
+        "word": "in.",
+        "start": 17.841,
+        "end": 18.021,
         "col": 14
       },
       {
-        "word": "in.",
-        "start": 18.093,
-        "end": 18.41,
-        "col": 17
+        "word": "Let",
+        "start": 18.141,
+        "end": 18.261,
+        "col": 18
+      },
+      {
+        "word": "me",
+        "start": 18.281,
+        "end": 18.361,
+        "col": 22
+      },
+      {
+        "word": "buy",
+        "start": 18.441,
+        "end": 18.621,
+        "col": 25
+      },
+      {
+        "word": "you",
+        "start": 18.661,
+        "end": 18.801,
+        "col": 29
+      },
+      {
+        "word": "a",
+        "start": 18.841,
+        "end": 18.881,
+        "col": 33
       }
     ]
   },
@@ -207,43 +238,13 @@
       20.17814058956916,
       20.735419501133787
     ],
-    "lyrics": "Let me buy you a drink.",
+    "lyrics": "drink.",
     "words": [
       {
-        "word": "Let",
-        "start": 18.41,
-        "end": 18.875,
-        "col": 0
-      },
-      {
-        "word": "me",
-        "start": 18.875,
-        "end": 19.34,
-        "col": 4
-      },
-      {
-        "word": "buy",
-        "start": 19.34,
-        "end": 19.805,
-        "col": 7
-      },
-      {
-        "word": "you",
-        "start": 19.805,
-        "end": 20.27,
-        "col": 11
-      },
-      {
-        "word": "a",
-        "start": 20.27,
-        "end": 20.735,
-        "col": 15
-      },
-      {
         "word": "drink.",
-        "start": 20.735,
-        "end": 21.2,
-        "col": 17
+        "start": 18.881,
+        "end": 19.249,
+        "col": 0
       }
     ]
   },
@@ -280,7 +281,7 @@
     ],
     "chord_cols": [
       0,
-      34
+      33
     ],
     "beats": [
       23.73079365079365,
@@ -288,49 +289,79 @@
       25.054331065759637,
       25.611609977324264
     ],
-    "lyrics": "You look like you want to know",
+    "lyrics": "You look like you want to know   how the world really works.",
     "words": [
       {
         "word": "You",
-        "start": 23.74,
-        "end": 23.927,
+        "start": 23.701,
+        "end": 23.801,
         "col": 0
       },
       {
         "word": "look",
-        "start": 23.927,
-        "end": 24.114,
+        "start": 23.861,
+        "end": 24.001,
         "col": 4
       },
       {
         "word": "like",
-        "start": 24.114,
+        "start": 24.061,
         "end": 24.301,
         "col": 9
       },
       {
         "word": "you",
-        "start": 24.301,
-        "end": 24.489,
+        "start": 24.321,
+        "end": 24.441,
         "col": 14
       },
       {
         "word": "want",
-        "start": 24.489,
-        "end": 24.676,
+        "start": 24.481,
+        "end": 24.661,
         "col": 18
       },
       {
         "word": "to",
-        "start": 24.676,
-        "end": 24.863,
+        "start": 24.681,
+        "end": 24.741,
         "col": 23
       },
       {
         "word": "know",
-        "start": 24.863,
-        "end": 25.05,
+        "start": 24.741,
+        "end": 24.981,
         "col": 26
+      },
+      {
+        "word": "how",
+        "start": 24.981,
+        "end": 25.101,
+        "col": 33
+      },
+      {
+        "word": "the",
+        "start": 25.121,
+        "end": 25.201,
+        "col": 37
+      },
+      {
+        "word": "world",
+        "start": 25.281,
+        "end": 25.601,
+        "col": 41
+      },
+      {
+        "word": "really",
+        "start": 25.661,
+        "end": 25.901,
+        "col": 47
+      },
+      {
+        "word": "works.",
+        "start": 25.981,
+        "end": 26.201,
+        "col": 54
       }
     ]
   },
@@ -345,7 +376,7 @@
     ],
     "chord_cols": [
       0,
-      23
+      8
     ],
     "beats": [
       26.16888888888889,
@@ -353,39 +384,8 @@
       27.30666666666667,
       28.0497052154195
     ],
-    "lyrics": "how the world really   works.",
-    "words": [
-      {
-        "word": "how",
-        "start": 25.05,
-        "end": 25.712,
-        "col": 0
-      },
-      {
-        "word": "the",
-        "start": 25.712,
-        "end": 26.374,
-        "col": 4
-      },
-      {
-        "word": "world",
-        "start": 26.374,
-        "end": 27.036,
-        "col": 8
-      },
-      {
-        "word": "really",
-        "start": 27.036,
-        "end": 27.698,
-        "col": 14
-      },
-      {
-        "word": "works.",
-        "start": 27.698,
-        "end": 28.36,
-        "col": 23
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 28.63020408163265,
@@ -420,7 +420,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      19
     ],
     "beats": [
       31.045079365079363,
@@ -428,25 +428,25 @@
       32.182857142857145,
       32.74013605442177
     ],
-    "lyrics": "It's easy,    kid.",
+    "lyrics": "It's easy, kid.",
     "words": [
       {
         "word": "It's",
-        "start": 29.86,
-        "end": 31.197,
+        "start": 31.222,
+        "end": 31.342,
         "col": 0
       },
       {
         "word": "easy,",
-        "start": 31.197,
-        "end": 32.533,
+        "start": 31.502,
+        "end": 31.802,
         "col": 5
       },
       {
         "word": "kid.",
-        "start": 32.533,
-        "end": 33.87,
-        "col": 14
+        "start": 31.902,
+        "end": 32.222,
+        "col": 11
       }
     ]
   },
@@ -461,7 +461,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      12
     ],
     "beats": [
       33.29741496598639,
@@ -469,13 +469,25 @@
       34.43519274376417,
       34.9924716553288
     ],
-    "lyrics": "Let",
+    "lyrics": "            Let me explain.\"",
     "words": [
       {
         "word": "Let",
-        "start": 33.87,
-        "end": 35.16,
-        "col": 0
+        "start": 34.482,
+        "end": 34.602,
+        "col": 12
+      },
+      {
+        "word": "me",
+        "start": 34.622,
+        "end": 34.702,
+        "col": 16
+      },
+      {
+        "word": "explain.\"",
+        "start": 34.762,
+        "end": 35.33,
+        "col": 19
       }
     ]
   },
@@ -490,7 +502,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      8
     ],
     "beats": [
       35.54975056689342,
@@ -498,21 +510,8 @@
       36.6875283446712,
       37.24480725623583
     ],
-    "lyrics": "me            explain.\"",
-    "words": [
-      {
-        "word": "me",
-        "start": 35.16,
-        "end": 36.45,
-        "col": 0
-      },
-      {
-        "word": "explain.\"",
-        "start": 36.45,
-        "end": 37.74,
-        "col": 14
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 37.802086167800454,
@@ -575,43 +574,55 @@
       43.607074829931975,
       44.18757369614512
     ],
-    "lyrics": "First, you write a check for",
+    "lyrics": "First you write a check for a big",
     "words": [
       {
-        "word": "First,",
-        "start": 42.46,
-        "end": 42.87,
+        "word": "First",
+        "start": 42.422,
+        "end": 42.802,
         "col": 0
       },
       {
         "word": "you",
-        "start": 42.87,
-        "end": 43.09,
-        "col": 7
+        "start": 42.862,
+        "end": 42.982,
+        "col": 6
       },
       {
         "word": "write",
-        "start": 43.09,
-        "end": 43.31,
-        "col": 11
+        "start": 43.002,
+        "end": 43.242,
+        "col": 10
       },
       {
         "word": "a",
-        "start": 43.31,
-        "end": 43.53,
-        "col": 17
+        "start": 43.262,
+        "end": 43.302,
+        "col": 16
       },
       {
         "word": "check",
-        "start": 43.53,
-        "end": 43.75,
-        "col": 19
+        "start": 43.382,
+        "end": 43.662,
+        "col": 18
       },
       {
         "word": "for",
-        "start": 43.75,
-        "end": 43.97,
-        "col": 25
+        "start": 43.742,
+        "end": 43.942,
+        "col": 24
+      },
+      {
+        "word": "a",
+        "start": 44.022,
+        "end": 44.062,
+        "col": 28
+      },
+      {
+        "word": "big",
+        "start": 44.142,
+        "end": 44.382,
+        "col": 30
       }
     ]
   },
@@ -626,7 +637,7 @@
     ],
     "chord_cols": [
       0,
-      19
+      14
     ],
     "beats": [
       44.74485260770975,
@@ -634,25 +645,13 @@
       46.04517006802721,
       46.625668934240366
     ],
-    "lyrics": "a big campaign.",
+    "lyrics": "campaign",
     "words": [
       {
-        "word": "a",
-        "start": 43.97,
-        "end": 44.707,
+        "word": "campaign",
+        "start": 44.462,
+        "end": 45.583,
         "col": 0
-      },
-      {
-        "word": "big",
-        "start": 44.707,
-        "end": 45.443,
-        "col": 2
-      },
-      {
-        "word": "campaign.",
-        "start": 45.443,
-        "end": 46.18,
-        "col": 6
       }
     ]
   },
@@ -675,31 +674,37 @@
       48.29750566893424,
       49.04054421768708
     ],
-    "lyrics": "            Make sure the right",
+    "lyrics": "            Make sure the right guy",
     "words": [
       {
         "word": "Make",
-        "start": 48.28,
-        "end": 48.579,
+        "start": 48.243,
+        "end": 48.503,
         "col": 12
       },
       {
         "word": "sure",
-        "start": 48.579,
-        "end": 48.878,
+        "start": 48.583,
+        "end": 48.823,
         "col": 17
       },
       {
         "word": "the",
-        "start": 48.878,
-        "end": 49.178,
+        "start": 48.843,
+        "end": 48.943,
         "col": 22
       },
       {
         "word": "right",
-        "start": 49.178,
-        "end": 49.477,
+        "start": 49.023,
+        "end": 49.323,
         "col": 26
+      },
+      {
+        "word": "guy",
+        "start": 49.383,
+        "end": 49.643,
+        "col": 32
       }
     ]
   },
@@ -714,7 +719,7 @@
     ],
     "chord_cols": [
       0,
-      16
+      18
     ],
     "beats": [
       49.621043083900226,
@@ -722,36 +727,36 @@
       50.73560090702948,
       51.316099773242634
     ],
-    "lyrics": "guy feels the   love, and",
+    "lyrics": "feels the love,   and not",
     "words": [
       {
-        "word": "guy",
-        "start": 49.477,
-        "end": 49.776,
+        "word": "feels",
+        "start": 49.723,
+        "end": 50.043,
         "col": 0
       },
       {
-        "word": "feels",
-        "start": 49.776,
-        "end": 50.075,
-        "col": 4
-      },
-      {
         "word": "the",
-        "start": 50.075,
-        "end": 50.806,
-        "col": 10
+        "start": 50.083,
+        "end": 50.163,
+        "col": 6
       },
       {
         "word": "love,",
-        "start": 50.806,
-        "end": 51.537,
-        "col": 16
+        "start": 50.303,
+        "end": 50.783,
+        "col": 10
       },
       {
         "word": "and",
-        "start": 51.537,
-        "end": 52.267,
+        "start": 51.563,
+        "end": 51.763,
+        "col": 18
+      },
+      {
+        "word": "not",
+        "start": 51.883,
+        "end": 52.163,
         "col": 22
       }
     ]
@@ -773,25 +778,19 @@
       53.173696145124715,
       53.730975056689346
     ],
-    "lyrics": "not the rain.",
+    "lyrics": "the rain",
     "words": [
       {
-        "word": "not",
-        "start": 52.267,
-        "end": 52.998,
+        "word": "the",
+        "start": 52.243,
+        "end": 52.343,
         "col": 0
       },
       {
-        "word": "the",
-        "start": 52.998,
-        "end": 53.729,
+        "word": "rain",
+        "start": 52.443,
+        "end": 53.115,
         "col": 4
-      },
-      {
-        "word": "rain.",
-        "start": 53.729,
-        "end": 54.46,
-        "col": 8
       }
     ]
   },
@@ -806,7 +805,7 @@
     ],
     "chord_cols": [
       0,
-      18
+      24
     ],
     "beats": [
       54.31147392290249,
@@ -814,43 +813,55 @@
       55.61179138321995,
       56.16907029478458
     ],
-    "lyrics": "Then you fund a   think tank",
+    "lyrics": "Then you fund a think   tank to muddy",
     "words": [
       {
         "word": "Then",
-        "start": 54.46,
-        "end": 54.728,
+        "start": 54.463,
+        "end": 54.723,
         "col": 0
       },
       {
         "word": "you",
-        "start": 54.728,
-        "end": 54.997,
+        "start": 54.823,
+        "end": 54.923,
         "col": 5
       },
       {
         "word": "fund",
-        "start": 54.997,
-        "end": 55.265,
+        "start": 54.983,
+        "end": 55.243,
         "col": 9
       },
       {
         "word": "a",
-        "start": 55.265,
-        "end": 55.533,
+        "start": 55.283,
+        "end": 55.323,
         "col": 14
       },
       {
         "word": "think",
-        "start": 55.533,
-        "end": 55.802,
-        "col": 18
+        "start": 55.383,
+        "end": 55.643,
+        "col": 16
       },
       {
         "word": "tank",
-        "start": 55.802,
-        "end": 56.07,
+        "start": 55.723,
+        "end": 56.023,
         "col": 24
+      },
+      {
+        "word": "to",
+        "start": 56.083,
+        "end": 56.143,
+        "col": 29
+      },
+      {
+        "word": "muddy",
+        "start": 56.323,
+        "end": 56.703,
+        "col": 32
       }
     ]
   },
@@ -865,7 +876,7 @@
     ],
     "chord_cols": [
       0,
-      18
+      16
     ],
     "beats": [
       56.74956916099773,
@@ -873,37 +884,25 @@
       58.049886621315196,
       58.63038548752834
     ],
-    "lyrics": "to muddy up the   facts,",
+    "lyrics": "up the facts",
     "words": [
       {
-        "word": "to",
-        "start": 56.07,
-        "end": 56.528,
+        "word": "up",
+        "start": 56.983,
+        "end": 57.123,
         "col": 0
       },
       {
-        "word": "muddy",
-        "start": 56.528,
-        "end": 56.986,
+        "word": "the",
+        "start": 57.223,
+        "end": 57.303,
         "col": 3
       },
       {
-        "word": "up",
-        "start": 56.986,
-        "end": 57.444,
-        "col": 9
-      },
-      {
-        "word": "the",
-        "start": 57.444,
-        "end": 57.902,
-        "col": 12
-      },
-      {
-        "word": "facts,",
-        "start": 57.902,
-        "end": 58.36,
-        "col": 18
+        "word": "facts",
+        "start": 57.423,
+        "end": 57.807,
+        "col": 7
       }
     ]
   },
@@ -918,7 +917,7 @@
     ],
     "chord_cols": [
       0,
-      12
+      14
     ],
     "beats": [
       59.187664399092974,
@@ -926,19 +925,25 @@
       60.30222222222222,
       61.045260770975055
     ],
-    "lyrics": "            with some",
+    "lyrics": "With          some well-paid",
     "words": [
       {
-        "word": "with",
-        "start": 60.14,
-        "end": 60.773,
-        "col": 12
+        "word": "With",
+        "start": 60.123,
+        "end": 60.363,
+        "col": 0
       },
       {
         "word": "some",
-        "start": 60.773,
-        "end": 61.405,
-        "col": 17
+        "start": 60.423,
+        "end": 60.663,
+        "col": 14
+      },
+      {
+        "word": "well-paid",
+        "start": 60.703,
+        "end": 61.303,
+        "col": 19
       }
     ]
   },
@@ -953,7 +958,7 @@
     ],
     "chord_cols": [
       0,
-      24
+      14
     ],
     "beats": [
       61.62575963718821,
@@ -961,19 +966,37 @@
       62.74031746031746,
       63.297596371882086
     ],
-    "lyrics": "well-paid scientists",
+    "lyrics": "scientists    to cover your tracks",
     "words": [
       {
-        "word": "well-paid",
-        "start": 61.405,
-        "end": 62.038,
+        "word": "scientists",
+        "start": 61.363,
+        "end": 62.543,
         "col": 0
       },
       {
-        "word": "scientists",
-        "start": 62.038,
-        "end": 62.67,
-        "col": 10
+        "word": "to",
+        "start": 62.663,
+        "end": 62.743,
+        "col": 14
+      },
+      {
+        "word": "cover",
+        "start": 62.863,
+        "end": 63.223,
+        "col": 17
+      },
+      {
+        "word": "your",
+        "start": 63.324,
+        "end": 63.464,
+        "col": 23
+      },
+      {
+        "word": "tracks",
+        "start": 63.544,
+        "end": 64.588,
+        "col": 28
       }
     ]
   },
@@ -988,7 +1011,7 @@
     ],
     "chord_cols": [
       0,
-      16
+      8
     ],
     "beats": [
       64.04063492063491,
@@ -996,33 +1019,8 @@
       65.1784126984127,
       65.73569160997732
     ],
-    "lyrics": "to cover your   tracks.",
-    "words": [
-      {
-        "word": "to",
-        "start": 62.67,
-        "end": 63.443,
-        "col": 0
-      },
-      {
-        "word": "cover",
-        "start": 63.443,
-        "end": 64.215,
-        "col": 3
-      },
-      {
-        "word": "your",
-        "start": 64.215,
-        "end": 64.988,
-        "col": 9
-      },
-      {
-        "word": "tracks.",
-        "start": 64.988,
-        "end": 65.76,
-        "col": 16
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 66.31619047619047,
@@ -1035,7 +1033,7 @@
     ],
     "chord_cols": [
       0,
-      19
+      29
     ],
     "beats": [
       66.31619047619047,
@@ -1043,37 +1041,43 @@
       67.61650793650794,
       68.17378684807257
     ],
-    "lyrics": "You get your man   appointed",
+    "lyrics": "You get your man appointed   to",
     "words": [
       {
         "word": "You",
-        "start": 65.76,
-        "end": 66.192,
+        "start": 65.904,
+        "end": 66.024,
         "col": 0
       },
       {
         "word": "get",
-        "start": 66.192,
-        "end": 66.624,
+        "start": 66.124,
+        "end": 66.344,
         "col": 4
       },
       {
         "word": "your",
-        "start": 66.624,
-        "end": 67.056,
+        "start": 66.424,
+        "end": 66.584,
         "col": 8
       },
       {
         "word": "man",
-        "start": 67.056,
-        "end": 67.488,
+        "start": 66.684,
+        "end": 67.004,
         "col": 13
       },
       {
         "word": "appointed",
-        "start": 67.488,
-        "end": 67.92,
-        "col": 19
+        "start": 67.084,
+        "end": 67.804,
+        "col": 17
+      },
+      {
+        "word": "to",
+        "start": 67.904,
+        "end": 68.064,
+        "col": 29
       }
     ]
   },
@@ -1096,31 +1100,25 @@
       70.05460317460317,
       70.6118820861678
     ],
-    "lyrics": "to the        agency board.",
+    "lyrics": "the agency    board",
     "words": [
       {
-        "word": "to",
-        "start": 67.92,
-        "end": 68.845,
+        "word": "the",
+        "start": 68.664,
+        "end": 68.764,
         "col": 0
       },
       {
-        "word": "the",
-        "start": 68.845,
-        "end": 69.77,
-        "col": 3
-      },
-      {
         "word": "agency",
-        "start": 69.77,
-        "end": 70.695,
-        "col": 14
+        "start": 68.964,
+        "end": 69.644,
+        "col": 4
       },
       {
-        "word": "board.",
-        "start": 70.695,
-        "end": 71.62,
-        "col": 21
+        "word": "board",
+        "start": 69.844,
+        "end": 70.52,
+        "col": 14
       }
     ]
   },
@@ -1143,42 +1141,36 @@
       72.3069387755102,
       73.04997732426304
     ],
-    "lyrics": "He's the      fox who's got the",
+    "lyrics": "He's          the fox who's got",
     "words": [
       {
         "word": "He's",
-        "start": 71.62,
-        "end": 71.973,
+        "start": 72.104,
+        "end": 72.404,
         "col": 0
       },
       {
         "word": "the",
-        "start": 71.973,
-        "end": 72.327,
-        "col": 5
-      },
-      {
-        "word": "fox",
-        "start": 72.327,
-        "end": 72.68,
+        "start": 72.444,
+        "end": 72.524,
         "col": 14
       },
       {
-        "word": "who's",
-        "start": 72.68,
-        "end": 73.033,
+        "word": "fox",
+        "start": 72.624,
+        "end": 72.924,
         "col": 18
       },
       {
-        "word": "got",
-        "start": 73.033,
-        "end": 73.387,
-        "col": 24
+        "word": "who's",
+        "start": 73.024,
+        "end": 73.164,
+        "col": 22
       },
       {
-        "word": "the",
-        "start": 73.387,
-        "end": 73.74,
+        "word": "got",
+        "start": 73.224,
+        "end": 73.464,
         "col": 28
       }
     ]
@@ -1202,30 +1194,36 @@
       74.74503401360545,
       75.30231292517007
     ],
-    "lyrics": "keys to       the henhouse,",
+    "lyrics": "the keys to   the henhouse,",
     "words": [
       {
-        "word": "keys",
-        "start": 73.74,
-        "end": 74.297,
+        "word": "the",
+        "start": 73.544,
+        "end": 73.624,
         "col": 0
       },
       {
+        "word": "keys",
+        "start": 73.744,
+        "end": 74.424,
+        "col": 4
+      },
+      {
         "word": "to",
-        "start": 74.297,
-        "end": 74.855,
-        "col": 5
+        "start": 74.504,
+        "end": 74.624,
+        "col": 9
       },
       {
         "word": "the",
-        "start": 74.855,
-        "end": 75.412,
+        "start": 74.744,
+        "end": 74.824,
         "col": 14
       },
       {
         "word": "henhouse,",
-        "start": 75.412,
-        "end": 75.97,
+        "start": 74.924,
+        "end": 75.884,
         "col": 18
       }
     ]
@@ -1247,24 +1245,24 @@
       77.18312925170068,
       77.7404081632653
     ],
-    "lyrics": "praise the Lord.",
+    "lyrics": "praise the Lord",
     "words": [
       {
         "word": "praise",
-        "start": 75.97,
-        "end": 76.7,
+        "start": 75.944,
+        "end": 76.544,
         "col": 0
       },
       {
         "word": "the",
-        "start": 76.7,
-        "end": 77.43,
+        "start": 76.584,
+        "end": 76.664,
         "col": 7
       },
       {
-        "word": "Lord.",
-        "start": 77.43,
-        "end": 78.16,
+        "word": "Lord",
+        "start": 76.784,
+        "end": 77.324,
         "col": 11
       }
     ]
@@ -1292,38 +1290,38 @@
     "words": [
       {
         "word": "And",
-        "start": 78.16,
-        "end": 78.542,
+        "start": 78.184,
+        "end": 78.384,
         "col": 0
       },
       {
         "word": "the",
-        "start": 78.542,
-        "end": 78.923,
+        "start": 78.424,
+        "end": 78.524,
         "col": 4
       },
       {
         "word": "watchdog",
-        "start": 78.923,
-        "end": 79.305,
+        "start": 78.644,
+        "end": 79.424,
         "col": 8
       },
       {
         "word": "that",
-        "start": 79.305,
-        "end": 79.687,
+        "start": 79.584,
+        "end": 79.764,
         "col": 19
       },
       {
         "word": "was",
-        "start": 79.687,
-        "end": 80.068,
+        "start": 79.824,
+        "end": 80.004,
         "col": 24
       },
       {
         "word": "meant",
-        "start": 80.068,
-        "end": 80.45,
+        "start": 80.104,
+        "end": 80.384,
         "col": 28
       }
     ]
@@ -1339,7 +1337,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      15
     ],
     "beats": [
       80.45714285714286,
@@ -1347,25 +1345,37 @@
       81.50204081632653,
       82.05931972789115
     ],
-    "lyrics": "to keep       your",
+    "lyrics": "to keep your   business clean?",
     "words": [
       {
         "word": "to",
-        "start": 80.45,
-        "end": 81.204,
+        "start": 80.484,
+        "end": 80.564,
         "col": 0
       },
       {
         "word": "keep",
-        "start": 81.204,
-        "end": 81.958,
+        "start": 80.664,
+        "end": 80.964,
         "col": 3
       },
       {
         "word": "your",
-        "start": 81.958,
-        "end": 82.712,
-        "col": 14
+        "start": 81.084,
+        "end": 81.264,
+        "col": 8
+      },
+      {
+        "word": "business",
+        "start": 81.425,
+        "end": 82.025,
+        "col": 15
+      },
+      {
+        "word": "clean?",
+        "start": 82.125,
+        "end": 82.969,
+        "col": 24
       }
     ]
   },
@@ -1380,7 +1390,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      8
     ],
     "beats": [
       82.61659863945579,
@@ -1388,21 +1398,8 @@
       83.73115646258503,
       84.31165532879818
     ],
-    "lyrics": "business      clean,",
-    "words": [
-      {
-        "word": "business",
-        "start": 82.712,
-        "end": 83.466,
-        "col": 0
-      },
-      {
-        "word": "clean,",
-        "start": 83.466,
-        "end": 84.22,
-        "col": 14
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 85.05469387755102,
@@ -1415,7 +1412,7 @@
     ],
     "chord_cols": [
       0,
-      29
+      34
     ],
     "beats": [
       85.05469387755102,
@@ -1423,60 +1420,60 @@
       86.16925170068028,
       86.7265306122449
     ],
-    "lyrics": "he's eating from your hand   now, if you know",
+    "lyrics": "He's eating from your hand now,   if you know",
     "words": [
       {
-        "word": "he's",
-        "start": 84.22,
+        "word": "He's",
+        "start": 84.245,
         "end": 84.605,
         "col": 0
       },
       {
         "word": "eating",
-        "start": 84.605,
-        "end": 84.99,
+        "start": 84.725,
+        "end": 84.965,
         "col": 5
       },
       {
         "word": "from",
-        "start": 84.99,
-        "end": 85.375,
+        "start": 85.005,
+        "end": 85.205,
         "col": 12
       },
       {
         "word": "your",
-        "start": 85.375,
-        "end": 85.76,
+        "start": 85.265,
+        "end": 85.385,
         "col": 17
       },
       {
         "word": "hand",
-        "start": 85.76,
-        "end": 86.145,
+        "start": 85.465,
+        "end": 85.785,
         "col": 22
       },
       {
         "word": "now,",
-        "start": 86.145,
-        "end": 86.53,
-        "col": 29
+        "start": 85.865,
+        "end": 86.205,
+        "col": 27
       },
       {
         "word": "if",
-        "start": 86.53,
-        "end": 86.805,
+        "start": 86.565,
+        "end": 86.665,
         "col": 34
       },
       {
         "word": "you",
-        "start": 86.805,
-        "end": 87.08,
+        "start": 86.725,
+        "end": 86.825,
         "col": 37
       },
       {
         "word": "know",
-        "start": 87.08,
-        "end": 87.355,
+        "start": 86.865,
+        "end": 87.125,
         "col": 41
       }
     ]
@@ -1492,7 +1489,7 @@
     ],
     "chord_cols": [
       0,
-      16
+      15
     ],
     "beats": [
       87.30702947845805,
@@ -1500,24 +1497,24 @@
       88.63056689342403,
       89.18784580498867
     ],
-    "lyrics": "what I mean.",
+    "lyrics": "what I mean",
     "words": [
       {
         "word": "what",
-        "start": 87.355,
-        "end": 87.63,
+        "start": 87.245,
+        "end": 87.385,
         "col": 0
       },
       {
         "word": "I",
-        "start": 87.63,
-        "end": 87.905,
+        "start": 87.385,
+        "end": 87.425,
         "col": 5
       },
       {
-        "word": "mean.",
-        "start": 87.905,
-        "end": 88.18,
+        "word": "mean",
+        "start": 87.485,
+        "end": 88.093,
         "col": 7
       }
     ]
@@ -1533,7 +1530,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      25
     ],
     "beats": [
       89.74512471655329,
@@ -1541,25 +1538,31 @@
       91.04544217687075,
       91.6259410430839
     ],
-    "lyrics": "It's called   Regulatory",
+    "lyrics": "It's called Regulatory   Capture,",
     "words": [
       {
         "word": "It's",
-        "start": 89.74,
-        "end": 90.472,
+        "start": 89.785,
+        "end": 89.985,
         "col": 0
       },
       {
         "word": "called",
-        "start": 90.472,
-        "end": 91.205,
+        "start": 90.065,
+        "end": 90.525,
         "col": 5
       },
       {
         "word": "Regulatory",
-        "start": 91.205,
-        "end": 91.938,
-        "col": 14
+        "start": 90.645,
+        "end": 91.805,
+        "col": 12
+      },
+      {
+        "word": "Capture,",
+        "start": 91.925,
+        "end": 92.565,
+        "col": 25
       }
     ]
   },
@@ -1574,7 +1577,7 @@
     ],
     "chord_cols": [
       0,
-      17
+      14
     ],
     "beats": [
       92.18321995464852,
@@ -1582,25 +1585,25 @@
       93.29777777777778,
       94.04081632653062
     ],
-    "lyrics": "Capture, baby,   a",
+    "lyrics": "baby,         a five-syllable",
     "words": [
       {
-        "word": "Capture,",
-        "start": 91.938,
-        "end": 92.67,
+        "word": "baby,",
+        "start": 92.685,
+        "end": 93.245,
         "col": 0
       },
       {
-        "word": "baby,",
-        "start": 92.67,
-        "end": 93.567,
-        "col": 9
+        "word": "a",
+        "start": 93.465,
+        "end": 93.505,
+        "col": 14
       },
       {
-        "word": "a",
-        "start": 93.567,
-        "end": 94.465,
-        "col": 17
+        "word": "five-syllable",
+        "start": 93.605,
+        "end": 94.865,
+        "col": 16
       }
     ]
   },
@@ -1615,7 +1618,7 @@
     ],
     "chord_cols": [
       0,
-      24
+      14
     ],
     "beats": [
       94.62131519274377,
@@ -1623,19 +1626,13 @@
       95.73587301587301,
       96.31637188208617
     ],
-    "lyrics": "five-syllable waltz,",
+    "lyrics": "waltz",
     "words": [
       {
-        "word": "five-syllable",
-        "start": 94.465,
-        "end": 95.363,
+        "word": "waltz",
+        "start": 94.965,
+        "end": 95.733,
         "col": 0
-      },
-      {
-        "word": "waltz,",
-        "start": 95.363,
-        "end": 96.26,
-        "col": 14
       }
     ]
   },
@@ -1650,7 +1647,7 @@
     ],
     "chord_cols": [
       0,
-      28
+      19
     ],
     "beats": [
       97.03619047619047,
@@ -1658,36 +1655,36 @@
       98.17396825396825,
       98.73124716553288
     ],
-    "lyrics": "where the public interest   is",
+    "lyrics": "Where the public   interest is",
     "words": [
       {
-        "word": "where",
-        "start": 96.26,
-        "end": 96.822,
+        "word": "Where",
+        "start": 96.645,
+        "end": 96.925,
         "col": 0
       },
       {
         "word": "the",
-        "start": 96.822,
-        "end": 97.384,
+        "start": 97.025,
+        "end": 97.105,
         "col": 6
       },
       {
         "word": "public",
-        "start": 97.384,
-        "end": 97.946,
+        "start": 97.205,
+        "end": 97.845,
         "col": 10
       },
       {
         "word": "interest",
-        "start": 97.946,
-        "end": 98.508,
-        "col": 17
+        "start": 98.045,
+        "end": 98.725,
+        "col": 19
       },
       {
         "word": "is",
-        "start": 98.508,
-        "end": 99.07,
+        "start": 98.785,
+        "end": 99.025,
         "col": 28
       }
     ]
@@ -1711,24 +1708,24 @@
       100.6120634920635,
       101.16934240362812
     ],
-    "lyrics": "declared entirely   false.",
+    "lyrics": "declared entirely   false",
     "words": [
       {
         "word": "declared",
-        "start": 99.07,
-        "end": 100.093,
+        "start": 99.085,
+        "end": 99.886,
         "col": 0
       },
       {
         "word": "entirely",
-        "start": 100.093,
-        "end": 101.117,
+        "start": 100.226,
+        "end": 100.906,
         "col": 9
       },
       {
-        "word": "false.",
-        "start": 101.117,
-        "end": 102.14,
+        "word": "false",
+        "start": 101.106,
+        "end": 101.746,
         "col": 20
       }
     ]
@@ -1756,38 +1753,38 @@
     "words": [
       {
         "word": "It's",
-        "start": 102.14,
-        "end": 102.474,
+        "start": 102.186,
+        "end": 102.386,
         "col": 0
       },
       {
         "word": "the",
-        "start": 102.474,
-        "end": 102.808,
+        "start": 102.446,
+        "end": 102.566,
         "col": 5
       },
       {
         "word": "art",
-        "start": 102.808,
-        "end": 103.142,
+        "start": 102.786,
+        "end": 103.066,
         "col": 9
       },
       {
         "word": "of",
-        "start": 103.142,
-        "end": 103.477,
+        "start": 103.126,
+        "end": 103.246,
         "col": 15
       },
       {
         "word": "putting",
-        "start": 103.477,
-        "end": 103.811,
+        "start": 103.366,
+        "end": 103.866,
         "col": 18
       },
       {
         "word": "your",
-        "start": 103.811,
-        "end": 104.145,
+        "start": 103.966,
+        "end": 104.226,
         "col": 26
       }
     ]
@@ -1815,20 +1812,20 @@
     "words": [
       {
         "word": "own",
-        "start": 104.145,
-        "end": 104.932,
+        "start": 104.226,
+        "end": 104.346,
         "col": 0
       },
       {
         "word": "umpire",
-        "start": 104.932,
-        "end": 105.719,
+        "start": 104.426,
+        "end": 105.346,
         "col": 4
       },
       {
         "word": "on",
-        "start": 105.719,
-        "end": 106.506,
+        "start": 106.106,
+        "end": 106.446,
         "col": 14
       }
     ]
@@ -1852,19 +1849,37 @@
       107.740589569161,
       108.29786848072563
     ],
-    "lyrics": "the field,",
+    "lyrics": "the field     The most profitable",
     "words": [
       {
         "word": "the",
-        "start": 106.506,
-        "end": 107.293,
+        "start": 106.566,
+        "end": 106.686,
         "col": 0
       },
       {
-        "word": "field,",
-        "start": 107.293,
-        "end": 108.08,
+        "word": "field",
+        "start": 106.906,
+        "end": 108.058,
         "col": 4
+      },
+      {
+        "word": "The",
+        "start": 108.106,
+        "end": 108.206,
+        "col": 14
+      },
+      {
+        "word": "most",
+        "start": 108.266,
+        "end": 108.566,
+        "col": 18
+      },
+      {
+        "word": "profitable",
+        "start": 108.626,
+        "end": 109.866,
+        "col": 23
       }
     ]
   },
@@ -1879,7 +1894,7 @@
     ],
     "chord_cols": [
       0,
-      22
+      14
     ],
     "beats": [
       109.04090702947846,
@@ -1887,31 +1902,19 @@
       110.17868480725623,
       110.73596371882086
     ],
-    "lyrics": "the most profitable   weapon",
+    "lyrics": "weapon        that",
     "words": [
       {
-        "word": "the",
-        "start": 108.08,
-        "end": 108.785,
+        "word": "weapon",
+        "start": 109.946,
+        "end": 110.546,
         "col": 0
       },
       {
-        "word": "most",
-        "start": 108.785,
-        "end": 109.49,
-        "col": 4
-      },
-      {
-        "word": "profitable",
-        "start": 109.49,
-        "end": 110.195,
-        "col": 9
-      },
-      {
-        "word": "weapon",
-        "start": 110.195,
-        "end": 110.9,
-        "col": 22
+        "word": "that",
+        "start": 111.106,
+        "end": 111.346,
+        "col": 14
       }
     ]
   },
@@ -1934,18 +1937,24 @@
       112.61678004535148,
       113.1740589569161
     ],
-    "lyrics": "that          you'll",
+    "lyrics": "you'll ever   wield",
     "words": [
       {
-        "word": "that",
-        "start": 110.9,
-        "end": 112.25,
+        "word": "you'll",
+        "start": 111.446,
+        "end": 111.866,
         "col": 0
       },
       {
-        "word": "you'll",
-        "start": 112.25,
-        "end": 113.6,
+        "word": "ever",
+        "start": 112.126,
+        "end": 112.786,
+        "col": 7
+      },
+      {
+        "word": "wield",
+        "start": 113.146,
+        "end": 114.558,
         "col": 14
       }
     ]
@@ -1967,21 +1976,8 @@
       114.89233560090703,
       115.44961451247165
     ],
-    "lyrics": "ever wield.",
-    "words": [
-      {
-        "word": "ever",
-        "start": 113.6,
-        "end": 114.95,
-        "col": 0
-      },
-      {
-        "word": "wield.",
-        "start": 114.95,
-        "end": 116.3,
-        "col": 5
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 116.00689342403628,
@@ -2034,7 +2030,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      22
     ],
     "beats": [
       120.48834467120182,
@@ -2042,25 +2038,25 @@
       121.62612244897959,
       122.18340136054422
     ],
-    "lyrics": "It's just     business.",
+    "lyrics": "It's just business",
     "words": [
       {
         "word": "It's",
-        "start": 119.92,
-        "end": 120.9,
+        "start": 119.947,
+        "end": 120.147,
         "col": 0
       },
       {
         "word": "just",
-        "start": 120.9,
-        "end": 121.88,
+        "start": 120.267,
+        "end": 120.547,
         "col": 5
       },
       {
-        "word": "business.",
-        "start": 121.88,
-        "end": 122.86,
-        "col": 14
+        "word": "business",
+        "start": 120.627,
+        "end": 121.283,
+        "col": 10
       }
     ]
   },
@@ -2161,7 +2157,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      15
     ],
     "beats": [
       131.75002267573697,
@@ -2169,37 +2165,37 @@
       133.05034013605442,
       133.60761904761904
     ],
-    "lyrics": "See, the      guy who green-lit",
+    "lyrics": "See, the guy   who green-lit",
     "words": [
       {
         "word": "See,",
-        "start": 132.06,
-        "end": 132.478,
+        "start": 132.067,
+        "end": 132.247,
         "col": 0
       },
       {
         "word": "the",
-        "start": 132.478,
-        "end": 132.896,
+        "start": 132.287,
+        "end": 132.367,
         "col": 5
       },
       {
         "word": "guy",
-        "start": 132.896,
-        "end": 133.314,
-        "col": 14
+        "start": 132.467,
+        "end": 133.007,
+        "col": 9
       },
       {
         "word": "who",
-        "start": 133.314,
-        "end": 133.732,
-        "col": 18
+        "start": 133.167,
+        "end": 133.267,
+        "col": 15
       },
       {
         "word": "green-lit",
-        "start": 133.732,
-        "end": 134.15,
-        "col": 22
+        "start": 133.387,
+        "end": 134.047,
+        "col": 19
       }
     ]
   },
@@ -2222,25 +2218,31 @@
       135.30267573696145,
       136.0457142857143
     ],
-    "lyrics": "Oxy for       the",
+    "lyrics": "Oxy for       the FDA?",
     "words": [
       {
         "word": "Oxy",
-        "start": 134.15,
-        "end": 134.972,
+        "start": 134.227,
+        "end": 134.627,
         "col": 0
       },
       {
         "word": "for",
-        "start": 134.972,
-        "end": 135.795,
+        "start": 134.887,
+        "end": 135.147,
         "col": 4
       },
       {
         "word": "the",
-        "start": 135.795,
-        "end": 136.618,
+        "start": 135.267,
+        "end": 135.367,
         "col": 14
+      },
+      {
+        "word": "FDA?",
+        "start": 135.688,
+        "end": 136.5,
+        "col": 18
       }
     ]
   },
@@ -2255,7 +2257,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      12
     ],
     "beats": [
       136.62621315192743,
@@ -2263,25 +2265,25 @@
       137.74077097505668,
       138.29804988662133
     ],
-    "lyrics": "FDA, he       got",
+    "lyrics": "            He got a",
     "words": [
       {
-        "word": "FDA,",
-        "start": 136.618,
-        "end": 137.44,
-        "col": 0
-      },
-      {
-        "word": "he",
-        "start": 137.44,
-        "end": 138.042,
-        "col": 5
+        "word": "He",
+        "start": 137.728,
+        "end": 137.828,
+        "col": 12
       },
       {
         "word": "got",
-        "start": 138.042,
-        "end": 138.645,
-        "col": 14
+        "start": 138.088,
+        "end": 138.468,
+        "col": 15
+      },
+      {
+        "word": "a",
+        "start": 138.528,
+        "end": 138.568,
+        "col": 19
       }
     ]
   },
@@ -2302,19 +2304,31 @@
       139.9931065759637,
       140.55038548752833
     ],
-    "lyrics": "a half-a-million-dollar",
+    "lyrics": "half-a-million-dollar job at Purdue,",
     "words": [
       {
-        "word": "a",
-        "start": 138.645,
-        "end": 139.248,
+        "word": "half-a-million-dollar",
+        "start": 138.628,
+        "end": 139.748,
         "col": 0
       },
       {
-        "word": "half-a-million-dollar",
-        "start": 139.248,
-        "end": 139.85,
-        "col": 2
+        "word": "job",
+        "start": 139.908,
+        "end": 140.348,
+        "col": 22
+      },
+      {
+        "word": "at",
+        "start": 140.428,
+        "end": 140.568,
+        "col": 26
+      },
+      {
+        "word": "Purdue,",
+        "start": 140.648,
+        "end": 141.268,
+        "col": 29
       }
     ]
   },
@@ -2329,7 +2343,7 @@
     ],
     "chord_cols": [
       0,
-      16
+      12
     ],
     "beats": [
       141.0380045351474,
@@ -2337,31 +2351,19 @@
       142.05968253968254,
       142.61696145124716
     ],
-    "lyrics": "job at Purdue   right",
+    "lyrics": "            right away",
     "words": [
       {
-        "word": "job",
-        "start": 139.85,
-        "end": 140.714,
-        "col": 0
-      },
-      {
-        "word": "at",
-        "start": 140.714,
-        "end": 141.578,
-        "col": 4
-      },
-      {
-        "word": "Purdue",
-        "start": 141.578,
-        "end": 142.442,
-        "col": 7
-      },
-      {
         "word": "right",
-        "start": 142.442,
-        "end": 143.306,
-        "col": 16
+        "start": 142.368,
+        "end": 142.768,
+        "col": 12
+      },
+      {
+        "word": "away",
+        "start": 142.848,
+        "end": 143.688,
+        "col": 18
       }
     ]
   },
@@ -2384,37 +2386,37 @@
       144.31201814058957,
       145.03183673469388
     ],
-    "lyrics": "away.         And the head of",
+    "lyrics": "And           the head of the",
     "words": [
       {
-        "word": "away.",
-        "start": 143.306,
-        "end": 144.17,
+        "word": "And",
+        "start": 144.168,
+        "end": 144.348,
         "col": 0
       },
       {
-        "word": "And",
-        "start": 144.17,
-        "end": 144.552,
+        "word": "the",
+        "start": 144.448,
+        "end": 144.548,
         "col": 14
       },
       {
-        "word": "the",
-        "start": 144.552,
-        "end": 144.935,
+        "word": "head",
+        "start": 144.648,
+        "end": 145.008,
         "col": 18
       },
       {
-        "word": "head",
-        "start": 144.935,
-        "end": 145.317,
-        "col": 22
+        "word": "of",
+        "start": 145.088,
+        "end": 145.168,
+        "col": 23
       },
       {
-        "word": "of",
-        "start": 145.317,
-        "end": 145.7,
-        "col": 27
+        "word": "the",
+        "start": 145.188,
+        "end": 145.288,
+        "col": 26
       }
     ]
   },
@@ -2437,31 +2439,25 @@
       146.7501133786848,
       147.30739229024942
     ],
-    "lyrics": "the EPA, a    Mr.",
+    "lyrics": "EPA,          a Mr.",
     "words": [
       {
-        "word": "the",
-        "start": 145.7,
-        "end": 146.082,
+        "word": "EPA,",
+        "start": 145.468,
+        "end": 146.068,
         "col": 0
       },
       {
-        "word": "EPA,",
-        "start": 146.082,
-        "end": 146.465,
-        "col": 4
-      },
-      {
         "word": "a",
-        "start": 146.465,
-        "end": 146.847,
-        "col": 9
+        "start": 146.728,
+        "end": 146.768,
+        "col": 14
       },
       {
         "word": "Mr.",
-        "start": 146.847,
-        "end": 147.23,
-        "col": 14
+        "start": 146.868,
+        "end": 147.188,
+        "col": 16
       }
     ]
   },
@@ -2482,18 +2478,18 @@
       149.18820861678006,
       149.74548752834468
     ],
-    "lyrics": "Scott Pruitt,",
+    "lyrics": "Scott Pruitt",
     "words": [
       {
         "word": "Scott",
-        "start": 147.23,
-        "end": 148.18,
+        "start": 147.248,
+        "end": 147.588,
         "col": 0
       },
       {
-        "word": "Pruitt,",
-        "start": 148.18,
-        "end": 149.13,
+        "word": "Pruitt",
+        "start": 147.688,
+        "end": 149.268,
         "col": 6
       }
     ]
@@ -2517,43 +2513,37 @@
       151.44054421768706,
       151.9978231292517
     ],
-    "lyrics": "met with Dow Chemical's   CEO... and",
+    "lyrics": "Met with Dow Chemical's   CEO.",
     "words": [
       {
-        "word": "met",
-        "start": 149.13,
-        "end": 149.758,
+        "word": "Met",
+        "start": 149.488,
+        "end": 149.768,
         "col": 0
       },
       {
         "word": "with",
-        "start": 149.758,
-        "end": 150.387,
+        "start": 149.888,
+        "end": 150.148,
         "col": 4
       },
       {
         "word": "Dow",
-        "start": 150.387,
-        "end": 151.015,
+        "start": 150.248,
+        "end": 150.528,
         "col": 9
       },
       {
         "word": "Chemical's",
-        "start": 151.015,
-        "end": 151.643,
+        "start": 150.628,
+        "end": 151.388,
         "col": 13
       },
       {
-        "word": "CEO...",
-        "start": 151.643,
-        "end": 152.272,
+        "word": "CEO.",
+        "start": 151.388,
+        "end": 152.464,
         "col": 26
-      },
-      {
-        "word": "and",
-        "start": 152.272,
-        "end": 152.9,
-        "col": 33
       }
     ]
   },
@@ -2568,7 +2558,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      16
     ],
     "beats": [
       152.55510204081634,
@@ -2576,31 +2566,37 @@
       153.6928798185941,
       154.25015873015872
     ],
-    "lyrics": "then just     blew right",
+    "lyrics": "and then just   blew right",
     "words": [
       {
-        "word": "then",
-        "start": 152.9,
-        "end": 153.428,
+        "word": "and",
+        "start": 152.748,
+        "end": 152.868,
         "col": 0
       },
       {
+        "word": "then",
+        "start": 152.888,
+        "end": 153.128,
+        "col": 4
+      },
+      {
         "word": "just",
-        "start": 153.428,
-        "end": 153.957,
-        "col": 5
+        "start": 153.228,
+        "end": 153.508,
+        "col": 9
       },
       {
         "word": "blew",
-        "start": 153.957,
-        "end": 154.485,
-        "col": 14
+        "start": 153.568,
+        "end": 153.989,
+        "col": 16
       },
       {
         "word": "right",
-        "start": 154.485,
-        "end": 155.013,
-        "col": 19
+        "start": 154.609,
+        "end": 154.889,
+        "col": 21
       }
     ]
   },
@@ -2623,37 +2619,43 @@
       155.94521541950112,
       156.50249433106575
     ],
-    "lyrics": "through it.   He killed a",
+    "lyrics": "through it    He killed a pesticide",
     "words": [
       {
         "word": "through",
-        "start": 155.013,
-        "end": 155.542,
+        "start": 154.949,
+        "end": 155.229,
         "col": 0
       },
       {
-        "word": "it.",
-        "start": 155.542,
-        "end": 156.07,
+        "word": "it",
+        "start": 155.329,
+        "end": 155.509,
         "col": 8
       },
       {
         "word": "He",
-        "start": 156.07,
-        "end": 156.385,
+        "start": 156.069,
+        "end": 156.129,
         "col": 14
       },
       {
         "word": "killed",
-        "start": 156.385,
-        "end": 156.7,
+        "start": 156.229,
+        "end": 156.489,
         "col": 17
       },
       {
         "word": "a",
-        "start": 156.7,
-        "end": 157.015,
+        "start": 156.529,
+        "end": 156.569,
         "col": 24
+      },
+      {
+        "word": "pesticide",
+        "start": 156.609,
+        "end": 157.409,
+        "col": 26
       }
     ]
   },
@@ -2668,7 +2670,7 @@
     ],
     "chord_cols": [
       0,
-      21
+      15
     ],
     "beats": [
       157.0597732426304,
@@ -2676,37 +2678,37 @@
       158.17433106575965,
       158.73160997732427
     ],
-    "lyrics": "pesticide ban that   his own",
+    "lyrics": "ban that his   own experts",
     "words": [
       {
-        "word": "pesticide",
-        "start": 157.015,
-        "end": 157.33,
+        "word": "ban",
+        "start": 157.449,
+        "end": 157.689,
         "col": 0
       },
       {
-        "word": "ban",
-        "start": 157.33,
-        "end": 157.645,
-        "col": 10
-      },
-      {
         "word": "that",
-        "start": 157.645,
-        "end": 157.96,
-        "col": 14
+        "start": 157.789,
+        "end": 157.949,
+        "col": 4
       },
       {
         "word": "his",
-        "start": 157.96,
-        "end": 158.78,
-        "col": 21
+        "start": 157.989,
+        "end": 158.129,
+        "col": 9
       },
       {
         "word": "own",
-        "start": 158.78,
-        "end": 159.6,
-        "col": 25
+        "start": 158.229,
+        "end": 158.389,
+        "col": 15
+      },
+      {
+        "word": "experts",
+        "start": 158.489,
+        "end": 159.029,
+        "col": 19
       }
     ]
   },
@@ -2721,7 +2723,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      16
     ],
     "beats": [
       159.3121088435374,
@@ -2729,25 +2731,19 @@
       160.61242630385487,
       161.19292517006804
     ],
-    "lyrics": "experts       had demanded,",
+    "lyrics": "had demanded",
     "words": [
       {
-        "word": "experts",
-        "start": 159.6,
-        "end": 160.42,
+        "word": "had",
+        "start": 159.109,
+        "end": 159.709,
         "col": 0
       },
       {
-        "word": "had",
-        "start": 160.42,
-        "end": 161.24,
-        "col": 14
-      },
-      {
-        "word": "demanded,",
-        "start": 161.24,
-        "end": 162.06,
-        "col": 18
+        "word": "demanded",
+        "start": 159.809,
+        "end": 160.853,
+        "col": 4
       }
     ]
   },
@@ -2762,7 +2758,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      19
     ],
     "beats": [
       161.75020408163266,
@@ -2770,37 +2766,43 @@
       163.0505215419501,
       163.60780045351473
     ],
-    "lyrics": "left the      science in the",
+    "lyrics": "Left the science   in the dust,",
     "words": [
       {
-        "word": "left",
-        "start": 162.06,
-        "end": 162.47,
+        "word": "Left",
+        "start": 162.089,
+        "end": 162.349,
         "col": 0
       },
       {
         "word": "the",
-        "start": 162.47,
-        "end": 162.88,
+        "start": 162.409,
+        "end": 162.489,
         "col": 5
       },
       {
         "word": "science",
-        "start": 162.88,
-        "end": 163.29,
-        "col": 14
+        "start": 162.589,
+        "end": 163.209,
+        "col": 9
       },
       {
         "word": "in",
-        "start": 163.29,
-        "end": 163.7,
-        "col": 22
+        "start": 163.269,
+        "end": 163.349,
+        "col": 19
       },
       {
         "word": "the",
-        "start": 163.7,
-        "end": 164.11,
-        "col": 25
+        "start": 163.389,
+        "end": 163.469,
+        "col": 22
+      },
+      {
+        "word": "dust,",
+        "start": 163.589,
+        "end": 164.169,
+        "col": 26
       }
     ]
   },
@@ -2815,7 +2817,7 @@
     ],
     "chord_cols": [
       0,
-      18
+      14
     ],
     "beats": [
       164.1882993197279,
@@ -2823,37 +2825,31 @@
       165.30285714285714,
       166.04589569160999
     ],
-    "lyrics": "dust, just like   the company",
+    "lyrics": "just like     the company",
     "words": [
       {
-        "word": "dust,",
-        "start": 164.11,
-        "end": 164.52,
+        "word": "just",
+        "start": 164.509,
+        "end": 164.789,
         "col": 0
       },
       {
-        "word": "just",
-        "start": 164.52,
-        "end": 165.015,
-        "col": 6
-      },
-      {
         "word": "like",
-        "start": 165.015,
-        "end": 165.51,
-        "col": 11
+        "start": 164.889,
+        "end": 165.209,
+        "col": 5
       },
       {
         "word": "the",
-        "start": 165.51,
-        "end": 166.005,
-        "col": 18
+        "start": 165.249,
+        "end": 165.329,
+        "col": 14
       },
       {
         "word": "company",
-        "start": 166.005,
-        "end": 166.5,
-        "col": 22
+        "start": 165.429,
+        "end": 166.309,
+        "col": 18
       }
     ]
   },
@@ -2868,7 +2864,7 @@
     ],
     "chord_cols": [
       0,
-      16
+      14
     ],
     "beats": [
       166.6031746031746,
@@ -2876,19 +2872,37 @@
       167.7409523809524,
       168.29823129251702
     ],
-    "lyrics": "had planned.",
+    "lyrics": "had planned   It's a textbook",
     "words": [
       {
         "word": "had",
-        "start": 166.5,
-        "end": 167.32,
+        "start": 166.529,
+        "end": 166.789,
         "col": 0
       },
       {
-        "word": "planned.",
-        "start": 167.32,
-        "end": 168.14,
+        "word": "planned",
+        "start": 166.889,
+        "end": 167.665,
         "col": 4
+      },
+      {
+        "word": "It's",
+        "start": 168.169,
+        "end": 168.389,
+        "col": 14
+      },
+      {
+        "word": "a",
+        "start": 168.449,
+        "end": 168.489,
+        "col": 19
+      },
+      {
+        "word": "textbook",
+        "start": 168.589,
+        "end": 169.249,
+        "col": 21
       }
     ]
   },
@@ -2909,30 +2923,24 @@
       170.17904761904762,
       170.73632653061225
     ],
-    "lyrics": "It's a textbook operation.",
+    "lyrics": "operation, it's elegant,",
     "words": [
       {
-        "word": "It's",
-        "start": 168.14,
-        "end": 168.785,
+        "word": "operation,",
+        "start": 169.489,
+        "end": 170.629,
         "col": 0
       },
       {
-        "word": "a",
-        "start": 168.785,
-        "end": 169.43,
-        "col": 5
+        "word": "it's",
+        "start": 170.769,
+        "end": 170.869,
+        "col": 11
       },
       {
-        "word": "textbook",
-        "start": 169.43,
-        "end": 170.075,
-        "col": 7
-      },
-      {
-        "word": "operation.",
-        "start": 170.075,
-        "end": 170.72,
+        "word": "elegant,",
+        "start": 170.969,
+        "end": 171.75,
         "col": 16
       }
     ]
@@ -2948,7 +2956,7 @@
     ],
     "chord_cols": [
       0,
-      21
+      14
     ],
     "beats": [
       171.29360544217687,
@@ -2956,31 +2964,19 @@
       172.61714285714285,
       173.17442176870748
     ],
-    "lyrics": "It's elegant, it's   slick.",
+    "lyrics": "it's slick",
     "words": [
       {
-        "word": "It's",
-        "start": 170.72,
-        "end": 171.515,
+        "word": "it's",
+        "start": 171.87,
+        "end": 172.07,
         "col": 0
       },
       {
-        "word": "elegant,",
-        "start": 171.515,
-        "end": 172.31,
+        "word": "slick",
+        "start": 172.27,
+        "end": 172.782,
         "col": 5
-      },
-      {
-        "word": "it's",
-        "start": 172.31,
-        "end": 173.105,
-        "col": 14
-      },
-      {
-        "word": "slick.",
-        "start": 173.105,
-        "end": 173.9,
-        "col": 21
       }
     ]
   },
@@ -3007,44 +3003,44 @@
     "words": [
       {
         "word": "You",
-        "start": 173.9,
-        "end": 174.22,
+        "start": 173.89,
+        "end": 174.01,
         "col": 0
       },
       {
         "word": "own",
-        "start": 174.22,
-        "end": 174.54,
+        "start": 174.17,
+        "end": 174.43,
         "col": 4
       },
       {
         "word": "the",
-        "start": 174.54,
-        "end": 174.86,
+        "start": 174.45,
+        "end": 174.51,
         "col": 8
       },
       {
         "word": "cop",
-        "start": 174.86,
-        "end": 175.18,
+        "start": 174.61,
+        "end": 174.95,
         "col": 12
       },
       {
         "word": "on",
-        "start": 175.18,
-        "end": 175.5,
+        "start": 175.11,
+        "end": 175.21,
         "col": 18
       },
       {
         "word": "the",
-        "start": 175.5,
-        "end": 175.82,
+        "start": 175.25,
+        "end": 175.33,
         "col": 21
       },
       {
         "word": "beat,",
-        "start": 175.82,
-        "end": 176.14,
+        "start": 175.43,
+        "end": 175.99,
         "col": 25
       }
     ]
@@ -3060,7 +3056,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      20
     ],
     "beats": [
       176.16979591836736,
@@ -3068,25 +3064,31 @@
       177.3075736961451,
       178.05061224489796
     ],
-    "lyrics": "that's the    oldest",
+    "lyrics": "that's the oldest   trick",
     "words": [
       {
         "word": "that's",
-        "start": 176.14,
-        "end": 176.97,
+        "start": 176.33,
+        "end": 176.63,
         "col": 0
       },
       {
         "word": "the",
-        "start": 176.97,
-        "end": 177.8,
+        "start": 176.71,
+        "end": 176.81,
         "col": 7
       },
       {
         "word": "oldest",
-        "start": 177.8,
-        "end": 178.63,
-        "col": 14
+        "start": 177.01,
+        "end": 177.53,
+        "col": 11
+      },
+      {
+        "word": "trick",
+        "start": 177.59,
+        "end": 178.166,
+        "col": 20
       }
     ]
   },
@@ -3101,7 +3103,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      12
     ],
     "beats": [
       178.60789115646259,
@@ -3109,25 +3111,25 @@
       179.74566893424037,
       180.302947845805
     ],
-    "lyrics": "trick. It's   called",
+    "lyrics": "            It's called Regulatory",
     "words": [
       {
-        "word": "trick.",
-        "start": 178.63,
-        "end": 179.46,
-        "col": 0
-      },
-      {
         "word": "It's",
-        "start": 179.46,
-        "end": 180.257,
-        "col": 7
+        "start": 179.79,
+        "end": 179.99,
+        "col": 12
       },
       {
         "word": "called",
-        "start": 180.257,
-        "end": 181.055,
-        "col": 14
+        "start": 180.07,
+        "end": 180.53,
+        "col": 17
+      },
+      {
+        "word": "Regulatory",
+        "start": 180.65,
+        "end": 181.81,
+        "col": 24
       }
     ]
   },
@@ -3142,7 +3144,7 @@
     ],
     "chord_cols": [
       0,
-      23
+      14
     ],
     "beats": [
       181.04598639455781,
@@ -3150,19 +3152,19 @@
       182.1837641723356,
       182.74104308390022
     ],
-    "lyrics": "Regulatory Capture,",
+    "lyrics": "Capture,      baby,",
     "words": [
       {
-        "word": "Regulatory",
-        "start": 181.055,
-        "end": 181.853,
+        "word": "Capture,",
+        "start": 181.93,
+        "end": 182.59,
         "col": 0
       },
       {
-        "word": "Capture,",
-        "start": 181.853,
-        "end": 182.65,
-        "col": 11
+        "word": "baby,",
+        "start": 182.69,
+        "end": 183.21,
+        "col": 14
       }
     ]
   },
@@ -3177,7 +3179,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      18
     ],
     "beats": [
       183.29832199546485,
@@ -3185,31 +3187,25 @@
       184.62185941043083,
       185.17913832199545
     ],
-    "lyrics": "baby, a       five-syllable waltz,",
+    "lyrics": "a five-syllable   waltz",
     "words": [
       {
-        "word": "baby,",
-        "start": 182.65,
-        "end": 183.548,
+        "word": "a",
+        "start": 183.47,
+        "end": 183.51,
         "col": 0
       },
       {
-        "word": "a",
-        "start": 183.548,
-        "end": 184.445,
-        "col": 6
-      },
-      {
         "word": "five-syllable",
-        "start": 184.445,
-        "end": 185.343,
-        "col": 14
+        "start": 183.63,
+        "end": 184.85,
+        "col": 2
       },
       {
-        "word": "waltz,",
-        "start": 185.343,
-        "end": 186.24,
-        "col": 28
+        "word": "waltz",
+        "start": 184.97,
+        "end": 185.786,
+        "col": 18
       }
     ]
   },
@@ -3232,31 +3228,25 @@
       187.03673469387755,
       187.6172335600907
     ],
-    "lyrics": "where the     public interest",
+    "lyrics": "Where         the public",
     "words": [
       {
-        "word": "where",
-        "start": 186.24,
-        "end": 186.808,
+        "word": "Where",
+        "start": 186.63,
+        "end": 186.93,
         "col": 0
       },
       {
         "word": "the",
-        "start": 186.808,
-        "end": 187.376,
-        "col": 6
-      },
-      {
-        "word": "public",
-        "start": 187.376,
-        "end": 187.944,
+        "start": 187.01,
+        "end": 187.11,
         "col": 14
       },
       {
-        "word": "interest",
-        "start": 187.944,
-        "end": 188.512,
-        "col": 21
+        "word": "public",
+        "start": 187.21,
+        "end": 187.89,
+        "col": 18
       }
     ]
   },
@@ -3279,24 +3269,30 @@
       189.31229024943312,
       190.05532879818594
     ],
-    "lyrics": "is            declared entirely",
+    "lyrics": "interest is   declared entirely",
     "words": [
       {
-        "word": "is",
-        "start": 188.512,
-        "end": 189.08,
+        "word": "interest",
+        "start": 188.05,
+        "end": 188.71,
         "col": 0
       },
       {
+        "word": "is",
+        "start": 188.81,
+        "end": 188.99,
+        "col": 9
+      },
+      {
         "word": "declared",
-        "start": 189.08,
-        "end": 190.1,
+        "start": 189.11,
+        "end": 190.131,
         "col": 14
       },
       {
         "word": "entirely",
-        "start": 190.1,
-        "end": 191.12,
+        "start": 190.211,
+        "end": 190.911,
         "col": 23
       }
     ]
@@ -3320,30 +3316,30 @@
       191.75038548752835,
       192.30766439909297
     ],
-    "lyrics": "false.        It's the art",
+    "lyrics": "false         It's the art",
     "words": [
       {
-        "word": "false.",
-        "start": 191.12,
-        "end": 192.14,
+        "word": "false",
+        "start": 191.091,
+        "end": 192.119,
         "col": 0
       },
       {
         "word": "It's",
-        "start": 192.14,
-        "end": 192.507,
+        "start": 192.171,
+        "end": 192.391,
         "col": 14
       },
       {
         "word": "the",
-        "start": 192.507,
-        "end": 192.873,
+        "start": 192.451,
+        "end": 192.571,
         "col": 19
       },
       {
         "word": "art",
-        "start": 192.873,
-        "end": 193.24,
+        "start": 192.771,
+        "end": 193.071,
         "col": 23
       }
     ]
@@ -3359,7 +3355,7 @@
     ],
     "chord_cols": [
       0,
-      19
+      18
     ],
     "beats": [
       193.0507029478458,
@@ -3367,25 +3363,37 @@
       194.16526077097507,
       194.7457596371882
     ],
-    "lyrics": "of putting your",
+    "lyrics": "of putting your   own umpire",
     "words": [
       {
         "word": "of",
-        "start": 193.24,
-        "end": 193.607,
+        "start": 193.131,
+        "end": 193.251,
         "col": 0
       },
       {
         "word": "putting",
-        "start": 193.607,
-        "end": 193.973,
+        "start": 193.351,
+        "end": 193.871,
         "col": 3
       },
       {
         "word": "your",
-        "start": 193.973,
-        "end": 194.34,
+        "start": 193.971,
+        "end": 194.211,
         "col": 11
+      },
+      {
+        "word": "own",
+        "start": 194.211,
+        "end": 194.331,
+        "col": 18
+      },
+      {
+        "word": "umpire",
+        "start": 194.411,
+        "end": 195.391,
+        "col": 22
       }
     ]
   },
@@ -3400,7 +3408,7 @@
     ],
     "chord_cols": [
       0,
-      16
+      14
     ],
     "beats": [
       195.30303854875282,
@@ -3408,37 +3416,25 @@
       196.6033560090703,
       197.18385487528346
     ],
-    "lyrics": "own umpire on   the field,",
+    "lyrics": "on            the field",
     "words": [
       {
-        "word": "own",
-        "start": 194.34,
-        "end": 195.092,
+        "word": "on",
+        "start": 196.111,
+        "end": 196.431,
         "col": 0
       },
       {
-        "word": "umpire",
-        "start": 195.092,
-        "end": 195.844,
-        "col": 4
-      },
-      {
-        "word": "on",
-        "start": 195.844,
-        "end": 196.596,
-        "col": 11
-      },
-      {
         "word": "the",
-        "start": 196.596,
-        "end": 197.348,
-        "col": 16
+        "start": 196.571,
+        "end": 196.671,
+        "col": 14
       },
       {
-        "word": "field,",
-        "start": 197.348,
-        "end": 198.1,
-        "col": 20
+        "word": "field",
+        "start": 196.871,
+        "end": 197.859,
+        "col": 18
       }
     ]
   },
@@ -3453,7 +3449,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      23
     ],
     "beats": [
       197.74113378684808,
@@ -3461,25 +3457,25 @@
       199.04145124716553,
       199.6219501133787
     ],
-    "lyrics": "the           most profitable",
+    "lyrics": "The most profitable",
     "words": [
       {
-        "word": "the",
-        "start": 198.1,
-        "end": 198.805,
+        "word": "The",
+        "start": 198.111,
+        "end": 198.211,
         "col": 0
       },
       {
         "word": "most",
-        "start": 198.805,
-        "end": 199.51,
-        "col": 14
+        "start": 198.271,
+        "end": 198.571,
+        "col": 4
       },
       {
         "word": "profitable",
-        "start": 199.51,
-        "end": 200.215,
-        "col": 19
+        "start": 198.631,
+        "end": 199.831,
+        "col": 9
       }
     ]
   },
@@ -3500,19 +3496,31 @@
       201.29378684807256,
       202.0368253968254
     ],
-    "lyrics": "weapon        that",
+    "lyrics": "weapon that you'll ever",
     "words": [
       {
         "word": "weapon",
-        "start": 200.215,
-        "end": 200.92,
+        "start": 199.951,
+        "end": 200.551,
         "col": 0
       },
       {
         "word": "that",
-        "start": 200.92,
-        "end": 202.252,
-        "col": 14
+        "start": 201.111,
+        "end": 201.351,
+        "col": 7
+      },
+      {
+        "word": "you'll",
+        "start": 201.471,
+        "end": 201.791,
+        "col": 12
+      },
+      {
+        "word": "ever",
+        "start": 202.111,
+        "end": 202.851,
+        "col": 19
       }
     ]
   },
@@ -3535,19 +3543,13 @@
       203.7318820861678,
       204.31238095238095
     ],
-    "lyrics": "you'll        ever",
+    "lyrics": "wield",
     "words": [
       {
-        "word": "you'll",
-        "start": 202.252,
-        "end": 203.585,
+        "word": "wield",
+        "start": 203.131,
+        "end": 204.667,
         "col": 0
-      },
-      {
-        "word": "ever",
-        "start": 203.585,
-        "end": 204.917,
-        "col": 14
       }
     ]
   },
@@ -3562,7 +3564,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      8
     ],
     "beats": [
       205.0554195011338,
@@ -3570,15 +3572,8 @@
       206.19319727891155,
       206.75047619047618
     ],
-    "lyrics": "wield.",
-    "words": [
-      {
-        "word": "wield.",
-        "start": 204.917,
-        "end": 206.25,
-        "col": 0
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 207.33097505668934,
@@ -3591,7 +3586,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      22
     ],
     "beats": [
       207.33097505668934,
@@ -3599,25 +3594,25 @@
       208.60807256235827,
       209.18857142857144
     ],
-    "lyrics": "It's just     business.",
+    "lyrics": "It's just business",
     "words": [
       {
         "word": "It's",
-        "start": 206.25,
-        "end": 207.707,
+        "start": 206.971,
+        "end": 207.131,
         "col": 0
       },
       {
         "word": "just",
-        "start": 207.707,
-        "end": 209.163,
+        "start": 207.251,
+        "end": 207.551,
         "col": 5
       },
       {
-        "word": "business.",
-        "start": 209.163,
-        "end": 210.62,
-        "col": 14
+        "word": "business",
+        "start": 207.631,
+        "end": 208.319,
+        "col": 10
       }
     ]
   },
@@ -3904,44 +3899,44 @@
     "words": [
       {
         "word": "And",
-        "start": 236.803,
-        "end": 237.167,
+        "start": 237.153,
+        "end": 237.393,
         "col": 0
       },
       {
         "word": "the",
-        "start": 237.167,
-        "end": 237.531,
+        "start": 237.453,
+        "end": 237.533,
         "col": 4
       },
       {
         "word": "best",
-        "start": 237.531,
-        "end": 237.895,
+        "start": 237.633,
+        "end": 237.953,
         "col": 8
       },
       {
         "word": "part",
-        "start": 237.895,
-        "end": 238.258,
+        "start": 238.013,
+        "end": 238.433,
         "col": 15
       },
       {
         "word": "is",
-        "start": 238.258,
-        "end": 238.622,
+        "start": 238.533,
+        "end": 238.673,
         "col": 20
       },
       {
         "word": "the",
-        "start": 238.622,
-        "end": 238.986,
+        "start": 238.753,
+        "end": 238.853,
         "col": 23
       },
       {
         "word": "door,",
-        "start": 238.986,
-        "end": 239.35,
+        "start": 238.953,
+        "end": 239.213,
         "col": 27
       }
     ]
@@ -3965,31 +3960,37 @@
       240.30331065759637,
       241.04634920634922
     ],
-    "lyrics": "kid, it       revolves for",
+    "lyrics": "kid, it       revolves for me",
     "words": [
       {
         "word": "kid,",
-        "start": 239.35,
-        "end": 239.91,
+        "start": 239.333,
+        "end": 239.913,
         "col": 0
       },
       {
         "word": "it",
-        "start": 239.91,
-        "end": 240.47,
+        "start": 239.993,
+        "end": 240.133,
         "col": 5
       },
       {
         "word": "revolves",
-        "start": 240.47,
-        "end": 241.03,
+        "start": 240.253,
+        "end": 241.113,
         "col": 14
       },
       {
         "word": "for",
-        "start": 241.03,
-        "end": 241.59,
+        "start": 241.193,
+        "end": 241.333,
         "col": 23
+      },
+      {
+        "word": "me",
+        "start": 241.413,
+        "end": 241.513,
+        "col": 27
       }
     ]
   },
@@ -4012,25 +4013,19 @@
       242.7414058956916,
       243.29868480725622
     ],
-    "lyrics": "me and        you.",
+    "lyrics": "and you",
     "words": [
       {
-        "word": "me",
-        "start": 241.59,
-        "end": 242.15,
+        "word": "and",
+        "start": 241.713,
+        "end": 241.913,
         "col": 0
       },
       {
-        "word": "and",
-        "start": 242.15,
-        "end": 242.71,
-        "col": 3
-      },
-      {
-        "word": "you.",
-        "start": 242.71,
-        "end": 243.27,
-        "col": 14
+        "word": "you",
+        "start": 242.013,
+        "end": 242.485,
+        "col": 4
       }
     ]
   },
@@ -4051,37 +4046,43 @@
       244.99374149659863,
       245.55102040816325
     ],
-    "lyrics": "Your public service    is a",
+    "lyrics": "Your public service is a two-year",
     "words": [
       {
         "word": "Your",
-        "start": 243.27,
-        "end": 243.78,
+        "start": 243.293,
+        "end": 243.473,
         "col": 0
       },
       {
         "word": "public",
-        "start": 243.78,
-        "end": 244.29,
+        "start": 243.593,
+        "end": 244.054,
         "col": 5
       },
       {
         "word": "service",
-        "start": 244.29,
-        "end": 244.8,
+        "start": 244.174,
+        "end": 244.794,
         "col": 12
       },
       {
         "word": "is",
-        "start": 244.8,
-        "end": 245.473,
-        "col": 23
+        "start": 244.834,
+        "end": 244.954,
+        "col": 20
       },
       {
         "word": "a",
-        "start": 245.473,
-        "end": 246.147,
-        "col": 26
+        "start": 245.014,
+        "end": 245.054,
+        "col": 23
+      },
+      {
+        "word": "two-year",
+        "start": 245.134,
+        "end": 246.074,
+        "col": 25
       }
     ]
   },
@@ -4096,7 +4097,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      12
     ],
     "beats": [
       246.13151927437642,
@@ -4104,19 +4105,13 @@
       247.24607709750566,
       247.80335600907028
     ],
-    "lyrics": "two-year      interview.",
+    "lyrics": "            interview",
     "words": [
       {
-        "word": "two-year",
-        "start": 246.147,
-        "end": 246.82,
-        "col": 0
-      },
-      {
-        "word": "interview.",
-        "start": 246.82,
-        "end": 249.27,
-        "col": 14
+        "word": "interview",
+        "start": 247.474,
+        "end": 248.594,
+        "col": 12
       }
     ]
   },
@@ -4139,25 +4134,31 @@
       249.4984126984127,
       250.05569160997732
     ],
-    "lyrics": "You           learn the",
+    "lyrics": "You           learn the secret",
     "words": [
       {
         "word": "You",
-        "start": 249.27,
-        "end": 249.796,
+        "start": 249.274,
+        "end": 249.394,
         "col": 0
       },
       {
         "word": "learn",
-        "start": 249.796,
-        "end": 250.322,
+        "start": 249.494,
+        "end": 249.914,
         "col": 14
       },
       {
         "word": "the",
-        "start": 250.322,
-        "end": 250.848,
+        "start": 250.014,
+        "end": 250.094,
         "col": 20
+      },
+      {
+        "word": "secret",
+        "start": 250.234,
+        "end": 250.814,
+        "col": 24
       }
     ]
   },
@@ -4172,7 +4173,7 @@
     ],
     "chord_cols": [
       0,
-      22
+      14
     ],
     "beats": [
       250.61297052154194,
@@ -4180,19 +4181,37 @@
       251.75074829931972,
       252.30802721088435
     ],
-    "lyrics": "secret handshakes,",
+    "lyrics": "handshakes,   you learn who to",
     "words": [
       {
-        "word": "secret",
-        "start": 250.848,
-        "end": 251.374,
+        "word": "handshakes,",
+        "start": 250.914,
+        "end": 251.834,
         "col": 0
       },
       {
-        "word": "handshakes,",
-        "start": 251.374,
-        "end": 251.9,
-        "col": 7
+        "word": "you",
+        "start": 251.894,
+        "end": 252.014,
+        "col": 14
+      },
+      {
+        "word": "learn",
+        "start": 252.094,
+        "end": 252.474,
+        "col": 18
+      },
+      {
+        "word": "who",
+        "start": 252.614,
+        "end": 252.714,
+        "col": 24
+      },
+      {
+        "word": "to",
+        "start": 252.834,
+        "end": 252.914,
+        "col": 28
       }
     ]
   },
@@ -4207,7 +4226,7 @@
     ],
     "chord_cols": [
       0,
-      27
+      14
     ],
     "beats": [
       253.0510657596372,
@@ -4215,61 +4234,31 @@
       254.16562358276644,
       254.7461224489796
     ],
-    "lyrics": "you learn who to ignore,   then you cash it",
+    "lyrics": "ignore        Then you cash",
     "words": [
       {
-        "word": "you",
-        "start": 251.9,
-        "end": 252.386,
+        "word": "ignore",
+        "start": 253.054,
+        "end": 253.858,
         "col": 0
       },
       {
-        "word": "learn",
-        "start": 252.386,
-        "end": 252.872,
-        "col": 4
-      },
-      {
-        "word": "who",
-        "start": 252.872,
-        "end": 253.358,
-        "col": 10
-      },
-      {
-        "word": "to",
-        "start": 253.358,
-        "end": 253.844,
+        "word": "Then",
+        "start": 254.354,
+        "end": 254.614,
         "col": 14
       },
       {
-        "word": "ignore,",
-        "start": 253.844,
-        "end": 254.33,
-        "col": 17
-      },
-      {
-        "word": "then",
-        "start": 254.33,
-        "end": 254.589,
-        "col": 27
-      },
-      {
         "word": "you",
-        "start": 254.589,
-        "end": 254.847,
-        "col": 32
+        "start": 254.694,
+        "end": 254.794,
+        "col": 19
       },
       {
         "word": "cash",
-        "start": 254.847,
-        "end": 255.106,
-        "col": 36
-      },
-      {
-        "word": "it",
-        "start": 255.106,
-        "end": 255.365,
-        "col": 41
+        "start": 254.854,
+        "end": 255.174,
+        "col": 23
       }
     ]
   },
@@ -4284,7 +4273,7 @@
     ],
     "chord_cols": [
       0,
-      15
+      25
     ],
     "beats": [
       255.30340136054423,
@@ -4292,43 +4281,49 @@
       256.6269387755102,
       257.1842176870748
     ],
-    "lyrics": "all in for a   corner office",
+    "lyrics": "it all in for a corner   office",
     "words": [
       {
-        "word": "all",
-        "start": 255.365,
-        "end": 255.623,
+        "word": "it",
+        "start": 255.234,
+        "end": 255.314,
         "col": 0
       },
       {
-        "word": "in",
-        "start": 255.623,
-        "end": 255.882,
-        "col": 4
+        "word": "all",
+        "start": 255.414,
+        "end": 255.654,
+        "col": 3
       },
       {
-        "word": "for",
-        "start": 255.882,
-        "end": 256.14,
+        "word": "in",
+        "start": 255.754,
+        "end": 255.854,
         "col": 7
       },
       {
+        "word": "for",
+        "start": 255.974,
+        "end": 256.194,
+        "col": 10
+      },
+      {
         "word": "a",
-        "start": 256.14,
-        "end": 256.399,
-        "col": 11
+        "start": 256.274,
+        "end": 256.314,
+        "col": 14
       },
       {
         "word": "corner",
-        "start": 256.399,
-        "end": 257.249,
-        "col": 15
+        "start": 256.394,
+        "end": 256.874,
+        "col": 16
       },
       {
         "word": "office",
-        "start": 257.249,
-        "end": 258.099,
-        "col": 22
+        "start": 257.074,
+        "end": 257.694,
+        "col": 25
       }
     ]
   },
@@ -4343,7 +4338,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      18
     ],
     "beats": [
       257.74149659863946,
@@ -4351,24 +4346,30 @@
       259.0418140589569,
       259.6223129251701
     ],
-    "lyrics": "on            the fortieth",
+    "lyrics": "on the fortieth   floor",
     "words": [
       {
         "word": "on",
-        "start": 258.099,
-        "end": 258.948,
+        "start": 258.174,
+        "end": 258.354,
         "col": 0
       },
       {
         "word": "the",
-        "start": 258.948,
-        "end": 259.798,
-        "col": 14
+        "start": 258.414,
+        "end": 258.494,
+        "col": 3
       },
       {
         "word": "fortieth",
-        "start": 259.798,
-        "end": 260.648,
+        "start": 258.634,
+        "end": 259.234,
+        "col": 7
+      },
+      {
+        "word": "floor",
+        "start": 259.314,
+        "end": 260.19,
         "col": 18
       }
     ]
@@ -4384,7 +4385,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      8
     ],
     "beats": [
       260.1795918367347,
@@ -4392,15 +4393,8 @@
       261.3173696145125,
       262.0604081632653
     ],
-    "lyrics": "floor.",
-    "words": [
-      {
-        "word": "floor.",
-        "start": 260.648,
-        "end": 261.498,
-        "col": 0
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 262.6176870748299,
@@ -4465,19 +4459,19 @@
       268.26013605442176,
       268.8174149659864
     ],
-    "lyrics": "So            relax...",
+    "lyrics": "So relax.",
     "words": [
       {
         "word": "So",
-        "start": 267.1,
-        "end": 268.03,
+        "start": 267.095,
+        "end": 267.195,
         "col": 0
       },
       {
-        "word": "relax...",
-        "start": 268.03,
-        "end": 268.96,
-        "col": 14
+        "word": "relax.",
+        "start": 267.315,
+        "end": 268.055,
+        "col": 3
       }
     ]
   },
@@ -4492,7 +4486,7 @@
     ],
     "chord_cols": [
       0,
-      15
+      23
     ],
     "beats": [
       269.374693877551,
@@ -4500,25 +4494,25 @@
       270.48925170068026,
       271.0465306122449
     ],
-    "lyrics": "Have another   drink.",
+    "lyrics": "have another drink.",
     "words": [
       {
-        "word": "Have",
-        "start": 268.96,
-        "end": 269.64,
+        "word": "have",
+        "start": 269.535,
+        "end": 269.735,
         "col": 0
       },
       {
         "word": "another",
-        "start": 269.64,
-        "end": 270.32,
+        "start": 269.755,
+        "end": 270.095,
         "col": 5
       },
       {
         "word": "drink.",
-        "start": 270.32,
-        "end": 271.0,
-        "col": 15
+        "start": 270.155,
+        "end": 270.539,
+        "col": 13
       }
     ]
   },
@@ -4533,7 +4527,7 @@
     ],
     "chord_cols": [
       0,
-      8
+      12
     ],
     "beats": [
       271.62702947845804,
@@ -4541,8 +4535,27 @@
       272.7415873015873,
       273.29886621315194
     ],
-    "lyrics": "",
-    "words": []
+    "lyrics": "            It's a win-win",
+    "words": [
+      {
+        "word": "It's",
+        "start": 273.295,
+        "end": 273.435,
+        "col": 12
+      },
+      {
+        "word": "a",
+        "start": 273.515,
+        "end": 273.555,
+        "col": 17
+      },
+      {
+        "word": "win-win",
+        "start": 273.635,
+        "end": 274.215,
+        "col": 19
+      }
+    ]
   },
   {
     "time": 273.8793650793651,
@@ -4563,25 +4576,13 @@
       274.9939229024943,
       275.55120181405897
     ],
-    "lyrics": "It's a        win-win",
+    "lyrics": "situation,",
     "words": [
       {
-        "word": "It's",
-        "start": 273.28,
-        "end": 274.155,
+        "word": "situation,",
+        "start": 274.355,
+        "end": 275.555,
         "col": 0
-      },
-      {
-        "word": "a",
-        "start": 274.155,
-        "end": 275.03,
-        "col": 5
-      },
-      {
-        "word": "win-win",
-        "start": 275.03,
-        "end": 275.905,
-        "col": 14
       }
     ]
   },
@@ -4596,7 +4597,7 @@
     ],
     "chord_cols": [
       0,
-      19
+      12
     ],
     "beats": [
       276.1317006802721,
@@ -4604,25 +4605,25 @@
       277.24625850340135,
       277.803537414966
     ],
-    "lyrics": "situation, don't   you",
+    "lyrics": "            don't you think?",
     "words": [
       {
-        "word": "situation,",
-        "start": 275.905,
-        "end": 276.78,
-        "col": 0
-      },
-      {
         "word": "don't",
-        "start": 276.78,
-        "end": 277.513,
-        "col": 11
+        "start": 277.355,
+        "end": 277.575,
+        "col": 12
       },
       {
         "word": "you",
-        "start": 277.513,
-        "end": 278.247,
-        "col": 19
+        "start": 277.635,
+        "end": 277.735,
+        "col": 18
+      },
+      {
+        "word": "think?",
+        "start": 277.815,
+        "end": 278.155,
+        "col": 22
       }
     ]
   },
@@ -4645,37 +4646,25 @@
       279.4985941043084,
       280.05587301587303
     ],
-    "lyrics": "think? It's   directed away from",
+    "lyrics": "It's          directed away",
     "words": [
       {
-        "word": "think?",
-        "start": 278.247,
-        "end": 278.98,
+        "word": "It's",
+        "start": 279.315,
+        "end": 279.435,
         "col": 0
       },
       {
-        "word": "It's",
-        "start": 278.98,
-        "end": 279.428,
-        "col": 7
-      },
-      {
         "word": "directed",
-        "start": 279.428,
-        "end": 279.875,
+        "start": 279.495,
+        "end": 280.035,
         "col": 14
       },
       {
         "word": "away",
-        "start": 279.875,
-        "end": 280.322,
+        "start": 280.095,
+        "end": 280.416,
         "col": 23
-      },
-      {
-        "word": "from",
-        "start": 280.322,
-        "end": 280.77,
-        "col": 28
       }
     ]
   },
@@ -4690,7 +4679,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      18
     ],
     "beats": [
       280.6131519274376,
@@ -4698,25 +4687,31 @@
       281.7509297052154,
       282.30820861678006
     ],
-    "lyrics": "the public    interest...",
+    "lyrics": "from the public   interest.",
     "words": [
       {
-        "word": "the",
-        "start": 280.77,
-        "end": 281.32,
+        "word": "from",
+        "start": 280.536,
+        "end": 280.736,
         "col": 0
       },
       {
-        "word": "public",
-        "start": 281.32,
-        "end": 281.87,
-        "col": 4
+        "word": "the",
+        "start": 280.776,
+        "end": 280.876,
+        "col": 5
       },
       {
-        "word": "interest...",
-        "start": 281.87,
-        "end": 282.42,
-        "col": 14
+        "word": "public",
+        "start": 280.956,
+        "end": 281.496,
+        "col": 9
+      },
+      {
+        "word": "interest.",
+        "start": 281.616,
+        "end": 282.128,
+        "col": 18
       }
     ]
   },
@@ -4751,7 +4746,7 @@
     ],
     "chord_cols": [
       0,
-      28
+      27
     ],
     "beats": [
       285.3035827664399,
@@ -4759,31 +4754,49 @@
       286.4413605442177,
       286.9986394557823
     ],
-    "lyrics": "and toward the interests",
+    "lyrics": "And toward the interests   of the regulated.",
     "words": [
       {
-        "word": "and",
-        "start": 285.12,
-        "end": 285.498,
+        "word": "And",
+        "start": 285.476,
+        "end": 285.576,
         "col": 0
       },
       {
         "word": "toward",
-        "start": 285.498,
-        "end": 285.875,
+        "start": 285.616,
+        "end": 285.896,
         "col": 4
       },
       {
         "word": "the",
-        "start": 285.875,
-        "end": 286.252,
+        "start": 285.936,
+        "end": 286.016,
         "col": 11
       },
       {
         "word": "interests",
-        "start": 286.252,
-        "end": 286.63,
+        "start": 286.116,
+        "end": 286.616,
         "col": 15
+      },
+      {
+        "word": "of",
+        "start": 286.656,
+        "end": 286.736,
+        "col": 27
+      },
+      {
+        "word": "the",
+        "start": 286.756,
+        "end": 286.836,
+        "col": 30
+      },
+      {
+        "word": "regulated.",
+        "start": 286.936,
+        "end": 287.736,
+        "col": 34
       }
     ]
   },
@@ -4798,7 +4811,7 @@
     ],
     "chord_cols": [
       0,
-      21
+      8
     ],
     "beats": [
       287.5559183673469,
@@ -4806,27 +4819,8 @@
       288.6936961451247,
       289.25097505668936
     ],
-    "lyrics": "of the regulated.",
-    "words": [
-      {
-        "word": "of",
-        "start": 286.63,
-        "end": 287.46,
-        "col": 0
-      },
-      {
-        "word": "the",
-        "start": 287.46,
-        "end": 288.291,
-        "col": 3
-      },
-      {
-        "word": "regulated.",
-        "start": 288.291,
-        "end": 289.121,
-        "col": 7
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 289.80825396825395,
@@ -4839,7 +4833,7 @@
     ],
     "chord_cols": [
       0,
-      8
+      12
     ],
     "beats": [
       289.80825396825395,
@@ -4847,8 +4841,21 @@
       290.94603174603174,
       291.5033106575964
     ],
-    "lyrics": "",
-    "words": []
+    "lyrics": "            .that's us.",
+    "words": [
+      {
+        "word": ".that's",
+        "start": 291.276,
+        "end": 291.516,
+        "col": 12
+      },
+      {
+        "word": "us.",
+        "start": 291.616,
+        "end": 291.936,
+        "col": 20
+      }
+    ]
   },
   {
     "time": 292.060589569161,
@@ -4861,7 +4868,7 @@
     ],
     "chord_cols": [
       0,
-      19
+      8
     ],
     "beats": [
       292.060589569161,
@@ -4869,33 +4876,8 @@
       293.1751473922902,
       293.7324263038549
     ],
-    "lyrics": "That's us. Don't   worry",
-    "words": [
-      {
-        "word": "That's",
-        "start": 291.28,
-        "end": 291.993,
-        "col": 0
-      },
-      {
-        "word": "us.",
-        "start": 291.993,
-        "end": 292.707,
-        "col": 7
-      },
-      {
-        "word": "Don't",
-        "start": 292.707,
-        "end": 293.42,
-        "col": 11
-      },
-      {
-        "word": "worry",
-        "start": 293.42,
-        "end": 294.133,
-        "col": 19
-      }
-    ]
+    "lyrics": "",
+    "words": []
   },
   {
     "time": 294.2897052154195,
@@ -4908,7 +4890,7 @@
     ],
     "chord_cols": [
       0,
-      14
+      25
     ],
     "beats": [
       294.2897052154195,
@@ -4916,19 +4898,31 @@
       295.42748299319726,
       296.00798185941045
     ],
-    "lyrics": "about it.",
+    "lyrics": "Don't worry about it.",
     "words": [
       {
-        "word": "about",
-        "start": 294.133,
-        "end": 294.847,
+        "word": "Don't",
+        "start": 293.496,
+        "end": 293.796,
         "col": 0
       },
       {
-        "word": "it.",
-        "start": 294.847,
-        "end": 295.56,
+        "word": "worry",
+        "start": 293.816,
+        "end": 294.216,
         "col": 6
+      },
+      {
+        "word": "about",
+        "start": 294.336,
+        "end": 294.856,
+        "col": 12
+      },
+      {
+        "word": "it.",
+        "start": 294.936,
+        "end": 295.196,
+        "col": 18
       }
     ]
   },
